@@ -55,9 +55,15 @@ The copy retains `preparation: true` and does not rebuild Android, enable live a
 
 These observed final URLs can now be used during console setup; acceptance, app-ads crawler verification and store declarations remain separate from HTTP delivery. Retain the production configuration gate until all remaining launch requirements are met.
 
-## Next owner phase — AdMob privacy URL
+## Owner-reported AdMob privacy URL — saved
 
-Prepare the European-regulations message in AdMob while Play identity verification is pending. Open **Privacy & messaging**, then the European-regulations card. Use the existing Luma Drift message if present; otherwise create one. In the app selection table, set the Luma Drift privacy-policy URL to **<https://luma-drift-production.web.app/privacy/index.html>**, save and confirm. Stop after this URL step; consent choices, languages, review and publication follow separately. No message creation, configuration or publication has yet been reported. [Official message setup](https://support.google.com/admob/answer/10113207?hl=en), [privacy URL instructions](https://support.google.com/admob/answer/10113106).
+The owner reports the Luma Drift privacy-policy URL **<https://luma-drift-production.web.app/privacy/index.html>** is now saved in AdMob. This is owner-reported console configuration, not independent console observation or evidence that a message is published. [Preparation record](admob-consent-preparation.json), [official privacy URL instructions](https://support.google.com/admob/answer/10113106).
+
+## Next owner phase — prepare the European message draft
+
+Use the existing Luma Drift message and save a draft with the proposed name **Luma Drift — Consentement UE**. Select English as fallback, with French, German, Spanish, Portuguese and Italian as additional languages; these are the six language codes present in `app/src/main/java/com/androidhit/lumadrift/data/Strings.java`. Enable the first-page refusal choice across the message's targeted countries and the optional close-as-refusal control. Target the European-regulations region offered by AdMob: EEA, United Kingdom and Switzerland. Save the draft; preview/review and publication follow as a separate step. These settings are instructions, not an observed or owner-confirmed configuration. [Official message settings](https://support.google.com/admob/answer/10113207?hl=en).
+
+The regional setting describes this European message only; no other applicable regional message setup or worldwide consent acceptance has been established. No production UMP message has yet been reported published or observed in the installed app.
 
 The hosted seller file is separate from AdMob's verification/readiness checks, which depend on the store listing and console state. No crawler approval or unrestricted ad serving follows from the site's HTTP 200. [AdMob seller-file discovery](https://support.google.com/admob/answer/9363762?hl=en).
 
