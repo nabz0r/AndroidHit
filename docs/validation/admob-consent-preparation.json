@@ -1,6 +1,6 @@
 {
   "recordedOn": "2026-10-27",
-  "source": "Owner messages after the guided AdMob privacy URL entry and consent draft settings",
+  "source": "Owner deployment messages: privacy URL saved, draft/settings saved, then AdMob status reported Published",
   "privacyPolicyUrl": "https://luma-drift-production.web.app/privacy/index.html",
   "ownerReportedPrivacyUrlSaved": true,
   "adMobAppId": "ca-app-pub-6914185503996225~9670436379",
@@ -22,7 +22,7 @@
   },
   "proposedDraftSettingsOwnerConfirmed": true,
   "draftSavedOwnerConfirmed": true,
-  "messagePublishedEstablished": false,
+  "messagePublishedEstablished": true,
   "installedProductionUmpMessageObserved": false,
   "adMobAppAdsVerificationEstablished": false,
   "adMobReadinessApprovalEstablished": false,
@@ -36,6 +36,21 @@
     {
       "stage": "draftSavedWithRequestedSettings",
       "recordedOn": "2026-10-27"
+    },
+    {
+      "stage": "messageStatusPublished",
+      "recordedOn": "2026-10-27"
     }
-  ]
+  ],
+  "messagePublishedOwnerConfirmed": true,
+  "reportedMessageStatus": "Publié",
+  "publicationIndependentlyObserved": false,
+  "runtimeCandidate": {
+    "version": "1.4.0-rc1",
+    "package": "com.androidhit.lumadrift",
+    "ownerAdMobAppIdRetainedForUmp": true,
+    "sampleAdCreativesForced": true,
+    "walletOriginEmbedded": false,
+    "newBuildOrRuntimeTestPerformed": false
+  }
 }
