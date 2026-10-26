@@ -6,7 +6,7 @@ On utilise ton projet existant **`luma-drift-production`** : Firebase Hosting po
 
 **Avancement au 27 octobre 2026 :** le propriétaire a confirmé Blaze, les domaines Firebase Auth, les comptes techniques/droits, la création de Firestore et le déploiement des règles/index. Le budget de 10 € signalé n'est pas un plafond de dépenses vérifié. La configuration Firebase Web est intégrée : application `1:369472826910:web:47e79b67e7a3abd0c3080f`. Cloud Run est déployé ; le correctif du chemin de santé `/health` est testé et redéployé. Nos sondes ont confirmé santé `200`, portefeuille sans connexion `401` et autorisation du futur site `204`. [Incident et procédure](validation/cloud-run-health-route.md).
 
-Les coordonnées publiques **nabilux** / **nabz0r+gaming@gmail.com** et l'adresse réelle du serveur sont intégrées aux pages FR/EN. Le bouton Google est configuré, avec un bandeau de qualification qui ne désactive pas les opérations. [Vérifications locales](validation/public-contact-preview.md). Le site Hosting existe et sa prévisualisation `qualification` est déployée : [adresse et vérifications HTTP](validation/hosting-preview.md). Le domaine de prévisualisation est déjà autorisé dans Firebase Auth. Après la commande CORS exécutée par le propriétaire, les sondes indépendantes des origines finale et de prévisualisation renvoient toutes deux `204` avec leur origine exacte autorisée. Le propriétaire rapporte avoir atteint **« Identité vérifiée »** après connexion Google sur la preview, sans cocher la confirmation de suppression. Ce résultat n’a pas été observé par l’agent et aucun journal ou capture n’a été fourni. Prochaine étape : un test explicite de suppression avec un compte Google de test distinct, après déconnexion/reconnexion récente, selon la section 7. Le site final retourne encore 404 ; la suppression serveur, le portefeuille authentifié, la connexion Google Android, les notifications/maintenance et les achats Play restent à qualifier. La validation d'identité Play est en attente. Les instructions ci-dessous conservent le parcours complet pour référence.
+Les coordonnées publiques **nabilux** / **nabz0r+gaming@gmail.com** et l'adresse réelle du serveur sont intégrées aux pages FR/EN. Le bouton Google est configuré, avec un bandeau de qualification qui ne désactive pas les opérations. [Vérifications locales](validation/public-contact-preview.md). Le site Hosting existe et sa prévisualisation `qualification` est déployée : [adresse et vérifications HTTP](validation/hosting-preview.md). Le domaine de prévisualisation est déjà autorisé dans Firebase Auth. Après la commande CORS exécutée par le propriétaire, les sondes indépendantes des origines finale et de prévisualisation renvoient toutes deux `204` avec leur origine exacte autorisée. Le propriétaire rapporte maintenant le message **« Ton compte Luma Drift et son portefeuille serveur ont été supprimés »** après le test Web guidé. Ce résultat n’a pas été observé indépendamment ; aucun journal, capture, statut DELETE ni vérification de la console Firebase n’a été fourni. Prochaine étape : copier le canal `qualification` vers `live` du même site, en gardant le bandeau et les achats/publicités réelles fermés, selon la section 7. Le site final retourne encore 404 ; la suppression reste seulement rapportée par le propriétaire ; le GET du portefeuille authentifié, la connexion Google Android, les notifications/maintenance et les achats Play restent à qualifier. La validation d'identité Play est en attente. Les instructions ci-dessous conservent le parcours complet pour référence.
 
 Fais une étape à la fois. Si une commande échoue, garde son message d'erreur et arrête le bloc avant de poursuivre. Ne relance pas aveuglément les commandes `create` : une ressource déjà créée se vérifie et se réutilise. Les commandes Cloud Run ci-dessous créent des ressources facturables. Les alertes de budget préviennent d'une dépense ; elles ne la plafonnent pas.
 
@@ -183,17 +183,19 @@ gcloud run services update luma-wallet \
   --update-env-vars='^|^ALLOWED_WEB_ORIGINS=https://luma-drift-production.web.app,https://luma-drift-production--qualification-uht107xg.web.app'
 ```
 
-Le délimiteur alternatif conserve la virgule dans la valeur. L’exécution est confirmée par le propriétaire et les réponses `OPTIONS` finale et preview renvoient désormais `204`, avec leurs origines exactes, les méthodes GET, POST, DELETE, OPTIONS et les en-têtes Authorization, Content-Type. `/health` répond aussi `200` avec `{"status":"ok"}`. La connexion Web jusqu’à **« Identité vérifiée »** est maintenant rapportée par le propriétaire, sans observation de l’agent ni journal/capture. Pour le prochain test, utilise un **compte Google de test distinct** : clique **« Annuler et me déconnecter »**, puis **« Se connecter avec Google »**. Moins de **cinq minutes** après cette nouvelle connexion, coche la confirmation et clique **« Supprimer définitivement mon compte »**. Cela peut supprimer réellement le compte Luma Drift et son portefeuille ; le compte Google reste intact. Aucun résultat de suppression ni état de la console Firebase n’est encore établi. [Preuve et limites actuelles](validation/hosting-preview.md).
+Le délimiteur alternatif conserve la virgule dans la valeur. L’exécution est confirmée par le propriétaire et les réponses `OPTIONS` finale et preview renvoient désormais `204`, avec leurs origines exactes, les méthodes GET, POST, DELETE, OPTIONS et les en-têtes Authorization, Content-Type. `/health` répond aussi `200` avec `{"status":"ok"}`. Le propriétaire rapporte maintenant **« Ton compte Luma Drift et son portefeuille serveur ont été supprimés »** après le test Web guidé. Il s’agit de son compte rendu, sans observation indépendante, journal/capture, statut DELETE mesuré ni vérification de la console Firebase. Le compte Google lui-même reste intact ; le GET du portefeuille authentifié, les paiements et la connexion Google Android ne sont pas validés. [Preuve et limites actuelles](validation/hosting-preview.md).
 
 La [configuration Hosting racine](../firebase.json) sert déjà `public/` et exclut les tests ; elle conserve les pages séparées et les en-têtes documentés. Il n'est pas nécessaire de lancer `firebase init` ni d'écraser les fichiers HTML.
 
-Après relecture et qualification, désactive explicitement le mode préparation, puis :
+**Prochaine étape : publier les pages de qualification à l’adresse stable, avec le bandeau conservé.** Le canal source relevé est `qualification`, version `332f610a434fe4a6`. Copie-le vers `live` sur le **même site** :
 
 ```sh
-node public/tests/check-static.mjs --production
-npx --yes firebase-tools@15.34.1 deploy --only hosting \
-  --project luma-drift-production --config firebase.json
+npx --yes firebase-tools@15.34.1 hosting:clone \
+  luma-drift-production:qualification luma-drift-production:live \
+  --project=luma-drift-production
 ```
+
+Cette commande n’est pas encore confirmée exécutée. Elle conserve le contenu et `preparation: true` du canal source ; elle ne lance ni achats ni annonces réelles et ne retire aucune garde de production. [Copie officielle preview vers live](https://firebase.google.com/docs/hosting/test-preview-deploy#clone-preview-to-live).
 
 Vérifie depuis une fenêtre privée les quatre adresses finales :
 
@@ -204,7 +206,17 @@ Vérifie depuis une fenêtre privée les quatre adresses finales :
 | Suppression du compte | `https://luma-drift-production.web.app/delete-account/index.html` |
 | Autorisation publicitaire | `https://luma-drift-production.web.app/app-ads.txt` |
 
-Teste aussi la connexion et la suppression réelles sur le domaine final, avec un compte de qualification dédié. La suppression est effective : n'utilise pas ton compte joueur principal. Le contrôle automatique ne constitue pas une validation juridique ou une preuve d'identité Google fonctionnelle.
+La publication stable devra être vérifiée après la commande ; elle n’est pas acquise par sa seule rédaction. Requalifie ensuite le parcours sur ce domaine avec un compte dédié.
+
+**Plus tard, après tous les critères de mise en production :** relis les deux langues et la politique, puis retire explicitement le bandeau et passe le contrôle commercial avant un nouveau déploiement :
+
+```sh
+node public/tests/check-static.mjs --production
+npx --yes firebase-tools@15.34.1 deploy --only hosting \
+  --project luma-drift-production --config firebase.json
+```
+
+Ce retrait du bandeau et ce contrôle restent distincts de la publication de qualification ci-dessus. Le contrôle automatique ne remplace pas les résultats réels Google/Play ni les vérifications de publication.
 
 ## 8. Publier un test interne Play et créer les produits
 
@@ -247,7 +259,7 @@ Les identifiants AdMob sont déjà intégrés ; il n'est pas nécessaire de les 
 ## Ce qu'il faut me renvoyer, dans l'ordre
 
 1. **Déjà reçus et intégrés** : confirmation Blaze, bloc public Firebase Web, domaines finaux autorisés, coordonnées publiques nabilux / nabz0r+gaming@gmail.com et adresse réelle Cloud Run. Les trois sondes anonymes sont consignées ; inutile de les renvoyer.
-2. **Hosting déjà reçu** : site présent et adresse de prévisualisation affichée, dont le domaine Auth est confirmé. La mise à jour CORS est confirmée pour les origines finale et preview. La connexion Web jusqu’à **« Identité vérifiée »** est rapportée par le propriétaire. Il reste le résultat du test explicite de suppression avec le compte Google distinct et une reconnexion de moins de cinq minutes, décrit en section 7 ; inutile de renvoyer le tableau.
+2. **Hosting déjà reçu** : site présent et adresse de prévisualisation affichée, dont le domaine Auth est confirmé. La mise à jour CORS est confirmée pour les origines finale et preview. Le message de suppression Web réussie est rapporté par le propriétaire. La prochaine action est la copie preview vers live avec `preparation: true`, puis la vérification de l’adresse stable ; inutile de renvoyer le tableau.
 3. **Après Play** : les empreintes du certificat de signature Play, l'état des trois produits et le lien du test interne.
 4. **Après AdMob** : l'état de validation `app-ads.txt`, l'état de préparation et la confirmation du message de consentement publié.
 

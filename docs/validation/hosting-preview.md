@@ -34,6 +34,21 @@ Independent follow-up probes on 27 October confirmed both final and preview `OPT
 
 On 27 October the owner reported the real preview displayed **« Identité vérifiée »** after Google sign-in, without ticking the deletion confirmation. [Scoped owner report](hosting-google-login.json). This is owner-reported UI evidence: the agent did not inspect the account, browser session, ID token, Firebase user record or authenticated server logs. It establishes neither an Android login nor authenticated wallet access, deletion or purchases. No personal account identifier or token was requested or recorded.
 
-The next qualification step is the separate, explicit deletion test on the distinct Google test account. First select **« Annuler et me déconnecter »** and sign back in with the same test account, so the server's five-minute recent-authentication requirement is met. Then read and select the confirmation and press **« Supprimer définitivement mon compte »**. This deletes the app account/wallet through the real server; it does not delete the Google Account. Record the actual final message before declaring success. A plus-tag email alias is not a distinct Google account, and the banner does not neutralize deletion against the real service.
+## Owner-reported Web deletion — succeeded
 
-The owner-reported Web login is the only new authenticated result. No server deletion, purchase, live ad, Scheduler/RTDN delivery or audit purge is established. The existing Android APK/AAB remain unchanged.
+After the separate deletion step, the owner reported **« Ton compte Luma Drift et son portefeuille serveur ont été supprimés »**. [Scoped deletion report](hosting-web-deletion.json). This matches the site's completion state, which the code displays only after the request helper accepts a successful HTTP response with `deleted: true`. The agent did not inspect the real response, Firebase user list, wallet documents or server logs. The result is owner-reported successful deletion on the preview, not independent storage/audit verification, a paid-wallet lifecycle test or an Android account test. Earlier JSON files preserve their original pre-deletion scope.
+
+## Next owner action — publish the qualification pages at the stable origin
+
+Copy the tested preview channel to the same site's live channel, retaining the qualification banner and closed commerce. Firebase documents this as publishing the same Hosting content/configuration that was tested. [Official preview-to-live workflow](https://firebase.google.com/docs/hosting/test-preview-deploy).
+
+```sh
+npx --yes firebase-tools@15.34.1 hosting:clone \
+  luma-drift-production:qualification \
+  luma-drift-production:live \
+  --project=luma-drift-production
+```
+
+This is the next documented command; its execution and final-origin availability are not yet established. It does not remove `preparation: true`, rebuild Android, enable live ads or activate purchases. The final origin is already authorized by Firebase Auth and the server preflight, but its actual login/deletion flow must be qualified after publication. Check the actual deployed page/configuration/seller bytes and headers before supplying the final URLs to consoles. Retain the production configuration gate until all remaining launch requirements are met.
+
+No purchase, live ad, Scheduler/RTDN delivery or audit purge is established. Authenticated wallet retrieval, paid-balance deletion, refunds, failures/retries and the final-domain flow remain separate checks. The existing Android APK/AAB remain unchanged.
