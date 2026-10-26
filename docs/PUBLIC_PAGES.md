@@ -1,6 +1,6 @@
 # Public developer, privacy and account-deletion pages
 
-Prepared on **26 October 2026**, with public contact/configuration qualification completed locally on **27 October 2026**, for the production application `com.androidhit.lumadrift`. The static site is in [`public/`](../public/). It is **not hosted by this commit** and is not yet a completed Google Play privacy/deletion submission.
+Prepared on **26 October 2026**, with public contact/configuration checks and Hosting preview deployment recorded on **27 October 2026**, for the production application `com.androidhit.lumadrift`. The static site is in [`public/`](../public/). The [qualification preview](https://luma-drift-production--qualification-uht107xg.web.app) serves the pages; the final origin currently returns 404. This is not yet a completed Google Play privacy/deletion submission. [Deployed preview evidence](validation/hosting-preview.md).
 
 The pages use the Luma Drift palette, original code-drawn puzzle artwork, responsive layouts, keyboard focus, reduced-motion handling and French/English controls. The Google sign-in control reuses the app’s unmodified official Google G asset; it is Google branding, not Luma Drift artwork. They need no build framework, remote font or analytics package. Switching language uses a URL parameter, without a cookie or local-storage entry.
 
@@ -17,15 +17,15 @@ The pages use the Luma Drift palette, original code-drawn puzzle artwork, respon
 
 Production Google/AdMob identifiers are integrated into Android separately. The separate Firebase **Web** configuration is integrated into `public/site-config.js`: project `luma-drift-production`, app `1:369472826910:web:47e79b67e7a3abd0c3080f`, auth domain `luma-drift-production.firebaseapp.com` and its public Web API key. The owner supplied the public publisher label **nabilux** and support email **nabz0r+gaming@gmail.com**. No legal entity is inferred from that label. These contacts appear in both languages, including the static HTML fallback.
 
-The site now points to the deployed API `https://luma-wallet-369472826910.europe-west1.run.app`. Its Google sign-in button is configured and enabled; identity modules load only after a click. The owner confirmed both final Firebase domains, and an external preflight from the final `web.app` origin returned 204. Hosting and actual Google sign-in/deletion remain unqualified. A preview origin will need its own exact Firebase-domain and API-CORS authorization. The existing Android candidate is unchanged and still lacks its wallet origin.
+The site now points to the deployed API `https://luma-wallet-369472826910.europe-west1.run.app`. Its Google sign-in button is configured and enabled; identity modules load only after a click. The qualification preview's five sampled resources returned 200 and matched repository bytes. Firebase's public configuration confirms both final domains and the exact preview hostname are authorized. The final origin's API preflight returned 204, but the preview origin's preflight currently returns 403 `ORIGIN_NOT_ALLOWED`. Add that exact HTTPS origin to the API allowlist before actual sign-in/deletion qualification. The existing Android candidate is unchanged and still lacks its wallet origin.
 
 The Firebase-generated example supplied by the owner also included an Analytics import and measurement ID. The site integrates only the identity configuration it uses; it still imports no Analytics SDK and makes no default analytics requests. This describes the website's code, not a claim about every setting of the owner's Firebase project.
 
 Before declaring these pages as the final policy or account-deletion route, complete these gates:
 
 1. Keep the supplied public publisher label and support address accurate and review the policy against the actual publisher's obligations. The contact fields are now filled; this is not an identity or legal review. Privacy requests must never use a public GitHub issue containing account details.
-2. A hosting origin/domain. Firebase Hosting can serve this directory on the production project’s `web.app` subdomain, or an owner-controlled domain. No such URL is claimed to be live yet.
-3. Keep the configured **Web app** identity and Google provider. The owner confirmed `luma-drift-production.web.app` and `luma-drift-production.firebaseapp.com` as authorized domains; authorize the actual preview hostname separately before preview login. For another project, register its own Web app; do not copy an Android `:android:` app ID.
+2. Qualify the deployed preview, then publish and verify the final hosting origin. The final project `web.app` origin currently returns 404; do not enter the temporary preview URL in Play or AdMob.
+3. Keep the configured **Web app** identity and Google provider. Both final domains and the actual preview hostname are already confirmed in Firebase's public configuration. CLI channel deployment normally attempts to add the preview domain; check its presence before adding it manually. For another project, register its own Web app; do not copy an Android `:android:` app ID.
 4. Keep the configured HTTPS `walletApiBaseUrl` and allow the site's exact origin for `DELETE` and `OPTIONS`, and `Authorization`/`Content-Type` headers. The final origin's preflight passed; add a preview origin separately while preserving the final origin. Wildcard authentication origins and browser cookies are not required.
 5. Review the privacy statement against the deployed build, actual log retention, transaction-audit retention, hosting and provider settings. The pages label services under qualification and disclose a planned 365-day minimal audit period. That is a configured retention choice, not a legal requirement. Scheduler/RTDN are not deployed, and no automatic purge or deletion-retry operation has been established. The current maintenance sequence also reconciles Play before purging, so pending Play permissions can prevent it reaching the purge. Qualify both permissions and maintenance before claiming automatic operation.
 6. Successful real Google sign-in, recent-authentication rejection, deletion and failure/retry tests on the final domain and live API. The local tests below use synthetic identity; they are not substitutes for these checks.
@@ -52,7 +52,7 @@ The public support address appears on the policy, deletion page and footer and o
 
 ## Hosting and app-ads.txt
 
-Serve the contents of `public/` as the site root, excluding `tests/**`. The directory includes a `.nojekyll` marker and works as static content. The repository now includes a [root Firebase Hosting configuration](../firebase.json), targeting site `luma-drift-production`; it is separate from `server/firebase.json`, which configures Firestore. No hosting deployment has been executed. The [French step-by-step guide](DEPLOIEMENT_PAS_A_PAS.md) covers setup, preview qualification and publication without rerunning `firebase init` or overwriting the pages. Its structure is:
+Serve the contents of `public/` as the site root, excluding `tests/**`. The directory includes a `.nojekyll` marker and works as static content. The [root Firebase Hosting configuration](../firebase.json) targets site `luma-drift-production`; it is separate from `server/firebase.json`, which configures Firestore. The owner deployed channel `qualification`, version `332f610a434fe4a6`; the final site remains unpublished. The [French step-by-step guide](DEPLOIEMENT_PAS_A_PAS.md) covers preview qualification and publication without rerunning `firebase init` or overwriting the pages. Its structure is:
 
 ```json
 {
@@ -112,7 +112,7 @@ Optional environment variables `LUMA_PLAYWRIGHT_MODULE`, `LUMA_CHROMIUM_EXECUTAB
 
 `node public/tests/check-static.mjs --production` is an additional release gate. The current contact, Web identity and HTTPS API fields are complete, but preparation mode deliberately keeps the release gate closed. Passing the gate still requires the manual review and live checks listed above. The current browser test pins the supplied contact and qualification flag; update those expectations deliberately when changing publication state.
 
-No hosted-site availability, real OAuth popup, live API deletion, production consent approval or legal approval is established by these checks.
+These local checks establish no hosted-site availability, real OAuth popup, live API deletion, production consent approval or legal approval. The later [independent preview HTTP/configuration probes](validation/hosting-preview.md) establish only their stated deployed-read scope.
 
 ## Primary references
 

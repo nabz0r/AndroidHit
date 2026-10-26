@@ -1,0 +1,90 @@
+{
+  "recordedOn": "2026-10-27",
+  "previewUrl": "https://luma-drift-production--qualification-uht107xg.web.app",
+  "ownerReportedVersion": "332f610a434fe4a6",
+  "ownerReportedExpiryText": "2026-11-02 23:05:45",
+  "expiryTimezone": "not specified in supplied CLI output",
+  "httpChecks": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "a7afaddca016703b5d034d6998b46b270fd7c697422dfa57e3a86559481319cc"
+    },
+    {
+      "path": "/privacy/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "02f58bd612f25023b60bc06fd4cf77d9c8f9c75891c38741ca4d50c4f689d156"
+    },
+    {
+      "path": "/delete-account/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "a5f3ec84b1f55ce7f49b7e74f40657f504fd2e8a9ce600769c180bce55e86daf"
+    },
+    {
+      "path": "/site-config.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "6053074f0b45e54e14267e7d2316be8f68d981110c2376641653e039fc0f4f67"
+    },
+    {
+      "path": "/app-ads.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "1ec22f11296d1bf892fdd26f7019ca10049cc97977d31ce9ea806b888b6dbcba"
+    }
+  ],
+  "firebasePublicConfiguration": {
+    "status": 200,
+    "projectNumber": "369472826910",
+    "previewDomainAuthorized": true,
+    "finalDomainsAuthorized": true,
+    "observation": "Read-only public SDK configuration response; no user login or project mutation"
+  },
+  "previewDeletionPreflight": {
+    "status": 403,
+    "errorCode": "ORIGIN_NOT_ALLOWED",
+    "allowOrigin": null,
+    "observation": "OPTIONS only; no DELETE or bearer token sent"
+  },
+  "realGoogleAuthenticationTested": false,
+  "liveServerDeletionTested": false,
+  "purchasesTested": false,
+  "finalSitePublishedByThisCommand": false,
+  "finalOriginCheck": {
+    "status": 404,
+    "servesCurrentLandingPage": false
+  }
+}

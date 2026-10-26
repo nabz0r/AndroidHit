@@ -10,6 +10,8 @@ The signed production candidate was built, installed and exercised on an Android
 
 **Public-contact follow-up, 27 October 2026:** the supplied publisher label/support address and deployed API origin are integrated into the FR/EN site. The local checks passed: 24 request/configuration cases, 3 static pages/37 references and 18 configured responsive states, plus isolated missing-wallet and synthetic sign-in/deletion cases. Mail recipients preserve the exact `+gaming` alias. The qualification banner remains on; the configured real Google button was not clicked in the test. Hosting, real Web authentication/deletion and automatic audit purge remain unqualified. No APK/AAB was rebuilt. [Report, versions and limits](validation/public-contact-preview.md).
 
+**Hosting follow-up, 27 October 2026:** the owner deployed preview channel `qualification`, version `332f610a434fe4a6`. Independent HTTPS reads of the five sampled pages/configuration/seller resources returned 200 and matched repository bytes. The public Firebase SDK configuration already authorizes the exact preview hostname. The preview API preflight still returns 403 `ORIGIN_NOT_ALLOWED`; adding that origin to Cloud Run is the next owner action. The final site returns 404. No real login, deletion or purchase was attempted. [Deployed evidence](validation/hosting-preview.md).
+
 | Layer | Result | Evidence / practical limit |
 |---|---|---|
 | Puzzle engine | 435,796 assertions | [Engine](validation/v1.4/engine-tests.txt); deterministic JVM boards/solver, not player enjoyment |
@@ -50,7 +52,7 @@ Screenshots under `docs/screenshots/production/` are actual installed-candidate 
 
 ## Remaining qualification
 
-Not validated here: completed Google authentication/sign-out/deletion with a real user, owner Play license-test payments and consumption, complete deployed Cloud Run/Firestore/IAM integration, actual RTDN/Scheduler/refund delivery, external web deletion on an authorized domain, owner UMP message approval/live creatives, public hosting, a physical phone, Android API 26 behavior, 16 KiB runtime, production load/latency or retention/revenue.
+Not validated here: completed Google authentication/sign-out/deletion with a real user, owner Play license-test payments and consumption, complete deployed Cloud Run/Firestore/IAM integration, actual RTDN/Scheduler/refund delivery, external web deletion on an authorized domain, owner UMP message approval/live creatives, final-site publication, a physical phone, Android API 26 behavior, 16 KiB runtime, production load/latency or retention/revenue. Preview availability alone is established by the later read-only probes above.
 
 The Firestore emulator establishes real local transaction/rule behavior, not deployed IAM, geographic resilience or operational backups. Provider doubles model receipt states, not actual Google receipts. A screenshot or local configuration gate cannot certify store approval, data-protection compliance or a commercial hit. Follow the [deployment acceptance gate](../server/DEPLOYMENT.md#6-internal-track-acceptance-gate-before-real-sales) and publish fresh actual-service evidence when the owner accounts are ready.
 

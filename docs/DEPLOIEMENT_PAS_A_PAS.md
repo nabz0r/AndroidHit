@@ -6,7 +6,7 @@ On utilise ton projet existant **`luma-drift-production`** : Firebase Hosting po
 
 **Avancement au 27 octobre 2026 :** le propriétaire a confirmé Blaze, les domaines Firebase Auth, les comptes techniques/droits, la création de Firestore et le déploiement des règles/index. Le budget de 10 € signalé n'est pas un plafond de dépenses vérifié. La configuration Firebase Web est intégrée : application `1:369472826910:web:47e79b67e7a3abd0c3080f`. Cloud Run est déployé ; le correctif du chemin de santé `/health` est testé et redéployé. Nos sondes ont confirmé santé `200`, portefeuille sans connexion `401` et autorisation du futur site `204`. [Incident et procédure](validation/cloud-run-health-route.md).
 
-Les coordonnées publiques **nabilux** / **nabz0r+gaming@gmail.com** et l'adresse réelle du serveur sont désormais intégrées aux pages FR/EN. Le bouton Google est configuré, avec un bandeau de qualification qui ne désactive pas les opérations. [Vérifications locales](validation/public-contact-preview.md). La validation d'identité Play est en attente. Prochaine étape : vérifier le site Hosting, puis publier une prévisualisation et autoriser son domaine exact. L'hébergement, la connexion/suppression réelles, les notifications/maintenance et les achats Play restent à qualifier. Les instructions ci-dessous conservent le parcours complet pour référence.
+Les coordonnées publiques **nabilux** / **nabz0r+gaming@gmail.com** et l'adresse réelle du serveur sont intégrées aux pages FR/EN. Le bouton Google est configuré, avec un bandeau de qualification qui ne désactive pas les opérations. [Vérifications locales](validation/public-contact-preview.md). Le site Hosting existe et sa prévisualisation `qualification` est déployée : [adresse et vérifications HTTP](validation/hosting-preview.md). Le domaine de prévisualisation est déjà autorisé dans Firebase Auth, mais son origine reçoit encore `403 ORIGIN_NOT_ALLOWED` du serveur. Prochaine étape : ajouter cette origine au CORS. Le site final retourne encore 404 ; la connexion/suppression réelles, les notifications/maintenance et les achats Play restent à qualifier. La validation d'identité Play est en attente. Les instructions ci-dessous conservent le parcours complet pour référence.
 
 Fais une étape à la fois. Si une commande échoue, garde son message d'erreur et arrête le bloc avant de poursuivre. Ne relance pas aveuglément les commandes `create` : une ressource déjà créée se vérifie et se réutilise. Les commandes Cloud Run ci-dessous créent des ressources facturables. Les alertes de budget préviennent d'une dépense ; elles ne la plafonnent pas.
 
@@ -169,10 +169,21 @@ La commande affiche une adresse de prévisualisation temporaire. **Cette adresse
 
 Pour y tester Google et la suppression :
 
-1. Dans les domaines autorisés Firebase Auth, ajoute **l'hôte exact**, sans `https://` ni chemin : par exemple `HOTE-PREVIEW.web.app`, à remplacer par le nom réellement affiché.
+1. Vérifie les domaines autorisés Firebase Auth : la CLI tente normalement d'ajouter le domaine de prévisualisation. Dans ce projet, `luma-drift-production--qualification-uht107xg.web.app` est déjà confirmé par la configuration publique Firebase. Pour un autre domaine absent, ajoute **l'hôte exact**, sans `https://` ni chemin.
 2. Cloud Run → **luma-wallet → Modifier et déployer une nouvelle révision → Variables et secrets** : modifie `ALLOWED_WEB_ORIGINS` pour conserver l'origine finale et ajouter l'origine de prévisualisation. Exemple de format : `https://luma-drift-production.web.app,https://HOTE-PREVIEW.web.app`, avec le vrai hôte de prévisualisation, **sans espace, sans chemin et sans barre finale**. Clique **Déployer**. Utiliser l'interface évite l'ambiguïté des virgules dans l'option `gcloud`.
 3. Garde `firebase.authDomain` dans le site sur `luma-drift-production.firebaseapp.com`, tel qu'indiqué par la configuration Firebase Web. Ne le remplace pas par l'adresse de prévisualisation.
 4. Après qualification, retire l'origine et le domaine temporaires en conservant les domaines et l'origine de production. Ne mets pas l'adresse de prévisualisation dans Play ou AdMob.
+
+Pour la prévisualisation actuelle, l'étape CORS peut aussi s'effectuer depuis Cloud Shell en mettant à jour cette seule variable :
+
+```sh
+gcloud run services update luma-wallet \
+  --project=luma-drift-production \
+  --region=europe-west1 \
+  --update-env-vars='^|^ALLOWED_WEB_ORIGINS=https://luma-drift-production.web.app,https://luma-drift-production--qualification-uht107xg.web.app'
+```
+
+Le délimiteur alternatif conserve la virgule dans la valeur. Cette commande est préparée, pas encore confirmée exécutée. Recontrôle la réponse `OPTIONS` avant tout test de suppression. [Preuve et limites actuelles](validation/hosting-preview.md).
 
 La [configuration Hosting racine](../firebase.json) sert déjà `public/` et exclut les tests ; elle conserve les pages séparées et les en-têtes documentés. Il n'est pas nécessaire de lancer `firebase init` ni d'écraser les fichiers HTML.
 
@@ -236,7 +247,7 @@ Les identifiants AdMob sont déjà intégrés ; il n'est pas nécessaire de les 
 ## Ce qu'il faut me renvoyer, dans l'ordre
 
 1. **Déjà reçus et intégrés** : confirmation Blaze, bloc public Firebase Web, domaines finaux autorisés, coordonnées publiques nabilux / nabz0r+gaming@gmail.com et adresse réelle Cloud Run. Les trois sondes anonymes sont consignées ; inutile de les renvoyer.
-2. **Pour Hosting** : le tableau `hosting:sites:list`, puis l'adresse de prévisualisation réellement affichée. Nous autoriserons ensuite ce domaine et son origine avant les essais réels.
+2. **Hosting déjà reçu** : site présent et adresse de prévisualisation affichée, dont le domaine Auth est confirmé. Il reste la confirmation de la mise à jour CORS, puis les résultats des essais réels ; inutile de renvoyer le tableau.
 3. **Après Play** : les empreintes du certificat de signature Play, l'état des trois produits et le lien du test interne.
 4. **Après AdMob** : l'état de validation `app-ads.txt`, l'état de préparation et la confirmation du message de consentement publié.
 
