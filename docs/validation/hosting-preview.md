@@ -30,6 +30,10 @@ The alternate dictionary delimiter keeps the comma inside this single environmen
 
 Independent follow-up probes on 27 October confirmed both final and preview `OPTIONS /v1/account` return **204**, each with its exact `Access-Control-Allow-Origin`, allowed methods `GET, POST, DELETE, OPTIONS` and headers `Authorization, Content-Type`. `/health` still returns **200** with `{"status":"ok"}`. [Follow-up JSON](hosting-preview-cors.json). The earlier 403 in the initial report is preserved as the pre-update observation.
 
-The next qualification step is real Google login on the preview using a distinct Google test account. Stop when the page displays **« Identité vérifiée »**: do not tick the deletion checkbox or request deletion during this first check. A plus-tag email alias is not a distinct Google account. Only after that result should the separate deletion check proceed. The banner does not neutralize deletion against the real service.
+## Owner-reported Google login — succeeded
 
-No real OAuth login, deletion, purchase, live ad, Scheduler/RTDN delivery or audit purge is established. The existing Android APK/AAB remain unchanged.
+On 27 October the owner reported the real preview displayed **« Identité vérifiée »** after Google sign-in, without ticking the deletion confirmation. [Scoped owner report](hosting-google-login.json). This is owner-reported UI evidence: the agent did not inspect the account, browser session, ID token, Firebase user record or authenticated server logs. It establishes neither an Android login nor authenticated wallet access, deletion or purchases. No personal account identifier or token was requested or recorded.
+
+The next qualification step is the separate, explicit deletion test on the distinct Google test account. First select **« Annuler et me déconnecter »** and sign back in with the same test account, so the server's five-minute recent-authentication requirement is met. Then read and select the confirmation and press **« Supprimer définitivement mon compte »**. This deletes the app account/wallet through the real server; it does not delete the Google Account. Record the actual final message before declaring success. A plus-tag email alias is not a distinct Google account, and the banner does not neutralize deletion against the real service.
+
+The owner-reported Web login is the only new authenticated result. No server deletion, purchase, live ad, Scheduler/RTDN delivery or audit purge is established. The existing Android APK/AAB remain unchanged.
