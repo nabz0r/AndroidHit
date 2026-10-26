@@ -1,6 +1,6 @@
 {
   "recordedOn": "2026-10-27",
-  "source": "Owner message after the guided AdMob privacy-policy URL entry",
+  "source": "Owner messages after the guided AdMob privacy URL entry and consent draft settings",
   "privacyPolicyUrl": "https://luma-drift-production.web.app/privacy/index.html",
   "ownerReportedPrivacyUrlSaved": true,
   "adMobAppId": "ca-app-pub-6914185503996225~9670436379",
@@ -8,17 +8,34 @@
   "proposedDraft": {
     "name": "Luma Drift — Consentement UE",
     "defaultLanguage": "en",
-    "additionalLanguages": ["fr", "de", "es", "pt", "it"],
+    "additionalLanguages": [
+      "fr",
+      "de",
+      "es",
+      "pt",
+      "it"
+    ],
     "refuseChoiceEnabled": true,
     "refuseChoiceScope": "All countries targeted by this European message",
     "closeAsRefusalEnabled": true,
     "targeting": "AdMob GDPR countries option: EEA, United Kingdom, Switzerland"
   },
-  "proposedDraftSettingsOwnerConfirmed": false,
-  "draftSavedOwnerConfirmed": false,
+  "proposedDraftSettingsOwnerConfirmed": true,
+  "draftSavedOwnerConfirmed": true,
   "messagePublishedEstablished": false,
   "installedProductionUmpMessageObserved": false,
   "adMobAppAdsVerificationEstablished": false,
   "adMobReadinessApprovalEstablished": false,
-  "liveAdsOrPurchasesActivated": false
+  "liveAdsOrPurchasesActivated": false,
+  "previewReviewOwnerConfirmed": false,
+  "ownerReportStages": [
+    {
+      "stage": "privacyUrlSaved",
+      "recordedOn": "2026-10-27"
+    },
+    {
+      "stage": "draftSavedWithRequestedSettings",
+      "recordedOn": "2026-10-27"
+    }
+  ]
 }

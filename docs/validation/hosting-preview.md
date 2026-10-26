@@ -59,9 +59,15 @@ These observed final URLs can now be used during console setup; acceptance, app-
 
 The owner reports the Luma Drift privacy-policy URL **<https://luma-drift-production.web.app/privacy/index.html>** is now saved in AdMob. This is owner-reported console configuration, not independent console observation or evidence that a message is published. [Preparation record](admob-consent-preparation.json), [official privacy URL instructions](https://support.google.com/admob/answer/10113106).
 
-## Next owner phase — prepare the European message draft
+## Owner-reported European message draft — saved
 
-Use the existing Luma Drift message and save a draft with the proposed name **Luma Drift — Consentement UE**. Select English as fallback, with French, German, Spanish, Portuguese and Italian as additional languages; these are the six language codes present in `app/src/main/java/com/androidhit/lumadrift/data/Strings.java`. Enable the first-page refusal choice across the message's targeted countries and the optional close-as-refusal control. Target the European-regulations region offered by AdMob: EEA, United Kingdom and Switzerland. Save the draft; preview/review and publication follow as a separate step. These settings are instructions, not an observed or owner-confirmed configuration. [Official message settings](https://support.google.com/admob/answer/10113207?hl=en).
+The owner reports saving **Luma Drift — Consentement UE** as a draft with the requested settings: English fallback plus French, German, Spanish, Portuguese and Italian, refusal and close-as-refusal enabled, and the AdMob European-regulations region (EEA, United Kingdom, Switzerland). The six language codes match `app/src/main/java/com/androidhit/lumadrift/data/Strings.java`. These are owner-confirmed settings, not an independently inspected console or rendered message. [Updated preparation record](admob-consent-preparation.json), [official message settings](https://support.google.com/admob/answer/10113207?hl=en).
+
+## Next owner phase — review the preview and publish the message
+
+Open the draft and inspect each of the six language versions using the language selector. Check readable consent/refusal/options controls, the close control, Luma Drift as the app, and the correct stable privacy link. If the preview matches, select **Publish** and confirm if requested, then check the message's **Status** column reads **Published**. Neither this preview review nor publication has yet been reported. Google instructs reviewing every selected language before publishing. [Review guidance](https://support.google.com/admob/answer/10113207?hl=en).
+
+Google documents both editor publication and the publish control in the message list, with a confirmation dialog. Eligible users may take up to ten minutes to see a published message. That propagation statement is not a claim that this installed candidate has displayed the production message. Publishing the consent message does not establish app-ads verification, readiness approval, live advertising or Play purchases. [Publication/status guidance](https://support.google.com/admob/answer/13651178?hl=en).
 
 The regional setting describes this European message only; no other applicable regional message setup or worldwide consent acceptance has been established. No production UMP message has yet been reported published or observed in the installed app.
 
