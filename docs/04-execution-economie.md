@@ -1,3 +1,5 @@
+> Archive de recherche antérieure au développement. La version livrée est décrite dans [le README actuel](../README.md) et [les notes de version](RELEASE.md).
+
 # Exécution, budget et argent
 
 Les montants et seuils de décision ci-dessous sont **des hypothèses internes**, sauf les frais et obligations Store explicitement sourcés. Aucun revenu, coût d’acquisition ou taux de rétention du futur jeu n’est encore mesuré.

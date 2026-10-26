@@ -1,0 +1,19 @@
+Event UI smoke test; serial=emulator-5580
+Device local daily period=2026-10-26; weekly period=2026-10-26
+Precondition: English Home screen confirmed; no install or save reset performed
+Daily stage 1: PASS; seed=3522558831355441801, pieces=16, stars=3, reward=0, wallet=565->565
+Daily stage 2: PASS; seed=3522557731843813590, pieces=17, stars=3, reward=0, wallet=565->565
+Daily stage 3: PASS; seed=3522556632332185379, pieces=18, stars=3, reward=0, wallet=565->565
+Daily completion bonus: PASS; exact +100, repeat claim +0, wallet=565->665
+Screenshot: docs/screenshots/events-daily-complete.png
+Weekly stage 1: PASS; seed=3947947744572045337, pieces=18, stars=3, reward=135, wallet=665->800
+Weekly stage 2: PASS; seed=3947946645060417126, pieces=15, stars=3, reward=135, wallet=800->935
+Weekly stage 3: PASS; seed=3947945545548788915, pieces=16, stars=3, reward=135, wallet=935->1070
+Weekly stage 4: PASS; seed=3947944446037160704, pieces=17, stars=3, reward=135, wallet=1070->1205
+Weekly stage 5: PASS; seed=3947952142618558181, pieces=18, stars=3, reward=135, wallet=1205->1340
+Weekly stage 6: PASS; seed=3947951043106929970, pieces=15, stars=3, reward=135, wallet=1340->1475
+Weekly stage 7: PASS; seed=3947949943595301759, pieces=16, stars=3, reward=135, wallet=1475->1610
+Weekly completion bonus: PASS; exact +250, repeat claim +0, wallet=1610->1860
+Screenshot: docs/screenshots/events-weekly-complete.png
+Crash buffer: clean (read without clearing existing logs)
+PASS: 10 event stages completed via UI; daily +100 and weekly +250 bonuses each credited once, repeated claims credited zero

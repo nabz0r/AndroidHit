@@ -1,3 +1,5 @@
+> Archive de recherche antérieure au développement. La version livrée est décrite dans [le README actuel](../README.md) et [les notes de version](RELEASE.md).
+
 # Étape 2 — Que faire sans acheter de licence de franchise ?
 
 **Aucun titre commercial cité n’est déclaré libre à recopier.** L’objectif est de créer une réalisation indépendante d’une famille de jeux, sans utiliser la franchise d’un autre éditeur.

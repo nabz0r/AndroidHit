@@ -1,0 +1,35 @@
+plugins { id 'com.android.application' }
+def signingFile = rootProject.file('signing.properties')
+def releaseKeys = new Properties()
+if (signingFile.exists()) signingFile.withInputStream { releaseKeys.load(it) }
+android {
+    namespace 'com.androidhit.lumadrift'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.androidhit.lumadrift'
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName '1.0.0'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    signingConfigs {
+        if (signingFile.exists()) {
+            release {
+                storeFile rootProject.file(releaseKeys.storeFile)
+                storePassword releaseKeys.storePassword
+                keyAlias releaseKeys.keyAlias
+                keyPassword releaseKeys.keyPassword
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (signingFile.exists()) signingConfig signingConfigs.release
+        }
+    }
+}

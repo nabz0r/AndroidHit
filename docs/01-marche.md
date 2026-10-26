@@ -1,3 +1,5 @@
+> Archive de recherche antérieure au développement. La version livrée est décrite dans [le README actuel](../README.md) et [les notes de version](RELEASE.md).
+
 # Étape 1 — Tendances Android internationales
 
 Observation : **26 octobre 2026**, fuseau Europe/Luxembourg. Le mois complet étudié est septembre 2026 ; les rangs pays sont des relevés du 26 octobre. Il ne s’agit pas de la même fenêtre temporelle.

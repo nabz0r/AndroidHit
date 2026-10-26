@@ -1,3 +1,5 @@
+> Archive de recherche antérieure au développement. La version livrée est décrite dans [le README actuel](../README.md) et [les notes de version](RELEASE.md).
+
 # Étape 3 — Le jeu recommandé
 
 **Choix : un puzzle 2D d’extraction, avec une petite règle de portes basculantes.** Nom de travail : **Signal Sortie**, sans vérification de disponibilité. Ce concept est proposé pour un test ; ni sa nouveauté mondiale ni son potentiel commercial ne sont établis.

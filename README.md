@@ -1,29 +1,65 @@
-# AndroidHit
+# Luma Drift
 
-**Étude du 26 octobre 2026 : quel jeu Android produire seul, avec l’IA, vite et avec peu de moyens ?**
+A complete offline Android puzzle game about small lights finding their way out. Built for [AndroidHit](https://github.com/nabz0r/AndroidHit).
 
-**Recommandation : tester un puzzle 2D d’extraction avec des portes basculantes**, sous le nom de travail **Signal Sortie**. Le nom reste à vérifier. Le joueur fait sortir des jetons fléchés ; certains départs ouvrent ou ferment une porte, ce qui rend l’ordre des coups décisif. Une partie vise 30 à 90 secondes, en portrait, hors ligne.
+**[Download the signed APK](releases/luma-drift-1.0.0.apk)** · [Install and release notes](docs/RELEASE.md) · [Gameplay](docs/GAMEPLAY.md) · [Validation](docs/VALIDATION.md)
 
-L’objectif commercial est de trouver une boucle qui retient les joueurs et se montre facilement en vidéo. **Le succès et les revenus restent inconnus.** Ce dépôt contient une étude et un plan de validation ; aucun jeu, APK ou résultat commercial n’a encore été produit.
+<p>
+<img src="docs/screenshots/home-fr.png" width="220" alt="Luma Drift home screen in French">
+<img src="docs/screenshots/gates-en.png" width="220" alt="Directional puzzle with gate switches">
+<img src="docs/screenshots/companions-en.png" width="220" alt="Six original unlockable companions">
+</p>
 
-## Les réponses
+## Play
 
-1. **Quels jeux marchent ?** Les relevés internationaux font ressortir les puzzles : Block Blast!, Meowdoku, Rotate Rings, Bus Fever Party!, Magic Sort! et les jeux de flèches. Le [relevé Android dans huit pays](docs/01-marche.md) complète un classement mondial Google Play. Les pays ne sont pas additionnés pour fabriquer un faux classement mondial. [Classements AppBrain](https://www.appbrain.com/stats/google-play-rankings/top_free/game)
-2. **Lesquels ne nécessitent pas de licence ?** Aucun titre commercial n’est libre à recopier. On peut envisager une réalisation indépendante d’une famille générique — blocs, tri, extraction, règles traditionnelles — sans acheter une franchise. Il faut créer son identité, son code et ses contenus, et vérifier les droits applicables. [Analyse des droits](docs/02-droits-licences.md)
-3. **Que développer ?** Un petit puzzle d’extraction avec une règle propre, plutôt qu’un jeu demandant beaucoup d’illustrations, de 3D ou d’exploitation en ligne. [Concept et choix](docs/03-concept.md)
-4. **À quel coût et pour gagner combien ?** Viser un prototype en une semaine, une version de test en trois à quatre semaines, puis un lancement envisageable en cinq à huit semaines. Budget proposé : **25 USD de compte Play si nécessaire, plus 0 à 300 €**, hors temps de travail, matériel, abonnement IA et fiscalité. Ce sont des estimations de projet, pas des devis. À titre d’hypothèse seulement, 5 000 joueurs actifs quotidiens, deux impressions publicitaires diffusées par jour et un eCPM de 4 € donneraient 1 200 €/mois avant charges. [Budget, calculs et critères d’arrêt](docs/04-execution-economie.md)
+Tap a light to send it along its arrow. Its path and exit gate must be clear. Some lights toggle a gate after leaving: choose the order, empty the board, and collect stars. Undo and restart are free. Blocked taps do not cost lives or currency. There is no timer.
 
-## Dossier
+- **240 deterministic, solvable campaign boards**, across eight chapters, from 5×5 to 6×6.
+- **Six original animated vector companions** and six color themes, purchased with earned coins.
+- **Three items:** Spark reveals a safe move, Vision highlights currently free pieces, Flow plays three safe moves.
+- **Local daily and weekly events:** three daily puzzles, seven weekly stages, completion bonuses. These follow the device date and work offline.
+- **Six languages:** French, English, German, Spanish, Portuguese and Italian; automatic system selection with English fallback.
+- **Original synthesized audio:** eleven effects, a soft looping soundtrack, separate music and sound switches, optional haptics and reduced motion.
+- Local progression and interrupted-game restoration; virtual accessibility controls, directional descriptions, keyboard navigation and safe system-bar insets.
 
-| Document | Contenu |
+The shop uses **earned in-game currency only**. This version contains no advertising, analytics, real-money payments, account system, online leaderboard or backend. Events are local challenges, not remotely operated live events. All levels can be completed without spending items.
+
+## Build
+
+Requires JDK 17, Android SDK platform 36, build-tools 36 and the Gradle wrapper. The first build may download the Gradle distribution and Android build dependencies.
+
+```sh
+export JAVA_HOME=/path/to/jdk-17
+export ANDROID_HOME=/path/to/android-sdk
+./gradlew assembleDebug
+```
+
+For release signing, create a private keystore and a local `signing.properties` file as described in [DEVELOPMENT.md](docs/DEVELOPMENT.md). Private signing files are excluded from Git. Never commit a keystore or its password.
+
+```sh
+scripts/test-engine.sh
+scripts/test-data.sh
+./gradlew assembleRelease bundleRelease lintRelease
+```
+
+The lightweight JVM tests do not require an emulator. The [interaction regression](scripts/smoke-emulator.py) requires an explicitly selected Android emulator; it refuses physical-device serials. See [validation evidence](docs/VALIDATION.md) for what was actually run and its limits.
+
+## Documentation
+
+| Document | Purpose |
 |---|---|
-| [Marché](docs/01-marche.md) | Google Play mondial, huit pays, accélérations et limites des sources |
-| [Droits et licences](docs/02-droits-licences.md) | Matrice par famille, franchises, moteur, licence du dépôt |
-| [Concept recommandé](docs/03-concept.md) | Comparaison des options, règles concrètes, périmètre du premier jeu |
-| [Exécution et économie](docs/04-execution-economie.md) | Calendrier, budget plafonné, monétisation, distribution, mesures et abandon |
-| [Sources](docs/SOURCES.md) | Registre des sources, périodes et rôle de chaque source |
-| [Relevé structuré](data/classements-2026-10-26.json) | Rangs pays, valeurs absentes explicites, liens et dates |
+| [GAMEPLAY.md](docs/GAMEPLAY.md) | Rules, progression, levels, items, stars and economy |
+| [ART_AUDIO.md](docs/ART_AUDIO.md) | Original vector art, palettes, characters and sound design |
+| [DEVELOPMENT.md](docs/DEVELOPMENT.md) | Architecture, building, signing and test commands |
+| [RELEASE.md](docs/RELEASE.md) | APK/AAB, installation, signing and checksums |
+| [VALIDATION.md](docs/VALIDATION.md) | Measured checks, emulator coverage and remaining limits |
+| [PRIVACY.md](docs/PRIVACY.md) | Actual data behavior of this release |
+| [Research archive](docs/RESEARCH.md) | Initial French market research and project recommendation |
 
-Les faits observés, les estimations des fournisseurs et nos hypothèses de conception sont distingués dans chaque document. « Viral » est ici une question de recherche : ces données ne prouvent pas une propagation organique.
+The initial market research is retained as historical planning material. Its forecasts and proposed Godot stack do not describe this implementation: Luma Drift uses native Java and Android Canvas, with no third-party runtime libraries.
 
-Le fichier [LICENSE](LICENSE) préexistant contient l’AGPL version 3. Il est conservé. Les droits des marques citées restent à leurs titulaires ; la licence du dépôt ne les accorde pas.
+## License
+
+[GNU Affero General Public License, version 3](LICENSE). Original source code, vector graphics and synthesized sounds are provided under this license. Android platform APIs and the Gradle build toolchain retain their own licenses. The wrapper JAR is part of Gradle, under [Apache 2.0](https://github.com/gradle/gradle/blob/master/LICENSE). Third-party game names in the research are references and are not licensed by this repository.
+
+There is no claim of guaranteed commercial success, global trademark clearance, Google Play approval, or testing on every phone. The APK is a signed, playable first release; the validation document gives the precise evidence.
