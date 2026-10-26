@@ -15,6 +15,8 @@ Purchased gold belongs to a server account and buys permanent companions/themes;
 
 The [FR/EN public pages](docs/PUBLIC_PAGES.md) prepare the developer site, privacy policy and external account-deletion route. They have been rendered and checked locally; hosting, publisher/support details, Web identity configuration and live deletion qualification remain to complete.
 
+**Owner deployment walkthrough (French): [server, public pages, Play purchases and AdMob](docs/DEPLOIEMENT_PAS_A_PAS.md).** The root Hosting configuration is prepared; no cloud resources or public site are deployed by this repository change.
+
 <table>
 <tr><td align="center"><img src="docs/screenshots/production/account-configured.png" width="220" alt="Actual candidate account screen with owner Google configuration and guest state; no completed login"><br><strong>Your account, your choice</strong><br>Guest play and optional Google identity.</td><td align="center"><img src="docs/screenshots/production/wallet-preparation.png" width="220" alt="Actual production store with separate purchased and earned gold and checkout blocked until the server is deployed"><br><strong>Clear currency boundaries</strong><br>Account purchases stay separate from local coins.</td><td align="center"><img src="docs/screenshots/production/victory.png" width="220" alt="Actual production Journey 1 win after the certified solution, without a fixture, ad or purchase"><br><strong>The full game stays playable</strong><br>Actual production-candidate victory.</td></tr>
 </table>

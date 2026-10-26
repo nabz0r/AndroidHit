@@ -1,15 +1,17 @@
 # Production deployment runbook
 
-**Prepared instructions only. No commands below were run against the owner's cloud project.** They create billable resources and change IAM. Run them after the owner has linked Cloud Billing/Blaze, finished Play merchant onboarding, and approved the deployment. Do not download, upload, paste or commit a service-account JSON private key. Cloud Run uses an attached managed identity.
+**Prepared instructions only. No commands below were run against the owner's cloud project.** They create billable resources and change IAM. Run them after the owner has linked Cloud Billing/Blaze and chosen to proceed with deployment. Play merchant onboarding is required before purchase acceptance; it need not delay server provisioning. Do not download, upload, paste or commit a service-account JSON private key. Cloud Run uses an attached managed identity.
 
 ## Prerequisites and identifiers
 
 - Owner project: `luma-drift-production` (Firebase and underlying Google Cloud project).
 - Production Android package: `com.androidhit.lumadrift`, never the `.sandbox` Lab package.
 - Firebase Authentication Google provider enabled, correct OAuth Web client ID and Play signing certificate registered.
-- Play Console internal release uploaded; exactly `luma_gold_500`, `luma_gold_1400`, `luma_gold_3600` active as one-time **Buy** products with multi-quantity disabled. Real money prices/countries configured in Play.
+- Before purchase acceptance: Play Console internal release published; exactly `luma_gold_500`, `luma_gold_1400`, `luma_gold_3600` active as one-time **Buy** products with multi-quantity disabled. Real money prices/countries configured in Play. Server provisioning can precede those product steps.
 - Owner developer website, support address, privacy, deletion and terms pages finalized. The external deletion site's exact HTTPS origin goes in `ALLOWED_WEB_ORIGINS`, and Firebase's Authentication authorized-domain list must contain its host. A full site URL with a path is not a CORS origin.
-- Local Node 24, gcloud CLI and Firebase CLI. Commands below use a dedicated new project; do not replace another application's Firestore rules with this deny-all ruleset.
+- Node 24, gcloud CLI and an authenticated Firebase CLI (Cloud Shell is suitable). In Cloud Shell, run `npx --yes firebase-tools@15.34.1 login --no-localhost`, then `projects:list` before the Firebase deployments. These instructions use the owner's dedicated existing project; do not replace another application's Firestore rules with this deny-all ruleset.
+
+For the French console walkthrough, including the public site and owner handoffs, see [deployment step by step](../docs/DEPLOIEMENT_PAS_A_PAS.md).
 
 Use budget alerts, an initial maximum instance count, provider quotas, and monitoring. Budget alerts are not hard spending caps. Firestore, Cloud Run, Cloud Build, Artifact Registry, Pub/Sub, Scheduler and logging may generate costs even when the app is small.
 
@@ -27,6 +29,7 @@ task_scheduler="luma-scheduler@$task_project.iam.gserviceaccount.com"
 
 gcloud services enable run.googleapis.com cloudbuild.googleapis.com \
   artifactregistry.googleapis.com firestore.googleapis.com \
+  firebaserules.googleapis.com firebasehosting.googleapis.com \
   identitytoolkit.googleapis.com androidpublisher.googleapis.com \
   pubsub.googleapis.com cloudscheduler.googleapis.com iam.googleapis.com \
   iamcredentials.googleapis.com --project "$task_project"
@@ -47,6 +50,18 @@ gcloud projects add-iam-policy-binding "$task_project" \
 ```
 
 The runtime needs Firestore data access and only Firebase user get/delete permissions, not Editor, Owner, or Firebase project administration. The custom permissions correspond to [Identity Platform's user APIs](https://cloud.google.com/identity-platform/docs/access-control). Pub/Sub and Scheduler identities have no wallet, Firebase-user or Play permissions.
+
+For source deployment, grant the build identity its own builder role. Current Cloud Run source deployment defaults to the Compute Engine default service account. Verify it exists, then grant:
+
+```sh
+gcloud iam service-accounts describe "$task_number-compute@developer.gserviceaccount.com" \
+  --project "$task_project"
+gcloud projects add-iam-policy-binding "$task_project" \
+  --member="serviceAccount:$task_number-compute@developer.gserviceaccount.com" \
+  --role=roles/run.builder
+```
+
+If the project uses a different Cloud Build default identity, select and authorize that identity explicitly rather than granting unrelated accounts. The deploying user needs `roles/run.sourceDeveloper`, `roles/serviceusage.serviceUsageConsumer`, and `roles/iam.serviceAccountUser` on the runtime identity, plus sufficient IAM administration for the setup and public-service policy changes in this runbook. The project owner normally has those setup permissions; a delegated deployer may not. Changing the invoker policy requires `run.services.setIamPolicy`. Allow time for role propagation. [Official source-deployment roles](https://cloud.google.com/run/docs/deploying-source-code).
 
 In Play Console **Users and permissions**, invite the runtime service-account **email** and scope access to Luma Drift. Grant the documented billing access needed to view financial/order data and manage orders/subscriptions; do not grant account administrator. This is separate from Google Cloud IAM. Enable the Android Publisher API in the same project. [Official API access setup](https://developers.google.com/android-publisher/getting_started).
 
@@ -72,23 +87,28 @@ The first revision can use a deliberately non-working internal OIDC audience unt
 ```sh
 gcloud run deploy luma-wallet --source . --project "$task_project" --region "$task_region" \
   --service-account="$task_runtime" --allow-unauthenticated \
-  --min-instances=0 --max-instances=3 --concurrency=32 \
+  --min=0 --max=3 --concurrency=32 \
   --memory=512Mi --cpu=1 --timeout=300 \
   --set-env-vars="GOOGLE_CLOUD_PROJECT=$task_project,PLAY_PACKAGE_NAME=com.androidhit.lumadrift,SERVICE_URL=https://bootstrap.invalid,PUBSUB_PUSH_SERVICE_ACCOUNT=$task_push,SCHEDULER_SERVICE_ACCOUNT=$task_scheduler,RTDN_SUBSCRIPTION=projects/$task_project/subscriptions/luma-rtdn,AUDIT_RETENTION_DAYS=365,ALLOW_TEST_PURCHASES=true"
 
 task_service_url=$(gcloud run services describe luma-wallet --project "$task_project" \
   --region "$task_region" --format='value(status.url)')
 gcloud run services update luma-wallet --project "$task_project" --region "$task_region" \
-  --update-env-vars="SERVICE_URL=$task_service_url,ALLOWED_WEB_ORIGINS=https://nabz0r.github.io"
+  --update-env-vars="SERVICE_URL=$task_service_url,ALLOWED_WEB_ORIGINS=https://luma-drift-production.web.app"
 ```
 
-Replace the example public origin with the actual owner site. Source deployment uses the supplied Dockerfile (Node 24, non-root process). The deployer/build identities need the [source deployment permissions](https://cloud.google.com/run/docs/deploying-source-code); grant these to deployment identities, not to the runtime. If organization policy forbids unauthenticated invocation, use an approved gateway that forwards Firebase tokens; do not weaken the verifier to work around that policy.
+Use the actual owner site's origin if it differs from the planned default Firebase Hosting site. `--min` and `--max` configure service-level instance limits rather than per-revision limits; they are capacity settings, not billing caps. Source deployment uses the supplied Dockerfile (Node 24, non-root process). The deployer/build identities need the [source deployment permissions](https://cloud.google.com/run/docs/deploying-source-code); grant these to deployment identities, not to the runtime. If organization policy forbids unauthenticated invocation, use an approved gateway that forwards Firebase tokens; do not weaken the verifier to work around that policy.
 
-Register this URL in the Android production configuration only after all steps and internal-track tests pass. No endpoint was invented or embedded as if it already existed in this deliverable.
+Once the deployment and authentication are ready, register this real URL in a new internal-test Android candidate with sample ads still forced. That candidate is needed to run the purchase acceptance tests below. Enable public sales only after those tests pass. No endpoint was invented or embedded as if it already existed in the delivered candidate.
 
 ## 4. Configure authenticated Pub/Sub RTDN
 
 ```sh
+gcloud beta services identity create --service=pubsub.googleapis.com --project "$task_project"
+gcloud projects add-iam-policy-binding "$task_project" \
+  --member="serviceAccount:service-$task_number@gcp-sa-pubsub.iam.gserviceaccount.com" \
+  --role=roles/pubsub.serviceAgent
+
 gcloud pubsub topics create luma-rtdn --project "$task_project"
 gcloud pubsub topics create luma-rtdn-dead-letter --project "$task_project"
 gcloud pubsub topics add-iam-policy-binding luma-rtdn --project "$task_project" \
@@ -116,6 +136,8 @@ gcloud pubsub subscriptions create luma-rtdn-dead-letter-review --project "$task
 
 Grant the deploying operator `iam.serviceAccounts.actAs` on the push identity if required; do not download its key. [Pub/Sub authentication configuration](https://cloud.google.com/pubsub/docs/authenticate-push-subscriptions).
 
+Creating the Pub/Sub service agent explicitly avoids assuming that enabling its API has already created it. The service-agent role belongs only to that Google-managed identity. [Service-agent creation](https://cloud.google.com/iam/docs/create-service-agents). The beta CLI component may require installation when prompted. Keep Cloud Scheduler's service-agent role intact as described below as well.
+
 In Play Console monetization settings, enter topic `projects/luma-drift-production/topics/luma-rtdn`, enable one-time product/void notifications and send a test notification. Check a successful delivery with the exact subscription field and OIDC audience. Monitor the dead-letter review subscription, with a documented redrive/reconciliation procedure. Pub/Sub retries do not replace the scheduled reconciliation job.
 
 ## 5. Schedule maintenance, retries, audit purge and alerts
@@ -139,6 +161,8 @@ Alert on repeated 5xx, scheduler failures, Pub/Sub oldest unacked age/dead lette
 
 Keep Google Play license testers separate from ordinary track membership and use official test payment instruments. Test approved, declined and delayed/cancelled purchases; bind each to the correct Google/Firebase UID. Confirm exactly one credit on duplicate callbacks, offline retries, app restart and two devices. Verify Google consumption/acknowledgement, restore after clearing app storage, permanent companion/skin ownership, logout isolation, and insufficient funds. Confirm a second Google account cannot claim the first account's token.
 
+`ALLOW_TEST_PURCHASES=true` permits official test purchases alongside ordinary purchases. It is not a global no-charge mode. Internal-track membership alone does not grant license-tester status; verify the test notice and test payment instrument in Google's checkout sheet. [Purchase testing](https://developer.android.com/google/play/billing/test).
+
 Exercise a real license-test refund/void and inspect the wallet debt/revocation once, including a spent purchase. Test authenticated RTDN, blocked forged Pub/Sub requests, the maintenance recovery path, direct Firestore client denials, and recent-login account deletion from Android and the external web page. Confirm required privacy/terms/contact pages and Play Data safety answers describe what is actually deployed.
 
-Only after recording those results should the Android billing gate receive the deployed endpoint and be enabled. The implementation's local tests prove its modeled behavior and emulator transactions; they do not prove that the owner's Play/IAM/merchant/project configuration is working.
+Only after recording those results should the candidate be promoted for public sales. Rebuild with a new version code for any changed endpoint or live-ad setting; keep previously published APK/AAB bytes immutable. The implementation's local tests prove its modeled behavior and emulator transactions; they do not prove that the owner's Play/IAM/merchant/project configuration is working.

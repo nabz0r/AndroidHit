@@ -48,13 +48,14 @@ A configured private support address appears on the policy, deletion page and fo
 
 ## Hosting and app-ads.txt
 
-Serve the contents of `public/` as the site root, excluding `tests/**`. The directory includes a `.nojekyll` marker and works as static content. For a Firebase Hosting configuration at the repository root, use this structure with a reviewed deployment target:
+Serve the contents of `public/` as the site root, excluding `tests/**`. The directory includes a `.nojekyll` marker and works as static content. The repository now includes a [root Firebase Hosting configuration](../firebase.json), targeting site `luma-drift-production`; it is separate from `server/firebase.json`, which configures Firestore. No hosting deployment has been executed. The [French step-by-step guide](DEPLOIEMENT_PAS_A_PAS.md) covers setup, preview qualification and publication without rerunning `firebase init` or overwriting the pages. Its structure is:
 
 ```json
 {
   "hosting": {
+    "site": "luma-drift-production",
     "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/tests/**"],
+    "ignore": ["firebase.json", "**/.*", "tests/**", "**/tests/**"],
     "headers": [
       { "source": "**", "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },

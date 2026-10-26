@@ -28,6 +28,7 @@ Preserved [stable 1.1](../releases/luma-drift-1.1.0.apk), [Lab 1.2](../releases/
 | [Production release](PRODUCTION_RELEASE.md) | Implemented server/client boundary, paid cosmetics and remaining activation |
 | [Android wallet](WALLET_ANDROID.md) | Real checkout, account binding, local/paid separation and recovery |
 | [Public pages](PUBLIC_PAGES.md) | FR/EN site, privacy/deletion flow, hosting gates and browser checks |
+| [Déploiement pas à pas — français](DEPLOIEMENT_PAS_A_PAS.md) | Owner console steps, Cloud Shell, Hosting, purchase tests and ad activation |
 | [Server](../server/README.md) | Firestore/Play verification, tests, managed IAM and deployment |
 | [Production onboarding](PRODUCTION_ONBOARDING.md) | Exact owner accounts, public IDs, setup order and remaining server work |
 | [Brand kit](store/README.md) | Original promotional artwork, editable vector assets and provenance |
