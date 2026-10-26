@@ -46,4 +46,14 @@ curl --fail-with-body --max-time 60 --write-out '\nHTTP %{http_code}\n' \
   https://luma-wallet-369472826910.europe-west1.run.app/health
 ```
 
-**Live `/health` HTTP 200 after this correction remains pending owner redeployment.** No successful fixed-route cloud response, live payment or hosted public page is claimed by this source change.
+## Verification after owner redeployment
+
+The owner reported successful `/health` JSON HTTP 200 after fetching and deploying the correction. Independent external HTTPS probes then confirmed:
+
+| Request | HTTP | Observed result |
+|---|---:|---|
+| `GET /health` | 200 | `{"status":"ok"}` |
+| `GET /v1/wallet` without credentials | 401 | `{"error":{"code":"UNAUTHENTICATED"}}` |
+| `OPTIONS /v1/account`, origin `https://luma-drift-production.web.app`, requested method DELETE and headers authorization/content-type | 204 | `Access-Control-Allow-Origin: https://luma-drift-production.web.app` |
+
+The public routing correction is therefore verified on the deployed service. No authenticated wallet, purchase, successful deletion or hosted public page is established by these probes.

@@ -4,7 +4,7 @@
 
 The signed production candidate was built, installed and exercised on an Android API 36 emulator. Server logic/HTTP/provider-boundary tests and actual Firestore-emulator transactions passed. The delivered configuration deliberately forces sample creatives and keeps checkout blocked without a deployed wallet origin. [Exact packages](RELEASE.md) · [Implementation](PRODUCTION_RELEASE.md) · [Installed final APK identity](validation/v1.4/final-binary.json).
 
-**Cloud deployment follow-up:** owner-reported Cloud Run revisions and independent anonymous HTTPS probes now establish application reachability and wallet authentication rejection. The original health path conflicted with a Cloud Run reserved URL; the `/health` correction passed **43 server tests under Node 24.22.1**, with the fixed cloud response still pending redeployment. [Incident evidence and scope](validation/cloud-run-health-route.md). These results do not establish real purchases or replace the original candidate measurements below.
+**Cloud deployment follow-up:** owner-reported Cloud Run revisions and independent anonymous HTTPS probes now establish application reachability and wallet authentication rejection. The original health path conflicted with a Cloud Run reserved URL; the `/health` correction passed **43 server tests under Node 24.22.1**, and a subsequent independent external probe confirmed the redeployed `/health` returns HTTP 200. Anonymous wallet rejection (401) and the configured site preflight (204) were also observed. [Incident evidence and scope](validation/cloud-run-health-route.md). These results do not establish real purchases or replace the original candidate measurements below.
 
 ## Executed checks
 

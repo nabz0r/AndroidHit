@@ -2,7 +2,7 @@
 
 The original measurements below cover the server source in the 1.4 release candidate. They did not establish a deployed backend, real Google sign-in, a real Play purchase, a configured merchant account, a container build, or production load capacity.
 
-**Later deployment follow-up:** the owner has deployed Cloud Run; external probes reached the application and rejected an anonymous wallet request. The original `/healthz` probe conflicted with a documented reserved URL. The corrected `/health` route passed the expanded **43-case suite under Node 24.22.1**; its fixed public response awaits owner redeployment. [Incident, observed results and exact scope](../docs/validation/cloud-run-health-route.md). The original 42-case and Firestore-emulator records below remain historical evidence rather than being rewritten as new results.
+**Later deployment follow-up:** the owner has deployed Cloud Run; external probes reached the application and rejected an anonymous wallet request. The original `/healthz` probe conflicted with a documented reserved URL. The corrected `/health` route passed the expanded **43-case suite under Node 24.22.1**; the redeployed public route now returns HTTP 200, with anonymous wallet rejection and the final website preflight also observed. [Incident, observed results and exact scope](../docs/validation/cloud-run-health-route.md). The original 42-case and Firestore-emulator records below remain historical evidence rather than being rewritten as new results.
 
 ## Measured results
 
