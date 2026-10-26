@@ -37,7 +37,9 @@ export function createHttpServer({ service, auth, internalAuth, store, allowedOr
       // Cloud Run terminates TLS behind a proxy: socket.remoteAddress is not a
       // reliable player IP. Bound in-flight work and rate-limit verified UIDs;
       // configure any IP policy at a trusted load-balancer edge instead.
-      if(req.url!=='/healthz'){
+      // Cloud Run reserves some paths ending in z. Use /health publicly;
+      // retain /healthz only for existing local probes.
+      if(req.url!=='/health'&&req.url!=='/healthz'){
         if(activeRequests>=maxConcurrentRequests)throw new AppError(429,'RATE_LIMITED');
         activeRequests++;counted=true;
       }
@@ -55,7 +57,7 @@ export function createHttpServer({ service, auth, internalAuth, store, allowedOr
       }
       const path=new URL(req.url,'http://localhost').pathname;
       if(req.url.includes('?'))throw new AppError(400,'QUERY_NOT_ALLOWED');
-      if(path==='/healthz'&&req.method==='GET'){send(res,200,{status:'ok'});return;}
+      if((path==='/health'||path==='/healthz')&&req.method==='GET'){send(res,200,{status:'ok'});return;}
       if(path==='/internal/rtdn'&&req.method==='POST'){
         await internalAuth.verify(bearer(req),'pubsub');
         const body=await readBody(req,65536);

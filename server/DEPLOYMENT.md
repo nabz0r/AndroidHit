@@ -1,6 +1,8 @@
 # Production deployment runbook
 
-**Prepared instructions only. No commands below were run against the owner's cloud project.** They create billable resources and change IAM. Run them after the owner has linked Cloud Billing/Blaze and chosen to proceed with deployment. Play merchant onboarding is required before purchase acceptance; it need not delay server provisioning. Do not download, upload, paste or commit a service-account JSON private key. Cloud Run uses an attached managed identity.
+**Fresh-setup reference.** These commands create billable resources and change IAM. Run them after the owner has linked Cloud Billing/Blaze and chosen to proceed with deployment. Play merchant onboarding is required before purchase acceptance; it need not delay server provisioning. Do not download, upload, paste or commit a service-account JSON private key. Cloud Run uses an attached managed identity.
+
+**Deployment follow-up:** the owner has since executed provisioning and the first Cloud Run deployment. External probes reached the application, but the original `/healthz` probe conflicted with a reserved Cloud Run URL. The source and instructions now use `/health`; [incident evidence, local tests and redeployment](../docs/validation/cloud-run-health-route.md) distinguish owner-reported setup, observed responses and remaining qualification. The commands below remain a fresh-setup reference; do not recreate already configured resources.
 
 ## Prerequisites and identifiers
 
@@ -100,6 +102,8 @@ gcloud run services update luma-wallet --project "$task_project" --region "$task
 Use the actual owner site's origin if it differs from the planned default Firebase Hosting site. `--min` and `--max` configure service-level instance limits rather than per-revision limits; they are capacity settings, not billing caps. Source deployment uses the supplied Dockerfile (Node 24, non-root process). The deployer/build identities need the [source deployment permissions](https://cloud.google.com/run/docs/deploying-source-code); grant these to deployment identities, not to the runtime. If organization policy forbids unauthenticated invocation, use an approved gateway that forwards Firebase tokens; do not weaken the verifier to work around that policy.
 
 Once the deployment and authentication are ready, register this real URL in a new internal-test Android candidate with sample ads still forced. That candidate is needed to run the purchase acceptance tests below. Enable public sales only after those tests pass. No endpoint was invented or embedded as if it already existed in the delivered candidate.
+
+Check the process using `GET /health`, for example `curl --fail-with-body "$task_service_url/health"`. Do not use `/healthz` for Cloud Run: Google reserves some URL paths ending in `z`. A healthy process response does not test database or Play access. [Reserved URL paths](https://docs.cloud.google.com/run/docs/known-issues#reserved-url-paths).
 
 ## 4. Configure authenticated Pub/Sub RTDN
 

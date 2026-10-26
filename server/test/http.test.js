@@ -21,6 +21,29 @@ async function start(t,options={}){
   };
   return {...f,base,request};
 }
+test('public health endpoints return uncached JSON without authentication or provider calls',async t=>{
+  const calls=[];
+  const unexpected=name=>async()=>{calls.push(name);throw new Error(`Health request called ${name}`);};
+  const service=Object.fromEntries(['getWallet','verifyPurchase','spend','use','deleteAccount','handleNotification','maintenance'].map(name=>[name,unexpected(`service.${name}`)]));
+  const f=await start(t,{
+    auth:{verifyIdToken:unexpected('Firebase authentication')},
+    internalAuth:{verify:unexpected('service authentication')},
+    store:{transact:unexpected('database')},
+    service
+  });
+  for(const path of ['/health','/healthz']){
+    const response=await f.request(path,undefined,{headers:{}});
+    assert.equal(response.status,200,path);
+    assert.deepEqual(response.body,{status:'ok'},path);
+    assert.match(response.headers.get('content-type'),/^application\/json\b/u,path);
+    assert.equal(response.headers.get('cache-control'),'no-store',path);
+  }
+  const query=await f.request('/health?x=1',undefined,{headers:{}});
+  assert.equal(query.status,400);assert.deepEqual(query.body,{error:{code:'QUERY_NOT_ALLOWED'}});
+  const post=await f.request('/health',{}, {headers:{'Content-Type':'application/json'}});
+  assert.equal(post.status,404);assert.deepEqual(post.body,{error:{code:'NOT_FOUND'}});
+  assert.deepEqual(calls,[],'Health checks and rejected variants must not reach authentication, wallet or providers');
+});
 test('HTTP real socket: paid purchase, wallet refresh and permanent entitlement redemption',async t=>{
   const f=await start(t);f.play.add('http-token');
   assert.deepEqual((await f.request('/v1/wallet')).body,{balance:0,version:0,characters:[],skins:[],inventory:{boosters:{},continuations:0}});
@@ -85,7 +108,12 @@ test('disconnecting clients cannot release in-flight slots while authentication 
   }}});
   const sockets=Array.from({length:2},()=>{const req=httpRequest(`${f.base}/v1/wallet`,{headers:{Authorization:'Bearer valid'}});req.on('error',()=>{});req.end();return req;});
   await bothEntered;for(const req of sockets)req.destroy();
-  assert.equal((await f.request('/v1/wallet')).status,429);assert.equal((await f.request('/healthz')).status,200);
-  blocking=false;for(const resolve of pending)resolve();await new Promise(resolve=>setImmediate(resolve));
+  try{
+    assert.equal((await f.request('/v1/wallet')).status,429);
+    for(const path of ['/health','/healthz']){
+      const response=await f.request(path,undefined,{headers:{}});
+      assert.equal(response.status,200,path);assert.deepEqual(response.body,{status:'ok'},path);
+    }
+  }finally{blocking=false;for(const resolve of pending)resolve();await new Promise(resolve=>setImmediate(resolve));}
   assert.equal((await f.request('/v1/wallet')).status,200);
 });

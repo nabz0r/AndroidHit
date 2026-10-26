@@ -1,6 +1,6 @@
 # Luma Drift paid gold wallet
 
-This is a server implementation and deployment preparation, **not a deployed payment service**. It needs the owner's Play products, Firebase Google sign-in, Cloud billing, managed runtime identity, permissions, and internal-track purchase/refund tests before selling gold. No live payment, cloud deployment, or owner-account access was used to develop it.
+This is a server implementation undergoing deployment qualification, **not a qualified payment service**. The owner has deployed Cloud Run and reported database/rules/IAM setup; external probes confirm application routing and rejection of an unauthenticated wallet request. The first public health check exposed Cloud Run's reserved `/healthz` path; use `/health` after deploying the correction. Play products, completed Google sign-in and internal-track purchase/refund tests remain necessary before selling gold. No real payment was used to develop or qualify it. [Deployment incident and evidence](../docs/validation/cloud-run-health-route.md).
 
 The production package is `com.androidhit.lumadrift`. Lab earned/test coins remain local and cannot be imported into this wallet. This release redeems paid gold for permanent companions and skins at fixed, published catalog prices. Boosters and continuation inventory have tested server primitives, but their paid redemption is disabled in the production entry point until their Android server-use flow ships.
 
@@ -22,7 +22,7 @@ All `/v1/*` routes require `Authorization: Bearer FIREBASE_ID_TOKEN`. The server
 | `POST /v1/wallet/spend` | `{ "requestId": "persisted UUID", "sku": "character:miko" }` | Wallet plus stable `entitlement` receipt |
 | `POST /v1/inventory/use` | `{ "requestId": "persisted UUID", "sku": "booster:hint" }` | Reserved; production returns `SKU_NOT_AVAILABLE` |
 | `DELETE /v1/account` | No body, or `{}`; Google authentication within 5 minutes | `{ "deleted": true }` after deletion completes |
-| `GET /healthz` | Public | `{ "status": "ok" }`, process health only |
+| `GET /health` | Public | `{ "status": "ok" }`, process health only; use this path on Cloud Run |
 
 Every wallet result has this flat shape:
 

@@ -4,6 +4,8 @@
 
 This release candidate introduces the owner's Google configuration, three AdMob placement IDs, a real Play Billing client and a server-authoritative purchased-gold service. It remains a preparation release: sample ad creatives are forced and checkout is blocked without an explicitly configured deployed wallet origin. No production deployment, completed Google login, Play payment or commercial result is inferred from these changes.
 
+**Later deployment follow-up:** the owner has now deployed Cloud Run, and external probes reach the application and reject an anonymous wallet request. The initial `/healthz` check encountered a reserved Cloud Run path; the source correction uses `/health` and passed 43 server tests. [Observed evidence, remaining checks and redeployment](validation/cloud-run-health-route.md). This follow-up does not rebuild or change the delivered APK/AAB, and no live purchase is established.
+
 ## What the player can use
 
 The production package contains the 480-board measured progression, move allowances, six milestone powers, 24 companions, six themes, local events, synthesized music and six languages. Guest play stays offline. Its package updates the original production/stable installation; the `.sandbox` Lab remains separate.

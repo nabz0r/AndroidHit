@@ -1,6 +1,8 @@
 # Server validation evidence — 26 October 2026
 
-This report covers the server source in this release. It does not establish a deployed backend, real Google sign-in, a real Play purchase, a configured merchant account, a container build, or production load capacity.
+The original measurements below cover the server source in the 1.4 release candidate. They did not establish a deployed backend, real Google sign-in, a real Play purchase, a configured merchant account, a container build, or production load capacity.
+
+**Later deployment follow-up:** the owner has deployed Cloud Run; external probes reached the application and rejected an anonymous wallet request. The original `/healthz` probe conflicted with a documented reserved URL. The corrected `/health` route passed the expanded **43-case suite under Node 24.22.1**; its fixed public response awaits owner redeployment. [Incident, observed results and exact scope](../docs/validation/cloud-run-health-route.md). The original 42-case and Firestore-emulator records below remain historical evidence rather than being rewritten as new results.
 
 ## Measured results
 

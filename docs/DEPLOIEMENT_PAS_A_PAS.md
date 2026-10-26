@@ -4,7 +4,7 @@ Procédure vérifiée dans les documentations officielles le **26 octobre 2026**
 
 On utilise ton projet existant **`luma-drift-production`** : Firebase Hosting pour les pages, Cloud Run pour le serveur, Firestore pour le portefeuille. Aucun domaine à acheter pour commencer. L'adresse prévue du site, après déploiement, est `https://luma-drift-production.web.app` ; le serveur recevra sa propre adresse HTTPS attribuée par Cloud Run.
 
-**Avancement de ce projet :** le propriétaire a confirmé le passage à Blaze et indiqué un budget de 10 €. Aucun plafond bloquant n'a été vérifié ; les budgets d'alerte ne coupent pas les dépenses. La configuration Firebase Web a été reçue et intégrée : application `1:369472826910:web:47e79b67e7a3abd0c3080f`. La prochaine étape accompagnée est la vérification des domaines autorisés Firebase Auth. Le serveur, le site hébergé, les coordonnées publiques et les tests réels restent à terminer. Les instructions ci-dessous conservent le parcours complet pour référence.
+**Avancement de ce projet :** le propriétaire a confirmé Blaze, les domaines Firebase Auth, les comptes techniques/droits, la création de Firestore et le déploiement des règles/index. Le budget de 10 € signalé n'est pas un plafond de dépenses vérifié. La configuration Firebase Web est intégrée : application `1:369472826910:web:47e79b67e7a3abd0c3080f`. Cloud Run est déployé à `https://luma-wallet-369472826910.europe-west1.run.app` ; nos sondes atteignent l'application et le portefeuille refuse une requête sans connexion. Le premier contrôle `/healthz` a révélé un chemin réservé par Cloud Run : un correctif `/health` est préparé et testé, à redéployer. [Incident et procédure](validation/cloud-run-health-route.md). Le site hébergé, les coordonnées publiques, les notifications/maintenance et les tests d'achats réels restent à terminer. Les instructions ci-dessous conservent le parcours complet pour référence.
 
 Fais une étape à la fois. Si une commande échoue, garde son message d'erreur et arrête le bloc avant de poursuivre. Ne relance pas aveuglément les commandes `create` : une ressource déjà créée se vérifie et se réutilise. Les commandes Cloud Run ci-dessous créent des ressources facturables. Les alertes de budget préviennent d'une dépense ; elles ne la plafonnent pas.
 
@@ -113,7 +113,7 @@ Vérifie ensuite :
 
 ```sh
 printf '%s\n' "$task_service_url"
-curl --fail-with-body "$task_service_url/healthz"
+curl --fail-with-body "$task_service_url/health"
 curl -i "$task_service_url/v1/wallet"
 curl -i -X OPTIONS "$task_service_url/v1/account" \
   -H 'Origin: https://luma-drift-production.web.app' \
@@ -121,7 +121,7 @@ curl -i -X OPTIONS "$task_service_url/v1/account" \
   -H 'Access-Control-Request-Headers: authorization,content-type'
 ```
 
-Résultats attendus : `/healthz` répond `200` avec `{"status":"ok"}` ; le portefeuille sans connexion répond `401` ; la requête préparatoire du site répond `204` avec l'origine exacte autorisée. **Le contrôle de santé seul ne valide ni la base, ni les droits Play, ni un achat.**
+Résultats attendus : `/health` répond `200` avec `{"status":"ok"}` ; le portefeuille sans connexion répond `401` ; la requête préparatoire du site répond `204` avec l'origine exacte autorisée. Utilise bien `/health` : Cloud Run réserve certains chemins finissant par `z`, ce qui rend notre ancien `/healthz` incompatible. **Le contrôle de santé seul ne valide ni la base, ni les droits Play, ni un achat.**
 
 **À me transmettre :** l'adresse HTTPS Cloud Run affichée. Elle est publique. Nous l'intégrerons au site et à la prochaine version Android de test. Si Cloud Shell se ferme, réinitialise les variables de la section 1 sans rejouer les créations ; récupère aussi `task_service_url` avec la commande `gcloud run services describe` de la section 3.
 
@@ -222,7 +222,7 @@ Les identifiants AdMob sont déjà intégrés ; il n'est pas nécessaire de les 
 
 ## Ce qu'il faut me renvoyer, dans l'ordre
 
-1. **Déjà reçus** : confirmation Blaze et bloc public Firebase Web. Il reste le nom de l'éditeur, l'email de support et la confirmation des domaines autorisés.
+1. **Déjà reçus** : confirmation Blaze, bloc public Firebase Web et domaines autorisés. Il reste le nom de l'éditeur et l'email de support.
 2. **Après Cloud Run** : l'adresse HTTPS réelle du serveur et le résultat des trois vérifications de la section 5.
 3. **Après Play** : les empreintes du certificat de signature Play, l'état des trois produits et le lien du test interne.
 4. **Après AdMob** : l'état de validation `app-ads.txt`, l'état de préparation et la confirmation du message de consentement publié.

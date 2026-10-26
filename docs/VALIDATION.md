@@ -4,6 +4,8 @@
 
 The signed production candidate was built, installed and exercised on an Android API 36 emulator. Server logic/HTTP/provider-boundary tests and actual Firestore-emulator transactions passed. The delivered configuration deliberately forces sample creatives and keeps checkout blocked without a deployed wallet origin. [Exact packages](RELEASE.md) · [Implementation](PRODUCTION_RELEASE.md) · [Installed final APK identity](validation/v1.4/final-binary.json).
 
+**Cloud deployment follow-up:** owner-reported Cloud Run revisions and independent anonymous HTTPS probes now establish application reachability and wallet authentication rejection. The original health path conflicted with a Cloud Run reserved URL; the `/health` correction passed **43 server tests under Node 24.22.1**, with the fixed cloud response still pending redeployment. [Incident evidence and scope](validation/cloud-run-health-route.md). These results do not establish real purchases or replace the original candidate measurements below.
+
 ## Executed checks
 
 | Layer | Result | Evidence / practical limit |
@@ -30,7 +32,7 @@ The signed production candidate was built, installed and exercised on an Android
 | Published downloads | APK/AAB bytes match tested files | [Actual remote verification](validation/v1.4/remote-publication.json); all156releasefiles also matched their Git objects |
 | Activation gate | Candidate accepted; live gate refuses | [Configuration](validation/v1.4/production-readiness.json), [gate check](validation/v1.4/live-gate-test.txt); no Google approval is inferred |
 
-The seven gameplay suites total **895,714 heterogeneous assertions/checks**; server cases, web states and Android interactions are separate measurements. Counts must not be summed into a claim of distinct human scenarios. The Firestore run uses Node 24.22.1, Java 21.0.13 and official emulator 1.22.0, with only `demo-luma-wallet`; [validated server source hashes](validation/v1.4/server-validated-inputs.txt) were compared with the final files. No owner cloud account was used. No container was built/run.
+The seven gameplay suites total **895,714 heterogeneous assertions/checks**; server cases, web states and Android interactions are separate measurements. Counts must not be summed into a claim of distinct human scenarios. The Firestore run uses Node 24.22.1, Java 21.0.13 and official emulator 1.22.0, with only `demo-luma-wallet`; [validated server source hashes](validation/v1.4/server-validated-inputs.txt) were compared with the original candidate files. That predeployment validation used no owner cloud account and built/ran no container; the later deployment follow-up is recorded separately above.
 
 Lint's five warnings are three intentional synchronous small preference commits plus two tooling/dependency update advisories. The analyzer remains standalone 9.4.0 through the recorded experimental Gradle override; AGP/Gradle versions are not upgraded as part of this monetization change. This is not a zero-warning result.
 
@@ -46,7 +48,7 @@ Screenshots under `docs/screenshots/production/` are actual installed-candidate 
 
 ## Remaining qualification
 
-Not validated here: completed Google authentication/sign-out/deletion with a real user, owner Play license-test payments and consumption, deployed Cloud Run/Firestore/IAM, actual RTDN/Scheduler/refund delivery, external web deletion on an authorized domain, owner UMP message approval/live creatives, public hosting, a physical phone, Android API 26 behavior, 16 KiB runtime, production load/latency or retention/revenue.
+Not validated here: completed Google authentication/sign-out/deletion with a real user, owner Play license-test payments and consumption, complete deployed Cloud Run/Firestore/IAM integration, actual RTDN/Scheduler/refund delivery, external web deletion on an authorized domain, owner UMP message approval/live creatives, public hosting, a physical phone, Android API 26 behavior, 16 KiB runtime, production load/latency or retention/revenue.
 
 The Firestore emulator establishes real local transaction/rule behavior, not deployed IAM, geographic resilience or operational backups. Provider doubles model receipt states, not actual Google receipts. A screenshot or local configuration gate cannot certify store approval, data-protection compliance or a commercial hit. Follow the [deployment acceptance gate](../server/DEPLOYMENT.md#6-internal-track-acceptance-gate-before-real-sales) and publish fresh actual-service evidence when the owner accounts are ready.
 
