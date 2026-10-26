@@ -2,6 +2,8 @@
 
 **Delivered test build: 1.3.0-sandbox · Version code 4 · Test only · No configured owner AdMob or Play accounts · 26 October 2026**
 
+For the exact owner-account creation order and public identifiers to provide, use the [production onboarding checklist](PRODUCTION_ONBOARDING.md). It distinguishes current Lab behavior from the production build and wallet service still to implement.
+
 Final signed 1.3 package and recorded Android 16 gameplay/SDK tests passed. Delivered 1.2 artifacts and results remain [historical evidence](VALIDATION_1_2.md); they are not fresh passes for changed reward placements.
 
 The signed **Luma Drift 1.1.0 offline APK** is preserved. Monetization preparation belongs to a separate **Luma Drift Lab** app:

@@ -131,6 +131,7 @@ The final Lab 1.3 lint report records **0 errors and 4 update advisories**, usin
 | Building or changing the game | [Architecture & development](docs/DEVELOPMENT.md) · [Level design](docs/LEVEL_DESIGN.md) |
 | Understanding monetization tests | [Lab setup](docs/MONETIZATION_SETUP.md) · [Primary-source research](docs/MONETIZATION_RESEARCH.md) |
 | Configuring optional Google identity | [Google sign-in](docs/GOOGLE_SIGN_IN.md) |
+| Activating owner accounts and production services | [Production onboarding checklist](docs/PRODUCTION_ONBOARDING.md) |
 | Art, sound and store preparation | [Art & audio](docs/ART_AUDIO.md) · [Store listing](docs/STORE_LISTING.md) · [Brand kit](docs/store/README.md) |
 | Data and provenance | [Privacy](docs/PRIVACY.md) · [License](LICENSE) · [Third-party notices](docs/THIRD_PARTY_NOTICES.md) · [Research archive](docs/RESEARCH.md) |
 

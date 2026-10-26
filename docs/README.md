@@ -25,6 +25,7 @@ The signed **stable 1.1.0 offline game** and separate **Lab sandbox** coexist. D
 | [Monetization research](MONETIZATION_RESEARCH.md) | Official-source evidence, SDK choices and limits of test mode |
 | [Lab setup](MONETIZATION_SETUP.md) | No-charge tests, consent gates and future account/backend work |
 | [Optional Google sign-in](GOOGLE_SIGN_IN.md) | Configuration, verified identity boundary and guest-first limits |
+| [Production onboarding](PRODUCTION_ONBOARDING.md) | Exact owner accounts, public IDs, setup order and remaining server work |
 | [Brand kit](store/README.md) | Original promotional artwork, editable vector assets and provenance |
 | [Art and audio](ART_AUDIO.md) | Original vector identity, companions, palettes and synthesized sound |
 

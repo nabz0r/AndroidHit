@@ -1,5 +1,7 @@
 # Optional Google sign-in
 
+For production account creation, the exact public Firebase fields and the Play/AdMob handoff, start with [production onboarding](PRODUCTION_ONBOARDING.md). The Lab setup below remains separate from the production package.
+
 The Lab integrates **Android Credential Manager 1.6.0**, **Google ID 1.2.1** and **Firebase Authentication 25.0.0**. The SDK route is implemented; this repository contains no owner's OAuth/Firebase configuration and does not claim a completed real Google login. Guest play remains available without an account.
 
 ## What happens
