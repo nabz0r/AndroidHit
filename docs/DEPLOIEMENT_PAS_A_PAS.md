@@ -4,6 +4,8 @@ Procédure vérifiée dans les documentations officielles le **26 octobre 2026**
 
 On utilise ton projet existant **`luma-drift-production`** : Firebase Hosting pour les pages, Cloud Run pour le serveur, Firestore pour le portefeuille. Aucun domaine à acheter pour commencer. L'adresse prévue du site, après déploiement, est `https://luma-drift-production.web.app` ; le serveur recevra sa propre adresse HTTPS attribuée par Cloud Run.
 
+**Avancement de ce projet :** le propriétaire a confirmé le passage à Blaze et indiqué un budget de 10 €. Aucun plafond bloquant n'a été vérifié ; les budgets d'alerte ne coupent pas les dépenses. La configuration Firebase Web a été reçue et intégrée : application `1:369472826910:web:47e79b67e7a3abd0c3080f`. La prochaine étape accompagnée est la vérification des domaines autorisés Firebase Auth. Le serveur, le site hébergé, les coordonnées publiques et les tests réels restent à terminer. Les instructions ci-dessous conservent le parcours complet pour référence.
+
 Fais une étape à la fois. Si une commande échoue, garde son message d'erreur et arrête le bloc avant de poursuivre. Ne relance pas aveuglément les commandes `create` : une ressource déjà créée se vérifie et se réutilise. Les commandes Cloud Run ci-dessous créent des ressources facturables. Les alertes de budget préviennent d'une dépense ; elles ne la plafonnent pas.
 
 ## 1. Activer la facturation et préparer les informations publiques
@@ -220,7 +222,7 @@ Les identifiants AdMob sont déjà intégrés ; il n'est pas nécessaire de les 
 
 ## Ce qu'il faut me renvoyer, dans l'ordre
 
-1. **Maintenant** : « Blaze activé », le nom de l'éditeur, l'email de support et le bloc public Firebase Web.
+1. **Déjà reçus** : confirmation Blaze et bloc public Firebase Web. Il reste le nom de l'éditeur, l'email de support et la confirmation des domaines autorisés.
 2. **Après Cloud Run** : l'adresse HTTPS réelle du serveur et le résultat des trois vérifications de la section 5.
 3. **Après Play** : les empreintes du certificat de signature Play, l'état des trois produits et le lien du test interne.
 4. **Après AdMob** : l'état de validation `app-ads.txt`, l'état de préparation et la confirmation du message de consentement publié.

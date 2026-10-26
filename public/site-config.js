@@ -9,9 +9,9 @@ window.LUMA_SITE_CONFIG = Object.freeze({
   supportEmail: "",
   walletApiBaseUrl: "",
   firebase: Object.freeze({
-    apiKey: "",
-    authDomain: "",
+    apiKey: "AIzaSyBspttjrAwSD1az3zlXjDg0nwB5sFhq9sk",
+    authDomain: "luma-drift-production.firebaseapp.com",
     projectId: "luma-drift-production",
-    appId: ""
+    appId: "1:369472826910:web:47e79b67e7a3abd0c3080f"
   })
 });

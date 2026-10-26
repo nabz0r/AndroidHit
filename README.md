@@ -13,7 +13,7 @@ The candidate brings the full puzzle into the production package, `com.androidhi
 
 Purchased gold belongs to a server account and buys permanent companions/themes; locally earned coins, powers and offline progression stay on the device. No editable local balance becomes paid gold. The server verifies tokens, credits once, consumes after durable delivery and reconciles refunds. [Android wallet](docs/WALLET_ANDROID.md) · [Server setup and tests](server/README.md).
 
-The [FR/EN public pages](docs/PUBLIC_PAGES.md) prepare the developer site, privacy policy and external account-deletion route. They have been rendered and checked locally; hosting, publisher/support details, Web identity configuration and live deletion qualification remain to complete.
+The [FR/EN public pages](docs/PUBLIC_PAGES.md) prepare the developer site, privacy policy and external account-deletion route. They have been rendered and checked locally, and the owner's Firebase Web identity configuration is now integrated. Hosting, publisher/support details, authorized-domain checks, the deployed API and live deletion qualification remain to complete.
 
 **Owner deployment walkthrough (French): [server, public pages, Play purchases and AdMob](docs/DEPLOIEMENT_PAS_A_PAS.md).** The root Hosting configuration is prepared; no cloud resources or public site are deployed by this repository change.
 
