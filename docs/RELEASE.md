@@ -25,6 +25,8 @@ Production **updates the stable package** with the same signing key; these two c
 | `luma-drift-1.4.0-rc1.apk` | 3,907,158 | `1684633cd69ca625925b906d7500ab5d8250ce58ca584257f4888bf470631dd9` |
 | `luma-drift-1.4.0-rc1.aab` | 7,205,688 | `2a5f3f22aa2b68c982b205141252e4fd6861915dbf05696725c32d185e12cfa1` |
 
+The production APK/AAB downloaded from GitHub main were compared byte for byte with the signed tested files: [remote publication evidence](validation/v1.4/remote-publication.json).
+
 The [artifact manifest](../releases/manifest.json) records both channels, all preserved packages and source-input hashes. [SHA256SUMS](../releases/SHA256SUMS.txt) can verify downloaded bytes. Packaging refuses to overwrite a versioned artifact with different bytes.
 
 APK v2 signature verification passed with the existing RSA-3072 certificate, SHA-256 `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. The final candidate was installed and exercised on Android API 36. AAB validation with bundletool and per-payload JarFile signature verification passed. The self-signed certificate is the app's signing identity, not a public certificate-chain or Play approval. Standard jarsigner also reports manifest-order/JarInputStream warnings for the AGP bundle; [the pinned JarFile verification](validation/v1.4/aab-payload-signature.txt) independently verifies every payload.

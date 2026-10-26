@@ -10,6 +10,6 @@ Updated 26 October 2026. Target: **1.4.0-rc1, version code 5**.
 | Android Billing and wallet | Implemented | Real checkout/recovery and server-only paid gold; permanent cosmetic equip bridge. Endpoint gate remains closed. |
 | Public pages | Prepared and browser-tested | 24 core cases, 37 local refs, 18 responsive FR/EN states; owner contact/Web config/hosting pending. |
 | Verification | Candidate checks passed | 895,714 gameplay checks, 309 client-boundary checks, 42 + 2 server cases; signed final APK installed, six languages, actual Google provider cancel, gameplay/restart/upgrade. No live purchase/login claim. |
-| Publication | Included in this release commit | Source, server, public-page preparation, both signed Android channels and verification reports are included. |
+| Publication | Published to main | Release commit `b87c756`; all 156 release files matched remote Git objects, and raw production APK/AAB downloads matched the tested files byte for byte. |
 
 The candidate must not claim live payments, Google sign-in, production advertising, cloud durability or store approval from simulations.
