@@ -17,6 +17,7 @@ public final class GoogleAccountController {
     private final Activity activity;private final Listener listener;private final IdentityConfig config;
     private final SharedPreferences prefs;private final CredentialManager manager;
     private FirebaseAuth auth;private FirebaseApp firebase;private CancellationSignal cancellation;
+    private com.androidhit.lumadrift.wallet.ProductionWalletClient wallet;
     private long epoch;private boolean closed,busy;
     public GoogleAccountController(Activity activity,Listener listener){
         this.activity=activity;this.listener=listener;config=IdentityConfig.load(activity);
@@ -68,6 +69,16 @@ public final class GoogleAccountController {
     public void signOut(){if(closed)return;epoch++;busy=false;if(cancellation!=null)cancellation.cancel();if(auth!=null)auth.signOut();prefs.edit().putBoolean("previously_signed_in",false).apply();clearProvider();report("account_guest");}
     public void deleteAccount(){
         if(closed||busy||auth==null||auth.getCurrentUser()==null)return;busy=true;long request=++epoch;report("google_loading");
+        if(!com.androidhit.lumadrift.commerce.CommerceConfig.MODE_SANDBOX&&com.androidhit.lumadrift.commerce.CommerceConfig.productionBillingReady()){
+            if(wallet==null)wallet=new com.androidhit.lumadrift.wallet.ProductionWalletClient(activity);
+            wallet.deleteAccount(new com.androidhit.lumadrift.wallet.ProductionWalletClient.Callback(){
+                public void onSuccess(com.androidhit.lumadrift.wallet.ProductionWalletClient.Wallet ignored){
+                    if(!current(request))return;busy=false;auth.signOut();prefs.edit().putBoolean("previously_signed_in",false).apply();clearProvider();report("account_deleted");
+                }
+                public void onError(String key){if(current(request)){busy=false;report(key.equals("account_recent_login")?key:"google_error");}}
+            });
+            return;
+        }
         auth.getCurrentUser().delete().addOnCompleteListener(activity,task->{if(!current(request))return;busy=false;
             if(task.isSuccessful()){prefs.edit().putBoolean("previously_signed_in",false).apply();clearProvider();report("account_deleted");}
             else report(task.getException() instanceof FirebaseAuthRecentLoginRequiredException?"account_recent_login":"google_error");});
@@ -76,5 +87,5 @@ public final class GoogleAccountController {
     private boolean current(long request){return !closed&&request==epoch&&!activity.isFinishing()&&!activity.isDestroyed();}
     private void failed(long request,String key){if(current(request)){busy=false;report(key);}}
     private void report(String key){if(!closed)listener.onState(key,displayName(),isSignedIn());}
-    public void close(){closed=true;epoch++;if(cancellation!=null)cancellation.cancel();}
+    public void close(){closed=true;epoch++;if(cancellation!=null)cancellation.cancel();if(wallet!=null)wallet.close();}
 }

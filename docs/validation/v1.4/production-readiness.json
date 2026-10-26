@@ -1,0 +1,32 @@
+{
+  "scope": "Local configuration and recorded outstanding milestones only",
+  "internal_candidate_configuration_valid": true,
+  "live_activation_ready": false,
+  "checks": {
+    "firebase_project_matches": true,
+    "firebase_app_matches": true,
+    "firebase_public_api_key_present": true,
+    "oauth_web_client_present": true,
+    "owner_admob_app_present": true,
+    "three_owner_rewarded_units_present": true,
+    "production_variant_compiled": true,
+    "production_package": true,
+    "sandbox_disabled": true
+  },
+  "manual_qualification_records": {
+    "google_identity_and_deletion": false,
+    "play_license_purchases": false,
+    "wallet_deployment_and_recovery": false,
+    "public_privacy_and_deletion": false,
+    "admob_and_store_approval": false
+  },
+  "live_blockers": [
+    "Candidate deliberately uses sample creatives; live AdMob/UMP qualification and a new build are required.",
+    "Wallet service is not deployed/configured in this build; checkout remains blocked.",
+    "Google login and deletion need actual account/device qualification; client IDs alone do not prove login.",
+    "Play products, merchant profile, signing certificate and license-test purchase lifecycle need owner-console evidence.",
+    "Cloud wallet needs deployed Firestore/IAM, recovery/refund/RTDN qualification and operational monitoring.",
+    "Public support/publisher details, hosted privacy/deletion resources, Web Firebase configuration and authorized domain remain to configure.",
+    "AdMob app-ads.txt, consent messages, app/account approval and store declarations remain owner milestones."
+  ]
+}

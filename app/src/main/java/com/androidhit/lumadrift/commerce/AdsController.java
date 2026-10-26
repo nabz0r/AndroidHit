@@ -220,17 +220,17 @@ public final class AdsController {
     private void loadSingle(long request) {
         if (!current(request) || !consentReady || loading) return;
         loading = true; report("ads_loading");
-        event("ad_load_requested", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
-        RewardedAd.load(new AdRequest.Builder(CommerceConfig.rewardedId()).build(), new AdLoadCallback<RewardedAd>() {
+        event("ad_load_requested", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS));
+        RewardedAd.load(new AdRequest.Builder(CommerceConfig.rewardedId(rewardPlacement)).build(), new AdLoadCallback<RewardedAd>() {
             @Override public void onAdLoaded(RewardedAd ad) {
                 onMain(() -> {
                     if (!current(request) || !consentReady) { destroyAd(ad); return; }
                     loading = false;
-                    cached = ad; report("ads_ready"); event("ad_loaded", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                    cached = ad; report("ads_ready"); event("ad_loaded", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS));
                 });
             }
             @Override public void onAdFailedToLoad(LoadAdError error) {
-                onMain(() -> { if (current(request)) { loading = false; report("ads_failed"); event("ad_load_failed", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX)); } });
+                onMain(() -> { if (current(request)) { loading = false; report("ads_failed"); event("ad_load_failed", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS)); } });
             }
         });
     }
@@ -271,13 +271,13 @@ public final class AdsController {
                     });
                 }
                 @Override public void onAdImpression() {
-                    onMain(() -> { if (validShow(show)) event("ad_impression", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX)); });
+                    onMain(() -> { if (validShow(show)) event("ad_impression", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS)); });
                 }
                 @Override public void onAdPaid(AdValue value) {
                     onMain(() -> {
                         if (validShow(show)) event("ad_paid", "value_micros", Long.toString(value.getValueMicros()),
                                 "currency", value.getCurrencyCode(), "precision", value.getPrecisionType().toString(),
-                                "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                                "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS));
                     });
                 }
             });
@@ -290,13 +290,13 @@ public final class AdsController {
                         catch (RuntimeException saveFailure) { report("commerce_save_error"); return; }
                         if (rewardPlacement == RewardPlacement.GOLD) {
                             event("ad_reward_earned", "gold", Integer.toString(CommerceConfig.REWARDED_GOLD),
-                                    "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                                    "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS));
                             report("ads_rewarded");
                         } else if(rewardPlacement==RewardPlacement.CONTINUATION) {
-                            event("ad_reward_earned", "reward", "continuation", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                            event("ad_reward_earned", "reward", "continuation", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS));
                             report("ads_continue_earned");
                         } else {
-                            event("ad_reward_earned", "reward", "power", "item", rewardItemId, "amount", "1", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                            event("ad_reward_earned", "reward", "power", "item", rewardItemId, "amount", "1", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX || CommerceConfig.FORCE_TEST_ADS));
                             report("ads_power_earned");
                         }
                     }
@@ -318,7 +318,7 @@ public final class AdsController {
         if (closed || owner() == null) return false;
         if (age != AgeStatus.ADULT) { report("adult_required"); return false; }
         if (!optedIn) { report("ads_opt_in_required"); return false; }
-        if (!CommerceConfig.MODE_SANDBOX && !CommerceConfig.productionAdsReady()) { report("production_blocked"); return false; }
+        if (!CommerceConfig.MODE_SANDBOX && !CommerceConfig.FORCE_TEST_ADS && !CommerceConfig.productionAdsReady()) { report("production_blocked"); return false; }
         return true;
     }
     private void discardAds() {

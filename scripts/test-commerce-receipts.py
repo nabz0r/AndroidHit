@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """JVM storage-failure checks against the built CommerceActivity bytecode.
 
-Run after compileReleaseJavaWithJavac. Minimal runtime-only Context/Activity
+Run after compileLabReleaseJavaWithJavac. Minimal runtime-only Context/Activity
 adapters avoid an Android runtime; SharedPreferences simulates Android's
 memory-before-disk behavior. This does not simulate or certify an ad display.
 """
@@ -108,11 +108,14 @@ public final class CommerceReceiptTest {
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--report", default="docs/validation/v1.3/commerce-receipts-tests.txt")
+    parser.add_argument("--report", default="docs/validation/v1.4/commerce-receipts-tests.txt")
+    parser.add_argument("--variant", choices=("lab", "production"), default="lab")
     args = parser.parse_args()
     sdk = Path(os.environ.get("ANDROID_HOME") or os.environ.get("ANDROID_SDK_ROOT") or Path.home() / "Library/Android/sdk")
     android = sdk / "platforms/android-36/android.jar"
-    classes = ROOT / "app/build/intermediates/javac/release/compileReleaseJavaWithJavac/classes"
+    variant = args.variant + "Release"
+    task = "compile" + variant[0].upper() + variant[1:] + "JavaWithJavac"
+    classes = ROOT / f"app/build/intermediates/javac/{variant}/{task}/classes"
     target = classes / "com/androidhit/lumadrift/commerce/CommerceActivity.class"
     source = ROOT / "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java"
     if not target.exists() or target.stat().st_mtime < source.stat().st_mtime:

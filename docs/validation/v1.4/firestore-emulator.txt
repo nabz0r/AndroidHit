@@ -1,0 +1,33 @@
+Provenance: verbatim stdout/stderr copied from the completed exec session 90980
+(tool output chunk 145922, exit_code 0), not a fresh rerun or fabricated output.
+Run directory: /Users/n/androidhit/server
+Runtime PATH selected Node v24.22.1; Java runtime selected JRE 21.0.13.
+Command:
+JAVA_HOME=/private/tmp/luma-jre21/jdk-21.0.13+9-jre/Contents/Home PATH=/private/tmp/luma-jre21/jdk-21.0.13+9-jre/Contents/Home/bin:/private/tmp/luma-wallet-npm-cache/_npx/387698761821791d/node_modules/node/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin node /private/tmp/luma-wallet-npm-cache/_npx/7750544ccf494d8b/node_modules/firebase-tools/lib/bin/firebase.js emulators:exec --project demo-luma-wallet --only firestore --config firebase.json 'node --test test/firestore.integration.js'
+
+Initial output:
+i  emulators: Starting emulators: firestore
+i  emulators: Detected demo project ID "demo-luma-wallet", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+
+Completed output:
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator was started in standard edition.
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: node --test test/firestore.integration.js
+(node:21935) MetadataLookupWarning: received unexpected error = All promises were rejected code = ETIMEDOUT, ENOTFOUND
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Firestore adapter survives real transaction contention, restores entitlements, refunds and deletes (10524.838541ms)
+✔ Firestore rules deny unauthenticated direct reads and writes, including private purchase ledger (190.484167ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11009.912916
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

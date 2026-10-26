@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.4.0-rc1 — Production preparation
+
+26 October 2026. Production package `com.androidhit.lumadrift`, code 5; full puzzle content retained. Separate production/Lab Gradle flavors, supplied Firebase public configuration and three owner rewarded-unit IDs. Preparation defaults force sample creatives and leave the deployed wallet origin empty.
+
+Implemented real Billing checkout and account-bound server verification, separate paid gold, permanent cosmetic redemption/ownership restoration, authenticated account deletion and an undeployed Firestore/Play wallet service with refund/retry processing. No client callback credits purchased gold locally. Prepared FR/EN privacy/deletion/developer pages and app-ads.txt; actual owner contact, hosting and Web identity configuration remain pending.
+
+[Production scope](PRODUCTION_RELEASE.md), [server](../server/README.md), [current executed checks](VALIDATION.md). This entry does not claim a live purchase, Google login, production ad impression, cloud deployment or store approval.
+
+
 Release scope is separated from executed checks in [VALIDATION.md](VALIDATION.md). APK bytes and checksums are recorded in [RELEASE.md](RELEASE.md).
 
 ## 1.3.0-sandbox — Action planning and six powers

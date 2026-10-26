@@ -1,92 +1,49 @@
-# Luma Drift privacy — stable game and test Lab
+# Luma Drift data and privacy — production preparation
 
-Effective date: **26 October 2026**.
+Updated **26 October 2026**. This is the implementation/data inventory for **1.4.0-rc1**, package `com.androidhit.lumadrift`, and the separate `.sandbox` Lab. The owner has not yet supplied its legal publisher/contact details or hosted the public policy. This repository document is not a claim that the privacy/store submission is complete. [Prepared FR/EN public policy and deletion pages](PUBLIC_PAGES.md).
 
-This statement distinguishes the **stable Luma Drift 1.1.0 game**, application ID `com.androidhit.lumadrift`, from **Luma Drift Lab**, application ID `com.androidhit.lumadrift.sandbox` (preserved 1.2.0-sandbox and delivered 1.3.0-sandbox). Their private saves and wallets are separate. Lab test gold does not transfer to the stable game.
+## Separate releases and currencies
 
-| | Stable 1.1.0 | Lab 1.2 / 1.3 |
+Preserved stable **1.1.0** has no account, Internet permission, advertising or billing SDK. Its [historical privacy statement](PRIVACY_LAB_HISTORY.md) also records the old Lab 1.2/1.3 behavior. Current production **1.4.0-rc1** includes Google Auth, advertising/UMP and Play Billing integrations. Its supplied Firebase configuration is complete, but an actual completed login has not been demonstrated. Sample creatives are forced and the wallet origin is empty; real checkout is blocked. Current **Lab 1.4** stays on `.sandbox`, uses sample ads and a no-charge purchase simulator, and does not include the production Firebase asset.
+
+Earned coins, powers, board progression and event rewards are device-local. Purchased gold is a separate authenticated server wallet when deployed. Its first integration buys permanent companions/themes. A local coin balance, simulator transaction or ad reward never credits purchased gold. Account cosmetics can be cached for display/equip while signed into their matching account; that cache is not a source of server funds or purchase proof.
+
+## Data paths
+
+| Path | Data and purpose | Destination / control |
 |---|---|---|
-| Puzzle play | Offline | Offline |
-| Advertising/Billing SDK | Absent | Google test advertising, UMP and Billing query integration |
-| Optional identity | No account | Credential Manager + Firebase Auth; owner configuration absent by default |
-| Internet permission | Absent | Present; Google SDK routes can communicate externally |
-| Real payments | Absent | Disabled; clearly labelled local simulation only |
-| Optional app journal | Device-local, off by default | Device-local, off by default, with optional test-commerce callbacks |
-| AndroidHit gameplay backend | None | None |
+| Offline game | Stars, unlocks, earned coins, inventory, cosmetics, language/audio settings, board session/action counters, XP/missions and local event dates | Private app storage; guest play works without a login |
+| Optional local journal | Bounded play events, language/version, dates, level/results, ad callbacks when enabled | Off by default; up to 2,000 device-local entries; explicit export only |
+| Google sign-in | Selected Google identity, app authentication credential/session; UI can show display name/email | Google/Credential Manager and Firebase Authentication after explicit sign-in; prior sessions can restore |
+| Optional advertising | Consent/age choices; SDK data can include IP address, advertising/device identifiers, interactions and diagnostics according to Google/configuration | Google advertising/UMP only through the controller's adult declaration, opt-in and applicable UMP eligibility; manual ad load |
+| Play purchases | Product/token/account binding, payment state, order and refund information | Google Play handles payment; app sends opaque token to authenticated wallet API; no card-entry form is implemented in the game |
+| Deployed wallet | Firebase UID binding, purchased balance, permanent ownership, request IDs, token/order audit and refund/consumption state | Owner's proposed Cloud Run/Firestore service; server-only value mutations |
+| Public site | Static page requests; optional explicit web Google sign-in/deletion | Hosting provider; Firebase Web identity and API only after explicit configured sign-in; no site analytics or remote fonts |
 
-Neither app automatically uploads its play journal to AndroidHit. **The Lab's use of Google SDKs is a separate external-data path.** “Local journal” does not mean “no SDK network traffic.” Lab SDK/runtime verification is recorded separately from stable evidence in [VALIDATION.md](VALIDATION.md).
+No Firebase Analytics, Crashlytics, remote gameplay analytics, contact list, microphone, camera or location feature is implemented. This does not mean Google SDKs or hosting providers process no technical data. [Google advertising SDK disclosure](https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure), [Firebase privacy information](https://firebase.google.com/support/privacy).
 
-## Data kept on the device
+## Consent and identity remain independent
 
-Both apps store their own campaign and Remix progression, coins, inventory, cosmetics, language/settings, interrupted-game history, XP/rank, mission claims, cumulative days played and cosmetic badge state in private local storage. The Lab additionally stores its coarse age declaration, explicit ad opt-in, simulated pending/completed transaction state and one-time reward markers. Lab 1.3 keeps an attempt identifier, spent/extra action counts, continuation receipts, Shield charges and one-time free inventory milestone claims. These are local gameplay/economy state, not a server account or financial ledger. If optional identity is configured and used, Firebase Auth can persist its SDK session; the app also remembers that a prior sign-in occurred. Daily and weekly puzzles and missions read the local calendar date. Audio is synthesized locally.
+The advertising controller starts with age unspecified and advertising disabled. An adult declaration is not age verification. Declining/losing advertising leaves puzzles and free restart usable. The player must explicitly enable advertising, pass UMP's request eligibility and choose to load/watch. Privacy choices are available through the supported UMP control. Turning the app's advertising switch off blocks new controller requests and discards its cached ad; it cannot recall previously processed Google data.
 
-Lab 1.3 updates the same sandbox save as 1.2. Its content-version migration resets an older interrupted board with a visible notice; earned stars/unlocks stay at their numbered positions, with wallet, XP, inventory, cosmetics and settings retained. Board layouts at those positions can change with the new within-chapter sequence. The separate stable application is unaffected.
+The owner still needs its applicable published consent messages, audience/region handling and store declarations. A sample creative or local switch does not certify those settings or prove an absence of all SDK traffic. [UMP guidance](https://developers.google.com/admob/android/privacy).
 
-Saves do not synchronize between devices. Removing the app or clearing its application storage removes them. Optional Lab sign-in does not add cloud save, progress recovery or a purchased-wallet service. Android's automatic backup and transfer rules exclude the saved game data.
+Identity is initialized on explicit sign-in or restoration of a previously signed-in configured session; Firebase auto-initialization is removed and its default data collection setting is disabled. Signing in does not enable advertising or upload offline progression. Raw identity/purchase tokens and emails are not put into the game's play journal. The named Firebase Auth SDK manages its session. A current Google/Firebase identity is required for paid-wallet requests.
 
-## Optional local journal
+## Wallet retention, security and deletion
 
-The play journal is **disabled by default**. Enabling it in Settings starts a local observation window. It can record:
+The server is implemented but **not deployed** by this release. It verifies Firebase Google tokens, uses managed server credentials, independently queries Play, and transactionally binds/credits purchases once before consumption. The ledger retains opaque purchase tokens and order references while an account is active so unfinished purchases/refunds can be reconciled; direct client Firestore access is denied. Request-body/token logging is not enabled by the application. Cloud platform logs/backups still require deliberate owner configuration.
 
-- UTC timestamps and local dates;
-- app version and selected interface language on a foreground session;
-- gameplay mode, board number and event identity where applicable;
-- board starts, completions and exits, result stars, powers, undo count, remaining pieces and active play duration where recorded;
-- challenge opening and a share-sheet handoff;
-- in Lab 1.3, exhausted attempts and optional extension events, including the reward source and added actions when recorded.
+When the server origin is configured, Android deletion invokes `DELETE /v1/account` after confirmation and requires recent Google authentication. A service error does not fall back to deleting only Firebase. The server freezes value changes, deletes the app's Firebase user, removes active balance/ownership and request records, and redacts raw tokens/order references. A durable job retries incomplete work. Its minimal hashed transaction/deletion audit has a configurable default **365-day** retention, then a scheduled purge; the owner must review this period and monitor the deployed purge. This is an engineering default, not an assertion of a legal retention obligation. [Server behavior and evidence](../server/README.md).
 
-When enabled in the Lab, the journal can also record test purchase outcomes, ad eligibility/loading, impressions, earned rewards and paid-event callback values such as currency, micros and precision. Such values are diagnostics from test mode, not real revenue. No Firebase Analytics or remote gameplay analytics service is included. Optional Firebase Auth is a separate identity service, not the destination of the play journal.
+Without a configured wallet origin, this build cannot create a paid wallet; its account action uses Firebase's app-user deletion. Deletion never deletes the person's Google Account. Local offline progression and already exported files are separate; clear Android app storage/uninstall to remove the local save. The app's backup/transfer rules exclude its save data. Deletion does not itself refund a Google Play purchase.
 
-The journal keeps at most 2,000 event entries, plus its local session/day counters and observation state. It does not record a player account, advertising identifier, contact list, message recipient, location, microphone, camera or payment details. Its return indicators describe only this device's enabled observation window; they are not an aggregate retention report.
+The external deletion page is prepared to sign in using a separately registered Firebase **Web** app, confirm the request and call the same API. It is deliberately disabled until its Web configuration/domain/API are present. In-app instructions alone do not complete Play's external deletion requirement. [Remaining publication gates](PUBLIC_PAGES.md), [Google account-deletion requirements](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en).
 
-Disabling the journal stops new entries and leaves the existing local record available. Clearing it removes its observations and staged local journal JSON exports, resets the observation window, and leaves gameplay progression intact. If still enabled, a new window begins. Clearing or disabling cannot recall copies the player already exported to another application or person.
+## Exports, permissions and contact
 
-## Sharing is initiated by the player
+Sharing is explicit. Challenge cards contain a board code and game/repository link; journal exports contain the selected local observations and can reveal play habits. Android's share sheet lets the player choose a destination; the game never selects a recipient or automatically uploads the journal. Cache files use a read-only, grant-scoped provider. Copies already delivered are controlled by their recipients.
 
-**Challenge sharing** creates a PNG card and accompanying text containing a reproducible board code, an app link and the repository address. The card shows the initial puzzle/gates and, when shared after completion, result stars. The code identifies a board number or seed, not a player or saved wallet. Opening a code cannot grant progression rewards or powers.
+The [exact merged production manifest](validation/v1.4/manifest-audit.json) records SDK-contributed permissions, including Internet, advertising ID and Billing. Declaring a permission alone does not establish which data was transmitted. Source inspection, signatures, local simulations, a rendered policy and emulator screenshots do not establish universal compliance, Google approval or a working production service.
 
-**Journal export** creates a JSON file containing the local observations and summary fields. It can reveal play times and habits. The export control opens Android's share sheet; the player chooses whether and where to send the file. The game does not choose a contact or send it automatically.
-
-Created share files are staged in the app's cache. A read-only content provider grants access for the explicit Android sharing flow; it does not expose the private save directory. The cache is periodically pruned and can also be removed by Android. After a file reaches a selected receiving app, that app and the recipient control their own copies and may transfer it over the network under their own policies.
-
-Do not include someone else's journal in a public issue without their consent. Challenge cards and journal exports serve different purposes; sharing a challenge does not attach the journal.
-
-## Permissions and external services
-
-Stable 1.1 declares only vibration for optional haptics and has no Internet permission. The Lab's source manifest additionally declares Internet and network-state access; SDK dependencies can contribute merged manifest entries. The [final Lab 1.3 manifest audit](validation/v1.3/manifest-audit.json) records its exact declared permissions, including SDK entries; a declared permission alone is not a measurement of transmitted data. Neither app requests contacts, location, microphone, camera or shared-media permissions for the puzzle or sharing flow.
-
-A receiving share app can use its own permissions and network access. The stable game's lack of Internet permission does not prevent the app the player chooses from sending an exported file.
-
-Android, the distribution service and an external browser opened through the source-code link have their own policies. This statement describes the application, not all behavior of the operating system or other applications.
-
-## Lab: Google advertising, consent and Billing
-
-The Lab integrates **GMA Next-Gen 1.6.0**, **UMP 4.0.0** and **Billing 9.1.0**. The advertising controller requires a declared adult state and a separate explicit opt-in before requesting UMP consent information. Unknown/minor declarations block that route. This is a test gate, not age verification or a declaration that the game is approved for a particular audience.
-
-UMP can contact Google to determine applicable choices. Before ad initialization/requests, the controller checks UMP's `canRequestAds()` state. The player still has to press the manual load control; the controller does not automatically preload an ad on game launch. Advertising uses Google's sample test identifiers. The privacy-options control opens the supported UMP form when required; turning off the app's ad opt-in prevents new controller requests and discards its cached ad state. It cannot recall information previously processed by Google.
-
-The SDK can process information such as IP address, interactions, diagnostics and device/account identifiers according to its configuration and Google's disclosure. Test creative does not remove those data considerations. An app-level opt-in is not a substitute for the owner's configured consent messages, regional handling or Play declarations. No owner-configured consent/account approval, absence of all pre-consent SDK traffic, or universal compliance is claimed by source inspection or a screenshot. [Google SDK disclosure](https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure) · [UMP integration](https://developers.google.com/admob/android/privacy).
-
-Opening the **ordinary** Lab commerce screen also starts the Play Billing connection/product-query route, independently of advertising opt-in. It can communicate with Google Play. The purpose-specific continuation and power-reward screens display consent/ad controls without starting Billing queries. Its actual checkout remains disabled; it does not grant gold from an unverified Google purchase observation, fabricate a Google receipt, acknowledge/consume a real purchase or deploy a verification server. The native simulator creates only local no-charge state. There is no real card/payment entry in that simulator.
-
-The owner has not configured production AdMob identifiers, Play gold products, license testers or a verified wallet backend. Account-specific consent, real Play test purchases and production data handling require further configuration and evidence before activation. [Lab setup and remaining dependencies](MONETIZATION_SETUP.md).
-
-## Lab: optional Google identity
-
-Settings → Account provides guest play and an optional sign-in route using Credential Manager **1.6.0**, Google ID **1.2.1** and Firebase Auth **25.0.0**. The default delivered configuration does not contain the owner's OAuth/Firebase identifiers. It reports that setup is missing and does not fabricate a profile or successful login.
-
-With valid configuration and an explicit sign-in action, Credential Manager obtains a Google credential and Firebase Auth sends it to its managed authentication service for verification. The UI can show a returned display name or email, and the SDK can persist an authentication session. A previously signed-in, configured session may be restored when the account screen is opened. The app does not manually store/log the Google ID token or put identity fields into its play journal. This does not mean the authentication providers receive no data; identity processing is distinct from the local game save.
-
-The adapter disables Firebase's default data collection setting and does not include Firebase Analytics. Authentication still requires its own network processing. Signing in does not enable advertising consent, upload progression, attach an identity to a paid wallet or create cloud saves. Advertising opt-in remains separate.
-
-Sign-out clears the app's Firebase session and requests credential-state clearing while preserving local puzzle progress. The confirmed account-deletion action requests deletion of the **Firebase app account**, not the person's Google account, and can require a recent sign-in. It does not erase local game saves or copies of journal files already shared. Clearing the app's local data remains a separate Android action. These are implemented SDK operations; successful configured login, sign-out and remote deletion have not been established without the owner's setup. [Configuration, provider data references and evidence limits](GOOGLE_SIGN_IN.md).
-
-## Currency and contact
-
-The [recorded identity UI check](validation/lab/identity-ui.txt) exercised English/French guest and missing-configuration handling. It did not authenticate a real Google account. Test advertising and consent-form observations use Google's sample configuration; they do not qualify the owner's future consent setup or establish revenue. [Full executed scope](VALIDATION.md).
-
-Stable 1.1 uses earned virtual coins. The Lab credits simulated packs into its separate local wallet, with no real charge or redeemable value. The ordinary commerce test-ad placement grants 35 test gold. Lab 1.3 additionally offers an exhausted-attempt extension or one selected unlocked power through distinct placements; each video grants only the announced reward. Its optional gold continuation costs a fixed 100 local sandbox gold, with at most two gold/ad continuations per attempt and free restart always available. Device owners can change local dates and saves; no anti-cheat or financial guarantee is provided.
-
-For issues, use the public [GitHub issue tracker](https://github.com/nabz0r/AndroidHit/issues). Do not post passwords, private signing keys or sensitive personal information.
-
-Any future change to production networking, advertising, remote analytics, account recovery or real payments requires an updated statement and store declarations matching the exact delivered behavior. This document describes the stable release and present test scope; it is not a completed Play Console Data safety submission.
+The owner must supply a public support address and legal publisher information before launch. Do not put account identifiers, purchase tokens, passwords or identity documents into public GitHub issues. A public issue tracker is for non-sensitive technical reports, not a private account-deletion request route.

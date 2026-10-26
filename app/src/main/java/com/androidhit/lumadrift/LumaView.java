@@ -62,21 +62,27 @@ public final class LumaView extends View {
         Flight(Tile t,long a,float x,float y,int c){tile=t;at=a;this.x=x;this.y=y;color=c;}
     }
     public LumaView(Context c) {
-        super(c); store=new GameStore(c); prefs=c.getSharedPreferences("luma_session",0);
+        super(c); store=new GameStore(c, new GameStore.ExternalOwnership() {
+            public boolean ownsCharacter(String id) { return com.androidhit.lumadrift.wallet.ProductionWalletClient.ownsCharacter(c,id); }
+            public boolean ownsSkin(String id) { return com.androidhit.lumadrift.wallet.ProductionWalletClient.ownsSkin(c,id); }
+        }); prefs=c.getSharedPreferences("luma_session",0);
         meta=new MetaProgress(c);journal=new PlayJournal(c);
         audio=new AudioEngine(c); setFocusable(true); setFocusableInTouchMode(true);
         setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_YES);
         reduceMotion=prefs.getBoolean("reduce_motion",false);
         syncStyle(); restoreSession();
     }
-    private String t(String key,Object... args){return Strings.get(store.resolvedLanguage(),key,args);}
+    private String t(String key,Object... args){
+        if(!com.androidhit.lumadrift.commerce.CommerceConfig.MODE_SANDBOX&&key.equals("commerce_entry"))key="commerce_title";
+        return Strings.get(store.resolvedLanguage(),key,args);
+    }
     private void syncStyle(){
         skin=Catalog.skin(store.equippedSkin()); if(skin==null)skin=Catalog.SKINS[0];
         character=Catalog.character(store.equippedCharacter());if(character==null)character=Catalog.CHARACTERS[0];
         audio.setSfxEnabled(store.soundEnabled());audio.setMusicEnabled(store.musicEnabled());cachedStars=store.totalStars();cachedCompleted=store.completedLevels();cachedEconomyProgress=store.economyProgress();
     }
     public void setSafeInsets(int a,int b){safeTop=a;safeBottom=b;invalidate();}
-    public void resumeApp(){running=true;meta.recordVisit();if(screen.equals("play")&&!paused&&!help&&!won&&!outOfMoves()&&activeStarted==0)activeStarted=SystemClock.uptimeMillis();applyPendingContinuation();if(prefs.getBoolean("session_migration_notice",false)){notice(t("moves_migration"));prefs.edit().putBoolean("session_migration_notice",false).commit();}log("session_start","version","1.3.0-sandbox","language",store.resolvedLanguage());syncStyle();audio.resume();invalidate();}
+    public void resumeApp(){running=true;meta.recordVisit();if(screen.equals("play")&&!paused&&!help&&!won&&!outOfMoves()&&activeStarted==0)activeStarted=SystemClock.uptimeMillis();applyPendingContinuation();if(prefs.getBoolean("session_migration_notice",false)){notice(t("moves_migration"));prefs.edit().putBoolean("session_migration_notice",false).commit();}log("session_start","version",BuildConfig.VERSION_NAME,"language",store.resolvedLanguage());syncStyle();audio.resume();invalidate();}
     public void pauseApp(){actionGeneration++;stopTimer();saveSession();running=false;audio.pause();}
     public void release(){actionGeneration++;running=false;audio.release();}
     public String screenName(){return screen;}
@@ -368,7 +374,7 @@ public final class LumaView extends View {
         int done=0;for(int i=0;i<3;i++)if(meta.missionComplete(i))done++;
         quietButton(c,t("missions"),243,484,107,()->go("missions"));center(c,done+" / 3",296,554,17,GOLD,true);
         quietButton(c,t("share_challenge"),24,601,165,()->shareBoard());quietButton(c,t("import_challenge"),201,601,165,()->importCode());
-        fit(c,t("sandbox_label"),195,674,10,340,PEACH,true,true);
+        fit(c,BuildConfig.MODE_SANDBOX?t("sandbox_label"):t("production_preparation"),195,674,10,340,PEACH,true,true);
     }
     private void tinyTile(Canvas c,float x,float y,Direction d,int color){c.save();c.translate(x,y);c.rotate(reduceMotion?0:(float)Math.sin(frameTime*.001)*8);round(c,-19,-19,38,38,12,color);arrow(c,0,0,d,10,INK);c.restore();}
     private void nav(Canvas c){
@@ -526,7 +532,7 @@ public final class LumaView extends View {
         try{
             String license;try(java.io.InputStream in=getContext().getAssets().open("LICENSE.txt")){java.io.ByteArrayOutputStream out=new java.io.ByteArrayOutputStream();byte[] buffer=new byte[4096];int count;while((count=in.read(buffer))!=-1)out.write(buffer,0,count);license=out.toString("UTF-8");}
             String notices;try(java.io.InputStream in=getContext().getAssets().open("THIRD_PARTY_NOTICES.txt")){java.io.ByteArrayOutputStream out=new java.io.ByteArrayOutputStream();byte[] buffer=new byte[2048];int count;while((count=in.read(buffer))!=-1)out.write(buffer,0,count);notices=out.toString("UTF-8");}
-            android.widget.TextView body=new android.widget.TextView(getContext());body.setText(t("sandbox_privacy_text")+"\n\n© 2026 AndroidHit. Original vector art and synthesized audio.\n\n"+notices+"\n\n"+license);body.setTextSize(12);body.setPadding(30,20,30,20);body.setTextColor(WHITE);android.widget.ScrollView scroll=new android.widget.ScrollView(getContext());scroll.addView(body);
+            android.widget.TextView body=new android.widget.TextView(getContext());body.setText(t(BuildConfig.MODE_SANDBOX?"sandbox_privacy_text":"production_privacy_text")+"\n\n© 2026 AndroidHit. Original vector art and synthesized audio.\n\n"+notices+"\n\n"+license);body.setTextSize(12);body.setPadding(30,20,30,20);body.setTextColor(WHITE);android.widget.ScrollView scroll=new android.widget.ScrollView(getContext());scroll.addView(body);
             new android.app.AlertDialog.Builder(getContext()).setTitle(t("credits")).setView(scroll).setPositiveButton(t("close"),(d,w)->{}).setNeutralButton(t("source_code"),(d,w)->{try{getContext().startActivity(new android.content.Intent(android.content.Intent.ACTION_VIEW,android.net.Uri.parse("https://github.com/nabz0r/AndroidHit")));}catch(android.content.ActivityNotFoundException ignored){notice("github.com/nabz0r/AndroidHit");}}).show();
         }catch(java.io.IOException ignored){notice("github.com/nabz0r/AndroidHit");}
     }
@@ -546,7 +552,7 @@ public final class LumaView extends View {
     private String journalStatus(String status){return t(PlayJournal.OBSERVED.equals(status)?"journal_observed":PlayJournal.NOT_OBSERVED_LOCAL.equals(status)?"journal_not_observed":"journal_unknown");}
     private void drawJournal(Canvas c){
         header(c,t("local_journal"),t("local_only"));quietButton(c,"‹ "+t("back"),24,99,107,()->go("settings"));
-        settingsRow(c,"local_journal",journal.isEnabled(),163,()->{journal.setEnabled(!journal.isEnabled());if(journal.isEnabled())applyPendingContinuation();if(prefs.getBoolean("session_migration_notice",false)){notice(t("moves_migration"));prefs.edit().putBoolean("session_migration_notice",false).commit();}log("session_start","version","1.3.0-sandbox","language",store.resolvedLanguage());});
+        settingsRow(c,"local_journal",journal.isEnabled(),163,()->{journal.setEnabled(!journal.isEnabled());if(journal.isEnabled())applyPendingContinuation();if(prefs.getBoolean("session_migration_notice",false)){notice(t("moves_migration"));prefs.edit().putBoolean("session_migration_notice",false).commit();}log("session_start","version",BuildConfig.VERSION_NAME,"language",store.resolvedLanguage());});
         wrap(c,t("journal_desc"),27,245,336,14,skin.muted,false,21);
         round(c,24,321,342,150,24,skin.card);fit(c,t("journal_sessions",journal.sessions(),journal.activeDays()),43,355,19,305,WHITE,true,false);fit(c,t("stats"),43,387,13,305,skin.accent2,true,false);
         wrap(c,t("journal_returns",journalStatus(journal.returnDay1()),journalStatus(journal.returnDay7())),43,417,300,12,skin.muted,false,19);
@@ -555,7 +561,7 @@ public final class LumaView extends View {
         wrap(c,t("export_note"),195,644,323,12,skin.muted,true,18);
     }
     private void drawSettings(Canvas c){
-        header(c,t("settings"),"Luma Drift Lab · 1.2.0");
+        header(c,t("settings"),(BuildConfig.MODE_SANDBOX?"Luma Drift Lab":"Luma Drift")+" · "+BuildConfig.VERSION_NAME);
         quietButton(c,"‹  "+t("back"),24,100,105,()->go("home"));
         settingsRow(c,"sound",store.soundEnabled(),151,()->{store.setSoundEnabled(!store.soundEnabled());syncStyle();});
         settingsRow(c,"music",store.musicEnabled(),211,()->{store.setMusicEnabled(!store.musicEnabled());syncStyle();});
@@ -567,7 +573,7 @@ public final class LumaView extends View {
         quietButton(c,t("local_journal"),24,648,165,()->go("journal"));
         quietButton(c,t("account"),201,648,165,()->getContext().startActivity(new android.content.Intent(getContext(),com.androidhit.lumadrift.identity.AccountActivity.class)));
         quietButton(c,t("credits"),24,706,342,()->showLegal());
-        fit(c,t("sandbox_privacy_local"),195,773,10,338,skin.muted,false,true);
+        fit(c,t(BuildConfig.MODE_SANDBOX?"sandbox_privacy_local":"production_privacy_local"),195,773,10,338,skin.muted,false,true);
 
     }
     private void settingsRow(Canvas c,String key,boolean on,float y,Runnable a){round(c,24,y,342,56,17,skin.card);text(c,t(key),43,y+34,15,WHITE,true);round(c,302,y+14,44,28,14,on?skin.accent2:alpha(skin.muted,55));p.setColor(on?INK:WHITE);c.drawCircle(on?332:316,y+28,10,p);hit(24,y,342,56,t(key)+": "+t(on?"on":"off"),a);}

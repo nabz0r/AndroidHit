@@ -1,0 +1,21 @@
+{
+  "apk_sha256": "1684633cd69ca625925b906d7500ab5d8250ce58ca584257f4888bf470631dd9",
+  "native_64bit_load_alignment_at_least_16kb": true,
+  "libraries": [
+    {
+      "name": "lib/arm64-v8a/libdatastore_shared_counter.so",
+      "load_segment_alignment": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "name": "lib/x86_64/libdatastore_shared_counter.so",
+      "load_segment_alignment": [
+        16384,
+        16384
+      ]
+    }
+  ]
+}

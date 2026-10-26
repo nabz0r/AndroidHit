@@ -10,6 +10,7 @@ import android.view.WindowManager;
 /** Luma Drift. Distributed under the repository's AGPL-3.0 license. */
 public final class MainActivity extends Activity {
     private LumaView game;
+    private com.androidhit.lumadrift.wallet.WalletRecoveryController walletRecovery;
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -18,6 +19,7 @@ public final class MainActivity extends Activity {
         getWindow().setNavigationBarColor(0x00000000);
         game = new LumaView(this);
         setContentView(game);
+        walletRecovery = new com.androidhit.lumadrift.wallet.WalletRecoveryController(this, () -> { if (game != null) game.invalidate(); });
         if(state!=null)game.restoreScreen(state.getString("screen"));
         if(state==null&&getIntent().getData()!=null)game.openChallenge(getIntent().getData().toString());
         if(getIntent().getBooleanExtra("open_journal",false)){game.openJournal();getIntent().removeExtra("open_journal");}
@@ -35,7 +37,7 @@ public final class MainActivity extends Activity {
     @SuppressLint("GestureBackNavigation")
     @Override public void onBackPressed() { game.back(); }
     @Override protected void onSaveInstanceState(Bundle out){out.putString("screen",game.screenName());super.onSaveInstanceState(out);}
-    @Override protected void onResume() { super.onResume(); if (game != null) game.resumeApp(); }
-    @Override protected void onPause() { if (game != null) game.pauseApp(); super.onPause(); }
-    @Override protected void onDestroy() { if (game != null) game.release(); super.onDestroy(); }
+    @Override protected void onResume() { super.onResume(); if (game != null) game.resumeApp(); if (walletRecovery != null) walletRecovery.onForeground(); }
+    @Override protected void onPause() { if (walletRecovery != null) walletRecovery.onBackground(); if (game != null) game.pauseApp(); super.onPause(); }
+    @Override protected void onDestroy() { if (walletRecovery != null) walletRecovery.close(); if (game != null) game.release(); super.onDestroy(); }
 }

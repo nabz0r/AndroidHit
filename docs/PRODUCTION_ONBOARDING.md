@@ -1,14 +1,16 @@
 # Activate Google sign-in, advertising and gold purchases
 
-**Owner checklist · Official requirements checked 26 October 2026 · Preparation, not an activation report**
+**Owner checklist · Official requirements checked 26 October 2026 · Updated for the 1.4 production candidate**
+
+Owner Firebase/Google and three AdMob IDs have now been received and integrated. The server and real Billing adapter are implemented; the signed production APK/AAB are prepared. Cloud deployment, Play qualification, publisher contact/site and live-service tests remain pending. [Current scope and exact IDs](PRODUCTION_RELEASE.md). The steps below remain the console/deployment checklist.
 
 One Google Account can own Play Console, Firebase/Google Cloud and AdMob. Use an account controlled by the actual publisher, enable two-step verification and retain its recovery methods. You do not need three Gmail addresses. Identity documents, payment details and contracts belong in Google's consoles, never in this repository or a chat.
 
-The delivered Lab has Google sign-in integration and tested Google sample advertising, but no owner configuration. Real checkout deliberately refuses to launch. **A production wallet backend and actual purchase fulfillment still need implementation. Supplying IDs alone does not enable safe real sales.** [Current implementation and evidence](MONETIZATION_SETUP.md).
+The Lab retains Google sample advertising and no real checkout. Production now has owner identity/ad configuration, real checkout code and a separate server wallet implementation. **The delivered candidate blocks purchases without a deployed wallet origin and forces sample creatives. Supplying IDs alone does not qualify real sales.** [Current implementation and evidence](MONETIZATION_SETUP.md).
 
 ## 1. Establish the production application
 
-Use **`com.androidhit.lumadrift`** for the production game. Keep **`com.androidhit.lumadrift.sandbox`** for the existing Lab, with separate test currency and configuration. The current 1.3 AAB belongs to the sandbox package: do not upload it into the production application's record. A matching production AAB must be prepared next. A first Play upload fixes the package identity, so check it before submitting.
+Use **`com.androidhit.lumadrift`** for the production game. Keep **`com.androidhit.lumadrift.sandbox`** for the existing Lab, with separate test currency and configuration. The preserved 1.3 AAB belongs to the sandbox package: do not upload it into the production application's record. The [1.4 production AAB](../releases/luma-drift-1.4.0-rc1.aab) now matches the production package. A first Play upload fixes the package identity, so check it before submitting.
 
 | Service | Create | Cost / prerequisite | Information to return |
 |---|---|---|---|
@@ -53,7 +55,7 @@ DC:C0:68:61:63:0B:B1:AC:0D:AF:76:F8:F2:D2:2D:E6:33:23:8C:8B:36:A1:99:05:0B:A5:BD
 | `apiKey` | Matching client's `api_key[].current_key` | `AIza…` |
 | `webClientId` | Matching client's `oauth_client[]` entry with `client_type: 3` | `NUMBER-STRING.apps.googleusercontent.com` |
 
-Select the client for `com.androidhit.lumadrift`. **The Web application OAuth client ID is required, not the Android OAuth client ID.** No OAuth client secret is needed in the app. This project initializes Firebase programmatically from its own ignored local configuration file; sending the Google file does not mean we will commit it unchanged.
+Select the client for `com.androidhit.lumadrift`. **The Web application OAuth client ID is required, not the Android OAuth client ID.** No OAuth client secret is needed in the app. This project initializes Firebase programmatically. Production now includes its matching public configuration asset; the main-source local development override remains ignored. No service-account key is included.
 
 Firebase client configuration is intended to ship with the app and is different from a privileged service-account JSON key. Apply appropriate API restrictions; server access controls protect data. Use a separate Firebase project if later enabling Lab identity to avoid mixing real and test users/data. [Firebase Google sign-in](https://firebase.google.com/docs/auth/android/google-signin), [configuration fields](https://firebase.google.com/docs/android/google-services-plugin-and-file), [API-key guidance](https://firebase.google.com/docs/projects/api-keys), [environment separation](https://firebase.google.com/docs/projects/dev-workflows/general-best-practices).
 
@@ -61,11 +63,11 @@ Firebase client configuration is intended to ship with the app and is different 
 
 1. Sign up using the same publisher-controlled Google Account. If it already has AdSense, use the associated account rather than creating duplicates. Choose the actual payment country/legal entity carefully; the AdMob payment country cannot simply be changed later. Enter payment/identity information only in Google. [Account setup](https://support.google.com/admob/answer/7356092?hl=en), [payment country](https://support.google.com/admob/answer/7356219?hl=en).
 2. **Apps → Add app → Android → Not published** lets you prepare Luma Drift before public listing. Use the production package when linking its eventual Play listing. [Add an unpublished app](https://support.google.com/admob/answer/9989980?hl=en).
-3. Create three units of format **Rewarded**, with the following suggested names. Three units are our measurement/configuration choice, not a Google requirement. Current code uses one shared unit; the production integration must route each placement to its own supplied ID.
+3. Create three units of format **Rewarded**, with the following suggested names. Three units are our measurement/configuration choice, not a Google requirement. The production integration now routes each placement to its own supplied ID; the delivered candidate still forces the Google sample unit for testing.
 
 | Unit name | Offer shown in the game | Console reward suggestion |
 |---|---|---|
-| `luma_gold` | 35 gold | Quantity 35, item `gold` |
+| `luma_gold` | 35 earned local coins; never purchased gold | Quantity 35, item `gold` (local earned reward) |
 | `luma_continue` | One continuation, disclosing the exact extra actions | Quantity 1, item `continuation` |
 | `luma_power` | One selected unlocked power | Quantity 1, item `power` |
 
@@ -92,9 +94,9 @@ Add test accounts both to the internal testing track and to **Settings → Licen
 
 ## 6. Prepare the wallet's cloud account, then implement the service
 
-Use the same production Firebase/Google Cloud project for identity and the proposed Cloud Run + Firestore + Pub/Sub wallet. Link a Cloud Billing account (Blaze) when ready for deployment and return the project ID and billing-enabled status. The server is not yet written or deployed. There is no existing endpoint for you to supply.
+Use the same production Firebase/Google Cloud project for identity and the proposed Cloud Run + Firestore + Pub/Sub wallet. Link a Cloud Billing account (Blaze) when ready for deployment and return the project ID and billing-enabled status. The [server is implemented](../server/README.md) but not deployed. There is no existing deployment endpoint to supply until the cloud runbook is executed.
 
-The implementation must bind purchases to verified Firebase users, verify Play tokens server-side, credit each transaction once, consume after durable delivery, and reconcile pending purchases, refunds and revocations. **All gold grants and spends must be authoritative on the server**, rather than importing a client-editable paid balance. Lab simulation currency must stay isolated. Ad rewards need appropriate server verification and replay protection too. [Purchase security](https://developer.android.com/google/play/billing/security).
+The implementation binds purchases to verified Firebase users, verifies Play tokens server-side, credits once, consumes after durable delivery, and reconciles pending/refunded/voided purchases. **Purchased-gold grants and spends are server-authoritative**; device-local earned coins stay a separate economy and are never imported. The first integration buys permanent companions/themes. Ad rewards remain local earned coins/powers/actions, distinct from purchased currency. Lab simulation currency stays isolated. [Purchase security](https://developer.android.com/google/play/billing/security).
 
 Once the service identity exists, enable **Google Play Android Developer API**. Add its service-account **email address** in Play Console → Users and permissions, scoped to Luma Drift and the documented purchase-verification/order permissions; do not give global administrator access. A managed Cloud Run identity can authenticate without exporting a JSON private key. [Developer API setup and permissions](https://developers.google.com/android-publisher/getting_started), [managed server credentials](https://firebase.google.com/docs/admin/setup).
 
@@ -102,7 +104,7 @@ For Real-time Developer Notifications, a later deployment creates a Pub/Sub topi
 
 ## 7. Public pages and handoff
 
-Provide a developer website, support email, privacy-policy URL and external account-deletion request URL. If no website exists yet, say so: we can prepare the pages and publishing steps next. Account creation requires an in-app deletion route and an external request resource; the existing Firebase-only deletion must be extended to cover the production wallet/account policy. [Play account-deletion requirements](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en-en).
+Provide a developer website, support email, privacy-policy URL and external account-deletion request URL. The pages and publishing instructions are now [prepared](PUBLIC_PAGES.md); owner contact, hosting and Web identity settings remain pending. Account creation requires an in-app deletion route and an external request resource; the production app now invokes server deletion when its wallet origin is configured. Qualify that route and the prepared external flow against the real deployment. [Play account-deletion requirements](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en-en).
 
 Copy this checklist and fill available values. **The first useful batch is Play account status, Firebase configuration and AdMob IDs.** Product status, Play signing certificate and cloud service details can follow after the corresponding upload/deployment.
 
@@ -142,4 +144,4 @@ Do not send Google passwords, two-factor codes, OAuth client secrets, service-ac
 
 ## What happens after handoff
 
-Prepare a production build with the correct package/configuration, route the three rewarded units, implement the server wallet and Play purchase lifecycle, publish the required public pages, then qualify real Google login and Play license-test purchases on actual Play installs. Test cancellation, pending/declined payment, duplicate delivery, recovery after reinstall, refunds, ad refusal and deletion before enabling real traffic. Finish the store declarations, closed test if required, AdMob verification and production review. No source edit, sample-ad screenshot or simulated purchase alone establishes production activation.
+The production build, three-unit routing and server/Play lifecycle code are now prepared. Next deploy/qualify the service, finalize and publish the required public pages, then qualify real Google login and Play license-test purchases on actual Play installs. Test cancellation, pending/declined payment, duplicate delivery, recovery after reinstall, refunds, ad refusal and deletion before enabling real traffic. Finish the store declarations, closed test if required, AdMob verification and production review. No source edit, sample-ad screenshot or simulated purchase alone establishes production activation.

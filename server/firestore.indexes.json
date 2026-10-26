@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    { "collectionGroup": "purchases", "queryScope": "COLLECTION", "fields": [
+      { "fieldPath": "owner", "order": "ASCENDING" },
+      { "fieldPath": "personalDataPresent", "order": "ASCENDING" }
+    ] }
+  ],
+  "fieldOverrides": [
+    { "collectionGroup": "purchases", "fieldPath": "purchaseToken", "indexes": [] },
+    { "collectionGroup": "purchases", "fieldPath": "orderId", "indexes": [] },
+    { "collectionGroup": "deletions", "fieldPath": "uid", "indexes": [] }
+  ]
+}

@@ -1,5 +1,22 @@
 # Luma Drift roadmap
 
+## Current milestone — 1.4 production preparation
+
+Implemented in the candidate: full production puzzle, owner Google configuration, three ad placements, real Play checkout adapter, server-authoritative purchased gold/permanent cosmetics, server deletion and FR/EN public pages. Sample creatives and checkout gates remain in place. [Delivered scope](PRODUCTION_RELEASE.md) · [Executed evidence](VALIDATION.md).
+
+Next activation gates, in order:
+
+1. Finish Play/merchant/product configuration, upload the production AAB internally and register Play's signing fingerprints in Firebase.
+2. Enable project billing and deploy the wallet with scoped managed identities, Firestore rules/indexes, RTDN and scheduled recovery; qualify real purchase/pending/refund/deletion behavior.
+3. Supply the legal publisher/support details, register a Firebase Web app and publish/test the site, privacy and deletion URLs on an authorized domain.
+4. Qualify owner UMP messages and app-ads.txt/AdMob readiness using test devices, then prepare a new explicit live-ad build.
+5. Complete physical-device checks, the applicable Play closed test and production review before a staged public launch.
+
+Paid-wallet power-ups/continuations and authoritative progression rewards are future integrations. The first paid wallet supports permanent companions/themes; earned offline gameplay remains separate. Retention and revenue still need real-player evidence.
+
+The sections below retain earlier milestones and their historical evidence; they do not override these current activation gates.
+
+
 **Build the memorable rule. Observe players. Scale only when the evidence improves.**
 
 Updated 26 October 2026. This roadmap records priorities and exit criteria. Future stages are proposals, not delivered features or committed launch dates. See [CHANGELOG.md](CHANGELOG.md) for release scope and [VALIDATION.md](VALIDATION.md) for checks actually executed.

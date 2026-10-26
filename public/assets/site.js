@@ -1,0 +1,58 @@
+(() => {
+  "use strict";
+  const config = window.LUMA_SITE_CONFIG || {};
+  const email = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(config.supportEmail || "") ? config.supportEmail : "";
+  const requestedLanguage = new URL(location.href).searchParams.get("lang");
+  let language = requestedLanguage === "en" ? "en" : "fr";
+  const syncConfiguration = () => {
+    if (config.preparation === false) {
+      document.querySelectorAll("[data-preparation-notice]").forEach(el => { el.hidden = true; });
+    }
+    if (config.publisherName && email) {
+      document.querySelectorAll("[data-publisher]").forEach(el => {
+        el.replaceChildren(document.createTextNode(`${config.publisherName} · `));
+        const a = document.createElement("a");
+        a.href = `mailto:${encodeURIComponent(email)}`;
+        a.textContent = email;
+        el.append(a);
+      });
+      document.querySelectorAll("[data-contact]").forEach(el => {
+        el.replaceChildren(document.createTextNode(language === "fr"
+          ? `Pour une demande privée concernant Luma Drift, contacte ${config.publisherName} : `
+          : `For a private Luma Drift request, contact ${config.publisherName}: `));
+        const a = document.createElement("a");
+        a.href = `mailto:${encodeURIComponent(email)}?subject=Luma%20Drift%20%E2%80%94%20account%20%2F%20privacy`;
+        a.textContent = email;
+        el.append(a, document.createTextNode(language === "fr"
+          ? ". N’envoie jamais ton mot de passe, un code de connexion ni tes coordonnées bancaires."
+          : ". Never send a password, sign-in code or payment-card details."));
+      });
+    }
+  };
+  const setLanguage = next => {
+    language = next === "en" ? "en" : "fr";
+    document.documentElement.lang = language;
+    document.querySelectorAll("[data-lang]").forEach(el => { el.hidden = el.dataset.lang !== language; });
+    document.querySelectorAll("[data-set-lang]").forEach(el => {
+      el.setAttribute("aria-pressed", String(el.dataset.setLang === language));
+    });
+    const url = new URL(location.href);
+    if (language === "en") url.searchParams.set("lang", "en");
+    else url.searchParams.delete("lang");
+    history.replaceState(null, "", url);
+    // Preserve the selected language between pages without cookies or localStorage.
+    document.querySelectorAll("a[href]").forEach(link => {
+      const destination = new URL(link.getAttribute("href"), location.href);
+      if (destination.origin !== location.origin || !destination.pathname.endsWith(".html")) return;
+      if (language === "en") destination.searchParams.set("lang", "en");
+      else destination.searchParams.delete("lang");
+      link.href = destination.pathname + destination.search + destination.hash;
+    });
+    syncConfiguration();
+    window.dispatchEvent(new CustomEvent("luma-language", { detail: language }));
+  };
+  document.querySelectorAll("[data-set-lang]").forEach(button => {
+    button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+  });
+  setLanguage(language);
+})();

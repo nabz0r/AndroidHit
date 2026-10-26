@@ -6,6 +6,9 @@ import android.os.Handler;
 import android.os.Looper;
 
 import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingFlowParams;
+import com.androidhit.lumadrift.wallet.ProductionWalletClient;
+import java.lang.ref.WeakReference;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingResult;
 import com.android.billingclient.api.PendingPurchasesParams;
@@ -21,9 +24,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Real Play Billing product/purchase observer. This lab does not launch payment
- * sheets, fabricate store prices, credit purchases, acknowledge or consume them.
- * Purchased tokens are handed only to the verification boundary, never a wallet.
+ * Play Billing checkout and recovery. Purchased tokens cross only the server
+ * verification boundary. Gold is never credited, acknowledged or consumed here.
  */
 public final class PlayGoldBilling {
     public interface Listener {
@@ -47,35 +49,45 @@ public final class PlayGoldBilling {
     }
 
     private final Context context;
+    private final WeakReference<Activity> activity;
+    private final Map<String, ProductDetails> detailsById = new LinkedHashMap<>();
+    private final Map<String, String> offersById = new LinkedHashMap<>();
+    private boolean checkoutInFlight;
     private final Listener listener;
     private final Handler main = new Handler(Looper.getMainLooper());
     private BillingClient client;
-    private boolean connecting, closed;
+    private boolean connecting, closed, queryCatalogRequested;
     private long generation;
     private String status = "billing_unavailable";
     private List<GoldProduct> currentProducts = Collections.emptyList();
 
     public PlayGoldBilling(Activity activity, Listener listener) {
         if (activity == null || listener == null) throw new IllegalArgumentException("Activity and listener required");
-        context = activity.getApplicationContext(); this.listener = listener;
+        context = activity.getApplicationContext(); this.activity = new WeakReference<>(activity); this.listener = listener;
     }
 
     public String statusKey() { return status; }
     public List<GoldProduct> products() { return currentProducts; }
-    /** Intentionally false until an actual verified fulfillment adapter is implemented. */
-    public boolean isRealPurchaseEnabled() { return false; }
+    /** Configuration alone cannot bypass account, product and connection checks. */
+    public boolean isRealPurchaseEnabled() { return CommerceConfig.productionBillingReady()
+            && !BillingPolicy.serverBase(CommerceConfig.PURCHASE_VERIFIER_ENDPOINT).isEmpty()
+            && !ProductionWalletClient.currentUid(context).isEmpty(); }
 
     /** Explicit store action. It does not contact an ad network. */
-    public void connectAndQuery() {
+    public void connectAndQuery() { connect(true); }
+    /** Existing-account foreground recovery: no product catalogue query or checkout. */
+    public void connectForRecovery() { connect(false); }
+    private void connect(boolean includeCatalogue) {
         onMain(() -> {
             if (closed) return;
+            queryCatalogRequested |= includeCatalogue;
             if (client == null) {
                 client = BillingClient.newBuilder(context)
                         .setListener((result, purchases) -> onMain(() -> handlePurchases(result, purchases)))
                         .enablePendingPurchases(PendingPurchasesParams.newBuilder().enableOneTimeProducts().build())
                         .enableAutoServiceReconnection().build();
             }
-            if (client.isReady()) { queryProducts(); queryOwned(); return; }
+            if (client.isReady()) { if (queryCatalogRequested) queryProducts(); queryOwned(); return; }
             if (connecting) return;
             connecting = true;
             final long request = generation;
@@ -86,7 +98,7 @@ public final class PlayGoldBilling {
                         if (closed || request != generation) return;
                         connecting = false;
                         if (result.getResponseCode() == BillingClient.BillingResponseCode.OK) {
-                            queryProducts(); queryOwned();
+                            if (queryCatalogRequested) queryProducts(); queryOwned();
                         } else {
                             currentProducts = Collections.emptyList(); listener.onProducts(currentProducts);
                             report("billing_unavailable");
@@ -109,13 +121,22 @@ public final class PlayGoldBilling {
         client.queryProductDetailsAsync(params, (result, details) -> onMain(() -> {
             if (closed || request != generation) return;
             Map<String, GoldProduct> fetched = new LinkedHashMap<>();
+            detailsById.clear(); offersById.clear();
             if (result.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                 for (ProductDetails product : details.getProductDetailsList()) {
                     int gold = CommerceConfig.goldAmount(product.getProductId());
                     if (gold == 0) continue;
                     List<ProductDetails.OneTimePurchaseOfferDetails> offers = product.getOneTimePurchaseOfferDetailsList();
                     if (offers == null || offers.isEmpty()) continue;
-                    ProductDetails.OneTimePurchaseOfferDetails offer = offers.get(0);
+                    // Gold is a consumable, never a rental or preorder. Prefer the
+                    // ordinary buy option; do not silently substitute a different offer.
+                    ProductDetails.OneTimePurchaseOfferDetails offer = null;
+                    for (ProductDetails.OneTimePurchaseOfferDetails candidate : offers) {
+                        if (candidate.getRentalDetails() == null && candidate.getPreorderDetails() == null
+                                && (candidate.getOfferId() == null || candidate.getOfferId().isEmpty())) { offer = candidate; break; }
+                    }
+                    if (offer == null || offer.getOfferToken() == null || offer.getOfferToken().isEmpty()) continue;
+                    detailsById.put(product.getProductId(), product); offersById.put(product.getProductId(), offer.getOfferToken());
                     fetched.put(product.getProductId(), new GoldProduct(product.getProductId(), gold,
                             offer.getFormattedPrice(), offer.getPriceCurrencyCode(), offer.getPriceAmountMicros()));
                 }
@@ -132,7 +153,7 @@ public final class PlayGoldBilling {
     public void refreshPurchases() {
         onMain(() -> {
             if (closed) return;
-            if (client == null || !client.isReady()) { connectAndQuery(); return; }
+            if (client == null || !client.isReady()) { connect(queryCatalogRequested); return; }
             queryOwned();
         });
     }
@@ -145,6 +166,7 @@ public final class PlayGoldBilling {
 
     private void handlePurchases(BillingResult result, List<Purchase> purchases) {
         if (closed) return;
+        checkoutInFlight = false;
         if (result.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
             report("billing_cancelled"); return;
         }
@@ -155,11 +177,15 @@ public final class PlayGoldBilling {
         for (Purchase purchase : purchases) {
             for (String productId : purchase.getProducts()) {
                 if (CommerceConfig.goldAmount(productId) == 0) continue;
+                if (purchase.getQuantity() != 1) { report("wallet_forbidden"); continue; }
                 if (purchase.getPurchaseState() == Purchase.PurchaseState.PENDING) {
                     listener.onPurchasePending(productId); report("billing_pending");
+                    // Register pending tokens with the server too: RTDN and its
+                    // maintenance worker can later fulfill without this screen open.
+                    listener.onPurchaseNeedsVerification(productId, purchase.getPurchaseToken());
                 } else if (purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED) {
-                    // The client callback is not proof of payment. Backend verification,
-                    // durable idempotent fulfillment and consumable delivery are absent.
+                    // A Play callback is not proof of payment. Only the authenticated
+                    // server may verify, durably grant once, then consume the purchase.
                     listener.onPurchaseNeedsVerification(productId, purchase.getPurchaseToken());
                     report("billing_verification_required");
                 }
@@ -167,15 +193,30 @@ public final class PlayGoldBilling {
         }
     }
 
-    /** No payment flow can be launched by this distribution, including license-test flows. */
+    /** Explicit user checkout, with the exact displayed offer and a non-PII account binding. */
     public void launchPurchase(String productId) {
         onMain(() -> {
-            if (closed) return;
+            if (closed || checkoutInFlight) return;
             if (CommerceConfig.goldAmount(productId) == 0) { report("billing_no_product"); return; }
             if (CommerceConfig.MODE_SANDBOX) { report("billing_test_only"); return; }
-            // A configuration toggle cannot substitute for a secure verifier and
-            // transactional fulfillment. No launchBillingFlow call exists here.
-            report("production_blocked");
+            if (!CommerceConfig.productionBillingReady() || BillingPolicy.serverBase(CommerceConfig.PURCHASE_VERIFIER_ENDPOINT).isEmpty()) { report("wallet_not_configured"); return; }
+            String uid = ProductionWalletClient.currentUid(context);
+            if (uid.isEmpty()) { report("wallet_sign_in_required"); return; }
+            Activity owner = activity.get();
+            if (owner == null || owner.isFinishing() || owner.isDestroyed()) return;
+            ProductDetails details = detailsById.get(productId); String offer = offersById.get(productId);
+            if (client == null || !client.isReady() || details == null || offer == null) { report("billing_no_product"); connectAndQuery(); return; }
+            BillingFlowParams.ProductDetailsParams product = BillingFlowParams.ProductDetailsParams.newBuilder()
+                    .setProductDetails(details).setOfferToken(offer).build();
+            BillingFlowParams params = BillingFlowParams.newBuilder().setProductDetailsParamsList(Collections.singletonList(product))
+                    .setObfuscatedAccountId(BillingPolicy.accountHash(uid)).build();
+            checkoutInFlight = true;
+            BillingResult result = client.launchBillingFlow(owner, params);
+            if (result.getResponseCode() != BillingClient.BillingResponseCode.OK) {
+                checkoutInFlight = false;
+                if (result.getResponseCode() == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED) queryOwned();
+                report(result.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED ? "billing_cancelled" : "billing_unavailable");
+            }
         });
     }
 
@@ -183,7 +224,8 @@ public final class PlayGoldBilling {
     private void onMain(Runnable action) { if (Looper.myLooper() == main.getLooper()) action.run(); else main.post(action); }
     public void close() {
         onMain(() -> {
-            closed = true; generation++; connecting = false; currentProducts = Collections.emptyList();
+            closed = true; generation++; connecting = false; checkoutInFlight = false; currentProducts = Collections.emptyList();
+            detailsById.clear(); offersById.clear(); activity.clear();
             if (client != null) { client.endConnection(); client = null; }
         });
     }

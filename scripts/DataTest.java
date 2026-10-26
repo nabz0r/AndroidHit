@@ -261,12 +261,35 @@ public final class DataTest {
         return count;
     }
 
+    private static void testExternalCosmeticOwnership() {
+        TestContext context = new TestContext();
+        final boolean[] signedIn = {true};
+        GameStore cloudAware = new GameStore(context, new GameStore.ExternalOwnership() {
+            public boolean ownsCharacter(String id) { return signedIn[0] && id.equals("miko"); }
+            public boolean ownsSkin(String id) { return signedIn[0] && id.equals("aurora"); }
+        });
+        int coins = cloudAware.coins();
+        check(cloudAware.ownsCharacter("miko"), "Account-bound companion can be equipped");
+        check(cloudAware.ownsSkin("aurora"), "Account-bound skin can be equipped");
+        check(cloudAware.equipCharacter("miko") && cloudAware.equipSkin("aurora"), "External permanent cosmetics are usable");
+        check(!cloudAware.purchaseCharacter("miko") && !cloudAware.purchaseSkin("aurora"), "Owned cloud cosmetics cannot debit earned coins");
+        check(cloudAware.coins() == coins, "External ownership never imports or spends purchased gold locally");
+        signedIn[0] = false;
+        check(!cloudAware.ownsCharacter("miko") && !cloudAware.ownsSkin("aurora"), "Signing out removes account-only ownership");
+        check(cloudAware.equippedCharacter().equals("nova") && cloudAware.equippedSkin().equals("lumina"), "Sign-out restores usable defaults");
+        check(!new GameStore(context).ownsCharacter("miko") && !new GameStore(context).ownsSkin("aurora"), "Cloud ownership never becomes a permanent local ownership flag");
+        signedIn[0] = true;
+        check(cloudAware.equippedCharacter().equals("miko") && cloudAware.equippedSkin().equals("aurora"), "Account return restores selected permanent cosmetics");
+        check(!cloudAware.ownsCharacter("unknown") && !cloudAware.ownsSkin("unknown"), "External source cannot invent catalog items");
+    }
+
     public static void main(String[] args) throws ReflectiveOperationException {
         testEconomyAndProgress();
         testEvents();
         testRemixProgression();
         testMilestoneClaims();
         testLanguagesAndSettings();
+        testExternalCosmeticOwnership();
         System.out.println("PASS " + checks + " data, economy, campaign, Remix, milestone, event and localization checks");
     }
 }

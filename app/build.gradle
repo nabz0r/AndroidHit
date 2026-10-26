@@ -2,15 +2,40 @@ plugins { id 'com.android.application' }
 def signingFile = rootProject.file('signing.properties')
 def releaseKeys = new Properties()
 if (signingFile.exists()) signingFile.withInputStream { releaseKeys.load(it) }
+def walletUrl = providers.gradleProperty('lumaWalletUrl').getOrElse('')
+if (walletUrl && !(walletUrl ==~ /https:\/\/[A-Za-z0-9.-]+(?::[0-9]+)?/)) {
+    throw new GradleException('lumaWalletUrl must be an HTTPS origin without a path, query or credentials')
+}
+def liveAds = providers.gradleProperty('lumaLiveAds').getOrElse('false')
+if (!(liveAds in ['true', 'false'])) throw new GradleException('lumaLiveAds must be true or false')
 android {
     namespace 'com.androidhit.lumadrift'
     compileSdk 36
     defaultConfig {
-        applicationId 'com.androidhit.lumadrift.sandbox'
+        applicationId 'com.androidhit.lumadrift'
         minSdk 26
         targetSdk 36
-        versionCode 4
-        versionName '1.3.0-sandbox'
+        versionCode 5
+        versionName '1.4.0-rc1'
+        buildConfigField 'String', 'WALLET_API_BASE_URL', '"' + walletUrl + '"'
+    }
+    buildFeatures { buildConfig true }
+    flavorDimensions += 'channel'
+    productFlavors {
+        production {
+            dimension 'channel'
+            buildConfigField 'boolean', 'MODE_SANDBOX', 'false'
+            buildConfigField 'boolean', 'FORCE_TEST_ADS', liveAds == 'true' ? 'false' : 'true'
+            manifestPlaceholders = [appLabel: 'Luma Drift', admobAppId: 'ca-app-pub-6914185503996225~9670436379']
+        }
+        lab {
+            dimension 'channel'
+            applicationIdSuffix '.sandbox'
+            versionName '1.4.0-sandbox'
+            buildConfigField 'boolean', 'MODE_SANDBOX', 'true'
+            buildConfigField 'boolean', 'FORCE_TEST_ADS', 'true'
+            manifestPlaceholders = [appLabel: 'Luma Drift Lab', admobAppId: 'ca-app-pub-3940256099942544~3347511713']
+        }
     }
     compileOptions {
         coreLibraryDesugaringEnabled true

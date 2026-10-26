@@ -1,0 +1,8 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Every wallet/ledger operation uses the managed server identity. Firebase
+    // clients, including authenticated Google users, never access these rows.
+    match /{document=**} { allow read, write: if false; }
+  }
+}

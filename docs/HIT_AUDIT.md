@@ -4,7 +4,7 @@
 
 Assessment date: **26 October 2026**. This is a product diagnosis, not a revenue forecast. Actual release checks are recorded separately in [VALIDATION.md](VALIDATION.md).
 
-The signed **1.1.0 stable game** and **Lab sandbox** are separate applications. Lab 1.2 is a delivered test build; delivered Lab 1.3 updates that same sandbox with recorded final-package Android 16 gameplay and test-ad evidence. The Lab prepares SDK test advertising, no-charge gold simulations, a progression pricing experiment, 24 companions, clearer event goals and optional Google/Firebase Auth identity. Owner sign-in configuration is absent, so guest play and a not-configured state are expected. Package/SDK tests have their own evidence; stable checks do not validate new routes or a live login. [Test scope](MONETIZATION_SETUP.md) · [Collection and events](COMPANIONS_EVENTS.md).
+The **1.4 production candidate** now contains the full expanded puzzle, owner Google configuration, three ad placements, real Billing code and an implemented wallet server. Sample creatives remain forced, the server origin is empty and no production deployment/payment is claimed. The earlier Lab/store observations below remain historical. Technical readiness has improved; no new real-player retention, acquisition or revenue evidence has been collected. [Current scope](PRODUCTION_RELEASE.md) · [Validation](VALIDATION.md).
 
 ## The proposition worth testing
 
@@ -14,7 +14,7 @@ The direction-and-gate rule can be demonstrated in a few moves. There is no time
 
 The distinctive moment is **seeing a switch change the future board**. If the early experience feels like generic arrow removal, players may leave before they discover that moment.
 
-The Lab's 24-companion collection gives earned coins more visible goals, and the clearer event screen explains what a return session offers. These are product hypotheses, not observed retention gains. The 12,200-coin companion catalog fits within the original campaign's 13,380-coin initial-plus-three-star income before other spending; that does not measure whether players enjoy earning it. Optional Google identity must remain skippable: it currently adds no cloud-save value and should not become a first-session obstacle. [Collection/event details](COMPANIONS_EVENTS.md) · [Identity limits](GOOGLE_SIGN_IN.md).
+The Lab's 24-companion collection gives earned coins more visible goals, and the clearer event screen explains what a return session offers. These are product hypotheses, not observed retention gains. The 12,200-coin companion catalog fits within the original campaign's 13,380-coin initial-plus-three-star income before other spending; that does not measure whether players enjoy earning it. Optional Google identity must remain skippable: it adds no gameplay cloud save; the new configured wallet can restore purchased cosmetics and should not become a first-session obstacle. [Collection/event details](COMPANIONS_EVENTS.md) · [Identity limits](GOOGLE_SIGN_IN.md).
 
 Delivered Lab 1.2 has historical Android 16 test-ad/reward, simulated-purchase and collection/event interactions. That closes technical integration questions for the recorded cases; it does not supply the missing player cohort. A +35 test-gold callback is not revenue, and a successful event regression is not evidence that people voluntarily return. [Executed checks](VALIDATION.md).
 

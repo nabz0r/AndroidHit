@@ -1,5 +1,7 @@
 # Companions and event clarity
 
+The current **1.4 production candidate** retains these 24 companions/event screens and adds account-restored permanent cosmetics from a separate purchased wallet when configured. The captures below are historical Lab images. [Production scope](PRODUCTION_RELEASE.md) · [Current evidence](VALIDATION.md).
+
 Luma Drift's lab release expands the collection from **6 to 24 companions** and makes each event's objective, progress, next stage, coin rewards, reset time, and completion bonus visible on one screen. These changes are implemented; visual/runtime release checks are recorded separately in [VALIDATION.md](VALIDATION.md).
 
 ## Screen guide

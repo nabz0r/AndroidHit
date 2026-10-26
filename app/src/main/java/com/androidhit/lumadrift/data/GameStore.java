@@ -22,6 +22,11 @@ import java.util.WeakHashMap;
 // Synchronous small local transactions intentionally persist economy before action returns.
 @SuppressLint("ApplySharedPref")
 public final class GameStore {
+    /** Optional account-bound permanent ownership; never imports purchased gold into local coins. */
+    public interface ExternalOwnership {
+        boolean ownsCharacter(String id);
+        boolean ownsSkin(String id);
+    }
     private static final String PREFS = "luma_drift_save_v1";
     private static final int MAX_COINS = 2_000_000_000;
     private static final int MAX_STOCK = 999;
@@ -34,8 +39,14 @@ public final class GameStore {
         LootRetry(int milestone, String item) { this.milestone = milestone; this.item = item; }
     }
     private final SharedPreferences prefs;
+    private final ExternalOwnership externalOwnership;
 
     public GameStore(Context context) {
+        this(context, null);
+    }
+
+    public GameStore(Context context, ExternalOwnership ownership) {
+        externalOwnership = ownership;
         prefs = context.getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         if (!prefs.contains("initialized")) {
             prefs.edit().putBoolean("initialized", true)
@@ -104,11 +115,13 @@ public final class GameStore {
     }
 
     public synchronized boolean ownsCharacter(String id) {
-        return Catalog.character(id) != null && ("nova".equals(id) || prefs.getBoolean("owned_character_" + id, false));
+        return Catalog.character(id) != null && ("nova".equals(id) || prefs.getBoolean("owned_character_" + id, false)
+                || externalOwnership != null && externalOwnership.ownsCharacter(id));
     }
 
     public synchronized boolean ownsSkin(String id) {
-        return Catalog.skin(id) != null && ("lumina".equals(id) || prefs.getBoolean("owned_skin_" + id, false));
+        return Catalog.skin(id) != null && ("lumina".equals(id) || prefs.getBoolean("owned_skin_" + id, false)
+                || externalOwnership != null && externalOwnership.ownsSkin(id));
     }
 
     public synchronized boolean purchaseCharacter(String id) {
