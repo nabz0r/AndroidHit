@@ -56,12 +56,14 @@ public final class Catalog {
         public final String descriptionKey;
         public final int price;
         public final int amount;
-        private BoosterItem(String id, int price, int amount) {
+        public final int unlockLevel;
+        private BoosterItem(String id, int price, int amount, int unlockLevel) {
             this.id = id;
             this.nameKey = "booster_" + id;
             this.descriptionKey = "booster_" + id + "_desc";
             this.price = price;
             this.amount = amount;
+            this.unlockLevel = unlockLevel;
         }
     }
 
@@ -102,9 +104,12 @@ public final class Catalog {
     };
 
     public static final BoosterItem[] BOOSTERS = {
-            new BoosterItem(HINT, 45, 3),
-            new BoosterItem(VISION, 40, 3),
-            new BoosterItem(FLOW, 60, 2)
+            new BoosterItem(HINT, 45, 3, 1),
+            new BoosterItem(VISION, 40, 3, 5),
+            new BoosterItem(FLOW, 60, 2, 12),
+            new BoosterItem("shield", 70, 2, 25),
+            new BoosterItem("focus", 80, 2, 45),
+            new BoosterItem("trail", 90, 2, 75)
     };
 
     private Catalog() { }

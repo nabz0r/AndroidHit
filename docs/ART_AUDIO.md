@@ -2,13 +2,15 @@
 
 Luma Drift uses an original, code-drawn visual system: a dark celestial backdrop, soft colored light, tactile rounded pieces, clear arrow marks, and small expressive companions. The interface takes general puzzle-game conventions—short sessions, visible progression, immediate feedback, and readable rewards—without copying another game's artwork, characters, screens, or sound recordings.
 
-Stable 1.1 includes six companions. **Lab 1.2.0-sandbox** expands that collection to 24 and retains the original six IDs, prices and shapes. Stable screenshots remain evidence for the stable release; the expanded collection and account/commerce surfaces have separately labelled [Lab captures and interaction evidence](COMPANIONS_EVENTS.md). The account images show guest/missing configuration, not a successful Google login.
+Stable 1.1 includes six companions. **Lab 1.2.0-sandbox** expanded the collection to 24, preserving the original six IDs, prices and shapes. Lab 1.3 keeps that collection. Stable screenshots remain evidence for the stable release; the expanded collection and account/commerce surfaces have separately labelled [Lab captures and interaction evidence](COMPANIONS_EVENTS.md). The account images show guest/missing configuration, not a successful Google login.
 
 ## Visual implementation
 
 `LumaView.java` draws the puzzle interface and illustrations directly with Android Canvas primitives, paths, gradients, and platform typefaces. Game artwork uses no downloaded texture/illustration packs, sprite sheets or bundled font files. The Lab's optional account control separately uses Google's official G branding asset; it is not an original companion illustration. Rendering scales from a 390-unit design width and respects the top and bottom system-bar insets.
 
 Pieces use both direction arrows and color, so color is not the only gameplay cue. Switch pieces carry a smaller direction badge. Remix switches carry two badges and toggle both indicated gates; selected switches outline the affected gate rails. Early campaign boards highlight a safe opening and show contextual guidance. Gates expose their open/closed state through shape and lock/arrow icons. Movement produces a short exit trail; blocked actions shake the piece; hints and vision use an outlined glow. Home and victory screens show the equipped companion.
+
+Lab 1.3 adds a visible action allowance and six original power icons: a Spark bulb, Vision eye, Flow arrows, Shield outline, Focus target and Trail path. Shield displays remaining protected blocks. Focus outlines exact safe moves for up to ten seconds; Trail numbers up to five moves of a complete solution for up to twelve seconds. Either preview ends at the next successful exit or Undo. The [actual 1.3 interface gallery](../README.md#actual-13-screens) uses a clearly disclosed synthetic emulator profile; the [final runtime report](validation/v1.3/move-power-ui-smoke.txt) records exact stock/action behavior and restoration. This is separate from physical-device or assistive-technology acceptance.
 
 The launcher uses Nova’s gold five-point silhouette, matching the game and original [brand kit](store/README.md). The home screen includes a rank card and mission entry. Seven distinct first clears unlock an optional star badge for the equipped companion. Original challenge cards render the initial board, gate rails, direction badges and an exact share code; they do not invent a ranking or score.
 
@@ -50,7 +52,7 @@ Collection presents eight companions per page across three pages. Opening a card
 
 <p><img src="screenshots/lab/collection-page-1.png" width="225" alt="Lab companions page 1"><img src="screenshots/lab/collection-page-2.png" width="225" alt="Lab companions page 2"><img src="screenshots/lab/collection-page-3.png" width="225" alt="Lab companions page 3"></p>
 
-Actual Android captures show all 24 card silhouettes. The installed UI run also opened native previews and exercised purchase/equip. This is separate from a physical-device, calibrated-display or complete assistive-technology review.
+Historical Lab 1.2 Android captures show all 24 card silhouettes; they do not depict the later six-power/budget interfaces. The installed UI run also opened native previews and exercised purchase/equip. This is separate from a physical-device, calibrated-display or complete assistive-technology review.
 
 Six skins change the background, cards, accents, and gameplay palette. They are also cosmetic.
 

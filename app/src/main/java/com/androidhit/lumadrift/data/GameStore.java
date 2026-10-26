@@ -11,10 +11,12 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Map;
+import java.util.WeakHashMap;
 
 /**
- * Local save with atomic economy updates. There is no network, ad currency,
- * real-money purchase, or repeat reward for replaying an already earned star.
+ * Local game progression and sandbox economy ledger. These methods never verify
+ * a real payment; replaying an already earned star cannot farm rewards.
  * Level numbers are 1-based. Event puzzle indexes are 0-based.
  */
 // Synchronous small local transactions intentionally persist economy before action returns.
@@ -24,6 +26,13 @@ public final class GameStore {
     private static final int MAX_COINS = 2_000_000_000;
     private static final int MAX_STOCK = 999;
     private static final Object GOLD_GRANT_LOCK = new Object();
+    // The no-argument loot API must retry the same milestone after an Android
+    // memory-before-disk failure, including through another handle in this process.
+    private static final Map<SharedPreferences, LootRetry> LOOT_RETRIES = new WeakHashMap<>();
+    private static final class LootRetry {
+        final int milestone; final String item;
+        LootRetry(int milestone, String item) { this.milestone = milestone; this.item = item; }
+    }
     private final SharedPreferences prefs;
 
     public GameStore(Context context) {
@@ -135,6 +144,14 @@ public final class GameStore {
         return Math.max(0, Math.min(MAX_STOCK, prefs.getInt("booster_" + id, 0)));
     }
 
+    public int boosterStockLimit() { return MAX_STOCK; }
+
+    /** Saved old stocks remain intact; access follows the public Journey milestone. */
+    public synchronized boolean boosterUnlocked(String id) {
+        Catalog.BoosterItem item = Catalog.booster(id);
+        return item != null && unlockedLevel() >= item.unlockLevel;
+    }
+
     /** Distinct first clears only. Events, replays, purchases and failures cannot raise prices. */
     public synchronized int economyProgress() {
         int completed = 0;
@@ -151,21 +168,104 @@ public final class GameStore {
     }
 
     public synchronized boolean purchaseBooster(String id) {
-        Catalog.BoosterItem item = Catalog.booster(id);
-        if (item == null) return false;
-        int price = boosterPrice(id);
-        if (coins() < price || boosterStock(id) > MAX_STOCK - item.amount) return false;
-        prefs.edit().putInt("coins", coins() - price)
-                .putInt("booster_" + id, boosterStock(id) + item.amount).commit();
-        return true;
+        synchronized (GOLD_GRANT_LOCK) {
+            Catalog.BoosterItem item = Catalog.booster(id);
+            if (item == null || !boosterUnlocked(id)) return false;
+            int price = boosterPrice(id);
+            if (coins() < price || boosterStock(id) > MAX_STOCK - item.amount) return false;
+            prefs.edit().putInt("coins", coins() - price)
+                    .putInt("booster_" + id, boosterStock(id) + item.amount).commit();
+            return true;
+        }
     }
 
     public synchronized boolean useBooster(String id) {
-        int count = boosterStock(id);
-        if (count <= 0) return false;
-        prefs.edit().putInt("booster_" + id, count - 1).commit();
-        return true;
+        synchronized (GOLD_GRANT_LOCK) {
+            if (!boosterUnlocked(id)) return false;
+            int count = boosterStock(id);
+            if (count <= 0) return false;
+            prefs.edit().putInt("booster_" + id, count - 1).commit();
+            return true;
+        }
     }
+
+    /** Read-only observation; grantBoosterOnce must succeed without a persistence error first. */
+    public synchronized boolean hasBoosterGranted(String id, String requestId) {
+        if (Catalog.booster(id) == null || !validRewardId(requestId)) return false;
+        synchronized (GOLD_GRANT_LOCK) {
+            return id.equals(prefs.getString("booster_reward_v1_" + sha256(requestId), ""));
+        }
+    }
+
+    /** One earned unit, not a purchased pack. One request can reward only one power. */
+    public synchronized int grantBoosterOnce(String id, String requestId) {
+        if (!boosterUnlocked(id) || !validRewardId(requestId)) return 0;
+        synchronized (GOLD_GRANT_LOCK) {
+            String token = "booster_reward_v1_" + sha256(requestId);
+            String granted = prefs.getString(token, "");
+            if (!granted.isEmpty()) {
+                if (!id.equals(granted)) return 0;
+                boolean persisted = prefs.edit().putString(token, id).putInt("booster_" + id, boosterStock(id)).commit();
+                if (!persisted) throw new IllegalStateException("Could not persist recorded power reward");
+                return 0;
+            }
+            int stock = boosterStock(id);
+            if (stock >= MAX_STOCK) return 0;
+            boolean persisted = prefs.edit().putString(token, id).putInt("booster_" + id, stock + 1).commit();
+            if (!persisted) throw new IllegalStateException("Could not persist power reward");
+            return 1;
+        }
+    }
+
+    /** Earliest unclaimed five-clear Journey milestone, or zero after the whole catalog. */
+    public synchronized int nextLootMilestone() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LootRetry retry = LOOT_RETRIES.get(prefs);
+            if (retry != null) return retry.milestone;
+            for (int milestone = 5; milestone <= Catalog.LEVEL_COUNT; milestone += 5) {
+                if (!prefs.contains("power_loot_v1_" + milestone)) return milestone;
+            }
+            return 0;
+        }
+    }
+
+    /**
+     * Earn one deterministic unlocked power per five distinct Journey clears.
+     * Claim oldest first; no paid/random loot and no reward from replay/event wins.
+     * Item and claim token share one commit. A failed in-process call remains on
+     * that same milestone until retry durably saves it, without another stock unit.
+     */
+    public synchronized String claimMilestoneLoot() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LootRetry pending = LOOT_RETRIES.get(prefs);
+            int milestone = pending == null ? nextLootMilestone() : pending.milestone;
+            if (milestone == 0 || completedLevels() < milestone) return "";
+            String token = "power_loot_v1_" + milestone;
+            String recorded = prefs.getString(token, "");
+            if (!recorded.isEmpty()) {
+                if (pending == null || !pending.item.equals(recorded) || Catalog.booster(recorded) == null) return "";
+                boolean persisted = prefs.edit().putString(token, recorded).putInt("booster_" + recorded, boosterStock(recorded)).commit();
+                if (!persisted) throw new IllegalStateException("Could not persist recorded milestone loot");
+                LOOT_RETRIES.remove(prefs);
+                return recorded;
+            }
+            int eligible = 0;
+            for (Catalog.BoosterItem item : Catalog.BOOSTERS) if (boosterUnlocked(item.id)) eligible++;
+            if (eligible == 0) return "";
+            int target = (milestone / 5 - 1) % eligible;
+            String id = "";
+            for (Catalog.BoosterItem item : Catalog.BOOSTERS) if (boosterUnlocked(item.id) && target-- == 0) { id = item.id; break; }
+            int stock = boosterStock(id);
+            if (stock >= MAX_STOCK) return "";
+            LOOT_RETRIES.put(prefs, new LootRetry(milestone, id));
+            boolean persisted = prefs.edit().putString(token, id).putInt("booster_" + id, stock + 1).commit();
+            if (!persisted) throw new IllegalStateException("Could not persist milestone loot");
+            LOOT_RETRIES.remove(prefs);
+            return id;
+        }
+    }
+
+    private static boolean validRewardId(String id) { return id != null && id.matches("[a-zA-Z0-9_:-]{1,160}"); }
 
     public synchronized boolean soundEnabled() { return prefs.getBoolean("sound", true); }
     public synchronized boolean musicEnabled() { return prefs.getBoolean("music", true); }
@@ -361,6 +461,48 @@ public final class GameStore {
             if (coins() > MAX_COINS - amount) return 0;
             boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", coins() + amount).commit();
             if (!persisted) throw new IllegalStateException("Could not persist gold transaction");
+            return amount;
+        }
+    }
+
+    /** Fixed, public continuation cost; kept equal to MoveBudget.GOLD_EXTENSION_COST by tests. */
+    public static final int CONTINUE_GOLD_COST = 100;
+
+    /**
+     * Whether this process currently records a continuation debit. As with gold
+     * grants, first call spendGoldOnce without a persistence error before treating
+     * an in-memory marker as a durable transaction.
+     */
+    public synchronized boolean hasGoldSpent(String requestId) {
+        if (requestId == null || !requestId.matches("[a-zA-Z0-9_:-]{1,160}")) return false;
+        synchronized (GOLD_GRANT_LOCK) {
+            return prefs.getBoolean("gold_spend_v1_" + sha256(requestId), false);
+        }
+    }
+
+    /**
+     * Continuation-only local debit: exactly 100 gold, never a real payment.
+     * Returns 100 for a new debit, 0 for a recorded duplicate or invalid/unfunded
+     * request. hasGoldSpent distinguishes a duplicate from a refusal. Amounts
+     * other than the published fixed cost are rejected, including on retry.
+     * Debit and hashed marker use one commit, under the same process-wide lock
+     * as credits. A duplicate flushes Android's memory-before-disk state before
+     * reporting success, so a failed commit can retry without a second debit.
+     */
+    public synchronized int spendGoldOnce(String requestId, int amount) {
+        if (requestId == null || !requestId.matches("[a-zA-Z0-9_:-]{1,160}")
+                || amount != CONTINUE_GOLD_COST) return 0;
+        synchronized (GOLD_GRANT_LOCK) {
+            String token = "gold_spend_v1_" + sha256(requestId);
+            if (prefs.getBoolean(token, false)) {
+                boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", coins()).commit();
+                if (!persisted) throw new IllegalStateException("Could not persist recorded gold debit");
+                return 0;
+            }
+            int balance = coins();
+            if (balance < amount) return 0;
+            boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", balance - amount).commit();
+            if (!persisted) throw new IllegalStateException("Could not persist gold debit");
             return amount;
         }
     }

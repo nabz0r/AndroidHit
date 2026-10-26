@@ -2,28 +2,52 @@
 
 <h1 align="center">Luma Drift</h1>
 <p align="center"><strong>A small light. A great escape.</strong><br>Tap. Change the gates. Find the order.</p>
-<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.2.0-sandbox.apk"><strong>Download Luma Drift Lab · 1.2.0-sandbox</strong></a><br><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.1.0.apk">Stable offline APK · 1.1.0</a> · <a href="docs/RELEASE.md">Install & checksums</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.3.0-sandbox.apk"><strong>Download Luma Drift Lab · 1.3.0-sandbox</strong></a><br><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.1.0.apk">Stable offline APK · 1.1.0</a> · <a href="docs/RELEASE.md">Install & checksums</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
 <p align="center">480 campaign & Remix boards · 6 languages · Original art & audio<br>Stable offline game + separate monetization test Lab</p>
 
 ## Choose the right app
 
 | | Stable game | Luma Drift Lab |
 | --- | --- | --- |
-| Version | **1.1.0** | **1.2.0-sandbox** · code 3 |
+| Version | **1.1.0** | **1.3.0-sandbox** · code 4; 1.2 preserved as history |
 | Android name | Luma Drift | Luma Drift Lab |
 | Application ID | `com.androidhit.lumadrift` | `com.androidhit.lumadrift.sandbox` |
-| Status | Signed, tested delivery | Delivered test APK; covered Android 16 flows passed |
+| Status | Signed, tested delivery | Signed delivery; recorded Android 16 gameplay and SDK tests passed |
 | Money and ads | Earned coins only; no ads or billing SDK | No-charge gold simulation; optional Google test ads |
 | Collection | Six original companions, six themes | 24 companions across three pages, six themes |
 | Account | Guest/local play only | Optional Google/Firebase Auth adapter; owner configuration absent |
 | Network | No Internet permission | Google SDK routes can contact Google; see [privacy](docs/PRIVACY.md) |
-| Install | **[Stable APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.1.0.apk)** | **[Lab APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.2.0-sandbox.apk)** |
+| Install | **[Stable APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.1.0.apk)** | **[Lab 1.3 APK · 3.9 MB](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.3.0-sandbox.apk)** · [Preserved 1.2](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.2.0-sandbox.apk) |
 
-The Lab installs beside the stable game with its own save and wallet. Simulated gold never transfers to the stable app. **No real checkout, production ad identifiers or purchase-verification backend is enabled.** Current `main` prepares the Lab; [stable 1.1 source is preserved at commit 15751be](https://github.com/nabz0r/AndroidHit/tree/15751bec3f332f60ba1ba6fef0c0b82f47f941c0), along with its APK. [Test guide and account setup](docs/MONETIZATION_SETUP.md) · [Research and design decisions](docs/MONETIZATION_RESEARCH.md).
+The Lab installs beside the stable game with its own save and wallet. Lab 1.3 updates the same sandbox application as 1.2; it is not a third isolated wallet. Simulated gold never transfers to the stable app. **No real checkout, production ad identifiers or purchase-verification backend is enabled.** Current `main` builds Lab 1.3; [stable 1.1 source is preserved at commit 15751be](https://github.com/nabz0r/AndroidHit/tree/15751bec3f332f60ba1ba6fef0c0b82f47f941c0), along with its APK. [Test guide and account setup](docs/MONETIZATION_SETUP.md) · [Research and design decisions](docs/MONETIZATION_RESEARCH.md).
+
+## New in Lab 1.3: plan every action
+
+The delivered Lab keeps the original board pool and introduces a measured order, an explicit action allowance and six powers. Its signed final APK passed the recorded Android 16 gameplay and real Google test-ad cases; physical-device comfort and player retention remain unmeasured.
+
+- **A smoother 480-board progression:** original layouts stay intact, while a frozen within-chapter order reduces measured upward spikes. Journey 1–6 and Remix 1–3 remain fixed. This is a transparent structural model, not a human difficulty rating. [Measurements and CSV](docs/DIFFICULTY.md).
+- **Visible moves, free restart:** a present-piece tap costs one action even when blocked; successful Undo costs one; empty taps and thinking time cost nothing. Every board has a certified solution inside its initial allowance. At exhaustion, restart free or optionally extend for 100 sandbox gold or an earned test ad, at most twice per attempt. [Exact rules](docs/GAMEPLAY.md#lab-13-action-allowance).
+- **Six powers, learned gradually:** Spark, Vision, Flow, Shield, Focus and Trail unlock at Journey 1/5/12/25/45/75. The shop has two pages with previews, explicit pack prices and optional earned-ad +1 power. Ordinary commerce retains its separate +35-test-gold ad; each video grants only its announced reward. A free deterministic power is claimable per five distinct Journey clears; there is no paid random loot.
+- **Explicit upgrade boundary:** earned stars/unlocks stay at their numbered positions, while coins, XP, inventory and cosmetics remain; an older interrupted Lab board resets with a notice because the content order/session policy changed. New attempt counters and Shield charges persist. New B/Q challenge codes identify balanced boards; old C/R/E codes retain their layouts.
+
+### Actual 1.3 screens
+
+These installed-game captures use an **explicit synthetic emulator profile**: Journey 75 access, 10,000 local test gold, four of each power and five seeded clears for the free-loot case. They demonstrate the interface, not 75 boards played or earned progression. The original six game-owned preference files were restored byte for byte after testing. [Exact run and restoration](docs/validation/v1.3/move-power-ui-smoke.txt) · [Fixture record](docs/validation/v1.3/move-power-profile.json).
+
+<table>
+<tr><td align="center"><img src="docs/screenshots/lab/v13-six-powers.png" width="220" alt="Actual Lab 1.3 board with visible action allowance and six power controls"><br><strong>Plan every exit</strong><br>Visible actions, six optional powers.</td><td align="center"><img src="docs/screenshots/lab/v13-power-focus.png" width="220" alt="Actual Focus preview outlining every solver-safe next move"><br><strong>See the safe choices</strong><br>Focus highlights exact safe exits.</td><td align="center"><img src="docs/screenshots/lab/v13-power-trail.png" width="220" alt="Actual Trail preview numbering the first five moves of one complete solution"><br><strong>Follow a possible path</strong><br>Trail numbers up to five steps.</td></tr>
+<tr><td align="center"><img src="docs/screenshots/lab/v13-out-of-moves.png" width="220" alt="Actual exhausted attempt with exact extension offer, two-continuation quota and free restart"><br><strong>Choose your next try</strong><br>Free restart stays in view.</td><td align="center"><img src="docs/screenshots/lab/v13-power-shop.png" width="220" alt="Actual settled second shop page showing Shield, Focus and Trail pack quantities, prices and free milestone loot"><br><strong>Understand every pack</strong><br>Preview, price and milestone loot.</td><td align="center"><img src="docs/screenshots/lab/v13-continuation-earned.png" width="220" alt="Actual board after an earned Google test ad added ten actions without adding gold"><br><strong>One offer, one reward</strong><br>Test-ad continuation: +10 actions.</td></tr>
+</table>
+
+The final-binary run checked action costs, exhaustion across recreation, two exact 100-gold debits, free restart, unlimited friend practice, unlock gates, all six powers, a pack purchase and one free milestone claim. **Two actual Google test ads** then granted +10 actions and Spark ×1 respectively, with **zero extra gold** and no duplicate continuation after recreation. The optional [local journal export](docs/validation/v1.3/ad-journal-export.json) observed two impressions and two USD 0-micros paid callbacks; test diagnostics establish no income. Google login, real checkout and production advertising remain unconfigured/unvalidated.
+
+<table>
+<tr><td align="center"><img src="docs/screenshots/lab/v13-exact-zero-win.png" width="220" alt="Separate actual Journey 1 win at exactly zero remaining actions, with two stars, 45 earned coins and 30 XP"></td><td><strong>The last action still wins.</strong><br><br>A separate run used the existing save without fixture edits: four exit/Undo cycles, then five certified exits, spending all 13 actions. It earned two stars, 45 coins and 30 XP, with no ad, purchase or exhaustion offer.<br><br>This victory frame is separate from the synthetic-profile gallery above. <a href="docs/validation/v1.3/exact-zero-ui.txt">Exact Android interaction record</a>.</td></tr>
+</table>
 
 ## One move changes the next
 
-Each light follows its arrow. A clear path and an open gate let it escape. A switch changes one gate; a paired Remix switch changes two. Choose the order and empty the board. Undo and restart are free, blocked taps cost nothing, and there is no countdown.
+Each light follows its arrow. A clear path and an open gate let it escape. A switch changes one gate; a paired Remix switch changes two. Choose the order and empty the board. In the preserved 1.1/1.2 releases, Undo and blocked taps have no action allowance; Lab 1.3 counts them as described above. Restart remains free and there is no countdown during a puzzle.
 
 <table>
 <tr><td align="center"><img src="docs/screenshots/v1.1/home.png" width="235" alt="Real Luma Drift home screen with rank, continue and challenge actions"><br><strong>Your next escape</strong><br>Continue, grow your rank, share a challenge.</td><td align="center"><img src="docs/screenshots/v1.1/play.png" width="235" alt="Actual direction-and-gate puzzle on Android"><br><strong>Read the path</strong><br>Arrows, switches and visible gate states.</td><td align="center"><img src="docs/screenshots/v1.1/remix.png" width="235" alt="Actual Remix puzzle with paired switch badges"><br><strong>Change two gates</strong><br>240 extra boards after Journey level 12.</td></tr>
@@ -44,7 +68,7 @@ French, English, German, Spanish, Portuguese and Italian are included. Music, ef
 
 Stable 1.1 has no account, network permission, automatic telemetry, online leaderboard or backend. Android's share sheet opens only after a player requests a challenge or journal export. Friend challenges use the same starting board and award no coins, XP or progression; powers are unavailable. Daily/weekly events follow the device date.
 
-## Inside the separate Lab
+## Preserved Lab 1.2: features and gallery
 
 The Lab keeps the puzzle and expands its collection, event presentation and optional test surfaces:
 
@@ -62,9 +86,9 @@ The Lab keeps the puzzle and expands its collection, event presentation and opti
 <tr><td align="center"><img src="docs/screenshots/lab/test-ad.png" width="220" alt="Actual Google SDK creative visibly labelled Test Ad"><br><strong>Real SDK, test creative</strong><br>Optional reward; no revenue claim.</td><td align="center"><img src="docs/screenshots/lab/ump-form.png" width="220" alt="Actual Google UMP Publisher Test Ads consent form with refusal option"><br><strong>Choices stay visible</strong><br>Google's test consent form.</td><td align="center"><img src="docs/screenshots/lab/account.png" width="220" alt="Lab account screen honestly showing guest play and missing owner Google configuration"><br><strong>Guest comes first</strong><br>Owner sign-in setup is still required.</td></tr>
 </table>
 
-These are actual installed-Lab captures. Google's **Test Ad / Publisher Test Ads** screens are SDK test material, not a Luma Drift rating, store listing or production approval. The test run displayed a rewarded creative and credited **35 test gold**, exercised UMP refusal and no-charge pack cancel/pending/restart/idempotence, browsed all 24 companions, and cleared all ten daily/weekly stages with one-time bonuses. Six-language collection/event checks passed. The opt-in local journal captured one actual test impression, reward and paid callback at USD 0 micros; it was cleared and disabled afterward. Google account evidence covers guest/missing-configuration behavior in English and French; actual login remains untested.
+These are actual installed **Lab 1.2** captures and historical results; they do not show the new 1.3 allowance or six-power shop. Google's **Test Ad / Publisher Test Ads** screens are SDK test material, not a Luma Drift rating, store listing or production approval. The test run displayed a rewarded creative and credited **35 test gold**, exercised UMP refusal and no-charge pack cancel/pending/restart/idempotence, browsed all 24 companions, and cleared all ten daily/weekly stages with one-time bonuses. Six-language collection/event checks passed. The opt-in local journal captured one actual test impression, reward and paid callback at USD 0 micros; it was cleared and disabled afterward. Google account evidence covers guest/missing-configuration behavior in English and French; actual login remains untested.
 
-The [validation report](docs/VALIDATION.md) identifies the exact packages, executed checks and remaining limits. Owner-configured consent, Play license-test purchases, production fulfillment, live identity and commercial results remain separate future work. Paid-event callback observation is not claimed from an SDK test-ad screenshot.
+The [preserved 1.2 validation](docs/VALIDATION_1_2.md) identifies those exact packages, executed checks and remaining limits. Owner-configured consent, Play license-test purchases, production fulfillment, live identity and commercial results remain separate future work. Paid-event callback observation is not claimed from an SDK test-ad screenshot.
 
 ## Could this be a hit?
 
@@ -74,7 +98,7 @@ The [hit audit](docs/HIT_AUDIT.md) explains the product choices and evidence gap
 
 ## Build & verify
 
-Current source builds **Luma Drift Lab 1.2.0-sandbox**: Java 17 and Android Canvas, minimum API 26, target/compile API 36; Gradle 8.14.3 and AGP 8.11.0. The Lab adds GMA Next-Gen 1.6.0, UMP 4.0.0, Billing 9.1.0, Credential Manager 1.6.0, Google ID 1.2.1, Firebase Auth 25.0.0, desugaring and transitive dependencies. Release builds use R8/resource shrinking. Stable 1.1 predates these integrations and has no third-party runtime SDK.
+Current source builds **Luma Drift Lab 1.3.0-sandbox**: Java 17 and Android Canvas, minimum API 26, target/compile API 36; Gradle 8.14.3 and AGP 8.11.0. The Lab adds GMA Next-Gen 1.6.0, UMP 4.0.0, Billing 9.1.0, Credential Manager 1.6.0, Google ID 1.2.1, Firebase Auth 25.0.0, desugaring and transitive dependencies. Release builds use R8/resource shrinking. Stable 1.1 predates these integrations and has no third-party runtime SDK.
 
 ```sh
 export JAVA_HOME=/path/to/jdk-17
@@ -86,12 +110,14 @@ scripts/test-data.sh
 scripts/test-meta.sh
 scripts/test-economy.sh
 scripts/test-collection-events.sh
+scripts/test-difficulty.sh
+scripts/test-move-budget.sh
 ./gradlew assembleRelease bundleRelease lintRelease
 ```
 
 Release builds need your private signing configuration; see [development](docs/DEVELOPMENT.md). Keep the existing signing key when updating an installed package. Private keys and local properties are excluded from this repository. The [validation report](docs/VALIDATION.md) separates logic tests, signature checks, emulator interaction and physical-device limits.
 
-Lab lint reports **0 errors and 4 update advisories**, using the standalone lint 9.4.0 experimental override required for the SDK dependency metadata. The build remains on the recorded AGP/Gradle/SDK versions; see [tooling details](docs/DEVELOPMENT.md).
+The final Lab 1.3 lint report records **0 errors and 4 update advisories**, using the [standalone lint 9.4.0 experimental override](docs/validation/v1.3/lint.txt) required for the SDK dependency metadata. The build remains on the recorded AGP/Gradle/SDK versions; see [tooling details](docs/DEVELOPMENT.md).
 
 ## Explore the project
 
@@ -100,6 +126,7 @@ Lab lint reports **0 errors and 4 update advisories**, using the standalone lint
 | Playing and understanding every feature | [Visual guide](docs/VISUAL_GUIDE.md) · [Gameplay & economy](docs/GAMEPLAY.md) |
 | Exploring the Lab's collection and local events | [Companions & events](docs/COMPANIONS_EVENTS.md) |
 | What's new and what comes next | [Changelog](docs/CHANGELOG.md) · [Roadmap](docs/ROADMAP.md) · [Hit audit](docs/HIT_AUDIT.md) |
+| Inspecting the new progression and allowance | [480-board difficulty audit](docs/DIFFICULTY.md) · [Move-limit research](docs/MOVE_LIMITS_RESEARCH.md) · [Action & power contracts](docs/MOVE_BUDGET_POWERUPS.md) |
 | Installing and checking the delivery | [Release](docs/RELEASE.md) · [Validation](docs/VALIDATION.md) · [Artifact manifest](releases/manifest.json) |
 | Building or changing the game | [Architecture & development](docs/DEVELOPMENT.md) · [Level design](docs/LEVEL_DESIGN.md) |
 | Understanding monetization tests | [Lab setup](docs/MONETIZATION_SETUP.md) · [Primary-source research](docs/MONETIZATION_RESEARCH.md) |

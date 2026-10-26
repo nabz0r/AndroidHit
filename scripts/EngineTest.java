@@ -27,6 +27,12 @@ public final class EngineTest {
         long started = System.nanoTime();
         fixtures();
         challengeCodes();
+        for(int n=1;n<=240;n++){
+            roundtrip(ChallengeCode.encodeBalanced(n),ChallengeCode.Kind.BALANCED,n);
+            roundtrip(ChallengeCode.encodeBalancedRemix(n),ChallengeCode.Kind.BALANCED_REMIX,n);
+        }
+        expectIllegal(()->ChallengeCode.encodeBalanced(0),"Balanced lower bound");
+        expectIllegal(()->ChallengeCode.encodeBalancedRemix(241),"Balanced remix upper bound");
         check(contentDigest(false).equals("7cdbb8a4d94fe8ddb468a2ade2fa214b258cedd6bc5cbe24a74ee7c029b2893a"),
                 "All 240 original board layouts remain v1.0 identical");
         Set<String> boards = new HashSet<String>();

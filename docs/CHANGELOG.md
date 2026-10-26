@@ -2,9 +2,31 @@
 
 Release scope is separated from executed checks in [VALIDATION.md](VALIDATION.md). APK bytes and checksums are recorded in [RELEASE.md](RELEASE.md).
 
+## 1.3.0-sandbox — Action planning and six powers
+
+**Released 26 October 2026 — version code 4; final signed package and recorded Android 16 runtime checks passed.** It updates the same `com.androidhit.lumadrift.sandbox` application as 1.2; stable 1.1 stays separate. The 1.2 package, screenshots and results remain historical evidence.
+
+- Frozen `BalancedCatalog` ordering for 240 Journey +240 Remix layouts, with original teaching prefixes and chapter membership preserved. [19,054 exact-board/structural checks and measured changes](DIFFICULTY.md); this is not a player difficulty study.
+- Visible per-attempt action allowance. Present-piece attempts and successful Undo cost one; empty taps/menu/focus/time cost zero. Free restart remains available. Exhausted attempts can receive `max(5, remaining pieces +3)` actions for 100 sandbox gold or an earned test ad, sharing a two-continuation quota.
+- Six powers at Journey 1/5/12/25/45/75: Spark, Vision, Flow, Shield, Focus and Trail. Shield protects three blocked attempts; Focus shows all solver-safe next moves; Trail numbers up to five moves in one complete solution. Flow checks that its required actions remain before spending an item.
+- Two-page, six-item shop with native offer details, progression-based pack prices, unlock gates and optional earned-ad +1 item. Ordinary commerce retains its separate +35-test-gold ad; continuation and power placements do not add gold as well. A free deterministic power per five distinct Journey clears is claimable once; no paid random loot.
+- New B/Q challenge identities for balanced Journey/Remix boards, with C/R/E compatibility preserved. Friend practice remains unlimited, with no powers, continuations or progression rewards.
+- Content version 2: an older interrupted Lab board resets with a migration notice; earned stars/unlocks stay at their numbered positions, while wallet, XP, owned cosmetics and inventory remain; old solved-layout identities are not remapped. New attempt counters/continuation state and Shield charges persist.
+- Stars account for assistance: three require no powers/continuations and at most two undos; two allow at most two powers and one continuation; other completed runs receive one.
+
+[Download Lab 1.3 APK](../releases/luma-drift-1.3.0-sandbox.apk) · [Exact integrity and scope](VALIDATION.md).
+
+### Executed 1.3 checks
+
+The recorded suites pass 435,796 engine assertions, 7,941 data checks, 362 meta checks plus JSON validation, 4,586 economy checks, 87,121 collection/calendar checks, 19,054 difficulty checks, 340,768 move-budget checks and 42 commerce-receipt adapter checks. Final lint reports 0 errors and 4 update advisories. JVM durability cases are simulations, not injected physical-storage faults.
+
+The [actual installed run](validation/v1.3/move-power-ui-smoke.txt) covers action costs, exhausted state/recreation, two exact 100-gold extensions and cap, free restart, unlimited friend practice, locked acquisition, all six powers, one exact pack debit and a unique free-loot claim. Two real Google sample ads earned +10 actions and Spark ×1, with no gold bonus or repeated extension after recreation. The journal records two test impressions and paid callbacks at USD 0 micros / UNKNOWN; these are not revenue.
+
+The profile was explicitly synthetic: Journey 75 access, 10,000 test gold, four of each power and five seeded three-star clears for loot eligibility. No 75-level playthrough is claimed. A separate [non-fixture Journey-1 run](validation/v1.3/exact-zero-ui.txt) won at exactly zero remaining actions after four Undos, earning two stars, 45 coins and 30 XP without an ad or purchase. All six original game-owned sandbox preference files were restored byte for byte, and the installed APK hash independently matched the delivered bytes. Earlier 1.2 account/collection results stay historical. Actual Google login, real checkout, production ads/backend, physical-device acceptance and market performance remain unestablished.
+
 ## 1.2.0-sandbox — Luma Drift Lab
 
-**Delivered 26 October 2026 — separate test app, version code 3.** Current source targets `com.androidhit.lumadrift.sandbox`, displayed as Luma Drift Lab. It can coexist with stable 1.1 and has separate private data. This is not a production monetization release. [Download Lab APK](../releases/luma-drift-1.2.0-sandbox.apk) · [Exact package checks and runtime evidence](VALIDATION.md).
+**Delivered 26 October 2026 — separate test app, version code 3.** That release targets `com.androidhit.lumadrift.sandbox`, displayed as Luma Drift Lab. It can coexist with stable 1.1 and has separate private data. This is not a production monetization release. [Download Lab APK](../releases/luma-drift-1.2.0-sandbox.apk) · [Exact package checks and runtime evidence](VALIDATION.md).
 
 ### Implemented test scope
 

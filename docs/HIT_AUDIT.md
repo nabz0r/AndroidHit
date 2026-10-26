@@ -4,19 +4,19 @@
 
 Assessment date: **26 October 2026**. This is a product diagnosis, not a revenue forecast. Actual release checks are recorded separately in [VALIDATION.md](VALIDATION.md).
 
-The signed **1.1.0 stable game** and **1.2.0-sandbox Lab** are separate applications. The Lab prepares SDK test advertising, no-charge gold simulations, a progression pricing experiment, 24 companions, clearer event goals and optional Google/Firebase Auth identity. Owner sign-in configuration is absent, so guest play and a not-configured state are expected. Package/SDK tests have their own evidence; stable checks do not validate new routes or a live login. [Test scope](MONETIZATION_SETUP.md) · [Collection and events](COMPANIONS_EVENTS.md).
+The signed **1.1.0 stable game** and **Lab sandbox** are separate applications. Lab 1.2 is a delivered test build; delivered Lab 1.3 updates that same sandbox with recorded final-package Android 16 gameplay and test-ad evidence. The Lab prepares SDK test advertising, no-charge gold simulations, a progression pricing experiment, 24 companions, clearer event goals and optional Google/Firebase Auth identity. Owner sign-in configuration is absent, so guest play and a not-configured state are expected. Package/SDK tests have their own evidence; stable checks do not validate new routes or a live login. [Test scope](MONETIZATION_SETUP.md) · [Collection and events](COMPANIONS_EVENTS.md).
 
 ## The proposition worth testing
 
 > Tap a light to let it escape. Some exits change the gates. One clear path can change every next choice.
 
-The direction-and-gate rule can be demonstrated in a few moves. There is no timer, energy wait, paid solution, or required account. The visual identity and synthesized sound give the mechanic a recognizable setting without a large art budget. Free undo makes experimenting safe. Keep those advantages.
+The direction-and-gate rule can be demonstrated in a few moves. There is no timer, energy wait, paid solution, or required account. The visual identity and synthesized sound give the mechanic a recognizable setting without a large art budget. The stable version's free Undo makes experimentation forgiving. Lab 1.3 keeps free restart but gives Undo and blocked taps an action cost, so that change must earn its place in player observation.
 
 The distinctive moment is **seeing a switch change the future board**. If the early experience feels like generic arrow removal, players may leave before they discover that moment.
 
 The Lab's 24-companion collection gives earned coins more visible goals, and the clearer event screen explains what a return session offers. These are product hypotheses, not observed retention gains. The 12,200-coin companion catalog fits within the original campaign's 13,380-coin initial-plus-three-star income before other spending; that does not measure whether players enjoy earning it. Optional Google identity must remain skippable: it currently adds no cloud-save value and should not become a first-session obstacle. [Collection/event details](COMPANIONS_EVENTS.md) · [Identity limits](GOOGLE_SIGN_IN.md).
 
-The delivered Lab now has observed Android 16 test-ad/reward, simulated-purchase and collection/event interactions. That closes technical integration questions for the recorded cases; it does not supply the missing player cohort. A +35 test-gold callback is not revenue, and a successful event regression is not evidence that people voluntarily return. [Executed checks](VALIDATION.md).
+Delivered Lab 1.2 has historical Android 16 test-ad/reward, simulated-purchase and collection/event interactions. That closes technical integration questions for the recorded cases; it does not supply the missing player cohort. A +35 test-gold callback is not revenue, and a successful event regression is not evidence that people voluntarily return. [Executed checks](VALIDATION.md).
 
 ## Diagnosis and response
 
@@ -30,6 +30,16 @@ The delivered Lab now has observed Android 16 test-ad/reward, simulated-purchase
 | Does the package convey the real game? | Genuine 1.0 screenshots and documentation | Updated screenshots, store copy, release evidence and roadmap | Run store listing experiments once there is enough eligible traffic |
 
 The 1.1 column describes delivered behavior. [CHANGELOG.md](CHANGELOG.md) and [VALIDATION.md](VALIDATION.md) distinguish implementation and executed verification; it does not imply completed market validation.
+
+## What 1.3 changes — and risks
+
+The frozen 480-board order reduces mean adjacent structural score jumps from **12.21 to 4.26** in Journey and **14.45 to 3.57** in Remix. All retained layouts are solvable. These are transparent model measurements, not human difficulty ratings or evidence of a Candy Crush quality curve. Original chapter pools stay intact; Journey 1–6 and Remix 1–3 remain fixed. [Method, remaining spikes and CSV](DIFFICULTY.md).
+
+The action allowance makes blocked attempts and Undo consequential; counting only successful removals would be cosmetic because every solution removes exactly one piece per move. Free restart and a certified solution inside the initial allowance prevent a required purchase, but the new penalty may also discourage useful experimentation or punish imprecise touches. A legal gate-changing move can still leave an unsolvable position. Two optional extensions do not guarantee recovery. Observe those failure cases before tightening any margin.
+
+Six powers and a free claim every five distinct Journey clears add teaching and inventory goals. Their value is a hypothesis. In particular, check whether players understand Vision's legal exits versus Focus's safe exits, and whether the two-page shop or unlocks distract from the first gate puzzle. The ordinary commerce ad still grants 35 test gold. New ad placements grant only the requested continuation or one unlocked power, without adding that gold; the delivered 1.2 +35-gold result does not validate the new routes.
+
+For the next study, record **unassisted clears, blocked attempts, accidental taps, Undos, exhausted attempts, free restarts, optional extension use and refusal**, along with comments and return. Compare a fixed build with the previous forgiving rule before attributing changes to monetization or difficulty. A lower structural score jump can coexist with worse comprehension. Final 1.3 runtime checks and actual player data remain distinct evidence. The [installed run](validation/v1.3/move-power-ui-smoke.txt) used explicit synthetic progression/inventory, restored six preference files, and confirmed two real test-ad rewards without extra gold; that does not measure comprehension or return.
 
 ## What code cannot establish
 
@@ -47,7 +57,7 @@ Google's quality guidance treats user value and continuing engagement as essenti
 
 Use a mix of regular puzzle players and occasional mobile players, across the supported languages and several physical devices. Record the exact APK version and source of recruitment. Obtain consent for observation or any exported journal. Do not contact or enroll people automatically.
 
-Give one neutral instruction: “Play this game as you normally would.” Before explaining anything, observe the first three minutes. Then ask the player to explain what a switch does. Note where they stop, why they use undo, whether a gate state is readable, and whether they voluntarily start another board. Test with sound both enabled and disabled. Include a reduced-motion and TalkBack session.
+Give one neutral instruction: “Play this game as you normally would.” Before explaining anything, observe the first three minutes. Then ask the player to explain what a switch does. Note where they stop, why they use Undo, whether an action was spent as expected, whether a gate state is readable, and whether they voluntarily start another board. Test with sound both enabled and disabled. Include a reduced-motion and TalkBack session.
 
 **Internal decision targets, chosen for this project:** at least 16 of 20 make a legal move within 20 seconds of entering the first board; at least 14 of 20 explain the gate rule after meeting it; at least 14 of 20 finish the first three campaign boards without verbal help. These are working targets, not industry benchmarks or claims of statistical certainty. If a repeated confusion appears in five sessions, fix it before buying traffic.
 
@@ -71,7 +81,7 @@ The local journal is a diagnostic aid. It does not upload data, identify a globa
 
 **Protect the puzzle while preparing monetization in the separate Lab.** The owner requested test mode, so the implementation uses optional Google test advertising and clearly labelled gold-pack simulations. It is preparation for a later experiment, not a live revenue launch. Measure interruption, consent handling, reward correctness and retention separately. If players do not return, more monetization controls will not repair the underlying problem.
 
-The Lab's item-price curve is a balancing hypothesis, not a formula proven to create hits. It uses distinct campaign + Remix clears only, with thresholds and sample prices documented in [gameplay](GAMEPLAY.md#lab-item-prices). It does not react to failures, ad refusal or spending. Test free-player affordability at each band before considering a production economy. The stable 1.1 shop retains its original fixed prices.
+The Lab's action margins, six-power unlocks and item-price curve are balancing hypotheses, not formulas proven to create hits. It uses distinct campaign + Remix clears only, with thresholds and sample prices documented in [gameplay](GAMEPLAY.md#lab-item-prices). It does not react to failures, ad refusal or spending. Test free-player affordability at each band before considering a production economy. The stable 1.1 shop retains its original fixed prices.
 
 Production needs the actual publisher accounts, SDK terms, regional privacy/consent configuration, billing setup, store declarations and an authoritative verified-purchase wallet service. None is supplied by a no-charge simulation. Ad callbacks with currency/micros/precision from a test opportunity must be excluded from revenue reporting. No credentials, payouts, trademark availability or Google Play approval are implied by this repository. [Official-source research](MONETIZATION_RESEARCH.md).
 

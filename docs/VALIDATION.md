@@ -1,65 +1,69 @@
-# Validation — Luma Drift Lab 1.2.0-sandbox
+# Validation — Luma Drift Lab 1.3.0-sandbox
 
-Evidence collected **26 October 2026**. Current source builds the separate Lab package `com.androidhit.lumadrift.sandbox`. The [stable 1.1 report](VALIDATION_1_1.md) remains a historical record for the offline app. A simulation, installed interaction, signature check and commercial result are distinct evidence.
+**26 October 2026 · version code 4 · package com.androidhit.lumadrift.sandbox**
 
-## Build and exact package
+Package integrity, deterministic simulation, actual Android interaction and business outcomes are distinct evidence. This report concerns the current Lab; [Lab 1.2](VALIDATION_1_2.md) and [stable 1.1](VALIDATION_1_1.md) keep their historical results.
 
-| Check | Observed result |
+## Build and integrity
+
+| Check | Result |
 | --- | --- |
-| Toolchain | Java 17, Gradle 8.14.3, AGP 8.11.0, compile/target API36, build-tools 36 |
-| Release | `assembleRelease bundleRelease lintRelease` succeeds with R8 and resource shrinking |
-| Lint | [0 errors, four advisory warnings](validation/lab/lint.txt): target/compile API37 availability, Gradle 8.14.6 availability and a preview lint release |
-| APK | [One RSA-3072 signer; scheme v2 verifies](validation/lab/apk-signature.txt) |
-| AAB | [bundletool validates](validation/lab/bundle-validation.txt); [JAR signature verifies](validation/lab/aab-signature.txt) with self-signed/timestamp/streaming-layout qualifications |
-| Package | [Version 1.2.0-sandbox / code 3, minimum API26, target36](validation/lab/package-badging.txt) |
-| Source/artifact match | Every source-input hash and artifact length/hash matches [the manifest](../releases/manifest-1.2.0-sandbox.json); [audit](validation/lab/manifest-audit.json) |
+| Toolchain | JDK17, Gradle8.14.3, AGP8.11.0, compile/target/build-tools36; R8/resource shrinking |
+| Release tasks | assembleRelease, bundleRelease and lintRelease succeed |
+| Lint | [0 errors / four advisory warnings](validation/v1.3/lint.txt): newer target/compile SDK, Gradle and preview lint availability |
+| APK | [One RSA-3072 signer; scheme v2 verifies](validation/v1.3/apk-signature.txt) |
+| AAB | [bundletool validates](validation/v1.3/bundle-validation.txt); [JAR signature verifies](validation/v1.3/aab-signature.txt) with self-signed/timestamp/streaming-layout qualifications |
+| Package | [1.3.0-sandbox, code4, min26, target36](validation/v1.3/package-badging.txt) |
+| Exact bytes | [Release sizes/hashes](RELEASE.md), [versioned source manifest](../releases/manifest-1.3.0-sandbox.json), [merged-manifest audit](validation/v1.3/manifest-audit.json) |
 
-Latest Google/AndroidX dependencies contain Kotlin 2.4 metadata. The build uses the experimental standalone lint override **9.4.0** so the analyzer can read it while retaining the tested AGP/Gradle toolchain. This is documented configuration, not a suppressed incompatibility error. Gradle also reports deprecated build features; compatibility with a future major Gradle version is not established.
+Standalone lint **9.4.0**, selected with the documented experimental override, reads Kotlin2.4 metadata in the latest SDK dependencies while retaining the tested AGP/Gradle setup. No analyzer incompatibility error is suppressed. Gradle also reports deprecated build features. A future major Gradle version has not been qualified.
 
-The merged-manifest audit lists all SDK permissions/providers. Firebase's automatic initialization provider and an advertising auto-init provider are absent. AndroidX startup remains. This static audit does not establish absence of every network request. Billing SDK connection/query and explicitly requested Google routes can contact Google; the optional app journal is separate.
+The merged manifest has no Firebase automatic initialization provider or advertising auto-init provider; AndroidX startup remains. Its permission list is recorded in the audit. Static inspection does not establish absence of every SDK network request. Billing queries and explicitly requested Google routes can contact Google independently of the device-local journal.
 
-## Deterministic simulation and persistence
+## Deterministic checks
 
-| Suite | Passing result | Coverage |
+| Suite | Passing result | Scope |
 | --- | ---: | --- |
-| [Engine](validation/lab/engine-tests.txt) | **435,314 assertions** | 240 Journey, 240 Remix, 1,002 event seeds and 1,002 paired-switch seeds; verified solutions, original fingerprints, undo/restart/gates, restore and challenge parser/fuzzing |
-| [Data](validation/lab/data-tests.txt) | **7,083 checks** | Campaign/Remix rewards/unlocks, replay prevention, all Remix completions, shop, six-language completeness/formatting, dates/events and catalog strings |
-| [Meta](validation/lab/meta-tests.txt) | **362 checks + valid JSON round trip** | XP, missions, migration, failed-commit retry, date/DST boundaries, bounded optional journal and Unicode/control characters |
-| [Economy](validation/lab/economy-tests.txt) | **3,474 checks** | Bounded logarithmic bands, affordability/integer limits, strict unique grant IDs, duplicates, wallet cap, pending retry and Android preference memory-before-disk-failure modeling |
-| [Collection/calendar](validation/lab/collection-events-tests.txt) | **87,121 checks** | 24 unique companions, six frozen legacy entries, budget arithmetic, **604 time zones / 14,496 boundary cases**, independent date oracle, Monday/year/leap-day/DST and final-millisecond rounding |
+| [Engine](validation/v1.3/engine-tests.txt) | 435,796 assertions | Original 240 Journey +240 Remix, 1,002 event +1,002 paired-switch seeds, frozen layouts, solutions, restore/undo/gates and C/R/E/B/Q challenge parsing/fuzzing |
+| [Budget](validation/v1.3/move-budget-tests.txt) | 340,768 checks | 1,962 original/balanced/event boards; 100,000 corrupt saves, 20,000 valid snapshots, 100,000 unlimited friend actions, exact-zero win, allowance/quota/extension/restart/overflow contracts |
+| [Economy](validation/v1.3/economy-tests.txt) | 4,586 checks | Six unlocks, preserved locked stock, progression prices, exact100 debit/idempotence, unique power grants, free loot every5 clears, caps, concurrent store handles and modeled memory-before-disk failures |
+| [Data/languages](validation/v1.3/data-tests.txt) | 7,941 checks | Progression/rewards, shop, events, cosmetics and EN/FR/DE/ES/PT/IT keys/placeholders |
+| [Difficulty](validation/v1.3/difficulty-tests.txt) | 19,054 checks | Every mapped solution, solver equivalence, complete frozen permutations, retained chapter pools/tutorials/source layouts and measured reduction of structural jumps |
+| [Collection/calendar](validation/v1.3/collection-events-tests.txt) | 87,121 checks | 24 companions, legacy six frozen, budget and 604 zones /14,496 calendar boundaries including DST23/25-hour days |
+| [Meta/journal](validation/v1.3/meta-tests.txt) | 362 checks + JSON round trip | XP/missions, migration, local observation bounds, Unicode/control characters and retry modeling |
+| [Ad receipts](validation/v1.3/commerce-receipts-tests.txt) | 42 checks | Actual compiled receipt methods with Android adapters: memory-before-disk failure, durable retry, duplicate/show binding, malformed IDs, request isolation and ack/recreation |
 
-The engine exercises 1,543 alternate legal starts; 53 correctly require undo. Published boards have verified complete solutions, but every possible move order need not remain solvable. Preference tests use Android stubs with explicit failure modeling; they do not establish physical disk durability, server transaction safety, human difficulty, enjoyment or retention. Item-price bands depend only on distinct Journey/Remix clears, never spending, failures or advertising choices.
+The [480-row report and before/after plot](DIFFICULTY.md) show mean absolute adjacent structural change from12.21→4.26 in Journey and14.45→3.57 in Remix. Upward jumps above30 structural points drop10→1 and14→1. These are declared structural heuristics, not player pass rates. No layout was removed or regenerated.
 
-## Actual Android interaction
+Preference fault adapters model memory and durable maps separately; no physical storage fault was injected. Exact solutions establish feasibility, not fun. The original engine also checks1,543 alternate legal starts;53 correctly require undo. Not every legal choice preserves solvability.
 
-The Lab APK was installed on an isolated ARM64 Google APIs Android 16/API36 emulator at 1080 × 1920. Host sound was disabled. No advertising install link, share destination or real payment action was selected.
+## Installed Android and actual ads
 
-### Companions and events
+The final signed release APK ran on an isolated ARM64 Google APIs Android16/API36 emulator at1080×1920. The [complete interaction report](validation/v1.3/move-power-ui-smoke.txt) independently verifies the installed base.apk SHA-256 against the delivered **313cee4693293c24d0775ca73bb00fc063e799f523bcb67e82a1bd975c4ba2da**.
 
-The [full UI run](validation/lab/collection-events-ui-smoke.txt) browsed all 24 cards on three pages and all six themes, cancelled previews without spending, bought Miko for exactly 160, confirmed an owned companion without another debit and equipped Nova for free.
+The six-power acceptance run uses an **explicit synthetic fixture**: Journey75 access,10,000 local test gold,4 of each power and5 seeded three-star clears for loot eligibility. This is not evidence that75 levels or those5 clears were played. [Fixture and six-file before/after hashes](validation/v1.3/move-power-profile.json) show the original game-owned preferences restored byte for byte. A separate [gallery fixture](validation/v1.3/gallery-profile.json) was also restored. Stable's different package was untouched.
 
-It solved all **three daily and seven weekly boards through actual touch controls** using certified solutions. Daily first clears paid 270 plus the 100 completion bonus; weekly clears paid 945 plus 250. Repeated completion-bonus claims paid zero. Collection and both event screens were exercised in EN/FR/DE/ES/PT/IT; accessible summaries and screen bounds passed, then English was restored. The crash buffer was clean. The [final-binary recheck](validation/lab/collection-final-ui-smoke.txt) also verified corrected thumbnail spacing, Orbit purchase at exactly 220, duplicate/equip at zero, daily/weekly replay and collected-bonus guards. The [screen guide](COMPANIONS_EVENTS.md) uses real captures.
+Actual visible touch controls established:
 
-### Test commerce and consent
+- A present-piece block spends1 without removing a piece; an exit spends1; successful Undo spends1; empty Undo spends0.
+- The exhausted board,13-action budget and run identifier survive force-stop/relaunch. Each gold continuation debits exactly100 and adds the disclosed10 actions. Recreating the process repeats neither debit nor extension. Two continuations block a third; free Restart resets the attempt without debit.
+- Balanced friend B6 accepts attempts beyond the campaign allowance, has no power/continuation purchase and gives no gold. Unlimited state survives recreation.
+- Locked Vision at Journey1 offers no acquisition. All six effects work on the unlocked fixture: one-stock debit, Focus's actual safe-move labels, Trail's exact Step1…5, Shield's three protected blocked attempts across recreation and fourth block costing1, Flow's three actual exits costing3.
+- A Shield shop pack adds2 for the displayed70 gold. Milestone loot adds one Spark with no gold, using the declared synthetic five-clear eligibility.
+- Entering the continuation consent surface and pressing Back without an earned callback grants0 actions/0 gold.
 
-The [commerce run](validation/commerce-ui-smoke.txt) exercised default unknown-age/ad-off state, minor blocking, simulator cancel, pending across force-stop/relaunch, then completion. Packs of 500, 1,400 and 3,600 each granted once; repeats granted zero. Starting wallet 180 became 5,680 after these packs. Real checkout remained disabled. Local-journal on/off survived restart.
+**Two actual official Google rewarded Test Ads rendered and earned their rewards.** The continuation gave exactly10 actions/quota1 and0 gold, with no repeat after process recreation. The power offer gave Spark×1 and0 gold, persisted after recreation, and offered no continuation bonus. The [actual local SDK journal](validation/v1.3/ad-journal-export.json) contains exactly2 earned events (continuation and hint×1),2 impressions and2 paid callbacks at **USD0 micros / UNKNOWN precision / test=true**. These test values establish no income. The share chooser opened and was cancelled; no recipient, advertising Install link or real checkout was selected. The crash buffer stayed clean.
 
-An actual UMP sample consent form appeared; **Do not consent** was selected. Later privacy choices and revocation/minor blocking were exercised. Google's request-eligibility result is not presented as personalized-ad consent. The sample integration does not qualify a future owner-configured privacy message or establish legal compliance.
+A separate [non-synthetic play run](validation/v1.3/exact-zero-ui.txt) actually completed Journey1 after four exit/Undo cycles and the five-piece certified route. The final exit used action13 of13 and displayed victory instead of exhaustion: **2 stars,45 earned coins,30 XP; wallet6,935→6,980**. It used no preference edits, power, advertising or purchase. This tests the exact-zero precedence on the delivered Android binary, alongside the broader pure simulations.
 
-An actual official Google rewarded **Test Ad** loaded and rendered. Watching to its earned-reward state and closing it changed the wallet **5,680 → 5,715**, exactly 35 once. No ad install link was followed. The journal was off for this initial ad run; it therefore proves no paid/impression journal record. The [final-binary metrics run](validation/commerce-ad-metrics-smoke.txt) then enabled the journal and observed exactly one impression, one earned reward and one paid-event callback: **USD 0 micros, UNKNOWN precision, test=true**. Wallet **6,900 → 6,935**. The [actual local JSON](validation/lab-ad-journal-export.json) records those callbacks; it is not revenue. Export opened the chooser and was cancelled. Journal and staged exports were cleared, and journal/ads were turned off with age unspecified. The [capture/cleanup report](validation/commerce-capture-refresh.txt) confirms the final state.
+The [final 720×1280 and1280×720 run](validation/v1.3/layout-ui.txt) checks all three collection pages, cancelled preview, both event screens, both shop pages, all six power controls and guest account. Clickable controls stay inside the display; the commerce action ends above navigation. The wallet stays unchanged. The emulator's previous size/density overrides and English Home are restored. This is a layout check, not a physical-phone comfort or full accessibility acceptance study.
 
-Native harness adjustments for Android's uppercase dialog labels, scroll position and asynchronous UMP form arrival are documented in the reports. Failed harness assumptions are not relabeled as application crashes or successful product checks.
+The final controller audit also checks persistence ordering: flush an existing gold debit before applying its budget, persist the session before acknowledging an ad receipt, and apply a previously earned/paid continuation before replacing or abandoning its pending request. JVM failure models are separate from actual physical storage-fault testing.
 
-### Google account
+## Preserved evidence and limits
 
-The [identity run](validation/lab/identity-ui.txt) opened Settings → Account in English and French, confirmed guest state and the missing-configuration explanation, pressed the Google control and confirmed no fake login, wallet credit or advertising opt-in. English was restored and the crash buffer stayed clean.
+The [1.2 collection/event run](validation/lab/collection-events-ui-smoke.txt) browsed all24 cards, checked previews/exact purchase/equip, completed all ten event stages and unique bonuses, and checked six languages. Its [final-binary collection recheck](validation/lab/collection-final-ui-smoke.txt), [guest/account check EN/FR](validation/lab/identity-ui.txt), [ordinary commerce/consent](validation/commerce-ui-smoke.txt), [ordinary +35 test-ad journal](validation/commerce-ad-metrics-smoke.txt) and [720×1280/1280×720 layout run](validation/lab/layout-ui.txt) remain explicitly 1.2 evidence. They are not relabeled fresh1.3 tests.
 
-**Actual Google account selection, Firebase sign-in, sign-out and account deletion have not run**: the owner's matching OAuth/Firebase configuration is absent. The code compiles against Credential Manager/Firebase Auth; this is not live-login evidence. [Configuration and future acceptance matrix](GOOGLE_SIGN_IN.md).
+Stable1.1 [actual play/share/journal](validation/v11-ui-smoke.txt) and [signed1.0→1.1 upgrade](validation/upgrade-results.txt) remain scoped to that separate offline package. Original 1.0 audio-focus and layout logs are historical. Host audio was disabled during headless emulator testing; execution is not subjective listening evidence.
 
-## Stable regression evidence and limits
-
-The [stable 1.1 UI run](validation/v11-ui-smoke.txt) covers Journey 1–12, Remix paired gates/restore/undo, missions, fair C/R/E friend boards, invalid links, native share/export chooser cancellation, local journal and cancellation of queued Flow on pause/help. The [signed 1.0 → 1.1 upgrade](validation/upgrade-results.txt) preserves progress, partial board, wallet and French and migrates XP once. These remain stable evidence, not newly executed Lab SDK tests.
-
-Historical 1.0 [small-screen/landscape](LAYOUT_RESULTS.txt) and [audio-focus checks](validation/audio-foreground.txt) remain labeled historical. No physical phone, subjective sound audition, battery/thermal benchmark, Bluetooth latency, full TalkBack session or broad API/device matrix is claimed. API26 is declared; an earlier API26 emulator failed to connect and is not a passing compatibility result.
-
-No configured live purchase service, server-authoritative wallet, cloud save, production ad revenue or remote gameplay analytics is present. Local time/data can be changed. Google Play approval, real-account acceptance, retention, acquisition cost, virality and commercial success remain unmeasured. Passing these checks establishes the covered behaviors, not a perfect experience on every device.
+No physical phone/tablet, full TalkBack user session, Bluetooth latency, battery/thermal benchmark or broad API/device matrix was tested. API26 is declared; an earlier API26 emulator connection failed and does not prove compatibility. No live Google sign-in/sign-out/deletion ran because the owner configuration is absent. No Play license-test purchase, server-authoritative wallet, real ad revenue, acquisition cost or retention outcome is established. [Google setup](GOOGLE_SIGN_IN.md) · [Test/production boundary](MONETIZATION_SETUP.md).

@@ -2,7 +2,7 @@
 
 **Stable Luma Drift 1.1.0 listing draft. Not submitted to Google Play.** Copy and media below describe the preserved stable game, not the separate Lab. Store approval, trademark availability and conversion performance are unknown. Last policy check: 26 October 2026.
 
-Current source builds **Luma Drift Lab 1.2.0-sandbox**, application ID `com.androidhit.lumadrift.sandbox`. Do not reuse stable claims of six companions, no account SDK or no Internet permission for that package. The Lab has 24 companions, clearer local event presentation, Google test advertising/Billing and optional Firebase Auth, with owner identity configuration absent and real checkout disabled. It is not prepared here as a production store listing. See [collection/events](COMPANIONS_EVENTS.md), [Lab setup](MONETIZATION_SETUP.md), [Google identity](GOOGLE_SIGN_IN.md) and [privacy distinctions](PRIVACY.md).
+Current source builds delivered **Luma Drift Lab 1.3.0-sandbox**, application ID `com.androidhit.lumadrift.sandbox`. Do not reuse stable claims of six companions, no account SDK or no Internet permission for that package. The Lab has 24 companions, clearer local event presentation, and 1.3 adds an action allowance, reordered boards and six powers. It also integrates Google test advertising/Billing and optional Firebase Auth, with owner identity configuration absent and real checkout disabled. It is not prepared here as a production store listing. See [collection/events](COMPANIONS_EVENTS.md), [Lab setup](MONETIZATION_SETUP.md), [Google identity](GOOGLE_SIGN_IN.md) and [privacy distinctions](PRIVACY.md).
 
 ## Positioning
 

@@ -33,6 +33,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public final class AdsController {
     public enum AgeStatus { UNKNOWN, MINOR, ADULT }
+    /** The same real earned callback fulfills one explicitly described reward. */
+    public enum RewardPlacement { GOLD, CONTINUATION, POWER }
+    /** A genuine earned event may still be refused when its item cannot be fulfilled. */
+    static final class RewardUnavailableException extends RuntimeException {
+        final String statusKey;
+        RewardUnavailableException(String statusKey){this.statusKey=statusKey;}
+    }
     public interface Listener {
         void onStatus(String statusKey);
         void onReward(String uniqueShowId, int gold);
@@ -45,6 +52,8 @@ public final class AdsController {
     private final WeakReference<Activity> activity;
     private final Listener listener;
     private final SharedPreferences prefs;
+    private final RewardPlacement rewardPlacement;
+    private final String rewardItemId;
     private final Handler main = new Handler(Looper.getMainLooper());
     private volatile AgeStatus age;
     private volatile boolean optedIn, consentReady, closed, localMetrics;
@@ -65,9 +74,21 @@ public final class AdsController {
     }
 
     public AdsController(Activity activity, Listener listener) {
+        this(activity, listener, RewardPlacement.GOLD);
+    }
+
+    public AdsController(Activity activity, Listener listener, RewardPlacement placement) {
+        this(activity,listener,placement,"");
+    }
+
+    public AdsController(Activity activity, Listener listener, RewardPlacement placement, String itemId) {
         if (activity == null || listener == null) throw new IllegalArgumentException("Activity and listener required");
+        if (placement == null) throw new IllegalArgumentException("Reward placement required");
+        if(placement==RewardPlacement.POWER&&(itemId==null||!itemId.matches("[a-z]{1,20}")))throw new IllegalArgumentException("Power reward requires an item");
         this.activity = new WeakReference<>(activity);
         this.listener = listener;
+        rewardPlacement = placement;
+        rewardItemId = itemId;
         prefs = activity.getApplicationContext().getSharedPreferences("luma_commerce_privacy_v1", Context.MODE_PRIVATE);
         AgeStatus stored;
         try { stored = AgeStatus.valueOf(prefs.getString("age_status", "UNKNOWN")); }
@@ -80,6 +101,7 @@ public final class AdsController {
     public boolean isExplicitOptIn() { return optedIn; }
     public String statusKey() { return status; }
     public boolean isLoading() { return loading || SDK_INITIALIZING.get(); }
+    public boolean isAdShowing() { return presenting != null || activeShow != null; }
     public boolean isRewardedReady() { return allowed() && consentReady && cached != null && activeShow == null; }
     public void setLocalMetricsEnabled(boolean enabled) { localMetrics = enabled; }
 
@@ -263,11 +285,20 @@ public final class AdsController {
                 ad.show(owner, reward -> onMain(() -> {
                     if (validShow(show) && show.rewarded.compareAndSet(false, true)) {
                         // Never trust a provider-supplied amount/type for our wallet.
-                        try { listener.onReward(show.id, CommerceConfig.REWARDED_GOLD); }
+                        try { listener.onReward(show.id, rewardPlacement == RewardPlacement.GOLD ? CommerceConfig.REWARDED_GOLD : 0); }
+                        catch (RewardUnavailableException rejected) { report(rejected.statusKey); return; }
                         catch (RuntimeException saveFailure) { report("commerce_save_error"); return; }
-                        event("ad_reward_earned", "gold", Integer.toString(CommerceConfig.REWARDED_GOLD),
-                                "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
-                        report("ads_rewarded");
+                        if (rewardPlacement == RewardPlacement.GOLD) {
+                            event("ad_reward_earned", "gold", Integer.toString(CommerceConfig.REWARDED_GOLD),
+                                    "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                            report("ads_rewarded");
+                        } else if(rewardPlacement==RewardPlacement.CONTINUATION) {
+                            event("ad_reward_earned", "reward", "continuation", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                            report("ads_continue_earned");
+                        } else {
+                            event("ad_reward_earned", "reward", "power", "item", rewardItemId, "amount", "1", "test", Boolean.toString(CommerceConfig.MODE_SANDBOX));
+                            report("ads_power_earned");
+                        }
                     }
                 }));
             } catch (RuntimeException failure) {

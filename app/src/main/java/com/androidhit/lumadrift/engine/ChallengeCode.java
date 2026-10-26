@@ -9,7 +9,7 @@ import java.util.zip.CRC32;
  * not authentication. No player identity, score, reward or save travels in a code.
  */
 public final class ChallengeCode {
-    public enum Kind { CAMPAIGN, REMIX, EVENT }
+    public enum Kind { CAMPAIGN, REMIX, EVENT, BALANCED, BALANCED_REMIX }
     /** Full nonnegative Java long range; no floating-point conversion occurs. */
     public static final long MAX_EVENT_SEED = Long.MAX_VALUE;
     public final Kind kind;
@@ -25,6 +25,9 @@ public final class ChallengeCode {
         return encode(Kind.REMIX, number);
     }
 
+    public static String encodeBalanced(int number){return encode(Kind.BALANCED,number);}
+    public static String encodeBalancedRemix(int number){return encode(Kind.BALANCED_REMIX,number);}
+
     public static String encodeEvent(long seed) { return encode(Kind.EVENT, seed); }
 
     /** Strict canonical format. Invalid input returns null and never throws. */
@@ -36,6 +39,8 @@ public final class ChallengeCode {
             case 'C': kind = Kind.CAMPAIGN; break;
             case 'R': kind = Kind.REMIX; break;
             case 'E': kind = Kind.EVENT; break;
+            case 'B': kind = Kind.BALANCED; break;
+            case 'Q': kind = Kind.BALANCED_REMIX; break;
             default: return null;
         }
         if (code.charAt(5) != '-') return null;
@@ -61,7 +66,7 @@ public final class ChallengeCode {
 
     private static String encode(Kind kind, long value) {
         if (!valid(kind, value)) throw new IllegalArgumentException("Challenge value outside supported range");
-        char family = kind == Kind.CAMPAIGN ? 'C' : kind == Kind.REMIX ? 'R' : 'E';
+        char family = kind == Kind.CAMPAIGN ? 'C' : kind == Kind.REMIX ? 'R' : kind == Kind.BALANCED ? 'B' : kind == Kind.BALANCED_REMIX ? 'Q' : 'E';
         String body = "LD1-" + family + "-" + Long.toString(value, 36).toUpperCase(Locale.ROOT);
         return body + "-" + checksum(body);
     }

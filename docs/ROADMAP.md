@@ -45,6 +45,24 @@ The [Lab setup guide](MONETIZATION_SETUP.md) distinguishes a local simulation, a
 
 The [installed collection/event run](validation/lab/collection-events-ui-smoke.txt) separately browsed the 24 cards, exercised native preview/purchase/equip, completed ten event boards and checked one-time bonuses across the six-language loop. A Google rewarded **test** creative and +35 reward, UMP refusal and local purchase simulations were also exercised. Identity evidence remains limited to [guest/not-configured English/French handling](validation/lab/identity-ui.txt). Production account setup, actual Google login, Play license-test purchases and an authoritative wallet remain future work.
 
+## 1.3.0-sandbox — Make decisions and recovery explicit
+
+**Delivered test update; final signed package and recorded Android 16 gameplay/SDK cases passed.** This updates the existing sandbox application, preserves stable 1.1 and retains 1.2 evidence as historical. It does not activate production sales or advertising.
+
+| Workstream | Delivered scope | Evidence / next acceptance |
+|---|---|---|
+| Board progression | Frozen order of the existing 240 Journey + 240 Remix layouts within their original chapters; Journey 1–6 and Remix 1–3 fixed | [19,054 structural/solver checks](validation/v1.3/difficulty-tests.txt); real-player difficulty remains unknown |
+| Action allowance | Piece count plus an explicit margin; present-piece blocked/legal taps and successful Undo cost one | Certified solutions fit; [ledger suite](validation/v1.3/move-budget-tests.txt) and covered Android exhaustion/restart cases pass |
+| Optional recovery | Free restart; fixed 100 sandbox-gold or earned-test-ad extension, max two per attempt | Two exact 100-gold debits/cap and a real earned-ad +10-action callback pass in the recorded run; hostile persistence cases use a separate adapter |
+| Six gradual powers | Spark/Vision/Flow/Shield/Focus/Trail at Journey 1/5/12/25/45/75; two shop pages and previews | Recorded unlock, stock debit, Shield recreation, Focus/Trail and Flow action checks pass; human comprehension remains unknown |
+| Free inventory | One deterministic eligible power per five distinct Journey clears | Logic contracts and a seeded five-clear Android milestone claim pass; no paid random reward |
+| Honest test ads | Ordinary commerce +35 test gold, continuation +actions, or +1 selected unlocked power; each placement grants only its announced reward | Actual continuation and Spark callbacks pass with zero extra gold; no-watch Back grants zero; ordinary +35 remains historical 1.2 evidence |
+| Compatibility | C/R/E layouts preserved; balanced B/Q codes; old interrupted sandbox board resets with notice while progression/wallet remain | Restore/migration/deep-link cases, separate from stable package compatibility |
+
+[Difficulty audit and CSV](DIFFICULTY.md) document lower structural score jumps, not measured enjoyment. [Move-limit research](MOVE_LIMITS_RESEARCH.md) distinguishes finite-move puzzle precedents from Crash Fever's different defeat/continue model. [Exact gameplay contract](GAMEPLAY.md#lab-13-action-allowance).
+
+The [final installed 1.3 run](validation/v1.3/move-power-ui-smoke.txt) covers the recorded action/power/gold/loot cases and two actual Google sample-ad rewards: +10 actions and Spark ×1, with no extra gold. Its temporary Journey-75 access, wallet/inventory and five-clear profile were synthetic; six original game-owned preference files were restored byte for byte. [Final package integrity and scope](VALIDATION.md). The earlier +35-gold report remains 1.2 history. A separate [non-fixture Journey-1 run](validation/v1.3/exact-zero-ui.txt) confirms victory on the final available action and normal two-star rewards. Do not replace the missing player study with more successful scripted clears.
+
 ## Next — Physical quality and comprehension
 
 **Entry:** use an identified stable build, with the tested package and device recorded. Test Lab-specific surfaces separately when that package has passed its own checks.

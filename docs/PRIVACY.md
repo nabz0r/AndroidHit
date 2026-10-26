@@ -2,9 +2,9 @@
 
 Effective date: **26 October 2026**.
 
-This statement distinguishes the **stable Luma Drift 1.1.0 game**, application ID `com.androidhit.lumadrift`, from **Luma Drift Lab 1.2.0-sandbox**, application ID `com.androidhit.lumadrift.sandbox`. Their private saves and wallets are separate. Lab test gold does not transfer to the stable game.
+This statement distinguishes the **stable Luma Drift 1.1.0 game**, application ID `com.androidhit.lumadrift`, from **Luma Drift Lab**, application ID `com.androidhit.lumadrift.sandbox` (preserved 1.2.0-sandbox and delivered 1.3.0-sandbox). Their private saves and wallets are separate. Lab test gold does not transfer to the stable game.
 
-| | Stable 1.1.0 | Lab 1.2.0-sandbox |
+| | Stable 1.1.0 | Lab 1.2 / 1.3 |
 |---|---|---|
 | Puzzle play | Offline | Offline |
 | Advertising/Billing SDK | Absent | Google test advertising, UMP and Billing query integration |
@@ -18,7 +18,9 @@ Neither app automatically uploads its play journal to AndroidHit. **The Lab's us
 
 ## Data kept on the device
 
-Both apps store their own campaign and Remix progression, coins, inventory, cosmetics, language/settings, interrupted-game history, XP/rank, mission claims, cumulative days played and cosmetic badge state in private local storage. The Lab additionally stores its coarse age declaration, explicit ad opt-in, simulated pending/completed transaction state and one-time reward markers. If optional identity is configured and used, Firebase Auth can persist its SDK session; the app also remembers that a prior sign-in occurred. Daily and weekly puzzles and missions read the local calendar date. Audio is synthesized locally.
+Both apps store their own campaign and Remix progression, coins, inventory, cosmetics, language/settings, interrupted-game history, XP/rank, mission claims, cumulative days played and cosmetic badge state in private local storage. The Lab additionally stores its coarse age declaration, explicit ad opt-in, simulated pending/completed transaction state and one-time reward markers. Lab 1.3 keeps an attempt identifier, spent/extra action counts, continuation receipts, Shield charges and one-time free inventory milestone claims. These are local gameplay/economy state, not a server account or financial ledger. If optional identity is configured and used, Firebase Auth can persist its SDK session; the app also remembers that a prior sign-in occurred. Daily and weekly puzzles and missions read the local calendar date. Audio is synthesized locally.
+
+Lab 1.3 updates the same sandbox save as 1.2. Its content-version migration resets an older interrupted board with a visible notice; earned stars/unlocks stay at their numbered positions, with wallet, XP, inventory, cosmetics and settings retained. Board layouts at those positions can change with the new within-chapter sequence. The separate stable application is unaffected.
 
 Saves do not synchronize between devices. Removing the app or clearing its application storage removes them. Optional Lab sign-in does not add cloud save, progress recovery or a purchased-wallet service. Android's automatic backup and transfer rules exclude the saved game data.
 
@@ -30,7 +32,8 @@ The play journal is **disabled by default**. Enabling it in Settings starts a lo
 - app version and selected interface language on a foreground session;
 - gameplay mode, board number and event identity where applicable;
 - board starts, completions and exits, result stars, powers, undo count, remaining pieces and active play duration where recorded;
-- challenge opening and a share-sheet handoff.
+- challenge opening and a share-sheet handoff;
+- in Lab 1.3, exhausted attempts and optional extension events, including the reward source and added actions when recorded.
 
 When enabled in the Lab, the journal can also record test purchase outcomes, ad eligibility/loading, impressions, earned rewards and paid-event callback values such as currency, micros and precision. Such values are diagnostics from test mode, not real revenue. No Firebase Analytics or remote gameplay analytics service is included. Optional Firebase Auth is a separate identity service, not the destination of the play journal.
 
@@ -50,7 +53,7 @@ Do not include someone else's journal in a public issue without their consent. C
 
 ## Permissions and external services
 
-Stable 1.1 declares only vibration for optional haptics and has no Internet permission. The Lab's source manifest additionally declares Internet and network-state access; SDK dependencies can contribute merged manifest entries. The final package evidence must be used to identify its exact permission set. Neither app requests contacts, location, microphone, camera or shared-media permissions for the puzzle or sharing flow.
+Stable 1.1 declares only vibration for optional haptics and has no Internet permission. The Lab's source manifest additionally declares Internet and network-state access; SDK dependencies can contribute merged manifest entries. The [final Lab 1.3 manifest audit](validation/v1.3/manifest-audit.json) records its exact declared permissions, including SDK entries; a declared permission alone is not a measurement of transmitted data. Neither app requests contacts, location, microphone, camera or shared-media permissions for the puzzle or sharing flow.
 
 A receiving share app can use its own permissions and network access. The stable game's lack of Internet permission does not prevent the app the player chooses from sending an exported file.
 
@@ -64,7 +67,7 @@ UMP can contact Google to determine applicable choices. Before ad initialization
 
 The SDK can process information such as IP address, interactions, diagnostics and device/account identifiers according to its configuration and Google's disclosure. Test creative does not remove those data considerations. An app-level opt-in is not a substitute for the owner's configured consent messages, regional handling or Play declarations. No owner-configured consent/account approval, absence of all pre-consent SDK traffic, or universal compliance is claimed by source inspection or a screenshot. [Google SDK disclosure](https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure) · [UMP integration](https://developers.google.com/admob/android/privacy).
 
-Opening the Lab commerce screen also starts the **Play Billing connection/product-query route**, independently of advertising opt-in. It can communicate with Google Play. Its actual checkout remains disabled; it does not grant gold from an unverified Google purchase observation, fabricate a Google receipt, acknowledge/consume a real purchase or deploy a verification server. The native simulator creates only local no-charge state. There is no real card/payment entry in that simulator.
+Opening the **ordinary** Lab commerce screen also starts the Play Billing connection/product-query route, independently of advertising opt-in. It can communicate with Google Play. The purpose-specific continuation and power-reward screens display consent/ad controls without starting Billing queries. Its actual checkout remains disabled; it does not grant gold from an unverified Google purchase observation, fabricate a Google receipt, acknowledge/consume a real purchase or deploy a verification server. The native simulator creates only local no-charge state. There is no real card/payment entry in that simulator.
 
 The owner has not configured production AdMob identifiers, Play gold products, license testers or a verified wallet backend. Account-specific consent, real Play test purchases and production data handling require further configuration and evidence before activation. [Lab setup and remaining dependencies](MONETIZATION_SETUP.md).
 
@@ -82,7 +85,7 @@ Sign-out clears the app's Firebase session and requests credential-state clearin
 
 The [recorded identity UI check](validation/lab/identity-ui.txt) exercised English/French guest and missing-configuration handling. It did not authenticate a real Google account. Test advertising and consent-form observations use Google's sample configuration; they do not qualify the owner's future consent setup or establish revenue. [Full executed scope](VALIDATION.md).
 
-Stable 1.1 uses earned virtual coins. The Lab also credits simulated packs and earned test-ad rewards into its separate local wallet, with no real charge or redeemable value. Device owners can change local dates and saves; no anti-cheat or financial guarantee is provided.
+Stable 1.1 uses earned virtual coins. The Lab credits simulated packs into its separate local wallet, with no real charge or redeemable value. The ordinary commerce test-ad placement grants 35 test gold. Lab 1.3 additionally offers an exhausted-attempt extension or one selected unlocked power through distinct placements; each video grants only the announced reward. Its optional gold continuation costs a fixed 100 local sandbox gold, with at most two gold/ad continuations per attempt and free restart always available. Device owners can change local dates and saves; no anti-cheat or financial guarantee is provided.
 
 For issues, use the public [GitHub issue tracker](https://github.com/nabz0r/AndroidHit/issues). Do not post passwords, private signing keys or sensitive personal information.
 
