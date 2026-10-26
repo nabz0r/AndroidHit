@@ -1,0 +1,5 @@
+PASS installed Lab Settings -> Account in English and French.
+PASS guest default, no owner configuration, explanatory OAuth/Firebase notice.
+PASS Google button with absent configuration preserves guest state; no fake login, wallet grant or ad opt-in.
+PASS English restored, crash buffer clean.
+NOT VALIDATED: actual Google account selection, Firebase sign-in/sign-out or deletion; matching OAuth/Firebase configuration is absent.

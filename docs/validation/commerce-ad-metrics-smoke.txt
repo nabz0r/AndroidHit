@@ -1,0 +1,17 @@
+Targeted ad-metrics UI smoke; package=com.androidhit.lumadrift.sandbox; serial=emulator-5580
+Installed sandbox: versionCode=3 minSdk=26 targetSdk=36
+Installed sandbox: versionName=1.2.0-sandbox
+Confirmed emulator root for reading this sandbox's staged export only
+Google test-ad load: Loading a test ad…
+Google test-ad load: Test ad ready
+Screenshot: docs/screenshots/lab/test-ad-load.png
+Screenshot: docs/screenshots/lab/test-ad.png
+Official test-ad wallet result: 6900 -> 6935
+PASS actual Google sample rewarded ad: display, Reward granted, Close, exact +35 local test gold; no external link selected
+Cleanup: optional advertising off; age unspecified
+Screenshot: docs/screenshots/lab/ad-metrics-export-chooser.png
+PASS actual SDK ad_impression observed locally: 1
+PASS actual SDK ad_reward_earned once; wallet 6900 -> 6935 (+35)
+OBSERVED actual SDK ad_paid: [{"currency": "USD", "precision": "UNKNOWN", "test": "true", "value_micros": "0"}]; test values are not real income
+Screenshot: docs/screenshots/lab/ad-metrics-journal.png
+PASS cleanup: journal and staged JSON exports cleared, journal off, ads off, age unspecified; no recipient/external link/payment selected; crash buffer clean

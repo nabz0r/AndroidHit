@@ -4,6 +4,8 @@
 
 Assessment date: **26 October 2026**. This is a product diagnosis, not a revenue forecast. Actual release checks are recorded separately in [VALIDATION.md](VALIDATION.md).
 
+The signed **1.1.0 stable game** and **1.2.0-sandbox Lab** are separate applications. The Lab prepares SDK test advertising, no-charge gold simulations, a progression pricing experiment, 24 companions, clearer event goals and optional Google/Firebase Auth identity. Owner sign-in configuration is absent, so guest play and a not-configured state are expected. Package/SDK tests have their own evidence; stable checks do not validate new routes or a live login. [Test scope](MONETIZATION_SETUP.md) · [Collection and events](COMPANIONS_EVENTS.md).
+
 ## The proposition worth testing
 
 > Tap a light to let it escape. Some exits change the gates. One clear path can change every next choice.
@@ -11,6 +13,10 @@ Assessment date: **26 October 2026**. This is a product diagnosis, not a revenue
 The direction-and-gate rule can be demonstrated in a few moves. There is no timer, energy wait, paid solution, or required account. The visual identity and synthesized sound give the mechanic a recognizable setting without a large art budget. Free undo makes experimenting safe. Keep those advantages.
 
 The distinctive moment is **seeing a switch change the future board**. If the early experience feels like generic arrow removal, players may leave before they discover that moment.
+
+The Lab's 24-companion collection gives earned coins more visible goals, and the clearer event screen explains what a return session offers. These are product hypotheses, not observed retention gains. The 12,200-coin companion catalog fits within the original campaign's 13,380-coin initial-plus-three-star income before other spending; that does not measure whether players enjoy earning it. Optional Google identity must remain skippable: it currently adds no cloud-save value and should not become a first-session obstacle. [Collection/event details](COMPANIONS_EVENTS.md) · [Identity limits](GOOGLE_SIGN_IN.md).
+
+The delivered Lab now has observed Android 16 test-ad/reward, simulated-purchase and collection/event interactions. That closes technical integration questions for the recorded cases; it does not supply the missing player cohort. A +35 test-gold callback is not revenue, and a successful event regression is not evidence that people voluntarily return. [Executed checks](VALIDATION.md).
 
 ## Diagnosis and response
 
@@ -30,7 +36,7 @@ The 1.1 column describes delivered behavior. [CHANGELOG.md](CHANGELOG.md) and [V
 - **Fun and retention:** solvability tests prove that covered boards can be finished. They do not prove that the difficulty curve is enjoyable.
 - **Distribution:** publishing an APK to GitHub does not create Play discovery, a creator audience, or an acquisition channel.
 - **Virality:** a share button creates a handoff. Organic growth requires people to use it and recipients to engage.
-- **Income:** the current shop uses earned coins. The delivered game has no ads, real-money billing or revenue.
+- **Income:** stable 1.1 uses earned coins and has no ads or billing SDK. The separate Lab uses test advertising and simulated packs, with real checkout disabled. Neither establishes revenue.
 - **Production reach:** emulator checks do not establish comfort on low-end physical phones, audible sound quality, or complete TalkBack usability.
 
 Google's quality guidance treats user value and continuing engagement as essential and warns that adding features can also add clutter. It also distinguishes acquisition from evidence of product value. This supports focusing on comprehension and return before expanding the shop. [Android core value guidance](https://developer.android.com/quality/core-value), checked 26 October 2026.
@@ -63,9 +69,11 @@ The local journal is a diagnostic aid. It does not upload data, identify a globa
 
 ## Monetization decision
 
-**Keep monetization out of the way until the loop survives testing.** If the cohort does not return, more ads or purchasable powers will not repair the underlying problem. If it does return, prototype one clearly optional rewarded-ad placement and a simple ad-removal purchase in a separate test build; measure interruption, consent, technical impact and retention before rollout. This is a future experiment, not a feature in this release.
+**Protect the puzzle while preparing monetization in the separate Lab.** The owner requested test mode, so the implementation uses optional Google test advertising and clearly labelled gold-pack simulations. It is preparation for a later experiment, not a live revenue launch. Measure interruption, consent handling, reward correctness and retention separately. If players do not return, more monetization controls will not repair the underlying problem.
 
-Any commercial integration needs the actual publisher accounts, SDK terms, regional privacy/consent configuration, billing setup, store declarations and verified behavior. No credentials, payouts, trademark availability or Google Play approval are implied by this repository.
+The Lab's item-price curve is a balancing hypothesis, not a formula proven to create hits. It uses distinct campaign + Remix clears only, with thresholds and sample prices documented in [gameplay](GAMEPLAY.md#lab-item-prices). It does not react to failures, ad refusal or spending. Test free-player affordability at each band before considering a production economy. The stable 1.1 shop retains its original fixed prices.
+
+Production needs the actual publisher accounts, SDK terms, regional privacy/consent configuration, billing setup, store declarations and an authoritative verified-purchase wallet service. None is supplied by a no-charge simulation. Ad callbacks with currency/micros/precision from a test opportunity must be excluded from revenue reporting. No credentials, payouts, trademark availability or Google Play approval are implied by this repository. [Official-source research](MONETIZATION_RESEARCH.md).
 
 ## Evidence to earn next
 

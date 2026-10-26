@@ -1,0 +1,34 @@
+Commerce UI smoke; package=com.androidhit.lumadrift.sandbox; serial=emulator-5580
+Screenshot: docs/screenshots/lab/shop.png
+Screenshot: docs/screenshots/lab/commerce.png
+Screenshot: docs/screenshots/lab/consent.png
+PASS default/age UI: unknown age and ads off; unknown/minor loads blocked; minor opt-in remains off; watch disabled
+SCOPE: UI blocking checked. No packet capture is claimed; network exclusion also follows the controller's pre-UMP age/opt-in gate.
+Screenshot: docs/screenshots/lab/pending.png
+PASS simulation: Cancel +0; Pending +0 across force-stop; Complete +500; repeat confirmation +0
+PASS simulation pack 1400: exact one credit; repeat +0
+PASS simulation pack 3600: exact one credit; repeat +0
+Screenshot: docs/screenshots/lab/gold.png
+PASS sandbox wallet: 180 -> 5680; all values are local simulated gold, no money charged
+Screenshot: docs/screenshots/lab/local-metrics.png
+PASS local observations: explicit journal opt-in/out; off survives process recreation
+Continuation: corrected asynchronous UMP overlay detection; no app-data reset.
+Screenshot: docs/screenshots/lab/ump-form.png
+Screenshot: docs/screenshots/lab/local-metrics.png
+PASS local observations: explicit journal opt-in/out; off survives process recreation
+OBSERVED UMP attempt after explicit adult opt-in: ['Advertising privacy choices applied']
+Screenshot: docs/screenshots/lab/ump-status.png
+PASS revocation: ad switch off; next load blocked; watch disabled; no gold credited; minor cannot re-enable
+Consent-only phase: no display/reward inferred from UMP. The additional actual test-ad check is recorded below; paid/impression journal callbacks remain unvalidated.
+PASS: lab flows complete; actual UMP refusal handled; no real payment sheet/recipient selected; crash buffer clean
+Additional official Google test-ad attempt (no live ad identifier).
+Observed pre-load status after UMP refusal: Advertising privacy choices applied
+Google test-ad load: Preparing test-ad service…
+Google test-ad load: Loading a test ad…
+Google test-ad load: Test ad ready
+Screenshot: docs/screenshots/lab/test-ad-load.png
+Screenshot: docs/screenshots/lab/test-ad.png
+Official test-ad wallet result: 5680 -> 5715
+PASS actual Google test rewarded ad: displayed, reward callback credited exactly 35 local test gold
+Cleanup: optional advertising off; age unspecified; no live payments or external ad clicks
+NOT VALIDATED paid/impression journal callbacks: local metrics were off during the actual ad; no real ad income or live purchase claimed.

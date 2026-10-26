@@ -1,6 +1,8 @@
-# Luma Drift gameplay — 1.1
+# Luma Drift gameplay and economy
 
-Luma Drift is an offline, turn based extraction puzzle. Tap a piece to send it in the direction of its arrow. Clear every piece from the board. There is no countdown, life counter, energy system, server, or AI model running during a game.
+This guide covers the signed **stable 1.1.0 game** and the separate **1.2.0-sandbox Lab**. The puzzle rules and content are shared. Stable 1.1 uses fixed earned-coin prices and has no advertising or billing SDK. The Lab adds test-only commerce and a progression price curve in its own private installation; its gold cannot transfer to stable saves. Current source builds the Lab. Executed evidence is scoped by package in [VALIDATION.md](VALIDATION.md).
+
+Luma Drift is a turn based extraction puzzle that can be played offline. Tap a piece to send it in the direction of its arrow. Clear every piece from the board. The puzzle has no countdown, life counter, energy system, gameplay server or runtime AI model. The optional Lab advertising/Billing routes can contact Google separately from puzzle play.
 
 ## Rules
 
@@ -52,7 +54,7 @@ Some legal moves can make a later completion impossible because they change the 
 
 **Undo** restores the last removed piece and reverses exactly that piece's gate transition. It is free and can be repeated back to the initial state. **Restart** restores the original board and gates; it starts a fresh scoring attempt after confirmation. Previously consumed powers remain consumed.
 
-| Power | Behavior | Shop pack |
+| Power | Behavior | Stable 1.1 shop pack |
 | --- | --- | --- |
 | Spark (Hint) | Highlights one next move that preserves a complete solution for eight seconds | 3 for 45 coins |
 | Vision | Highlights all pieces that can legally leave in the current state for eight seconds | 3 for 40 coins |
@@ -60,7 +62,33 @@ Some legal moves can make a later completion impossible because they change the 
 
 Vision shows legal moves; a legal move is not always a safe move. Spark and Flow use the exact solver to find moves from which every remaining piece can still leave. If the current position cannot be completed, Spark and Flow request an undo or restart instead of consuming a power.
 
-The initial save contains 180 coins, three Sparks, three Visions, and two Flows. The shop spends coins earned inside the game. This build has no advertising, real money purchases, or payment integration.
+The initial save contains 180 coins, three Sparks, three Visions, and two Flows. Stable 1.1 spends only earned coins and contains no advertising, real-money purchases or payment SDK. The Lab adds clearly labelled no-charge gold simulations and optional test ads; its item prices are explained below.
+
+## Lab item prices
+
+The Lab counts distinct campaign + Remix boards cleared, from 0 to 480. Replays, stars earned again, events, failures, purchases, time played and advertising choices do not increase this count. It selects a band using `floor(log2(1 + progress / 30))`, implemented with integer thresholds and capped at band 4.
+
+Booster prices use `base × (1 + 0.20 × band)`, rounded up to the next five coins and capped at twice the base price. Within the present 480-board range the highest multiplier before rounding is 1.8. This is a transparent design hypothesis, not a proven revenue optimization.
+
+| Distinct campaign + Remix clears | Band | Spark ×3 | Vision ×3 | Flow ×2 |
+|---|---:|---:|---:|---:|
+| 0–29 | 0 | 45 | 40 | 60 |
+| 30–89 | 1 | 55 | 50 | 75 |
+| 90–209 | 2 | 65 | 60 | 85 |
+| 210–449 | 3 | 75 | 65 | 100 |
+| 450–480 | 4 | 85 | 75 | 110 |
+
+Cosmetic prices remain fixed. Inventory is retained, and puzzle access does not depend on buying items. Every board remains solvable without powers. Stable 1.1 retains the first row's fixed prices throughout its progression.
+
+## Lab test gold and rewarded ads
+
+Shop opens a visibly labelled native Lab screen. It uses the Lab's separate private wallet; installing it does not upgrade or copy the stable game's coins.
+
+The three packs contain **500, 1,400 or 3,600 test gold**. The app's own dialog clearly states that no charge occurs. Cancel grants nothing. Pending records the simulated transaction without gold and survives restart. Complete credits it once; retrying the same transaction credits zero. This is a local simulator, not a Google payment sheet, receipt, real purchase or recoverable paid entitlement. The Billing SDK can connect/query products, but actual checkout is disabled.
+
+Advertising is a separate test route. The player must declare an adult state and explicitly enable Google contact. Unknown/minor states block the route. UMP's `canRequestAds()` must permit requests before ad initialization, and a manual load action is still required. If a Google test ad becomes available, the optional rewarded action grants **35 test gold once** on an earned-reward callback. Loading, closing or failing an ad does not itself grant gold. The age selection is a declaration, not identity verification; UMP eligibility is not proof of agreement to every advertising purpose.
+
+The journal can record impression and paid-event callbacks when enabled. Test callback values, including currency/micros/precision, are diagnostic data, not revenue. Refusing advertising or encountering an unavailable service leaves the puzzle playable. [Detailed test instructions and remaining account/backend dependencies](MONETIZATION_SETUP.md) · [Privacy differences](PRIVACY.md).
 
 ## Stars, rewards, and cosmetics
 
@@ -72,7 +100,9 @@ A completed attempt earns:
 
 Blocked taps have no scoring penalty. There is no speed bonus. A first campaign completion pays 25 coins plus 10 per star, so a first three star completion pays 55 coins. Improving an existing record pays only 10 coins for each newly earned star. Replaying without improving the record pays no further coins.
 
-Six characters and six visual themes are available in Collection. Nova and Lumina are included. Other characters cost 160–600 coins; other themes cost 180–450 coins. These purchases change appearance and do not alter the rules, solution, or board difficulty.
+Stable 1.1 offers six companions and six themes. The Lab preserves those six companion IDs/prices and adds **18 original silhouettes, for 24 companions total**. Its Collection has three pages of eight companions and a separate six-theme tab. Tap a card to open a native preview, then choose the displayed purchase/equip action; opening a preview does not spend coins. Nova and Lumina are included. Paid companions range from 160 to 1,100 coins in the Lab; themes remain 180–450 coins. Cosmetics change appearance and do not alter rules, solutions or board difficulty. [Full collection and event guide](COMPANIONS_EVENTS.md).
+
+All 24 companions together cost **12,200 coins**. The initial 180 coins plus first three-star clears of all 240 original campaign boards total **13,380 coins**, before other purchases. That arithmetic shows a free earning path for the companion set, not an estimate of completion time or a promise that all companions and themes fit the same budget. Daily/weekly/Remix and mission rewards provide additional earned currency. The total companion-and-theme catalog costs 13,730 coins.
 
 ## XP, missions and the constellation badge
 
@@ -96,6 +126,10 @@ Daily events contain three sequential stages; weekly events contain seven. Each 
 
 Periods follow the device's local calendar. A daily event refreshes with the local date. Weekly periods start on Monday and use that Monday's date as their identifier. These are local offline events, not server synchronized competitions. Changing the device clock can change the available period.
 
+The Lab event screen makes the goal, completed-stage count, stage reward range and next playable stage explicit. A countdown shows the next local midnight for daily boards or Monday midnight for weekly boards, using calendar arithmetic across daylight-saving changes. It rounds remaining time up to a minute. The bonus control stays visible and explains missing stages until eligible, then offers the one-time claim. Stable 1.1's older event layout remains unchanged in its preserved APK.
+
+The [installed Lab event run](validation/lab/collection-events-ui-smoke.txt) cleared all three daily boards for 270 coins plus the 100-coin bonus, and all seven weekly boards for 945 plus 250, at three stars. Repeated bonus claims granted zero. These are observed test outcomes for those periods, not player income forecasts.
+
 A first daily stage completion pays 60 coins plus 10 per star. A first weekly stage completion pays 90 coins plus 15 per star. Subsequent improvements pay only the additional star difference. Clearing all daily stages allows a one time 100 coin claim for that day; clearing all weekly stages allows a one time 250 coin claim for that week. A board opened during an expired period cannot claim rewards for the next period.
 
 ## Friend challenges and sharing
@@ -111,6 +145,12 @@ Sharing renders an original 1080 × 1350 card from the initial board and gates, 
 Progression, coins, inventory, cosmetic ownership, equipped appearance, XP/rank, mission claims, badge state and settings are stored in private local preferences. An unfinished board stores its successful move history and replays that history during restoration. Invalid histories are rejected atomically, and an event save from an expired period is not restored. The active play timer pauses for help, pause and background time. It does not impose a time limit or change the star rules. Saves do not synchronize between devices, and uninstalling or clearing application storage removes them.
 
 The interface supports English, French, German, Spanish, Portuguese, and Italian, plus automatic selection from the system language with English fallback. Sound effects, music, haptics, and reduced motion have separate settings. The interface includes keyboard navigation and virtual accessibility nodes; the existence of these code paths does not establish a completed accessibility audit.
+
+## Optional Lab Google account
+
+Settings → Account is independent of puzzle access and advertising consent. Guest play remains available. The default Lab has no owner OAuth/Firebase configuration, so its sign-in control reports that setup is missing instead of inventing a Google profile.
+
+With valid owner configuration, the adapter requests a Google credential through Android Credential Manager and passes it to Firebase Auth for verification before showing a signed-in user. This does not upload coins, progression or the local journal, and does not provide cloud saves or purchased-wallet recovery. Signing out leaves local game progress intact. The confirmed delete action requests deletion of the Firebase app account; it does not delete the player's Google account or local saves. A recent sign-in may be required. No actual successful configured login/deletion is claimed by these implementation notes. [Setup and evidence limits](GOOGLE_SIGN_IN.md).
 
 ## Optional local play journal
 

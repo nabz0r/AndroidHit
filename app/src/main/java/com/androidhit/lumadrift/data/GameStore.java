@@ -4,6 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -20,6 +23,7 @@ public final class GameStore {
     private static final String PREFS = "luma_drift_save_v1";
     private static final int MAX_COINS = 2_000_000_000;
     private static final int MAX_STOCK = 999;
+    private static final Object GOLD_GRANT_LOCK = new Object();
     private final SharedPreferences prefs;
 
     public GameStore(Context context) {
@@ -131,10 +135,27 @@ public final class GameStore {
         return Math.max(0, Math.min(MAX_STOCK, prefs.getInt("booster_" + id, 0)));
     }
 
+    /** Distinct first clears only. Events, replays, purchases and failures cannot raise prices. */
+    public synchronized int economyProgress() {
+        int completed = 0;
+        for (int level = 1; level <= Catalog.LEVEL_COUNT; level++) {
+            if (stars(level) > 0) completed++;
+            if (remixStars(level) > 0) completed++;
+        }
+        return completed;
+    }
+
+    public synchronized int boosterPrice(String id) {
+        Catalog.BoosterItem item = Catalog.booster(id);
+        return item == null ? 0 : EconomyCurve.price(item.price, economyProgress());
+    }
+
     public synchronized boolean purchaseBooster(String id) {
         Catalog.BoosterItem item = Catalog.booster(id);
-        if (item == null || coins() < item.price || boosterStock(id) > MAX_STOCK - item.amount) return false;
-        prefs.edit().putInt("coins", coins() - item.price)
+        if (item == null) return false;
+        int price = boosterPrice(id);
+        if (coins() < price || boosterStock(id) > MAX_STOCK - item.amount) return false;
+        prefs.edit().putInt("coins", coins() - price)
                 .putInt("booster_" + id, boosterStock(id) + item.amount).commit();
         return true;
     }
@@ -304,6 +325,58 @@ public final class GameStore {
         boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", safeAdd(coins(), amount)).commit();
         if (!persisted) throw new IllegalStateException("Could not persist milestone reward");
         return amount;
+    }
+
+    /**
+     * Whether this save currently records the transaction ID. Call grantGold without
+     * a persistence error before treating an in-memory token as durably fulfilled.
+     */
+    public synchronized boolean isGoldGranted(String transactionId) {
+        if (transactionId == null || !transactionId.matches("[a-zA-Z0-9_:-]{1,160}")) return false;
+        synchronized (GOLD_GRANT_LOCK) {
+            return prefs.getBoolean("gold_tx_v1_" + sha256(transactionId), false);
+        }
+    }
+
+    /**
+     * Atomic local fulfillment, currently for explicit sandbox simulations only.
+     * This method does not verify a payment. Any future live caller must first verify
+     * a unique PURCHASED transaction with a trusted backend and pass its stable ID.
+     * Raw purchase tokens/IDs are never used as preference keys or exported here.
+     * Full-wallet requests are rejected without consuming the transaction ID.
+     */
+    public synchronized int grantGold(String transactionId, int amount) {
+        if (transactionId == null || !transactionId.matches("[a-zA-Z0-9_:-]{1,160}")
+                || amount < 1 || amount > 100_000) return 0;
+        // Also serialize independent GameStore handles sharing this process's save.
+        synchronized (GOLD_GRANT_LOCK) {
+            String token = "gold_tx_v1_" + sha256(transactionId);
+            if (prefs.getBoolean(token, false)) {
+                // Android commits memory before disk. A previous failed commit can
+                // leave the token and credit in memory: flush them before success.
+                boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", coins()).commit();
+                if (!persisted) throw new IllegalStateException("Could not persist recorded gold transaction");
+                return 0;
+            }
+            if (coins() > MAX_COINS - amount) return 0;
+            boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", coins() + amount).commit();
+            if (!persisted) throw new IllegalStateException("Could not persist gold transaction");
+            return amount;
+        }
+    }
+
+    private static String sha256(String value) {
+        try {
+            byte[] digest = MessageDigest.getInstance("SHA-256").digest(value.getBytes(StandardCharsets.UTF_8));
+            char[] hex = "0123456789abcdef".toCharArray();
+            StringBuilder result = new StringBuilder(64);
+            for (byte part : digest) {
+                result.append(hex[(part & 0xff) >>> 4]).append(hex[part & 15]);
+            }
+            return result.toString();
+        } catch (NoSuchAlgorithmException unavailable) {
+            throw new IllegalStateException("SHA-256 unavailable", unavailable);
+        }
     }
 
     private static int clampStars(int stars) { return Math.max(0, Math.min(3, stars)); }

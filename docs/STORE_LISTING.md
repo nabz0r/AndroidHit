@@ -1,6 +1,8 @@
 # Store presentation kit
 
-**Draft for Luma Drift. Not submitted to Google Play.** Copy and media must match the final verified APK; store approval, trademark availability and conversion performance are unknown. Last policy check: 26 October 2026.
+**Stable Luma Drift 1.1.0 listing draft. Not submitted to Google Play.** Copy and media below describe the preserved stable game, not the separate Lab. Store approval, trademark availability and conversion performance are unknown. Last policy check: 26 October 2026.
+
+Current source builds **Luma Drift Lab 1.2.0-sandbox**, application ID `com.androidhit.lumadrift.sandbox`. Do not reuse stable claims of six companions, no account SDK or no Internet permission for that package. The Lab has 24 companions, clearer local event presentation, Google test advertising/Billing and optional Firebase Auth, with owner identity configuration absent and real checkout disabled. It is not prepared here as a production store listing. See [collection/events](COMPANIONS_EVENTS.md), [Lab setup](MONETIZATION_SETUP.md), [Google identity](GOOGLE_SIGN_IN.md) and [privacy distinctions](PRIVACY.md).
 
 ## Positioning
 
@@ -34,7 +36,7 @@ Show a real decision: a light has a clear path, but its switch changes another e
 >
 > Progress is saved on your device. The current version has no account, advertising or real-money purchases. The shop uses coins earned by playing. An optional local play journal is off by default and leaves the app only when you choose to export it. Removing the app or clearing its storage removes its save; cloud recovery is not included.
 
-The above copy describes the implemented 1.1 candidate. Cross-check it against the final APK and [VALIDATION.md](VALIDATION.md) before store submission. No player retention or revenue claim is included.
+The above copy describes the signed stable 1.1 game. Cross-check it against that APK and its [validation evidence](VALIDATION.md) before store submission. The genuine 1.1 screenshots and current Lab source are different artifacts. No player retention or revenue claim is included.
 
 ## Localized short descriptions
 

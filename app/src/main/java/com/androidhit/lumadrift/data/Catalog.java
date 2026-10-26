@@ -2,7 +2,7 @@ package com.androidhit.lumadrift.data;
 
 import android.graphics.Color;
 
-/** Original, code-drawn cosmetics. All prices use coins earned by playing. */
+/** Original, code-drawn cosmetics. Prices use the same coins earned by playing. */
 public final class Catalog {
     public static final int LEVEL_COUNT = 240;
     public static final int DAILY_COUNT = 3;
@@ -16,7 +16,7 @@ public final class Catalog {
         public final String nameKey;
         public final int price;
         public final int color;
-        /** Shape index: 0 star, 1 cat, 2 robot, 3 bunny, 4 comet, 5 ghost. */
+        /** Stable shape index, 0–23; the original six IDs and prices remain unchanged. */
         public final int shape;
         private CharacterItem(String id, int price, String color, int shape) {
             this.id = id;
@@ -71,7 +71,25 @@ public final class Catalog {
             new CharacterItem("orbit", 220, "#8DEBDD", 2),
             new CharacterItem("pip", 300, "#CBB0FF", 3),
             new CharacterItem("astra", 420, "#8DC8FF", 4),
-            new CharacterItem("zig", 600, "#DAF79D", 5)
+            new CharacterItem("zig", 600, "#DAF79D", 5),
+            new CharacterItem("lune", 180, "#FBE6A1", 6),
+            new CharacterItem("fenn", 240, "#FFAF85", 7),
+            new CharacterItem("hoot", 280, "#CBB0E9", 8),
+            new CharacterItem("buzz", 320, "#FFE084", 9),
+            new CharacterItem("tula", 360, "#9BE6BF", 10),
+            new CharacterItem("jelli", 400, "#B9B5FF", 11),
+            new CharacterItem("vela", 440, "#E5A9DE", 12),
+            new CharacterItem("nimbi", 480, "#C5E3FA", 13),
+            new CharacterItem("soli", 520, "#FFC58C", 14),
+            new CharacterItem("mochi", 560, "#D2B3F5", 15),
+            new CharacterItem("nixi", 620, "#FFB6D6", 16),
+            new CharacterItem("prickly", 680, "#ADDEA2", 17),
+            new CharacterItem("quill", 740, "#DDB8A4", 18),
+            new CharacterItem("waddles", 800, "#A5C6EC", 19),
+            new CharacterItem("halo", 860, "#A8D9E8", 20),
+            new CharacterItem("emberling", 920, "#D0B1F7", 21),
+            new CharacterItem("bambu", 1000, "#D4ECE2", 22),
+            new CharacterItem("inky", 1100, "#F1ABBC", 23)
     };
 
     public static final SkinItem[] SKINS = {

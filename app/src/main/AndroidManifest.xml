@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.VIBRATE" />
-    <application tools:targetApi="31" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:allowBackup="false" android:label="Luma Drift"
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application tools:targetApi="31" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:allowBackup="false" android:label="Luma Drift Lab"
         android:icon="@drawable/ic_launcher" android:roundIcon="@drawable/ic_launcher"
         android:theme="@style/AppTheme" android:supportsRtl="true"
         android:usesCleartextTraffic="false">
@@ -17,6 +19,11 @@
                 <data android:scheme="lumadrift" android:host="challenge" />
             </intent-filter>
         </activity>
+        <activity android:name=".identity.AccountActivity" android:exported="false" />
+        <meta-data android:name="firebase_data_collection_default_enabled" android:value="false" />
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" tools:node="remove" />
+        <activity android:name=".commerce.CommerceActivity" android:exported="false" />
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />
         <provider android:name=".sharing.ShareContentProvider" android:authorities="${applicationId}.share" android:exported="false" android:grantUriPermissions="true" />
     </application>
 </manifest>

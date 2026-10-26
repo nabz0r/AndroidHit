@@ -23,9 +23,31 @@ Delivered in 1.1; executed runtime coverage belongs in [VALIDATION.md](VALIDATIO
 
 The release validation document is the authority for completion of these checks. A line in this roadmap is not a passing test result.
 
-## 1.2 — Physical quality and comprehension
+## 1.2.0-sandbox — Prepare monetization without real sales
 
-**Entry:** the 1.1 release candidate passes its automated and emulator checks.
+**Delivered test application.** The Lab APK is packaged and installed; covered Android 16 SDK and UI cases passed. The stable 1.1 APK and its evidence remain available separately. The owner requested test mode, so this milestone does not activate production advertising or payments. [Executed checks and remaining limits](VALIDATION.md).
+
+| Workstream | Delivered Lab scope | Acceptance contract |
+|---|---|---|
+| Isolation | `com.androidhit.lumadrift.sandbox`, own save and wallet, visible Lab label | Install beside stable; verify no balance/progress contamination |
+| Rewarded test ad | Adult declaration + explicit opt-in + UMP eligibility + manual load; Google sample IDs | Observe refusal/unavailable path and any actual test creative separately; earn 35 once only on the reward callback |
+| Gold simulation | Native no-charge 500/1,400/3,600 pack dialog; cancel/pending/complete; idempotent grant | Pending survives restart, no premature credit, duplicate completion adds zero |
+| Billing boundary | Billing 9.1 connection/product queries; actual checkout disabled | SDK status and disabled checkout evidence; no claim of a license-test purchase |
+| Item economy | Progression bands based on distinct campaign + Remix clears | Formula/boundary tests and later free-player affordability observations |
+| Local observations | Optional journal ad callbacks; no Firebase Analytics or remote gameplay analytics | Default-off behavior, export inspection, test-labelled values excluded from income |
+| Expanded collection | 24 total companions, original six preserved, three pages of eight, native preview/buy/equip | Catalog/purchase contracts, all-page visual review and installed interaction |
+| Clear local events | Goals, stage progress/rewards, next stage, reset countdown and visible bonus | Device-calendar boundary tests and daily/weekly UI/claim checks |
+| Optional identity | Credential Manager + Firebase Auth; no owner config by default, guest-first UI | Not-configured behavior now; actual provider login/sign-out/deletion only after owner setup |
+
+The [Lab setup guide](MONETIZATION_SETUP.md) distinguishes a local simulation, a Google test ad, a Billing query and a future Play license-test purchase. Passing one does not establish the others. [Research](MONETIZATION_RESEARCH.md) records the official sources used before implementation.
+
+[Companion/event logic checks](validation/lab/collection-events-tests.txt) record 87,121 checks, including 604 time zones and 14,496 reset-boundary scenarios. This is evidence for deterministic contracts, not a human visual review. [Collection guide](COMPANIONS_EVENTS.md) · [Optional identity setup](GOOGLE_SIGN_IN.md).
+
+The [installed collection/event run](validation/lab/collection-events-ui-smoke.txt) separately browsed the 24 cards, exercised native preview/purchase/equip, completed ten event boards and checked one-time bonuses across the six-language loop. A Google rewarded **test** creative and +35 reward, UMP refusal and local purchase simulations were also exercised. Identity evidence remains limited to [guest/not-configured English/French handling](validation/lab/identity-ui.txt). Production account setup, actual Google login, Play license-test purchases and an authoritative wallet remain future work.
+
+## Next — Physical quality and comprehension
+
+**Entry:** use an identified stable build, with the tested package and device recorded. Test Lab-specific surfaces separately when that package has passed its own checks.
 
 Test on at least one modest physical Android phone and one current phone, plus a smaller viewport and a large-screen configuration. Cover suspend/resume, interruptions, actual speakers/headphones, rapid taps, temperature/battery behavior, text readability and TalkBack. Fix regressions before the next cohort. Do not infer low-end performance from a powerful development host.
 
@@ -33,7 +55,7 @@ Observe 20 first-time players using the protocol in [HIT_AUDIT.md](HIT_AUDIT.md)
 
 **Exit:** publish a short device matrix, recurring confusion counts, fixes and retest results. Internal comprehension targets are met or explicitly revised with reasons.
 
-## 1.3 — Measure voluntary return
+## Next — Measure voluntary return
 
 **Entry:** first-session friction and physical-device blockers have been addressed.
 
@@ -41,7 +63,7 @@ Run a fresh 100–300-player test, wait for complete D1 and D7 windows, and repo
 
 **Exit:** a versioned cohort report, including the result if it is disappointing. The working targets are 60% reaching board 5, 30% D1 return and 10% D7 return. These are project hypotheses, not industry benchmarks. If the result is weak, revise onboarding, early difficulty or the hook and test a fresh cohort before spending more.
 
-## 1.4 — Store readiness and discovery experiments
+## Next — Store readiness and discovery experiments
 
 **Entry:** player evidence justifies a public test.
 
@@ -55,9 +77,11 @@ Test truthful store variants one variable at a time when traffic supports it: ic
 
 ## Later — Commercial tests and expanded content
 
-Only after retention is worth protecting, test optional rewarded ads and a clearly described purchase in a separate integration milestone. Recheck privacy and regional requirements against the chosen SDKs. Model net revenue using observed impressions, fill, acquisition cost and retention; do not substitute a hypothetical eCPM for a business result.
+The Lab prepares test controls now; **real traffic and real sales remain future work**. Before production, configure the owner's AdMob/UMP and Play accounts, verify actual license-test purchase behavior, qualify a backend wallet and token-verification service, review SDK terms and complete store/privacy declarations. Remove simulation controls from the production route. No service is deployed merely by documenting its contract.
 
-Consider more mechanics, curated level packs, seasonal art or synchronized events only when player evidence points to a specific need. Cloud saves, accounts, remote leaderboards and live operations require a backend, operating budget and a revised privacy model; none is implied by the local event system.
+Only run commercial experiments after retention is worth protecting. Model net revenue using observed impressions, fill, acquisition cost and retention; do not substitute a hypothetical eCPM or test paid-event callback for a business result. Preserve stable earned progress and keep Lab gold outside production entitlements.
+
+Consider more mechanics, curated level packs, seasonal art or synchronized events only when player evidence points to a specific need. Optional managed identity is prepared in the Lab, but cloud saves, a verified wallet, remote leaderboards and live operations still require separate services, an operating budget and privacy review; none is implied by a Google sign-in adapter or local event system.
 
 ## Stop or change direction when
 

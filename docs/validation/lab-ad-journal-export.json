@@ -1,0 +1,26 @@
+{
+  "schema": "luma-drift-local-journal-v1",
+  "scope": "single-device opt-in observations; no global retention or acquisition metrics",
+  "summary_scope": "totals since first observation or last clear; event list retains only the latest 2000 records",
+  "enabled": true,
+  "exported_at": "2026-10-26T18:57:37.859Z",
+  "first_observed_local_date": "2026-10-26",
+  "sessions": 4,
+  "active_days": 1,
+  "day_1": "UNKNOWN",
+  "day_7": "UNKNOWN",
+  "return_definition": "any recorded event on first_observed_local_date + N calendar days; UNKNOWN until that day ends, when disabled, or if observation was paused",
+  "max_events": 2000,
+  "events": [
+    {"at":"2026-10-26T18:26:54.543Z","day":"2026-10-26","event":"session_start","fields":{"surface":"commerce_lab","version":"1.2.0-sandbox"}},
+    {"at":"2026-10-26T18:31:05.711Z","day":"2026-10-26","event":"session_start","fields":{"surface":"commerce_lab","version":"1.2.0-sandbox"}},
+    {"at":"2026-10-26T18:56:02.555Z","day":"2026-10-26","event":"session_start","fields":{"surface":"commerce_lab","version":"1.2.0-sandbox"}},
+    {"at":"2026-10-26T18:56:33.085Z","day":"2026-10-26","event":"ads_consent_state","fields":{"can_request_ads":"true","privacy_options_required":"true"}},
+    {"at":"2026-10-26T18:56:37.944Z","day":"2026-10-26","event":"ad_load_requested","fields":{"test":"true"}},
+    {"at":"2026-10-26T18:56:43.860Z","day":"2026-10-26","event":"ad_loaded","fields":{"test":"true"}},
+    {"at":"2026-10-26T18:56:48.364Z","day":"2026-10-26","event":"ad_impression","fields":{"test":"true"}},
+    {"at":"2026-10-26T18:56:48.368Z","day":"2026-10-26","event":"ad_paid","fields":{"currency":"USD","precision":"UNKNOWN","test":"true","value_micros":"0"}},
+    {"at":"2026-10-26T18:56:56.201Z","day":"2026-10-26","event":"ad_reward_earned","fields":{"gold":"35","test":"true"}},
+    {"at":"2026-10-26T18:57:35.582Z","day":"2026-10-26","event":"session_start","fields":{"language":"en","version":"1.2.0-sandbox"}}
+  ]
+}
