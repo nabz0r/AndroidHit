@@ -1,4 +1,4 @@
-# Luma Drift gameplay
+# Luma Drift gameplay — 1.1
 
 Luma Drift is an offline, turn based extraction puzzle. Tap a piece to send it in the direction of its arrow. Clear every piece from the board. There is no countdown, life counter, energy system, server, or AI model running during a game.
 
@@ -7,11 +7,11 @@ Luma Drift is an offline, turn based extraction puzzle. Tap a piece to send it i
 1. A piece travels in a straight row or column until it exits the board. Pieces do not rotate or change position inside the board.
 2. Every cell between the piece and the relevant board edge must be empty. A piece pointing at another piece cannot leave, even if that other piece points somewhere else.
 3. The gate for that direction must be open. Each side has one shared gate state: closing the upper gate blocks every upward pointing piece, regardless of its column.
-4. A piece with a small switch badge toggles its indicated gate **after it leaves**. An open gate closes, and a closed gate opens. The piece checks the old gate state before moving.
+4. A piece with a small switch badge toggles its indicated gate **after it leaves**. An open gate closes, and a closed gate opens. Remix pieces can have two badges: both indicated gates change at once. The piece checks the old gate state before moving.
 5. An illegal tap leaves the board, gates, successful move count, and undo history unchanged. It costs no coins or booster.
 6. Removing the final piece completes the board. Gate states no longer matter when the board is empty.
 
-The large arrow specifies the piece's travel direction. The smaller switch badge specifies the gate that will change; these directions can differ. Directional arrows supplement the four direction colors.
+The large arrow specifies the piece's travel direction. Smaller switch badges specify the gates that will change; these directions can differ from the travel arrow. Directional arrows supplement the four direction colors.
 
 ## Campaign
 
@@ -29,6 +29,16 @@ The campaign contains **240 deterministic boards in eight chapters of 30**. Chap
 | 8 | 211–240 | 6 × 6 | 16–18 | 5 |
 
 Boards 1–3 teach directional motion with immediately free paths and open gates. Boards 4–5 introduce pieces blocking other pieces, with all gates open. Switches appear from board 6. Later chapters increase the board area, piece count, and number of gate transitions. These are implementation parameters, not measured difficulty ratings from player testing.
+
+Contextual coaching appears beside these early boards: movement for boards 1–3, order for boards 4–5, and gates on board 6. The opening highlights safe moves on board 1. The full rule explanation remains available from Pause or Settings. The guide does not impose a time limit or consume inventory.
+
+## Remix — 240 additional boards
+
+Complete campaign board **12** to unlock the Remix tab in Journey. It has its own 240-board progression, stars and rewards; it does not replace or regenerate the original campaign. Like other modes, Remix uses the game's single interrupted-board save slot. Starting another board replaces that active session. Switches can toggle two gate directions after exiting, creating choices about which paths to open and which to close.
+
+The first 12 Remix boards are fixed teaching layouts: first opening a pair of exits, then exchanging gate states, then reasoning about alternative exits. Later boards use a deterministic constructive generator. Remix boards 1–60 use a 5 × 5 grid; later boards use 6 × 6. The difficulty parameters and teaching sequence still require observation with real first-time players.
+
+A first Remix completion pays 35 coins plus 12 per star: 71 coins for a three-star completion. An improved record pays 12 coins per new star. Repeating the same result does not pay again. Undo, restart and optional powers follow the same rules as the campaign.
 
 ### Why every generated board has a solution
 
@@ -64,6 +74,22 @@ Blocked taps have no scoring penalty. There is no speed bonus. A first campaign 
 
 Six characters and six visual themes are available in Collection. Nova and Lumina are included. Other characters cost 160–600 coins; other themes cost 180–450 coins. These purchases change appearance and do not alter the rules, solution, or board difficulty.
 
+## XP, missions and the constellation badge
+
+A first recorded completion of an eligible campaign, Remix, daily or weekly board grants **20 + 5 × stars XP**: 25, 30 or 35 XP. Rank starts at 1 and increases every 120 XP. Improving or repeating a previously completed board does not grant further XP or mission credit. On upgrade, existing campaign records and available current-period event records seed the progression; the game cannot reconstruct expired event history that is absent from the save.
+
+Three optional missions refresh with the local calendar date:
+
+| Mission | Credit required that day | Claim reward |
+|---|---|---:|
+| Clear boards | First recorded completion of 3 eligible boards | 35 coins |
+| Collect stars | 6 stars from first recorded completions | 40 coins |
+| Play an event | First recorded completion of 1 daily or weekly stage | 45 coins |
+
+Each reward can be claimed once per date. Unclaimed daily opportunities expire with that date, but taking a break never removes XP, rank, coins or unlocked cosmetics. The distinct days played counter is cumulative, not a streak.
+
+After seven first recorded board completions, a small cosmetic badge becomes available for the companion. It can be equipped or removed from Missions. It does not change the rules or rewards. Friend challenge boards do not contribute to these systems.
+
 ## Daily and weekly events
 
 Daily events contain three sequential stages; weekly events contain seven. Each board uses a deterministic seed derived from its period and stage, so reopening a stage during the same period returns the same layout. Event boards use a 6 × 6 grid with 15–18 pieces and four switches.
@@ -72,17 +98,33 @@ Periods follow the device's local calendar. A daily event refreshes with the loc
 
 A first daily stage completion pays 60 coins plus 10 per star. A first weekly stage completion pays 90 coins plus 15 per star. Subsequent improvements pay only the additional star difference. Clearing all daily stages allows a one time 100 coin claim for that day; clearing all weekly stages allows a one time 250 coin claim for that week. A board opened during an expired period cannot claim rewards for the next period.
 
+## Friend challenges and sharing
+
+Home offers challenge sharing and manual code entry. A versioned code identifies one initial board: **C** for a campaign number, **R** for a Remix number, or **E** for an event seed. The app also handles its `lumadrift://challenge/...` links when Android routes them to the installed game. A copy checksum catches typing mistakes; it is not authentication or anti-cheat.
+
+The code carries no player identity, wallet, inventory, campaign unlocks or move history. Opening it starts a separate practice challenge on the same layout and initial gate state. It can be played regardless of the recipient's normal progression, but grants **no coins, XP, mission credit or campaign/Remix unlocks**. Powers are unavailable in this mode; free undo and restart remain available. An interrupted friend challenge can resume locally.
+
+Sharing renders an original 1080 × 1350 card from the initial board and gates, with the challenge code and optional result stars. Android's share sheet lets the player choose an application or cancel. The game does not select contacts, send a message automatically, create matchmaking or verify delivery. A share-sheet handoff is not evidence that someone received or played a puzzle. Receiving apps may handle the accompanying text/link differently; manual code entry remains available.
+
 ## Saves and settings
 
-Progression, coins, inventory, cosmetic ownership, equipped appearance, and settings are stored in private local preferences. An unfinished board stores its successful move history and replays that history during restoration. Invalid histories are rejected atomically, and an event save from an expired period is not restored. Saves do not synchronize between devices, and uninstalling or clearing application storage removes them.
+Progression, coins, inventory, cosmetic ownership, equipped appearance, XP/rank, mission claims, badge state and settings are stored in private local preferences. An unfinished board stores its successful move history and replays that history during restoration. Invalid histories are rejected atomically, and an event save from an expired period is not restored. The active play timer pauses for help, pause and background time. It does not impose a time limit or change the star rules. Saves do not synchronize between devices, and uninstalling or clearing application storage removes them.
 
 The interface supports English, French, German, Spanish, Portuguese, and Italian, plus automatic selection from the system language with English fallback. Sound effects, music, haptics, and reduced motion have separate settings. The interface includes keyboard navigation and virtual accessibility nodes; the existence of these code paths does not establish a completed accessibility audit.
+
+## Optional local play journal
+
+Settings → Local journal provides a diagnostic record that is **off by default**. Enabling it records foreground sessions, board starts/completions/exits, power use and share-sheet handoffs. Entries include local date, UTC timestamp and relevant gameplay fields such as mode, board, event period, stars, undos or active play duration. The record is capped at 2,000 event entries and is never uploaded automatically.
+
+The screen shows observed sessions and active days. D1/D7 indicators refer to the date of first journal opt-in plus one or seven local calendar days, not the installation date. A recorded event on that target date means observed. An elapsed target date without an event is only “not observed locally” while observation remained enabled; incomplete or paused observation is unknown. These are single-device observations, not global retention, acquisition or a cohort dashboard.
+
+Export creates a JSON file and opens Android's share sheet; the player chooses its destination. Disabling the journal stops new entries. Clearing it resets the observation window and removes app-held staged journal exports, without changing game progress. Clearing cannot recall files already copied or sent to another app. See [PRIVACY.md](PRIVACY.md) for data and sharing details.
 
 ## Engine API and verification
 
 The engine lives under `app/src/main/java/com/androidhit/lumadrift/engine/` and has no Android dependency:
 
-- `LevelCatalog.get(1..240)` returns an immutable campaign description; `LevelCatalog.event(seed)` returns a reproducible event board.
+- `LevelCatalog.get(1..240)` returns an immutable campaign description; `LevelCatalog.remix(1..240)` returns the separate Remix family; `LevelCatalog.event(seed)` returns a reproducible daily/weekly board.
 - `Board.move(id)` validates the gate and path, removes one piece, and applies its switch. It returns a result explaining success or the blocking reason.
 - `undo()`, `restart()`, `history()`, and `restoreHistory(history)` handle reversible sessions.
 - `snapshot()`, `remainingTiles()`, `isPresent(id)`, `gateMask()`, and `blockingTile(id)` support rendering without exposing mutable session internals.
@@ -94,6 +136,6 @@ Run the engine suite with:
 scripts/test-engine.sh
 ```
 
-The suite uses a JDK, not the Android runtime. It verifies all **240 campaign solutions and 1,002 event seeds**, including extreme signed seed values, deterministic generation, alternate player choices, safe hints, gate transitions, invalid moves, undo, restart, and atomic session restoration. The recorded run passed **190,238 assertions** and checked **804 alternate legal starts**, including **12 positions correctly identified as requiring undo**. Its observed elapsed time was **2.37 seconds on the development host**, which is not an Android performance measurement.
+The suite uses a JDK, not the Android runtime. Its coverage includes campaign and Remix solutions, event seeds, deterministic generation, alternate player choices, safe hints, gate transitions, invalid moves, undo, restart, atomic session restoration and challenge-code validation. Exact counts and results belong to the versioned [validation evidence](VALIDATION.md); timings on the development host are not Android performance measurements.
 
 These checks establish engine behavior for the covered cases. APK installation, graphics, sound playback, touch handling, Android lifecycle behavior, and device compatibility require separate runtime validation and are recorded in the project's release evidence.

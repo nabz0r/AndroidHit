@@ -1,65 +1,69 @@
-# Luma Drift
+<p align="center"><img src="docs/store/luma-drift-feature.png" alt="Luma Drift — lights, arrows and changing gates" width="920"></p>
 
-A complete offline Android puzzle game about small lights finding their way out. Built for [AndroidHit](https://github.com/nabz0r/AndroidHit).
+<h1 align="center">Luma Drift</h1>
+<p align="center"><strong>A small light. A great escape.</strong><br>Tap. Change the gates. Find the order.</p>
+<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.1.0.apk"><strong>Download Android APK · 1.1.0</strong></a> · <a href="docs/RELEASE.md">Install & checksums</a> · <a href="docs/VISUAL_GUIDE.md">Visual guide</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
+<p align="center">480 campaign & Remix boards · 6 languages · Original art & audio · Offline · No ads or real-money purchases</p>
 
-**[Download the signed APK](releases/luma-drift-1.0.0.apk)** · [Install and release notes](docs/RELEASE.md) · [Gameplay](docs/GAMEPLAY.md) · [Validation](docs/VALIDATION.md)
+## One move changes the next
 
-<p>
-<img src="docs/screenshots/home-fr.png" width="220" alt="Luma Drift home screen in French">
-<img src="docs/screenshots/gates-en.png" width="220" alt="Directional puzzle with gate switches">
-<img src="docs/screenshots/companions-en.png" width="220" alt="Six original unlockable companions">
-</p>
+Each light follows its arrow. A clear path and an open gate let it escape. A switch changes one gate; a paired Remix switch changes two. Choose the order and empty the board. Undo and restart are free, blocked taps cost nothing, and there is no countdown.
 
-## Play
+<table>
+<tr><td align="center"><img src="docs/screenshots/v1.1/home.png" width="235" alt="Real Luma Drift home screen with rank, continue and challenge actions"><br><strong>Your next escape</strong><br>Continue, grow your rank, share a challenge.</td><td align="center"><img src="docs/screenshots/v1.1/play.png" width="235" alt="Actual direction-and-gate puzzle on Android"><br><strong>Read the path</strong><br>Arrows, switches and visible gate states.</td><td align="center"><img src="docs/screenshots/v1.1/remix.png" width="235" alt="Actual Remix puzzle with paired switch badges"><br><strong>Change two gates</strong><br>240 extra boards after Journey level 12.</td></tr>
+</table>
 
-Tap a light to send it along its arrow. Its path and exit gate must be clear. Some lights toggle a gate after leaving: choose the order, empty the board, and collect stars. Undo and restart are free. Blocked taps do not cost lives or currency. There is no timer.
+Screenshots show the installed app. See the [illustrated walkthrough](docs/VISUAL_GUIDE.md) for the shop, collection, missions and local journal.
 
-- **240 deterministic, solvable campaign boards**, across eight chapters, from 5×5 to 6×6.
-- **Six original animated vector companions** and six color themes, purchased with earned coins.
-- **Three items:** Spark reveals a safe move, Vision highlights currently free pieces, Flow plays three safe moves.
-- **Local daily and weekly events:** three daily puzzles, seven weekly stages, completion bonuses. These follow the device date and work offline.
-- **Six languages:** French, English, German, Spanish, Portuguese and Italian; automatic system selection with English fallback.
-- **Original synthesized audio:** eleven effects, a soft looping soundtrack, separate music and sound switches, optional haptics and reduced motion.
-- Local progression and interrupted-game restoration; virtual accessibility controls, directional descriptions, keyboard navigation and safe system-bar insets.
+## Inside version 1.1
 
-The shop uses **earned in-game currency only**. This version contains no advertising, analytics, real-money payments, account system, online leaderboard or backend. Events are local challenges, not remotely operated live events. All levels can be completed without spending items.
+| Play | Collect | Return & share |
+| --- | --- | --- |
+| 240 original Journey boards across eight chapters | Six vector companions and six color themes | Three daily missions with earned-coin rewards |
+| 240 Remix boards with paired gate switches | Optional star badge after seven distinct clears | First-clear XP, ranks and days explored |
+| Three daily puzzles and seven weekly stages | Spark, Vision and Flow powers | Exact C/R/E friend codes and actual-board share cards |
+| Contextual coaching and a safe first opening | Earned currency only; no paid solutions | Opt-in local journal with explicit JSON export |
 
-## Build
+French, English, German, Spanish, Portuguese and Italian are included. Music, effects, haptics and reduced motion have separate settings. Interrupted boards and progression stay on the device. Version 1.1 keeps the original boards and 1.0 save format compatible.
 
-Requires JDK 17, Android SDK platform 36, build-tools 36 and the Gradle wrapper. The first build may download the Gradle distribution and Android build dependencies.
+There is no account, network permission, automatic telemetry, online leaderboard or backend. Android's share sheet opens only after a player requests a challenge or journal export. Friend challenges use the same starting board and award no coins, XP or progression; powers are unavailable. Daily/weekly events follow the device date.
+
+## Could this be a hit?
+
+**The product is playable; market success is unproven.** This release strengthens the first session, the gate mechanic, return goals and friend handoff. Engine tests establish solvability and consistency. They do not measure fun, retention or acquisition cost. The shop currently generates no real revenue.
+
+The [hit audit](docs/HIT_AUDIT.md) explains the product choices and evidence gaps. The [roadmap](docs/ROADMAP.md) puts observation of first-time players and D1/D7 return ahead of additional monetization. Its decision thresholds are project hypotheses, not claimed industry benchmarks.
+
+## Build & verify
+
+Native Java 17 and Android Canvas. Minimum API 26, target/compile API 36; Gradle 8.14.3 and AGP 8.11.0. No third-party runtime library or game engine.
 
 ```sh
 export JAVA_HOME=/path/to/jdk-17
 export ANDROID_HOME=/path/to/android-sdk
 ./gradlew assembleDebug
-```
 
-For release signing, create a private keystore and a local `signing.properties` file as described in [DEVELOPMENT.md](docs/DEVELOPMENT.md). Private signing files are excluded from Git. Never commit a keystore or its password.
-
-```sh
 scripts/test-engine.sh
 scripts/test-data.sh
+scripts/test-meta.sh
 ./gradlew assembleRelease bundleRelease lintRelease
 ```
 
-The lightweight JVM tests do not require an emulator. The [interaction regression](scripts/smoke-emulator.py) requires an explicitly selected Android emulator; it refuses physical-device serials. See [validation evidence](docs/VALIDATION.md) for what was actually run and its limits.
+Release builds need your private signing configuration; see [development](docs/DEVELOPMENT.md). Keep the existing signing key when updating an installed package. Private keys and local properties are excluded from this repository. The [validation report](docs/VALIDATION.md) separates logic tests, signature checks, emulator interaction and physical-device limits.
 
-## Documentation
+## Explore the project
 
-| Document | Purpose |
-|---|---|
-| [GAMEPLAY.md](docs/GAMEPLAY.md) | Rules, progression, levels, items, stars and economy |
-| [ART_AUDIO.md](docs/ART_AUDIO.md) | Original vector art, palettes, characters and sound design |
-| [DEVELOPMENT.md](docs/DEVELOPMENT.md) | Architecture, building, signing and test commands |
-| [RELEASE.md](docs/RELEASE.md) | APK/AAB, installation, signing and checksums |
-| [VALIDATION.md](docs/VALIDATION.md) | Measured checks, emulator coverage and remaining limits |
-| [PRIVACY.md](docs/PRIVACY.md) | Actual data behavior of this release |
-| [Research archive](docs/RESEARCH.md) | Initial French market research and project recommendation |
+| For… | Read |
+| --- | --- |
+| Playing and understanding every feature | [Visual guide](docs/VISUAL_GUIDE.md) · [Gameplay & economy](docs/GAMEPLAY.md) |
+| What's new and what comes next | [Changelog](docs/CHANGELOG.md) · [Roadmap](docs/ROADMAP.md) · [Hit audit](docs/HIT_AUDIT.md) |
+| Installing and checking the delivery | [Release](docs/RELEASE.md) · [Validation](docs/VALIDATION.md) · [Artifact manifest](releases/manifest.json) |
+| Building or changing the game | [Architecture & development](docs/DEVELOPMENT.md) · [Level design](docs/LEVEL_DESIGN.md) |
+| Art, sound and store preparation | [Art & audio](docs/ART_AUDIO.md) · [Store listing](docs/STORE_LISTING.md) · [Brand kit](docs/store/README.md) |
+| Data and provenance | [Privacy](docs/PRIVACY.md) · [License](LICENSE) · [Research archive](docs/RESEARCH.md) |
 
-The initial market research is retained as historical planning material. Its forecasts and proposed Godot stack do not describe this implementation: Luma Drift uses native Java and Android Canvas, with no third-party runtime libraries.
+[All documentation](docs/README.md). The initial French research is retained as historical planning; its proposed Godot stack and revenue scenarios do not describe this native implementation or measured business results.
 
 ## License
 
-[GNU Affero General Public License, version 3](LICENSE). Original source code, vector graphics and synthesized sounds are provided under this license. Android platform APIs and the Gradle build toolchain retain their own licenses. The wrapper JAR is part of Gradle, under [Apache 2.0](https://github.com/gradle/gradle/blob/master/LICENSE). Third-party game names in the research are references and are not licensed by this repository.
-
-There is no claim of guaranteed commercial success, global trademark clearance, Google Play approval, or testing on every phone. The APK is a signed, playable first release; the validation document gives the precise evidence.
+[GNU AGPL v3](LICENSE), including the original code, vector graphics and synthesized sounds. Android platform facilities and build tools retain their own licenses; the Gradle wrapper is [Apache 2.0](https://github.com/gradle/gradle/blob/master/LICENSE). Third-party game names in the research are references. Trademark availability, Play approval and commercial success have not been established.

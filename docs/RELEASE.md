@@ -1,53 +1,53 @@
-# Luma Drift 1.0.0
+# Luma Drift 1.1.0
 
-Released in this repository on 26 October 2026. Package: `com.androidhit.lumadrift`; version code 1; minimum Android API 26; target API 36.
+Repository release: **26 October 2026**. Package `com.androidhit.lumadrift`, version code **2**, minimum API26/Android8, target API36/Android 16. This is a signed repository delivery; Google Play publication has not occurred.
 
 ## Download and install
 
-- **[Signed Android APK](../releases/luma-drift-1.0.0.apk)** — installable package, 89,712 bytes.
-- [Signed Android App Bundle](../releases/luma-drift-1.0.0.aab) — publication input, 89,879 bytes; not directly installable.
-- [Checksums](../releases/SHA256SUMS.txt), [artifact and source-input manifest](../releases/manifest.json), [public signing certificate](../releases/luma-release-certificate.pem).
+| Artifact | Exact bytes | Use |
+| --- | ---: | --- |
+| **[Signed APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.1.0.apk)** | 120,336 | Install on Android |
+| [Signed AAB](../releases/luma-drift-1.1.0.aab) | 120,494 | Input for future Play Console submission; not directly installable |
+| [Public certificate](../releases/luma-release-certificate.pem) | 1,497 | Check signing identity; no private key |
 
-Open the APK on an Android device and, if Android asks, allow installation from the application used to open that file. The permission is managed by Android. The app itself does not request installer privileges. Existing versions with the same application ID require the same signing certificate for an update.
+Open the APK from the downloading application and use Android's installation prompt. Android may ask to allow that application to install packages. Luma Drift itself does not request installer privileges.
 
-This is a repository release, not a claim of Google Play publication or approval. The AAB has passed bundletool validation but has not been uploaded to Play Console.
+**Updating 1.0:** install 1.1 over it with the same package/signing identity. Do not uninstall first if you want to preserve local progress. A signed in-place upgrade was exercised on the Android 16 emulator: three prior clears, an interrupted level 4, balance 300 after a purchase and explicit French language survived; 105 XP migrated once and old clears did not complete today's missions. [Upgrade evidence](validation/upgrade-results.txt).
 
-## Integrity and signing
+## Exact integrity
 
 APK SHA-256:
 
 ```text
-8c5a24cf9ba420b6a8e5402126c953b8dfa5dd19e9d42a8265c943bc402776d0
+08c4852c63d9a6c806dae740a8cc2f9fe4a49cae4263b06b8b554118027050fb
 ```
 
 AAB SHA-256:
 
 ```text
-6ab4f5b1bae15d798c24a5afda22b0c98a73ee351b2ecfc07fd924110402939b
+d85d498c87690d0b30918aca823d3cf59b2afb51e2b5ce129964002b5b61f020
 ```
 
-Certificate SHA-256:
+Signing-certificate SHA-256:
 
 ```text
 dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287
 ```
 
-The APK is release-signed with a locally generated RSA-3072 certificate, not the Android debug key. APK Signature Scheme v2 verification passed. The certificate is self-signed, as is normal for this direct Android distribution workflow; this does not mean Google has reviewed the application. Private signing material remains local and is excluded from Git.
+[All artifact checksums](../releases/SHA256SUMS.txt) · [Source-input and artifact manifest](../releases/manifest.json) · [APK signature output](validation/apk-signature.txt).
 
-The AAB's JAR signature verifies. The Java verifier reports the self-signed certificate, missing timestamp and streaming/JAR layout warnings for the generated bundle. Separate bundletool validation passes. These checks are not Play Console acceptance.
+The APK uses one locally generated RSA-3072 release signer and passes APK Signature Scheme v2 verification. It is not signed with Android's debug key. The self-signed certificate is normal for direct distribution and does not imply a Google review. Private signing material stays outside Git; preserve it securely for future updates.
 
-## Included
+The AAB passes [bundletool validation](validation/bundle-validation.txt). Its [JAR signature](validation/aab-signature.txt) verifies with self-signed-certificate, timestamp and streaming-layout qualifications from the verifier. This is not Play Console acceptance. The manifest records exact delivered bytes and build-source inputs; it does not promise a bit-identical rebuild with another signing key or timestamp.
 
-240 campaign boards; eight chapters; six companions; six themes; three powers; earned-coin shop; local daily and weekly puzzle events; six languages; original vector art and procedural audio; local saves; undo/restart; reduced motion; accessibility nodes and keyboard controls.
+## What changed
 
-## Deliberate boundaries
+240 new Remix boards with paired gate switches, contextual first moves, missions, XP/ranks, a cosmetic badge, fair C/R/E friend challenges, original share cards and an optional local play journal. The original 240 boards, local events, six companions/themes/languages, three powers, synthesized audio and 1.0 progression remain. [Detailed changelog](CHANGELOG.md) · [Visual guide](VISUAL_GUIDE.md).
 
-No real-money purchase, advertising, analytics, multiplayer, cloud save or remotely operated event service. No server or runtime model inference. All currencies and dates are local and are unsuitable for a financial economy without a different trust model.
+## Delivery boundaries
 
-The initial validated runtime is the Android 16/API 36 ARM64 emulator. A physical-phone session, subjective sound audition and Google Play review remain unverified. Minimum SDK is a declared build compatibility level; see [VALIDATION.md](VALIDATION.md) for the actual platform checks rather than assuming every supported version was exercised.
+No real-money billing, ads, automatic telemetry, account or backend. The earned-coin shop generates no real revenue. Local events follow the device clock. Friend sharing opens Android's share sheet and requires the player's choice of destination. Codes open installed apps; no installation referral service is included.
 
-## Controls
+The runtime evidence comes from an ARM64 Android 16/API36 emulator. Physical-phone sound, comfort, battery behavior, older-device compatibility, full TalkBack acceptance and player retention remain unmeasured. Read [VALIDATION.md](VALIDATION.md) for exact coverage.
 
-Tap a piece to preview its direction, then release on it to play. A small switch badge points to the gate that changes after that piece leaves. An impossible tap leaves the game unchanged. The three powers can be earned or purchased using game coins; they are optional. Undo and restart are always free.
-
-The interface follows the system language when supported. Settings allows an explicit language, sound, music, haptic and reduced-motion selection. Credits includes the license text and source link. Uninstalling or clearing app data removes local progress.
+Version 1.0 packages remain in [releases](../releases/) for provenance and upgrade reproduction; 1.1 is the current delivery. Clearing app data or uninstalling removes local progression. [Privacy](PRIVACY.md).

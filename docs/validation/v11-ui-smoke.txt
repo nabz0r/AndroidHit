@@ -1,0 +1,33 @@
+v1.1 real UI smoke; emulator=emulator-5580; cases=journal,campaign,remix,missions,friends,share,flow
+Screenshot: docs/screenshots/v1.1/v11-journal-enabled.png
+Screenshot: docs/screenshots/v1.1/v11-journal-export-chooser.png
+PASS journal: default off; opt-in; export chooser only (cancelled); clear; empty export stays local; opt-out persists; coins unchanged
+PASS campaign 1: real UI completion, coins=0, XP=0
+PASS campaign 2: real UI completion, coins=0, XP=0
+PASS campaign 3: real UI completion, coins=0, XP=0
+PASS campaign 4: real UI completion, coins=55, XP=35
+PASS campaign 5: real UI completion, coins=55, XP=35
+PASS campaign 6: real UI completion, coins=55, XP=35
+PASS campaign 7: real UI completion, coins=55, XP=35
+PASS campaign 8: real UI completion, coins=55, XP=35
+PASS campaign 9: real UI completion, coins=55, XP=35
+PASS campaign 10: real UI completion, coins=55, XP=35
+PASS campaign 11: real UI completion, coins=55, XP=35
+PASS campaign 12: real UI completion, coins=55, XP=35
+Screenshot: docs/screenshots/v1.1/v11-remix-unlocked.png
+PASS Remix unlock: Journey 12 completed through UI; separate Remix Level 1 available
+Screenshot: docs/screenshots/v1.1/v11-paired-switch-play.png
+Screenshot: docs/screenshots/v1.1/v11-remix-victory.png
+PASS Remix: paired gates change atomically, mode 3 survives process death, undo restores both gates, certified finish and Remix 2; coins=71, XP=35
+Screenshot: docs/screenshots/v1.1/v11-missions.png
+PASS missions: 2 exact first credits; repeated claims +0; progress/XP unchanged by collection
+PASS friend C: exact same board, no powers, +0 coins/XP/mission credit; code=LD1-C-1-473F0790
+PASS friend: invalid code leaves active run intact; mode 4/code/history survive process death
+Screenshot: docs/screenshots/v1.1/v11-friend-victory.png
+PASS friend R: exact same board, no powers, +0 coins/XP/mission credit; code=LD1-R-7-B3B86BE2
+PASS friend E: exact same board, no powers, +0 coins/XP/mission credit; code=LD1-E-QRGIW31R7KI1-56422E14
+PASS friend locked Remix 7 does not unlock Remix progression
+Screenshot: docs/screenshots/v1.1/v11-share-chooser.png
+PASS share: real image chooser opened and cancelled; no recipient/app selected; game intact
+PASS Flow: pause and help transitions permanently cancel later scheduled actions (at most the immediate move)
+PASS: selected v1.1 UI cases completed; crash buffer clean; emulator save retained

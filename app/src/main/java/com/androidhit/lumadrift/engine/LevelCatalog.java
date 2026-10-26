@@ -11,7 +11,9 @@ public final class LevelCatalog {
     public static final int LEVEL_COUNT = 240;
     public static final int CHAPTER_COUNT = 8;
     public static final int LEVELS_PER_CHAPTER = 30;
+    public static final int REMIX_COUNT = 240;
     private static final Level[] CACHE = new Level[LEVEL_COUNT];
+    private static final Level[] REMIX_CACHE = new Level[REMIX_COUNT];
 
     private LevelCatalog() { }
 
@@ -27,6 +29,19 @@ public final class LevelCatalog {
         int count = 15 + (int) ((seed ^ (seed >>> 32)) & 3L);
         return generate(0, 0, 6, count, 4, seed, true);
     }
+
+    /**
+     * Separate, save-stable dual-switch campaign. It never changes the original
+     * campaign's numbers, seeds or solutions. The UI unlocks it after level 12.
+     */
+    public static synchronized Level remix(int number) {
+        if (number < 1 || number > REMIX_COUNT) throw new IllegalArgumentException("Remix must be 1..240");
+        if (REMIX_CACHE[number - 1] == null) REMIX_CACHE[number - 1] = RemixCatalog.get(number);
+        return REMIX_CACHE[number - 1];
+    }
+
+    /** Deterministic dual-switch board for independent seed/solver validation. */
+    public static Level remixEvent(long seed) { return RemixCatalog.event(seed); }
 
     private static Level campaign(int number) {
         int chapter = (number - 1) / LEVELS_PER_CHAPTER + 1;

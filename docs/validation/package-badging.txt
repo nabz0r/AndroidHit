@@ -1,0 +1,17 @@
+package: name='com.androidhit.lumadrift' versionCode='2' versionName='1.1.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+sdkVersion:'26'
+targetSdkVersion:'36'
+uses-permission: name='android.permission.VIBRATE'
+application-label:'Luma Drift'
+application-icon-160:'res/r2.xml'
+application: label='Luma Drift' icon='res/r2.xml'
+launchable-activity: name='com.androidhit.lumadrift.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+other-activities
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'

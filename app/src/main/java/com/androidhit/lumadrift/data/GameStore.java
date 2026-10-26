@@ -277,6 +277,35 @@ public final class GameStore {
         return hash & Long.MAX_VALUE;
     }
 
+    /** Dedicated Remix progression. Existing campaign saves and rewards remain unchanged. */
+    public synchronized int remixUnlockedLevel() {
+        return Math.max(1, Math.min(240, prefs.getInt("remix_unlocked", 1)));
+    }
+    public synchronized boolean remixAvailable() { return unlockedLevel() >= 13; }
+    public synchronized int remixStars(int level) {
+        return level >= 1 && level <= 240 ? clampStars(prefs.getInt("remix_stars_" + level, 0)) : 0;
+    }
+    public synchronized int completeRemix(int level, int stars) {
+        if (!remixAvailable() || level < 1 || level > remixUnlockedLevel()) return 0;
+        int next = clampStars(stars), old = remixStars(level);
+        if (next == 0) return 0;
+        int reward = next > old ? (old == 0 ? 35 : 0) + 12 * (next - old) : 0;
+        boolean persisted = prefs.edit().putInt("remix_stars_" + level, Math.max(old, next))
+                .putInt("remix_unlocked", Math.min(240, Math.max(remixUnlockedLevel(), level + 1)))
+                .putInt("coins", safeAdd(coins(), reward)).commit();
+        if (!persisted) throw new IllegalStateException("Could not persist Remix reward");
+        return reward;
+    }
+    /** Reward and its claim token are persisted together. Never accepts arbitrary external intent amounts. */
+    public synchronized int grantMilestone(String uniqueKey, int amount) {
+        if (uniqueKey == null || !uniqueKey.matches("[a-zA-Z0-9_:-]{1,100}") || amount < 1 || amount > 500) return 0;
+        String token = "milestone_" + uniqueKey;
+        if (prefs.getBoolean(token, false)) return 0;
+        boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", safeAdd(coins(), amount)).commit();
+        if (!persisted) throw new IllegalStateException("Could not persist milestone reward");
+        return amount;
+    }
+
     private static int clampStars(int stars) { return Math.max(0, Math.min(3, stars)); }
     private static int safeAdd(int balance, int amount) { return (int) Math.min(MAX_COINS, (long) balance + Math.max(0, amount)); }
 }

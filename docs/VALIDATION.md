@@ -1,57 +1,59 @@
-# Release validation — Luma Drift 1.0.0
+# Release validation — Luma Drift 1.1.0
 
-Evidence collected on 26 October 2026. This document separates static/build checks, engine/data tests, installed-app interaction and untested physical behavior.
+Evidence collected on **26 October 2026**. Logic, package integrity and installed Android behavior are separate checks. No player study, physical-phone acceptance or commercial outcome is claimed.
 
 ## Build and package
 
-- JDK 17, Gradle 8.14.3, Android Gradle Plugin 8.11.0; SDK/build-tools 36.
-- `assembleRelease`, `bundleRelease`, `lintRelease`: successful. The final Android lint text is **No issues found**. Gradle reports its own deprecated-build-feature notice; compilation uses some platform APIs retained for compatibility.
-- APK signature: verifies with v2, one RSA-3072 release signer. [Signature output](validation/apk-signature.txt).
-- AAB: bundletool 1.18.1 `validate` exits 0. [Output](validation/bundle-validation.txt). JAR signature verifies with the qualifications documented in [RELEASE.md](RELEASE.md).
-- Manifest inspection: application ID `com.androidhit.lumadrift`, version 1.0.0/1, min 26, target 36. Only declared permission: `VIBRATE`. No Internet permission.
-- [SHA256SUMS](../releases/SHA256SUMS.txt) and [manifest](../releases/manifest.json) record delivered bytes and build-source inputs. This is not a claim that timestamps and a private signing key yield a bit-identical build elsewhere.
+| Check | Observed result |
+| --- | --- |
+| Toolchain | JDK 17, Gradle 8.14.3, AGP 8.11.0, SDK/build-tools 36 |
+| Release tasks | `assembleRelease bundleRelease lintRelease` successful; [lint: no issues](validation/lint.txt) |
+| APK | One RSA-3072 release signer; [v2 signature verifies](validation/apk-signature.txt) |
+| AAB | [bundletool validation passes](validation/bundle-validation.txt); [JAR signature verifies](validation/aab-signature.txt) with self-signed/timestamp/streaming-layout qualifications |
+| Manifest | [Version 1.1.0 / code 2, min 26, target 36](validation/package-badging.txt); only VIBRATE permission, no Internet permission |
+| Exact bytes | [Release hashes](RELEASE.md), [SHA256SUMS](../releases/SHA256SUMS.txt), [source-input manifest](../releases/manifest.json) |
 
-## Logic tests
+Gradle also reports its deprecated-build-feature notice. The supplied signing identity is local and private; source hashes do not imply a timestamp-independent reproducible signed binary.
 
-| Suite | Actual result | Coverage |
-|---|---|---|
-| [Engine](validation/engine-tests.txt) | 190,238 assertions | All 240 campaign boards, 1,002 event seeds, deterministic generation, exact solutions, 804 alternative legal starts, 12 recoverable dead ends, illegal moves, undo, restart and atomic history restore |
-| [Data](validation/data-tests.txt) | 3,219 assertions | Unlocks, coins, all 720 campaign stars, repeat-reward prevention, star improvements, shop debit, inventory/equipment, local event periods, unique bonuses, stale-period rejection, language completeness and placeholder consistency |
-| [Lint](validation/lint.txt) | No issues found | Android static checks; explicit narrow suppressions for legacy back fallback, intentionally synchronous preference transactions and original legal text |
+## Logic and persistence contracts
 
-Data tests use in-memory SharedPreferences stubs and do not establish disk durability or Android process behavior. Those are exercised separately below.
+| Suite | Result | Scope |
+| --- | ---: | --- |
+| [Engine](validation/engine-tests.txt) | **435,314 assertions** | 240 Journey +240 Remix +1,002 event +1,002 paired-switch seeds; exact solutions, frozen original fingerprints, gates, undo, restart, atomic restore and challenge-code parsing/fuzzing |
+| [Data](validation/data-tests.txt) | **4,823 checks** | Campaign/Remix unlocks and independent stars, rewards and replay prevention, all 240 Remix completions, milestone claim idempotence, shop, events, dates and six-language completeness/format arguments |
+| [Meta](validation/meta-tests.txt) | **362 checks + valid JSON export** | First-clear XP/ranks, migration, missions, failed-commit retry, calendar/DST boundaries, badge, bounded opt-in journal and Unicode/control-character round trip |
 
-## Installed Android 16 interaction
+The engine checks 1,543 alternate legal starts; 53 lead to states correctly requiring undo. Every published campaign and Remix board has a verified complete solution; not every legal move preserves solvability. The data/meta tests use in-memory Android preference stubs. They do not prove physical disk durability or human difficulty quality.
 
-An isolated read-only AVD based on the Google APIs ARM64 Android 16/API 36 image was used at 1080×2340. The signed release APK was installed and launched. The emulator was headless, software-rendered and host audio was disabled.
+## Installed Android 16 / API 36
 
-[Main interaction log](SMOKE_RESULTS.txt) records:
+The release APK was installed on an isolated ARM64 Google APIs emulator at 1080×1920. Host sound output was disabled. [Actual v1.1 UI log](validation/v11-ui-smoke.txt) and [reproducible script](../scripts/smoke-v11.py) record:
 
-- Campaign levels 1–6 completed through touch controls, including a switch/gate board.
-- Three-star unassisted rewards and two-star assisted reward observed.
-- Undo restores the board; a blocked move leaves piece count unchanged.
-- Force-stop/relaunch preserves an interrupted game.
-- Flow stops remaining delayed actions when the app backgrounds.
-- Shop purchase deducts the exact price; a companion purchase/equip is exercised.
-- French UI and save survive process restart; all six language choices are exercised.
-- Crash buffer clean after this sequence.
+- Journey 1–12 completed by operating pieces through the actual UI; prior clears returned 0 coins/XP, new clears returned the expected 55 coins/35 XP.
+- Remix unlock after 12; paired gates change together; process restart restores board/gates; Undo restores both; Remix 1 gives 71 coins/35 XP and opens Remix 2.
+- Two completed daily missions pay 35 and 40 once; repeat claims give 0 and do not alter XP/progress.
+- C/R/E friend boards match exact fixtures, have no powers, and yield 0 coins/XP/mission credit. A locked friend Remix does not unlock personal progression.
+- An invalid URI leaves the active game intact. Friend code/history survive force-stop/relaunch.
+- Sharing opens the real Android image chooser and is cancelled; no destination is selected and no message is sent.
+- Journal starts off; opt-in, JSON export chooser/cancel, clear, empty-export behavior and persisted opt-out work. Wallet stays unchanged.
+- Pause and help permanently cancel queued Flow actions. Crash buffer stays clean.
 
-The final binary was reinstalled after the last cleanup and used for the event and final layout checks. The cleanup changed redundant API branches, legal-text lint metadata and orientation configuration; its engine/data tests and lint were rerun.
+The first harness attempt expected native button `Yes`, while Android rendered `YES`; the harness selector was made case-insensitive and the complete sequence then passed. This was a test-selector failure, not an application crash.
 
-[Event interaction log](EVENT_SMOKE_RESULTS.txt) records the separately executed daily/weekly sequence and bonus claims. The test script uses the same deterministic seeds but operates every piece and button through the installed interface. Its first run stopped on an ambiguous test selector (`Collect` also matched `Collection`); the selector was corrected and the sequence rerun. That harness error was not an application crash.
+## Signed 1.0 → 1.1 upgrade
 
-Screenshots in [screenshots/](screenshots/) are captures of the installed application, not mockups. They include home, gate play, powers, victory, shop, companions, themes, events and language settings. Static source review also corrected delayed-action session targeting, victory-window interaction and stale accessibility actions before release.
+A genuine 1.0 installation was played before installing 1.1 with `-r` and the same certificate. Three clears migrate to 105 XP without completing today's missions; partial level 4 restores six pieces, balance 300 after a prior purchase remains, and explicit French remains. [Before state](validation/upgrade-before.json) · [Observed checks](validation/upgrade-results.txt).
 
-[Layout and license checks](LAYOUT_RESULTS.txt) passed at 720×1280/320 dpi, including the weekly bonus control. A 1280×720 landscape resize rendered without a crash; its portrait composition is centered and scaled. The embedded license dialog was opened. Audio-focus excerpts show Luma Drift owning focus in the [foreground](validation/audio-foreground.txt) and releasing it in the [background](validation/audio-background.txt).
+The final package adds the Nova launcher icon after the full behavior run; it is reinstalled for the final screenshot/launch sequence. [Final-binary record](validation/final-v11-binary.txt). No gameplay code changed between those runs.
 
-[Final binary check](FINAL_BINARY_CHECK.txt) reinstalled the last APK and verified interrupted event continuation after the last home-caption correction.
+## Visual and historical coverage
 
-## Limits
+The [visual guide](VISUAL_GUIDE.md) uses genuine 1080×1920 captures from this release. The [brand kit](store/README.md) is original promotional art, clearly separate from gameplay captures. Screen images are not mockups or claims of market performance.
 
-- No physical Android phone or tablet was tested in this session. Android 8/API 26 emulation was attempted, but its ADB shell/install connection did not complete; it does not count as a passing compatibility test.
-- Headless emulation verifies that the audio code can run with the game; it does not provide subjective listening, speaker quality, Bluetooth latency or acoustic evidence. DSP buffer measurements are documented in [ART_AUDIO.md](ART_AUDIO.md).
-- No full TalkBack user session, accessibility certification, low-end battery benchmark, large device matrix or real-world retention study was performed.
-- Event dates and local storage are user-controlled. No anti-cheat, server reward authority or real-money store is claimed.
-- Google Play publication, policy acceptance, trademark clearance and commercial performance remain unverified.
+The original 1.0 [main interaction](SMOKE_RESULTS.txt), [event sequence](EVENT_SMOKE_RESULTS.txt), [small-screen/landscape checks](LAYOUT_RESULTS.txt) and [audio focus excerpts](validation/audio-foreground.txt) remain historical regression evidence. They exercised all daily/weekly stages/bonuses, shop debit, languages, 720×1280 and 1280×720 layouts, embedded license and foreground/background audio focus. They were run on 1.0 and do not become fresh 1.1 device results by being linked here. Frozen campaign/event fingerprints and current data tests protect those content contracts.
 
-A passing logic or emulator test is evidence for the checked behavior, not a guarantee of a perfect experience on every device.
+## Practical limits
+
+No physical phone/tablet, subjective sound audition, Bluetooth latency, battery/thermal benchmark, full TalkBack user session or large device matrix was tested. API 26 is the declared minimum; an earlier API 26 emulator attempt failed to complete its ADB connection and is not a passing compatibility result. Headless audio execution is not listening evidence.
+
+Dates/storage are user-controlled; there is no server reward authority. Google Play publication, policy acceptance, trademark availability, retention, virality, acquisition cost and real revenue remain unverified. Passing covered tests does not guarantee a perfect experience on every device.

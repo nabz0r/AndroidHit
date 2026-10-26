@@ -137,6 +137,79 @@ public final class DataTest {
         check(store.unlockedLevel() == 1, "Events do not unlock campaign levels");
     }
 
+    private static void testRemixProgression() {
+        TestContext context = new TestContext();
+        GameStore store = new GameStore(context);
+        check(!store.remixAvailable() && store.remixUnlockedLevel() == 1, "Fresh save cannot enter Remix");
+        int initialCoins = store.coins();
+        check(store.completeRemix(1, 3) == 0, "Remix cannot pay before its Journey prerequisite");
+        check(store.coins() == initialCoins && store.remixStars(1) == 0, "Blocked Remix attempt leaves wallet and stars unchanged");
+        for (int level = 1; level <= 11; level++) store.completeLevel(level, 1);
+        check(!store.remixAvailable(), "Eleven Journey clears are insufficient to unlock Remix");
+        store.completeDaily(0, 3);
+        check(!store.remixAvailable(), "Daily clear cannot replace the twelfth Journey prerequisite");
+        check(store.completeRemix(1, 3) == 0, "Remix reward remains blocked one Journey clear before unlock");
+        store.completeLevel(12, 1);
+        check(store.remixAvailable(), "Twelfth Journey clear unlocks Remix");
+        check(new GameStore(context).remixAvailable(), "Remix availability persists store recreation");
+
+        int journeyUnlock = store.unlockedLevel(), journeyStars = store.totalStars();
+        int dailyStars = store.dailyStars(0), balance = store.coins();
+        check(store.remixStars(1) == 0, "Journey clear does not pre-complete matching Remix board");
+        check(store.completeRemix(2, 3) == 0, "Locked Remix board cannot skip progression");
+        check(store.completeRemix(0, 3) == 0 && store.completeRemix(-1, 3) == 0, "Zero and negative Remix indexes rejected");
+        check(store.completeRemix(241, 3) == 0, "Past-end Remix index rejected");
+        check(store.completeRemix(1, 0) == 0 && store.completeRemix(1, -1) == 0, "Incomplete Remix board cannot pay or unlock");
+        check(store.coins() == balance && store.remixUnlockedLevel() == 1, "Rejected Remix attempts preserve wallet and next board");
+
+        check(store.completeRemix(1, 1) == 47, "First one-star Remix clear pays its first-clear reward");
+        check(store.coins() == balance + 47 && store.remixUnlockedLevel() == 2, "First Remix reward credited while next board unlocks");
+        check(store.completeRemix(1, 1) == 0, "Same-score Remix replay cannot farm currency");
+        check(store.completeRemix(1, 3) == 24, "Remix star improvement pays only two newly earned stars");
+        check(store.completeRemix(1, 2) == 0 && store.remixStars(1) == 3, "Worse Remix replay preserves best without reward");
+        check(store.coins() == balance + 71, "First clear and improvements sum to the exact three-star reward");
+        check(store.unlockedLevel() == journeyUnlock && store.totalStars() == journeyStars, "Remix leaves Journey unlocks and stars independent");
+        check(store.dailyStars(0) == dailyStars && store.weeklyStars(0) == 0, "Remix leaves event progression independent");
+        GameStore restored = new GameStore(context);
+        check(restored.remixStars(1) == 3 && restored.remixUnlockedLevel() == 2 && restored.coins() == store.coins(), "Recreated store retains Remix stars, unlock and wallet");
+
+        for (int level = 2; level <= Catalog.LEVEL_COUNT; level++) {
+            check(restored.completeRemix(level, 3) == 71, "First complete Remix reward " + level);
+        }
+        check(restored.remixUnlockedLevel() == 240 && restored.remixStars(240) == 3, "Remix progression reaches and caps at final board");
+        check(restored.remixStars(0) == 0 && restored.remixStars(-1) == 0 && restored.remixStars(241) == 0, "Out-of-range Remix star reads are empty");
+        balance = restored.coins();
+        for (int level = 1; level <= Catalog.LEVEL_COUNT; level++) restored.completeRemix(level, 3);
+        check(restored.coins() == balance, "Replaying the full Remix journey cannot farm earned currency");
+        check(restored.completeRemix(241, 3) == 0 && restored.remixUnlockedLevel() == 240, "Completed Remix journey cannot create a 241st board");
+        check(restored.unlockedLevel() == 13 && restored.totalStars() == 12, "Completing all Remix boards never advances the independent Journey");
+        check(new GameStore(context).remixStars(240) == 3, "Final Remix completion persists recreation");
+    }
+
+    private static void testMilestoneClaims() {
+        TestContext context = new TestContext();
+        GameStore store = new GameStore(context);
+        int initial = store.coins();
+        for (String key : new String[]{null, "", "contains space", "../escape", "bad/key", "line\nbreak", "étoile", "a".repeat(101)}) {
+            check(store.grantMilestone(key, 35) == 0, "Malformed milestone identity rejected: " + key);
+        }
+        for (int amount : new int[]{Integer.MIN_VALUE, -1, 0, 501, Integer.MAX_VALUE}) {
+            check(store.grantMilestone("mission:retry", amount) == 0, "Invalid milestone amount rejected: " + amount);
+        }
+        check(store.coins() == initial, "Rejected milestone requests never mutate currency");
+        check(store.grantMilestone("mission:retry", 35) == 35, "Rejected amounts do not consume a valid future claim token");
+        check(store.coins() == initial + 35, "Milestone credits the exact approved amount");
+        check(store.grantMilestone("mission:retry", 35) == 0, "Duplicate milestone token cannot pay again");
+        check(store.grantMilestone("mission:retry", 500) == 0, "Changing an already claimed amount cannot bypass idempotency");
+        check(new GameStore(context).grantMilestone("mission:retry", 35) == 0, "Milestone token survives store recreation");
+        check(store.coins() == initial + 35, "Repeated milestone requests preserve the credited balance");
+        check(store.grantMilestone("mission:2026-10-26:1", 1) == 1, "Minimum approved reward and dated identity accepted");
+        check(store.grantMilestone("a".repeat(100), 500) == 500, "Maximum approved reward and identity length accepted");
+        check(store.coins() == initial + 536, "Independent milestone claims sum precisely");
+        check(store.unlockedLevel() == 1 && store.totalStars() == 0 && store.remixStars(1) == 0, "Milestone reward cannot alter board progression");
+        check(!store.ownsSkin("aurora") && store.boosterStock(Catalog.HINT) == 3, "Milestone reward does not silently grant cosmetics or powers");
+    }
+
     private static void testLanguagesAndSettings() throws ReflectiveOperationException {
         TestContext context = new TestContext();
         GameStore store = new GameStore(context);
@@ -191,7 +264,9 @@ public final class DataTest {
     public static void main(String[] args) throws ReflectiveOperationException {
         testEconomyAndProgress();
         testEvents();
+        testRemixProgression();
+        testMilestoneClaims();
         testLanguagesAndSettings();
-        System.out.println("PASS " + checks + " data, economy, campaign, event and localization checks");
+        System.out.println("PASS " + checks + " data, economy, campaign, Remix, milestone, event and localization checks");
     }
 }

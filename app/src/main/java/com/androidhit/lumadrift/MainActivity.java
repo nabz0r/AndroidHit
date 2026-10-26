@@ -19,6 +19,7 @@ public final class MainActivity extends Activity {
         game = new LumaView(this);
         setContentView(game);
         if(state!=null)game.restoreScreen(state.getString("screen"));
+        if(state==null&&getIntent().getData()!=null)game.openChallenge(getIntent().getData().toString());
         game.setOnApplyWindowInsetsListener((v, insets) -> {
             if (Build.VERSION.SDK_INT >= 30) {
                 android.graphics.Insets safe = insets.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
@@ -28,6 +29,7 @@ public final class MainActivity extends Activity {
         });
         if (Build.VERSION.SDK_INT >= 33) getOnBackInvokedDispatcher().registerOnBackInvokedCallback(0, () -> game.back());
     }
+    @Override protected void onNewIntent(android.content.Intent intent){super.onNewIntent(intent);setIntent(intent);if(intent.getData()!=null)game.openChallenge(intent.getData().toString());}
     // API 33+ registers OnBackInvokedCallback above; this fallback serves API 26–32.
     @SuppressLint("GestureBackNavigation")
     @Override public void onBackPressed() { game.back(); }

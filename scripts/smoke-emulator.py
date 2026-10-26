@@ -32,7 +32,9 @@ def balance():
 def launch():shell('am','start','-n',pkg+'/.MainActivity');time.sleep(.5)
 if a.reset:shell('pm','clear',pkg)
 shell('logcat','-c');launch();shot('home-en')
-click('Continue',True);click('Let’s drift');shot('play-en')
+click('Continue',True)
+if any(n.get('text')=='Let’s drift' for n in nodes()):click('Let’s drift')
+shot('play-en')
 java=Path(os.environ.get('JAVA_HOME','/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'))/'bin'
 with tempfile.TemporaryDirectory() as out:
     sources=list((root/'app/src/main/java/com/androidhit/lumadrift/engine').glob('*.java'))+[root/'scripts/EngineFixture.java']
