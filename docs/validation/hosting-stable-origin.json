@@ -1,0 +1,81 @@
+{
+  "recordedOn": "2026-10-27",
+  "origin": "https://luma-drift-production.web.app",
+  "ownerReportedStableSiteVisible": true,
+  "httpChecks": [
+    {
+      "path": "/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "a7afaddca016703b5d034d6998b46b270fd7c697422dfa57e3a86559481319cc"
+    },
+    {
+      "path": "/privacy/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "02f58bd612f25023b60bc06fd4cf77d9c8f9c75891c38741ca4d50c4f689d156"
+    },
+    {
+      "path": "/delete-account/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "a5f3ec84b1f55ce7f49b7e74f40657f504fd2e8a9ce600769c180bce55e86daf"
+    },
+    {
+      "path": "/site-config.js",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "6053074f0b45e54e14267e7d2316be8f68d981110c2376641653e039fc0f4f67"
+    },
+    {
+      "path": "/app-ads.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "no-referrer"
+      },
+      "matchesRepositoryBytes": true,
+      "sha256": "1ec22f11296d1bf892fdd26f7019ca10049cc97977d31ce9ea806b888b6dbcba"
+    }
+  ],
+  "authHelper": {
+    "path": "/__/auth/iframe",
+    "status": 200,
+    "xFrameOptions": null
+  },
+  "deletionPreflight": {
+    "status": 204,
+    "allowOrigin": "https://luma-drift-production.web.app"
+  },
+  "realFinalOriginGoogleSignInTested": false,
+  "realFinalOriginDeletionTested": false,
+  "adMobSellerVerificationEstablished": false,
+  "purchasesTested": false,
+  "qualificationBannerRetained": true
+}

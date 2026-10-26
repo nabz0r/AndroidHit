@@ -38,9 +38,9 @@ On 27 October the owner reported the real preview displayed **« Identité véri
 
 After the separate deletion step, the owner reported **« Ton compte Luma Drift et son portefeuille serveur ont été supprimés »**. [Scoped deletion report](hosting-web-deletion.json). This matches the site's completion state, which the code displays only after the request helper accepts a successful HTTP response with `deleted: true`. The agent did not inspect the real response, Firebase user list, wallet documents or server logs. The result is owner-reported successful deletion on the preview, not independent storage/audit verification, a paid-wallet lifecycle test or an Android account test. Earlier JSON files preserve their original pre-deletion scope.
 
-## Next owner action — publish the qualification pages at the stable origin
+## Stable-origin publication — completed
 
-Copy the tested preview channel to the same site's live channel, retaining the qualification banner and closed commerce. Firebase documents this as publishing the same Hosting content/configuration that was tested. [Official preview-to-live workflow](https://firebase.google.com/docs/hosting/test-preview-deploy).
+The owner now reports the site is visible at **<https://luma-drift-production.web.app>** after the guided preview-to-live copy, retaining the qualification banner and closed commerce. Firebase documents this workflow as publishing the same Hosting content/configuration that was tested. [Official preview-to-live workflow](https://firebase.google.com/docs/hosting/test-preview-deploy). The command is preserved as the completed owner step:
 
 ```sh
 npx --yes firebase-tools@15.34.1 hosting:clone \
@@ -49,6 +49,10 @@ npx --yes firebase-tools@15.34.1 hosting:clone \
   --project=luma-drift-production
 ```
 
-This is the next documented command; its execution and final-origin availability are not yet established. It does not remove `preparation: true`, rebuild Android, enable live ads or activate purchases. The final origin is already authorized by Firebase Auth and the server preflight, but its actual login/deletion flow must be qualified after publication. Check the actual deployed page/configuration/seller bytes and headers before supplying the final URLs to consoles. Retain the production configuration gate until all remaining launch requirements are met.
+Independent HTTPS reads on 27 October confirmed the stable origin serves `/`, `/privacy/index.html`, `/delete-account/index.html`, `/site-config.js` and `/app-ads.txt` with **HTTP 200**, all matching repository bytes. The responses include the documented `nosniff`, `DENY` and `no-referrer` headers. The reserved `/__/auth/iframe` helper returns 200 without an `X-Frame-Options` block. A fresh final-origin deletion preflight returned 204 with its exact allowed origin. [Stable-origin observations](hosting-stable-origin.json). Earlier reports preserve the prepublication 404; that is no longer the current site state. No authenticated administrative Hosting API or new release-version metadata was inspected.
+
+The copy retains `preparation: true` and does not rebuild Android, enable live ads or activate purchases. The final origin is authorized by Firebase Auth and the server preflight, but its actual login/deletion flow remains unqualified. The next owner phase is Google sign-in followed by explicit app-account deletion on the **final** deletion page, using the same distinct Google test account. Signing in after the previous deletion can create a fresh Luma Drift app account; it does not delete or replace the Google Account. Complete the confirmation within the server's five-minute recent-authentication window and report the actual result. Do not infer final-domain authentication from static delivery or from the preview's owner-reported success.
+
+These observed final URLs can now be used during console setup; acceptance, app-ads crawler verification and store declarations remain separate from HTTP delivery. Retain the production configuration gate until all remaining launch requirements are met.
 
 No purchase, live ad, Scheduler/RTDN delivery or audit purge is established. Authenticated wallet retrieval, paid-balance deletion, refunds, failures/retries and the final-domain flow remain separate checks. The existing Android APK/AAB remain unchanged.

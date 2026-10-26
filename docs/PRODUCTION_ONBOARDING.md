@@ -2,7 +2,7 @@
 
 **Owner checklist · Official requirements checked 26 October 2026 · Deployment/contact status updated 27 October 2026**
 
-Owner Firebase/Google, the Firebase Web configuration and three AdMob IDs have been received and integrated. The public publisher name is **nabilux**, with support **nabz0r+gaming@gmail.com**. Cloud Run is deployed and its real origin is configured in the site; public routing and the final site's CORS preflight have been checked. A temporary qualification preview is now accessible. Play identity verification, purchases, final-site publication/qualification, authenticated wallet GET, Android Google login and scheduled maintenance/RTDN remain pending. Web login/deletion success is owner-reported only, without independent observation, logs, a screenshot or Firebase Console verification. The unchanged Android APK/AAB still have an empty wallet origin and force sample ads. [Current scope and exact IDs](PRODUCTION_RELEASE.md). The steps below remain the console/deployment checklist.
+Owner Firebase/Google, the Firebase Web configuration and three AdMob IDs have been received and integrated. The public publisher name is **nabilux**, with support **nabz0r+gaming@gmail.com**. Cloud Run is deployed and its real origin is configured in the site; public routing and the final site's CORS preflight have been checked. The qualification preview and stable site are now accessible; independent reads confirmed five stable resources and repository-identical bytes. Play identity verification, purchases, stable-domain OAuth/deletion, authenticated wallet GET, Android Google login and scheduled maintenance/RTDN remain pending. Preview Web login/deletion success is owner-reported only, without independent observation, logs, a screenshot or Firebase Console verification. The unchanged Android APK/AAB still have an empty wallet origin and force sample ads. [Current scope and exact IDs](PRODUCTION_RELEASE.md). The steps below remain the console/deployment checklist.
 
 One Google Account can own Play Console, Firebase/Google Cloud and AdMob. Use an account controlled by the actual publisher, enable two-step verification and retain its recovery methods. You do not need three Gmail addresses. Identity documents, payment details and contracts belong in Google's consoles, never in this repository or a chat.
 
@@ -108,9 +108,9 @@ Real-time Developer Notifications and scheduled maintenance are not deployed yet
 
 ## 7. Public pages and handoff
 
-The [prepared public pages](PUBLIC_PAGES.md) now include **nabilux**, **nabz0r+gaming@gmail.com**, the supplied Firebase Web settings and the deployed API origin. The [qualification preview](https://luma-drift-production--qualification-uht107xg.web.app) is deployed and its static resources respond with HTTP 200. [Hosting evidence](validation/hosting-preview.md). Final-site publication and qualification remain unconfirmed. Final and preview Auth domains are confirmed. The owner applied the CORS update; independent final and preview API preflights now both return HTTP 204 with their exact allowed origins. The owner now reports “Ton compte Luma Drift et son portefeuille serveur ont été supprimés” after the guided Web deletion test. No independent observation, log/screenshot, DELETE status or Firebase Console check supports this report. Authenticated wallet GET, payments and Android Google login remain unqualified. `preparation: true` only keeps the qualification banner visible: the configured Google control can reach real identity/deletion services after explicit player actions. Next copy channel `qualification` to `live` on the same Hosting site while retaining `preparation: true`; purchases and live ads stay closed. This pending stable-site publication is not commercial activation. The Google Account itself is not deleted by the app-account flow. Account creation requires an in-app deletion route and an external request resource; the production app invokes server deletion when built with its wallet origin. Qualify both routes against the real deployment before their store declaration. [Play account-deletion requirements](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en-en).
+The [prepared public pages](PUBLIC_PAGES.md) now include **nabilux**, **nabz0r+gaming@gmail.com**, the supplied Firebase Web settings and the deployed API origin. The [qualification preview](https://luma-drift-production--qualification-uht107xg.web.app) is deployed and its static resources respond with HTTP 200. [Hosting evidence](validation/hosting-preview.md). Stable-site publication is confirmed by independent HTTPS reads; OAuth/deletion on that domain remains untested. Final and preview Auth domains are confirmed. The owner applied the CORS update; independent final and preview API preflights now both return HTTP 204 with their exact allowed origins. The owner now reports “Ton compte Luma Drift et son portefeuille serveur ont été supprimés” after the guided Web deletion test on the preview. No independent observation, log/screenshot, DELETE status or Firebase Console check supports this report. Authenticated wallet GET, payments and Android Google login remain unqualified. `preparation: true` only keeps the qualification banner visible: the configured Google control can reach real identity/deletion services after explicit player actions. The stable site is published with `preparation: true`; purchases and live ads stay closed. Next repeat Google sign-in and explicit app-account deletion there with the same distinct test account. Sign-in can recreate the Luma Drift profile after its deletion; this is not commercial activation. The Google Account itself is not deleted by the app-account flow. Account creation requires an in-app deletion route and an external request resource; the production app invokes server deletion when built with its wallet origin. Qualify both routes against the real deployment before their store declaration. [Play account-deletion requirements](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en-en).
 
-The existing Firebase, AdMob, publisher/contact and Cloud Run values do not need to be resent. Complete the remaining Play status/products, Play signing certificate, final-site publication and actual-service results. The supplied name **nabilux** is the public publisher display name; this checklist does not infer a legal person or organization behind it.
+The existing Firebase, AdMob, publisher/contact and Cloud Run values do not need to be resent. Complete the remaining Play status/products, Play signing certificate, stable-domain qualification and actual-service results. The supplied name **nabilux** is the public publisher display name; this checklist does not infer a legal person or organization behind it.
 
 ```text
 Public publisher name: nabilux
@@ -119,9 +119,9 @@ Play legal account type: personal / organization (confirm in Play)
 Play identity verification: pending
 Play application link (when available):
 Production package: com.androidhit.lumadrift
-Final developer website: https://luma-drift-production.web.app/ (publication unconfirmed)
-Final privacy policy: same site /privacy/index.html (publication unconfirmed)
-Final account deletion: same site /delete-account/index.html (publication/qualification pending)
+Final developer website: https://luma-drift-production.web.app/ (HTTP 200 confirmed)
+Final privacy policy: same site /privacy/index.html (HTTP 200 confirmed)
+Final account deletion: same site /delete-account/index.html (HTTP 200; OAuth/deletion untested)
 Qualification preview: deployed; static resources return HTTP 200
 
 Firebase projectId: luma-drift-production
@@ -134,7 +134,7 @@ Google sign-in provider: enabled / pending
 Play app-signing SHA-1 and SHA-256: available values / pending first upload
 
 AdMob app and three rewarded-unit IDs: received and integrated
-Publisher/app-ads.txt line: served on preview; final hosting and AdMob verification pending
+Publisher/app-ads.txt file: HTTP delivery confirmed on stable site; AdMob verification not established
 Privacy messages: published / pending
 
 luma_gold_500: option ID / base price + currency / active or pending
@@ -149,11 +149,12 @@ Scheduler / RTDN / automatic purge: not active
 Web Google sign-in/deletion: success messages owner-reported; no independent observation
 DELETE status / Firebase Console state: not independently checked
 Authenticated wallet GET / Play payments / Android Google login: unqualified
-Next Hosting step: clone qualification to same-site live with preparation:true; not executed
+Stable Hosting: five resources confirmed HTTP 200; preparation:true retained
+Next: Google sign-in and explicit deletion on stable domain with same distinct test account
 ```
 
 Do not send Google passwords, two-factor codes, OAuth client secrets, service-account private-key JSON, private signing keys, bank details or identity documents. The requested IDs and certificate fingerprints are public configuration.
 
 ## What happens after handoff
 
-The production build, three-unit routing and server/Play lifecycle code are prepared, and the wallet has reached initial deployment. Next finish Play identity/access, configure Scheduler/RTDN, qualify the preview and publish/qualify the final site, and prepare a new server-connected Android internal build with sample ads retained. Qualify real Google login and Play license-test purchases on actual Play installs. Test cancellation, pending/declined payment, duplicate delivery, recovery after reinstall, refunds, ad refusal and deletion before enabling real traffic. Finish the store declarations, closed test if required, AdMob verification and production review. No source edit, sample-ad screenshot or simulated purchase alone establishes production activation.
+The production build, three-unit routing and server/Play lifecycle code are prepared, and the wallet has reached initial deployment. Next finish Play identity/access, configure Scheduler/RTDN, qualify Google sign-in/deletion on the published stable site, and prepare a new server-connected Android internal build with sample ads retained. Qualify real Google login and Play license-test purchases on actual Play installs. Test cancellation, pending/declined payment, duplicate delivery, recovery after reinstall, refunds, ad refusal and deletion before enabling real traffic. Finish the store declarations, closed test if required, AdMob verification and production review. No source edit, sample-ad screenshot or simulated purchase alone establishes production activation.
