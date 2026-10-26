@@ -15,7 +15,7 @@ The public Firebase SDK configuration endpoint returned HTTP 200 for project num
 
 An actual `OPTIONS /v1/account` request to Cloud Run, with the preview Origin and requested DELETE/authorization/content-type, returned **403 `ORIGIN_NOT_ALLOWED`**, without `Access-Control-Allow-Origin`. No account deletion was requested. The previously observed final-site preflight remains a separate check. [Cloud Run evidence](cloud-run-health-route.md).
 
-## Next owner action
+## Owner CORS update — completed
 
 Add the preview HTTPS origin to `ALLOWED_WEB_ORIGINS`, preserving the final origin and all other environment variables. From Cloud Shell:
 
@@ -26,6 +26,10 @@ gcloud run services update luma-wallet \
   --update-env-vars='^|^ALLOWED_WEB_ORIGINS=https://luma-drift-production.web.app,https://luma-drift-production--qualification-uht107xg.web.app'
 ```
 
-The alternate dictionary delimiter keeps the comma inside this single environment variable's value. [Official gcloud escaping](https://docs.cloud.google.com/sdk/gcloud/reference/topic/escaping). This command is documented for the owner and has not been executed by the agent. Independently recheck the preview preflight after it completes, then qualify actual Google login and explicit deletion using a distinct Google test account. The banner does not neutralize deletion against the real service.
+The alternate dictionary delimiter keeps the comma inside this single environment variable's value. [Official gcloud escaping](https://docs.cloud.google.com/sdk/gcloud/reference/topic/escaping). The owner has now reported this command completed with `Done`; the agent did not run an administrative update.
+
+Independent follow-up probes on 27 October confirmed both final and preview `OPTIONS /v1/account` return **204**, each with its exact `Access-Control-Allow-Origin`, allowed methods `GET, POST, DELETE, OPTIONS` and headers `Authorization, Content-Type`. `/health` still returns **200** with `{"status":"ok"}`. [Follow-up JSON](hosting-preview-cors.json). The earlier 403 in the initial report is preserved as the pre-update observation.
+
+The next qualification step is real Google login on the preview using a distinct Google test account. Stop when the page displays **« Identité vérifiée »**: do not tick the deletion checkbox or request deletion during this first check. A plus-tag email alias is not a distinct Google account. Only after that result should the separate deletion check proceed. The banner does not neutralize deletion against the real service.
 
 No real OAuth login, deletion, purchase, live ad, Scheduler/RTDN delivery or audit purge is established. The existing Android APK/AAB remain unchanged.

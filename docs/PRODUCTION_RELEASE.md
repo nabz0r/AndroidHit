@@ -29,7 +29,7 @@ flowchart LR
   Coins --> Local[Local shop, powers and continuations]
 ```
 
-These are implemented lifecycle routes. Only the deployed service's public routing, anonymous rejection and final-site CORS have been checked; the purchase/refund lifecycle is not qualified. The local cosmetic cache is display/equip convenience, not a trusted source of funds or server ownership. Server APIs independently enforce identity, price, balance and permanent ownership.
+These are implemented lifecycle routes. Only the deployed service's public routing, anonymous rejection and final/preview-site CORS have been checked; the purchase/refund lifecycle is not qualified. The local cosmetic cache is display/equip convenience, not a trusted source of funds or server ownership. Server APIs independently enforce identity, price, balance and permanent ownership.
 
 ## Purchase lifecycle
 
@@ -68,9 +68,9 @@ The exact public publisher name is **nabilux**; it does not identify a legal per
 
 ## Public pages and deletion
 
-The [static site](../public/index.html) contains FR/EN developer, privacy and account-deletion pages, the supplied public contact and the publisher's app-ads.txt line. Its Firebase **Web** app and real Cloud Run origin are configured. The Google control is enabled by that configuration, but no successful web OAuth or real deletion has been qualified. Final and preview Firebase Auth domains are confirmed, and the final `web.app` CORS preflight returned HTTP 204. The preview API preflight instead returns HTTP 403 `ORIGIN_NOT_ALLOWED` without an allowed-origin header; add the exact preview origin to the server allowlist before deletion tests. Final-site publication and end-to-end qualification remain pending.
+The [static site](../public/index.html) contains FR/EN developer, privacy and account-deletion pages, the supplied public contact and the publisher's app-ads.txt line. Its Firebase **Web** app and real Cloud Run origin are configured. The Google control is enabled by that configuration, but no successful web OAuth or real deletion has been qualified. Final and preview Firebase Auth domains are confirmed. After the owner updated the server allowlist, independent final and preview API preflights both returned HTTP 204 with their exact allowed origins. Final-site publication and end-to-end qualification remain pending.
 
-`preparation: true` displays the qualification banner; it is not an authentication or deletion lock. On an authorized host, a recent real Google identity and explicit confirmation can delete the actual app account and wallet. Use a dedicated qualification account for these tests. An Android Firebase app ID cannot substitute for the Web app ID. This website configuration change does not rebuild the Android candidate.
+`preparation: true` displays the qualification banner; it is not an authentication or deletion lock. On an authorized host, a recent real Google identity and explicit confirmation can delete the actual app account and wallet. The next check uses a distinct Google test account and stops at “Identity verified”, without selecting the confirmation checkbox or requesting deletion. This check has not been performed yet. An Android Firebase app ID cannot substitute for the Web app ID. This website configuration change does not rebuild the Android candidate.
 
 Android account deletion calls the wallet service when it is configured; it does not fall back to deleting only Firebase if that service fails. Without a configured wallet service, no paid wallet can be created by this build and the existing Firebase-only account route applies. Local offline game progress is separate. The server deletion workflow and limited retained transaction audit are explained in the [privacy/deletion preparation](PUBLIC_PAGES.md); the default 365-day audit period is configurable. Automatic purging is not active until the pending scheduled maintenance and its provider access are configured and qualified.
 

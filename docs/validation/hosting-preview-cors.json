@@ -1,0 +1,30 @@
+{
+  "recordedOn": "2026-10-27",
+  "ownerReportedEnvironmentUpdate": "Done",
+  "preflights": [
+    {
+      "origin": "https://luma-drift-production.web.app",
+      "status": 204,
+      "allowOrigin": "https://luma-drift-production.web.app",
+      "allowMethods": "GET, POST, DELETE, OPTIONS",
+      "allowHeaders": "Authorization, Content-Type",
+      "body": ""
+    },
+    {
+      "origin": "https://luma-drift-production--qualification-uht107xg.web.app",
+      "status": 204,
+      "allowOrigin": "https://luma-drift-production--qualification-uht107xg.web.app",
+      "allowMethods": "GET, POST, DELETE, OPTIONS",
+      "allowHeaders": "Authorization, Content-Type",
+      "body": ""
+    }
+  ],
+  "health": {
+    "healthStatus": 200,
+    "body": "{\"status\":\"ok\"}"
+  },
+  "scope": "Independent anonymous OPTIONS and GET only. No Firebase user, ID token, login or DELETE request.",
+  "realGoogleAuthenticationTested": false,
+  "liveServerDeletionTested": false,
+  "purchasesTested": false
+}
