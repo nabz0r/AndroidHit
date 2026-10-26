@@ -1,6 +1,6 @@
 # Public developer, privacy and account-deletion pages
 
-Prepared on **26 October 2026** for the production application `com.androidhit.lumadrift`. The static site is in [`public/`](../public/). It is **not hosted by this commit** and is not yet a completed Google Play privacy/deletion submission.
+Prepared on **26 October 2026**, with public contact/configuration qualification completed locally on **27 October 2026**, for the production application `com.androidhit.lumadrift`. The static site is in [`public/`](../public/). It is **not hosted by this commit** and is not yet a completed Google Play privacy/deletion submission.
 
 The pages use the Luma Drift palette, original code-drawn puzzle artwork, responsive layouts, keyboard focus, reduced-motion handling and French/English controls. The Google sign-in control reuses the app’s unmodified official Google G asset; it is Google branding, not Luma Drift artwork. They need no build framework, remote font or analytics package. Switching language uses a URL parameter, without a cookie or local-storage entry.
 
@@ -15,22 +15,24 @@ The pages use the Luma Drift palette, original code-drawn puzzle artwork, respon
 
 ## Present state and publication gates
 
-Production Google/AdMob identifiers are integrated into Android separately. The owner has now supplied a separate Firebase **Web** configuration, integrated into `public/site-config.js`: project `luma-drift-production`, app `1:369472826910:web:47e79b67e7a3abd0c3080f`, auth domain `luma-drift-production.firebaseapp.com` and its public Web API key. The Android configuration remains separate. The website intentionally keeps the web sign-in control disabled while the deployed wallet origin is missing. It makes no request for account deletion in this state and does not show a fabricated success. Domain authorization, hosting, publisher/contact details and live qualification remain pending.
+Production Google/AdMob identifiers are integrated into Android separately. The separate Firebase **Web** configuration is integrated into `public/site-config.js`: project `luma-drift-production`, app `1:369472826910:web:47e79b67e7a3abd0c3080f`, auth domain `luma-drift-production.firebaseapp.com` and its public Web API key. The owner supplied the public publisher label **nabilux** and support email **nabz0r+gaming@gmail.com**. No legal entity is inferred from that label. These contacts appear in both languages, including the static HTML fallback.
+
+The site now points to the deployed API `https://luma-wallet-369472826910.europe-west1.run.app`. Its Google sign-in button is configured and enabled; identity modules load only after a click. The owner confirmed both final Firebase domains, and an external preflight from the final `web.app` origin returned 204. Hosting and actual Google sign-in/deletion remain unqualified. A preview origin will need its own exact Firebase-domain and API-CORS authorization. The existing Android candidate is unchanged and still lacks its wallet origin.
 
 The Firebase-generated example supplied by the owner also included an Analytics import and measurement ID. The site integrates only the identity configuration it uses; it still imports no Analytics SDK and makes no default analytics requests. This describes the website's code, not a claim about every setting of the owner's Firebase project.
 
-Before public publication as the policy or account-deletion route, the owner must supply or configure:
+Before declaring these pages as the final policy or account-deletion route, complete these gates:
 
-1. The actual publisher’s legal name and a private support email. No name, email address, processing promise or legal owner has been invented. Privacy requests must never use a public GitHub issue containing account details.
+1. Keep the supplied public publisher label and support address accurate and review the policy against the actual publisher's obligations. The contact fields are now filled; this is not an identity or legal review. Privacy requests must never use a public GitHub issue containing account details.
 2. A hosting origin/domain. Firebase Hosting can serve this directory on the production project’s `web.app` subdomain, or an owner-controlled domain. No such URL is claimed to be live yet.
-3. The **Web app** is now registered and its public `apiKey`, `authDomain`, `projectId` and `:web:` app ID are configured in `site-config.js`. Keep the Google provider enabled and verify authorization of the final hosting domain. The received configuration does not prove a completed Web Google login or replace that domain check. For another project, register its own Web app; do not copy an Android `:android:` app ID.
-4. The deployed HTTPS wallet API URL in `walletApiBaseUrl`. The backend must allow the site’s exact origin for `DELETE` and `OPTIONS`, and `Authorization`/`Content-Type` headers. Wildcard authentication origins and browser cookies are not required.
-5. A reviewed privacy statement matching the deployed build, actual log retention, transaction-audit retention, hosting and provider settings. The current page visibly labels production preparation and planned services; update those statements when the services actually launch. The backend’s prepared audit default is 365 days with a scheduled purge. The owner must validate that retention choice and monitor purge completion; this is not a claim that a production purge job is running.
+3. Keep the configured **Web app** identity and Google provider. The owner confirmed `luma-drift-production.web.app` and `luma-drift-production.firebaseapp.com` as authorized domains; authorize the actual preview hostname separately before preview login. For another project, register its own Web app; do not copy an Android `:android:` app ID.
+4. Keep the configured HTTPS `walletApiBaseUrl` and allow the site's exact origin for `DELETE` and `OPTIONS`, and `Authorization`/`Content-Type` headers. The final origin's preflight passed; add a preview origin separately while preserving the final origin. Wildcard authentication origins and browser cookies are not required.
+5. Review the privacy statement against the deployed build, actual log retention, transaction-audit retention, hosting and provider settings. The pages label services under qualification and disclose a planned 365-day minimal audit period. That is a configured retention choice, not a legal requirement. Scheduler/RTDN are not deployed, and no automatic purge or deletion-retry operation has been established. The current maintenance sequence also reconciles Play before purging, so pending Play permissions can prevent it reaching the purge. Qualify both permissions and maintenance before claiming automatic operation.
 6. Successful real Google sign-in, recent-authentication rejection, deletion and failure/retry tests on the final domain and live API. The local tests below use synthetic identity; they are not substitutes for these checks.
 
-Keep `preparation: true` until these gates pass. Setting it to `false` hides the shared preparation banner; it does **not** rewrite the privacy policy or certify compliance. Review both language versions before changing it.
+Keep `preparation: true` until these gates pass. This flag only controls the shared qualification banner: it does **not** disable sign-in or deletion. A confirmed deletion against the configured real API can take effect during preview. Use a separate Google test account, not an email alias of the owner's account. Setting the flag to `false` does not rewrite the privacy policy or certify compliance. Review both language versions before changing it.
 
-The [Google Play requirement](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en) includes a functional external deletion pathway for people who have uninstalled the app. In-app instructions alone do not complete that requirement. The current disabled external route must therefore not be declared as a finished store deletion flow.
+The [Google Play requirement](https://support.google.com/googleplay/android-developer/answer/13327111?hl=en) includes a functional external deletion pathway for people who have uninstalled the app. In-app instructions alone do not complete that requirement. The configured but unqualified external route must therefore not be declared as a finished store deletion flow.
 
 ## External deletion design
 
@@ -42,11 +44,11 @@ The web route uses the official Firebase JavaScript SDK **13.1.0**, pinned to th
 4. Only a successful HTTP response containing `{ "deleted": true }` displays completion. Authentication expiry requires another sign-in; ambiguous bodies, timeouts, network failure and backend errors never display success. A failed connection does not claim that a previously received deletion was rolled back.
 5. The page signs out after completion or cancellation. Closing/canceling the account chooser does not request deletion. The app’s Google Account itself remains intact.
 
-The backend requires recent authentication and performs the actual authenticated account/wallet deletion. Its minimal hashed transaction audit is distinct from active wallet data. The page explains retained audit information and that local offline saves/exports are separate. Deletion is not a refund request.
+The backend requires authentication within five minutes and implements authenticated account/wallet deletion. This synchronous endpoint does not call Play and can be qualified before Play identity approval. Its minimal hashed transaction audit is distinct from active wallet data. The page explains retained audit information and that local offline saves/exports are separate. Deletion is not a refund request. If an interrupted operation needs recovery, contact support; automatic retry is not running at this stage.
 
 The browser’s content security policy permits only its own assets plus the Google identity modules/frames and Google Cloud endpoint families needed by this prepared flow. If using a custom wallet host or custom Firebase Auth domain, explicitly update the CSP and the strict configuration validator; do not loosen it to arbitrary scripts/origins. HTTP is accepted only for loopback development by the request helper, not by the production preflight.
 
-A configured private support address appears on the policy, deletion page and footer. It offers a private contact for sign-in/access problems. Do not add service-account JSON, OAuth secrets, ID tokens, bank details or passwords to `site-config.js`.
+The public support address appears on the policy, deletion page and footer and offers private correspondence for sign-in/access problems. Mail links encode the literal plus in `nabz0r+gaming@gmail.com` as `%2B`; browser checks verify that the decoded recipient matches exactly. Do not add service-account JSON, OAuth secrets, ID tokens, bank details or passwords to `site-config.js`.
 
 ## Hosting and app-ads.txt
 
@@ -92,9 +94,11 @@ The following checks passed locally:
 
 - **24** request/configuration tests: disabled missing configuration, Android-vs-Web app mismatch, auth-domain mismatch, insecure/off-origin URL forms, fresh bearer token, no-cookie/no-query/redirect behavior, authentication errors, rate limits, ambiguous results and non-JSON failure.
 - **3** static HTML pages and **37** internal asset/navigation links validated, with both languages, CSP, referrer policy, no inline handlers/scripts and the exact app-ads publisher line.
-- **18** browser page states: 3 pages × FR/EN × widths 320, 390 and 1366 pixels. No horizontal overflow, default external network requests or browser exceptions. The narrow-screen decorative-orbit overflow found by the first check was fixed and the entire matrix passed again.
-- Synthetic browser Google modules + backend responses exercised explicit confirmation, successful deletion, expired-session reauthentication, rejected ambiguous success, cancel-without-delete and configured private contact/language switching.
+- **18** current browser page states: 3 pages × FR/EN × widths 320, 390 and 1366 pixels. Exact supplied contact, visible qualification banner, configured Google button without clicking it, and no horizontal overflow, default external network requests or browser exceptions. Two additional isolated missing-wallet states retain the disabled control.
+- Synthetic browser Google modules + backend responses exercised explicit confirmation, successful deletion, expired-session reauthentication, rejected ambiguous success, cancel-without-delete and public contact/language switching. All external requests were denied by default; only synthetic modules and three synthetic-token deletion requests were fulfilled. No real Google or wallet operation was attempted.
 - Desktop and mobile screenshots of all three pages were generated. The landing and account-deletion layouts were visually inspected. These are website captures, not screenshots proving a shipped Google login or production service.
+
+The contact/configuration follow-up ran under **Node 26.7.0, Playwright 1.62.1 and Chromium 149.0.7827.55**. [Current scope and report](validation/public-contact-preview.md). The original candidate evidence remains preserved separately.
 
 Reproduce with Node.js and an available Playwright/Chromium installation:
 
@@ -106,7 +110,7 @@ node public/tests/browser-check.mjs
 
 Optional environment variables `LUMA_PLAYWRIGHT_MODULE`, `LUMA_CHROMIUM_EXECUTABLE` and `LUMA_PAGES_QA_DIR` select an existing Playwright package/browser and screenshot directory. The browser check starts an ephemeral loopback-only server and intercepts the synthetic identity/API requests. It does not delete a real account.
 
-`node public/tests/check-static.mjs --production` is an additional release gate. It intentionally fails while preparation mode, legal contact, Web identity or HTTPS API configuration is missing. Passing it still requires the manual review and live checks listed above.
+`node public/tests/check-static.mjs --production` is an additional release gate. The current contact, Web identity and HTTPS API fields are complete, but preparation mode deliberately keeps the release gate closed. Passing the gate still requires the manual review and live checks listed above. The current browser test pins the supplied contact and qualification flag; update those expectations deliberately when changing publication state.
 
 No hosted-site availability, real OAuth popup, live API deletion, production consent approval or legal approval is established by these checks.
 

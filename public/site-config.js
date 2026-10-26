@@ -5,9 +5,9 @@
  */
 window.LUMA_SITE_CONFIG = Object.freeze({
   preparation: true,
-  publisherName: "",
-  supportEmail: "",
-  walletApiBaseUrl: "",
+  publisherName: "nabilux",
+  supportEmail: "nabz0r+gaming@gmail.com",
+  walletApiBaseUrl: "https://luma-wallet-369472826910.europe-west1.run.app",
   firebase: Object.freeze({
     apiKey: "AIzaSyBspttjrAwSD1az3zlXjDg0nwB5sFhq9sk",
     authDomain: "luma-drift-production.firebaseapp.com",

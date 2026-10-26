@@ -2,6 +2,7 @@
   "use strict";
   const config = window.LUMA_SITE_CONFIG || {};
   const email = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(config.supportEmail || "") ? config.supportEmail : "";
+  const emailLink = email ? `mailto:${encodeURIComponent(email).replace("%40", "@")}` : "";
   const requestedLanguage = new URL(location.href).searchParams.get("lang");
   let language = requestedLanguage === "en" ? "en" : "fr";
   const syncConfiguration = () => {
@@ -12,7 +13,7 @@
       document.querySelectorAll("[data-publisher]").forEach(el => {
         el.replaceChildren(document.createTextNode(`${config.publisherName} · `));
         const a = document.createElement("a");
-        a.href = `mailto:${encodeURIComponent(email)}`;
+        a.href = emailLink;
         a.textContent = email;
         el.append(a);
       });
@@ -21,7 +22,7 @@
           ? `Pour une demande privée concernant Luma Drift, contacte ${config.publisherName} : `
           : `For a private Luma Drift request, contact ${config.publisherName}: `));
         const a = document.createElement("a");
-        a.href = `mailto:${encodeURIComponent(email)}?subject=Luma%20Drift%20%E2%80%94%20account%20%2F%20privacy`;
+        a.href = `${emailLink}?subject=Luma%20Drift%20%E2%80%94%20account%20%2F%20privacy`;
         a.textContent = email;
         el.append(a, document.createTextNode(language === "fr"
           ? ". N’envoie jamais ton mot de passe, un code de connexion ni tes coordonnées bancaires."

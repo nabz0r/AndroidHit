@@ -8,6 +8,8 @@ The signed production candidate was built, installed and exercised on an Android
 
 ## Executed checks
 
+**Public-contact follow-up, 27 October 2026:** the supplied publisher label/support address and deployed API origin are integrated into the FR/EN site. The local checks passed: 24 request/configuration cases, 3 static pages/37 references and 18 configured responsive states, plus isolated missing-wallet and synthetic sign-in/deletion cases. Mail recipients preserve the exact `+gaming` alias. The qualification banner remains on; the configured real Google button was not clicked in the test. Hosting, real Web authentication/deletion and automatic audit purge remain unqualified. No APK/AAB was rebuilt. [Report, versions and limits](validation/public-contact-preview.md).
+
 | Layer | Result | Evidence / practical limit |
 |---|---|---|
 | Puzzle engine | 435,796 assertions | [Engine](validation/v1.4/engine-tests.txt); deterministic JVM boards/solver, not player enjoyment |

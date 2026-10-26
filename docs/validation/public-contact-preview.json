@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "findings": [
+    "18 configured local FR/EN responsive states (320/390/1366px), exact nabilux contact, visible preparation notice, configured sign-in ready without being clicked, zero horizontal overflow and zero default external requests",
+    "Every visible configured mailto decodes exactly to nabz0r+gaming@gmail.com, with the literal plus percent-encoded",
+    "Isolated missing-wallet configuration keeps sign-in disabled in FR/EN and sends no deletion request",
+    "Synthetic web sign-in + explicit checkbox + authenticated DELETE + server-confirmed success",
+    "Synthetic expired-session rejection clears confirmation and requires reauthentication; no success claim",
+    "Synthetic invalid-success response does not announce deletion",
+    "Cancel signs out without sending a deletion request",
+    "All external requests are denied by default; only in-memory synthetic Firebase modules and synthetic-token DELETE requests are fulfilled",
+    "Configured public support email and FR/EN switching work without a public issue request route"
+  ],
+  "screenshots": "Six local browser captures reviewed; transient screenshot files are not hosted-service evidence.",
+  "realGoogleAuthenticationTested": false,
+  "liveServerDeletionTested": false,
+  "recordedOn": "2026-10-27",
+  "runtime": {
+    "node": "26.7.0",
+    "playwright": "1.62.1",
+    "chromium": "149.0.7827.55"
+  },
+  "scope": {
+    "requestTests": 24,
+    "staticPages": 3,
+    "localReferences": 37,
+    "configuredResponsiveStates": 18,
+    "isolatedMissingWalletStates": 2,
+    "syntheticDeleteRequests": 3,
+    "preparationBanner": true,
+    "liveConfigurationGoogleButtonClicked": false,
+    "externalRequestsDeniedByDefault": true,
+    "hostingDeployed": false,
+    "androidRebuilt": false
+  }
+}

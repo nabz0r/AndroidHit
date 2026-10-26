@@ -22,7 +22,7 @@ const strings = {
     deleting: "Suppression en cours. Attends la confirmation du serveur.",
     deleted: "Ton compte Luma Drift et son portefeuille serveur ont été supprimés. Ton compte Google reste intact. Consulte ci-dessous les données d’audit conservées.",
     cancelled: "Connexion annulée. Aucune suppression n’a été demandée.",
-    "sign-in-again": "Reconnecte-toi : une authentification récente est nécessaire. Si une suppression précédente est en cours, le serveur la reprendra.",
+    "sign-in-again": "Reconnecte-toi : une authentification récente est nécessaire. Si une suppression est déjà en cours, contacte le support.",
     "try-later": "Trop de demandes. Patiente avant de réessayer.",
     error: "Impossible de confirmer la suppression. Aucun succès n’est annoncé. Réessaie ou utilise le contact privé ci-dessous ; une demande déjà reçue peut encore être en cours.",
     account: "Compte vérifié : ", anonymous: "compte Google sélectionné"
@@ -35,7 +35,7 @@ const strings = {
     deleting: "Deletion in progress. Wait for the server confirmation.",
     deleted: "Your Luma Drift account and server wallet have been deleted. Your Google Account stays intact. See the retained audit information below.",
     cancelled: "Sign-in cancelled. No deletion was requested.",
-    "sign-in-again": "Sign in again: recent authentication is required. If a previous deletion is in progress, the server will resume it.",
+    "sign-in-again": "Sign in again: recent authentication is required. If deletion is already in progress, contact support.",
     "try-later": "Too many requests. Wait before trying again.",
     error: "Deletion could not be confirmed. No success is claimed. Retry or use the private contact below; a request already received may still be in progress.",
     account: "Verified account: ", anonymous: "selected Google account"

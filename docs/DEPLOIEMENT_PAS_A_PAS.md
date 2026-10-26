@@ -2,9 +2,11 @@
 
 Procédure vérifiée dans les documentations officielles le **26 octobre 2026**. Ce guide prépare les manipulations du propriétaire ; sa rédaction n'a créé aucune ressource cloud, publié aucune page et activé aucun paiement.
 
-On utilise ton projet existant **`luma-drift-production`** : Firebase Hosting pour les pages, Cloud Run pour le serveur, Firestore pour le portefeuille. Aucun domaine à acheter pour commencer. L'adresse prévue du site, après déploiement, est `https://luma-drift-production.web.app` ; le serveur recevra sa propre adresse HTTPS attribuée par Cloud Run.
+On utilise ton projet existant **`luma-drift-production`** : Firebase Hosting pour les pages, Cloud Run pour le serveur, Firestore pour le portefeuille. Aucun domaine à acheter pour commencer. L'adresse prévue du site, après déploiement, est `https://luma-drift-production.web.app` ; le serveur déployé est à `https://luma-wallet-369472826910.europe-west1.run.app`.
 
-**Avancement de ce projet :** le propriétaire a confirmé Blaze, les domaines Firebase Auth, les comptes techniques/droits, la création de Firestore et le déploiement des règles/index. Le budget de 10 € signalé n'est pas un plafond de dépenses vérifié. La configuration Firebase Web est intégrée : application `1:369472826910:web:47e79b67e7a3abd0c3080f`. Cloud Run est déployé à `https://luma-wallet-369472826910.europe-west1.run.app` ; nos sondes atteignent l'application et le portefeuille refuse une requête sans connexion. Le premier contrôle `/healthz` a révélé un chemin réservé par Cloud Run : le correctif `/health` est testé et redéployé. Nos sondes ont confirmé santé `200`, portefeuille sans connexion `401` et autorisation du futur site `204`. [Incident et procédure](validation/cloud-run-health-route.md). Le site hébergé, les coordonnées publiques, les notifications/maintenance et les tests d'achats réels restent à terminer. Les instructions ci-dessous conservent le parcours complet pour référence.
+**Avancement au 27 octobre 2026 :** le propriétaire a confirmé Blaze, les domaines Firebase Auth, les comptes techniques/droits, la création de Firestore et le déploiement des règles/index. Le budget de 10 € signalé n'est pas un plafond de dépenses vérifié. La configuration Firebase Web est intégrée : application `1:369472826910:web:47e79b67e7a3abd0c3080f`. Cloud Run est déployé ; le correctif du chemin de santé `/health` est testé et redéployé. Nos sondes ont confirmé santé `200`, portefeuille sans connexion `401` et autorisation du futur site `204`. [Incident et procédure](validation/cloud-run-health-route.md).
+
+Les coordonnées publiques **nabilux** / **nabz0r+gaming@gmail.com** et l'adresse réelle du serveur sont désormais intégrées aux pages FR/EN. Le bouton Google est configuré, avec un bandeau de qualification qui ne désactive pas les opérations. [Vérifications locales](validation/public-contact-preview.md). La validation d'identité Play est en attente. Prochaine étape : vérifier le site Hosting, puis publier une prévisualisation et autoriser son domaine exact. L'hébergement, la connexion/suppression réelles, les notifications/maintenance et les achats Play restent à qualifier. Les instructions ci-dessous conservent le parcours complet pour référence.
 
 Fais une étape à la fois. Si une commande échoue, garde son message d'erreur et arrête le bloc avant de poursuivre. Ne relance pas aveuglément les commandes `create` : une ressource déjà créée se vérifie et se réutilise. Les commandes Cloud Run ci-dessous créent des ressources facturables. Les alertes de budget préviennent d'une dépense ; elles ne la plafonnent pas.
 
@@ -13,7 +15,7 @@ Fais une étape à la fois. Si une commande échoue, garde son message d'erreur 
 1. Ouvre [ton projet Firebase](https://console.firebase.google.com/project/luma-drift-production/overview).
 2. Dans le choix de forfait, clique **Mettre à niveau → Blaze** et rattache ton compte de facturation Google Cloud. Les informations bancaires restent chez Google.
 3. Dans [Google Cloud → Facturation](https://console.cloud.google.com/billing), sélectionne ce compte, puis **Budgets et alertes**. Tu peux commencer par un budget de surveillance de **10 € par mois**, avec des alertes à 50 %, 90 % et 100 %. Ce montant est un choix d'alerte, pas une estimation ni une limite de la facture. Vérifie la devise réelle du compte.
-4. Choisis le **nom légal de l'éditeur** et une **adresse email publique de support** que tu consultes. Une adresse existante dédiée au jeu convient ; aucun domaine payant n'est nécessaire.
+4. Renseigne le **nom public de l'éditeur** et une **adresse email publique de support** que tu consultes. Reçus pour ce projet : **nabilux** et **nabz0r+gaming@gmail.com**. Aucun domaine payant n'est nécessaire ; ce libellé public ne permet pas de déduire une identité juridique.
 
 La facturation de ce projet et le profil marchand Google Play sont deux réglages distincts. Le premier fait fonctionner le serveur ; le second permet les ventes du jeu. [Forfaits Firebase](https://firebase.google.com/docs/projects/billing/firebase-pricing-plans).
 
@@ -28,7 +30,7 @@ L'application Android est déjà enregistrée. Les pages ont besoin de leur prop
 5. Firebase → **Authentication → Paramètres → Domaines autorisés** : vérifie la présence de `luma-drift-production.web.app` et de `luma-drift-production.firebaseapp.com`. Ajoute-les s'ils manquent. Garde le fournisseur Google activé.
 6. Firebase → **Hosting classique** → **Commencer**, si le site n'est pas encore initialisé. Le site voulu a pour identifiant `luma-drift-production`. Nous utilisons Hosting pour des fichiers statiques, sans App Hosting et sans réécriture de toutes les pages vers l'accueil.
 
-**À me transmettre à cette étape :** le bloc `firebaseConfig`, le nom de l'éditeur et l'email de support. Ce sont des informations publiques destinées au site. Aucun secret OAuth ou fichier de clé de compte de service n'est nécessaire.
+**Déjà reçus pour ce projet :** le bloc `firebaseConfig`, le nom public de l'éditeur et l'email de support. Ce sont des informations publiques destinées au site ; inutile de les renvoyer. Aucun secret OAuth ou fichier de clé de compte de service n'est nécessaire.
 
 [Inscription Web](https://firebase.google.com/docs/web/setup), [connexion Google Web](https://firebase.google.com/docs/auth/web/google-signin), [Hosting](https://firebase.google.com/docs/hosting/quickstart).
 
@@ -140,19 +142,30 @@ Ces deux fonctions récupèrent notamment les traitements interrompus et les ach
 
 ## 7. Configurer les pages et les héberger
 
-Nous finalisons ensemble `public/site-config.js` avec le nom de l'éditeur, l'email, le bloc Firebase Web et l'adresse Cloud Run. Nous relisons aussi les textes **français et anglais** pour décrire les services réellement déployés et la conservation choisie. Le simple passage de `preparation` à `false` ne réécrit pas la politique.
+`public/site-config.js` contient désormais les coordonnées fournies, le bloc Firebase Web et l'adresse réelle Cloud Run. Les textes **français et anglais** décrivent le serveur déployé et les services encore en qualification. Le simple passage de `preparation` à `false` ne réécrit pas la politique. Ce réglage ne bloque pas la suppression : le contrôle Google est maintenant activé.
+
+Vérifie d'abord que le site Hosting existe, sans refaire la configuration ni écraser les pages. Ce bloc fonctionne aussi depuis le dossier `server/` :
+
+```sh
+git -C ~/AndroidHit-deploiement pull --ff-only &&
+cd ~/AndroidHit-deploiement &&
+npx --yes firebase-tools@15.34.1 hosting:sites:list \
+  --project=luma-drift-production
+```
+
+La liste doit contenir le site `luma-drift-production`. S'il manque, initialise Hosting dans Firebase ou crée ce site avant la prévisualisation. Ne relance pas une création si le site est déjà présent.
 
 Pour tester d'abord les pages configurées sans les annoncer comme parcours définitif, garde le bandeau de préparation et utilise une adresse de prévisualisation. Depuis la **racine du dépôt** :
 
 ```sh
-cd ..
+cd ~/AndroidHit-deploiement
 node --test public/tests/deletion-core.test.mjs
 node public/tests/check-static.mjs
 npx --yes firebase-tools@15.34.1 hosting:channel:deploy qualification \
   --expires 7d --project luma-drift-production --config firebase.json
 ```
 
-La commande affiche une adresse de prévisualisation temporaire. **Cette adresse utilise le vrai Firebase et le vrai serveur : une suppression est effective dès la prévisualisation. Utilise un compte Google de qualification dédié avant le premier essai.** La prévisualisation est accessible aux personnes qui possèdent son URL. [Fonctionnement des prévisualisations Firebase](https://firebase.google.com/docs/hosting/test-preview-deploy).
+La commande affiche une adresse de prévisualisation temporaire. **Cette adresse utilise le vrai Firebase et le vrai serveur : une suppression confirmée peut être effective dès la prévisualisation. Utilise un compte Google de qualification distinct avant le premier essai ; un alias `+...` de ton compte n'est pas un autre compte Google.** La prévisualisation est accessible aux personnes qui possèdent son URL. [Fonctionnement des prévisualisations Firebase](https://firebase.google.com/docs/hosting/test-preview-deploy).
 
 Pour y tester Google et la suppression :
 
@@ -222,8 +235,8 @@ Les identifiants AdMob sont déjà intégrés ; il n'est pas nécessaire de les 
 
 ## Ce qu'il faut me renvoyer, dans l'ordre
 
-1. **Déjà reçus** : confirmation Blaze, bloc public Firebase Web et domaines autorisés. Il reste le nom de l'éditeur et l'email de support.
-2. **Après Cloud Run** : l'adresse HTTPS réelle du serveur et le résultat des trois vérifications de la section 5.
+1. **Déjà reçus et intégrés** : confirmation Blaze, bloc public Firebase Web, domaines finaux autorisés, coordonnées publiques nabilux / nabz0r+gaming@gmail.com et adresse réelle Cloud Run. Les trois sondes anonymes sont consignées ; inutile de les renvoyer.
+2. **Pour Hosting** : le tableau `hosting:sites:list`, puis l'adresse de prévisualisation réellement affichée. Nous autoriserons ensuite ce domaine et son origine avant les essais réels.
 3. **Après Play** : les empreintes du certificat de signature Play, l'état des trois produits et le lien du test interne.
 4. **Après AdMob** : l'état de validation `app-ads.txt`, l'état de préparation et la confirmation du message de consentement publié.
 
