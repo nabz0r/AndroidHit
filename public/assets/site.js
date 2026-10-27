@@ -57,8 +57,9 @@
       image.alt = language === "en" ? image.dataset.altEn : image.dataset.altFr;
     });
     if (document.querySelector("#hero-title")) {
-      document.title = language === "en" ? "Luma Drift — A little spark. A great escape." : "Luma Drift — Un petit déclic. Une grande évasion.";
+      document.title = language === "en" ? "Luma Drift 1.6 — A new world to open." : "Luma Drift 1.6 — Un nouveau monde à ouvrir.";
     }
+    document.querySelectorAll("[data-content-fr]").forEach(meta => { meta.setAttribute("content", language === "en" ? meta.dataset.contentEn : meta.dataset.contentFr); });
     syncConfiguration();
     window.dispatchEvent(new CustomEvent("luma-language", { detail: language }));
   };

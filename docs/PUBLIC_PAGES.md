@@ -1,25 +1,41 @@
 # Public developer, privacy and account-deletion pages
 
-Prepared on **26 October 2026**, with public contact/configuration checks and Hosting preview deployment recorded on **27 October 2026**, for the production application `com.androidhit.lumadrift`. The static site is in [`public/`](../public/). The [stable site](https://luma-drift-production.web.app/) and [qualification preview](https://luma-drift-production--qualification-uht107xg.web.app) serve the pages. Earlier independent stable-origin reads confirmed all five sampled resources matching their recorded repository revision; stable-domain Google sign-in/deletion success is owner-reported only, without independent runtime evidence. This is not yet a completed Google Play privacy/deletion submission. [Deployed preview evidence](validation/hosting-preview.md).
+The **1.6 website candidate**, prepared and checked locally on **27 October 2026**, presents the production application `com.androidhit.lumadrift`. Its source is in [`public/`](../public/). The homepage now describes the 1.6 saga map, prelevel objective/action budget, inventory filters and keys within Journey, and links the signed **1.6.0-rc1 APK**. The [1.6 site record](validation/site-v1.6/README.md) separates local checks, source provenance and any later deployment outcome. Deployment of this revision is not yet established here.
+
+The existing [stable site](https://luma-drift-production.web.app/) and [qualification preview](https://luma-drift-production--qualification-uht107xg.web.app) have earlier deployment observations dated **26–27 October 2026**. Independent reads of those earlier revisions and owner-reported Google sign-in/deletion success do not verify the 1.6 website or a real account transaction in this review. This is not a completed Google Play privacy/deletion submission. [Historical preview evidence](validation/hosting-preview.md).
 
 The pages use the Luma Drift palette, original code-drawn puzzle artwork, responsive layouts, keyboard focus, reduced-motion handling and French/English controls. The Google sign-in control reuses the app’s unmodified official Google G asset; it is Google branding, not Luma Drift artwork. They need no build framework, remote font or analytics package. Switching language uses a URL parameter, without a cookie or local-storage entry.
 
 | File | Purpose |
 |---|---|
-| [`public/index.html`](../public/index.html) | 1.5 game homepage, APK route, real game captures and privacy/account links |
+| [`public/index.html`](../public/index.html) | 1.6 game homepage, signed APK route, final native captures and privacy/account links |
 | [`public/privacy/index.html`](../public/privacy/index.html) | FR/EN privacy information, data paths and deletion/retention explanation |
 | [`public/delete-account/index.html`](../public/delete-account/index.html) | In-app instructions and prepared authenticated external deletion flow |
 | [`public/site-config.js`](../public/site-config.js) | Public publisher, contact, Firebase Web and wallet settings |
 | [`public/app-ads.txt`](../public/app-ads.txt) | Supplied publisher’s authorized advertising seller |
-| [`public/tests/`](../public/tests/) | Static, request-boundary and browser checks; exclude from hosting |
+| [`scripts/check-site-v16.py`](../scripts/check-site-v16.py) | Current offline source, DOM, local asset and hash checks |
+| [`public/tests/`](../public/tests/) | Request-boundary tests and preserved static/browser runners; exclude from hosting |
 
-## 1.5 visual refresh and new evidence
+## 1.6 local qualification · 27 October 2026
 
-The repository's 1.5 presentation aligns the homepage, legal pages and GitHub materials with the actual game: night/pastel palette, original companion vectors, seven source Android screenshots and one Android-generated challenge card, feature explanations and a direct route to the signed **1.5.0-rc1 APK**. The Android binaries and their existing validation are unchanged. [Design system](DESIGN_SYSTEM.md) · [Visual guide](VISUAL_GUIDE.md) · [Exact APK/hash](RELEASE.md).
+The candidate uses final production 1.6 Android captures for the map, briefing, Home and inventory. The map shows ten levels per page; the briefing explains a fresh attempt; Home resumes an existing practice challenge. Keys and seals enter ordinary Journey at level 12, while the six unlimited workshop challenges remain separate. The page distinguishes local gameplay saves from optional Google identity and makes no Google Play launch claim. [Native release and exact binary](RELEASE_1_6.md) · [Design system](DESIGN_SYSTEM.md) · [Art/capture provenance](ART_AUDIO.md).
+
+| Local check | Recorded result | Boundary |
+|---|---|---|
+| [Offline source/assets](validation/site-v1.6/static-check.json) | 2,012 assertions passed across three HTML pages and 66 local references | No browser launch, network request or remote APK availability check |
+| [CUA browser matrix](validation/site-v1.6/browser-check.json) | 18 states: three pages × FR/EN × 320/390/1366 px; no measured horizontal overflow, wrong-language visible text, multiple visible H1s or broken visible images | Localhost rendering and real page/language controls only; no public Hosting-origin access |
+| Language and deletion controls | EN button works; navigation through privacy to deletion preserves EN; checkbox remains unchecked and deletion disabled; five localized homepage image elements load their EN sources | No Google chooser, authentication or real deletion executed |
+| [Deletion request core](validation/site-v1.6/deletion-core-tests.txt) | 24 tests passed | Request/configuration contracts; not provider or live API execution |
+
+Six [local page captures](screenshots/site-v1.6/) accompany these results. The [asset record](validation/site-v1.6/source-assets.json) identifies the final native captures, retained historical assets, copied Aurora Atlas environment and original web rule illustration separately. The [source manifest](validation/site-v1.6/source-manifest.json) fingerprints 36 public payloads and explicitly records `network_verified: false`. The [qualification record](validation/site-v1.6/README.md) owns the final status; local PASS results are not a deployment result, complete accessibility review, native-speaker review or identity/commerce qualification.
+
+## Historical 1.5 visual refresh · 27 October 2026
+
+The repository's 1.5 presentation aligned the homepage, legal pages and GitHub materials with that game revision: night/pastel palette, original companion vectors, seven source Android screenshots and one Android-generated challenge card, feature explanations and a direct route to the signed **1.5.0-rc1 APK**. That website refresh changed no Android binary. Its original assets and existing validation retain their scope. [Visual guide](VISUAL_GUIDE.md) · [Preserved APK/hash](RELEASE.md).
 
 **Published 27 October 2026:** source revision [9eebee1588f2](https://github.com/nabz0r/AndroidHit/commit/9eebee1588f2086ac91baecb6647cc63d21ae10a) was deployed to the existing Firebase site. Independent HTTPS reads confirm all **23 public payloads plus three directory aliases** match the frozen source bytes, with security/cache headers checked. [Delivery result](validation/site-v1.5/delivery.json) · [Scoped acceptance](validation/site-v1.5/README.md). Local screenshots remain local renders; earlier OAuth/CORS observations and owner testimony retain their original scope. This visual deployment does not qualify Android identity, commerce or a real web-account transaction.
 
-New evidence is recorded in [`validation/site-v1.5/`](validation/site-v1.5/), with local website captures in [`screenshots/site-v1.5/`](screenshots/site-v1.5/):
+That revision's evidence is recorded in [`validation/site-v1.5/`](validation/site-v1.5/), with local website captures in [`screenshots/site-v1.5/`](screenshots/site-v1.5/):
 
 | Local check | Recorded result | Boundary |
 |---|---|---|
@@ -28,30 +44,30 @@ New evidence is recorded in [`validation/site-v1.5/`](validation/site-v1.5/), wi
 | Missing configuration / deletion handling | Two isolated missing-wallet states and three strictly synthetic DELETE requests; cancel sends none | Synthetic identity/request interception only; not a real account-flow qualification |
 | [Deletion request core](validation/site-v1.5/deletion-core.txt) | 24 tests passed | URL/token/HTTP-error/ambiguous-success contracts, not provider execution |
 
-The [asset manifest](validation/site-v1.5/source-assets.json) records exact copies of 12 source assets: seven Android screenshots, one Android-generated challenge card and four original promotional assets. It distinguishes the preceding unchanged-gameplay P1 capture from final-APK captures/exports. The [source manifest](validation/site-v1.5/source-manifest.json) identifies the 23 public source files tested. Deployment and served-resource evidence belong in `delivery.json` when available. Their intended filenames do not themselves prove successful publication. The new local results do not replace or relabel the older 18-state contact/configuration run.
+The [asset manifest](validation/site-v1.5/source-assets.json) records exact copies of 12 source assets: seven Android screenshots, one Android-generated challenge card and four original promotional assets. It distinguishes the preceding unchanged-gameplay P1 capture from final-APK captures/exports. The [source manifest](validation/site-v1.5/source-manifest.json) identifies the 23 public source files tested. Its deployment evidence is the dated `delivery.json` linked above. These local and delivery results do not replace or relabel the older 18-state contact/configuration run, and none verifies the 1.6 revision.
 
-The public publisher/support and Firebase/wallet fields remain the supplied values. The redesign keeps `preparation: true`, Google/deletion confirmation boundaries, no Analytics import and no live-purchase claim. A configured deletion page can still affect a real app account after explicit actions; the banner is not a safety lock.
+The 1.5 redesign retained the supplied public publisher/support and Firebase/wallet fields, `preparation: true`, Google/deletion confirmation boundaries, no Analytics import and no live-purchase claim. The 1.6 source retains those configuration boundaries. A configured deletion page can still affect a real app account after explicit actions; the banner is not a safety lock.
 
-## Present state and publication gates
+## Configuration, historical observations and publication gates
 
 Production Google/AdMob identifiers are integrated into Android separately. The separate Firebase **Web** configuration is integrated into `public/site-config.js`: project `luma-drift-production`, app `1:369472826910:web:47e79b67e7a3abd0c3080f`, auth domain `luma-drift-production.firebaseapp.com` and its public Web API key. The owner supplied the public publisher label **nabilux** and support email **nabz0r+gaming@gmail.com**. No legal entity is inferred from that label. These contacts appear in both languages, including the static HTML fallback.
 
-The site now points to the deployed API `https://luma-wallet-369472826910.europe-west1.run.app`. Its Google sign-in button is configured and enabled; identity modules load only after a click. The qualification preview's five sampled resources returned 200 and matched repository bytes. Firebase's public configuration confirms both final domains and the exact preview hostname are authorized. The owner has applied the API allowlist update. Independent preflights from the final and preview origins both returned HTTP 204 with their exact allowed origins. The allowed methods are GET, POST, DELETE and OPTIONS, with Authorization and Content-Type headers. The 1.5 Android candidate still lacks its wallet origin; this website redesign changes no APK or gameplay code.
+The source points to the API `https://luma-wallet-369472826910.europe-west1.run.app`. Its Google sign-in button is configured and enabled; identity modules load only after a click. In the **26–27 October 2026 qualification record**, the preview's five sampled resources returned 200 and matched repository bytes. Firebase's public configuration listed both final domains and the exact preview hostname as authorized, and the owner reported applying the API allowlist update. Independent preflights then returned HTTP 204 with their exact allowed origins. The allowed methods were GET, POST, DELETE and OPTIONS, with Authorization and Content-Type headers. These are historical network observations, not a recheck for 1.6. The preserved 1.5 Android package lacked its wallet origin; a website redesign changes no APK or gameplay code.
 
 The Firebase-generated example supplied by the owner also included an Analytics import and measurement ID. The site integrates only the identity configuration it uses; it still imports no Analytics SDK and makes no default analytics requests. This describes the website's code, not a claim about every setting of the owner's Firebase project.
 
 Before declaring these pages as the final policy or account-deletion route, complete these gates:
 
 1. Keep the supplied public publisher label and support address accurate and review the policy against the actual publisher's obligations. The contact fields are now filled; this is not an identity or legal review. Privacy requests must never use a public GitHub issue containing account details.
-2. Retain the owner-reported stable Google sign-in/deletion result and distinguish it from independent runtime proof. The five sampled static resources returned HTTP 200 matching the recorded earlier repository revision. Use the stable URLs rather than the temporary preview URL for eventual Play/AdMob declarations; no provider approval is implied.
-3. Keep the configured **Web app** identity and Google provider. Both final domains and the actual preview hostname are already confirmed in Firebase's public configuration. CLI channel deployment normally attempts to add the preview domain; check its presence before adding it manually. For another project, register its own Web app; do not copy an Android `:android:` app ID.
-4. Keep the configured HTTPS `walletApiBaseUrl` and allow the site's exact origin for `DELETE` and `OPTIONS`, and `Authorization`/`Content-Type` headers. The current final and preview origins have both passed their preflights; preserve them and authorize any different future preview origin separately. Wildcard authentication origins and browser cookies are not required.
+2. Retain the owner-reported stable Google sign-in/deletion result and distinguish it from independent runtime proof. On 26–27 October 2026 the five sampled static resources returned HTTP 200 matching the recorded earlier repository revision. Use the stable URLs rather than the temporary preview URL for eventual Play/AdMob declarations; no provider approval is implied.
+3. Keep the configured **Web app** identity and Google provider. Both final domains and the actual preview hostname were listed in Firebase's public configuration in the 26–27 October 2026 record. CLI channel deployment normally attempts to add the preview domain; check its presence before adding it manually. For another project, register its own Web app; do not copy an Android `:android:` app ID.
+4. Keep the configured HTTPS `walletApiBaseUrl` and allow the site's exact origin for `DELETE` and `OPTIONS`, and `Authorization`/`Content-Type` headers. The recorded final and preview origins passed their preflights on 26–27 October 2026; preserve them and authorize any different future preview origin separately. Wildcard authentication origins and browser cookies are not required.
 5. Review the privacy statement against the deployed build, actual log retention, transaction-audit retention, hosting and provider settings. The pages label services under qualification and disclose a planned 365-day minimal audit period. That is a configured retention choice, not a legal requirement. Scheduler/RTDN are not deployed, and no automatic purge or deletion-retry operation has been established. The current maintenance sequence also reconciles Play before purging, so pending Play permissions can prevent it reaching the purge. Qualify both permissions and maintenance before claiming automatic operation.
 6. Successful real Google sign-in, recent-authentication rejection, deletion and failure/retry tests on the final domain and live API. The local tests below use synthetic identity; they are not substitutes for these checks.
 
-The owner now reports the exact message “Ton compte Luma Drift et son portefeuille serveur ont été supprimés” after the guided Web deletion tests on the preview and stable domain. This is owner testimony, without independent observation, a log/screenshot, a measured DELETE status or Firebase Console verification. Authenticated wallet GET, payments and Android Google login remain unqualified. [Owner report and evidence boundaries](validation/hosting-preview.md).
+The **26–27 October 2026 owner report** gives the exact message “Ton compte Luma Drift et son portefeuille serveur ont été supprimés” after guided Web deletion tests on the preview and stable domain. This is owner testimony, without independent observation, a log/screenshot, a measured DELETE status or Firebase Console verification. It does not establish a new 1.6 test. Authenticated wallet GET, payments and successful Android Google login still require their own qualification. [Owner report and evidence boundaries](validation/hosting-preview.md).
 
-The earlier qualification revision is published at the stable origin with `preparation: true` and closed purchases/live ads. This historical observation does not establish that the new 1.5 homepage revision is served. The owner reports the same successful account flow on the stable domain; the Google Account itself stays intact. The owner reports `https://luma-drift-production.web.app/privacy/index.html`, saved European-consent draft/settings and the Published state in AdMob, with six languages, refusal/close enabled and GDPR-region targeting. There is no independent console observation or proof of UMP display in the game, app-ads.txt verification, ad readiness or revenue activation. Next test the message in the existing production APK while retaining sample ads; the separate `--production` gate and banner removal remain later steps after all release gates pass.
+The earlier qualification revision was observed at the stable origin on **27 October 2026** with `preparation: true` and closed purchases/live ads. That observation predates the separately recorded 1.5 homepage deployment and does not verify the 1.6 candidate. The owner reported the same successful account flow on the stable domain; the Google Account itself stays intact. The same dated owner report gives `https://luma-drift-production.web.app/privacy/index.html`, saved European-consent draft/settings and the Published state in AdMob, with six languages, refusal/close enabled and GDPR-region targeting. There is no independent console observation or proof of UMP display in the game, app-ads.txt verification, ad readiness or revenue activation. Test the message in the identified production APK while retaining sample ads; the separate `--production` gate and banner removal remain later steps after all release gates pass.
 
 Keep `preparation: true` until these gates pass. This flag only controls the shared qualification banner: it does **not** disable sign-in or deletion. A confirmed deletion against the configured real API can take effect during preview. Use a separate Google test account, not an email alias of the owner's account. Setting the flag to `false` does not rewrite the privacy policy or certify compliance. Review both language versions before changing it.
 
@@ -75,7 +91,7 @@ The public support address appears on the policy, deletion page and footer and o
 
 ## Hosting and app-ads.txt
 
-Serve the contents of `public/` as the site root, excluding `tests/**`. The directory includes a `.nojekyll` marker and works as static content. The [root Firebase Hosting configuration](../firebase.json) targets site `luma-drift-production`; it is separate from `server/firebase.json`, which configures Firestore. The owner reports cloning channel `qualification` to the same site’s `live` channel. Independent reads confirmed all five stable-origin resources with the qualification flag preserved; the recorded preview source version is `332f610a434fe4a6`. The [French step-by-step guide](DEPLOIEMENT_PAS_A_PAS.md) covers preview qualification and publication without rerunning `firebase init` or overwriting the pages. Its structure is:
+Serve the contents of `public/` as the site root, excluding `tests/**`. The directory includes a `.nojekyll` marker and works as static content. The [root Firebase Hosting configuration](../firebase.json) targets site `luma-drift-production`; it is separate from `server/firebase.json`, which configures Firestore. In the **26–27 October 2026 record**, the owner reported cloning channel `qualification` to the same site’s `live` channel. Independent reads then confirmed all five stable-origin resources with the qualification flag preserved; that preview source version was `332f610a434fe4a6`. Those reads do not verify a later website revision. The [French step-by-step guide](DEPLOIEMENT_PAS_A_PAS.md) covers preview qualification and publication without rerunning `firebase init` or overwriting the pages. Its structure is:
 
 ```json
 {
@@ -111,9 +127,9 @@ The publisher ID comes from the owner’s supplied AdMob IDs; the Google exchang
 
 **A GitHub project Pages URL such as `https://nabz0r.github.io/AndroidHit/` alone does not put the file at `https://nabz0r.github.io/app-ads.txt`.** AdMob discovers the file from the hostname root. Use a domain/site root that can serve `/app-ads.txt`, or arrange the correct root file on that hostname. See [AdMob’s hosting and crawler rules](https://support.google.com/admob/answer/9363762?hl=en).
 
-## Executed validation
+## Historical contact/configuration validation · 26–27 October 2026
 
-The following checks passed locally:
+The following checks passed locally for the earlier contact/configuration revision. The current 1.6 results are in the dedicated section above:
 
 - **24** request/configuration tests: disabled missing configuration, Android-vs-Web app mismatch, auth-domain mismatch, insecure/off-origin URL forms, fresh bearer token, no-cookie/no-query/redirect behavior, authentication errors, rate limits, ambiguous results and non-JSON failure.
 - **3** static HTML pages and **37** internal asset/navigation links validated, with both languages, CSP, referrer policy, no inline handlers/scripts and the exact app-ads publisher line.
@@ -123,7 +139,7 @@ The following checks passed locally:
 
 The earlier contact/configuration follow-up ran under **Node 26.7.0, Playwright 1.62.1 and Chromium 149.0.7827.55**. [Recorded pre-redesign scope and report](validation/public-contact-preview.md). The original candidate evidence remains preserved separately.
 
-Reproduce with Node.js and an available Playwright/Chromium installation:
+The historical run used Node.js and an available Playwright/Chromium installation:
 
 ```sh
 node --test public/tests/deletion-core.test.mjs
@@ -132,6 +148,8 @@ node public/tests/browser-check.mjs
 ```
 
 Optional environment variables `LUMA_PLAYWRIGHT_MODULE`, `LUMA_CHROMIUM_EXECUTABLE` and `LUMA_PAGES_QA_DIR` select an existing Playwright package/browser and screenshot directory. The browser check starts an ephemeral loopback-only server and intercepts the synthetic identity/API requests. It does not delete a real account.
+
+For the 1.6 source check, use `python3 scripts/check-site-v16.py` and the request-core command above. The preserved `public/tests/browser-check.mjs` still expects the 1.5 APK, three localized images and the earlier workshop-only copy; it was **not executed as a 1.6 browser check**. The 1.6 rendering evidence instead comes from the separate CUA localhost run linked above. Do not treat the old runner's assumptions or historical synthetic account flow as new 1.6 results.
 
 Publishing the qualification pages at the stable origin while the banner remains visible is separate from commercial activation. `node public/tests/check-static.mjs --production` is an additional, later release gate. The current contact, Web identity and HTTPS API fields are complete, but preparation mode deliberately keeps the release gate closed. Passing the gate still requires the manual review and live checks listed above. The current browser test pins the supplied contact and qualification flag; update those expectations deliberately when changing publication state.
 

@@ -40,7 +40,9 @@ The following captures come from the final production **1.6** package; Home resu
 | [Store copy](STORE_LISTING.md) | Preserved 1.5 copy drafts; final 1.6 marketing must match its qualified artifact |
 | [Public website](PUBLIC_PAGES.md) | FR/EN homepage, policy/deletion routes, local checks and deployment evidence |
 
-The game, public pages and GitHub presentation share a visual family. The website hero combines original Nova art with an unedited Android capture; the composite itself is web artwork. Local page captures and [independent delivery of all 23 Hosting payloads plus three aliases](validation/site-v1.5/delivery.json) retain distinct scopes. [Earlier Hosting observations](validation/hosting-preview.md) concern their recorded revision.
+The game, public pages and GitHub presentation share a visual family. The website **1.6 refresh is a candidate** until its own deployment is recorded. Its product imagery must identify the [final production Android captures](validation/v1.6/ui-final-production/report.json) separately from the retained [1.5 vector brand kit](store/assets.json) and [generated Aurora Atlas environment](art/aurora-atlas-v1.json). Frames and surrounding artwork are web compositions, not Android controls. New local checks, asset provenance and any delivery result belong under `docs/validation/site-v1.6/`.
+
+The earlier [independent delivery of all 23 Hosting payloads plus three aliases](validation/site-v1.5/delivery.json) verifies the 1.5 website revision only. [Earlier Hosting observations](validation/hosting-preview.md) also retain their recorded revision; neither record verifies the new candidate.
 
 ## Identity, privacy and commercial gates
 

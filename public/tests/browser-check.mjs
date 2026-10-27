@@ -107,13 +107,19 @@ try {
         await assertPublishedContact(page);
         assert.match(await page.locator("[data-publisher]:visible").textContent(), /nabilux/);
         assert.equal(await page.locator("[data-preparation-notice]:visible").count(), 1, "Preparation notice stays visible");
-        assert.match(await page.locator("[data-preparation-notice]").textContent(), lang === "fr" ? /Services en qualification/ : /Services under qualification/);
+        const preparationCopy = await page.locator("[data-preparation-notice]:visible").innerText();
+        assert.match(preparationCopy, route === "/index.html"
+          ? lang === "fr" ? /Cette version reste en qualification/ : /This release is still under qualification/
+          : lang === "fr" ? /Services en qualification/ : /Services under qualification/);
         if (route === "/index.html") {
-          const apkLinks = page.locator('a[href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.5.0-rc1.apk"]:visible');
+          const apkLinks = page.locator('a[href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.6.0-rc1.apk"]:visible');
           assert.equal(await apkLinks.count(), 2, "Both direct download actions target the shipped signed APK");
           assert.match(await page.locator(".stat-strip").innerText(), /1 000/);
-          assert.match(await page.locator(".sealed-copy").innerText(), lang === "fr" ? /coups illimités/ : /unlimited moves/);
-          assert.equal(await page.locator("[data-screenshot-fr]").count(), 3);
+          assert.match(await page.locator(".sealed-copy").innerText(), lang === "fr" ? /Dès le niveau 12/ : /at level 12/);
+          const workshopCopy = await page.locator(".sealed-copy .fineprint").innerText();
+          assert.match(workshopCopy, lang === "fr" ? /Les six défis de l’atelier/ : /The six workshop challenges/);
+          assert.match(workshopCopy, lang === "fr" ? /coups illimités, sans pouvoirs ni récompenses/ : /unlimited moves, without powers or rewards/);
+          assert.equal(await page.locator("[data-screenshot-fr]").count(), 5);
           for (const image of await page.locator("[data-screenshot-fr]").all()) {
             const src = await image.getAttribute("src");
             assert.ok(src.endsWith(`-${lang}.png`), "Screenshots follow the selected language");

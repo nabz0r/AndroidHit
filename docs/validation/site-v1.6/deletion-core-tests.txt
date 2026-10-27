@@ -1,0 +1,32 @@
+✔ incomplete config cannot activate network: undefined (0.710125ms)
+✔ incomplete config cannot activate network: {} (0.08675ms)
+✔ incomplete config cannot activate network: {"walletApiBaseUrl":"https://wallet.example.com/","firebase":{}} (0.106125ms)
+✔ incomplete config cannot activate network: {"walletApiBaseUrl":"","firebase":{"apiKey":"public-api-key","authDomain":"luma-drift-production.firebaseapp.com","projectId":"luma-drift-production","appId":"1:123:web:abcdef"}} (0.332042ms)
+✔ valid configuration maps to the account endpoint (0.217042ms)
+✔ unsafe API address rejected: http://wallet.example.com (0.12175ms)
+✔ unsafe API address rejected: javascript:alert(1) (0.063959ms)
+✔ unsafe API address rejected: https://user:password@wallet.example.com (0.065792ms)
+✔ unsafe API address rejected: https://wallet.example.com?token=secret (0.063875ms)
+✔ unsafe API address rejected: https://wallet.example.com#fragment (0.113708ms)
+✔ loopback HTTP is allowed only for a local development server (0.109583ms)
+✔ Android app configuration cannot activate web auth (0.059375ms)
+✔ unrelated auth domains are rejected (0.056459ms)
+✔ auth domain must match the project (0.058666ms)
+✔ a user and a fresh token are required before any request (0.418625ms)
+✔ authenticated deletion sends no tokens in URL/body/cookies and rejects redirects (0.238125ms)
+✔ HTTP 401 never reports deletion success (0.119709ms)
+✔ HTTP 403 never reports deletion success (0.081417ms)
+✔ HTTP 429 never reports deletion success (0.058292ms)
+✔ HTTP 503 never reports deletion success (0.060959ms)
+✔ ambiguous success body rejected: {} (0.092084ms)
+✔ ambiguous success body rejected: {"deleted":false} (0.059208ms)
+✔ ambiguous success body rejected: {"deleted":"true"} (0.0545ms)
+✔ non-JSON response cannot announce success (0.10925ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 68.055291

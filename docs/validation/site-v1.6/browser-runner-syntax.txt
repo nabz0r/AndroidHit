@@ -1,0 +1,5 @@
+PASS node --check public/tests/browser-check.mjs
+Node v26.7.0
+SHA-256 56fb4acca7e0b7ebf5553e55a3fbdb438b2733fc7e6b3e0933008787b2a6ba9d
+Assertions updated for the 1.6 source. Synthetic deletion/network isolation scenarios retained.
+NOT EXECUTED: no autonomous browser run, sign-in, live network request or account deletion. Current browser QA is a separate CUA localhost run.

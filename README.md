@@ -45,6 +45,8 @@ These are installed **production 1.6 Android captures**. They show real controls
 
 [Inventory capture](docs/screenshots/v1.6/ui/final-production/companions-en.png) · [Art and audio](docs/ART_AUDIO.md) · [Design system](docs/DESIGN_SYSTEM.md) · [Executed checks and limits](docs/VALIDATION_1_6.md).
 
+The public website's 1.6 refresh is a separate candidate until its deployment is recorded. Its native captures, retained brand illustrations, local page checks and delivery evidence keep separate provenance; the [previous website qualification](docs/validation/site-v1.5/README.md) covers version 1.5 only. New site evidence belongs under `docs/validation/site-v1.6/`.
+
 ## Account and commercial boundaries
 
 The 1.6 identity source distinguishes Guest, Refreshing, Connected, Reauthentication required and Error, and guards late callbacks after account changes. A refreshed session model or configured provider does not establish a successful real Google login. Ordinary gameplay and local inventory remain available independently of sign-in.

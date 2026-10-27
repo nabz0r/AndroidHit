@@ -1,6 +1,6 @@
 # Luma Drift design system
 
-**Shared direction for the Android game, public site and GitHub presentation · 1.5**
+**Shared direction for the Android game, public site and GitHub presentation · 1.6**
 
 A night sky, a small companion and a readable puzzle form the identity. The presentation should help a player see an arrow, understand a gate, recognize their avatar and choose the next action. Product screenshots, explanatory artwork and test evidence each retain their own label.
 
@@ -21,11 +21,11 @@ Keep reading text light on dark surfaces. Pastel arrows use dark ink. A state ne
 
 ## Shapes and composition
 
-Use rounded cards, soft rims, restrained star particles and a small original companion. Leave quiet space around the board. Put the current puzzle and primary action ahead of secondary systems. In the lobby, the profile, avatar, next board and activities belong in one composition; on the site, explain the arrow/gate rule before listing all systems.
+Use rounded cards, soft rims, restrained star particles and a small original companion. Leave quiet space around the board. Put the current puzzle and primary action ahead of secondary systems. In the lobby, the profile, avatar, next board and activities belong in one composition; on the site, explain the arrow/gate rule before listing all systems. The 1.6 saga map shows ten levels per page. A fresh board has a separate briefing with its objective, element, authored difficulty label and fixed action allowance. These are real game controls, not decorative website statistics.
 
 Arrows remain clear at small sizes. Switch badges show their own directional change. Sealed cells have a lock and a matching K number; their key pieces carry the same badge. A promotional board that shows those mechanics must preserve their relationship. Original code-drawn SVG/Canvas artwork can explain a mechanic, but must not be described as an installed screenshot or a verified playable level unless it is one.
 
-Companions and themes change appearance. Headwear, Aura and Charm have the separately stated limited effects. Equipment previews show ownership, slot, source and benefit; rarity is not an implied extra ability or a drop probability. [Exact equipment contract](AVATAR_EQUIPMENT.md).
+Companions and themes change appearance. Headwear, Aura and Charm have the separately stated limited effects. Equipment previews show ownership, slot, source and benefit; rarity is not an implied extra ability or a drop probability. The 1.6 inventory uses three full-width rows per page, category tabs and All/Owned/To unlock filters. Keep those states visible when choosing product captures. [Exact equipment contract](AVATAR_EQUIPMENT.md) · [Native 1.6 presentation](UX_1_6.md).
 
 ## Typography, controls and language
 
@@ -49,15 +49,18 @@ The game uses original synthesized effects and an eight-bar ambient loop. The we
 | Public website | Download route, explain the game and provide policy/support/deletion links | Distinguish local renders from the exact deployed revision |
 | GitHub | Clear delivery links, short explanations, diagrams and original art | Link release hashes and test reports; repository publication is not Play approval |
 
-Use real game captures for product behavior, original vectors for explanatory art and responsive page captures for website review. Keep those categories visible in alt text and captions. Do not stretch a phone capture to another aspect ratio or remove an important caveat from a store caption.
+Use real game captures for product behavior, original vectors for explanatory art and responsive page captures for website review. Keep those categories visible in alt text and captions. Do not stretch a phone capture to another aspect ratio or remove an important caveat from a store caption. A phone frame, surrounding glow or crop belongs to the web composition; it does not turn the composition into an Android screenshot. Keep the unedited source capture available and record any exported derivative separately.
 
 ## Reference artifacts
 
-- [Final French lobby](screenshots/v1.5/home-fr.png), [equipment collection](screenshots/v1.5/collection-equipment-fr.png) and [earned-coin shop](screenshots/v1.5/shop-fr.png).
-- [Actual final-APK P6 share card](screenshots/v1.5/sharing/sealed-p6-card.png), with matching keys and walls.
+- [Installed 1.6 French lobby](screenshots/v1.6/ui/final-production/home-fr.png), [ten-level saga map](screenshots/v1.6/ui/final-production/map-fr.png), [prelevel briefing](screenshots/v1.6/ui/final-production/briefing-fr.png) and [companion inventory](screenshots/v1.6/ui/final-production/companions-en.png).
+- [Final production capture report](validation/v1.6/ui-final-production/report.json) and [device context](validation/v1.6/ui-device-runtime.json). Home resumes a preserved practice challenge; it is not a fresh Journey session.
+- [Historical 1.5 P6 share card](screenshots/v1.5/sharing/sealed-p6-card.png), with matching keys and walls. The six workshop challenges keep their original identities; 1.6 also teaches keys and seals within ordinary Journey and Remix.
 - [Illustrated tour](VISUAL_GUIDE.md), [brand assets and provenance](store/README.md), [public-page implementation](PUBLIC_PAGES.md).
-- [Executed validation and exact-byte boundaries](VALIDATION.md). A polished image does not establish retention, provider activation or physical-device quality.
+- [Executed 1.6 validation and exact-byte boundaries](VALIDATION_1_6.md). A polished image does not establish retention, provider activation or physical-device quality.
 
-## Android 1.6 extension
+## Environment and website 1.6 scope
 
-The Android 1.6 candidate keeps the direction/color geometry and six palette themes, with one bundled generated Aurora Atlas environment behind opaque or quietened controls. The exact prompt and image hash are in [art provenance](art/aurora-atlas-v1.json). Its ten-node saga pages, prelevel goal/action budget, pinned navigation and three-row inventory are documented in [UX 1.6](UX_1_6.md). These native Android changes do not imply that the separately deployed 1.5 website has changed; [site qualification](validation/site-v1.5/README.md) keeps its dated scope.
+Android 1.6 keeps the direction/color geometry and six palette themes, with one bundled generated Aurora Atlas environment behind opaque or quietened controls. The exact prompt and image hash are in [art provenance](art/aurora-atlas-v1.json). This image is environment art; the board, route, text and controls are rendered by the game. Existing Nova vectors and the [1.5 brand kit](store/README.md) retain their original provenance and are not relabelled as new 1.6 screenshots.
+
+The website 1.6 refresh is a candidate until its own deployment is recorded. Its new evidence belongs under `docs/validation/site-v1.6/`: source/asset provenance, executed local checks and any deployment outcome must state their separate scopes. The [1.5 site qualification](validation/site-v1.5/README.md) remains the dated record for that revision; neither Android acceptance nor a new local page render updates it.
