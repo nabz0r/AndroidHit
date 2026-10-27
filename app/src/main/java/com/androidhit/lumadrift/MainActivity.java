@@ -19,6 +19,10 @@ public final class MainActivity extends Activity {
         getWindow().setNavigationBarColor(0x00000000);
         game = new LumaView(this);
         setContentView(game);
+        if (Build.VERSION.SDK_INT >= 30 && getWindow().getInsetsController() != null) {
+            int appearance=android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS|android.view.WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS;
+            getWindow().getInsetsController().setSystemBarsAppearance(appearance,appearance);
+        } else getWindow().getDecorView().setSystemUiVisibility(android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR|android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
         walletRecovery = new com.androidhit.lumadrift.wallet.WalletRecoveryController(this, () -> { if (game != null) game.invalidate(); });
         if(state!=null)game.restoreUiState(state);
         if(state==null&&getIntent().getData()!=null)game.openChallenge(getIntent().getData().toString());

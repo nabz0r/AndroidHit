@@ -1,72 +1,33 @@
-# Luma Drift design system
+# Luma Drift design system — 1.8
 
-**Shared direction for the Android game, public site and GitHub presentation · 1.7 candidate**
+[Current UX contract](UX_1_8.md) · [Native capture provenance](RELEASE_1_8.md) · [Original illustration prompt and hash](art/dream-glade-v18.json).
 
-A night sky, a small companion and a readable puzzle form the identity. The presentation should help a player see an arrow, understand a gate, recognize their avatar and choose the next action. Product screenshots, explanatory artwork and test evidence each retain their own label.
+## Palette and hierarchy
 
-## Color and contrast
+The game and Firebase pages share cream/lilac paper surfaces, dark plum typography, peach primary actions and mint progress. Android theme IDs and ownership remain stable; their six palettes were refreshed. Primary content is opaque enough to read over the original Dream Glade environment. Native text rendering darkens light label colors; body text has a physical size floor with support up to the existing 1.3 font preference. This is not a claim that every native pixel pair or accessibility mode has been certified.
 
-| Reference token | Color | Intended use |
-|---|---|---|
-| Night indigo | `#12142e` | Page background and the surrounding night sky |
-| Mint | `#99ecda` | Clear paths, positive controls and selected states |
-| Peach | `#ffb194` | Main play/download action and a warm directional accent |
-| Lilac | `#baa5ff` | Companion decoration, gates and secondary emphasis |
-| Ivory | `#f7f5ff` | Main reading text and headings |
-| Soft gold | `#ffe29a` | Earned coins, key badges and explicit rewards |
+| Role | Current treatment |
+| --- | --- |
+| Text / secondary | Plum `#463252` / muted plum, separate from white artwork highlights |
+| Main action | Peach soft-volume button, dark label, short press feedback |
+| Standard surface | Warm paper or pale lilac, fine top highlight and restrained lower edge |
+| Actual progress | Mint bar with measured completion, never a fabricated near miss |
+| Arrow direction | Up mint; Right peach; Down lilac; Left blue; arrow shapes remain essential |
+| Key / seal | Gold key plus matching identifier; a lock is a fixed cell, not a movable piece |
+| Gate preview | Current state plus immediate opens/closes markers and an explicit confirmation |
 
-These are shared presentation references, not a claim that every game theme has identical pixels. The Android catalog is authoritative for its six themes: Lumina uses the closely related `#11142b` background, `#232744` cards, `#a99aff` and `#7ee8d1` accents. Other themes deliberately vary. The in-game key/reward gold can use `#ffd992`; the shared web/asset soft-gold reference is `#ffe29a`. Use the family coherently instead of recoloring installed captures to imitate a web token.
+The direction palette is the same in `LumaView` and `SweetUi`. No meaning relies solely on hue or sound.
 
-Keep reading text light on dark surfaces. Pastel arrows use dark ink. A state needs a label, outline, icon or shape as well as color: direction arrows, switches, K1/K2 keys, owned/equipped badges and power Active labels carry meaning. Responsive screenshots and focus checks do not certify contrast, physical readability or complete TalkBack usability; those remain explicit acceptance work.
+## Shape, composition and motion
 
-## Shapes and composition
+`SweetUi` draws plush arrow pieces, an original expressive star guide, an illustrated moving fingertip, gate controls, progress and soft surfaces. `KawaiiArt` supplies six differentiated power silhouettes and 24 clothing drawings. Canvas helper drawing reuses its Paint/Path/RectF objects. `WorldBackdrop` decodes one RGB565 image and reuses it with ten gentle biome tints; this is one original scene, not ten separately painted scenes.
 
-Use rounded cards, soft rims, restrained star particles and a small original companion. Leave quiet space around the board. Put the current puzzle and primary action ahead of secondary systems. In the lobby, the profile, avatar, next board and activities belong in one composition; on the site, explain the arrow/gate rule before listing all systems. The 1.7 Journey map scrolls continuously through levels 1–1,000, with visible-range rendering, a current-level return and direct level jump. Ten 100-level biome ranges change the environment tint and original procedural arrangement. The preserved 1.6 map showed ten levels per page. A fresh board has a separate briefing with its objective, element, authored difficulty label and fixed action allowance. These are real game controls, not decorative website statistics.
+The current adventure is the home focus. Session status is explicit, with direct map/events/inventory/shop navigation. Details such as acquisition sources and cost confirmation remain adjacent to the action. The tutorial is skippable, replayable and self-paced; small landscape windows use two columns. Long menus scroll rather than scaling the entire UI down to fit.
 
-Arrows remain clear at small sizes. Switch badges show their own directional change. Sealed cells have a lock and a matching K number; their key pieces carry the same badge. A promotional board that shows those mechanics must preserve their relationship. Original code-drawn SVG/Canvas artwork can explain a mechanic, but must not be described as an installed screenshot or a verified playable level unless it is one.
+Reduced motion removes demonstration travel, bobbing and pulse motion while retaining static instruction and emphasis. Android's disabled animator setting is respected. Music and effects have separate controls; app background/foreground audio is separately observed. No essential interaction waits for an animation to finish.
 
-Companions and themes change appearance. The new 24-item wardrobe adds Hat, Outfit, Shoes and Gloves as visual-only slots. Owned, equipped and unowned must have explicit labels; previewing an unowned item is not acquiring it. Permanent seasonal designs keep their original ownership outside their named season. The existing Headwear, Aura and Charm equipment has its separately stated limited effects. Equipment previews show ownership, slot, source and benefit; rarity is not an implied extra ability or a drop probability. The 1.6 inventory uses three full-width rows per page, category tabs and All/Owned/To unlock filters. Keep those states visible when choosing product captures. [Exact equipment contract](AVATAR_EQUIPMENT.md) · [Native 1.7 presentation](UX_1_7.md) · [Wardrobe sources and odds](ECONOMY_1_7.md).
+## Provenance and review
 
-## Typography, controls and language
+Dream Glade was generated through the built-in image generation tool, without franchise imagery, reference screenshots or image edits. Exact prompt, dimensions, copies and SHA-256 are [recorded](art/dream-glade-v18.json). Native screenshots are unedited Android SDK captures from an identified installed APK. Website frames and promotional SVGs are compositions, not Android execution evidence.
 
-Use a strong, short display heading and familiar system sans-serif reading text. The Android game uses platform sans-serif families; the website can use system fonts without a remote font request. Preserve enough space for German, French, Portuguese, Spanish and Italian text instead of shrinking a critical price or source caption beyond comfortable reading.
-
-A primary button should describe the action: play, download, confirm one charge or buy the stated pack. Price and quantity remain together. Use the names **LumaCoins** for local earned currency and **LumaGold** for the premium account wallet, with source/availability labels. They are separate balances without automatic conversion. A local capsule confirmation states the full earned-currency price, category and per-item odds, plus 25/60/100 duplicate compensation by rarity; a premium preparation label is not an active purchase control. Avoid dashboard-like decorative statistics, fictional ranks, fake review stars, invented users or revenue figures.
-
-The game supports six languages. Public privacy/deletion pages and the website currently use French and English; do not imply that six-language Android support is six-language web/store localization. Localized marketing copy is a draft until reviewed by speakers and checked with its matching imagery.
-
-## Motion and sound
-
-Small companion movement, light particles and short transitions support the puzzle. Reduced-motion preferences must have a usable static presentation. Avoid motion that hides an arrow, masks a price or blocks a critical control. Web reduced-motion behavior and Android's saved setting are separate controls.
-
-The game uses original synthesized effects and ten biome-specific eight-bar ambient arrangements. Changes follow the viewed route, while saved music/effect preferences and reduced motion remain independent. Worker coalescing and digital audio checks do not establish physical playback quality. The website must not claim browser audio playback or autoplay the soundtrack merely because the Android build has music. [Audio source, measurements and Android playback limits](ART_AUDIO.md).
-
-## One family, three surfaces
-
-| Surface | Use | Evidence boundary |
-|---|---|---|
-| Android | Actual lobby, boards, collection, equipment and shop | Identify package/build and whether a temporary synthetic profile was used |
-| Public website | Download route, explain the game and provide policy/support/deletion links | Distinguish local renders from the exact deployed revision |
-| GitHub | Clear delivery links, short explanations, diagrams and original art | Link release hashes and test reports; repository publication is not Play approval |
-
-Use real game captures for product behavior, original vectors for explanatory art and responsive page captures for website review. Keep those categories visible in alt text and captions. Do not stretch a phone capture to another aspect ratio or remove an important caveat from a store caption. A phone frame, surrounding glow or crop belongs to the web composition; it does not turn the composition into an Android screenshot. Keep the unedited source capture available and record any exported derivative separately.
-
-## Current 1.7 evidence boundary
-
-The candidate adds a continuous route, native wardrobe/power art, state-aware hint pulse and daily/weekly reward presentation. [Candidate scope](RELEASE_1_7.md), [UX](UX_1_7.md) and [economy](ECONOMY_1_7.md) describe source behavior. New unedited package captures and their exact hashes belong in [1.7 qualification](validation/v1.7/README.md). The [final 1.7 Lab menus2 captures](validation/v1.7/ui-sdk-final-menus2/host-report.json) now identify 38 native assertions, 32 images, exact final Lab bytes and restored guest preferences. Existing reference images below stay labelled 1.6 or 1.5; a new native or web frame does not update old evidence.
-
-No friend marker should represent a fabricated player. Show a real mutually shared progress snapshot only when the prepared service returns one; expose authentication/service failure. No cosmetic capsule, motion or seasonal collection is evidence of retention or sales.
-
-## Reference artifacts
-
-- [Installed 1.6 French lobby](screenshots/v1.6/ui/final-production/home-fr.png), [ten-level saga map](screenshots/v1.6/ui/final-production/map-fr.png), [prelevel briefing](screenshots/v1.6/ui/final-production/briefing-fr.png) and [companion inventory](screenshots/v1.6/ui/final-production/companions-en.png).
-- [Final production capture report](validation/v1.6/ui-final-production/report.json) and [device context](validation/v1.6/ui-device-runtime.json). Home resumes a preserved practice challenge; it is not a fresh Journey session.
-- [Historical 1.5 P6 share card](screenshots/v1.5/sharing/sealed-p6-card.png), with matching keys and walls. The six workshop challenges keep their original identities; 1.6 also teaches keys and seals within ordinary Journey and Remix.
-- [Illustrated tour](VISUAL_GUIDE.md), [brand assets and provenance](store/README.md), [public-page implementation](PUBLIC_PAGES.md).
-- [Executed 1.6 validation and exact-byte boundaries](VALIDATION_1_6.md). A polished image does not establish retention, provider activation or physical-device quality.
-
-## Environment and website 1.6 scope
-
-Android 1.6 keeps the direction/color geometry and six palette themes, with one bundled generated Aurora Atlas environment behind opaque or quietened controls. The exact prompt and image hash are in [art provenance](art/aurora-atlas-v1.json). This image is environment art; the board, route, text and controls are rendered by the game. Existing Nova vectors and the [1.5 brand kit](store/README.md) retain their original provenance and are not relabelled as new 1.6 screenshots.
-
-The website 1.6 refresh is published through Firebase Hosting. Its [separate evidence](validation/site-v1.6/README.md) records source/asset provenance, executed local checks and the deployment outcome with their individual scopes. The [1.5 site qualification](validation/site-v1.5/README.md) remains the dated record for that revision; neither Android acceptance nor a new local page render updates it.
+The old night/Atlas direction, earlier screenshots and delivered packages remain in historical release records [1.7](RELEASE_1_7.md), [1.6](RELEASE_1_6.md) and [1.5](RELEASE_1_5.md). They are not relabelled as 1.8 tests. Physical-phone comfort, color-vision review, TalkBack reading order and full large-text coverage still need human evaluation; passing model and screenshot checks does not substitute for it.

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.0-rc1 / code 9 — 2026-10-27
+
+Full default L/M strategy progression(1000+240), productive OPEN_GATE, exact minima, refunded free Undo and before/after previews; T events use an audited finite closure. Preserves old identities and current saved geometry/base. Seven interactive, skippable/replayable lessons with durable100 LumaCoins/+2 Sparks once-only reward. DreamGlade pastel art, plush pieces/tutor/fingertip/powers, light readable navigation and compact tutorial landscape. Directional drag and accessible tap are equivalent; guidance work is coalesced off the UI thread. Existing Google/social/commercial gates remain closed/pending. [Release and evidence](RELEASE_1_8.md).
+
+
 ## 1.7.0-rc1 / 1.7.0-sandbox — exact recovery, wardrobe and a longer route
 
 27 October 2026 · declared version code 8 · candidate under qualification. [Scope](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Executed record](validation/v1.7/README.md). Final package, installed UI, website and backend deployment statuses are separately recorded; prior 1.6 artifacts remain unchanged.

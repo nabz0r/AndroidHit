@@ -1,140 +1,93 @@
-# Luma Drift · level design and challenge protocol
+# Level design, typed actions and challenge identities
 
-## Current 1.6 source content and identities
+## Current V4 route
 
-The frozen V3 route uses **J for 1,000 Journey boards and K for 240 Remix boards**. `BalancedCatalog.get()` / `.remix()` now select those routes; `getV2()` / `remixV2()` preserve every G/H board. `ChallengeCode.resolve()` binds each family to the correct version. `ProgressionInfo` supplies cached authored difficulty, beat, goal, element and source provenance without generating or solving boards on a phone. [Full V3 design and method](PROGRESSION_V3.md).
+The 1.8 default is **L Journey 1–1,000 and M Remix 1–240** through `StrategyCatalog`, with T events for new daily/weekly attempts. Historical J/K continue through `BalancedCatalog.get/remix`; those APIs are not aliases for V4. Source behavior and [engine evidence](validation/v1.8/engine/README.md) remain separate from installed Android acceptance.
 
-Journey key lessons are 12, 14 and 17; the route contains 167 key boards. Remix contains 29. Board 12 neutralizes gate switches to teach only the key/seal dependency; the original G source stays unchanged. Every new certificate fits N exits within its fixed N+3–5 budget. The independent audit covers all 1,240 new boards, genuine seal dependencies, arbitrary subset/gate oracle samples, saved histories, budget restoration and geometric uniqueness including key associations. Normal/Hard/Expert remain authored labels, not human calibration. [Executed host report](validation/v1.6/progression-tests.txt) · [Exact comparisons](data/progression-v3-summary.md).
+V4 freezes gate states, reauthored switch targets, key/seal dependencies, productive minima, typed certificates, margins and comparative labels. Geometry is inherited from validated layouts; new rule interactions are separately authored and versioned. There are 591 key/seal boards, 8,830 reauthored switch masks and 1,161 boards with a measured decision affecting productive completion cost. This is not presented as 1,240 newly hand-drawn geometries. [Full specification](PROGRESSION_V4.md).
 
-The UI save schema uses content 4 for J/K, content 3 for active G/H attempts, and content 2 for historical B/Q attempts. Valid old attempts keep their layout, history and original allowance until finished or abandoned. Old challenge encoders, checksums and P/event definitions remain unchanged. Source validation is distinct from final installed 1.6 acceptance. [Candidate qualification](RELEASE_1_6.md).
+## Readable mechanics and reversible choices
 
-## Preserved 1.5 content and identities
+A piece exits along a clear ray through an open gate. A key's exit dissolves its linked seals. A switch XORs the indicated borders **after exit**, checking its old exit gate first. Both opening and closing consequences must remain visible when several badges fire.
 
-| Family | Current API | Code / bound |
+L/M/T add `OPEN_GATE(direction)` for one action. A gate closed by a later switch can be reopened. Preview/cancel is free; commitment is charged once. The preview describes before/after masks and immediate blockers without exposing an optimality oracle or auto-rejecting every inefficient choice.
+
+Policy-3 Undo reverses/refunds the last exit or opening and restores key/switch state, even at zero actions. Unrelated blocked-tap charges remain. The first five boards teach exits/blockers, 6–10 keys/seals, 11–20 manual openings/switches, then combined dependencies and differently priced productive routes. The separate [tutorial](TUTORIAL.md) consumes no campaign stock and does not replace the interrupted board.
+
+## Offline authoring and certificates
+
+[GenerateStrategyV4](../scripts/GenerateStrategyV4.java) writes [StrategyV4Layouts](../app/src/main/java/com/androidhit/lumadrift/engine/StrategyV4Layouts.java) and [authoring metrics](validation/v1.8/engine/strategy-authoring.csv). Starting a game parses a frozen row; it does not author, sort or personalize a layout.
+
+Rows record source identity, exact productive minimum, margin, initial gates, switch masks, seals, typed certificate, structural metrics and labels. Each added seal lies after its key in a valid spatial dependency order. Switches are reauthored for the new manual-opening rules; the old exit certificate is not claimed to prove their new cost.
+
+`Level.minimumActions` and V4 `parMoves` are the exact initial productive cost. **`Level.actionSolution` is the authoritative V4 certificate**, including gate actions. `Level.solution` retains the old piece-exit order/search preference; by itself it is not a playable V4 plan when manual openings are required.
+
+Certificates are checked for legal typed transitions and complete clearing on load; the independent audit proves their optimality. A runtime certificate suffix is an optimal shortcut only if current history matches that globally shortest certificate's prefix. Comparative labels use recorded choice/cost/dependency metrics and explicit teaching introductions. [Score definition and limits](DIFFICULTY.md).
+
+## Action APIs
+
+| Value/API | Contract |
+|---|---|
+| Tile IDs 0–48 | Exits; historical `move(tileId)` remains available |
+| `64 + Direction.ordinal()` | Opening; use `gateAction`, `isGateAction`, `gateDirection` |
+| `performAction(action)` | Exit or opening; a gate result has `tile == null` |
+| `previewAction(action)` | Immediate legality/blockers and before/after gates, without a solve verdict |
+| `solve()` / `hint()` | Shortest typed V4 plan / first action; −1 hint means no next action |
+| `history()` / `restoreHistory()` | Ordered typed replay; malformed input leaves the old board intact |
+| `moves()` | Committed productive actions, including openings |
+| `remainingCount()` | Pieces, not remaining productive cost |
+| `Guidance.actionsToFinish` | Exact remaining productive minimum |
+
+Gate actions are not tile coordinates. Flow, Trail, hints, accessibility and fixtures must branch on `isGateAction`. Reopening an already open gate is rejected without history or charge. Undo of a latest manual opening closes exactly that gate.
+
+History can exceed N: its bound includes exits, four initial openings and gate bits closed by switches. Typed history/budget are saved together. Dropping gate entries would make replayed gate state incorrect.
+
+## Recoverability and planning
+
+An initial certificate proves an acyclic spatial dependency order. Legal removal only deletes piece/key blockers. Gate changes cannot add spatial blockers, and every closed required border can be opened manually. From any reached subset, a spatially free piece can therefore leave after opening its gate; repeating clears the board.
+
+This proves forward logical recoverability for all L/M/T branches, **not that every branch fits its remaining budget**. Exact planning measures inefficient choices; Undo/refund and free restart handle exhaustion. Fast V4 `hasSolution`/`isDeadEnd` use the certified structural property, while exact productive costs are computed separately.
+
+The UI searches an isolated typed-history snapshot in a background worker and discards stale generations. Physical previews do not call the planner. Development-host measurements do not establish Android or low-end latency.
+
+## Identity protocol
+
+Codes retain `LD1-<family>-<base36 value>-<CRC32>`. CRC32 detects copying errors; it carries no authentication, reward or ownership proof.
+
+| Family | Lookup | Scope |
 |---|---|---|
-| Journey v2 | `BalancedCatalog.getV2(1..1000)` | G, 1–1,000 |
-| Remix v2 | `BalancedCatalog.remixV2(1..240)` | H, 1–240 |
-| Previous balanced Journey / Remix | `BalancedCatalog.legacyGet(1..240)` / `.legacyRemix(1..240)` | B / Q, unchanged |
-| Original Journey / Remix | `LevelCatalog.get(1..240)` / `.remix(1..240)` | C / R, unchanged |
-| Existing event seed | `LevelCatalog.event(long)` | E, nonnegative Java `long` |
-| Sealed passages prototypes | `SealedCatalog.get(1..6)` | P, 1–6 |
+| L/M | `StrategyCatalog.get(1..1000)` / `.remix(1..240)` | Current V4 route |
+| T | `StrategyCatalog.event(long)` | Current V4 event identity |
+| J/K | `BalancedCatalog.get(1..1000)` / `.remix(1..240)` | Preserved V3 |
+| G/H | `BalancedCatalog.getV2(1..1000)` / `.remixV2(1..240)` | Preserved V2 |
+| B/Q | `BalancedCatalog.legacyGet(1..240)` / `.legacyRemix(1..240)` | Original balanced order |
+| C/R | `LevelCatalog.get(1..240)` / `.remix(1..240)` | Original campaign/Remix |
+| E | `LevelCatalog.event(long)` | Historical event rules |
+| P | `SealedCatalog.get(1..6)` | Historical workshop practice |
 
-All families use the canonical `LD1-<family>-<base36 value>-<CRC32>` structure. The 1.5 encoders are `encodeBalancedV2()`, `encodeBalancedRemixV2()` and `encodeSealed()`; 1.6 adds `encodeBalancedV3()` / `encodeBalancedRemixV3()` for J/K. Reusing an old family for new layouts would break shared challenges, so historical routes remain frozen. In the preserved 1.5 artifact, valid old content-2/policy-1 sessions keep their board and allowance, and fresh runs select content 3/policy 2. [Historical installed upgrade evidence](RELEASE_1_5.md).
+`encodeStrategy`, `encodeStrategyRemix` and `encodeStrategyEvent` emit L/M/T. Existing encoders/checksums keep their meanings. Shared codes open their actual family in unlimited, reward-free mode 4, without powers or continuations. Manual gates are not retrofitted into J/K or earlier families.
 
-The preserved G/H fixtures are generated and analyzed offline, stored in `ProgressionV2Layouts`, and parsed/cached lazily. Runtime play does not generate or rebalance them. All have exact certified solutions, fixed N+2…4 allowances, and measured risky ordering choices after the introduction. The [V2 audit](data/progression-v2-summary.md) checks layout uniqueness under rotation/reflection/translation and reports exact legal-choice and seeded blind-tap baselines, without treating them as human difficulty ratings.
+T maps deterministically to the **980 audited L21–L1000 geometries** while retaining its seed identity. Its finite geometry closure is fully audited; it does not generate a unique layout per seed. Event APIs accept signed `long`; canonical E/T codes retain the nonnegative `long` domain including `Long.MAX_VALUE`, without floating-point conversion.
 
-`Level.barriers` adds immutable `Barrier(row, col, keyTileId)` definitions. An active wall blocks an exit ray until its matching key leaves; restoring the key closes it again. Both Board and the exact solver derive this from remaining pieces. P1–P6 contain 1–2 fixed cells and 4–7 pieces and run as unlimited/no-reward practice without powers. The P pack remains separate; current J/K content adds its own explicitly versioned seals while G/H stays wall-free. [Historical P oracle tests](validation/v1.5/sealed-tests.txt) · [Historical installed P checks](validation/v1.5/sealed-ui.txt).
+## Saved-board compatibility
 
-## Historical v1.1 design and protocol evidence
+| UI content version | Route retained |
+|---|---|
+| 5 | L/M or new T |
+| 4 | J/K |
+| 3 | G/H |
+| 2 | B/Q |
 
-The v1.1 engine adds a distinct **Remix** campaign with paired gate switches. The original 240 campaign boards and their save histories remain compatible. This is a new rule interaction and a controlled introduction, rather than a change to players' existing progression.
+UI content version, `Level.progressionVersion`, budget policy and challenge family have separate roles. An old valid active board is restored from its original family, never swapped for a same-numbered L board. Stars, unlocks, balances and equipment retain their local recorded positions.
 
-## The rule players can reason about
+New attempts/restarts use `startReversible` policy 3. Saved policy 2 restores its board/ledger, migrates through `toReversible`, then saves immediately: base/extensions stay fixed, historical `2 × prior Undos` overhead is refunded, blocked-attempt costs remain. Saved policy 1 stays charged when resumed; finishing or freely restarting leaves that old attempt. [Budget validation](MOVE_BUDGET_POWERUPS.md).
 
-A tile exits in its arrow direction when its ray is clear and that side's gate is open. A switch activates **after** its tile has left:
+## Verification and archives
 
-- An ordinary tile changes no gate.
-- A single switch changes one gate.
-- A paired switch changes exactly two gates at the same time. An open gate closes; a closed gate opens.
+[Current exhaustive evidence](validation/v1.8/engine/README.md) covers 1,240 unique boards under D4 transforms, translation and reordered IDs; 13,254,058 reachable action states; 57,403,554 transitions; independent exact minima; previews; Undo; typed saves; zero-action refunds; migration; and all 980 T geometries. Complete runtime plans are sampled in addition to exhaustive cost/transition checks.
 
-There is no all-four toggle in Remix. Both affected sides must be shown on the tile and in the move preview. Undo reverses the tile removal and both gate changes atomically. The exit itself uses the gate state before the switch fires, so a switch may close its own exit after leaving.
-
-Example: with the top and right gates open, an upward tile that changes the right and left gates can leave through the top, close the right, and open the left. The top stays open. A leftward tile can now exit if its path is clear.
-
-## Content families and compatibility
-
-| Family | API | Content | Compatibility contract |
-| --- | --- | --- | --- |
-| Original campaign | `LevelCatalog.get(1..240)` | Existing progression and single switches | Unchanged layouts, IDs, initial gates and certified solutions |
-| Remix | `LevelCatalog.remix(1..240)` | 240 separate boards; paired switches throughout | Distinct progress; original saves never become Remix saves |
-| Existing daily/weekly challenge | `LevelCatalog.event(long)` | Existing deterministic seeded event boards | Existing event generation retained |
-| Paired-switch seed validation | `LevelCatalog.remixEvent(long)` | Independent 6×6 paired-switch boards | Used for arbitrary-seed engine validation; not an additional advertised event mode |
-
-The product unlocks Remix after original campaign level 12. This keeps the first experience focused on movement and the existing gate rule. The engine remains independent of progress storage and does not grant unlocks or rewards.
-
-The original board fingerprint, captured before the change, is:
-
-```text
-7cdbb8a4d94fe8ddb468a2ade2fa214b258cedd6bc5cbe24a74ee7c029b2893a
+```sh
+./scripts/test-strategy-v4.sh
 ```
 
-The v1.1 Remix board fingerprint is:
-
-```text
-9839d4f6fcf785e14f6a8e66c368a2a797c8d77a1594813d56735c1ddab35208
-```
-
-The test fingerprints serialize board number, size, initial gate state and each stable tile's ID, row, column, direction and switch mask. Any later content change must preserve the boards already referenced by `LD1` challenge codes, or introduce a new protocol version. It must not silently remap a friend's code.
-
-## First twelve Remix boards
-
-These layouts are explicit, frozen definitions in `RemixCatalog`, selected to introduce one interaction at a time. They are not regenerated at launch.
-
-| Board | Teaching intent | Tiles | Switches (paired) | Initial legal / unsafe exits | Ray dependencies | Ray depth |
-| --- | --- | ---: | ---: | ---: | ---: | ---: |
-| 1 | Open top and bottom together | 10 | 1 (1) | 2 / 0 | 10 | 4 |
-| 2 | Rotate the rule: open left and right | 10 | 1 (1) | 2 / 0 | 12 | 6 |
-| 3 | Read an adjacent pair | 10 | 1 (1) | 2 / 0 | 12 | 4 |
-| 4 | Exchange an open side for a closed side | 11 | 2 (2) | 2 / 0 | 12 | 5 |
-| 5 | Link two paired transitions | 11 | 2 (2) | 2 / 0 | 13 | 6 |
-| 6 | Combine one paired and one single switch | 11 | 2 (1) | 2 / 0 | 11 | 4 |
-| 7 | Introduce a reversible ordering fork | 12 | 3 (3) | 3 / 1 | 14 | 4 |
-| 8 | Interleave paired switches and ray clearing | 12 | 3 (3) | 2 / 0 | 16 | 6 |
-| 9 | Recognize a gate-dependent fork | 12 | 3 (2) | 2 / 1 | 15 | 8 |
-| 10 | Plan a longer transition chain | 13 | 4 (4) | 2 / 0 | 20 | 7 |
-| 11 | Carry the rule across all four sides | 13 | 4 (4) | 2 / 0 | 19 | 7 |
-| 12 | Resolve a mixed-switch chain | 13 | 4 (3) | 2 / 0 | 14 | 8 |
-
-“Unsafe” means a legal initial exit leaves no exact completion without undo. The first six boards have no unsafe **initial** choices; this is not a claim that every later move is safe. A ray dependency counts a tile directly ahead of another tile's arrow in the initial layout, including more distant blockers. Ray depth is the longest chain of those spatial dependencies. It excludes gate transitions, so it is a structural measure rather than a player difficulty rating.
-
-## Later pacing and construction
-
-- Boards 13–50 contain 13 tiles, 51–88 contain 14, 89–126 contain 15, 127–164 contain 16, 165–202 contain 17, and 203–240 contain 18.
-- Boards 1–60 use a 5×5 grid; boards 61–240 use 6×6.
-- Generated Remix boards have 3–7 switches. All but one are paired switches; the remaining switch changes a single gate.
-- The certified first and last exits are ordinary tiles, which separates the feedback for leaving from the feedback for a switch.
-
-The generator constructs a legal solution backwards. When inserting a tile, it chooses a clear exit ray and computes the required previous gate state by XOR. Reversing those insertions is a certified completion. Sixteen deterministic candidates are compared for spatial blockers, gate dependencies, varied directions and a useful initial choice count. Generation does not depend on network access or an AI service.
-
-Across the 240 Remix boards, the measured averages are **15.30 tiles**, **4.69 switches** including **3.73 paired switches**, **2.55 legal initial exits**, **0.14 unsafe initial exits**, **19.87 ray dependencies**, and **6.21 ray depth**. Each board has a distinct full layout signature. These measurements demonstrate structural variety and exact solvability. Human playtests must establish clarity, perceived difficulty and enjoyment; these figures do not predict retention or commercial success.
-
-## Friend challenge codes
-
-`ChallengeCode` is a pure Java board identifier with no Android dependency:
-
-```java
-String code = ChallengeCode.encodeRemix(7); // LD1-R-7-B3B86BE2
-ChallengeCode challenge = ChallengeCode.parse(code);
-// challenge.kind == ChallengeCode.Kind.REMIX
-// challenge.value == 7L
-```
-
-| Family | Example | Resolved board |
-| --- | --- | --- |
-| Original | `LD1-C-1-473F0790` | Original campaign 1 |
-| Remix | `LD1-R-7-B3B86BE2` | Remix 7 |
-| Event | `LD1-E-C29IA-98173BD8` | Existing event seed 20261026 |
-
-The canonical format is `LD1-<C/R/E>-<uppercase base36 value>-<8 uppercase hexadecimal CRC32 digits>`. The checksum covers everything before the final separator. Original and Remix values are bounded to 1–240. Event seeds use the full exact nonnegative Java `long` range, 0–9223372036854775807. No value passes through floating-point arithmetic. The longest valid code is 28 characters.
-
-`parse` returns `null` for unknown versions, families, negative values, overflow, out-of-range boards, leading zeros, lowercase, extra whitespace, non-ASCII value characters, oversized input, malformed checksums or altered content. The UI may extract a code from its custom challenge URI before calling this strict parser; the engine parser itself accepts only a code.
-
-The Android app accepts either code text or `lumadrift://challenge/<code>` through the import dialog and its `VIEW` intent. The UI trims surrounding pasted whitespace, extracts one URI path segment, and rejects query strings or fragments before parsing. `MainActivity` handles both a new launch and `onNewIntent` when the activity is already visible. In a friend session, `C` resolves to `get`, `R` to `remix`, and `E` to the existing `event` generator. The saved session retains the code and replays the validated move history against that same family and value. A friend may open a locked board, but that session cannot unlock progression or award coins, XP or mission credit; consumable powers are disabled.
-
-A checksum catches copying errors and many alterations. It does not authenticate the sender or establish a verified score. A code contains no user identifier, reward, leaderboard result or saved run. Shared challenges must not modify campaign unlock state or provide repeatable reward farming.
-
-## Reproducible validation
-
-Run `scripts/test-engine.sh` with JDK 17. The dependency-free suite checks:
-
-- All 240 original boards and the pre-change content fingerprint.
-- All 240 Remix boards, their content fingerprint, distinct signatures and structural constraints.
-- 1002 existing event seeds and 1002 arbitrary paired-switch seeds, including both `long` extremes.
-- Every certified exit, exact gate transition, undo, restart, save replay and corrupt-save atomicity.
-- Exact hints and alternative legal starts, including losing choices that correctly require undo.
-- A dedicated paired-switch fixture that opens one gate and closes another in the same action.
-- All original/Remix challenge codes, 1007 event round trips including `Long.MAX_VALUE`, malformed/overflow/tamper cases and 10000 arbitrary parser inputs.
-
-The recorded run completed **435314 assertions** over the 2484 boards/seeds, including **1543 alternate legal starts**, of which **53** correctly required undo. Runtime on this development machine was **5.67 seconds**. See [the captured test output](validation/engine-tests.txt). This is engine correctness evidence; Android input, layout, audio, install/update and physical-device performance require their own checks.
-
-For emulator interaction, `EngineFixture remix 7` prints the board size and certified tap positions. Existing original/event fixture arguments remain supported.
+Historical methods and original evidence remain separate: [V3 J/K](PROGRESSION_V3.md), [V2 G/H](data/progression-v2-summary.md), [B/Q measurements](data/difficulty-summary.md), [P workshop](validation/v1.5/sealed-tests.txt), and [1.7 trap diagnosis](LEVEL_MANAGEMENT_REVIEW.md). Preserved release reports are not rewritten as V4 acceptance.

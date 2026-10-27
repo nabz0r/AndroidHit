@@ -1,5 +1,24 @@
 # Luma Drift — illustrated tour
 
+## Current 1.8: learn, explore and recover
+
+These unedited views come from the final **Lab 1.8.0-sandbox / code 9**. The [native qualification record](validation/v1.8/SDK_UI_FINAL.md) identifies each APK, run and limitation. The menu run passes 47 checks; a separate core run completed the first 100 Journey boards with 2,015 passing assertions before a menu-selector failure. That failed run remains labelled failed. A fresh second installation checks actual first arrival, skipping, resuming and claiming the tutorial reward once.
+
+<p><img src="screenshots/v1.8/ui-sdk-final-menus/home-fr-localized.png" width="225" alt="Actual final Lab 1.8 French guest home"><img src="screenshots/v1.8/ui-sdk-final-menus/tutorial-key-fr.png" width="225" alt="Actual key and seal practice in final Lab 1.8"><img src="screenshots/v1.8/ui-sdk-final-full/journey-13-start-en.png" width="225" alt="Actual new L13 and its per-board action budget"></p>
+
+The original Dream Glade environment, soft surfaces, illustrated powers and clearer possession labels give the interface one visual family. Seven interactive lessons use real mini-boards, with a moving hand, a tap or directional drag, keys, gates, Undo and a hint. Practice preserves the campaign and consumes no stock. Completing it grants 100 LumaCoins and two hints once per installation.
+
+The new L/M/T boards permit manual gate opening. Free Undo refunds its action in policy 3, including at zero remaining moves. The full engine audit covers every reachable action state in the finite new catalogue; Android tests cover the first 100 Journey boards. Neither proves that human players will find the desired difficulty curve. [Progression](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [UX](UX_1_8.md) · [Release](RELEASE_1_8.md).
+
+<p><img src="screenshots/v1.8/ui-sdk-final-menus/wardrobe-fr-localized.png" width="225" alt="Final Lab 1.8 wardrobe with ownership and slots"><img src="screenshots/v1.8/ui-sdk-final-menus/rewards-fr-localized.png" width="225" alt="Actual seven-visit gifts and quests"><img src="screenshots/v1.8/ui-sdk-final-menus/map-1000-fr.png" width="225" alt="Actual final Lab 1.8 map explored to locked level 1000"></p>
+
+The website uses ten byte-identical copies of the passing final menu captures, separately documented from production binary startup. This browser view is a **local source preview**, not a public-origin screenshot. [Website delivery evidence](validation/site-v1.8/README.md).
+
+<img src="screenshots/site-v1.8/desktop-home-final-fr.png" width="760" alt="Local final French 1.8 website preview with the actual Android home image">
+
+## Preserved 1.7 presentation
+
+
 ## Final Lab 1.7: a longer route and a dressed companion
 
 These unedited captures come from **Lab 1.7.0-sandbox / code 8**, exact APK `d7fea345…`, on the API-36 arm64 emulator with a 16KB-page kernel. The [passing native run](validation/v1.7/ui-sdk-final-menus2/host-report.json) records 38 assertions and 32 PNGs. It uses a guest qualification session without profile injection, spends actual local coins on its earned capsule, and restores the original preferences byte for byte afterward. They are Lab screenshots, not production or real-account acceptance.

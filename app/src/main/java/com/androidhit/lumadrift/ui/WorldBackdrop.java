@@ -9,34 +9,39 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import com.androidhit.lumadrift.R;
 
-/** One decoded environment, reused across scenes; no bitmap allocation in draw(). */
+/** One original dream garden, decoded once and reused. Biomes are restrained color variations of that shared scene. */
 public final class WorldBackdrop {
     private final Paint paint = new Paint(Paint.FILTER_BITMAP_FLAG);
     private final Rect source = new Rect();
     private final RectF destination = new RectF();
     private Bitmap bitmap;
     private int biome;
-    private static final int[] TINTS={0x00212649,0x2c36d6a3,0x32ef9873,0x2c9ba9e7,0x2c53bfea,0x30edb963,0x406a5daa,0x40c36537,0x3fe296c8,0x36c7b8f7};
+    private static final int[] TINTS={
+        0x00fff0e8,0x1a9ce0c0,0x1cffc4aa,0x1abdc5ff,0x1a99dcec,
+        0x1cffdc92,0x20c9b1e9,0x1cecae8d,0x20ffc8e0,0x1ecab8ef
+    };
     public void setBiome(int value){biome=Math.max(0,Math.min(9,value));}
     public WorldBackdrop(Context context) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inScaled = false;
         options.inPreferredConfig = Bitmap.Config.RGB_565;
-        bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.aurora_atlas_v1, options);
+        bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.dream_glade_v18, options);
     }
     public void draw(Canvas canvas, float width, float height, boolean quiet, int background) {
-        if (bitmap == null || bitmap.isRecycled()) return;
+        if (bitmap == null || bitmap.isRecycled() || width<=0 || height<=0) return;
         float ratio = width / height;
-        int cropWidth = Math.min(bitmap.getWidth(), Math.round(bitmap.getHeight() * ratio));
-        int cropHeight = Math.min(bitmap.getHeight(), Math.round(bitmap.getWidth() / ratio));
+        int cropWidth = Math.min(bitmap.getWidth(), Math.max(1,Math.round(bitmap.getHeight() * ratio)));
+        int cropHeight = Math.min(bitmap.getHeight(), Math.max(1,Math.round(bitmap.getWidth() / ratio)));
         int left = (bitmap.getWidth() - cropWidth) / 2;
         int top = bitmap.getHeight() - cropHeight;
         source.set(left, top, left + cropWidth, top + cropHeight);
         destination.set(0, 0, width, height);
-        paint.setAlpha(quiet ? 95 : 230);
+        paint.setAlpha(255);
         canvas.drawBitmap(bitmap, source, destination, paint);
-        paint.setAlpha(255);paint.setColor(TINTS[biome]);canvas.drawRect(destination,paint);
-        paint.setColor((background & 0xffffff) | ((quiet ? 140 : 30) << 24));
+        paint.setColor(TINTS[biome]);canvas.drawRect(destination,paint);
+        // Quiet scenes keep the garden's warmth while making the board and inventory the focus.
+        // The veil is always light, including when an older save has selected a previously dark theme.
+        paint.setColor(quiet ? 0x87fff8f3 : 0x25fff8f3);
         canvas.drawRect(destination, paint);
     }
     public void close() {

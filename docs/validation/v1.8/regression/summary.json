@@ -1,0 +1,92 @@
+[
+  {
+    "suite": "data",
+    "exit_code": 0,
+    "elapsed_seconds": 1.609,
+    "result": "PASS 8882 data, economy, campaign, Remix, milestone, event and localization checks"
+  },
+  {
+    "suite": "economy",
+    "exit_code": 0,
+    "elapsed_seconds": 2.114,
+    "result": "DURABILITY MODEL: memory-before-disk failures and process reload are simulated; no physical storage fault was injected"
+  },
+  {
+    "suite": "meta",
+    "exit_code": 0,
+    "elapsed_seconds": 2.03,
+    "result": "PASS exported journal parses as JSON and round-trips Unicode and control characters"
+  },
+  {
+    "suite": "collection-events",
+    "exit_code": 0,
+    "elapsed_seconds": 1.306,
+    "result": "Collection/event checks: 87121 passed."
+  },
+  {
+    "suite": "inventory",
+    "exit_code": 0,
+    "elapsed_seconds": 1.894,
+    "result": "PASS 1482 inventory presentation checks (synthetic preferences; no Android runtime or external services)"
+  },
+  {
+    "suite": "experience-layout",
+    "exit_code": 0,
+    "elapsed_seconds": 1.053,
+    "result": "PASS 1491 ExperienceLayout checks (pure geometry; installed clipping, legibility and gestures require Android QA)"
+  },
+  {
+    "suite": "audio",
+    "exit_code": 0,
+    "elapsed_seconds": 2.78,
+    "result": "65 DSP checks passed"
+  },
+  {
+    "suite": "audio-biomes",
+    "exit_code": 0,
+    "elapsed_seconds": 14.253,
+    "result": "Preview is a 20-second rendered montage at default gain, not a recording of device playback."
+  },
+  {
+    "suite": "billing-policy",
+    "exit_code": 0,
+    "elapsed_seconds": 0.726,
+    "result": "Billing policy and production copy: 248 checks passed"
+  },
+  {
+    "suite": "wallet-recovery",
+    "exit_code": 0,
+    "elapsed_seconds": 0.622,
+    "result": "Wallet recovery lifecycle: 19 checks passed (provider doubles; no Google transaction)"
+  },
+  {
+    "suite": "identity",
+    "exit_code": 0,
+    "elapsed_seconds": 1.125,
+    "result": "NOT VALIDATED: actual Google chooser, OAuth/Firebase server exchange, real account reconnect/sign-out/deletion on a device."
+  },
+  {
+    "suite": "social-languages",
+    "exit_code": 0,
+    "elapsed_seconds": 1.472,
+    "result": "SCOPE: source/JVM localization only; no provider, network, installed screen or native-speaker review is inferred."
+  },
+  {
+    "suite": "cosmetic-vault",
+    "exit_code": 0,
+    "elapsed_seconds": 1.479,
+    "result": "No real sign-in, ID token, HTTPS request, purchase, LumaGold debit or device rendering occurred. Mutable switches belong only to the JVM test BuildConfig adapter."
+  },
+  {
+    "suite": "rewards-cosmetics",
+    "exit_code": 0,
+    "elapsed_seconds": 2.427,
+    "result": "PASS 100953 v1.7 rewards, wardrobe, earned capsules, quests and gift persistence checks"
+  },
+  {
+    "suite": "tutorial",
+    "exit_code": 0,
+    "elapsed_seconds": 2.338,
+    "result": "SCOPE: pure JVM session and real GameStore with deterministic Android preference doubles; installed touch/rotation/rendering require separate SDK UI checks."
+  }
+]

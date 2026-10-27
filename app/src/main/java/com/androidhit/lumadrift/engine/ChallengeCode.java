@@ -10,7 +10,7 @@ import java.util.zip.CRC32;
  */
 public final class ChallengeCode {
     public enum Kind { CAMPAIGN, REMIX, EVENT, BALANCED, BALANCED_REMIX, BALANCED_V2, BALANCED_REMIX_V2, SEALED,
-        BALANCED_V3, BALANCED_REMIX_V3 }
+        BALANCED_V3, BALANCED_REMIX_V3, STRATEGY, STRATEGY_REMIX, STRATEGY_EVENT }
     /** Full nonnegative Java long range; no floating-point conversion occurs. */
     public static final long MAX_EVENT_SEED = Long.MAX_VALUE;
     public final Kind kind;
@@ -33,6 +33,9 @@ public final class ChallengeCode {
     public static String encodeBalancedV3(int number){return encode(Kind.BALANCED_V3,number);}
     public static String encodeBalancedRemixV3(int number){return encode(Kind.BALANCED_REMIX_V3,number);}
     public static String encodeSealed(int number){return encode(Kind.SEALED,number);}
+    public static String encodeStrategy(int number){return encode(Kind.STRATEGY,number);}
+    public static String encodeStrategyRemix(int number){return encode(Kind.STRATEGY_REMIX,number);}
+    public static String encodeStrategyEvent(long seed){return encode(Kind.STRATEGY_EVENT,seed);}
 
     public static String encodeEvent(long seed) { return encode(Kind.EVENT, seed); }
 
@@ -52,6 +55,9 @@ public final class ChallengeCode {
             case 'P': kind = Kind.SEALED; break;
             case 'J': kind = Kind.BALANCED_V3; break;
             case 'K': kind = Kind.BALANCED_REMIX_V3; break;
+            case 'L': kind = Kind.STRATEGY; break;
+            case 'M': kind = Kind.STRATEGY_REMIX; break;
+            case 'T': kind = Kind.STRATEGY_EVENT; break;
             default: return null;
         }
         if (code.charAt(5) != '-') return null;
@@ -79,15 +85,16 @@ public final class ChallengeCode {
         if (!valid(kind, value)) throw new IllegalArgumentException("Challenge value outside supported range");
         char family = kind == Kind.CAMPAIGN ? 'C' : kind == Kind.REMIX ? 'R' : kind == Kind.BALANCED ? 'B'
                 : kind == Kind.BALANCED_REMIX ? 'Q' : kind == Kind.BALANCED_V2 ? 'G' : kind == Kind.BALANCED_REMIX_V2 ? 'H'
-                : kind == Kind.SEALED ? 'P' : kind == Kind.BALANCED_V3 ? 'J' : kind == Kind.BALANCED_REMIX_V3 ? 'K' : 'E';
+                : kind == Kind.SEALED ? 'P' : kind == Kind.BALANCED_V3 ? 'J' : kind == Kind.BALANCED_REMIX_V3 ? 'K'
+                : kind == Kind.STRATEGY ? 'L' : kind == Kind.STRATEGY_REMIX ? 'M' : kind == Kind.STRATEGY_EVENT ? 'T' : 'E';
         String body = "LD1-" + family + "-" + Long.toString(value, 36).toUpperCase(Locale.ROOT);
         return body + "-" + checksum(body);
     }
 
     private static boolean valid(Kind kind, long value) {
-        if(kind == Kind.EVENT) return value >= 0 && value <= MAX_EVENT_SEED;
-        int maximum = kind == Kind.SEALED ? SealedCatalog.COUNT : kind == Kind.BALANCED_V2 || kind == Kind.BALANCED_V3 ? BalancedCatalog.LEVEL_COUNT
-                : kind == Kind.BALANCED_REMIX_V2 || kind == Kind.BALANCED_REMIX_V3 ? BalancedCatalog.REMIX_COUNT
+        if(kind == Kind.EVENT || kind == Kind.STRATEGY_EVENT) return value >= 0 && value <= MAX_EVENT_SEED;
+        int maximum = kind == Kind.SEALED ? SealedCatalog.COUNT : kind == Kind.BALANCED_V2 || kind == Kind.BALANCED_V3 || kind==Kind.STRATEGY ? BalancedCatalog.LEVEL_COUNT
+                : kind == Kind.BALANCED_REMIX_V2 || kind == Kind.BALANCED_REMIX_V3 || kind==Kind.STRATEGY_REMIX ? BalancedCatalog.REMIX_COUNT
                 : kind == Kind.CAMPAIGN ? LevelCatalog.LEVEL_COUNT : LevelCatalog.REMIX_COUNT;
         return value >= 1 && value <= maximum;
     }
@@ -104,6 +111,9 @@ public final class ChallengeCode {
             case BALANCED_REMIX_V2: return BalancedCatalog.remixV2(number);
             case BALANCED_V3: return BalancedCatalog.get(number);
             case BALANCED_REMIX_V3: return BalancedCatalog.remix(number);
+            case STRATEGY: return StrategyCatalog.get(number);
+            case STRATEGY_REMIX: return StrategyCatalog.remix(number);
+            case STRATEGY_EVENT: return StrategyCatalog.event(value);
             case SEALED: return SealedCatalog.get(number);
             default: return LevelCatalog.event(value);
         }

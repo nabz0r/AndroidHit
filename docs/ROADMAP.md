@@ -1,6 +1,18 @@
 # Luma Drift roadmap
 
-## Current candidate — 1.7 route recovery, wardrobe and service rollout
+## Current 1.8 — all levels, learning and a readable world
+
+[Delivered scope, artifacts and evidence](RELEASE_1_8.md) · [V4 content](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [UX](UX_1_8.md). The user prioritized every level and presentation over Google/social/commercial activation. The former manual-gate proposal is implemented in separate L/M/T families, with exact productive-action budgets and free refunded correction. Historical J/K and older codes remain unchanged.
+
+Next decisions, in order:
+
+1. Observe first-time players on the7-lesson tutorial and levels1–30. Check recognition of the key/seal, a switch preview, a paid action versus free preview, and free Undo at 0. No payment or ad is needed for a certified completion.
+2. Calibrate the measured structural progression with human errors/comprehension rather than claiming normal/hard/expert labels predict CandyCrush-like retention. Review levels31–100 andlater biome peaks on modest physical phones, large fonts and TalkBack.
+3. Evaluate first-session clarity, voluntary replay and completed D1/D7 cohorts with explicit observation/opt-in tooling. No false near miss, fake limited stock or automatic price escalation is part of the fixed route.
+4. Resume the [two-real-account Google/friends/gift qualification](QUALIFICATION_SOCIALE.md). Prepared virtual Androids and source simulations are not actual Google-account acceptance.
+5. Qualify UMP consent/decline, live AdMob eligibility andPlay license-test purchase/pending/refund/recovery before producing a separately reviewed live build. Paid cosmetics remain disabled on client and server.
+
+## Preserved milestone — 1.7 route recovery, wardrobe and service rollout
 
 Published signed production **1.7.0-rc1 / code 8**, with isolated **1.7.0-sandbox**; all four public downloads have [independent size/hash verification](validation/v1.7/publication.json). [Scope and qualification](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Economy](ECONOMY_1_7.md) · [Executed record](validation/v1.7/README.md). Final Lab/production native runs pass with restored preferences, and [Cloud Run deployment/basic probes](validation/v1.7/cloud-run.json) are recorded. [Website 1.7 publication](validation/site-v1.7/README.md) is confirmed from exact main `4c5f5ca8`, with all 47 source payloads hash-verified before Firebase completion. Real authenticated two-account and commercial qualification remain separate.
 

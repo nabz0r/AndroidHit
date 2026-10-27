@@ -1,14 +1,17 @@
 # Development and architecture
 
-Current source declares **production 1.6.0-rc1** and **Lab 1.6.0-sandbox**, both Android version code 7. Final artifact identity and integrated runtime acceptance belong to the [1.6 candidate record](RELEASE_1_6.md). Signed 1.1–1.5 packages and their dated reports remain preserved; their hashes and checks do not qualify the newer candidate. [Preserved artifact record](RELEASE.md) · [Historical 1.5 acceptance](VALIDATION.md).
+Current source declares **production 1.8.0-rc1** and **Lab 1.8.0-sandbox**, code **9**. [Current release and exact bytes](RELEASE_1_8.md) · [V4 engine](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [UX contract](UX_1_8.md). Build with JDK21 for the pinned lint analyzer; Java17 source remains supported.
+
+The component/build details below retain their earlier historical references; current content uses StrategyCatalog L/M/T, content save5 and reversible budget policy3. Current 1.7 policy2 saves migrate with their exact old layout/base; historical codes are unchanged. New exact guidance runs off the UI thread on one worker with one coalesced queued request.
 
 ## Components
 
 | Area | Responsibility |
 |---|---|
-| `engine/` | Pure Java boards/gates/key walls and exact solver; frozen 1,000 J Journey + 240 K Remix rows and metadata, preserved G/H/C/R/B/Q identities, six P workshop boards and versioned action ledger |
+| `engine/` | Pure Java boards, typed exits/gate openings, bounded exact V4 planner; frozen 1,000 L + 240 M rows, finite T event closure and all historical identities |
+| `onboarding/` | Seven pure-Java practice lessons, validated phase/history save and six-language contextual instructions |
 | `data/` | Local coins/inventory/progress/events/settings, six-language copy, XP/missions, 18 items across three equipment slots, durable power-use receipts and optional local play journal |
-| `LumaView` / `MainActivity` / `ui/` | Canvas game, ten-board saga/briefing, inventory presentation, scroll/touch layout, virtual controls, effects, local session persistence and wallet recovery |
+| `LumaView` / `MainActivity` / `ui/` | Canvas game, full saga/briefing, tutorial, pastel presentation, native virtual controls, matching directional drags, local session persistence and wallet recovery |
 | `commerce/` | Three guarded rewarded placements, UMP, real Billing offer/owned-purchase adapter, isolated Lab simulator and production wallet UI |
 | `wallet/` | HTTPS authenticated client, account-scoped permanent cosmetic cache, foreground owned-purchase recovery |
 | `identity/` | Explicit Credential Manager → Google → Firebase Auth login, guarded session snapshots/foreground refresh, optional restoration and account deletion |
@@ -61,6 +64,8 @@ Collection reads the actual output metadata and generated BuildConfig, checks ch
 ## Tests
 
 ```sh
+scripts/test-strategy-v4.sh
+scripts/test-tutorial-v18.sh
 scripts/test-engine.sh
 scripts/test-progression-v3.sh
 scripts/test-data.sh
@@ -82,13 +87,13 @@ python3 scripts/smoke-production.py --serial emulator-5580
 
 The UI script refuses phone serials and does not reset application data or select a Google account. Its recorded fresh-game run completes Journey 1 after normalizing language; reuse with a save already beyond that board requires choosing the intended board explicitly. Never reset a physical device for a test. Inspect captures and the crash buffer; compilation is not runtime validation.
 
-The JVM Android/storage/provider adapters are explicit test doubles and are not packaged. They model disk failure, callbacks and accounts, not actual Android flash faults or Google receipts. The server's independent **real Firestore emulator** test exercises its production database transaction adapter/rules; Firebase identity and Play payments still need owner-account qualification. [Server tests](../server/TESTING.md), [web tests](PUBLIC_PAGES.md#executed-validation).
+The JVM Android/storage/provider adapters are explicit test doubles and are not packaged. They model disk failure, callbacks and accounts, not actual Android flash faults or Google receipts. The server's independent **real Firestore emulator** test exercises its production database transaction adapter/rules; Firebase identity and Play payments still need owner-account qualification. [Server tests](../server/TESTING.md), [web tests](PUBLIC_PAGES.md).
 
 `test-economy.sh` includes the power input/reservation model and avatar equipment/first-victory receipts. Installed Flow interruptions and equipment controls have separate [1.5 runtime evidence](VALIDATION.md#installed-android-acceptance); a JVM pass alone does not establish those UI behaviors.
 
 ## Persistence and value boundaries
 
-Local SharedPreferences retain earned coins, stars/unlocks, settings, inventory, XP, equipment ownership/loadout and local calendar/event claims. A session snapshot stores board identity/history, content/budget versions, action allowance, run/request IDs, Shield/Charm protection, timed-preview remainder, Flow steps and applied continuation state. New runs use **content 4 / policy 2** and J/K. Valid content-3 attempts restore the exact G/H layout and original policy-2 allowance through `getV2()` / `remixV2()`; content-2 attempts retain B/Q and their saved policy. `Level.progressionVersion` (3 for J/K, 2 for G/H, 0 otherwise) selects the correct frozen margin independently of the UI save schema. Unsupported session formats reset with a notice while earned progress/economy remain at numbered slots. C/R/B/Q/G/H/P/E friend identities are preserved by `ChallengeCode.resolve()`. Date/clock/save data are device-controlled and never authorize paid gold. [Content compatibility and host checks](PROGRESSION_V3.md).
+Local SharedPreferences retain earned coins, stars/unlocks, settings, inventory, XP, equipment ownership/loadout and local calendar/event claims. A session snapshot stores board identity/history, content/budget versions, action allowance, run/request IDs, Shield/Charm protection, timed-preview remainder, Flow steps and applied continuation state. New runs use **content 5 / policy 3** and L/M/T; content4 J/K remains restorable. The following historical accounting descriptions refer to policies1/2, not new refunded Undo. Valid content-3 attempts restore the exact G/H layout and original policy-2 allowance through `getV2()` / `remixV2()`; content-2 attempts retain B/Q and their saved policy. `Level.progressionVersion` (3 for J/K, 2 for G/H, 0 otherwise) selects the correct frozen margin independently of the UI save schema. Unsupported session formats reset with a notice while earned progress/economy remain at numbered slots. C/R/B/Q/G/H/P/E friend identities are preserved by `ChallengeCode.resolve()`. Date/clock/save data are device-controlled and never authorize paid gold. [Content compatibility and host checks](PROGRESSION_V3.md).
 
 Present-piece taps, including unprotected blocked attempts, and successful Undo consume actions; every J/K progression board has a certified N-exit solution within its fixed N+3…5 budget. G/H retains N+2…4. Earned-coin/ad continuations share a maximum of two, cost 100 local earned coins or the announced rewarded offer and add `max(5, remaining pieces+3)`. Free restart remains. Six local powers unlock at Journey 1/5/12/25/45/75; every five distinct Journey clears can claim one deterministic eligible power. Activation requires confirmation, rejects active/overlapping use, reserves stock and durably saves the effect before committing the one-unit receipt. Interrupted Flow resumes its saved remaining exits. Local power prices use the bounded progression curve and equipped Aura discount; paid cosmetics use fixed server catalog prices.
 

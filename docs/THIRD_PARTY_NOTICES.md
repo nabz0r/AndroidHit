@@ -31,3 +31,7 @@ The Apache notices here are provenance, not a conclusion about all distribution/
 The 1.5 website/GitHub refresh adds no runtime framework, remote font or analytics package. Original vector companions and copied game captures retain their recorded source provenance; Google G remains the separate official branding asset. [Shared design and image categories](DESIGN_SYSTEM.md) · [Brand asset provenance](store/README.md).
 
 The 1.6 Android refresh adds the generated Aurora Atlas background, recorded with its exact prompt and pixel hash in [asset provenance](art/aurora-atlas-v1.json). It introduces no new runtime library. Puzzle pieces, companions and equipment remain code-drawn; no franchise artwork or audio is imported.
+
+## Dream Glade / presentation1.8
+
+Original built-in image generation output, no franchise/reference image inputs. [Prompt, copies and hash](art/dream-glade-v18.json). Native plush guide, fingertip, soft-volume puzzle pieces, power and clothing silhouettes are repository-native drawings; no Candy Crush or Crash Fever artwork, audio, characters or code is included.

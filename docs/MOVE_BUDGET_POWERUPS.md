@@ -1,139 +1,105 @@
-# Action budgets, optional continuation, and six powers
+# Productive budgets, refundable Undo and six powers
 
-> Current 1.5: new runs use fixed board-specific N+2…4 allowances, G/H layouts (1,000 Journey + 240 Remix), explicit power confirmation and durable effect recovery. Advanced charms protect at most one additional blocked attempt per run. Existing policy-1 attempts keep the historical allowances below until finished/abandoned. [Current rules and acceptance](RELEASE_1_5.md) · [Measured maps](data/progression-v2-summary.md).
+## Current 1.8 accounting
 
-## Current 1.5 activation and recovery
+Fresh attempts use **policy 3**, including new attempts on preserved content. Default L/M and T boards support manual gate openings. Their allowance is the **exact minimum productive exits/openings plus a fixed margin**. No power or purchase is needed to finish an authored initial board. [V4 specification](PROGRESSION_V4.md).
 
-The six effects and Journey unlocks below are retained. Tapping an available stocked power opens a confirmation showing its effect and one-unit stock cost; cancelling does not reserve or consume it. The controller rejects an already active effect and overlapping activation/Flow sequence, with a 450 ms input debounce. An unactivated reservation can be cancelled; a persisted activation commits its stock receipt once. `retryPowerCommit()` flushes a failed durable inventory transaction before reconciliation. A storage failure pauses further actions behind an explicit retry rather than accepting unsaved spending.
+| Action | Policy-3 cost |
+|---|---:|
+| Successful piece exit | 1 |
+| Confirmed opening of a closed gate | 1 |
+| Present but blocked piece attempt | 1 unless protected |
+| Successful Undo of an exit/opening | 0; refunds the original action |
+| Shield-protected blocked attempt | 0; consumes one protection charge |
+| Empty tap, missing piece, empty Undo, already open gate | 0 |
+| Inspect/cancel a preview, help, menus, pause/background time | 0 |
+| Spark, Vision, Focus or Trail activation | No additional actions; one confirmed stock unit |
+| Each actual Flow exit/opening | 1; activation has no extra action cost |
+| Restart | Free; creates a new reversible attempt |
 
-Spark/Vision retain up to 8 seconds, Focus 10 seconds and Trail 12 seconds; pause, help and background time freeze previews. Shield's remaining charges and Flow's remaining safe exits are saved. Flow resumes after interruption without a second stock debit and spends one action for each actual exit. Powers and continuations stay unavailable in unlimited friend practice, including all six P prototypes. [Installed power checks and fixture boundaries](VALIDATION.md#installed-android-acceptance).
+Undo restores exact board/gate/key state and refunds the productive action even at zero. It cannot refund an empty history, unrelated blocked taps, previously used powers or continuation currency. Undo alone does not lower the current star result. Blocked attempts may still exhaust a margin, so free restart remains available.
 
-Policy 2 reads Journey/Remix margins from each frozen board through `BalancedCatalog.mistakeAllowance()`. Event margins also use fixed board characteristics. `startLegacy()` / `restoreLegacy()` retain policy 1 for compatible interrupted runs; they do not replace its board with a G/H layout. The continuation debit remains **100 local earned coins**, despite legacy API names such as `spendGoldOnce`; account-purchased gold is separate. Real checkout remains gated and advertising uses sample units. The historical tables and test-gold terminology below are not current allowance tables or evidence of real purchases.
+All reached V4 states remain logically completable, but not necessarily within the current remaining allowance. Guidance distinguishes a fitting exact plan, insufficient actions and a historical gate-order dead end. The controller checks victory before exhaustion, including on the final action.
 
-## Historical Lab 1.3 contract
+## Initial allowances and guidance
 
-This is the implemented **Lab 1.3** contract. The [research note](MOVE_LIMITS_RESEARCH.md) records the official game and Google references checked before implementation. The original 1.2 APK and its historical evidence remain separate. Automated logic results below do not claim human enjoyment, retention, revenue, or live payment validation.
+| Range/mode | Fixed allowance |
+|---|---|
+| L/M 1–10 | Exact minimum +5 |
+| L/M 11–20 | Exact minimum +4 |
+| L/M 21 onward | Exact minimum +2 to +4, frozen per board |
+| New daily/weekly T | Exact minimum plus a margin from fixed event characteristics |
+| Shared challenge/P practice | Unlimited; no continuation route |
 
-## What an action means
+L/M productive minima range from **5–28**, initial allowances **10–31**. [All values](validation/v1.8/engine/strategy-authoring.csv). Old content retains its geometry; a new reversible attempt on C/R/B/Q/G/H/J/K still needs N exits because manual gates are not retrofitted to those rules.
 
-A board with **N pieces needs exactly N successful exits**: each exit removes one piece, and the certified solution achieves that lower bound. A successful-exit-only allowance would therefore add no decision cost. The action budget instead consumes:
+`Level.minimumActions` is the initial optimum. `Guidance.actionsToFinish` is the exact remaining productive cost, which can exceed remaining pieces. The UI searches an isolated typed-history snapshot in a single background worker and discards obsolete generations. Pending guidance shows a thinking state and cannot reserve a power. Host timings are not Android frame-time guarantees.
 
-| Action | Allowance cost |
-| --- | ---: |
-| Attempt a piece still on the board, successful or blocked | 1 |
-| Successful undo | 1 |
-| Blocked attempt protected by Shield | 0; consumes one Shield charge |
-| Empty tap, missing piece, undo with no history, selection or focus | 0 |
-| Help, pause, background time, Spark, Vision, Focus, Trail | 0 additional actions |
-| Each actual Flow exit | 1; no additional charge for the Flow button |
-| Restart | Free; starts a new run with its original allowance |
+## Optional continuation
 
-An undo restores a piece, so removing it again costs another action. For an ordinary completed run without protected blocks, the total is **N + blocked attempts + 2 × successful undos**. The allowance is based on the board and its progression position; it does not depend on payment history, advertising choices, losses, session length, or a player profile.
+Refundable Undo/free restart are the recovery choices. A continuation costs **100 earned LumaCoins** or the specifically announced earned-ad callback. Both share a maximum of **two per run**. Purchased LumaGold cannot authorize this local debit.
 
-## Initial allowances
-
-| Mode / progression | Initial allowance |
-| --- | --- |
-| Journey 1–3 | N + 8 |
-| Journey 4–6 | N + 6 |
-| Journey 7–30 | N + 5 |
-| Journey 31–90 | N + 4 |
-| Journey 91–240 | N + 3 |
-| Remix 1–3 | N + 6 |
-| Remix 4–12 | N + 5 |
-| Remix 13–60 | N + 4 |
-| Remix 61–240 | N + 3 |
-| Daily | N + 5 |
-| Weekly | N + 4 |
-| Friend challenge | Unlimited; no ad/gold continuation |
-
-Lab progression uses the [frozen balanced order](DIFFICULTY.md); the level number used for the allowance is its position in that order. Original C/R challenge layouts retain their original identities; friend practice stays unlimited on either family. A win on the final available action is a win. The controller checks solved state before displaying exhaustion.
-
-## Continuing an exhausted run
-
-Free Restart remains available. An optional continuation costs **100 gold** or requires the advertised earned-reward callback. Both paths share a limit of **two continuations per run**. There is no failure-based price increase.
-
-Each continuation grants:
+For exact remaining productive cost R, policy 3 adds:
 
 ```text
-max(5, remaining pieces + 3) additional actions
+max(5, R + 3) actions
 ```
 
-The offer can therefore cover every remaining exit plus three extra actions on a position that is still solvable. It does not repair an unsafe gate order, guarantee a win, or protect against subsequent mistakes. Undo or free restart remains necessary when the current board state has no completion.
+R includes required gate operations. The offer waits for valid guidance; a historical dead route is offered repair/restart rather than a claim that extra actions alone fix its gate order. Further inefficient/blocked actions can still lose the extended attempt.
 
-`MoveBudget.copy()` prepares the extension separately. The controller binds any callback to the saved board/run/extension request and applies a candidate budget only after the corresponding reward/debit and session state have been persisted. Opening, closing, loading, or failing an ad is not an earned reward. Consent, age and explicit advertising choice remain independent requirements; Google sign-in is unrelated to ad consent. The Lab continues to use test advertising and simulated purchase configuration.
+The controller saves a run-bound request, prepares a copied budget, and applies it only after matching debit/reward and session persistence. An ad's load/cancel/failure is not an earned reward; late callbacks cannot move to another attempt. Refundable Undo does not reset the extension quota or reimburse its currency.
 
-### Gold debit API
+The legacy-named `GameStore.spendGoldOnce(requestId, 100)` spends **local earned LumaCoins**. Debit/request marker share a commit; duplicate retries flush persistence without charging twice. This is not an account-wallet authorization or Play receipt. Age/consent and sample-ad/checkout gates retain their [separate contract](MONETIZATION_SETUP.md).
 
-`GameStore.spendGoldOnce(requestId, 100)` returns 100 for a new debit, or 0 for a duplicate/refusal. `hasGoldSpent(requestId)` distinguishes a recorded duplicate from insufficient funds or invalid input. Amounts other than exactly 100 are rejected, as are invalid IDs. The same marker cannot debit twice, even if the remaining wallet is below 100.
+## Six powers
 
-The debit and a SHA-256 request marker are written together in one preferences commit, under the same process-wide lock as gold credits. Android can update its in-memory preferences before a failed disk commit; therefore the duplicate branch forces another durability commit before success. A caller must not treat `hasGoldSpent()` alone as durable fulfillment after a persistence error. The session controller retains its pending request so an interrupted continuation can be retried. This is a local sandbox ledger, not a verified payment service or server-authoritative wallet.
+Unlocks refer to the unlocked Journey level; retained old stock cannot bypass a milestone. Base prices are LumaCoins before progression bands or disclosed equipment discounts.
 
-## Six progressively unlocked powers
+| Power | Unlock | Base pack | Current effect |
+|---|---:|---|---|
+| Spark (`hint`) | 1 | 3 for 45 | Show one exact next action for up to 8 seconds, including a required opening |
+| Vision | 5 | 3 for 40 | Highlight immediately legal piece exits for 8 seconds; no optimal-order verdict |
+| Flow | 12 | 2 for 60 | Perform up to 3 exact-plan productive actions, including openings; each costs one action |
+| Shield | 25 | 2 for 70 | Protect the next 3 blocked piece attempts from spending actions |
+| Focus | 45 | 2 for 80 | On V4, highlight one efficient next action for up to 10 seconds or until board change |
+| Trail | 75 | 2 for 90 | Number up to 5 typed solution actions for up to 12 seconds or until board change |
 
-Unlocks refer to reaching the indicated Journey level. Legacy saved inventory remains intact while an item is locked.
+Legacy Focus retains its all-safe-exits display. V4's current implementation highlights the first optimal action, not every equally optimal alternative. Gate instructions use **64–67**, not tile coordinates. Hint rendering, Trail and Flow distinguish them from exits. Vision remains a view of legal piece exits, not manual gate controls.
 
-| Power | Unlock level | Pack base price | Pack size | Effect |
-| --- | ---: | ---: | ---: | --- |
-| Spark (`hint`) | 1 | 45 | 3 | Reveal a safe next exit |
-| Vision | 5 | 40 | 3 | Highlight pieces that can currently exit for 8 seconds |
-| Flow | 12 | 60 | 2 | Perform up to 3 safe exits; each spends an action |
-| Shield | 25 | 70 | 2 | Protect the next 3 blocked attempts from spending actions |
-| Focus | 45 | 80 | 2 | Highlight all safe moves for up to 10 seconds or until the next board change |
-| Trail | 75 | 90 | 2 | Number up to the first 5 moves of one complete solution for up to 12 seconds or until the next board change |
+A successful exit, opening or Undo clears Focus/Trail; a blocked attempt does not change geometry. Flow requires enough actions for its at-most-three-action sequence before stock reservation. Pause/help/background freeze visual-effect duration; Shield charges and remaining Flow actions persist. Flow resumes from fresh generation-checked guidance without a second stock debit.
 
-A successful exit or Undo changes the board and clears Focus/Trail; a blocked attempt does not. Their expiry timers are visual previews, not puzzle time limits.
+## One-charge activation and persistence
 
-Pack prices use the existing public progression-only logarithmic curve. No power adds hidden allowance or changes the continuation formula. Inventory is capped at **999 units per power**. Purchases and use are rejected before unlock; a saved Vision/Flow starter stock cannot bypass that rule.
+A stocked power opens an explicit effect/stock confirmation. Cancel consumes nothing. Already-active duplicates, overlapping activation/Flow and input inside the 450 ms debounce are rejected. Guidance must be ready and fit the allowance before reservation.
 
-### Earned shop reward
+Activation reserves one unit, saves effect/session/request, then completes the stock receipt once. Failure before the effect is saved restores typed history, budget and prior effects before cancelling the reservation. A saved effect whose inventory commit fails blocks further actions behind retry/reconciliation. Recreated sessions distinguish a saved activation from an unused reservation. These source contracts do not claim installed storage-failure acceptance.
 
-`grantBoosterOnce(powerId, requestId)` grants exactly **one unit**, rather than a shop pack. It rechecks known ID, unlock, stock capacity, and request uniqueness. A request is bound globally to its first power, so a duplicated show ID cannot reward a different power. Full stock rejects without consuming the request ID. Marker and stock share one commit; duplicate retries flush memory-before-disk failures without awarding another unit.
+Powers and continuations are disabled in unlimited shared practice, including P boards. Free tutorial hint/Undo is separate from campaign inventory.
 
-`hasBoosterGranted(powerId, requestId)` observes the recorded target. As with gold, a grant call must first return without a persistence error before that observation is treated as durable. The ad controller must also verify its own placement, earned callback, current consent and active target; this data method does not certify an ad completion.
+## Earned inventory and prices
 
-### Free milestone loot
+Every five distinct Journey clears earns one deterministic power unit from the unlocked pool. Oldest eligible milestones are claimed once; replay, Remix and events do not advance them. A selected full-stock reward remains unclaimed. Stock caps at 999 units per power. A rewarded power placement grants **one selected unlocked unit**, not its whole pack or a currency reward.
 
-Every **five distinct Journey clears** earns one free power unit. Daily, weekly, Remix, star improvements, and replays do not advance this count. Claims catch up oldest milestone first; the final milestone follows the Journey catalog size.
+The public price curve is `floor(log2(1 + progress / 30))`, with thresholds 30/90/210/450 and cap band 4. Each band adds 20% of base, rounded up to five coins with a twice-base ceiling. The input clamps at 480 despite the expanded route. Only distinct Journey/Remix clears advance it; failures, purchases, time, events and ads do not. Equipment applies only its [disclosed bounded discount](AVATAR_EQUIPMENT.md).
 
-The reward is deterministic. Build the catalog-order list of powers currently unlocked, then choose:
+## Saved policies
 
-```text
-((milestone / 5) - 1) modulo unlocked power count
-```
+| Attempt | Budget/Undo restoration |
+|---|---|
+| New attempt or restart | `startReversible`; policy 3, free/refunding Undo |
+| Valid saved policy 2 | Restore old board/ledger, migrate with `toReversible`, save policy 3 immediately |
+| Valid saved policy 1 | Keep historical allowance and charged Undo until finished/restarted |
+| Unlimited shared practice | Zero budget/extension ledger; typed gates only on V4 |
 
-This is earned loot, without a paid draw or random rarity. A player claiming late may have a larger eligible set than one claiming immediately. Full stock for the selected power leaves the milestone unclaimed. `nextLootMilestone()` reports the earliest pending/unclaimed threshold, or 0 when every catalog milestone is collected.
+Policy-2 migration preserves base and extension totals, subtracts `2 × prior successful Undos`, and keeps blocked-attempt costs. Unlimited snapshots migrate without subtracting nonexistent charges. Policy 1 is **not silently upgraded**; restarting freely creates a reversible attempt.
 
-Stock and milestone marker share one commit. Because the no-argument claim method derives its next request internally, an in-process retry remembers the failed milestone through a weak preferences-keyed retry record. A memory-before-disk failure cannot silently advance to the next milestone; retry flushes the original unit and returns its ID without incrementing stock again. Independent GameStore handles in the same process share that retry state. Actual process death reloads the durable preferences ledger.
+`restoreVersion` validates policy, mode/content, counters, allowance and extension bounds. Policy 1/2 retains `used >= boardActions + 2 × undos`; policy 3 uses `used >= boardActions`. The controller separately validates typed replay, family and run identity. Local consistency is not payment authority.
 
-## Saved-budget validation
-
-`MoveBudget.restore(mode, level, used, extensions, extraActions, boardMoves, undos)` returns a validated candidate or null. The session controller separately validates the board's replayed history, content version, policy version and run identity.
-
-The pure policy rejects negative fields, unsupported mode/level pairs, more than two extensions, extra actions without an extension, extension totals outside their possible range, use beyond the allowance, and a ledger with `used < boardMoves + 2 × undos`. Arithmetic uses a wider intermediate for the undo lower bound, so corrupt integer extremes cannot wrap into a valid save. Unlimited friend snapshots have zero budget/extension counters.
-
-These checks detect invalid state combinations; they do not make editable local preferences an anti-cheat or payment authority.
-
-## Verified logic evidence
-
-| Suite | Actual result | Coverage |
-| --- | --- | --- |
-| [Move budget](validation/v1.3/move-budget-tests.txt) | 340,768 passing checks | 1,962 certified real boards: original 240 Journey + 240 Remix, balanced 240 + 240, and 1,002 event seeds; 100,000 corrupt saves, 20,000 valid snapshots, 100,000 unlimited friend actions; blocked/undo costs, exact-zero win, copy isolation, extension floor/quota, restart and overflow |
-| [Economy](validation/v1.3/economy-tests.txt) | 4,586 passing checks | Public prices, six unlocks, preserved locked inventory, one-unit ad rewards, five-clear deterministic loot, 100-gold debits, duplicate requests, stock/full-wallet boundaries, simulated memory-before-disk failures and concurrent independent store handles |
-| [Data/localization](validation/v1.3/data-tests.txt) | 7,941 passing checks | Existing campaign/Remix/event economy, milestones, cosmetics and language data |
+[Current exhaustive evidence](validation/v1.8/engine/README.md) covers all 1,240 boards, exact costs, transitions, previews, typed saves and zero-action refunds. [33,611 targeted contracts](validation/v1.8/engine/strategy-contracts.txt) include migration/malformed state. [390,327 legacy budget checks](validation/v1.8/engine/legacy-budget.txt) retain their original policy semantics.
 
 ```sh
+./scripts/test-strategy-v4.sh
 ./scripts/test-move-budget.sh
-./scripts/test-economy.sh
-./scripts/test-data.sh
 ```
 
-The preferences fault adapter models memory and durable maps separately. No physical device storage fault, live payment, ad completion, human difficulty or revenue is inferred from these JVM suites. Installed-APK and actual SDK evidence belong in the release validation report.
-
-## Installed final 1.3 evidence
-
-The [final signed APK run](validation/v1.3/move-power-ui-smoke.txt) passed the recorded action/exhaustion/recreation, two exact 100-gold continuations, duplicate/cap, free restart, unlimited friend, unlock, six-power, pack and free-loot cases. Two actual Google sample ads then granted +10 actions and Spark ×1, with zero added gold or cross-purpose reward; a recreated process did not repeat the continuation. The [local journal](validation/v1.3/ad-journal-export.json) contains two test impressions/earned events and two paid diagnostics at USD 0 micros / UNKNOWN, not revenue.
-
-The fixture deliberately seeded Journey-75 access, 10,000 test gold, four units of each power and five clears for the loot case. It is not earned progression or a 75-board playthrough. All six original game-owned preference files were restored byte for byte, and the installed APK independently matched the final delivered SHA-256. [Profile and restoration hashes](validation/v1.3/move-power-profile.json). No physical-device quality, player retention, live payment or production ad result follows from this run.
-
-A separate [non-fixture exact-zero check](validation/v1.3/exact-zero-ui.txt) played Journey 1 on the existing save: four exit/Undo cycles plus five certified exits spent all 13 actions, produced a normal two-star victory and awarded 45 coins/30 XP. No fixture/save edit, ad or purchase was used. This result is separate from the seeded milestone/power/SDK profile.
+JVM results do not qualify Android power presentation, actual ad callbacks, physical storage failures, real payments or human difficulty. Earlier installed results remain scoped to [1.7](RELEASE_1_7.md), [1.6](VALIDATION_1_6.md) and [1.3](VALIDATION_1_3.md).

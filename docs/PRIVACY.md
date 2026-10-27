@@ -53,3 +53,7 @@ Challenge sharing contains the board, its code and game/repository link. The P c
 SDK-contributed Internet, advertising-ID and Billing permissions must be assessed against the exact shipped manifest and SDK configuration. A declared permission alone does not establish transmitted data. [Current binary evidence](VALIDATION.md) · [Third-party facilities](THIRD_PARTY_NOTICES.md).
 
 Use **nabz0r+gaming@gmail.com** for private support. Do not post account identifiers, tokens, passwords or identity documents in public GitHub issues. The display label nabilux does not establish a legal person or organization; publisher obligations and final Play Data safety/privacy declarations still need review. The website redesign and repository documentation do not themselves certify compliance or commercial approval.
+
+## 1.8 local practice state
+
+The optional/replayable interactive tutorial stores a local lesson/phase/typed-history record and a one-time welcome-gift receipt in existing private game preferences. It does not transmit tutorial steps, record Google credentials or add an analytics SDK. Guest and signed-in play share the same local practice reward; Google login does not create a second entitlement. Local uninstall/data removal can remove this local state; this is not a server premium grant. [Tutorial contract](TUTORIAL.md).

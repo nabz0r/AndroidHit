@@ -46,8 +46,8 @@ public final class Catalog {
             this.card = Color.parseColor(card);
             this.accent = Color.parseColor(accent);
             this.accent2 = Color.parseColor(accent2);
-            this.text = Color.rgb(247, 248, 255);
-            this.muted = Color.rgb(174, 181, 210);
+            this.text = Color.rgb(64, 43, 82);
+            this.muted = Color.rgb(111, 92, 125);
         }
     }
 
@@ -96,12 +96,12 @@ public final class Catalog {
     };
 
     public static final SkinItem[] SKINS = {
-            new SkinItem("lumina", 0, "#11142B", "#232744", "#A99AFF", "#7EE8D1"),
-            new SkinItem("lagoon", 180, "#081F2A", "#123745", "#70E1CF", "#A5CCFF"),
-            new SkinItem("blossom", 240, "#291429", "#46223F", "#FF9CC7", "#E2B0FF"),
-            new SkinItem("ember", 300, "#281A1C", "#442B2B", "#FFBB81", "#FF8A9F"),
-            new SkinItem("midnight", 360, "#0B1229", "#192747", "#8AB9FF", "#D1B0FF"),
-            new SkinItem("aurora", 450, "#152120", "#263C36", "#C1EE9C", "#86DFC2")
+            new SkinItem("lumina", 0, "#F6EDFF", "#FFF9FF", "#7750A8", "#297B70"),
+            new SkinItem("lagoon", 180, "#E5F7F5", "#F8FFFE", "#287E79", "#4B68A1"),
+            new SkinItem("blossom", 240, "#FCEAF4", "#FFF8FC", "#AD467D", "#8553A8"),
+            new SkinItem("ember", 300, "#FFF0E5", "#FFFAF6", "#A35D2E", "#AC4963"),
+            new SkinItem("midnight", 360, "#EDEDFC", "#FAFAFF", "#4A69AA", "#79549F"),
+            new SkinItem("aurora", 450, "#EBF6E7", "#FBFFF7", "#587C35", "#287D68")
     };
 
     public static final BoosterItem[] BOOSTERS = {

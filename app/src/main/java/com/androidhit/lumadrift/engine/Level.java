@@ -15,12 +15,16 @@ public final class Level {
     /** Empty for all historical and G/H boards; explicit fixed cells in the separate P prototype. */
     public final List<Barrier> barriers;
     public final int parMoves;
+    /** Exact productive-action minimum; historical rules need one exit per tile. */
+    public final int minimumActions;
     public final boolean isEvent;
     public final long seed;
     /** 0: historical/event/P; 2: frozen G/H; 3: frozen J/K. Not the UI save schema. */
     public final int progressionVersion;
     /** A certified completion from the initial board. Do not mutate this array. */
     public final int[] solution;
+    /** Certified action plan. V4 uses 64+direction ordinal for manual gate openings. */
+    public final int[] actionSolution;
     private final Tile[] byId;
     public final long allTilesMask;
 
@@ -37,6 +41,13 @@ public final class Level {
     public Level(int number, int chapter, int size, int initialGateMask,
                  List<Tile> tiles, int[] solution, boolean isEvent, long seed,
                  List<Barrier> barriers, int progressionVersion) {
+        this(number, chapter, size, initialGateMask, tiles, solution, isEvent, seed,
+                barriers, progressionVersion, tiles.size(), solution);
+    }
+
+    public Level(int number, int chapter, int size, int initialGateMask,
+                 List<Tile> tiles, int[] solution, boolean isEvent, long seed,
+                 List<Barrier> barriers, int progressionVersion, int minimumActions, int[] actionSolution) {
         if (size < 2 || size > 7 || tiles.isEmpty() || tiles.size() > 49
                 || (initialGateMask & ~15) != 0 || solution.length != tiles.size() || barriers == null) {
             throw new IllegalArgumentException("Invalid level definition");
@@ -47,8 +58,14 @@ public final class Level {
         this.initialGateMask = initialGateMask;
         this.isEvent = isEvent;
         this.seed = seed;
-        if (progressionVersion != 0 && progressionVersion != 2 && progressionVersion != 3)
+        if (progressionVersion != 0 && progressionVersion != 2 && progressionVersion != 3 && progressionVersion != 4)
             throw new IllegalArgumentException("Unsupported progression version");
+        if (minimumActions < tiles.size() || actionSolution == null || actionSolution.length != minimumActions
+                || minimumActions > tiles.size() * 5 + 4)
+            throw new IllegalArgumentException("Invalid productive-action certificate");
+        if (progressionVersion != 4 && (minimumActions != tiles.size()
+                || !java.util.Arrays.equals(solution, actionSolution)))
+            throw new IllegalArgumentException("Historical action certificate changed");
         this.progressionVersion = progressionVersion;
         this.tiles = Collections.unmodifiableList(new ArrayList<Tile>(tiles));
         this.byId = new Tile[tiles.size()];
@@ -78,8 +95,25 @@ public final class Level {
         }
         this.barriers = Collections.unmodifiableList(new ArrayList<>(barriers));
         this.solution = solution.clone();
-        this.parMoves = tiles.size();
+        this.minimumActions = minimumActions;
+        this.parMoves = minimumActions;
+        this.actionSolution = actionSolution.clone();
         this.allTilesMask = (1L << tiles.size()) - 1L;
+        if(progressionVersion==4){
+            long mask=allTilesMask;int gates=initialGateMask;
+            for(int action:this.actionSolution){
+                if(Board.isGateAction(action)){
+                    int bit=Board.gateDirection(action).bit;
+                    if(mask==0||(gates&bit)!=0)throw new IllegalArgumentException("Illegal gate action certificate");
+                    gates|=bit;
+                }else{
+                    Tile tile=action>=0&&action<byId.length?byId[action]:null;
+                    if(tile==null||!Board.canMove(this,mask,gates,tile))throw new IllegalArgumentException("Illegal exit action certificate");
+                    mask&=~(1L<<action);gates^=tile.switchMask;
+                }
+            }
+            if(mask!=0)throw new IllegalArgumentException("Incomplete action certificate");
+        }
     }
 
     public Tile tile(int id) {

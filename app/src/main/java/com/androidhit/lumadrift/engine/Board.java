@@ -6,7 +6,23 @@ import java.util.List;
 
 /** Mutable session. Illegal actions never change gates, pieces, or undo history. */
 public final class Board {
-    public enum BlockReason { NONE, MISSING_TILE, CLOSED_GATE, BLOCKED_PATH, LOCKED_BARRIER }
+    public enum BlockReason { NONE, MISSING_TILE, CLOSED_GATE, BLOCKED_PATH, LOCKED_BARRIER, GATE_ALREADY_OPEN, MANUAL_GATE_UNAVAILABLE }
+    private static final Direction[] DIRECTIONS=Direction.values();
+    public static int gateAction(Direction direction) { if (direction == null) throw new IllegalArgumentException("Direction required");return 64 + direction.ordinal(); }
+    public static boolean isGateAction(int action) { return action >= 64 && action < 68; }
+    public static Direction gateDirection(int action) { if (!isGateAction(action)) throw new IllegalArgumentException("Not a gate action");return DIRECTIONS[action - 64]; }
+
+    /** Immediate mechanical consequences only: no hidden solvability verdict or correctness oracle. */
+    public static final class ActionPreview {
+        public final int action,previousGateMask,gateMask,openedMask,closedMask,blockingTileId;
+        public final boolean legal;
+        public final BlockReason reason;
+        public final Barrier blockingBarrier;
+        private ActionPreview(int action,int before,int after,BlockReason reason,int blocker,Barrier wall) {
+            this.action=action;previousGateMask=before;gateMask=after;openedMask=after&~before;closedMask=before&~after;
+            this.reason=reason;legal=reason==BlockReason.NONE;blockingTileId=blocker;blockingBarrier=wall;
+        }
+    }
 
     /** A legal exit can still close a gate needed later; legality is not completion. */
     public enum PositionStatus { SOLVED, PLAYABLE, NEEDS_ACTIONS, DEAD_END }
@@ -33,13 +49,18 @@ public final class Board {
 
         private Guidance(PositionStatus status, int remainingActions, int remainingPieces,
                          int hintTileId, int actionsToFinish, int undoSteps) {
+            this(status,remainingActions,remainingPieces,hintTileId,actionsToFinish,undoSteps,
+                    undoSteps < 0 ? -1 : remainingPieces + 2 * undoSteps);
+        }
+        private Guidance(PositionStatus status,int remainingActions,int remainingPieces,int hintTileId,
+                         int actionsToFinish,int undoSteps,int recoveryActions) {
             this.status = status;
             this.remainingActions = remainingActions;
             this.remainingPieces = remainingPieces;
             this.hintTileId = hintTileId;
             this.actionsToFinish = actionsToFinish;
             this.undoSteps = undoSteps;
-            this.actionsToRecoverAndFinish = undoSteps < 0 ? -1 : remainingPieces + 2 * undoSteps;
+            this.actionsToRecoverAndFinish = recoveryActions;
             this.recoveryFitsBudget = actionsToRecoverAndFinish >= 0
                     && (remainingActions == -1 || remainingActions >= actionsToRecoverAndFinish);
         }
@@ -94,10 +115,12 @@ public final class Board {
     private long remainingMask;
     private int gates;
     private final ArrayList<Integer> history = new ArrayList<Integer>();
+    private final StrategySolver.Session strategy;
 
     public Board(Level level) {
         if (level == null) throw new IllegalArgumentException("A level is required");
         this.level = level;
+        strategy = level.progressionVersion == 4 ? new StrategySolver.Session(level) : null;
         restart();
     }
 
@@ -111,6 +134,9 @@ public final class Board {
         return level.tile(id) != null && (remainingMask & (1L << id)) != 0;
     }
     public boolean isGateOpen(Direction direction) { return (gates & direction.bit) != 0; }
+    public boolean supportsManualGates() { return strategy != null; }
+    public int plannerCachedStates() { return strategy == null ? 0 : strategy.cachedStates(); }
+    public int plannerCacheBytes() { return strategy == null ? 0 : strategy.cacheBytes(); }
     public Snapshot snapshot() { return new Snapshot(remainingMask, gates, moves(), level.tiles.size()); }
 
     public List<Tile> remainingTiles() {
@@ -126,6 +152,17 @@ public final class Board {
     }
 
     public boolean canMove(int id) { return blockReason(id) == BlockReason.NONE; }
+    public boolean canPerformAction(int action) { return previewAction(action).legal; }
+    public ActionPreview previewAction(int action) {
+        if (isGateAction(action)) {
+            Direction d=gateDirection(action);BlockReason reason=!supportsManualGates()?BlockReason.MANUAL_GATE_UNAVAILABLE:
+                    isSolved()||isGateOpen(d)?BlockReason.GATE_ALREADY_OPEN:BlockReason.NONE;
+            return new ActionPreview(action,gates,reason==BlockReason.NONE?gates|d.bit:gates,reason,-1,null);
+        }
+        BlockReason reason=blockReason(action);Tile tile=level.tile(action);
+        return new ActionPreview(action,gates,reason==BlockReason.NONE?gates^tile.switchMask:gates,reason,
+                tile==null?-1:blockingTile(action),tile==null?null:blockingBarrier(action));
+    }
 
     /** Gate is checked before the path; UI can show the relevant closed border. */
     public BlockReason blockReason(int id) {
@@ -170,11 +207,20 @@ public final class Board {
         return new MoveResult(true, tile, BlockReason.NONE, -1, null, oldGates, gates, isSolved());
     }
 
+    /** V4 gate actions are productive actions; ordinary exits preserve the historical move API. */
+    public MoveResult performAction(int action) {
+        if (!isGateAction(action)) return move(action);
+        ActionPreview preview=previewAction(action);int before=gates;
+        if (!preview.legal) return new MoveResult(false,null,preview.reason,-1,null,before,before,isSolved());
+        gates=preview.gateMask;history.add(action);
+        return new MoveResult(true,null,BlockReason.NONE,-1,null,before,gates,isSolved());
+    }
+
     public boolean undo() {
         if (history.isEmpty()) return false;
         int id = history.remove(history.size() - 1);
-        remainingMask |= 1L << id;
-        gates ^= level.tile(id).switchMask;
+        if (isGateAction(id)) gates &= ~gateDirection(id).bit;
+        else {remainingMask |= 1L << id;gates ^= level.tile(id).switchMask;}
         return true;
     }
 
@@ -192,9 +238,11 @@ public final class Board {
 
     /** Replays an atomic validated save. Malformed saves leave the current session intact. */
     public boolean restoreHistory(int[] saved) {
-        if (saved == null || saved.length > level.tiles.size()) return false;
+        int maximum=level.tiles.size();
+        if(supportsManualGates()){maximum+=4;for(Tile tile:level.tiles)maximum+=Integer.bitCount(tile.switchMask);}
+        if (saved == null || saved.length > maximum) return false;
         Board candidate = new Board(level);
-        for (int id : saved) if (!candidate.move(id).success) return false;
+        for (int id : saved) if (!candidate.performAction(id).success) return false;
         remainingMask = candidate.remainingMask;
         gates = candidate.gates;
         history.clear();
@@ -209,11 +257,19 @@ public final class Board {
     }
 
     /** Exact completion, or null when the current position cannot be completed. */
-    public int[] solve() { return Solver.solve(level, remainingMask, gates); }
-    public boolean hasSolution() { return solve() != null; }
-    public boolean isStuck() { return !isSolved() && legalMoves().isEmpty(); }
+    public int[] solve() {
+        if(strategy==null)return Solver.solve(level, remainingMask, gates);
+        // Every suffix of a globally shortest certificate is itself shortest.
+        boolean prefix=history.size()<=level.actionSolution.length;
+        for(int i=0;prefix&&i<history.size();i++)prefix=history.get(i)==level.actionSolution[i];
+        if(prefix)return java.util.Arrays.copyOfRange(level.actionSolution,history.size(),level.actionSolution.length);
+        return strategy.solve(remainingMask,gates);
+    }
+    public int minimumActionsToFinish() { return strategy==null?(hasSolution()?remainingCount():-1):strategy.minimumActions(remainingMask,gates); }
+    public boolean hasSolution() { return supportsManualGates() || solve() != null; }
+    public boolean isStuck() { return !isSolved() && legalMoves().isEmpty() && !supportsManualGates(); }
     /** Includes doomed positions that still have one or more legal exits. */
-    public boolean isDeadEnd() { return !isSolved() && !hasSolution(); }
+    public boolean isDeadEnd() { return !supportsManualGates() && !isSolved() && !hasSolution(); }
 
     /**
      * Distinguishes a real gate-order dead end from an otherwise solvable run
@@ -226,9 +282,9 @@ public final class Board {
         int[] solution = solve();
         if (remaining == 0) return new Guidance(PositionStatus.SOLVED, remainingActions, 0, -1, 0, 0);
         if (solution != null) {
-            PositionStatus status = remainingActions >= 0 && remainingActions < remaining
+            PositionStatus status = remainingActions >= 0 && remainingActions < solution.length
                     ? PositionStatus.NEEDS_ACTIONS : PositionStatus.PLAYABLE;
-            return new Guidance(status, remainingActions, remaining, solution[0], remaining, 0);
+            return new Guidance(status, remainingActions, remaining, solution[0], solution.length, 0, solution.length);
         }
         long recoveredMask = remainingMask;
         int recoveredGates = gates;
@@ -246,6 +302,7 @@ public final class Board {
 
     /** A bonus preview never mutates the board or spends anything. */
     public boolean isSafeMove(int id) {
+        if(supportsManualGates())return canPerformAction(id);
         Tile tile = level.tile(id);
         return canMove(id) && Solver.solve(level, remainingMask & ~(1L << id),
                 gates ^ tile.switchMask) != null;

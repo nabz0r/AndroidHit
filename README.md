@@ -1,103 +1,76 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>A small light. A clever escape.</strong><br>An Android puzzle about arrows, gates, keys and the order of your moves.</p>
-<p align="center"><a href="https://luma-drift-production.web.app/"><strong>Public website</strong></a> · <a href="docs/RELEASE_1_7.md"><strong>1.7 candidate & evidence</strong></a> · <a href="docs/README.md"><strong>Documentation</strong></a><br><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.7.0-rc1.apk">Download signed Android APK · 1.7.0-rc1</a> · <a href="docs/RELEASE.md">Install & verify</a></p>
-<p align="center">1,000 Journey levels · 240 Remix · 24 companions<br>24 four-slot wardrobe cosmetics · 18 separate equipment items · 6 languages</p>
-<p align="center"><sub>Published signed 1.7.0-rc1 / code 8 · 5.59 MB. Final Lab/production emulator checks and basic server deployment checks pass. The 1.7 website is published on Firebase Hosting; real two-account/commercial acceptance remains open.</sub></p>
+<p align="center"><strong>A soft little world. Every move matters.</strong><br>Guide the stars home. Read the gates. Find your own little aha.</p>
+<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.8.0-rc1.apk"><strong>Download signed Android APK · 1.8.0-rc1</strong></a><br><a href="https://luma-drift-production.web.app/">Website</a> · <a href="docs/RELEASE_1_8.md">Release & evidence</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
+<p align="center">1,000 Journey boards · 240 Remix · 7 interactive lessons<br>24 companions · 24 wardrobe cosmetics · 6 powers · 6 languages</p>
 
-Source and all four APK/AAB artifacts were published on main at [4c5f5ca8](https://github.com/nabz0r/AndroidHit/commit/4c5f5ca8bc5f74173e283377275bb352c76534c7). [Independent public-download checks](docs/validation/v1.7/publication.json) confirm HTTP 200, exact sizes and SHA-256 for every file. Final native runs pass **38 Lab menu**, **34 Lab gameplay** and **7 production startup** assertions, with original preferences restored; [their record](docs/validation/v1.7/SDK_UI_FINAL.md) distinguishes actual J13 play and digital audio from real accounts/payments.
+<p align="center"><img src="docs/screenshots/v1.8/ui-sdk-final-menus/home-fr-localized.png" width="230" alt="Actual final Lab 1.8 French home, guest state and soft pastel presentation"><img src="docs/screenshots/v1.8/ui-sdk-final-menus/tutorial-key-fr.png" width="230" alt="Actual final Lab 1.8 interactive key tutorial with the animated illustrated fingertip"><img src="docs/screenshots/v1.8/ui-sdk-final-full/journey-13-start-en.png" width="230" alt="Actual final Lab 1.8 level 13 with its productive action budget and distinct power icons"></p>
 
-## A puzzle can be solvable and your current route can be closed
+These are unedited Android SDK captures of **Lab 1.8**, not web mockups or Google-account acceptance. [Exact installed APK and native evidence](docs/validation/v1.8/README.md).
 
-The reported level-13 problem led to an exhaustive audit of **all 1,000 Journey and 240 Remix boards**. Every board can finish within its original starting allowance, with no power, ad or purchase. Their layouts, identities and budgets are unchanged. A legal move can nevertheless close a gate needed later while other legal moves remain; the previous immediate-stuck check missed that case.
+## A puzzle you can understand and recover
 
-The 1.7 source diagnoses the actual remaining state. It distinguishes a safe next move, too few actions, and a route with no completion. In the last case, extra actions alone cannot repair the gate order: Undo or free restart is the relevant recovery. Hints point to a safe move in the current state and cannot spend stock on a doomed route. [Reproducible J13 diagnosis](docs/validation/v1.7/board-audit-journey13.md) · [Independent reachability audit](docs/validation/v1.7/board-audit.md).
+The full default route is reauthored as **L/M**. A piece follows its arrow; another piece, a seal or a closed exit can block it. A key removes its matching seal. Switches change gates when they leave.
 
-The audit enumerated **1,101,868 reachable subsets** and **3,348,959 legal transitions**, including keys, seals, gate changes, undo recovery and budgets. Its 49,063,063 assertions check the technical model, not human enjoyment or retention. The user's exact saved attempt was unavailable, so the J13 reproduction is a mechanism diagnosis rather than a claim about their actual taps.
+Now you can **open a closed gate for one action**. Each level's budget is based on its exact minimum productive actions plus a fixed margin. Exit order can save an opening or require another: the limit measures planning, rather than only charging mistakes around an unavoidable N-piece solution.
 
-## A longer journey, a companion that feels yours
+- **Look before choosing.** A switch or gate previews its immediate open/closed consequences. Confirm costs one action; cancel costs none.
+- **Correct freely.** Undo restores the last productive action and refunds its move, even at zero. Restart is free. No new-route state is a permanent logical dead end.
+- **Follow a useful hint.** Spark, Focus, Trail and Flow understand both piece exits and gate openings. One confirmed charge produces one durable effect; showing an active effect again does not spend another charge.
+- **See the real goal.** Actual remaining stars, progress, the next earned gift and collection ownership stay visible. Difficulty, prices and odds do not change in response to spending or losses.
 
-The 1.7 candidate combines a continuously scrollable **1–1,000 Journey map**, ten 100-level biomes, a four-slot dressing room, a nonpunitive daily gift cycle and separate daily/weekly quests. [UX contract](docs/UX_1_7.md) · [Candidate status and evidence](docs/RELEASE_1_7.md).
+[Gameplay](docs/GAMEPLAY.md) · [Every level, exact solver and compatibility](docs/PROGRESSION_V4.md) · [Six powers](docs/MOVE_BUDGET_POWERUPS.md).
 
-- **Explore the route:** scroll the whole map, jump to a level or return to your current board. Locked positions stay visible; exploration does not unlock them. Each 100-level biome changes its environment tint and original synthesized arrangement.
-- **Plan the board:** a briefing states the objective, mechanic, authored difficulty and fixed action allowance. Keys occur on 167 Journey boards and 29 Remix boards; Journey 12 teaches the rule before later combinations.
-- **Dress the companion:** hat, outfit, shoes and gloves show their owned/equipped/unowned state and exact source. All 24 new wardrobe items are visual only. Halloween and Valentine designs remain permanently owned.
-- **Return at your pace:** seven claimed visits give 40/50/60/70/80/100/150 LumaCoins, then repeat. Missing days never resets the cycle. Daily and weekly quests have different targets and once-per-period claims.
-- **Understand the two wallets:** LumaCoins are earned and stored locally. LumaGold belongs to the separate premium account wallet. Neither balance is automatically converted into the other.
-- **Choose a cosmetic capsule:** 150 earned LumaCoins, common/rare/epic odds of 60%/30%/10%, individual odds and duplicate compensation shown before spending. This local capsule never spends LumaGold. The native premium account catalogue is prepared, with both APK and server draw gates closed.
-- **Friends and limited gifts:** authenticated backend/client source implements mutual friendships, opt-in shared progress and one-hint gifts with limits. The [server deployment](docs/validation/v1.7/cloud-run.json) passes health/unauthenticated-gate probes; real two-account acceptance remains open.
+## Little star school
 
-Six powers, three daily and seven weekly event boards, original companion silhouettes, six themes, optional sign-in, local save/resume and the existing three-slot equipment are retained. [Rewards, wardrobe, odds and persistence](docs/ECONOMY_1_7.md) · [Existing equipment](docs/AVATAR_EQUIPMENT.md).
+A new guest or connected local profile can learn on seven small playable boards: arrows, blockers, keys, gates, switches, refunded Undo and Spark. A glowing object and illustrated fingertip demonstrate the action; **tap or drag along the arrow**. Instructions wait for the player.
 
-## Cosmetic wardrobe and equipment are different systems
+**Skip, resume at the same step, or replay from Help.** Finishing all lessons unlocks an explicit one-time gift of **100 LumaCoins + 2 Sparks**. Practice spends no inventory, awards no campaign wins and cannot farm the gift through login, replay or double taps. Landscape uses a compact board/instruction layout. Reduced motion keeps static cues.
 
-The **new wardrobe** contains 24 appearance-only items in Hat / Outfit / Shoes / Gloves. Sources include claimed daily gifts, lifetime weekly/event progress, earned-coin direct purchases and earned cosmetic capsules. No wardrobe item changes movement allowances, puzzle geometry, rewards, power stock, prices or drop odds.
+[Tutorial state, reward and failure recovery](docs/TUTORIAL.md) · [UX and research references](docs/UX_1_8.md).
 
-The **existing 18 equipment items** occupy Head / Aura / Charm. Their previously stated bounded benefits remain: at most +3 coins on an eligible first victory, −5 coins per power pack, or one protected blocked attempt per run. Companion identity and themes remain cosmetic. The two systems retain their separate rules.
+## A world that feels yours
 
-The prepared account vault shows its own authenticated ownership and conditional probabilities. Its future guarantee means new to the account; that design can already exist in the earned local wardrobe. Both premium draw gates stay closed. [Exact local economy](docs/ECONOMY_1_7.md) describes the probabilities, duplicate compensation, save recovery and the distinction from prepared premium server transactions.
+Dream Glade, an original generated illustration, surrounds cream/lilac surfaces, plum text, plush pieces and distinct power silhouettes. The companion, wardrobe, actual session status and next adventure lead the home screen. The full scrollable map has ten 100-level atmospheres and original synthesized music, with separate music/effects settings.
 
-## Keep the board and inventory you started
+Collect 24 companions and 24 appearance-only clothing items across Hat / Outfit / Shoes / Gloves. Owned, equipped and unowned states show their source. The older 18 Head / Aura / Charm equipment items retain their separate bounded benefits.
 
-Historical C/R, B/Q, G/H, J/K, P and event codes keep their original layouts. The 1.7 diagnostic changes neither the frozen route nor its fixed N+3–5 initial budgets. Free restart remains available; fixed content and margins do not react to spending, ads, losses or account status.
+Seven claimed daily visits grant **40 / 50 / 60 / 70 / 80 / 100 / 150 LumaCoins**, then repeat. A missed day loses nothing. Daily and weekly quests have separate goals. LumaCoins are earned and local; LumaGold is the separate premium account wallet. The earned cosmetic capsule costs 150 LumaCoins and discloses item odds and duplicate compensation before a spend. Real checkout and paid premium draws remain closed.
 
-Existing stars, unlocks, companions, skins, powers, earned balance and equipment remain in their existing saves. New wardrobe, reward and receipt keys use separate versioned namespaces. Google sign-in does not provide a gameplay cloud save. Shared friend positions, when actually returned by the deployed service and consented to, are social snapshots rather than an authoritative cross-device progression save.
+[Design system](docs/DESIGN_SYSTEM.md) · [Art prompt and pixel hash](docs/art/dream-glade-v18.json) · [Wardrobe economy](docs/ECONOMY_1_7.md) · [Existing equipment](docs/AVATAR_EQUIPMENT.md).
 
-[Content compatibility](docs/PROGRESSION_V3.md) · [1.7 qualification directory](docs/validation/v1.7/README.md) · [Preserved actual 1.5→1.6 upgrade](docs/validation/v1.6/upgrade-api26.json).
+## Tested claims, exact deliverables
 
-## Original presentation and evidence
+The independent V4 audit covers all **1,240 boards**, **13,254,058 reachable action states** and **57,403,554 legal transitions**, with **773,092,810 assertions** comparing exact cost, previews, Undo and typed state restoration. All states remain recoverable. There are **591 key/seal boards** and **1,161 boards with a measured ordering choice that affects cost**. T daily/weekly events select from 980 audited geometries.
 
-Code-native pastel pieces, companion silhouettes and wardrobe drawings sit over the original generated Aurora Atlas environment. The ten biome arrangements use procedural audio, with separate music/effect controls and no runtime music download. The six Android languages are French, English, German, Spanish, Portuguese and Italian; the public website is French/English.
+Both signed APKs and AABs pass signature, official bundletool and 16KB ZIP/native ELF alignment checks. Both release lint reports have zero errors. [Final Android tests, gestures, six languages, audio and restored preferences](docs/validation/v1.8/README.md) are distinct from the source simulations. Human comprehension, physical-phone performance and D1/D7 retention are still to measure; no hit or revenue result is implied.
 
-These are unedited captures from the **final Lab 1.7 APK**, `d7fea345…`, on API 36 with a 16KB-page kernel. The passing native run covers 38 assertions and 32 captures, using the existing guest qualification session without profile injection. Daily gift and capsule actions used its actual earned balance; all original preferences were restored byte for byte afterward. These are Lab images, not production-package or real-account acceptance.
+| Artifact | Download | SHA-256 |
+| --- | --- | --- |
+| Production APK · 7.71 MB | [1.8.0-rc1](releases/luma-drift-1.8.0-rc1.apk) | `aab583241c42179e5cffb80bdd32f9a502be124a3e8a75ccf94936e538db87d4` |
+| Production AAB | [1.8.0-rc1](releases/luma-drift-1.8.0-rc1.aab) | [Manifest](releases/manifest-1.8.0-rc1.json) |
+| Separate Lab APK/AAB | [Lab APK](releases/luma-drift-1.8.0-sandbox.apk) · [AAB](releases/luma-drift-1.8.0-sandbox.aab) | [Manifest](releases/manifest-1.8.0-sandbox.json) |
 
-<p align="center"><img src="docs/screenshots/v1.7/ui-sdk-final-menus2/home-fr.png" width="235" alt="Final Lab 1.7 French home in a real guest qualification session"><img src="docs/screenshots/v1.7/ui-sdk-final-menus2/wardrobe-fr.png" width="235" alt="Final Lab 1.7 four-slot dressing room and actual owned inventory"><img src="docs/screenshots/v1.7/ui-sdk-final-menus2/map-1000-fr.png" width="235" alt="Final Lab 1.7 route explored to locked level 1000 without unlocking it"></p>
+Android 8+ / API 26; version code 9; production package `com.androidhit.lumadrift`. Install over the existing app to retain local saves. Previous artifacts and their exact checksums remain available. [Install/signatures](docs/RELEASE.md) · [All checksums](releases/SHA256SUMS.txt).
 
-[Exact installed run and restored profile](docs/validation/v1.7/ui-sdk-final-menus2/host-report.json). The earlier failed final-menu oracle and pilot runs remain separately labelled.
+## Compatibility and service status
 
-[Illustrated tour](docs/VISUAL_GUIDE.md) · [Art and audio](docs/ART_AUDIO.md) · [Design system](docs/DESIGN_SYSTEM.md) · [Atlas provenance](docs/art/aurora-atlas-v1.json).
+Historical C/R/B/Q/G/H/J/K/P/E codes retain their original layouts and rules. Active current policy-2 attempts keep their old board and allowance while migrating to refunded Undo; much older policy-1 attempts retain their original accounting until restarted. New attempts use policy 3. Existing numbered stars, unlocks, balances, possessions and rewards remain; replacing a board does not award its old stars again.
 
-The [1.7 website qualification](docs/validation/site-v1.7/README.md) passes 2,219 offline checks and 18 local FR/EN browser views at measured CSS widths 320/390/1366, with actual Lab captures and the correct APK route. Firebase confirms Hosting publication from exact source `4c5f5ca8bc5f74173e283377275bb352c76534c7`, after all 47 payloads matched the frozen manifest. Its delivery record separates CLI/management evidence from the unperformed public-origin byte comparison; the [preserved 1.6 record](docs/validation/site-v1.6/README.md) retains its own scope.
+Google is optional and does not synchronize gameplay saves. The existing deployed friend service and opt-in map snapshots remain prepared for real two-account qualification; this release does not fabricate friends or gifts. Test advertising is forced, real checkout is gated, and paid cosmetic draws are disabled in both app and server. The existing Cloud Run service is unchanged. No remote gameplay analytics SDK was added.
 
-## Identity, privacy and commercial boundaries
+[Privacy](docs/PRIVACY.md) · [Two-account qualification](docs/QUALIFICATION_SOCIALE.md) · [Production setup](docs/DEPLOIEMENT_PAS_A_PAS.md) · [Server](server/README.md).
 
-Guest play remains available. Google session snapshots distinguish refreshing, connected, reconnect-required and error states, with guards against late callbacks after account changes. A configured provider or provider-sheet cancellation is not successful real authentication.
+## Build and explore
 
-Default production settings force sample ads and keep real checkout gated. Purchased LumaGold is account-bound server currency; editable local saves cannot authorize it. Real Google success, installed consent choices, ad readiness, Play license-test purchase/refund/recovery, authenticated post-deployment operations and public-store approval require their own qualification. No commercial activation, measured revenue or retention improvement is claimed.
-
-There is no Firebase Analytics gameplay tracking. The optional play journal stays local unless the player explicitly exports it. Opt-in friend progress is a separately disclosed social data flow. [Privacy](docs/PRIVACY.md) · [Production activation, in French](docs/DEPLOIEMENT_PAS_A_PAS.md) · [Server](server/README.md).
-
-## Build and verify
-
-Declared production **1.7.0-rc1 / code 8**, isolated **Lab 1.7.0-sandbox / code 8**. Minimum API 26, compile/target API 36, Java 17 source, Gradle 8.14.3 and AGP 8.11.0. Use a JDK 21 runtime for the pinned standalone lint analyzer. Release signing uses an ignored local `signing.properties`; private keys do not belong in the repository.
+Use JDK 21 for the pinned lint analyzer, the Android SDK and the Gradle wrapper. Java source compatibility remains 17. Private signing files are ignored and never published.
 
 ```sh
-export JAVA_HOME=/path/to/jdk-21
-export ANDROID_HOME=/path/to/android-sdk
-./gradlew assembleProductionDebug
-
-scripts/test-board-audit-v17.sh
-scripts/test-rewards-cosmetics-v17.sh
-python3 scripts/test-social-strings-v17.py
-scripts/test-engine.sh
-scripts/test-progression-v3.sh
-scripts/test-move-budget.sh
-scripts/test-data.sh
-scripts/test-economy.sh
-scripts/test-meta.sh
-scripts/test-collection-events.sh
-scripts/test-audio.sh
-scripts/test-inventory-presentation.sh
-scripts/test-experience-layout.sh
-python3 scripts/test-identity-session.py
-scripts/test-billing-policy.sh
-scripts/test-wallet-recovery.sh
-
 ./gradlew assembleProductionRelease bundleProductionRelease lintProductionRelease
 ./gradlew assembleLabRelease bundleLabRelease lintLabRelease
+scripts/test-strategy-v4.sh
+scripts/test-tutorial-v18.sh
 ```
 
-[Development](docs/DEVELOPMENT.md) · [Exact release bytes and signing](docs/RELEASE.md) · [1.7 evidence](docs/validation/v1.7/README.md). JVM adapters and fixed-seed simulations are labelled separately from an installed Android run or two real accounts.
+[Development](docs/DEVELOPMENT.md) lists the storage, economy, identity, audio and SDK integration checks. [Native QA runner](scripts/v18-ui-test/README.md) uses real Android controls and SDK touch events, with no profile injection. [Roadmap](docs/ROADMAP.md) prioritizes observed player comprehension before commercial activation. [Historical 1.7](docs/RELEASE_1_7.md) and earlier evidence keep their own scope and hashes.
 
-More content and systems do not establish a hit. First-time-player observation, physical phones and complete D1/D7 cohort windows remain the next product gates. [Roadmap](docs/ROADMAP.md) · [Hit audit](docs/HIT_AUDIT.md).
-
-Preserved releases: [1.6](docs/RELEASE_1_6.md), [1.5](docs/RELEASE_1_5.md), [1.4](docs/PRODUCTION_RELEASE.md), [1.3](docs/VALIDATION_1_3.md), [1.2](docs/VALIDATION_1_2.md), [offline 1.1](docs/VALIDATION_1_1.md). Source: **AGPL-3.0**. [License](LICENSE) · [Third-party notices](docs/THIRD_PARTY_NOTICES.md).
+Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Candy Crush or Crash Fever artwork, characters, audio or code is included.

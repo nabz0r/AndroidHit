@@ -1,6 +1,8 @@
 # Level management review — open issue after 1.7
 
-**Diagnosis and proposed next release; no gameplay change is applied to 1.7.** Source baseline: `245f9f59f01ca1f5a4226b14ab8e8c707bcaf896`. Real Google/two-account qualification keeps that release unchanged. The existing level-management problem remains open.
+**Historical 1.7 diagnosis; its correction is now implemented in the separate 1.8 source candidate.** See [V4 rules, productive budgets, compatibility and exhaustive evidence](PROGRESSION_V4.md). The shipped 1.7 packages remain unchanged; installed 1.8 acceptance is recorded separately.
+
+**Preserved diagnosis and original proposal; no gameplay change is applied to 1.7.** Source baseline: `245f9f59f01ca1f5a4226b14ab8e8c707bcaf896`. Real Google/two-account qualification keeps that release unchanged. The old J/K level-management problem remains reproducible under its preserved rules; the new L/M route implements manual gate recovery and productive-cost budgets.
 
 [Exact J1–30 metrics](validation/early-levels-v1.7/J1-30-metrics.csv) · [J7 reproduction](validation/early-levels-v1.7/J7-reproduction.md) · [J8 reproduction](validation/early-levels-v1.7/J8-reproduction.md) · [Proposed manual-gate metrics](validation/early-levels-v1.7/manual-gate-proposal-metrics.csv) · [Reproduce the audit](../scripts/level-rework-audit/run.sh) · [Execution record](validation/early-levels-v1.7/README.md)
 

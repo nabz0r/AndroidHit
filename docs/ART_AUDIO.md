@@ -1,5 +1,12 @@
 # Art direction and original audio
 
+## Current 1.8 presentation
+
+Cream/lilac surfaces, plum text, soft-volume arrow pieces, original animated star tutor and fingertip, six distinct power silhouettes and refreshed four-slot clothing form the current native/web family. Dream Glade replaces the default Atlas background; its built-in generation prompt and exact pixel hash are [recorded](art/dream-glade-v18.json). The image is copied unchanged into Android and public assets. Ten subtle tints share this one scene.
+
+The ten original synthesized biome arrangements are retained, with separate music/effects settings and reduced motion. No new licensed music or third-party game asset was added. [Current UX](UX_1_8.md) · [Design system](DESIGN_SYSTEM.md) · [Final 1.8 captures/evidence](RELEASE_1_8.md). The sections below document preserved earlier artwork/audio and must not be read as a claim that older captures show 1.8.
+
+
 Luma Drift combines code-drawn puzzle pieces and companions with a bundled generated environment: a dark celestial backdrop, soft colored light, tactile rounded pieces, clear arrow marks, and small expressive companions. The interface takes general puzzle-game conventions—short sessions, visible progression, immediate feedback, and readable rewards—without copying another game's artwork, characters, screens, or sound recordings.
 
 The **1.7 candidate** adds code-native kawaii power illustrations and a four-slot visual wardrobe, a continuously scrollable 1–1,000 route with ten 100-level tints and original procedural arrangements, and exact current-state hint/recovery feedback. All 24 new Hat/Outfit/Shoes/Gloves items are appearance-only; the preserved 18 Head/Aura/Charm equipment items remain a separate bounded-benefit system. The existing 24 companion silhouettes, six themes and Aurora Atlas stay. [1.7 scope](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Economy](ECONOMY_1_7.md). Final package, installed screens and playback require the [1.7 evidence record](validation/v1.7/README.md); historical captures do not establish new behavior.

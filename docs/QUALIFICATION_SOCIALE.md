@@ -1,5 +1,7 @@
 # Qualification amis et cadeaux — deux Android virtuels
 
+**Priorité actuelle : niveaux, tutoriel et UX 1.8.** Les comptes Google et échanges réels restent à qualifier. La nouvelle candidate [1.8](RELEASE_1_8.md) a ses tests Android invités séparés ; ils ne valident aucun compte Google ni cadeau serveur. Le protocole ci-dessous conserve sa base 1.7 installée sur les deux appareils : ne pas mélanger ces captures avec les tests Lab 1.8. L’appareil B est arrêté, ses données conservées ; A conserve sa production 1.7 et dispose aussi d’une installation Lab 1.8 invitée distincte.
+
 27 octobre 2026 · base figée **Luma Drift production 1.7.0-rc1 / code8**.
 
 Deux appareils locaux neufs et indépendants sont préparés : **Luma-Social-A** (`emulator-5582`) et **Luma-Social-B** (`emulator-5584`). Ils utilisent l'image officielle Android36 GooglePlay ARM64 révision7. Le Play Store et les services Google sont installés. La même APK production est installée et son empreinte relue sur chacun : `7eeaa816853533f441acfc73f4ad3f6af0fb2cbdd6fd0eae1fda3f64c388a2bf`. Aucun profil utilisateur précédent n'a été cloné. [État de préparation observé](validation/social-two-devices-v1.7/setup.json).

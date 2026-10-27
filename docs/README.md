@@ -1,5 +1,10 @@
 # Luma Drift documentation
 
+## Current 1.8 candidate
+
+[Release and exact APK/AAB hashes](RELEASE_1_8.md) · [V4 all-level rules](PROGRESSION_V4.md) · [Seven-lesson tutorial](TUTORIAL.md) · [UX and research](UX_1_8.md) · [Executed 1.8 evidence](validation/v1.8/README.md) · [Website 1.8](validation/site-v1.8/README.md). The 1.7 tables below are preserved background; 1.8 is the current gameplay/DA candidate. Google/friend/commercial acceptance is postponed while gameplay is prioritized.
+
+
 **A little spark. A great escape.** Read the actual rule, inspect the exact delivered bytes, and distinguish implementation, installed acceptance and service rollout.
 
 Current declared candidate: **production 1.7.0-rc1 / Lab 1.7.0-sandbox, code 8**, under qualification. [Candidate scope](RELEASE_1_7.md) · [UX contract](UX_1_7.md) · [1.7 executed record](validation/v1.7/README.md). Final package/download and website deployment status must follow those records rather than an older screenshot.

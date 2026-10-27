@@ -1,0 +1,1132 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-27T14:46:35.577477+00:00",
+  "scope": "Lossless curation only: retained and archived PNG files remain exact original SDK bytes. Raw native reports and host reports are unchanged. Archive paths are local-only, not Git-hosted downloads.",
+  "archive_root": "/tmp/luma-v18-superseded-ui",
+  "runs": {
+    "final-full": {
+      "global_passed": false,
+      "assertions": 2015,
+      "capture_events": 86,
+      "unique_png_before": 85,
+      "unique_png_retained": 32,
+      "raw_file_sha256": {
+        "host-report.json": "33fd30601990291baff7574bb13e580798a90b2ced10171d52e44e3fbd2133da",
+        "report.json": "bda4bfe0b876878e4aade1e4c345b6276f6b3b23a1ef993927ab1273ded8cefb",
+        "actions.json": "80e9eb6a0da808c78ac946636bfd2a12331f3c224d07aa771fd3273e09e4eee6",
+        "instrumentation.txt": "29467354d35795ea5fb243378640d37116ad16ade7e5d59b7c1f6584447f1da0"
+      },
+      "published_png_bytes": 27276729,
+      "archived_png_bytes": 55058383
+    },
+    "fresh-guest": {
+      "global_passed": true,
+      "assertions": 77,
+      "capture_events": 35,
+      "unique_png_before": 35,
+      "unique_png_retained": 7,
+      "raw_file_sha256": {
+        "host-report.json": "47b15b1a2e2b709b25a65c4efaee8584e8c3754e9982d4e8880e426eb90af205",
+        "report.json": "af1cd1f1977c4c7f12d24b75459f9b841e02a2b474bf12f5d3834d26aea1f620",
+        "actions.json": "4bc55664e5435894b30f3f0b414beb5bb95be3509215539313cb880f483da446",
+        "instrumentation.txt": "235faa20923b336405d3a2db0c5ba38ce529f6eca003c9c88e023bc18494b8c2"
+      },
+      "published_png_bytes": 3902437,
+      "archived_png_bytes": 17922683
+    },
+    "final-menus": {
+      "global_passed": true,
+      "all_original_pngs_retained": true,
+      "unique_png_retained": 37,
+      "raw_host_report_sha256": "0e9be28dbd2af29d7de64bdf2d2ddda6d3ffb32ee07d40c518ee8f17c2778460"
+    },
+    "final-production": {
+      "global_passed": true,
+      "all_original_pngs_retained": true,
+      "unique_png_retained": 1,
+      "raw_host_report_sha256": "ea8ffd36296ff22a7cd3912435b8033d052df65ab445abebec15944e5830147c"
+    }
+  },
+  "entries": [
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/failure.png",
+      "sha256": "b7bad61339e9a3bc34e8d1db59610794fdd4916709debaa30120d99dc0b99d02",
+      "bytes": 838092,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/failure.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/flow-gate-sequence-en.png",
+      "sha256": "068c39ec2ccda04b913ecb0b423ded909a01ac4cfb85d8735ccfb0d1f26720e8",
+      "bytes": 1021085,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/flow-gate-sequence-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/hint-gate-en.png",
+      "sha256": "7ceff6ee464a9575ef7023b10a681a2b0ba48fbc251e8a8d3a89b0c0ec1a1439",
+      "bytes": 1025114,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/hint-gate-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/home-en-localized.png",
+      "sha256": "486b5085a5da0d7c2c19ad4490f108c4ce17591d7b705d8cfca50e8d87dfa235",
+      "bytes": 883645,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/home-en-localized.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/home-en.png",
+      "sha256": "d83619a879ae768a21aee183a897eef4b82108ff2f56aa649448cc5a83a328e7",
+      "bytes": 913593,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/home-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-1-cleared-en.png",
+      "sha256": "eef9fe0ebc349e5c1298731e10d2c274825ea5f416d3b1c843506588768d114e",
+      "bytes": 319674,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-1-cleared-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-1-start-en.png",
+      "sha256": "aa7c627e9d3f5fb5de5b1be5e4cde284aff00575b346d67f0f56dd76bfc9e2f5",
+      "bytes": 1012343,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-1-start-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-10-cleared-en.png",
+      "sha256": "b900d34bc73f1fc57727c6a2fb5f386c285ded981bd200356e11ce8a236fd767",
+      "bytes": 324033,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-10-cleared-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-10-start-en.png",
+      "sha256": "b0edb244a37f734ce7021b774c474d261ec75bddba216c56e7ffb8f9c2da427b",
+      "bytes": 1000875,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-10-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-100-cleared-en.png",
+      "sha256": "f658a713910a11eef963c7e8cfc399cfeda191f8f6bcf802ff2e00e6147400dd",
+      "bytes": 328779,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-100-cleared-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-100-start-en.png",
+      "sha256": "7e44aaf8cfc7aeb8033183bfbff3f11f6d25b6d95b762ad3ec13fcc824ddcaf7",
+      "bytes": 1034253,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-100-start-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-13-cleared-en.png",
+      "sha256": "d9f4b5c8d3cf7cc5995bbec352908bb64b6da4a6e5e43ded30ccf4531a71bbf4",
+      "bytes": 323489,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-13-cleared-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-13-start-en.png",
+      "sha256": "1d919d212c3876230c2e4d5e97aa1dba44b21c185c57b4e344c445ffaac46296",
+      "bytes": 991314,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-13-start-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-20-cleared-en.png",
+      "sha256": "227332ef2983424902b1ad7db99bffacda62c8ca181f8ce07c4976f5311121bf",
+      "bytes": 324120,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-20-cleared-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-20-start-en.png",
+      "sha256": "2111cbd751e8d534ce451f2c500ff15e68f3a3123b80a795f7537d1fbe55afa4",
+      "bytes": 1009522,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-20-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-30-cleared-en.png",
+      "sha256": "e65b6df738adad37ddad19ebc8160afabfe65f483b286245723991c16dadb140",
+      "bytes": 326977,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-30-cleared-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-30-start-en.png",
+      "sha256": "bdf5d2d7b426d136a716f6b2e6126d20dee12b01861623b126a98880c15e7ee2",
+      "bytes": 994842,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-30-start-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-40-cleared-en.png",
+      "sha256": "1bf3598de79862c86aa3401fcf6c106223dd1ad17a18b80e8cca0e1974b45688",
+      "bytes": 326787,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-40-cleared-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-40-start-en.png",
+      "sha256": "2845b1e857dafd8bf8267388a2472a1b7af4c2ebb0f0df2b2853c7d0b1380ed0",
+      "bytes": 1006292,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-40-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-50-cleared-en.png",
+      "sha256": "d0888075c498229f5e67ed6dcfa03425f9dcab838cd258bf9704f6ba2c4e5ada",
+      "bytes": 327733,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-50-cleared-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-50-start-en.png",
+      "sha256": "27136d44da2e9d0910f6337d62c9dec5eda06a4ed8337897d18f7bf44c132ee8",
+      "bytes": 1016424,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-50-start-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-60-cleared-en.png",
+      "sha256": "7316faa16614879ff75a1ee0bda0dde405f50dda7b4ff560d4377860a9723d3c",
+      "bytes": 328932,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-60-cleared-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-60-start-en.png",
+      "sha256": "98929cefbbc1620bb30d7493a2350b9f098e0a4a8711cf8c14b176bbf5c57775",
+      "bytes": 1018006,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-60-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-7-cleared-en.png",
+      "sha256": "b2d7279ff5d11f6d397304e060324c5d0461fc5981c8e950667b75080d796b16",
+      "bytes": 322422,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-7-cleared-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-7-start-en.png",
+      "sha256": "8896c9283de084680b58447f92aa47e7f42f3411ca99f24c49385c03470ae55a",
+      "bytes": 1016092,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-7-start-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-70-cleared-en.png",
+      "sha256": "ec47d7689241fa87fb352e39415e04e5131f76944a3b4b46753c814f66bff02f",
+      "bytes": 327803,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-70-cleared-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-70-start-en.png",
+      "sha256": "31d82224fdb20fa1d8838718ec77403bdb856a0ccaf6751276c8b8a1c2a61d60",
+      "bytes": 994655,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-70-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-8-cleared-en.png",
+      "sha256": "9fc09c0331da2e00acd3919a881c18b422a2512f4415d836f2327ae33067bc27",
+      "bytes": 323657,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-8-cleared-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-8-start-en.png",
+      "sha256": "9009a5fa813aedeebca5b00aac51bdbe40365910066918648edfb30da94e3cb4",
+      "bytes": 1002359,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-8-start-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-80-cleared-en.png",
+      "sha256": "e87d4f2e613abe23f15d84da19c16d4cc1ec8d1b7a54b4829acd9f5be69fee07",
+      "bytes": 328439,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-80-cleared-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-80-start-en.png",
+      "sha256": "36eb97c5b278cc53ab7e7aa7e2981e7fe9a04f5a5f55ca0f16f41823257c5a08",
+      "bytes": 1012847,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-80-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-90-cleared-en.png",
+      "sha256": "5c26f592cae305e7efb6862148b9eb90d1d43cb852dfaa3e9bf142899f7d8329",
+      "bytes": 328445,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-90-cleared-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-90-start-en.png",
+      "sha256": "993a80c11c987ca1cd7a9a38c4b498dcbb2324f71afcc330e9a2d1ecb023a049",
+      "bytes": 1000696,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/journey-90-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-native-drag-en.png",
+      "sha256": "b0d082472c32150932209cab47bb698905c7e942519e50b1cc64aecb3242b8b3",
+      "bytes": 1007235,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/journey-native-drag-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-1-en.png",
+      "sha256": "c84470611f8ec89139398b247ce5db52261d5550bc0c6be2cc16f57967a672e4",
+      "bytes": 1384147,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-100-en.png",
+      "sha256": "8c7b1ba2b672ffc37b7748017ca4c9793db4db07128ede4b2635f5ad8bde7738",
+      "bytes": 1316097,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-100-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-1000-en.png",
+      "sha256": "eb57de60aca75cc1781cfa26322206584b10260af1ac4de0708599b005957601",
+      "bytes": 1389122,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-1000-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-101-en.png",
+      "sha256": "6860eac39402b52abedcd493cd34a1495db3d559d8d372dcea1ea522ed84ce63",
+      "bytes": 1342525,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-101-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-13-en.png",
+      "sha256": "7a04975daaa865f0174b36f9520ba2b84e5c27604333c6fdd4e4bca2d98ea2b0",
+      "bytes": 1424694,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-13-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-500-en.png",
+      "sha256": "c66d5f0b29bbf10db56464ad449417ca7a76896d6deb61a4358376348790da62",
+      "bytes": 1326170,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-500-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-7-en.png",
+      "sha256": "3b1c37c6aa8eae44b09221db4c27845bf8f96eca2e10c5c6f8d3a9a45bc244ba",
+      "bytes": 1415596,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-7-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-8-en.png",
+      "sha256": "aaff365d4c72aaa65cd226197d817048c3a0f2e17868c791beefe4af444805a2",
+      "bytes": 1420640,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-8-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-landscape-en.png",
+      "sha256": "4a4df226c25610df2e5591449ab173c5343c82c588d9c1770aa7a6bc01f9db1e",
+      "bytes": 762825,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-landscape-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/map-scroll-en.png",
+      "sha256": "63b493323945d3501ea4d27305d1e29bf1b68b5fabe3178d5ae918b35dadea15",
+      "bytes": 1361446,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/map-scroll-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/menu-events-en.png",
+      "sha256": "71c49d3ab78465618c0ec4d705e3e2916197b74841c6f8dacf40ddc7e40675a0",
+      "bytes": 1031323,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/menu-events-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/menu-inventory-en.png",
+      "sha256": "0fd22854ef36b723f2e4be933bd47dfca74045317a3698766cff98a9fbf257f7",
+      "bytes": 675398,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/menu-inventory-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/menu-map-en.png",
+      "sha256": "7b022701d87542c7a057b3a5e47ae6c524471a125f05d5a7066c3fce883cb5de",
+      "bytes": 1384193,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/menu-map-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/menu-shop-en.png",
+      "sha256": "10ca5aad7635bf656b4cf87b5fef7f8f938d3086f3444532c3a0ef4fce644538",
+      "bytes": 760515,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/menu-shop-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/rewards-en.png",
+      "sha256": "6f83edbaf165614728622fefedca30d43dcb57128c763bb8cb1ec810a1fe9784",
+      "bytes": 793288,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/rewards-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-1-phase-0-en.png",
+      "sha256": "516cbd8193003dec13148b8621ccec786b6965488fcb1ce35e8dc7cb9a1f69cf",
+      "bytes": 1265223,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-1-phase-0-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-1-phase-1-en.png",
+      "sha256": "c19a5ba58b1a81e45b9bea9fd650607c941d3ae35d1ad6bf28caaf7d7debd83e",
+      "bytes": 949194,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-1-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-2-phase-0-en.png",
+      "sha256": "9de08cccac3c9ce5069099fdf0dc0e1ec4ffec933ec553264ce4b01504c9212f",
+      "bytes": 1133006,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-2-phase-0-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-2-phase-1-en.png",
+      "sha256": "98054119b7fdb0d97557fc28d92243bfdef91cc067221217242686858dcc315e",
+      "bytes": 1270270,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-2-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-2-phase-2-en.png",
+      "sha256": "d525a1fc16f4c9fc29edcbbfe41d077084f50d424cb8bf48942b84daf9ebb115",
+      "bytes": 1260092,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-2-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-2-phase-3-en.png",
+      "sha256": "cae20b41bfd1590a3b1abccb33a07dfe2b17eae8aab22b5298fc8b26806e69ca",
+      "bytes": 1084868,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-2-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-3-phase-0-en.png",
+      "sha256": "834390973f87b1d0d198a86521180cd47ef45a5f2d82623981053cc89ab606f6",
+      "bytes": 1282130,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-3-phase-0-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-3-phase-1-en.png",
+      "sha256": "1b3ecdffd56965dfde4817ba6f998bde6dcfdaf5e957f883612c5b359cfda701",
+      "bytes": 1282657,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-3-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-3-phase-2-en.png",
+      "sha256": "e057bc7a82cab88ed7f994fd2e9b16e4477fd2e96f79fd42ee37811091c11218",
+      "bytes": 1265900,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-3-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-3-phase-3-en.png",
+      "sha256": "3e8a6e68d106db167cb6035c0d57918bb041e7b290b84a845d4a4cf9b59266c2",
+      "bytes": 1088214,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-3-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-4-phase-0-en.png",
+      "sha256": "1acea5b90e94b827d458f189c99f9d44ecdcfec0571a4f9461094d0b862e8a1e",
+      "bytes": 1265466,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-4-phase-0-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-4-phase-1-en.png",
+      "sha256": "ed9b857601d5acf3bc6991a7458811c8b1c8dc5593d8f79c4242f5c61f223295",
+      "bytes": 1113470,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-4-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-4-phase-2-en.png",
+      "sha256": "58a924b1b1add2234ec173eb54400776ce43e374f16438a475b0709dac95363e",
+      "bytes": 1272395,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-4-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-4-phase-3-en.png",
+      "sha256": "284933ad2db53059573170577bef0af42e00fb1ca5caec82c3627a481aa5973a",
+      "bytes": 1087656,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-4-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-5-phase-0-en.png",
+      "sha256": "4e19674d08d8324dac0de13bbef3e5d62f899256b5743b4de68068ff98eb0530",
+      "bytes": 1277269,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-5-phase-0-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-5-phase-1-en.png",
+      "sha256": "f2120190726bb1b1d4f998f36231230c4ea20626d26e438ed784f03ffdd0fe20",
+      "bytes": 1134338,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-5-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-5-phase-2-en.png",
+      "sha256": "e152b1b954e26f2eb38b71f8eae33ef7359606bef7deff1a3bfc12737a4eb043",
+      "bytes": 1268788,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-5-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-5-phase-3-en.png",
+      "sha256": "ace9ccec58399516d8f7bbedd143fb04d342e29d351b8ca4e06fa7dbf2fe8fe4",
+      "bytes": 1089574,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-5-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-6-phase-0-en.png",
+      "sha256": "5ba525e7713a2af9cb3fbedff8b930a8d03f0ccf9010c9a001a54a4e135e6d4c",
+      "bytes": 1276631,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-6-phase-0-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-6-phase-1-en.png",
+      "sha256": "28bf97d87ae8bf7452df05cceeb9620d5d16c43137711b310d798b96d17c2099",
+      "bytes": 1097864,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-6-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-6-phase-2-en.png",
+      "sha256": "967c270a778b75aef5ab1147026aba45c578208dc591fc6f4c0b2be581e96bd0",
+      "bytes": 1275330,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-6-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-6-phase-3-en.png",
+      "sha256": "025e6e8d612827aaacae1f05db6bdd21a33340f3fd6cbb5d1000c8ab09cf9826",
+      "bytes": 1264932,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-6-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-6-phase-4-en.png",
+      "sha256": "256d839768b92d7844e715b99d37d8abd96bc672473444206c11807f128c44b2",
+      "bytes": 1088874,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-6-phase-4-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-7-phase-0-en.png",
+      "sha256": "8efafa12c02021fef17da1d643dec838fcddb31156683d3e9873ffbde9ab7f50",
+      "bytes": 1106790,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-7-phase-0-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-7-phase-1-en.png",
+      "sha256": "80a45de9e3749a84ae80dce9305ea681a973053ab52485ef0602eab8d43e5e6d",
+      "bytes": 1277616,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-7-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-7-phase-2-en.png",
+      "sha256": "93f73377a4caf9935e41ff95e48cc8a6d81673970053abd603281fbfe06c5ac4",
+      "bytes": 1269463,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-7-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-7-phase-3-en.png",
+      "sha256": "1fc0eda8859a2449a7711ae9315e67f7b77a138565ad31a841b395d792331b19",
+      "bytes": 1087304,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-7-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-complete-en.png",
+      "sha256": "1d5177ebf10199fca158f0407c10746ac37ba1930b694de217ca7404ee573afd",
+      "bytes": 778930,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-complete-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-key-landscape-en.png",
+      "sha256": "18e06a6aecd48dfc90edeabb27c596ce1ae151c1a97ed3ba0a64335c0c911b96",
+      "bytes": 724321,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-key-landscape-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-resumed-en.png",
+      "sha256": "a02a281ed0d02f19f00d5818fc871d42e4e63d572b46e841a6ac2290462c56b7",
+      "bytes": 1269852,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-resumed-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-reward-en.png",
+      "sha256": "626898dc88f16da6733f12a6ab96fe05d9d46d45d21294008e879e9c2929b52a",
+      "bytes": 705838,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-reward-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-start-en.png",
+      "sha256": "516cbd8193003dec13148b8621ccec786b6965488fcb1ce35e8dc7cb9a1f69cf",
+      "bytes": 1265223,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/tutorial-start-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-wrong-drag-en.png",
+      "sha256": "262ee5de3d767838519fdb187f3dde4c73ff89f5d8915b22c3e05409f7399ad8",
+      "bytes": 1131137,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/tutorial-wrong-drag-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/wardrobe-en.png",
+      "sha256": "dabd06ae281681f770fc25459fcf88b67b7fc95aa38941c72d6795241a92989c",
+      "bytes": 840665,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/final-full-unselected/wardrobe-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/zero-actions-recovery-en.png",
+      "sha256": "bde4d154e0ea92895512d0292a5ceb385f6eb0deb4ab16ec7fae6866163b4b54",
+      "bytes": 316039,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/zero-actions-recovery-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "final-full",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/zero-actions-undone-en.png",
+      "sha256": "edc834f2f0d6b272d427344266817b0ff3a42ffa12f88d21a28c293754dfbb14",
+      "bytes": 1019240,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-final-full/zero-actions-undone-en.png",
+      "reason": "Representative native puzzle milestone, tutorial mechanic, gesture, recovery or retained selector-failure evidence"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/home-en.png",
+      "sha256": "7be0ca4b4dc9956865f199636c4c8818d29bae874b05812e540f90b87c63e1c3",
+      "bytes": 514800,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/home-en.png",
+      "reason": "Representative real native first-install practice, claim or gesture evidence"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/journey-native-drag-en.png",
+      "sha256": "6a64f65eda767c615ed995d928825ce211b9eb59950125141e489605cd4342c1",
+      "bytes": 578131,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/journey-native-drag-en.png",
+      "reason": "Representative real native first-install practice, claim or gesture evidence"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-1-phase-0-en.png",
+      "sha256": "bb14c6e7b2d0f85691957ef780949448da8214bad449b17e55ba7dcb7d13e894",
+      "bytes": 685202,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-1-phase-0-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-1-phase-1-en.png",
+      "sha256": "3e6aafd866f4410e0d88b772560cae0d7823a81e9f73c08324809402885a52e2",
+      "bytes": 522465,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-1-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-2-phase-0-en.png",
+      "sha256": "a7d18bdeb9dd8d694b098e7597d0cc16c640b2d21775b10e7488d016fd8d5db2",
+      "bytes": 617204,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-2-phase-0-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-2-phase-1-en.png",
+      "sha256": "2fc9f02a684bc15af699cf05faedfd106568821b0934506e8dd1f456450a89cd",
+      "bytes": 689505,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-2-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-2-phase-2-en.png",
+      "sha256": "e3b662056496a1dc902fe6b230bee7e93b78d06d2b01ee088978f220339745af",
+      "bytes": 685542,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-2-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-2-phase-3-en.png",
+      "sha256": "a7b03fcc0084eb1e857233453fe662d47ff1b7e03faff2e5740da557cc61dcaa",
+      "bytes": 592370,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-2-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-3-phase-0-en.png",
+      "sha256": "d4f29b00b40dcb573c8b9bb9ad1e032e7005d35d3af129c3962f51a433a0cc85",
+      "bytes": 695157,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-3-phase-0-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-3-phase-1-en.png",
+      "sha256": "6e7022f619865ac8fce8075dcd5e8869e1ba3b0c05982988015f85cb45628661",
+      "bytes": 697549,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-3-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-3-phase-2-en.png",
+      "sha256": "7679f08a0501d90f1c11a95016f24bd2cb44cfaf359f438311eaa5d419890e56",
+      "bytes": 688793,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-3-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-3-phase-3-en.png",
+      "sha256": "12caf87f193ee298d786f641c9f3412397e87afc51c3f1bb1d5a50466cf1083c",
+      "bytes": 594358,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-3-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-4-phase-0-en.png",
+      "sha256": "a800f30d63b1f9200988c0a8f432f29e866f55de5ad46ed0f7fcce07b50d0114",
+      "bytes": 686828,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-4-phase-0-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-4-phase-1-en.png",
+      "sha256": "9156912b8fafa8b49905abc66ed65f3c868fd140897300a23bc4dce3f05168a5",
+      "bytes": 607457,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-4-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-4-phase-2-en.png",
+      "sha256": "eac75ae11b66147fce0b2e221f2fa2e758cd43b19b3774f4fc73c62d09cfcee8",
+      "bytes": 690653,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-4-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-4-phase-3-en.png",
+      "sha256": "b259e421882677b3c673269a0e59b596d8b3bc228b6c3b5b28ee39459da5368b",
+      "bytes": 594680,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-4-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-5-phase-0-en.png",
+      "sha256": "4e618095095576cfc0e6822e3968989fc0385be64ab0c5185b0e502dd9697914",
+      "bytes": 693792,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-5-phase-0-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-5-phase-1-en.png",
+      "sha256": "e9ae8204cab4c6a8e8ec365096dd8b6efd5334806d19b0e44ae767a0a05e8e3b",
+      "bytes": 619971,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-5-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-5-phase-2-en.png",
+      "sha256": "1e0e10ad714cd5df1d0de91b958e568a89dd95bfc4a54df132c02de40b61c097",
+      "bytes": 693908,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-5-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-5-phase-3-en.png",
+      "sha256": "f485954e7dd299eb81dc3c3a97394cc8789ce0114ef55562750b22d05bfc7ae8",
+      "bytes": 595246,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-5-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-6-phase-0-en.png",
+      "sha256": "4e6d264b7a032ab8c630a0b68b68849db5ffc5f09c578c647b552eac775b94db",
+      "bytes": 694206,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-6-phase-0-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-6-phase-1-en.png",
+      "sha256": "9a6c6210951141edb8d489cf574f77714e6e479d6cb70be9ac1a844f373bb032",
+      "bytes": 599985,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-6-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-6-phase-2-en.png",
+      "sha256": "e449ddf8b48933e213e5271e4fa5522d3c5cd6bf14592439543e804bece9ecd1",
+      "bytes": 692720,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-6-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-6-phase-3-en.png",
+      "sha256": "0e42f6e47be50e9ce62465258f1af7f08651b3fa4e2d84c6a7e727442bb5979f",
+      "bytes": 688544,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-6-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-6-phase-4-en.png",
+      "sha256": "9cc78ecfb92d819a094ee3fadbcc3fd87ab058a100d319c53eb862f227bef22c",
+      "bytes": 591139,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-6-phase-4-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-7-phase-0-en.png",
+      "sha256": "a3c97d9c8fad548c60324fc2a654e531f292a29aa5776254ad25808a80336ce0",
+      "bytes": 602244,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-7-phase-0-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-7-phase-1-en.png",
+      "sha256": "6467a00015b0f9ce5946b6a687de56da5cf58ab7984ef809d3a9c8cd1f60c291",
+      "bytes": 693050,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-7-phase-1-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-7-phase-2-en.png",
+      "sha256": "5b7fdf51fc2f99d42744d9f35c2265d20f3c7a43f0fcf801b85c82a5393886d4",
+      "bytes": 691021,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-7-phase-2-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-7-phase-3-en.png",
+      "sha256": "d7f67ee9672462d8f3886fcd35c61aa36c31ddebba13ffb136d7968f0167ff41",
+      "bytes": 594218,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-7-phase-3-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-complete-en.png",
+      "sha256": "fbe79e4d8f6c5be3ef334d004a69cd9fc8f85ea6fb70e06bf688ff48f6cea6bd",
+      "bytes": 428174,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-complete-en.png",
+      "reason": "Representative real native first-install practice, claim or gesture evidence"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-key-landscape-en.png",
+      "sha256": "5b6d766ad9f89e416031f6c518db634b65a461e4287c927249201d7924d1145c",
+      "bytes": 424876,
+      "availability": "local_archive_only",
+      "local_archive_path": "/tmp/luma-v18-superseded-ui/fresh-guest-unselected/tutorial-key-landscape-en.png",
+      "reason": "Redundant intermediate native capture; exact SDK bytes archived locally to reduce repository size"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-resumed-en.png",
+      "sha256": "7e3a8660f755431a03b842358fcc7d12a8fb8358d5a353505f90f48ec364ed5e",
+      "bytes": 688712,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-resumed-en.png",
+      "reason": "Representative real native first-install practice, claim or gesture evidence"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-reward-en.png",
+      "sha256": "490880c9682e8b07d8ff0448c43e9030a6243d7042c774038d57b176a7dcfc25",
+      "bytes": 389670,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-reward-en.png",
+      "reason": "Representative real native first-install practice, claim or gesture evidence"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-start-en.png",
+      "sha256": "05af691bc3e10a06bd36527a5f1887f9fb2ff8f1eb3dd0e2094955384a9e6e50",
+      "bytes": 685673,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-start-en.png",
+      "reason": "Representative real native first-install practice, claim or gesture evidence"
+    },
+    {
+      "run": "fresh-guest",
+      "original_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-wrong-drag-en.png",
+      "sha256": "c844e6940339456f1b0e76c0815078e8d3d46ef9adff940768d193d3a70696da",
+      "bytes": 617277,
+      "availability": "retained_in_repository",
+      "retained_repo_path": "docs/screenshots/v1.8/ui-sdk-fresh-guest/tutorial-wrong-drag-en.png",
+      "reason": "Representative real native first-install practice, claim or gesture evidence"
+    }
+  ]
+}

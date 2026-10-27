@@ -1,101 +1,97 @@
-# A measured progression for 480 boards
+# V4 difficulty: productive costs and measured limits
 
-> **Historical Lab 1.3 and V2 audits.** The 480-board report below retains its original scope. Current 1.6 source uses frozen J/K V3 content: **1,000 Journey + 240 Remix**, sparse key/seal lessons and authored wave descriptors. [V3 design](PROGRESSION_V3.md) · [Exact comparisons](data/progression-v3-summary.md) · [All V3 rows](data/progression-v3-audit.csv) · [Candidate qualification](RELEASE_1_6.md).
+## Current 1.8 route
 
-The V3 host suite records **582,831 checks** for certified solutions, independent reachability comparisons, actual seal dependencies, geometric uniqueness and old-session restoration. It preserves G/H through `getV2()` / `remixV2()` and B/Q through `legacyGet()` / `legacyRemix()`. New J/K rows use N+3–5 fixed allowances. The naive legal-choice model separates recovery from peak beats in aggregate; Normal/Hard/Expert remain authored comparative labels, not measured human difficulty. Final Android/device/player qualification is separate.
+Default progression is **1,000 L Journey and 240 M Remix boards**, with T events from an audited geometry pool. J/K and earlier families remain preserved. V4 adds a one-action manual gate opening, an exact productive-cost allowance and free/refunding Undo. Its budget is no longer only a tile count plus penalties for mistakes. [Rules and APIs](PROGRESSION_V4.md).
 
-The preserved V2 offline audit certifies every G/H layout and checks uniqueness after all eight rotations/reflections, translation and consistent arrow/gate transformations. It does not prove uniqueness under every possible abstract puzzle isomorphism. After three introductory boards, later G/H content includes unsafe legal ordering choices. Its fixed mistake margins remain 2–4 actions; G Journey allowances range from 9 to 23. No runtime player/payment signal changes those layouts or budgets.
+Every reached L/M/T state is **logically recoverable**. An inefficient sequence can still exceed its remaining budget and require Undo/refund or free restart. These properties are separate. The measurements below do not establish human pass rates, a Candy Crush balancing algorithm, enjoyment, retention or revenue.
 
-On the matched first 240 positions, uniform choice among legal exits gives modeled clear rates of **89.04% → 30.02%** for Journey and **57.96% → 22.55%** for Remix. The complete 1,000-board Journey model averages **11.96%**. These are exact results for a deliberately naive policy, not human pass rates or retention. Separate seeded blind taps include blocked-action costs. Current `scripts/test-difficulty.sh` checks both historical and v2 contracts; its [1.5 record](validation/v1.5/difficulty-tests.txt) contains **161,985 checks** and supersedes the historical command result below.
+## Frozen content metrics
 
-**Lab 1.3 progression component · 26 October 2026 · Structural measurements, not human difficulty ratings**
+| Measure | L/M result |
+|---|---:|
+| Boards | 1,240 |
+| Exact productive minimum | 5–28 actions |
+| Initial allowance | 10–31 actions |
+| Boards requiring manual openings in an optimal plan | 1,220 |
+| Key/seal boards | 591 |
+| Sealed cells | 1,367 |
+| Reauthored switch masks | 8,830 |
+| Boards with a measured optimal-route decision affecting cost | 1,161 |
+| Spatial/key dependency depth | 1–13 |
 
-`BalancedCatalog` gives the existing **240 Journey + 240 Remix** boards a frozen progression order. It keeps every original layout and solution; it does not generate replacement puzzles. All 480 boards were measured and verified solvable. Of them, 216 Journey and 225 Remix boards move to another position within their original chapter.
+The first ten boards of each route need no manual opening: 1–5 teach exits/blockers, 6–10 keys/seals. Boards 11–20 add required openings and switches gradually. The [per-board metrics](validation/v1.8/engine/strategy-authoring.csv) report actual costs rather than infer them from a label.
 
-This component is separate from the preserved stable/Lab 1.2 delivery. A JVM pass does not establish installed behavior or player difficulty. The [separate final 1.3 runtime report](validation/v1.3/move-power-ui-smoke.txt) records covered Android cases, with an explicit synthetic profile; neither report establishes enjoyment, retention or a Candy Crush equivalent.
+| Minimum required openings | Boards |
+|---:|---:|
+| 0 | 20 |
+| 1 | 167 |
+| 2 | 333 |
+| 3 | 354 |
+| 4 | 223 |
+| 5 | 83 |
+| 6 | 43 |
+| 7 | 13 |
+| 8 | 4 |
 
-## What changed
+Margins are fixed: +5 at 1–10, +4 at 11–20, then +2 to +4. Layouts and budgets do not adapt to payment, ads, failures, elapsed time or individual profiles. Different productive routes can cost more than the minimum; refunded Undo removes an action, while unrelated blocked-attempt charges stay spent.
 
-- Journey boards **1–6** and Remix boards **1–3** keep their exact original positions, preserving movement, blocking and the first gate/paired-gate introductions.
-- The remaining boards are ordered by a declared structural score **inside each original 30-board chapter**. Equal scores keep original-number order.
-- Each returned level has its new position/chapter number but preserves the original grid, gates, pieces, certified solution, seed and event flag.
-- Original `LevelCatalog` definitions remain intact. Legacy C/R challenge identities resolve against that original catalog; new B/Q codes identify the balanced Journey/Remix order. On upgrade, earned stars/unlocks stay at their numbered positions rather than being remapped to original source IDs. An older interrupted sandbox board resets with a visible notice; wallet, XP, inventory and cosmetics remain.
-- The Android app uses static permutation tables and lazy single-level caching. It does not sort 480 boards or run the difficulty analyzer during startup.
+## Structural score and comparative labels
 
-Chapter membership is conserved, so chapter averages stay exactly the same. The improvement is the order of encounters: fewer abrupt upward changes within a chapter, followed by a recovery at chapter boundaries. It is not a promise that every successive board is harder than the last.
+The offline tool follows one fixed optimal action certificate. At each prefix it evaluates legal exits and closed-gate openings that immediately enable a spatially free piece, using the exact remaining cost.
 
-## Score: a transparent proxy
-
-For each original board the offline analyzer records:
-
-| Symbol | Measured quantity |
+| Symbol | Metric |
 |---|---|
-| N | Number of pieces |
-| B | Initially path-blocked pieces, independently of gate state |
-| C | Pieces initially pointing toward a closed gate |
-| S | Switch pieces |
-| P | Pieces changing more than one gate |
-| E | Ordered piece-to-piece blocking-ray dependencies |
-| F | Certified-path positions with exactly one legal move |
-| L / U | All legal choices sampled along the certified solution / those that cannot lead to a full clear |
-
-The integer score is:
+| D | Certificate steps with several productive choices, including a more expensive completion |
+| A | Exact minimum productive action count |
+| G | Minimum necessary openings, A minus piece count |
+| K | Distinct linked key pieces |
+| P | Largest extra completion cost from one alternative at a certificate prefix |
+| H | Longest spatial/key dependency chain |
 
 ```text
-10N + 5B + 4C + 10S + 12P + 2E + 2F + round(20U / L)
+score = round(100 × D / A) + 3G + 2K + 2P + H
 ```
 
-These weights are **project heuristics**, chosen to describe workload, dependencies and potentially misleading exits. They are not fitted to players or copied from another game's algorithm. A forced path may be easy to recognize for one player and difficult for another; that is one reason this is called a structural score.
+`forced_optimal_steps` separately counts prefixes with exactly one optimal next productive action. Scores range from **1–124**. After the first 20 teaching boards, Normal is below 80, Hard is 80–109 and Expert is 110 or more. The current route contains **644 Normal, 551 Hard and 45 Expert** boards. First-20 teaching overrides and mechanic introductions are explicit authoring choices, not fitted human ratings.
 
-The analyzer evaluates safety with the exact solver, not an approximate timeout. It samples every prefix of the recorded certified solution, then examines every legal next choice at that prefix. This is not an exhaustive enumeration of all possible play histories and not a random-player pass-rate simulation.
+Introductions have their own beat. Recovery requires a measured score below 80% of the preceding board; otherwise a Hard/Expert board is a Peak and another board Practice. These descriptors are frozen from their metrics rather than assigned solely by level-number slots. The margin schedule remains a separate design choice.
 
-Across the audited paths, Journey contributes **7,122 legal choices, 76 unsafe**, and Remix **7,608 legal choices, 394 unsafe**. Those counts describe this sampling procedure; they are not the probability that a human makes a mistake.
+Weights, thresholds and reference certificate are project heuristics. Its decision counts are **not every possible human decision** and can differ on another equally optimal route. A forced action can be obvious or difficult to discover. Exhaustive cost correctness does not validate these coefficients as a model of cognition or enjoyment.
 
-## Measured before and after
+## Exhaustive validation and runtime bounds
 
-![Original and balanced structural scores for all 480 boards](data/difficulty-curves.svg)
+[Final engine evidence](validation/v1.8/engine/README.md) records:
 
+- **773,092,810 assertions** across all 1,240 current boards;
+- **13,254,058 reachable action states** and **57,403,554 legal transitions**, including openings;
+- independent bottom-up evaluation of **31,230,944 gate states**, agreeing with runtime exact costs;
+- every reached physical preview and Undo, plus 13,839 sampled complete typed plans/save replays;
+- geometric uniqueness, policy migration, malformed saves and zero-action refunds;
+- all 980 selectable T geometries and extreme signed seeds, alongside preserved-family regressions.
 
-All adjacent-change statistics include chapter boundaries and the unchanged teaching prefix. A “large upward jump” here means **more than 30 structural points**, an explicit analysis threshold rather than a player-derived boundary.
+T maps to L21–L1000, placing every possible event geometry inside the audited finite closure. This is not every 64-bit seed individually enumerated or a unique new layout for each date.
 
-| Measure | Original Journey | Balanced Journey | Original Remix | Balanced Remix |
-|---|---:|---:|---:|---:|
-| Mean absolute adjacent change | 12.21 | **4.26** | 14.45 | **3.57** |
-| Mean positive adjacent rise | 6.81 | **2.86** | 7.86 | **2.44** |
-| Largest positive adjacent rise | 43 | **41** | 77 | **37** |
-| Upward jumps over 30 points | 10 | **1** | 14 | **1** |
+The board-local runtime cache caps at 524,288 entries. The audit observed 279,897 entries and 9,437,184 bytes of steady arrays at peak; growth can temporarily retain old/new arrays. Its worst individual cost call was **33.89 ms on the development host**, with **50.18 seconds** for the final exhaustive run. These are not Android latency, frame rates, total app memory or low-end-device guarantees.
 
-The remaining largest rise in each family is at **board 3 → 4**. Journey retains that blocking introduction inside its fixed prefix. Remix finishes its fixed three-board introduction, then begins the remaining chapter at the lowest available score. The progression does not hide those transitions by changing an old tutorial or pretending the whole curve is monotonic.
+UI guidance searches an isolated typed-history snapshot in a single background worker and discards stale generations. Frames do not solve the board repeatedly. Pending results show a thinking state and cannot consume a power. Installed interruption, accessibility and physical-device latency have separate acceptance.
 
-| Chapter | Journey mean | Remix mean |
-|---|---:|---:|
-| 1 | 147.13 | 284.33 |
-| 2 | 207.13 | 297.23 |
-| 3 | 235.77 | 338.53 |
-| 4 | 262.10 | 366.27 |
-| 5 | 290.57 | 401.97 |
-| 6 | 314.33 | 426.60 |
-| 7 | 345.17 | 450.33 |
-| 8 | 364.97 | 490.63 |
-
-These chapter means increase in both families; their numerical ranges are not interchangeable with star ratings or pass percentages. [All 480 rows and source mappings](data/difficulty.csv) · [Generated summary including ranges](data/difficulty-summary.md).
-
-## Verification and reproducibility
-
-Run from the repository:
+Reproduce with JDK 17:
 
 ```sh
-scripts/test-difficulty.sh
+./scripts/test-strategy-v4.sh
 ```
 
-The recorded run passed **19,054 checks** in **1.31 seconds on the development host**, which is not an Android timing. [Exact output](validation/v1.3/difficulty-tests.txt).
+[Frozen metadata](../app/src/main/java/com/androidhit/lumadrift/engine/StrategyV4Layouts.java) regenerates byte-identically through the explicit offline tool. Normal play does not regenerate, sort or personalize the progression.
 
-The suite checks every mapped solution, exact-solver equivalence, source layouts/metadata, chapter membership, complete unique permutations, fixed teaching prefixes, deterministic score/tie ordering, increasing chapter means, cache identity, invalid indices and actual reduction of adjacent variability/large spikes. Every board appears once; no difficult board is deleted to improve the averages.
+## Historical measurements
 
-The normal run regenerates the CSV and summary from source. `scripts/test-difficulty.sh --emit-order /private/tmp/luma-difficulty` emits the independently computed candidate tables for comparison with the frozen production arrays. Changing a weight or board definition must regenerate/review the tables and measured evidence; the runtime never silently rebalances boards from player behavior.
+The [1.7 review](LEVEL_MANAGEMENT_REVIEW.md) reproduces why solvable J7/J8/J13 starts could become lost after legal exits. Its uniform-legal probabilities are neither player rates nor V4 results. J/K retain those old interactions for code compatibility; L/M/T changes recovery rather than relabelling the old metric.
 
-## What “like Candy Crush” means here
+Older evidence retains its scope: [V3 summary](data/progression-v3-summary.md), [V2 summary](data/progression-v2-summary.md), and the [original 480-board score audit](data/difficulty-summary.md), [chart](data/difficulty-curves.svg) and [rows](data/difficulty.csv). Their scores, path samples and adjacent-change improvements are not current V4 measurements. The preserved [difficulty test suite](../scripts/test-difficulty.sh) is separate from the current strategy audit.
 
-King's [official game-mode guide](https://candycrush.zendesk.com/hc/en-us/articles/360000754897-Which-game-modes-will-I-find) describes different goals and Hard/Super Hard/Nightmarishly Hard/Legendary labels. The reviewed help page does not publish a numerical balancing function that another developer can reproduce. We use the owner's request as a goal for understandable progression and visible challenge, not a claim to copy King's levels or private tuning.
+## What still needs players
 
-The next useful evidence is a small human study: can players explain the gate rule, do they notice the first paired switch, where do they repeatedly undo or restart, and do later chapters feel earned rather than merely longer? Assess the new action allowance and six-power inventory separately; solvable boards and a smoother score curve cannot establish that the economy is comfortable. [Player-study protocol](HIT_AUDIT.md).
+Observe whether first-time players predict the preview, distinguish an exit arrow from switch targets, find Undo at zero and understand why productive routes cost different amounts. Record actual family/code, budget policy, device and retry history when investigating a reported level: “level 7” alone can refer to several preserved boards.
+
+Measure confusion, blocked attempts, voluntary recovery and abandonment before concluding that the curve works. Wait for complete cohorts before retention claims. [Player-study protocol](HIT_AUDIT.md). Technical solvability and presentation do not substitute for those observations.

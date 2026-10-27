@@ -1,0 +1,32 @@
+{
+  "scope": "Local configuration and recorded outstanding milestones only",
+  "internal_candidate_configuration_valid": true,
+  "live_activation_ready": false,
+  "checks": {
+    "firebase_project_matches": true,
+    "firebase_app_matches": true,
+    "firebase_public_api_key_present": true,
+    "oauth_web_client_present": true,
+    "owner_admob_app_present": true,
+    "three_owner_rewarded_units_present": true,
+    "production_variant_compiled": true,
+    "production_package": true,
+    "sandbox_disabled": true
+  },
+  "manual_qualification_records": {
+    "google_identity_and_deletion": false,
+    "play_license_purchases": false,
+    "wallet_deployment_and_recovery": false,
+    "public_privacy_and_deletion": false,
+    "admob_and_store_approval": false
+  },
+  "live_blockers": [
+    "Candidate deliberately uses sample creatives; live AdMob/UMP qualification and a new build are required.",
+    "Wallet origin is empty in this build; checkout remains blocked. Server deployment is a separate milestone.",
+    "This configuration check has no supplied record of actual Google login/deletion qualification; client IDs alone do not prove it.",
+    "Supply qualification evidence for Play products, merchant profile, signing identity and license-test purchase lifecycle.",
+    "Supply deployment and recovery/refund/RTDN qualification evidence for the cloud wallet; absence here does not mean no server has been deployed.",
+    "Supply the public privacy/deletion qualification record; this script does not inspect hosting or infer that an existing deployment is absent.",
+    "Supply console qualification evidence for AdMob consent, app/account approval, app-ads.txt and store declarations."
+  ]
+}

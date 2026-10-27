@@ -10,6 +10,7 @@ package com.androidhit.lumadrift.engine;
  */
 public final class MoveBudget {
     public static final int POLICY_VERSION = 2;
+    public static final int REVERSIBLE_POLICY_VERSION = 3;
     public static final int MAX_EXTENSIONS = 2;
     public static final int GOLD_EXTENSION_COST = 100;
     private final int mode;
@@ -49,8 +50,10 @@ public final class MoveBudget {
 
     /** 0 Journey, 1 daily, 2 weekly, 3 Remix, 4 fair unlimited friend challenge. */
     public static MoveBudget start(int mode, Level level) {
-        return create(mode, level, POLICY_VERSION);
+        return create(mode, level, level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
     }
+    /** New attempts on preserved content may opt into free, refunding Undo without changing its geometry. */
+    public static MoveBudget startReversible(int mode,Level level) { return create(mode,level,REVERSIBLE_POLICY_VERSION); }
 
     /** Finish an already-started policy-1 attempt without changing its allowance. */
     public static MoveBudget startLegacy(int mode, Level level) {
@@ -65,13 +68,15 @@ public final class MoveBudget {
             throw new IllegalArgumentException("Campaign mode requires a numbered campaign board");
         }
         if ((mode == 1 || mode == 2) && !level.isEvent) throw new IllegalArgumentException("Event mode requires an event board");
-        int minimum = level.tiles.size();
+        int minimum = policyVersion == REVERSIBLE_POLICY_VERSION ? level.minimumActions : level.tiles.size();
         // N exits are necessary because each exit removes one tile; certified content solves in N.
         int margin;
         if (policyVersion == 1) {
             if (mode == 0) margin = level.number <= 3 ? 8 : level.number <= 6 ? 6 : level.number <= 30 ? 5 : level.number <= 90 ? 4 : 3;
             else if (mode == 3) margin = level.number <= 3 ? 6 : level.number <= 12 ? 5 : level.number <= 60 ? 4 : 3;
             else margin = mode == 1 ? 5 : 4;
+        } else if ((mode == 0 || mode == 3) && level.progressionVersion == 4) {
+            margin = StrategyCatalog.allowance(level.number,mode==3);
         } else if (mode == 0 || mode == 3) {
             margin = level.progressionVersion >= 3
                     ? BalancedCatalog.mistakeAllowance(level.number, mode == 3)
@@ -95,7 +100,25 @@ public final class MoveBudget {
      */
     public static MoveBudget restore(int mode, Level level, int used, int extensions,
                                      int extraActions, int boardMoves, int undos) {
-        return restorePolicy(mode, level, used, extensions, extraActions, boardMoves, undos, POLICY_VERSION);
+        return restorePolicy(mode, level, used, extensions, extraActions, boardMoves, undos,
+                level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
+    }
+    /** Explicit version routing preserves policy-1/2 saves; no guessing from the current release. */
+    public static MoveBudget restoreVersion(int policy,int mode,Level level,int used,int extensions,
+                                            int extraActions,int boardActions,int undos) {
+        if(policy<1||policy>REVERSIBLE_POLICY_VERSION)return null;
+        if(level!=null&&level.progressionVersion==4&&policy!=REVERSIBLE_POLICY_VERSION)return null;
+        return restorePolicy(mode,level,used,extensions,extraActions,boardActions,undos,policy);
+    }
+    /** Deterministic policy-2 upgrade: retain its base/extensions; refund historical Undo overhead only. */
+    public static MoveBudget toReversible(int mode,Level level,int used,int extensions,int extraActions,int boardActions,int undos) {
+        MoveBudget old=restorePolicy(mode,level,used,extensions,extraActions,boardActions,undos,2);
+        if(old==null)return null;
+        if(old.isUnlimited())return restorePolicy(mode,level,0,0,0,boardActions,undos,3);
+        long refunded=(long)used-2L*undos;
+        if(refunded<0||refunded>Integer.MAX_VALUE)return null;
+        MoveBudget result=restorePolicy(mode,level,(int)refunded,extensions,extraActions,boardActions,undos,3);
+        return result!=null&&result.base==old.base?result:null;
     }
 
     public static MoveBudget restoreLegacy(int mode, Level level, int used, int extensions,
@@ -109,16 +132,16 @@ public final class MoveBudget {
         try { candidate = create(mode, level, policyVersion); }
         catch (IllegalArgumentException invalid) { return null; }
         if (used < 0 || extensions < 0 || extensions > MAX_EXTENSIONS || extraActions < 0
-                || boardMoves < 0 || boardMoves > candidate.minimum || undos < 0) return null;
+                || boardMoves < 0 || (policyVersion!=3&&boardMoves>candidate.minimum) || undos < 0) return null;
         if (candidate.isUnlimited()) {
             return used == 0 && extensions == 0 && extraActions == 0 ? candidate : null;
         }
-        int maxExtension = Math.max(5, candidate.minimum + 3);
+        int maxExtension = Math.max(5, policyVersion==3?candidate.minimum*3+7:candidate.minimum+3);
         if (extensions == 0 && extraActions != 0) return null;
         if (extensions > 0 && (extraActions < extensions * 5
                 || extraActions > extensions * maxExtension
-                || used < candidate.base + (extensions - 1) * 5)) return null;
-        long minimumUsed = (long) boardMoves + 2L * undos;
+                || policyVersion!=3&&used<candidate.base+(extensions-1)*5)) return null;
+        long minimumUsed = policyVersion==3?boardMoves:(long)boardMoves+2L*undos;
         if (used < minimumUsed || used > candidate.base + extraActions) return null;
         candidate.used = used;
         candidate.extensions = extensions;
@@ -149,10 +172,18 @@ public final class MoveBudget {
         used++;
         return true;
     }
+    /** Refund exactly the productive action just undone. The controller must first undo a real action. */
+    public boolean refundAction() {
+        if(policyVersion!=REVERSIBLE_POLICY_VERSION)return false;
+        if(isUnlimited())return true;
+        if(used<=0)return false;
+        used--;return true;
+    }
 
     /** Enough for every remaining exit plus three mistakes; invalid/solved counts return zero. */
     public int extensionActions(int remainingPieces) {
-        return remainingPieces >= 1 && remainingPieces <= minimum ? Math.max(5, remainingPieces + 3) : 0;
+        int max=policyVersion==3?minimum*3+4:minimum;
+        return remainingPieces >= 1 && remainingPieces <= max ? Math.max(5, remainingPieces + 3) : 0;
     }
 
     /**

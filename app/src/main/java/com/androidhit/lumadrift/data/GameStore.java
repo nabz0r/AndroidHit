@@ -75,6 +75,7 @@ public final class GameStore {
         prefs = context.getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         if (!prefs.contains("initialized")) {
             prefs.edit().putBoolean("initialized", true)
+                    .putBoolean("tutorial_v18_fresh_profile", true)
                     .putInt("coins", 180)
                     .putInt("booster_hint", 3)
                     .putInt("booster_vision", 3)
@@ -553,6 +554,67 @@ public final class GameStore {
 
     public synchronized boolean tutorialSeen() { return prefs.getBoolean("tutorial_seen", false); }
     public synchronized void setTutorialSeen(boolean seen) { prefs.edit().putBoolean("tutorial_seen", seen).commit(); }
+
+    /** One local practice save, including lesson, teaching phase and typed board history. */
+    public synchronized String tutorialState() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String state = prefs.getString("tutorial_v18_state", "");
+            return validTutorialEnvelope(state) ? state : "";
+        }
+    }
+    /** The UI must pass TutorialSession.encode(); that class additionally validates the exact history. */
+    public synchronized void saveTutorialState(String state) {
+        if (!validTutorialEnvelope(state)) throw new IllegalArgumentException("Invalid tutorial save");
+        synchronized (GOLD_GRANT_LOCK) {
+            Map<String,Object> write = new HashMap<>();
+            write.put("tutorial_v18_state", state);
+            LocalSaveTransactions.write(prefs, write);
+        }
+    }
+    private static final String TUTORIAL_COMPLETED_SAVE = "T1|7|0|COMPLETE|";
+    private static boolean validTutorialEnvelope(String state) {
+        return state != null && state.length() <= 256 && (TUTORIAL_COMPLETED_SAVE.equals(state)
+                || state.matches("T1\\|[0-6]\\|[0-4]\\|(ACTIVE|SKIPPED)\\|(?:[0-9]{1,2}(?:,[0-9]{1,2})*)?"));
+    }
+    /** Resume explicit active practice; only profiles first initialized in 1.8 start automatically. */
+    public synchronized boolean shouldAutoStartTutorial() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String state = tutorialState();
+            if (state.contains("|ACTIVE|")) return true;
+            return prefs.getBoolean("tutorial_v18_fresh_profile", false) && state.isEmpty()
+                    && !tutorialRewardClaimed() && unlockedLevel() == 1 && completedLevels() == 0;
+        }
+    }
+    public synchronized boolean tutorialRewardClaimed() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            return prefs.getBoolean("tutorial_v18_reward_claimed", false);
+        }
+    }
+    public enum TutorialRewardStatus { GRANTED, ALREADY_CLAIMED, STORAGE_FULL, NOT_COMPLETE }
+    /**
+     * Exact once per local installation/profile, independent of guest/Google identity.
+     * A completed practice save is mandatory. No campaign/event/daily counter is updated.
+     * Receipt, 100 earned coins and two hints commit together; full storage stays retryable.
+     */
+    public synchronized TutorialRewardStatus claimTutorialReward() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            if (tutorialRewardClaimed()) return TutorialRewardStatus.ALREADY_CLAIMED;
+            if (!TUTORIAL_COMPLETED_SAVE.equals(tutorialState())) return TutorialRewardStatus.NOT_COMPLETE;
+            int balance = coins(), hints = storedBoosterStock(Catalog.HINT);
+            if (balance > MAX_COINS - 100 || hints > MAX_STOCK - 2) return TutorialRewardStatus.STORAGE_FULL;
+            Map<String,Object> write = new HashMap<>();
+            write.put("tutorial_v18_state", TUTORIAL_COMPLETED_SAVE);
+            write.put("tutorial_v18_reward_claimed", true);
+            write.put("coins", balance + 100);
+            write.put("booster_" + Catalog.HINT, hints + 2);
+            LocalSaveTransactions.write(prefs, write);
+            return TutorialRewardStatus.GRANTED;
+        }
+    }
 
     public String dailyId() { return dayId(new Date(clock.now())); }
 
