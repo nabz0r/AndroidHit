@@ -8,7 +8,7 @@ Equipment gives explicit, limited benefits rather than changing the puzzle's gat
 
 Completed technical checks: signed production/Lab APK/AAB and lint; fixed board bounds and legacy identities; actual old active-save upgrade; all six power activations and interrupted Flow recovery; earned-coin equipment purchase/equip/restore; all six sealed challenges; six-language emulator navigation; final share images and advancing Android audio. [Executed evidence and exact-byte scope](VALIDATION.md).
 
-The current website/GitHub presentation work uses the [shared design system](DESIGN_SYSTEM.md), actual game captures and truthful release links. [Web revision checks and publication](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) are a separate delivery gate: a local redesign or repository push is not proof of Hosting deployment, provider readiness or a new game release.
+The current website/GitHub presentation work uses the [shared design system](DESIGN_SYSTEM.md), actual game captures and truthful release links. [Web revision checks](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) and [independent Hosting delivery](validation/site-v1.5/delivery.json) now record this completed visual update. This is separate from provider readiness, player acceptance and a new Android release.
 
 Next product checks, in order:
 

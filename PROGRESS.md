@@ -20,4 +20,4 @@ The final source change after full functional acceptance is isolated to the shar
 
 ## Site / GitHub visual refresh
 
-27 October 2026: shared Nova/vector art, actual 1.5 captures, direct signed-APK links, shared FR/EN site styling and current-document audit in progress. Static/browser/deletion checks and exact Firebase delivery evidence will be recorded under `docs/validation/site-v1.5/`. This entry does not yet establish a new Hosting deployment.
+27 October 2026: completed original Nova/vector brand kit, new repository banner, actual 1.5 captures, direct signed-APK links and shared FR/EN site styling. Source/docs published at [9eebee1588f2](https://github.com/nabz0r/AndroidHit/commit/9eebee1588f2086ac91baecb6647cc63d21ae10a), then deployed to the existing Firebase site. All 23 static payloads and three directory aliases match their source hashes over public HTTPS. [Checks and delivery](docs/validation/site-v1.5/README.md). Android packages are unchanged; commerce/provider qualification remains open.

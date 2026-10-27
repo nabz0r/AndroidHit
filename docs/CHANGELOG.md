@@ -16,7 +16,7 @@
 
 ### Presentation follow-up — site and documentation
 
-The 1.5 public homepage, legal-page presentation and GitHub materials use a shared night/pastel identity, original companion vectors and sourced game captures. Current guides describe the actual 1.5 downloads, local equipment and commercial gates; older release/validation evidence retains its original scope. This changes no Android artifact. [Design system](DESIGN_SYSTEM.md) · [Web revision checks and deployment boundary](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence).
+The 1.5 public homepage, legal-page presentation and GitHub materials use a shared night/pastel identity, original companion vectors and sourced game captures. Current guides describe the actual 1.5 downloads, local equipment and commercial gates; older release/validation evidence retains its original scope. This changes no Android artifact. The Firebase update and exact public-payload comparison are [recorded separately](validation/site-v1.5/delivery.json). [Design system](DESIGN_SYSTEM.md) · [Web revision checks and deployment boundary](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence).
 
 ## 1.4.0-rc1 — Production preparation
 

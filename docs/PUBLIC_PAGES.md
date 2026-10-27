@@ -17,7 +17,7 @@ The pages use the Luma Drift palette, original code-drawn puzzle artwork, respon
 
 The repository's 1.5 presentation aligns the homepage, legal pages and GitHub materials with the actual game: night/pastel palette, original companion vectors, seven source Android screenshots and one Android-generated challenge card, feature explanations and a direct route to the signed **1.5.0-rc1 APK**. The Android binaries and their existing validation are unchanged. [Design system](DESIGN_SYSTEM.md) · [Visual guide](VISUAL_GUIDE.md) · [Exact APK/hash](RELEASE.md).
 
-**Publication boundary:** implementation, local browser checks and image capture are separate from Hosting deployment. Do not describe this new revision as deployed until the deployment result and actual served-resource comparison are recorded. Earlier qualification URLs, OAuth/CORS observations and owner testimony below retain their original scope.
+**Published 27 October 2026:** source revision [9eebee1588f2](https://github.com/nabz0r/AndroidHit/commit/9eebee1588f2086ac91baecb6647cc63d21ae10a) was deployed to the existing Firebase site. Independent HTTPS reads confirm all **23 public payloads plus three directory aliases** match the frozen source bytes, with security/cache headers checked. [Delivery result](validation/site-v1.5/delivery.json) · [Scoped acceptance](validation/site-v1.5/README.md). Local screenshots remain local renders; earlier OAuth/CORS observations and owner testimony retain their original scope. This visual deployment does not qualify Android identity, commerce or a real web-account transaction.
 
 New evidence is recorded in [`validation/site-v1.5/`](validation/site-v1.5/), with local website captures in [`screenshots/site-v1.5/`](screenshots/site-v1.5/):
 

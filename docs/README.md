@@ -31,7 +31,7 @@ The game contains **1,000 Journey boards, 240 Remix boards, six Sealed passages 
 | [Store copy](STORE_LISTING.md) | Truthful 1.5 copy drafts, localized short descriptions and screenshot order |
 | [Public website](PUBLIC_PAGES.md) | FR/EN homepage, policy/deletion routes, local checks and deployment evidence |
 
-The game, public pages and GitHub presentation share a visual family. A website hero or explanatory board is artwork, not an installed gameplay screenshot. A local web preview is not proof that the redesigned site was deployed. [Existing Hosting observations](validation/hosting-preview.md) concern their recorded revision; new publication needs its own result and served-resource check.
+The game, public pages and GitHub presentation share a visual family. The website hero combines original Nova art with an unedited Android capture; the composite itself is web artwork. Local page captures and [independent delivery of all 23 Hosting payloads plus three aliases](validation/site-v1.5/delivery.json) retain distinct scopes. [Earlier Hosting observations](validation/hosting-preview.md) concern their recorded revision.
 
 ## Identity, privacy and commercial gates
 

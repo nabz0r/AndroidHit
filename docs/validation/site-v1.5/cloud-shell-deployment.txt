@@ -1,0 +1,45 @@
+Firebase Hosting deployment — observed Cloud Shell result
+
+Recorded UTC: 2026-10-27T10:12:25.125898+00:00
+Scope: existing site luma-drift-production; Hosting only.
+Control: existing authorized Google Cloud Shell session, through browser UI.
+Checkout: /home/nabz0r/AndroidHit-deploiement
+
+Predeployment:
+  Branch: main
+  Before HEAD: c6f649fdb1ae6927155ac7e0588a302bbe273499
+  Before status: clean
+  git pull --ff-only origin main completed successfully.
+  After HEAD: 9eebee1588f2086ac91baecb6647cc63d21ae10a
+  After tree: 6c06ba0b4e09cf01598551df071b9b0055d6b777
+  Remote main: 9eebee1588f2086ac91baecb6647cc63d21ae10a
+  PREDEPLOY CHECK PASS: expected commit, expected tree, clean main
+
+Executed from that checkout:
+  firebase deploy --only hosting --project luma-drift-production --config firebase.json --non-interactive
+
+Observed terminal output (relevant lines transcribed from the live UI):
+  Publishing Hosting only from commit: 9eebee1588f2086ac91baecb6647cc63d21ae10a
+  === Deploying to 'luma-drift-production'...
+  i  deploying hosting
+  i  hosting[luma-drift-production]: beginning deploy...
+  i  hosting[luma-drift-production]: found 23 files in public
+  i  hosting: uploading new files [0/17] (0%)
+  i  hosting: uploading new files [16/17] (94%)
+  i  hosting: upload complete
+  ✔  hosting[luma-drift-production]: file upload complete
+  i  hosting[luma-drift-production]: finalizing version...
+  ✔  hosting[luma-drift-production]: version finalized
+  i  hosting[luma-drift-production]: releasing new version...
+  ✔  hosting[luma-drift-production]: release complete
+  ✔  Deploy complete!
+  Project Console: https://console.firebase.google.com/project/luma-drift-production/overview
+  Hosting URL: https://luma-drift-production.web.app
+  HOSTING_DEPLOY_EXIT: 0
+
+This is a scoped transcription, not a raw complete terminal/debug log. The CLI
+completion did not print a Hosting version identifier, so none is inferred.
+The deployment did not include backend, Firestore, IAM, purchases or ad activation.
+Independent HTTP/content checks and rendered-site acceptance are separate reports.
+No public-site preview was opened by this deployment agent after publication.
+The session was left untouched after the root agent's stop instruction.

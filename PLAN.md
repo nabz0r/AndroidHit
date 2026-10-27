@@ -24,3 +24,5 @@ Items 1–5 and technical delivery checks in item 6 are implemented and evidence
 Harmonize the Firebase site and GitHub around the shipped 1.5 art: indigo, mint, peach, lilac, Nova and actual Android screenshots. Replace the generic illustrative grid with real gameplay. Preserve functional FR/EN privacy/account routes and the existing host. Refresh current documentation while keeping historical reports scoped to their original versions.
 
 Acceptance: original vector brand kit and rendered PNGs; responsive FR/EN pages; language-aware captures; accessible navigation and reduced motion; isolated deletion-flow regression; no default external requests; main publication and Firebase Hosting verification of the exact deployed files. Android packages remain 1.5/code 6.
+
+Delivered: main publication, Firebase Hosting update and independent comparison of all 23 public payloads plus three directory aliases passed. [Site delivery](docs/validation/site-v1.5/delivery.json).

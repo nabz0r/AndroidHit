@@ -1,0 +1,402 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-27T10:11:09.165319+00:00",
+  "site": "luma-drift-production",
+  "origin": "https://luma-drift-production.web.app",
+  "source_commit": "9eebee1588f2086ac91baecb6647cc63d21ae10a",
+  "source_manifest": "source-manifest.json",
+  "paths_verified": 26,
+  "scope": "Independent HTTPS GETs after Firebase Hosting deployment. All 23 static payloads and 3 directory aliases match local source bytes; security/cache headers checked. This does not perform Google sign-in, deletion, an ad request or purchase.",
+  "responses": [
+    {
+      "path": "/app-ads.txt",
+      "url": "https://luma-drift-production.web.app/app-ads.txt",
+      "status": 200,
+      "bytes": 59,
+      "sha256": "1ec22f11296d1bf892fdd26f7019ca10049cc97977d31ce9ea806b888b6dbcba",
+      "matches_source": true,
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/brand/brand-scene.svg",
+      "url": "https://luma-drift-production.web.app/assets/brand/brand-scene.svg",
+      "status": 200,
+      "bytes": 8164,
+      "sha256": "06584a87464a3b9899a16ef4a42961ae1dc4114320559b93d695ecd9de8b41c8",
+      "matches_source": true,
+      "content_type": "image/svg+xml",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/brand/luma-drift-feature.png",
+      "url": "https://luma-drift-production.web.app/assets/brand/luma-drift-feature.png",
+      "status": 200,
+      "bytes": 478691,
+      "sha256": "ea78c6b1bcc11a6050950d0fa2e6c0923e47753bb77bf6dd3d2e2fb564126170",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/brand/nova-companion.svg",
+      "url": "https://luma-drift-production.web.app/assets/brand/nova-companion.svg",
+      "status": 200,
+      "bytes": 3246,
+      "sha256": "71b04d36956705d7a54b9ebe228f33aa740c1a32e41c15e1c0d5f64878de9206",
+      "matches_source": true,
+      "content_type": "image/svg+xml",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/delete-account.js",
+      "url": "https://luma-drift-production.web.app/assets/delete-account.js",
+      "status": 200,
+      "bytes": 6001,
+      "sha256": "68933dc4981d16a7473776c2cef6635799558923f3a11673951f1f9c768b0ce3",
+      "matches_source": true,
+      "content_type": "text/javascript; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/deletion-core.mjs",
+      "url": "https://luma-drift-production.web.app/assets/deletion-core.mjs",
+      "status": 200,
+      "bytes": 2299,
+      "sha256": "67815fa6c57a157aa6d712e56b29bb356bdf3bf21da63f9b7275d4dcf2e512ad",
+      "matches_source": true,
+      "content_type": "text/javascript; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/google_g.png",
+      "url": "https://luma-drift-production.web.app/assets/google_g.png",
+      "status": 200,
+      "bytes": 33661,
+      "sha256": "d1ce9c2af0b10a7333abc99bc706f9a6a199e5b65bf3e3009624f076b8638e6a",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/icon.svg",
+      "url": "https://luma-drift-production.web.app/assets/icon.svg",
+      "status": 200,
+      "bytes": 6258,
+      "sha256": "d168aab7fb3730f4ab969e4c8a8d2ffa9db8c3eb8a9cb5370e1b0fa75481d8e4",
+      "matches_source": true,
+      "content_type": "image/svg+xml",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/collection-equipment-en.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/collection-equipment-en.png",
+      "status": 200,
+      "bytes": 271239,
+      "sha256": "04c058d950862ea142c7a1604b0412b6732b0f3ab8532cb0df3201ac992805df",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/collection-equipment-fr.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/collection-equipment-fr.png",
+      "status": 200,
+      "bytes": 283094,
+      "sha256": "c6a6716ccab77d4e1806292d15419120028ef8e74f472804a58d657944987cf3",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/home-en.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/home-en.png",
+      "status": 200,
+      "bytes": 308128,
+      "sha256": "2b2094ce9df91aaa4cb9ec0ac92d9944ec5df3911e38730d2589e709f5d71ad0",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/home-fr.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/home-fr.png",
+      "status": 200,
+      "bytes": 315485,
+      "sha256": "7a8e034c4ddd71f286bf656a4d2dd8ab412db314aa30b4499cfef8cfc807bd86",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/sealed-p6-card.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/sealed-p6-card.png",
+      "status": 200,
+      "bytes": 130689,
+      "sha256": "f57c198b6ee8474df50af8a0c78403ebeae2c8d7b6677b61284d28d2edebf78d",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/sealed-wall-before.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/sealed-wall-before.png",
+      "status": 200,
+      "bytes": 224968,
+      "sha256": "28df598902849b3aba1c3f85189194927b835ea329057cb0a94fc9fba06795e3",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/shop-en.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/shop-en.png",
+      "status": 200,
+      "bytes": 208920,
+      "sha256": "8f9b43f989983cb1ac8b41a794b7c54381d73c1aca77f6f099d350d4cfeaf080",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/screenshots/shop-fr.png",
+      "url": "https://luma-drift-production.web.app/assets/screenshots/shop-fr.png",
+      "status": 200,
+      "bytes": 219158,
+      "sha256": "5de652ab7d177cce828cb6dc0ad73eb9d54a2ce06cbe0f70be3c1fc85ffd9576",
+      "matches_source": true,
+      "content_type": "image/png",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/site.js",
+      "url": "https://luma-drift-production.web.app/assets/site.js",
+      "status": 200,
+      "bytes": 3698,
+      "sha256": "c6764568abbb2b03d99d45886008a2c7f31ac2d3dbc6c9b5f90184601404b8ae",
+      "matches_source": true,
+      "content_type": "text/javascript; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/assets/style.css",
+      "url": "https://luma-drift-production.web.app/assets/style.css",
+      "status": 200,
+      "bytes": 16074,
+      "sha256": "d015ecfa7d7cb4e67075d1aec9304d496c52abac796b4ff891fa7fcee80a89b5",
+      "matches_source": true,
+      "content_type": "text/css; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/delete-account/index.html",
+      "url": "https://luma-drift-production.web.app/delete-account/index.html",
+      "status": 200,
+      "bytes": 12001,
+      "sha256": "de85a72bbf84219c4b19d3f053dfab72a551fb16484d094e28a3e8258c4d5415",
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "no-cache",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/index.html",
+      "url": "https://luma-drift-production.web.app/index.html",
+      "status": 200,
+      "bytes": 19401,
+      "sha256": "c0706275434aaba454628d128cc4c74f7b7b299261d9db4b84ae70421510c9de",
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "no-cache",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/privacy/index.html",
+      "url": "https://luma-drift-production.web.app/privacy/index.html",
+      "status": 200,
+      "bytes": 17188,
+      "sha256": "01781a73eb3d2ce225bcaf1adfdd4eb5b03629a696a241957c71d23d97d5598a",
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "no-cache",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/robots.txt",
+      "url": "https://luma-drift-production.web.app/robots.txt",
+      "status": 200,
+      "bytes": 41,
+      "sha256": "273a38ddf3d5e34a9cc9cc68079c1b46294c9d2d7946343f346f720bb03697aa",
+      "matches_source": true,
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/site-config.js",
+      "url": "https://luma-drift-production.web.app/site-config.js",
+      "status": 200,
+      "bytes": 790,
+      "sha256": "6053074f0b45e54e14267e7d2316be8f68d981110c2376641653e039fc0f4f67",
+      "matches_source": true,
+      "content_type": "text/javascript; charset=utf-8",
+      "cache_control": "no-store",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/",
+      "url": "https://luma-drift-production.web.app/",
+      "status": 200,
+      "bytes": 19401,
+      "sha256": "c0706275434aaba454628d128cc4c74f7b7b299261d9db4b84ae70421510c9de",
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "no-cache",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/privacy/",
+      "url": "https://luma-drift-production.web.app/privacy/",
+      "status": 200,
+      "bytes": 17188,
+      "sha256": "01781a73eb3d2ce225bcaf1adfdd4eb5b03629a696a241957c71d23d97d5598a",
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "path": "/delete-account/",
+      "url": "https://luma-drift-production.web.app/delete-account/",
+      "status": 200,
+      "bytes": 12001,
+      "sha256": "de85a72bbf84219c4b19d3f053dfab72a551fb16484d094e28a3e8258c4d5415",
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8",
+      "cache_control": "max-age=3600",
+      "security_headers": {
+        "x-content-type-options": "nosniff",
+        "referrer-policy": "no-referrer",
+        "x-frame-options": "DENY"
+      }
+    }
+  ]
+}

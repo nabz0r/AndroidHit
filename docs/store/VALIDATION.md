@@ -19,3 +19,7 @@ The repository banner, store feature, full-size icon, transparent Nova and wide 
 The sources were compared with the installed [1.5 lobby](../screenshots/v1.5/home-en.png) and [sealed puzzle card](../screenshots/v1.5/sharing/sealed-p6-card.png). These are visual/provenance checks, not evidence of store approval, conversion performance, a newly built APK or physical-device quality.
 
 Reproduction uses the three commands in the [kit README](README.md#reproduce). PNG rendering was checked with macOS AppKit; SVG generation and structural verification use Python's standard library. Font spacing can differ on another platform.
+
+## Hosting follow-up
+
+After the asset checks above, the redesigned public site was deployed. [Independent HTTPS delivery](../validation/site-v1.5/delivery.json) confirms the exact copied brand assets and the other public payloads match their frozen source bytes. This adds Hosting delivery evidence; it does not establish Play approval.
