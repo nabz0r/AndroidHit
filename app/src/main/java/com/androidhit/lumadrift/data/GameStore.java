@@ -27,6 +27,11 @@ import java.util.UUID;
 // Synchronous small local transactions intentionally persist economy before action returns.
 @SuppressLint("ApplySharedPref")
 public final class GameStore {
+    /** A retryable local transaction failure, including a read that flushes a pending write. */
+    public static final class LocalSaveException extends IllegalStateException {
+        private static final long serialVersionUID = 1L;
+        public LocalSaveException(String message) { super(message); }
+    }
     public interface Clock { long now(); }
     /** Optional account-bound permanent ownership; never imports purchased gold into local coins. */
     public interface ExternalOwnership {
@@ -87,6 +92,9 @@ public final class GameStore {
                     .commit();
         }
     }
+
+    /** Flush the exact pending transaction before the UI resumes, without replaying its grant. */
+    public synchronized void retryPendingLocalSave() { LocalSaveTransactions.flush(prefs); }
 
     public synchronized int coins() { LocalSaveTransactions.flush(prefs); return Math.max(0, prefs.getInt("coins", 0)); }
 
@@ -413,6 +421,47 @@ public final class GameStore {
         return item != null && unlockedLevel() >= item.unlockLevel;
     }
 
+    private static String powerTrialReceipt(String id) { return "power_trial_v19_" + id; }
+
+    /** One free, explicitly claimed sample per local profile and catalog power. */
+    public enum PowerTrialStatus { GRANTED, ALREADY_CLAIMED, LOCKED, STORAGE_FULL, INVALID_POWER }
+
+    public synchronized boolean powerTrialClaimed(String id) {
+        if (Catalog.booster(id) == null) return false;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            return prefs.getBoolean(powerTrialReceipt(id), false);
+        }
+    }
+
+    /** An earned pending sample; full stock leaves it available for a later retry. */
+    public synchronized boolean powerTrialAvailable(String id) {
+        synchronized (GOLD_GRANT_LOCK) {
+            return boosterUnlocked(id) && !powerTrialClaimed(id);
+        }
+    }
+
+    /**
+     * Receipt and one physical stock unit share the same atomic local write.
+     * Existing stock, purchases and past usage do not consume this welcome sample.
+     * A storage failure throws; retry flushes that exact grant before any new use.
+     */
+    public synchronized PowerTrialStatus claimPowerTrial(String id) {
+        if (Catalog.booster(id) == null) return PowerTrialStatus.INVALID_POWER;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            if (powerTrialClaimed(id)) return PowerTrialStatus.ALREADY_CLAIMED;
+            if (!boosterUnlocked(id)) return PowerTrialStatus.LOCKED;
+            int stock = storedBoosterStock(id);
+            if (stock >= MAX_STOCK) return PowerTrialStatus.STORAGE_FULL;
+            Map<String,Object> write = new HashMap<>();
+            write.put(powerTrialReceipt(id), true);
+            write.put("booster_" + id, stock + 1);
+            LocalSaveTransactions.write(prefs, write);
+            return PowerTrialStatus.GRANTED;
+        }
+    }
+
     /** Distinct first clears only. Events, replays, purchases and failures cannot raise prices. */
     public synchronized int economyProgress() {
         int completed = 0;
@@ -486,10 +535,43 @@ public final class GameStore {
             LootRetry retry = LOOT_RETRIES.get(prefs);
             if (retry != null) return retry.milestone;
             for (int milestone = 5; milestone <= Catalog.LEVEL_COUNT; milestone += 5) {
-                if (!prefs.contains("power_loot_v1_" + milestone)) return milestone;
+                if (!prefs.contains("power_loot_v1_" + milestone)
+                        && !prefs.contains("power_loot_v19_" + milestone)) return milestone;
             }
             return 0;
         }
+    }
+
+    /**
+     * Stable preview for the earliest unclaimed five-clear gift, even before earned.
+     * Eligibility is frozen to the Journey level opened by that milestone, rather
+     * than the player's level when they visit the rewards screen. Old receipts and
+     * an exact in-process storage retry retain their original item.
+     */
+    public synchronized String nextMilestoneLootId() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LootRetry retry = LOOT_RETRIES.get(prefs);
+            if (retry != null) return retry.item;
+            return milestoneLootId(nextLootMilestone());
+        }
+    }
+
+    private String milestoneLootId(int milestone) {
+        if (milestone < 5 || milestone > Catalog.LEVEL_COUNT || milestone % 5 != 0) return "";
+        int eligible = 0;
+        int earnedUnlock = Math.min(Catalog.LEVEL_COUNT, milestone + 1);
+        for (Catalog.BoosterItem item : Catalog.BOOSTERS) if (item.unlockLevel <= earnedUnlock) eligible++;
+        if (eligible == 0) return "";
+        int target = (milestone / 5 - 1) % eligible;
+        for (Catalog.BoosterItem item : Catalog.BOOSTERS)
+            if (item.unlockLevel <= earnedUnlock && target-- == 0) return item.id;
+        return "";
+    }
+
+    private String milestoneLootReceipt(int milestone) {
+        String current = "power_loot_v19_" + milestone;
+        return prefs.contains(current) || !prefs.contains("power_loot_v1_" + milestone)
+                ? current : "power_loot_v1_" + milestone;
     }
 
     /**
@@ -503,7 +585,7 @@ public final class GameStore {
             LootRetry pending = LOOT_RETRIES.get(prefs);
             int milestone = pending == null ? nextLootMilestone() : pending.milestone;
             if (milestone == 0 || completedLevels() < milestone) return "";
-            String token = "power_loot_v1_" + milestone;
+            String token = milestoneLootReceipt(milestone);
             String recorded = prefs.getString(token, "");
             if (!recorded.isEmpty()) {
                 if (pending == null || !pending.item.equals(recorded) || Catalog.booster(recorded) == null) return "";
@@ -512,12 +594,8 @@ public final class GameStore {
                 LOOT_RETRIES.remove(prefs);
                 return recorded;
             }
-            int eligible = 0;
-            for (Catalog.BoosterItem item : Catalog.BOOSTERS) if (boosterUnlocked(item.id)) eligible++;
-            if (eligible == 0) return "";
-            int target = (milestone / 5 - 1) % eligible;
-            String id = "";
-            for (Catalog.BoosterItem item : Catalog.BOOSTERS) if (boosterUnlocked(item.id) && target-- == 0) { id = item.id; break; }
+            String id = milestoneLootId(milestone);
+            if (id.isEmpty()) return "";
             int stock = storedBoosterStock(id);
             if (stock >= MAX_STOCK) return "";
             LOOT_RETRIES.put(prefs, new LootRetry(milestone, id));
@@ -1006,5 +1084,29 @@ public final class GameStore {
     }
 
     private static int clampStars(int stars) { return Math.max(0, Math.min(3, stars)); }
+    /** Local visual choice only; never changes gameplay, prices or account ownership. */
+    public synchronized String avatarStyle() {
+        LocalSaveTransactions.flush(prefs);
+        return AvatarStyles.find(prefs.getString("avatar_style_v19", "plush_classic")).id;
+    }
+    public synchronized boolean equipAvatarStyle(String id) {
+        boolean valid=false;for(AvatarStyles.Style style:AvatarStyles.all())if(style.id.equals(id))valid=true;
+        if(!valid)return false;
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);Map<String,Object> write=new HashMap<>();write.put("avatar_style_v19",id);LocalSaveTransactions.write(prefs,write);return true;}
+    }
+    public synchronized boolean guardianUnlocked(int number) { return number>=1&&number<=100&&completedLevels()>=number*10; }
+    public synchronized boolean guardianCleared(int number) { LocalSaveTransactions.flush(prefs);return number>=1&&number<=100&&prefs.getBoolean("guardian_v19_"+number,false); }
+    /** First pending encounter, including its actual locked requirement. */
+    public synchronized int nextGuardian() { for(int n=1;n<=100;n++)if(!guardianCleared(n))return n;return 100; }
+    /** Call only after the native GuardianEncounter is solved. Currency and receipt commit together. */
+    public synchronized int completeGuardian(int number) {
+        synchronized(LocalSaveTransactions.LOCK){
+            LocalSaveTransactions.flush(prefs);
+            if(!guardianUnlocked(number)||guardianCleared(number)||coins()>MAX_COINS-100)return 0;
+            Map<String,Object> write=new HashMap<>();write.put("guardian_v19_"+number,true);write.put("coins",coins()+100);
+            LocalSaveTransactions.write(prefs,write);return 100;
+        }
+    }
+
     private static int safeAdd(int balance, int amount) { return (int) Math.min(MAX_COINS, (long) balance + Math.max(0, amount)); }
 }

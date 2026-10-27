@@ -1,10 +1,16 @@
 # Art direction and original audio
 
-## Current 1.8 presentation
+## Current 1.9 companions and moving stages
+
+The original code renderer adds **24 companion silhouettes × 12 visual treatments**, five poses and actual-progress parallax with a quiet central reading area. Cyberpunk, arcade, modern pixel, sakura, ocean, space, steampunk, candy, Halloween, Valentine, ice and plush treatments change geometry/accessories as well as colour. These are 288 combinations, not 288 hand-painted assets. Styles are free and do not grant unowned companions or gameplay benefits. Reduced motion freezes the temporal and travelling effects. [Renderer and native atlas evidence](validation/v1.9/avatar/README.md) · [UX](UX_1_9.md).
+
+The original Dream Glade illustration and ten synthesized music arrangements remain. No new third-party game art, recording, font or generated illustration was added in 1.9.
+
+## Preserved 1.8 presentation
 
 Cream/lilac surfaces, plum text, soft-volume arrow pieces, original animated star tutor and fingertip, six distinct power silhouettes and refreshed four-slot clothing form the current native/web family. Dream Glade replaces the default Atlas background; its built-in generation prompt and exact pixel hash are [recorded](art/dream-glade-v18.json). The image is copied unchanged into Android and public assets. Ten subtle tints share this one scene.
 
-The ten original synthesized biome arrangements are retained, with separate music/effects settings and reduced motion. No new licensed music or third-party game asset was added. [Current UX](UX_1_8.md) · [Design system](DESIGN_SYSTEM.md) · [Final 1.8 captures/evidence](RELEASE_1_8.md). The sections below document preserved earlier artwork/audio and must not be read as a claim that older captures show 1.8.
+The ten original synthesized biome arrangements are retained, with separate music/effects settings and reduced motion. No new licensed music or third-party game asset was added. [Preserved 1.8 UX](UX_1_8.md) · [Design system](DESIGN_SYSTEM.md) · [Final 1.8 captures/evidence](RELEASE_1_8.md). The sections below document preserved earlier artwork/audio and must not be read as a claim that older captures show 1.8.
 
 
 Luma Drift combines code-drawn puzzle pieces and companions with a bundled generated environment: a dark celestial backdrop, soft colored light, tactile rounded pieces, clear arrow marks, and small expressive companions. The interface takes general puzzle-game conventions—short sessions, visible progression, immediate feedback, and readable rewards—without copying another game's artwork, characters, screens, or sound recordings.

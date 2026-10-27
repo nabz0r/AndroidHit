@@ -1,3 +1,5 @@
+> **1.9 artwork:** AvatarStyles/AvatarStage, 288 combinatorial appearances, stage drawings and guardian pieces are original repository code, with Android Canvas exports. No franchise sprite, sampled game sound or new external illustration was imported. Research extracts retain primary-source attribution and do not include full protected reports or respondent data.
+
 # Third-party facilities and notices
 
 The original game source, companion drawings, interface illustrations and synthesized audio remain under the repository's [AGPL-3.0 license](../LICENSE). This does not relicense external SDKs, platform fonts or Google branding under AGPL.

@@ -1,4 +1,63 @@
-# Store presentation kit — Luma Drift 1.8
+# Store presentation kit — Luma Drift 1.9
+
+## Current candidate · 27 October 2026
+
+**Draft copy for production 1.9.0-rc1 / code 10. No Play application, submitted listing or public Play release is established by this delivery.** The owner reports that the developer account is approved; that is owner testimony, not independent Console observation. Creating the Play application and qualifying its test track, Google identity and commerce are subsequent work.
+
+The [production APK](../releases/luma-drift-1.9.0-rc1.apk) is **7,740,394 bytes / 7.74 MB decimal**, SHA-256 `b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05`. The separate [Lab APK](../releases/luma-drift-1.9.0-sandbox.apk) is SHA-256 `acb3e1b0cfa71f84435d6cb0cf0fc73e3d4b434009deef972c54d86d9e7c09c7`. These are the FINAL5 packages. [Exact release/bundles](RELEASE_1_9.md) · [Production manifest](../releases/manifest-1.9.0-rc1.json) · [Executed qualification](validation/v1.9/README.md).
+
+The 1,000 Journey and 240 Remix layouts remain the published L/M content. The update fixes the gate-practice touch path, exposes named five-clear gifts directly in Rewards, offers one explicitly claimed trial charge per unlocked power, and grades stars by the initial action budget rather than hint use or elapsed time. Three stars allow the exact minimum plus half the fixed mistake margin; two fit the original budget, and an extension yields one. Free Undo refunds the reversed productive action, while failed blocked attempts remain charged.
+
+[100 optional Guardians](GUARDIANS.md) open one per ten distinct Journey clears, with double-layer pieces from Guardian 1 and one-cell pieces from Guardian 5. They have a real work meter, one saved active encounter separate from Journey, free hints/recovery and an explicit once-only 100-LumaCoin reward. The ordinary Journey stays available. The 24 companions have **12 free original visual treatments**, producing 288 combinations with the companions the player owns. A treatment does not grant an unowned companion or a gameplay advantage. These are combinations rendered by the game, not 288 separately painted assets.
+
+FINAL5 also preserves the exact Studio/Guardian screen through recreation and blocks onward Guardian navigation while its attempt is unsaved. A typed local-save Retry barrier keeps repeated write/read-flush failures out of rendering; its Retry target is not intercepted by an underlying piece. Source robustness results and exact native fault acceptance are separate.
+
+The candidate forces **test ads**, has **no embedded paid-wallet origin**, and keeps real checkout and paid cosmetic draws closed. Configured social/Google adapters and synthetic profile tests do not establish real account, friend, gift, advertising or payment acceptance. Progression, earned LumaCoins, tutorial receipts and Guardian state remain device-local; Google identity does not synchronize them. Public contact: **nabilux / nabz0r+gaming@gmail.com**, without a claim that this label identifies a legal publisher entity.
+
+## English description draft for this candidate
+
+**One line:** Soft little worlds. Every move matters.
+
+> Follow Nova through a soft world of arrows, gates and little discoveries.
+>
+> Tap a piece or swipe along its arrow. Clear a path, release a key and preview which gates a switch will change. Explore 1,000 Journey puzzles and a separate 240-board Remix route. Reopen a closed gate for one action; undo freely and get the reversed action back, even at zero moves.
+>
+> Learn through seven small playable lessons. Try a real blocker, key, gate, switch, Undo and Spark. Pause, resume the same step or replay whenever you like. Finish the practice for a one-time local gift of 100 LumaCoins and two hints. Practice spends no campaign inventory.
+>
+> Collect named Journey gifts every five distinct clears, and claim a free trial charge when a new power unlocks. Stars reward your action use: taking time, asking for a hint and using Undo do not themselves remove stars. Every fixed Journey board has a completion within its original allowance without a purchase or power.
+>
+> Meet an optional Prism Guardian every ten Journey clears. Peel a thick piece before moving it; later, guide footprint pieces one cell at a time. The progress meter follows real layers and steps. Use free next-gesture help, Undo or restart, then collect a first-clear fragment worth 100 earned LumaCoins.
+>
+> Choose among 24 original companions and 12 free visual treatments for the companions you own. Dress them with hats, outfits, shoes and gloves from a separate 24-item cosmetic wardrobe. Headwear, Aura and Charm equipment remains a different collection with its stated limited effects.
+>
+> Travel through ten map atmospheres with original synthesized music. Discover daily and weekly puzzles and quests, and a seven-visit gift cycle that keeps its place when you miss a day. Play in English, French, German, Spanish, Portuguese or Italian, with separate sound, music, haptic and reduced-motion settings.
+>
+> This qualification candidate uses test advertisements and keeps real checkout and paid draws closed. Online Google/friend/gift acceptance is still being qualified. Gameplay progress and earned items stay on this device; optional Google identity does not provide cloud progression. Uninstalling or clearing app data removes local saves.
+
+This is an identified candidate draft, not copy for an already approved commercial release. Final store media, native-speaker review, audience/content declarations, privacy/Data safety and the actual submitted build need their own review. Do not advertise measured enjoyment, cognitive benefit, retention, revenue or a hit outcome from the simulation audit. [Player-audit limits](PLAYER_AUDIT_2026.md).
+
+## Current short-description drafts
+
+| Locale | Draft, within 80 characters |
+| --- | --- |
+| en-US | Arrows, gates, guardians and little companions in a soft puzzle adventure |
+| fr-FR | Flèches, portes, gardiens et compagnons : un voyage de puzzles tout doux |
+| de-DE | Pfeile, Tore, Wächter und kleine Begleiter auf einer sanften Rätselreise |
+| es-ES | Flechas, puertas, guardianes y compañeros en una dulce aventura de puzles |
+| pt-PT | Setas, portas, guardiões e companheiros numa doce aventura de puzzles |
+| it-IT | Frecce, porte, guardiani e compagni in una dolce avventura di rompicapi |
+
+## Media and publication boundary
+
+Use only native captures whose exact candidate APK, profile, passing result and restoration/first-install scope are recorded in the [1.9 evidence index](validation/v1.9/README.md). FINAL5 [full-100/menu/Guardian/language acceptance](validation/v1.9/ui-sdk-final5-full100/host-report.json) passes **2,277 checks / 79 PNGs** on the exact Lab APK, API 36 ARM64 with 16 KiB pages, and restores its saved test environment. The [first-install guest D run](validation/v1.9/ui-sdk-fresh-guest-d/host-report.json) passes **85 checks / 17 PNGs** on API 36 ARM64 with 4 KiB pages; Lab was absent beforehand, production absent before and after, its new guest profile remains and rotation settings were restored. [Production startup](validation/v1.9/ui-sdk-production-final5/host-report.json) passes **7 checks / 1 PNG** on the exact production APK and restores its saved environment. These are current-byte native results, separate from provider acceptance. The [FINAL5 persistent-save fault run 3](validation/v1.9/ui-sdk-final5-storage-fault3/host-report.json) passes **524 checks / 14 PNGs** on the exact Lab APK. Two real permission cycles (`500 → 771`) deny writes and restore access: the pending Guardian layer peel remains on screen when Back is pressed and the physical Retry button saves it once; the reward remains exactly 100 pending coins through a still-blocked retry and Activity recreation, then durably changes **1,830 → 1,930 coins** with its receipt. A repeated claim adds zero. Memory and XML disk state are checked separately, and directory permissions, rotation and the saved test environment are restored. This is Activity recreation with an in-process pending transaction, **not process death while that transaction is pending**. The first two raw failed runs remain unchanged: [fault 1](validation/v1.9/ui-sdk-final5-storage-fault/host-report.json) stopped on the harness rotation wait before any permission lock, and [fault 2](validation/v1.9/ui-sdk-final5-storage-fault2/host-report.json) expected “Retry” while the actual control was labelled “Try again”. Neither failure is relabelled as a pass; run 3 supplies its own completed fault-recovery evidence. The retained [fresh-guest B run](validation/v1.9/ui-sdk-fresh-guest-b/host-report.json) passed 85 checks on historical FINAL3 Lab, SHA-256 `a16fbc03a75455805b7f3f491a8fc26cddc4e33637ec0b8bc1668700e83de36f`. Historical FINAL4 Lab SHA-256 `f8d554a446d4511baafb4edc3012f4014d0ae420c02e6fffdc29fc58b93a9e08` passed [fresh-guest C](validation/v1.9/ui-sdk-fresh-guest-c/host-report.json), 85 checks / 17 PNGs, and the [normal full-100 route](validation/v1.9/ui-sdk-final4-full100/host-report.json), 2,277 checks / 79 PNGs. C was a first installation with production absent before and after; its new guest profile remains and rotation settings were restored. The full run restored its saved test environment. None qualifies current FINAL5 bytes, the later persistent-save fixes or production Play media. Historical 1.8 screenshots and all earlier raw failures retain their labels and hashes. Neither a rendered avatar atlas, a website composition nor a source audit is an installed gameplay screenshot. Eventual Play media should be captured from the exact build selected for submission with honest account and progress provenance.
+
+The [website release record](validation/site-v1.9/README.md) separately identifies source preparation, native-image promotion, local browser review and Hosting publication. Preparing store copy or a site does not publish an app to Google Play.
+
+---
+
+## Preserved 1.8 presentation record
+
+The following 1.8 sections retain their original wording and evidence. References to their then-current candidate, media and publication status are historical, not the current 1.9 status.
 
 ## Current candidate and copy boundary · 27 October 2026
 

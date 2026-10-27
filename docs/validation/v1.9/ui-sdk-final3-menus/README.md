@@ -1,0 +1,11 @@
+# FINAL3 tail validation: real guardian screen restoration defect
+
+This is a retained **raw FAIL**, not final release qualification. It tested frozen Lab APK `a16fbc03a75455805b7f3f491a8fc26cddc4e33637ec0b8bc1668700e83de36f` on the owned API36/16KiB QA emulator5580 at a temporarily compact1080×1920 viewport. The exact independent runner is archived beside the report. The host restored every original preference byte, display dimensions and rotation settings.
+
+The run performed50 real campaign clears and then the metagame tail. It verified earned gift content/receipt, explicitly claimable available power samples, the still-locked level75 sample, all12 free avatar styles and actual Guardian1 layer peeling, free Undo, solved-state reopening and a single100-coin claim. Guardian5 retained its exact partial history and one-cell state after leaving and reopening.
+
+A real SDK rotation during Guardian5 preserved the encoded encounter save but returned the actual activity to **Home**. The next physical piece action therefore failed because no guardian piece was visible. The immediately preceding save-only rotation assertion passed: saved data alone was insufficient to prove the screen stayed usable. The captured failure view and native accessibility tree show Home, with50/1000 progression. There were976 successful checks before that missing-control exception; the complete suite remains failed.
+
+This exposed an app restoration defect, not a reason to navigate back silently from the test. Parent-owned FINAL4 changes add the new styles/guardians to menu restoration, persist the active guardian/blocked flag in the activity bundle and reload the real encounter save when restoring its screen. The test now separately asserts the actual restored pane, visible piece bounds after portrait restoration, source-matched one-cell displacement, and rotations of both newly added menus. A new full100 run on FINAL4 must establish the result; this report is not relabeled as passing.
+
+The earlier FINAL3 full100 report is separately failed for a test assumption about a normally scrollable claim card. Its300 individual native level assertions are extracted with their exact scope, without changing that original suite verdict. Neither run measures human retention or monetization.

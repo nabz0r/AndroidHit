@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.9.0-rc1 / 1.9.0-sandbox — first journey and Prism guardians
+
+- Reproduced/fixed the lesson-4 physical gesture/scroll conflict and L11 compact-window preview clipping; Confirm/Cancel stay visible and preview itself stays free.
+- Stable, visible Journey gifts; six explicit sample-power receipts; action-only star thresholds without a hint/Undo/time penalty.
+- 100 optional ten-clear guardians, visible double layers, one-cell pieces from Guardian 5, saved reversible attempts and once-only fragment coins.
+- 288 original companion/style combinations, five poses and actual-progress parallax with reduced motion.
+- First-100 before/after simulations with six documented behaviour profiles and primary aggregate research published in 2026; no fabricated human retention result.
+
+[Exact release](RELEASE_1_9.md) · [Audit](PLAYER_AUDIT_2026.md) · [Executed evidence](validation/v1.9/README.md).
+
+
 1.8 delivery: signed code-9 artifacts and source published on main `5cab179b`; all four independent GitHub downloads match. Existing Firebase Hosting updated from that exact source at 2026-10-27 14:59 UTC, live version `4324523b7540b1a1`; 58 source payloads verified before deploy. [Package delivery](validation/v1.8/publication.json) · [Website delivery](validation/site-v1.8/README.md).
 
 ## 1.8.0-rc1 / code 9 — 2026-10-27

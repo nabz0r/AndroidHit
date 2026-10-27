@@ -1,6 +1,12 @@
 # Luma Drift roadmap
 
-## Current 1.8 — all levels, learning and a readable world
+## Current 1.9 — first journey, guardians and expressive companions
+
+[Release](RELEASE_1_9.md) · [2026 player audit](PLAYER_AUDIT_2026.md) · [UX](UX_1_9.md) · [Guardians](GUARDIANS.md). The release fixes reproduced native lesson-4 and compact preview failures, makes earned gifts and free power samples visible, grades actions rather than hint use, and adds 100 optional encounters plus 288 visual combinations. Synthetic policy experiments and original 2026 survey aggregates retain their separate scopes; human enjoyment and return rates remain unmeasured.
+
+The owner reports Play account approval on **27 October 2026**. After the tested gameplay release, the next owner workflow is to create the Play application, use the signed code-10 AAB on an internal track, and qualify actual Google identity, two-account gifts, consent and license-test purchases. Approval of the developer account does not itself publish an app or activate commerce.
+
+## Preserved 1.8 milestone — all levels, learning and a readable world
 
 [Delivered scope, artifacts and evidence](RELEASE_1_8.md) · [V4 content](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [UX](UX_1_8.md). The user prioritized every level and presentation over Google/social/commercial activation. The former manual-gate proposal is implemented in separate L/M/T families, with exact productive-action budgets and free refunded correction. Historical J/K and older codes remain unchanged.
 

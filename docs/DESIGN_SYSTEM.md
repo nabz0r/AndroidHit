@@ -1,4 +1,6 @@
-# Luma Drift design system — 1.8
+# Luma Drift design system — 1.9
+
+The cream/lilac/plum visual family remains. [1.9 UX](UX_1_9.md) adds an action-preview modal anchored to the visible window, explicit reward/sample states, visibly stacked boss pieces with layer counts, footprint-marked one-cell movement and the [288 original companion combinations](validation/v1.9/avatar/README.md). Animation changes art only, preserves fixed controls and follows actual progress; reduced motion disables the movement. The retained 1.8 foundation follows.
 
 [Current UX contract](UX_1_8.md) · [Native capture provenance](RELEASE_1_8.md) · [Original illustration prompt and hash](art/dream-glade-v18.json).
 

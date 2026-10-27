@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "Engineering stress hypotheses; not fitted human behaviour",
+  "age_policy": "Adult Gen Z 18+ and older-adult 50+ labels can be crossed with all six behaviours using identical parameters. Age never determines skill, price, difficulty, failure, spending or help availability.",
+  "population_weights": null,
+  "source_usage": "Sources justify coverage dimensions only. No source measures Luma Drift errors, help thresholds, tutorial completion, level duration or retention.",
+  "parameter_semantics": {
+    "off_plan_rate": "Assumed probability of selecting an available legal action outside the solver plan. It is not a measured mis-tap or psychological error rate.",
+    "blocked_probe_rate": "Assumed deliberate or accidental blocked-action probe per selection opportunity.",
+    "help_after_unproductive_actions": "Assumed engineering threshold for consulting visible help or a free undo; not a measured reaction time.",
+    "session_window_minutes": "Synthetic interruption budget. Timing must be labelled modelled and cannot establish human enjoyment or next-day return.",
+    "action_latency_seconds": "Synthetic sensitivity interval; includes assumed thinking time and cannot be attributed to any generation.",
+    "retry_limit": "Test-run stopping rule per level, not estimated human churn. Zero retry does not imply loss of progress or resource.",
+    "no_purchase": "All profiles complete without ads or payment. Commerce qualification remains a separate test."
+  },
+  "profiles": [
+    {
+      "id": "practising_novice",
+      "label": "Puzzle newcomer who completes and reopens practice",
+      "anchors": ["OFQ26-skill", "AARP26-relax"],
+      "design_hypothesis": "Teach each mechanic through action and expose a free recovery path.",
+      "assumed_parameters": {"off_plan_rate": 0.2, "blocked_probe_rate": 0.12, "help_after_unproductive_actions": 2, "session_window_minutes": [8, 15], "action_latency_seconds": [3, 8], "retry_limit": 3, "tutorial": "complete", "no_purchase": true},
+      "sensitivity": {"off_plan_rate": [0.1, 0.35], "blocked_probe_rate": [0.05, 0.2]}
+    },
+    {
+      "id": "impatient_skipper",
+      "label": "Experienced phone user, unfamiliar puzzle, skips practice",
+      "anchors": ["OFQ26-skill", "DMT26-social-discovery"],
+      "design_hypothesis": "Digital confidence must not substitute for understanding gates, keys or reversibility.",
+      "assumed_parameters": {"off_plan_rate": 0.3, "blocked_probe_rate": 0.18, "help_after_unproductive_actions": 3, "session_window_minutes": [4, 8], "action_latency_seconds": [1, 4], "retry_limit": 2, "tutorial": "skip_then_resume", "no_purchase": true},
+      "sensitivity": {"off_plan_rate": [0.15, 0.45], "help_after_unproductive_actions": [1, 5]}
+    },
+    {
+      "id": "careful_explorer",
+      "label": "Reads explanations and checks previews before commitment",
+      "anchors": ["OFQ26-skill", "AARP26-relax"],
+      "design_hypothesis": "Preview and state explanation should reward deliberate play without time pressure.",
+      "assumed_parameters": {"off_plan_rate": 0.1, "blocked_probe_rate": 0.04, "help_after_unproductive_actions": 2, "session_window_minutes": [15, 30], "action_latency_seconds": [4, 12], "retry_limit": 4, "tutorial": "complete", "no_purchase": true},
+      "sensitivity": {"off_plan_rate": [0.02, 0.2], "action_latency_seconds": [2, 15]}
+    },
+    {
+      "id": "interrupted_commuter",
+      "label": "Short windows, interruption mid-lesson or mid-level",
+      "anchors": ["OFL26-social-time", "OFQ26-screen-time"],
+      "design_hypothesis": "Saving, free exit and return context must survive interruptions.",
+      "assumed_parameters": {"off_plan_rate": 0.15, "blocked_probe_rate": 0.08, "help_after_unproductive_actions": 2, "session_window_minutes": [2, 5], "action_latency_seconds": [2, 6], "retry_limit": 2, "tutorial": "interrupt_resume", "no_purchase": true},
+      "sensitivity": {"session_window_minutes": [1, 8], "off_plan_rate": [0.05, 0.3]},
+      "note": "The 2–5 minute window is a stress choice; no cited survey estimates this window for new Luma players."
+    },
+    {
+      "id": "independent_planner",
+      "label": "Practised puzzle player seeking efficient solutions",
+      "anchors": ["ESA26-puzzle", "AARP26-solo"],
+      "design_hypothesis": "Measure monotony, structural variety and meaningful gates even when the path is understood.",
+      "assumed_parameters": {"off_plan_rate": 0.02, "blocked_probe_rate": 0.01, "help_after_unproductive_actions": 5, "session_window_minutes": [15, 45], "action_latency_seconds": [1, 3], "retry_limit": 4, "tutorial": "skip", "no_purchase": true},
+      "sensitivity": {"off_plan_rate": [0, 0.1], "help_after_unproductive_actions": [3, 8]}
+    },
+    {
+      "id": "social_collector",
+      "label": "Explores clothing and friends between level bursts",
+      "anchors": ["DMT26-community", "OFL26-social-time", "MIL26-spend-association"],
+      "design_hypothesis": "Owned items, earned rewards and voluntary social entry should remain clear without pressuring a purchase.",
+      "assumed_parameters": {"off_plan_rate": 0.15, "blocked_probe_rate": 0.08, "help_after_unproductive_actions": 2, "session_window_minutes": [8, 20], "action_latency_seconds": [2, 6], "retry_limit": 3, "tutorial": "complete", "no_purchase": true},
+      "sensitivity": {"off_plan_rate": [0.05, 0.3], "menu_visit_every_clears": [3, 10]},
+      "note": "Friend and wardrobe visits are coverage scenarios, not a Gen Z stereotype or predicted feature conversion."
+    }
+  ],
+  "orthogonal_accessibility_scenarios": [
+    {"id": "large_text", "setting": "larger Android font and compact viewport", "empirical_prevalence": null},
+    {"id": "reduced_motion", "setting": "Android animations disabled", "empirical_prevalence": null},
+    {"id": "tap_only", "setting": "use the alternative to directional dragging", "empirical_prevalence": null},
+    {"id": "silent", "setting": "music and sound muted; instructions still sufficient", "empirical_prevalence": null},
+    {"id": "guest_offline", "setting": "no Google session or service availability", "empirical_prevalence": null}
+  ],
+  "forbidden_inferences": ["D1/D7 or commercial retention prediction", "Generation-based failure or conversion rate", "Clinical benefit", "Worldwide representativeness", "Real social users or Google accounts simulated", "Causal effect of rewards from observational surveys"]
+}

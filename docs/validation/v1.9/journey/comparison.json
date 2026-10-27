@@ -1,0 +1,351 @@
+{
+  "passed": true,
+  "baseline": "baseline-39908e2",
+  "candidate": "candidate",
+  "first_100_geometry_budget_and_metrics_identical": true,
+  "paired_independent_attempt_outcomes_identical": true,
+  "independent_attempts_per_version": 16000,
+  "sequential_journeys_per_version": 72,
+  "profile_results": [
+    {
+      "profile": "practising_novice",
+      "journeys": 12,
+      "baseline_cleared_range": [
+        100,
+        100
+      ],
+      "candidate_cleared_range": [
+        100,
+        100
+      ],
+      "baseline_mean_coins": 6325.42,
+      "candidate_mean_coins": 6789.17,
+      "candidate_restarts": 0,
+      "candidate_help_units": 735,
+      "candidate_refunded_undos": 13,
+      "candidate_restored_interruptions": 144
+    },
+    {
+      "profile": "impatient_skipper",
+      "journeys": 12,
+      "baseline_cleared_range": [
+        100,
+        100
+      ],
+      "candidate_cleared_range": [
+        100,
+        100
+      ],
+      "baseline_mean_coins": 6351.25,
+      "candidate_mean_coins": 6591.67,
+      "candidate_restarts": 16,
+      "candidate_help_units": 729,
+      "candidate_refunded_undos": 173,
+      "candidate_restored_interruptions": 129
+    },
+    {
+      "profile": "careful_explorer",
+      "journeys": 12,
+      "baseline_cleared_range": [
+        100,
+        100
+      ],
+      "candidate_cleared_range": [
+        100,
+        100
+      ],
+      "baseline_mean_coins": 7344.17,
+      "candidate_mean_coins": 7548.75,
+      "candidate_restarts": 0,
+      "candidate_help_units": 298,
+      "candidate_refunded_undos": 0,
+      "candidate_restored_interruptions": 100
+    },
+    {
+      "profile": "interrupted_commuter",
+      "journeys": 12,
+      "baseline_cleared_range": [
+        100,
+        100
+      ],
+      "candidate_cleared_range": [
+        100,
+        100
+      ],
+      "baseline_mean_coins": 6757.92,
+      "candidate_mean_coins": 7117.5,
+      "candidate_restarts": 0,
+      "candidate_help_units": 551,
+      "candidate_refunded_undos": 7,
+      "candidate_restored_interruptions": 345
+    },
+    {
+      "profile": "independent_planner",
+      "journeys": 12,
+      "baseline_cleared_range": [
+        100,
+        100
+      ],
+      "candidate_cleared_range": [
+        100,
+        100
+      ],
+      "baseline_mean_coins": 7790.0,
+      "candidate_mean_coins": 7782.5,
+      "candidate_restarts": 0,
+      "candidate_help_units": 0,
+      "candidate_refunded_undos": 0,
+      "candidate_restored_interruptions": 12
+    },
+    {
+      "profile": "social_collector",
+      "journeys": 12,
+      "baseline_cleared_range": [
+        100,
+        100
+      ],
+      "candidate_cleared_range": [
+        100,
+        100
+      ],
+      "baseline_mean_coins": 6757.92,
+      "candidate_mean_coins": 7117.5,
+      "candidate_restarts": 0,
+      "candidate_help_units": 551,
+      "candidate_refunded_undos": 7,
+      "candidate_restored_interruptions": 84
+    }
+  ],
+  "structural_bands": [
+    {
+      "from": 1,
+      "through": 5,
+      "levels": 5,
+      "mean_pieces": 7.0,
+      "mean_minimum": 7.0,
+      "mean_base": 12.0,
+      "mean_allowance": 5.0,
+      "mean_decision_points": 0.0,
+      "mean_structural_score": 2.2
+    },
+    {
+      "from": 6,
+      "through": 10,
+      "levels": 5,
+      "mean_pieces": 10.2,
+      "mean_minimum": 10.2,
+      "mean_base": 15.2,
+      "mean_allowance": 5.0,
+      "mean_decision_points": 0.0,
+      "mean_structural_score": 7.0
+    },
+    {
+      "from": 11,
+      "through": 20,
+      "levels": 10,
+      "mean_pieces": 9.6,
+      "mean_minimum": 11.7,
+      "mean_base": 15.7,
+      "mean_allowance": 4.0,
+      "mean_decision_points": 0.8,
+      "mean_structural_score": 18.1
+    },
+    {
+      "from": 21,
+      "through": 30,
+      "levels": 10,
+      "mean_pieces": 10.8,
+      "mean_minimum": 13.7,
+      "mean_base": 16.9,
+      "mean_allowance": 3.2,
+      "mean_decision_points": 4.6,
+      "mean_structural_score": 52.1
+    },
+    {
+      "from": 31,
+      "through": 50,
+      "levels": 20,
+      "mean_pieces": 11.65,
+      "mean_minimum": 14.4,
+      "mean_base": 17.6,
+      "mean_allowance": 3.2,
+      "mean_decision_points": 4.6,
+      "mean_structural_score": 49.6
+    },
+    {
+      "from": 51,
+      "through": 75,
+      "levels": 25,
+      "mean_pieces": 12.72,
+      "mean_minimum": 15.72,
+      "mean_base": 18.96,
+      "mean_allowance": 3.24,
+      "mean_decision_points": 3.8,
+      "mean_structural_score": 43.44
+    },
+    {
+      "from": 76,
+      "through": 100,
+      "levels": 25,
+      "mean_pieces": 13.64,
+      "mean_minimum": 16.2,
+      "mean_base": 19.36,
+      "mean_allowance": 3.16,
+      "mean_decision_points": 6.72,
+      "mean_structural_score": 59.4
+    }
+  ],
+  "largest_adjacent_structural_increases": [
+    {
+      "level": 88,
+      "before_score": 26,
+      "score": 104,
+      "increase": 78
+    },
+    {
+      "level": 23,
+      "before_score": 17,
+      "score": 85,
+      "increase": 68
+    },
+    {
+      "level": 34,
+      "before_score": 24,
+      "score": 91,
+      "increase": 67
+    },
+    {
+      "level": 45,
+      "before_score": 19,
+      "score": 81,
+      "increase": 62
+    },
+    {
+      "level": 92,
+      "before_score": 45,
+      "score": 107,
+      "increase": 62
+    },
+    {
+      "level": 85,
+      "before_score": 43,
+      "score": 104,
+      "increase": 61
+    },
+    {
+      "level": 42,
+      "before_score": 25,
+      "score": 85,
+      "increase": 60
+    },
+    {
+      "level": 68,
+      "before_score": 44,
+      "score": 99,
+      "increase": 55
+    },
+    {
+      "level": 77,
+      "before_score": 31,
+      "score": 84,
+      "increase": 53
+    },
+    {
+      "level": 53,
+      "before_score": 16,
+      "score": 68,
+      "increase": 52
+    },
+    {
+      "level": 80,
+      "before_score": 20,
+      "score": 71,
+      "increase": 51
+    },
+    {
+      "level": 57,
+      "before_score": 20,
+      "score": 65,
+      "increase": 45
+    },
+    {
+      "level": 28,
+      "before_score": 23,
+      "score": 64,
+      "increase": 41
+    },
+    {
+      "level": 39,
+      "before_score": 34,
+      "score": 73,
+      "increase": 39
+    },
+    {
+      "level": 58,
+      "before_score": 65,
+      "score": 103,
+      "increase": 38
+    }
+  ],
+  "candidate_claimed_power_trials": [
+    {
+      "after_clears": 0,
+      "entering_level": 1,
+      "ids": [
+        "hint"
+      ]
+    },
+    {
+      "after_clears": 4,
+      "entering_level": 5,
+      "ids": [
+        "vision"
+      ]
+    },
+    {
+      "after_clears": 11,
+      "entering_level": 12,
+      "ids": [
+        "flow"
+      ]
+    },
+    {
+      "after_clears": 24,
+      "entering_level": 25,
+      "ids": [
+        "shield"
+      ]
+    },
+    {
+      "after_clears": 44,
+      "entering_level": 45,
+      "ids": [
+        "focus"
+      ]
+    },
+    {
+      "after_clears": 74,
+      "entering_level": 75,
+      "ids": [
+        "trail"
+      ]
+    }
+  ],
+  "baseline_independent_star_distribution": {
+    "3": 12983,
+    "0": 3006,
+    "2": 11
+  },
+  "candidate_independent_star_distribution": {
+    "3": 10016,
+    "2": 2978,
+    "0": 3006
+  },
+  "limitations": [
+    "No real people, Google accounts or social network were simulated.",
+    "Aggregate 2026 evidence motivates coverage axes; numerical errors, help and interruption inputs are engineering assumptions.",
+    "Age labels are crossed with every profile using identical parameters; no demographic skill, spending or failure inference.",
+    "UI tutorial gesture corrections and the new boss mode are not part of these unchanged Board-policy completion comparisons.",
+    "No enjoyment, desire-to-continue, D1/D7, purchase conversion or clinical effect is estimated."
+  ]
+}

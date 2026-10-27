@@ -1,4 +1,43 @@
-# Luma Drift 1.4 — production preparation
+# Luma Drift 1.9 — production candidate and activation boundary
+
+## Current delivery · 27 October 2026
+
+**Production 1.9.0-rc1 / code 10** uses `com.androidhit.lumadrift`; the separate Lab package uses `.sandbox`. The [production APK](../releases/luma-drift-1.9.0-rc1.apk) is SHA-256 `b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05`; the [Lab APK](../releases/luma-drift-1.9.0-sandbox.apk) is `acb3e1b0cfa71f84435d6cb0cf0fc73e3d4b434009deef972c54d86d9e7c09c7`. The [release record](RELEASE_1_9.md) identifies all four signed outputs, source hashes, binary checks and native-test scope. Production and Lab bytes, source oracles, native acceptance, GitHub delivery and website deployment are separate evidence layers in the [validation index](validation/v1.9/README.md).
+
+The update corrects tutorial gate gestures and preview visibility, exposes actual gift claims, offers one trial charge per unlocked power, and uses transparent action-based star grading. It adds optional [Guardians](GUARDIANS.md) and free visual treatments. The published L/M/T puzzle identities, server code and deployed Cloud Run configuration are unchanged. [First-player audit and 2026 source limits](PLAYER_AUDIT_2026.md).
+
+These are the **FINAL5** bytes. They retain exact Studio/guardian-list/typed-encounter restoration introduced in FINAL4 and add a typed local-save Retry barrier around persistent write/read-flush failures. Retrying flushes the pending transaction without granting it twice; onward Guardian navigation waits for a successful attempt save. Guardian gestures use the actual hit target so the visible Retry control is not swallowed by an underlying piece. [Source durability evidence](validation/v1.9/local-save/README.md) and native fault qualification remain separate.
+
+Historical FINAL4 Lab SHA-256 `f8d554a446d4511baafb4edc3012f4014d0ae420c02e6fffdc29fc58b93a9e08` passed [fresh-guest C](validation/v1.9/ui-sdk-fresh-guest-c/host-report.json), 85 checks / 17 PNGs, and its [normal full-100 route](validation/v1.9/ui-sdk-final4-full100/host-report.json), 2,277 checks / 79 PNGs. C was a first Lab installation with production absent before and after; its new guest profile remains and rotation settings were restored. The full run restored its saved test environment. Historical FINAL3 runs and raw failures are also retained. No earlier result is relabelled as acceptance of these bytes.
+
+FINAL5 [full-100/menu/Guardian/language acceptance](validation/v1.9/ui-sdk-final5-full100/host-report.json) passes **2,277 checks / 79 PNGs** on the exact Lab APK, API 36 ARM64 with 16 KiB pages, and restores its saved test environment. The [first-install guest D run](validation/v1.9/ui-sdk-fresh-guest-d/host-report.json) passes **85 checks / 17 PNGs** on API 36 ARM64 with 4 KiB pages; Lab was absent beforehand, production absent before and after, its new guest profile remains and rotation settings were restored. [Production startup](validation/v1.9/ui-sdk-production-final5/host-report.json) passes **7 checks / 1 PNG** on the exact production APK and restores its saved environment. These are current-byte native results, separate from provider acceptance.
+
+The [FINAL5 persistent-save fault run 3](validation/v1.9/ui-sdk-final5-storage-fault3/host-report.json) passes **524 checks / 14 PNGs** on the exact Lab APK. Two real permission cycles (`500 → 771`) deny writes and restore access: the pending Guardian layer peel remains on screen when Back is pressed and the physical Retry button saves it once; the reward remains exactly 100 pending coins through a still-blocked retry and Activity recreation, then durably changes **1,830 → 1,930 coins** with its receipt. A repeated claim adds zero. Memory and XML disk state are checked separately, and directory permissions, rotation and the saved test environment are restored. This is Activity recreation with an in-process pending transaction, **not process death while that transaction is pending**. The first two raw failed runs remain unchanged: [fault 1](validation/v1.9/ui-sdk-final5-storage-fault/host-report.json) stopped on the harness rotation wait before any permission lock, and [fault 2](validation/v1.9/ui-sdk-final5-storage-fault2/host-report.json) expected “Retry” while the actual control was labelled “Try again”. Neither failure is relabelled as a pass; run 3 supplies its own completed fault-recovery evidence.
+
+| Final candidate setting | Actual boundary |
+| --- | --- |
+| Sample advertising | Forced; the owner's production placement IDs do not enable live traffic in these bytes |
+| Paid wallet origin | Empty; real checkout remains blocked |
+| Paid cosmetic draws | Disabled |
+| Social API | Configured, but real Google-account and two-account friend/gift acceptance remain unqualified |
+| Local saves | Journey, practice, earned currency, power trials, avatar style and Guardian state remain on this installation |
+| Google identity | Optional adapter; no gameplay cloud save and no real SSO success established by these release tests |
+
+The owner reports that the **Play developer account is approved**. This is owner testimony, not an independently observed Console state, and does not establish a created Play application, an approved listing, accessible products or a published app. The next owner workflow is to create the Play application **after this delivery**, select the identified signed AAB for its test release, and then qualify the required real providers. The existing APK/AAB will not start accepting payments merely because the Console account is approved.
+
+## Activation work remains separate
+
+Google identity requires actual account/device acceptance against the production package, signing configuration and Firebase project. Friends/gifts require two distinct real identities and observed invite, acceptance, quota, single-credit and account-switch behaviour; the [two-device protocol](QUALIFICATION_SOCIALE.md) is still the protocol to execute. Six synthetic behaviour profiles and Android guest tests are not substitute Google accounts.
+
+A purchase-qualification build must explicitly configure the deployed wallet origin and retain test advertising. Qualify actual Play products and licence-test purchase states, one-time server credit, retries, consumption, account binding, refunds and recovery before opening a real-money route. Commercial advertising also needs its own consent/device/placement acceptance; tests continue to use sample creatives. Paid draws retain their separate closed gate. No genuine ad impression, real-money transaction, SSO session or provider acceptance is asserted by the source simulations or this gameplay release.
+
+The existing Firebase website and wallet deployment have dated records below. For the current website, use [website 1.9 delivery evidence](validation/site-v1.9/README.md), which separates prepared source, original native captures, local browser checks and Hosting management evidence. The new local gameplay fields do not imply new server telemetry or gameplay cloud synchronization. [Current privacy inventory](PRIVACY.md) · [Public-page contract](PUBLIC_PAGES.md).
+
+---
+
+## Preserved 1.4 foundation and dated deployment observations
+
+The following record preserves the original release versions, timestamps, probes and owner statements. Its then-pending Play identity status is historical; the newer owner-reported approval above does not retroactively alter those observations or qualify purchases. Earlier network probes are not re-executed or inferred from the 1.9 source tests.
 
 **1.4 foundation, preserved scope.** Current game delivery is [1.8.0-rc1 / code 9](RELEASE_1_8.md), with its own [executed qualification](validation/v1.8/README.md). The older 1.5 had 1,000 Journey boards, 240 Remix, six P prototypes and 18 local equipment items. The implementation/deployment follow-up below retains its dates and 1.4 artifact scope. The separate [1.5 website redesign](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) does not inherit these earlier served-byte checks.
 

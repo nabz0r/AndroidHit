@@ -1,6 +1,25 @@
 # Luma Drift — illustrated tour
 
-## Current 1.8: learn, explore and recover
+## Current 1.9: learn, plan and restore the Prism
+
+The current signed release is **1.9.0-rc1 / code 10**. [Release](RELEASE_1_9.md) · [Native evidence and earlier failures](validation/v1.9/README.md) · [Research-linked first-100 audit](PLAYER_AUDIT_2026.md).
+
+The gate lesson now recognises its actual touch target and keeps confirmation inside the compact screen. The first Android installation below really began without an installed Lab package; its seven lessons, skipping, resuming and once-only gift use the final Lab bytes. The separate completed-route/menu qualification uses the same APK; it is not that fresh guest or a Google session.
+
+<p><img src="screenshots/v1.9/ui-sdk-fresh-guest-d/tutorial-gate-drift-fixed-en.png" width="225" alt="Actual final Lab first-install gate preview"><img src="screenshots/v1.9/ui-sdk-final5-full100/home-fr-localized.png" width="225" alt="Actual final Lab French guest home after the tested route"><img src="screenshots/v1.9/ui-sdk-final5-full100/avatar-style-cyberpunk_neon-en.png" width="225" alt="Actual free cyberpunk companion treatment"></p>
+
+Avatar Studio composes 24 existing identities and twelve free treatments into **288 visual combinations**, including plush, cyberpunk, retro and modern pixel. Five poses and progress-linked scenery add motion; reduced motion freezes temporal effects and travelling scenery. Character ownership, equipment and free visual treatments remain separate.
+
+<p><img src="screenshots/v1.9/ui-sdk-final5-full100/guardian-1-start-en.png" width="225" alt="Actual first guardian with visibly thick double layers"><img src="screenshots/v1.9/ui-sdk-final5-full100/guardian-1-peeled-en.png" width="225" alt="Actual slab after its first layer is removed"><img src="screenshots/v1.9/ui-sdk-final5-full100/guardian-5-one-cell-en.png" width="225" alt="Actual later guardian piece after one cell of movement"></p>
+
+Every ten distinct Journey wins unlock an optional guardian. Double layers take two actions; from guardian 5, marked pieces travel one cell at a time. Free guidance, refunded Undo and restart preserve recovery. An actually solved encounter offers 100 earned coins once. [Rules/story](GUARDIANS.md). The main L/M route and historical codes keep their published geometry.
+
+The [native raster atlas](validation/v1.9/avatar/README.md) is a separate art export from package-prefix-only source copies, rather than an integrated screen or performance measurement:
+
+<img src="validation/v1.9/avatar/native-output/backdrop-contact-sheet.png" width="700" alt="Original Android Canvas contact sheet of twelve companion treatments and scenery families">
+
+
+## Preserved 1.8: learn, explore and recover
 
 These unedited views come from the final **Lab 1.8.0-sandbox / code 9**. The [native qualification record](validation/v1.8/SDK_UI_FINAL.md) identifies each APK, run and limitation. The menu run passes 47 checks; a separate core run completed the first 100 Journey boards with 2,015 passing assertions before a menu-selector failure. That failed run remains labelled failed. A fresh second installation checks actual first arrival, skipping, resuming and claiming the tutorial reward once.
 

@@ -1,0 +1,4030 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "menus,map,journey,rewards,styles,guardians,landscape,languages",
+  "journey_through": 50,
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "display_size_before": "Physical size: 1080x2340",
+  "apk_sha256": "a16fbc03a75455805b7f3f491a8fc26cddc4e33637ec0b8bc1668700e83de36f",
+  "expected_apk_sha256": "a16fbc03a75455805b7f3f491a8fc26cddc4e33637ec0b8bc1668700e83de36f",
+  "test_apk_sha256": "eaf9730bfa5e76f23d60deda15d8b4f2c660f20c6f6da867980ce493d3a5a6d4",
+  "runner_source_sha256": "4a2ec2d9ff0c5c952b0195f6fd6723ffb9a0ebb48d629b5e9e7e48022d09a42b",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v19-ui-original-prefs-aedy5tjw",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "screenshots": {
+    "journey-1-cleared-en.png": "8428d4864c5febae4e826c9b6584acbee5ad68b253f7753ca8fb553524c73c39",
+    "menu-inventory-en.png": "0b90cd11605f950c169d8fc9c0b4b2811f95d5ee2a64f0e2852eb023c0a308ff",
+    "rewards-first-gift-en.png": "27dc427038a6f45fc6c3eda19e8e6683fd6ae351c6b13137fa6accdea5678d3a",
+    "menu-events-en.png": "afd1671d156fe38c8ea97075ad7c545e4f0cc6f239957403ce79a9394a442521",
+    "journey-50-cleared-en.png": "63c9806da0bf0942d927d0b36b82dd6e0716a53c37d3446ae55ef372bc27941a",
+    "journey-7-cleared-en.png": "522c6dc696b59abf3c812f55cb464cfc6d33340f5ea2d3b983d6541e03bdd5eb",
+    "wardrobe-en.png": "738fc30a22107584926816e442087d67078e99e17cf1eb877331c55f18b0b009",
+    "guardian-1-reward-en.png": "2651c02bc5e97aea95dede4937d709543e022423badb944bc3e70a6509aa2b7b",
+    "journey-8-cleared-en.png": "07c933aab1fa0baec1e6dd84c287ec6e0f85eed22b7910795f415f92b98f2571",
+    "map-1000-en.png": "34d23dfc1061c8305acef120616f6820e8d65e7713f626238ab968c809489a39",
+    "avatar-style-retro_arcade-en.png": "e18f02cc3b3d3d84ce4596630ae9ca98ea7fafc56b5d33b4211c4a215050f475",
+    "journey-1-start-en.png": "0dd1c4c1d2b90a063ed3ff32c9fac8b05462660c6b70e4a103a0ceea57c9d2a5",
+    "avatar-style-persisted-en.png": "fce0233c7c6c769da29b9e93db419c0a796c0d79ee968065900af93ea04dffc6",
+    "rewards-weekly-quest-route-en.png": "25f69d5d269ec82a72f50ddc53a8b47a2e42d383501c0703e3317bc9db067678",
+    "map-1-en.png": "2bad582b36f7e58dbb5f9b81ffe8d55f17ff1c5bc7882a120e3b67492e13a355",
+    "journey-50-start-en.png": "a380d985884686a42f17aaa76f56477b0c7817cfbaa8058a8992f02f7a790434",
+    "journey-7-start-en.png": "9940ef3472fb87dafad025b8f319e3e77419b86bdbe33694b37663aa1e2ef73a",
+    "avatar-style-plush_classic-en.png": "c12b428b3574f33f35f98bd81f70594d493167030aee50d6e41b8c65948040ce",
+    "avatar-style-ice-en.png": "884ec9dc98060090378f9339a97809a785c0cedb8e249c4ed1ec7e044f78227b",
+    "guardian-1-start-en.png": "ae7819bcf305aa6cd0cce5f4ace36c23d2f642fff952becff5a0864311dac225",
+    "home-en.png": "62dd333a92623364b364b82fc250324868f356818661528618343ecff2add404",
+    "guardian-1-peeled-en.png": "e1865cf6b295dd98f0838242c1c99d16cbabe5357e8d390f2db184e8a3d56a0c",
+    "guardian-5-peeled-en.png": "6d8cd33a48e40d08e165620d1cade770d655f539cbd3ee4d41daa813787be38c",
+    "map-13-en.png": "a83f9044cbba419657a1b505b4f6a27ce56a31e12b0e1116bf320253c7086353",
+    "guardian-5-one-cell-en.png": "7e7677edac332130d4b1718379956853de7c9f63fc709e99ff507f940588a7c2",
+    "journey-13-start-en.png": "2a18799a195f7cf13d3826d936e34b9940a9f5fb89fc47ba14c92369d64daba2",
+    "rewards-en.png": "3155e05942a52438ae564916e7f4dbb2a16f797b1016fc90c1f4105507378fe1",
+    "guardian-5-start-en.png": "1e54f8b6178763774162fd23ecd075cf0c25c5daadb13ae25d6af2f03b4bef7e",
+    "menu-shop-en.png": "fa16b51c3da5b35bf41058db7de8ecb0fc375926374ad27d37d69a554c78b294",
+    "rewards-trials-claimed-en.png": "b27126b4a5929cd4604044a322014d3d736f44c229705a94185cdca88a647747",
+    "guardian-1-cleared-en.png": "c94023933a0975cc4db0b4057d79e5e1926ad717dc96a4027a4cb58ed9354b62",
+    "failure.png": "1b997c02786394af2393a4389c24416287be7ea0578fcdcc4a069d6f0283f8f7",
+    "avatar-style-cyberpunk_neon-en.png": "08e32796e5000f6faf6553874af2e3faa108033d0837ee2af02d979d83a954bd",
+    "map-scroll-en.png": "4d8a2478a2dd17d0ee923d9ad27d192c69d5081241c750fa88905be670474d47",
+    "gate-preview-visible-before-cancel-en.png": "f3ae0abd41beb393d576d99a57e2650756fcc78cb67c9b7912822ff4ac0569f4",
+    "journey-8-start-en.png": "f536a55c9bac7caeb1c03b9910c9ccebd2138963d70bbf40b11be21148062693",
+    "menu-map-en.png": "94c0b7d3d3d5a37bf915aa15b8c81a6726264fd49f7af056ec62221391187b22",
+    "journey-13-cleared-en.png": "1b5732beecbbbffaf7e3726748fc1ec701430e8863b15de1a48024b699ad6744"
+  },
+  "native": {
+    "passed": false,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate1.9/code10"
+      },
+      {
+        "pass": true,
+        "message": "SDK configures owned QA display1080x1920 for compact portrait"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Map retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Events retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Inventory retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Shop retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Wardrobe distinguishes equipped items from unowned items"
+      },
+      {
+        "pass": true,
+        "message": "Daily rewards exposes the separate weekly quest route through real scrolling"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 1"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 7"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 8"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 13"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 100"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 101"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 500"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 1000"
+      },
+      {
+        "pass": true,
+        "message": "Map supports the SDK's backward scroll action"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Real native preview cancellation spends no action and changes no history"
+      },
+      {
+        "pass": true,
+        "message": "Canceled native preview returns to actual board controls"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 31 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 31 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 31 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 32 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 32 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 32 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 33 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 33 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 33 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 34 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 34 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 34 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 35 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 35 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 35 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 36 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 36 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 36 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 12 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 37 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 37 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 37 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 38 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 38 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 38 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 39 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 39 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 39 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 12 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 40 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 40 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 40 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 41 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 41 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 41 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 42 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 42 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 42 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 43 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 43 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 43 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 44 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 44 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 44 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 45 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 45 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 45 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 46 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 46 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 46 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 47 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 47 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 47 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 48 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 48 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 48 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 49 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 49 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 49 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 50 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 50 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 50 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Earned five-clear gift is directly claimable on Rewards"
+      },
+      {
+        "pass": true,
+        "message": "Visible Journey gift grants its exact preview item and v19 receipt"
+      },
+      {
+        "pass": true,
+        "message": "Actual free sample hint grants once without currency spend"
+      },
+      {
+        "pass": true,
+        "message": "Claimed hint sample no longer presents a second grant"
+      },
+      {
+        "pass": true,
+        "message": "Actual free sample vision grants once without currency spend"
+      },
+      {
+        "pass": true,
+        "message": "Claimed vision sample no longer presents a second grant"
+      },
+      {
+        "pass": true,
+        "message": "Actual free sample flow grants once without currency spend"
+      },
+      {
+        "pass": true,
+        "message": "Claimed flow sample no longer presents a second grant"
+      },
+      {
+        "pass": true,
+        "message": "Actual free sample shield grants once without currency spend"
+      },
+      {
+        "pass": true,
+        "message": "Claimed shield sample no longer presents a second grant"
+      },
+      {
+        "pass": true,
+        "message": "Actual free sample focus grants once without currency spend"
+      },
+      {
+        "pass": true,
+        "message": "Claimed focus sample no longer presents a second grant"
+      },
+      {
+        "pass": true,
+        "message": "Locked trail sample remains unavailable without creating a receipt"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists plush_classic"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists cyberpunk_neon"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists retro_arcade"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists modern_pixel"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists sakura"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists ocean"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists space"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists steampunk"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists candy_cloud"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists halloween"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists valentine"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Actual style selection persists ice"
+      },
+      {
+        "pass": true,
+        "message": "Free style keeps currency and companion ownership unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Leaving and reopening studio retains selected free style"
+      },
+      {
+        "pass": true,
+        "message": "Guardian 1 starts or visibly restarts with its real authored layers"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 0 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "A real first hit leaves one fewer visible layer and the piece present"
+      },
+      {
+        "pass": true,
+        "message": "First guardian action really peels a double layer"
+      },
+      {
+        "pass": true,
+        "message": "Guardian free Undo restores the layer and refunds its action without cost"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 0 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "A real first hit leaves one fewer visible layer and the piece present"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 0 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 1 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 2 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 3 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "Solved unclaimed guardian reopens its exact completed save without another playthrough"
+      },
+      {
+        "pass": true,
+        "message": "Guardian reward is reachable through normal page scrolling"
+      },
+      {
+        "pass": true,
+        "message": "Guardian 1 explicit fragment reward credits exactly once"
+      },
+      {
+        "pass": true,
+        "message": "Repeated guardian reward does not duplicate100 LumaCoins"
+      },
+      {
+        "pass": true,
+        "message": "Guardian 5 starts or visibly restarts with its real authored layers"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 0 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "A real first hit leaves one fewer visible layer and the piece present"
+      },
+      {
+        "pass": true,
+        "message": "First guardian action really peels a double layer"
+      },
+      {
+        "pass": true,
+        "message": "Guardian free Undo restores the layer and refunds its action without cost"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 0 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "A real first hit leaves one fewer visible layer and the piece present"
+      },
+      {
+        "pass": true,
+        "message": "Guardian action 0 records exactly the source-certified layer/step state"
+      },
+      {
+        "pass": true,
+        "message": "Cellwise guardian piece remains present after moving one cell"
+      },
+      {
+        "pass": true,
+        "message": "Leaving and reopening a partial one-cell encounter restores exact history, positions and used actions"
+      },
+      {
+        "pass": true,
+        "message": "Guardian partial state survives real activity recreation"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "menu-map-en",
+      "menu-events-en",
+      "menu-inventory-en",
+      "menu-shop-en",
+      "wardrobe-en",
+      "rewards-en",
+      "rewards-weekly-quest-route-en",
+      "map-1-en",
+      "map-13-en",
+      "map-1000-en",
+      "map-scroll-en",
+      "journey-1-start-en",
+      "journey-1-cleared-en",
+      "journey-7-start-en",
+      "journey-7-cleared-en",
+      "journey-8-start-en",
+      "journey-8-cleared-en",
+      "gate-preview-visible-before-cancel-en",
+      "journey-13-start-en",
+      "journey-13-cleared-en",
+      "journey-50-start-en",
+      "journey-50-cleared-en",
+      "rewards-first-gift-en",
+      "rewards-trials-claimed-en",
+      "avatar-style-plush_classic-en",
+      "avatar-style-cyberpunk_neon-en",
+      "avatar-style-retro_arcade-en",
+      "avatar-style-ice-en",
+      "avatar-style-persisted-en",
+      "guardian-1-start-en",
+      "guardian-1-peeled-en",
+      "guardian-1-cleared-en",
+      "guardian-1-reward-en",
+      "guardian-5-start-en",
+      "guardian-5-peeled-en",
+      "guardian-5-one-cell-en",
+      "failure"
+    ],
+    "checkCount": 976,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+  },
+  "error": "Instrumentation checks failed; inspect failure.txt",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v19-ui-test/run.py\", line 73, in main\n    else:assert report['passed'],'Instrumentation checks failed; inspect failure.txt'\nAssertionError: Instrumentation checks failed; inspect failure.txt\n",
+  "display_size_restored": true,
+  "rotation_settings_restored": true
+}

@@ -1,4 +1,4 @@
-> **Current 1.8 validation:** [executed evidence](validation/v1.8/README.md) and [exact release](RELEASE_1_8.md). The [1.7](VALIDATION_1_7.md), [1.6](VALIDATION_1_6.md) and 1.5 records below preserve their original hashes, captures and scopes.
+> **Current 1.9 validation:** [executed evidence](validation/v1.9/README.md) and [exact release](RELEASE_1_9.md). The [1.8 record](validation/v1.8/README.md) remains separate. The [1.7](VALIDATION_1_7.md), [1.6](VALIDATION_1_6.md) and 1.5 records below preserve their original hashes, captures and scopes.
 
 # Luma Drift 1.5 validation
 

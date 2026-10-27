@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "tutorial,gestures,menus,map,journey,recovery,powers,rewards,styles,guardians,landscape,languages",
+  "journey_through": 100,
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "display_size_before": "Physical size: 1080x2340",
+  "apk_sha256": "a16fbc03a75455805b7f3f491a8fc26cddc4e33637ec0b8bc1668700e83de36f",
+  "expected_apk_sha256": "f8d554a446d4511baafb4edc3012f4014d0ae420c02e6fffdc29fc58b93a9e08",
+  "error": "Installed APK differs from the frozen candidate",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v19-ui-test/run.py\", line 52, in main\n    assert report['apk_sha256']==report['expected_apk_sha256'],'Installed APK differs from the frozen candidate'\nAssertionError: Installed APK differs from the frozen candidate\n",
+  "display_size_restored": true,
+  "rotation_settings_restored": true
+}

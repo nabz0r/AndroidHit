@@ -1,0 +1,7 @@
+# Retained infrastructure timing FAIL before any permission fault
+
+FINAL5 frozen Lab APK `acb3e1b0cfa71f84435d6cb0cf0fc73e3d4b434009deef972c54d86d9e7c09c7` was tested on the new owned official API36/16KiB QA emulator5590. Its30 campaign levels actually cleared, with their visible grade/budget assertions. The suite then stopped on an immediate post-rotation presence assertion in the independent harness before Guardian3 opened.
+
+The failure screenshot still contains the platform's rotation animation. The native accessibility snapshot collected immediately afterward already contains the actual Guardian1/2/3 controls in portrait. A fixed650ms delay was not a reliable synchronization condition on the newly booted device under concurrent QA load. The next test uses a bounded wait for the actual target encounter control and verifies the returned orientation. It does not navigate around a game failure or change player progress.
+
+The raw report remains **FAIL** (489 checks). The infrastructure journal records **zero locks and zero restores**: directory permissions were never altered, and no storage-failure behavior is claimed. Original directory mode771, preference bytes/file set, display dimensions and rotation settings were restored. Source snapshots and the real first-launch bootstrap remain with the report. The retry uses a separate evidence label and plays30 levels again, with no preference injection.

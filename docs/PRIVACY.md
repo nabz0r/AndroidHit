@@ -1,3 +1,5 @@
+> **1.9 local-state addition:** guardian attempts/once-only coin receipts, explicit power-sample receipts and the free avatar-style choice stay in the device profile. Public research uses aggregate published statistics, without personal records. No age field, demographic targeting, new remote analytics or gameplay cloud save was added. Existing account deletion and Google SDK boundaries remain below.
+
 # Luma Drift data and privacy inventory
 
 Updated **27 October 2026** for **production 1.5.0-rc1 / code 6**, package `com.androidhit.lumadrift`, and isolated **Lab 1.5.0-sandbox**. This document describes implemented data paths and qualification limits. It is not a completed privacy/store submission or an assessment of every publisher obligation. Public publisher label: **nabilux**; private support correspondence: **nabz0r+gaming@gmail.com**. [FR/EN public policy and deletion pages](PUBLIC_PAGES.md).

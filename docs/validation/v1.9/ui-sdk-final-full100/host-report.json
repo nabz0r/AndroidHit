@@ -1,0 +1,1049 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "tutorial,gestures,menus,map,journey,recovery,powers,rewards,styles,guardians,landscape,languages",
+  "journey_through": 100,
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "display_size_before": "Physical size: 1080x2340",
+  "apk_sha256": "dd4bc97a7325e679f0af5c70f0b74ef769dffcef656051672cacdb24ea34e652",
+  "expected_apk_sha256": "dd4bc97a7325e679f0af5c70f0b74ef769dffcef656051672cacdb24ea34e652",
+  "test_apk_sha256": "bcbae265bf6a333443cd481aaf5853e61e73702e156a79249b4306af1d98c330",
+  "runner_source_sha256": "f3b9eca115fad79950f4095fd4b6edbba687cdb6c0b6fec7cb1ec7fac266f948",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v19-ui-original-prefs-2su22c1p",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "screenshots": {
+    "journey-1-cleared-en.png": "ab585bbea281017b5e0cc57149602679510b3c9416f6cc20cdabcffe9a6dbeee",
+    "menu-inventory-en.png": "b12c6613292e9fb95b9e0d3eebe133c65c45ecfb38e0f36de684d8d52f0fa5fd",
+    "tutorial-6-phase-0-en.png": "c426f1a63e9da79cc273490720dc99440131db39787417095823516718b92b2d",
+    "tutorial-gate-drift-fixed-en.png": "54283669c0a6dfce5ebb217dd7bfae7386ba6ecdd699256e4dd78ff20c0b05ee",
+    "tutorial-1-phase-0-en.png": "078b6c7ba091ef344aef3a164ced5d2adfe796fbe0bc33b1984921f6cc5272c7",
+    "menu-events-en.png": "bdcfbe64de021205349adc638d8e19fd4fa9621df9dcce3d626550a82a458f3d",
+    "tutorial-resumed-en.png": "fe2bee82f21c454478a5fbb42e86ba71d4a0b511186cfe9b31b4e8c026f0dbc8",
+    "tutorial-wrong-drag-en.png": "85b131169e95d090347c5d4be1992ee368a6366f61ff32071ae429f01fac6130",
+    "journey-7-cleared-en.png": "e852d363c3b62bba98af35db26eb534fd222073ac204bcbb5bcfbbc13dbe8e39",
+    "wardrobe-en.png": "5f35ce73f131dfcf04a9cf6ad81914668645170ac983aa197d7613684b9ae4a6",
+    "tutorial-complete-en.png": "d33f551ce69ec5210aa737103057036d345e3e527752dd557c0ad928d29c5c31",
+    "journey-8-cleared-en.png": "9449573eb95def0e47f79b61f23dbbd38e74ff1ba36585617cb622cea15cb102",
+    "map-1000-en.png": "f85633f82d8796d68a041f66ec5c76f524296453ae1b6a1b7d18ce33bdd7db1c",
+    "tutorial-7-phase-0-en.png": "307791522e3ae906cab71c5093e493d5b143780e1ea6e5bf43c17c3e2aeffcd0",
+    "tutorial-gate-double-confirm-en.png": "4cce3849f6ae822d0269e629011cffd14a213320376bd02b8f3089571cb87b8c",
+    "journey-1-start-en.png": "59db84631496403d707369d85e552085da60df66666b30a7c5c33bc02f4bf3cf",
+    "tutorial-5-phase-0-en.png": "6a7788254afb8fc91c6e517aca92a6d1d830adfb902321ae421eb9b1052d5e40",
+    "rewards-weekly-quest-route-en.png": "015a7d15b9e990c2fe84d26533d67cc7d8e5286c5064881257f6137d1209c432",
+    "tutorial-2-phase-0-en.png": "362cf12720fbf1a8abf5e564e7d10f9d8918f1d78462f57599b704e396a6c478",
+    "tutorial-3-phase-0-en.png": "63149326ab1da6019d17cd561784029ab1267d00ecafa1c486acc1a612dbd6ea",
+    "map-1-en.png": "f24f68384b01bc392a4c4d9ffb0c94f1f670fa0ee6063d38b8c40a2b36ecb298",
+    "tutorial-reward-en.png": "76c22b95667e4c67bc6c89c8a85771b7f606e320191b358cda39e52d68eecfbb",
+    "journey-native-drag-en.png": "97e4e93530d10d21f27bccf89d9f8d863e4bd0e00d4a89bab4b6edf26eaf086a",
+    "journey-7-start-en.png": "5d1c84c21c0c83b3b9c704934142cfc14d5cfe85cbf7827cd42238291009a42a",
+    "tutorial-4-phase-0-en.png": "0c061436f6310c90e892d11ffa82112eb8d029830dc2d908c9df37622dfc6e87",
+    "home-en.png": "2d63173a804e543aa4b0218bae47bc939efb0d2c4971e62c70c69fca39203471",
+    "map-13-en.png": "c6beb1fbecfade4f7164b8e35e4a950b6cfb4add7bd68fb14ea01a8e53440661",
+    "rewards-en.png": "dace50957af0d9f607487c2d0ebe0feab3c88c66a2a30c388d07d832cdb6e3e4",
+    "menu-shop-en.png": "f88095f0c0b487d1cc1125426afe110d1130148cd1853bf9f435a14b6a2c4388",
+    "tutorial-key-landscape-en.png": "2fefebf82790edc1284337dcada1383ac271c5bc378fb2292b0a31a67aa4a5b2",
+    "failure.png": "d151bcd42e3b8edbd98bbc7b6f82b041358b2c7be5ea8706803724151d74a7d7",
+    "tutorial-start-en.png": "078b6c7ba091ef344aef3a164ced5d2adfe796fbe0bc33b1984921f6cc5272c7",
+    "map-scroll-en.png": "c69a6d31bab12f13e82cc7cb809c2db567ac803dc7fba28b59cbb1ee3290adb9",
+    "journey-8-start-en.png": "fe91e0670f2a414ae3349308cf5a2d1ad1fea037531c10981a0a2e745eee0616",
+    "menu-map-en.png": "41212219a154c42a671aaeb74959bc5f0c0a5b8893e23609a2a88604fb627a1d"
+  },
+  "native": {
+    "passed": false,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate1.9/code10"
+      },
+      {
+        "pass": true,
+        "message": "SDK configures owned QA display1080x1920 for compact portrait"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Optional tutorial opens real saved practice rather than an informational slideshow"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 2, column 2, arrow right"
+      },
+      {
+        "pass": true,
+        "message": "Wrong-direction native SDK drag leaves the practice phase and history unchanged"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 2, column 2, arrow right"
+      },
+      {
+        "pass": true,
+        "message": "A real rightward SDK drag completes the exit lesson and records exactly one piece"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 1 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 1 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Skipping stores practice as paused rather than completed"
+      },
+      {
+        "pass": true,
+        "message": "Skipping tutorial grants no reward and consumes no stock"
+      },
+      {
+        "pass": true,
+        "message": "Resume restores the exact lesson, phase and typed action history"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "SDK rotates an in-progress tutorial"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial retains its exact teaching phase and preview through activity recreation"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial phase remains durable after portrait return"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Gate gesture uses observed visible accessibility bounds"
+      },
+      {
+        "pass": true,
+        "message": "Real gate coach15-point native drift opens the expected preview in compact portrait"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "SDK rotates an in-progress tutorial"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial retains its exact teaching phase and preview through activity recreation"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial phase remains durable after portrait return"
+      },
+      {
+        "pass": true,
+        "message": "Gate preview survives real rotation and activity recreation"
+      },
+      {
+        "pass": true,
+        "message": "Skipped gate preview resumes its exact phase and typed history"
+      },
+      {
+        "pass": true,
+        "message": "Double native gate confirmation records one opening only"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 4 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "All seven interactive lessons durably complete"
+      },
+      {
+        "pass": true,
+        "message": "First completion grants exactly100 LumaCoins and2 earned Sparks"
+      },
+      {
+        "pass": true,
+        "message": "Welcome gift has one durable receipt"
+      },
+      {
+        "pass": true,
+        "message": "Repeated reward action adds no second gift"
+      },
+      {
+        "pass": true,
+        "message": "Replaying remains free and preserves the original welcome receipt"
+      },
+      {
+        "pass": true,
+        "message": "Map retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Events retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Inventory retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Shop retains a visible Home destination"
+      },
+      {
+        "pass": true,
+        "message": "Wardrobe distinguishes equipped items from unowned items"
+      },
+      {
+        "pass": true,
+        "message": "Daily rewards exposes the separate weekly quest route through real scrolling"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 1"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 7"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 8"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 13"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 100"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 101"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 500"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes real level 1000"
+      },
+      {
+        "pass": true,
+        "message": "Map supports the SDK's backward scroll action"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 1, column 2, arrow up, Gate open"
+      },
+      {
+        "pass": true,
+        "message": "A real campaign SDK drag follows the actual arrow and charges exactly one action"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": false,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "tutorial-start-en",
+      "tutorial-1-phase-0-en",
+      "tutorial-wrong-drag-en",
+      "tutorial-2-phase-0-en",
+      "tutorial-resumed-en",
+      "tutorial-3-phase-0-en",
+      "tutorial-key-landscape-en",
+      "tutorial-4-phase-0-en",
+      "tutorial-gate-drift-fixed-en",
+      "tutorial-key-landscape-en",
+      "tutorial-gate-double-confirm-en",
+      "tutorial-5-phase-0-en",
+      "tutorial-6-phase-0-en",
+      "tutorial-7-phase-0-en",
+      "tutorial-complete-en",
+      "tutorial-reward-en",
+      "menu-map-en",
+      "menu-events-en",
+      "menu-inventory-en",
+      "menu-shop-en",
+      "wardrobe-en",
+      "rewards-en",
+      "rewards-weekly-quest-route-en",
+      "map-1-en",
+      "map-13-en",
+      "map-1000-en",
+      "map-scroll-en",
+      "journey-native-drag-en",
+      "journey-1-start-en",
+      "journey-1-cleared-en",
+      "journey-7-start-en",
+      "journey-7-cleared-en",
+      "journey-8-start-en",
+      "journey-8-cleared-en",
+      "failure"
+    ],
+    "checkCount": 232,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+  },
+  "error": "Instrumentation checks failed; inspect failure.txt",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v19-ui-test/run.py\", line 73, in main\n    else:assert report['passed'],'Instrumentation checks failed; inspect failure.txt'\nAssertionError: Instrumentation checks failed; inspect failure.txt\n",
+  "display_size_restored": true,
+  "rotation_settings_restored": true
+}

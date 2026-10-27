@@ -1,0 +1,26 @@
+{
+  "scope": "Temporary filesystem permission fault on the explicitly owned guest Lab QA emulator; no preference values injected or edited",
+  "serial": "emulator-5590",
+  "directory": "/data/user/0/com.androidhit.lumadrift.sandbox/shared_prefs",
+  "original_mode": "771",
+  "final_mode": "771",
+  "permissions_restored": true,
+  "requested_lock_observed": true,
+  "requested_restore_observed": true,
+  "observed_lock_count": 1,
+  "observed_restore_count": 1,
+  "events": [
+    {
+      "request": "guardian3-session-lock",
+      "stage": "lock",
+      "observed_mode": "500"
+    },
+    {
+      "request": "guardian3-session-restore",
+      "stage": "restore",
+      "observed_mode": "771"
+    }
+  ],
+  "controller_error": null,
+  "cleanup_error": null
+}

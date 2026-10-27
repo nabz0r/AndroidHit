@@ -14,7 +14,7 @@ final class LocalSaveTransactions {
         synchronized (LOCK) {
             Map<String, Object> pending = PENDING.get(prefs);
             if (pending == null) return;
-            if (!editor(prefs, pending).commit()) throw new IllegalStateException("Could not persist pending local reward");
+            if (!editor(prefs, pending).commit()) throw new GameStore.LocalSaveException("Could not persist pending local reward");
             PENDING.remove(prefs);
         }
     }
@@ -22,7 +22,7 @@ final class LocalSaveTransactions {
         synchronized (LOCK) {
             flush(prefs);
             PENDING.put(prefs, new HashMap<>(values));
-            if (!editor(prefs, values).commit()) throw new IllegalStateException("Could not persist local reward");
+            if (!editor(prefs, values).commit()) throw new GameStore.LocalSaveException("Could not persist local reward");
             PENDING.remove(prefs);
         }
     }

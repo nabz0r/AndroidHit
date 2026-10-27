@@ -1,0 +1,5 @@
+# Retained native-label selector FAIL after a real blocked write
+
+The same frozen FINAL5 Lab bytes actually played30 levels, opened authored Guardian3, verified its initial XML disk state and received the host's verified0500 permission acknowledgement. The app correctly displayed its blocked-save panel, whose native controls were **Back** and **Try again**. The test incorrectly searched only for **Retry**, an assumed English label rather than the actual Strings value. The missing-control failure therefore precedes the cache/disk/Back/recovery assertions; they are not claimed as passing.
+
+This raw suite remains FAIL with494 checks. The test's finally requested restoration, and the independent infrastructure journal confirms one0500→771 cycle, original preference bytes/file set, display and rotations restored. There was no app crash. Exact source snapshots and the observed failure screenshot/tree are preserved. The follow-up uses only the actual visible retry labels (Try again/Retry), a new evidence label and30 newly played levels; no profile is seeded or receipt erased. Normal FINAL5 full100, fresh D and production startup verdicts are separate.

@@ -1,0 +1,16 @@
+// Test-only exporter. It does not change the application source or signing configuration.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig { testInstrumentationRunner 'com.androidhit.lumadrift.qa.AvatarAtlasInstrumentation' }
+            sourceSets {
+                androidTest {
+                    java.setSrcDirs([new File(rootDir, 'docs/validation/v1.9/avatar/native'), new File(rootDir, 'build/generated/v19-avatar')])
+                    assets.srcDirs = []
+                    manifest.srcFile new File(rootDir, 'docs/validation/v1.9/avatar/native/AndroidManifest.xml')
+                }
+            }
+        }
+    }
+}

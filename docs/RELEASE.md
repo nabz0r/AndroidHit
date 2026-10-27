@@ -1,6 +1,10 @@
 # Installation and release artifacts
 
-## Current 1.8 installation
+## Current 1.9 installation
+
+Install the signed [production 1.9 APK](../releases/luma-drift-1.9.0-rc1.apk), package `com.androidhit.lumadrift`, version code 10. Keep the existing application installed to retain device-local saves. The separate [Lab APK](../releases/luma-drift-1.9.0-sandbox.apk) has its own profile. [Exact sizes/hashes, AABs and compatibility](RELEASE_1_9.md) · [Executed qualification](validation/v1.9/README.md). Published older versions remain byte-identical.
+
+## Preserved 1.8 installation
 
 Use the signed [production1.8 APK](../releases/luma-drift-1.8.0-rc1.apk)(7,707,626 bytes), package`com.androidhit.lumadrift`, code 9. Its SHA-256 is`aab583241c42179e5cffb80bdd32f9a502be124a3e8a75ccf94936e538db87d4`. The isolated [Lab APK](../releases/luma-drift-1.8.0-sandbox.apk) does not share its local save. Install as an update with the same signing identity; do not uninstall first if you want local progress retained. [All four artifacts, signatures and scope](RELEASE_1_8.md) · [Current validation](validation/v1.8/README.md). Earlier entries below remain historical.
 

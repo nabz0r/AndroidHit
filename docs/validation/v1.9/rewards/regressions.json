@@ -1,0 +1,46 @@
+{
+  "recorded_date": "2026-10-27",
+  "all_passed": true,
+  "suites": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "file": "test-data.sh",
+        "exit_code": 0,
+        "output": "PASS 8882 data, economy, campaign, Remix, milestone, event and localization checks\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "file": "test-meta.sh",
+        "exit_code": 0,
+        "output": "PASS 362 first-clear progression, claims, migration, journal and feature-copy checks\nPASS exported journal parses as JSON and round-trips Unicode and control characters\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "file": "test-rewards-cosmetics-v17.sh",
+        "exit_code": 0,
+        "output": "DRAW_SIMULATION 100000 outcomes: common=60072, rare=29862, epic=10066\nPASS 100953 v1.7 rewards, wardrobe, earned capsules, quests and gift persistence checks\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "file": "test-tutorial-v18.sh",
+        "exit_code": 0,
+        "output": "PASS 1454 tutorial1.8 session, seven real boards, typed-history recreation, skip/replay, six-language and atomic one-time reward checks\nSCOPE: pure JVM session and real GameStore with deterministic Android preference doubles; installed touch/rotation/rendering require separate SDK UI checks.\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "file": "test-inventory-presentation.sh",
+        "exit_code": 0,
+        "output": "PASS 1482 inventory presentation checks (synthetic preferences; no Android runtime or external services)\n"
+      }
+    }
+  ]
+}

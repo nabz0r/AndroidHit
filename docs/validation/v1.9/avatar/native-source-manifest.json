@@ -1,0 +1,21 @@
+{
+  "transformation": "Replace Java package/import prefix only; reverse replacement byte-identical",
+  "reason": "Signed release R8 inlines/removes catalogue methods. Rasterize identical renderer bodies in test namespace; integrated app evidence is separate.",
+  "sources": [
+    {
+      "source": "app/src/main/java/com/androidhit/lumadrift/data/Catalog.java",
+      "source_sha256": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+      "generated_sha256": "bb283ed807c4ab457b227b0e93af053c023d9d44cfa33bff3123247283facc2b"
+    },
+    {
+      "source": "app/src/main/java/com/androidhit/lumadrift/data/AvatarStyles.java",
+      "source_sha256": "3f6fc31444ffdd3a1c5db7662da4ec8db0b95fab55f4ef103479d8c1b65246fc",
+      "generated_sha256": "9246d391e8ab1042511a0d0b14504eb31ac9e1c558a2590375ae62c3bbf7b5c6"
+    },
+    {
+      "source": "app/src/main/java/com/androidhit/lumadrift/ui/AvatarStage.java",
+      "source_sha256": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+      "generated_sha256": "dd16f6df537eff9521edba5b592f434016a3e9c5e746c1ff6458dbe98040a218"
+    }
+  ]
+}

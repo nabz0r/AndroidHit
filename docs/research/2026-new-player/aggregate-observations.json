@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "extraction_type": "Manually verified minimal aggregate facts from primary publisher research reads; not respondent-level scraping.",
+  "retrieved_at_utc": "2026-10-27T15:13:16Z",
+  "contains_personal_records": false,
+  "source_raw_bytes_retained": false,
+  "source_aggregates": [
+    {
+      "source_id": "ESA26",
+      "url": "https://www.theesa.com/two-thirds-of-americans-play-video-games-every-week-according-tonew-report-from-the-entertainment-software-association/",
+      "published": "2026-06-03",
+      "collection": {
+        "start": "2026-02-11",
+        "end": "2026-02-25",
+        "year_note": "Announcement labels this the 2026 survey; methodology states February 11–25 without repeating year."
+      },
+      "sample_n": 13545,
+      "observations": [
+        {
+          "id": "ESA26-mobile",
+          "value": 80,
+          "unit": "percent",
+          "base": "players",
+          "meaning": "Play on a mobile device; multi-platform measure, not Android-only."
+        },
+        {
+          "id": "ESA26-puzzle",
+          "value": 66,
+          "unit": "percent",
+          "base": "mobile players",
+          "meaning": "Puzzle is the leading reported mobile genre."
+        },
+        {
+          "id": "ESA26-adult-genz-relax",
+          "value": 60,
+          "unit": "percent",
+          "base": "Gen Z among total players 18+; subgroup n not given on HTML page",
+          "meaning": "Report playing to pass time or relax."
+        },
+        {
+          "id": "ESA26-adult-genz-fun",
+          "value": 70,
+          "unit": "percent",
+          "base": "Gen Z among total players 18+; subgroup n not given on HTML page",
+          "meaning": "Report playing to have fun."
+        }
+      ]
+    },
+    {
+      "source_id": "AARP26",
+      "url": "https://www.aarp.org/pri/topics/technology/internet-media-devices/play-purpose-video-games-older-adults/",
+      "published": "2026-10-22",
+      "collection": {
+        "quantitative_research_summary": [
+          "2026-05-14/2026-05-18",
+          "2026-06-17/2026-06-22"
+        ],
+        "quantitative_press_release": "2026-06-17/2026-06-22",
+        "qualitative": "2026-03-09/2026-03-13",
+        "discrepancy": "Research summary includes a May wave absent from press-release methodology; do not silently merge."
+      },
+      "sample_n": 1014,
+      "observations": [
+        {
+          "id": "AARP26-solo",
+          "value": 79,
+          "unit": "percent",
+          "base": "50+ players",
+          "meaning": "Usually play alone."
+        },
+        {
+          "id": "AARP26-session",
+          "value": 65,
+          "unit": "percent",
+          "base": "50+ players",
+          "meaning": "Typical session 15–60 minutes, across games/devices."
+        },
+        {
+          "id": "AARP26-relax",
+          "value": 75,
+          "unit": "percent",
+          "base": "50+ players",
+          "meaning": "Report playing to relax/decompress."
+        }
+      ]
+    },
+    {
+      "source_id": "DMT26",
+      "url": "https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey.html?go_to_origin=true",
+      "published": "2026-03-25",
+      "collection": {
+        "start_month": "2025-10",
+        "end_month": "2025-11"
+      },
+      "sample_n": 3575,
+      "observations": [
+        {
+          "id": "DMT26-social-discovery",
+          "value": 73,
+          "unit": "percent",
+          "base": "Gen Z fans, includes minors",
+          "meaning": "Social media is primary discovery route for TV, movies, music, games or events."
+        },
+        {
+          "id": "DMT26-community",
+          "value": 46,
+          "unit": "percent",
+          "base": "all fans",
+          "meaning": "More likely to engage with entertainment recommended by fan community."
+        }
+      ]
+    },
+    {
+      "source_id": "OFQ26",
+      "url": "https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/adults/adults-media-use-and-attitudes-2026/adults-media-use-and-attitudes-2026-report.pdf?v=415430",
+      "published": "2026-04-02",
+      "collection": {
+        "start": "2025-09-29",
+        "end": "2025-11-28"
+      },
+      "sample_n": 7533,
+      "observations": [
+        {
+          "id": "OFQ26-screen-time",
+          "value": 40,
+          "unit": "percent",
+          "base": "online adults",
+          "meaning": "Report spending too long on screens most days."
+        },
+        {
+          "id": "OFQ26-smartphone-only",
+          "value": 20,
+          "unit": "percent",
+          "base": "online adults",
+          "meaning": "Rely solely on a smartphone for internet access."
+        },
+        {
+          "id": "OFQ26-skill",
+          "value": null,
+          "unit": "qualitative_summary_of_analysis",
+          "base": "survey scenario tests",
+          "meaning": "Breadth of use and task-specific confidence predict performance better than age alone."
+        }
+      ]
+    },
+    {
+      "source_id": "OFL26",
+      "url": "https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/adults/adults-media-use-and-attitudes-2026/adults-media-lives-2026-report.pdf?v=415484",
+      "published": "2026-04",
+      "collection": {
+        "start": "2025-10-06",
+        "end": "2025-10-31"
+      },
+      "sample_n": 20,
+      "observations": [
+        {
+          "id": "OFL26-social-time",
+          "value": null,
+          "unit": "qualitative_theme",
+          "base": "interview accounts",
+          "meaning": "Gaming provides social connection for some participants; life schedules can limit opportunities."
+        }
+      ]
+    },
+    {
+      "source_id": "MIL26",
+      "url": "https://www.drogues.gouv.fr/barometre-ecrans-mildeca-harris-interactive-2026-les-depenses-dans-les-jeux-video-un-enjeu-de",
+      "published": "2026-07-27",
+      "collection": {
+        "start": "2026-06-19",
+        "end": "2026-06-24"
+      },
+      "sample_n": 2158,
+      "observations": [
+        {
+          "id": "MIL26-spend-association",
+          "value": {
+            "reporting_problematic_use": 72,
+            "reporting_no_difficulty": 11
+          },
+          "unit": "percent",
+          "base": "the two stated player subgroups; subgroup n not given on summary page",
+          "meaning": "In-app purchases several times weekly; association, not causation."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "scope": "Unpublished synthetic-journey harness pilot; not an application failure or a human result.",
+  "observed_assertion": "profile action bound",
+  "observed_stack_location": "NewPlayerV19Audit.profiles",
+  "cause": "After blocked probes exceeded the original mistake margin, the harness fully undid productive actions, then repeatedly replayed and undid the next action. Undo correctly could not refund the failed probes, so that harness recovery loop never made progress.",
+  "correction": "Use the declared free-restart branch when the exact remaining work still exceeds budget after full Undo. A separate request-format assertion also prevents decimal-point receipt IDs from silently bypassing stock hints.",
+  "current_evidence": "baseline-39908e2/summary.json and candidate/summary.json supersede this pilot; both use the corrected same harness."
+}

@@ -1,6 +1,26 @@
 # Public developer, privacy and account-deletion pages
 
-## Current 1.8 source and delivery boundary · 27 October 2026
+## Current 1.9 source qualification · 27 October 2026
+
+The current source presents **Luma Drift 1.9.0-rc1 / code 10**, production package `com.androidhit.lumadrift`, on the existing Firebase site. Its [signed APK](../releases/luma-drift-1.9.0-rc1.apk) is **7,740,394 bytes / 7.74 MB decimal**, SHA-256 `b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05`. [Exact release manifest](../releases/manifest-1.9.0-rc1.json) · [Release notes](RELEASE_1_9.md) · [Player audit](PLAYER_AUDIT_2026.md) · [UX contract](UX_1_9.md).
+
+The homepage preserves L/M/T identities and explains the 1,000 Journey / 240 Remix route, seven real practice lessons, free recovery and action-based stars. It adds the optional 100-guardian route, real layers and one-cell actions, explicit once-only free power samples, accessible stable Journey gifts, and 24 companions × 12 free graphical treatments. Those are 288 combinations, not 288 individually hand-painted assets; style choice does not grant an unowned companion. Reduced motion freezes parallax. Test ads and closed real checkout remain explicit; no Play launch, identity/commerce qualification or retention prediction is inferred.
+
+Thirteen [unedited PNG copies](validation/site-v1.9/captures.json) match the final Lab bytes and passing native reports. Twelve come from the [2,277-check full100 run](validation/v1.9/ui-sdk-final5-full100/host-report.json); the first-practice English image comes from the [85-check genuine first installation D](validation/v1.9/ui-sdk-fresh-guest-d/host-report.json). The current Home images were captured after 100 earned Journey clears and later replays, and **resume an L11 session**. They are neither a zero-clear account nor a claim that Next shows L101. The 1,000-map capture is exploration, not 1,000 clears. Fresh D had no original Lab profile to restore and retains its new guest; the full run restores its original preference bytes/settings. [Complete native scope and retained failures](validation/v1.9/SDK_UI_FINAL.md).
+
+The [current offline release check](validation/site-v1.9/release/static-check.json) passes **3,183 assertions / three pages / 71 references**; the [source manifest](validation/site-v1.9/release/source-manifest.json) fingerprints **71 payload files**. [32 Node tests](validation/site-v1.9/node-tests-final.txt) pass. The [website qualification record](validation/site-v1.9/README.md) separates those local checks from the coordinating run's local browser review and eventual GitHub/Hosting delivery. The [local CUA review](validation/site-v1.9/browser-check.json) also passes18 FR/EN states at actual CSS widths320/390/1366, across Home, privacy and deletion; its [French preview](validation/site-v1.9/local-home-fr-desktop.png) is a localhost render. **These checks do not themselves confirm deployment.** Dated 1.8 delivery below remains historical until a separate 1.9 management/CLI record identifies the new source.
+
+Privacy now describes the actual local guardian, style, sample and retry/receipt data. Privacy/deletion HTML query versions are refreshed for the shared current stylesheet/controller. This changes their presentation shell and privacy text; the authenticated deletion protocol, Google asset, separate confirmation, Firebase identity modules and public runtime configuration remain unchanged. FR/EN routing still uses URL state, without language cookies/localStorage; Android has six languages. [Source/retrieval limits](research/2026-new-player/README.md) distinguish published 2026 aggregates from assumed play behaviours.
+
+Use the current checker, without replacing historical evidence:
+
+```sh
+python3 scripts/check-site-v19.py --phase release \
+  --apk-sha256 b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05
+node --test public/tests/*.test.mjs
+```
+
+## Historical 1.8 source and delivery boundary · 27 October 2026
 
 The website source now presents **Luma Drift 1.8.0-rc1 / code 9**, production package `com.androidhit.lumadrift`, on the existing Firebase site. Its [signed APK](../releases/luma-drift-1.8.0-rc1.apk) is **7,707,626 bytes / 7.71 MB decimal**, SHA-256 `aab583241c42179e5cffb80bdd32f9a502be124a3e8a75ccf94936e538db87d4`. The [exact release manifest](../releases/manifest-1.8.0-rc1.json) and [1.8 release notes](RELEASE_1_8.md) identify the candidate. Firebase Hosting delivery is confirmed at **27 October 2026, 14:59:00.486 UTC**, from exact main `5cab179b6eff488e641b75e5c6dfaa0e843d6553`, after 58 payloads matched on the clean deployment checkout. The live finalized version is `4324523b7540b1a1`. The [1.8 website qualification/delivery record](validation/site-v1.8/README.md) separates local browser review, CLI/management publication and the unperformed public-origin byte/render check.
 

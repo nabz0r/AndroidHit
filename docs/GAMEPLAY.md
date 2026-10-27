@@ -1,6 +1,10 @@
 # Luma Drift gameplay and economy
 
-## Current 1.8 source contract
+## Current 1.9 additions
+
+[Guardians](GUARDIANS.md) are optional separate encounters every ten Journey clears: two-layer thickness, one-cell pieces from the fifth, free recovery and one earned fragment reward. They do not alter the L/M/T boards below. [UX](UX_1_9.md) records visible fixed-window gate previews, stable gifts and explicit free power trials. Three stars allow `minimum + floor((base - minimum) / 2)` actions, two allow the original base, and an extension produces one star. Hint/power use, elapsed time and Undo count are not grading inputs; Undo's real action refund still matters.
+
+## Retained V4 route contract
 
 The default route is **1,000 L Journey boards and 240 M Remix boards**, selected through `StrategyCatalog`. New daily/weekly stages use T events. Historical J/K still resolve through `BalancedCatalog`; older shared codes and valid active boards retain their original geometry. This page describes source behavior, separately from installed Android and real-service qualification. [V4 specification and evidence](PROGRESSION_V4.md).
 

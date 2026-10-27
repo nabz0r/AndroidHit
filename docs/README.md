@@ -1,30 +1,31 @@
 # Luma Drift documentation
 
-## Current 1.8 candidate
+## Current 1.9 candidate
 
-[Release and exact APK/AAB hashes](RELEASE_1_8.md) · [V4 all-level rules](PROGRESSION_V4.md) · [Seven-lesson tutorial](TUTORIAL.md) · [UX and research](UX_1_8.md) · [Executed 1.8 evidence](validation/v1.8/README.md) · [Website 1.8](validation/site-v1.8/README.md). The 1.7 tables below are preserved background; 1.8 is the current gameplay/DA candidate. Google/friend/commercial acceptance is postponed while gameplay is prioritized.
+[Signed APK/AAB and exact hashes](RELEASE_1_9.md) · [New-player audit and 2026 sources](PLAYER_AUDIT_2026.md) · [1.9 UX](UX_1_9.md) · [Guardian rules](GUARDIANS.md) · [Executed qualification](validation/v1.9/README.md) · [Website](validation/site-v1.9/README.md).
 
+The 1.8 route below remains the ordinary Journey foundation. The current release fixes native touch/preview problems and reward discoverability, adds optional guardians and 288 visual combinations, and preserves published challenge families. The Play developer account is approved according to the owner; the app listing and provider qualification are next.
 
 **A little spark. A great escape.** Read the actual rule, inspect the exact delivered bytes, and distinguish implementation, installed acceptance and service rollout.
 
-Current signed delivery: **[production 1.8.0-rc1 APK](../releases/luma-drift-1.8.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.8.0-rc1.aab) · [Exact hashes and release notes](RELEASE_1_8.md). Lab remains a separate `.sandbox` package. Source/package integrity, installed acceptance, Hosting delivery and real-provider qualification are separately recorded.
+Current signed delivery: **[production 1.9.0-rc1 APK](../releases/luma-drift-1.9.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.9.0-rc1.aab) · [Exact hashes and release notes](RELEASE_1_9.md). Lab remains a separate `.sandbox` package. Source/package integrity, installed acceptance, Hosting delivery and real-provider qualification are separately recorded.
 
 The current game has 1,000 new L Journey boards, 240 M Remix, T daily/weekly events, six preserved sealed-passage practice challenges, 24 companions, six themes, 18 bounded functional equipment items, 24 appearance-only wardrobe items and six powers. Seven interactive lessons teach the actual rules. The ten-biome map remains scrollable from 1 to 1,000. Progress, earned inventory and tutorial receipts remain local; Google identity does not provide gameplay cloud saves.
 
-<p><img src="screenshots/v1.8/ui-sdk-final-menus/home-fr-localized.png" width="225" alt="Final Lab 1.8 guest home"><img src="screenshots/v1.8/ui-sdk-final-menus/tutorial-key-fr.png" width="225" alt="Final Lab 1.8 playable key lesson"><img src="screenshots/v1.8/ui-sdk-final-menus/wardrobe-fr-localized.png" width="225" alt="Final Lab 1.8 actual wardrobe ownership"></p>
+<p><img src="screenshots/v1.9/ui-sdk-final5-full100/home-fr-localized.png" width="225" alt="Final Lab 1.9 guest home"><img src="screenshots/v1.9/ui-sdk-final5-full100/tutorial-key-fr.png" width="225" alt="Final Lab 1.9 playable key lesson"><img src="screenshots/v1.9/ui-sdk-final5-full100/wardrobe-fr-localized.png" width="225" alt="Final Lab 1.9 actual wardrobe ownership"></p>
 
-These authentic final Lab screenshots come from the passing 47-check menu run. They show a real guest with zero Journey clears, not the separate 100-level native playthrough. [Capture scope](validation/v1.8/SDK_UI_FINAL.md).
+These final-byte 1.9 Lab images show the guest qualification route, with earned progression and no profile injection. The separate first installation and the individual 100-level assertions have their own scopes. [Capture and acceptance record](validation/v1.9/README.md).
 
 ## Understand the new candidate
 
 | Guide | What it answers |
 | --- | --- |
-| [1.8 release](RELEASE_1_8.md) | Exact APK/AAB, implemented scope and qualification limits |
+| [1.9 release](RELEASE_1_9.md) | Exact APK/AAB, implemented scope and qualification limits |
 | [V4 progression](PROGRESSION_V4.md) | Reauthored L/M/T boards, productive budgets, reversible gates and old-save compatibility |
 | [Tutorial](TUTORIAL.md) | Seven real lessons, skip/resume/replay and one-time reward durability |
-| [1.8 UX](UX_1_8.md) | Readability, gestures, motivation, reduced motion and bounded background guidance |
-| [Independent engine audit](validation/v1.8/engine/README.md) | Every reachable state, exact productive cost and finite catalogue coverage |
-| [Installed native tests](validation/v1.8/SDK_UI_FINAL.md) | 100 completed Journey boards, gestures, recovery, six languages, fresh arrival and audio |
+| [1.9 UX](UX_1_9.md) | Readability, gestures, motivation, reduced motion and bounded background guidance |
+| [Independent engine audit](validation/v1.9/engine/strategy-all-states.txt) | Every reachable state, exact productive cost and finite catalogue coverage |
+| [Installed native tests](validation/v1.9/README.md) | 100 completed Journey boards, gestures, recovery, six languages, fresh arrival and audio |
 | [Prior management diagnosis](LEVEL_MANAGEMENT_REVIEW.md) | Reproduced J7/J8 traps and the delivered 1.8 remedy |
 | [Retained economy](ECONOMY_1_7.md) | Visit gifts, 24 wardrobe sources, quests, odds, duplicates and receipts |
 | [Installation](RELEASE.md) | Channel separation, retained packages and signing |
@@ -52,7 +53,7 @@ LumaCoins are earned and device-local. LumaGold is the separate account premium 
 | [Art and audio](ART_AUDIO.md) | Native silhouettes and wardrobe, generated Dream Glade and retained Atlas, biome arrangements and playback evidence boundaries |
 | [Brand kit](store/README.md) | Original promotional artwork, editable assets and historical export provenance |
 | [Public pages](PUBLIC_PAGES.md) | FR/EN homepage, support/privacy/deletion routes and separate Hosting delivery |
-| [Store copy](STORE_LISTING.md) | Current 1.8 draft and clearly preserved earlier copy; no submitted Play listing |
+| [Store copy](STORE_LISTING.md) | Current 1.9 draft and clearly preserved earlier copy; no submitted Play listing |
 
 The previously published [website 1.6](validation/site-v1.6/README.md) has its own record of 18 local responsive states, real final-APK imagery, source hashes and Firebase completion. The [retained 1.5 site](validation/site-v1.5/README.md), original brand vectors and [Atlas pixel provenance](art/aurora-atlas-v1.json) remain distinct. Native screenshots do not independently establish a website revision or public-origin byte comparison.
 
@@ -81,8 +82,8 @@ A configured service URL is not proof that new routes are deployed. The prepared
 | [Notices](THIRD_PARTY_NOTICES.md) | SDK/Google mark and original source/art/audio provenance |
 | [Research archive](RESEARCH.md) | Dated market, initial concept and licensing work |
 
-Historical reports remain available: [1.7](RELEASE_1_7.md), [1.6](RELEASE_1_6.md), [1.5](RELEASE_1_5.md), [1.4](RELEASE_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](RELEASE_1_2.md) and [1.1](RELEASE_1_1.md). Their packages, dates, synthetic profiles, screenshots and limits are not relabelled as 1.8 evidence. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; new runs belong under their own version.
+Historical reports remain available: [1.8](RELEASE_1_8.md), [1.7](RELEASE_1_7.md), [1.6](RELEASE_1_6.md), [1.5](RELEASE_1_5.md), [1.4](RELEASE_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](RELEASE_1_2.md) and [1.1](RELEASE_1_1.md). Their packages, dates, synthetic profiles, screenshots and limits are not relabelled as 1.9 evidence. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; new runs belong under their own version. The current 1.9 result is indexed above.
 
 ## Qualification sociale en attente
 
-[Parcours guidé sur deux Android virtuels](QUALIFICATION_SOCIALE.md) : appareils préparés, connexion Google et vrais échanges encore en attente. La base de test est la production 1.7 préservée ; la nouvelle 1.8 est livrée séparément.
+[Parcours guidé sur deux Android virtuels](QUALIFICATION_SOCIALE.md) : appareils préparés, connexion Google et vrais échanges encore en attente. La base de test est la production 1.7 préservée ; la nouvelle 1.9 est livrée séparément, sans qualification sociale réelle déduite des simulations.

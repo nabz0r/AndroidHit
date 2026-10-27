@@ -1,0 +1,462 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "tutorial,gestures",
+  "journey_through": 30,
+  "serial": "emulator-5580",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "display_size_before": "Physical size: 1080x2340",
+  "apk_sha256": "a91542c4addf9b939063340be4ea5f71964bb9e6949fe998d3bc64c720fe94c6",
+  "expected_apk_sha256": "a91542c4addf9b939063340be4ea5f71964bb9e6949fe998d3bc64c720fe94c6",
+  "test_apk_sha256": "9a04b1b568c4edc6301575f1f2de5db38d77cdb51a245f2b104f57505d56e46c",
+  "runner_source_sha256": "8ffd3dd9796bfe7de86c5a7d40c9aabef14348806aa0269c1bd07de90e2b9c3b",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v19-ui-original-prefs-l_81b8as",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "screenshots": {
+    "tutorial-6-phase-0-en.png": "571b6e8c9f3132d91095cfe0c3ed504459a70a5d959f802315ea11bf8d69ca44",
+    "tutorial-7-phase-2-en.png": "0c46d6f23423ede07a1a4c7832b8c152add0796c248b76b7e6e54ef1373de2cc",
+    "tutorial-gate-drift-fixed-en.png": "d37f85dd3ef4c9492f7d40994891c5392d60cd5dad26dc8ced2ddb634b559a9b",
+    "tutorial-1-phase-0-en.png": "017faec9005aaddc73766692075796c75868e78fbef3c801536b16aaf17b3342",
+    "tutorial-resumed-en.png": "7ab71b28fb9bfb6f44463199031ce1640d3c179d9741918b3664a2a2b1ad8f80",
+    "tutorial-wrong-drag-en.png": "7ac7e7eb3df1c0566f78f7e58fab3b55b0dec512b12f7bdbf37921427949bb6e",
+    "tutorial-6-phase-2-en.png": "d5ce7b643c5c7c3b91b48f4efbe461f856b0a3af7cce40468a3f5dc4eb142863",
+    "tutorial-complete-en.png": "8e2dbb3715a240113356ff9bf56c02e2049f428338b2c1090edfb5b3bfbd5f7a",
+    "tutorial-7-phase-0-en.png": "13c4deebe642b443da01532fcfc31aa4cdc287dbd2d5ea41cbf0dde3b34cedc3",
+    "tutorial-gate-double-confirm-en.png": "81e186fe0e1913cc94414c29cb4fe645d628d64258abba431853bba1c23ef5d2",
+    "tutorial-4-phase-2-en.png": "81e186fe0e1913cc94414c29cb4fe645d628d64258abba431853bba1c23ef5d2",
+    "tutorial-5-phase-0-en.png": "d588aa7b38d5eaae85e4070a1e4ee6bc0be4e348649d6e5acd8f07bf995fd6f7",
+    "tutorial-3-phase-2-en.png": "2a76148a72a4d1f95b506badb78a8668adfc000716083344c83274593c630133",
+    "tutorial-2-phase-0-en.png": "4ccc6560c8d7a85fa3a149a5a2b0b7da43b9fa9946d028a2f7f349ddcba96d6c",
+    "tutorial-3-phase-0-en.png": "fc5312f69ae99b84d820cadf34b0311419a3b9310c9ad3ba5cb6aaed7c288e92",
+    "tutorial-reward-en.png": "d32c370f0a75def1b79b278407643ff0166a46ce7c76fa5493703fbe6e4f3691",
+    "journey-native-drag-en.png": "757835b751420cd9e31fbb03dbe2a356367c3df24e496e96fc7bf8245d307783",
+    "tutorial-6-phase-4-en.png": "8596957a3375f33396f1c3819396d6c3f7cc48380ad64b51ae3ddbf9d3a052ed",
+    "tutorial-2-phase-2-en.png": "38c2360d6ea20e7256efb083748fbdf94848625fd882258836fff5f332887707",
+    "tutorial-4-phase-0-en.png": "6686de481c517a9fc0b5cb7bdbf990659181a426fa9658d9c19dcdd6c1b88657",
+    "tutorial-5-phase-2-en.png": "78a67516143772071caaeb7579708b5af236770080bd2ac8ea24a0f4d8d6fab0",
+    "home-en.png": "5ce4342e92fb0acaeff825ac3465ee72d31bd0c7532d195c87d01b69ab199e01",
+    "tutorial-1-phase-1-en.png": "a89e0efff1a886a4481056b7c036d2c6149c44b9e5bd8b38941614a6b0ec9762",
+    "tutorial-7-phase-3-en.png": "2caa21ca5b2ec14922b5f18efb30d9d768eed43bed0b1b6605f53e50d1cadd22",
+    "tutorial-6-phase-1-en.png": "031fe0b45b58a8d3d1914a94e93f90fd20e910cd1569adc780427c8124837c52",
+    "tutorial-7-phase-1-en.png": "d215004814bb60c156f1797d4d0387268c02e38188c39d0571e5c96c676c653e",
+    "tutorial-6-phase-3-en.png": "081e34955f03c4e1ee92229f027c1fdb6b819c52dfd7585263bd3993f11337eb",
+    "tutorial-2-phase-1-en.png": "7ab71b28fb9bfb6f44463199031ce1640d3c179d9741918b3664a2a2b1ad8f80",
+    "tutorial-key-landscape-en.png": "21e64e08276c85a9278d357a7e7f2e8508b16f619cc37ef8f3c4103980d87e26",
+    "tutorial-start-en.png": "017faec9005aaddc73766692075796c75868e78fbef3c801536b16aaf17b3342",
+    "tutorial-3-phase-3-en.png": "1a481226bb7a63f25f95864ff9ed19a3868ab2f2e6bb29b7beb2061134d5393b",
+    "tutorial-5-phase-1-en.png": "0af40f1d59aeccd64421de12f26d4797867eabc1673d3c6f9d50144ab9eec7ba",
+    "tutorial-4-phase-3-en.png": "a6ac14966786b9e5a11d5a7167e017ead39027d96e2e6803ed1fe99ffb889f7a",
+    "tutorial-5-phase-3-en.png": "bae32ad076361fa0e78afc012cdaef7e871fd2b7a9a65f49cdcd12459b01825a",
+    "tutorial-4-phase-1-en.png": "d37f85dd3ef4c9492f7d40994891c5392d60cd5dad26dc8ced2ddb634b559a9b",
+    "tutorial-2-phase-3-en.png": "7f70a6f71ca8f78a3655331cd0dd7985898b758d188c46d5eee68c2c3820a80b",
+    "tutorial-3-phase-1-en.png": "9bdf17824e250cc713fea09bc0dcf32549a97c30d84895a0e3e00a6d804be3a2"
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate1.9/code10"
+      },
+      {
+        "pass": true,
+        "message": "SDK configures owned QA display1080x1920 for compact portrait"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Optional tutorial opens real saved practice rather than an informational slideshow"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 2, column 2, arrow right"
+      },
+      {
+        "pass": true,
+        "message": "Wrong-direction native SDK drag leaves the practice phase and history unchanged"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 2, column 2, arrow right"
+      },
+      {
+        "pass": true,
+        "message": "A real rightward SDK drag completes the exit lesson and records exactly one piece"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 1 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 1 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Skipping stores practice as paused rather than completed"
+      },
+      {
+        "pass": true,
+        "message": "Skipping tutorial grants no reward and consumes no stock"
+      },
+      {
+        "pass": true,
+        "message": "Resume restores the exact lesson, phase and typed action history"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 2 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "SDK rotates an in-progress tutorial"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial retains its exact teaching phase and preview through activity recreation"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial phase remains durable after portrait return"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 3 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Gate gesture uses observed visible accessibility bounds"
+      },
+      {
+        "pass": true,
+        "message": "Real gate coach15-point native drift opens the expected preview in compact portrait"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "SDK rotates an in-progress tutorial"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial retains its exact teaching phase and preview through activity recreation"
+      },
+      {
+        "pass": true,
+        "message": "Tutorial phase remains durable after portrait return"
+      },
+      {
+        "pass": true,
+        "message": "Gate preview survives real rotation and activity recreation"
+      },
+      {
+        "pass": true,
+        "message": "Skipped gate preview resumes its exact phase and typed history"
+      },
+      {
+        "pass": true,
+        "message": "Double native gate confirmation records one opening only"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 4 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 5 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 6 phase 4 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 0 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 1 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 2 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "Lesson 7 phase 3 advances only after its requested teaching action"
+      },
+      {
+        "pass": true,
+        "message": "Practice phase spends no earned coins or real power charges"
+      },
+      {
+        "pass": true,
+        "message": "All seven interactive lessons durably complete"
+      },
+      {
+        "pass": true,
+        "message": "First completion grants exactly100 LumaCoins and2 earned Sparks"
+      },
+      {
+        "pass": true,
+        "message": "Welcome gift has one durable receipt"
+      },
+      {
+        "pass": true,
+        "message": "Repeated reward action adds no second gift"
+      },
+      {
+        "pass": true,
+        "message": "Replaying remains free and preserves the original welcome receipt"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 1, column 2, arrow up, Gate open"
+      },
+      {
+        "pass": true,
+        "message": "A real campaign SDK drag follows the actual arrow and charges exactly one action"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "tutorial-start-en",
+      "tutorial-1-phase-0-en",
+      "tutorial-wrong-drag-en",
+      "tutorial-1-phase-1-en",
+      "tutorial-2-phase-0-en",
+      "tutorial-resumed-en",
+      "tutorial-2-phase-1-en",
+      "tutorial-2-phase-2-en",
+      "tutorial-2-phase-3-en",
+      "tutorial-3-phase-0-en",
+      "tutorial-key-landscape-en",
+      "tutorial-3-phase-1-en",
+      "tutorial-3-phase-2-en",
+      "tutorial-3-phase-3-en",
+      "tutorial-4-phase-0-en",
+      "tutorial-gate-drift-fixed-en",
+      "tutorial-4-phase-1-en",
+      "tutorial-key-landscape-en",
+      "tutorial-gate-double-confirm-en",
+      "tutorial-4-phase-2-en",
+      "tutorial-4-phase-3-en",
+      "tutorial-5-phase-0-en",
+      "tutorial-5-phase-1-en",
+      "tutorial-5-phase-2-en",
+      "tutorial-5-phase-3-en",
+      "tutorial-6-phase-0-en",
+      "tutorial-6-phase-1-en",
+      "tutorial-6-phase-2-en",
+      "tutorial-6-phase-3-en",
+      "tutorial-6-phase-4-en",
+      "tutorial-7-phase-0-en",
+      "tutorial-7-phase-1-en",
+      "tutorial-7-phase-2-en",
+      "tutorial-7-phase-3-en",
+      "tutorial-complete-en",
+      "tutorial-reward-en",
+      "journey-native-drag-en"
+    ],
+    "checkCount": 85,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+  },
+  "display_size_restored": true,
+  "rotation_settings_restored": true
+}

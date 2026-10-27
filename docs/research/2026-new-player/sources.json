@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "retrieved_at_utc": "2026-10-27T15:13:16Z",
+  "selection": "Six primary 2026 publications; aggregate observations only; no personal records or full reports stored.",
+  "sources": [
+    {
+      "id": "ESA26",
+      "organisation": "Entertainment Software Association / YouGov",
+      "title": "2026 Essential Facts About the U.S. Video Game Industry — official announcement and methodology",
+      "url": "https://www.theesa.com/two-thirds-of-americans-play-video-games-every-week-according-tonew-report-from-the-entertainment-software-association/",
+      "published": "2026-06-03",
+      "collection": {
+        "start": "2026-02-11",
+        "end": "2026-02-25",
+        "year_note": "Announcement labels this the 2026 survey; methodology states February 11–25 without repeating year."
+      },
+      "population": "United States; participation estimates include ages 5–90. Adults report household members; players 8–17 answer with parental supervision.",
+      "sample_n": 13545,
+      "method": "20-minute online YouGov proprietary-panel survey; weighted on demographic/geographic variables and gamer participation.",
+      "observations": [
+        {
+          "id": "ESA26-mobile",
+          "value": 80,
+          "unit": "percent",
+          "base": "players",
+          "meaning": "Play on a mobile device; multi-platform measure, not Android-only."
+        },
+        {
+          "id": "ESA26-puzzle",
+          "value": 66,
+          "unit": "percent",
+          "base": "mobile players",
+          "meaning": "Puzzle is the leading reported mobile genre."
+        },
+        {
+          "id": "ESA26-adult-genz-relax",
+          "value": 60,
+          "unit": "percent",
+          "base": "Gen Z among total players 18+; subgroup n not given on HTML page",
+          "meaning": "Report playing to pass time or relax."
+        },
+        {
+          "id": "ESA26-adult-genz-fun",
+          "value": 70,
+          "unit": "percent",
+          "base": "Gen Z among total players 18+; subgroup n not given on HTML page",
+          "meaning": "Report playing to have fun."
+        }
+      ],
+      "locator": "Announcement: Mobile leads the way and methodology. Data page: Motivations for playing video games, explicitly among total players 18+.",
+      "short_quote": "Mobile leads the way",
+      "limitations": [
+        "US panel; trade-body commissioned.",
+        "Overall Gen Z participation includes minors; motivation data separately state players 18+.",
+        "No puzzle-specific adult Gen Z subgroup, task error or retention estimate."
+      ],
+      "access": "Primary page read directly through web research tool.",
+      "licence": "Copyright ESA; no open redistribution licence established. Minimal paraphrased aggregates and one quote shorter than 25 words retained; full report not stored.",
+      "supporting_url": "https://www.theesa.com/resources/essential-facts-about-the-us-video-game-industry/2026-data/"
+    },
+    {
+      "id": "AARP26",
+      "organisation": "AARP Research / NORC Foresight 50-Plus",
+      "title": "Play on Purpose: The Motivations of Adult Gamers Age 50-Plus",
+      "url": "https://www.aarp.org/pri/topics/technology/internet-media-devices/play-purpose-video-games-older-adults/",
+      "supporting_url": "https://www.aarp.org/press/releases/2026-10-22-aarp-gaming-study/",
+      "doi": "10.26419/res.01050.001",
+      "published": "2026-10-22",
+      "collection": {
+        "quantitative_research_summary": [
+          "2026-05-14/2026-05-18",
+          "2026-06-17/2026-06-22"
+        ],
+        "quantitative_press_release": "2026-06-17/2026-06-22",
+        "qualitative": "2026-03-09/2026-03-13",
+        "discrepancy": "Research summary includes a May wave absent from press-release methodology; do not silently merge."
+      },
+      "population": "United States, age 50+; game-player findings are not all adults.",
+      "sample_n": 1014,
+      "additional_samples": {
+        "screening_adults_from_press_release": 2550,
+        "qualitative_interviews": 312
+      },
+      "method": "Probability-based NORC panel; approximately 90% online/10% phone; weighted to CPS and membership benchmarks. Qualitative interviews AI-moderated.",
+      "observations": [
+        {
+          "id": "AARP26-solo",
+          "value": 79,
+          "unit": "percent",
+          "base": "50+ players",
+          "meaning": "Usually play alone."
+        },
+        {
+          "id": "AARP26-session",
+          "value": 65,
+          "unit": "percent",
+          "base": "50+ players",
+          "meaning": "Typical session 15–60 minutes, across games/devices."
+        },
+        {
+          "id": "AARP26-relax",
+          "value": 75,
+          "unit": "percent",
+          "base": "50+ players",
+          "meaning": "Report playing to relax/decompress."
+        }
+      ],
+      "locator": "Research summary: numerical bullet list and methodology; press release: From the report and methodology.",
+      "short_quote": "Older gamers are not one audience",
+      "limitations": [
+        "Self-reported motivations, not clinical effects.",
+        "Typical sessions are not first sessions or puzzle-specific targets.",
+        "No experience or motor-skill coefficient follows from age."
+      ],
+      "access": "Official indexed excerpts read through web search; direct origin read returned HTTP 403. Full report/questionnaire not obtained.",
+      "licence": "Copyright AARP; no open redistribution licence established. Minimal paraphrased aggregates and one quote shorter than 25 words retained; full report not stored."
+    },
+    {
+      "id": "DMT26",
+      "organisation": "Deloitte Center for Technology, Media & Telecommunications",
+      "title": "2026 Digital Media Trends: Capturing always-on fandom between releases and seasons",
+      "url": "https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey.html?go_to_origin=true",
+      "published": "2026-03-25",
+      "collection": {
+        "start_month": "2025-10",
+        "end_month": "2025-11"
+      },
+      "population": "US consumers; fan subgroup; not exclusively mobile players.",
+      "sample_n": 3575,
+      "subgroup_n": {
+        "fans": 2977
+      },
+      "method": "Online independent-firm survey, census-weighted. Gen Z defined as birth years 1997–2011.",
+      "observations": [
+        {
+          "id": "DMT26-social-discovery",
+          "value": 73,
+          "unit": "percent",
+          "base": "Gen Z fans, includes minors",
+          "meaning": "Social media is primary discovery route for TV, movies, music, games or events."
+        },
+        {
+          "id": "DMT26-community",
+          "value": 46,
+          "unit": "percent",
+          "base": "all fans",
+          "meaning": "More likely to engage with entertainment recommended by fan community."
+        }
+      ],
+      "locator": "Figure 2; fans engagement section; Methodology.",
+      "short_quote": "conducted in October and November 2025",
+      "limitations": [
+        "Publication 2026, observations 2025.",
+        "Gen Z includes minors; no adult-only estimate extracted.",
+        "Cross-media discovery cannot calibrate puzzle help, skill, spend or retention."
+      ],
+      "access": "Primary article and methodology read directly through web research tool.",
+      "licence": "Copyright Deloitte; no open redistribution licence established. Minimal paraphrased aggregates and one quote shorter than 25 words retained; full report not stored."
+    },
+    {
+      "id": "OFQ26",
+      "organisation": "Ofcom",
+      "title": "Adults’ Media Use and Attitudes Report 2026",
+      "url": "https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/adults/adults-media-use-and-attitudes-2026/adults-media-use-and-attitudes-2026-report.pdf?v=415430",
+      "published": "2026-04-02",
+      "collection": {
+        "start": "2025-09-29",
+        "end": "2025-11-28"
+      },
+      "population": "UK adults aged 16+; individual statistics use their stated internet-user sub-bases.",
+      "sample_n": 7533,
+      "method": "Mixed online-panel and face-to-face survey. Consolidated questionnaire differs from 2021–2024; trend comparisons indicative.",
+      "observations": [
+        {
+          "id": "OFQ26-screen-time",
+          "value": 40,
+          "unit": "percent",
+          "base": "online adults",
+          "meaning": "Report spending too long on screens most days."
+        },
+        {
+          "id": "OFQ26-smartphone-only",
+          "value": 20,
+          "unit": "percent",
+          "base": "online adults",
+          "meaning": "Rely solely on a smartphone for internet access."
+        },
+        {
+          "id": "OFQ26-skill",
+          "value": null,
+          "unit": "qualitative_summary_of_analysis",
+          "base": "survey scenario tests",
+          "meaning": "Breadth of use and task-specific confidence predict performance better than age alone."
+        }
+      ],
+      "locator": "Printed pp. 6–7: key findings; p. 7: methodology (PDF indices 5–6).",
+      "short_quote": "confidence does not always align with ability",
+      "limitations": [
+        "2026 publication uses 2025 fieldwork.",
+        "Includes ages 16–17; not adult-only Gen Z.",
+        "Media-literacy tasks are not game ability or accessibility diagnoses."
+      ],
+      "access": "Official PDF text read through web research tool; PDF not copied into repository.",
+      "licence": "Ofcom copyright/re-use conditions not independently established here. Minimal paraphrased aggregates and one quote shorter than 25 words retained; full report not stored."
+    },
+    {
+      "id": "OFL26",
+      "organisation": "Ofcom / The Knowledge Agency",
+      "title": "Adults’ Media Lives — Wave 21: 2026",
+      "url": "https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/adults/adults-media-use-and-attitudes-2026/adults-media-lives-2026-report.pdf?v=415484",
+      "published_month": "2026-04",
+      "collection": {
+        "start": "2025-10-06",
+        "end": "2025-10-31"
+      },
+      "population": "Purposively selected longitudinal UK panel; illustrative, not population-representative.",
+      "sample_n": 20,
+      "method": "17 in-home interviews and three online; over half the panel followed for more than 15 years.",
+      "observations": [
+        {
+          "id": "OFL26-social-time",
+          "value": null,
+          "unit": "qualitative_theme",
+          "base": "interview accounts",
+          "meaning": "Gaming provides social connection for some participants; life schedules can limit opportunities."
+        }
+      ],
+      "locator": "Printed pp. 3–4: methodology/limits; pp. 52–53: gaming context.",
+      "short_quote": "illustrative and illuminating",
+      "limitations": [
+        "Collected 2025, published 2026.",
+        "No prevalence, demographic weight or error-rate inference from 20 interviews.",
+        "No participant identities, biographies or quotations retained beyond methodological phrase."
+      ],
+      "access": "Official PDF text read through web research tool; PDF not copied into repository.",
+      "licence": "Ofcom copyright/re-use conditions not independently established here. Minimal paraphrased aggregates and one quote shorter than 25 words retained; full report not stored."
+    },
+    {
+      "id": "MIL26",
+      "organisation": "MILDECA / Toluna Harris Interactive",
+      "title": "Baromètre Écrans 2026 — Les dépenses dans les jeux vidéo : un enjeu de prévention",
+      "url": "https://www.drogues.gouv.fr/barometre-ecrans-mildeca-harris-interactive-2026-les-depenses-dans-les-jeux-video-un-enjeu-de",
+      "published": "2026-07-27",
+      "updated": "2026-07-30",
+      "collection": {
+        "start": "2026-06-19",
+        "end": "2026-06-24"
+      },
+      "population": "France ages 15–75; broad video-game definition across devices.",
+      "sample_n": 2158,
+      "method": "Online quotas and weighting for sex, age, socioeconomic group, region and settlement size.",
+      "observations": [
+        {
+          "id": "MIL26-spend-association",
+          "value": {
+            "reporting_problematic_use": 72,
+            "reporting_no_difficulty": 11
+          },
+          "unit": "percent",
+          "base": "the two stated player subgroups; subgroup n not given on summary page",
+          "meaning": "In-app purchases several times weekly; association, not causation."
+        }
+      ],
+      "locator": "Les achats intégrés; Méthodologie.",
+      "short_quote": "des marqueurs importants des usages problématiques",
+      "limitations": [
+        "Self-report and observational associations, not a causal experiment.",
+        "Includes minors and excludes over-75s.",
+        "Not an estimate of individual vulnerability or a conversion objective."
+      ],
+      "access": "Official government article read directly through web research tool.",
+      "licence": "No source redistribution licence established here. Minimal paraphrased aggregates and one quote shorter than 25 words retained; full report not stored."
+    }
+  ]
+}

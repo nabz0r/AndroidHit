@@ -337,7 +337,19 @@ public final class EconomyTest {
         TestContext concurrent=progressed(5);AtomicInteger granted=new AtomicInteger();CountDownLatch ready=new CountDownLatch(1);List<Thread> threads=new ArrayList<>();
         for(int i=0;i<12;i++){Thread t=new Thread(()->{try{ready.await();if(!new GameStore(concurrent).claimMilestoneLoot().isEmpty())granted.incrementAndGet();}catch(InterruptedException e){throw new AssertionError(e);}});threads.add(t);t.start();}
         ready.countDown();for(Thread t:threads)t.join();check(granted.get()==1&&new GameStore(concurrent).boosterStock("hint")==4,"Concurrent milestone callers collect one unit exactly once");
-        TestContext catchup=progressed(75);GameStore late=new GameStore(catchup);for(int i=0;i<15;i++)check(late.claimMilestoneLoot().equals(Catalog.BOOSTERS[i%6].id),"Late claims cycle deterministically across currently unlocked powers");check(late.nextLootMilestone()==80&&late.claimMilestoneLoot().isEmpty(),"Missed eligible milestones can be caught up without advancing unearned milestones");
+        TestContext catchup=progressed(75);GameStore late=new GameStore(catchup);
+        for(int i=0;i<15;i++){
+            int milestone=(i+1)*5;List<String> eligible=new ArrayList<>();
+            for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(item.unlockLevel<=milestone+1)eligible.add(item.id);
+            String expected=eligible.get(i%eligible.size());
+            check(late.nextMilestoneLootId().equals(expected)&&late.claimMilestoneLoot().equals(expected),"Late gift preserves its milestone-time preview");
+        }
+        check(late.nextLootMilestone()==80&&late.claimMilestoneLoot().isEmpty(),"Missed eligible milestones can be caught up without advancing unearned milestones");
+        TestContext legacy=progressed(10);GameStore migrated=new GameStore(legacy);
+        legacy.preferences.edit().putString("power_loot_v1_5","flow").putInt("booster_flow",3).commit();
+        check(migrated.nextLootMilestone()==10&&migrated.nextMilestoneLootId().equals("vision"),"Historical gift receipt stays claimed during preview migration");
+        check(migrated.claimMilestoneLoot().equals("vision")&&migrated.boosterStock("flow")==3,"Historical gift stock is preserved without duplication");
+        check(legacy.preferences.getString("power_loot_v1_5","").equals("flow")&&!legacy.preferences.contains("power_loot_v19_5"),"Historical gift receipt remains unchanged");
     }
     private static void testConcurrentPowerUseAndPurchases() throws InterruptedException {
         TestContext useContext=new TestContext();new GameStore(useContext);AtomicInteger uses=new AtomicInteger();CountDownLatch useReady=new CountDownLatch(1);List<Thread> users=new ArrayList<>();

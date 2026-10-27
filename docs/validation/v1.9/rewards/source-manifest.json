@@ -1,0 +1,22 @@
+{
+  "git_head": "39908e2772c36002a54e7b4a553cac6c180f8287",
+  "date": "2026-10-27",
+  "method": "Production GameStore/MetaProgress executed with named per-file deterministic SharedPreferences test doubles; read-only source audit of native rendering/navigation. Not observed human play.",
+  "assumptions": [
+    "100 first clears at 3 stars",
+    "same local day",
+    "no purchases or power spending",
+    "tutorial and first login claimed",
+    "no quest coin claims",
+    "starter equipment retained"
+  ],
+  "sources": {
+    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "df7ef9fa78aa14d8b3daec8ce154d5212ab9f22c935543a56c33bdb8beb5f3de",
+    "app/src/main/java/com/androidhit/lumadrift/data/MetaProgress.java": "c21a163323828dfa0e9726e2a97aff48ef4d2a094e1709f1bfa6916ced48eab4",
+    "app/src/main/java/com/androidhit/lumadrift/data/Catalog.java": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+    "app/src/main/java/com/androidhit/lumadrift/data/EconomyCurve.java": "1f5e230948603e61b4522f0d790a764312c381a12216449d7a45b0f9e17b261a",
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "03c190ee30506ba8eb36e3af3caa1acc2c041303f775fedc45f31667caf2a39e",
+    "app/src/main/java/com/androidhit/lumadrift/data/AvatarGearCatalog.java": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
+    "app/src/main/java/com/androidhit/lumadrift/data/CosmeticCatalog.java": "d75a2a94b7b3b927a35c63c2256eb2e7e3e6a704a47ee3741d08f4b69f8c2e1f"
+  }
+}
