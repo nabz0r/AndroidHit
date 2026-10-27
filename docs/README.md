@@ -1,75 +1,81 @@
 # Luma Drift documentation
 
-**A little spark. A great escape.** Read the rules, inspect the delivered game, and keep test evidence separate from the next proposal.
+**A little spark. A great escape.** Read the actual rule, inspect the exact delivered bytes, and distinguish implementation, installed acceptance and service rollout.
 
-Current playable candidate: **1.6.0-rc1 production / 1.6.0-sandbox Lab, code 7**. The saga map, prelevel briefing, inventory/session presentation and frozen J/K progression are described in [the 1.6 candidate record](RELEASE_1_6.md). [Final signed artifacts](RELEASE.md) and [installed acceptance](VALIDATION_1_6.md) identify the exact binaries and remaining limits. Host-side source checks are recorded under [validation/v1.6](validation/v1.6/).
+Current declared candidate: **production 1.7.0-rc1 / Lab 1.7.0-sandbox, code 8**, under qualification. [Candidate scope](RELEASE_1_7.md) · [UX contract](UX_1_7.md) · [1.7 executed record](validation/v1.7/README.md). Final package/download and website deployment status must follow those records rather than an older screenshot.
 
-Current delivery: **[1.6.0-rc1 APK](../releases/luma-drift-1.6.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.6.0-rc1.aab) · [Executed qualification](VALIDATION_1_6.md).
+Current signed package: **[production 1.7.0-rc1 APK](../releases/luma-drift-1.7.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.7.0-rc1.aab) · [Exact package hashes](validation/v1.7/package-production.json). Packaging is complete; installed acceptance and service/website rollout remain separately recorded.
 
-Preserved delivery: **[1.5.0-rc1 production APK](../releases/luma-drift-1.5.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.5.0-rc1.aab) · [Original signatures and hashes](RELEASE.md). These code-6 artifacts and their captures retain their 1.5 evidence; they are not 1.6 downloads. Default candidate settings force sample ads and keep real checkout gated.
+Preserved signed delivery: **[production 1.6.0-rc1 APK](../releases/luma-drift-1.6.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.6.0-rc1.aab) · [Exact installed 1.6 qualification](VALIDATION_1_6.md). Those code-7 artifacts keep their original evidence; they are not rebuilt 1.7 packages.
 
-The source contains **1,000 Journey boards, 240 Remix boards, six Sealed passages workshop challenges, 24 companions, six themes, 18 equipment items in three slots and six powers**. V3 adds keys/seals to 167 Journey boards and 29 Remix boards while preserving historical identities and active sessions. Its six languages are French, English, German, Spanish, Portuguese and Italian. Progress and equipment stay on the device; optional Google identity does not provide cloud saves.
+The 1.7 source retains **1,000 Journey, 240 Remix, six sealed-passage workshop challenges, 24 companions, six themes, 18 functional equipment items and six powers**. It adds **24 appearance-only wardrobe items in four slots**, a continuously scrollable map with ten 100-level biomes, a seven-visit daily gift cycle and separate daily/weekly quests. Its six Android languages are French, English, German, Spanish, Portuguese and Italian. Progress and earned inventory remain local; Google sign-in is not a gameplay cloud save.
 
-The following captures come from the final production **1.6** package; Home resumes a preserved practice challenge.
+The following **final Lab 1.7** screenshots come from a passing 38-assertion native run on the exact delivered Lab APK, using its guest session without profile injection. All original preferences were restored afterward; the [run report](validation/v1.7/ui-sdk-final-menus2/host-report.json) identifies the 32 captures, APK hash and API-36/16KB device. Production-package, real-authentication and service acceptance remain separate.
 
-<p><img src="screenshots/v1.6/ui/final-production/home-fr.png" width="225" alt="Actual French game lobby"><img src="screenshots/v1.6/ui/final-production/companions-en.png" width="225" alt="Actual owned/locked companion inventory"><img src="screenshots/v1.6/ui/final-production/briefing-fr.png" width="225" alt="Actual prelevel objective and action budget"></p>
+<p><img src="screenshots/v1.7/ui-sdk-final-menus2/home-fr.png" width="225" alt="Final Lab 1.7 home"><img src="screenshots/v1.7/ui-sdk-final-menus2/wardrobe-fr.png" width="225" alt="Final Lab 1.7 visual wardrobe"><img src="screenshots/v1.7/ui-sdk-final-menus2/rewards-fr.png" width="225" alt="Final Lab 1.7 daily gift and quests"></p>
 
-## Play and understand
-
-| Guide | What it answers |
-|---|---|
-| [Release and installation](RELEASE.md) | Which APK to install, channel separation, signing and checksums |
-| [1.6 candidate](RELEASE_1_6.md) | Current artifacts, compatibility, host checks and installed acceptance |
-| [1.6 UX](UX_1_6.md) | Saga navigation, briefing, readable inventory and session states |
-| [V3 progression](PROGRESSION_V3.md) | J/K identities, authored waves, sparse key lessons, exact oracle and legacy restoration |
-| [Preserved 1.5](RELEASE_1_5.md) | Original lobby, G/H progression, workshop keys, equipment and powers |
-| [Illustrated tour](VISUAL_GUIDE.md) | Real Android views and the distinction from website illustrations |
-| [Gameplay](GAMEPLAY.md) | Arrow/gate rules, actions, rewards and fair friend challenges |
-| [Avatar equipment](AVATAR_EQUIPMENT.md) | All 18 items, sources, prices, three slots and exact benefit limits |
-| [Powers and recovery](MOVE_BUDGET_POWERUPS.md) | Six effects, one-charge confirmation, Flow persistence and continuations |
-| [Companions and events](COMPANIONS_EVENTS.md) | Collection, local daily/weekly play and ownership |
-| [Validation](VALIDATION.md) | Executed checks, actual APK identities, synthetic profiles and remaining limits |
-
-## One visual identity
+## Understand the new candidate
 
 | Guide | What it answers |
-|---|---|
-| [Design system](DESIGN_SYSTEM.md) | Night palette, pastel arrows, companion-led composition, type, motion and image provenance |
-| [Art and audio](ART_AUDIO.md) | Code-drawn game art, themes, original sound and measured playback |
-| [Brand assets](store/README.md) | Promotional originals, editable assets and export sizes |
-| [Store copy](STORE_LISTING.md) | Preserved 1.5 copy drafts; final 1.6 marketing must match its qualified artifact |
-| [Public website](PUBLIC_PAGES.md) | FR/EN homepage, policy/deletion routes, local checks and deployment evidence |
+| --- | --- |
+| [1.7 candidate](RELEASE_1_7.md) | Exact source scope, level-13 diagnosis, qualification and deployment boundaries |
+| [1.7 UX](UX_1_7.md) | Dead-end recovery, safe hints, scrollable map, ownership, reward and currency presentation |
+| [1.7 economy](ECONOMY_1_7.md) | Daily/weekly claims, all 24 wardrobe sources, earned capsules, odds, duplicates and durable receipts |
+| [Reachability audit](validation/v1.7/board-audit.md) | Why all 1,240 boards are initially solvable and why a legal route can become doomed |
+| [Journey 13 diagnosis](validation/v1.7/board-audit-journey13.md) | The complete 13-action-budget solution, legal doomed prefix and exact Undo recovery |
+| [1.7 qualification](validation/v1.7/README.md) | Executed source checks, identified Android runs and remaining limits |
+| [Installation and signatures](RELEASE.md) | APK/AAB identities, channel separation, checksums and signing |
+| [Illustrated tour](VISUAL_GUIDE.md) | Captures labelled by package/version and the distinction from web compositions |
 
-The game, public pages and GitHub presentation share a visual family. The website **1.6 refresh is published through Firebase Hosting**, with its [own scoped delivery record](validation/site-v1.6/README.md). Its product imagery must identify the [final production Android captures](validation/v1.6/ui-final-production/report.json) separately from the retained [1.5 vector brand kit](store/assets.json) and [generated Aurora Atlas environment](art/aurora-atlas-v1.json). Frames and surrounding artwork are web compositions, not Android controls. The [1.6 site record](validation/site-v1.6/README.md) contains local checks, asset provenance and the Firebase deployment confirmation.
-
-The earlier [independent delivery of all 23 Hosting payloads plus three aliases](validation/site-v1.5/delivery.json) verifies the 1.5 website revision only. [Earlier Hosting observations](validation/hosting-preview.md) also retain their recorded revision; neither record verifies the 1.6 revision.
-
-## Identity, privacy and commercial gates
-
-| Guide | What it answers |
-|---|---|
-| [Data and privacy inventory](PRIVACY.md) | Local saves/equipment, Google SDK paths, exports and account deletion |
-| [Optional Google sign-in](GOOGLE_SIGN_IN.md) | Real identity, guest play and absence of cloud progression |
-| [Monetization configuration](MONETIZATION_SETUP.md) | Current production/Lab flags, sample placements and purchase gates |
-| [Android purchased-gold wallet](WALLET_ANDROID.md) | Server-authoritative paid funds, permanent cosmetics and account recovery |
-| [Owner onboarding](PRODUCTION_ONBOARDING.md) | Existing public IDs and remaining provider/account steps |
-| [Déploiement pas à pas — français](DEPLOIEMENT_PAS_A_PAS.md) | Existing Cloud Run/Hosting project, qualification and activation steps |
-| [1.4 production foundation](PRODUCTION_RELEASE.md) | Historical implementation and separately dated deployment follow-up |
-| [Server](../server/README.md) | Purchase verification, Firestore transactions, IAM and scheduled recovery |
-
-The deployed wallet and earlier public pages have recorded routing/CORS observations. Web sign-in/deletion and the AdMob message's Published state are owner-reported. Completed Android login, installed UMP acceptance/refusal, Play license-test purchases, RTDN/Scheduler, automatic audit purge and commercial approval retain their separate qualification gates. Preserved 1.5 APKs embed an empty wallet origin; final 1.6 flags/origin must be read from its actual package. A source or site redesign does not remove these gates.
-
-## Build, evidence and next decisions
+## Rules, route and possessions
 
 | Guide | What it answers |
-|---|---|
+| --- | --- |
+| [Gameplay](GAMEPLAY.md) | Direction/gate rules, actions, rewards and reward-free friend practice |
+| [V3 progression](PROGRESSION_V3.md) | Frozen J/K content, sparse key lessons, authored waves and historical restoration |
+| [Existing avatar equipment](AVATAR_EQUIPMENT.md) | 18 Head/Aura/Charm items and their bounded benefits; separate from the new cosmetic wardrobe |
+| [Powers and recovery](MOVE_BUDGET_POWERUPS.md) | Six effects, confirmation, durable one-charge use and interrupted Flow |
+| [Companions and events](COMPANIONS_EVENTS.md) | Original companion collection and local daily/weekly stages |
+| [Level design](LEVEL_DESIGN.md) | Versioned layouts, workshop rules and preserved family identities |
+| [Difficulty](DIFFICULTY.md) | Structural measurements and the boundary between a solver and human difficulty |
+
+LumaCoins are earned and device-local. LumaGold is the separate account premium balance. The new earned capsule costs LumaCoins only; prepared paid cosmetic server draws remain disabled by default. A wardrobe item does not grant a puzzle advantage, while pre-existing functional equipment keeps its disclosed limits.
+
+## One visual family
+
+| Guide | What it answers |
+| --- | --- |
+| [Design system](DESIGN_SYSTEM.md) | Pastel/night palette, readable rules, slot shapes, currency labels, motion and image provenance |
+| [Art and audio](ART_AUDIO.md) | Native silhouettes and wardrobe, generated Atlas, biome arrangements and playback evidence boundaries |
+| [Brand kit](store/README.md) | Original promotional artwork, editable assets and historical export provenance |
+| [Public pages](PUBLIC_PAGES.md) | FR/EN homepage, support/privacy/deletion routes and separate Hosting delivery |
+| [Store copy](STORE_LISTING.md) | Historical copy draft; marketing must match the qualified new artifact |
+
+The previously published [website 1.6](validation/site-v1.6/README.md) has its own record of 18 local responsive states, real final-APK imagery, source hashes and Firebase completion. The [retained 1.5 site](validation/site-v1.5/README.md), original brand vectors and [Atlas pixel provenance](art/aurora-atlas-v1.json) remain distinct. Native screenshots do not independently establish a website revision or public-origin byte comparison.
+
+## Accounts, social data and commercial gates
+
+| Guide | What it answers |
+| --- | --- |
+| [Privacy inventory](PRIVACY.md) | Local saves, Google SDK flows, opt-in social data, exports and deletion |
+| [Google sign-in](GOOGLE_SIGN_IN.md) | Optional identity, guest play, session states and absence of gameplay cloud saves |
+| [Monetization setup](MONETIZATION_SETUP.md) | Test-ad and checkout gates, production/Lab separation |
+| [Purchased wallet](WALLET_ANDROID.md) | Server-authoritative paid funds and account ownership recovery |
+| [Owner onboarding](PRODUCTION_ONBOARDING.md) | Public IDs and remaining provider/account steps |
+| [French deployment guide](DEPLOIEMENT_PAS_A_PAS.md) | Cloud Run/Hosting qualification and owner activation |
+| [Server](../server/README.md) | Purchase verification, Firestore, prepared social/gift/cosmetic routes and closed premium default |
+
+A configured service URL is not proof that new routes are deployed. The prepared friend feature requires scoped deployment and real two-account acceptance; map positions are opt-in snapshots, not trusted completion or cloud progression. Successful Android Google login, installed UMP acceptance/refusal, Play license-test purchase/refund/recovery, live ad eligibility and public-store approval retain separate gates. No revenue or retention result is inferred from a redesigned interface or synthetic transaction test.
+
+## Build and decide what comes next
+
+| Guide | What it answers |
+| --- | --- |
 | [Development](DEVELOPMENT.md) | Architecture, tools, signing and reproducible checks |
-| [Level design](LEVEL_DESIGN.md) | Current J/K metadata, preserved G/H/C/R/B/Q identities, keys and workshop rules |
-| [Difficulty](DIFFICULTY.md) | Structural audits and why exact-solver results are not player retention |
-| [Roadmap](ROADMAP.md) | Physical-device/player studies and later commercial gates |
-| [Hit audit](HIT_AUDIT.md) | Unproven product assumptions and a measurable observation protocol |
-| [Changelog](CHANGELOG.md) | Delivered scope by version |
-| [Third-party notices](THIRD_PARTY_NOTICES.md) | SDK, Google branding and source/audio provenance |
-| [Research archive](RESEARCH.md) | Dated market, licensing and initial concept decisions |
+| [Roadmap](ROADMAP.md) | Device/player acceptance, service rollout and later commercial qualification |
+| [Hit audit](HIT_AUDIT.md) | Unproven assumptions and an actual observation/cohort protocol |
+| [Changelog](CHANGELOG.md) | Versioned implementation and delivery scope |
+| [Notices](THIRD_PARTY_NOTICES.md) | SDK/Google mark and original source/art/audio provenance |
+| [Research archive](RESEARCH.md) | Dated market, initial concept and licensing work |
 
-Historical [1.1](RELEASE_1_1.md), [1.2](RELEASE_1_2.md), [1.3](RELEASE_1_3.md), [1.4](RELEASE_1_4.md) and [1.5](RELEASE_1_5.md) reports retain their original packages, hashes, dates and limitations. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; [the 1.6 record](VALIDATION_1_6.md) identifies its own final binary and acceptance evidence. Old screenshots and synthetic tests are not relabelled as final-release evidence.
+Historical reports remain available: [1.6](RELEASE_1_6.md), [1.5](RELEASE_1_5.md), [1.4](RELEASE_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](RELEASE_1_2.md) and [1.1](RELEASE_1_1.md). Their packages, dates, synthetic profiles, screenshots and limits are not relabelled as 1.7 evidence. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; new runs belong under their own version.

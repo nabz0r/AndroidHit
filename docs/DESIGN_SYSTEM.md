@@ -1,6 +1,6 @@
 # Luma Drift design system
 
-**Shared direction for the Android game, public site and GitHub presentation · 1.6**
+**Shared direction for the Android game, public site and GitHub presentation · 1.7 candidate**
 
 A night sky, a small companion and a readable puzzle form the identity. The presentation should help a player see an arrow, understand a gate, recognize their avatar and choose the next action. Product screenshots, explanatory artwork and test evidence each retain their own label.
 
@@ -21,17 +21,17 @@ Keep reading text light on dark surfaces. Pastel arrows use dark ink. A state ne
 
 ## Shapes and composition
 
-Use rounded cards, soft rims, restrained star particles and a small original companion. Leave quiet space around the board. Put the current puzzle and primary action ahead of secondary systems. In the lobby, the profile, avatar, next board and activities belong in one composition; on the site, explain the arrow/gate rule before listing all systems. The 1.6 saga map shows ten levels per page. A fresh board has a separate briefing with its objective, element, authored difficulty label and fixed action allowance. These are real game controls, not decorative website statistics.
+Use rounded cards, soft rims, restrained star particles and a small original companion. Leave quiet space around the board. Put the current puzzle and primary action ahead of secondary systems. In the lobby, the profile, avatar, next board and activities belong in one composition; on the site, explain the arrow/gate rule before listing all systems. The 1.7 Journey map scrolls continuously through levels 1–1,000, with visible-range rendering, a current-level return and direct level jump. Ten 100-level biome ranges change the environment tint and original procedural arrangement. The preserved 1.6 map showed ten levels per page. A fresh board has a separate briefing with its objective, element, authored difficulty label and fixed action allowance. These are real game controls, not decorative website statistics.
 
 Arrows remain clear at small sizes. Switch badges show their own directional change. Sealed cells have a lock and a matching K number; their key pieces carry the same badge. A promotional board that shows those mechanics must preserve their relationship. Original code-drawn SVG/Canvas artwork can explain a mechanic, but must not be described as an installed screenshot or a verified playable level unless it is one.
 
-Companions and themes change appearance. Headwear, Aura and Charm have the separately stated limited effects. Equipment previews show ownership, slot, source and benefit; rarity is not an implied extra ability or a drop probability. The 1.6 inventory uses three full-width rows per page, category tabs and All/Owned/To unlock filters. Keep those states visible when choosing product captures. [Exact equipment contract](AVATAR_EQUIPMENT.md) · [Native 1.6 presentation](UX_1_6.md).
+Companions and themes change appearance. The new 24-item wardrobe adds Hat, Outfit, Shoes and Gloves as visual-only slots. Owned, equipped and unowned must have explicit labels; previewing an unowned item is not acquiring it. Permanent seasonal designs keep their original ownership outside their named season. The existing Headwear, Aura and Charm equipment has its separately stated limited effects. Equipment previews show ownership, slot, source and benefit; rarity is not an implied extra ability or a drop probability. The 1.6 inventory uses three full-width rows per page, category tabs and All/Owned/To unlock filters. Keep those states visible when choosing product captures. [Exact equipment contract](AVATAR_EQUIPMENT.md) · [Native 1.7 presentation](UX_1_7.md) · [Wardrobe sources and odds](ECONOMY_1_7.md).
 
 ## Typography, controls and language
 
 Use a strong, short display heading and familiar system sans-serif reading text. The Android game uses platform sans-serif families; the website can use system fonts without a remote font request. Preserve enough space for German, French, Portuguese, Spanish and Italian text instead of shrinking a critical price or source caption beyond comfortable reading.
 
-A primary button should describe the action: play, download, confirm one charge or buy the stated pack. Price and quantity remain together. Local earned coins and account purchased gold are visibly distinct. Avoid dashboard-like decorative statistics, fictional ranks, fake review stars, invented users or revenue figures.
+A primary button should describe the action: play, download, confirm one charge or buy the stated pack. Price and quantity remain together. Use the names **LumaCoins** for local earned currency and **LumaGold** for the premium account wallet, with source/availability labels. They are separate balances without automatic conversion. A local capsule confirmation states the full earned-currency price, category and per-item odds, plus 25/60/100 duplicate compensation by rarity; a premium preparation label is not an active purchase control. Avoid dashboard-like decorative statistics, fictional ranks, fake review stars, invented users or revenue figures.
 
 The game supports six languages. Public privacy/deletion pages and the website currently use French and English; do not imply that six-language Android support is six-language web/store localization. Localized marketing copy is a draft until reviewed by speakers and checked with its matching imagery.
 
@@ -39,7 +39,7 @@ The game supports six languages. Public privacy/deletion pages and the website c
 
 Small companion movement, light particles and short transitions support the puzzle. Reduced-motion preferences must have a usable static presentation. Avoid motion that hides an arrow, masks a price or blocks a critical control. Web reduced-motion behavior and Android's saved setting are separate controls.
 
-The game uses original synthesized effects and an eight-bar ambient loop. The website must not claim browser audio playback or autoplay the soundtrack merely because the Android build has music. [Audio source, measurements and Android playback limits](ART_AUDIO.md).
+The game uses original synthesized effects and ten biome-specific eight-bar ambient arrangements. Changes follow the viewed route, while saved music/effect preferences and reduced motion remain independent. Worker coalescing and digital audio checks do not establish physical playback quality. The website must not claim browser audio playback or autoplay the soundtrack merely because the Android build has music. [Audio source, measurements and Android playback limits](ART_AUDIO.md).
 
 ## One family, three surfaces
 
@@ -50,6 +50,12 @@ The game uses original synthesized effects and an eight-bar ambient loop. The we
 | GitHub | Clear delivery links, short explanations, diagrams and original art | Link release hashes and test reports; repository publication is not Play approval |
 
 Use real game captures for product behavior, original vectors for explanatory art and responsive page captures for website review. Keep those categories visible in alt text and captions. Do not stretch a phone capture to another aspect ratio or remove an important caveat from a store caption. A phone frame, surrounding glow or crop belongs to the web composition; it does not turn the composition into an Android screenshot. Keep the unedited source capture available and record any exported derivative separately.
+
+## Current 1.7 evidence boundary
+
+The candidate adds a continuous route, native wardrobe/power art, state-aware hint pulse and daily/weekly reward presentation. [Candidate scope](RELEASE_1_7.md), [UX](UX_1_7.md) and [economy](ECONOMY_1_7.md) describe source behavior. New unedited package captures and their exact hashes belong in [1.7 qualification](validation/v1.7/README.md). The [final 1.7 Lab menus2 captures](validation/v1.7/ui-sdk-final-menus2/host-report.json) now identify 38 native assertions, 32 images, exact final Lab bytes and restored guest preferences. Existing reference images below stay labelled 1.6 or 1.5; a new native or web frame does not update old evidence.
+
+No friend marker should represent a fabricated player. Show a real mutually shared progress snapshot only when the prepared service returns one; expose authentication/service failure. No cosmetic capsule, motion or seasonal collection is evidence of retention or sales.
 
 ## Reference artifacts
 

@@ -1,0 +1,34 @@
+{
+  "revision": "luma-wallet-00005-pps",
+  "identity": "luma-wallet@luma-drift-production.iam.gserviceaccount.com",
+  "paidDrawsEnabled": "false",
+  "maxInstances": "3",
+  "traffic": [
+    {
+      "latestRevision": true,
+      "percent": 100,
+      "revisionName": "luma-wallet-00005-pps"
+    }
+  ],
+  "probes": [
+    {
+      "path": "/health",
+      "status": 200,
+      "body": "{\"status\":\"ok\"}"
+    },
+    {
+      "path": "/v1/social",
+      "status": 401,
+      "body": "{\"error\":{\"code\":\"UNAUTHENTICATED\"}}"
+    },
+    {
+      "path": "/v1/wallet/cosmetic-catalog",
+      "status": 401,
+      "body": "{\"error\":{\"code\":\"UNAUTHENTICATED\"}}"
+    }
+  ],
+  "sourceCommit": "23a196451a58fbdbbdecca72f3880dcb089f3c12",
+  "serverSourceTree": "83e1699aadaf7be279c8e8b1171cdb4ef99007be",
+  "observedAt": "2026-10-27T13:09:56.489Z",
+  "scope": "Authenticated existing-service deployment; public health and unauthenticated access gates only. No real two-account/social or payment transaction."
+}

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation and AccessibilityNodeProvider actions only; no browser/desktop/manual input/profile injection",
+  "cases": "startup",
+  "serial": "emulator-5580",
+  "apk_sha256": "7eeaa816853533f441acfc73f4ad3f6af0fb2cbdd6fd0eae1fda3f64c388a2bf",
+  "test_apk_sha256": "cf66f11d9b446825c5f1bfb919f30c198b20160117775266d461da9fb9086c9b",
+  "runner_source_sha256": "616d9e91417f1cfc51d39359281813b81755e5d79ed04f66a4c1b31b9494e132",
+  "package": "com.androidhit.lumadrift",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v17-ui-original-prefs-kqgdqopu",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "51dd90a498290f542c07106aa518b8860d2cc5a5659977c34e2f11d56e783200"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "native": {
+    "passed": true,
+    "checkCount": 7,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Actual production1.7.0-rc1/code8 package loaded"
+      },
+      {
+        "pass": true,
+        "message": "Production launch exposes its actual native accessible window"
+      },
+      {
+        "pass": true,
+        "message": "Production music has an active track owned by its actual process"
+      },
+      {
+        "pass": true,
+        "message": "The same production audio track advances real mixed frames"
+      },
+      {
+        "pass": true,
+        "message": "SDK sends the app to background for lifecycle audio observation"
+      },
+      {
+        "pass": true,
+        "message": "Production music pauses after actual background lifecycle"
+      },
+      {
+        "pass": true,
+        "message": "Production music resumes after actual foreground lifecycle"
+      }
+    ],
+    "captures": [
+      "home-production-native"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Production startup and lifecycle/audio SDK observation only; no piece/menu/account/ad/payment action"
+  },
+  "screenshots": {
+    "home-production-native.png": "10fbdb83d1d79c6de70a990b316d080ba804047b8b9c4bfff8eb69c1972065aa"
+  }
+}

@@ -41,7 +41,7 @@ public final class ExperienceStrings {
         add("source_events", "Event stars · %d/%d total", "Étoiles d’événement · %d/%d au total", "Eventsterne · %d/%d insgesamt", "Estrellas de eventos · %d/%d total", "Estrelas de eventos · %d/%d total", "Stelle degli eventi · %d/%d totali");
         add("source_shop", "Shop · %d earned coins", "Boutique · %d pièces gagnées", "Shop · %d erspielte Münzen", "Tienda · %d monedas ganadas", "Loja · %d moedas ganhas", "Negozio · %d monete guadagnate");
         add("earned_price", "%d earned coins", "%d pièces gagnées", "%d erspielte Münzen", "%d monedas ganadas", "%d moedas ganhas", "%d monete guadagnate");
-        add("earned_short", "Earned coins", "Pièces gagnées", "Erspielte Münzen", "Monedas ganadas", "Moedas ganhas", "Monete guadagnate");
+        add("earned_short", "LumaCoins", "LumaCoins", "LumaCoins", "LumaCoins", "LumaCoins", "LumaCoins");
         add("effect_appearance", "Appearance only", "Apparence uniquement", "Nur Aussehen", "Solo apariencia", "Apenas aparência", "Solo aspetto");
         add("effect_win_one", "+1 earned coin on first clears", "+1 pièce aux premières victoires", "+1 Münze bei ersten Siegen", "+1 moneda en primeras victorias", "+1 moeda nas primeiras vitórias", "+1 moneta alle prime vittorie");
         add("effect_win", "+%d earned coins on first clears", "+%d pièces aux premières victoires", "+%d Münzen bei ersten Siegen", "+%d monedas en primeras victorias", "+%d moedas nas primeiras vitórias", "+%d monete alle prime vittorie");

@@ -1,0 +1,70 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation and AccessibilityNodeProvider actions only; no browser/desktop/manual input/profile injection",
+  "cases": "menus,map,languages",
+  "serial": "emulator-5580",
+  "apk_sha256": "05c5ba485a0f992f5004e15c4c5853cee3c5e4942f57fc710df3156f4f75dfd3",
+  "test_apk_sha256": "ba148802756e48ed2f73f3367acad1434add2c2b9cb40d8e91aef8c8fd3c088f",
+  "runner_source_sha256": "40b5e09a2e52eda174503ed8d5e4dc8d9c1bec18e93b74035debf70a56ee6439",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v17-ui-original-prefs-3tdpnf6n",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "native": {
+    "passed": false,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate 1.7/code8"
+      },
+      {
+        "pass": true,
+        "message": "Daily gift adds exactly the advertised earned coins once"
+      },
+      {
+        "pass": true,
+        "message": "Daily reward repeated action cannot add coins twice"
+      },
+      {
+        "pass": true,
+        "message": "Starter Hat has explicit equipped ownership state"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "rewards-before-en",
+      "rewards-claimed-en",
+      "weekly-quests-en",
+      "wardrobe-hat-en",
+      "wardrobe-hat-preview-en",
+      "failure"
+    ],
+    "checkCount": 4,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider/UiAutomation actions; no preference injection, account, ad or payment"
+  },
+  "screenshots": {
+    "rewards-before-en.png": "4b0f6332959fe2623c6b106a15e7d9820dc2b1c2f867bb93cd6c78c62dbd0a93",
+    "wardrobe-hat-en.png": "eba8de7e2434e649d106ea6fe48dc3060a808276e01ef693d20c5e91162c7554",
+    "wardrobe-hat-preview-en.png": "851b284b40230cac107184172b12344d508934e2e889ed862cde6a6d129f9510",
+    "home-en.png": "9ac76fc270e344a9010c6165ced6f12fe6c25d04c4699c4a11f72aa74c399eda",
+    "weekly-quests-en.png": "eb741ac0fd0624f50d8d493aaa02fc5c380e7b1d6c16a4c51ff96eafeb7a5da5",
+    "failure.png": "0cc519edb848ea3e05ec41ef31eec32852804339e42721508b761027daa91ad2",
+    "rewards-claimed-en.png": "17e5b690f7e82922b64fa9a59b29b988bb888d138c9d135d08ed603a3eeec8b6"
+  },
+  "error": "Instrumentation checks failed; inspect failure.txt",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v17-ui-test/run.py\", line 46, in main\n    report['passed']=bool(native.get('passed'));assert report['passed'],'Instrumentation checks failed; inspect failure.txt'\nAssertionError: Instrumentation checks failed; inspect failure.txt\n"
+}

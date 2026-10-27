@@ -1,6 +1,28 @@
 # Luma Drift — illustrated tour
 
-## Current 1.6 presentation
+## Final Lab 1.7: a longer route and a dressed companion
+
+These unedited captures come from **Lab 1.7.0-sandbox / code 8**, exact APK `d7fea345…`, on the API-36 arm64 emulator with a 16KB-page kernel. The [passing native run](validation/v1.7/ui-sdk-final-menus2/host-report.json) records 38 assertions and 32 PNGs. It uses a guest qualification session without profile injection, spends actual local coins on its earned capsule, and restores the original preferences byte for byte afterward. They are Lab screenshots, not production or real-account acceptance.
+
+<p><img src="screenshots/v1.7/ui-sdk-final-menus2/home-fr.png" width="225" alt="Final Lab 1.7 home and guest identity"><img src="screenshots/v1.7/ui-sdk-final-menus2/wardrobe-fr.png" width="225" alt="Final Lab 1.7 avatar with four cosmetic slots and power stocks"><img src="screenshots/v1.7/ui-sdk-final-menus2/rewards-fr.png" width="225" alt="Final Lab 1.7 seven-visit gift and quest controls"></p>
+
+The 24 wardrobe items are visual only. Hat, Outfit, Shoes and Gloves show their exact slot, owned/equipped/unowned state and real source. The existing 18 Head/Aura/Charm equipment items retain their separate bounded benefits. Daily rewards advance across seven claimed visits; absence does not reset them. Daily and weekly quests are separate. [Economy](ECONOMY_1_7.md) · [UX](UX_1_7.md).
+
+### See the whole route
+
+<p><img src="screenshots/v1.7/ui-sdk-final-menus2/map-1-en.png" width="225" alt="Final Lab map at level 1"><img src="screenshots/v1.7/ui-sdk-final-menus2/map-101-en.png" width="225" alt="Final Lab map at level 101 and the second biome"><img src="screenshots/v1.7/ui-sdk-final-menus2/map-1000-fr.png" width="225" alt="Final Lab map explored to locked level 1000"></p>
+
+The native run jumps to 1, 13, 100, 101 and 1,000, and scrolls backward. Viewing a locked position does not unlock it. Ten hundred-level ranges change tint and original procedural music. Exact J13 diagnostics and safe hints have an independent [reachability report](validation/v1.7/board-audit.md); these map images alone do not demonstrate a complete playthrough or native J13 recovery.
+
+### Two currencies and a closed account vault
+
+<p><img src="screenshots/v1.7/ui-sdk-final-menus2/shop-premium-closed-en.png" width="225" alt="Final Lab shop clearly separates LumaCoins and closed premium LumaGold"><img src="screenshots/v1.7/ui-sdk-final-menus2/capsule-odds-en.png" width="225" alt="Final Lab earned-capsule confirmation with category and per-item odds"><img src="screenshots/v1.7/ui-sdk-final-menus2/vault-guest-closed-en.png" width="225" alt="Final Lab guest account vault with paid draws disabled"></p>
+
+The earned capsule costs 150 LumaCoins. It discloses 60/30/10% category odds, 7.5/3.75/1.25% per item, and 25/60/100 duplicate coins before confirming. The native run verifies the exact debit and outcome; it does not spend LumaGold. The prepared account vault requires real authentication to load account ownership and conditional probabilities, and both draw gates remain false. Its future guarantee means account-new, which can already exist in the local wardrobe. No account or payment is invented in these guest captures.
+
+The website copies eleven final-menu PNGs exactly. Its composition, browser checks and Hosting publication have separate evidence under `docs/validation/site-v1.7/`. Source/pilot images and earlier failed runs are not substituted for the passing final report. [Candidate and exact binaries](RELEASE_1_7.md).
+
+## Preserved installed 1.6 presentation
 
 The signed production 1.6.0-rc1 has a ten-level saga map, a briefing before a fresh attempt, a three-row inventory with ownership filters and explicit session states. Journey introduces keys and seals at level 12. The captures below are from the final installed production APK; Home resumes an existing preserved challenge. [Exact artifact and acceptance](RELEASE_1_6.md) · [UX contract](UX_1_6.md).
 

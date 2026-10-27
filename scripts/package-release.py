@@ -58,6 +58,9 @@ record = {
     'version': version, 'version_code': element['versionCode'], 'channel': variant,
     'application_id': package, 'build_date': datetime.date.today().isoformat(),
     'configuration': {'sandbox': flag('MODE_SANDBOX'), 'force_test_ads': flag('FORCE_TEST_ADS'),
+                      'paid_cosmetic_draws_enabled': flag('PAID_COSMETIC_DRAWS_ENABLED'),
+                      'wallet_api_configured': bool(re.search(r'String WALLET_API_BASE_URL = "[^"]+";', build_config)),
+                      'social_api_configured': bool(re.search(r'String SOCIAL_API_BASE_URL = "https://[^"]+";', build_config)),
                       'live_services_validated': False},
     'source_inputs_sha256': {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
     'artifacts': {p.name: {'bytes': p.stat().st_size, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}

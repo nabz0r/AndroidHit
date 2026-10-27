@@ -1,0 +1,52 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation and AccessibilityNodeProvider actions only; no browser/desktop/manual input/profile injection",
+  "cases": "menus,map,languages",
+  "serial": "emulator-5580",
+  "apk_sha256": "05c5ba485a0f992f5004e15c4c5853cee3c5e4942f57fc710df3156f4f75dfd3",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v17-ui-original-prefs-lhimvj9k",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "native": {
+    "passed": false,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate 1.7/code8"
+      },
+      {
+        "pass": true,
+        "message": "Daily gift adds exactly the advertised earned coins once"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "rewards-before-en",
+      "failure"
+    ],
+    "checkCount": 2,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider/UiAutomation actions; no preference injection, account, ad or payment"
+  },
+  "screenshots": {
+    "rewards-before-en.png": "2fa8ef5b011fd3a30aebbd9ae4905148609a1db6f516302bc9522f3e90973627",
+    "home-en.png": "831433d324883bde1bac0fd78a76eea03b01c3f83ced94f0be0a534d4ecf2a8f",
+    "failure.png": "9dd4a62dcd5149364c7a8aac8ccef778e59b2c928d5f2e7c13e1f20b008e6660"
+  },
+  "error": "Instrumentation checks failed; inspect failure.txt",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v17-ui-test/run.py\", line 46, in main\n    report['passed']=bool(native.get('passed'));assert report['passed'],'Instrumentation checks failed; inspect failure.txt'\nAssertionError: Instrumentation checks failed; inspect failure.txt\n"
+}

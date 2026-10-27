@@ -1,6 +1,30 @@
 # Luma Drift roadmap
 
-## Current playable milestone — 1.6 saga, ownership and session clarity
+## Current candidate — 1.7 route recovery, wardrobe and social preparation
+
+Declared production **1.7.0-rc1 / code 8**, with isolated **1.7.0-sandbox**. [Scope and qualification](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Economy](ECONOMY_1_7.md) · [Executed record](validation/v1.7/README.md). Package installation, website publication and social service rollout each require their own evidence; this entry does not turn source completion into a live service claim.
+
+Completed source contracts:
+
+- Exhaustive reachability of all 1,000 Journey and 240 Remix boards confirms initial completion inside the unchanged allowances. J13 demonstrates why a legal choice can close the eventual solution while another exit remains. Exact guidance distinguishes safe play, insufficient actions and a dead route, with Undo/free restart and safe current-state hints. [Independent audit and reproduction](validation/v1.7/board-audit.md).
+- A scrollable 1–1,000 map, level jump/current-node return, and ten 100-level atmosphere ranges. Biome art tint and original audio change with the viewed route; physical scrolling/readability/playback remain separate acceptance.
+- A seven-claimed-visit gift cycle without absence reset, daily/weekly first-clear quests and atomic receipts. Existing local balances, progression and equipment remain.
+- A four-slot 24-item visual wardrobe, including permanent Halloween/Valentine designs, explicit owned/equipped/unowned states, source progress and earned direct purchases. The existing 18 Head/Aura/Charm equipment items remain a separate bounded-benefit system.
+- LumaCoins/LumaGold presentation separates local earned funds and the premium server wallet. The local 150-LumaCoins capsule shows category/per-item probabilities and rarity-based duplicate compensation; no LumaGold is spent.
+- Authenticated friend/gift service and client source, with mutual friendship, opt-in map snapshots and limited one-hint gifts. Real-account acceptance and deployed routes remain to qualify. The native premium account catalogue is prepared, while both APK and server draw gates remain false. Account ownership/conditional probabilities are distinct from the untrusted earned local wardrobe.
+
+Next acceptance, in order:
+
+1. Signed final APK/AAB packaging is complete. The final Lab menu run passes 38 native assertions with 32 captures and original preferences restored. Final Lab gameplay also passes 34 checks/9 captures; separate production startup passes 7 checks/1 capture and observes digital music advance/pause/resume. Physical quality, full six-language layout, large-text and human comprehension remain separate acceptance. Preserve the prior 1.6 bytes and evidence.
+2. Website source/imagery and 18 FR/EN CUA views at actual 320/390/1366 CSS pixels now pass. Publish the frozen source to Hosting and record its exact commit/completion; local checks do not establish delivery.
+3. Deploy the prepared authenticated social routes with scoped data rules; qualify two real accounts, mutual requests/removal, opt-in visibility, sender/receiver limits, account switching, deletion and full-stock/retry gift handling. Never seed fictional map friends.
+4. Observe first-time players reaching J13, the first key lesson and later peaks. Measure whether the dead-end explanation, restart/Undo choice, slot/ownership state and two currencies are understood. Test with physical phones and assistive technologies.
+5. Keep paid draws, live ads and real checkout closed until their separate provider, policy, purchase/refund/recovery and release checks pass. Resolve the premium pool versus local-earned ownership decision: an account-new guarantee currently permits a design already earned locally. An earned-currency capsule simulation does not qualify a real paid draw.
+6. Wait for complete player cohorts before making retention, monetization or hit claims. Add features only where observation supports the next decision.
+
+The fixed-seed local capsule simulation is an implementation check, not a conversion or engagement result. All 1,240 solvable starting boards do not imply that every later gate state remains solvable; recovery clarity is the product change.
+
+## Preserved milestone — 1.6 saga, ownership and session clarity
 
 The 1.6 signed candidate delivers production `1.6.0-rc1` and isolated Lab `1.6.0-sandbox`, both code 7. It adds a ten-board saga map, explicit prelevel objective/element/difficulty, scrollable layouts, a unified inventory presentation with owned/equipped/locked states, and guarded Google-session refresh states. New frozen J/K content has 1,000 Journey and 240 Remix boards, with keys taught at Journey 12/14/17 and revisited sparsely. [Candidate scope](RELEASE_1_6.md) · [UX contract](UX_1_6.md) · [Content and compatibility](PROGRESSION_V3.md).
 
@@ -53,7 +77,7 @@ The sections below retain earlier milestones and their historical evidence; they
 
 **Build the memorable rule. Observe players. Scale only when the evidence improves.**
 
-Updated 27 October 2026. This roadmap records priorities and exit criteria. Future stages are proposals, not delivered features or committed launch dates. See [the 1.6 candidate](RELEASE_1_6.md) for current source work, [preserved 1.5](RELEASE_1_5.md) for its identified artifacts, [CHANGELOG.md](CHANGELOG.md) for versioned scope and [VALIDATION.md](VALIDATION.md) for the preserved installed checks.
+Updated 27 October 2026. This roadmap records priorities and exit criteria. Future stages are proposals, not delivered features or committed launch dates. See [the 1.7 candidate](RELEASE_1_7.md) for current source work, [preserved 1.6](RELEASE_1_6.md) for its separate delivery, [preserved 1.5](RELEASE_1_5.md) for its identified artifacts, [CHANGELOG.md](CHANGELOG.md) for versioned scope and [VALIDATION.md](VALIDATION.md) for the preserved installed checks.
 
 ## 1.0 — A playable foundation
 

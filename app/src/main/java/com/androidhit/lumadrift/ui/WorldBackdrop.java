@@ -15,6 +15,9 @@ public final class WorldBackdrop {
     private final Rect source = new Rect();
     private final RectF destination = new RectF();
     private Bitmap bitmap;
+    private int biome;
+    private static final int[] TINTS={0x00212649,0x2c36d6a3,0x32ef9873,0x2c9ba9e7,0x2c53bfea,0x30edb963,0x406a5daa,0x40c36537,0x3fe296c8,0x36c7b8f7};
+    public void setBiome(int value){biome=Math.max(0,Math.min(9,value));}
     public WorldBackdrop(Context context) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inScaled = false;
@@ -32,7 +35,7 @@ public final class WorldBackdrop {
         destination.set(0, 0, width, height);
         paint.setAlpha(quiet ? 95 : 230);
         canvas.drawBitmap(bitmap, source, destination, paint);
-        paint.setAlpha(255);
+        paint.setAlpha(255);paint.setColor(TINTS[biome]);canvas.drawRect(destination,paint);
         paint.setColor((background & 0xffffff) | ((quiet ? 140 : 30) << 24));
         canvas.drawRect(destination, paint);
     }

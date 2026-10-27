@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.7.0-rc1 / 1.7.0-sandbox — exact recovery, wardrobe and a longer route
+
+27 October 2026 · declared version code 8 · candidate under qualification. [Scope](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Executed record](validation/v1.7/README.md). Final package, installed UI, website and backend deployment statuses are separately recorded; prior 1.6 artifacts remain unchanged.
+
+- Exhaustive independent audit of 1,000 Journey +240 Remix boards: every initial board finishes inside its existing allowance. No geometry, identity, seed, certificate or budget was changed. 1,101,868 reachable subsets, 3,348,959 legal transitions and 49,063,063 assertions.
+- Reproduced J13 legal-but-doomed gate sequence missed by the old immediate-stuck predicate. Exact current-state guidance, safe next-piece hints, useful Undo recovery and free restart; extra actions are not offered as a gate-order repair. The user's exact save was unavailable.
+- Continuously scrollable Journey 1–1,000, jump/current-position controls and ten 100-level biome names, tints and original procedural arrangements.
+- Seven claimed daily gifts, no lost-day reset; separate daily and weekly first-clear quest targets and idempotent claims.
+- 24 new appearance-only wardrobe items in Hat/Outfit/Shoes/Gloves, source/ownership/equip states, native preview and permanent seasonal designs. Existing 18 functional Head/Aura/Charm items remain separate and keep their bounded benefits.
+- LumaCoins local earned balance and separate LumaGold premium wallet; no automatic conversion. Local earned capsule: 150 LumaCoins, 60/30/10% rarity distribution, 7.5/3.75/1.25% per item and 25/60/100 duplicate coins by rarity, atomic stable-request receipt.
+- Prepared authenticated friends, opt-in map snapshots and bounded one-hint gifts, with local idempotent stock receipt. Source preparation is distinct from deployed social routes and real two-account qualification.
+- Prepared premium cosmetic transaction server remains disabled by default. No active paid gacha, live-ad activation, real checkout success, retention or revenue is claimed.
+- New local reward/wardrobe suite: 100,953 checks including Android memory-before-disk failure simulation, cold recreation, concurrent handles and six languages; 100,000-outcome fixed-seed odds simulation. [Economy and evidence limits](ECONOMY_1_7.md).
+
 ## 1.6.0-rc1 / 1.6.0-sandbox — saga, inventory and session clarity
 
 27 October 2026 · version code 7. Signed APK/AAB delivery with [installed acceptance and remaining limits](VALIDATION_1_6.md). [Changes and contracts](RELEASE_1_6.md).

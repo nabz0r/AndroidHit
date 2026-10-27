@@ -25,6 +25,7 @@ public final class GoogleAccountController {
     private FirebaseAuth auth;
     private CancellationSignal cancellation;
     private com.androidhit.lumadrift.wallet.ProductionWalletClient wallet;
+    private com.androidhit.lumadrift.social.SocialClient social;
     private boolean closed, resumed, signingIn, deleting, refreshInFlight, reauthRequired;
     private String observedUid = "";
     private final FirebaseAuth.AuthStateListener authListener = ignored -> reconcile(true);
@@ -225,6 +226,9 @@ public final class GoogleAccountController {
     }
     public void signOut() {
         if (closed) return;
+        String oldUid = currentGoogleUser(activity) == null ? "" : currentGoogleUser(activity).getUid();
+        com.androidhit.lumadrift.social.SocialClient.clearCache(activity, oldUid);
+        com.androidhit.lumadrift.social.CosmeticVaultClient.clearCache(activity, oldUid);
         signingIn = false; deleting = false; refreshInFlight = false; reauthRequired = false; observedUid = "";
         tracker.guest("account_guest");
         IdentitySessionAccess.revoke(activity);
@@ -238,12 +242,25 @@ public final class GoogleAccountController {
         if (user == null) { tracker.guest("account_guest"); emit(); return; }
         deleting = true;
         long request = tracker.begin(user.getUid(), "account_refreshing", true); emit();
+        if (com.androidhit.lumadrift.social.SocialClient.configured()) {
+            if (social == null) social = new com.androidhit.lumadrift.social.SocialClient(activity);
+            social.deleteAccount(new com.androidhit.lumadrift.social.SocialClient.Callback() {
+                public void onSuccess(org.json.JSONObject result) { deleted(request, user.getUid()); }
+                public void onError(String code) {
+                    if (!deletionCurrent(request, user.getUid())) return;
+                    deleting = false; boolean reauth = "RECENT_LOGIN_REQUIRED".equals(code) || "SOCIAL_SIGN_IN_REQUIRED".equals(code);
+                    reauthRequired |= reauth;
+                    if (reauthRequired) IdentitySessionAccess.requireReauthentication(activity);
+                    tracker.failure(request, reauth ? "account_reauth" : "account_session_error", reauth, currentGoogleUser(activity) != null); emit();
+                }
+            }); return;
+        }
         if (!com.androidhit.lumadrift.commerce.CommerceConfig.MODE_SANDBOX && com.androidhit.lumadrift.commerce.CommerceConfig.productionBillingReady()) {
             if (wallet == null) wallet = new com.androidhit.lumadrift.wallet.ProductionWalletClient(activity);
             wallet.deleteAccount(new com.androidhit.lumadrift.wallet.ProductionWalletClient.Callback() {
-                public void onSuccess(com.androidhit.lumadrift.wallet.ProductionWalletClient.Wallet ignored) { deleted(request); }
+                public void onSuccess(com.androidhit.lumadrift.wallet.ProductionWalletClient.Wallet ignored) { deleted(request, user.getUid()); }
                 public void onError(String key) {
-                    if (!tracker.current(request)) return;
+                    if (!deletionCurrent(request, user.getUid())) return;
                     deleting = false; boolean reauth = "account_recent_login".equals(key) || "wallet_sign_in_required".equals(key);
                     reauthRequired |= reauth;
                     if (reauthRequired) IdentitySessionAccess.requireReauthentication(activity);
@@ -252,13 +269,25 @@ public final class GoogleAccountController {
             }); return;
         }
         user.delete().addOnCompleteListener(main, task -> {
-            if (!tracker.current(request)) return;
-            if (task.isSuccessful()) deleted(request);
+            if (!deletionCurrent(request, user.getUid())) return;
+            if (task.isSuccessful()) deleted(request, user.getUid());
             else { deleting = false; sessionFailure(request, task.getException()); }
         });
     }
-    private void deleted(long request) {
-        if (!tracker.current(request)) return;
+    private boolean deletionCurrent(long request, String expectedUid) {
+        if (!tracker.current(request)) return false;
+        FirebaseUser current = auth == null ? null : auth.getCurrentUser();
+        if (current != null && !expectedUid.equals(current.getUid())) {
+            deleting = false; refreshInFlight = false;
+            reconcile(true);
+            return false;
+        }
+        return true;
+    }
+    private void deleted(long request, String expectedUid) {
+        if (!deletionCurrent(request, expectedUid)) return;
+        com.androidhit.lumadrift.social.SocialClient.clearCache(activity, expectedUid);
+        com.androidhit.lumadrift.social.CosmeticVaultClient.clearCache(activity, expectedUid);
         signOut(); tracker.guest("account_deleted"); emit();
     }
     private void clearProvider() {
@@ -278,5 +307,6 @@ public final class GoogleAccountController {
         if (auth != null) { auth.removeAuthStateListener(authListener); auth.removeIdTokenListener(tokenListener); }
         if (cancellation != null) cancellation.cancel();
         if (wallet != null) wallet.close();
+        if (social != null) social.close();
     }
 }

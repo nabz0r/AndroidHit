@@ -16,6 +16,8 @@ import java.util.WeakHashMap;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.HashMap;
+import java.util.UUID;
 
 /**
  * Local game progression and sandbox economy ledger. These methods never verify
@@ -25,15 +27,17 @@ import java.util.List;
 // Synchronous small local transactions intentionally persist economy before action returns.
 @SuppressLint("ApplySharedPref")
 public final class GameStore {
+    public interface Clock { long now(); }
     /** Optional account-bound permanent ownership; never imports purchased gold into local coins. */
     public interface ExternalOwnership {
         boolean ownsCharacter(String id);
         boolean ownsSkin(String id);
+        default boolean ownsCosmetic(String id) { return false; }
     }
     private static final String PREFS = "luma_drift_save_v1";
     private static final int MAX_COINS = 2_000_000_000;
     private static final int MAX_STOCK = 999;
-    private static final Object GOLD_GRANT_LOCK = new Object();
+    private static final Object GOLD_GRANT_LOCK = LocalSaveTransactions.LOCK;
     // The no-argument loot API must retry the same milestone after an Android
     // memory-before-disk failure, including through another handle in this process.
     private static final Map<SharedPreferences, LootRetry> LOOT_RETRIES = new WeakHashMap<>();
@@ -53,12 +57,20 @@ public final class GameStore {
     }
     private final SharedPreferences prefs;
     private final ExternalOwnership externalOwnership;
+    private final Clock clock;
 
     public GameStore(Context context) {
         this(context, null);
     }
 
     public GameStore(Context context, ExternalOwnership ownership) {
+        this(context, ownership, System::currentTimeMillis);
+    }
+
+    /** Injectable local calendar clock for rollover and save-recovery verification. */
+    public GameStore(Context context, ExternalOwnership ownership, Clock clock) {
+        if (clock == null) throw new IllegalArgumentException("Missing clock");
+        this.clock = clock;
         externalOwnership = ownership;
         prefs = context.getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         if (!prefs.contains("initialized")) {
@@ -75,7 +87,7 @@ public final class GameStore {
         }
     }
 
-    public synchronized int coins() { return Math.max(0, prefs.getInt("coins", 0)); }
+    public synchronized int coins() { LocalSaveTransactions.flush(prefs); return Math.max(0, prefs.getInt("coins", 0)); }
 
     public synchronized int unlockedLevel() {
         return Math.max(1, Math.min(Catalog.LEVEL_COUNT, prefs.getInt("unlocked", 1)));
@@ -178,6 +190,9 @@ public final class GameStore {
     }
 
     private int storedBoosterStock(String id) {
+        // A failed gift commit must be durable before an existing power path can
+        // consume that stock; later receipt recovery must not overwrite its debit.
+        LocalSaveTransactions.flush(prefs);
         return Math.max(0, Math.min(MAX_STOCK, prefs.getInt("booster_" + id, 0)));
     }
 
@@ -539,11 +554,12 @@ public final class GameStore {
     public synchronized boolean tutorialSeen() { return prefs.getBoolean("tutorial_seen", false); }
     public synchronized void setTutorialSeen(boolean seen) { prefs.edit().putBoolean("tutorial_seen", seen).commit(); }
 
-    public String dailyId() { return dayId(new Date()); }
+    public String dailyId() { return dayId(new Date(clock.now())); }
 
     /** ISO-style Monday start, represented by that Monday's local calendar date. */
     public String weeklyId() {
         Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(clock.now());
         int daysAfterMonday = (calendar.get(Calendar.DAY_OF_WEEK) + 5) % 7;
         calendar.add(Calendar.DAY_OF_MONTH, -daysAfterMonday);
         return dayId(calendar.getTime());
@@ -674,11 +690,163 @@ public final class GameStore {
     /** Reward and its claim token are persisted together. Never accepts arbitrary external intent amounts. */
     public synchronized int grantMilestone(String uniqueKey, int amount) {
         if (uniqueKey == null || !uniqueKey.matches("[a-zA-Z0-9_:-]{1,100}") || amount < 1 || amount > 500) return 0;
-        String token = "milestone_" + uniqueKey;
-        if (prefs.getBoolean(token, false)) return 0;
-        boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", safeAdd(coins(), amount)).commit();
-        if (!persisted) throw new IllegalStateException("Could not persist milestone reward");
-        return amount;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String token = "milestone_" + uniqueKey;
+            if (prefs.getBoolean(token, false)) {
+                if (!prefs.edit().putBoolean(token, true).putInt("coins", coins()).commit())
+                    throw new IllegalStateException("Could not persist recorded milestone reward");
+                return 0;
+            }
+            boolean persisted = prefs.edit().putBoolean(token, true).putInt("coins", safeAdd(coins(), amount)).commit();
+            if (!persisted) throw new IllegalStateException("Could not persist milestone reward");
+            return amount;
+        }
+    }
+
+    /** Applies a verified social-service hint gift once on this device; never credits either currency. */
+    public synchronized boolean claimSocialGift(String uid,String giftId) {
+        if(uid==null||uid.trim().isEmpty()||!uid.matches("[^\\p{Cntrl}]{1,128}")
+                ||giftId==null||!giftId.matches("[a-fA-F0-9]{64}"))return false;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String token="social_gift_v17_"+sha256(uid+":"+giftId.toLowerCase(Locale.ROOT));
+            if(prefs.getBoolean(token,false))return false;
+            int stock=storedBoosterStock(Catalog.HINT);if(stock>=MAX_STOCK)return false;
+            Map<String,Object> write=new HashMap<>();write.put(token,true);write.put("booster_"+Catalog.HINT,stock+1);
+            LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+
+    private static final int[] LOGIN_COINS = {40, 50, 60, 70, 80, 100, 150};
+
+    /** Seven claimed visits, never a consecutive-day streak. Missing days lose nothing. */
+    public synchronized int dailyLoginCount() {
+        LocalSaveTransactions.flush(prefs);
+        return Math.max(0, prefs.getInt("login_claims_v17", 0));
+    }
+    public synchronized boolean dailyLoginClaimed() {
+        LocalSaveTransactions.flush(prefs);
+        String latest=prefs.getString("login_latest_v17", "");
+        // A backwards local clock cannot collect an older date or rewind the cycle.
+        return !latest.isEmpty() && dailyId().compareTo(latest)<=0;
+    }
+    public synchronized int dailyLoginDay() {
+        int count=dailyLoginCount();
+        return dailyLoginClaimed() && count>0 ? (count-1)%7+1 : count%7+1;
+    }
+    public int dailyLoginCoins(int day) { return day>=1&&day<=7?LOGIN_COINS[day-1]:0; }
+    public synchronized int claimDailyLogin() {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            if(dailyLoginClaimed())return 0;
+            int count=dailyLoginCount(), reward=dailyLoginCoins(count%7+1);
+            Map<String,Object> write=new HashMap<>();
+            write.put("login_latest_v17",dailyId());
+            write.put("login_claims_v17",safeAdd(count,1));
+            write.put("coins",safeAdd(coins(),reward));
+            LocalSaveTransactions.write(prefs,write);
+            return reward;
+        }
+    }
+
+    /** The four wardrobe slots are strictly cosmetic and separate from legacy gear. */
+    public synchronized boolean ownsCosmetic(String id) {
+        LocalSaveTransactions.flush(prefs);
+        CosmeticCatalog.Item item=CosmeticCatalog.find(id);
+        return item!=null&&(item.source==CosmeticCatalog.Source.STARTER||(externalOwnership!=null&&externalOwnership.ownsCosmetic(id))||!prefs.getString("cosmetic_owned_v17_"+id,"").isEmpty());
+    }
+    public synchronized String cosmeticAcquisitionSource(String id) {
+        if(!ownsCosmetic(id))return "";
+        CosmeticCatalog.Item item=CosmeticCatalog.find(id);
+        return item.source==CosmeticCatalog.Source.STARTER?"STARTER":prefs.getString("cosmetic_owned_v17_"+id,"");
+    }
+    public synchronized int cosmeticProgress(String id) {
+        CosmeticCatalog.Item item=CosmeticCatalog.find(id);if(item==null)return 0;
+        if(item.source==CosmeticCatalog.Source.LOGIN_DAYS)return dailyLoginCount();
+        AvatarGearCatalog.Progress progress=avatarGearProgress();
+        return item.source==CosmeticCatalog.Source.WEEKLY_WINS?progress.weeklyWins:
+                item.source==CosmeticCatalog.Source.EVENT_STARS?progress.eventStars:0;
+    }
+    public synchronized boolean cosmeticClaimable(String id) {
+        CosmeticCatalog.Item item=CosmeticCatalog.find(id);
+        return item!=null&&!ownsCosmetic(id)&&item.source!=CosmeticCatalog.Source.EARNED_COINS
+                &&cosmeticProgress(id)>=item.requirement;
+    }
+    /** Seasonal designs stay owned permanently and remain earnable through the event archive. */
+    public synchronized List<String> claimCosmeticUnlocks() {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            List<String> unlocked=new ArrayList<>();Map<String,Object> write=new HashMap<>();
+            for(CosmeticCatalog.Item item:CosmeticCatalog.ITEMS)if(cosmeticClaimable(item.id)) {
+                unlocked.add(item.id);write.put("cosmetic_owned_v17_"+item.id,item.source.name());
+            }
+            if(!write.isEmpty())LocalSaveTransactions.write(prefs,write);
+            return Collections.unmodifiableList(unlocked);
+        }
+    }
+    public synchronized boolean purchaseCosmetic(String id) {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            CosmeticCatalog.Item item=CosmeticCatalog.find(id);
+            if(item==null||item.source!=CosmeticCatalog.Source.EARNED_COINS||ownsCosmetic(id)||coins()<item.priceCoins)return false;
+            Map<String,Object> write=new HashMap<>();write.put("coins",coins()-item.priceCoins);
+            write.put("cosmetic_owned_v17_"+id,"EARNED_COINS");LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+    public synchronized boolean equipCosmetic(String id) {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            CosmeticCatalog.Item item=CosmeticCatalog.find(id);if(item==null||!ownsCosmetic(id))return false;
+            Map<String,Object> write=new HashMap<>();write.put("cosmetic_slot_v17_"+item.slot.name(),id);
+            LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+    public synchronized String equippedCosmetic(CosmeticCatalog.Slot slot) {
+        LocalSaveTransactions.flush(prefs);if(slot==null)return "";
+        String id=prefs.getString("cosmetic_slot_v17_"+slot.name(),CosmeticCatalog.starter(slot).id);
+        CosmeticCatalog.Item item=CosmeticCatalog.find(id);
+        return item!=null&&item.slot==slot&&ownsCosmetic(id)?id:CosmeticCatalog.starter(slot).id;
+    }
+    public synchronized int ownedCosmeticCount() {
+        int count=0;for(CosmeticCatalog.Item item:CosmeticCatalog.ITEMS)if(ownsCosmetic(item.id))count++;return count;
+    }
+    public static final class LootResult {
+        public final String itemId;
+        public final boolean duplicate, replayed;
+        public final int compensationCoins, chargedCoins;
+        private LootResult(String id,boolean duplicate,int compensation,int charged,boolean replayed) {
+            itemId=id;this.duplicate=duplicate;compensationCoins=compensation;chargedCoins=charged;this.replayed=replayed;
+        }
+    }
+    private LootResult readCosmeticLoot(String receipt,boolean replayed) {
+        String[] parts=receipt.split(":");if(parts.length!=3)return null;
+        CosmeticCatalog.Item item=CosmeticCatalog.find(parts[0]);
+        if(item==null||!("0".equals(parts[1])||"1".equals(parts[1])))return null;
+        int compensation;
+        try { compensation=Integer.parseInt(parts[2]); } catch(NumberFormatException invalid) { return null; }
+        boolean duplicate="1".equals(parts[1]);
+        if(compensation!=(duplicate?item.duplicateCoins():0))return null;
+        return new LootResult(item.id,duplicate,compensation,replayed?0:CosmeticCatalog.LOOT_PRICE_COINS,replayed);
+    }
+    /** 150 earned LumaCoins only. Stable request, debit, outcome and ownership share one commit. */
+    public synchronized LootResult drawCosmeticLoot(String requestId) {
+        if(!validRewardId(requestId))return null;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String token="cosmetic_draw_v17_"+sha256(requestId),recorded=prefs.getString(token,"");
+            if(!recorded.isEmpty())return readCosmeticLoot(recorded,true);
+            if(coins()<CosmeticCatalog.LOOT_PRICE_COINS)return null;
+            String seed=prefs.getString("cosmetic_seed_v17","");if(seed.isEmpty())seed=UUID.randomUUID().toString();
+            CosmeticCatalog.Item item=CosmeticCatalog.draw(seed,requestId);boolean duplicate=ownsCosmetic(item.id);
+            int compensation=duplicate?item.duplicateCoins():0;
+            Map<String,Object> write=new HashMap<>();write.put("cosmetic_seed_v17",seed);
+            write.put("coins",safeAdd(coins()-CosmeticCatalog.LOOT_PRICE_COINS,compensation));
+            if(!duplicate)write.put("cosmetic_owned_v17_"+item.id,"EARNED_CAPSULE");
+            write.put(token,item.id+":"+(duplicate?"1":"0")+":"+compensation);
+            LocalSaveTransactions.write(prefs,write);
+            return new LootResult(item.id,duplicate,compensation,CosmeticCatalog.LOOT_PRICE_COINS,false);
+        }
     }
 
     /**

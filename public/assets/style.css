@@ -34,3 +34,22 @@ a{color:var(--mint);text-underline-offset:4px}a:hover{color:#d2fff5}button,input
 .landing .hero-phone{transform:rotate(4deg)}
 @media(max-width:1050px){.landing .hero-phone{right:24px}}
 @media(max-width:380px){.landing .hero-phone{transform:rotate(2deg);right:16px}}
+
+/* 1.7 keeps the established Atlas art; wardrobe and economy have quiet reading surfaces. */
+.landing-v17 .hero h1{font-size:clamp(3.35rem,6.1vw,5.65rem);line-height:1.04;max-width:760px}
+.landing-v17 .hero-copy{max-width:725px}
+.landing-v17 .hero .lead{max-width:550px}
+.landing-v17 .hero-art{min-height:635px}
+.landing-v17 .hero-phone{width:245px;top:28px}
+.currency-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:35px 0 24px}
+.currency-card{padding:34px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(135deg,#262d46,#1a1d37)}
+.currency-card h3{font-size:30px;margin:15px 0 10px}.currency-card p{color:var(--muted);line-height:1.8;margin:0;font-size:16px}
+.currency-icon{font-size:36px;color:#ffe29a}.currency-card.premium{background:linear-gradient(135deg,#342a49,#1a1d37)}.currency-card.premium .currency-icon{color:#d5b2ff}
+.capsule-card{padding:36px;border-radius:28px;background:linear-gradient(125deg,#293f46,#25223e);border:1px solid #779ca04d}.capsule-card h3{font-size:26px;line-height:1.35;margin:10px 0 16px}.capsule-card p{max-width:930px;line-height:1.8;color:var(--muted)}
+.social-v17{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-block:60px 105px}.social-v17 h2{font-size:clamp(2.5rem,4.5vw,4.2rem);line-height:1.08;margin:20px 0}.social-detail{padding:35px;background:#24283f;border:1px solid var(--line);border-radius:28px}.social-detail h3{font-size:23px;line-height:1.35;margin:0 0 16px}.social-detail p{font-size:16px;line-height:1.8;color:var(--muted)}.text-link{color:var(--mint);font-weight:700;display:inline-block;margin-top:10px}
+@media(max-width:1050px){.landing-v17 .hero h1{font-size:clamp(3.2rem,7.3vw,5.4rem)}.landing-v17 .hero-art{min-height:580px}.landing-v17 .hero-phone{right:24px}.social-v17{gap:30px}}
+@media(max-width:760px){.landing-v17 .hero h1{font-size:clamp(2.7rem,11.4vw,4.3rem)}.landing-v17 .hero-art{min-height:590px}.landing-v17 .hero-phone{width:227px;top:25px;right:20px}.currency-grid,.social-v17{grid-template-columns:1fr}.currency-card,.capsule-card,.social-detail{padding:25px}.social-v17{gap:24px;padding-block:30px 65px}.currency-card h3{font-size:27px}}
+@media(max-width:380px){.landing-v17 .hero-art{min-height:550px}.landing-v17 .hero-phone{width:210px;right:17px}.landing-v17 .hero h1{font-size:2.7rem}}
+
+/* Legal headings remain readable in narrow or zoomed viewports without horizontal overflow. */
+.document h1{overflow-wrap:anywhere}

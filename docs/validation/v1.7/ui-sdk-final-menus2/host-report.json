@@ -1,0 +1,255 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation and AccessibilityNodeProvider actions only; no browser/desktop/manual input/profile injection",
+  "cases": "menus,map,social,capsule,languages",
+  "serial": "emulator-5580",
+  "apk_sha256": "d7fea345c1f33cc8e114688ee06d8b60ed1278cc29eeb328c677c6c1858ba049",
+  "test_apk_sha256": "cfac08b43667cbcde8ebb4fe6a0aafdd10c4655948d863c24348917c8d6ee8c9",
+  "runner_source_sha256": "66904c526ce809209e26289c33a4a2449f99f746bfc74d139df438c6853481c0",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v17-ui-original-prefs-h3uja7k_",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate 1.7/code8"
+      },
+      {
+        "pass": true,
+        "message": "Daily gift adds exactly the advertised earned coins once"
+      },
+      {
+        "pass": true,
+        "message": "Daily reward repeated action cannot add coins twice"
+      },
+      {
+        "pass": true,
+        "message": "Starter Hat has explicit equipped ownership state"
+      },
+      {
+        "pass": true,
+        "message": "Equipping owned Hat costs no coins"
+      },
+      {
+        "pass": true,
+        "message": "Cancelling an unowned Hat preview spends no coins"
+      },
+      {
+        "pass": true,
+        "message": "Starter Outfit has explicit equipped ownership state"
+      },
+      {
+        "pass": true,
+        "message": "Equipping owned Outfit costs no coins"
+      },
+      {
+        "pass": true,
+        "message": "Cancelling an unowned Outfit preview spends no coins"
+      },
+      {
+        "pass": true,
+        "message": "Starter Shoes has explicit equipped ownership state"
+      },
+      {
+        "pass": true,
+        "message": "Equipping owned Shoes costs no coins"
+      },
+      {
+        "pass": true,
+        "message": "Cancelling an unowned Shoes preview spends no coins"
+      },
+      {
+        "pass": true,
+        "message": "Starter Gloves has explicit equipped ownership state"
+      },
+      {
+        "pass": true,
+        "message": "Equipping owned Gloves costs no coins"
+      },
+      {
+        "pass": true,
+        "message": "Cancelling an unowned Gloves preview spends no coins"
+      },
+      {
+        "pass": true,
+        "message": "Shop exposes the earned LumaCoins balance"
+      },
+      {
+        "pass": true,
+        "message": "Shop distinguishes the closed premium LumaGold account currency"
+      },
+      {
+        "pass": true,
+        "message": "Closed premium catalogue opens as a preview route only"
+      },
+      {
+        "pass": true,
+        "message": "Premium account wardrobe honestly declares paid draws closed"
+      },
+      {
+        "pass": true,
+        "message": "Guest vault has a disabled draw control and optional account access, without opening the chooser"
+      },
+      {
+        "pass": true,
+        "message": "Viewing the closed vault cannot spend earned coins"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes level 1 with a real accessibility label"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes level 13 with a real accessibility label"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes level 100 with a real accessibility label"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes level 101 with a real accessibility label"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Map jump exposes level 1000 with a real accessibility label"
+      },
+      {
+        "pass": true,
+        "message": "Saga map supports native accessibility scroll backward"
+      },
+      {
+        "pass": true,
+        "message": "Social guest screen explains optional Google login without inventing friends"
+      },
+      {
+        "pass": true,
+        "message": "Native capsule confirmation discloses every item probability before a spend"
+      },
+      {
+        "pass": true,
+        "message": "An earned capsule debits exactly150 coins with only the disclosed duplicate compensation"
+      },
+      {
+        "pass": true,
+        "message": "Capsule grants a new cosmetic or the explicit rarity-based earned duplicate refund"
+      },
+      {
+        "pass": true,
+        "message": "Equipping the earned capsule result adds no second spend"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "rewards-before-en",
+      "rewards-claimed-en",
+      "weekly-quests-en",
+      "wardrobe-hat-en",
+      "wardrobe-hat-preview-en",
+      "wardrobe-hat-en",
+      "wardrobe-hat-locked-preview-en",
+      "wardrobe-outfit-preview-en",
+      "wardrobe-outfit-en",
+      "wardrobe-outfit-locked-preview-en",
+      "wardrobe-shoes-preview-en",
+      "wardrobe-shoes-en",
+      "wardrobe-shoes-locked-preview-en",
+      "wardrobe-gloves-preview-en",
+      "wardrobe-gloves-en",
+      "wardrobe-gloves-locked-preview-en",
+      "shop-earned-en",
+      "shop-premium-closed-en",
+      "vault-guest-closed-en",
+      "map-1-en",
+      "map-13-en",
+      "map-100-en",
+      "map-101-en",
+      "map-1000-en",
+      "map-scroll-en",
+      "social-guest-en",
+      "capsule-odds-en",
+      "capsule-reveal-en",
+      "home-fr",
+      "rewards-fr",
+      "wardrobe-fr",
+      "map-1000-fr"
+    ],
+    "checkCount": 38,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider/UiAutomation actions; no preference injection, account, ad or payment"
+  },
+  "screenshots": {
+    "wardrobe-fr.png": "3aa26a2fafbfa679dd49e1a3caf414343180f9636a8c91157b5968a3f10077e4",
+    "map-100-en.png": "0b82bb81fa743f118ad62bdecf69c6804c8b864968637cb3638394e4f3855cff",
+    "map-1000-fr.png": "4d66eb3ee57c7e352ab92e2f620dba25bb2eef8a91a63e557dc31611618280d8",
+    "rewards-before-en.png": "924e57c6dce62160743626e5082533c43c73b0a9e5906928cb173ca2d09ef97c",
+    "shop-earned-en.png": "5f50419a15f370eaca45ea5cfa5da180d6df1ac455cd431d11612d25b2cdfb10",
+    "map-1000-en.png": "faa488b53146e2c5a2a081e97de13cd24276d1f8fe87104de3a59f72f0d73a80",
+    "social-guest-en.png": "aa9219187b46e1025791e1e6c22f93e0e90256bc67a80ec906813ed53aa76b4a",
+    "wardrobe-hat-en.png": "4986ea8d44f0ec2513e887417a9fda1488276751f3b91affe2de0fa58a9abfa7",
+    "wardrobe-gloves-preview-en.png": "5cdddb0b48721f08abe91f494fd1ca8c25abbc230d63b35b630b2e9250ddb104",
+    "wardrobe-outfit-en.png": "1dae56f2609eb9e3ef4c1a66fd6d360255fb733480222b0297c8cb00389b0667",
+    "map-1-en.png": "1ac39cf28b6ed964d9cdddafdb45d1bab9910f366957a5ce5fba6963b05014aa",
+    "wardrobe-hat-preview-en.png": "235eb8db3480821ac8dbb65e5bc388cd3511fad4f722d7bcf71cac407d44dbfb",
+    "wardrobe-shoes-locked-preview-en.png": "8e72e44f3040a6f1192c98ef715dfe0dadb6409b31f4f5843418fc8fdf021372",
+    "home-en.png": "9993b77a2551ac2988fc0034f9091b4cdd735bfe50c937f9e2468f33bbc3fed6",
+    "wardrobe-gloves-en.png": "7d53330f8c0243e30370522fec7a3527b0dc8a7fe4769d332eca270c77ba7e33",
+    "rewards-fr.png": "ca94955acd1a80b84167d9f260c3899da331e4e8b9232cf60f0b9c20d89ad894",
+    "map-101-en.png": "f698f7578f28de41a7d4f9624b4c1c7201e745e5ac53b3277603f6fcfdcd36ce",
+    "map-13-en.png": "36ce2d8c435f8d93454ddc326724ae9b6eb034c3361ddb441b82ed560258ba56",
+    "wardrobe-outfit-locked-preview-en.png": "2bc88541b10782511941fd645a45067d2a227df95c7d62470b3f5ae0df25a963",
+    "weekly-quests-en.png": "6f15474a1cd5e7c0dffb447043c1560ac25fb307ee6d5e7e69fbee70ce3f1bb5",
+    "capsule-reveal-en.png": "be367593924f035042936684526d65443bdd626ee8cc8bd51d6d1e83781475d1",
+    "home-fr.png": "a4f9c24aaa49c057b596b0a830bec084adcb1bf92dcf8a51ab875fbc34cc41f4",
+    "wardrobe-outfit-preview-en.png": "423ded81ae75dadcb7c6c51dfbdcaa6cbc2197baf4a9f1446353d888dc7e699e",
+    "vault-guest-closed-en.png": "6b036f09c1c5c906a3324544dad164f9bec45236cf952840b8cac7e1b02f5f96",
+    "map-scroll-en.png": "42648374fb132f7075dc5910855a515c7b84e03a7f32a35f168cc124f340226a",
+    "rewards-claimed-en.png": "e43266d1df5f6d7f90f137074766f85f19d75b965d24b447ef0bed8f74ef22dd",
+    "wardrobe-hat-locked-preview-en.png": "19e9fe01bee258f17d3933f7766f0893b5bc10ab693bf48ebcf342263d9a6a54",
+    "wardrobe-shoes-preview-en.png": "c99ad0af2f2dd0b14e695f3f1a7ea3b663fd436f13f4b55e07bc0b0d44b25195",
+    "shop-premium-closed-en.png": "f966438fd6fe3b698ce0c8d178d3bb4b34f91987c9208befee3fb46f74915170",
+    "capsule-odds-en.png": "93ae5ef4e57aca4496c1025d9fb931091d5ac28d9a8e50e24f43341e2e454d0d",
+    "wardrobe-gloves-locked-preview-en.png": "bdcb77c7c2eef57a113ca90f7b315b3a0f567cb027ad5ad4dd3061115579d704",
+    "wardrobe-shoes-en.png": "cf6b622d3cb28793f1d6d5fbb7397a652746e017f921358c31ef0156baba8822"
+  }
+}

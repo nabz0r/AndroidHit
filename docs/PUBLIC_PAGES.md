@@ -1,6 +1,8 @@
 # Public developer, privacy and account-deletion pages
 
-The **1.6 website refresh**, checked locally and published through Firebase Hosting on **27 October 2026**, presents the production application `com.androidhit.lumadrift`. Its source is in [`public/`](../public/). The homepage now describes the 1.6 saga map, prelevel objective/action budget, inventory filters and keys within Journey, and links the signed **1.6.0-rc1 APK**. The [1.6 site record](validation/site-v1.6/README.md) separates local checks, source provenance and the Firebase deployment outcome. The 36 local payloads were hash-verified on the clean deployment checkout before publication; no public-origin HTTP/browser comparison was performed for this revision.
+The **1.7 website source refresh** targets the existing Firebase site and production application `com.androidhit.lumadrift`. Its source remains in [`public/`](../public/); no hosting migration is involved. It presents the continuous 1–1,000 map, ten atmospheres, safe current-state hints/dead-end recovery, 24 visual wardrobe items in four slots, seven-visit gifts, daily/weekly quests, earned capsules and clearly separate LumaCoins/LumaGold. It links the signed **1.7.0-rc1 APK**, independently verified at 5,594,242 bytes and SHA-256 `7eeaa816…`. Its eleven new images now match the passing final Lab SDK capture report byte for byte. Hosting publication remains a separate pending step.
+
+The latest preserved published record is the [website 1.6 delivery](validation/site-v1.6/README.md), on 27 October 2026. It verified 36 source payloads on the clean deployment checkout and recorded Firebase completion without a public-origin byte comparison. That record is not evidence of 1.7 publication. The [1.7 local qualification record](validation/site-v1.7/README.md) collects the current source hashes, CUA matrix and captures; Hosting completion remains pending.
 
 The existing [stable site](https://luma-drift-production.web.app/) and [qualification preview](https://luma-drift-production--qualification-uht107xg.web.app) have earlier deployment observations dated **26–27 October 2026**. Independent reads of those earlier revisions and owner-reported Google sign-in/deletion success do not verify the 1.6 website or a real account transaction in this review. This is not a completed Google Play privacy/deletion submission. [Historical preview evidence](validation/hosting-preview.md).
 
@@ -8,15 +10,36 @@ The pages use the Luma Drift palette, original code-drawn puzzle artwork, respon
 
 | File | Purpose |
 |---|---|
-| [`public/index.html`](../public/index.html) | 1.6 game homepage, signed APK route, final native captures and privacy/account links |
+| [`public/index.html`](../public/index.html) | 1.7 candidate homepage, exact APK route, final native captures and explicit qualification boundaries |
 | [`public/privacy/index.html`](../public/privacy/index.html) | FR/EN privacy information, data paths and deletion/retention explanation |
 | [`public/delete-account/index.html`](../public/delete-account/index.html) | In-app instructions and prepared authenticated external deletion flow |
 | [`public/site-config.js`](../public/site-config.js) | Public publisher, contact, Firebase Web and wallet settings |
 | [`public/app-ads.txt`](../public/app-ads.txt) | Supplied publisher’s authorized advertising seller |
-| [`scripts/check-site-v16.py`](../scripts/check-site-v16.py) | Current offline source, DOM, local asset and hash checks |
+| [`scripts/check-site-v17.py`](../scripts/check-site-v17.py) | Current offline source, DOM, final-image provenance, policy and APK/hash consistency checks |
 | [`public/tests/`](../public/tests/) | Request-boundary tests and preserved static/browser runners; exclude from hosting |
 
-## 1.6 website delivery and local qualification · 27 October 2026
+## 1.7 website source and qualification boundaries
+
+The homepage uses the original Aurora Atlas and retained Nova vector with a refreshed composition. Product-image paths point at versioned 1.7 captures; the source checker accepts a new product image only when its bytes exactly match the final SDK capture directory, never a pilot. FR/EN native image alternatives cover Home, map, wardrobe and rewards. A composition frame or glow is web layout, not an Android control. [Release](RELEASE_1_7.md) · [Design](DESIGN_SYSTEM.md) · [UX](UX_1_7.md).
+
+The source explicitly distinguishes:
+
+- All 1,000 Journey and 240 Remix boards initially solve inside their fixed budgets; a later legal gate choice can still doom a route. Hints follow the real remaining state, with Undo/free restart for a dead route.
+- The new 24-item visual wardrobe and the separate 18 legacy functional equipment items.
+- Seven claimed visits without lost-day reset, daily/weekly quests and permanent seasonal ownership.
+- Local earned LumaCoins and account LumaGold, without automatic conversion. The earned capsule costs 150 LumaCoins, with 60/30/10% categories, 7.5/3.75/1.25% per item, and 25/60/100 duplicate compensation.
+- Prepared authenticated friends, opt-in map snapshots and one-hint gifts, with three sends/five claims per UTC day and one send per friend. No fictitious friend markers or completed real two-account claim.
+- Prepared native account premium catalogue and server transactions, with both APK and server draw activation false. Their future account ownership/conditional probabilities are separate from local earned ownership; there is no active paid sale.
+
+Privacy/deletion copy now includes the social code, chosen nickname, avatar, opt-in reported progress/timestamp, mutual relations, requests, gifts and operation receipts. Requests/gifts expire functionally after seven days; receipts are planned for thirty days. Automatic maintenance scheduling is not deployed/qualified, so expiration is not a promise of physical deletion. Server social/wallet cleanup must precede deleting the Firebase identity, with retry on cleanup failure. No address-book/Google-contact import is requested. The policy also distinguishes six Android languages from two website languages.
+
+`check-site-v17.py` performs no network request and launches no browser. At release freeze it verifies the independently supplied APK SHA-256 against the local signed artifact/manifest, all page references, final native-image hashes, FR/EN DOM structure, copy, legal retention/deletion sequence, CSP, retained Firebase/contact settings, JS syntax and unchanged payload snapshot. Its output is source evidence, not remote APK availability or deployed bytes. The historical v16 runner/logs stay untouched.
+
+Executed source checks now pass: [2,219 offline assertions](validation/site-v1.7/static-check.json) over three pages/66 references and [24 deletion-core tests](validation/site-v1.7/deletion-core-tests.txt). The [source manifest](validation/site-v1.7/source-manifest.json) fingerprints 47 Hosting payloads; the [asset record](validation/site-v1.7/source-assets.json) records all 37 image/vector assets and connects the eleven new copies to the [passing final Lab run](validation/v1.7/ui-sdk-final-menus2/host-report.json), exact Lab hash and 32 capture hashes. The new product captions explicitly say Lab, with an actual guest qualification session, no injected profile and original preferences restored.
+
+The [final CUA localhost matrix](validation/site-v1.7/README.md) now passes 18 FR/EN views at measured CSS widths 320/390/1366, with loaded localized images and actual English navigation through privacy/deletion. Guest deletion remains disabled and confirmation hidden. Its five page captures are local renders. Hosting publication still requires its separate exact-commit/Firebase completion record. Real Google authentication, deletion, two-account interaction, live ads/payments, accessibility certification and retention are not inferred from website tests.
+
+## Preserved 1.6 website delivery and local qualification · 27 October 2026
 
 The published website uses final production 1.6 Android captures for the map, briefing, Home and inventory. The map shows ten levels per page; the briefing explains a fresh attempt; Home resumes an existing practice challenge. Keys and seals enter ordinary Journey at level 12, while the six unlimited workshop challenges remain separate. The page distinguishes local gameplay saves from optional Google identity and makes no Google Play launch claim. [Native release and exact binary](RELEASE_1_6.md) · [Design system](DESIGN_SYSTEM.md) · [Art/capture provenance](ART_AUDIO.md).
 
@@ -48,7 +71,7 @@ That revision's evidence is recorded in [`validation/site-v1.5/`](validation/sit
 
 The [asset manifest](validation/site-v1.5/source-assets.json) records exact copies of 12 source assets: seven Android screenshots, one Android-generated challenge card and four original promotional assets. It distinguishes the preceding unchanged-gameplay P1 capture from final-APK captures/exports. The [source manifest](validation/site-v1.5/source-manifest.json) identifies the 23 public source files tested. Its deployment evidence is the dated `delivery.json` linked above. These local and delivery results do not replace or relabel the older 18-state contact/configuration run, and none verifies the 1.6 revision.
 
-The 1.5 redesign retained the supplied public publisher/support and Firebase/wallet fields, `preparation: true`, Google/deletion confirmation boundaries, no Analytics import and no live-purchase claim. The 1.6 source retains those configuration boundaries. A configured deletion page can still affect a real app account after explicit actions; the banner is not a safety lock.
+The 1.5 redesign retained the supplied public publisher/support and Firebase/wallet fields, `preparation: true`, Google/deletion confirmation boundaries, no Analytics import and no live-purchase claim. The 1.7 source retains those configuration boundaries. A configured deletion page can still affect a real app account after explicit actions; the banner is not a safety lock.
 
 ## Configuration, historical observations and publication gates
 

@@ -8,6 +8,46 @@ import java.util.List;
 public final class Board {
     public enum BlockReason { NONE, MISSING_TILE, CLOSED_GATE, BLOCKED_PATH, LOCKED_BARRIER }
 
+    /** A legal exit can still close a gate needed later; legality is not completion. */
+    public enum PositionStatus { SOLVED, PLAYABLE, NEEDS_ACTIONS, DEAD_END }
+
+    /**
+     * Exact, read-only help for the current run. A value of -1 for remainingActions
+     * means unlimited. Recovery includes both paid undo actions and the pieces
+     * restored by those undos; it never assumes that an ad or extra actions can
+     * repair a closed-gate dead end. Recompute after actions, not every frame.
+     */
+    public static final class Guidance {
+        public final PositionStatus status;
+        public final int remainingActions;
+        public final int remainingPieces;
+        /** Exact next exit from the current position, or -1 when solved/dead. */
+        public final int hintTileId;
+        /** Exact necessary exits from the current position, or -1 when dead. */
+        public final int actionsToFinish;
+        /** Fewest undos to reach a solvable history prefix; -1 means no prefix. */
+        public final int undoSteps;
+        /** Undo actions plus necessary exits after undo; -1 if no recovery exists. */
+        public final int actionsToRecoverAndFinish;
+        public final boolean recoveryFitsBudget;
+
+        private Guidance(PositionStatus status, int remainingActions, int remainingPieces,
+                         int hintTileId, int actionsToFinish, int undoSteps) {
+            this.status = status;
+            this.remainingActions = remainingActions;
+            this.remainingPieces = remainingPieces;
+            this.hintTileId = hintTileId;
+            this.actionsToFinish = actionsToFinish;
+            this.undoSteps = undoSteps;
+            this.actionsToRecoverAndFinish = undoSteps < 0 ? -1 : remainingPieces + 2 * undoSteps;
+            this.recoveryFitsBudget = actionsToRecoverAndFinish >= 0
+                    && (remainingActions == -1 || remainingActions >= actionsToRecoverAndFinish);
+        }
+
+        /** A stock hint should only be spent when it can help finish this run. */
+        public boolean canUseHint() { return status == PositionStatus.PLAYABLE && hintTileId >= 0; }
+    }
+
     public static final class MoveResult {
         public final boolean success;
         public final Tile tile;
@@ -172,6 +212,37 @@ public final class Board {
     public int[] solve() { return Solver.solve(level, remainingMask, gates); }
     public boolean hasSolution() { return solve() != null; }
     public boolean isStuck() { return !isSolved() && legalMoves().isEmpty(); }
+    /** Includes doomed positions that still have one or more legal exits. */
+    public boolean isDeadEnd() { return !isSolved() && !hasSolution(); }
+
+    /**
+     * Distinguishes a real gate-order dead end from an otherwise solvable run
+     * lacking actions. The certificate is only a search preference: hints are
+     * solved again from the actual remaining pieces and gate state.
+     */
+    public Guidance guidance(int remainingActions) {
+        if (remainingActions < -1) throw new IllegalArgumentException("Remaining actions must be -1 or nonnegative");
+        int remaining = remainingCount();
+        int[] solution = solve();
+        if (remaining == 0) return new Guidance(PositionStatus.SOLVED, remainingActions, 0, -1, 0, 0);
+        if (solution != null) {
+            PositionStatus status = remainingActions >= 0 && remainingActions < remaining
+                    ? PositionStatus.NEEDS_ACTIONS : PositionStatus.PLAYABLE;
+            return new Guidance(status, remainingActions, remaining, solution[0], remaining, 0);
+        }
+        long recoveredMask = remainingMask;
+        int recoveredGates = gates;
+        for (int index = history.size() - 1; index >= 0; index--) {
+            int id = history.get(index);
+            recoveredMask |= 1L << id;
+            recoveredGates ^= level.tile(id).switchMask;
+            if (Solver.solve(level, recoveredMask, recoveredGates) != null) {
+                return new Guidance(PositionStatus.DEAD_END, remainingActions, remaining, -1, -1,
+                        history.size() - index);
+            }
+        }
+        return new Guidance(PositionStatus.DEAD_END, remainingActions, remaining, -1, -1, -1);
+    }
 
     /** A bonus preview never mutates the board or spends anything. */
     public boolean isSafeMove(int id) {

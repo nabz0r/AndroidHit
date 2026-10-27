@@ -1,0 +1,60 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation and AccessibilityNodeProvider actions only; no browser/desktop/manual input/profile injection",
+  "cases": "menus,map,social,capsule,languages",
+  "serial": "emulator-5580",
+  "apk_sha256": "d7fea345c1f33cc8e114688ee06d8b60ed1278cc29eeb328c677c6c1858ba049",
+  "test_apk_sha256": "eb9ba75f5451eadf8c467d869e29908eca2016981d8c194776c340a25d075e3c",
+  "runner_source_sha256": "0d87c2c87536e592430330efa0804e5d1d93547404a43ac8fae02fbbefb0cd12",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v17-ui-original-prefs-g9r4gnkd",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "native": {
+    "passed": false,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate 1.7/code8"
+      },
+      {
+        "pass": true,
+        "message": "Daily gift adds exactly the advertised earned coins once"
+      },
+      {
+        "pass": true,
+        "message": "Daily reward repeated action cannot add coins twice"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "rewards-before-en",
+      "rewards-claimed-en",
+      "failure"
+    ],
+    "checkCount": 3,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider/UiAutomation actions; no preference injection, account, ad or payment"
+  },
+  "screenshots": {
+    "rewards-before-en.png": "33a7f9b214d75f258ca29d037383b99cdba568b4b5fe39052d3fdbcf5f42923a",
+    "home-en.png": "c8ed83ac97bc9d0275a49d59c74e0fafe9fe6f76e0e54545948ba527be186dfe",
+    "failure.png": "d9a563118a65a058896f31eaa5150ca1fc8d997dbd1c7f5042628d8d2a0329b6",
+    "rewards-claimed-en.png": "4ddfcfbcf31170d64f32c635c5c5792b6b79c7d29d38c6535c47e96bc944c839"
+  },
+  "error": "Instrumentation checks failed; inspect failure.txt",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v17-ui-test/run.py\", line 50, in main\n    report['passed']=bool(native.get('passed'));assert report['passed'],'Instrumentation checks failed; inspect failure.txt'\nAssertionError: Instrumentation checks failed; inspect failure.txt\n"
+}

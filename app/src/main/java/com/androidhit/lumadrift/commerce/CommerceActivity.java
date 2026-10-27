@@ -105,7 +105,7 @@ public final class CommerceActivity extends Activity {
         if(isContinuation())startActivity(new Intent(this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP));
         finish();
     }
-    private String t(String key,Object...args){return CommerceConfig.MODE_SANDBOX?Strings.get(store.resolvedLanguage(),key,args):WalletStrings.get(store.resolvedLanguage(),key,args);}
+    private String t(String key,Object...args){if(key.equals("gold_reward_received"))return "+"+args[0]+" LumaCoins";if(CommerceConfig.MODE_SANDBOX){if(key.equals("gold_balance")||key.equals("gold_pack"))return args[0]+" LumaCoins · Lab";if(key.equals("gold_packs")||key.equals("commerce_title"))return "LumaCoins · Lab";}return CommerceConfig.MODE_SANDBOX?Strings.get(store.resolvedLanguage(),key,args):WalletStrings.get(store.resolvedLanguage(),key,args);}
     @Override public void onCreate(Bundle state){
         super.onCreate(state);alive=true;
         if(getIntent().hasExtra(EXTRA_CONTINUATION_REQUEST)){

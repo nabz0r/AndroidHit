@@ -116,7 +116,7 @@ public class FirebaseUser {
 import java.util.*;import com.google.android.gms.tasks.Task;
 public class FirebaseAuth {
  public interface AuthStateListener {void onAuthStateChanged(FirebaseAuth a);}public interface IdTokenListener {void onIdTokenChanged(FirebaseAuth a);}
- public static FirebaseAuth instance=new FirebaseAuth();public FirebaseUser user;
+ public static FirebaseAuth instance=new FirebaseAuth();public FirebaseUser user;public int signOutCalls;
  public final List<AuthStateListener> authListeners=new ArrayList<>();public final List<IdTokenListener> tokenListeners=new ArrayList<>();
  public final ArrayDeque<Task<AuthResult>> signIns=new ArrayDeque<>();
  public static FirebaseAuth getInstance(com.google.firebase.FirebaseApp app){return instance;}
@@ -124,7 +124,7 @@ public class FirebaseAuth {
  public void addAuthStateListener(AuthStateListener l){authListeners.add(l);l.onAuthStateChanged(this);}public void removeAuthStateListener(AuthStateListener l){authListeners.remove(l);}
  public void addIdTokenListener(IdTokenListener l){tokenListeners.add(l);l.onIdTokenChanged(this);}public void removeIdTokenListener(IdTokenListener l){tokenListeners.remove(l);}
  public Task<AuthResult> signInWithCredential(AuthCredential c){Task<AuthResult> t=new Task<>();signIns.add(t);return t;}
- public void signOut(){user=null;fire();}
+ public void signOut(){signOutCalls++;user=null;fire();}
  public void setUser(FirebaseUser u){user=u;fire();}
  public void finishSignIn(FirebaseUser u){setUser(u);signIns.remove().succeed(new AuthResult(u));}
  public void fire(){for(AuthStateListener l:new ArrayList<>(authListeners))l.onAuthStateChanged(this);for(IdTokenListener l:new ArrayList<>(tokenListeners))l.onIdTokenChanged(this);}
@@ -134,6 +134,23 @@ public class IdentityConfig {public static boolean configured=true;public String
 'com/androidhit/lumadrift/commerce/CommerceConfig.java': '''package com.androidhit.lumadrift.commerce;public class CommerceConfig{public static boolean MODE_SANDBOX=true;public static boolean productionBillingReady(){return !MODE_SANDBOX;}}''',
 'com/androidhit/lumadrift/wallet/ProductionWalletClient.java': '''package com.androidhit.lumadrift.wallet;
 public class ProductionWalletClient {public static class Wallet{} public interface Callback{void onSuccess(Wallet w);void onError(String k);}public static Callback deletion;public ProductionWalletClient(android.content.Context c){} public void deleteAccount(Callback c){deletion=c;}public void close(){}}''',
+'com/androidhit/lumadrift/social/SocialClient.java': '''package com.androidhit.lumadrift.social;
+public class SocialClient {
+ public interface Callback{void onSuccess(org.json.JSONObject result);void onError(String code);}
+ public static boolean serverConfigured;public static Callback deletion;public static int creations,deletionCalls,closeCalls;
+ public static final java.util.List<String> cleared=new java.util.ArrayList<>();
+ public SocialClient(android.content.Context context){creations++;}
+ public static boolean configured(){return serverConfigured;}
+ public void deleteAccount(Callback callback){deletionCalls++;deletion=callback;}
+ public static void clearCache(android.content.Context context,String uid){cleared.add(uid);}
+ public void close(){closeCalls++;}
+ public static void reset(){serverConfigured=false;deletion=null;creations=deletionCalls=closeCalls=0;cleared.clear();}
+}''',
+'com/androidhit/lumadrift/social/CosmeticVaultClient.java': '''package com.androidhit.lumadrift.social;
+public class CosmeticVaultClient {
+ public static final java.util.List<String> cleared=new java.util.ArrayList<>();
+ public static void clearCache(android.content.Context context,String uid){cleared.add(uid);}
+}''',
 'org/json/JSONObject.java': '''package org.json;
 public class JSONObject {private final String json;public JSONObject(String s){json=s;}public String optString(String k){int a=json.indexOf((char)34+k+(char)34);if(a<0)return "";a=json.indexOf(':',a)+1;a=json.indexOf((char)34,a)+1;int b=json.indexOf((char)34,a);return b<a?"":json.substring(a,b);}}''',
 }

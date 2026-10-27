@@ -1,3 +1,16 @@
+# Luma Drift 1.7 — delivery plan
+
+1.7 — clarity, rewards and social wardrobe
+- Reproduce Journey13 and verify all1240 boards with independent exact guidance and real move budgets; signal dead ends and provide free restart before continuation offers.
+- Separate earned LumaCoins from account LumaGold; retain live commercial qualification gates. Earned cosmetic loot now; server-authoritative premium draw prepared and disabled pending market/provider review.
+- Claimable 7-step login rewards, daily/weekly quests, atomic wardrobe/loot ownership, six-language labels.
+- Scrollable virtualized 1–1000 saga with biome/audio transitions and consented friend markers; genuine authenticated friend requests and quota-limited gifts on server.
+- Original native kawaii avatar dressing room and power art; clearer next-move pulse and powerless dead-end diagnosis.
+- 1.7 signed production/Lab artifacts; preserve existing identities/saves; run logic/server/build/lint/install/visual/audio checks with exact package evidence.
+- Update all current docs, responsive FR/EN site, deploy hosted changes and publish tested source/artifacts/main; distinguish local/emulator and real provider evidence.
+
+## Preserved earlier delivery plan
+
 # Luma Drift 1.5 — game quality release
 
 Target: 1.5.0-rc1 / Android code 6. Owner requests: integrated lobby and visible Google identity, avatar equipment, at least 1,000 maps, meaningful difficulty, reliable powers, ambient music, clearer collection/shop, documentation, tested APK/AAB and main publication.

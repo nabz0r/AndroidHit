@@ -7,6 +7,9 @@ import androidx.credentials.CredentialManager;
 import androidx.credentials.exceptions.GetCredentialCancellationException;
 import com.androidhit.lumadrift.commerce.CommerceConfig;
 import com.androidhit.lumadrift.data.Strings;
+import com.androidhit.lumadrift.social.SocialClient;
+import com.androidhit.lumadrift.social.CosmeticVaultClient;
+import com.androidhit.lumadrift.wallet.ProductionWalletClient;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.*;
 import java.util.ArrayList;
@@ -35,7 +38,7 @@ public final class IdentitySessionTest {
             Context.prefs = new SharedPreferences(); FirebaseApp.app = null; FirebaseApp.initializations = 0;
             FirebaseAuth.instance = new FirebaseAuth(); IdentityConfig.configured = true;
             CredentialManager.chooserCalls = 0; CredentialManager.clearCalls = 0; CredentialManager.failClear = false;
-            CommerceConfig.MODE_SANDBOX = true;
+            CommerceConfig.MODE_SANDBOX = true;SocialClient.reset();CosmeticVaultClient.cleared.clear();ProductionWalletClient.deletion=null;
             user = new FirebaseUser("alice", "Alice");
             if (restored) {
                 Context.prefs.edit().putBoolean("previously_signed_in", true).putString("signed_in_uid", user.uid).apply();
@@ -217,11 +220,65 @@ public final class IdentitySessionTest {
         state(f.controller, SessionSnapshot.State.REAUTH_REQUIRED);
         check(GoogleAccountController.currentGoogleUser(f.activity) == null, "A legacy session cannot later drift to another UID"); f.close();
     }
+    private static void socialDeletionBeforeAuth() {
+        scenarios++;Fixture f=new Fixture(true);SocialClient.serverConfigured=true;f.connect();
+        f.controller.deleteAccount();
+        check(SocialClient.deletionCalls==1&&SocialClient.deletion!=null,"Configured social deletion reaches the authenticated backend first");
+        check(f.user.deletes.isEmpty()&&ProductionWalletClient.deletion==null,"Social deletion never falls through to Firebase-only or paid-wallet deletion");
+        check(FirebaseAuth.instance.user==f.user&&FirebaseAuth.instance.signOutCalls==0,"Identity stays present while authoritative backend deletion is pending");
+        state(f.controller,SessionSnapshot.State.REFRESHING);SocialClient.deletion.onSuccess(new org.json.JSONObject("{}"));
+        state(f.controller,SessionSnapshot.State.GUEST);check("account_deleted".equals(f.controller.snapshot().statusKey),"Only backend success publishes completed account deletion");
+        check(FirebaseAuth.instance.user==null&&!IdentitySessionAccess.previouslySignedIn(f.activity),"Backend success revokes local Google consent and identity");
+        check(SocialClient.cleared.contains("alice")&&CosmeticVaultClient.cleared.contains("alice"),"Backend completion clears both same-account social and cosmetic caches");
+        f.close();check(SocialClient.closeCalls==1,"Closing account controller closes its social client");
+    }
+    private static void socialServerRemovedAuthBeforeResponse() {
+        scenarios++;Fixture f=new Fixture(true);SocialClient.serverConfigured=true;f.connect();f.controller.deleteAccount();SocialClient.Callback late=SocialClient.deletion;
+        FirebaseAuth.instance.user=null;FirebaseAuth.instance.fire();late.onSuccess(new org.json.JSONObject("{}"));state(f.controller,SessionSnapshot.State.GUEST);
+        check("account_deleted".equals(f.controller.snapshot().statusKey),"Server-removed Firebase identity still permits completion of its own deletion");
+        check(SocialClient.cleared.contains("alice")&&CosmeticVaultClient.cleared.contains("alice"),"Deletion clears captured owner caches even after Firebase Auth removed the user");f.close();
+    }
+    private static void socialFailurePreservesIdentity() {
+        scenarios++;Fixture f=new Fixture(true);SocialClient.serverConfigured=true;f.connect();f.controller.deleteAccount();
+        SocialClient.deletion.onError("SOCIAL_UNAVAILABLE");state(f.controller,SessionSnapshot.State.ERROR);
+        check(FirebaseAuth.instance.user==f.user&&FirebaseAuth.instance.signOutCalls==0,"Backend outage does not silently remove or sign out the Google identity");
+        check(f.user.deletes.isEmpty(),"Backend outage never triggers Firebase-only fallback deletion");
+        check(!"account_deleted".equals(f.controller.snapshot().statusKey),"An unavailable backend cannot announce completed deletion");
+        check(SocialClient.cleared.isEmpty()&&CosmeticVaultClient.cleared.isEmpty(),"Pending failed deletion does not erase another session's cached ownership");
+        f.controller.onResume();f.user.refreshed();state(f.controller,SessionSnapshot.State.CONNECTED);f.controller.deleteAccount();
+        check(SocialClient.deletionCalls==2,"The same account can explicitly retry a failed backend deletion after refresh");f.close();
+    }
+    private static void socialRecentLoginAndLateSignOut() {
+        scenarios++;Fixture f=new Fixture(true);SocialClient.serverConfigured=true;f.connect();f.controller.deleteAccount();
+        SocialClient.deletion.onError("RECENT_LOGIN_REQUIRED");state(f.controller,SessionSnapshot.State.REAUTH_REQUIRED);
+        check(f.controller.snapshot().canSignIn&&!f.controller.snapshot().canDeleteAccount,"Backend recent-login requirement exposes explicit reconnection");check(f.user.deletes.isEmpty(),"Recent-login failure never deletes Firebase alone");f.close();
+        scenarios++;f=new Fixture(true);SocialClient.serverConfigured=true;f.connect();f.controller.deleteAccount();SocialClient.Callback late=SocialClient.deletion;
+        f.controller.signOut();int events=f.events.size(),cacheClears=SocialClient.cleared.size();late.onSuccess(new org.json.JSONObject("{}"));
+        state(f.controller,SessionSnapshot.State.GUEST);check(f.events.size()==events,"Late backend success cannot override an explicit sign-out epoch");check(SocialClient.cleared.size()==cacheClears,"Late callback does not repeat cache cleanup for a revoked session");f.close();
+    }
+    private static void socialLateDeletionAcrossUidSwitch() {
+        scenarios++;Fixture f=new Fixture(true);SocialClient.serverConfigured=true;f.connect();f.controller.deleteAccount();SocialClient.Callback late=SocialClient.deletion;
+        FirebaseUser other=new FirebaseUser("bob","Bob");FirebaseAuth.instance.setUser(other);late.onSuccess(new org.json.JSONObject("{}"));
+        check(FirebaseAuth.instance.user==other&&FirebaseAuth.instance.signOutCalls==0,"An old UID's deletion response must not sign out a newer Google account");
+        check(!f.controller.snapshot().signedIn&&!"account_deleted".equals(f.controller.snapshot().statusKey),"Old deletion success cannot be presented as the current account's deletion");
+        check(!SocialClient.cleared.contains("bob")&&!CosmeticVaultClient.cleared.contains("bob"),"Old deletion response cannot clear a new UID's social or paid ownership cache");f.close();
+    }
+    private static void socialLateDeletionAfterClose() {
+        scenarios++;Fixture f=new Fixture(true);SocialClient.serverConfigured=true;f.connect();f.controller.deleteAccount();SocialClient.Callback late=SocialClient.deletion;int events=f.events.size();
+        f.close();late.onSuccess(new org.json.JSONObject("{}"));late.onError("SOCIAL_UNAVAILABLE");
+        check(f.events.size()==events&&FirebaseAuth.instance.user==f.user,"Destroyed account screen ignores late deletion callbacks without touching another lifecycle");
+    }
+    private static void paidWalletFallbackAndOwnedCacheLogout() {
+        scenarios++;Fixture f=new Fixture(true);CommerceConfig.MODE_SANDBOX=false;f.connect();f.controller.deleteAccount();
+        check(SocialClient.deletionCalls==0&&ProductionWalletClient.deletion!=null&&f.user.deletes.isEmpty(),"Social-unconfigured paid build preserves authoritative wallet deletion fallback");
+        ProductionWalletClient.deletion.onSuccess(null);state(f.controller,SessionSnapshot.State.GUEST);check(SocialClient.cleared.contains("alice")&&CosmeticVaultClient.cleared.contains("alice"),"Explicit successful logout clears only the validated owner's caches");f.close();
+    }
     public static void main(String[] args) {
         guestAndConfiguration(); lifecycleAndProfile(); networkFailureAndRetry(); invalidTokenAndExplicitReauth();
         externalSignOutAndWrongAccount(); wrongProviders(); signOutDominatesRefresh(); signOutDominatesPendingSignIn();
         closeRemovesListeners(); cancellationAndBindingFailure(); recentLoginDeleteAndCleanupFailure();
         observerAcrossAccountScreen(); emptyTokenAndTranslations(); reauthSurvivesScreensAndRecreation(); bindLegacyRestoredUid();
+        socialDeletionBeforeAuth();socialServerRemovedAuthBeforeResponse();socialFailurePreservesIdentity();socialRecentLoginAndLateSignOut();socialLateDeletionAcrossUidSwitch();socialLateDeletionAfterClose();paidWalletFallbackAndOwnedCacheLogout();
         System.out.println("PASS identity session: " + scenarios + " scenarios, " + checks + " assertions (real controller, deterministic platform/provider doubles).");
         System.out.println("NOT VALIDATED: actual Google chooser, OAuth/Firebase server exchange, real account reconnect/sign-out/deletion on a device.");
     }

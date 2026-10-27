@@ -15,7 +15,7 @@ public final class UiStrings {
   TEXT.put("all",new String[]{"All","Tout","Alle","Todo","Tudo","Tutto"});
   TEXT.put("owned_count",new String[]{"%d / %d owned","%d / %d possédés","%d / %d im Besitz","%d / %d obtenidos","%d / %d adquiridos","%d / %d posseduti"});
   TEXT.put("earned",new String[]{"Earned coins","Pièces gagnées","Erspielte Münzen","Monedas ganadas","Moedas ganhas","Monete guadagnate"});
-  TEXT.put("pack",new String[]{"%d charges · %d coins","%d charges · %d pièces","%d Ladungen · %d Münzen","%d cargas · %d monedas","%d cargas · %d moedas","%d cariche · %d monete"});
+  TEXT.put("pack",new String[]{"%d charges · %d LumaCoins","%d charges · %d LumaCoins","%d Ladungen · %d LumaCoins","%d cargas · %d LumaCoins","%d cargas · %d LumaCoins","%d cariche · %d LumaCoins"});
   TEXT.put("power_confirm",new String[]{"Use one charge","Utiliser une charge","Eine Ladung verwenden","Usar una carga","Usar uma carga","Usa una carica"});
   TEXT.put("power_cost",new String[]{"One activation uses exactly 1 charge. Stock: %d.","Une activation utilise exactement 1 charge. Stock : %d.","Eine Aktivierung verbraucht genau 1 Ladung. Vorrat: %d.","Una activación usa exactamente 1 carga. Reservas: %d.","Uma ativação usa exatamente 1 carga. Stock: %d.","Ogni attivazione usa esattamente 1 carica. Scorte: %d."});
   TEXT.put("active",new String[]{"Active","Actif","Aktiv","Activo","Ativo","Attivo"});

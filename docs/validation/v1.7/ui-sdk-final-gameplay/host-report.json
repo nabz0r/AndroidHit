@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation and AccessibilityNodeProvider actions only; no browser/desktop/manual input/profile injection",
+  "cases": "challenge,journey,landscape",
+  "serial": "emulator-5580",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "apk_sha256": "d7fea345c1f33cc8e114688ee06d8b60ed1278cc29eeb328c677c6c1858ba049",
+  "test_apk_sha256": "cfac08b43667cbcde8ebb4fe6a0aafdd10c4655948d863c24348917c8d6ee8c9",
+  "runner_source_sha256": "66904c526ce809209e26289c33a4a2449f99f746bfc74d139df438c6853481c0",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v17-ui-original-prefs-vup2uvoy",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed Lab candidate 1.7/code8"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Public J13 challenge import opens fair challenge mode"
+      },
+      {
+        "pass": true,
+        "message": "Imported challenge does not offer paid or stock power buttons"
+      },
+      {
+        "pass": true,
+        "message": "Finishing imported J13 challenge grants no earned coins and spends no stock"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 is cleared by actual piece actions, with no profile seeding"
+      },
+      {
+        "pass": true,
+        "message": "Real first-twelve clears unlock normal Journey13"
+      },
+      {
+        "pass": true,
+        "message": "J13 move/undo/move/undo spends4 actions and restores all10 pieces"
+      },
+      {
+        "pass": true,
+        "message": "An insufficient-budget J13 hint cannot open a consuming confirmation or spend stock"
+      },
+      {
+        "pass": true,
+        "message": "Free restart restores J13 allowance after the insufficient-budget guard"
+      },
+      {
+        "pass": true,
+        "message": "Spark consumes exactly one earned hint charge"
+      },
+      {
+        "pass": true,
+        "message": "Journey13 hint chooses the exact completion-preserving next tile4"
+      },
+      {
+        "pass": true,
+        "message": "Hint itself consumes no move"
+      },
+      {
+        "pass": true,
+        "message": "Tapping an active hint cannot consume another charge"
+      },
+      {
+        "pass": true,
+        "message": "Dead-end guidance explains that extra paid moves do not repair gates"
+      },
+      {
+        "pass": true,
+        "message": "Native Undo restores the solvable J13 prefix"
+      },
+      {
+        "pass": true,
+        "message": "Normal Journey13 clears within its move allowance through actual UI actions"
+      },
+      {
+        "pass": true,
+        "message": "SDK rotates the QA app to compact landscape"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog accepts text through SDK accessibility"
+      },
+      {
+        "pass": true,
+        "message": "Landscape saga node101 remains below the pinned compact header"
+      },
+      {
+        "pass": true,
+        "message": "Landscape jump control preserves at least48dp physical touch height"
+      },
+      {
+        "pass": true,
+        "message": "SDK restores the original display rotation after landscape"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "j13-challenge-en",
+      "j13-challenge-cleared-en",
+      "j13-needs-actions-guard-en",
+      "j13-safe-hint-en",
+      "j13-dead-end-banner-en",
+      "j13-dead-end-dialog-en",
+      "j13-journey-cleared-en",
+      "map-landscape-101-en"
+    ],
+    "checkCount": 34,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Actual SDK AccessibilityNodeProvider/UiAutomation actions; no preference injection, account, ad or payment"
+  },
+  "screenshots": {
+    "map-landscape-101-en.png": "56480fd9657ef385be6de20235b1de200521ab27b0cd963e156ea2d036d42f3e",
+    "j13-challenge-cleared-en.png": "5677ec7dd5ecd3785cc6fb7d83fbc7ac28809f7905f55eecb1d199af2b5bfb49",
+    "j13-needs-actions-guard-en.png": "65f21f8793274ffe8d0631f25f1dd319cb464e4db4d4af47e892a5d02020d541",
+    "j13-safe-hint-en.png": "daf3d9f427839ad4764bdcd37601bba33acc5d0a8b690dcb485d1e018fa0cc87",
+    "j13-dead-end-dialog-en.png": "628165ec6054131f524625e3d9b4b2f9773560c53b8e00ccc8ee0ae6c4fc5e6d",
+    "home-en.png": "fccf7e1f1b4edcdf6e75ecb6259b1ed91cb64e0810c59a7d258d622e6c0225cd",
+    "j13-challenge-en.png": "eace8b9a4892dbe5e7242f998b6609ed9c4003260dac0486a94e96746cb5f855",
+    "j13-journey-cleared-en.png": "e686139fda3786237f41f801b3d71e644b58b11092e10cd518e0896e50c437bf",
+    "j13-dead-end-banner-en.png": "b1c6f9cacbc78d9b3ceffcea3374e9bcbfe3004d1debfc2b98bf16462fb5ecbb"
+  },
+  "rotation_settings_restored": true
+}

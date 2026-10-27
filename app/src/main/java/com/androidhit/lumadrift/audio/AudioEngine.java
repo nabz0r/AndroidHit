@@ -29,6 +29,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public final class AudioEngine {
     public enum Sound { TAP, SELECT, MOVE, BLOCKED, GATE, UNDO, HINT, COIN, PURCHASE, WIN, LOSE }
+    public static final int BIOME_COUNT = 10;
     private static final String TAG = "LumaAudio";
     static final float DEFAULT_MUSIC_VOLUME = 0.27f;
 
@@ -49,6 +50,11 @@ public final class AudioEngine {
     private final Handler fades = new Handler(Looper.getMainLooper());
     private final Runnable fadeTick = this::advanceFade;
     private AudioTrack music;
+    private int requestedBiome;
+    private int loadedBiome = -1;
+    private long biomeGeneration;
+    /** One coalescing worker, including the constructor's initial preparation. */
+    private boolean musicWorkerQueued = true;
     private boolean running;
     private boolean sfxEnabled = true;
     private boolean musicEnabled = true;
@@ -104,7 +110,6 @@ public final class AudioEngine {
     }
 
     private void prepare(File directory) {
-        AudioTrack candidate = null;
         try {
             if (!directory.exists() && !directory.mkdirs()) throw new IOException("Cannot create sound cache");
             for (Sound sound : Sound.values()) {
@@ -120,45 +125,118 @@ public final class AudioEngine {
             // Music does not depend on the effects cache being writable.
             Log.w(TAG, "Could not prepare every sound effect", failed);
         }
-        try {
-            if (released.get()) return;
-            short[] pcm = Synth.ambientLoop();
-            if (released.get() || Thread.currentThread().isInterrupted()) return;
-            candidate = new AudioTrack.Builder()
-                    .setAudioAttributes(new AudioAttributes.Builder()
-                            .setUsage(AudioAttributes.USAGE_GAME)
-                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC).build())
-                    .setAudioFormat(new AudioFormat.Builder()
-                            .setEncoding(AudioFormat.ENCODING_PCM_16BIT)
-                            .setSampleRate(Synth.RATE)
-                            .setChannelMask(AudioFormat.CHANNEL_OUT_MONO).build())
-                    .setBufferSizeInBytes(pcm.length * 2)
-                    .setTransferMode(AudioTrack.MODE_STATIC).build();
-            // MODE_STATIC starts in STATE_NO_STATIC_DATA; write the PCM before requiring readiness.
-            if (candidate.getState() == AudioTrack.STATE_UNINITIALIZED) {
-                throw new IllegalStateException("Music output could not initialize");
-            }
-            int written = candidate.write(pcm, 0, pcm.length);
-            if (written != pcm.length || candidate.getState() != AudioTrack.STATE_INITIALIZED
-                    || candidate.setLoopPoints(0, pcm.length, -1) != AudioTrack.SUCCESS) {
-                throw new IllegalStateException("Music PCM or loop could not load: " + written);
-            }
-            candidate.setVolume(0f);
+        prepareRequestedMusic();
+    }
+
+    /**
+     * One job consumes the newest request. PCM is never cached for all ten
+     * worlds: only the current output and one in-flight replacement exist.
+     * Generation guards cover late DSP/write completion and Activity destruction.
+     */
+    private void prepareRequestedMusic() {
+        while (true) {
+            final int target;
+            final long generation;
             synchronized (lock) {
-                if (!released.get()) {
+                if (released.get() || Thread.currentThread().isInterrupted() || loadedBiome == requestedBiome) {
+                    musicWorkerQueued = false;
+                    return;
+                }
+                target = requestedBiome;
+                generation = biomeGeneration;
+            }
+            AudioTrack candidate = null;
+            try {
+                short[] pcm = Synth.ambientLoop(target);
+                synchronized (lock) {
+                    if (released.get() || Thread.currentThread().isInterrupted()) return;
+                    if (generation != biomeGeneration) continue;
+                }
+                candidate = new AudioTrack.Builder()
+                        .setAudioAttributes(new AudioAttributes.Builder()
+                                .setUsage(AudioAttributes.USAGE_GAME)
+                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC).build())
+                        .setAudioFormat(new AudioFormat.Builder()
+                                .setEncoding(AudioFormat.ENCODING_PCM_16BIT)
+                                .setSampleRate(Synth.RATE)
+                                .setChannelMask(AudioFormat.CHANNEL_OUT_MONO).build())
+                        .setBufferSizeInBytes(pcm.length * 2)
+                        .setTransferMode(AudioTrack.MODE_STATIC).build();
+                // MODE_STATIC starts in STATE_NO_STATIC_DATA: fill before readiness/loop checks.
+                if (candidate.getState() == AudioTrack.STATE_UNINITIALIZED)
+                    throw new IllegalStateException("Music output could not initialize");
+                int written = candidate.write(pcm, 0, pcm.length);
+                if (written != pcm.length || candidate.getState() != AudioTrack.STATE_INITIALIZED
+                        || candidate.setLoopPoints(0, pcm.length, -1) != AudioTrack.SUCCESS)
+                    throw new IllegalStateException("Music PCM or loop could not load: " + written);
+                candidate.setVolume(0f);
+                if (!awaitPreviousFade(generation)) continue;
+                synchronized (lock) {
+                    if (released.get() || generation != biomeGeneration) continue;
+                    fades.removeCallbacks(fadeTick);
+                    fading = false;
+                    pauseAfterFade = false;
+                    appliedMusicGain = 0f;
+                    releaseTrack(music);
                     music = candidate;
                     candidate = null;
-                    Log.i(TAG, "Original ambient ready: " + pcm.length + " mono frames at " + Synth.RATE + " Hz");
+                    loadedBiome = target;
+                    Log.i(TAG, "Original ambient ready: biome=" + target + ", " + pcm.length
+                            + " mono frames at " + Synth.RATE + " Hz");
                     updateMusicLocked();
                 }
+            } catch (RuntimeException failed) {
+                synchronized (lock) {
+                    if (released.get()) return;
+                    if (generation == biomeGeneration) {
+                        musicWorkerQueued = false;
+                        Log.w(TAG, "Could not prepare ambient music", failed);
+                        return;
+                    }
+                }
+            } finally {
+                releaseTrack(candidate);
             }
-        } catch (RuntimeException failed) {
-            // An unavailable output must never prevent playing, but should remain diagnosable.
-            Log.w(TAG, "Could not prepare ambient music", failed);
-        } finally {
-            if (candidate != null) {
-                try { candidate.release(); } catch (RuntimeException ignored) { }
+        }
+    }
+
+    /**
+     * Select the original atmosphere for one 100-level world, 0..9. Repeated
+     * requests for the same world do not regenerate PCM or queue extra jobs.
+     * The previous track fades briefly while the worker prepares its successor.
+     */
+    public void setBiome(int biome) {
+        if (biome < 0 || biome >= BIOME_COUNT) throw new IllegalArgumentException("Biome must be 0..9");
+        synchronized (lock) {
+            if (released.get() || requestedBiome == biome) return;
+            requestedBiome = biome;
+            biomeGeneration++;
+            updateMusicLocked();
+            if (!musicWorkerQueued) {
+                musicWorkerQueued = true;
+                worker.execute(this::prepareRequestedMusic);
             }
+        }
+    }
+
+    public int getBiome() { synchronized (lock) { return requestedBiome; } }
+
+    /** Wait only on the background worker; the UI remains free to fade or cancel. */
+    private boolean awaitPreviousFade(long generation) {
+        long deadline = System.nanoTime() + 280_000_000L;
+        while (true) {
+            synchronized (lock) {
+                if (released.get() || generation != biomeGeneration || Thread.currentThread().isInterrupted()) return false;
+                if (music == null || music.getPlayState() != AudioTrack.PLAYSTATE_PLAYING || appliedMusicGain <= .0001f)
+                    return true;
+                if (System.nanoTime() >= deadline) {
+                    // A stalled main looper must not retain an obsolete player indefinitely.
+                    stopMusicLocked();
+                    return true;
+                }
+            }
+            try { Thread.sleep(10); }
+            catch (InterruptedException cancelled) { Thread.currentThread().interrupt(); return false; }
         }
     }
 
@@ -238,9 +316,10 @@ public final class AudioEngine {
             running = false;
             fades.removeCallbacks(fadeTick);
             fading = false;
+            biomeGeneration++;
             abandonFocusLocked();
             if (music != null) {
-                try { music.pause(); music.release(); } catch (RuntimeException ignored) { }
+                releaseTrack(music);
                 music = null;
             }
             try { pool.release(); } catch (RuntimeException ignored) { }
@@ -278,6 +357,11 @@ public final class AudioEngine {
         try {
             if (!running || !focusGranted || focusSuppressed) {
                 stopMusicLocked();
+                return;
+            }
+            if (loadedBiome != requestedBiome) {
+                if (music.getPlayState() == AudioTrack.PLAYSTATE_PLAYING && !pauseAfterFade)
+                    fadeMusicLocked(0f, 180, true);
                 return;
             }
             if (!musicEnabled) {
@@ -344,6 +428,12 @@ public final class AudioEngine {
 
     private static float clampVolume(float value) {
         return Float.isNaN(value) ? 0f : Math.max(0f, Math.min(1f, value));
+    }
+
+    private static void releaseTrack(AudioTrack track) {
+        if (track == null) return;
+        try { track.pause(); } catch (RuntimeException ignored) { }
+        try { track.release(); } catch (RuntimeException ignored) { }
     }
 
     private static void writeWave(File file, short[] pcm) throws IOException {
