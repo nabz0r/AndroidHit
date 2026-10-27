@@ -2,7 +2,7 @@
 
 ## Current 1.8 source and delivery boundary · 27 October 2026
 
-The website source now presents **Luma Drift 1.8.0-rc1 / code 9**, production package `com.androidhit.lumadrift`, on the existing Firebase site. Its [signed APK](../releases/luma-drift-1.8.0-rc1.apk) is **7,707,626 bytes / 7.71 MB decimal**, SHA-256 `aab583241c42179e5cffb80bdd32f9a502be124a3e8a75ccf94936e538db87d4`. The [exact release manifest](../releases/manifest-1.8.0-rc1.json) and [1.8 release notes](RELEASE_1_8.md) identify the candidate. This document does **not** announce completed 1.8 Hosting delivery; browser review, publication and any later observations are recorded separately in the [1.8 website qualification/delivery record](validation/site-v1.8/README.md).
+The website source now presents **Luma Drift 1.8.0-rc1 / code 9**, production package `com.androidhit.lumadrift`, on the existing Firebase site. Its [signed APK](../releases/luma-drift-1.8.0-rc1.apk) is **7,707,626 bytes / 7.71 MB decimal**, SHA-256 `aab583241c42179e5cffb80bdd32f9a502be124a3e8a75ccf94936e538db87d4`. The [exact release manifest](../releases/manifest-1.8.0-rc1.json) and [1.8 release notes](RELEASE_1_8.md) identify the candidate. Firebase Hosting delivery is confirmed at **27 October 2026, 14:59:00.486 UTC**, from exact main `5cab179b6eff488e641b75e5c6dfaa0e843d6553`, after 58 payloads matched on the clean deployment checkout. The live finalized version is `4324523b7540b1a1`. The [1.8 website qualification/delivery record](validation/site-v1.8/README.md) separates local browser review, CLI/management publication and the unperformed public-origin byte/render check.
 
 The 1.8 homepage explains these current rules:
 

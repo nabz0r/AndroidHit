@@ -1,6 +1,6 @@
 # Luma Drift 1.4 — production preparation
 
-**1.4 foundation, preserved scope.** Current game delivery is [1.5.0-rc1 / code 6](RELEASE.md), with 1,000 Journey boards, 240 Remix, six P prototypes and 18 local equipment items. The implementation/deployment follow-up below retains its dates and 1.4 artifact scope. The separate [1.5 website redesign](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) does not inherit these earlier served-byte checks.
+**1.4 foundation, preserved scope.** Current game delivery is [1.8.0-rc1 / code 9](RELEASE_1_8.md), with its own [executed qualification](validation/v1.8/README.md). The older 1.5 had 1,000 Journey boards, 240 Remix, six P prototypes and 18 local equipment items. The implementation/deployment follow-up below retains its dates and 1.4 artifact scope. The separate [1.5 website redesign](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) does not inherit these earlier served-byte checks.
 
 
 **1.4.0-rc1 · Android version code 5 · `com.androidhit.lumadrift` · 26 October 2026**

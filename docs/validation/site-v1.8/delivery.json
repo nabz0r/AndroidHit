@@ -1,0 +1,41 @@
+{
+  "status": "DEPLOYED",
+  "observed_at_utc": "2026-10-27T15:01:18.990146+00:00",
+  "site_id": "luma-drift-production",
+  "source_commit": "5cab179b6eff488e641b75e5c6dfaa0e843d6553",
+  "source_git_tree": "6b4e8a047295b7d6db565007998a295639f67520",
+  "public_git_tree": "c575a999c6411531d2382e707cbf69c1f7696a09",
+  "payload_files_verified_in_clean_cloudshell_checkout": 58,
+  "source_manifest_sha256": "bc0d96fd39cc38a01084e964a01d13a32b74f682c8209ac0c709ad925952774e",
+  "deployment_command": "firebase deploy --only hosting --project=luma-drift-production --non-interactive",
+  "deployment_complete": true,
+  "live": {
+    "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+    "url": "https://luma-drift-production.web.app",
+    "release": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793113140486000",
+    "version": "projects/luma-drift-production/sites/luma-drift-production/versions/4324523b7540b1a1",
+    "status": "FINALIZED",
+    "release_time": "2026-10-27T14:59:00.486Z"
+  },
+  "proof_files": {
+    "docs/validation/site-v1.8/cloudshell-deploy.txt": {
+      "bytes": 1211,
+      "sha256": "df792923da0dc2d7b2c069042d620b2aa1f400bf0be283e820b1d437dc1676b3"
+    },
+    "docs/validation/site-v1.8/firebase-live.json": {
+      "bytes": 429,
+      "sha256": "d05332566e3a08576033a8ea2e13dd725273773cc66170a4493b2948cb9af81a"
+    },
+    "docs/screenshots/site-v1.8/firebase-live-version.png": {
+      "bytes": 53476,
+      "sha256": "19b537c41a38b070950955590ea05d8c5d18f59523c8ce50c4fd1b61edc85679"
+    },
+    "docs/screenshots/site-v1.8/desktop-home-final-fr.png": {
+      "bytes": 114303,
+      "sha256": "8a7430b6416fd16602e78cb782d117475d2800ba511eb70f9db754a78d45c5bb"
+    }
+  },
+  "verification_scope": "Authenticated Cloud Shell CLI/management metadata and predeploy checkout SHA-256 comparison. Public Firebase-origin bytes/rendering were not independently requested. Local browser preview is separate.",
+  "cloud_run": "Unchanged; no server deployment in this gameplay release.",
+  "privacy_account_flow": "No real sign-in/deletion test executed; runtime configuration and deletion logic unchanged."
+}

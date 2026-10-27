@@ -1,5 +1,7 @@
 # Changelog
 
+1.8 delivery: signed code-9 artifacts and source published on main `5cab179b`; all four independent GitHub downloads match. Existing Firebase Hosting updated from that exact source at 2026-10-27 14:59 UTC, live version `4324523b7540b1a1`; 58 source payloads verified before deploy. [Package delivery](validation/v1.8/publication.json) · [Website delivery](validation/site-v1.8/README.md).
+
 ## 1.8.0-rc1 / code 9 — 2026-10-27
 
 Full default L/M strategy progression(1000+240), productive OPEN_GATE, exact minima, refunded free Undo and before/after previews; T events use an audited finite closure. Preserves old identities and current saved geometry/base. Seven interactive, skippable/replayable lessons with durable100 LumaCoins/+2 Sparks once-only reward. DreamGlade pastel art, plush pieces/tutor/fingertip/powers, light readable navigation and compact tutorial landscape. Directional drag and accessible tap are equivalent; guidance work is coalesced off the UI thread. Existing Google/social/commercial gates remain closed/pending. [Release and evidence](RELEASE_1_8.md).

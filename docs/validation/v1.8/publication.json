@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-27T14:56:52.465141+00:00",
+  "source_commit": "5cab179b6eff488e641b75e5c6dfaa0e843d6553",
+  "parent_commit": "a45c0a35398a632cb1376238a775e339343d179d",
+  "source_tree": "6b4e8a047295b7d6db565007998a295639f67520",
+  "reviewed_changed_files": 596,
+  "publication_method": "Native GitHub Git-data connector; exact local/API tree comparison; fast-forward compare-and-swap main. No CLI credential or forced update.",
+  "local_checkout": "Fetched published commit, compared all planned local SHA-256/Git blobs, then metadata-only mixed reset; clean.",
+  "artifacts": [
+    {
+      "path": "releases/luma-drift-1.8.0-rc1.aab",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/5cab179b6eff488e641b75e5c6dfaa0e843d6553/releases/luma-drift-1.8.0-rc1.aab",
+      "http_status": 200,
+      "bytes": 11074303,
+      "sha256": "2a5175c6278c9a6b5137450ab2742745222d2c4c26b1365d70f9a0e72753f840",
+      "matches_local": true
+    },
+    {
+      "path": "releases/luma-drift-1.8.0-rc1.apk",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/5cab179b6eff488e641b75e5c6dfaa0e843d6553/releases/luma-drift-1.8.0-rc1.apk",
+      "http_status": 200,
+      "bytes": 7707626,
+      "sha256": "aab583241c42179e5cffb80bdd32f9a502be124a3e8a75ccf94936e538db87d4",
+      "matches_local": true
+    },
+    {
+      "path": "releases/luma-drift-1.8.0-sandbox.aab",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/5cab179b6eff488e641b75e5c6dfaa0e843d6553/releases/luma-drift-1.8.0-sandbox.aab",
+      "http_status": 200,
+      "bytes": 11067308,
+      "sha256": "5429f0f86fc10d718d61b658e413d26b9b2be3ead7ca88eb24cd1bd3b9010899",
+      "matches_local": true
+    },
+    {
+      "path": "releases/luma-drift-1.8.0-sandbox.apk",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/5cab179b6eff488e641b75e5c6dfaa0e843d6553/releases/luma-drift-1.8.0-sandbox.apk",
+      "http_status": 200,
+      "bytes": 7707309,
+      "sha256": "f93467a11073a0f01c9b09ae6e73aebe211f700661a21c54097cebf1063a034d",
+      "matches_local": true
+    }
+  ],
+  "boundaries": "Independent public GitHub downloads verify package bytes only. Installed startup/signatures/native play are separately recorded. No Firebase public-origin probe."
+}

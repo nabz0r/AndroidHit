@@ -1,6 +1,8 @@
 # Can Luma Drift become a hit?
 
-> 1.5 follow-up: the current candidate addresses the old fixed-looking allowance, low planning pressure, missing music, ambiguous ownership and fragmented lobby. It adds a measured 1,000-board route, equipment and six sealed-passage prototypes. [Implemented scope and current evidence](RELEASE_1_5.md). These changes do not establish human comprehension, retention or revenue; the [roadmap study](ROADMAP.md) remains the next product gate.
+> **1.8 follow-up · 27 October 2026:** [reversible default levels, seven playable lessons and the soft visual refresh](RELEASE_1_8.md) address the observed rule/recovery/readability problems. [Actual progress and motivation](UX_1_8.md) use earned state and explicit prices. Source audits and native tests do not measure human enjoyment, D1/D7 retention, acquisition cost or revenue. The dated diagnosis below remains historical; these measurements are still required.
+
+> Preserved 1.5 follow-up: that candidate addresses the old fixed-looking allowance, low planning pressure, missing music, ambiguous ownership and fragmented lobby. It adds a measured 1,000-board route, equipment and six sealed-passage prototypes. [Implemented scope and current evidence](RELEASE_1_5.md). These changes do not establish human comprehension, retention or revenue; the [roadmap study](ROADMAP.md) remains the next product gate.
 
 
 **The game has a workable product premise. A hit is still unproven.** Version 1.0 shipped a playable puzzle, original art and audio, an earned-currency shop, and substantial offline content. Those are production capabilities. They do not establish that strangers understand the hook, return voluntarily, share it, or can be acquired profitably.
