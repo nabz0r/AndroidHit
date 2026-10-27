@@ -22,6 +22,7 @@ The following **final Lab 1.7** screenshots come from a passing 38-assertion nat
 | [1.7 UX](UX_1_7.md) | Dead-end recovery, safe hints, scrollable map, ownership, reward and currency presentation |
 | [1.7 economy](ECONOMY_1_7.md) | Daily/weekly claims, all 24 wardrobe sources, earned capsules, odds, duplicates and durable receipts |
 | [Reachability audit](validation/v1.7/board-audit.md) | Why all 1,240 boards are initially solvable and why a legal route can become doomed |
+| [Open level-management review](LEVEL_MANAGEMENT_REVIEW.md) | Reproducible J7/J8 legal traps, full J1–30 measurements and a proposed next-release redesign; current 1.7 rules are unchanged |
 | [Journey 13 diagnosis](validation/v1.7/board-audit-journey13.md) | The complete 13-action-budget solution, legal doomed prefix and exact Undo recovery |
 | [1.7 qualification](validation/v1.7/README.md) | Executed source checks, identified Android runs and remaining limits |
 | [Installation and signatures](RELEASE.md) | APK/AAB identities, channel separation, checksums and signing |
@@ -79,3 +80,7 @@ A configured service URL is not proof that new routes are deployed. The prepared
 | [Research archive](RESEARCH.md) | Dated market, initial concept and licensing work |
 
 Historical reports remain available: [1.6](RELEASE_1_6.md), [1.5](RELEASE_1_5.md), [1.4](RELEASE_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](RELEASE_1_2.md) and [1.1](RELEASE_1_1.md). Their packages, dates, synthetic profiles, screenshots and limits are not relabelled as 1.7 evidence. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; new runs belong under their own version.
+
+## Qualification sociale en cours
+
+[Parcours guidé sur deux Android virtuels](QUALIFICATION_SOCIALE.md) : appareils préparés, connexion Google et vrais échanges encore en attente. La base de test est la production1.7 ; le rework des niveaux est documenté séparément.

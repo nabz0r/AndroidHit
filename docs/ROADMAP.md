@@ -4,6 +4,8 @@
 
 Published signed production **1.7.0-rc1 / code 8**, with isolated **1.7.0-sandbox**; all four public downloads have [independent size/hash verification](validation/v1.7/publication.json). [Scope and qualification](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Economy](ECONOMY_1_7.md) · [Executed record](validation/v1.7/README.md). Final Lab/production native runs pass with restored preferences, and [Cloud Run deployment/basic probes](validation/v1.7/cloud-run.json) are recorded. [Website 1.7 publication](validation/site-v1.7/README.md) is confirmed from exact main `4c5f5ca8`, with all 47 source payloads hash-verified before Firebase completion. Real authenticated two-account and commercial qualification remain separate.
 
+**Open level-management issue:** the [J1–30 diagnosis and next-release proposal](LEVEL_MANAGEMENT_REVIEW.md) reproduces legal dead ends on J7/J8 and distinguishes initial solvability from fair exploration. The current N-plus-margin budget chiefly charges errors/Undo. A simulated manual-gate action and a versioned authored prototype are proposals only; no rule, board or budget change is applied to 1.7 during real-account qualification.
+
 Completed source contracts:
 
 - Exhaustive reachability of all 1,000 Journey and 240 Remix boards confirms initial completion inside the unchanged allowances. J13 demonstrates why a legal choice can close the eventual solution while another exit remains. Exact guidance distinguishes safe play, insufficient actions and a dead route, with Undo/free restart and safe current-state hints. [Independent audit and reproduction](validation/v1.7/board-audit.md).
