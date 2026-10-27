@@ -6,6 +6,10 @@ The **1.5 candidate** presents three collection tabs: Companions, Themes and Equ
 
 Daily and weekly tabs retain visible goals, stages, reset times and one-time completion rewards. Their lifetime victories/stars can unlock permanent equipment. A third tab offers six separate key/wall practice puzzles with unlimited actions and no economic reward; it is a prototype pack, not a timed online event.
 
+Equipment has **Head, Aura and Charm** slots, with six items per slot. Visible benefits are bounded at +3 local coins on an eligible first victory, −5 coins per power pack, and one protected blocked attempt per run; one equipped item per slot prevents stacking within it. Starter/milestone claims do not spend money, and the four coin-priced items use only earned local coins. Ownership/loadout are device-local, with no Google gameplay/equipment cloud save or paid-gold import. The Sealed pack also awards no XP, missions or progression. [Exact acquisition and receipt rules](AVATAR_EQUIPMENT.md).
+
+Current [installed 1.5 acceptance](VALIDATION.md#installed-android-acceptance) covers equipment, P challenges and the revised UI; the final [EN/FR capture repeat](validation/v1.5/ui-smoke.txt) explicitly preserves balances/inventory. The 1.2 screenshots and dated results below remain historical evidence rather than screenshots of this candidate.
+
 ## Historical Lab 1.2 collection and event guide
 
 The following screenshots and eight-card pagination describe **Lab1.2**, not the current four-card/three-tab layout. The catalog IDs, silhouettes and fixed companion prices remain applicable.

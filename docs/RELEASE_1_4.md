@@ -1,8 +1,11 @@
 # Luma Drift 1.4 — signed production candidate
 
+> Preserved 1.4 delivery. Its artifact sizes, hashes and runtime claims remain historical. Use [the current release](RELEASE.md) and [current validation](VALIDATION.md) for 1.5.
+
+
 **26 October 2026 · 1.4.0-rc1 · version code 5 · `com.androidhit.lumadrift`**
 
-**[Download production APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.4.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.4.0-rc1.aab) · [Validation](VALIDATION.md) · [Production scope](PRODUCTION_RELEASE.md).
+**[Download production APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.4.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.4.0-rc1.aab) · [Validation](VALIDATION_1_4.md) · [Production scope](PRODUCTION_RELEASE.md).
 
 This is a preparation candidate with the full puzzle, configured Google identity/AdMob IDs and an implemented real purchase adapter. It forces Google sample creatives and blocks checkout while the deployed wallet origin is absent. It does not claim a completed Google login, owner Play payment, hosted policy or live advertising.
 

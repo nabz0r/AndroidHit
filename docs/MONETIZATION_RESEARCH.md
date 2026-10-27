@@ -1,5 +1,8 @@
 # Monetization: evidence and design decisions
 
+> Historical research before Lab 1.2, dated 26 October 2026. Future-work/configuration statements below describe that decision point; owner IDs, deployed services and implemented 1.5 adapters are documented in [current setup](MONETIZATION_SETUP.md). Research is not provider or revenue qualification.
+
+
 **Research date: 26 October 2026 · Primary sources only · Luma Drift Lab 1.2.0-sandbox · No real payments**
 
 This note records the research completed before changing monetization behavior. No production AdMob or Google Play configuration has been supplied and requested test mode. The resulting architecture preserves the signed **1.1.0 offline game** and prepares a separate **Luma Drift Lab 1.2.0-sandbox**, version code 3, application ID `com.androidhit.lumadrift.sandbox`. Its private save and wallet are isolated by Android from the stable `com.androidhit.lumadrift` application. Simulated gold cannot become a paid entitlement in the stable game. See the [test and activation guide](MONETIZATION_SETUP.md).

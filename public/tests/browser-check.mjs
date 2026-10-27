@@ -41,7 +41,7 @@ const syntheticAuthModule = `https://www.gstatic.com/firebasejs/${FIREBASE_SDK_V
 let browser;
 let calls = 0;
 let response = { status: 200, json: { deleted: true } };
-const findings = [], blockedExternal = [], errors = [];
+const findings = [], blockedExternal = [], errors = [], failedLocalResources = [];
 
 // A single deny-by-default handler owns every request in every test context.
 // External URLs are either fulfilled entirely by explicit synthetic handlers or
@@ -84,6 +84,9 @@ async function assertPublishedContact(page) {
 try {
   browser = await chromium.launch({ headless: true, ...(process.env.LUMA_CHROMIUM_EXECUTABLE ? { executablePath: process.env.LUMA_CHROMIUM_EXECUTABLE } : {}) });
   const context = await isolatedContext();
+  context.on("response", response => {
+    if (new URL(response.url()).origin === origin && response.status() >= 400) failedLocalResources.push({ url: response.url(), status: response.status() });
+  });
   const page = await context.newPage();
   const defaultExternal = [];
   page.on("request", request => { if (new URL(request.url()).origin !== origin) defaultExternal.push(request.url()); });
@@ -105,6 +108,22 @@ try {
         assert.match(await page.locator("[data-publisher]:visible").textContent(), /nabilux/);
         assert.equal(await page.locator("[data-preparation-notice]:visible").count(), 1, "Preparation notice stays visible");
         assert.match(await page.locator("[data-preparation-notice]").textContent(), lang === "fr" ? /Services en qualification/ : /Services under qualification/);
+        if (route === "/index.html") {
+          const apkLinks = page.locator('a[href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.5.0-rc1.apk"]:visible');
+          assert.equal(await apkLinks.count(), 2, "Both direct download actions target the shipped signed APK");
+          assert.match(await page.locator(".stat-strip").innerText(), /1 000/);
+          assert.match(await page.locator(".sealed-copy").innerText(), lang === "fr" ? /coups illimités/ : /unlimited moves/);
+          assert.equal(await page.locator("[data-screenshot-fr]").count(), 3);
+          for (const image of await page.locator("[data-screenshot-fr]").all()) {
+            const src = await image.getAttribute("src");
+            assert.ok(src.endsWith(`-${lang}.png`), "Screenshots follow the selected language");
+            await image.scrollIntoViewIfNeeded();
+            await page.waitForFunction(img => img.complete && img.naturalWidth > 0, await image.elementHandle());
+            await image.evaluate(img => img.decode());
+            assert.equal(await image.evaluate(img => img.naturalWidth > 0 && img.naturalHeight > 0), true);
+          }
+          await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
+        }
         if (route.includes("delete-account")) {
           await page.waitForFunction(() => document.querySelector("#deletion-status").textContent.includes(document.documentElement.lang === "fr" ? "Connecte-toi avec Google" : "Sign in with Google"));
           assert.equal(await page.locator("#google-sign-in").isDisabled(), !publishedReady);
@@ -113,15 +132,33 @@ try {
           assert.match(await page.locator("#deletion-status").textContent(), lang === "fr" ? /Connecte-toi avec Google/ : /Sign in with Google/);
           // Never click this enabled button with the real published configuration.
         }
-        if (viewport.width !== 320 && lang === "fr") {
+        if (viewport.width !== 320) {
           const name = route.includes("privacy") ? "privacy" : route.includes("delete") ? "delete-account" : "home";
-          await page.screenshot({ path: path.join(output, `${name}-${viewport.width}.png`), fullPage: true });
+          await page.screenshot({ path: path.join(output, `${name}-${lang}-${viewport.width}.png`), fullPage: true });
+          if (name === "home") await page.screenshot({ path: path.join(output, `${name}-${lang}-${viewport.width}-hero.png`) });
         }
       }
     }
   }
   assert.deepEqual(defaultExternal, [], "Configured default pages must make no external network request");
-  findings.push("18 published FR/EN responsive states (320/390/1366px), exact nabilux contact, visible preparation notice, configured sign-in ready without being clicked, zero horizontal overflow and zero default external requests");
+  assert.deepEqual(failedLocalResources, [], "Every referenced local image/script/style must load without HTTP errors");
+  await page.goto(`${origin}/index.html?lang=en`);
+  await page.getByRole("button", { name: "FR", exact: true }).click();
+  await page.getByRole("navigation").getByRole("link", { name: "Confidentialité", exact: true }).click();
+  await page.waitForFunction(() => document.documentElement.lang === "fr");
+  await page.getByRole("button", { name: "EN", exact: true }).click();
+  await page.getByRole("navigation").getByRole("link", { name: "My account", exact: true }).click();
+  await page.waitForFunction(() => document.documentElement.lang === "en");
+  assert.equal(new URL(page.url()).searchParams.get("lang"), "en", "Selected language survives real navigation");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto(`${origin}/index.html?lang=en`);
+  assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), "auto");
+  await page.keyboard.press("Tab");
+  assert.equal(new URL(await page.locator(":focus").getAttribute("href"), origin).hash, "#main", "Keyboard entry exposes the skip link first");
+  await page.keyboard.press("Enter");
+  assert.equal(new URL(page.url()).hash, "#main");
+  findings.push("Homepage direct signed-APK actions, localized actual screenshots, key-challenge scope, loaded resources, cross-page language selection, keyboard skip link and reduced-motion behavior passed");
+  findings.push("18 local FR/EN responsive states (320/390/1366px), exact nabilux contact, visible preparation notice, configured sign-in ready without being clicked, zero horizontal overflow and zero default external requests");
   findings.push("Every visible published mailto decodes exactly to nabz0r+gaming@gmail.com, with the literal plus percent-encoded");
   await context.close();
 

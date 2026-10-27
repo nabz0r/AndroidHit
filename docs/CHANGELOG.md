@@ -14,6 +14,10 @@
 - Sample ad units and the empty wallet-origin checkout gate remain. Real purchase, Android Google provider success and consent/ad readiness require separate qualification.
 
 
+### Presentation follow-up — site and documentation
+
+The 1.5 public homepage, legal-page presentation and GitHub materials use a shared night/pastel identity, original companion vectors and sourced game captures. Current guides describe the actual 1.5 downloads, local equipment and commercial gates; older release/validation evidence retains its original scope. This changes no Android artifact. [Design system](DESIGN_SYSTEM.md) · [Web revision checks and deployment boundary](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence).
+
 ## 1.4.0-rc1 — Production preparation
 
 26 October 2026. Production package `com.androidhit.lumadrift`, code 5; full puzzle content retained. Separate production/Lab Gradle flavors, supplied Firebase public configuration and three owner rewarded-unit IDs. Preparation defaults force sample creatives and leave the deployed wallet origin empty.

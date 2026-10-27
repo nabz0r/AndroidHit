@@ -1,8 +1,11 @@
 # Luma Drift Lab 1.3 — signed Android delivery
 
+> Preserved 1.3 delivery. Its artifact sizes, hashes and runtime claims remain historical. Use [the current release](RELEASE.md) and [current validation](VALIDATION.md) for 1.5.
+
+
 **26 October 2026 · 1.3.0-sandbox · code 4 · test configuration**
 
-**[Download the signed 1.3 APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.3.0-sandbox.apk)** · [Validation](VALIDATION.md) · [Rules and six powers](MOVE_BUDGET_POWERUPS.md).
+**[Download the signed 1.3 APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.3.0-sandbox.apk)** · [Validation](VALIDATION_1_3.md) · [Rules and six powers](MOVE_BUDGET_POWERUPS.md).
 
 ## Choose the app
 
@@ -53,6 +56,6 @@ dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287
 
 ## Validation and history
 
-The [current validation report](VALIDATION.md) separates deterministic simulations, installed Android interaction, actual SDK callbacks and remaining account/device limits. Synthetic milestone/inventory fixtures are explicitly marked and restored after their tests; they do not demonstrate that 75 levels were played. No physical-phone acceptance, live Google account, Play license-test purchase, production income or market-retention result is claimed.
+The [current validation report](VALIDATION_1_3.md) separates deterministic simulations, installed Android interaction, actual SDK callbacks and remaining account/device limits. Synthetic milestone/inventory fixtures are explicitly marked and restored after their tests; they do not demonstrate that 75 levels were played. No physical-phone acceptance, live Google account, Play license-test purchase, production income or market-retention result is claimed.
 
 Earlier deliveries remain downloadable: [Lab 1.2 record](RELEASE_1_2.md) / [validation](VALIDATION_1_2.md), [stable 1.1 record](RELEASE_1_1.md) / [validation](VALIDATION_1_1.md), and the original 1.0 packages in [releases](../releases/). [Privacy](PRIVACY.md) · [Third-party notices](THIRD_PARTY_NOTICES.md).

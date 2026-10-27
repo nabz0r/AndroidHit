@@ -1,13 +1,13 @@
 # Development and architecture
 
-Current source builds **production 1.4.0-rc1** and **Lab 1.4.0-sandbox**, both Android version code 5. The signed historical 1.1/1.2/1.3 packages and their reports are preserved. [Current release](RELEASE.md) · [Scope and architecture diagram](PRODUCTION_RELEASE.md) · [Executed checks](VALIDATION.md).
+Current source builds **production 1.5.0-rc1** and **Lab 1.5.0-sandbox**, both Android version code 6. The signed historical 1.1–1.4 packages and their dated reports are preserved. [Current release](RELEASE.md) · [1.5 contract](RELEASE_1_5.md) · [Executed checks](VALIDATION.md).
 
 ## Components
 
 | Area | Responsibility |
 |---|---|
-| `engine/` | Pure Java boards, gates, solver, frozen original and measured 480-board order, bounded action ledger, friend codes |
-| `data/` | Local coins/inventory/progress/events/settings, six-language copy, XP/missions and optional local play journal |
+| `engine/` | Pure Java boards/gates/key walls and exact solver; frozen 1,000 G Journey + 240 H Remix layouts, six P prototypes, preserved C/R/B/Q identities and versioned action ledger |
+| `data/` | Local coins/inventory/progress/events/settings, six-language copy, XP/missions, 18 items across three equipment slots, durable power-use receipts and optional local play journal |
 | `LumaView` / `MainActivity` | Canvas game, lifecycle, accessible virtual controls, effects, local session persistence and signed-in wallet recovery |
 | `commerce/` | Three guarded rewarded placements, UMP, real Billing offer/owned-purchase adapter, isolated Lab simulator and production wallet UI |
 | `wallet/` | HTTPS authenticated client, account-scoped permanent cosmetic cache, foreground owned-purchase recovery |
@@ -21,7 +21,7 @@ The Android app includes no Firebase Analytics, Firestore client or gameplay clo
 
 ## Build environment and channels
 
-JDK 17, Gradle wrapper 8.14.3, AGP 8.11.0, compile/target SDK 36 and minimum Android API 26. Set `JAVA_HOME` and `ANDROID_HOME`, or add untracked `local.properties` containing the local `sdk.dir`. No credentials belong in these public instructions.
+Java 17 source compatibility, Gradle wrapper 8.14.3, AGP 8.11.0, compile/target SDK 36 and minimum Android API 26. The final 1.5 release/lint run used **JDK 21.0.13**; pure engine/data suites also run on JDK 17. Set `JAVA_HOME` and `ANDROID_HOME`, or add untracked `local.properties` containing the local `sdk.dir`. No credentials belong in these public instructions.
 
 ```sh
 ./gradlew assembleProductionDebug
@@ -33,7 +33,7 @@ The `channel` dimension selects `production` (`com.androidhit.lumadrift`, label 
 
 After deployment/qualification, `-PlumaWalletUrl=https://REVIEWED_ORIGIN` supplies the wallet origin and `-PlumaLiveAds=true` disables test-unit forcing for production. The normal candidate has an empty origin; its real purchase launch remains blocked. Build settings alone do not prove Play/AdMob approval or actual fulfillment. [Activation report](validation/v1.4/production-readiness.json).
 
-Lint uses standalone 9.4.0 through `android.experimental.lint.version`, an experimental tooling override required by the SDK metadata. The current production and Lab lint runs have **0 errors and 5 warnings each**: three intentional small synchronous preference commits and two update advisories. The release does not claim zero warnings or a tooling upgrade.
+Lint uses standalone 9.4.0 through `android.experimental.lint.version`, an experimental tooling override required by the SDK metadata. The final production and Lab reports have **0 errors and 6 warnings each**: three intentional small synchronous preference commits, two update advisories and one `SetTextI18n` notice. These are separate from Gradle's recorded deprecation/SDK warnings. [Executed build](validation/v1.5/android-build.txt).
 
 ## Signing and collecting artifacts
 
@@ -68,6 +68,8 @@ scripts/test-economy.sh
 scripts/test-collection-events.sh
 scripts/test-difficulty.sh
 scripts/test-move-budget.sh
+scripts/test-sealed.sh
+scripts/test-audio.sh
 scripts/test-billing-policy.sh
 scripts/test-wallet-recovery.sh
 ./gradlew compileLabReleaseJavaWithJavac
@@ -79,11 +81,15 @@ The UI script refuses phone serials and does not reset application data or selec
 
 The JVM Android/storage/provider adapters are explicit test doubles and are not packaged. They model disk failure, callbacks and accounts, not actual Android flash faults or Google receipts. The server's independent **real Firestore emulator** test exercises its production database transaction adapter/rules; Firebase identity and Play payments still need owner-account qualification. [Server tests](../server/TESTING.md), [web tests](PUBLIC_PAGES.md#executed-validation).
 
+`test-economy.sh` includes the power input/reservation model and avatar equipment/first-victory receipts. Installed Flow interruptions and equipment controls have separate [1.5 runtime evidence](VALIDATION.md#installed-android-acceptance); a JVM pass alone does not establish those UI behaviors.
+
 ## Persistence and value boundaries
 
-Local SharedPreferences retain earned coins, stars/unlocks, settings, inventory, XP and local calendar/event claims. A session snapshot stores board identity/history, the action allowance, run/request IDs, Shield charges and applied continuation state. Content version 2 resets an older interrupted board with a notice while retaining earned progress/economy at numbered slots. The old original layout identities remain in C/R/E friend codes; B/Q codes identify balanced layouts. Date/clock/save data are device-controlled and never authorize paid gold.
+Local SharedPreferences retain earned coins, stars/unlocks, settings, inventory, XP, equipment ownership/loadout and local calendar/event claims. A session snapshot stores board identity/history, content/budget versions, action allowance, run/request IDs, Shield/Charm protection, timed-preview remainder, Flow steps and applied continuation state. Valid older content-2/policy-1 runs retain their old B/Q board and allowance; new runs use content 3/policy 2 and G/H. Unsupported older session formats reset with a notice while earned progress/economy remain at numbered slots. C/R/B/Q/E friend identities are preserved, and P identifies the six sealed prototypes. Date/clock/save data are device-controlled and never authorize paid gold.
 
-Present-piece taps, including blocked attempts, and successful Undo consume actions; every board has a certified solution within its initial budget. Local gold/ad continuations share a maximum of two, cost 100 earned coins or the announced rewarded offer and add `max(5, remaining pieces+3)`. Free restart remains. Six local powers unlock at Journey 1/5/12/25/45/75; every five distinct Journey clears can claim one deterministic eligible power. Local power prices use the bounded progression curve; paid cosmetics use fixed server catalog prices.
+Present-piece taps, including unprotected blocked attempts, and successful Undo consume actions; every progression board has a certified solution within its fixed N+2…4 budget. Earned-coin/ad continuations share a maximum of two, cost 100 local earned coins or the announced rewarded offer and add `max(5, remaining pieces+3)`. Free restart remains. Six local powers unlock at Journey 1/5/12/25/45/75; every five distinct Journey clears can claim one deterministic eligible power. Activation requires confirmation, rejects active/overlapping use, reserves stock and durably saves the effect before committing the one-unit receipt. Interrupted Flow resumes its saved remaining exits. Local power prices use the bounded progression curve and equipped Aura discount; paid cosmetics use fixed server catalog prices.
+
+Equipment has one Head, Aura and Charm slot. Caps are +3 first-victory coins, −5 coins per power pack and one protected blocked attempt per run. Acquisitions, valid loadout and first-victory bonus receipts are local; P/friend practice grants no economic, XP or mission reward and has no consumable powers. Companion/theme identity itself remains cosmetic. [Exact table and persistence](AVATAR_EQUIPMENT.md).
 
 Purchased gold never enters `GameStore.coins`. `GameStore.ExternalOwnership` supplies account-only permanent cosmetics without persisting them as local ownership flags. Sign-out removes that source; already locally earned cosmetics remain. The UID-bound cache is not trusted by the server. The server independently verifies tokens, prices, balance and uniqueness, including concurrent requests/refunds. [Android wallet contract](WALLET_ANDROID.md), [server ledger](../server/README.md).
 
@@ -93,8 +99,8 @@ Foreground recovery contacts Billing/wallet only for an existing Google session 
 
 The owner public configuration in `app/src/production/assets/identity-config.json` is a client identifier set, not a private key. The ignored main-source identity file remains available for local development; keep Lab/test identity in a separate Firebase project. Register the actual Play app-signing fingerprints in addition to the direct-release fingerprints. [Google setup](GOOGLE_SIGN_IN.md).
 
-The account screen deletes via the wallet API when its origin is configured, requiring recent authentication; it does not fall back to Firebase-only deletion on backend failure. The prepared server handles durable deletion/retry and limited audit retention. The external deletion site needs a Firebase Web app, authorized domain, public contact and the deployed API; it is currently disabled. [Pages](PUBLIC_PAGES.md).
+The account screen deletes via the wallet API when its origin is configured, requiring recent authentication; it does not fall back to Firebase-only deletion on backend failure. The server handles durable deletion/retry and limited audit retention. The external deletion pages are configured and published on the existing Firebase Hosting site; successful Web sign-in/deletion is owner-reported, while Android identity and the remaining provider/commercial cases retain their separate qualification limits. This account flow does not synchronize gameplay or equipment. [Pages and observed deployment scope](PUBLIC_PAGES.md).
 
-Use managed Cloud Run credentials, deny direct client Firestore access and qualify RTDN/maintenance/IAM before enabling checkout. No Docker build, billable deployment, owner Google account operation or live payment was performed here. [Deployment runbook](../server/DEPLOYMENT.md).
+Use managed Cloud Run credentials, deny direct client Firestore access and qualify RTDN/maintenance/IAM before enabling checkout. Existing Hosting/Cloud Run deployment observations are recorded separately; compiling the app does not establish authenticated wallet behavior, real purchases or service approval. [Deployment runbook](../server/DEPLOYMENT.md) · [Observed Hosting scope](validation/hosting-preview.md).
 
 The AGPL-3.0 project license is preserved for original code/art/audio. Google SDKs, branding and other dependencies retain their own terms. [Third-party notices](THIRD_PARTY_NOTICES.md). Publication/SDK approval and a commercial hit are not established by a build or simulation.

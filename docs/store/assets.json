@@ -1,39 +1,180 @@
 {
-  "schema": "androidhit-brand-kit-v1",
-  "created": "2026-10-26",
-  "provenance": "Original code-native art derived from Luma Drift companion geometry and palette; no claim of store approval.",
+  "schema": "androidhit-brand-kit-v2",
+  "created": "2026-10-27",
+  "release": "1.5.0-rc1",
+  "palette": {
+    "night": "#12142E",
+    "card": "#252944",
+    "mint": "#99ECDA",
+    "peach": "#FFB194",
+    "lilac": "#BAA5FF",
+    "ivory": "#F7F5FF",
+    "gold": "#FFE29A"
+  },
+  "provenance": "Original code-native geometry derived from the Luma Drift Nova, starter equipment, arrows and sealed-wall motifs. Promotional illustration, not an installed-app screenshot or store approval.",
+  "source_references": [
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+    "app/src/main/java/com/androidhit/lumadrift/data/Catalog.java",
+    "docs/screenshots/v1.5/home-en.png",
+    "docs/screenshots/v1.5/sharing/sealed-p6-card.png"
+  ],
+  "generator_inputs_sha256": {
+    "generate_assets.py": "4310fabd833ebe7fad3cda16cfd6c9c9b14b93f251cf875c54b0fdd1f80e20f0",
+    "render_assets.swift": "151baca0e13c22e363033afc22ea524c82a42d5649ff908f81175a85d0b957b9",
+    "verify_assets.py": "dc141f0aed3b2803ab3c4fe7101d4786a20b50d26008649d579eba9cb692557e",
+    "asset-specs.json": "48c0cd71649d66a3b8d0c296dd525110d6c884661c49af738656effa0e8d12b6"
+  },
   "assets": [
     {
-      "file": "luma-drift-feature.png",
-      "bytes": 577382,
-      "sha256": "43d4ca89460f51412f991c27f58545c480734376acf7da560d35305f5e133c6d",
+      "file": "luma-drift-repo-banner.svg",
+      "bytes": 9640,
+      "sha256": "b1ec3fbb61e02d0ec8d8b0215f2669bade8f9a8de8b37326249e718d7203a708",
+      "format": "SVG",
+      "role": "Repository hero",
+      "width": 1600,
+      "height": 640
+    },
+    {
+      "file": "luma-drift-repo-banner.png",
+      "bytes": 930394,
+      "sha256": "34a2d368aef6c3c0c26fb6ec7cf85e47bc8aa7b3dfbd343fa76cc33eeb5c3f20",
       "format": "PNG",
-      "width": 1024,
-      "height": 500
+      "role": "Repository hero",
+      "width": 1600,
+      "height": 640,
+      "color_type": 2,
+      "bit_depth": 8,
+      "alpha_min": null,
+      "alpha_max": null,
+      "nova_sample_pixel": [
+        255,
+        226,
+        154
+      ]
     },
     {
       "file": "luma-drift-feature.svg",
-      "bytes": 9086,
-      "sha256": "65843524f54ac9e3b97c0a104e2a67b100e445d762e572c89562f6e2f414dd23",
+      "bytes": 8465,
+      "sha256": "9139da8d7cdf5dfcf93b4d933715b984252233fae152f52cb093d538bf512ec2",
       "format": "SVG",
+      "role": "Proposed store feature graphic",
       "width": 1024,
       "height": 500
     },
     {
-      "file": "luma-drift-icon.png",
-      "bytes": 325667,
-      "sha256": "c467c0b28c0bc294c9b11a862be3d4a55cf1cd6a6e2cc4a3f747bb07f6e44fae",
+      "file": "luma-drift-feature.png",
+      "bytes": 478691,
+      "sha256": "ea78c6b1bcc11a6050950d0fa2e6c0923e47753bb77bf6dd3d2e2fb564126170",
       "format": "PNG",
+      "role": "Proposed store feature graphic",
+      "width": 1024,
+      "height": 500,
+      "color_type": 2,
+      "bit_depth": 8,
+      "alpha_min": null,
+      "alpha_max": null,
+      "nova_sample_pixel": [
+        254,
+        225,
+        153
+      ]
+    },
+    {
+      "file": "luma-drift-icon.svg",
+      "bytes": 6258,
+      "sha256": "d168aab7fb3730f4ab969e4c8a8d2ffa9db8c3eb8a9cb5370e1b0fa75481d8e4",
+      "format": "SVG",
+      "role": "Proposed store icon",
       "width": 512,
       "height": 512
     },
     {
-      "file": "luma-drift-icon.svg",
-      "bytes": 5355,
-      "sha256": "819a8e2f076146863691afb4ededc25b0681ec492f3661bb2759389499709e1c",
-      "format": "SVG",
+      "file": "luma-drift-icon.png",
+      "bytes": 289903,
+      "sha256": "41ea66dd28078b4dc91992fa549e00f8c10e9ef3f5228dfd66d4570bdc0e98f4",
+      "format": "PNG",
+      "role": "Proposed store icon",
       "width": 512,
-      "height": 512
+      "height": 512,
+      "color_type": 6,
+      "bit_depth": 8,
+      "alpha_min": 255,
+      "alpha_max": 255,
+      "nova_sample_pixel": [
+        255,
+        226,
+        154,
+        255
+      ]
+    },
+    {
+      "file": "nova-companion.svg",
+      "bytes": 3246,
+      "sha256": "71b04d36956705d7a54b9ebe228f33aa740c1a32e41c15e1c0d5f64878de9206",
+      "format": "SVG",
+      "role": "Transparent site companion",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "file": "nova-companion.png",
+      "bytes": 152876,
+      "sha256": "9fa882ad83d55611b58045372fff8ec9ee48277a49441e5da4f810c2c62c8867",
+      "format": "PNG",
+      "role": "Transparent site companion",
+      "width": 640,
+      "height": 640,
+      "color_type": 6,
+      "bit_depth": 8,
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "nova_sample_pixel": [
+        255,
+        226,
+        154,
+        255
+      ]
+    },
+    {
+      "file": "brand-scene.svg",
+      "bytes": 8164,
+      "sha256": "06584a87464a3b9899a16ef4a42961ae1dc4114320559b93d695ecd9de8b41c8",
+      "format": "SVG",
+      "role": "Text-free site illustration",
+      "width": 1440,
+      "height": 720
+    },
+    {
+      "file": "brand-scene.png",
+      "bytes": 895149,
+      "sha256": "5b77f87d63b86cf79d59f3d1641607b289539e6d7c6ab5b43c7a47fda0334baa",
+      "format": "PNG",
+      "role": "Text-free site illustration",
+      "width": 1440,
+      "height": 720,
+      "color_type": 2,
+      "bit_depth": 8,
+      "alpha_min": null,
+      "alpha_max": null,
+      "nova_sample_pixel": [
+        255,
+        226,
+        154
+      ]
+    },
+    {
+      "file": "luma-drift-icon-64-preview.png",
+      "bytes": 7570,
+      "sha256": "f1a084e9f1d18a63b0af334b78a86b4cd11a7fd4b6595552f04162aa065a3e39",
+      "format": "PNG",
+      "role": "Visual review only; not a store upload",
+      "width": 64,
+      "height": 64,
+      "color_type": 6,
+      "bit_depth": 8,
+      "alpha_min": 255,
+      "alpha_max": 255,
+      "nova_sample_pixel": null
     }
   ]
 }

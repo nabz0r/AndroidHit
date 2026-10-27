@@ -49,6 +49,16 @@
       else destination.searchParams.delete("lang");
       link.href = destination.pathname + destination.search + destination.hash;
     });
+    document.querySelectorAll("[data-screenshot-fr]").forEach(image => {
+      image.src = language === "en" ? image.dataset.screenshotEn : image.dataset.screenshotFr;
+      image.alt = language === "en" ? image.dataset.altEn : image.dataset.altFr;
+    });
+    document.querySelectorAll("[data-alt-fr]").forEach(image => {
+      image.alt = language === "en" ? image.dataset.altEn : image.dataset.altFr;
+    });
+    if (document.querySelector("#hero-title")) {
+      document.title = language === "en" ? "Luma Drift — A little spark. A great escape." : "Luma Drift — Un petit déclic. Une grande évasion.";
+    }
     syncConfiguration();
     window.dispatchEvent(new CustomEvent("luma-language", { detail: language }));
   };

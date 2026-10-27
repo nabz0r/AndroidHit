@@ -62,3 +62,9 @@ Physical speakers/headphones, modest/modern phones, native-speaker review, first
 Commercial/provider qualification remains separate: Android Google login success, actual installed UMP acceptance/refusal, live ad readiness, Play product/license-test purchases and full pending/refund/RTDN/scheduled reconciliation remain open. The shipped quality candidate uses sample ads and blocks checkout; no simulation establishes revenue or production approval. [Owner activation](PRODUCTION_ONBOARDING.md).
 
 Historical results retain their original scope: [1.4](VALIDATION_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](VALIDATION_1_2.md), [1.1](VALIDATION_1_1.md).
+
+## Website presentation evidence
+
+The 1.5 public-site/GitHub refresh is separate from Android runtime acceptance. Its proof set is [`validation/site-v1.5/`](validation/site-v1.5/) with local website captures under [`screenshots/site-v1.5/`](screenshots/site-v1.5/). [Static checks](validation/site-v1.5/static-check.txt), [18 FR/EN responsive states and synthetic-only deletion cases](validation/site-v1.5/browser-check.txt), and [24 deletion-core tests](validation/site-v1.5/deletion-core.txt) passed locally. No real identity/deletion is inferred, and Hosting deployment still requires its actual result/served-resource record. The earlier public-page/contact browser run and Hosting observations retain their recorded dates/revisions. [Web acceptance boundary](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) · [Shared design system](DESIGN_SYSTEM.md).
+
+The [website asset provenance](validation/site-v1.5/source-assets.json) preserves 12 exact copied images/vectors and their actual source scopes; [the 23-file public manifest](validation/site-v1.5/source-manifest.json) binds local checks to source bytes. Neither manifest is a Hosting publication result.

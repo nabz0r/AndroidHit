@@ -1,5 +1,8 @@
 # Luma Drift 1.4 — production preparation
 
+**1.4 foundation, preserved scope.** Current game delivery is [1.5.0-rc1 / code 6](RELEASE.md), with 1,000 Journey boards, 240 Remix, six P prototypes and 18 local equipment items. The implementation/deployment follow-up below retains its dates and 1.4 artifact scope. The separate [1.5 website redesign](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) does not inherit these earlier served-byte checks.
+
+
 **1.4.0-rc1 · Android version code 5 · `com.androidhit.lumadrift` · 26 October 2026**
 
 This release candidate introduces the owner's Google configuration, three AdMob placement IDs, a real Play Billing client and a server-authoritative purchased-gold service. It remains a preparation release: sample ad creatives are forced and checkout is blocked without an explicitly configured deployed wallet origin. The signed candidate alone establishes no completed Google login, Play payment or commercial result. Later deployment observations are recorded separately below.

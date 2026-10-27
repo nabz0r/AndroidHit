@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "findings": [
+    "Homepage direct signed-APK actions, localized actual screenshots, key-challenge scope, loaded resources, cross-page language selection, keyboard skip link and reduced-motion behavior passed",
+    "18 local FR/EN responsive states (320/390/1366px), exact nabilux contact, visible preparation notice, configured sign-in ready without being clicked, zero horizontal overflow and zero default external requests",
+    "Every visible published mailto decodes exactly to nabz0r+gaming@gmail.com, with the literal plus percent-encoded",
+    "Isolated missing-wallet configuration keeps sign-in disabled in FR/EN and sends no deletion request",
+    "Synthetic web sign-in + explicit checkbox + authenticated DELETE + server-confirmed success",
+    "Synthetic expired-session rejection clears confirmation and requires reauthentication; no success claim",
+    "Synthetic invalid-success response does not announce deletion",
+    "Cancel signs out without sending a deletion request",
+    "All external requests are denied by default; only in-memory synthetic Firebase modules and synthetic-token DELETE requests are fulfilled",
+    "Configured private email and FR/EN switching work without a public issue request route"
+  ],
+  "screenshots": "/Users/n/androidhit/docs/screenshots/site-v1.5",
+  "realGoogleAuthenticationTested": false,
+  "liveServerDeletionTested": false
+}

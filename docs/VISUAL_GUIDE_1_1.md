@@ -1,5 +1,8 @@
 # Luma Drift — an illustrated tour
 
+> Preserved 1.1 images and explanations. They are not relabelled as 1.5 captures. [Current illustrated tour](VISUAL_GUIDE.md) · [Shared visual direction](DESIGN_SYSTEM.md).
+
+
 Version 1.1.0. Every phone image below is a **real 1080×1920 capture of the signed Android app**. The artwork in the brand kit is separate promotional art. These images explain the shipped behavior; they are not evidence of player retention.
 
 ## Start with one light

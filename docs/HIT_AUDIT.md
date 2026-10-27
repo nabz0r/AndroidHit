@@ -7,7 +7,7 @@
 
 Assessment date: **26 October 2026**. This is a product diagnosis, not a revenue forecast. Actual release checks are recorded separately in [VALIDATION.md](VALIDATION.md).
 
-The **1.4 production candidate** now contains the full expanded puzzle, owner Google configuration, three ad placements, real Billing code and an implemented wallet server. Sample creatives remain forced, the server origin is empty and no production deployment/payment is claimed. The earlier Lab/store observations below remain historical. Technical readiness has improved; no new real-player retention, acquisition or revenue evidence has been collected. [Current scope](PRODUCTION_RELEASE.md) · [Validation](VALIDATION.md).
+The **1.5 production candidate** adds the current lobby, equipment and fixed progression to the implemented Google/ad/Billing/wallet foundation. Its Android origin remains empty, sample ads are forced and checkout is blocked. The server and earlier qualification pages have routing/deployment observations; no real Play payment or Android provider qualification follows from them. Earlier Lab/store observations below remain historical. The website/design refresh improves presentation, not the missing real-player retention, acquisition or revenue evidence. [Current scope](RELEASE_1_5.md) · [Validation](VALIDATION.md) · [Web revision boundary](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence).
 
 ## The proposition worth testing
 
@@ -86,7 +86,7 @@ The local journal is a diagnostic aid. It does not upload data, identify a globa
 
 The Lab's action margins, six-power unlocks and item-price curve are balancing hypotheses, not formulas proven to create hits. It uses distinct campaign + Remix clears only, with thresholds and sample prices documented in [gameplay](GAMEPLAY.md#lab-item-prices). It does not react to failures, ad refusal or spending. Test free-player affordability at each band before considering a production economy. The stable 1.1 shop retains its original fixed prices.
 
-Production needs the actual publisher accounts, SDK terms, regional privacy/consent configuration, billing setup, store declarations and an authoritative verified-purchase wallet service. None is supplied by a no-charge simulation. Ad callbacks with currency/micros/precision from a test opportunity must be excluded from revenue reporting. No credentials, payouts, trademark availability or Google Play approval are implied by this repository. [Official-source research](MONETIZATION_RESEARCH.md).
+Owner public configuration and the wallet implementation/deployment are now present, but actual provider access, regional consent, billing lifecycle and store declarations remain qualification work. No-charge simulations do not establish those outcomes. Ad callbacks with currency/micros/precision from a test opportunity must be excluded from revenue reporting. No credentials, payouts, trademark availability or Google Play approval are implied by this repository. [Official-source research](MONETIZATION_RESEARCH.md).
 
 ## Evidence to earn next
 

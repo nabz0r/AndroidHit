@@ -1,17 +1,22 @@
-<p align="center"><img src="docs/store/luma-drift-feature.png" alt="Luma Drift — arrows, gates and little companions" width="920"></p>
+<p align="center"><img src="docs/store/luma-drift-repo-banner.png" alt="Luma Drift 1.5 — Nova, mint orbits, arrow pieces and matching K1 key and sealed wall" width="1000"></p>
 
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>A small light. A great escape.</strong><br>Read the arrows. Change the gates. Plan the escape.</p>
-<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.5.0-rc1.apk"><strong>Download Android APK · 1.5.0-rc1</strong></a><br><a href="releases/luma-drift-1.5.0-rc1.aab">Google Play bundle</a> · <a href="docs/RELEASE.md">Install & checksums</a> · <a href="docs/ROADMAP.md">Roadmap</a> · <a href="docs/README.md">Documentation</a></p>
+<p align="center"><strong>A small light. A clever escape.</strong><br>An Android puzzle about arrows, gates and the order of your moves.</p>
+<p align="center"><a href="https://luma-drift-production.web.app/"><strong>Visit the website</strong></a> · <a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.5.0-rc1.apk"><strong>Download Android APK · 1.5.0-rc1</strong></a><br><a href="docs/RELEASE.md">Install & verify</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
 <p align="center">1,000 Journey levels · 240 Remix · 6 sealed-passage prototypes<br>24 companions · 18 equipment items · 6 languages · Original vector art & music</p>
+<p align="center"><sub>Android release candidate. Live advertising and commercial checkout still require qualification.</sub></p>
 
 ## Your next escape, in one place
 
 The 1.5 lobby brings the current board, equipped companion, missions, events, collection and shop together. A visible profile card says whether you are a guest or connected through Google. The welcome uses the actual signed-in Google identity; a login flag does not invent an account. Puzzle progress and equipment remain saved on the device.
 
-<table>
-<tr><td align="center"><img src="docs/screenshots/v1.5/home-fr.png" width="230" alt="Installed 1.5 French lobby with honest guest profile and integrated activities"><br><strong>A clear home</strong><br>Your avatar, next puzzle and activities.</td><td align="center"><img src="docs/screenshots/v1.5/collection-equipment-fr.png" width="230" alt="Installed equipment collection with owned and equipped states"><br><strong>Build your loadout</strong><br>Three slots, explicit ownership and sources.</td><td align="center"><img src="docs/screenshots/v1.5/shop-fr.png" width="230" alt="Installed power shop with visible stock, pack quantities and earned-coin prices"><br><strong>Know every offer</strong><br>Stock, quantity, price and confirmation.</td></tr>
-</table>
+<p align="center">
+<img src="docs/screenshots/v1.5/home-en.png" width="245" alt="Installed 1.5 English lobby showing Nova, an honest guest profile and the next Journey board">
+<img src="docs/screenshots/v1.5/collection-equipment-en.png" width="245" alt="Installed equipment collection with three slots, owned and equipped states, and explicit unlock sources">
+<img src="docs/screenshots/v1.5/shop-en.png" width="245" alt="Installed power shop with current stock, pack quantities and earned-coin prices">
+</p>
+
+Your next board, your loadout and every offer have a place in the lobby. These are [installed 1.5 captures](docs/validation/v1.5/ui-acceptance.md), with matching [French](docs/screenshots/v1.5/home-fr.png) and English evidence.
 
 ## Plan the order
 
@@ -29,13 +34,14 @@ The exact model of uniformly choosing a legal move clears the first 240 new Jour
 
 The **Sealed passages** tab contains six playable prototypes. A wall blocks a real path until its matching key piece leaves. Undo restores both the key and wall. Later prototypes combine keys with switches: taking a key too early can close the wrong gate.
 
-<table>
-<tr><td align="center"><img src="docs/screenshots/v1.5/sealed-wall-before.png" width="230" alt="Actual sealed puzzle with numbered key piece and blocking wall"><br><strong>Read the seal</strong><br>The wall blocks a piece's route.</td><td align="center"><img src="docs/screenshots/v1.5/sealed-wall-open.png" width="230" alt="Actual puzzle after its key opens the passage"><br><strong>Release the key</strong><br>The passage opens; other gates still matter.</td></tr>
-</table>
+<p align="center">
+<img src="docs/screenshots/v1.5/sealed-wall-before.png" width="245" alt="Actual sealed puzzle before the numbered key leaves, with its wall blocking an exit path">
+<img src="docs/screenshots/v1.5/sealed-wall-open.png" width="245" alt="Actual puzzle after its key leaves and the matching wall opens; other gates still matter">
+</p>
 
 These six challenges use unlimited actions and award no currency, XP or equipment. They test a new puzzle rule before it spreads through the campaign. [Rules, six designs and exhaustive engine checks](docs/data/sealed-engine-summary.md).
 
-## A companion worth collecting
+## Your companion, your loadout
 
 Choose one of 24 original companions, a color theme and **one item in each of three equipment slots**. Collection cards distinguish **owned**, **equipped** and **to unlock**; a filter shows only owned items. Previews explain the exact source, benefit and price before any purchase.
 
@@ -49,7 +55,7 @@ Looks remain cosmetic; functional equipment is labeled separately. All 18 items 
 
 ## Art, sound and accessibility
 
-The game uses original procedural vector silhouettes, animated particles and a new eight-bar ambient composition. Music, effects, haptics and reduced motion have separate switches. French, English, German, Spanish, Portuguese and Italian are included. Canvas controls expose accessibility labels and keyboard focus. [Art and audio](docs/ART_AUDIO.md) · [Release details and validation](docs/RELEASE_1_5.md).
+The game uses original procedural vector silhouettes, animated particles and a new eight-bar ambient composition. Music, effects, haptics and reduced motion have separate switches. French, English, German, Spanish, Portuguese and Italian are included. Canvas controls expose accessibility labels and keyboard focus. The [vector brand kit](docs/store/README.md) extends the game's indigo, mint, peach and lilac palette across the repository and website. [Art and audio](docs/ART_AUDIO.md) · [Release details and validation](docs/RELEASE_1_5.md).
 
 ## Production status
 
@@ -89,11 +95,11 @@ python3 scripts/test-commerce-receipts.py
 ./gradlew assembleLabRelease bundleLabRelease lintLabRelease
 ```
 
-Release signing uses an ignored local `signing.properties`; no private key belongs in the repository. See [installation, hashes and channel boundaries](docs/RELEASE.md), [versioned evidence](docs/validation/v1.5/) and the [roadmap](docs/ROADMAP.md). UI smoke scripts require an explicitly selected emulator and document whether they use a synthetic test profile.
+Release signing uses an ignored local `signing.properties`; no private key belongs in the repository. The [Play bundle](releases/luma-drift-1.5.0-rc1.aab) is a delivery artifact, not a published store listing. See [installation, hashes and channel boundaries](docs/RELEASE.md), [versioned evidence](docs/validation/v1.5/) and the [roadmap](docs/ROADMAP.md). UI smoke scripts require an explicitly selected emulator and document whether they use a synthetic test profile.
 
 ## What still makes or breaks a hit
 
-The new mechanics, content and presentation improve the testable product. They do not establish enjoyment, D1/D7 return, acquisition cost or revenue. The next product decision comes from first-time-player observations and complete cohort windows, then careful difficulty tuning. [Hit audit](docs/HIT_AUDIT.md) · [Study and release roadmap](docs/ROADMAP.md).
+The new mechanics, content and presentation expand the testable product. They do not establish enjoyment, D1/D7 return, acquisition cost or revenue. The next product decision comes from first-time-player observations and complete cohort windows, then careful difficulty tuning. [Hit audit](docs/HIT_AUDIT.md) · [Study and release roadmap](docs/ROADMAP.md).
 
 Preserved releases: [offline 1.1](docs/VALIDATION_1_1.md), [Lab 1.2](docs/VALIDATION_1_2.md), [actions/powers 1.3](docs/VALIDATION_1_3.md), [production preparation 1.4](docs/PRODUCTION_RELEASE.md). Old binaries and reports retain their original scope.
 

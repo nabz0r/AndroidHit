@@ -1,5 +1,8 @@
 # Luma Drift Lab: monetization tests and later activation
 
+> Preserved Lab 1.3 setup. Keep its test SDK observations, synthetic profile and package scope separate from [current 1.5 configuration](MONETIZATION_SETUP.md) and [current executed checks](VALIDATION.md).
+
+
 **Delivered test build: 1.3.0-sandbox · Version code 4 · Test only · No configured owner AdMob or Play accounts · 26 October 2026**
 
 For the exact owner-account creation order and public identifiers to provide, use the [production onboarding checklist](PRODUCTION_ONBOARDING.md). It distinguishes current Lab behavior from the production build and wallet service still to implement.

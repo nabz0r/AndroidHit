@@ -1,56 +1,64 @@
 # Luma Drift documentation
 
-**Play, understand the system, inspect the evidence, and decide what to build next.**
+**A little spark. A great escape.** Read the rules, inspect the delivered game, and keep test evidence separate from the next proposal.
 
-**Current development candidate: [Luma Drift 1.5](RELEASE_1_5.md).** Its source work covers an avatar-centered lobby, [three equipment slots and 18 items](AVATAR_EQUIPMENT.md), 1,000 Journey boards plus 240 Remix boards, power-use safeguards and [repaired original music](validation/v1.5/audio/README.md). Integrated build, migration and installed runtime acceptance are tracked in the candidate report; this heading does not replace the identified 1.4 downloads below or claim a published 1.5 package. Commercial activation and real-player retention remain pending.
+Current delivery: **[1.5.0-rc1 production APK](../releases/luma-drift-1.5.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.5.0-rc1.aab) · [Install, signatures and exact hashes](RELEASE.md). Production and the isolated Lab use version code **6**. This is a playable quality candidate with **sample ads forced and checkout blocked**, not a commercially activated Play release.
 
-Current delivery: **[Luma Drift 1.4.0-rc1 production APK](../releases/luma-drift-1.4.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.4.0-rc1.aab). The unchanged production APK contains the full puzzle and the owner's public Google/AdMob configuration, with sample creatives forced and checkout blocked because its embedded wallet origin is empty. Cloud Run is now deployed, but Play identity verification, purchase qualification, Scheduler and RTDN remain pending; automatic audit purging is not active. The FR/EN qualification pages are now published on the stable domain and preview; stable-domain OAuth/deletion is owner-reported only and commercial activation remains pending. [Production release](PRODUCTION_RELEASE.md) · [Current evidence](VALIDATION.md).
+The game contains **1,000 Journey boards, 240 Remix boards, six Sealed passages prototypes, 24 companions, six themes, 18 equipment items in three slots and six powers**. Its six languages are French, English, German, Spanish, Portuguese and Italian. Progress and equipment stay on the device; optional Google identity does not provide cloud saves.
 
-The site configuration includes the public publisher name **nabilux**, support **nabz0r+gaming@gmail.com**, supplied Firebase Web identifiers and `https://luma-wallet-369472826910.europe-west1.run.app`. Final and preview Auth domains are confirmed; both API preflights now return HTTP 204 with their exact allowed origins. The owner reports the Web message “Ton compte Luma Drift et son portefeuille serveur ont été supprimés” after the guided deletion tests on the preview and stable domain. This is not independently observed or backed by a log/screenshot/Firebase Console check. Authenticated wallet GET, payments and Android Google login remain unqualified. Independent HTTPS reads now confirm the stable site’s five resources and repository-identical bytes. The owner reports the privacy URL, European-consent draft/settings and **Published** state in AdMob, with six game languages, refusal/close enabled and GDPR-region targeting. This has no independent console observation or proof of UMP display in the game, app-ads.txt verification or ad readiness. Next test the message in the existing production APK with sample ads retained. [Consent qualification instructions](DEPLOIEMENT_PAS_A_PAS.md#9-faire-valider-les-annonces-admob). `preparation: true` and closed purchases/live ads remain. [Preview access and observed HTTPS results](validation/hosting-preview.md). `preparation: true` shows a banner and does not disable the configured Google/deletion flow. The observed health/anonymous-wallet responses are HTTP 200/401, not proof of a paid purchase. [Deployment evidence](validation/cloud-run-health-route.md) · [Site qualification](PUBLIC_PAGES.md).
+<p><img src="screenshots/v1.5/home-fr.png" width="225" alt="Actual French game lobby"><img src="screenshots/v1.5/collection-equipment-fr.png" width="225" alt="Actual equipment collection"><img src="screenshots/v1.5/sharing/sealed-p6-card.png" width="225" alt="Actual exported sealed puzzle with matching keys and walls"></p>
 
-Preserved [stable 1.1](../releases/luma-drift-1.1.0.apk), [Lab 1.2](../releases/luma-drift-1.2.0-sandbox.apk) and [Lab 1.3](../releases/luma-drift-1.3.0-sandbox.apk) keep their original bytes and historical screenshots/reports. Lab currency remains isolated.
+## Play and understand
 
-| Start here | What it answers |
+| Guide | What it answers |
 |---|---|
-| [Release and installation](RELEASE.md) | Which APK to install, signing and checksums |
-| [1.5 candidate](RELEASE_1_5.md) | New lobby, 1,000 + 240 progression, six sealed-wall prototypes, equipment, powers/audio and exact acceptance status |
-| [Avatar equipment](AVATAR_EQUIPMENT.md) | Three slots, 18 fixed items, bounded benefits and device-local ownership |
-| [Illustrated tour](VISUAL_GUIDE.md) | The interface and rules, explained with real game captures |
-| [Gameplay](GAMEPLAY.md) | Shared puzzle rules, stable rewards and separate Lab economy |
-| [Companions and events](COMPANIONS_EVENTS.md) | The Lab's 24 companions, preview/buy/equip flow and local event presentation |
-| [Validation](VALIDATION.md) | Checks actually executed and device limitations |
-| [Changelog](CHANGELOG.md) | What changed in each version |
+| [Release and installation](RELEASE.md) | Which APK to install, channel separation, signing and checksums |
+| [1.5 changes](RELEASE_1_5.md) | Lobby, fixed progression, keys/walls, equipment and powers |
+| [Illustrated tour](VISUAL_GUIDE.md) | Real Android views and the distinction from website illustrations |
+| [Gameplay](GAMEPLAY.md) | Arrow/gate rules, actions, rewards and fair friend challenges |
+| [Avatar equipment](AVATAR_EQUIPMENT.md) | All 18 items, sources, prices, three slots and exact benefit limits |
+| [Powers and recovery](MOVE_BUDGET_POWERUPS.md) | Six effects, one-charge confirmation, Flow persistence and continuations |
+| [Companions and events](COMPANIONS_EVENTS.md) | Collection, local daily/weekly play and ownership |
+| [Validation](VALIDATION.md) | Executed checks, actual APK identities, synthetic profiles and remaining limits |
 
-## Product and presentation
+## One visual identity
 
-| Document | What it answers |
+| Guide | What it answers |
 |---|---|
-| [Hit potential audit](HIT_AUDIT.md) | Why success is unproven, what improves the premise, and how to test it |
-| [Roadmap](ROADMAP.md) | Staged work with explicit entry and exit criteria |
-| [Store listing kit](STORE_LISTING.md) | Truthful copy, screenshot order and preparation still required |
-| [Monetization research](MONETIZATION_RESEARCH.md) | Official-source evidence, SDK choices and limits of test mode |
-| [Lab setup](MONETIZATION_SETUP.md) | No-charge tests, consent gates and future account/backend work |
-| [Optional Google sign-in](GOOGLE_SIGN_IN.md) | Configuration, verified identity boundary and guest-first limits |
-| [Production release](PRODUCTION_RELEASE.md) | Implemented server/client boundary, paid cosmetics and remaining activation |
-| [Android wallet](WALLET_ANDROID.md) | Real checkout, account binding, local/paid separation and recovery |
-| [Public pages](PUBLIC_PAGES.md) | FR/EN site, privacy/deletion flow, hosting gates and browser checks |
-| [Déploiement pas à pas — français](DEPLOIEMENT_PAS_A_PAS.md) | Owner console steps, Cloud Shell, Hosting, purchase tests and ad activation |
-| [Server](../server/README.md) | Firestore/Play verification, tests, managed IAM and deployment |
-| [Production onboarding](PRODUCTION_ONBOARDING.md) | Exact owner accounts, public IDs, setup order and remaining server work |
-| [Brand kit](store/README.md) | Original promotional artwork, editable vector assets and provenance |
-| [Art and audio](ART_AUDIO.md) | Original vector identity, companions, palettes and synthesized sound |
+| [Design system](DESIGN_SYSTEM.md) | Night palette, pastel arrows, companion-led composition, type, motion and image provenance |
+| [Art and audio](ART_AUDIO.md) | Code-drawn game art, themes, original sound and measured playback |
+| [Brand assets](store/README.md) | Promotional originals, editable assets and export sizes |
+| [Store copy](STORE_LISTING.md) | Truthful 1.5 copy drafts, localized short descriptions and screenshot order |
+| [Public website](PUBLIC_PAGES.md) | FR/EN homepage, policy/deletion routes, local checks and deployment evidence |
 
-## Build and data
+The game, public pages and GitHub presentation share a visual family. A website hero or explanatory board is artwork, not an installed gameplay screenshot. A local web preview is not proof that the redesigned site was deployed. [Existing Hosting observations](validation/hosting-preview.md) concern their recorded revision; new publication needs its own result and served-resource check.
 
-| Document | What it answers |
+## Identity, privacy and commercial gates
+
+| Guide | What it answers |
 |---|---|
-| [Development](DEVELOPMENT.md) | Architecture, build, signing and tests |
-| [Level design](LEVEL_DESIGN.md) | Original campaign compatibility, Remix teaching boards and generator decisions |
-| [Difficulty audit](DIFFICULTY.md) | Frozen 480-board order, structural score, remaining spikes and reproducible CSV |
-| [Move-limit research](MOVE_LIMITS_RESEARCH.md) | Official precedents and action/recovery design rationale |
-| [Action budgets and powers](MOVE_BUDGET_POWERUPS.md) | Exact allowance, six powers, unique rewards and saved-ledger contracts |
-| [Privacy](PRIVACY.md) | Local data, optional exports and actual permissions |
-| [Third-party notices](THIRD_PARTY_NOTICES.md) | SDK dependencies, branding provenance and their separate terms |
-| [Initial research archive](RESEARCH.md) | The historical market study and original project assumptions |
+| [Data and privacy inventory](PRIVACY.md) | Local saves/equipment, Google SDK paths, exports and account deletion |
+| [Optional Google sign-in](GOOGLE_SIGN_IN.md) | Real identity, guest play and absence of cloud progression |
+| [Monetization configuration](MONETIZATION_SETUP.md) | Current production/Lab flags, sample placements and purchase gates |
+| [Android purchased-gold wallet](WALLET_ANDROID.md) | Server-authoritative paid funds, permanent cosmetics and account recovery |
+| [Owner onboarding](PRODUCTION_ONBOARDING.md) | Existing public IDs and remaining provider/account steps |
+| [Déploiement pas à pas — français](DEPLOIEMENT_PAS_A_PAS.md) | Existing Cloud Run/Hosting project, qualification and activation steps |
+| [1.4 production foundation](PRODUCTION_RELEASE.md) | Historical implementation and separately dated deployment follow-up |
+| [Server](../server/README.md) | Purchase verification, Firestore transactions, IAM and scheduled recovery |
 
-The main README distinguishes installed-game captures from locally rendered `web-*` website captures. Graphics intended as explanatory diagrams or store artwork must be labeled separately. A roadmap item or store-copy draft is not proof that a feature ships; release evidence is the source of truth.
+The deployed wallet and earlier public pages have recorded routing/CORS observations. Web sign-in/deletion and the AdMob message's Published state are owner-reported. Completed Android login, installed UMP acceptance/refusal, Play license-test purchases, RTDN/Scheduler, automatic audit purge and commercial approval remain unqualified. The current Android APK embeds an empty wallet origin. A new site design does not remove any of these gates.
+
+## Build, evidence and next decisions
+
+| Guide | What it answers |
+|---|---|
+| [Development](DEVELOPMENT.md) | Architecture, tools, signing and reproducible checks |
+| [Level design](LEVEL_DESIGN.md) | G/H progression, historical code compatibility and separate P prototypes |
+| [Difficulty](DIFFICULTY.md) | Structural audits and why exact-solver results are not player retention |
+| [Roadmap](ROADMAP.md) | Physical-device/player studies and later commercial gates |
+| [Hit audit](HIT_AUDIT.md) | Unproven product assumptions and a measurable observation protocol |
+| [Changelog](CHANGELOG.md) | Delivered scope by version |
+| [Third-party notices](THIRD_PARTY_NOTICES.md) | SDK, Google branding and source/audio provenance |
+| [Research archive](RESEARCH.md) | Dated market, licensing and initial concept decisions |
+
+Historical [1.1](RELEASE_1_1.md), [1.2](RELEASE_1_2.md), [1.3](RELEASE_1_3.md) and [1.4](RELEASE_1_4.md) reports retain their original packages, hashes, dates and limitations. Current exact-byte scope is in [VALIDATION.md](VALIDATION.md); old screenshots and synthetic tests are not relabelled as final-release evidence.

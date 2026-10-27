@@ -1,5 +1,11 @@
 # A measured progression for 480 boards
 
+> **Historical Lab 1.3 audit.** Its 480-board reordering and recorded results are preserved below. Current 1.5 uses **1,000 new G Journey boards + 240 new H Remix boards**, while B/Q still resolve through `legacyGet()` / `legacyRemix()`. [Current before/after audit](data/progression-v2-summary.md) · [All current rows](data/progression-v2-audit.csv) · [Release contract](RELEASE_1_5.md).
+
+The current offline audit certifies every layout and checks uniqueness after all eight rotations/reflections, translation and consistent arrow/gate transformations. It does not prove uniqueness under every possible abstract puzzle isomorphism. After three introductory boards, later G/H content includes unsafe legal ordering choices. Fixed mistake margins are 2–4 actions; Journey allowances range from 9 to 23. No runtime player/payment signal changes the layouts or budgets.
+
+On the matched first 240 positions, uniform choice among legal exits gives modeled clear rates of **89.04% → 30.02%** for Journey and **57.96% → 22.55%** for Remix. The complete 1,000-board Journey model averages **11.96%**. These are exact results for a deliberately naive policy, not human pass rates or retention. Separate seeded blind taps include blocked-action costs. Current `scripts/test-difficulty.sh` checks both historical and v2 contracts; its [1.5 record](validation/v1.5/difficulty-tests.txt) contains **161,985 checks** and supersedes the historical command result below.
+
 **Lab 1.3 progression component · 26 October 2026 · Structural measurements, not human difficulty ratings**
 
 `BalancedCatalog` gives the existing **240 Journey + 240 Remix** boards a frozen progression order. It keeps every original layout and solution; it does not generate replacement puzzles. All 480 boards were measured and verified solvable. Of them, 216 Journey and 225 Remix boards move to another position within their original chapter.

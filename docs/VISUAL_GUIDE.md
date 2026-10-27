@@ -37,3 +37,13 @@ This PNG was generated on the final APK. The Android chooser was cancelled; no m
 ## Evidence and limits
 
 Six-language and small-window UI reports identify exact package hashes, inspected states and original-setting restoration. Lab equipment/power screenshots may use the explicitly disclosed temporary test profile; those coins, ownership and unlocks are not presented as earned progression. Real provider login, live ads, purchases, physical touch/audio quality and retention remain separate qualification.
+
+## Website and GitHub presentation
+
+The 1.5 homepage uses the same night/pastel visual family, original companion vectors and clearly sourced game captures. [Design system](DESIGN_SYSTEM.md) explains palette, layout, language and image provenance. The public site is French/English; six-language support describes the Android game.
+
+<p><img src="screenshots/site-v1.5/home-en-1366-hero.png" width="690" alt="Local desktop rendering of the English 1.5 homepage"><img src="screenshots/site-v1.5/home-fr-390-hero.png" width="240" alt="Local mobile hero rendering of the French 1.5 homepage"></p>
+
+These are **local browser renders**, including original Nova vector art and the sourced game view; they are not screenshots of a confirmed deployed revision. [FR/EN responsive checks](validation/site-v1.5/browser-check.txt) passed on 18 local states, with synthetic-only deletion tests and no real sign-in.
+
+Website captures belong in [`screenshots/site-v1.5/`](screenshots/site-v1.5/) and their checks/manifests in [`validation/site-v1.5/`](validation/site-v1.5/). Local webpage captures demonstrate the rendered source revision, not a deployed page or new Android behavior. The deployment record must identify the revision and served bytes before the new site is called published. Existing Android images above keep their original final/predecessor labels. [Web evidence boundary](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence).

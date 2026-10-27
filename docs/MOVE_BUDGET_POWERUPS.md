@@ -2,6 +2,15 @@
 
 > Current 1.5: new runs use fixed board-specific N+2…4 allowances, G/H layouts (1,000 Journey + 240 Remix), explicit power confirmation and durable effect recovery. Advanced charms protect at most one additional blocked attempt per run. Existing policy-1 attempts keep the historical allowances below until finished/abandoned. [Current rules and acceptance](RELEASE_1_5.md) · [Measured maps](data/progression-v2-summary.md).
 
+## Current 1.5 activation and recovery
+
+The six effects and Journey unlocks below are retained. Tapping an available stocked power opens a confirmation showing its effect and one-unit stock cost; cancelling does not reserve or consume it. The controller rejects an already active effect and overlapping activation/Flow sequence, with a 450 ms input debounce. An unactivated reservation can be cancelled; a persisted activation commits its stock receipt once. `retryPowerCommit()` flushes a failed durable inventory transaction before reconciliation. A storage failure pauses further actions behind an explicit retry rather than accepting unsaved spending.
+
+Spark/Vision retain up to 8 seconds, Focus 10 seconds and Trail 12 seconds; pause, help and background time freeze previews. Shield's remaining charges and Flow's remaining safe exits are saved. Flow resumes after interruption without a second stock debit and spends one action for each actual exit. Powers and continuations stay unavailable in unlimited friend practice, including all six P prototypes. [Installed power checks and fixture boundaries](VALIDATION.md#installed-android-acceptance).
+
+Policy 2 reads Journey/Remix margins from each frozen board through `BalancedCatalog.mistakeAllowance()`. Event margins also use fixed board characteristics. `startLegacy()` / `restoreLegacy()` retain policy 1 for compatible interrupted runs; they do not replace its board with a G/H layout. The continuation debit remains **100 local earned coins**, despite legacy API names such as `spendGoldOnce`; account-purchased gold is separate. Real checkout remains gated and advertising uses sample units. The historical tables and test-gold terminology below are not current allowance tables or evidence of real purchases.
+
+## Historical Lab 1.3 contract
 
 This is the implemented **Lab 1.3** contract. The [research note](MOVE_LIMITS_RESEARCH.md) records the official game and Google references checked before implementation. The original 1.2 APK and its historical evidence remain separate. Automated logic results below do not claim human enjoyment, retention, revenue, or live payment validation.
 

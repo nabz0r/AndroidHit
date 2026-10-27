@@ -1,5 +1,8 @@
 # Luma Drift privacy — stable game and test Lab
 
+> Historical inventory for 1.1 and Lab 1.2/1.3. Its no-account/no-SDK statements apply only to those identified versions. [Current 1.5 data and privacy](PRIVACY.md) covers identity, equipment and the separately configured wallet/site.
+
+
 Effective date: **26 October 2026**.
 
 This statement distinguishes the **stable Luma Drift 1.1.0 game**, application ID `com.androidhit.lumadrift`, from **Luma Drift Lab**, application ID `com.androidhit.lumadrift.sandbox` (preserved 1.2.0-sandbox and delivered 1.3.0-sandbox). Their private saves and wallets are separate. Lab test gold does not transfer to the stable game.

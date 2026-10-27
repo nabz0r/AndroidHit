@@ -18,3 +18,9 @@ Hosting and Cloud Run deployment, account deletion and published AdMob message h
 ## Executed outcome
 
 Items 1–5 and technical delivery checks in item 6 are implemented and evidenced in [VALIDATION](docs/VALIDATION.md). Final sharing, key/Undo and audio were retested after the isolated share-image fix. APK/AAB hashes and signing are in [RELEASE](docs/RELEASE.md). Source, documentation and exact tested artifacts were published to main and all four public package downloads matched their hashes. [Delivery proof](docs/validation/v1.5/publication.json). Physical-device/player/provider qualification remains a separate roadmap stage. No scripted clear establishes enjoyment or a hit.
+
+## Site and repository art direction — 27 October 2026
+
+Harmonize the Firebase site and GitHub around the shipped 1.5 art: indigo, mint, peach, lilac, Nova and actual Android screenshots. Replace the generic illustrative grid with real gameplay. Preserve functional FR/EN privacy/account routes and the existing host. Refresh current documentation while keeping historical reports scoped to their original versions.
+
+Acceptance: original vector brand kit and rendered PNGs; responsive FR/EN pages; language-aware captures; accessible navigation and reduced motion; isolated deletion-flow regression; no default external requests; main publication and Firebase Hosting verification of the exact deployed files. Android packages remain 1.5/code 6.

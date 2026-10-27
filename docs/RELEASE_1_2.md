@@ -1,5 +1,8 @@
 # Luma Drift — signed Android deliveries
 
+> Preserved 1.2 delivery. Its artifact sizes, hashes and runtime claims remain historical. Use [the current release](RELEASE.md) and [current validation](VALIDATION.md) for 1.5.
+
+
 Repository delivery: **26 October 2026**. The newest app is **Luma Drift Lab 1.2.0-sandbox**, a separate test installation. **Luma Drift 1.1.0** remains available as the offline stable game. Neither has been published to Google Play.
 
 ## Choose and install

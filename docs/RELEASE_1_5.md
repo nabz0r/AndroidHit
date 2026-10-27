@@ -78,3 +78,7 @@ The final build record must state its wallet origin and test-ad forcing, rather 
 | Human comprehension/retention | **Unmeasured** | First-time observations and complete cohort windows in [the roadmap](ROADMAP.md) |
 
 The [source comparison](validation/v1.5/binary-source-diff.json) identifies the final share-image-only correction; it does not rename predecessor runtime reports. Every installed report states its actual APK identity. Historical reports remain preserved.
+
+## Website and documentation presentation
+
+The 1.5 website/GitHub refresh shares the game's [visual direction](DESIGN_SYSTEM.md), uses actual source captures with provenance, and explains the delivered 1,000/240/six-P and 18-item scope. It adds no Android gameplay feature and changes none of the APK hashes above. Public policy/contact and commercial gates remain visible. [Site implementation and revision-specific evidence](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) distinguishes local rendering, earlier Hosting observations and a new deployment result.

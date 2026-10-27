@@ -1,6 +1,6 @@
 # Android purchased-gold wallet
 
-The production store now has a real Google Play checkout implementation and an authenticated server client. Checkout stays disabled while the production server URL is absent. A successful local build does not establish that a real purchase, Google login or server deployment has been tested.
+The **1.5.0-rc1 / code 6** production store implements Google Play checkout and an authenticated server client, but the delivered APK embeds an empty server origin and blocks checkout. The wallet itself is deployed with recorded public routing/CORS checks; actual Android login and Play purchase lifecycle remain unqualified. [Exact candidate](RELEASE.md) · [Deployment observations](PRODUCTION_RELEASE.md).
 
 ## Player experience and currency separation
 
@@ -62,6 +62,8 @@ A cosmetic spend writes a UUID request ID to account-scoped local preferences be
 
 Run `scripts/test-billing-policy.sh` for the credential-destination, UID-binding, request-ID and six-language formatting checks. Run `scripts/test-wallet-recovery.sh` for 19 deterministic lifecycle checks covering guest/configuration gates, duplicate callbacks, retry, account switching, backgrounding and destruction. This controller test uses explicit provider doubles and never represents a Google transaction. Neither suite certifies the remote deployment. The production Java sources also compile against Billing 9.1.0 and the pinned Firebase/advertising dependencies.
 
-Before enabling actual checkout, deploy and configure the server, authorize its managed identity for the specific Play application, enable the three products, and test approved/declined/pending payments with Play **license testers** installed through the internal track. Test reconnects, process death, refund reconciliation, account switching and deletion against that deployed service. [Google's billing test procedure](https://developer.android.com/google/play/billing/test).
+Before enabling actual checkout, qualify the deployed server and configure its origin in a new internal Android build, authorize its managed identity for the specific Play application, enable the three products, and test approved/declined/pending payments with Play **license testers** installed through the internal track. Test reconnects, process death, refund reconciliation, account switching and deletion against that deployed service. [Google's billing test procedure](https://developer.android.com/google/play/billing/test).
 
 The preparation APK uses Google sample ad creatives even though the owner's three placement IDs are configured. Real ad serving requires an explicit qualified build with test forcing disabled. Gold, continuation and power placements select their respective configured unit when enabled. Existing age, explicit opt-in and Google UMP consent gates remain mandatory.
+
+The 18 local avatar equipment items and their limited benefits are outside the server wallet cosmetic SKU catalog. Google login does not synchronize equipment, puzzle progression or earned coins. [Equipment ownership boundary](AVATAR_EQUIPMENT.md).

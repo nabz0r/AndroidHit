@@ -1,5 +1,8 @@
 # Luma Drift 1.1.0
 
+> Preserved 1.1 delivery. Its artifact sizes, hashes and runtime claims remain historical. Use [the current release](RELEASE.md) and [current validation](VALIDATION.md) for 1.5.
+
+
 Repository release: **26 October 2026**. Package `com.androidhit.lumadrift`, version code **2**, minimum API26/Android8, target API36/Android 16. This is a signed repository delivery; Google Play publication has not occurred.
 
 ## Download and install

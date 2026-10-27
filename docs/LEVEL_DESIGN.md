@@ -1,5 +1,24 @@
 # Luma Drift · level design and challenge protocol
 
+## Current 1.5 content and identities
+
+| Family | Current API | Code / bound |
+|---|---|---|
+| Journey v2 | `BalancedCatalog.get(1..1000)` | G, 1–1,000 |
+| Remix v2 | `BalancedCatalog.remix(1..240)` | H, 1–240 |
+| Previous balanced Journey / Remix | `BalancedCatalog.legacyGet(1..240)` / `.legacyRemix(1..240)` | B / Q, unchanged |
+| Original Journey / Remix | `LevelCatalog.get(1..240)` / `.remix(1..240)` | C / R, unchanged |
+| Existing event seed | `LevelCatalog.event(long)` | E, nonnegative Java `long` |
+| Sealed passages prototypes | `SealedCatalog.get(1..6)` | P, 1–6 |
+
+All families use the canonical `LD1-<family>-<base36 value>-<CRC32>` structure. New encoders are `encodeBalancedV2()`, `encodeBalancedRemixV2()` and `encodeSealed()`. Reusing B/Q or C/R for new layouts would break shared challenges, so those routes remain frozen. Valid old active content-2/policy-1 sessions keep their board and allowance; new runs select content 3/policy 2. Earned progress remains at numbered slots. [Current compatibility and installed upgrade evidence](RELEASE_1_5.md).
+
+The G/H fixtures are generated and analyzed offline, stored in `ProgressionV2Layouts`, and parsed/cached lazily. Runtime play does not generate or rebalance them. All have exact certified solutions, fixed N+2…4 allowances, and measured risky ordering choices after the introduction. The [current audit](data/progression-v2-summary.md) checks layout uniqueness under rotation/reflection/translation and reports exact legal-choice and seeded blind-tap baselines, without treating them as human difficulty ratings.
+
+`Level.barriers` adds immutable `Barrier(row, col, keyTileId)` definitions. An active wall blocks an exit ray until its matching key leaves; restoring the key closes it again. Both Board and the exact solver derive this from remaining pieces. P1–P6 contain 1–2 fixed cells and 4–7 pieces, remain separate from the 1,240 progression boards, and run as unlimited/no-reward practice without powers. [Exact/oracle tests](validation/v1.5/sealed-tests.txt) · [Installed key/Undo/restoration checks](validation/v1.5/sealed-ui.txt).
+
+## Historical v1.1 design and protocol evidence
+
 The v1.1 engine adds a distinct **Remix** campaign with paired gate switches. The original 240 campaign boards and their save histories remain compatible. This is a new rule interaction and a controlled introduction, rather than a change to players' existing progression.
 
 ## The rule players can reason about

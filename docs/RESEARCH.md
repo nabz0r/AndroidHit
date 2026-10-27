@@ -1,4 +1,4 @@
-> Historical research recorded on 26 October 2026, before implementation. Current shipped behavior is documented in the root README and RELEASE.md.
+> Historical research recorded on 26 October 2026, before implementation. The working name, estimates and future-tense statements below remain that archive. Current delivered behavior is in [the root README](../README.md) and [release notes](RELEASE.md).
 
 # AndroidHit
 

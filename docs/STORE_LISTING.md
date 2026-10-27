@@ -1,83 +1,69 @@
-# Store presentation kit
+# Store presentation kit — Luma Drift 1.5
 
-**Stable Luma Drift 1.1.0 listing draft. Not submitted to Google Play.** Copy and media below describe the preserved stable game, not the separate Lab. Store approval, trademark availability and conversion performance are unknown. Last policy check: 26 October 2026.
+**Copy drafts for the delivered 1.5.0-rc1 candidate, code 6 · not a submitted or approved Play listing.** [Exact artifacts](RELEASE.md) · [Installed evidence and limitations](VALIDATION.md). The preserved 1.1 game had six companions and no Google SDKs; those historical claims must not describe the current app.
 
-Current source builds **production 1.4.0-rc1** (`com.androidhit.lumadrift`) and a separate Lab flavor. The production candidate includes 24 companions, six powers, action allowances, the owner Google configuration and an implemented server-wallet client. It forces sample creatives and blocks checkout without the deployment origin. **Do not submit the historical 1.1 copy below as a description of 1.4:** its six-companion/no-account/no-SDK claims are specific to the old APK. Final production store copy/media and Data safety must match the actually activated build after its owner accounts/public pages are qualified. [Production scope](PRODUCTION_RELEASE.md), [current evidence](VALIDATION.md), [public pages](PUBLIC_PAGES.md).
+The current APK contains 1,000 Journey boards, 240 Remix, six P prototypes, 24 companions, six themes, 18 local equipment items and six powers. It includes optional Google identity and commercial adapters, but forces sample advertising and blocks checkout with an empty wallet origin. Any later commercial build needs copy, privacy/Data safety and imagery reviewed against its own actual configuration.
 
-## Positioning
+## Positioning and identity
 
-**One line:** A calm arrow puzzle where every exit can change the gates.
+**One line:** A little spark. A great escape.
 
-Show a real decision: a light has a clear path, but its switch changes another exit. That consequence is more useful than a generic claim about “brain training.” Keep the celestial palette, original companions and visible arrows consistent with the installed game.
+**Mechanic:** Read the arrows, change the gates and plan the order. Show a meaningful gate consequence rather than a generic brain-training promise. Use the [shared design system](DESIGN_SYSTEM.md): night indigo, pastel arrows, warm companion art and clear state labels. [Original promotional assets](store/README.md) are separate from installed gameplay captures.
 
-## English listing draft
+## English full-description draft
 
-**App name:** Luma Drift
-
-**Short description:** Tap lights, change the gates and find your way through an offline puzzle
-
-**Full description:**
-
-> Every light has a direction. Every gate can change your next choice.
+> Every light has a direction. Every exit can change your next choice.
 >
-> Tap a light to send it out of the board. Clear its path, check the exit, and choose your order carefully: switch pieces change the gates after they leave.
+> Send a piece out along its arrow. Clear its path, check the gate and choose the order carefully: switch pieces change gates after they leave.
 >
-> Explore 240 campaign puzzles across eight chapters. There is no countdown or energy wait. Undo and restart are always available, so you can experiment with another order.
+> Explore 1,000 Journey puzzles and a separate 240-board Remix route with paired switches. Each board has a visible action allowance. Blocked attempts and successful Undo use an action; restarting is free. There is no thinking timer or energy wait, and every fixed board has a solution without items.
 >
-> Finish campaign board 12 to open Remix: 240 more puzzles where one switch can change two gates at once. Follow contextual tips as each rule appears, then choose your own path through the puzzle.
+> Try six Sealed passages challenges, where matching key pieces open fixed walls. Undo brings the key and wall back. These prototypes offer unlimited practice without currency, XP or item rewards.
 >
-> Collect stars and earned coins, meet six original companions, and choose from six visual themes. Spark offers a safe next move, Vision shows currently open moves, and Flow helps a few pieces on their way. Every board can be solved without spending an item.
+> Choose among 24 original companions and six visual themes. Equip one Headwear, Aura and Charm from 18 fixed items. Their sources and limited benefits are shown before acquisition; owning several items does not stack their effects.
 >
-> Come back for local daily and weekly puzzles, or pick an optional daily mission. Build permanent XP and rank, and earn a cosmetic badge after seven first board completions. Taking a break never removes your rank or earned collection.
+> Unlock Spark, Vision, Flow, Shield, Focus and Trail through Journey progress. Read the effect and confirm one charge before activation. Daily and weekly puzzles follow your device calendar; missions build permanent XP and rank without a lost-day penalty.
 >
-> Pass a puzzle to a friend with a challenge code and an original share card. Enter a friend's code to play the same board without powers or progression rewards. Sharing uses Android's share sheet; there is no online leaderboard or matchmaking.
+> Share a challenge code and its original board card using Android's share sheet. Friend challenges have no powers or progression rewards. There is no online leaderboard or matchmaking.
 >
-> Luma Drift includes original synthesized music and sound effects, separate audio switches, optional haptics and reduced motion. Play in English, French, German, Spanish, Portuguese or Italian.
+> Play in English, French, German, Spanish, Portuguese or Italian, with original synthesized music and effects, optional haptics and reduced motion.
 >
-> Progress is saved on your device. The current version has no account, advertising or real-money purchases. The shop uses coins earned by playing. An optional local play journal is off by default and leaves the app only when you choose to export it. Removing the app or clearing its storage removes its save; cloud recovery is not included.
+> Puzzle progress, earned coins and equipment stay on this device. Google sign-in is optional and does not provide cloud progression. This repository candidate uses test advertising and does not enable real checkout. Its optional play journal is off by default and leaves the app only through an explicit export. Uninstalling or clearing storage removes local saves.
 
-The above copy describes the signed stable 1.1 game. Cross-check it against that APK and its [validation evidence](VALIDATION_1_1.md) before store submission. The genuine 1.1 screenshots and current Lab source are different artifacts. No player retention or revenue claim is included.
+This text describes the candidate. Replace the test/commercial-status sentence only when a differently configured, identified build is qualified. Do not silently advertise paid gold, cloud equipment or live advertising as active. Native-speaker and store review remain open.
 
-## Localized short descriptions
+## Localized short-description drafts
 
-These are editable copy drafts, not a completed native-speaker review. The in-game language set is broader than the set of fully localized store assets currently prepared.
+Each line is within 80 characters. These are copy drafts, not evidence of native-speaker quality or six-language store media coverage.
 
 | Locale | Short description |
 |---|---|
-| en-US | Tap lights, change the gates and find your way through an offline puzzle |
-| fr-FR | Libère les lumières, change les portes et résous des puzzles hors ligne |
-| de-DE | Befreie die Lichter, schalte Tore um und löse knifflige Offline-Puzzles |
-| es-ES | Libera luces, cambia las puertas y resuelve puzles sin conexión |
-| pt-PT | Liberta luzes, muda os portões e resolve puzzles sem ligação à Internet |
-| it-IT | Libera le luci, cambia i cancelli e risolvi rompicapi offline |
+| en-US | Plan arrow exits, switch gates and collect your own little constellation |
+| fr-FR | Planifie les sorties, change les portes et compose ton petit avatar |
+| de-DE | Plane Pfeilausgänge, schalte Tore um und gestalte deinen kleinen Begleiter |
+| es-ES | Planea las salidas, cambia las puertas y personaliza tu pequeño compañero |
+| pt-PT | Planeia as saídas, muda os portões e personaliza o teu pequeno companheiro |
+| it-IT | Pianifica le uscite, cambia i cancelli e crea il tuo piccolo compagno |
 
-## Screenshot sequence
+## Screenshot story
 
-Use **captures from the final installed release**, with one story per frame. Documentation screenshots can use the emulator's native shape; prepare separate 9:16 crops/exports for store discovery assets. Never stretch a tall phone capture to fill another ratio.
+Use installed release captures with a truthful build/profile record. Preserve aspect ratio; make separate store exports instead of stretching a phone image. If an equipment screen uses synthetic test ownership or coins, label that provenance in the source manifest and do not imply that the fixture was earned or purchased.
 
-| Order | What to show | Optional short caption | Purpose |
+| Order | Actual view | Caption idea | Source boundary |
 |---|---|---|---|
-| 1 | A playable gate puzzle with arrows clearly visible | Every exit changes your choices | Explain the hook immediately |
-| 2 | Contextual gate coaching on a real board | Open a path. Watch the gates. | Make the first decision understandable |
-| 3 | A later board or optional Remix board | Plan the next move | Show depth through gameplay |
-| 4 | Genuine companion/theme collection | Make it your constellation | Show original art and earned cosmetics |
-| 5 | Actual daily/weekly and mission interface | A little puzzle for another day | Show the return loop without implying a server |
-| 6 | A real victory or challenge handoff | A puzzle worth passing on | Show the sharing path truthfully |
+| 1 | A clear arrow/gate decision | One exit changes the next choice | Real gameplay, arrows and switch visible |
+| 2 | Current lobby and avatar | Your next escape, in one place | Actual guest/Google state; no invented user |
+| 3 | Later Journey or Remix | Read the gates. Plan the order. | Actual board, no invented difficulty rating |
+| 4 | Equipment preview | One item. One clear benefit. | Show source, price, ownership and exact capped effect |
+| 5 | P challenge key/wall | Release the key. Open the passage. | Identify the six prototypes; not 1,000 wall levels |
+| 6 | Daily/weekly or challenge share | Another puzzle to discover | Device-calendar event or actual share card; no implied server event |
 
-Do not put mock gameplay, monetization that does not exist, invented ratings, ranking badges, download counts or competing game artwork into the assets. Keep explanatory captions short, readable and translated with the associated UI.
+The [visual guide](VISUAL_GUIDE.md) identifies final captures and preceding unchanged-layout observations. A website hero, SVG puzzle or feature illustration is artwork, not an installed screenshot. Store screenshots and captions must describe the actual build selected for submission.
 
-Google currently specifies a 512 × 512 PNG icon and a 1024 × 500 feature graphic. The short description has an 80-character limit. For screenshot-based game recommendation formats, its guidance calls for at least three actual gameplay screenshots in 16:9 landscape or 9:16 portrait, at least 1920 × 1080 or 1080 × 1920 respectively. Check the exact current upload constraints when preparing the submission. [Official preview-asset requirements](https://support.google.com/googleplay/android-developer/answer/9866151?hl=en).
+## Asset and submission checks
 
-## Experiment design
+Google's [preview-asset guide](https://support.google.com/googleplay/android-developer/answer/9866151?hl=en), reviewed 27 October 2026, specifies the 512×512 app icon, 1024×500 feature graphic and 80-character short description, with separate requirements/recommendations for screenshots. Check the actual console's formats and dimensions before upload. Its [listing guidance](https://support.google.com/googleplay/android-developer/answer/13393723?hl=en) calls for accurate functionality and original presentation; no fictional ratings, rankings, endorsements, download counts or affiliations belong in the kit.
 
-Start with the most uncertain message: do people understand that switches change later decisions? Compare a first gameplay frame emphasizing a visible switch with a first gameplay frame emphasizing the full board. Keep the remaining listing constant. Wait for the Play experiment's usable result rather than declaring a winner after a few installs.
+The public contact is **nabilux / nabz0r+gaming@gmail.com**. That display label does not establish a legal publisher identity. Play identity, signing enrollment, content rating, audience, Data safety, privacy/deletion qualification, applicable testing and review remain owner tasks. A GitHub release or a deployed developer site is not Play publication. [Onboarding](PRODUCTION_ONBOARDING.md) · [Privacy inventory](PRIVACY.md).
 
-Judge the incoming players too: a creative that increases installs but attracts people who immediately leave may be the wrong promise. Localize screenshots and copy together; an English screenshot behind a translated headline is an incomplete localization.
-
-Google's guidance requires truthful functionality and original presentation rather than misleading resemblance, unverified rankings or unsupported affiliations. [Store listing best practices](https://support.google.com/googleplay/android-developer/answer/13393723?hl=en).
-
-## Submission work still required
-
-The publisher must supply the actual Play Console account, verified identity and support contact; complete content rating, target audience, Data safety and privacy-policy fields; enroll the intended signing setup; and satisfy the account's applicable testing requirements. No email address, account status, rating, age suitability or approval has been invented here.
-
-Use the current [privacy statement](PRIVACY.md), [release artifacts](RELEASE.md), [validation limits](VALIDATION.md) and [staged rollout plan](ROADMAP.md). Do not claim cloud saves, online events, multiplayer, payments or analytics aggregation that the game does not implement.
+Test listing variants one message at a time after enough traffic exists. Report visitors, installs and eligible retained players by creative/version. More clicks do not prove better acquisition or enjoyment. [Player-study roadmap](ROADMAP.md).

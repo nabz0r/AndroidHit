@@ -17,3 +17,7 @@ Updated 27 October 2026 · **1.5.0-rc1 / Lab 1.5.0-sandbox, code 6**.
 | Publication | Published source/artifacts together on [main at aa9131ba7956](https://github.com/nabz0r/AndroidHit/commit/aa9131ba795694c4fa1d8bb839c25a37c4c48da7); all four public downloads match final hashes. [Delivery proof](docs/validation/v1.5/publication.json) |
 
 The final source change after full functional acceptance is isolated to the share-image renderer. Final production sharing/key/Undo/audio checks and the source comparison are [recorded separately](docs/VALIDATION.md). Physical phones, native-speaker review, real player enjoyment/retention and commercial/provider qualification remain open. Real ads and paid gold remain gated.
+
+## Site / GitHub visual refresh
+
+27 October 2026: shared Nova/vector art, actual 1.5 captures, direct signed-APK links, shared FR/EN site styling and current-document audit in progress. Static/browser/deletion checks and exact Firebase delivery evidence will be recorded under `docs/validation/site-v1.5/`. This entry does not yet establish a new Hosting deployment.

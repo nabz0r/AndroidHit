@@ -40,3 +40,5 @@ This candidate keeps `FORCE_TEST_ADS=true` and an empty embedded wallet origin. 
 A successful build is only one part of release evidence. [Validation](VALIDATION.md) distinguishes exact installed bytes, runtime checks, synthetic emulator profiles, preserved old saves and remaining physical/player/commercial checks.
 
 Preserved: [1.4 release](RELEASE_1_4.md), [1.4 validation](VALIDATION_1_4.md), [1.3](RELEASE_1_3.md), [1.2](VALIDATION_1_2.md), [offline 1.1](VALIDATION_1_1.md).
+
+The [1.5 website/design refresh](DESIGN_SYSTEM.md) changes presentation only; these Android artifacts retain their listed hashes. Website publication has its own [revision-specific evidence](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence).

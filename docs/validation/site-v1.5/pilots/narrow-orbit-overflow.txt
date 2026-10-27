@@ -1,0 +1,48 @@
+[
+  {
+    tag: 'DIV',
+    class: 'orbit orbit-one',
+    width: 399.44287109375,
+    left: -39.72144317626953,
+    right: 359.72142791748047
+  },
+  {
+    tag: 'DIV',
+    class: 'orbit orbit-two',
+    width: 435.0482177734375,
+    left: -57.52412414550781,
+    right: 377.5240936279297
+  },
+  {
+    tag: 'FIGURE',
+    class: 'hero-phone',
+    width: 261.68072509765625,
+    left: 59.659645080566406,
+    right: 321.34037017822266
+  },
+  {
+    tag: 'IMG',
+    class: '',
+    width: 258.4093017578125,
+    left: 62.93107223510742,
+    right: 321.3403739929199
+  }
+]
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Overflow: /index.html fr 320
+
+false !== true
+
+    at file:///Users/n/androidhit/public/tests/browser-check.mjs:104:16 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
