@@ -1,0 +1,20 @@
+Runtime verified separately during this run: Android API36, arm64-v8a, getconf PAGESIZE=16384.
+Scope: installed APK SHA24a128e3f25fc73e698e46e7d46a30b3358e8d88f08dd59d2b9e8984e3ddf049, before the separate shared-PNG barrier renderer fix. Core engine and LumaView were unchanged by that forthcoming fix. No shared-image, payment or identity claim is made here.
+
+Installed production: versionCode=6 minSdk=26 targetSdk=36
+Installed production: versionName=1.5.0-rc1
+Installed APK SHA256 matches current production output: 24a128e3f25fc73e698e46e7d46a30b3358e8d88f08dd59d2b9e8984e3ddf049
+No profile seed/reset. Baseline earned coins=180, XP=0, read-only power stocks={"flow": 2, "focus": 0, "hint": 3, "shield": 0, "trail": 0, "vision": 3}
+P1 fixed obstacle rejects the crossing piece without removing it: PASS
+Screenshot: docs/screenshots/v1.5/sealed-wall-before.png
+Screenshot: docs/screenshots/v1.5/sealed-wall-open.png
+P1 key exit opens fixed cell; Undo restores key and fixed-cell blocker: PASS
+P1 force-stop/resume retains opened seal; Undo after restoration closes it correctly: PASS
+P1 completed through real taps: 4 pieces, 1 fixed cells, 0 coins, 0 XP, no powers: PASS
+P2 completed through real taps: 5 pieces, 2 fixed cells, 0 coins, 0 XP, no powers: PASS
+P3 completed through real taps: 5 pieces, 2 fixed cells, 0 coins, 0 XP, no powers: PASS
+P4 completed through real taps: 5 pieces, 1 fixed cells, 0 coins, 0 XP, no powers: PASS
+P5 completed through real taps: 4 pieces, 1 fixed cells, 0 coins, 0 XP, no powers: PASS
+P6 completed through real taps: 7 pieces, 2 fixed cells, 0 coins, 0 XP, no powers: PASS
+All six completions leave earned coins, XP, all power stocks, progression and meta records unchanged: PASS
+No production crash found in existing crash buffer. No ad, purchase, profile seeding or publication performed.

@@ -1,0 +1,570 @@
+#!/usr/bin/env python3
+"""Inspect the installed 1.5 UI on emulator-5556, without purchases or account login.
+
+Examples:
+  python3 scripts/smoke-v15.py --check-copy
+  python3 scripts/smoke-v15.py --serial emulator-5556 --restore-language auto
+  python3 scripts/smoke-v15.py --serial emulator-5556 --restore-language en \
+      --package com.androidhit.lumadrift.sandbox --cases layouts
+  python3 scripts/smoke-v15.py --serial emulator-5556 --restore-language en \
+      --languages en,fr --cases languages
+
+Never installs, clears app data, edits private preferences, buys/equips anything,
+presses reward claims, opens Google login, or requests an advertisement. Language is
+changed through Settings, then restored to the caller-supplied original choice.
+The Canvas language buttons do not expose which saved choice is selected, so the
+caller must explicitly distinguish "auto" from a resolved language like "en".
+Display overrides are saved and restored in finally, including on interruption.
+Root coordinates this single emulator; do not run another UI smoke concurrently.
+"""
+import argparse
+from datetime import datetime, timezone
+import importlib.util
+import json
+import os
+from pathlib import Path
+import re
+import signal
+import struct
+import subprocess
+import sys
+import time
+import traceback
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parents[1]
+SPEC = importlib.util.spec_from_file_location("v15_ui_base", ROOT / "scripts/smoke-v11.py")
+BASE = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(BASE)
+LANGUAGES = ("en", "fr", "de", "es", "pt", "it")
+LANGUAGE_NAMES = dict(zip(LANGUAGES, ("English", "Français", "Deutsch", "Español", "Português", "Italiano")))
+PACKAGES = ("com.androidhit.lumadrift", "com.androidhit.lumadrift.sandbox")
+
+
+def normalize_languages(values):
+    """Accept a subset as comma-separated or separate CLI arguments."""
+    selected = []
+    for value in values:
+        for language in value.split(","):
+            language = language.strip()
+            if language not in LANGUAGES:
+                raise ValueError("Unknown language " + repr(language) + "; choose " + ", ".join(LANGUAGES))
+            if language not in selected:
+                selected.append(language)
+    return tuple(selected)
+
+
+def source_copy(filename):
+    """Read existing Java string literals; no generated/translated test copy."""
+    rows = {}
+    for line in (ROOT / "app/src/main/java/com/androidhit/lumadrift/data" / filename).read_text().splitlines():
+        if not re.search(r"\badd\(|TEXT\.put\(", line):
+            continue
+        literals = re.findall(r'"(?:\\.|[^"\\])*"', line)
+        if len(literals) == 7:
+            values = [json.loads(value) for value in literals]
+            rows[values[0]] = dict(zip(LANGUAGES, values[1:]))
+    if not rows:
+        raise AssertionError("No six-language copy parsed from " + filename)
+    return rows
+
+
+COPY = {"t": source_copy("Strings.java"), "u": source_copy("UiStrings.java"), "g": source_copy("GearStrings.java")}
+
+
+def caption(kind, language, key, *args):
+    result = COPY[kind][key][language]
+    return result % args if args else result
+
+
+def format_pattern(template):
+    return re.compile("^" + re.escape(template).replace("%d", r"(\d+)").replace("%s", r"(.+)") + "$")
+
+
+def check_copy():
+    required = {
+        "t": ("home", "settings", "shop", "collection", "characters", "skins", "coins", "account",
+              "account_guest", "google_sign_in", "back", "close", "equipped", "booster_hint",
+              "stock", "power_buy", "system"),
+        "u": ("guest_note", "equipment", "owned_count", "all", "owned", "get", "pack", "wardrobe", "local", "sealed"),
+        "g": ("gear_moonbud", "gear_lantern_leaf", "gear_slot_head", "gear_effect_win_bonus"),
+    }
+    for kind, keys in required.items():
+        for key in keys:
+            for language in LANGUAGES:
+                if not COPY[kind][key][language].strip():
+                    raise AssertionError("Missing UI copy " + repr((kind, key, language)))
+    for language in LANGUAGES:
+        assert format_pattern(caption("u", language, "owned_count")).fullmatch(caption("u", language, "owned_count", 3, 18))
+        assert format_pattern(caption("u", language, "pack")).fullmatch(caption("u", language, "pack", 3, 40))
+    print("PASS offline copy/parser check: six languages and all smoke selectors. No adb operation.")
+
+
+class V15Smoke(BASE.V11Smoke):
+    def __init__(self, args):
+        if args.serial != "emulator-5556":
+            raise ValueError("This coordinated smoke only permits explicit --serial emulator-5556")
+        BASE.PACKAGE = args.package
+        super().__init__(args.serial, args.adb, args.report)
+        self.package = args.package
+        self.args = args
+        self.report_path = Path(args.report or ROOT / "docs/validation/v1.5/ui-smoke.txt")
+        self.json_path = self.report_path.with_suffix(".json")
+        self.shots = Path(args.screenshots or ROOT / "docs/screenshots/v1.5")
+        self.node_directory = self.report_path.parent / "ui-nodes"
+        self.language = None
+        self.width = self.height = 0
+        self._node_cache = None
+        self.evidence = {"status": "RUNNING", "started_utc": datetime.now(timezone.utc).isoformat(),
+                         "serial": self.serial, "package": self.package, "captures": [], "cases": [],
+                         "requested_languages": list(args.languages), "requested_cases": list(args.cases),
+                         "boundaries": "No installs, profile reset, private preference edits, login, ads, purchases, equips or explicit reward-claim actions."
+                         " Normal app entry may record a visit or persist already-eligible local gear unlocks."
+                         " Language changes use Settings; metadata/digital bounds are not native-speaker or physical-device acceptance."}
+
+    def t(self, key, *args):
+        return caption("t", self.language, key, *args)
+
+    def u(self, key, *args):
+        return caption("u", self.language, key, *args)
+
+    def shell(self, *args):
+        # Root reserves this emulator exclusively. Reuse one accessibility dump
+        # between actions; invalidate before every navigation/display mutation.
+        if args and (args[0] in ("input", "am") or (args[0] == "wm" and len(args) > 2)):
+            self._node_cache = None
+        return super().shell(*args)
+
+    def nodes(self, all_packages=False):
+        if self._node_cache is not None:
+            return self._node_cache if all_packages else [node for node in self._node_cache if node.get("package") == self.package]
+        remote = "/sdcard/luma-v15-ui-smoke.xml"
+        for attempt in range(3):
+            try:
+                self.shell("uiautomator", "dump", remote)
+                values = list(ET.fromstring(self.shell("cat", remote)).iter("node"))
+                self._node_cache = values
+                return values if all_packages else [node for node in values if node.get("package") == self.package]
+            except (ET.ParseError, subprocess.CalledProcessError):
+                if attempt == 2:
+                    raise
+                time.sleep(.3)
+
+    def launch(self):
+        self.shell("am", "start", "-n", self.package + "/com.androidhit.lumadrift.MainActivity")
+        time.sleep(.55)
+
+    def detect_language(self, nodes=None):
+        labels = {BASE.text(node) for node in (self.nodes() if nodes is None else nodes)}
+        matches = []
+        for language in LANGUAGES:
+            unique = (caption("t", language, "settings"), caption("t", language, "account_guest"),
+                      caption("u", language, "guest_note"))
+            if any(value in labels or any(value in label for label in labels) for value in unique):
+                matches.append(language)
+        if len(matches) != 1:
+            raise AssertionError("Cannot unambiguously identify the current UI language; return to Home or Settings first")
+        self.language = matches[0]
+        return self.language
+
+    def home(self):
+        for _ in range(9):
+            nodes = self.nodes()
+            labels = [BASE.text(node) for node in nodes]
+            settings = [node for node in nodes if node.get("clickable") == "true"
+                        and BASE.text(node) in {caption("t", lang, "settings") for lang in LANGUAGES}]
+            if settings:
+                self.detect_language(nodes)
+                return nodes
+            home_labels = {caption("t", lang, "home") for lang in LANGUAGES}
+            controls = [node for node in nodes if node.get("clickable") == "true" and BASE.text(node) in home_labels]
+            if controls:
+                self.tap(max(controls, key=lambda node: self.bounds(node)[1]))
+                continue
+            exits = {caption("t", lang, "exit") for lang in LANGUAGES}
+            controls = [node for node in nodes if node.get("clickable") == "true" and BASE.text(node) in exits]
+            if controls:
+                self.tap(controls[0])
+                continue
+            # Back closes previews/native Account or returns Settings to Home. It
+            # never presses any affirmative, sign-in or purchase control.
+            self.shell("input", "keyevent", "4")
+            time.sleep(.2)
+        raise AssertionError("Could not reach the 1.5 Home screen without changing gameplay")
+
+    def select_language(self, language):
+        nodes = self.home()
+        self.click(self.t("settings"), nodes)
+        self.click(self.t("system") if language == "auto" else LANGUAGE_NAMES[language])
+        time.sleep(.12)
+        self.shell("input", "keyevent", "4")
+        self.home()
+        if language != "auto" and self.language != language:
+            raise AssertionError("Language did not update to " + language)
+
+    def dimensions(self):
+        raw = self.command("exec-out", "screencap", "-p")
+        if raw[:8] != b"\x89PNG\r\n\x1a\n":
+            raise AssertionError("Invalid emulator screenshot")
+        self.width, self.height = struct.unpack(">II", raw[16:24])
+        return raw
+
+    def frame_bounds(self, nodes=None, minimum_controls=1):
+        nodes = self.nodes() if nodes is None else nodes
+        if not self.width:
+            self.dimensions()
+        inspected = []
+        for node in nodes:
+            if node.get("clickable") != "true" or node.get("visible-to-user") == "false":
+                continue
+            values = re.fullmatch(r"\[(-?\d+),(-?\d+)\]\[(-?\d+),(-?\d+)\]", node.get("bounds", ""))
+            if not values:
+                raise AssertionError("Clickable control lacks valid bounds")
+            left, top, right, bottom = map(int, values.groups())
+            if left == right or top == bottom:
+                continue  # Offscreen native ScrollView children are not visible controls.
+            if not (0 <= left < right <= self.width and 0 <= top < bottom <= self.height):
+                raise AssertionError("Control outside display: " + repr((BASE.text(node), (left, top, right, bottom))))
+            inspected.append({"label": BASE.text(node), "bounds": [left, top, right, bottom]})
+        if len(inspected) < minimum_controls:
+            raise AssertionError("Too few visible actionable controls")
+        return inspected
+
+    def capture(self, name, nodes=None):
+        canonical = re.fullmatch(r"v15-(en|fr|de|es|pt|it)-(.+)", name)
+        if canonical:
+            language, suffix = canonical.groups()
+            suffix = {"equipment": "collection-equipment", "companions": "collection-companions",
+                      "themes": "collection-themes", "equipment-owned": "collection-equipment-owned",
+                      "equipment-preview": "equipment-preview", "shop-1": "shop", "shop-2": "shop-page2",
+                      "guest": "profile-guest"}.get(suffix, suffix)
+            name = suffix + "-" + language
+        self.shots.mkdir(parents=True, exist_ok=True)
+        self.node_directory.mkdir(parents=True, exist_ok=True)
+        path = self.shots / (name + ".png")
+        path.write_bytes(self.dimensions())
+        nodes = self.nodes() if nodes is None else nodes
+        controls = self.frame_bounds(nodes)
+        body = ET.Element("hierarchy", {"package": self.package, "language": self.language or "unknown"})
+        for node in nodes:
+            body.append(ET.Element("node", dict(node.attrib)))
+        xml_path = self.node_directory / (name + ".xml")
+        ET.ElementTree(body).write(xml_path, encoding="utf-8", xml_declaration=True)
+        self.evidence["captures"].append({"image": str(path.relative_to(ROOT)),
+                "nodes": str(xml_path.relative_to(ROOT)), "width": self.width, "height": self.height,
+                "language": self.language, "controls": controls})
+        self.log("CAPTURE " + str(path.relative_to(ROOT)))
+
+    def balance(self, nodes=None):
+        pattern = re.compile("^" + re.escape(self.t("coins")) + r":\s*(\d+)$")
+        matches = [int(match.group(1)) for node in (self.nodes() if nodes is None else nodes)
+                   if (match := pattern.fullmatch(BASE.text(node)))]
+        if len(matches) != 1:
+            raise AssertionError("Expected one accessible local balance")
+        return matches[0]
+
+    def mark(self, case, **details):
+        self.evidence["cases"].append({"case": case, "language": self.language, **details})
+        self.log("PASS " + case + " " + json.dumps(details, ensure_ascii=False, sort_keys=True))
+
+    def scroll(self, upwards=False):
+        if not self.width:
+            self.dimensions()
+        start, end = (.35, .8) if upwards else (.8, .35)
+        self.shell("input", "swipe", str(self.width // 2), str(int(self.height * start)),
+                   str(self.width // 2), str(int(self.height * end)), "380")
+        time.sleep(.15)
+
+    def account_guest(self, name):
+        nodes = self.home()
+        profile = self.t("account") + ": " + self.u("guest_note")
+        self.click(profile, nodes)
+        time.sleep(.25)
+        for _ in range(8):
+            nodes = self.nodes()
+            if self.t("account_guest") in [BASE.text(node) for node in nodes]:
+                break
+            self.scroll()
+        else:
+            raise AssertionError("Guest profile precondition failed; the smoke will not sign out an existing account")
+        self.capture(name + "-guest", nodes)
+        for _ in range(8):
+            nodes = self.nodes()
+            candidates = [node for node in nodes if node.get("clickable") == "true"
+                          and BASE.text(node).casefold() == self.t("google_sign_in").casefold()]
+            if candidates:
+                self.frame_bounds(nodes)
+                break
+            self.scroll()
+        else:
+            raise AssertionError("Guest page does not expose the Google sign-in action")
+        # The button is inspected, never pressed. Native Back returns to the same local game.
+        self.shell("input", "keyevent", "4")
+        self.home()
+        self.mark("guest account inspected; no provider UI opened")
+
+    def collection(self, name):
+        nodes = self.home()
+        self.click(self.t("collection"), nodes)
+        tabs = ((self.t("characters"), 24, "companions"), (self.t("skins"), 6, "themes"),
+                (self.u("equipment"), 18, "equipment"))
+        for title, total, suffix in tabs:
+            self.click(title)
+            self.click(self.u("all"))
+            nodes = self.nodes()
+            owned_pattern = format_pattern(self.u("owned_count"))
+            counters = [tuple(map(int, match.groups())) for node in nodes
+                        if (match := owned_pattern.fullmatch(BASE.text(node)))]
+            if len(counters) != 1 or counters[0][1] != total:
+                raise AssertionError("Wrong accessible ownership counter for " + suffix)
+            owned_count = counters[0][0]
+            cards = self.cards(nodes)
+            if len(cards) != min(4, total):
+                raise AssertionError("Expected four cards on the first unfiltered collection page")
+            self.capture(name + "-" + suffix, nodes)
+            self.click(self.u("owned_count", owned_count, total), nodes)
+            filtered = self.nodes()
+            filtered_cards = self.cards(filtered)
+            if len(filtered_cards) != min(4, owned_count):
+                raise AssertionError("Owned filter does not match its ownership count")
+            if any(state == self.u("get") for _, state, _ in filtered_cards):
+                raise AssertionError("Owned filter includes an unowned card")
+            self.frame_bounds(filtered)
+            if suffix == "equipment":
+                if owned_count < 3:
+                    raise AssertionError("Three starter slot items should be owned")
+                self.capture(name + "-equipment-owned", filtered)
+                self.click(self.u("all"))
+                gear_name = caption("g", self.language, "gear_lantern_leaf")
+                self.click(gear_name + ", ", prefix=True)
+                dialog = self.nodes()
+                labels = [BASE.text(node) for node in dialog]
+                if gear_name not in labels or not any(self.u("local") in label for label in labels):
+                    raise AssertionError("Equipment preview is missing its exact name/local-storage explanation")
+                first_win = (caption("g", self.language, "gear_effect_win_bonus_one")
+                             if "gear_effect_win_bonus_one" in COPY["g"]
+                             else caption("g", self.language, "gear_effect_win_bonus", 1))
+                if not any(first_win in label for label in labels):
+                    raise AssertionError("Lantern Leaf preview does not disclose the +1 first-victory benefit")
+                self.capture(name + "-equipment-preview", dialog)
+                self.close_dialog(dialog)
+            self.mark("collection tab and owned filter", tab=suffix, owned=owned_count, total=total)
+        self.home()
+
+    def cards(self, nodes):
+        states = {self.t("equipped"), self.u("owned"), self.u("get")}
+        values = []
+        for node in nodes:
+            parts = BASE.text(node).split(", ", 2)
+            if node.get("clickable") == "true" and len(parts) == 3 and parts[1] in states:
+                values.append((parts[0], parts[1], parts[2]))
+        return values
+
+    def close_dialog(self, nodes=None):
+        nodes = self.nodes() if nodes is None else nodes
+        close = [node for node in nodes if node.get("resource-id") == "android:id/button2"
+                 and BASE.text(node).casefold() == self.t("close").casefold()]
+        if len(close) != 1:
+            raise AssertionError("Expected one native negative Close button; no affirmative control was pressed")
+        self.tap(close[0])
+
+    def power_preview(self, name, capture=False):
+        nodes = self.nodes()
+        prefix = self.t("booster_hint") + ", "
+        card = self.control(prefix, nodes, prefix=True)
+        match = format_pattern(self.u("pack")).fullmatch(BASE.text(card)[len(prefix):])
+        if not match:
+            raise AssertionError("Spark card does not announce the pack quantity and local price")
+        quantity, price = map(int, match.groups())
+        if quantity != 3 or price < 1:
+            raise AssertionError("Spark pack quantity/positive local price invalid")
+        self.tap(card)
+        dialog = self.nodes()
+        labels = [BASE.text(node) for node in dialog]
+        stock_pattern = re.compile(re.escape(self.t("stock")) + r":\s*(\d+)")
+        match = stock_pattern.search("\n".join(labels))
+        if not match:
+            raise AssertionError("Power preview omits the exact current stock")
+        stock = int(match.group(1))
+        positive = [node for node in dialog if node.get("resource-id") == "android:id/button1"]
+        if len(positive) != 1 or BASE.text(positive[0]).casefold() != self.t("power_buy", quantity, price).casefold():
+            raise AssertionError("Buy confirmation differs from the displayed pack quantity/price")
+        if capture:
+            self.capture(name + "-power-offer", dialog)
+        self.close_dialog(dialog)
+        return {"stock": stock, "pack_quantity": quantity, "pack_price": price}
+
+    def shop(self, name):
+        nodes = self.home()
+        self.click(self.t("shop"), nodes)
+        self.click("‹")
+        before_coins = self.balance()
+        self.capture(name + "-shop-1")
+        before = self.power_preview(name, capture=True)
+        self.click("›")
+        self.capture(name + "-shop-2")
+        self.click("‹")
+        after = self.power_preview(name)
+        if after != before or self.balance() != before_coins:
+            raise AssertionError("Cancelled power previews changed stock, price or the local balance")
+        self.mark("shop pages and cancelled local-pack confirmation", coins=before_coins, **before)
+        self.home()
+
+    def sealed_menu(self, name):
+        nodes = self.home()
+        self.click(self.t("events"), nodes)
+        self.click(self.u("sealed"))
+        nodes = self.nodes()
+        stages = [node for node in nodes if node.get("clickable") == "true"
+                  and BASE.text(node).startswith(self.u("sealed") + " · ")]
+        if len(stages) != 6:
+            raise AssertionError("The Sealed passages prototype menu must expose six separate stages")
+        self.capture(name + "-sealed-menu", nodes)
+        self.mark("six sealed prototype entries inspected; no board opened", stages=len(stages))
+        self.home()
+
+    def language_case(self, language, name=None):
+        self.select_language(language)
+        name = name or "v15-" + language
+        home = self.home()
+        if self.t("account") + ": " + self.u("guest_note") not in [BASE.text(node) for node in home]:
+            raise AssertionError("Guest lobby precondition failed; no account state will be changed")
+        coins = self.balance(home)
+        self.capture(name + "-home", home)
+        self.click(self.t("settings"), home)
+        self.capture(name + "-settings")
+        self.shell("input", "keyevent", "4")
+        self.account_guest(name)
+        self.collection(name)
+        self.shop(name)
+        self.sealed_menu(name)
+        if self.balance(self.home()) != coins:
+            raise AssertionError("UI-only navigation changed the local balance")
+        self.mark("language navigation complete", coins_unchanged=coins)
+
+    def override(self, kind):
+        return next((line.split(":", 1)[1].strip() for line in self.shell("wm", kind).splitlines()
+                     if line.startswith("Override ")), "reset")
+
+    def installed_identity(self):
+        if self.command("get-state").decode().strip() != "device" or self.shell("getprop", "ro.kernel.qemu").strip() != "1":
+            raise AssertionError("The explicitly selected target is not a running Android emulator")
+        dump = self.shell("dumpsys", "package", self.package)
+        version_name = re.search(r"\bversionName=([^\s]+)", dump)
+        version_code = re.search(r"\bversionCode=(\d+)", dump)
+        wanted = self.args.expected_version or ("1.5.0-sandbox" if self.package.endswith(".sandbox") else "1.5.0-rc1")
+        if not version_name or version_name.group(1) != wanted or not version_code or int(version_code.group(1)) != 6:
+            raise AssertionError("Install the identified 1.5/code6 candidate first; the smoke never installs or accepts old 1.4 UI")
+        paths = self.shell("pm", "path", self.package).splitlines()
+        base = next((line.removeprefix("package:") for line in paths if line.endswith("/base.apk")), None)
+        digest = None
+        if base:
+            measured = self.shell("sha256sum", base).split()
+            if measured and re.fullmatch(r"[a-fA-F0-9]{64}", measured[0]):
+                digest = measured[0].lower()
+        self.evidence["installed"] = {"version_name": version_name.group(1), "version_code": int(version_code.group(1)),
+                                      "base_apk_sha256": digest}
+        self.log("Installed identity: " + json.dumps(self.evidence["installed"], sort_keys=True))
+
+    def run(self):
+        self.installed_identity()
+        self.launch()
+        self.home()
+        self.evidence["initial_resolved_language"] = self.language
+        if self.t("account") + ": " + self.u("guest_note") not in [BASE.text(node) for node in self.nodes()]:
+            raise AssertionError("Use an existing guest installation; this smoke will not change an account")
+        size, density = self.override("size"), self.override("density")
+        self.evidence["initial_display_overrides"] = {"size": size, "density": density}
+        self.evidence["requested_restored_language_choice"] = self.args.restore_language
+        self.log("No gameplay, account, advertisement or purchase action will be confirmed.")
+        try:
+            if "languages" in self.args.cases:
+                for language in self.args.languages:
+                    self.language_case(language)
+            if "layouts" in self.args.cases:
+                for dimensions in ("720x1280", "1280x720"):
+                    self.shell("wm", "size", dimensions)
+                    self.shell("wm", "density", "320")
+                    time.sleep(.65)
+                    self.width = self.height = 0
+                    self.launch()
+                    self.language_case("en", "v15-layout-" + dimensions)
+                    self.mark("display bounds", dimensions=dimensions, density=320)
+            self.evidence["status"] = "PASS"
+        finally:
+            restore_errors = []
+            for kind, value in (("size", size), ("density", density)):
+                try:
+                    self.shell("wm", kind, value)
+                except Exception as error:
+                    restore_errors.append(kind + ": " + str(error))
+            self.width = self.height = 0
+            time.sleep(.4)
+            try:
+                self.select_language(self.args.restore_language)
+                self.evidence["restored_resolved_language"] = self.language
+            except Exception as error:
+                restore_errors.append("language: " + str(error))
+            self.evidence["final_display_overrides"] = {"size": self.override("size"), "density": self.override("density")}
+            if self.evidence["final_display_overrides"] != self.evidence["initial_display_overrides"]:
+                restore_errors.append("Display overrides differ from their original values")
+            self.evidence["restoration_errors"] = restore_errors
+            if restore_errors:
+                self.evidence["status"] = "FAIL"
+                raise AssertionError("Could not fully restore test settings: " + repr(restore_errors))
+            self.log("Original display overrides and caller-specified original language choice restored.")
+
+    def write_report(self):
+        self.report_path.parent.mkdir(parents=True, exist_ok=True)
+        self.evidence["finished_utc"] = datetime.now(timezone.utc).isoformat()
+        self.json_path.write_text(json.dumps(self.evidence, ensure_ascii=False, indent=2) + "\n")
+        self.report_path.write_text("Installed Luma Drift 1.5 UI smoke — " + self.evidence["status"] + "\n"
+                + "\n".join(self.messages) + "\n\n" + self.evidence["boundaries"] + "\n"
+                + "JSON details: " + str(self.json_path.relative_to(ROOT)) + "\n")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--check-copy", action="store_true", help="Offline parser/selector check; no adb calls")
+    parser.add_argument("--serial", choices=("emulator-5556",))
+    parser.add_argument("--package", choices=PACKAGES, default=PACKAGES[0])
+    parser.add_argument("--restore-language", choices=("auto",) + LANGUAGES,
+                        help="Required original saved language choice, including auto when applicable")
+    parser.add_argument("--cases", choices=("languages", "layouts"), nargs="+", default=("languages", "layouts"))
+    parser.add_argument("--languages", nargs="+", default=LANGUAGES, metavar="LANG[,LANG...]",
+                        help="Language subset, comma- or space-separated (default: en fr de es pt it)")
+    parser.add_argument("--expected-version", help="Expected 1.5 candidate version name; code6 is still required")
+    parser.add_argument("--adb")
+    parser.add_argument("--report")
+    parser.add_argument("--screenshots")
+    args = parser.parse_args()
+    try:
+        args.languages = normalize_languages(args.languages)
+    except ValueError as error:
+        parser.error(str(error))
+    if args.check_copy:
+        check_copy()
+        return 0
+    if args.serial is None or args.restore_language is None:
+        parser.error("Runtime inspection requires explicit --serial emulator-5556 and --restore-language ORIGINAL_CHOICE")
+    task = V15Smoke(args)
+    previous = signal.getsignal(signal.SIGTERM)
+    def interrupted(signum, frame):
+        raise KeyboardInterrupt("UI smoke interrupted; attempting settings restoration")
+    signal.signal(signal.SIGTERM, interrupted)
+    try:
+        task.run()
+    except BaseException as error:
+        task.evidence["status"] = "FAIL"
+        task.evidence["error"] = str(error)
+        task.log("FAIL " + str(error))
+        traceback.print_exc()
+        return 1
+    finally:
+        signal.signal(signal.SIGTERM, previous)
+        task.write_report()
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

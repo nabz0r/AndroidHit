@@ -71,24 +71,33 @@ final class Synth {
         return pcm(output, 0.8);
     }
 
-    /** A 12.8-second original ambient loop at 75 BPM; all note tails wrap exactly. */
+    /** Original 25.6-second theme at 75 BPM, with overlapping notes and wrapped echo tails. */
     static short[] ambientLoop() {
         double beat = 0.8;
-        double[] output = new double[(int) Math.round(16 * beat * RATE)];
+        double[] output = new double[(int) Math.round(32 * beat * RATE)];
         int[][] chords = { { 48, 55, 59, 64 }, { 45, 52, 55, 60 },
-                { 41, 48, 52, 57 }, { 43, 50, 55, 59 } };
-        int[][] melody = { { 76, 79, 83, 79 }, { 76, 72, 79, 76 },
-                { 77, 81, 76, 72 }, { 74, 79, 83, 79 } };
-        for (int bar = 0; bar < 4; bar++) {
+                { 41, 48, 52, 57 }, { 43, 50, 55, 59 },
+                { 48, 55, 59, 62 }, { 45, 52, 55, 59 },
+                { 41, 48, 55, 57 }, { 43, 50, 55, 62 } };
+        int[][] melody = { { 76, 79, 74 }, { 72, 76, 79 },
+                { 77, 76, 72 }, { 74, 71, 67 },
+                { 76, 79, 83 }, { 81, 79, 76 },
+                { 77, 74, 72 }, { 74, 71, 79 } };
+        for (int bar = 0; bar < chords.length; bar++) {
             double start = bar * beat * 4;
-            for (int note : chords[bar]) pad(output, start, beat * 4, hz(note), 0.034);
-            for (int step = 0; step < 4; step++) {
-                double t = start + step * beat + (step % 2 == 0 ? 0 : 0.075);
-                bell(output, t, 1.15, hz(melody[bar][step]), 0.075);
-                bell(output, t + 0.27, 0.65, hz(melody[bar][step]), 0.014);
+            for (int note : chords[bar]) pad(output, start, beat * 5.3, hz(note), 0.047);
+            pad(output, start, beat * 4.6, hz(chords[bar][0] - 12), 0.042);
+            for (int step = 0; step < melody[bar].length; step++) {
+                double t = start + (step == 0 ? 0.15 : step == 1 ? 1.5 : 2.75) * beat;
+                double pitch = hz(melody[bar][step]);
+                bell(output, t, 1.85, pitch, step == 0 ? 0.065 : 0.050);
+                bell(output, t + beat * 0.75, 1.15, pitch, 0.016);
+                bell(output, t + beat * 1.5, 0.85, pitch / 2, 0.008);
             }
+            // A quiet lower-register answer gives pulse without a percussion loop.
+            bell(output, start + beat * 2.1, 1.5, hz(chords[bar][1]), 0.024);
         }
-        return pcm(output, 0.65);
+        return levelMusic(output, 0.14, 0.62);
     }
 
     private static void notes(double[] output, int[] notes, double interval, double duration, double gain) {
@@ -134,6 +143,23 @@ final class Synth {
     }
 
     private static double hz(int midi) { return 440 * Math.pow(2, (midi - 69) / 12.0); }
+
+    private static short[] levelMusic(double[] audio, double targetRms, double ceiling) {
+        double sum = 0;
+        for (double value : audio) sum += value;
+        double mean = sum / audio.length;
+        double squares = 0;
+        double peak = 0;
+        for (int i = 0; i < audio.length; i++) {
+            audio[i] -= mean;
+            squares += audio[i] * audio[i];
+            peak = Math.max(peak, Math.abs(audio[i]));
+        }
+        double rms = Math.sqrt(squares / audio.length);
+        double gain = rms == 0 ? 0 : Math.min(targetRms / rms, ceiling / peak);
+        for (int i = 0; i < audio.length; i++) audio[i] *= gain;
+        return pcm(audio, ceiling);
+    }
 
     private static short[] pcm(double[] audio, double ceiling) {
         double peak = 0;

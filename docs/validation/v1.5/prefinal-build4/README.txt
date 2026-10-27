@@ -1,0 +1,1 @@
+Historical build 4 binary audit, preserved before the Gold-label and durable-retry fixes. These hashes do not identify the final build 5 deliverables. Current evidence belongs in the parent v1.5 directory.

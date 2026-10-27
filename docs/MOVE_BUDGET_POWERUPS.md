@@ -1,5 +1,8 @@
 # Action budgets, optional continuation, and six powers
 
+> Current 1.5: new runs use fixed board-specific N+2…4 allowances, G/H layouts (1,000 Journey + 240 Remix), explicit power confirmation and durable effect recovery. Advanced charms protect at most one additional blocked attempt per run. Existing policy-1 attempts keep the historical allowances below until finished/abandoned. [Current rules and acceptance](RELEASE_1_5.md) · [Measured maps](data/progression-v2-summary.md).
+
+
 This is the implemented **Lab 1.3** contract. The [research note](MOVE_LIMITS_RESEARCH.md) records the official game and Google references checked before implementation. The original 1.2 APK and its historical evidence remain separate. Automated logic results below do not claim human enjoyment, retention, revenue, or live payment validation.
 
 ## What an action means

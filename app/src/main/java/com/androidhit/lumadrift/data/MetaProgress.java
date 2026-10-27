@@ -132,7 +132,7 @@ public final class MetaProgress {
         if ("campaign".equals(mode)) return index >= 1 && index <= Catalog.LEVEL_COUNT;
         if ("daily".equals(mode)) return index >= 0 && index < Catalog.DAILY_COUNT && dayId().equals(period);
         if ("weekly".equals(mode)) return index >= 0 && index < Catalog.WEEKLY_COUNT && weekId().equals(period);
-        return "remix".equals(mode) && index >= 1 && index <= Catalog.LEVEL_COUNT && "remix-v1".equals(period);
+        return "remix".equals(mode) && index >= 1 && index <= Catalog.REMIX_COUNT && "remix-v1".equals(period);
     }
 
     private String weekId() {

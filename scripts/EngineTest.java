@@ -1,3 +1,4 @@
+import com.androidhit.lumadrift.engine.BalancedCatalog;
 import com.androidhit.lumadrift.engine.Board;
 import com.androidhit.lumadrift.engine.ChallengeCode;
 import com.androidhit.lumadrift.engine.Direction;
@@ -30,7 +31,13 @@ public final class EngineTest {
         for(int n=1;n<=240;n++){
             roundtrip(ChallengeCode.encodeBalanced(n),ChallengeCode.Kind.BALANCED,n);
             roundtrip(ChallengeCode.encodeBalancedRemix(n),ChallengeCode.Kind.BALANCED_REMIX,n);
+            roundtrip(ChallengeCode.encodeBalancedV2(n),ChallengeCode.Kind.BALANCED_V2,n);
+            roundtrip(ChallengeCode.encodeBalancedRemixV2(n),ChallengeCode.Kind.BALANCED_REMIX_V2,n);
         }
+        for(int n=241;n<=BalancedCatalog.LEVEL_COUNT;n++)roundtrip(ChallengeCode.encodeBalancedV2(n),ChallengeCode.Kind.BALANCED_V2,n);
+        expectIllegal(()->ChallengeCode.encodeBalancedV2(1001),"V2 Journey upper bound");
+        expectIllegal(()->ChallengeCode.encodeBalancedV2(0),"V2 Journey lower bound");
+        expectIllegal(()->ChallengeCode.encodeBalancedRemixV2(241),"V2 Remix upper bound");
         expectIllegal(()->ChallengeCode.encodeBalanced(0),"Balanced lower bound");
         expectIllegal(()->ChallengeCode.encodeBalancedRemix(241),"Balanced remix upper bound");
         check(contentDigest(false).equals("7cdbb8a4d94fe8ddb468a2ade2fa214b258cedd6bc5cbe24a74ee7c029b2893a"),

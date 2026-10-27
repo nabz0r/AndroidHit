@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.5.0-rc1 / 1.5.0-sandbox — avatar, planning and sealed passages
+
+27 October 2026 · version code 6. [Release scope and executed acceptance](RELEASE_1_5.md).
+
+- Integrated lobby with actual Google/guest identity, equipped avatar, current board and activity cards.
+- 1,000 certified Journey maps and 240 Remix, with fixed per-map action margins, measured risky choices and versioned G/H codes. C/R/B/Q and unfinished old runs keep their original board and allowance.
+- Six separate P challenges introduce fixed walls that dissolve when their matching key exits; Undo restores them. Unlimited practice, no currency/XP/powers.
+- 18 permanent local equipment items in Head/Aura/Charm slots, deterministic Journey/weekly/event/earned-coin sources and bounded benefits. Explicit ownership/equip filters and previews.
+- Six powers now require explicit confirmation. Durable reservation/application/confirmation and recovery block duplicate charges, active-effect reuse and interrupted-Flow loss.
+- Repaired static AudioTrack loading; original 25.6-second ambient loop, fades and lifecycle/focus handling.
+- Clear stock, quantities, earned-coin prices, milestone rewards and separate purchased-gold entry. Six-language lobby/equipment/store copy.
+- Sample ad units and the empty wallet-origin checkout gate remain. Real purchase, Android Google provider success and consent/ad readiness require separate qualification.
+
+
 ## 1.4.0-rc1 — Production preparation
 
 26 October 2026. Production package `com.androidhit.lumadrift`, code 5; full puzzle content retained. Separate production/Lab Gradle flavors, supplied Firebase public configuration and three owner rewarded-unit IDs. Preparation defaults force sample creatives and leave the deployed wallet origin empty.

@@ -1,17 +1,20 @@
-# Production preparation — 1.4.0 release candidate
+# Luma Drift 1.5 — game quality release
 
-Owner request: implement the gold-purchase server, prepare public privacy/deletion pages and a production Android build, test/document the result and publish it on `main`.
+Target: 1.5.0-rc1 / Android code 6. Owner requests: integrated lobby and visible Google identity, avatar equipment, at least 1,000 maps, meaningful difficulty, reliable powers, ambient music, clearer collection/shop, documentation, tested APK/AAB and main publication.
 
-## Work and acceptance
+## Acceptance
 
-1. **Server wallet:** Firebase-authenticated HTTP service; Google Play verification; Firestore transactions; unique fulfillment; durable recovery/consumption; refund notifications/reconciliation; account deletion. Exercise failure, concurrency and replay scenarios without fabricating Google receipts.
-2. **Android production channel:** separate production/Lab build configurations, supplied public Firebase/AdMob IDs, three rewarded placements, real Billing flow and server-only paid balance. Keep checkout blocked while deployment/configuration is missing; keep Lab simulation isolated.
-3. **Useful purchased currency:** spend paid gold on permanent companions/skins through the server; restore account-bound ownership. Never import editable local coins into paid gold. Existing local gameplay, powers and rewards remain available offline.
-4. **Public resources:** responsive FR/EN developer, privacy and deletion pages; app-ads.txt; explicit owner/hosting configuration still required. No invented support address or claimed publication.
-5. **Delivery evidence:** server and game regression tests, Android build/lint/signature/bundle checks, installed production UI/gameplay checks and screenshots, refreshed documentation and versioned artifacts published on `main`.
+1. 1,000 distinct certified Journey boards; 240 Remix; measure risky legal choices, exact random-legal completion and symmetry uniqueness. Preserve legacy share codes and unfinished attempts.
+2. Reserve/apply/save/complete power charges; block active/overlapping inputs; recover interrupted Flow and process recreation without a second charge.
+3. Correct static AudioTrack loading; original ambient loop with focus/lifecycle and sound controls; distinguish JVM/DSP checks from installed runtime evidence.
+4. Integrated lobby: honest guest/Google identity, current companion/equipment, main play CTA, clear event/missions/shop access. Six languages and small-screen accessibility.
+5. Permanent local avatar equipment in three slots, explicit sources and bounded benefits earned through play; distinguish cosmetic looks, functional gear, earned coins and account gold.
+6. Build/lint/signature, engine/economy/upgrade checks, installed play/UI/audio validation, screenshots; update README, roadmap and versioned evidence. Publish tested artifacts and source to main and verify remote bytes.
 
-## External milestones
+## Production boundary
 
-Google sign-in requires a Web OAuth client ID: the first supplied Android Firebase file has none. Play license tests require the owner's products/account/track; production wallet deployment requires Cloud billing and scoped service permissions. AdMob serving requires account/app/consent qualification. These are separate from local tests and a successfully built APK.
+Hosting and Cloud Run deployment, account deletion and published AdMob message have owner-reported evidence in docs/validation. Installed consent refusal, Play approval and real purchases remain unverified. This quality release retains sample ad units and gated checkout; no purchase or retention result is inferred from simulations.
 
-No paid cloud resources or production traffic are activated by this preparation task.
+## Executed outcome
+
+Items 1–5 and technical delivery checks in item 6 are implemented and evidenced in [VALIDATION](docs/VALIDATION.md). Final sharing, key/Undo and audio were retested after the isolated share-image fix. APK/AAB hashes and signing are in [RELEASE](docs/RELEASE.md). Publication is the final delivery step; physical-device/player/provider qualification remains a separate roadmap stage. No scripted clear establishes enjoyment or a hit.

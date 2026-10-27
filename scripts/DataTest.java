@@ -17,6 +17,7 @@ public final class DataTest {
 
     private static final class MemoryPreferences implements SharedPreferences {
         private final Map<String, Object> values = new HashMap<>();
+        @Override public synchronized Map<String, ?> getAll() { return new HashMap<>(values); }
         @Override public boolean contains(String key) { return values.containsKey(key); }
         @Override public int getInt(String key, int fallback) {
             return values.containsKey(key) ? (Integer) values.get(key) : fallback;
@@ -86,15 +87,15 @@ public final class DataTest {
         for (int level = 2; level <= Catalog.LEVEL_COUNT; level++) {
             check(store.completeLevel(level, 3) == 55, "Campaign completion " + level);
         }
-        check(store.unlockedLevel() == 240, "Unlocked level capped at last campaign level");
-        check(store.totalStars() == 720, "All campaign stars counted");
-        check(store.completedLevels() == 240, "All campaign completions counted");
-        check(store.completeLevel(241, 3) == 0, "Out-of-range level cannot pay rewards");
+        check(store.unlockedLevel() == Catalog.LEVEL_COUNT, "Unlocked level capped at last campaign level");
+        check(store.totalStars() == Catalog.LEVEL_COUNT * 3, "All campaign stars counted");
+        check(store.completedLevels() == Catalog.LEVEL_COUNT, "All campaign completions counted");
+        check(store.completeLevel(Catalog.LEVEL_COUNT+1, 3) == 0, "Out-of-range level cannot pay rewards");
         check(store.completeLevel(-1, 3) == 0, "Negative level cannot pay rewards");
-        check(new GameStore(context).stars(240) == 3, "Recreated store retains progression");
+        check(new GameStore(context).stars(Catalog.LEVEL_COUNT) == 3, "Recreated store retains progression");
 
         int balance = store.coins();
-        for (int level = 1; level <= 240; level++) store.completeLevel(level, 3);
+        for (int level = 1; level <= Catalog.LEVEL_COUNT; level++) store.completeLevel(level, 3);
         check(store.coins() == balance, "Replaying entire campaign cannot farm earned rewards");
         check(store.purchaseSkin("lagoon"), "Earned currency buys a theme");
         balance = store.coins();
@@ -173,13 +174,13 @@ public final class DataTest {
         GameStore restored = new GameStore(context);
         check(restored.remixStars(1) == 3 && restored.remixUnlockedLevel() == 2 && restored.coins() == store.coins(), "Recreated store retains Remix stars, unlock and wallet");
 
-        for (int level = 2; level <= Catalog.LEVEL_COUNT; level++) {
+        for (int level = 2; level <= Catalog.REMIX_COUNT; level++) {
             check(restored.completeRemix(level, 3) == 71, "First complete Remix reward " + level);
         }
         check(restored.remixUnlockedLevel() == 240 && restored.remixStars(240) == 3, "Remix progression reaches and caps at final board");
         check(restored.remixStars(0) == 0 && restored.remixStars(-1) == 0 && restored.remixStars(241) == 0, "Out-of-range Remix star reads are empty");
         balance = restored.coins();
-        for (int level = 1; level <= Catalog.LEVEL_COUNT; level++) restored.completeRemix(level, 3);
+        for (int level = 1; level <= Catalog.REMIX_COUNT; level++) restored.completeRemix(level, 3);
         check(restored.coins() == balance, "Replaying the full Remix journey cannot farm earned currency");
         check(restored.completeRemix(241, 3) == 0 && restored.remixUnlockedLevel() == 240, "Completed Remix journey cannot create a 241st board");
         check(restored.unlockedLevel() == 13 && restored.totalStars() == 12, "Completing all Remix boards never advances the independent Journey");

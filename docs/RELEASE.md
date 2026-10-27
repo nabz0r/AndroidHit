@@ -1,42 +1,42 @@
-# Luma Drift 1.4 — signed production candidate
+# Luma Drift 1.5 — avatar, planning and sealed passages
 
-**26 October 2026 · 1.4.0-rc1 · version code 5 · `com.androidhit.lumadrift`**
+**27 October 2026 · 1.5.0-rc1 / code 6 · `com.androidhit.lumadrift`**
 
-**[Download production APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.4.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.4.0-rc1.aab) · [Validation](VALIDATION.md) · [Production scope](PRODUCTION_RELEASE.md).
+**[Download Android APK](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.5.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.5.0-rc1.aab) · [Changes and rules](RELEASE_1_5.md) · [Executed validation](VALIDATION.md).
 
-This is a preparation candidate with the full puzzle, configured Google identity/AdMob IDs and an implemented real purchase adapter. It forces Google sample creatives and blocks checkout while the deployed wallet origin is absent. It does not claim a completed Google login, owner Play payment, hosted policy or live advertising.
+The quality candidate adds an integrated lobby, honest Google/guest profile, 18 avatar equipment items, 1,000 Journey boards plus 240 Remix, six key/wall prototype challenges, explicit power confirmation/recovery and repaired original ambient music. Equipment is earned locally with fixed sources and bounded benefits. [Full equipment table](AVATAR_EQUIPMENT.md).
 
-## Choose the installation
+## Choose the channel
 
-| | Production candidate | Current Lab | Preserved stable |
+| | Production | Isolated Lab | Preserved offline |
 |---|---|---|---|
-| Version | 1.4.0-rc1 / code 5 | 1.4.0-sandbox / code 5 | 1.1.0 |
+| Version | 1.5.0-rc1 / code 6 | 1.5.0-sandbox / code 6 | 1.1.0 |
 | Package | `com.androidhit.lumadrift` | `com.androidhit.lumadrift.sandbox` | `com.androidhit.lumadrift` |
-| APK | [Production](../releases/luma-drift-1.4.0-rc1.apk) | [Lab](../releases/luma-drift-1.4.0-sandbox.apk) | [Offline stable](../releases/luma-drift-1.1.0.apk) |
-| Wallet | Earned local coins; separate server paid wallet when deployed | Local simulator/test wallet | Earned local coins |
-| Network | Optional Google and configured wallet services | Google sample-ad routes | No Internet permission |
+| Wallet | Earned coins; separate server wallet adapter, checkout gated | Local test wallet and simulation | Earned coins |
+| Ads | Google sample units forced | Google sample units | No ad SDK |
+| Installation | Updates production/stable using the existing signing identity | Can coexist with production | Historical binary |
 
-Production **updates the stable package** with the same signing key; these two cannot be installed alongside each other. The Lab can coexist with production and never transfers simulated funds into its paid wallet. A genuine 1.1 → 1.4 emulator update preserved the observed French choice and 180 earned coins. Prior interrupted-board migration follows the content-version rules; this particular upgrade check started without an active puzzle. See [before](validation/v1.4/upgrade-before.json) and [after](validation/v1.4/upgrade-after.json).
+Production preserves existing local progress and inventory. New runs use fixed G/H progression and budget policy 2; an unfinished 1.4 run keeps its B/Q board and budget policy 1 until finished or abandoned. C/R/B/Q codes retain their old layouts. P codes identify the six unlimited, reward-free sealed challenges.
 
-## Exact production artifacts
+## Exact artifacts
 
 | File | Bytes | SHA-256 |
 |---|---:|---|
-| `luma-drift-1.4.0-rc1.apk` | 3,907,158 | `1684633cd69ca625925b906d7500ab5d8250ce58ca584257f4888bf470631dd9` |
-| `luma-drift-1.4.0-rc1.aab` | 7,205,688 | `2a5f3f22aa2b68c982b205141252e4fd6861915dbf05696725c32d185e12cfa1` |
+| [luma-drift-1.5.0-rc1.apk](../releases/luma-drift-1.5.0-rc1.apk) | 3,989,078 | `33c4dbd6c14fa3e72ec52c7d98475b1a9738b175bad9216c4bc4c7c5bdd817a2` |
+| [luma-drift-1.5.0-rc1.aab](../releases/luma-drift-1.5.0-rc1.aab) | 7,312,603 | `94264e1c62b04338646be6255c259c85a491366e4a652993712b2ca38fb41d7e` |
+| [luma-drift-1.5.0-sandbox.apk](../releases/luma-drift-1.5.0-sandbox.apk) | 3,988,753 | `d926fea0f52f0e868b3364d8e1c19e16941f9d9831636483971ef518e3f39c53` |
+| [luma-drift-1.5.0-sandbox.aab](../releases/luma-drift-1.5.0-sandbox.aab) | 7,304,111 | `31f01806bef9d3b35a90cf9f6d8102a088832204f6ae92cc0026b9a9534d5203` |
 
-The production APK/AAB downloaded from GitHub main were compared byte for byte with the signed tested files: [remote publication evidence](validation/v1.4/remote-publication.json).
+[SHA256SUMS](../releases/SHA256SUMS.txt) · [Production manifest](../releases/manifest-1.5.0-rc1.json) · [Lab manifest](../releases/manifest-1.5.0-sandbox.json) · [Binary audit](validation/v1.5/binary-final-candidate.json).
 
-The [artifact manifest](../releases/manifest.json) records both channels, all preserved packages and source-input hashes. [SHA256SUMS](../releases/SHA256SUMS.txt) can verify downloaded bytes. Packaging refuses to overwrite a versioned artifact with different bytes.
+The APKs pass v2 signature verification against the existing RSA-3072 certificate, SHA-256 `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. Every AAB payload was verified with JarFile against that pinned public certificate; official bundletool 1.18.1 validates both bundles. ZIP/native ELF 16 KiB alignment checks also pass. Signature and structural checks do not establish Play approval or physical-device quality. [Reproducible verifier](../scripts/verify-v15-binaries.py).
 
-APK v2 signature verification passed with the existing RSA-3072 certificate, SHA-256 `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. The final candidate was installed and exercised on Android API 36. AAB validation with bundletool and per-payload JarFile signature verification passed. The self-signed certificate is the app's signing identity, not a public certificate-chain or Play approval. Standard jarsigner also reports manifest-order/JarInputStream warnings for the AGP bundle; [the pinned JarFile verification](validation/v1.4/aab-payload-signature.txt) independently verifies every payload.
+## Install and qualify
 
-The arm64/x86_64 native library load segments are aligned to at least 16 KiB, and APK 16 KiB ZIP alignment passed. These structural checks do not establish a run on a 16 KiB device. [Native alignment](validation/v1.4/native-alignment.json).
+For APK installation, allow installs from your selected download source. Keep the existing package installed to retain local saves; uninstalling or clearing storage removes local progress/equipment. The Lab's simulated balances never become purchased gold. Google Play distribution uses the production AAB and the owner's Play App Signing/internal test setup.
 
-## Install and test
+This candidate keeps `FORCE_TEST_ADS=true` and an empty embedded wallet origin. It does not activate real ads, paid gold or paid equipment. The supplied Firebase and AdMob public identifiers remain in place for separate account/consent qualification. [Activation walkthrough](DEPLOIEMENT_PAS_A_PAS.md) · [Server wallet](WALLET_ANDROID.md).
 
-For direct APK installation, permit installation from the selected download source in Android settings. Preserve your local save before changing channels or uninstalling. Google Play distribution uses the **production AAB**, not the `.sandbox` AAB. It still needs the owner's Play record, signing setup, products, merchant configuration and internal-track qualification.
+A successful build is only one part of release evidence. [Validation](VALIDATION.md) distinguishes exact installed bytes, runtime checks, synthetic emulator profiles, preserved old saves and remaining physical/player/commercial checks.
 
-The candidate leaves the wallet endpoint empty. Entering public IDs does not activate real payments or production ad traffic. Follow [owner onboarding](PRODUCTION_ONBOARDING.md), [server deployment](../server/DEPLOYMENT.md) and [public-page setup](PUBLIC_PAGES.md) before preparing a new live configuration.
-
-[Preserved 1.3 release](RELEASE_1_3.md) · [Preserved 1.3 validation](VALIDATION_1_3.md) · [1.2 evidence](VALIDATION_1_2.md) · [1.1 evidence](VALIDATION_1_1.md).
+Preserved: [1.4 release](RELEASE_1_4.md), [1.4 validation](VALIDATION_1_4.md), [1.3](RELEASE_1_3.md), [1.2](VALIDATION_1_2.md), [offline 1.1](VALIDATION_1_1.md).

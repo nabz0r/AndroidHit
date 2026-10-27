@@ -1,59 +1,62 @@
-# Luma Drift 1.4 candidate — validation evidence
+# Luma Drift 1.5 validation
 
-**26 October 2026 · 1.4.0-rc1 / code 5 · production package `com.androidhit.lumadrift`**
+27 October 2026 · **production 1.5.0-rc1 / Lab1.5.0-sandbox, code 6**. This report identifies executed checks and their boundaries. [Exact artifacts/signing](RELEASE.md) · [Release behavior](RELEASE_1_5.md).
 
-The signed production candidate was built, installed and exercised on an Android API 36 emulator. Server logic/HTTP/provider-boundary tests and actual Firestore-emulator transactions passed. The delivered configuration deliberately forces sample creatives and keeps checkout blocked without a deployed wallet origin. [Exact packages](RELEASE.md) · [Implementation](PRODUCTION_RELEASE.md) · [Installed final APK identity](validation/v1.4/final-binary.json).
+## Automated checks on integrated sources
 
-**Cloud deployment follow-up:** owner-reported Cloud Run revisions and independent anonymous HTTPS probes now establish application reachability and wallet authentication rejection. The original health path conflicted with a Cloud Run reserved URL; the `/health` correction passed **43 server tests under Node 24.22.1**, and a subsequent independent external probe confirmed the redeployed `/health` returns HTTP 200. Anonymous wallet rejection (401) and the configured site preflight (204) were also observed. [Incident evidence and scope](validation/cloud-run-health-route.md). These results do not establish real purchases or replace the original candidate measurements below.
+| Area | Passed assertions | Evidence |
+|---|---:|---|
+| Board engine, solutions, undo, snapshots and sharing | 437,039 | [Engine](validation/v1.5/engine-tests.txt) |
+| Per-run budgets, old policies and extensions | 390,327 | [Budget](validation/v1.5/move-budget-tests.txt) |
+| 1,000 + 240 layouts and structural difficulty | 161,985 | [Progression](validation/v1.5/difficulty-tests.txt) |
+| Keys, fixed walls, exact oracle and reversibility | 10,425 | [Sealed engine](validation/v1.5/sealed-tests.txt) |
+| Earned economy, equipment and power transactions | 6,608 | [Economy](validation/v1.5/economy-tests.txt) |
+| Storage, catalog bounds and localized data | 8,787 | [Data](validation/v1.5/data-tests.txt) |
+| First clears, missions, migration and local journal | 362 + JSON export | [Meta](validation/v1.5/meta-tests.txt) |
+| Companions and event clock boundaries | 87,121 | [Events](validation/v1.5/collection-events-tests.txt) |
+| Billing policy and production copy | 248 | [Billing](validation/v1.5/billing-tests.txt) |
+| Wallet recovery lifecycle, provider doubles | 19 | [Recovery](validation/v1.5/wallet-recovery-tests.txt) |
+| Continuation receipts and memory-before-disk failure | 42 | [Receipts](validation/v1.5/commerce-receipts-tests.txt) |
+| Audio state/focus model and actual PCM DSP | 36 + 65 | [Audio](validation/v1.5/audio/README.md) |
 
-## Executed checks
+These assertions include independent oracles, concurrency, malformed input, period boundaries and persistence failures. They are not numbers of players, frames or completed online transactions. SharedPreferences/provider adapters isolate unit failure cases; installed tests cover actual Android behavior separately.
 
-**Public-contact follow-up, 27 October 2026:** the supplied publisher label/support address and deployed API origin are integrated into the FR/EN site. The local checks passed: 24 request/configuration cases, 3 static pages/37 references and 18 configured responsive states, plus isolated missing-wallet and synthetic sign-in/deletion cases. Mail recipients preserve the exact `+gaming` alias. The qualification banner remains on; the configured real Google button was not clicked in the test. Hosting, real Web authentication/deletion and automatic audit purge remain unqualified. No APK/AAB was rebuilt. [Report, versions and limits](validation/public-contact-preview.md).
+## Build and package integrity
 
-**Hosting follow-up, 27 October 2026:** the owner deployed preview channel `qualification`, version `332f610a434fe4a6`. Independent HTTPS reads of the five sampled pages/configuration/seller resources returned 200 and matched repository bytes. The public Firebase SDK configuration already authorizes the exact preview hostname. The initial preview API preflight returned 403 `ORIGIN_NOT_ALLOWED` before the allowlist correction. After the owner applied the CORS update, independent final and preview preflights both returned HTTP 204 with their exact allowed origins, methods GET/POST/DELETE/OPTIONS and headers Authorization/Content-Type. `/health` returned HTTP 200 with `{"status":"ok"}`. The original raw preview JSON preserves the earlier 403; the follow-up results are recorded separately. The stable site is now published: independent reads of its five sampled resources returned HTTP 200 with repository-identical bytes and the expected security headers. The reserved Auth iframe returned HTTP 200 without X-Frame-Options, and the final-origin API preflight returned HTTP 204 with its exact allowed origin. The owner subsequently reports “Ton compte Luma Drift et son portefeuille serveur ont été supprimés” after the guided Web deletion tests on the preview and stable domain. This is owner testimony, without independent observation, logs, a screenshot, a measured DELETE status or Firebase Console verification. Authenticated wallet GET, payments and Android Google login remain unqualified. Stable publication preserves `preparation: true` and closed purchases/live ads. Google sign-in/deletion success on the stable domain is also owner-reported only, without independent interaction, DELETE status or Firebase Console verification. The owner reports the stable privacy URL, saved European-consent draft/settings and Published state in AdMob, with six game languages, refusal/close enabled and GDPR-region targeting. These settings and publication are owner-reported only, without independent console observation or proof of UMP display in the game, app-ads.txt verification, ad readiness or revenue activation. Next test the message in the existing production APK while retaining sample ads. Both account-flow successes remain owner-reported only, and static delivery establishes no commercial activation or AdMob approval. [Deployed evidence](validation/hosting-preview.md).
+Both signed APK/AAB variants and both release lint tasks passed with the final source set. [Gradle log](validation/v1.5/android-build.txt). Java 17 source was compiled under the recorded JDK21 toolchain. The pinned lint analyzer can run on this runtime. Existing deprecation/SDK warnings are recorded; no lint error is hidden.
 
-| Layer | Result | Evidence / practical limit |
+The [binary audit](validation/v1.5/binary-final-candidate.json) checks source/outputs freshness, hashes every source input and rechecks that bytes remain stable during verification. APK signature, pinned AAB payload signatures, official bundletool validation, 16 KiB ZIP alignment and ELF load segments pass. [APK signatures](validation/v1.5/apk-signatures.txt) · [AAB signatures](validation/v1.5/aab-signatures.txt) · [Bundle validation](validation/v1.5/bundletool-validation.txt) · [Native alignment](validation/v1.5/native-elf-alignment.txt).
+
+## Installed Android acceptance
+
+**Final production APK: `33c4dbd6c14fa3e72ec52c7d98475b1a9738b175bad9216c4bc4c7c5bdd817a2`.** It was installed and launched on Android 16 / API 36 emulators with ordinary and actual 16 KiB page kernels. The final Lab APK is independently signed/validated but was not reinstalled after the isolated share-card correction.
+
+The full functional pass ran on the immediately preceding production/Lab candidates, SHA-256 `24a128e3f25fc73e698e46e7d46a30b3358e8d88f08dd59d2b9e8984e3ddf049` / `bb7731632a0523ae9e86f1093fbbab2e82e3bc06acd4d9e3ed4cd289c0a1a065`. The [source-input comparison](validation/v1.5/binary-source-diff.json) establishes that **only `ShareComposer.java` changed** afterward: the final fix adds missing sealed walls and matching key badges to exported images. Engine, data, views, translations, powers, migrations and audio inputs are byte-identical. Earlier reports retain their actual APK hashes; they are not relabelled as final-byte tests.
+
+| Installed check | Executed result and scope | Evidence |
 |---|---|---|
-| Puzzle engine | 435,796 assertions | [Engine](validation/v1.4/engine-tests.txt); deterministic JVM boards/solver, not player enjoyment |
-| Data/localization/ownership | 8,027 checks | [Data](validation/v1.4/data-tests.txt); includes account-only cosmetic equip, logout fallback and no paid/local balance transfer |
-| Meta progression/journal | 362 checks + JSON round trip | [Meta](validation/v1.4/meta-tests.txt) |
-| Local economy/powers | 4,586 checks | [Economy](validation/v1.4/economy-tests.txt); persistence faults use an explicit memory-before-disk model |
-| Collection/calendar | 87,121 checks | [Collection/events](validation/v1.4/collection-events-tests.txt) |
-| Frozen difficulty sequence | 19,054 checks | [Difficulty](validation/v1.4/difficulty-tests.txt); all 480 certified boards, structural model |
-| Action allowance | 340,768 checks | [Move budget](validation/v1.4/move-budget-tests.txt); corrupt saves, unlimited friends, last-action win and extension bounds |
-| Continuation receipt boundary | 42 checks | [Receipts](validation/v1.4/commerce-receipts-tests.txt); compiled Lab bytecode with explicit JVM Android storage adapters |
-| Billing policy/production copy | 248 checks | [Billing](validation/v1.4/billing-policy-tests.txt); destination validation, UID hashing, request IDs and six-language formatting |
-| Foreground recovery | 19 checks | [Recovery](validation/v1.4/wallet-recovery-tests.txt); real controller with provider doubles, account/lifecycle/duplicate callbacks |
-| Server core/HTTP/adapters | 42 cases, no failures/skips | [Final Node 24 run](validation/v1.4/server-tests.txt), [scope](../server/TESTING.md); Firebase/Play providers are injected doubles, HTTP uses actual loopback sockets |
-| Firestore transactions/rules | 2 integration cases, no failures/skips | [Official emulator run](validation/v1.4/firestore-emulator.txt); 12 concurrent claims/two instances, 8 spend retries, refunds/deletion and actual direct-client denials |
-| Server dependencies | 0 reported vulnerabilities | [Audit](validation/v1.4/server-dependency-audit.json); point-in-time advisory report, not proof of no vulnerabilities |
-| Public site | 24 request cases; 3 pages/37 local refs; 18 responsive states | [Core](validation/v1.4/public-pages-tests.txt), [static](validation/v1.4/public-pages-static.txt), [browser](validation/v1.4/public-pages-browser.json); browser identity/API scenarios are explicitly synthetic |
-| Android production and Lab | Build/lint passed | [Build](validation/v1.4/android-build.txt); both APK/AAB flavors; lint has 0 errors and 5 warnings per flavor |
-| Final production install/UI | Passed | [Actual UI](validation/v1.4/production-ui.txt), [upgrade before](validation/v1.4/upgrade-before.json), [after](validation/v1.4/upgrade-after.json) |
-| Lab coexistence/isolation | Passed | [Actual Lab check](validation/v1.4/lab-isolation.json); both packages installed, production identity absent from Lab, cancelling500simulation leaves180coins |
-| Small/landscape store layout | Passed | [Actual bounds/scroll checks](validation/v1.4/layout-ui.txt), 720×1280 and1280×720 at density320; display overrides restored |
-| Signing/bundle/native structure | Passed | [APK](validation/v1.4/apk-signature.txt), [AAB payload](validation/v1.4/aab-payload-signature.txt), [bundletool](validation/v1.4/bundle-validation.txt), [16 KiB segments](validation/v1.4/native-alignment.json) |
-| Published downloads | APK/AAB bytes match tested files | [Actual remote verification](validation/v1.4/remote-publication.json); all156releasefiles also matched their Git objects |
-| Activation gate | Candidate accepted; live gate refuses | [Configuration](validation/v1.4/production-readiness.json), [gate check](validation/v1.4/live-gate-test.txt); no Google approval is inferred |
+| Final EN/FR UI repeat | 14 cases / 24 captures on exact final production bytes; guest profile, lobby, collection/ownership/filter, equipment preview and earned-coin shop inspected; balance 235 / Spark stock 3 unchanged; original English/display settings restored | [Final scoped report](validation/v1.5/ui-smoke.txt), [identity/settings JSON](validation/v1.5/ui-smoke.json) |
+| Six-language lobby/collection/shop | 58 cases, 96 PNG/XML captures; English, French, German, Portuguese, Italian, Spanish; 720×1280 and 1280×720; guest status, 24/6/18 collection totals, filters and eight cancelled purchase confirmations preserved balance/stock | [Full predecessor run](validation/v1.5/pre-share-image-fix/ui-smoke.txt) |
+| All six powers | Spark, Vision, Flow, Shield, Focus and Trail activated; exactly one stock debit, active reuse rejected, persisted effects restored | [Power run](validation/v1.5/powers-ui-smoke.txt), [hints/effects](validation/v1.5/effects-hint-ui-smoke.txt) |
+| Flow interruptions | Pause, help and process recreation freeze pending exits, then finish exactly three actions for one item; last-piece victory credits once | [Executed scenarios](validation/v1.5/powers-ui-smoke.txt) |
+| Protection ordering | Shield absorbs three blocked taps, equipped Charm one, fifth costs one action; remaining charges survive recreation | [Executed scenarios](validation/v1.5/powers-ui-smoke.txt) |
+| Equipment and final Journey board | Cancel costs zero; Starfold confirm debits exactly 600 **synthetic earned coins**, equips once and survives recreation. Zone 34 contains 991–1,000, actual board 1,000 solves for three stars; no 1,001 | [Executed scenarios](validation/v1.5/powers-ui-smoke.txt) |
+| Genuine active-save upgrade | Actual 1.4 UI created the interrupted run; no seeding. Board/history/budget/run ID/coins/stock retained; new attempt uses new policy | [Upgrade JSON](validation/v1.5/active-save-upgrade.json) |
+| All six P challenges | Actual taps solve P1–P6; blocked ray/key/open/Undo/recreate verified; zero coins/XP/items/progression changes | [Predecessor gameplay](validation/v1.5/sealed-ui.txt) |
+| Final P sharing and key regression | P1/P6 Android-generated cards display matching walls/keys; real choosers opened and cancelled; final P1 block/key/Undo repeated | [Share run](validation/v1.5/sealed-share-ui.txt), [visual review](validation/v1.5/sealed-share-visual-review.txt), [final gameplay](validation/v1.5/sealed-final-key-undo.txt) |
+| Old share-image compatibility | Actual C1 exported PNG before/after is byte-identical | [PNG comparison](validation/v1.5/legacy-share-regression.json) |
+| Final Android ambient playback | AudioFlinger track advances 22,491 frames, pauses in background and resumes in foreground | [Final runtime JSON](validation/v1.5/audio-runtime.json) |
 
-The seven gameplay suites total **895,714 heterogeneous assertions/checks**; server cases, web states and Android interactions are separate measurements. Counts must not be summed into a claim of distinct human scenarios. The Firestore run uses Node 24.22.1, Java 21.0.13 and official emulator 1.22.0, with only `demo-luma-wallet`; [validated server source hashes](validation/v1.4/server-validated-inputs.txt) were compared with the original candidate files. That predeployment validation used no owner cloud account and built/ran no container; the later deployment follow-up is recorded separately above.
+The power/equipment/boundary tests used a disclosed temporary **Lab-only synthetic profile**: Journey access up to 1,000, 10,000 local coins, six items per power and an equipped Charm. Those are fixtures, not earned progress or paid transactions. Original preferences were backed up and restored byte for byte; test-created files were removed and temporary native window-animation settings restored. P gameplay and the active-save upgrade used actual UI without preference seeding. [Power profile](validation/v1.5/powers-profile.json) · [Hints profile](validation/v1.5/effects-hint-profile.json).
 
-Lint's five warnings are three intentional synchronous small preference commits plus two tooling/dependency update advisories. The analyzer remains standalone 9.4.0 through the recorded experimental Gradle override; AGP/Gradle versions are not upgraded as part of this monetization change. This is not a zero-warning result.
+Driver timing pilots remain labelled in their filenames; early taps during closing native dialogs were corrected in the driver. Only the passing reruns establish those cases. Reports under `prefinal-build4` are historical and exposed copy ambiguities subsequently corrected. No Google login, ad reward or real checkout is inferred from these UI runs.
 
-## Actual production Android run
+Landscape coverage establishes bounds/navigation at the captured size. The Canvas interface reduces the portrait column in landscape; physical readability, comfortable targets and comprehensive TalkBack usability remain open. Screenshots are actual emulator captures; [the visual guide](VISUAL_GUIDE.md) distinguishes final EN/FR captures from earlier unchanged-layout observations.
 
-The first genuine stable-to-candidate update preserved French and 180 earned coins, verified from UI labels and the package manager. The final rebuilt candidate was installed afterward and exercised without a game-state fixture or data reset.
+## Remaining acceptance
 
-Settings → Account showed the real supplied Google configuration rather than a missing-configuration notice. Selecting Google sign-in opened the Google credential-provider UI (the emulator displayed “Checking info…”); it was cancelled without selecting an account or entering credentials. **This proves provider invocation/cancellation, not a completed Firebase login.**
+Physical speakers/headphones, modest/modern phones, native-speaker review, first-time-player comprehension, D1/D7 cohorts and market performance are unmeasured. Emulator frame/track evidence cannot establish tactile quality, physical loudness or retention.
 
-The production store showed separate earned/purchased balances, no simulator, and a clear server-not-configured state. Refresh could not credit gold or launch checkout. The store entry and production wallet text were visited in English, French, German, Spanish, Portuguese and Italian, then English was restored. Journey 1 was completed with the certified solution, visible action allowance and earned reward. Process restart retained the earned balance and the crash buffer was empty. [Executed transcript](validation/v1.4/production-ui-run.txt).
+Commercial/provider qualification remains separate: Android Google login success, actual installed UMP acceptance/refusal, live ad readiness, Play product/license-test purchases and full pending/refund/RTDN/scheduled reconciliation remain open. The shipped quality candidate uses sample ads and blocks checkout; no simulation establishes revenue or production approval. [Owner activation](PRODUCTION_ONBOARDING.md).
 
-Screenshots under `docs/screenshots/production/` are actual installed-candidate captures or clearly named locally rendered `web-*` pages. They do not depict a successful Google login, real Play payment, live ad or hosted deletion service. Old 1.1/1.2/1.3 galleries retain their original scope and dates.
-
-## Remaining qualification
-
-Not independently validated here: completed preview/stable Web Google authentication/deletion (owner-reported only), Android Google login or authenticated wallet GET, owner Play license-test payments and consumption, complete deployed Cloud Run/Firestore/IAM integration, actual RTDN/Scheduler/refund delivery, external web deletion on an authorized domain, owner UMP message approval/live creatives, independent stable-domain OAuth/deletion evidence, a physical phone, Android API 26 behavior, 16 KiB runtime, production load/latency or retention/revenue. Preview and stable-site availability are established by the later read-only probes above; the preview OAuth/deletion report has a different, owner-testimony evidence scope.
-
-The Firestore emulator establishes real local transaction/rule behavior, not deployed IAM, geographic resilience or operational backups. Provider doubles model receipt states, not actual Google receipts. A screenshot or local configuration gate cannot certify store approval, data-protection compliance or a commercial hit. Follow the [deployment acceptance gate](../server/DEPLOYMENT.md#6-internal-track-acceptance-gate-before-real-sales) and publish fresh actual-service evidence when the owner accounts are ready.
-
-[Preserved 1.3 evidence](VALIDATION_1_3.md) · [1.2 evidence](VALIDATION_1_2.md) · [1.1 evidence](VALIDATION_1_1.md).
+Historical results retain their original scope: [1.4](VALIDATION_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](VALIDATION_1_2.md), [1.1](VALIDATION_1_1.md).

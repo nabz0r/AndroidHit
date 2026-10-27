@@ -1,14 +1,30 @@
 # Luma Drift roadmap
 
-## Current milestone — 1.4 production preparation
+## Current milestone — 1.5 avatar, progression and playback candidate
 
-Implemented in the candidate: full production puzzle, owner Google configuration, three ad placements, real Play checkout adapter, server-authoritative purchased gold/permanent cosmetics, server deletion and FR/EN public pages. Sample creatives and checkout gates remain in place. [Delivered scope](PRODUCTION_RELEASE.md) · [Executed evidence](VALIDATION.md).
+The current source work adds an avatar-centered lobby, three equipment slots with 18 fixed items earned through local play or local coins, a 1,000-board Journey plus 240-board Remix, a bounded power-activation policy and repaired original ambient music. The signed candidate has passed recorded package, active-save migration, emulator UI/gameplay and Android playback checks. Physical devices and player comprehension remain the next acceptance stage. [Delivered scope and acceptance](RELEASE_1_5.md) · [Equipment contract](AVATAR_EQUIPMENT.md) · [Audio evidence](validation/v1.5/audio/README.md).
+
+Equipment gives explicit, limited benefits rather than changing the puzzle's gate or exit rules. The new progression uses fixed offline-generated boards and board-specific mistake allowances; neither board generation nor allowances adapt to payment history. Six separate Sealed passages prototypes explore keys that dissolve fixed walls; they use unlimited friend challenges without progression rewards or powers. Structural difficulty analysis and the prototype engine's exact checks are separate from player comprehension and enjoyment. The existing companion identities and themes stay cosmetic.
+
+Completed technical checks: signed production/Lab APK/AAB and lint; fixed board bounds and legacy identities; actual old active-save upgrade; all six power activations and interrupted Flow recovery; earned-coin equipment purchase/equip/restore; all six sealed challenges; six-language emulator navigation; final share images and advancing Android audio. [Executed evidence and exact-byte scope](VALIDATION.md).
+
+Next product checks, in order:
+
+1. Play the identified candidate on modest and current physical phones; check readable labels, comfortable targets, TalkBack, interruptions and speakers/headphones. Landscape needs physical review because the Canvas column is reduced.
+2. Observe first-time players using the six sealed prototypes. Record whether they recognize matching keys, understand that Undo reseals walls, and anticipate key/gate ordering. Curate campaign integration only after these observations; the current 1,000 Journey boards do not silently gain walls.
+3. Compare confusion and voluntary replay with ordinary gate puzzles before expanding the mechanic. Keep the human comprehension and complete cohort criteria below.
+
+This work does not activate paid equipment, cloud progression, live ads or production sales. Local equipment ownership stays separate from purchased-gold server entitlements. The commercial and operating gates established during 1.4 preparation remain open below. Retention and revenue are still unmeasured.
+
+## 1.4 production preparation — deployment baseline
+
+The 1.4 preparation candidate implemented the production puzzle, owner Google configuration, three ad placements, real Play checkout adapter, server-authoritative purchased gold/permanent cosmetics, server deletion and FR/EN public pages. Cloud Run and the stable qualification site are now deployed; observed public routing/CORS and owner-reported account flows have distinct evidence limits. Sample creatives and checkout gates remain in place. [Delivered scope and deployment follow-up](PRODUCTION_RELEASE.md) · [Executed evidence](VALIDATION.md).
 
 Next activation gates, in order:
 
 1. Finish Play/merchant/product configuration, upload the production AAB internally and register Play's signing fingerprints in Firebase.
-2. Enable project billing and deploy the wallet with scoped managed identities, Firestore rules/indexes, RTDN and scheduled recovery; qualify real purchase/pending/refund/deletion behavior.
-3. Supply the legal publisher/support details, register a Firebase Web app and publish/test the site, privacy and deletion URLs on an authorized domain.
+2. Qualify the deployed wallet with scoped managed identities and Firestore rules/indexes; deploy the pending RTDN/scheduled recovery and verify real purchase, pending, refund and deletion behavior. Automatic audit purging is not active.
+3. Complete legal publisher information and independently qualify the published site's authenticated account/deletion flow. Public contact, the Web configuration, stable-site delivery and CORS are already recorded; owner-reported deletion does not substitute for independent acceptance.
 4. Qualify owner UMP messages and app-ads.txt/AdMob readiness using test devices, then prepare a new explicit live-ad build.
 5. Complete physical-device checks, the applicable Play closed test and production review before a staged public launch.
 
@@ -19,7 +35,7 @@ The sections below retain earlier milestones and their historical evidence; they
 
 **Build the memorable rule. Observe players. Scale only when the evidence improves.**
 
-Updated 26 October 2026. This roadmap records priorities and exit criteria. Future stages are proposals, not delivered features or committed launch dates. See [CHANGELOG.md](CHANGELOG.md) for release scope and [VALIDATION.md](VALIDATION.md) for checks actually executed.
+Updated 27 October 2026. This roadmap records priorities and exit criteria. Future stages are proposals, not delivered features or committed launch dates. See [Release 1.5](RELEASE_1_5.md) for the current candidate, [CHANGELOG.md](CHANGELOG.md) for historical release scope and [VALIDATION.md](VALIDATION.md) for checks actually executed.
 
 ## 1.0 — A playable foundation
 
@@ -116,7 +132,7 @@ The Lab prepares test controls now; **real traffic and real sales remain future 
 
 Only run commercial experiments after retention is worth protecting. Model net revenue using observed impressions, fill, acquisition cost and retention; do not substitute a hypothetical eCPM or test paid-event callback for a business result. Preserve stable earned progress and keep Lab gold outside production entitlements.
 
-Consider more mechanics, curated level packs, seasonal art or synchronized events only when player evidence points to a specific need. Optional managed identity is prepared in the Lab, but cloud saves, a verified wallet, remote leaderboards and live operations still require separate services, an operating budget and privacy review; none is implied by a Google sign-in adapter or local event system.
+Consider more mechanics, curated level packs, seasonal art or synchronized events only when player evidence points to a specific need. The wallet service is deployed but its provider and purchase lifecycle still need qualification. Cloud progression saves, remote leaderboards and live operations require separate integrations, an operating budget and privacy review; none is implied by a Google sign-in adapter, local equipment save or local event system.
 
 ## Stop or change direction when
 

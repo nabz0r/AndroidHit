@@ -8,6 +8,7 @@ import android.net.Uri;
 import com.androidhit.lumadrift.data.Strings;
 import com.androidhit.lumadrift.engine.*;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -67,15 +68,31 @@ public final class ShareComposer {
             else c.drawLine(bx+200,by-23,bx+520,by-23,p);
             c.restore();
         }
+        ArrayList<Integer> keys=new ArrayList<>();
+        for(Barrier wall:level.barriers)if(!keys.contains(wall.keyTileId))keys.add(wall.keyTileId);
+        for(Barrier wall:level.barriers){
+            float x=bx+(wall.col+.5f)*size,y=by+(wall.row+.5f)*size;
+            sealedCell(c,p,x,y,size,keys.indexOf(wall.keyTileId)+1);
+        }
         int[] colors={0xff91ebd5,0xffffb398,0xffb8a5ff,0xff9dc9ff};
         for(Tile tile:level.tiles){float x=bx+(tile.col+.5f)*size,y=by+(tile.row+.5f)*size;int shade=colors[tile.direction.ordinal()];p.setColor(shade);c.drawRoundRect(x-size*.43f,y-size*.43f,x+size*.43f,y+size*.43f,22,22,p);arrow(c,p,x,y,tile.direction,size*.27f,0xff14182e);
             if(tile.switchMask!=0){int n=Integer.bitCount(tile.switchMask),k=0;for(Direction d:Direction.values())if((tile.switchMask&d.bit)!=0){float xx=x+size*.29f,yy=y-size*.29f+k*size*.24f;p.setColor(0xff171b32);c.drawCircle(xx,yy,size*.15f,p);p.setColor(colors[d.ordinal()]);c.drawCircle(xx,yy,size*.12f,p);arrow(c,p,xx,yy,d,size*.09f,0xff171b32);k++;}}
+            int key=keys.indexOf(tile.id)+1;
+            if(key>0){float left=x-size*.43f,top=y-size*.43f;p.setColor(0xffffd992);c.drawRoundRect(left,top,left+size*.35f,top+size*.25f,7,7,p);text(c,p,"K"+key,left+size*.035f,top+size*.18f,size*.17f,0xff14182e,true);}
         }
         String score=stars>0?(stars==1?"★":stars==2?"★★":"★★★"):Strings.get(lang,"share_card_subtitle");
         text(c,p,score,108,1079,35,0xffffd992,true);
         p.setColor(color);c.drawCircle(907,1063,37,p);p.setColor(0xff171b32);c.drawOval(891,1053,899,1066,p);c.drawOval(916,1053,924,1066,p);p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(3);c.drawArc(898,1067,917,1080,0,180,false,p);p.setStyle(Paint.Style.FILL);
         p.setColor(0xff91ebd5);c.drawRoundRect(65,1172,1015,1244,24,24,p);text(c,p,code,95,1221,29,0xff14182e,true);
         text(c,p,Strings.get(lang,"share_card_footer"),75,1303,22,0xffc3c5db,false);return bitmap;
+    }
+    private static void sealedCell(Canvas c,Paint p,float x,float y,float size,int key){
+        p.setColor(0xff4a4056);c.drawRoundRect(x-size*.43f,y-size*.43f,x+size*.43f,y+size*.43f,22,22,p);
+        p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(3);p.setColor(0xffffd992);c.drawRoundRect(x-size*.43f,y-size*.43f,x+size*.43f,y+size*.43f,22,22,p);
+        p.setStrokeWidth(size*.04f);c.drawArc(x-size*.12f,y-size*.28f,x+size*.12f,y-size*.02f,180,180,false,p);p.setStyle(Paint.Style.FILL);
+        c.drawRoundRect(x-size*.18f,y-size*.13f,x+size*.18f,y+size*.12f,6,6,p);
+        p.setColor(0xff4a4056);c.drawCircle(x,y-size*.025f,size*.025f,p);c.drawRect(x-size*.013f,y-size*.025f,x+size*.013f,y+size*.055f,p);
+        String label="K"+key;p.setTypeface(Typeface.create("sans-serif-black",Typeface.NORMAL));p.setTextSize(size*.17f);p.setColor(0xffffd992);c.drawText(label,x-p.measureText(label)/2,y+size*.32f,p);
     }
     private static void text(Canvas c,Paint p,String s,float x,float y,float size,int color,boolean bold){p.setColor(color);p.setTypeface(android.graphics.Typeface.create(bold?"sans-serif-black":"sans-serif",android.graphics.Typeface.NORMAL));p.setTextSize(size);float w=p.measureText(s);if(w>925)p.setTextSize(size*925/w);c.drawText(s,x,y,p);}
     private static void arrow(Canvas c,Paint p,float x,float y,Direction d,float r,int color){c.save();c.translate(x,y);c.rotate(d.ordinal()*90);p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(r*.2f);p.setStrokeCap(Paint.Cap.ROUND);p.setColor(color);Path path=new Path();path.moveTo(0,r*.7f);path.lineTo(0,-r*.7f);path.moveTo(-r*.5f,-r*.15f);path.lineTo(0,-r*.7f);path.lineTo(r*.5f,-r*.15f);c.drawPath(path,p);p.setStyle(Paint.Style.FILL);c.restore();}

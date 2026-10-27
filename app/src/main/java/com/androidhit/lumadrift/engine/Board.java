@@ -6,23 +6,25 @@ import java.util.List;
 
 /** Mutable session. Illegal actions never change gates, pieces, or undo history. */
 public final class Board {
-    public enum BlockReason { NONE, MISSING_TILE, CLOSED_GATE, BLOCKED_PATH }
+    public enum BlockReason { NONE, MISSING_TILE, CLOSED_GATE, BLOCKED_PATH, LOCKED_BARRIER }
 
     public static final class MoveResult {
         public final boolean success;
         public final Tile tile;
         public final BlockReason reason;
         public final int blockingTileId;
+        public final Barrier blockingBarrier;
         public final int previousGateMask;
         public final int gateMask;
         public final boolean solved;
 
         private MoveResult(boolean success, Tile tile, BlockReason reason,
-                           int blocker, int oldGates, int newGates, boolean solved) {
+                           int blocker, Barrier barrier, int oldGates, int newGates, boolean solved) {
             this.success = success;
             this.tile = tile;
             this.reason = reason;
             this.blockingTileId = blocker;
+            this.blockingBarrier = barrier;
             this.previousGateMask = oldGates;
             this.gateMask = newGates;
             this.solved = solved;
@@ -90,7 +92,11 @@ public final class Board {
         Tile tile = level.tile(id);
         if (!isPresent(id)) return BlockReason.MISSING_TILE;
         if ((gates & tile.direction.bit) == 0) return BlockReason.CLOSED_GATE;
-        return blockingTile(id) >= 0 ? BlockReason.BLOCKED_PATH : BlockReason.NONE;
+        int blocking = blockingTile(id);
+        Barrier barrier = blockingBarrier(id);
+        if (barrier != null && (blocking < 0 || distance(tile, barrier.row, barrier.col)
+                < distance(tile, level.tile(blocking).row, level.tile(blocking).col))) return BlockReason.LOCKED_BARRIER;
+        return blocking >= 0 ? BlockReason.BLOCKED_PATH : BlockReason.NONE;
     }
 
     /** Nearest present tile on this tile's ray, or -1. Independent of gate state. */
@@ -100,17 +106,28 @@ public final class Board {
         return blockingTile(level, remainingMask, tile);
     }
 
+    public boolean isBarrierActive(Barrier barrier) {
+        return barrier != null && level.barriers.contains(barrier) && isPresent(barrier.keyTileId);
+    }
+
+    /** Nearest still-sealed fixed cell on the tile's ray, independent of other pieces. */
+    public Barrier blockingBarrier(int id) {
+        Tile tile = level.tile(id);
+        if (!isPresent(id)) return null;
+        return blockingBarrier(level, remainingMask, tile);
+    }
+
     public MoveResult move(int id) {
         Tile tile = level.tile(id);
         BlockReason reason = blockReason(id);
         int oldGates = gates;
         if (reason != BlockReason.NONE) {
-            return new MoveResult(false, tile, reason, blockingTile(id), gates, gates, isSolved());
+            return new MoveResult(false, tile, reason, blockingTile(id), blockingBarrier(id), gates, gates, isSolved());
         }
         remainingMask &= ~(1L << id);
         gates ^= tile.switchMask;
         history.add(id);
-        return new MoveResult(true, tile, BlockReason.NONE, -1, oldGates, gates, isSolved());
+        return new MoveResult(true, tile, BlockReason.NONE, -1, null, oldGates, gates, isSolved());
     }
 
     public boolean undo() {
@@ -166,7 +183,26 @@ public final class Board {
     static boolean canMove(Level level, long remaining, int gateMask, Tile tile) {
         return (remaining & (1L << tile.id)) != 0
                 && (gateMask & tile.direction.bit) != 0
-                && blockingTile(level, remaining, tile) < 0;
+                && blockingTile(level, remaining, tile) < 0
+                && blockingBarrier(level, remaining, tile) == null;
+    }
+
+    private static int distance(Tile tile, int row, int col) {
+        return Math.abs(tile.row - row) + Math.abs(tile.col - col);
+    }
+
+    private static Barrier blockingBarrier(Level level, long remaining, Tile tile) {
+        Barrier closest = null;
+        int closestDistance = Integer.MAX_VALUE;
+        for (Barrier barrier : level.barriers) {
+            if ((remaining & (1L << barrier.keyTileId)) == 0) continue;
+            int dr = barrier.row - tile.row, dc = barrier.col - tile.col;
+            boolean onRay = tile.direction.dr == 0 ? dr == 0 && dc * tile.direction.dc > 0
+                    : dc == 0 && dr * tile.direction.dr > 0;
+            int distance = Math.abs(dr) + Math.abs(dc);
+            if (onRay && distance < closestDistance) { closest = barrier; closestDistance = distance; }
+        }
+        return closest;
     }
 
     static int blockingTile(Level level, long remaining, Tile tile) {

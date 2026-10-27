@@ -1,0 +1,10 @@
+Official pinned bundletool 1.18.1
+Source: https://github.com/google/bundletool/releases/tag/1.18.1
+Asset: https://github.com/google/bundletool/releases/download/1.18.1/bundletool-all-1.18.1.jar
+Downloaded JAR SHA256: 675786493983787ffa11550bdb7c0715679a44e1643f3ff980a529e9c822595c
+GitHub release metadata supplies no asset digest; SHA256 above records this downloaded tool, not a separately authenticated published checksum.
+
+PASS PRODUCTION AAB: bundletool-all-1.18.1.jar validate --bundle=app/build/outputs/bundle/productionRelease/app-production-release.aab; exit 0. Full output: bundletool-production-raw.txt
+PASS LAB AAB: bundletool-all-1.18.1.jar validate --bundle=app/build/outputs/bundle/labRelease/app-lab-release.aab; exit 0. Full output: bundletool-lab-raw.txt
+
+Scope: bundle schema validation, not Play acceptance or installed runtime behavior.

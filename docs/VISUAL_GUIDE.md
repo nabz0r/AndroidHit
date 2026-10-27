@@ -1,53 +1,39 @@
-# Luma Drift — an illustrated tour
+# Luma Drift 1.5 — illustrated tour
 
-Version 1.1.0. Every phone image below is a **real 1080×1920 capture of the signed Android app**. The artwork in the brand kit is separate promotional art. These images explain the shipped behavior; they are not evidence of player retention.
+These are installed Android captures of the identified 1.5 candidate, not mockups. They establish displayed behavior; physical-device and player acceptance remain separate. [Exact binary and tests](VALIDATION.md) · [Historical 1.1 tour](VISUAL_GUIDE_1_1.md).
 
-## Start with one light
+The French lobby, profile, collection and shop captures below come from the final production APK (`33c4dbd6…`). The wall-before/open gameplay pair comes from the preceding full functional pass; only the exported-image renderer changed afterward. [Source comparison](validation/v1.5/binary-source-diff.json).
 
-<p><img src="screenshots/v1.1/home.png" width="260" alt="Home screen"><img src="screenshots/v1.1/play.png" width="260" alt="Journey puzzle"></p>
+## Start from your avatar
 
-**Home** puts the current board first. The rank card shows first-clear XP and today's mission entry. The two challenge actions share a reproducible board or open a friend's code.
+<p><img src="screenshots/v1.5/home-fr.png" width="270" alt="French integrated lobby"><img src="screenshots/v1.5/profile-guest-fr.png" width="270" alt="Guest account view"></p>
 
-**On a board**, tap a light to send it in its arrow's direction. Another light can block the ray; a closed gate can block the exit. An impossible tap costs nothing. Early boards highlight a safe opening and show a short contextual rule. Full help stays available from the question mark. There is no countdown or energy meter.
+The profile card clearly identifies a guest or actual Google session. The central avatar shows equipped gear beside the next board. Play resumes an interrupted attempt; the four activity cards lead to events, missions, collection and shop. Google identity does not imply cloud-save support.
 
-## Gates make the order matter
+## Own, equip or unlock
 
-<p><img src="screenshots/v1.1/remix.png" width="260" alt="Paired-switch Remix board"><img src="screenshots/v1.1/journey.png" width="260" alt="Journey level selection"></p>
+<p><img src="screenshots/v1.5/collection-equipment-fr.png" width="270" alt="Equipment inventory"><img src="screenshots/v1.5/equipment-preview-fr.png" width="270" alt="Exact equipment effect and unlock condition"></p>
 
-A small arrow badge identifies the gate a switch toggles after leaving. **Remix adds paired badges**: both gates change on the same move. A selected switch previews the affected rails. Journey has 240 boards; finishing board 12 unlocks a separate 240-board Remix path. Both keep independent stars and unlocks.
+Three tabs separate companions, themes and functional equipment. The hero displays the current loadout. Status badges and an owned filter answer what is already available; a preview states the slot, rarity, effect and exact source. Acquisition through weekly/event milestones is permanent. [All 18 items](AVATAR_EQUIPMENT.md).
 
-Undo and restart are free. A locally solvable position can become stuck after a poor ordering choice; undo restores the previous gate state. Every published campaign and Remix board has a solver-verified complete solution. That check does not rate human difficulty or enjoyment.
+## Understand the price before spending
 
-## Earn a reason to return
+<p><img src="screenshots/v1.5/shop-fr.png" width="270" alt="Earned-coin power shop"><img src="screenshots/v1.5/power-offer-fr.png" width="270" alt="Pack confirmation with earned-coin price"></p>
 
-<p><img src="screenshots/v1.1/missions.png" width="260" alt="Daily missions and rank"><img src="screenshots/v1.1/collection.png" width="260" alt="Companion collection"></p>
+Stock and pack quantities are explicit. Opening/cancelling an offer spends nothing. Gameplay power activation separately confirms one charge, then shows the active effect; a running effect cannot consume another charge of the same power. Purchased-gold/account offers live in their separate, currently gated commerce screen.
 
-Three missions reward new clears, stars on new clears and an event clear. Claiming a completed mission grants coins once. XP also comes from distinct first clears; replaying a cleared board does not farm it. Seven different clears unlock an optional cosmetic star badge. Days explored accumulate without a missed-day penalty.
+## Release a key, open a passage
 
-Six companions and six themes can be previewed, bought with earned coins and equipped. They change appearance, not puzzle solutions. Daily and weekly puzzles are generated from the device calendar and remain available offline.
+<p><img src="screenshots/v1.5/sealed-wall-before.png" width="270" alt="Numbered key and fixed wall"><img src="screenshots/v1.5/sealed-wall-open.png" width="270" alt="Open passage after the key exits"></p>
 
-## Shop with game coins
+Matching key pieces dissolve fixed walls. Undo brings them back. Later prototypes mix this rule with gates, so the order of a key's exit can matter. The six P challenges are unlimited, reward-free practice. Journey instead uses 1,000 new fixed layouts and per-board action limits; 240 Remix provide paired gate-switch puzzles.
 
-<p><img src="screenshots/v1.1/shop.png" width="260" alt="Earned-currency item shop"></p>
+Open **Events → Sealed passages** to play P1–P6. The exported challenge card also includes matching walls and key badges:
 
-**Spark** reveals a safe next piece. **Vision** highlights pieces with a currently clear exit; it does not promise every highlighted order will solve the board. **Flow** plays up to three solver-safe moves. Leaving play, backgrounding, opening help, restarting or undoing cancels queued Flow actions.
+<p><img src="screenshots/v1.5/sharing/sealed-p6-card.png" width="420" alt="Actual final-APK P6 share card with K1/K2 keys and matching sealed walls"></p>
 
-Powers are optional and affect the star score. The shop does not take real money. See [the exact prices and reward rules](GAMEPLAY.md).
+This PNG was generated on the final APK. The Android chooser was cancelled; no message was sent.
 
-## Share a fair puzzle
+## Evidence and limits
 
-The share action creates an original card from the actual starting board, including its initial gates and exact C/R/E code. Android opens its share sheet; the player chooses the destination. A code can also be entered from Home. The custom `lumadrift://challenge/CODE` link opens an installed app; it is not an installation service or verified HTTPS App Link.
-
-Friend mode has no powers, coins, XP, mission progress or campaign unlocks. Sharing records a handoff only when the optional journal is enabled; it cannot tell whether a message was sent or a friend installed the game.
-
-## Learn locally, by choice
-
-<p><img src="screenshots/v1.1/journal.png" width="260" alt="Optional local play journal"></p>
-
-Settings → Local play journal is off by default. Opting in records a maximum of 2,000 events on that device, with timing, board identity and basic session observations. Export opens Android's share sheet for a JSON file. Nothing is sent automatically.
-
-Clear removes observations and cached journal exports while preserving game progress. Copies already saved or sent elsewhere remain with their owners. Local D1/D7 observations describe one opt-in window, not global retention; missing data remains unknown. [Privacy details](PRIVACY.md).
-
-## Read the evidence
-
-[Release and installation](RELEASE.md) · [Executed checks and limits](VALIDATION.md) · [Changes](CHANGELOG.md) · [Next milestones](ROADMAP.md).
+Six-language and small-window UI reports identify exact package hashes, inspected states and original-setting restoration. Lab equipment/power screenshots may use the explicitly disclosed temporary test profile; those coins, ownership and unlocks are not presented as earned progression. Real provider login, live ads, purchases, physical touch/audio quality and retention remain separate qualification.

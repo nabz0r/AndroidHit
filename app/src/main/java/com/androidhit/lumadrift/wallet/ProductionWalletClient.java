@@ -119,6 +119,12 @@ public final class ProductionWalletClient {
             } catch (Exception ignored) { /* A fresh server fetch restores this optional local cosmetic cache. */ }
         }
     }
+    public static String currentDisplayName(Context context) {
+        FirebaseUser user=currentUser(context);if(user==null)return "";
+        String value=user.getDisplayName();if(value==null||value.trim().isEmpty())return "Google";
+        value=value.replaceAll("[\\p{Cntrl}]", " ").trim();
+        return value.length()>48?value.substring(0,48):value;
+    }
     public static String currentUid(Context context) { FirebaseUser user = currentUser(context); return user == null ? "" : user.getUid(); }
     public void refresh(Callback callback) { request("GET", "/v1/wallet", null, callback); }
     public void verify(String productId, String purchaseToken, Callback callback) {

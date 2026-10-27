@@ -1,0 +1,49 @@
+Installed Luma Drift 1.5 UI smoke — PASS
+Installed identity: {"base_apk_sha256": "33c4dbd6c14fa3e72ec52c7d98475b1a9738b175bad9216c4bc4c7c5bdd817a2", "version_code": 6, "version_name": "1.5.0-rc1"}
+No gameplay, account, advertisement or purchase action will be confirmed.
+CAPTURE docs/screenshots/v1.5/home-en.png
+CAPTURE docs/screenshots/v1.5/settings-en.png
+CAPTURE docs/screenshots/v1.5/profile-guest-en.png
+PASS guest account inspected; no provider UI opened {}
+CAPTURE docs/screenshots/v1.5/collection-companions-en.png
+PASS collection tab and owned filter {"owned": 1, "tab": "companions", "total": 24}
+CAPTURE docs/screenshots/v1.5/collection-themes-en.png
+PASS collection tab and owned filter {"owned": 1, "tab": "themes", "total": 6}
+CAPTURE docs/screenshots/v1.5/collection-equipment-en.png
+CAPTURE docs/screenshots/v1.5/collection-equipment-owned-en.png
+CAPTURE docs/screenshots/v1.5/equipment-preview-en.png
+PASS collection tab and owned filter {"owned": 3, "tab": "equipment", "total": 18}
+CAPTURE docs/screenshots/v1.5/shop-en.png
+CAPTURE docs/screenshots/v1.5/power-offer-en.png
+CAPTURE docs/screenshots/v1.5/shop-page2-en.png
+PASS shop pages and cancelled local-pack confirmation {"coins": 235, "pack_price": 45, "pack_quantity": 3, "stock": 3}
+CAPTURE docs/screenshots/v1.5/sealed-menu-en.png
+PASS six sealed prototype entries inspected; no board opened {"stages": 6}
+PASS language navigation complete {"coins_unchanged": 235}
+CAPTURE docs/screenshots/v1.5/home-fr.png
+CAPTURE docs/screenshots/v1.5/settings-fr.png
+CAPTURE docs/screenshots/v1.5/profile-guest-fr.png
+PASS guest account inspected; no provider UI opened {}
+CAPTURE docs/screenshots/v1.5/collection-companions-fr.png
+PASS collection tab and owned filter {"owned": 1, "tab": "companions", "total": 24}
+CAPTURE docs/screenshots/v1.5/collection-themes-fr.png
+PASS collection tab and owned filter {"owned": 1, "tab": "themes", "total": 6}
+CAPTURE docs/screenshots/v1.5/collection-equipment-fr.png
+CAPTURE docs/screenshots/v1.5/collection-equipment-owned-fr.png
+CAPTURE docs/screenshots/v1.5/equipment-preview-fr.png
+PASS collection tab and owned filter {"owned": 3, "tab": "equipment", "total": 18}
+CAPTURE docs/screenshots/v1.5/shop-fr.png
+CAPTURE docs/screenshots/v1.5/power-offer-fr.png
+CAPTURE docs/screenshots/v1.5/shop-page2-fr.png
+PASS shop pages and cancelled local-pack confirmation {"coins": 235, "pack_price": 45, "pack_quantity": 3, "stock": 3}
+CAPTURE docs/screenshots/v1.5/sealed-menu-fr.png
+PASS six sealed prototype entries inspected; no board opened {"stages": 6}
+PASS language navigation complete {"coins_unchanged": 235}
+Original display overrides and caller-specified original language choice restored.
+
+No installs, profile reset, private preference edits, login, ads, purchases, equips or explicit reward-claim actions. Normal app entry may record a visit or persist already-eligible local gear unlocks. Language changes use Settings; metadata/digital bounds are not native-speaker or physical-device acceptance.
+JSON details: docs/validation/v1.5/ui-smoke.json
+
+FINAL RERUN SCOPE: English/French only; 14 passed cases and 24 captures on APK 33c4dbd6c14fa3e72ec52c7d98475b1a9738b175bad9216c4bc4c7c5bdd817a2.
+Full six-language/display evidence: docs/validation/v1.5/pre-share-image-fix/ui-smoke.json (earlier APK identity retained).
+Source provenance: docs/validation/v1.5/binary-final-candidate.json and binary-source-diff.json.

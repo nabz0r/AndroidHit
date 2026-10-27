@@ -4,7 +4,8 @@ import android.graphics.Color;
 
 /** Original, code-drawn cosmetics. Prices use the same coins earned by playing. */
 public final class Catalog {
-    public static final int LEVEL_COUNT = 240;
+    public static final int LEVEL_COUNT = 1000;
+    public static final int REMIX_COUNT = 240;
     public static final int DAILY_COUNT = 3;
     public static final int WEEKLY_COUNT = 7;
     public static final String HINT = "hint";

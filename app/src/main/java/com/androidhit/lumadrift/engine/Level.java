@@ -7,11 +7,13 @@ import java.util.List;
 /** Immutable, validated board description plus one proven completion. */
 public final class Level {
     public final int number;
-    /** One based campaign chapter (1..8), or zero for an event. */
+    /** One based campaign chapter, or zero for a standalone/event board. */
     public final int chapter;
     public final int size;
     public final int initialGateMask;
     public final List<Tile> tiles;
+    /** Empty for all historical and G/H boards; explicit fixed cells in the separate P prototype. */
+    public final List<Barrier> barriers;
     public final int parMoves;
     public final boolean isEvent;
     public final long seed;
@@ -22,8 +24,13 @@ public final class Level {
 
     public Level(int number, int chapter, int size, int initialGateMask,
                  List<Tile> tiles, int[] solution, boolean isEvent, long seed) {
+        this(number, chapter, size, initialGateMask, tiles, solution, isEvent, seed, Collections.emptyList());
+    }
+
+    public Level(int number, int chapter, int size, int initialGateMask,
+                 List<Tile> tiles, int[] solution, boolean isEvent, long seed, List<Barrier> barriers) {
         if (size < 2 || size > 7 || tiles.isEmpty() || tiles.size() > 49
-                || (initialGateMask & ~15) != 0 || solution.length != tiles.size()) {
+                || (initialGateMask & ~15) != 0 || solution.length != tiles.size() || barriers == null) {
             throw new IllegalArgumentException("Invalid level definition");
         }
         this.number = number;
@@ -51,6 +58,14 @@ public final class Level {
             }
             used[id] = true;
         }
+        for (Barrier barrier : barriers) {
+            if (barrier == null || barrier.row >= size || barrier.col >= size
+                    || barrier.keyTileId >= byId.length || occupied[barrier.row * size + barrier.col]) {
+                throw new IllegalArgumentException("Invalid/overlapping barrier or missing key piece");
+            }
+            occupied[barrier.row * size + barrier.col] = true;
+        }
+        this.barriers = Collections.unmodifiableList(new ArrayList<>(barriers));
         this.solution = solution.clone();
         this.parMoves = tiles.size();
         this.allTilesMask = (1L << tiles.size()) - 1L;
@@ -58,5 +73,10 @@ public final class Level {
 
     public Tile tile(int id) {
         return id >= 0 && id < byId.length ? byId[id] : null;
+    }
+
+    public boolean isKey(int tileId) {
+        for (Barrier barrier : barriers) if (barrier.keyTileId == tileId) return true;
+        return false;
     }
 }

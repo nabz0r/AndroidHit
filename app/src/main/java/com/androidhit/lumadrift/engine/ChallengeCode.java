@@ -9,7 +9,7 @@ import java.util.zip.CRC32;
  * not authentication. No player identity, score, reward or save travels in a code.
  */
 public final class ChallengeCode {
-    public enum Kind { CAMPAIGN, REMIX, EVENT, BALANCED, BALANCED_REMIX }
+    public enum Kind { CAMPAIGN, REMIX, EVENT, BALANCED, BALANCED_REMIX, BALANCED_V2, BALANCED_REMIX_V2, SEALED }
     /** Full nonnegative Java long range; no floating-point conversion occurs. */
     public static final long MAX_EVENT_SEED = Long.MAX_VALUE;
     public final Kind kind;
@@ -27,6 +27,9 @@ public final class ChallengeCode {
 
     public static String encodeBalanced(int number){return encode(Kind.BALANCED,number);}
     public static String encodeBalancedRemix(int number){return encode(Kind.BALANCED_REMIX,number);}
+    public static String encodeBalancedV2(int number){return encode(Kind.BALANCED_V2,number);}
+    public static String encodeBalancedRemixV2(int number){return encode(Kind.BALANCED_REMIX_V2,number);}
+    public static String encodeSealed(int number){return encode(Kind.SEALED,number);}
 
     public static String encodeEvent(long seed) { return encode(Kind.EVENT, seed); }
 
@@ -41,6 +44,9 @@ public final class ChallengeCode {
             case 'E': kind = Kind.EVENT; break;
             case 'B': kind = Kind.BALANCED; break;
             case 'Q': kind = Kind.BALANCED_REMIX; break;
+            case 'G': kind = Kind.BALANCED_V2; break;
+            case 'H': kind = Kind.BALANCED_REMIX_V2; break;
+            case 'P': kind = Kind.SEALED; break;
             default: return null;
         }
         if (code.charAt(5) != '-') return null;
@@ -66,14 +72,19 @@ public final class ChallengeCode {
 
     private static String encode(Kind kind, long value) {
         if (!valid(kind, value)) throw new IllegalArgumentException("Challenge value outside supported range");
-        char family = kind == Kind.CAMPAIGN ? 'C' : kind == Kind.REMIX ? 'R' : kind == Kind.BALANCED ? 'B' : kind == Kind.BALANCED_REMIX ? 'Q' : 'E';
+        char family = kind == Kind.CAMPAIGN ? 'C' : kind == Kind.REMIX ? 'R' : kind == Kind.BALANCED ? 'B'
+                : kind == Kind.BALANCED_REMIX ? 'Q' : kind == Kind.BALANCED_V2 ? 'G' : kind == Kind.BALANCED_REMIX_V2 ? 'H'
+                : kind == Kind.SEALED ? 'P' : 'E';
         String body = "LD1-" + family + "-" + Long.toString(value, 36).toUpperCase(Locale.ROOT);
         return body + "-" + checksum(body);
     }
 
     private static boolean valid(Kind kind, long value) {
-        return kind == Kind.EVENT ? value >= 0 && value <= MAX_EVENT_SEED
-                : value >= 1 && value <= (kind == Kind.CAMPAIGN ? LevelCatalog.LEVEL_COUNT : LevelCatalog.REMIX_COUNT);
+        if(kind == Kind.EVENT) return value >= 0 && value <= MAX_EVENT_SEED;
+        int maximum = kind == Kind.SEALED ? SealedCatalog.COUNT : kind == Kind.BALANCED_V2 ? BalancedCatalog.LEVEL_COUNT
+                : kind == Kind.BALANCED_REMIX_V2 ? BalancedCatalog.REMIX_COUNT
+                : kind == Kind.CAMPAIGN ? LevelCatalog.LEVEL_COUNT : LevelCatalog.REMIX_COUNT;
+        return value >= 1 && value <= maximum;
     }
 
     private static String checksum(String body) {

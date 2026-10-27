@@ -1,5 +1,8 @@
 # Can Luma Drift become a hit?
 
+> 1.5 follow-up: the current candidate addresses the old fixed-looking allowance, low planning pressure, missing music, ambiguous ownership and fragmented lobby. It adds a measured 1,000-board route, equipment and six sealed-passage prototypes. [Implemented scope and current evidence](RELEASE_1_5.md). These changes do not establish human comprehension, retention or revenue; the [roadmap study](ROADMAP.md) remains the next product gate.
+
+
 **The game has a workable product premise. A hit is still unproven.** Version 1.0 shipped a playable puzzle, original art and audio, an earned-currency shop, and substantial offline content. Those are production capabilities. They do not establish that strangers understand the hook, return voluntarily, share it, or can be acquired profitably.
 
 Assessment date: **26 October 2026**. This is a product diagnosis, not a revenue forecast. Actual release checks are recorded separately in [VALIDATION.md](VALIDATION.md).

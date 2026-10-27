@@ -1,0 +1,24 @@
+Lab1.5 real powers UI; emulator=emulator-5580; cases=hint,flow,shield,finish,journey,gear
+Installed Lab: versionCode=6 minSdk=26 targetSdk=36
+Installed Lab: versionName=1.5.0-sandbox
+Recovery backup: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v15-powers-backup-c9rigf1q
+QA emulator only: native window_animation_scale temporarily0; original=0; Canvas/game effect durations unchanged.
+SYNTHETIC Lab profile: Journey31 access,10000 local coins,6 charges per power,Moon Seed equipped; no progression or purchase claim. All preference files backed up outside repository.
+Screenshot: docs/screenshots/v1.5/powers/hint-one-charge-active.png
+PASS Spark: opening/cancelling costs0; confirmed effect costs1; active reactivation costs0; recreation costs0.
+Confirmation→interruption input duration: 0.134s
+FAIL: Missing control 'Resume' in ['', '', '', 'Luma Drift · Play', 'Pause', 'Coins: 10000', 'How to play', '8 / 11 moves  ·  Charm: 1 protected block', 'Gate open · up', 'Gate open · down', 'Piece, row 3, column 3, arrow up, Gate open', 'Piece, row 5, column 4, arrow down, Gate open, Switch: down', 'Piece, row 4, column 4, arrow right, Gate open, Switch: down', 'Piece, row 3, column 4, arrow down, Path blocked', 'Piece, row 3, column 2, arrow right, Path blocked', '↶  Undo', '↻  Restart', 'Spark: Stock: 5', 'Vision: Stock: 6', 'Flow: Stock: 5', 'Shield: Stock: 6', 'Focus, Level 45', 'Trail, Level 75']
+Screenshot: docs/screenshots/v1.5/powers/failure.png
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/smoke-powers-v15.py", line 448, in main
+    smoke.run(cases)
+  File "/Users/n/androidhit/scripts/smoke-powers-v15.py", line 423, in run
+    getattr(self, "case_" + case)()
+  File "/Users/n/androidhit/scripts/smoke-powers-v15.py", line 260, in case_flow
+    self.control("Resume" if transition != "help" else "Let’s drift")
+  File "/Users/n/androidhit/scripts/smoke-v11.py", line 100, in control
+    raise AssertionError("Missing control " + repr(name) + " in " + repr([text(n) for n in nodes]))
+AssertionError: Missing control 'Resume' in ['', '', '', 'Luma Drift · Play', 'Pause', 'Coins: 10000', 'How to play', '8 / 11 moves  ·  Charm: 1 protected block', 'Gate open · up', 'Gate open · down', 'Piece, row 3, column 3, arrow up, Gate open', 'Piece, row 5, column 4, arrow down, Gate open, Switch: down', 'Piece, row 4, column 4, arrow right, Gate open, Switch: down', 'Piece, row 3, column 4, arrow down, Path blocked', 'Piece, row 3, column 2, arrow right, Path blocked', '↶  Undo', '↻  Restart', 'Spark: Stock: 5', 'Vision: Stock: 6', 'Flow: Stock: 5', 'Shield: Stock: 6', 'Focus, Level 45', 'Trail, Level 75']
+
+PASS restoration: all 2 original Lab preference files restored byte for byte; newly created files removed; Lab remains stopped.
+PASS restoration: native window_animation_scale restored to 0 on selected QA emulator.

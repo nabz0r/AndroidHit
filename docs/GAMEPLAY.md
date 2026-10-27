@@ -1,5 +1,8 @@
 # Luma Drift gameplay and economy
 
+> Current source: 1.5 uses 1,000 Journey boards, 240 Remix and six separate key/wall prototypes. See [the 1.5 rules and compatibility contract](RELEASE_1_5.md), [equipment](AVATAR_EQUIPMENT.md) and [map measurements](data/progression-v2-summary.md). Earlier version-specific sections below retain their historical scope.
+
+
 **Current 1.4 production/Lab builds inherit the 1.3 board order, action allowances and six-power rules described below.** Production adds a separate account purchased-gold wallet for permanent companions/themes; earned local coins, powers and progression stay offline. Paid gold is never imported into the local economy. [Production differences](PRODUCTION_RELEASE.md) · [Current validation](VALIDATION.md). The version comparisons below preserve the earlier releases' exact behavior.
 
 This guide distinguishes the signed **stable 1.1.0 game**, delivered **Lab 1.2.0-sandbox**, and delivered **Lab 1.3.0-sandbox**. The extraction and gate rules are shared; 1.3 adds a reordered progression, action allowance and six powers. Its final signed package passed the recorded Android 16 interaction and SDK test cases; physical-device/player acceptance remains separate. Stable uses fixed earned-coin prices and has no advertising or billing SDK. Both Lab versions use the separate sandbox application ID and wallet; 1.3 updates 1.2, while neither transfers gold to stable. Executed evidence is scoped by version and package in [VALIDATION.md](VALIDATION.md).

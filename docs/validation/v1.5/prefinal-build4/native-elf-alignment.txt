@@ -1,0 +1,22 @@
+Native ELF LOAD-segment audit; no emulator access.
+Scope: 64-bit arm64-v8a and x86_64 libraries inside both APKs and AABs.
+Requirement checked: PT_LOAD p_align >= 16384 and p_offset congruent to p_vaddr modulo 16384.
+APK uncompressed native ZIP payloads additionally require offsets divisible by 16384.
+
+app/build/outputs/apk/production/release/app-production-release.apk SHA256 a38d8328a3bb966e6bef1fa6260a89f8d63bc8885154c5b00654128a7cff9204
+  PASS lib/arm64-v8a/libdatastore_shared_counter.so: 3 LOAD segments; alignment(s) 16384,16384,16384; SHA256 d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS lib/x86_64/libdatastore_shared_counter.so: 2 LOAD segments; alignment(s) 16384,16384; SHA256 fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+
+app/build/outputs/apk/lab/release/app-lab-release.apk SHA256 98f3a1a01ddee0795f490f2bea5a6119435c15091119c875c026509b04d848fd
+  PASS lib/arm64-v8a/libdatastore_shared_counter.so: 3 LOAD segments; alignment(s) 16384,16384,16384; SHA256 d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS lib/x86_64/libdatastore_shared_counter.so: 2 LOAD segments; alignment(s) 16384,16384; SHA256 fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+
+app/build/outputs/bundle/productionRelease/app-production-release.aab SHA256 7d0cb1d397316cbe2023e0fb4666f5f3947e33c88abf0dc24f96c27a8465e4ca
+  PASS base/lib/arm64-v8a/libdatastore_shared_counter.so: 3 LOAD segments; alignment(s) 16384,16384,16384; SHA256 d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS base/lib/x86_64/libdatastore_shared_counter.so: 2 LOAD segments; alignment(s) 16384,16384; SHA256 fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+
+app/build/outputs/bundle/labRelease/app-lab-release.aab SHA256 5194db0fa1868ed6bf889023fc3fb1556f79fe0cd9334b3cd93a7cef7826acdf
+  PASS base/lib/arm64-v8a/libdatastore_shared_counter.so: 3 LOAD segments; alignment(s) 16384,16384,16384; SHA256 d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS base/lib/x86_64/libdatastore_shared_counter.so: 2 LOAD segments; alignment(s) 16384,16384; SHA256 fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+
+PASS 8 native payload checks, 20 PT_LOAD segment checks. This is binary alignment evidence, not a 16KB-page runtime test.

@@ -2,7 +2,9 @@
 
 Luma Drift uses an original, code-drawn visual system: a dark celestial backdrop, soft colored light, tactile rounded pieces, clear arrow marks, and small expressive companions. The interface takes general puzzle-game conventions—short sessions, visible progression, immediate feedback, and readable rewards—without copying another game's artwork, characters, screens, or sound recordings.
 
-Stable 1.1 includes six companions. **Lab 1.2.0-sandbox** expanded the collection to 24, preserving the original six IDs, prices and shapes. Lab 1.3 keeps that collection. Stable screenshots remain evidence for the stable release; the expanded collection and account/commerce surfaces have separately labelled [Lab captures and interaction evidence](COMPANIONS_EVENTS.md). The account images show guest/missing configuration, not a successful Google login.
+The **1.5 candidate** retains 24 companions and six themes, adds a lobby built around the equipped avatar, and introduces three equipment slots. Companions and themes stay cosmetic; the separately equipped items have the limited gameplay bonuses described in [Avatar equipment](AVATAR_EQUIPMENT.md). Candidate build, interface and runtime acceptance belong in [Release 1.5](RELEASE_1_5.md); historical captures do not establish the new layout or equipment behavior.
+
+Stable 1.1 originally included six companions. **Lab 1.2.0-sandbox** expanded the collection to 24, preserving those original IDs, prices and shapes; later candidates retain that collection. Stable screenshots remain evidence for their identified release. The expanded collection and account/commerce surfaces have separately labelled [Lab captures and interaction evidence](COMPANIONS_EVENTS.md). Historical guest/missing-configuration account images are not evidence of successful Google login.
 
 ## Visual implementation
 
@@ -10,11 +12,13 @@ Stable 1.1 includes six companions. **Lab 1.2.0-sandbox** expanded the collectio
 
 Pieces use both direction arrows and color, so color is not the only gameplay cue. Switch pieces carry a smaller direction badge. Remix switches carry two badges and toggle both indicated gates; selected switches outline the affected gate rails. Early campaign boards highlight a safe opening and show contextual guidance. Gates expose their open/closed state through shape and lock/arrow icons. Movement produces a short exit trail; blocked actions shake the piece; hints and vision use an outlined glow. Home and victory screens show the equipped companion.
 
-Lab 1.3 adds a visible action allowance and six original power icons: a Spark bulb, Vision eye, Flow arrows, Shield outline, Focus target and Trail path. Shield displays remaining protected blocks. Focus outlines exact safe moves for up to ten seconds; Trail numbers up to five moves of a complete solution for up to twelve seconds. Either preview ends at the next successful exit or Undo. The [actual 1.3 interface gallery](../README.md#actual-13-screens) uses a clearly disclosed synthetic emulator profile; the [final runtime report](validation/v1.3/move-power-ui-smoke.txt) records exact stock/action behavior and restoration. This is separate from physical-device or assistive-technology acceptance.
+The 1.5 **Sealed passages** prototypes add fixed wall cells and matching key markings. A wall disappears when its key piece exits and reappears when Undo restores that key; gate changes remain a separate part of the move. The menu explicitly identifies six prototypes with no rewards or powers. Source/engine checks are recorded in [Release 1.5](RELEASE_1_5.md#sealed-passages--six-prototypes); actual key/wall readability still requires installed and human inspection.
 
-The launcher uses Nova’s gold five-point silhouette, matching the game and original [brand kit](store/README.md). The home screen includes a rank card and mission entry. Seven distinct first clears unlock an optional star badge for the equipped companion. Original challenge cards render the initial board, gate rails, direction badges and an exact share code; they do not invent a ranking or score.
+Lab 1.3 adds a visible action allowance and six original power icons: a Spark bulb, Vision eye, Flow arrows, Shield outline, Focus target and Trail path. Shield displays remaining protected blocks. Focus outlines exact safe moves for up to ten seconds; Trail numbers up to five moves of a complete solution for up to twelve seconds. Either preview ends at the next successful exit or Undo. The [historical 1.3 interface evidence](VALIDATION_1_3.md) uses a clearly disclosed synthetic emulator profile; the [final runtime report](validation/v1.3/move-power-ui-smoke.txt) records exact stock/action behavior and restoration. This is separate from physical-device or assistive-technology acceptance.
 
-All companions are vector drawings with shape-specific geometry. The Lab adds silhouettes rather than recoloring one common outline. Their expressions share the visual system; every companion remains cosmetic and does not alter puzzle rules. The original six below remain in both releases.
+The launcher uses Nova’s gold five-point silhouette, matching the game and original [brand kit](store/README.md). The 1.5 lobby centers the equipped companion and its equipment, the next Journey board, and access to progression, missions and the collection. Actual layout acceptance remains a release check. Seven distinct first clears unlock the existing optional star badge. Original challenge cards render the initial board, gate rails, direction badges and an exact share code; they do not invent a ranking or score.
+
+All companions are vector drawings with shape-specific geometry. The expanded collection adds silhouettes rather than recoloring one common outline. Their expressions share the visual system; the companion identity itself remains cosmetic and does not alter puzzle rules. Equipment is a separate system, with explicit slots and capped benefits. The original six below remain available.
 
 | Companion | Silhouette | Base color | Coin price |
 | --- | --- | --- | ---: |
@@ -25,7 +29,7 @@ All companions are vector drawings with shape-specific geometry. The Lab adds si
 | Astra | Comet with a translucent tail | `#8DC8FF` | 420 |
 | Zig | Soft ghost with scalloped base | `#DAF79D` | 600 |
 
-The Lab adds 18 companions:
+The expanded collection adds 18 companions:
 
 | Companion | Silhouette | Base color | Coin price |
 |---|---|---|---:|
@@ -65,7 +69,7 @@ Six skins change the background, cards, accents, and gameplay palette. They are 
 | Midnight | `#0B1229` | `#192747` | `#8AB9FF` | `#D1B0FF` | 360 |
 | Aurora | `#152120` | `#263C36` | `#C1EE9C` | `#86DFC2` | 450 |
 
-The collection previews and equips cosmetics. Stable purchases use earned coins; the Lab's separate wallet can also receive clearly labelled simulated packs or earned test-ad rewards. No real money is charged in either delivered mode. Companion and skin names use the six-language string catalog. Localized text completeness is distinct from native-speaker review.
+The collection previews and equips cosmetics. The offline shop uses earned local coins; the Lab's separate balance can also receive clearly labelled simulated packs or earned test-ad rewards. The production account wallet is a separate service for permanent cosmetics; its commercial activation and purchase qualification remain pending. Equipment purchases use local earned coins. [Value and validation boundaries](RELEASE_1_5.md). Companion, theme and equipment text uses the six-language catalog; automated text completeness is distinct from native-speaker review.
 
 ## Sound design
 
@@ -87,11 +91,13 @@ The collection previews and equips cosmetics. Stable purchases use earned coins;
 | `WIN` | 1.450 s | Board completion |
 | `LOSE` | 0.600 s | Available descending cue; currently not triggered by the interface |
 
-The original ambient loop lasts **12.8 seconds at 75 BPM**. It combines four soft chord pads, sparse bell notes, and quiet delayed repeats. Note tails wrap into the next iteration instead of being abruptly cut at the loop boundary. The tone and rhythm are deliberately restrained for repeated puzzle sessions.
+The 1.5 original ambient loop lasts **25.6 seconds at 75 BPM**. Its eight bars combine overlapping chord pads, a low-register voice, bell phrases and quiet delayed repeats. Note tails wrap into the next iteration. This replaces the earlier 12.8-second phrase. A static-track initialization defect previously discarded the music before its first PCM write; the repaired engine writes the buffer before requiring `STATE_INITIALIZED`. [Cause, before/after regression and test scope](validation/v1.5/audio/README.md).
 
-Music and effects have independent enable switches in Settings, persisted by GameStore. AudioEngine also exposes separate volume controls for integration. Its default gains are 0.24 for music and 0.72 for effects. The music pauses and all active effects stop when the Activity enters the background. The engine relinquishes audio focus, handles focus loss or ducking, and releases its worker, SoundPool, and AudioTrack on destruction. No audio permission is requested.
+Music and effects have independent enable switches in Settings, persisted by GameStore. AudioEngine also exposes separate volume controls. Its default gains are **0.27 for music and 0.72 for effects**. Initial music playback and foreground resume fade in over 900 ms; disabling music fades out over 180 ms. Focus ducking also changes the level smoothly. Backgrounding or losing focus pauses output immediately, without finishing an audible fade in the background. Resume reuses the same track and position. Destruction cancels fade callbacks and releases the worker, SoundPool and AudioTrack. No audio permission is requested.
 
-The cached effects occupy approximately **0.245 MB** in total; the music's PCM buffer is **564,480 bytes**. Cache files can be regenerated if Android clears them. No audio downloads are required.
+The cached effects occupy approximately **0.245 MB** in total; the music's PCM buffer is **1,128,960 bytes**. Music preparation is independent of effects-cache availability. Cache files can be regenerated if Android clears them. No audio downloads are required.
+
+[Listen to the 16-second preview](validation/v1.5/audio/ambient-preview.wav). It uses the actual default music gain and entrance fade; its final fade only closes the excerpt. [Measured PCM levels](validation/v1.5/audio/audio-levels.txt).
 
 ## Provenance and validation boundaries
 
@@ -99,7 +105,7 @@ The puzzle illustrations, palettes, companion shapes and procedural audio were c
 
 Android Canvas, Android audio APIs and device-provided system typefaces are platform facilities. Original project source/art/audio retain the repository's AGPL-3.0 license; platform facilities, SDKs, marks and tools retain their own terms. This provenance statement is not a trademark availability opinion about the game or companion names.
 
-The audio sources compile against the Android 36 API with Java 17 source compatibility. A pure-Java DSP check generated every effect and the music loop: all effect endpoints are zero, the largest effect peak is 14,453 out of 32,767, and the music loop's boundary step is 15 sample units compared with a maximum ordinary adjacent-sample step of 1,175. These measurements show headroom and loop continuity in the generated buffers; they do not measure speaker quality or end-to-end input latency.
+The 1.5 audio sources compile against Android 36 with Java 17 source compatibility. [Executed checks](validation/v1.5/audio/automated-checks.txt) include **65 DSP checks** on the generated buffers and **36 lifecycle/focus checks using a JVM Android model**. All effect endpoints are zero. At the default music gain, the loop measures **−28.45 dBFS RMS and −15.94 dBFS peak**; its boundary step is **17 sample units**, compared with a maximum ordinary adjacent step of **2,710**. These are digital PCM measurements, not LUFS, speaker quality, output capture or end-to-end latency. The model reproduces the former zero-write failure and passes after the repair; actual Android playback acceptance is tracked separately in [Release 1.5](RELEASE_1_5.md).
 
 Base-palette calculations give normal body text at least 10.9:1 contrast against the skin cards and muted text at least 5.8:1. These checks cover the listed solid card colors, not every translucent layer, disabled state, or illustration. The application includes arrow shapes, localized labels, keyboard navigation, virtual accessibility nodes, and a reduced-motion preference, but this document does not claim complete accessibility certification.
 

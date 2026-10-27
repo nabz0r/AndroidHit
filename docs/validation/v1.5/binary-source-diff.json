@@ -1,0 +1,17 @@
+{
+  "before_manifest": "docs/validation/v1.5/pre-share-image-fix/binary-final-candidate.json",
+  "after_manifest": "docs/validation/v1.5/binary-final-candidate.json",
+  "scope": "Game/build source-input SHA256 maps; app/build generated sources were not part of either manifest.",
+  "added": [],
+  "removed": [],
+  "changed": {
+    "app/src/main/java/com/androidhit/lumadrift/sharing/ShareComposer.java": {
+      "before": "bb194a844b07ca9b23567614a0a085fa4574dabc8de778ad1f108e8daaf6cdb2",
+      "after": "fc7653f450887b352a9dc1e5db83b4b866d66994fd8ae58bd67ff6b977a7c747"
+    }
+  },
+  "expected_changed_files": [
+    "app/src/main/java/com/androidhit/lumadrift/sharing/ShareComposer.java"
+  ],
+  "exact_expected_change_only": true
+}

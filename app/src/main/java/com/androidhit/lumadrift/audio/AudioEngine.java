@@ -7,6 +7,10 @@ import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.media.SoundPool;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.SystemClock;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -25,6 +29,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public final class AudioEngine {
     public enum Sound { TAP, SELECT, MOVE, BLOCKED, GATE, UNDO, HINT, COIN, PURCHASE, WIN, LOSE }
+    private static final String TAG = "LumaAudio";
+    static final float DEFAULT_MUSIC_VOLUME = 0.27f;
 
     private final Object lock = new Object();
     private final AtomicBoolean released = new AtomicBoolean();
@@ -40,6 +46,8 @@ public final class AudioEngine {
     private final AudioManager manager;
     private final AudioFocusRequest focusRequest;
     private final AudioManager.OnAudioFocusChangeListener focusListener;
+    private final Handler fades = new Handler(Looper.getMainLooper());
+    private final Runnable fadeTick = this::advanceFade;
     private AudioTrack music;
     private boolean running;
     private boolean sfxEnabled = true;
@@ -48,7 +56,14 @@ public final class AudioEngine {
     private boolean focusSuppressed;
     private boolean ducked;
     private float sfxVolume = 0.72f;
-    private float musicVolume = 0.24f;
+    private float musicVolume = DEFAULT_MUSIC_VOLUME;
+    private float appliedMusicGain;
+    private float fadeFrom;
+    private float fadeTo;
+    private long fadeStarted;
+    private long fadeDuration;
+    private boolean fading;
+    private boolean pauseAfterFade;
 
     public AudioEngine(Context context) {
         Context app = context.getApplicationContext();
@@ -64,7 +79,7 @@ public final class AudioEngine {
         });
         focusListener = change -> {
             synchronized (lock) {
-                if (released.get()) return;
+                if (released.get() || !running) return;
                 if (change == AudioManager.AUDIOFOCUS_GAIN) {
                     focusSuppressed = false;
                     ducked = false;
@@ -74,6 +89,7 @@ public final class AudioEngine {
                 } else {
                     focusSuppressed = true;
                     if (change == AudioManager.AUDIOFOCUS_LOSS) focusGranted = false;
+                    try { pool.autoPause(); } catch (RuntimeException ignored) { }
                 }
                 updateMusicLocked();
             }
@@ -90,7 +106,7 @@ public final class AudioEngine {
     private void prepare(File directory) {
         AudioTrack candidate = null;
         try {
-            if (!directory.exists() && !directory.mkdirs()) return;
+            if (!directory.exists() && !directory.mkdirs()) throw new IOException("Cannot create sound cache");
             for (Sound sound : Sound.values()) {
                 if (released.get() || Thread.currentThread().isInterrupted()) return;
                 File file = new File(directory, sound.name().toLowerCase(java.util.Locale.ROOT) + ".wav");
@@ -100,8 +116,14 @@ public final class AudioEngine {
                     samples.put(sound, pool.load(file.getAbsolutePath(), 1));
                 }
             }
+        } catch (IOException | RuntimeException failed) {
+            // Music does not depend on the effects cache being writable.
+            Log.w(TAG, "Could not prepare every sound effect", failed);
+        }
+        try {
             if (released.get()) return;
             short[] pcm = Synth.ambientLoop();
+            if (released.get() || Thread.currentThread().isInterrupted()) return;
             candidate = new AudioTrack.Builder()
                     .setAudioAttributes(new AudioAttributes.Builder()
                             .setUsage(AudioAttributes.USAGE_GAME)
@@ -112,18 +134,27 @@ public final class AudioEngine {
                             .setChannelMask(AudioFormat.CHANNEL_OUT_MONO).build())
                     .setBufferSizeInBytes(pcm.length * 2)
                     .setTransferMode(AudioTrack.MODE_STATIC).build();
-            if (candidate.getState() != AudioTrack.STATE_INITIALIZED) return;
+            // MODE_STATIC starts in STATE_NO_STATIC_DATA; write the PCM before requiring readiness.
+            if (candidate.getState() == AudioTrack.STATE_UNINITIALIZED) {
+                throw new IllegalStateException("Music output could not initialize");
+            }
             int written = candidate.write(pcm, 0, pcm.length);
-            if (written != pcm.length || candidate.setLoopPoints(0, pcm.length, -1) != AudioTrack.SUCCESS) return;
+            if (written != pcm.length || candidate.getState() != AudioTrack.STATE_INITIALIZED
+                    || candidate.setLoopPoints(0, pcm.length, -1) != AudioTrack.SUCCESS) {
+                throw new IllegalStateException("Music PCM or loop could not load: " + written);
+            }
+            candidate.setVolume(0f);
             synchronized (lock) {
                 if (!released.get()) {
                     music = candidate;
                     candidate = null;
+                    Log.i(TAG, "Original ambient ready: " + pcm.length + " mono frames at " + Synth.RATE + " Hz");
                     updateMusicLocked();
                 }
             }
-        } catch (IOException | RuntimeException ignored) {
-            // A muted device or unavailable audio output must never prevent playing the game.
+        } catch (RuntimeException failed) {
+            // An unavailable output must never prevent playing, but should remain diagnosable.
+            Log.w(TAG, "Could not prepare ambient music", failed);
         } finally {
             if (candidate != null) {
                 try { candidate.release(); } catch (RuntimeException ignored) { }
@@ -134,7 +165,7 @@ public final class AudioEngine {
     public void play(Sound sound) {
         if (sound == null || released.get()) return;
         synchronized (lock) {
-            if (released.get() || !running || !sfxEnabled || focusSuppressed) return;
+            if (released.get() || !running || !sfxEnabled || !focusGranted || focusSuppressed) return;
             Integer id = samples.get(sound);
             if (id == null || !loaded.contains(id)) return;
             float volume = sfxVolume * (ducked ? 0.25f : 1f);
@@ -145,16 +176,21 @@ public final class AudioEngine {
 
     public void setSfxEnabled(boolean enabled) {
         synchronized (lock) {
+            if (released.get()) return;
             sfxEnabled = enabled;
             if (!enabled && !released.get()) pool.autoPause();
             if (enabled && running && !focusGranted) requestFocusLocked();
+            if (!enabled && !musicEnabled) abandonFocusLocked();
+            updateMusicLocked();
         }
     }
 
     public void setMusicEnabled(boolean enabled) {
         synchronized (lock) {
+            if (released.get()) return;
             musicEnabled = enabled;
             if (running && enabled && !focusGranted) requestFocusLocked();
+            if (!enabled && !sfxEnabled) abandonFocusLocked();
             updateMusicLocked();
         }
     }
@@ -200,6 +236,8 @@ public final class AudioEngine {
         synchronized (lock) {
             if (!released.compareAndSet(false, true)) return;
             running = false;
+            fades.removeCallbacks(fadeTick);
+            fading = false;
             abandonFocusLocked();
             if (music != null) {
                 try { music.pause(); music.release(); } catch (RuntimeException ignored) { }
@@ -218,7 +256,11 @@ public final class AudioEngine {
             int result = manager.requestAudioFocus(focusRequest);
             focusGranted = result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED;
             focusSuppressed = !focusGranted;
-        } catch (RuntimeException ignored) { focusSuppressed = false; }
+            if (!focusGranted) Log.i(TAG, "Audio focus unavailable; audio remains paused");
+        } catch (RuntimeException failed) {
+            focusSuppressed = true;
+            Log.w(TAG, "Could not request audio focus", failed);
+        }
     }
 
     private void abandonFocusLocked() {
@@ -234,11 +276,70 @@ public final class AudioEngine {
     private void updateMusicLocked() {
         if (music == null || released.get()) return;
         try {
-            music.setVolume(musicVolume * (ducked ? 0.2f : 1f));
-            boolean shouldPlay = running && musicEnabled && !focusSuppressed;
-            if (shouldPlay && music.getPlayState() != AudioTrack.PLAYSTATE_PLAYING) music.play();
-            else if (!shouldPlay && music.getPlayState() == AudioTrack.PLAYSTATE_PLAYING) music.pause();
-        } catch (RuntimeException ignored) { }
+            if (!running || !focusGranted || focusSuppressed) {
+                stopMusicLocked();
+                return;
+            }
+            if (!musicEnabled) {
+                if (music.getPlayState() == AudioTrack.PLAYSTATE_PLAYING && !pauseAfterFade) {
+                    fadeMusicLocked(0f, 180, true);
+                }
+                return;
+            }
+            float target = musicVolume * (ducked ? 0.2f : 1f);
+            if (music.getPlayState() != AudioTrack.PLAYSTATE_PLAYING) {
+                appliedMusicGain = 0f;
+                music.setVolume(0f);
+                music.play();
+                Log.i(TAG, "Ambient playing; fade to " + target);
+                fadeMusicLocked(target, 900, false);
+            } else if (Math.abs(target - fadeTo) > 0.0001f || pauseAfterFade) {
+                fadeMusicLocked(target, ducked ? 180 : 450, false);
+            }
+        } catch (RuntimeException failed) { Log.w(TAG, "Could not update ambient playback", failed); }
+    }
+
+    private void stopMusicLocked() {
+        fades.removeCallbacks(fadeTick);
+        fading = false;
+        pauseAfterFade = false;
+        appliedMusicGain = 0f;
+        music.setVolume(0f);
+        if (music.getPlayState() == AudioTrack.PLAYSTATE_PLAYING) {
+            music.pause();
+            Log.i(TAG, "Ambient paused");
+        }
+    }
+
+    private void fadeMusicLocked(float target, long duration, boolean pauseWhenSilent) {
+        fades.removeCallbacks(fadeTick);
+        fadeFrom = appliedMusicGain;
+        fadeTo = target;
+        fadeStarted = SystemClock.uptimeMillis();
+        fadeDuration = duration;
+        pauseAfterFade = pauseWhenSilent;
+        fading = true;
+        fades.post(fadeTick);
+    }
+
+    private void advanceFade() {
+        synchronized (lock) {
+            if (released.get() || music == null || !fading) return;
+            float progress = Math.min(1f, (SystemClock.uptimeMillis() - fadeStarted) / (float) fadeDuration);
+            float eased = progress * progress * (3f - 2f * progress);
+            appliedMusicGain = fadeFrom + (fadeTo - fadeFrom) * eased;
+            try {
+                music.setVolume(appliedMusicGain);
+                if (progress < 1f) fades.postDelayed(fadeTick, 20);
+                else {
+                    fading = false;
+                    if (pauseAfterFade) stopMusicLocked();
+                }
+            } catch (RuntimeException failed) {
+                fading = false;
+                Log.w(TAG, "Could not fade ambient playback", failed);
+            }
+        }
     }
 
     private static float clampVolume(float value) {

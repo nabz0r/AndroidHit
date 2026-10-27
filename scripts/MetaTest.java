@@ -17,6 +17,7 @@ public final class MetaTest {
     private static final class MemoryPreferences implements SharedPreferences {
         private final Map<String, Object> values = new HashMap<>();
         private boolean failNextCommit;
+        @Override public synchronized Map<String, ?> getAll() { return new HashMap<>(values); }
         @Override public boolean contains(String key) { return values.containsKey(key); }
         @Override public int getInt(String key, int fallback) { return (Integer) values.getOrDefault(key, fallback); }
         @Override public String getString(String key, String fallback) { return (String) values.getOrDefault(key, fallback); }
@@ -92,7 +93,7 @@ public final class MetaTest {
         check(meta.recordWin(3, 1, 3, "remix-v1") == 35, "Remix boards have distinct identity from Journey");
         check(meta.recordWin(3, 1, 3, "remix-v1") == 0, "Remix replay cannot farm XP");
         check(meta.recordWin(4, 200, 3, "challenge") == 0, "Friend challenges cannot farm XP or quest credit");
-        check(meta.recordWin(0, 0, 3, null) == 0 && meta.recordWin(0, 241, 3, null) == 0, "Invalid campaign bounds rejected");
+        check(meta.recordWin(0, 0, 3, null) == 0 && meta.recordWin(0, com.androidhit.lumadrift.data.Catalog.LEVEL_COUNT+1, 3, null) == 0, "Invalid campaign bounds rejected");
         check(meta.recordWin(1, -1, 3, "2026-10-26") == 0 && meta.recordWin(1, 3, 3, "2026-10-26") == 0, "Invalid daily bounds rejected");
         check(meta.recordWin(3, 1, 3, "invalid/identity") == 0, "Malformed remix identity rejected");
         check(meta.recordWin(3, 0, 3, "remix-v1") == 0 && meta.recordWin(3, 241, 3, "remix-v1") == 0, "Remix board bounds match the fixed 240-board catalog");

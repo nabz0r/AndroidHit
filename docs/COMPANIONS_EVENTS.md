@@ -1,6 +1,14 @@
-# Companions and event clarity
+# Companions, equipment and event clarity
 
-The current **1.4 production candidate** retains these 24 companions/event screens and adds account-restored permanent cosmetics from a separate purchased wallet when configured. The captures below are historical Lab images. [Production scope](PRODUCTION_RELEASE.md) · [Current evidence](VALIDATION.md).
+The **1.5 candidate** presents three collection tabs: Companions, Themes and Equipment. Four large cards per page distinguish **Owned**, **Equipped** and **To unlock**. An owned-only filter and permanent equipped-avatar hero keep inventory readable. The 24 companion identities and six themes remain cosmetic; the new 18 equipment items have separate explicit, bounded benefits. [Equipment table and sources](AVATAR_EQUIPMENT.md) · [Current validation](VALIDATION.md).
+
+<p><img src="screenshots/v1.5/collection-equipment-fr.png" width="260" alt="Actual 1.5 equipment collection with clear states"><img src="screenshots/v1.5/sealed-menu-fr.png" width="260" alt="Actual 1.5 sealed-passage prototype menu"></p>
+
+Daily and weekly tabs retain visible goals, stages, reset times and one-time completion rewards. Their lifetime victories/stars can unlock permanent equipment. A third tab offers six separate key/wall practice puzzles with unlimited actions and no economic reward; it is a prototype pack, not a timed online event.
+
+## Historical Lab 1.2 collection and event guide
+
+The following screenshots and eight-card pagination describe **Lab1.2**, not the current four-card/three-tab layout. The catalog IDs, silhouettes and fixed companion prices remain applicable.
 
 Luma Drift's lab release expands the collection from **6 to 24 companions** and makes each event's objective, progress, next stage, coin rewards, reset time, and completion bonus visible on one screen. These changes are implemented; visual/runtime release checks are recorded separately in [VALIDATION.md](VALIDATION.md).
 
