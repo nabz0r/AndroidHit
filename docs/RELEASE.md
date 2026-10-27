@@ -13,7 +13,7 @@ The internal candidate adds ten-node saga pages, prelevel goals and action limit
 | [luma-drift-1.6.0-sandbox.apk](../releases/luma-drift-1.6.0-sandbox.apk) | 5,528,321 | `0f8d7c04df45331b844b276c8149d9c276e8687f190c2cc7d2e1e236fbaa1a45` |
 | [luma-drift-1.6.0-sandbox.aab](../releases/luma-drift-1.6.0-sandbox.aab) | 8,855,495 | `ad5dbf567ff2188438a7d1bfa0d7b28c6fb5424541a2419daba6927d701a37b5` |
 
-Both APKs verify against the existing public RSA signing certificate; both AABs pass signature and pinned bundletool validation. ZIP/native ELF 16KB alignment passes. [Binary record](validation/v1.6/binary-final-candidate.json) · [Production manifest](../releases/manifest-1.6.0-rc1.json) · [Lab manifest](../releases/manifest-1.6.0-sandbox.json) · [Checksums](../releases/SHA256SUMS.txt).
+[Public downloads verified against the tested bytes](validation/v1.6/publication.json). Both APKs verify against the existing public RSA signing certificate; both AABs pass signature and pinned bundletool validation. ZIP/native ELF 16KB alignment passes. [Binary record](validation/v1.6/binary-final-candidate.json) · [Production manifest](../releases/manifest-1.6.0-rc1.json) · [Lab manifest](../releases/manifest-1.6.0-sandbox.json) · [Checksums](../releases/SHA256SUMS.txt).
 
 The delivered build forces official sample ads and keeps its wallet origin empty. It does not activate real checkout or live ad units. Google provider/server qualification and Play commercial approval remain separate. [Activation guide](DEPLOIEMENT_PAS_A_PAS.md).
 
