@@ -13,6 +13,10 @@
 - Actual API 26 Lab 1.5→1.6 save preservation; API 36/16KB execution; 88 Lab and 43 production menu checks; six-power consumption/recreation, key/Undo and Flow pause/help/rotation checks. Successful real login, live commerce, physical phones and retention remain separate.
 - V3 host report: 582,831 checks, independent exact reference comparisons, geometric uniqueness including key links, equal historical fingerprints and byte-identical offline regeneration. No Android runtime, retention, revenue or live-commercial outcome is inferred from these checks.
 
+### Website presentation follow-up · 27 October 2026
+
+The public FR/EN site now presents the 1.6 saga map, briefing, inventory ownership and progressive keys using real final-APK captures. Aurora Atlas and the original Nova artwork frame a new responsive layout; both download actions target the signed 1.6 APK. Source provenance, 18 local browser states, 24 deletion-core tests and Firebase delivery have their own [site record](validation/site-v1.6/README.md). This website change does not change Android binaries or activate commerce.
+
 ## 1.5.0-rc1 / 1.5.0-sandbox — avatar, planning and sealed passages
 
 27 October 2026 · version code 6. [Release scope and executed acceptance](RELEASE_1_5.md).

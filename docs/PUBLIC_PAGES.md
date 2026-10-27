@@ -1,6 +1,6 @@
 # Public developer, privacy and account-deletion pages
 
-The **1.6 website candidate**, prepared and checked locally on **27 October 2026**, presents the production application `com.androidhit.lumadrift`. Its source is in [`public/`](../public/). The homepage now describes the 1.6 saga map, prelevel objective/action budget, inventory filters and keys within Journey, and links the signed **1.6.0-rc1 APK**. The [1.6 site record](validation/site-v1.6/README.md) separates local checks, source provenance and any later deployment outcome. Deployment of this revision is not yet established here.
+The **1.6 website refresh**, checked locally and published through Firebase Hosting on **27 October 2026**, presents the production application `com.androidhit.lumadrift`. Its source is in [`public/`](../public/). The homepage now describes the 1.6 saga map, prelevel objective/action budget, inventory filters and keys within Journey, and links the signed **1.6.0-rc1 APK**. The [1.6 site record](validation/site-v1.6/README.md) separates local checks, source provenance and the Firebase deployment outcome. The 36 local payloads were hash-verified on the clean deployment checkout before publication; no public-origin HTTP/browser comparison was performed for this revision.
 
 The existing [stable site](https://luma-drift-production.web.app/) and [qualification preview](https://luma-drift-production--qualification-uht107xg.web.app) have earlier deployment observations dated **26–27 October 2026**. Independent reads of those earlier revisions and owner-reported Google sign-in/deletion success do not verify the 1.6 website or a real account transaction in this review. This is not a completed Google Play privacy/deletion submission. [Historical preview evidence](validation/hosting-preview.md).
 
@@ -16,9 +16,9 @@ The pages use the Luma Drift palette, original code-drawn puzzle artwork, respon
 | [`scripts/check-site-v16.py`](../scripts/check-site-v16.py) | Current offline source, DOM, local asset and hash checks |
 | [`public/tests/`](../public/tests/) | Request-boundary tests and preserved static/browser runners; exclude from hosting |
 
-## 1.6 local qualification · 27 October 2026
+## 1.6 website delivery and local qualification · 27 October 2026
 
-The candidate uses final production 1.6 Android captures for the map, briefing, Home and inventory. The map shows ten levels per page; the briefing explains a fresh attempt; Home resumes an existing practice challenge. Keys and seals enter ordinary Journey at level 12, while the six unlimited workshop challenges remain separate. The page distinguishes local gameplay saves from optional Google identity and makes no Google Play launch claim. [Native release and exact binary](RELEASE_1_6.md) · [Design system](DESIGN_SYSTEM.md) · [Art/capture provenance](ART_AUDIO.md).
+The published website uses final production 1.6 Android captures for the map, briefing, Home and inventory. The map shows ten levels per page; the briefing explains a fresh attempt; Home resumes an existing practice challenge. Keys and seals enter ordinary Journey at level 12, while the six unlimited workshop challenges remain separate. The page distinguishes local gameplay saves from optional Google identity and makes no Google Play launch claim. [Native release and exact binary](RELEASE_1_6.md) · [Design system](DESIGN_SYSTEM.md) · [Art/capture provenance](ART_AUDIO.md).
 
 | Local check | Recorded result | Boundary |
 |---|---|---|
@@ -27,7 +27,9 @@ The candidate uses final production 1.6 Android captures for the map, briefing, 
 | Language and deletion controls | EN button works; navigation through privacy to deletion preserves EN; checkbox remains unchecked and deletion disabled; five localized homepage image elements load their EN sources | No Google chooser, authentication or real deletion executed |
 | [Deletion request core](validation/site-v1.6/deletion-core-tests.txt) | 24 tests passed | Request/configuration contracts; not provider or live API execution |
 
-Six [local page captures](screenshots/site-v1.6/) accompany these results. The [asset record](validation/site-v1.6/source-assets.json) identifies the final native captures, retained historical assets, copied Aurora Atlas environment and original web rule illustration separately. The [source manifest](validation/site-v1.6/source-manifest.json) fingerprints 36 public payloads and explicitly records `network_verified: false`. The [qualification record](validation/site-v1.6/README.md) owns the final status; local PASS results are not a deployment result, complete accessibility review, native-speaker review or identity/commerce qualification.
+Six [local page captures](screenshots/site-v1.6/) accompany these results. The [asset record](validation/site-v1.6/source-assets.json) identifies the final native captures, retained historical assets, copied Aurora Atlas environment and original web rule illustration separately. The [source manifest](validation/site-v1.6/source-manifest.json) fingerprints 36 public payloads and explicitly records `network_verified: false`. The [qualification record](validation/site-v1.6/README.md) records the final Firebase deployment and its exact source commit. Local PASS results and deployment confirmation do not constitute complete accessibility review, native-speaker review or identity/commerce qualification.
+
+<a id="15-visual-refresh-and-new-evidence"></a>
 
 ## Historical 1.5 visual refresh · 27 October 2026
 

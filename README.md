@@ -45,7 +45,7 @@ These are installed **production 1.6 Android captures**. They show real controls
 
 [Inventory capture](docs/screenshots/v1.6/ui/final-production/companions-en.png) · [Art and audio](docs/ART_AUDIO.md) · [Design system](docs/DESIGN_SYSTEM.md) · [Executed checks and limits](docs/VALIDATION_1_6.md).
 
-The public website's 1.6 refresh is a separate candidate until its deployment is recorded. Its native captures, retained brand illustrations, local page checks and delivery evidence keep separate provenance; the [previous website qualification](docs/validation/site-v1.5/README.md) covers version 1.5 only. New site evidence belongs under `docs/validation/site-v1.6/`.
+The [public website](https://luma-drift-production.web.app/) now presents 1.6 with real final-APK captures, Aurora Atlas, a clearer rule tour and the signed APK download. Firebase Hosting confirms publication of the 36 verified source payloads. [Site qualification and delivery](docs/validation/site-v1.6/README.md) records the exact revision, 18 local FR/EN responsive states and deployment proof; local browser previews are distinct from a public-origin byte comparison. The previous 1.5 evidence retains its original scope.
 
 ## Account and commercial boundaries
 

@@ -1,0 +1,37 @@
+Observed via CUA in the authenticated existing Google Cloud Shell terminal.
+Firebase CLI 15.33.0; target luma-drift-production; hosting only.
+Source: 446110346ed76c6303132d8d1b78620499f29dd9
+Tree: 671e5f038b654fcfea3f6beae9bd965e2d789a3d
+Scope: clean checkout and 36 local payload hashes verified before deployment. No public-origin HTTP/browser probe.
+
+SITE16_SOURCE_VERIFIED: 36 Hosting payloads; source 446110346ed76c6303132d8d1b78620499f29dd9; clean checkout; Firebase config exact
+nabz0r@cloudshell:~/AndroidHit-deploiement (luma-drift-production)$ firebase deploy --only hosting --project luma-drift-production --config firebase.json --non-interactive
+=== Deploying to 'luma-drift-production'...
+i  deploying hosting
+i  hosting[luma-drift-production]: beginning deploy...
+i  hosting[luma-drift-production]: found 36 files in public
+i  hosting: uploading new files [0/18] (0%)
+i  hosting: uploading new files [4/18] (22%)
+i  hosting: uploading new files [4/18] (22%)
+i  hosting: uploading new files [7/18] (38%)
+i  hosting: uploading new files [8/18] (44%)
+i  hosting: uploading new files [8/18] (44%)
+i  hosting: uploading new files [12/18] (66%)
+i  hosting: uploading new files [12/18] (66%)
+i  hosting: uploading new files [12/18] (66%)
+i  hosting: uploading new files [12/18] (66%)
+i  hosting: uploading new files [12/18] (66%)
+i  hosting: uploading new files [14/18] (77%)
+i  hosting: uploading new files [16/18] (88%)
+i  hosting: uploading new files [16/18] (88%)
+i  hosting: uploading new files [17/18] (94%)
+i  hosting: uploading new files [17/18] (94%)
+i  hosting: upload complete
+✔  hosting[luma-drift-production]: file upload complete
+i  hosting[luma-drift-production]: finalizing version...
+✔  hosting[luma-drift-production]: version finalized
+i  hosting[luma-drift-production]: releasing new version...
+✔  hosting[luma-drift-production]: release complete
+✔  Deploy complete!
+Project Console: https://console.firebase.google.com/project/luma-drift-production/overview
+Hosting URL: https://luma-drift-production.web.app

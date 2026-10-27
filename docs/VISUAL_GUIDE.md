@@ -1,4 +1,18 @@
-# Luma Drift 1.5 — illustrated tour
+# Luma Drift — illustrated tour
+
+## Current 1.6 presentation
+
+The signed production 1.6.0-rc1 has a ten-level saga map, a briefing before a fresh attempt, a three-row inventory with ownership filters and explicit session states. Journey introduces keys and seals at level 12. The captures below are from the final installed production APK; Home resumes an existing preserved challenge. [Exact artifact and acceptance](RELEASE_1_6.md) · [UX contract](UX_1_6.md).
+
+<p><img src="screenshots/v1.6/ui/final-production/home-fr.png" width="225" alt="Actual production 1.6 home, guest and preserved challenge"><img src="screenshots/v1.6/ui/final-production/map-fr.png" width="225" alt="Actual production ten-level saga map"><img src="screenshots/v1.6/ui/final-production/inventory-fr.png" width="225" alt="Actual production inventory and ownership filters"></p>
+
+The matching website uses real 1.6 captures, the original Aurora Atlas environment and a separately labelled key/wall rule illustration. These local browser captures demonstrate its responsive composition; deployment has its own [delivery record](validation/site-v1.6/README.md).
+
+<p><img src="screenshots/site-v1.6/home-fr-1366-hero.png" width="690" alt="Local browser preview of the French 1.6 website"><img src="screenshots/site-v1.6/collection-fr-390.png" width="240" alt="Local mobile collection section with actual 1.6 game capture"></p>
+
+## Preserved 1.5 illustrated tour
+
+The remaining images and descriptions retain their 1.5 scope.
 
 These are installed Android captures of the identified 1.5 candidate, not mockups. They establish displayed behavior; physical-device and player acceptance remain separate. [Exact binary and tests](VALIDATION.md) · [Historical 1.1 tour](VISUAL_GUIDE_1_1.md).
 

@@ -12,6 +12,8 @@ Recorded candidate acceptance:
 - Actual Lab 1.5→1.6 replacement preserves the original active board, budget and economy on API 26; prelevel cancellation preserves it too.
 - Final Lab: 88 menu/layout checks with six languages, 320dp, landscape and font preference 1.3. Final production: 43 menu checks plus real advancing AudioFlinger playback. Both run on an actual 16KB-page API 36 emulator. Exact hashes and restored profiles/settings are recorded.
 
+The matching FR/EN website presents real final 1.6 captures, progressive keys, clear collection states and the signed APK download. [Website implementation and delivery](validation/site-v1.6/README.md) separately record its 18 local responsive states, source provenance and Hosting outcome.
+
 Next gates are human first-time comprehension and difficulty calibration, physical-phone/audio/TalkBack/large-text review, and separate authorized provider and commercial qualification. Captions abbreviate where necessary at 130% text; some compact targets remain below 48dp. A fixed solver-certified curve is not measured D1/D7 retention. Real Google success, Play license-test purchase/refund/recovery and live-ad eligibility remain distinct from model tests and provider cancellation. [Evidence and limits](VALIDATION_1_6.md).
 
 ## Preserved milestone — 1.5 avatar, progression and playback candidate

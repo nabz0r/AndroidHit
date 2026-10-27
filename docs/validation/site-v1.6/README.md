@@ -19,7 +19,7 @@ The page states that the APK uses test ads, real checkout remains disabled and G
 | [Deletion-core regression](deletion-core-tests.txt) | 24 tests passed | URL/token/HTTP-error contracts, not provider execution |
 | [Legacy static check](legacy-static-check.txt) | Three pages and 44 checked local references | Narrower earlier checker; source checker above is the current comprehensive record |
 
-`node --check public/assets/site.js` and `git diff --check` passed. No browser console error was captured in the local run. Browser screenshots were visually inspected on desktop and at 320/390 pixels. The autonomous Playwright runner was not executed during this turn; CUA supplied the current browser observations. Reduced-motion CSS is retained, but an operating-system reduced-motion setting and complete screen-reader behavior were not separately exercised in this run.
+`node --check public/assets/site.js`, [browser-runner syntax](browser-runner-syntax.txt) and `git diff --check` passed. [Local document links](document-links.txt) also resolve. No browser console error was captured in the local run. Browser screenshots were visually inspected on desktop and at 320/390 pixels. The autonomous Playwright runner was not executed during this turn; CUA supplied the current browser observations. Reduced-motion CSS is retained, but an operating-system reduced-motion setting and complete screen-reader behavior were not separately exercised in this run.
 
 The first gallery measurement occurred during smooth anchor scrolling, before lazy images loaded. After the actual scroll completed, all five EN image placements loaded; the final gallery record and saved screenshot reflect the settled state. This was not a failed production request.
 
@@ -39,7 +39,11 @@ Actual local browser captures are under [site screenshots](../../screenshots/sit
 
 ## Delivery
 
-Local qualification is complete. Firebase Hosting deployment is pending and must be recorded separately before calling this revision live. The intended existing target is `luma-drift-production`, at [the public site](https://luma-drift-production.web.app/). No public-origin browser or HTTP probe was performed during this turn. Earlier [1.5 delivery observations](../site-v1.5/README.md) retain their original revision and scope.
+**Published 27 October 2026 through the existing Firebase Hosting site `luma-drift-production`.** [Public site](https://luma-drift-production.web.app/) · [Delivery metadata](delivery.json) · [Observed Cloud Shell output](cloud-shell-deployment.txt) · [Actual deployment confirmation](../../screenshots/site-v1.6/firebase-deploy-complete.png).
+
+Source commit: [446110346ed76c6303132d8d1b78620499f29dd9](https://github.com/nabz0r/AndroidHit/commit/446110346ed76c6303132d8d1b78620499f29dd9). Tree: `671e5f038b654fcfea3f6beae9bd965e2d789a3d`. The clean Cloud Shell checkout, all 36 public source payloads, source-manifest SHA-256 and Firebase configuration hash matched before deployment. Firebase CLI 15.33.0 reported upload complete, version finalized, release complete and Deploy complete for hosting only.
+
+The [live-channel management metadata](firebase-live-release.json) identifies finalized version `b71320d62da02abb`, released at `2026-10-27T11:46:29.811Z`. No public-origin browser or HTTP probe was performed during this turn: served-byte equivalence and public response headers are not independently requalified. The screenshots above remain local browser previews. Earlier [1.5 delivery observations](../site-v1.5/README.md) retain their original revision and scope.
 
 ## Reproduce source checks
 

@@ -1,0 +1,57 @@
+{
+  "status": "DEPLOYED",
+  "date": "2026-10-27",
+  "site": "luma-drift-production",
+  "url": "https://luma-drift-production.web.app",
+  "sourceCommit": "446110346ed76c6303132d8d1b78620499f29dd9",
+  "sourceTree": "671e5f038b654fcfea3f6beae9bd965e2d789a3d",
+  "firebaseCli": "15.33.0",
+  "command": "firebase deploy --only hosting --project luma-drift-production --config firebase.json --non-interactive",
+  "hostingPayloadCount": 36,
+  "sourceManifestSha256": "6fa0f7468b09fd9d60a2e29f59060f4efc463e1dc7536af0336a15e819c92249",
+  "firebaseConfigSha256": "1a02cfbadae7edeff76275b7c2c223664b475d0406ba310cf45b07bd20842867",
+  "predeploy": {
+    "cleanCheckoutVerified": true,
+    "exactCommitAndTreeVerified": true,
+    "allPayloadHashesVerified": true,
+    "firebaseConfigHashVerified": true
+  },
+  "firebaseRelease": {
+    "observedAt": "2026-10-27T11:48:43.137Z",
+    "method": "firebase hosting:channel:list --project luma-drift-production --json; selected public metadata only",
+    "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+    "url": "https://luma-drift-production.web.app",
+    "release": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793101589811000",
+    "releaseTime": "2026-10-27T11:46:29.811Z",
+    "version": "projects/luma-drift-production/sites/luma-drift-production/versions/b71320d62da02abb",
+    "status": "FINALIZED",
+    "finalizeTime": "2026-10-27T11:46:29.364517Z"
+  },
+  "confirmation": {
+    "uploadComplete": true,
+    "versionFinalized": true,
+    "releaseComplete": true,
+    "deployComplete": true,
+    "transcript": "cloud-shell-deployment.txt",
+    "screenshot": "../../screenshots/site-v1.6/firebase-deploy-complete.png"
+  },
+  "localBrowser": {
+    "method": "CUA localhost preview",
+    "states": 18,
+    "widths": [
+      320,
+      390,
+      1366
+    ],
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "report": "browser-check.json"
+  },
+  "publicOriginHttpVerified": false,
+  "publicOriginBrowserVisited": false,
+  "servedByteComparisonPerformed": false,
+  "providerTransactionsExecuted": false,
+  "scope": "Firebase CLI deployment and live-channel management metadata confirmed. Source bytes hash-verified before upload. Local rendering only; no public-origin byte/header comparison, real sign-in/deletion, live ad or payment qualification."
+}
