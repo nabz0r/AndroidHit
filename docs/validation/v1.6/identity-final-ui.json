@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "scope": "Final-production guest/provider-cancellation and guest foreground lifecycle only; no successful login claimed",
+  "serial": "emulator-5580",
+  "package": "com.androidhit.lumadrift",
+  "installed_base_sha256": "3d840e9a7598ca28d4bf12525b312f4d4f671fc613d5ae88082819547abfc1c1",
+  "platform": {
+    "api": "36",
+    "page_size": "16384",
+    "abi": "arm64-v8a",
+    "device": "sdk_gphone16k_arm64",
+    "wm_size": "Physical size: 1080x2340",
+    "wm_density": "Physical density: 440",
+    "font_scale": "1.0"
+  },
+  "account_before": {
+    "guest_texts": [
+      "\u2039  Back",
+      "LUMA DRIFT",
+      "Account",
+      "Optional. Play freely as a guest. Google sign-in does not enable advertising or cloud saves.",
+      "Playing as a guest",
+      "Playing as a guest",
+      "Sign in with Google",
+      "Local saves \u00b7 No cloud sync"
+    ],
+    "sign_in_button_text": "Sign in with Google",
+    "sign_in_enabled": true
+  },
+  "actual_ui_sequence": {
+    "provider_component": "com.google.android.gms/.auth.uiflows.minutemaid.MinuteMaidActivity",
+    "provider_was_external_google_activity": true,
+    "provider_back_events": 1,
+    "account_selection_performed": false,
+    "credentials_entered": false,
+    "delete_action_performed": false,
+    "after_cancel_guest_texts": [
+      "\u2039  Back",
+      "LUMA DRIFT",
+      "Account",
+      "Optional. Play freely as a guest. Google sign-in does not enable advertising or cloud saves.",
+      "Playing as a guest",
+      "Playing as a guest",
+      "Sign in with Google",
+      "Local saves \u00b7 No cloud sync"
+    ],
+    "after_cancel_sign_in_enabled": true,
+    "back_home_guest_profile": "Account: Welcome, explorer, Guest \u00b7 tap to sign in",
+    "background_relaunch_guest_profile": "Account: Welcome, explorer, Guest \u00b7 tap to sign in",
+    "background_relaunch_no_provider_ui": true
+  },
+  "crash_buffer": {
+    "app_fatal_found": false,
+    "raw_buffer_empty": true
+  },
+  "shared_preferences_restore": {
+    "original_file_count": 3,
+    "all_files_byte_identical": true,
+    "restored_sha256": {
+      "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+      "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+      "luma_session.xml": "51dd90a498290f542c07106aa518b8860d2cc5a5659977c34e2f11d56e783200"
+    },
+    "new_preference_files_removed": [],
+    "protected_P_session_restored": {
+      "active": "true",
+      "level": "1",
+      "mode": "4",
+      "history": "",
+      "content_version": "3",
+      "budget_policy": "2",
+      "budget_used": "0",
+      "run_id": "1ee9aea0-736b-43e3-81ad-b7ac69904d45",
+      "challenge_code": "LD1-P-1-595F1AB9"
+    },
+    "app_force_stopped_after_restore": true,
+    "private_byte_backup": "/private/tmp/luma-identity-final-5580/original-shared-prefs"
+  },
+  "captures": [
+    "identity-final-account-guest.png",
+    "identity-final-account-after-cancel.png",
+    "identity-final-home-guest.png"
+  ],
+  "nodes": {
+    "before_account": [
+      "\u2039  Back",
+      "LUMA DRIFT",
+      "Account",
+      "Optional. Play freely as a guest. Google sign-in does not enable advertising or cloud saves.",
+      "Playing as a guest",
+      "Playing as a guest",
+      "Sign in with Google",
+      "Local saves \u00b7 No cloud sync"
+    ],
+    "after_cancel_account": [
+      "\u2039  Back",
+      "LUMA DRIFT",
+      "Account",
+      "Optional. Play freely as a guest. Google sign-in does not enable advertising or cloud saves.",
+      "Playing as a guest",
+      "Playing as a guest",
+      "Sign in with Google",
+      "Local saves \u00b7 No cloud sync"
+    ],
+    "home_profile": "Account: Welcome, explorer, Guest \u00b7 tap to sign in",
+    "foreground_profile": "Account: Welcome, explorer, Guest \u00b7 tap to sign in"
+  },
+  "limits": [
+    "No real Google account chosen, credentials entered or app account deleted",
+    "No successful Google/Firebase authentication or token refresh qualification",
+    "No advertising, Play purchase or backend deletion performed",
+    "Account/Home interaction on API36 emulator with 16KiB system pages, not a physical-device acceptance matrix",
+    "Provider XML/focus records and raw preference bytes remain private; no account identifiers are published"
+  ]
+}

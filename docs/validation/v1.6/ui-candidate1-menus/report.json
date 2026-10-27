@@ -1,0 +1,40 @@
+{
+  "scope": "Installed Lab menu QA; no seeded profile, account login, ad or purchase",
+  "serial": "emulator-5580",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "label": "candidate1-menus",
+  "cases": "menus",
+  "restored": true,
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v16-menus-backup-yal5l_3u",
+  "apk_sha256": "b8e854844f239412c99e671ab08784a00811aa5c9bd7641e9feac54ced06d2b4",
+  "build": [
+    "versionCode=7 minSdk=26 targetSdk=36",
+    "versionName=1.6.0-sandbox"
+  ],
+  "device": {
+    "api": "36",
+    "page_size": "16384"
+  },
+  "settings_before": {
+    "size": "Physical size: 1080x2340\n",
+    "density": "Physical density: 440\n",
+    "rotation": "0",
+    "accelerometer": "1"
+  },
+  "status": "PASS",
+  "preference_sha256": {
+    "luma_drift_meta_v1.xml": {
+      "before": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+      "after": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3"
+    },
+    "luma_drift_save_v1.xml": {
+      "before": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+      "after": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081"
+    },
+    "luma_session.xml": {
+      "before": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4",
+      "after": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+    }
+  },
+  "checks": 21
+}

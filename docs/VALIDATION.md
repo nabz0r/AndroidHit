@@ -1,3 +1,5 @@
+> **Current 1.6 qualification:** [VALIDATION_1_6.md](VALIDATION_1_6.md). The report below preserves the 1.5 release, hashes and captures; it does not establish newer artifacts.
+
 # Luma Drift 1.5 validation
 
 27 October 2026 · **production 1.5.0-rc1 / Lab1.5.0-sandbox, code 6**. This report identifies executed checks and their boundaries. [Exact artifacts/signing](RELEASE.md) · [Release behavior](RELEASE_1_5.md).

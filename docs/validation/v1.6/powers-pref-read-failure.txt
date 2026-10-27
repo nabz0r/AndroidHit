@@ -1,0 +1,30 @@
+Lab1.6 real powers UI; emulator=emulator-5556; cases=gear,effects,keys
+Installed Lab: versionCode=7 minSdk=26 targetSdk=36
+Installed Lab: versionName=1.6.0-sandbox
+Recovery backup: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v16-powers-backup-4g3151yd
+QA emulator only: native window_animation_scale temporarily0; original=1.0; Canvas/game effect durations unchanged.
+SYNTHETIC Lab profile: Journey31 access,10000 local coins,6 charges per power,Moon Seed equipped; no progression or purchase claim. All preference files backed up outside repository.
+Screenshot: docs/screenshots/v1.6/powers/gear-starfold-preview-soft-price.png
+Screenshot: docs/screenshots/v1.6/powers/gear-starfold-owned-recreated.png
+PASS equipment SOFT purchase: Starfold preview/Close costs0; confirm exactly600 synthetic earnedcoins; one ownership/equippedHEAD; no duplicate offer/debit; recreated intact. No IAP involved.
+EXPLICIT additional synthetic fixture: Journey 75 access for Vision, Focus and Trail; not earned progression.
+Screenshot: docs/screenshots/v1.6/powers/vision-active-paused.png
+FAIL: syntax error: line 1, column 0
+Screenshot: docs/screenshots/v1.6/powers/failure.png
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/smoke-powers-v16.py", line 674, in main
+    smoke.run(cases)
+  File "/Users/n/androidhit/scripts/smoke-powers-v16.py", line 649, in run
+    getattr(self, "case_" + case)()
+  File "/Users/n/androidhit/scripts/smoke-powers-v16.py", line 623, in case_effects
+    persisted = self.pref("luma_session")
+  File "/Users/n/androidhit/scripts/smoke-move-power-ui.py", line 84, in pref
+    return self.decode_pref(self.raw_pref(name))
+  File "/Users/n/androidhit/scripts/smoke-move-power-ui.py", line 74, in decode_pref
+    for node in ET.fromstring(raw):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/xml/etree/ElementTree.py", line 1347, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: syntax error: line 1, column 0
+
+PASS restoration: all 3 original Lab preference files restored byte for byte; newly created files removed; Lab remains stopped.
+PASS restoration: native window_animation_scale restored to 1.0 on selected QA emulator.

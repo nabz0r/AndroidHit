@@ -73,7 +73,9 @@ public final class MoveBudget {
             else if (mode == 3) margin = level.number <= 3 ? 6 : level.number <= 12 ? 5 : level.number <= 60 ? 4 : 3;
             else margin = mode == 1 ? 5 : 4;
         } else if (mode == 0 || mode == 3) {
-            margin = BalancedCatalog.mistakeAllowance(level.number, mode == 3);
+            margin = level.progressionVersion >= 3
+                    ? BalancedCatalog.mistakeAllowance(level.number, mode == 3)
+                    : BalancedCatalog.mistakeAllowanceV2(level.number, mode == 3);
         } else {
             int switches = 0, paired = 0;
             for (Tile tile : level.tiles) {

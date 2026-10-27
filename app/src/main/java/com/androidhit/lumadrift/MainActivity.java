@@ -20,7 +20,7 @@ public final class MainActivity extends Activity {
         game = new LumaView(this);
         setContentView(game);
         walletRecovery = new com.androidhit.lumadrift.wallet.WalletRecoveryController(this, () -> { if (game != null) game.invalidate(); });
-        if(state!=null)game.restoreScreen(state.getString("screen"));
+        if(state!=null)game.restoreUiState(state);
         if(state==null&&getIntent().getData()!=null)game.openChallenge(getIntent().getData().toString());
         if(getIntent().getBooleanExtra("open_journal",false)){game.openJournal();getIntent().removeExtra("open_journal");}
         game.setOnApplyWindowInsetsListener((v, insets) -> {
@@ -36,7 +36,7 @@ public final class MainActivity extends Activity {
     // API 33+ registers OnBackInvokedCallback above; this fallback serves API 26–32.
     @SuppressLint("GestureBackNavigation")
     @Override public void onBackPressed() { game.back(); }
-    @Override protected void onSaveInstanceState(Bundle out){out.putString("screen",game.screenName());super.onSaveInstanceState(out);}
+    @Override protected void onSaveInstanceState(Bundle out){game.saveUiState(out);super.onSaveInstanceState(out);}
     @Override protected void onResume() { super.onResume(); if (game != null) game.resumeApp(); if (walletRecovery != null) walletRecovery.onForeground(); }
     @Override protected void onPause() { if (walletRecovery != null) walletRecovery.onBackground(); if (game != null) game.pauseApp(); super.onPause(); }
     @Override protected void onDestroy() { if (walletRecovery != null) walletRecovery.close(); if (game != null) game.release(); super.onDestroy(); }

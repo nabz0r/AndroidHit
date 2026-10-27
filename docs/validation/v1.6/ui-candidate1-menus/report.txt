@@ -1,0 +1,34 @@
+PASS Explicit QA emulator; no physical device
+PASS Installed Lab 1.6/code7
+PASS Cold launch opens Home without abandoning the saved run
+APK SHA-256 b8e854844f239412c99e671ab08784a00811aa5c9bd7641e9feac54ced06d2b4
+CAPTURE home-en
+PASS Home → Map
+PASS Saga exposes exactly ten level nodes on first page
+CAPTURE map-en
+PASS Level node opens the prelevel goal screen
+CAPTURE briefing-en
+PASS Prelevel Powers shortcut opens inventory
+CAPTURE powers-en
+PASS Back from inventory restores prelevel without abandoning
+PASS Back from prelevel returns to Map
+PASS Map → Inventory
+CAPTURE companions-en
+PASS Owned companion opens a native detail preview
+PASS Cancelling owned preview returns to inventory
+CAPTURE companions-locked-en
+PASS Unowned companion opens its preview
+PASS Preview cancellations spend no coins, stock, stars or ownership
+PASS Owned filter includes selected starter companion
+CAPTURE themes-owned-en
+CAPTURE equipment-owned-en
+PASS Owned equipment shows all three equipped starters
+CAPTURE equipment-locked-en
+CAPTURE powers-locked-en
+PASS Locked powers retain explicit unlock state
+CAPTURE events-en
+PASS Inventory → Events
+PASS Menu/filter traversal leaves economic and gameplay values unchanged
+PASS No new crash-buffer entry
+PASS All preference files restored byte-for-byte; app left stopped
+SCOPE: candidate-only UI; no move, purchase, ad or Google login.

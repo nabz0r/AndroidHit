@@ -21,6 +21,10 @@ public final class AudioEngineTest {
         await(() -> track.getPlayState() == AudioTrack.PLAYSTATE_PLAYING, "Ambient starts after preparation");
         check(track.writes == 1 && track.looped, "STATE_NO_STATIC_DATA is filled before loop/play");
         check(track.volume == 0f, "Playback starts silently for the fade");
+        // PLAYING is visible before the worker enqueues the first fade. Wait for
+        // that handoff before advancing the model clock; wall-time sleeps race
+        // when compilation/emulators compete for CPU.
+        await(() -> Handler.pending() > 0, "Entrance fade is scheduled before advancing model time");
         Handler.advanceBy(450);
         check(track.volume > .1f && track.volume < .22f, "The entrance fades progressively");
         Handler.advanceBy(500);

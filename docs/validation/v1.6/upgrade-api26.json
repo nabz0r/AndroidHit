@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "scope": "Actual Lab 1.5 -> 1.6 replacement on Android API26, real UI progress, no synthetic save/profile",
+  "serial": "emulator-5582",
+  "api": 26,
+  "old_apk": "releases/luma-drift-1.5.0-sandbox.apk",
+  "old_version": "1.5.0-sandbox",
+  "old_version_code": 6,
+  "old_sha256": "d926fea0f52f0e868b3364d8e1c19e16941f9d9831636483971ef518e3f39c53",
+  "new_apk_source": "app/build/outputs/apk/lab/release/app-lab-release.apk",
+  "new_version": "1.6.0-sandbox",
+  "new_version_code": 7,
+  "new_sha256": "0f8d7c04df45331b844b276c8149d9c276e8687f190c2cc7d2e1e236fbaa1a45",
+  "installed_base_sha256": "0f8d7c04df45331b844b276c8149d9c276e8687f190c2cc7d2e1e236fbaa1a45",
+  "replacement_preserved_all_3_prelaunch_preference_files_byte_for_byte": true,
+  "original_state": {
+    "package": "absent",
+    "profile": "absent"
+  },
+  "old_real_ui": {
+    "level": 1,
+    "history": "0",
+    "remaining_pieces": 4,
+    "run_id": "a489d546-5159-4054-9c25-b568fed731c6",
+    "content_version": 3,
+    "budget_policy": 2,
+    "used": 1,
+    "remaining": 8,
+    "total": 9,
+    "coins": 180,
+    "stocks": {
+      "hint": 3,
+      "vision": 3,
+      "flow": 2
+    }
+  },
+  "restored_run": {
+    "resume_piece_count": 4,
+    "resume_cells_1based": [
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "resume_action_label": "8 / 9 moves",
+    "exact_session_keys_preserved": {
+      "active": "true",
+      "level": "1",
+      "mode": "0",
+      "event": "0",
+      "history": "0",
+      "content_version": "3",
+      "budget_policy": "2",
+      "budget_used": "1",
+      "budget_extensions": "0",
+      "budget_extra": "0",
+      "run_id": "a489d546-5159-4054-9c25-b568fed731c6",
+      "hints": "0",
+      "undos": "0"
+    },
+    "economy_preserved": {
+      "character": "nova",
+      "booster_hint": "3",
+      "coins": "180",
+      "booster_vision": "3",
+      "skin": "lumina",
+      "booster_flow": "2"
+    }
+  },
+  "preview_cancel": {
+    "sequence": "Pause -> Leave level -> Map -> J1 briefing (10 actions) -> Back -> Home -> Resume old G1 (8/9 moves)",
+    "old_session_keys_unchanged": true,
+    "exact_session_keys": {
+      "active": "true",
+      "level": "1",
+      "mode": "0",
+      "event": "0",
+      "history": "0",
+      "content_version": "3",
+      "budget_policy": "2",
+      "budget_used": "1",
+      "budget_extensions": "0",
+      "budget_extra": "0",
+      "run_id": "a489d546-5159-4054-9c25-b568fed731c6",
+      "hints": "0",
+      "undos": "0"
+    }
+  },
+  "legacy_win": {
+    "summary": "Lovely drift!, 3 Stars, Reward: 55 Coins, +35 XP",
+    "all_remaining_pieces_removed_via_ui": true
+  },
+  "new_v3_run": {
+    "session": {
+      "active": "true",
+      "level": "2",
+      "mode": "0",
+      "content_version": "4",
+      "budget_policy": "2",
+      "budget_used": "0",
+      "budget_extensions": "0",
+      "budget_extra": "0",
+      "history": "",
+      "run_id": "4f2e522c-97a3-43e4-b896-763fbe7cbb93"
+    },
+    "remaining_pieces": 6,
+    "action_label": "11 / 11 moves",
+    "coins_after_old_real_victory": 235,
+    "old_level1_stars": 3,
+    "new_unlocked_level": 2
+  },
+  "crash_buffer": {
+    "app_fatal_entries": 0,
+    "raw_buffer_empty": true
+  },
+  "private_byte_backups": "/private/tmp/luma-v16-upgrade-5582",
+  "captures": [
+    "upgrade-api26-before.png",
+    "upgrade-api26-restored.png",
+    "upgrade-api26-new-v3.png"
+  ],
+  "limits": [
+    "Lab only; production package not upgraded by this test",
+    "Android emulator API26, not physical-device acceptance",
+    "No Google login, advertising or Play purchase performed",
+    "Level1 legacy and new Level2 only; full route covered separately by JVM oracle tests"
+  ],
+  "cleanup": {
+    "result": "PASS",
+    "action": "Removed only the test-installed sandbox package; initial absent package/profile restored",
+    "package_absent_including_uninstalled": true,
+    "uninstall_result": "Success",
+    "all_other_emulators_untouched": true
+  }
+}

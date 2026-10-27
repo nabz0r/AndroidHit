@@ -9,7 +9,8 @@ import java.util.zip.CRC32;
  * not authentication. No player identity, score, reward or save travels in a code.
  */
 public final class ChallengeCode {
-    public enum Kind { CAMPAIGN, REMIX, EVENT, BALANCED, BALANCED_REMIX, BALANCED_V2, BALANCED_REMIX_V2, SEALED }
+    public enum Kind { CAMPAIGN, REMIX, EVENT, BALANCED, BALANCED_REMIX, BALANCED_V2, BALANCED_REMIX_V2, SEALED,
+        BALANCED_V3, BALANCED_REMIX_V3 }
     /** Full nonnegative Java long range; no floating-point conversion occurs. */
     public static final long MAX_EVENT_SEED = Long.MAX_VALUE;
     public final Kind kind;
@@ -29,6 +30,8 @@ public final class ChallengeCode {
     public static String encodeBalancedRemix(int number){return encode(Kind.BALANCED_REMIX,number);}
     public static String encodeBalancedV2(int number){return encode(Kind.BALANCED_V2,number);}
     public static String encodeBalancedRemixV2(int number){return encode(Kind.BALANCED_REMIX_V2,number);}
+    public static String encodeBalancedV3(int number){return encode(Kind.BALANCED_V3,number);}
+    public static String encodeBalancedRemixV3(int number){return encode(Kind.BALANCED_REMIX_V3,number);}
     public static String encodeSealed(int number){return encode(Kind.SEALED,number);}
 
     public static String encodeEvent(long seed) { return encode(Kind.EVENT, seed); }
@@ -47,6 +50,8 @@ public final class ChallengeCode {
             case 'G': kind = Kind.BALANCED_V2; break;
             case 'H': kind = Kind.BALANCED_REMIX_V2; break;
             case 'P': kind = Kind.SEALED; break;
+            case 'J': kind = Kind.BALANCED_V3; break;
+            case 'K': kind = Kind.BALANCED_REMIX_V3; break;
             default: return null;
         }
         if (code.charAt(5) != '-') return null;
@@ -74,17 +79,34 @@ public final class ChallengeCode {
         if (!valid(kind, value)) throw new IllegalArgumentException("Challenge value outside supported range");
         char family = kind == Kind.CAMPAIGN ? 'C' : kind == Kind.REMIX ? 'R' : kind == Kind.BALANCED ? 'B'
                 : kind == Kind.BALANCED_REMIX ? 'Q' : kind == Kind.BALANCED_V2 ? 'G' : kind == Kind.BALANCED_REMIX_V2 ? 'H'
-                : kind == Kind.SEALED ? 'P' : 'E';
+                : kind == Kind.SEALED ? 'P' : kind == Kind.BALANCED_V3 ? 'J' : kind == Kind.BALANCED_REMIX_V3 ? 'K' : 'E';
         String body = "LD1-" + family + "-" + Long.toString(value, 36).toUpperCase(Locale.ROOT);
         return body + "-" + checksum(body);
     }
 
     private static boolean valid(Kind kind, long value) {
         if(kind == Kind.EVENT) return value >= 0 && value <= MAX_EVENT_SEED;
-        int maximum = kind == Kind.SEALED ? SealedCatalog.COUNT : kind == Kind.BALANCED_V2 ? BalancedCatalog.LEVEL_COUNT
-                : kind == Kind.BALANCED_REMIX_V2 ? BalancedCatalog.REMIX_COUNT
+        int maximum = kind == Kind.SEALED ? SealedCatalog.COUNT : kind == Kind.BALANCED_V2 || kind == Kind.BALANCED_V3 ? BalancedCatalog.LEVEL_COUNT
+                : kind == Kind.BALANCED_REMIX_V2 || kind == Kind.BALANCED_REMIX_V3 ? BalancedCatalog.REMIX_COUNT
                 : kind == Kind.CAMPAIGN ? LevelCatalog.LEVEL_COUNT : LevelCatalog.REMIX_COUNT;
         return value >= 1 && value <= maximum;
+    }
+
+    /** Resolves every historical code to its original content, never to a current reorder. */
+    public Level resolve() {
+        int number = (int) value;
+        switch (kind) {
+            case CAMPAIGN: return LevelCatalog.get(number);
+            case REMIX: return LevelCatalog.remix(number);
+            case BALANCED: return BalancedCatalog.legacyGet(number);
+            case BALANCED_REMIX: return BalancedCatalog.legacyRemix(number);
+            case BALANCED_V2: return BalancedCatalog.getV2(number);
+            case BALANCED_REMIX_V2: return BalancedCatalog.remixV2(number);
+            case BALANCED_V3: return BalancedCatalog.get(number);
+            case BALANCED_REMIX_V3: return BalancedCatalog.remix(number);
+            case SEALED: return SealedCatalog.get(number);
+            default: return LevelCatalog.event(value);
+        }
     }
 
     private static String checksum(String body) {

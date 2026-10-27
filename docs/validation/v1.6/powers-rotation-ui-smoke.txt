@@ -1,0 +1,20 @@
+Lab1.6 real powers UI; emulator=emulator-5556; cases=rotation
+Installed Lab: versionCode=7 minSdk=26 targetSdk=36
+Installed Lab: versionName=1.6.0-sandbox
+Recovery backup: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v16-powers-backup-66ddn6kd
+QA emulator only: native window_animation_scale temporarily0; original=1.0; Canvas/game effect durations unchanged.
+SYNTHETIC Lab profile: Journey31 access,10000 local coins,6 charges per power,Moon Seed equipped; no progression or purchase claim. All preference files backed up outside repository.
+Confirmation→interruption input duration: 0.813s
+Screenshot: docs/screenshots/v1.6/powers/flow-rotation-pause-landscape-frozen.png
+PASS restoration: window rotation restored to free on selected QA emulator.
+Screenshot: docs/screenshots/v1.6/powers/flow-rotation-pause-resumed.png
+PASS actual rotation with Flow pause: overlay preserved in landscape and after return; 2 initial exits frozen; explicit resume exactly1; total3 exits/actions,1 item, no stale callback.
+Confirmation→interruption input duration: 0.654s
+Screenshot: docs/screenshots/v1.6/powers/flow-rotation-help-landscape-frozen.png
+PASS restoration: window rotation restored to free on selected QA emulator.
+Screenshot: docs/screenshots/v1.6/powers/flow-rotation-help-resumed.png
+PASS actual rotation with Flow help: overlay preserved in landscape and after return; 2 initial exits frozen; explicit resume exactly1; total3 exits/actions,1 item, no stale callback.
+PASS selected actual UI scenarios; no account/payment/advertising flow; no new Lab crash. Restoration follows.
+PASS restoration: all 3 original Lab preference files restored byte for byte; newly created files removed; Lab remains stopped.
+PASS restoration: native window_animation_scale restored to 1.0 on selected QA emulator.
+PASS restoration: window rotation restored to free on selected QA emulator.

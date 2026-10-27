@@ -16,11 +16,13 @@ public final class V15Fixture {
         return result.append(']').toString();
     }
     public static void main(String[] args) {
-        if(args.length!=2)throw new IllegalArgumentException("Family G/H/P/B/Q/C/R/E and value required");
+        if(args.length!=2)throw new IllegalArgumentException("Family J/K/G/H/P/B/Q/C/R/E and value required");
         String family=args[0];long value=Long.parseLong(args[1]);Level level;String code;int mode=4;
         switch(family) {
-            case "G":level=BalancedCatalog.get((int)value);code=ChallengeCode.encodeBalancedV2((int)value);mode=0;break;
-            case "H":level=BalancedCatalog.remix((int)value);code=ChallengeCode.encodeBalancedRemixV2((int)value);mode=3;break;
+            case "G":level=BalancedCatalog.getV2((int)value);code=ChallengeCode.encodeBalancedV2((int)value);mode=0;break;
+            case "H":level=BalancedCatalog.remixV2((int)value);code=ChallengeCode.encodeBalancedRemixV2((int)value);mode=3;break;
+            case "J":level=BalancedCatalog.get((int)value);code=ChallengeCode.encodeBalancedV3((int)value);mode=0;break;
+            case "K":level=BalancedCatalog.remix((int)value);code=ChallengeCode.encodeBalancedRemixV3((int)value);mode=3;break;
             case "P":level=SealedCatalog.get((int)value);code=ChallengeCode.encodeSealed((int)value);break;
             case "B":level=BalancedCatalog.legacyGet((int)value);code=ChallengeCode.encodeBalanced((int)value);break;
             case "Q":level=BalancedCatalog.legacyRemix((int)value);code=ChallengeCode.encodeBalancedRemix((int)value);break;

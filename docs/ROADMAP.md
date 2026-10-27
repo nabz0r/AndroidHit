@@ -1,6 +1,20 @@
 # Luma Drift roadmap
 
-## Current milestone — 1.5 avatar, progression and playback candidate
+## Current playable milestone — 1.6 saga, ownership and session clarity
+
+The 1.6 signed candidate delivers production `1.6.0-rc1` and isolated Lab `1.6.0-sandbox`, both code 7. It adds a ten-board saga map, explicit prelevel objective/element/difficulty, scrollable layouts, a unified inventory presentation with owned/equipped/locked states, and guarded Google-session refresh states. New frozen J/K content has 1,000 Journey and 240 Remix boards, with keys taught at Journey 12/14/17 and revisited sparsely. [Candidate scope](RELEASE_1_6.md) · [UX contract](UX_1_6.md) · [Content and compatibility](PROGRESSION_V3.md).
+
+Completed host-side progression checks cover all 1,240 certificates, an independent exact model, genuine key/seal dependencies, geometric uniqueness and active-history/budget restoration. The V3 suite records **582,831 checks**; regenerated rows are byte-identical and pre-change/post-change historical family fingerprints match. These checks qualify their source contracts, not an installed APK or a human difficulty curve. Normal/Hard/Expert remain authored comparative labels. [Measured audit](data/progression-v3-summary.md) · [Executed host reports](validation/v1.6/).
+
+Recorded candidate acceptance:
+
+- Both signed release APKs/AABs, build/lint, exact source hashes, signature/bundle/16KB alignment checks: [1.6 qualification](VALIDATION_1_6.md).
+- Actual Lab 1.5→1.6 replacement preserves the original active board, budget and economy on API 26; prelevel cancellation preserves it too.
+- Final Lab: 88 menu/layout checks with six languages, 320dp, landscape and font preference 1.3. Final production: 43 menu checks plus real advancing AudioFlinger playback. Both run on an actual 16KB-page API 36 emulator. Exact hashes and restored profiles/settings are recorded.
+
+Next gates are human first-time comprehension and difficulty calibration, physical-phone/audio/TalkBack/large-text review, and separate authorized provider and commercial qualification. Captions abbreviate where necessary at 130% text; some compact targets remain below 48dp. A fixed solver-certified curve is not measured D1/D7 retention. Real Google success, Play license-test purchase/refund/recovery and live-ad eligibility remain distinct from model tests and provider cancellation. [Evidence and limits](VALIDATION_1_6.md).
+
+## Preserved milestone — 1.5 avatar, progression and playback candidate
 
 The current source work adds an avatar-centered lobby, three equipment slots with 18 fixed items earned through local play or local coins, a 1,000-board Journey plus 240-board Remix, a bounded power-activation policy and repaired original ambient music. The signed candidate has passed recorded package, active-save migration, emulator UI/gameplay and Android playback checks. Physical devices and player comprehension remain the next acceptance stage. [Delivered scope and acceptance](RELEASE_1_5.md) · [Equipment contract](AVATAR_EQUIPMENT.md) · [Audio evidence](validation/v1.5/audio/README.md).
 
@@ -10,10 +24,10 @@ Completed technical checks: signed production/Lab APK/AAB and lint; fixed board 
 
 The current website/GitHub presentation work uses the [shared design system](DESIGN_SYSTEM.md), actual game captures and truthful release links. [Web revision checks](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) and [independent Hosting delivery](validation/site-v1.5/delivery.json) now record this completed visual update. This is separate from provider readiness, player acceptance and a new Android release.
 
-Next product checks, in order:
+Product checks recorded for the 1.5 milestone:
 
 1. Play the identified candidate on modest and current physical phones; check readable labels, comfortable targets, TalkBack, interruptions and speakers/headphones. Landscape needs physical review because the Canvas column is reduced.
-2. Observe first-time players using the six sealed prototypes. Record whether they recognize matching keys, understand that Undo reseals walls, and anticipate key/gate ordering. Curate campaign integration only after these observations; the current 1,000 Journey boards do not silently gain walls.
+2. Observe first-time players using the six sealed prototypes. Record whether they recognize matching keys, understand that Undo reseals walls, and anticipate key/gate ordering. The preserved 1.5 G/H Journey stays wall-free; the separately versioned 1.6 J/K source now includes sparse keys, with its human comprehension study still pending.
 3. Compare confusion and voluntary replay with ordinary gate puzzles before expanding the mechanic. Keep the human comprehension and complete cohort criteria below.
 
 This work does not activate paid equipment, cloud progression, live ads or production sales. Local equipment ownership stays separate from purchased-gold server entitlements. The commercial and operating gates established during 1.4 preparation remain open below. Retention and revenue are still unmeasured.
@@ -37,7 +51,7 @@ The sections below retain earlier milestones and their historical evidence; they
 
 **Build the memorable rule. Observe players. Scale only when the evidence improves.**
 
-Updated 27 October 2026. This roadmap records priorities and exit criteria. Future stages are proposals, not delivered features or committed launch dates. See [Release 1.5](RELEASE_1_5.md) for the current candidate, [CHANGELOG.md](CHANGELOG.md) for historical release scope and [VALIDATION.md](VALIDATION.md) for checks actually executed.
+Updated 27 October 2026. This roadmap records priorities and exit criteria. Future stages are proposals, not delivered features or committed launch dates. See [the 1.6 candidate](RELEASE_1_6.md) for current source work, [preserved 1.5](RELEASE_1_5.md) for its identified artifacts, [CHANGELOG.md](CHANGELOG.md) for versioned scope and [VALIDATION.md](VALIDATION.md) for the preserved installed checks.
 
 ## 1.0 — A playable foundation
 

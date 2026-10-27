@@ -57,3 +57,7 @@ Use real game captures for product behavior, original vectors for explanatory ar
 - [Actual final-APK P6 share card](screenshots/v1.5/sharing/sealed-p6-card.png), with matching keys and walls.
 - [Illustrated tour](VISUAL_GUIDE.md), [brand assets and provenance](store/README.md), [public-page implementation](PUBLIC_PAGES.md).
 - [Executed validation and exact-byte boundaries](VALIDATION.md). A polished image does not establish retention, provider activation or physical-device quality.
+
+## Android 1.6 extension
+
+The Android 1.6 candidate keeps the direction/color geometry and six palette themes, with one bundled generated Aurora Atlas environment behind opaque or quietened controls. The exact prompt and image hash are in [art provenance](art/aurora-atlas-v1.json). Its ten-node saga pages, prelevel goal/action budget, pinned navigation and three-row inventory are documented in [UX 1.6](UX_1_6.md). These native Android changes do not imply that the separately deployed 1.5 website has changed; [site qualification](validation/site-v1.5/README.md) keeps its dated scope.

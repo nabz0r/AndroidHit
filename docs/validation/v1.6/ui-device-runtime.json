@@ -1,0 +1,33 @@
+{
+  "serial": "emulator-5580",
+  "api": 36,
+  "abi": "arm64-v8a",
+  "kernel_page_size_bytes": 16384,
+  "physical_size_pixels": [
+    1080,
+    2340
+  ],
+  "physical_density_dpi": 440,
+  "scope": "Actual installation, launch and UI execution on this 16KB emulator. This is distinct from APK ZIP/native-library alignment inspection and does not establish physical-device compatibility.",
+  "runs": [
+    {
+      "variant": "lab",
+      "report": "ui-final-lab/report.json",
+      "status": "PASS",
+      "checks": 88,
+      "apk_sha256": "0f8d7c04df45331b844b276c8149d9c276e8687f190c2cc7d2e1e236fbaa1a45",
+      "preferences_restored": true,
+      "settings_restored": true
+    },
+    {
+      "variant": "production",
+      "report": "ui-final-production/report.json",
+      "status": "PASS",
+      "checks": 43,
+      "apk_sha256": "3d840e9a7598ca28d4bf12525b312f4d4f671fc613d5ae88082819547abfc1c1",
+      "preferences_restored": true,
+      "settings_restored": true
+    }
+  ],
+  "audio_runtime": "audio-runtime.json"
+}

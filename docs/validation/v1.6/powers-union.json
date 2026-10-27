@@ -1,0 +1,136 @@
+{
+  "scope": "UNION OF COMPLETED CASES ON SAME FROZEN LAB APK; SYNTHETIC PROFILE, NOT EARNED PROGRESSION",
+  "timestampUtc": "2026-10-27T11:17:13.870563+00:00",
+  "serial": "emulator-5556",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "versionName": "1.6.0-sandbox",
+  "versionCode": 7,
+  "installed_apk_sha256": "0f8d7c04df45331b844b276c8149d9c276e8687f190c2cc7d2e1e236fbaa1a45",
+  "engine_sources_sha256": "87ec0b71a9648e8e9bfbe687c125e138de53f924a2e32ed603f9b9c1149f385f",
+  "coverage": {
+    "hint": {
+      "report": "powers-starfold-selector-failure.txt",
+      "completedAssertions": [
+        "PASS Spark: opening/cancelling costs0; confirmed effect costs1; active reactivation costs0; recreation costs0."
+      ]
+    },
+    "flow": {
+      "report": "powers-starfold-selector-failure.txt",
+      "completedAssertions": [
+        "PASS Flow pause: observed 2 initial exits; no exit while frozen; resume exactly1; total3 actions and1 item; no stale callback.",
+        "PASS Flow help: observed 2 initial exits; no exit while frozen; resume exactly1; total3 actions and1 item; no stale callback.",
+        "PASS Flow recreate: observed 1 initial exits; no exit while frozen; resume exactly2; total3 actions and1 item; no stale callback."
+      ]
+    },
+    "shield": {
+      "report": "powers-starfold-selector-failure.txt",
+      "completedAssertions": [
+        "PASS Shield3 + charm1: four protected blocks; fifth costs1 action; recreation preserves Shield1/charm1; reactivation spends0; Shield stock\u22121 total."
+      ]
+    },
+    "finish": {
+      "report": "powers-starfold-selector-failure.txt",
+      "completedAssertions": [
+        "PASS final-piece Flow: real victory once, one charge, inactive saved run, no reward/debit replay after recreation."
+      ]
+    },
+    "journey": {
+      "report": "powers-starfold-selector-failure.txt",
+      "completedAssertions": [
+        "PASS Journey1000: zone34 shows only991..1000; final arrow capped; certified actual UI solution wins3 stars; victory Next cannot create1001."
+      ]
+    },
+    "gear": {
+      "report": "powers-pref-read-failure.txt",
+      "completedAssertions": [
+        "PASS equipment SOFT purchase: Starfold preview/Close costs0; confirm exactly600 synthetic earnedcoins; one ownership/equippedHEAD; no duplicate offer/debit; recreated intact. No IAP involved."
+      ]
+    },
+    "effects": {
+      "report": "powers-effects-keys-ui-smoke.txt",
+      "completedAssertions": [
+        "PASS Vision: actual activation, Active UI, bounded saved duration; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.",
+        "PASS Focus: actual activation, Active UI, bounded saved duration and nonempty visible targets; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.",
+        "PASS Trail: actual activation, Active UI, bounded saved duration and nonempty visible targets; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0."
+      ]
+    },
+    "keys": {
+      "report": "powers-effects-keys-ui-smoke.txt",
+      "completedAssertions": [
+        "PASS actual Journey12: real wall/key UI; key opens seals, Undo restores, replay reopens; certified completion within fixed budget, no power or continuation."
+      ]
+    },
+    "rotation": {
+      "report": "powers-rotation-ui-smoke.txt",
+      "completedAssertions": [
+        "PASS actual rotation with Flow pause: overlay preserved in landscape and after return; 2 initial exits frozen; explicit resume exactly1; total3 exits/actions,1 item, no stale callback.",
+        "PASS actual rotation with Flow help: overlay preserved in landscape and after return; 2 initial exits frozen; explicit resume exactly1; total3 exits/actions,1 item, no stale callback."
+      ]
+    }
+  },
+  "runs": [
+    {
+      "report": "powers-starfold-selector-failure.txt",
+      "profile": "powers-starfold-selector-profile.json",
+      "overallInvocationPassed": false,
+      "completedCases": [
+        "hint",
+        "flow",
+        "shield",
+        "finish",
+        "journey"
+      ],
+      "reportSha256": "5d5f84c3df78b18df74e113b066a5855460f4eb9c1c1f2d99eca5f0ad29d730a",
+      "preferencesRestoredByteForByte": true,
+      "windowAnimationRestored": true
+    },
+    {
+      "report": "powers-pref-read-failure.txt",
+      "profile": "powers-pref-read-failure-profile.json",
+      "overallInvocationPassed": false,
+      "completedCases": [
+        "gear"
+      ],
+      "reportSha256": "acb08b41826f794bea1da869564610f323519c352edfd6449c02b30d99b9aa2f",
+      "preferencesRestoredByteForByte": true,
+      "windowAnimationRestored": true
+    },
+    {
+      "report": "powers-effects-keys-ui-smoke.txt",
+      "profile": "powers-effects-keys-profile.json",
+      "overallInvocationPassed": true,
+      "completedCases": [
+        "effects",
+        "keys"
+      ],
+      "reportSha256": "0905c0d580c517938a6faf86548e7f280ecc5279b2954ecca8ec7a290ded58c3",
+      "preferencesRestoredByteForByte": true,
+      "windowAnimationRestored": true
+    },
+    {
+      "report": "powers-rotation-ui-smoke.txt",
+      "profile": "powers-rotation-profile.json",
+      "overallInvocationPassed": true,
+      "completedCases": [
+        "rotation"
+      ],
+      "reportSha256": "a973f235c24eef7b6649152661d47b5b09bb902473eaf221b2a99ebca11f55f1",
+      "preferencesRestoredByteForByte": true,
+      "windowAnimationRestored": true
+    }
+  ],
+  "restored": true,
+  "originalPreferenceSha256": {
+    "luma_drift_meta_v1.xml": "496dc1ebe934ca5b14e3be7c9142e3e89698160fd2e87d0e0ca2bf34cecfb67a",
+    "luma_drift_save_v1.xml": "26ccc1900421ae42b22a0dcdf34bee9a0c206e5de323162d338293fc8656819a",
+    "luma_session.xml": "26b35b78cb63342cdea1b9e3585c3694812af1c8eb9fc9d69ac9d3a56f6e98f6"
+  },
+  "windowAnimationRestored": true,
+  "rotationRestored": true,
+  "availableCrashBufferClean": true,
+  "singleUninterruptedFullRunClaimed": false,
+  "preservedOtherAttempts": [
+    "powers-initial-scroll-selector-failure.txt",
+    "powers-interrupted-duplicate-rerun.txt"
+  ]
+}

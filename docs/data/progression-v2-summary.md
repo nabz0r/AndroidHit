@@ -64,4 +64,4 @@ Matched first 240 positions: exact legal-random success **57.96% → 22.55%**; b
 
 Full V2 route: **240 distinct layouts even after canonicalizing all eight rotations/reflections, translations, arrows, switch directions and gate states**. Mean exact legal-random success **22.55%**; blind-tap success **0.07%**.
 
-Legacy attempts restore legacyGet/legacyRemix with MoveBudget.restoreLegacy and policy 1 until completion/abandonment. New attempts use get/remix and policy 2. Earned progression and inventory are not reset. G/H codes prevent historical B/Q shares from silently opening different boards. Exact model measurements do not establish player enjoyment or a calibrated human difficulty curve.
+Legacy attempts restore legacyGet/legacyRemix with MoveBudget.restoreLegacy and policy 1 until completion/abandonment. G/H attempts use getV2/remixV2 and policy 2. Earned progression and inventory are not reset. G/H codes prevent historical B/Q shares from silently opening different boards. Exact model measurements do not establish player enjoyment or a calibrated human difficulty curve.

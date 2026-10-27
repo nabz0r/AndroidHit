@@ -2,18 +2,27 @@
 
 **A little spark. A great escape.** Read the rules, inspect the delivered game, and keep test evidence separate from the next proposal.
 
-Current delivery: **[1.5.0-rc1 production APK](../releases/luma-drift-1.5.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.5.0-rc1.aab) · [Install, signatures and exact hashes](RELEASE.md). Production and the isolated Lab use version code **6**. This is a playable quality candidate with **sample ads forced and checkout blocked**, not a commercially activated Play release.
+Current playable candidate: **1.6.0-rc1 production / 1.6.0-sandbox Lab, code 7**. The saga map, prelevel briefing, inventory/session presentation and frozen J/K progression are described in [the 1.6 candidate record](RELEASE_1_6.md). [Final signed artifacts](RELEASE.md) and [installed acceptance](VALIDATION_1_6.md) identify the exact binaries and remaining limits. Host-side source checks are recorded under [validation/v1.6](validation/v1.6/).
 
-The game contains **1,000 Journey boards, 240 Remix boards, six Sealed passages prototypes, 24 companions, six themes, 18 equipment items in three slots and six powers**. Its six languages are French, English, German, Spanish, Portuguese and Italian. Progress and equipment stay on the device; optional Google identity does not provide cloud saves.
+Current delivery: **[1.6.0-rc1 APK](../releases/luma-drift-1.6.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.6.0-rc1.aab) · [Executed qualification](VALIDATION_1_6.md).
 
-<p><img src="screenshots/v1.5/home-fr.png" width="225" alt="Actual French game lobby"><img src="screenshots/v1.5/collection-equipment-fr.png" width="225" alt="Actual equipment collection"><img src="screenshots/v1.5/sharing/sealed-p6-card.png" width="225" alt="Actual exported sealed puzzle with matching keys and walls"></p>
+Preserved delivery: **[1.5.0-rc1 production APK](../releases/luma-drift-1.5.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.5.0-rc1.aab) · [Original signatures and hashes](RELEASE.md). These code-6 artifacts and their captures retain their 1.5 evidence; they are not 1.6 downloads. Default candidate settings force sample ads and keep real checkout gated.
+
+The source contains **1,000 Journey boards, 240 Remix boards, six Sealed passages workshop challenges, 24 companions, six themes, 18 equipment items in three slots and six powers**. V3 adds keys/seals to 167 Journey boards and 29 Remix boards while preserving historical identities and active sessions. Its six languages are French, English, German, Spanish, Portuguese and Italian. Progress and equipment stay on the device; optional Google identity does not provide cloud saves.
+
+The following captures come from the final production **1.6** package; Home resumes a preserved practice challenge.
+
+<p><img src="screenshots/v1.6/ui/final-production/home-fr.png" width="225" alt="Actual French game lobby"><img src="screenshots/v1.6/ui/final-production/companions-en.png" width="225" alt="Actual owned/locked companion inventory"><img src="screenshots/v1.6/ui/final-production/briefing-fr.png" width="225" alt="Actual prelevel objective and action budget"></p>
 
 ## Play and understand
 
 | Guide | What it answers |
 |---|---|
 | [Release and installation](RELEASE.md) | Which APK to install, channel separation, signing and checksums |
-| [1.5 changes](RELEASE_1_5.md) | Lobby, fixed progression, keys/walls, equipment and powers |
+| [1.6 candidate](RELEASE_1_6.md) | Current artifacts, compatibility, host checks and installed acceptance |
+| [1.6 UX](UX_1_6.md) | Saga navigation, briefing, readable inventory and session states |
+| [V3 progression](PROGRESSION_V3.md) | J/K identities, authored waves, sparse key lessons, exact oracle and legacy restoration |
+| [Preserved 1.5](RELEASE_1_5.md) | Original lobby, G/H progression, workshop keys, equipment and powers |
 | [Illustrated tour](VISUAL_GUIDE.md) | Real Android views and the distinction from website illustrations |
 | [Gameplay](GAMEPLAY.md) | Arrow/gate rules, actions, rewards and fair friend challenges |
 | [Avatar equipment](AVATAR_EQUIPMENT.md) | All 18 items, sources, prices, three slots and exact benefit limits |
@@ -28,7 +37,7 @@ The game contains **1,000 Journey boards, 240 Remix boards, six Sealed passages 
 | [Design system](DESIGN_SYSTEM.md) | Night palette, pastel arrows, companion-led composition, type, motion and image provenance |
 | [Art and audio](ART_AUDIO.md) | Code-drawn game art, themes, original sound and measured playback |
 | [Brand assets](store/README.md) | Promotional originals, editable assets and export sizes |
-| [Store copy](STORE_LISTING.md) | Truthful 1.5 copy drafts, localized short descriptions and screenshot order |
+| [Store copy](STORE_LISTING.md) | Preserved 1.5 copy drafts; final 1.6 marketing must match its qualified artifact |
 | [Public website](PUBLIC_PAGES.md) | FR/EN homepage, policy/deletion routes, local checks and deployment evidence |
 
 The game, public pages and GitHub presentation share a visual family. The website hero combines original Nova art with an unedited Android capture; the composite itself is web artwork. Local page captures and [independent delivery of all 23 Hosting payloads plus three aliases](validation/site-v1.5/delivery.json) retain distinct scopes. [Earlier Hosting observations](validation/hosting-preview.md) concern their recorded revision.
@@ -46,14 +55,14 @@ The game, public pages and GitHub presentation share a visual family. The websit
 | [1.4 production foundation](PRODUCTION_RELEASE.md) | Historical implementation and separately dated deployment follow-up |
 | [Server](../server/README.md) | Purchase verification, Firestore transactions, IAM and scheduled recovery |
 
-The deployed wallet and earlier public pages have recorded routing/CORS observations. Web sign-in/deletion and the AdMob message's Published state are owner-reported. Completed Android login, installed UMP acceptance/refusal, Play license-test purchases, RTDN/Scheduler, automatic audit purge and commercial approval remain unqualified. The current Android APK embeds an empty wallet origin. A new site design does not remove any of these gates.
+The deployed wallet and earlier public pages have recorded routing/CORS observations. Web sign-in/deletion and the AdMob message's Published state are owner-reported. Completed Android login, installed UMP acceptance/refusal, Play license-test purchases, RTDN/Scheduler, automatic audit purge and commercial approval retain their separate qualification gates. Preserved 1.5 APKs embed an empty wallet origin; final 1.6 flags/origin must be read from its actual package. A source or site redesign does not remove these gates.
 
 ## Build, evidence and next decisions
 
 | Guide | What it answers |
 |---|---|
 | [Development](DEVELOPMENT.md) | Architecture, tools, signing and reproducible checks |
-| [Level design](LEVEL_DESIGN.md) | G/H progression, historical code compatibility and separate P prototypes |
+| [Level design](LEVEL_DESIGN.md) | Current J/K metadata, preserved G/H/C/R/B/Q identities, keys and workshop rules |
 | [Difficulty](DIFFICULTY.md) | Structural audits and why exact-solver results are not player retention |
 | [Roadmap](ROADMAP.md) | Physical-device/player studies and later commercial gates |
 | [Hit audit](HIT_AUDIT.md) | Unproven product assumptions and a measurable observation protocol |
@@ -61,4 +70,4 @@ The deployed wallet and earlier public pages have recorded routing/CORS observat
 | [Third-party notices](THIRD_PARTY_NOTICES.md) | SDK, Google branding and source/audio provenance |
 | [Research archive](RESEARCH.md) | Dated market, licensing and initial concept decisions |
 
-Historical [1.1](RELEASE_1_1.md), [1.2](RELEASE_1_2.md), [1.3](RELEASE_1_3.md) and [1.4](RELEASE_1_4.md) reports retain their original packages, hashes, dates and limitations. Current exact-byte scope is in [VALIDATION.md](VALIDATION.md); old screenshots and synthetic tests are not relabelled as final-release evidence.
+Historical [1.1](RELEASE_1_1.md), [1.2](RELEASE_1_2.md), [1.3](RELEASE_1_3.md), [1.4](RELEASE_1_4.md) and [1.5](RELEASE_1_5.md) reports retain their original packages, hashes, dates and limitations. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; [the 1.6 record](VALIDATION_1_6.md) identifies its own final binary and acceptance evidence. Old screenshots and synthetic tests are not relabelled as final-release evidence.

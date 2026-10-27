@@ -1,17 +1,17 @@
 # Development and architecture
 
-Current source builds **production 1.5.0-rc1** and **Lab 1.5.0-sandbox**, both Android version code 6. The signed historical 1.1–1.4 packages and their dated reports are preserved. [Current release](RELEASE.md) · [1.5 contract](RELEASE_1_5.md) · [Executed checks](VALIDATION.md).
+Current source declares **production 1.6.0-rc1** and **Lab 1.6.0-sandbox**, both Android version code 7. Final artifact identity and integrated runtime acceptance belong to the [1.6 candidate record](RELEASE_1_6.md). Signed 1.1–1.5 packages and their dated reports remain preserved; their hashes and checks do not qualify the newer candidate. [Preserved artifact record](RELEASE.md) · [Historical 1.5 acceptance](VALIDATION.md).
 
 ## Components
 
 | Area | Responsibility |
 |---|---|
-| `engine/` | Pure Java boards/gates/key walls and exact solver; frozen 1,000 G Journey + 240 H Remix layouts, six P prototypes, preserved C/R/B/Q identities and versioned action ledger |
+| `engine/` | Pure Java boards/gates/key walls and exact solver; frozen 1,000 J Journey + 240 K Remix rows and metadata, preserved G/H/C/R/B/Q identities, six P workshop boards and versioned action ledger |
 | `data/` | Local coins/inventory/progress/events/settings, six-language copy, XP/missions, 18 items across three equipment slots, durable power-use receipts and optional local play journal |
-| `LumaView` / `MainActivity` | Canvas game, lifecycle, accessible virtual controls, effects, local session persistence and signed-in wallet recovery |
+| `LumaView` / `MainActivity` / `ui/` | Canvas game, ten-board saga/briefing, inventory presentation, scroll/touch layout, virtual controls, effects, local session persistence and wallet recovery |
 | `commerce/` | Three guarded rewarded placements, UMP, real Billing offer/owned-purchase adapter, isolated Lab simulator and production wallet UI |
 | `wallet/` | HTTPS authenticated client, account-scoped permanent cosmetic cache, foreground owned-purchase recovery |
-| `identity/` | Explicit Credential Manager → Google → Firebase Auth login, optional session restoration and account deletion |
+| `identity/` | Explicit Credential Manager → Google → Firebase Auth login, guarded session snapshots/foreground refresh, optional restoration and account deletion |
 | `sharing/` | Board cards and explicit local-journal export through a grant-scoped read-only provider |
 | `audio/` | Original PCM synthesis, SoundPool effects, AudioTrack music and focus/lifecycle handling |
 | `server/` | Firebase/Play verification, Firestore ledger, permanent cosmetic spending, refunds/retries/deletion, HTTP boundaries and deployment preparation |
@@ -33,7 +33,7 @@ The `channel` dimension selects `production` (`com.androidhit.lumadrift`, label 
 
 After deployment/qualification, `-PlumaWalletUrl=https://REVIEWED_ORIGIN` supplies the wallet origin and `-PlumaLiveAds=true` disables test-unit forcing for production. The normal candidate has an empty origin; its real purchase launch remains blocked. Build settings alone do not prove Play/AdMob approval or actual fulfillment. [Activation report](validation/v1.4/production-readiness.json).
 
-Lint uses standalone 9.4.0 through `android.experimental.lint.version`, an experimental tooling override required by the SDK metadata. The final production and Lab reports have **0 errors and 6 warnings each**: three intentional small synchronous preference commits, two update advisories and one `SetTextI18n` notice. These are separate from Gradle's recorded deprecation/SDK warnings. [Executed build](validation/v1.5/android-build.txt).
+Lint uses standalone 9.4.0 through `android.experimental.lint.version`, an experimental tooling override required by the SDK metadata. The preserved **1.5** production and Lab reports have **0 errors and 6 warnings each**: three intentional small synchronous preference commits, two update advisories and one `SetTextI18n` notice. Those counts are historical; the integrated 1.6 run needs its own recorded result. [Executed 1.5 build](validation/v1.5/android-build.txt).
 
 ## Signing and collecting artifacts
 
@@ -62,6 +62,7 @@ Collection reads the actual output metadata and generated BuildConfig, checks ch
 
 ```sh
 scripts/test-engine.sh
+scripts/test-progression-v3.sh
 scripts/test-data.sh
 scripts/test-meta.sh
 scripts/test-economy.sh
@@ -69,6 +70,8 @@ scripts/test-collection-events.sh
 scripts/test-difficulty.sh
 scripts/test-move-budget.sh
 scripts/test-sealed.sh
+scripts/test-inventory-presentation.sh
+python3 scripts/test-identity-session.py
 scripts/test-audio.sh
 scripts/test-billing-policy.sh
 scripts/test-wallet-recovery.sh
@@ -85,9 +88,11 @@ The JVM Android/storage/provider adapters are explicit test doubles and are not 
 
 ## Persistence and value boundaries
 
-Local SharedPreferences retain earned coins, stars/unlocks, settings, inventory, XP, equipment ownership/loadout and local calendar/event claims. A session snapshot stores board identity/history, content/budget versions, action allowance, run/request IDs, Shield/Charm protection, timed-preview remainder, Flow steps and applied continuation state. Valid older content-2/policy-1 runs retain their old B/Q board and allowance; new runs use content 3/policy 2 and G/H. Unsupported older session formats reset with a notice while earned progress/economy remain at numbered slots. C/R/B/Q/E friend identities are preserved, and P identifies the six sealed prototypes. Date/clock/save data are device-controlled and never authorize paid gold.
+Local SharedPreferences retain earned coins, stars/unlocks, settings, inventory, XP, equipment ownership/loadout and local calendar/event claims. A session snapshot stores board identity/history, content/budget versions, action allowance, run/request IDs, Shield/Charm protection, timed-preview remainder, Flow steps and applied continuation state. New runs use **content 4 / policy 2** and J/K. Valid content-3 attempts restore the exact G/H layout and original policy-2 allowance through `getV2()` / `remixV2()`; content-2 attempts retain B/Q and their saved policy. `Level.progressionVersion` (3 for J/K, 2 for G/H, 0 otherwise) selects the correct frozen margin independently of the UI save schema. Unsupported session formats reset with a notice while earned progress/economy remain at numbered slots. C/R/B/Q/G/H/P/E friend identities are preserved by `ChallengeCode.resolve()`. Date/clock/save data are device-controlled and never authorize paid gold. [Content compatibility and host checks](PROGRESSION_V3.md).
 
-Present-piece taps, including unprotected blocked attempts, and successful Undo consume actions; every progression board has a certified solution within its fixed N+2…4 budget. Earned-coin/ad continuations share a maximum of two, cost 100 local earned coins or the announced rewarded offer and add `max(5, remaining pieces+3)`. Free restart remains. Six local powers unlock at Journey 1/5/12/25/45/75; every five distinct Journey clears can claim one deterministic eligible power. Activation requires confirmation, rejects active/overlapping use, reserves stock and durably saves the effect before committing the one-unit receipt. Interrupted Flow resumes its saved remaining exits. Local power prices use the bounded progression curve and equipped Aura discount; paid cosmetics use fixed server catalog prices.
+Present-piece taps, including unprotected blocked attempts, and successful Undo consume actions; every J/K progression board has a certified N-exit solution within its fixed N+3…5 budget. G/H retains N+2…4. Earned-coin/ad continuations share a maximum of two, cost 100 local earned coins or the announced rewarded offer and add `max(5, remaining pieces+3)`. Free restart remains. Six local powers unlock at Journey 1/5/12/25/45/75; every five distinct Journey clears can claim one deterministic eligible power. Activation requires confirmation, rejects active/overlapping use, reserves stock and durably saves the effect before committing the one-unit receipt. Interrupted Flow resumes its saved remaining exits. Local power prices use the bounded progression curve and equipped Aura discount; paid cosmetics use fixed server catalog prices.
+
+V3 authoring is offline: `scripts/generate-progression-v3.sh` reuses frozen G/H positions/solutions, explicitly stores sparse seals and the neutral-switch Journey-12 lesson, and writes `ProgressionV3Layouts.java`. Phones only parse/cache those rows. `BalancedCatalog.info()` returns cached metadata without solver work. `scripts/test-progression-v3.sh` compares independent exact reachability, all 1,240 certificates, save prefixes, geometric uniqueness and the pre-change historical fingerprints. Its [582,831-check report](validation/v1.6/progression-tests.txt) and [byte-identical regeneration](validation/v1.6/progression-reproduction.txt) are host-side evidence, not device performance. [Full method](PROGRESSION_V3.md).
 
 Equipment has one Head, Aura and Charm slot. Caps are +3 first-victory coins, −5 coins per power pack and one protected blocked attempt per run. Acquisitions, valid loadout and first-victory bonus receipts are local; P/friend practice grants no economic, XP or mission reward and has no consumable powers. Companion/theme identity itself remains cosmetic. [Exact table and persistence](AVATAR_EQUIPMENT.md).
 
@@ -104,3 +109,7 @@ The account screen deletes via the wallet API when its origin is configured, req
 Use managed Cloud Run credentials, deny direct client Firestore access and qualify RTDN/maintenance/IAM before enabling checkout. Existing Hosting/Cloud Run deployment observations are recorded separately; compiling the app does not establish authenticated wallet behavior, real purchases or service approval. [Deployment runbook](../server/DEPLOYMENT.md) · [Observed Hosting scope](validation/hosting-preview.md).
 
 The AGPL-3.0 project license is preserved for original code/art/audio. Google SDKs, branding and other dependencies retain their own terms. [Third-party notices](THIRD_PARTY_NOTICES.md). Publication/SDK approval and a commercial hit are not established by a build or simulation.
+
+## Identified 1.6 outputs
+
+Use `python3 scripts/verify-v16-binaries.py --build-log docs/validation/v1.6/release-build.txt` after the four release outputs are complete and application inputs are frozen. It checks signatures, pinned bundletool schema, native/ZIP alignment and source/artifact stability. UI runs: `scripts/smoke-v16.py` (explicit emulator 5580), `scripts/smoke-powers-v16.py` (explicit Lab synthetic profile, mandatory backup/restore), and `scripts/check-audio-runtime.py` (mandatory expected APK hash). Read each CLI/help and [actual qualification](VALIDATION_1_6.md) before running; host and provider models do not replace real Android checks. Earlier smoke scripts keep their release-specific semantics.

@@ -1,0 +1,48 @@
+Lab1.6 real powers UI; emulator=emulator-5556; cases=hint,flow,shield,finish,journey,gear,effects,keys
+Installed Lab: versionCode=7 minSdk=26 targetSdk=36
+Installed Lab: versionName=1.6.0-sandbox
+Recovery backup: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v16-powers-backup-z9qnm5jc
+QA emulator only: native window_animation_scale temporarily0; original=1.0; Canvas/game effect durations unchanged.
+SYNTHETIC Lab profile: Journey31 access,10000 local coins,6 charges per power,Moon Seed equipped; no progression or purchase claim. All preference files backed up outside repository.
+Screenshot: docs/screenshots/v1.6/powers/hint-one-charge-active.png
+PASS Spark: opening/cancelling costs0; confirmed effect costs1; active reactivation costs0; recreation costs0.
+Confirmation→interruption input duration: 0.859s
+Screenshot: docs/screenshots/v1.6/powers/flow-pause-frozen.png
+Screenshot: docs/screenshots/v1.6/powers/flow-pause-resumed.png
+PASS Flow pause: observed 2 initial exits; no exit while frozen; resume exactly1; total3 actions and1 item; no stale callback.
+Confirmation→interruption input duration: 0.701s
+Screenshot: docs/screenshots/v1.6/powers/flow-help-frozen.png
+Screenshot: docs/screenshots/v1.6/powers/flow-help-resumed.png
+PASS Flow help: observed 2 initial exits; no exit while frozen; resume exactly1; total3 actions and1 item; no stale callback.
+Confirmation→interruption input duration: 0.771s
+Screenshot: docs/screenshots/v1.6/powers/flow-recreate-frozen.png
+Screenshot: docs/screenshots/v1.6/powers/flow-recreate-resumed.png
+PASS Flow recreate: observed 1 initial exits; no exit while frozen; resume exactly2; total3 actions and1 item; no stale callback.
+Screenshot: docs/screenshots/v1.6/powers/shield-three-plus-charm-one.png
+PASS Shield3 + charm1: four protected blocks; fifth costs1 action; recreation preserves Shield1/charm1; reactivation spends0; Shield stock−1 total.
+Screenshot: docs/screenshots/v1.6/powers/flow-final-piece-victory-recreated.png
+PASS final-piece Flow: real victory once, one charge, inactive saved run, no reward/debit replay after recreation.
+EXPLICIT additional synthetic fixture: unlocked1000 for UI boundary validation; not earned progression.
+Screenshot: docs/screenshots/v1.6/powers/journey-final-zone-991-1000.png
+Screenshot: docs/screenshots/v1.6/powers/journey-1000-certified-victory.png
+PASS Journey1000: zone34 shows only991..1000; final arrow capped; certified actual UI solution wins3 stars; victory Next cannot create1001.
+Screenshot: docs/screenshots/v1.6/powers/gear-starfold-preview-soft-price.png
+FAIL: Ambiguous control 'Starfold Visor,'
+Screenshot: docs/screenshots/v1.6/powers/failure.png
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/smoke-powers-v16.py", line 593, in main
+    snapshot = self.pref("luma_session")
+  File "/Users/n/androidhit/scripts/smoke-powers-v16.py", line 568, in run
+    self.click("Close")
+  File "/Users/n/androidhit/scripts/smoke-powers-v16.py", line 493, in case_gear
+    if after != levels:
+  File "/Users/n/androidhit/scripts/smoke-powers-v16.py", line 75, in click
+    surface = next((n for n in nodes if BASE.text(n).startswith("Luma Drift ·")), None)
+  File "/Users/n/androidhit/scripts/smoke-v11.py", line 123, in click
+    self.tap(self.control(name, nodes, prefix, topmost), delay)
+  File "/Users/n/androidhit/scripts/smoke-v11.py", line 104, in control
+    raise AssertionError("Ambiguous control " + repr(name))
+AssertionError: Ambiguous control 'Starfold Visor,'
+
+PASS restoration: all 3 original Lab preference files restored byte for byte; newly created files removed; Lab remains stopped.
+PASS restoration: native window_animation_scale restored to 1.0 on selected QA emulator.

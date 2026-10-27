@@ -5,10 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import com.androidhit.lumadrift.commerce.BillingPolicy;
 import com.androidhit.lumadrift.commerce.CommerceConfig;
-import com.androidhit.lumadrift.identity.IdentityConfig;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.auth.FirebaseAuth;
+import com.androidhit.lumadrift.identity.GoogleAccountController;
 import com.google.firebase.auth.FirebaseUser;
 import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
@@ -66,27 +63,7 @@ public final class ProductionWalletClient {
 
     /** Restores the optional named Firebase instance only after an earlier explicit sign-in. */
     private static FirebaseUser currentUser(Context context) {
-        try {
-            FirebaseApp app;
-            try { app = FirebaseApp.getInstance("LumaIdentity"); }
-            catch (IllegalStateException missing) {
-                if (!context.getSharedPreferences("luma_identity_state_v1", 0).getBoolean("previously_signed_in", false)) return null;
-                IdentityConfig config = IdentityConfig.load(context);
-                if (!config.isConfigured()) return null;
-                synchronized (ProductionWalletClient.class) {
-                    try { app = FirebaseApp.getInstance("LumaIdentity"); }
-                    catch (IllegalStateException absent) {
-                        app = FirebaseApp.initializeApp(context.getApplicationContext(), new FirebaseOptions.Builder()
-                                .setApiKey(config.apiKey).setApplicationId(config.appId).setProjectId(config.projectId).build(), "LumaIdentity");
-                    }
-                }
-                app.setDataCollectionDefaultEnabled(false);
-            }
-            FirebaseUser user = FirebaseAuth.getInstance(app).getCurrentUser();
-            if (user == null || user.isAnonymous()) return null;
-            for (com.google.firebase.auth.UserInfo provider : user.getProviderData()) if ("google.com".equals(provider.getProviderId())) return user;
-            return null;
-        } catch (RuntimeException unavailable) { return null; }
+        return GoogleAccountController.currentWalletUser(context);
     }
     private static final Object CACHE_LOCK = new Object();
     private static final String CACHE_PREFS = "luma_server_wallet_v1";
@@ -156,7 +133,12 @@ public final class ProductionWalletClient {
         final String uid = user.getUid(); final long request = generation;
         user.getIdToken(false).addOnCompleteListener(task -> {
             if (!current(request, uid)) { if (!closed) fail(callback, "wallet_sign_in_required"); return; }
-            if (!task.isSuccessful() || task.getResult() == null || task.getResult().getToken() == null) { fail(callback, "wallet_sign_in_required"); return; }
+            if (!task.isSuccessful() || task.getResult() == null || task.getResult().getToken() == null || task.getResult().getToken().isEmpty()) {
+                Exception error = task.getException();
+                boolean invalid = error instanceof com.google.firebase.auth.FirebaseAuthInvalidUserException
+                        || error instanceof com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+                fail(callback, invalid ? "wallet_sign_in_required" : "wallet_unavailable"); return;
+            }
             final String token = task.getResult().getToken();
             try { io.execute(() -> execute(method, path, body, token, uid, request, callback)); }
             catch (java.util.concurrent.RejectedExecutionException stopped) { if (!closed) fail(callback, "wallet_unavailable"); }

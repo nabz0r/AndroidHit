@@ -1,16 +1,22 @@
 # Luma Drift gameplay and economy
 
-> Current source: **1.5.0-rc1 / code 6**. The rules below retain the explicitly labelled 1.1–1.4 history; use the current contract immediately below for the delivered candidate. [Release and compatibility](RELEASE_1_5.md) · [Executed validation](VALIDATION.md).
+> Current playable candidate: **1.6.0-rc1 / code 7**. [Exact signed artifacts and installed acceptance](VALIDATION_1_6.md) identify this candidate. The current source contract is immediately below; preserved 1.1–1.5 reports retain their own artifacts and evidence. [1.6 candidate](RELEASE_1_6.md) · [Preserved 1.5](RELEASE_1_5.md).
 
-## Current 1.5 contract
+## Current 1.6 source contract
 
-Journey now contains **1,000 fixed G boards**, alongside **240 separate H Remix boards**. The first three boards teach the controls; later boards add measured unsafe legal choices. Every board has an exact certified solution without powers. The allowance is its piece count N plus a fixed **2–4 action margin**, rather than a shared 13-action limit. A blocked present-piece attempt spends one action unless protected; Undo spends one action and restores a piece that must leave again. Thinking, empty taps and menus cost nothing. Content and margins do not adapt to spending, ads, losses or the player. [Per-board measurements and limits](data/progression-v2-summary.md).
+Journey contains **1,000 frozen J boards**, alongside **240 separate K Remix boards**. A ten-board saga page and a prelevel briefing state the board's goal, element and authored Normal/Hard/Expert label. Introduction, Practice, Peak and Recovery describe the intended rhythm; they have not been calibrated as human difficulty ratings. Every board has a certified complete solution without powers. The allowance is its piece count N plus a fixed **3–5 action margin**. A blocked present-piece attempt spends one action unless protected; Undo spends one action and restores a piece that must leave again. Thinking, empty taps and menus cost nothing. Content and margins do not adapt to spending, ads, losses or the player. [Fixed content and measurements](PROGRESSION_V3.md).
+
+A key piece opens its matching sealed cells when it exits; Undo restores the piece and reseals those cells. Journey teaches keys at **12, 14 and 17**, then revisits them at **22 + 6k**: 167 of 1,000 boards. Remix has 29 key boards, at 9 and then 17 + 8k. Board 12 isolates the lesson with at most nine pieces, no switches and all gates open. Later key boards combine seals and gate order. `OPEN_SEALS` still requires clearing every piece; opening the seals alone is not victory. Six separate P workshop boards remain available under their original unlimited, reward-free practice rules.
 
 All six powers require an explicit activation confirmation. Cancel spends no stock; an already active effect or concurrent activation is rejected. Stock is reserved, the effect/session is saved, and the use is committed once. Saved previews retain their remaining duration; pause/help/background freeze them. Flow performs at most three certified safe exits and resumes its saved remaining steps after interruption. Free restart remains available. Optional continuations cost **100 local earned coins** or their announced earned-ad reward, with a shared maximum of two per run; purchased account gold does not fund these local actions. The candidate forces sample ads and keeps real checkout gated. [Exact powers and persistence](MOVE_BUDGET_POWERUPS.md).
 
-Collection has four cards per page and three tabs: **24 cosmetic companions, six cosmetic themes, and 18 equipment items**. Equipment occupies Head, Aura and Charm slots. Its separately stated caps are +3 coins on an eligible first victory, −5 coins per power pack, or one protected blocked attempt per run; benefits do not stack within a slot or change the board. Ownership and progression stay local. Optional Google identity does not create a gameplay/equipment cloud save. [Equipment sources and receipts](AVATAR_EQUIPMENT.md).
+Collection has four categories: **24 cosmetic companions, six cosmetic themes, 18 equipment items, and six powers**. Owned, equipped and locked states have separate labels and filters; the source presents three entries per page and a preview before a confirmed action. Equipment occupies Head, Aura and Charm slots. Its separately stated caps are +3 coins on an eligible first victory, −5 coins per power pack, or one protected blocked attempt per run; benefits do not stack within a slot or change the board. Ownership and progression stay local. Optional Google identity does not create a gameplay/equipment cloud save. [Equipment sources and receipts](AVATAR_EQUIPMENT.md) · [Presentation contract](UX_1_6.md).
 
-Events retain three daily and seven weekly local-calendar stages. **Sealed passages P1–P6** are a separate practice pack: fixed wall cells disappear when the matching key piece exits and return when Undo restores the key. They have unlimited actions, no powers, coins, XP, mission credit or progression rewards, and no event expiry. Existing C/R and B/Q challenge codes keep their old layouts. A valid interrupted content-2/policy-1 run keeps its original board and allowance; new runs use content 3/policy 2. Earned stars, unlocks and inventory are preserved. [Compatibility and installed evidence](RELEASE_1_5.md).
+Events retain three daily and seven weekly local-calendar stages. P1–P6 have unlimited actions, no powers, coins, XP, mission credit or progression rewards, and no event expiry. Existing C/R, B/Q, G/H, P and event codes keep their old layouts. A valid interrupted content-2 run loads B/Q; content 3 loads its original G/H board and policy-2 allowance. New runs use **content 4 / policy 2** and J/K. `Level.progressionVersion` is a separate content marker, allowing the budget to preserve an older board's exact margin. Earned stars, unlocks and inventory stay at their recorded local positions. An [actual API-26 Lab upgrade](validation/v1.6/upgrade-api26.json) preserves a real 1.5 G1 run, its original 8/9 actions, history, coins and stock, including after preview cancellation; new J2 then starts with content 4 and 11/11 actions. This is Lab/emulator evidence, not production or physical-device qualification. [Compatibility contract and proof](PROGRESSION_V3.md#frozen-identities-and-save-compatibility).
+
+## Preserved 1.5 contract
+
+The 1.5 artifacts use 1,000 G Journey and 240 H Remix boards with N+2–4 fixed action allowances, while keys remain in the separate six P workshop boards. They use content 3/policy 2 for new runs and preserve content-2/policy-1 B/Q attempts. Their equipment, six-power confirmation/recovery and original music behavior are documented in [RELEASE_1_5.md](RELEASE_1_5.md), with installed evidence in [VALIDATION.md](VALIDATION.md). Those artifacts and observations are not relabelled as 1.6.
 
 ## Historical 1.1–1.4 rules and evidence
 
@@ -218,7 +224,8 @@ Export creates a JSON file and opens Android's share sheet; the player chooses i
 
 The engine lives under `app/src/main/java/com/androidhit/lumadrift/engine/` and has no Android dependency:
 
-- `LevelCatalog.get(1..240)` and `.remix(1..240)` retain original board identities; `BalancedCatalog.get(1..240)` and `.remix(1..240)` select the frozen 1.3 within-chapter order. `LevelCatalog.event(seed)` returns a reproducible daily/weekly board.
+- `BalancedCatalog.get(1..1000)` and `.remix(1..240)` select current J/K content; `.info(number, remix)` provides cached objective/element/authored difficulty metadata without runtime generation or solving. `.getV2()` / `.remixV2()` retain G/H, and `.legacyGet()` / `.legacyRemix()` retain the frozen B/Q routes. `LevelCatalog.get()` / `.remix()` retain C/R; `.event(seed)` retains dated-event identities.
+- `ChallengeCode.resolve()` selects the layout matching the parsed family. `SealedCatalog.get(1..6)` retains P practice, and `Level.barriers` describes key-linked fixed cells for the source's actual board.
 - `MoveBudget` holds the separate attempt allowance, action ledger and shared two-continuation limit; friend mode is unlimited.
 - `Board.move(id)` validates the gate and path, removes one piece, and applies its switch. It returns a result explaining success or the blocking reason.
 - `undo()`, `restart()`, `history()`, and `restoreHistory(history)` handle reversible sessions.
@@ -229,8 +236,10 @@ Run the engine suite with:
 
 ```sh
 scripts/test-engine.sh
+scripts/test-progression-v3.sh
 scripts/test-difficulty.sh
 scripts/test-move-budget.sh
+scripts/test-sealed.sh
 ```
 
 The suite uses a JDK, not the Android runtime. Its coverage includes campaign and Remix solutions, event seeds, deterministic generation, alternate player choices, safe hints, gate transitions, invalid moves, undo, restart, atomic session restoration and challenge-code validation. Exact counts and results belong to the versioned [validation evidence](VALIDATION.md); timings on the development host are not Android performance measurements.

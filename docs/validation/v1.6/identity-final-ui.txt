@@ -1,0 +1,10 @@
+PASS: final production guest/provider-cancellation UI
+APK SHA-256 3d840e9a7598ca28d4bf12525b312f4d4f671fc613d5ae88082819547abfc1c1
+Device sdk_gphone16k_arm64; API 36; system page size 16384 bytes; arm64-v8a
+Guest Account -> Sign in with Google -> actual com.google.android.gms/.auth.uiflows.minutemaid.MinuteMaidActivity
+Back before any account choice or credential input -> guest, sign-in button enabled
+Account Back -> Home guest; background/foreground relaunch remains guest without another provider UI
+No real Google login, account selection, deletion, ad or payment performed
+SharedPreferences: 3 original files restored byte for byte; P1 active run UUID/history/content/policy unchanged
+Crash buffer: app fatal found=false; raw buffer empty=True
+App left force-stopped after restoration; private byte backups retained outside repository

@@ -1,0 +1,95 @@
+PASS Explicit QA emulator; no physical device
+PASS Installed Lab 1.6/code7
+PASS Cold launch opens Home without abandoning the saved run
+APK SHA-256 b8e854844f239412c99e671ab08784a00811aa5c9bd7641e9feac54ced06d2b4
+PASS Language en returns to localized Home
+CAPTURE home-en
+PASS Inventory localized en
+PASS Visible localized control en/tab_companions
+PASS Visible localized control en/tab_themes
+PASS Visible localized control en/tab_equipment
+PASS Visible localized control en/tab_powers
+PASS Visible localized control en/filter_all
+PASS Visible localized control en/filter_owned
+PASS Visible localized control en/filter_locked
+CAPTURE inventory-en
+PASS Language fr returns to localized Home
+CAPTURE home-fr
+PASS Inventory localized fr
+PASS Visible localized control fr/tab_companions
+PASS Visible localized control fr/tab_themes
+PASS Visible localized control fr/tab_equipment
+PASS Visible localized control fr/tab_powers
+PASS Visible localized control fr/filter_all
+PASS Visible localized control fr/filter_owned
+PASS Visible localized control fr/filter_locked
+CAPTURE inventory-fr
+PASS Language de returns to localized Home
+CAPTURE home-de
+PASS Inventory localized de
+PASS Visible localized control de/tab_companions
+PASS Visible localized control de/tab_themes
+PASS Visible localized control de/tab_equipment
+PASS Visible localized control de/tab_powers
+PASS Visible localized control de/filter_all
+PASS Visible localized control de/filter_owned
+PASS Visible localized control de/filter_locked
+CAPTURE inventory-de
+PASS Language es returns to localized Home
+CAPTURE home-es
+PASS Inventory localized es
+PASS Visible localized control es/tab_companions
+PASS Visible localized control es/tab_themes
+PASS Visible localized control es/tab_equipment
+PASS Visible localized control es/tab_powers
+PASS Visible localized control es/filter_all
+PASS Visible localized control es/filter_owned
+PASS Visible localized control es/filter_locked
+CAPTURE inventory-es
+PASS Language pt returns to localized Home
+CAPTURE home-pt
+PASS Inventory localized pt
+PASS Visible localized control pt/tab_companions
+PASS Visible localized control pt/tab_themes
+PASS Visible localized control pt/tab_equipment
+PASS Visible localized control pt/tab_powers
+PASS Visible localized control pt/filter_all
+PASS Visible localized control pt/filter_owned
+PASS Visible localized control pt/filter_locked
+CAPTURE inventory-pt
+PASS Language it returns to localized Home
+CAPTURE home-it
+PASS Inventory localized it
+PASS Visible localized control it/tab_companions
+PASS Visible localized control it/tab_themes
+PASS Visible localized control it/tab_equipment
+PASS Visible localized control it/tab_powers
+PASS Visible localized control it/filter_all
+PASS Visible localized control it/filter_owned
+PASS Visible localized control it/filter_locked
+CAPTURE inventory-it
+PASS 320dp portrait launches Home
+CAPTURE home-320dp-en
+CAPTURE inventory-320dp-en
+CAPTURE equipment-320dp-top-en
+CAPTURE equipment-320dp-bottom-en
+PASS 320dp scroll makes inventory pager reachable
+PASS Compact landscape launches Home
+CAPTURE home-landscape-top-en
+CAPTURE home-landscape-bottom-en
+PASS Landscape pinned navigation survives content scroll
+CAPTURE inventory-landscape-top-en
+CAPTURE inventory-landscape-bottom-en
+FAIL Landscape scroll reaches inventory pager
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/smoke-v16.py", line 201, in run
+    for case in self.args.cases.split(","):getattr(self,case)()
+  File "/Users/n/androidhit/scripts/smoke-v16.py", line 177, in compact
+    self.check(any(text(n)=="›" for n in self.nodes()),"Landscape scroll reaches inventory pager")
+  File "/Users/n/androidhit/scripts/smoke-v16.py", line 58, in check
+    if not condition:raise AssertionError(message)
+AssertionError: Landscape scroll reaches inventory pager
+
+CAPTURE failure
+PASS All preference files restored byte-for-byte; app left stopped
+SCOPE: candidate-only UI; no move, purchase, ad or Google login.

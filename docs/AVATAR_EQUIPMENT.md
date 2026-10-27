@@ -1,4 +1,6 @@
-# Avatar equipment — 1.5 candidate contract
+# Avatar equipment — persistence and benefits
+
+Version 1.6 retains these 18 items, prices, sources, three slots and capped effects. Its wider inventory presentation and filters are described in [UX 1.6](UX_1_6.md); historical 1.5 evidence below keeps its original scope.
 
 The 1.5 avatar combines one of the existing 24 cosmetic companions with **three equipment slots: Headwear, Aura and Charm**. Each slot has six fixed items, for **18 items in total**. Only the three equipped items contribute benefits; owning several items in a slot never adds their effects together. Companion identity and theme selection remain cosmetic.
 

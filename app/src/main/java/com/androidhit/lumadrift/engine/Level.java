@@ -17,6 +17,8 @@ public final class Level {
     public final int parMoves;
     public final boolean isEvent;
     public final long seed;
+    /** 0: historical/event/P; 2: frozen G/H; 3: frozen J/K. Not the UI save schema. */
+    public final int progressionVersion;
     /** A certified completion from the initial board. Do not mutate this array. */
     public final int[] solution;
     private final Tile[] byId;
@@ -29,6 +31,12 @@ public final class Level {
 
     public Level(int number, int chapter, int size, int initialGateMask,
                  List<Tile> tiles, int[] solution, boolean isEvent, long seed, List<Barrier> barriers) {
+        this(number, chapter, size, initialGateMask, tiles, solution, isEvent, seed, barriers, 0);
+    }
+
+    public Level(int number, int chapter, int size, int initialGateMask,
+                 List<Tile> tiles, int[] solution, boolean isEvent, long seed,
+                 List<Barrier> barriers, int progressionVersion) {
         if (size < 2 || size > 7 || tiles.isEmpty() || tiles.size() > 49
                 || (initialGateMask & ~15) != 0 || solution.length != tiles.size() || barriers == null) {
             throw new IllegalArgumentException("Invalid level definition");
@@ -39,6 +47,9 @@ public final class Level {
         this.initialGateMask = initialGateMask;
         this.isEvent = isEvent;
         this.seed = seed;
+        if (progressionVersion != 0 && progressionVersion != 2 && progressionVersion != 3)
+            throw new IllegalArgumentException("Unsupported progression version");
+        this.progressionVersion = progressionVersion;
         this.tiles = Collections.unmodifiableList(new ArrayList<Tile>(tiles));
         this.byId = new Tile[tiles.size()];
         boolean[] occupied = new boolean[size * size];

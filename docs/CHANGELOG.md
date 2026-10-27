@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.6.0-rc1 / 1.6.0-sandbox — saga, inventory and session clarity
+
+27 October 2026 · version code 7. Signed APK/AAB delivery with [installed acceptance and remaining limits](VALIDATION_1_6.md). [Changes and contracts](RELEASE_1_6.md).
+
+- Ten-board saga navigation, a briefing describing objective/element/authored difficulty before a new attempt, and scroll-aware layouts.
+- Unified owned/equipped/locked inventory presentation for companions, themes, equipment and powers, with exact acquisition/effect copy and previews before confirmed actions.
+- Frozen J/K V3 content: 1,000 Journey and 240 Remix; key lessons at Journey 12/14/17, 167 Journey key boards and 29 Remix key boards, and introduction/practice/peak/recovery beats. Normal/Hard/Expert labels are not calibrated human ratings.
+- Certified completions fit fixed N+3–5 initial budgets without payment, powers or continuation. C/R/B/Q/G/H/P/event identities are preserved; active G/H histories and original policy-2 allowances retain their versioned restore path.
+- Guest/Refreshing/Connected/Reauthentication-required/Error session model, stale-callback/account guards and optional silent foreground refresh; real provider authentication remains separately qualified.
+- Decorative aurora art, updated foreground hierarchy and motion feedback; final production/Lab menu captures, actual audio observation and accessibility limits are tied to their exact artifact.
+- Actual API 26 Lab 1.5→1.6 save preservation; API 36/16KB execution; 88 Lab and 43 production menu checks; six-power consumption/recreation, key/Undo and Flow pause/help/rotation checks. Successful real login, live commerce, physical phones and retention remain separate.
+- V3 host report: 582,831 checks, independent exact reference comparisons, geometric uniqueness including key links, equal historical fingerprints and byte-identical offline regeneration. No Android runtime, retention, revenue or live-commercial outcome is inferred from these checks.
+
 ## 1.5.0-rc1 / 1.5.0-sandbox — avatar, planning and sealed passages
 
 27 October 2026 · version code 6. [Release scope and executed acceptance](RELEASE_1_5.md).

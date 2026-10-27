@@ -1,0 +1,63 @@
+PASS Explicit QA emulator; no physical device
+PASS Installed production1.6/code7
+PASS Cold launch opens Home without abandoning the saved run
+APK SHA-256 3d840e9a7598ca28d4bf12525b312f4d4f671fc613d5ae88082819547abfc1c1
+CAPTURE home-en
+PASS Home → Map
+PASS Saga exposes exactly ten level nodes on first page
+CAPTURE map-en
+PASS Level node opens the prelevel goal screen
+CAPTURE briefing-en
+PASS Prelevel Powers shortcut opens inventory
+CAPTURE powers-en
+PASS Back from inventory restores prelevel without abandoning
+PASS Visible Back from prelevel returns to Map
+PASS Back after visible prelevel cancellation has no history loop
+PASS Map remains reachable after cancellation
+PASS Map → Inventory
+CAPTURE companions-en
+PASS Owned companion opens a native detail preview
+PASS Cancelling owned preview returns to inventory
+CAPTURE companions-locked-en
+PASS Unowned companion opens its preview
+PASS Preview cancellations spend no coins, stock, stars or ownership
+PASS Owned filter includes selected starter companion
+CAPTURE themes-owned-en
+CAPTURE equipment-owned-en
+PASS Owned equipment shows all three equipped starters
+CAPTURE equipment-locked-en
+CAPTURE powers-locked-en
+PASS Locked powers retain explicit unlock state
+CAPTURE events-en
+PASS Inventory → Events
+PASS Menu/filter traversal leaves economic and gameplay values unchanged
+PASS Language en returns to localized Home
+CAPTURE home-en
+PASS Inventory localized en
+PASS Visible localized control en/tab_companions
+PASS Visible localized control en/tab_themes
+PASS Visible localized control en/tab_equipment
+PASS Visible localized control en/tab_powers
+PASS Visible localized control en/filter_all
+PASS Visible localized control en/filter_owned
+PASS Visible localized control en/filter_locked
+CAPTURE inventory-en
+PASS Language fr returns to localized Home
+CAPTURE home-fr
+CAPTURE map-fr
+CAPTURE briefing-fr
+PASS Inventory localized fr
+PASS Visible localized control fr/tab_companions
+PASS Visible localized control fr/tab_themes
+PASS Visible localized control fr/tab_equipment
+PASS Visible localized control fr/tab_powers
+PASS Visible localized control fr/filter_all
+PASS Visible localized control fr/filter_owned
+PASS Visible localized control fr/filter_locked
+CAPTURE inventory-fr
+PASS Music actually enabled through the settings UI before AudioFlinger observation
+{"status": "PASS", "frame_advance": 22491, "background_active": false, "resumed": true, "sha256": "3d840e9a7598ca28d4bf12525b312f4d4f671fc613d5ae88082819547abfc1c1"}
+PASS No new crash-buffer entry
+PASS Window overrides, rotation and font preference restored
+PASS All preference files restored byte-for-byte; app left stopped
+SCOPE: candidate-only UI; no move, purchase, ad or Google login.

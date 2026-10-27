@@ -1,0 +1,81 @@
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java:264: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+            public void onSuccess(ProductionWalletClient.Wallet result){requests.edit().remove(key).commit();spendBusy=false;acceptWallet(result);walletStatus.setText(t("wallet_unlocked"));}
+                                                                                                    ~~~~~~~~
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java:86: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+        synchronized (CACHE_LOCK) { context.getSharedPreferences(CACHE_PREFS, 0).edit().remove(BillingPolicy.accountHash(uid)).commit(); }
+                                                                                                                               ~~~~~~~~
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java:95: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+                prefs.edit().putString(key, value.toString()).commit();
+                                                              ~~~~~~~~
+
+   Explanation for issues of type "ApplySharedPref":
+   Consider using apply() instead of commit on shared preferences. Whereas
+   commit blocks and writes its data to persistent storage immediately, apply
+   will handle it in the background.
+
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/identity/GoogleAccountController.java:180: Warning: Call to CredentialManager.getCredential without use of NoCredentialException [CredentialManagerMisuse]
+            manager.getCredentialAsync(activity, wanted, cancellation, main, new CredentialManagerCallback<GetCredentialResponse, GetCredentialException>() {
+            ^
+
+   Explanation for issues of type "CredentialManagerMisuse":
+   When calling CredentialManager.getCredential or
+   CredentialManager.getCredentialAsync, you should handle
+   NoCredentialException somewhere in your project.
+
+   https://developer.android.com/identity/sign-in/credential-manager#handle-exceptions
+
+/Users/n/androidhit/gradle/wrapper/gradle-wrapper.properties:3: Warning: A newer version of Gradle than 8.14.3 is available: 8.14.6 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/Users/n/androidhit/gradle.properties:8: Warning: Newer version of lint available: 9.6.0-alpha01 [GradleDependency]
+android.experimental.lint.version=9.4.0
+                                  ~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/LumaView.java:249: Warning: Avoid object allocations during draw/layout operations (preallocate and reuse instead) [DrawAllocation]
+        layout=new ExperienceLayout(getWidth(),getHeight(),safeTop,safeBottom,getResources().getDisplayMetrics().density,getResources().getConfiguration().fontScale);
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "DrawAllocation":
+   You should avoid allocating objects during a drawing or layout operation.
+   These are called frequently, so a smooth UI can be interrupted by garbage
+   collection pauses caused by the object allocations.
+
+   The way this is generally handled is to allocate the needed objects up
+   front and to reuse them for each drawing operation.
+
+   Some methods allocate memory on your behalf (such as Bitmap.create), and
+   these should be handled in the same way.
+
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/LumaView.java:625: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        android.widget.TextView note=new android.widget.TextView(getContext());note.setText((equipped?t("equipped"):owned?u("owned"):u("get"))+"\n"+t("companion_wallet_note",store.coins())+"\n"+t("cosmetic_only"));note.setTextColor(skin.muted);note.setGravity(Gravity.CENTER);note.setTextSize(16);layout.addView(note);
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 8 warnings

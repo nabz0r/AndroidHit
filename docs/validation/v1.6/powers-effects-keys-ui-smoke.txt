@@ -1,0 +1,23 @@
+Lab1.6 real powers UI; emulator=emulator-5556; cases=effects,keys
+Installed Lab: versionCode=7 minSdk=26 targetSdk=36
+Installed Lab: versionName=1.6.0-sandbox
+Recovery backup: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v16-powers-backup-1w0lfaba
+QA emulator only: native window_animation_scale temporarily0; original=1.0; Canvas/game effect durations unchanged.
+SYNTHETIC Lab profile: Journey31 access,10000 local coins,6 charges per power,Moon Seed equipped; no progression or purchase claim. All preference files backed up outside repository.
+EXPLICIT additional synthetic fixture: Journey 75 access for Vision, Focus and Trail; not earned progression.
+Screenshot: docs/screenshots/v1.6/powers/vision-active-paused.png
+Screenshot: docs/screenshots/v1.6/powers/vision-active-recreated.png
+PASS Vision: actual activation, Active UI, bounded saved duration; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.
+Screenshot: docs/screenshots/v1.6/powers/focus-active-paused.png
+Screenshot: docs/screenshots/v1.6/powers/focus-active-recreated.png
+PASS Focus: actual activation, Active UI, bounded saved duration and nonempty visible targets; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.
+Screenshot: docs/screenshots/v1.6/powers/trail-active-paused.png
+Screenshot: docs/screenshots/v1.6/powers/trail-active-recreated.png
+PASS Trail: actual activation, Active UI, bounded saved duration and nonempty visible targets; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.
+Screenshot: docs/screenshots/v1.6/powers/keys-12-open.png
+Screenshot: docs/screenshots/v1.6/powers/keys-12-undo-restored.png
+Screenshot: docs/screenshots/v1.6/powers/keys-12-certified-victory.png
+PASS actual Journey12: real wall/key UI; key opens seals, Undo restores, replay reopens; certified completion within fixed budget, no power or continuation.
+PASS selected actual UI scenarios; no account/payment/advertising flow; no new Lab crash. Restoration follows.
+PASS restoration: all 3 original Lab preference files restored byte for byte; newly created files removed; Lab remains stopped.
+PASS restoration: native window_animation_scale restored to 1.0 on selected QA emulator.

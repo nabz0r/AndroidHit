@@ -1,0 +1,10 @@
+Lab1.6 real powers UI; emulator=emulator-5556; cases=hint,flow,shield,finish,journey,gear,effects,keys
+Installed Lab: versionCode=7 minSdk=26 targetSdk=36
+Installed Lab: versionName=1.6.0-sandbox
+Recovery backup: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v16-powers-backup-pteilyrs
+QA emulator only: native window_animation_scale temporarily0; original=1.0; Canvas/game effect durations unchanged.
+SYNTHETIC Lab profile: Journey31 access,10000 local coins,6 charges per power,Moon Seed equipped; no progression or purchase claim. All preference files backed up outside repository.
+Screenshot: docs/screenshots/v1.6/powers/hint-one-charge-active.png
+PASS Spark: opening/cancelling costs0; confirmed effect costs1; active reactivation costs0; recreation costs0.
+PASS restoration: all 3 original Lab preference files restored byte for byte; newly created files removed; Lab remains stopped.
+PASS restoration: native window_animation_scale restored to 1.0 on selected QA emulator.

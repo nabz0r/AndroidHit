@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "serial": "emulator-5580",
+  "package": "com.androidhit.lumadrift",
+  "apk_sha256": "3d840e9a7598ca28d4bf12525b312f4d4f671fc613d5ae88082819547abfc1c1",
+  "pid": "14512",
+  "foreground_first": [
+    {
+      "track_id": "112",
+      "active": false,
+      "frames": 5512,
+      "row": "S    112     no   14512/  10216     513      72 S  0x600 00000001 00000001  22050  3   e  4   -35  -2.9  -2.9     0          -33      false 00001588   5512       0 f         0        0      false        false   86.19 k"
+    },
+    {
+      "track_id": "111",
+      "active": true,
+      "frames": 156437,
+      "row": "S    111    yes   14512/  10216     505      71 A  0x000 00000001 00000001  22050  3   e  2   -44   -11   -11     0          -33      false 00026315 564480  99999999 A         0        0      false        false   80.11 t"
+    }
+  ],
+  "foreground_second": [
+    {
+      "track_id": "112",
+      "active": false,
+      "frames": 5512,
+      "row": "S    112     no   14512/  10216     513      72 S  0x600 00000001 00000001  22050  3   e  4   -35  -2.9  -2.9     0          -33      false 00001588   5512       0 f         0        0      false        false   86.19 k"
+    },
+    {
+      "track_id": "111",
+      "active": true,
+      "frames": 178928,
+      "row": "S    111    yes   14512/  10216     505      71 A  0x000 00000001 00000001  22050  3   e  2   -44   -11   -11     0          -33      false 0002BAF0 564480  99999999 A         0        0      false        false   89.47 t"
+    }
+  ],
+  "observed_frame_advance": 22491,
+  "background": [
+    {
+      "track_id": "112",
+      "active": false,
+      "frames": 5512,
+      "row": "S    112     no   14512/  10216     513      72 S  0x600 00000001 00000001  22050  3   e  4   -35  -2.9  -2.9     0          -33      false 00001588   5512       0 f         0        0      false        false   86.19 k"
+    },
+    {
+      "track_id": "111",
+      "active": false,
+      "frames": 180927,
+      "row": "S    111     no   14512/  10216     505      71 P  0x600 00000001 00000001  22050  3   e  2  -inf  -inf  -inf     0          -33      false 0002C2BF 564480  99999999 A         0        0      false        false   62.02 k"
+    }
+  ],
+  "foreground_after_resume": [
+    {
+      "track_id": "112",
+      "active": false,
+      "frames": 5512,
+      "row": "S    112     no   14512/  10216     513      72 S  0x600 00000001 00000001  22050  3   e  4   -35  -2.9  -2.9     0          -33      false 00001588   5512       0 f         0        0      false        false   86.19 k"
+    },
+    {
+      "track_id": "111",
+      "active": true,
+      "frames": 194421,
+      "row": "S    111    yes   14512/  10216     505      71 A  0x200 00000001 00000001  22050  3   e  2   -47   -14   -14     0          -33      false 0002F775 564480  99999999 A         0        0      false        false   84.09 t"
+    }
+  ],
+  "audio_log": [
+    "10-27 12:06:15.308 14512 14530 I LumaAudio: Original ambient ready: 564480 mono frames at 22050 Hz",
+    "10-27 12:06:15.322 14512 14530 I LumaAudio: Ambient playing; fade to 0.27",
+    "10-27 12:06:23.495 14512 14512 I LumaAudio: Ambient paused",
+    "10-27 12:06:23.983 14512 14512 I LumaAudio: Ambient playing; fade to 0.27"
+  ],
+  "scope": "Actual Android AudioFlinger track, frame advance, background pause and foreground resume. Digital playback observation only; no physical speaker/headphone audition or real external focus interruption."
+}

@@ -1,6 +1,6 @@
 # Companions, equipment and event clarity
 
-The **1.5 candidate** presents three collection tabs: Companions, Themes and Equipment. Four large cards per page distinguish **Owned**, **Equipped** and **To unlock**. An owned-only filter and permanent equipped-avatar hero keep inventory readable. The 24 companion identities and six themes remain cosmetic; the new 18 equipment items have separate explicit, bounded benefits. [Equipment table and sources](AVATAR_EQUIPMENT.md) · [Current validation](VALIDATION.md).
+The **1.6 candidate** presents four collection tabs: Companions, Themes, Equipment and Powers. Three full-width rows per page distinguish **Selected**, **Owned**, **Equipped** and **To unlock**; power rows also show Active/Ready/No charges/Locked. All/Owned/To unlock filters and the equipped-avatar strip expose the current inventory. The 24 companion identities and six themes remain cosmetic; the new 18 equipment items have separate explicit, bounded benefits. [Equipment table and sources](AVATAR_EQUIPMENT.md) · [Current validation](VALIDATION_1_6.md).
 
 <p><img src="screenshots/v1.5/collection-equipment-fr.png" width="260" alt="Actual 1.5 equipment collection with clear states"><img src="screenshots/v1.5/sealed-menu-fr.png" width="260" alt="Actual 1.5 sealed-passage prototype menu"></p>
 
@@ -8,7 +8,7 @@ Daily and weekly tabs retain visible goals, stages, reset times and one-time com
 
 Equipment has **Head, Aura and Charm** slots, with six items per slot. Visible benefits are bounded at +3 local coins on an eligible first victory, −5 coins per power pack, and one protected blocked attempt per run; one equipped item per slot prevents stacking within it. Starter/milestone claims do not spend money, and the four coin-priced items use only earned local coins. Ownership/loadout are device-local, with no Google gameplay/equipment cloud save or paid-gold import. The Sealed pack also awards no XP, missions or progression. [Exact acquisition and receipt rules](AVATAR_EQUIPMENT.md).
 
-Current [installed 1.5 acceptance](VALIDATION.md#installed-android-acceptance) covers equipment, P challenges and the revised UI; the final [EN/FR capture repeat](validation/v1.5/ui-smoke.txt) explicitly preserves balances/inventory. The 1.2 screenshots and dated results below remain historical evidence rather than screenshots of this candidate.
+Preserved [installed 1.5 acceptance](VALIDATION.md#installed-android-acceptance) covers equipment, P challenges and the revised UI; the final [EN/FR capture repeat](validation/v1.5/ui-smoke.txt) explicitly preserves balances/inventory. The 1.2 screenshots and dated results below remain historical evidence rather than screenshots of this candidate.
 
 ## Historical Lab 1.2 collection and event guide
 

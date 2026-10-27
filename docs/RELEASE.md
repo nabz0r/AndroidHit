@@ -1,4 +1,25 @@
-# Luma Drift 1.5 — avatar, planning and sealed passages
+# Installation and release artifacts
+
+**Luma Drift 1.6 · 27 October 2026 · code 7**
+
+**[Download Android APK · 1.6.0-rc1](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.6.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.6.0-rc1.aab) · [Isolated Lab APK](../releases/luma-drift-1.6.0-sandbox.apk) · [Changes](RELEASE_1_6.md) · [Executed validation](VALIDATION_1_6.md).
+
+The internal candidate adds ten-node saga pages, prelevel goals and action limits, three-row inventory with ownership filters, explicit account-session states, Aurora Atlas art and a fixed J/K progression with key/seal lessons. Existing G/H active saves and historical share codes retain their original board and allowance. Production updates `com.androidhit.lumadrift`; Lab uses the separate `.sandbox` package. Keep the installed application and its data when updating.
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| [luma-drift-1.6.0-rc1.apk](../releases/luma-drift-1.6.0-rc1.apk) | 5,528,646 | `3d840e9a7598ca28d4bf12525b312f4d4f671fc613d5ae88082819547abfc1c1` |
+| [luma-drift-1.6.0-rc1.aab](../releases/luma-drift-1.6.0-rc1.aab) | 8,865,601 | `ed5d1a76dce4935a7b042a6507cefded8193cf22859830770a7b2814c974df07` |
+| [luma-drift-1.6.0-sandbox.apk](../releases/luma-drift-1.6.0-sandbox.apk) | 5,528,321 | `0f8d7c04df45331b844b276c8149d9c276e8687f190c2cc7d2e1e236fbaa1a45` |
+| [luma-drift-1.6.0-sandbox.aab](../releases/luma-drift-1.6.0-sandbox.aab) | 8,855,495 | `ad5dbf567ff2188438a7d1bfa0d7b28c6fb5424541a2419daba6927d701a37b5` |
+
+Both APKs verify against the existing public RSA signing certificate; both AABs pass signature and pinned bundletool validation. ZIP/native ELF 16KB alignment passes. [Binary record](validation/v1.6/binary-final-candidate.json) · [Production manifest](../releases/manifest-1.6.0-rc1.json) · [Lab manifest](../releases/manifest-1.6.0-sandbox.json) · [Checksums](../releases/SHA256SUMS.txt).
+
+The delivered build forces official sample ads and keeps its wallet origin empty. It does not activate real checkout or live ad units. Google provider/server qualification and Play commercial approval remain separate. [Activation guide](DEPLOIEMENT_PAS_A_PAS.md).
+
+The files, hashes, signatures and runtime references below identify the preserved **1.5** delivery. Do not relabel them as 1.6 evidence or attempt to infer a newer package's configuration from them.
+
+## Preserved Luma Drift 1.5 — avatar, planning and sealed passages
 
 **27 October 2026 · 1.5.0-rc1 / code 6 · `com.androidhit.lumadrift`**
 

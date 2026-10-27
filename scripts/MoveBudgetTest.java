@@ -33,7 +33,7 @@ public final class MoveBudgetTest {
             MoveBudget current=MoveBudget.start(remix?3:0,board);
             check(current.policyVersion()==2&&current.snapshot().policyVersion==2,"Current attempt uses version two");
             check(current.mistakeAllowance()==BalancedCatalog.mistakeAllowance(number,remix),"Per-layout frozen allowance");
-            check(current.mistakeAllowance()>=2&&current.mistakeAllowance()<=4,"Every board permits a free undo repair");
+            check(current.mistakeAllowance()>=2&&current.mistakeAllowance()<=5,"Every board permits a free undo repair");
             Level old=remix?BalancedCatalog.legacyRemix(number):BalancedCatalog.legacyGet(number);
             MoveBudget legacy=MoveBudget.startLegacy(remix?3:0,old);legacy.consumeAction();
             check(legacy.policyVersion()==1&&legacy.snapshot().policyVersion==1&&legacy.copy().policyVersion()==1,"Interrupted legacy attempt keeps its policy");

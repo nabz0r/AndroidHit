@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 /**
  * Versioned frozen progression. C/R remain in LevelCatalog, legacy B/Q remain
- * accessible here, and G/H identify the more demanding version 2 progression.
+ * accessible here. G/H retain version 2; J/K identify the version 3 saga route.
  * Candidate generation, exact choice analysis and sorting run offline only.
  */
 public final class BalancedCatalog {
     public static final int LEVEL_COUNT = 1000;
     public static final int REMIX_COUNT = 240;
     public static final int LEGACY_LEVEL_COUNT = 240;
-    public static final int ORDER_VERSION = 2;
+    public static final int ORDER_VERSION = 3;
     private static final int[] JOURNEY_ORDER = {
             1, 2, 3, 4, 5, 6, 8, 7, 12, 9, 14, 13, 10, 11, 15,
             17, 16, 21, 22, 24, 19, 23, 28, 18, 20, 29, 27, 30, 25, 26,
@@ -55,13 +55,24 @@ public final class BalancedCatalog {
 
     private BalancedCatalog() { }
 
-    public static synchronized Level get(int number) { return current(number, false); }
-    public static synchronized Level remix(int number) { return current(number, true); }
+    public static synchronized Level get(int number) { return ProgressionV3Catalog.get(number, false); }
+    public static synchronized Level remix(int number) { return ProgressionV3Catalog.get(number, true); }
+    public static synchronized Level getV2(int number) { return current(number, false); }
+    public static synchronized Level remixV2(int number) { return current(number, true); }
     public static synchronized Level legacyGet(int number) { return legacy(number, false); }
     public static synchronized Level legacyRemix(int number) { return legacy(number, true); }
 
     /** Fixed board-specific allowance; independent of purchases, player history and clock. */
     public static int mistakeAllowance(int number, boolean remix) {
+        return ProgressionV3Catalog.allowance(number, remix);
+    }
+
+    public static synchronized ProgressionInfo info(int number, boolean remix) {
+        return ProgressionV3Catalog.info(number, remix);
+    }
+
+    /** Frozen policy-2 allowance for G/H and already-started historical sessions. */
+    public static int mistakeAllowanceV2(int number, boolean remix) {
         requireNumber(number, remix ? REMIX_COUNT : LEVEL_COUNT);
         return Integer.parseInt((remix ? ProgressionV2Layouts.REMIX : ProgressionV2Layouts.JOURNEY)[number - 1].split("\\|", 5)[3]);
     }
@@ -100,7 +111,8 @@ public final class BalancedCatalog {
                 solution[id] = id;
             }
             cache[number - 1] = new Level(number, (number - 1) / 30 + 1, Integer.parseInt(row[0]),
-                    Integer.parseInt(row[1]), tiles, solution, false, Long.parseLong(row[2]));
+                    Integer.parseInt(row[1]), tiles, solution, false, Long.parseLong(row[2]),
+                    java.util.Collections.emptyList(), 2);
         }
         return cache[number - 1];
     }

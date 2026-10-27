@@ -1,21 +1,29 @@
 # Luma Drift · level design and challenge protocol
 
-## Current 1.5 content and identities
+## Current 1.6 source content and identities
+
+The frozen V3 route uses **J for 1,000 Journey boards and K for 240 Remix boards**. `BalancedCatalog.get()` / `.remix()` now select those routes; `getV2()` / `remixV2()` preserve every G/H board. `ChallengeCode.resolve()` binds each family to the correct version. `ProgressionInfo` supplies cached authored difficulty, beat, goal, element and source provenance without generating or solving boards on a phone. [Full V3 design and method](PROGRESSION_V3.md).
+
+Journey key lessons are 12, 14 and 17; the route contains 167 key boards. Remix contains 29. Board 12 neutralizes gate switches to teach only the key/seal dependency; the original G source stays unchanged. Every new certificate fits N exits within its fixed N+3–5 budget. The independent audit covers all 1,240 new boards, genuine seal dependencies, arbitrary subset/gate oracle samples, saved histories, budget restoration and geometric uniqueness including key associations. Normal/Hard/Expert remain authored labels, not human calibration. [Executed host report](validation/v1.6/progression-tests.txt) · [Exact comparisons](data/progression-v3-summary.md).
+
+The UI save schema uses content 4 for J/K, content 3 for active G/H attempts, and content 2 for historical B/Q attempts. Valid old attempts keep their layout, history and original allowance until finished or abandoned. Old challenge encoders, checksums and P/event definitions remain unchanged. Source validation is distinct from final installed 1.6 acceptance. [Candidate qualification](RELEASE_1_6.md).
+
+## Preserved 1.5 content and identities
 
 | Family | Current API | Code / bound |
 |---|---|---|
-| Journey v2 | `BalancedCatalog.get(1..1000)` | G, 1–1,000 |
-| Remix v2 | `BalancedCatalog.remix(1..240)` | H, 1–240 |
+| Journey v2 | `BalancedCatalog.getV2(1..1000)` | G, 1–1,000 |
+| Remix v2 | `BalancedCatalog.remixV2(1..240)` | H, 1–240 |
 | Previous balanced Journey / Remix | `BalancedCatalog.legacyGet(1..240)` / `.legacyRemix(1..240)` | B / Q, unchanged |
 | Original Journey / Remix | `LevelCatalog.get(1..240)` / `.remix(1..240)` | C / R, unchanged |
 | Existing event seed | `LevelCatalog.event(long)` | E, nonnegative Java `long` |
 | Sealed passages prototypes | `SealedCatalog.get(1..6)` | P, 1–6 |
 
-All families use the canonical `LD1-<family>-<base36 value>-<CRC32>` structure. New encoders are `encodeBalancedV2()`, `encodeBalancedRemixV2()` and `encodeSealed()`. Reusing B/Q or C/R for new layouts would break shared challenges, so those routes remain frozen. Valid old active content-2/policy-1 sessions keep their board and allowance; new runs select content 3/policy 2. Earned progress remains at numbered slots. [Current compatibility and installed upgrade evidence](RELEASE_1_5.md).
+All families use the canonical `LD1-<family>-<base36 value>-<CRC32>` structure. The 1.5 encoders are `encodeBalancedV2()`, `encodeBalancedRemixV2()` and `encodeSealed()`; 1.6 adds `encodeBalancedV3()` / `encodeBalancedRemixV3()` for J/K. Reusing an old family for new layouts would break shared challenges, so historical routes remain frozen. In the preserved 1.5 artifact, valid old content-2/policy-1 sessions keep their board and allowance, and fresh runs select content 3/policy 2. [Historical installed upgrade evidence](RELEASE_1_5.md).
 
-The G/H fixtures are generated and analyzed offline, stored in `ProgressionV2Layouts`, and parsed/cached lazily. Runtime play does not generate or rebalance them. All have exact certified solutions, fixed N+2…4 allowances, and measured risky ordering choices after the introduction. The [current audit](data/progression-v2-summary.md) checks layout uniqueness under rotation/reflection/translation and reports exact legal-choice and seeded blind-tap baselines, without treating them as human difficulty ratings.
+The preserved G/H fixtures are generated and analyzed offline, stored in `ProgressionV2Layouts`, and parsed/cached lazily. Runtime play does not generate or rebalance them. All have exact certified solutions, fixed N+2…4 allowances, and measured risky ordering choices after the introduction. The [V2 audit](data/progression-v2-summary.md) checks layout uniqueness under rotation/reflection/translation and reports exact legal-choice and seeded blind-tap baselines, without treating them as human difficulty ratings.
 
-`Level.barriers` adds immutable `Barrier(row, col, keyTileId)` definitions. An active wall blocks an exit ray until its matching key leaves; restoring the key closes it again. Both Board and the exact solver derive this from remaining pieces. P1–P6 contain 1–2 fixed cells and 4–7 pieces, remain separate from the 1,240 progression boards, and run as unlimited/no-reward practice without powers. [Exact/oracle tests](validation/v1.5/sealed-tests.txt) · [Installed key/Undo/restoration checks](validation/v1.5/sealed-ui.txt).
+`Level.barriers` adds immutable `Barrier(row, col, keyTileId)` definitions. An active wall blocks an exit ray until its matching key leaves; restoring the key closes it again. Both Board and the exact solver derive this from remaining pieces. P1–P6 contain 1–2 fixed cells and 4–7 pieces and run as unlimited/no-reward practice without powers. The P pack remains separate; current J/K content adds its own explicitly versioned seals while G/H stays wall-free. [Historical P oracle tests](validation/v1.5/sealed-tests.txt) · [Historical installed P checks](validation/v1.5/sealed-ui.txt).
 
 ## Historical v1.1 design and protocol evidence
 

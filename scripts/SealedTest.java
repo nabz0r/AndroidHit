@@ -123,9 +123,9 @@ public final class SealedTest {
         for(int number=1;number<=240;number++) {
             check(LevelCatalog.get(number).barriers.isEmpty()&&LevelCatalog.remix(number).barriers.isEmpty(),"C/R historical maps retain empty obstacle sets");
             check(BalancedCatalog.legacyGet(number).barriers.isEmpty()&&BalancedCatalog.legacyRemix(number).barriers.isEmpty(),"B/Q historical maps retain empty obstacle sets");
-            check(BalancedCatalog.remix(number).barriers.isEmpty(),"H progression remains independent from prototype");
+            check(BalancedCatalog.remixV2(number).barriers.isEmpty(),"H progression remains independent from prototype");
         }
-        for(int number=1;number<=1000;number++)check(BalancedCatalog.get(number).barriers.isEmpty(),"G progression remains independent from prototype");
+        for(int number=1;number<=1000;number++)check(BalancedCatalog.getV2(number).barriers.isEmpty(),"G progression remains independent from prototype");
         System.out.println("PASS "+checks+" sealed-cell checks; all 6 P boards, every piece-subset ×16 gate states, exact independent oracle, undo/history/restart, hostile definitions and isolation.");
     }
 }

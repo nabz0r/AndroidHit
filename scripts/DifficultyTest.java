@@ -229,7 +229,7 @@ public final class DifficultyTest {
                 for(int number=first;number<=last;number++) {
                     int mode=remix?3:0;
                     Level legacy=number<=240?(remix?BalancedCatalog.legacyRemix(number):BalancedCatalog.legacyGet(number)):null;
-                    Level current=remix?BalancedCatalog.remix(number):BalancedCatalog.get(number);
+                    Level current=remix?BalancedCatalog.remixV2(number):BalancedCatalog.getV2(number);
                     ChoiceMetrics old=legacy==null?null:new ChoiceMetrics(legacy),now=new ChoiceMetrics(current);
                     MoveBudget oldBudget=legacy==null?null:MoveBudget.startLegacy(mode,legacy),budget=MoveBudget.start(mode,current);
                     check(current.number==number&&current.chapter==chapter,"V2 numbering and chapters");
@@ -268,7 +268,7 @@ public final class DifficultyTest {
             report.append("\nMatched first 240 positions: exact legal-random success **").append(decimal(oldTotal/240*100)).append("% → ").append(decimal(matchedNewTotal/240*100)).append("%**; blind taps **").append(decimal(oldBlindTotal/240.0)).append("% → ").append(decimal(matchedNewBlind/240.0)).append("%**.\n\n")
                   .append("Full V2 route: **").append(total).append(" distinct layouts even after canonicalizing all eight rotations/reflections, translations, arrows, switch directions and gate states**. Mean exact legal-random success **").append(decimal(newTotal/total*100)).append("%**; blind-tap success **").append(decimal(newBlindTotal/(double)total)).append("%**.\n\n");
         }
-        report.append("Legacy attempts restore legacyGet/legacyRemix with MoveBudget.restoreLegacy and policy 1 until completion/abandonment. New attempts use get/remix and policy 2. Earned progression and inventory are not reset. G/H codes prevent historical B/Q shares from silently opening different boards. Exact model measurements do not establish player enjoyment or a calibrated human difficulty curve.\n");
+        report.append("Legacy attempts restore legacyGet/legacyRemix with MoveBudget.restoreLegacy and policy 1 until completion/abandonment. G/H attempts use getV2/remixV2 and policy 2. Earned progression and inventory are not reset. G/H codes prevent historical B/Q shares from silently opening different boards. Exact model measurements do not establish player enjoyment or a calibrated human difficulty curve.\n");
         Files.write(folder.resolve("progression-v2-audit.csv"),csv.toString().getBytes(StandardCharsets.UTF_8));
         Files.write(folder.resolve("progression-v2-summary.md"),report.toString().getBytes(StandardCharsets.UTF_8));
     }

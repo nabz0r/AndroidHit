@@ -2,7 +2,7 @@
 
 The original game source, companion drawings, interface illustrations and synthesized audio remain under the repository's [AGPL-3.0 license](../LICENSE). This does not relicense external SDKs, platform fonts or Google branding under AGPL.
 
-Stable 1.1 uses Android platform facilities and no third-party runtime library. Current 1.5 production and Lab builds include the following independently licensed components. Their licenses and transitive notices remain applicable; this table is provenance information and not a legal compatibility opinion.
+Stable 1.1 uses Android platform facilities and no third-party runtime library. Current 1.6 production and Lab builds include the following independently licensed components. Their licenses and transitive notices remain applicable; this table is provenance information and not a legal compatibility opinion.
 
 | Component | Android version | Primary terms/source |
 | --- | --- | --- |
@@ -29,3 +29,5 @@ The prepared external deletion page lazily imports Firebase Web SDK **13.1.0** f
 The Apache notices here are provenance, not a conclusion about all distribution/SDK terms or Google account approval. No server dependencies or private credentials are embedded into the Android APK.
 
 The 1.5 website/GitHub refresh adds no runtime framework, remote font or analytics package. Original vector companions and copied game captures retain their recorded source provenance; Google G remains the separate official branding asset. [Shared design and image categories](DESIGN_SYSTEM.md) · [Brand asset provenance](store/README.md).
+
+The 1.6 Android refresh adds the generated Aurora Atlas background, recorded with its exact prompt and pixel hash in [asset provenance](art/aurora-atlas-v1.json). It introduces no new runtime library. Puzzle pieces, companions and equipment remain code-drawn; no franchise artwork or audio is imported.

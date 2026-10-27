@@ -1,0 +1,36 @@
+CANDIDATE IDENTITY QA — 27 October 2026
+
+Scope: production 1.6.0-rc1 / versionCode 7 installed on emulator-5556 only.
+Installed base APK SHA-256: 69d91af4db0c22e051992dcfa7557ecbe9068598e4d1333ff5706fda3e71a965
+The same hash matched the local production release APK at QA start.
+This is scoped candidate evidence, not qualification of the later final binary.
+Root states AccountActivity/controller were frozen; later font/navigation changes are excluded.
+AVD: hexkeep-play-36, API 36, headless. No physical device or emulator-5580 used.
+
+PASS Home displayed Guest and no account name/email. Local coin display was235.
+PASS Home profile -> native Account showed Playing as a guest, enabled Sign in with Google,
+     and no Sign out / Delete account action.
+PASS Explicit Sign in with Google opened the actual Google Play services provider activity
+     com.google.android.gms/.auth.uiflows.minutemaid.MinuteMaidActivity (Checking info…).
+PASS Android Back cancelled before any account selection or credential entry.
+     Account returned to guest with enabled Google sign-in; no stuck Connecting state.
+PASS Native Back returned to Home, whose profile remained Guest with no signed-in badge.
+PASS Device Home / launcher re-entry remained Guest. This candidate returned to app Home;
+     restoration of the Account navigation stack is not claimed by this evidence.
+PASS Landscape configuration recreation preserved Guest; Google sign-in remained enabled
+     and was reachable by scrolling the native ScrollView. No signed-in actions appeared.
+PASS Original window rotation mode free was restored; portrait Account remained Guest.
+PASS Explicit force-stop / launcher recreation produced a new app process, Guest Home and
+     the unchanged local coin display235. No app data or preference reset was performed.
+PASS The complete available crash buffer contained no FATAL EXCEPTION at QA completion.
+
+Observation, non-blocking: native Account repeats Playing as a guest as heading and status.
+Landscape Account intentionally scrolls; the sign-in action is below the initial viewport.
+No application source was changed during this QA.
+
+NOT VALIDATED: successful real Google account selection, Google/Firebase server exchange,
+connected profile, real sign-out, reconnect after real token revocation, or account deletion.
+No real Google login, sign-out of an existing real account or user-account deletion was performed.
+Sign-out was unavailable in the observed guest UI; it was not forced through a hidden entry point.
+Deterministic controller tests cover these transitions separately, without authenticating a user:
+python3 scripts/test-identity-session.py — 16 scenarios /203 assertions at source freeze.

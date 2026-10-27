@@ -43,13 +43,13 @@ if match:
     except ValueError:
         pass
 if not origin_valid:
-    blocked.append('Wallet service is not deployed/configured in this build; checkout remains blocked.')
+    blocked.append('Wallet origin is empty in this build; checkout remains blocked. Server deployment is a separate milestone.')
 milestones = {
-    'google_identity_and_deletion': 'Google login and deletion need actual account/device qualification; client IDs alone do not prove login.',
-    'play_license_purchases': 'Play products, merchant profile, signing certificate and license-test purchase lifecycle need owner-console evidence.',
-    'wallet_deployment_and_recovery': 'Cloud wallet needs deployed Firestore/IAM, recovery/refund/RTDN qualification and operational monitoring.',
-    'public_privacy_and_deletion': 'Public support/publisher details, hosted privacy/deletion resources, Web Firebase configuration and authorized domain remain to configure.',
-    'admob_and_store_approval': 'AdMob app-ads.txt, consent messages, app/account approval and store declarations remain owner milestones.',
+    'google_identity_and_deletion': 'This configuration check has no supplied record of actual Google login/deletion qualification; client IDs alone do not prove it.',
+    'play_license_purchases': 'Supply qualification evidence for Play products, merchant profile, signing identity and license-test purchase lifecycle.',
+    'wallet_deployment_and_recovery': 'Supply deployment and recovery/refund/RTDN qualification evidence for the cloud wallet; absence here does not mean no server has been deployed.',
+    'public_privacy_and_deletion': 'Supply the public privacy/deletion qualification record; this script does not inspect hosting or infer that an existing deployment is absent.',
+    'admob_and_store_approval': 'Supply console qualification evidence for AdMob consent, app/account approval, app-ads.txt and store declarations.',
 }
 manual = json.loads(Path(args.evidence).read_text()) if args.evidence else {}
 manual_checks = {}

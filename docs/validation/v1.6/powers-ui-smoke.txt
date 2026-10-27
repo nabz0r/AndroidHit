@@ -1,0 +1,45 @@
+LAB 1.6 POWERS UI — UNION OF SCOPED RUNS
+Installed package com.androidhit.lumadrift.sandbox, version1.6.0-sandbox/code7, API36 emulator-5556.
+Installed APK SHA256: 0f8d7c04df45331b844b276c8149d9c276e8687f190c2cc7d2e1e236fbaa1a45
+Engine source SHA256: 87ec0b71a9648e8e9bfbe687c125e138de53f924a2e32ed603f9b9c1149f385f
+
+All eight requested case groups plus rotation passed their complete product assertions on this same APK.
+This is an explicit union of completed case sections, not a claim that one uninterrupted full run passed.
+The first two contributing invocations later stopped on test-harness selector/preference-read errors.
+Those failures and their completed PASS sections remain unchanged in their original reports.
+Only the new QA script changed: scroll/card selectors, bounded transient XML-read retries, and rotation coverage.
+No application source or APK changed during these runs.
+
+PASS hint — powers-starfold-selector-failure.txt
+  PASS Spark: opening/cancelling costs0; confirmed effect costs1; active reactivation costs0; recreation costs0.
+PASS flow — powers-starfold-selector-failure.txt
+  PASS Flow pause: observed 2 initial exits; no exit while frozen; resume exactly1; total3 actions and1 item; no stale callback.
+  PASS Flow help: observed 2 initial exits; no exit while frozen; resume exactly1; total3 actions and1 item; no stale callback.
+  PASS Flow recreate: observed 1 initial exits; no exit while frozen; resume exactly2; total3 actions and1 item; no stale callback.
+PASS shield — powers-starfold-selector-failure.txt
+  PASS Shield3 + charm1: four protected blocks; fifth costs1 action; recreation preserves Shield1/charm1; reactivation spends0; Shield stock−1 total.
+PASS finish — powers-starfold-selector-failure.txt
+  PASS final-piece Flow: real victory once, one charge, inactive saved run, no reward/debit replay after recreation.
+PASS journey — powers-starfold-selector-failure.txt
+  PASS Journey1000: zone34 shows only991..1000; final arrow capped; certified actual UI solution wins3 stars; victory Next cannot create1001.
+PASS gear — powers-pref-read-failure.txt
+  PASS equipment SOFT purchase: Starfold preview/Close costs0; confirm exactly600 synthetic earnedcoins; one ownership/equippedHEAD; no duplicate offer/debit; recreated intact. No IAP involved.
+PASS effects — powers-effects-keys-ui-smoke.txt
+  PASS Vision: actual activation, Active UI, bounded saved duration; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.
+  PASS Focus: actual activation, Active UI, bounded saved duration and nonempty visible targets; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.
+  PASS Trail: actual activation, Active UI, bounded saved duration and nonempty visible targets; active reactivation spends 0; pause/HOME/process recreation preserves effect; total stock debit 1 and coin debit 0.
+PASS keys — powers-effects-keys-ui-smoke.txt
+  PASS actual Journey12: real wall/key UI; key opens seals, Undo restores, replay reopens; certified completion within fixed budget, no power or continuation.
+PASS rotation — powers-rotation-ui-smoke.txt
+  PASS actual rotation with Flow pause: overlay preserved in landscape and after return; 2 initial exits frozen; explicit resume exactly1; total3 exits/actions,1 item, no stale callback.
+  PASS actual rotation with Flow help: overlay preserved in landscape and after return; 2 initial exits frozen; explicit resume exactly1; total3 exits/actions,1 item, no stale callback.
+
+PASS every contributing run restored all3 original Lab preference files byte for byte;
+newly created preference files were removed and Lab was left stopped.
+PASS original native window animation1.0 and rotation mode free restored.
+PASS final available emulator crash buffer contains no FATAL EXCEPTION or Fatal signal.
+
+Profiles disclose synthetic Journey access (31/75/1000/12 as needed),10000 local coins,
+six charges per power and Moon Seed charm. This is not earned progression or purchase evidence.
+No real payment, advertisement, Google login, production-package change or physical device was used.
+Machine-readable coverage, report hashes and restoration details: powers-union.json.
