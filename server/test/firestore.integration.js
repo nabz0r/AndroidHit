@@ -30,3 +30,11 @@ test('Firestore rules deny unauthenticated direct reads and writes, including pr
   }
 });
 test.after(async()=>{await db.terminate();});
+test('Firestore social transactions enforce mutual acceptance and atomic per-day gifts across service instances',async()=>{
+ const store=new FirestoreStore(db),f=fixture({store}),other=fixture({store:new FirestoreStore(db)}),s=f.service.social,t=other.service.social;
+ const a='firestore-social-a',b='firestore-social-b',ac=(await s.snapshot(a)).me.code,bc=(await t.snapshot(b)).me.code;
+ await Promise.all(Array.from({length:8},(_,i)=>(i%2?s:t).request(a,bc,'firestore-invite')));await t.respond(b,ac,true,'firestore-accept');
+ const sent=await Promise.all(Array.from({length:12},(_,i)=>(i%2?s:t).gift(a,bc,`firestore-gift-${i}`)));assert.equal(new Set(sent.map(x=>x.giftId)).size,1);assert.equal((await t.snapshot(b)).gifts.length,1);assert.equal((await s.snapshot(a)).limits.giftsRemaining,2);
+ const claimed=await Promise.all(Array.from({length:8},(_,i)=>(i%2?s:t).claim(b,sent[0].giftId,`firestore-claim-${i}`)));assert.ok(claimed.every(x=>x.grant.id===sent[0].giftId));
+ await f.service.deleteAccount(a,f.now()/1000);assert.equal((await t.snapshot(b)).friends.length,0);assert.equal((await t.snapshot(b)).gifts.length,0);assert.equal(await store.read(`socialCodes/${ac}`),undefined);
+});

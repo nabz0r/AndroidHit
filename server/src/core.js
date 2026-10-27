@@ -1,5 +1,7 @@
 import { createHash, timingSafeEqual, randomUUID } from 'node:crypto';
 import { PRODUCTS, SKUS } from './catalog.js';
+import { SocialService } from './social.js';
+import { CosmeticService } from './cosmetic.js';
 
 export class AppError extends Error {
   constructor(status, code, message = code) { super(message); this.status = status; this.code = code; }
@@ -53,9 +55,10 @@ function snapshotPurchase(raw, productId, uidHash) {
 
 /** All value mutations use one store transaction; provider calls never run in it. */
 export class WalletService {
-  constructor({ store, play, identity, packageName, now = Date.now, retentionDays = 365, allowTestPurchases = true, batchSize = 100, consumablesEnabled = false }) {
+  constructor({ store, play, identity, packageName, now = Date.now, retentionDays = 365, allowTestPurchases = true, batchSize = 100, consumablesEnabled = false, paidCosmeticDrawsEnabled = false }) {
     if (!/^[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*){2,}$/u.test(packageName || '')) throw new Error('Valid production packageName required');
     if (!Number.isInteger(retentionDays) || retentionDays < 30 || retentionDays > 3650) throw new Error('retentionDays must be 30..3650');
+    this.social=new SocialService({store,now});this.cosmetic=new CosmeticService({store,now,enabled:paidCosmeticDrawsEnabled});
     this.store=store; this.play=play; this.identity=identity; this.packageName=packageName; this.now=now; this.retentionMs=retentionDays*86400000; this.allowTestPurchases=allowTestPurchases; this.batchSize=batchSize;this.consumablesEnabled=consumablesEnabled;
   }
   async getWallet(uid) {
@@ -286,6 +289,7 @@ export class WalletService {
   }
   async finishDeletion(uid) {
     const owner=ownerOf(uid),wk=walletKey(uid),dk=deletionKey(uid),now=this.now();
+    await this.social.deleteOwner(uid);
     try { await this.identity.deleteUser(uid); } catch(error) { if(error.code!=='auth/user-not-found') {await this.retryLater(dk,'nextAttemptAtMs');throw new AppError(503,'DELETION_RETRY_PENDING');} }
     // Redact each purchase and erase each request before marking complete. A
     // crash leaves the durable job in PENDING for the maintenance worker.
@@ -330,6 +334,7 @@ export class WalletService {
     }
     // Overlap a full 30-day window, including quantity-based refunds. The
     // refund ledger makes replay and overlapping schedules harmless.
+    await this.social.maintenance(this.batchSize);
     results.reconciled+=await this.reconcileVoided();
     for(const collection of ['purchases','wallets','deletions','notifications','rateLimits']) {
       const docs=await this.store.find(collection,{field:'expiresAtMs',op:'<=',value:this.now(),limit:this.batchSize});

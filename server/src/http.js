@@ -68,15 +68,30 @@ export function createHttpServer({ service, auth, internalAuth, store, allowedOr
         await internalAuth.verify(bearer(req),'scheduler');exactObject(await readBody(req),[]);
         send(res,200,await service.maintenance());return;
       }
-      const supported=(['/v1/wallet','/v1/inventory'].includes(path)&&req.method==='GET')||(['/v1/purchases/verify','/v1/wallet/spend','/v1/inventory/use'].includes(path)&&req.method==='POST')||(path==='/v1/account'&&req.method==='DELETE');
+      const socialGet=path==='/v1/social'&&req.method==='GET';
+      const socialAction=req.method==='POST'&&['profile','request','respond','remove','gift','claim'].some(action=>path===`/v1/social/${action}`);
+      const cosmeticCatalog=path==='/v1/wallet/cosmetic-catalog'&&req.method==='GET';
+      const cosmeticDraw=path==='/v1/wallet/cosmetic-draw'&&req.method==='POST';
+      const supported=socialGet||socialAction||cosmeticCatalog||cosmeticDraw||(['/v1/wallet','/v1/inventory'].includes(path)&&req.method==='GET')||(['/v1/purchases/verify','/v1/wallet/spend','/v1/inventory/use'].includes(path)&&req.method==='POST')||(path==='/v1/account'&&req.method==='DELETE');
       if(!supported)throw new AppError(404,'NOT_FOUND');
       let claims;
       try{claims=await auth.verifyIdToken(bearer(req),true);}catch(error){if(error instanceof AppError)throw error;throw new AppError(401,'UNAUTHENTICATED');}
       const uid=validateUid(claims.uid);
       if(claims.firebase?.sign_in_provider!=='google.com')throw new AppError(403,'GOOGLE_LOGIN_REQUIRED');
       await enforceUserRate(store,hash(uid),now(),userLimit);
+      if(socialGet){send(res,200,await service.social.snapshot(uid));return;}
+      if(cosmeticCatalog){send(res,200,await service.cosmetic.catalog(uid));return;}
       if(req.method==='GET'){send(res,200,await service.getWallet(uid));return;}
       const body=await readBody(req);
+      if(cosmeticDraw){exactObject(body,['requestId']);send(res,200,await service.cosmetic.draw(uid,body.requestId));return;}
+      if(socialAction){
+        const action=path.split('/').pop();let result;
+        if(action==='profile'){exactObject(body,['nickname','avatar','level','shareProgress']);result=await service.social.profile(uid,body);}
+        else if(action==='respond'){exactObject(body,['code','accept','requestId']);result=await service.social.respond(uid,body.code,body.accept,body.requestId);}
+        else if(action==='claim'){exactObject(body,['giftId','requestId']);result=await service.social.claim(uid,body.giftId,body.requestId);}
+        else{exactObject(body,['code','requestId']);result=await service.social[action](uid,body.code,body.requestId);}
+        send(res,200,result);return;
+      }
       if(path==='/v1/account'){exactObject(body,[]);send(res,200,await service.deleteAccount(uid,claims.auth_time));return;}
       if(path==='/v1/purchases/verify'){exactObject(body,['productId','purchaseToken']);send(res,200,await service.verifyPurchase(uid,body.productId,body.purchaseToken));return;}
       exactObject(body,['requestId','sku']);

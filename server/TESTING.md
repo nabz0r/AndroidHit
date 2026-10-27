@@ -61,3 +61,7 @@ Do not set the owner's project ID or credentials for this suite. The production 
 ## Remaining deployment evidence
 
 Follow [the production acceptance gate](DEPLOYMENT.md#6-internal-track-acceptance-gate-before-real-sales): real owner Firebase Google authentication, Play license-test approved/declined/pending cases, server consumption, restart/reinstall/two-device restoration, refunds/RTDN, authenticated Scheduler, direct database denials, account deletion and operational alerting. Record measured latency/traffic against the actual deployment before describing it as production load-tested. No physical phone or Google merchant checkout was used for these server tests.
+
+## 1.7 social and closed premium-draw follow-up
+
+The expanded suite passes **62 tests under Node 24.22.1**, and the real local Firestore emulator passes **3 integration/rules tests**. [Current records and scope](validation/social-v1.7/README.md) include raw output, finite gift replay/concurrency, opt-in map privacy, mutual deletion cleanup, closed premium draws and actual conditional odds. These local results do not qualify production Google login, provider accounts, live gift delivery or real-money products. Earlier 42/43-case records above remain historical evidence.

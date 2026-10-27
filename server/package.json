@@ -10,7 +10,7 @@
     "start": "node src/main.js",
     "test": "node --test --test-concurrency=1 test/*.test.js",
     "test:firestore": "npx --yes firebase-tools@15.34.1 emulators:exec --project demo-luma-wallet --only firestore --config firebase.json 'node --test test/firestore.integration.js'",
-    "check": "node --check src/main.js && node --check src/core.js && node --check src/http.js && node --check src/production.js"
+    "check": "node --check src/main.js && node --check src/core.js && node --check src/http.js && node --check src/production.js && node --check src/social.js && node --check src/cosmetic.js"
   },
   "dependencies": {
     "firebase-admin": "14.5.0",

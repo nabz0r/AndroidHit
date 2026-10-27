@@ -117,3 +117,23 @@ test('disconnecting clients cannot release in-flight slots while authentication 
   }finally{blocking=false;for(const resolve of pending)resolve();await new Promise(resolve=>setImmediate(resolve));}
   assert.equal((await f.request('/v1/wallet')).status,200);
 });
+test('HTTP social endpoints require Google auth, exact schemas and never accept client gift rewards',async t=>{
+ const f=await start(t),social=await f.request('/v1/social');assert.equal(social.status,200);assert.equal(social.body.me.shareProgress,false);
+ const profile=await f.request('/v1/social/profile',{nickname:'Nova',avatar:'nova',level:1200,shareProgress:true});assert.equal(profile.status,200);assert.equal(profile.body.me.level,1000);
+ for(const [path,body]of [['/v1/social/gift',{code:social.body.me.code,requestId:'gift-fake-01',amount:500}],['/v1/social/profile',{nickname:'Nova',avatar:'nova',level:1,shareProgress:true,email:'private@example.com'}],['/v1/social/claim',{giftId:'f'.repeat(64),requestId:'claim-fake-1',reward:{amount:999}}]]){const result=await f.request(path,body);assert.equal(result.status,400);assert.equal(result.body.error.code,'INVALID_BODY');}
+ assert.equal((await f.request('/v1/social',undefined,{headers:{}})).status,401);assert.equal((await f.request('/v1/social/requests')).status,404);
+ const paid=await f.request('/v1/wallet/cosmetic-catalog');assert.equal(paid.status,200);assert.equal(paid.body.enabled,false);assert.equal(paid.body.items.length,24);
+ const blocked=await f.request('/v1/wallet/cosmetic-draw',{requestId:'draw-blocked-1'});assert.equal(blocked.status,403);assert.equal(blocked.body.error.code,'PAID_COSMETIC_DRAWS_DISABLED');
+ const fakeprice=await f.request('/v1/wallet/cosmetic-draw',{requestId:'draw-blocked-1',price:0});assert.equal(fakeprice.status,400);
+});
+test('HTTP social two identities complete accepted friendship and gifts without exposing Firebase identifiers',async t=>{
+ const shared=fixture();const a=await start(t,{fixture:shared}),b=await start(t,{fixture:shared,claims:{uid:'http-social-peer'}});
+ const ac=(await a.request('/v1/social')).body.me.code,bc=(await b.request('/v1/social')).body.me.code;
+ assert.equal((await a.request('/v1/social/request',{code:bc,requestId:'http-invite-1'})).status,200);
+ assert.equal((await b.request('/v1/social/respond',{code:ac,accept:true,requestId:'http-accept-1'})).status,200);
+ await b.request('/v1/social/profile',{nickname:'Mochi',avatar:'mochi',level:13,shareProgress:true});
+ const list=await a.request('/v1/social');assert.equal(list.body.friends[0].level,13);assert.ok(!JSON.stringify(list.body).includes('http-social-peer'));
+ const sent=await a.request('/v1/social/gift',{code:bc,requestId:'http-gift-1'});assert.equal(sent.status,200);
+ const claim=await b.request('/v1/social/claim',{giftId:sent.body.giftId,requestId:'http-claim-1'});assert.deepEqual(claim.body.grant,{id:sent.body.giftId,kind:'power',itemId:'hint',amount:1});
+ await b.request('/v1/account',undefined,{method:'DELETE'});assert.equal((await a.request('/v1/social')).body.friends.length,0);
+});
