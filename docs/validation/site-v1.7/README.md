@@ -1,6 +1,6 @@
-# Website 1.7 — local qualification, Hosting pending
+# Website 1.7 — local qualification and Hosting delivery
 
-**27 October 2026.** The existing Firebase site’s 1.7 source and localhost browser checks pass. **Hosting publication of this revision is not yet claimed.** The [preserved 1.6 deployment](../site-v1.6/README.md) remains a separate record. No public Firebase-origin request or served-byte comparison was performed for this revision.
+**27 October 2026.** The existing Firebase site’s 1.7 source and localhost browser checks pass. **Firebase publication completed from the clean, pinned main source commit `4c5f5ca8bc5f74173e283377275bb352c76534c7`, after all 47 payload hashes matched the frozen manifest.** The [preserved 1.6 deployment](../site-v1.6/README.md) remains a separate record. No public Firebase-origin request or served-byte comparison was performed for this revision.
 
 ## Exact source and imagery
 
@@ -28,4 +28,4 @@ Run `python3 scripts/check-site-v17.py` and `node --test public/tests/deletion-c
 
 The 1.7 source describes the continuous map, exact safe hints/dead-end recovery, four-slot wardrobe, seven-visit gift cycle, quests, separate currencies and disclosed earned-capsule odds. Prepared premium draws remain closed by independent APK/server gates. Account-new ownership and local-earned ownership are distinct.
 
-Server deployment, authenticated two-account social/catalogue behavior and Hosting publication are separate records. This local website acceptance establishes none of real Google authentication/deletion, friend exchange, paid draws, live ads, real checkout, Play approval, full accessibility, native-speaker review or retention. A later Firebase completion must record its exact source commit and frozen payload manifest before this revision is described as published.
+[Cloud Run deployment](../v1.7/cloud-run.json), authenticated two-account social/catalogue behavior and Hosting delivery have separate scopes. This local website acceptance establishes none of real Google authentication/deletion, friend exchange, paid draws, live ads, real checkout, Play approval, full accessibility, native-speaker review or retention. The [delivery record](delivery.json) and [selected live-channel metadata](firebase-live-release.json) identify Firebase version `aba1c303230c8c17`, finalized and released at `2026-10-27T13:13:34.246Z`. The [CLI completion capture](../../screenshots/site-v1.7/firebase-deploy-complete.png) records the source commit, completion and Hosting URL. No public Firebase-origin request or served-byte comparison was performed.

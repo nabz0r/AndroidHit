@@ -7,7 +7,7 @@
 - Full scrollable journey, ten biome arrangements, original avatar/power art and six-language native social/vault UI.
 - Server social/cosmetic source and tests published on main at `23a196451a58fbdbbdecca72f3880dcb089f3c12`; live rollout recorded separately.
 - Final four artifacts built/signed/linted; binary verification passed. Final Lab 72 installed assertions/41 PNGs and production 7 launch/audio assertions passed on API36/16KB, with exact preference restoration.
-- FR/EN website and documentation updated from genuine final Lab captures. Browser review and deployment/publication records are being completed.
+- FR/EN website and documentation updated from genuine final Lab captures. The 18-view local browser review passed. All four public artifact downloads match their final hashes; matching Hosting source from `4c5f5ca8bc5f74173e283377275bb352c76534c7` is published as Firebase version `aba1c303230c8c17`. Cloud Run revision `luma-wallet-00005-pps` is deployed, with health200/private unauthenticated401 and paid drawsfalse. See scoped delivery records.
 
 [Evidence and limits](docs/validation/v1.7/README.md). No claim of real purchases, live ads, two-account friendship acceptance, physical-device enjoyment, retention or revenue.
 

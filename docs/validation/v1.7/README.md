@@ -34,3 +34,9 @@ Hosting and Cloud Run deployment, real two-account exchanges, actual Google succ
 ## Executed server deployment
 
 The existing Cloud Run service was updated from main commit `23a196451a58fbdbbdecca72f3880dcb089f3c12`, exact server tree `83e1699aadaf7be279c8e8b1171cdb4ef99007be`. Revision `luma-wallet-00005-pps` serves 100% of traffic under the same managed identity, with maximum three instances and `PAID_COSMETIC_DRAWS_ENABLED=false`. Health returns 200; unauthenticated social and cosmetic-catalog requests return 401. [Observed management/probe record](cloud-run.json). No two-real-account friendship exchange or payment acceptance is inferred.
+
+## Published artifacts and website
+
+[Four independent public HTTPS downloads](publication.json) match the tested APK/AAB hashes and byte sizes. Main release source commit `4c5f5ca8bc5f74173e283377275bb352c76534c7` has exact tree `937609296309afc56247e581745a3456bbd15905`. [Source freeze after native SDK checks](source-freeze-final.txt).
+
+The matching [website delivery](../site-v1.7/delivery.json) completed from that clean source and its verified 47-payload manifest; Firebase management confirms live version `aba1c303230c8c17`. Browser checks used localhost. No public Firebase-origin byte/rendering comparison was performed. Real provider/player acceptance remains open.

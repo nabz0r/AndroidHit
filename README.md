@@ -2,7 +2,9 @@
 <p align="center"><strong>A small light. A clever escape.</strong><br>An Android puzzle about arrows, gates, keys and the order of your moves.</p>
 <p align="center"><a href="https://luma-drift-production.web.app/"><strong>Public website</strong></a> · <a href="docs/RELEASE_1_7.md"><strong>1.7 candidate & evidence</strong></a> · <a href="docs/README.md"><strong>Documentation</strong></a><br><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.7.0-rc1.apk">Download signed Android APK · 1.7.0-rc1</a> · <a href="docs/RELEASE.md">Install & verify</a></p>
 <p align="center">1,000 Journey levels · 240 Remix · 24 companions<br>24 four-slot wardrobe cosmetics · 18 separate equipment items · 6 languages</p>
-<p align="center"><sub>Signed 1.7.0-rc1 / code 8 · 5.59 MB. Installed Android checks, service rollout and website publication are qualified separately. Earlier release bytes and evidence are preserved.</sub></p>
+<p align="center"><sub>Published signed 1.7.0-rc1 / code 8 · 5.59 MB. Final Lab/production emulator checks and basic server deployment checks pass. The 1.7 website is published on Firebase Hosting; real two-account/commercial acceptance remains open.</sub></p>
+
+Source and all four APK/AAB artifacts were published on main at [4c5f5ca8](https://github.com/nabz0r/AndroidHit/commit/4c5f5ca8bc5f74173e283377275bb352c76534c7). [Independent public-download checks](docs/validation/v1.7/publication.json) confirm HTTP 200, exact sizes and SHA-256 for every file. Final native runs pass **38 Lab menu**, **34 Lab gameplay** and **7 production startup** assertions, with original preferences restored; [their record](docs/validation/v1.7/SDK_UI_FINAL.md) distinguishes actual J13 play and digital audio from real accounts/payments.
 
 ## A puzzle can be solvable and your current route can be closed
 
@@ -22,7 +24,7 @@ The 1.7 candidate combines a continuously scrollable **1–1,000 Journey map**, 
 - **Return at your pace:** seven claimed visits give 40/50/60/70/80/100/150 LumaCoins, then repeat. Missing days never resets the cycle. Daily and weekly quests have different targets and once-per-period claims.
 - **Understand the two wallets:** LumaCoins are earned and stored locally. LumaGold belongs to the separate premium account wallet. Neither balance is automatically converted into the other.
 - **Choose a cosmetic capsule:** 150 earned LumaCoins, common/rare/epic odds of 60%/30%/10%, individual odds and duplicate compensation shown before spending. This local capsule never spends LumaGold. The native premium account catalogue is prepared, with both APK and server draw gates closed.
-- **Friends and limited gifts:** authenticated backend/client source prepares mutual friendships, opt-in shared progress and one-hint gifts with limits. Deployment and real two-account acceptance are separate gates; the interface must expose an unavailable service honestly.
+- **Friends and limited gifts:** authenticated backend/client source implements mutual friendships, opt-in shared progress and one-hint gifts with limits. The [server deployment](docs/validation/v1.7/cloud-run.json) passes health/unauthenticated-gate probes; real two-account acceptance remains open.
 
 Six powers, three daily and seven weekly event boards, original companion silhouettes, six themes, optional sign-in, local save/resume and the existing three-slot equipment are retained. [Rewards, wardrobe, odds and persistence](docs/ECONOMY_1_7.md) · [Existing equipment](docs/AVATAR_EQUIPMENT.md).
 
@@ -38,7 +40,7 @@ The prepared account vault shows its own authenticated ownership and conditional
 
 Historical C/R, B/Q, G/H, J/K, P and event codes keep their original layouts. The 1.7 diagnostic changes neither the frozen route nor its fixed N+3–5 initial budgets. Free restart remains available; fixed content and margins do not react to spending, ads, losses or account status.
 
-Existing stars, unlocks, companions, skins, powers, earned balance and equipment remain in their existing saves. New wardrobe, reward and receipt keys use separate versioned namespaces. Google sign-in does not provide a gameplay cloud save. Shared friend positions, when the prepared service is deployed and consented to, are social snapshots rather than an authoritative cross-device progression save.
+Existing stars, unlocks, companions, skins, powers, earned balance and equipment remain in their existing saves. New wardrobe, reward and receipt keys use separate versioned namespaces. Google sign-in does not provide a gameplay cloud save. Shared friend positions, when actually returned by the deployed service and consented to, are social snapshots rather than an authoritative cross-device progression save.
 
 [Content compatibility](docs/PROGRESSION_V3.md) · [1.7 qualification directory](docs/validation/v1.7/README.md) · [Preserved actual 1.5→1.6 upgrade](docs/validation/v1.6/upgrade-api26.json).
 
@@ -54,13 +56,13 @@ These are unedited captures from the **final Lab 1.7 APK**, `d7fea345…`, on AP
 
 [Illustrated tour](docs/VISUAL_GUIDE.md) · [Art and audio](docs/ART_AUDIO.md) · [Design system](docs/DESIGN_SYSTEM.md) · [Atlas provenance](docs/art/aurora-atlas-v1.json).
 
-The [1.7 website qualification](docs/validation/site-v1.7/README.md) passes 2,219 offline checks and 18 local FR/EN browser views at measured CSS widths 320/390/1366, with actual Lab captures and the correct APK route. Hosting publication is the next separate delivery step; the [preserved 1.6 Hosting record](docs/validation/site-v1.6/README.md) is not reused as 1.7 evidence.
+The [1.7 website qualification](docs/validation/site-v1.7/README.md) passes 2,219 offline checks and 18 local FR/EN browser views at measured CSS widths 320/390/1366, with actual Lab captures and the correct APK route. Firebase confirms Hosting publication from exact source `4c5f5ca8bc5f74173e283377275bb352c76534c7`, after all 47 payloads matched the frozen manifest. Its delivery record separates CLI/management evidence from the unperformed public-origin byte comparison; the [preserved 1.6 record](docs/validation/site-v1.6/README.md) retains its own scope.
 
 ## Identity, privacy and commercial boundaries
 
 Guest play remains available. Google session snapshots distinguish refreshing, connected, reconnect-required and error states, with guards against late callbacks after account changes. A configured provider or provider-sheet cancellation is not successful real authentication.
 
-Default production settings force sample ads and keep real checkout gated. Purchased LumaGold is account-bound server currency; editable local saves cannot authorize it. Real Google success, installed consent choices, ad readiness, Play license-test purchase/refund/recovery, server rollout and public-store approval require their own qualification. No commercial activation, measured revenue or retention improvement is claimed.
+Default production settings force sample ads and keep real checkout gated. Purchased LumaGold is account-bound server currency; editable local saves cannot authorize it. Real Google success, installed consent choices, ad readiness, Play license-test purchase/refund/recovery, authenticated post-deployment operations and public-store approval require their own qualification. No commercial activation, measured revenue or retention improvement is claimed.
 
 There is no Firebase Analytics gameplay tracking. The optional play journal stays local unless the player explicitly exports it. Opt-in friend progress is a separately disclosed social data flow. [Privacy](docs/PRIVACY.md) · [Production activation, in French](docs/DEPLOIEMENT_PAS_A_PAS.md) · [Server](server/README.md).
 

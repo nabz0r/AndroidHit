@@ -1,6 +1,6 @@
 # Luma Drift 1.7 — route recovery and a dressed-up journey
 
-**27 October 2026 · declared production `1.7.0-rc1` / Lab `1.7.0-sandbox` · code 8 · candidate under qualification**
+**27 October 2026 · published signed production `1.7.0-rc1` / Lab `1.7.0-sandbox` · code 8 · candidate under qualification**
 
 The new source adds exact dead-end guidance, a scrollable journey, separate currencies, a visual wardrobe and a return loop that does not punish absence. This document distinguishes implemented behavior from final package, installed UI, service deployment and commercial acceptance. The [1.7 evidence directory](validation/v1.7/README.md) owns the executed record. Preserved [1.6 artifacts and tests](RELEASE_1_6.md) keep their original identities and limits.
 
@@ -16,6 +16,8 @@ The production and isolated Lab release APK/AAB files are packaged at code 8. Th
 | [Lab AAB](../releases/luma-drift-1.7.0-sandbox.aab) | 8,941,491 | `2e6f8412e42979b00238689134abd335b10fc040780d6f36b6085fed37a757c8` |
 
 Both package manifests declare sample ads, the paid cosmetic draw gate false, an empty real-billing wallet origin and a configured social/catalogue origin, with `live_services_validated: false`. A configured origin is not deployed-route or provider acceptance.
+
+Source/artifacts were published at [main 4c5f5ca8](https://github.com/nabz0r/AndroidHit/commit/4c5f5ca8bc5f74173e283377275bb352c76534c7), tree `937609296309afc56247e581745a3456bbd15905`. [Independent public raw-download verification](validation/v1.7/publication.json) records HTTP 200 and exact byte/hash matches for all four APK/AAB files. This establishes repository delivery, not Play approval.
 
 ## The level-13 question
 
@@ -66,10 +68,10 @@ The run uses an actual guest qualification session without preference injection;
 
 ## Package, deployment and acceptance gates
 
-Final APK/AAB hashes, signature/alignment checks, installed screenshots and Android scenarios must be associated with the exact new artifact in [1.7 qualification](validation/v1.7/README.md) and [Install & verify](RELEASE.md). No 1.6 binary or screenshot is relabelled as a 1.7 result.
+Final APK/AAB identities, signature/alignment checks, native screenshots and Android scenarios are associated with their exact artifacts in [1.7 qualification](validation/v1.7/README.md) and [Install & verify](RELEASE.md). No 1.6 binary or screenshot is relabelled as a 1.7 result.
 
-The social endpoint configured in an app does not establish that the deployed server has the new routes. Mutual requests, two real authenticated accounts, privacy opt-in, account switching, limits and receipt recovery require their own scoped integration/deployment record. A friend position is a shared snapshot, not cloud progression. Real Google login remains independent of cached session/controller tests.
+[Cloud Run revision `luma-wallet-00005-pps`](validation/v1.7/cloud-run.json) is deployed at 100% traffic from source `23a19645`, with paid draws false and a three-instance maximum. Recorded probes return health 200 and unauthenticated 401 on social/catalogue paths. These are deployment/basic access-gate checks: mutual requests, two real authenticated accounts, privacy opt-in, account switching, limits and receipt recovery still need their own real-account acceptance. A friend position is a shared snapshot, not cloud progression. Real Google login remains independent of cached session/controller tests.
 
 The native account vault prepares authenticated catalogue loading, account ownership, conditional odds and transaction recovery. Both APK BuildConfig and server environment draw gates remain false. An account-new cosmetic can already exist locally; no account guarantee promises a locally new item. Paid cosmetic draws remain closed and there is no active premium sale. Sample ads and existing checkout gates remain. Live ad demand, Play license-test purchase/refund/recovery, store approval and revenue are unqualified unless an explicit later record says otherwise.
 
-The [website’s local qualification](validation/site-v1.7/README.md) now passes 2,219 source assertions, 24 deletion-core tests and 18 CUA views at actual CSS widths 320/390/1366 across all three routes and FR/EN. Its eleven copied final Lab images have exact native provenance. Hosting publication remains a separate pending record; native packaging and local rendering do not publish it. [Roadmap and remaining human/device gates](ROADMAP.md).
+The [website’s local qualification](validation/site-v1.7/README.md) now passes 2,219 source assertions, 24 deletion-core tests and 18 CUA views at actual CSS widths 320/390/1366 across all three routes and FR/EN. Its eleven copied final Lab images have exact native provenance. Firebase Hosting completion now confirms publication from exact main `4c5f5ca8bc5f74173e283377275bb352c76534c7`, with all 47 payloads hash-verified before deployment. The separate delivery record uses CLI/management evidence; no public Firebase-origin byte comparison was performed. [Roadmap and remaining human/device gates](ROADMAP.md).

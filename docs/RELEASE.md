@@ -1,5 +1,28 @@
 # Installation and release artifacts
 
+**Luma Drift 1.7 · 27 October 2026 · code 8**
+
+**[Download Android APK · 1.7.0-rc1](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.7.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.7.0-rc1.aab) · [Isolated Lab APK](../releases/luma-drift-1.7.0-sandbox.apk) · [Changes](RELEASE_1_7.md) · [Executed validation](VALIDATION_1_7.md).
+
+Install the production APK over the existing Luma Drift installation to retain local progress, coins, clothing and interrupted boards. Keep the application data; uninstalling removes the local save. Lab is a separate package and its progress/currency is not transferred into production. Android 8.0 or later is required.
+
+The candidate adds exact dead-end recovery and safe hints, the continuous 1–1,000 map, seven visit rewards, daily/weekly quests, four-slot cosmetic wardrobe, earned capsules, ten original biome arrangements and the private friend-circle client/service. All 1,240 starting boards remain solvable inside their unchanged allowances. [Rules and limits](RELEASE_1_7.md).
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| [luma-drift-1.7.0-rc1.apk](../releases/luma-drift-1.7.0-rc1.apk) | 5,594,242 | `7eeaa816853533f441acfc73f4ad3f6af0fb2cbdd6fd0eae1fda3f64c388a2bf` |
+| [luma-drift-1.7.0-rc1.aab](../releases/luma-drift-1.7.0-rc1.aab) | 8,948,843 | `b5bfc1e51b272bc8046c3e79efcf95ae79814913e87d522ff6062e3f81d6ec75` |
+| [luma-drift-1.7.0-sandbox.apk](../releases/luma-drift-1.7.0-sandbox.apk) | 5,593,925 | `d7fea345c1f33cc8e114688ee06d8b60ed1278cc29eeb328c677c6c1858ba049` |
+| [luma-drift-1.7.0-sandbox.aab](../releases/luma-drift-1.7.0-sandbox.aab) | 8,941,491 | `2e6f8412e42979b00238689134abd335b10fc040780d6f36b6085fed37a757c8` |
+
+Both APKs use the existing pinned public signing identity; both AAB signatures and bundletool validation pass. ZIP/native ELF 16KB alignment passes. Final Lab and production were actually installed on API36 arm64 with a 16,384-byte page kernel. Lab passes 72 UI/gameplay checks; production passes 7 startup/audio observations. [Binary/signature record](validation/v1.7/binary-final-candidate.json) · [Native SDK record](validation/v1.7/SDK_UI_FINAL.md) · [Public HTTPS download verification](validation/v1.7/publication.json) · [Production manifest](../releases/manifest-1.7.0-rc1.json) · [Lab manifest](../releases/manifest-1.7.0-sandbox.json) · [Checksums](../releases/SHA256SUMS.txt).
+
+Production updates `com.androidhit.lumadrift`; Lab uses `com.androidhit.lumadrift.sandbox`. Production forces sample ads, keeps real checkout disabled and closes premium cosmetic draws in the APK and server. The separate social/catalogue endpoint is configured and deployed; real two-Google-account acceptance remains open. No real purchase, live-ad eligibility or physical-device enjoyment was validated. [Activation guide](DEPLOIEMENT_PAS_A_PAS.md).
+
+The sections below preserve earlier deliveries, hashes and tests. They do not describe the current 1.7 package.
+
+## Preserved 1.6 delivery
+
 **Luma Drift 1.6 · 27 October 2026 · code 7**
 
 **[Download Android APK · 1.6.0-rc1](https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.6.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.6.0-rc1.aab) · [Isolated Lab APK](../releases/luma-drift-1.6.0-sandbox.apk) · [Changes](RELEASE_1_6.md) · [Executed validation](VALIDATION_1_6.md).

@@ -1,8 +1,8 @@
 # Luma Drift roadmap
 
-## Current candidate — 1.7 route recovery, wardrobe and social preparation
+## Current candidate — 1.7 route recovery, wardrobe and service rollout
 
-Declared production **1.7.0-rc1 / code 8**, with isolated **1.7.0-sandbox**. [Scope and qualification](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Economy](ECONOMY_1_7.md) · [Executed record](validation/v1.7/README.md). Package installation, website publication and social service rollout each require their own evidence; this entry does not turn source completion into a live service claim.
+Published signed production **1.7.0-rc1 / code 8**, with isolated **1.7.0-sandbox**; all four public downloads have [independent size/hash verification](validation/v1.7/publication.json). [Scope and qualification](RELEASE_1_7.md) · [UX](UX_1_7.md) · [Economy](ECONOMY_1_7.md) · [Executed record](validation/v1.7/README.md). Final Lab/production native runs pass with restored preferences, and [Cloud Run deployment/basic probes](validation/v1.7/cloud-run.json) are recorded. [Website 1.7 publication](validation/site-v1.7/README.md) is confirmed from exact main `4c5f5ca8`, with all 47 source payloads hash-verified before Firebase completion. Real authenticated two-account and commercial qualification remain separate.
 
 Completed source contracts:
 
@@ -11,13 +11,13 @@ Completed source contracts:
 - A seven-claimed-visit gift cycle without absence reset, daily/weekly first-clear quests and atomic receipts. Existing local balances, progression and equipment remain.
 - A four-slot 24-item visual wardrobe, including permanent Halloween/Valentine designs, explicit owned/equipped/unowned states, source progress and earned direct purchases. The existing 18 Head/Aura/Charm equipment items remain a separate bounded-benefit system.
 - LumaCoins/LumaGold presentation separates local earned funds and the premium server wallet. The local 150-LumaCoins capsule shows category/per-item probabilities and rarity-based duplicate compensation; no LumaGold is spent.
-- Authenticated friend/gift service and client source, with mutual friendship, opt-in map snapshots and limited one-hint gifts. Real-account acceptance and deployed routes remain to qualify. The native premium account catalogue is prepared, while both APK and server draw gates remain false. Account ownership/conditional probabilities are distinct from the untrusted earned local wardrobe.
+- Authenticated friend/gift service and client source, with mutual friendship, opt-in map snapshots and limited one-hint gifts. The deployed revision passes health and unauthenticated-gate probes; real-account feature acceptance remains to qualify. The native premium account catalogue is prepared, while both APK and server draw gates remain false. Account ownership/conditional probabilities are distinct from the untrusted earned local wardrobe.
 
 Next acceptance, in order:
 
 1. Signed final APK/AAB packaging is complete. The final Lab menu run passes 38 native assertions with 32 captures and original preferences restored. Final Lab gameplay also passes 34 checks/9 captures; separate production startup passes 7 checks/1 capture and observes digital music advance/pause/resume. Physical quality, full six-language layout, large-text and human comprehension remain separate acceptance. Preserve the prior 1.6 bytes and evidence.
-2. Website source/imagery and 18 FR/EN CUA views at actual 320/390/1366 CSS pixels now pass. Publish the frozen source to Hosting and record its exact commit/completion; local checks do not establish delivery.
-3. Deploy the prepared authenticated social routes with scoped data rules; qualify two real accounts, mutual requests/removal, opt-in visibility, sender/receiver limits, account switching, deletion and full-stock/retry gift handling. Never seed fictional map friends.
+2. Website source/imagery and 18 FR/EN CUA views at actual 320/390/1366 CSS pixels pass. Firebase Hosting completion now confirms publication from exact main `4c5f5ca8bc5f74173e283377275bb352c76534c7` after verifying all 47 payload hashes. [Delivery](validation/site-v1.7/README.md) records CLI/management scope; no Firebase public-origin byte probe was performed.
+3. Server revision `luma-wallet-00005-pps` is deployed at 100% traffic, with paid draws false and recorded health/unauthenticated-gate probes. Qualify two real accounts, mutual requests/removal, opt-in visibility, sender/receiver limits, account switching, deletion and full-stock/retry gift handling. Never seed fictional map friends.
 4. Observe first-time players reaching J13, the first key lesson and later peaks. Measure whether the dead-end explanation, restart/Undo choice, slot/ownership state and two currencies are understood. Test with physical phones and assistive technologies.
 5. Keep paid draws, live ads and real checkout closed until their separate provider, policy, purchase/refund/recovery and release checks pass. Resolve the premium pool versus local-earned ownership decision: an account-new guarantee currently permits a design already earned locally. An earned-currency capsule simulation does not qualify a real paid draw.
 6. Wait for complete player cohorts before making retention, monetization or hit claims. Add features only where observation supports the next decision.
