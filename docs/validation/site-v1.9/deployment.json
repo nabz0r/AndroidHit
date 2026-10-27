@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-27T17:26:42.049527+00:00",
+  "site": "luma-drift-production",
+  "hosting_url": "https://luma-drift-production.web.app",
+  "source_commit": "6fbb1649432c9a86b7de6c5ed9a8e3af33a049ba",
+  "source_public_tree": "edac03407d61d8add970f6e6b4f180823e17f264",
+  "source_checkout_clean": true,
+  "hosting_payloads": 71,
+  "all_source_payloads_hash_verified_on_deployment_checkout": true,
+  "source_manifest": "release/source-manifest.json",
+  "source_manifest_sha256": "e302eec46da4b63d8a6527ee455be90ee9ddbf99595476de81fc559221b53ac5",
+  "firebase_cli_version": "15.33.0",
+  "cli_deploy_complete": true,
+  "live_management": {
+    "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+    "url": "https://luma-drift-production.web.app",
+    "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793121804636000",
+    "release_type": "DEPLOY",
+    "release_time": "2026-10-27T17:23:24.636Z",
+    "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/c3ffb9ceec687aff",
+    "version_status": "FINALIZED"
+  },
+  "public_origin_requested": false,
+  "public_origin_byte_or_render_verified": false,
+  "local_browser_matrix": "browser-check.json",
+  "local_browser_states_pass": 18,
+  "scope": "Authenticated Firebase Hosting deployment from the clean published source, exact71 local payload hashes on Cloud Shell, CLI completion and whitelisted live management metadata. The browser preview is localhost; no public-origin response or render is inferred. No Cloud Run, Google/AdMob/Play activation or real account operation changed.",
+  "evidence": [
+    "deployment-preflight.json",
+    "deploy-cli.txt",
+    "live-management.json",
+    "hosting-confirmation.png"
+  ]
+}

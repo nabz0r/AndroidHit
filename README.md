@@ -62,6 +62,8 @@ The [new-player audit](docs/PLAYER_AUDIT_2026.md) uses six declared behaviour pr
 | Production AAB | [1.9.0-rc1](releases/luma-drift-1.9.0-rc1.aab) | [Manifest](releases/manifest-1.9.0-rc1.json) |
 | Separate Lab APK/AAB | [Lab APK](releases/luma-drift-1.9.0-sandbox.apk) · [AAB](releases/luma-drift-1.9.0-sandbox.aab) | [Manifest](releases/manifest-1.9.0-sandbox.json) |
 
+[Published source 6fbb1649](https://github.com/nabz0r/AndroidHit/commit/6fbb1649432c9a86b7de6c5ed9a8e3af33a049ba) · [Independent public download verification](docs/validation/v1.9/publication.json). All four selected APK/AAB downloads match the frozen manifests. [Firebase website delivery](docs/validation/site-v1.9/deployment.json) is confirmed from the same source revision.
+
 Android 8+ / API 26; version code **10**; production package `com.androidhit.lumadrift`. Install over the existing app to retain saves. Signing identity is unchanged. [Installation](docs/RELEASE.md) · [All checksums](releases/SHA256SUMS.txt) · [Historical 1.8](docs/RELEASE_1_8.md).
 
 ## Compatibility and service status

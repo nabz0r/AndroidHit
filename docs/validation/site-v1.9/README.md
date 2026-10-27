@@ -1,6 +1,6 @@
 # Website 1.9 — FINAL5 source qualification
 
-**Current status: native imagery, release source checks and local browser review passed; publication is recorded separately by the coordinating release run.** This file does not claim a Firebase deployment or a public-origin render/byte verification.
+**Delivered:** native imagery, release source checks, local browser review and authenticated Firebase Hosting publication passed. Public-origin rendering/served-byte verification remains unperformed.
 
 The homepage describes the unchanged 1,000 L / 240 M boards, the corrected gate-practice sequence, 100 optional guardian encounters, two-layer pieces from guardian 1 and one-cell movement from guardian 5/50 clears, accessible Journey gifts, single-charge power trials, action-based stars, and 24 × 12 combinatorial companion treatments. All 12 visual treatments are free; choosing one does not grant an unowned companion. Five poses and actual-progress parallax are explained with reduced-motion support. The original pastel design and Dream Glade illustration remain; no franchise art or new illustration is implied.
 
@@ -46,3 +46,9 @@ The privacy copy now identifies 1.9 and describes local guardian/session/style/t
 [Public-page documentation](../../PUBLIC_PAGES.md) links the current release and preserved historical delivery records. The [2026 research dossier](../../research/2026-new-player/README.md) records aggregate sources, dates and simulation limits; the homepage does not turn that research into a retention or hit claim. Any later GitHub/Firebase delivery record must identify the frozen source commit and payload manifest separately from local CUA review. No publication or provider approval follows from this source PASS alone.
 
 The [saved French desktop capture](local-home-fr-desktop.png) is a localhost browser render with the exact current native Home image. Earlier reused French navigation still displayed a preparation document; those observations are retained and were not accepted. Explicit reload observed the final source in all six homepage combinations. This is separate from Firebase served-byte/render verification.
+
+## Delivered Hosting revision
+
+Firebase CLI 15.33.0 completed the Hosting-only deployment from clean main [6fbb1649432c9a86b7de6c5ed9a8e3af33a049ba](https://github.com/nabz0r/AndroidHit/commit/6fbb1649432c9a86b7de6c5ed9a8e3af33a049ba), after all 71 payload sizes/SHA-256 values matched on the deployment checkout. Public tree: `edac03407d61d8add970f6e6b4f180823e17f264`. The live management record identifies finalized version **c3ffb9ceec687aff**, released **27 October 2026, 17:23:24.636 UTC**. [Combined delivery record](deployment.json) · [CLI result](deploy-cli.txt) · [Whitelisted management metadata](live-management.json) · [Original confirmation screenshot](hosting-confirmation.png).
+
+This confirms publication on the existing [Hosting site](https://luma-drift-production.web.app/), separately from the [localhost preview](local-home-fr-desktop.png). No public-origin HTTP/browser probe was performed, so neither a served-byte comparison nor a public browser render is claimed. No Cloud Run deploy, live ad, purchase, Google login or friend-account qualification occurred. The later documentation receipt commit preserves all application/public/release bytes from this source revision.

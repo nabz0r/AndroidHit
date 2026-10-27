@@ -2,6 +2,10 @@
 
 Production **1.9.0-rc1 / code 10** and isolated **1.9.0-sandbox / code 10**. Android 8+ / API 26, target 36. This is a gameplay candidate; real advertising, checkout and paid cosmetic draws remain closed.
 
+The source and four selected signed outputs are [published on main 6fbb1649](https://github.com/nabz0r/AndroidHit/commit/6fbb1649432c9a86b7de6c5ed9a8e3af33a049ba). [Independent public downloads](validation/v1.9/publication.json) return HTTP 200 and match each frozen byte count/SHA-256. This is GitHub delivery, separate from a Google Play submission.
+
+The [website delivery](validation/site-v1.9/deployment.json) is also confirmed from that exact source: 71 matching payloads, finalized Hosting version `c3ffb9ceec687aff`, 27 October 2026 at 17:23:24.636 UTC. The [saved website image](validation/site-v1.9/local-home-fr-desktop.png) is a localhost preview; a public-origin render/byte check is not claimed. No server code or provider activation changed.
+
 ## Delivered changes
 
 - Fixed the reproduced lesson-4 finger/scroll conflict. The demonstrated touch is owned by its real gate target, with a static tap coach, an explicit preview action and visible compact confirmation.

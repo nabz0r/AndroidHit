@@ -1,5 +1,7 @@
 # Luma Drift 1.9 — production candidate and activation boundary
 
+Current 1.9 source, signed APK/AAB files and site are [delivered from main 6fbb1649](RELEASE_1_9.md), with independent public-download hashes and a finalized Hosting receipt. Real commerce stays gated; creating the Play application is the next owner step.
+
 ## Current delivery · 27 October 2026
 
 **Production 1.9.0-rc1 / code 10** uses `com.androidhit.lumadrift`; the separate Lab package uses `.sandbox`. The [production APK](../releases/luma-drift-1.9.0-rc1.apk) is SHA-256 `b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05`; the [Lab APK](../releases/luma-drift-1.9.0-sandbox.apk) is `acb3e1b0cfa71f84435d6cb0cf0fc73e3d4b434009deef972c54d86d9e7c09c7`. The [release record](RELEASE_1_9.md) identifies all four signed outputs, source hashes, binary checks and native-test scope. Production and Lab bytes, source oracles, native acceptance, GitHub delivery and website deployment are separate evidence layers in the [validation index](validation/v1.9/README.md).
