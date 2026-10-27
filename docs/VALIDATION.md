@@ -27,6 +27,8 @@ Both signed APK/AAB variants and both release lint tasks passed with the final s
 
 The [binary audit](validation/v1.5/binary-final-candidate.json) checks source/outputs freshness, hashes every source input and rechecks that bytes remain stable during verification. APK signature, pinned AAB payload signatures, official bundletool validation, 16 KiB ZIP alignment and ELF load segments pass. [APK signatures](validation/v1.5/apk-signatures.txt) · [AAB signatures](validation/v1.5/aab-signatures.txt) · [Bundle validation](validation/v1.5/bundletool-validation.txt) · [Native alignment](validation/v1.5/native-elf-alignment.txt).
 
+All four final packages were independently downloaded from public main after publication; sizes and SHA-256 hashes match the tested local artifacts. [Public delivery proof](validation/v1.5/publication.json). This adds distribution integrity evidence, not another device run.
+
 ## Installed Android acceptance
 
 **Final production APK: `33c4dbd6c14fa3e72ec52c7d98475b1a9738b175bad9216c4bc4c7c5bdd817a2`.** It was installed and launched on Android 16 / API 36 emulators with ordinary and actual 16 KiB page kernels. The final Lab APK is independently signed/validated but was not reinstalled after the isolated share-card correction.

@@ -27,7 +27,7 @@ Production preserves existing local progress and inventory. New runs use fixed G
 | [luma-drift-1.5.0-sandbox.apk](../releases/luma-drift-1.5.0-sandbox.apk) | 3,988,753 | `d926fea0f52f0e868b3364d8e1c19e16941f9d9831636483971ef518e3f39c53` |
 | [luma-drift-1.5.0-sandbox.aab](../releases/luma-drift-1.5.0-sandbox.aab) | 7,304,111 | `31f01806bef9d3b35a90cf9f6d8102a088832204f6ae92cc0026b9a9534d5203` |
 
-[SHA256SUMS](../releases/SHA256SUMS.txt) · [Production manifest](../releases/manifest-1.5.0-rc1.json) · [Lab manifest](../releases/manifest-1.5.0-sandbox.json) · [Binary audit](validation/v1.5/binary-final-candidate.json).
+[Public download verification](validation/v1.5/publication.json) · [SHA256SUMS](../releases/SHA256SUMS.txt) · [Production manifest](../releases/manifest-1.5.0-rc1.json) · [Lab manifest](../releases/manifest-1.5.0-sandbox.json) · [Binary audit](validation/v1.5/binary-final-candidate.json).
 
 The APKs pass v2 signature verification against the existing RSA-3072 certificate, SHA-256 `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. Every AAB payload was verified with JarFile against that pinned public certificate; official bundletool 1.18.1 validates both bundles. ZIP/native ELF 16 KiB alignment checks also pass. Signature and structural checks do not establish Play approval or physical-device quality. [Reproducible verifier](../scripts/verify-v15-binaries.py).
 

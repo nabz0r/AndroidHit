@@ -14,6 +14,6 @@ Updated 27 October 2026 · **1.5.0-rc1 / Lab 1.5.0-sandbox, code 6**.
 | Migration | Actual 1.4 interrupted Lab run preserved board/history/policy/balance/stock; fresh run uses new content/policy |
 | Packages | Both final signed APK/AAB variants and lint passed; final production SHA-256 starts `33c4dbd6c14f`; [full hashes](docs/RELEASE.md) |
 | Documentation | Illustrated README/guide, equipment contract, rules, roadmap and scoped validation updated |
-| Publication | Prepared for main publication; publication is established by the remote branch and downloadable artifact hashes, not this status sentence |
+| Publication | Published source/artifacts together on [main at aa9131ba7956](https://github.com/nabz0r/AndroidHit/commit/aa9131ba795694c4fa1d8bb839c25a37c4c48da7); all four public downloads match final hashes. [Delivery proof](docs/validation/v1.5/publication.json) |
 
 The final source change after full functional acceptance is isolated to the share-image renderer. Final production sharing/key/Undo/audio checks and the source comparison are [recorded separately](docs/VALIDATION.md). Physical phones, native-speaker review, real player enjoyment/retention and commercial/provider qualification remain open. Real ads and paid gold remain gated.

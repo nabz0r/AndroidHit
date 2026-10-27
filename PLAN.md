@@ -17,4 +17,4 @@ Hosting and Cloud Run deployment, account deletion and published AdMob message h
 
 ## Executed outcome
 
-Items 1–5 and technical delivery checks in item 6 are implemented and evidenced in [VALIDATION](docs/VALIDATION.md). Final sharing, key/Undo and audio were retested after the isolated share-image fix. APK/AAB hashes and signing are in [RELEASE](docs/RELEASE.md). Publication is the final delivery step; physical-device/player/provider qualification remains a separate roadmap stage. No scripted clear establishes enjoyment or a hit.
+Items 1–5 and technical delivery checks in item 6 are implemented and evidenced in [VALIDATION](docs/VALIDATION.md). Final sharing, key/Undo and audio were retested after the isolated share-image fix. APK/AAB hashes and signing are in [RELEASE](docs/RELEASE.md). Source, documentation and exact tested artifacts were published to main and all four public package downloads matched their hashes. [Delivery proof](docs/validation/v1.5/publication.json). Physical-device/player/provider qualification remains a separate roadmap stage. No scripted clear establishes enjoyment or a hit.
