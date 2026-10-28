@@ -30,6 +30,10 @@ Production **1.13.0-rc2**, separate Lab **1.13.0-sandbox-rc2**, code **14**, rep
 
 [RC2 source/artifact freeze](validation/v1.13/source-freeze-rc2.json) · [RC2 successful build](validation/v1.13/build-rc2.txt) · [RC2 binary verification](validation/v1.13/binaries-rc2/binary-verification.txt). Android 8+ / API26; production package `com.androidhit.lumadrift`, Lab package `com.androidhit.lumadrift.sandbox`.
 
+## Main publication
+
+The RC2 source is published on `main` at [commit `67774c14`](https://github.com/nabz0r/AndroidHit/commit/67774c143a60017049207adcedf2ea63fe048d97), tree `10fa8ffd092aaedd3fb66efb82a84be4b96b858d`. The [independent public-download receipt](validation/v1.13/publication.json) records all four immutable APK/AAB routes returning HTTP200 with the exact packaged bytes and SHA-256 hashes: **38,006,707 bytes total**. This verifies public binary delivery; Play publication and Firebase website delivery keep their own records.
+
 ## Local save and economy
 
 The room uses the existing device-local save and LumaCoins. There is no home currency, automatic coin grant, LumaGold conversion, server decoration state or cloud progression. Missing room keys return a free starter arrangement without rewriting the old wallet. Existing progression, wardrobe and equipment IDs remain.
@@ -46,9 +50,9 @@ Test ads remain forced. Real checkout, premium draws, real Google/two-account/so
 
 ## Website
 
-The prepared FR/EN website leads with the home and keeps the puzzle prominent. It uses versioned native capture paths, exact APK download information, and existing privacy/deletion pages. Public screenshots must remain byte-identical to original final-candidate captures and carry source/report/hash provenance. The English hug capture is explicitly labelled in both website languages; site decoration is distinguished from game imagery.
+The published FR/EN website leads with the home and keeps the puzzle prominent. It uses versioned native capture paths, exact APK download information, and existing privacy/deletion pages. Public screenshots must remain byte-identical to original final-candidate captures and carry source/report/hash provenance. The English hug capture is explicitly labelled in both website languages; site decoration is distinguished from game imagery.
 
-The [source audit](validation/site-v1.13/release/static-check.json) passes 2,150 assertions and the [local browser review](validation/site-v1.13/browser/report.json) records 14 states and seven original JPEGs. Nine original native images carry exact RC2 source/report/hash provenance. Firebase Hosting publication remains a separate receipt in [the site record](validation/site-v1.13/); local qualification does not establish that the live origin has changed.
+The [source audit](validation/site-v1.13/release/static-check.json) passes 2,150 assertions and the [local browser review](validation/site-v1.13/browser/report.json) records 14 states and seven original JPEGs. Nine original native images carry exact RC2 source/report/hash provenance. [Firebase Hosting delivery](validation/site-v1.13/deployment.json) is confirmed from source `67774c143a60017049207adcedf2ea63fe048d97`, public tree `98634dede88c30cf677e25ab4c3840079cd6873c`: **108 files /77,610,834 bytes**, version `170cf6d048c1b40f`, finalized **28 October 2026,16:03:50.235 UTC**. [Independent public-origin verification](validation/site-v1.13/public-origin.json) confirms HTTP200 and exact bytes/SHA-256 for all 108 files plus `/`, `/privacy/` and `/delete-account/`. Later documentation-only commits are not relabelled as the deployed source. [Separate evidence scopes](validation/site-v1.13/).
 
 ## Preserved releases
 

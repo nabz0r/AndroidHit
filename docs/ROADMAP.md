@@ -4,7 +4,7 @@
 
 [Release](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Executed qualification](validation/v1.13/README.md). Connect existing earned puzzle rewards to a room the player can arrange: twelve furnishings, a companion who wears the actual equipped look, hugs, path-based movement, interactive furniture, wall/floor choices and a pinned wish. Introduce the core gesture immediately with a skippable three-piece board; keep the existing optional seven-lesson route.
 
-The implementation preserves puzzle geometry, budgets, progression, inventory and commercial gates. The six-language home model has 891 source/durability checks; the actual opening has 18 source checks. Final-byte Android, public artifacts and Hosting acceptance remain separate receipts in the current record. No human retention result is inferred from these checks.
+The implementation preserves puzzle geometry, budgets, progression, inventory and commercial gates. The six-language home model has 891 source/durability checks; the actual opening has 18 source checks. The final RC2 retained-Lab route passes 798 native checks; targeted/fresh/production scopes retain separate reports. [Main publication](validation/v1.13/publication.json) verifies four public binaries from source `67774c14`; [Hosting delivery](validation/site-v1.13/deployment.json) and [public-origin checks](validation/site-v1.13/public-origin.json) verify the 108-file website from that same source. These are separate acceptance layers. No human retention result is inferred from these checks.
 
 Next decisions:
 

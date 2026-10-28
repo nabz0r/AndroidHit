@@ -10,6 +10,8 @@ Owner scope: deliver the interactive home, preserve puzzles as the main game, pu
 
 Commercial/provider gates remain at their current settings. Native checks do not measure human enjoyment or retention; report physical-device/provider limits explicitly.
 
+Delivered as **1.13.0-rc2 / code14**: interactive home and quick first puzzle, all final native routes, signed packages and documentation on [main](https://github.com/nabz0r/AndroidHit/commit/67774c143a60017049207adcedf2ea63fe048d97), four independently verified public downloads and the existing Firebase site deployed from the same source. The real rapid tutorial-resume crash found during qualification is fixed and retested before publication. [Android acceptance](docs/validation/v1.13/README.md) · [Hosting and public-byte proof](docs/validation/site-v1.13/README.md).
+
 ## Preserved earlier plan
 
 # Luma Drift 1.7 — delivery plan

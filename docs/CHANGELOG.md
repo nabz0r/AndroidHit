@@ -10,9 +10,9 @@
 - Persist complete immutable layout/companion position, ownership, surfaces and wish through exact tracked writes/read-flush recovery; preserve older saves and refuse unsafe placements.
 - Add a skippable real three-piece first switch encounter with durable history/finish marker and no invented campaign progress or reward. Preserve the existing seven optional lessons.
 - Fix the reproduced RC1 tutorial Later→Resume crash by resetting obsolete feedback state and guarding completed/skipped lesson text lookup; RC1 evidence is preserved and excluded from RC2 acceptance.
-- Prepare a FR/EN website presentation around the home and main puzzle, with current-byte native capture provenance and exact release/source checks; Hosting is independently recorded.
+- Publish the FR/EN home/puzzle website with nine byte-identical native RC2 captures, current APK metadata, 2,150 source assertions and 14 local browser states. Firebase version `170cf6d048c1b40f` is finalized from source `67774c14` at 28 October 2026,16:03:50.235 UTC; all 108 public payloads and three aliases match independent HTTP byte/SHA-256 checks.
 
-Puzzle layouts/budgets, existing challenge identities, rewards, equipment and commercial gates remain. Source checks pass 891 home assertions and 18 actual-opening checks; final native, artifact and publication receipts retain their own scope. No Play publication, cloud progression or human retention result is implied.
+Puzzle layouts/budgets, existing challenge identities, rewards, equipment and commercial gates remain. Source checks pass 891 home assertions and 18 actual-opening checks. The retained-Lab route passes 798 native checks, with separate 90 targeted tutorial, 55 fresh, seven production startup and 35 production house checks. [Four public binaries](validation/v1.13/publication.json) and [Hosting/public-origin delivery](validation/site-v1.13/README.md) retain exact-byte receipts from source `67774c14`. No Play publication, cloud progression or human retention result is implied.
 
 ## Preserved 1.12.0-rc2 / code13 — the little atelier
 

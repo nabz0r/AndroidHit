@@ -15,7 +15,7 @@ The candidate keeps test ads, disabled real checkout and premium draws, and devi
 
 Production RC2 APK SHA-256: `c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b`, **7,806,558 bytes / 7.81 MB decimal**. The page resolves its metadata from that exact signed freeze; the checker still refuses unresolved placeholders or mismatched bytes. [Production manifest](../../../releases/manifest-1.13.0-rc2.json) · [Android qualification](../v1.13/README.md).
 
-Both download actions target the exact `main/releases/luma-drift-1.13.0-rc2.apk` raw GitHub route. Inspecting local links does not prove remote availability. The release operator records the actual main commit and independent public-download result separately.
+Both download actions target the exact `main/releases/luma-drift-1.13.0-rc2.apk` raw GitHub route. The source is now published on `main` at [commit `67774c14`](https://github.com/nabz0r/AndroidHit/commit/67774c143a60017049207adcedf2ea63fe048d97). The [independent Android publication receipt](../v1.13/publication.json) verifies all four immutable production/Lab APK/AAB responses: HTTP200 with exact frozen bytes and SHA-256. That binary-delivery receipt does not itself verify this website’s Hosting origin.
 
 ## Native image contract
 
@@ -42,18 +42,23 @@ Actual CSS viewports are 1366×900, 390×844 and 320×740. The browser’s pre-e
 
 [Desktop French view](browser/desktop-fr.jpg) · [Desktop English view](browser/desktop-en.jpg) · [Mobile French](browser/mobile-fr.jpg) · [Mobile English](browser/mobile-en.jpg) · [Catalogue](browser/mobile-catalog-en.jpg) · [Puzzle](browser/mobile-puzzle-en.jpg). These are local rendering evidence; early reviews with missing captures do not qualify the final site.
 
-## Hosting boundary
+## Confirmed Firebase Hosting delivery
 
-No 1.13 deployment receipt is recorded in this document yet. The preserved [1.12 delivery](../site-v1.12/README.md) keeps its original dated scope.
+The existing [live site](https://luma-drift-production.web.app/) serves 1.13. The [deployment receipt](deployment.json) and [authenticated live-channel management](live-management.json) identify **source `67774c143a60017049207adcedf2ea63fe048d97`**, public tree `98634dede88c30cf677e25ab4c3840079cd6873c`, **108 payloads /77,610,834 bytes**. Firebase records `DEPLOY` / `FINALIZED`, version **`170cf6d048c1b40f`**, release time **28 October 2026,16:03:50.235 UTC**. Later documentation-only commits preserve this deployed source identity.
 
-`scripts/deploy-site-v113.py` accepts an exact clean source commit only. It verifies every public payload, unchanged Firebase target/configuration, the current passing source manifest, frozen APK and release metadata, checker inputs and capture provenance before any optional Hosting deploy. The Firebase CLI/live-channel result is retained outside the deployment checkout, then incorporated by the release operator. It does not upload an app to Play or activate provider services.
+The clean deployment checkout matches the final source-manifest SHA-256 `b6e9b36f0e20d8dbf1f6c1ba3601c2f56c0c8bcbacaa4eb3085eeb0f1c956d5e`. The [preflight](deployment-preflight.json), [Firebase CLI excerpt](deploy-cli-excerpt.txt) and [receipt transport hashes](deployment-transport.json) retain the execution trail. The deployment helper checks all public payloads, Firebase configuration, frozen APK/release metadata and native provenance before deployment. It does not upload an app to Play or activate provider services. The preserved [1.12 delivery](../site-v1.12/README.md) keeps its original dated scope.
 
-## Independent public-origin verification — pending deployment
+## Independent public-origin verification — passed
 
-After a real finalized Hosting receipt is retained, the release operator can run:
+The executed command targets the immutable source actually named by the Firebase receipt:
 
 ```sh
-python3 scripts/verify-v113-site-publication.py --commit "$DEPLOYED_SOURCE_COMMIT"
+python3 scripts/verify-v113-site-publication.py \
+  --commit 67774c143a60017049207adcedf2ea63fe048d97
 ```
 
-The required value is the immutable forty-character commit actually named by the finalized Firebase receipt. The verifier requires the passing RC2 source manifest and matching `public` tree, then streams each public HTTPS payload plus `/`, `/privacy/` and `/delete-account/`. HTTP status, bytes and SHA-256 must match exactly. Its eventual output is `docs/validation/site-v1.13/public-origin.json`; no such pass is claimed before execution. Browser rendering and actual account/provider operations remain separate.
+The [public-origin report](public-origin.json) passes **108 payloads plus three directory aliases**, `/`, `/privacy/` and `/delete-account/`: **111 HTTP200 responses**, each matching the deployed source’s exact bytes and SHA-256. It checks the finalized receipt, immutable commit/public tree and source manifest before streaming responses. Unlike local source checks or the management receipt alone, this record verifies actual public HTTPS delivery.
+
+The [public browser report](browser/live-report.json) separately confirms the live FR/EN desktop first fold, localized 1080×2340 native hero, matching RC2 download links and equal content/scroll widths. Original provider captures: [French](browser/live-fr-desktop.jpg) · [English](browser/live-en-desktop.jpg). The live tab is left in French; mobile, lower-section and keyboard review remains scoped to the matching localhost source above.
+
+Local browser layout evidence, public first-fold rendering and actual account/provider operations have separate scopes. Public byte identity establishes no Google sign-in, account deletion, real purchase, live ad or human enjoyment result.

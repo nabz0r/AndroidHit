@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-28T16:03:23.940420+00:00",
+  "source_commit": "67774c143a60017049207adcedf2ea63fe048d97",
+  "source_public_tree": "98634dede88c30cf677e25ab4c3840079cd6873c",
+  "source_checkout_clean": true,
+  "hosting_payloads": 108,
+  "payload_bytes": 77610834,
+  "source_manifest": "docs/validation/site-v1.13/release/source-manifest.json",
+  "source_manifest_sha256": "b6e9b36f0e20d8dbf1f6c1ba3601c2f56c0c8bcbacaa4eb3085eeb0f1c956d5e",
+  "all_source_payloads_hash_verified_on_deployment_checkout": true,
+  "public_origin_requested": false,
+  "firebase_cli_version": "15.33.0",
+  "site": "luma-drift-production",
+  "hosting_url": "https://luma-drift-production.web.app",
+  "edition": "1.13",
+  "android_release": "1.13.0-rc2",
+  "cli_deploy_complete": true,
+  "live_management": {
+    "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+    "url": "https://luma-drift-production.web.app",
+    "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793203430235000",
+    "release_type": "DEPLOY",
+    "release_time": "2026-10-28T16:03:50.235Z",
+    "release_message": "Website1.13 from 67774c143a60017049207adcedf2ea63fe048d97",
+    "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/170cf6d048c1b40f",
+    "version_status": "FINALIZED",
+    "management_provider": "authenticated firebase hosting:channel:list --json",
+    "headers": [
+      {
+        "headers": {
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "X-Content-Type-Options": "nosniff"
+        },
+        "glob": "**"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-store"
+        },
+        "glob": "/site-config.js"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-cache"
+        },
+        "glob": "/"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-cache"
+        },
+        "glob": "**/*.html"
+      }
+    ]
+  },
+  "public_origin_byte_or_render_verified": false,
+  "scope": "Exact clean source and every Hosting payload checked before Firebase CLI completion. Live channel management reports DEPLOY/FINALIZED. Localhost browser review is separate; no public-origin byte/render or real provider acceptance is inferred."
+}

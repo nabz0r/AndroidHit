@@ -1,11 +1,13 @@
-# Luma Drift 1.13 — delivery in progress
+# Luma Drift 1.13 — delivered
 
 - Scope accepted: interactive home, companion movement/cuddle, existing wardrobe integration, earned furniture/decorating and immediate puzzle access; main publication and existing Firebase website update.
 - Interactive room, 12 original furniture objects, 8 surface choices, walk/cuddle/use, explicit earned purchase/placement, furniture wish and quick first encounter implemented in six languages. Existing puzzle identities and saved gameplay remain unchanged.
 - RC2 fixes the rapid tutorial Later/Resume crash found before publication. The final build/lint and four signed APK/AAB signature, bundletool and static 16 KiB checks pass. All 108 public application inputs remain frozen. Host checks pass: home 891, actual first encounter 18, prior appearance 683, initialization 41, powers 1,670 and tutorial 1,454.
 - RC2 native acceptance passes: full retained-Lab route 798 checks, including 13 real clears, six languages, compact portrait/landscape and a distinct cold process; fast tutorial regression 90 checks; genuine fresh arrival 55; production startup/audio 7 and house 35. Original guest preferences and display settings restored; isolated test packages removed. Six outer-baseline preference files restored exactly and three owned emulators shut down with saved data retained.
 - RC1 observations and its later real tutorial crash remain historical, separate from RC2 acceptance. The failed Lab20 whole run and intermediate smoke checks retain their original labels.
-- Baseline is main `589d8bc`; historical 1.12 signed packages/evidence are preserved. Main publication, final native acceptance and Hosting 1.13 deployment are not yet recorded as complete.
+- Source and signed RC2 packages are published on [main at 67774c14](https://github.com/nabz0r/AndroidHit/commit/67774c143a60017049207adcedf2ea63fe048d97). All four public downloads return HTTP 200 with exact sizes/SHA-256. [Package receipt](docs/validation/v1.13/publication.json).
+- The existing Firebase site is updated from that same clean commit: version `170cf6d048c1b40f`, FINALIZED at **28 October 2026, 16:03:50.235 UTC**. Every one of 108 public payloads and three directory aliases matches its source bytes. FR/EN public desktop rendering also passes; localhost acceptance covers mobile, compact width and keyboard access. [Deployment](docs/validation/site-v1.13/deployment.json) · [Public bytes](docs/validation/site-v1.13/public-origin.json) · [Live browser](docs/validation/site-v1.13/browser/live-report.json).
+- Baseline was main `589d8bc`; historical signed packages/evidence remain preserved. Physical-phone/player acceptance and live commercial/provider qualification remain separate.
 
 ## Preserved earlier delivery progress
 

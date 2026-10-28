@@ -39,8 +39,8 @@ These are host/JVM or local JavaScript results. Home durability tests explicitly
 | Production house | [RC2 house](ui-bugs/ui-sdk-rc2-production-house/host-report.json): 35 native checks pass, ten original full frames plus four labelled crops, exact production APK, original profile restored |
 | Website source | [Final source audit](../site-v1.13/release/static-check.json): 2,150 assertions pass; 108 public payloads, exact RC2 metadata and nine byte-identical original native captures; RC1 provenance rejected |
 | Website browser rendering | [Final local browser report](../site-v1.13/browser/report.json): 14 recorded states and seven original JPEGs; FR/EN desktop/mobile, compact width, lower sections, decoded images, controls and legal/download routes reviewed |
-| GitHub publication | No final RC2 commit/ref and public-download receipt recorded here yet |
-| Firebase Hosting | No 1.13 live release receipt recorded here yet; preserved 1.12 delivery remains historical |
+| GitHub publication | [Source `67774c14`](https://github.com/nabz0r/AndroidHit/commit/67774c143a60017049207adcedf2ea63fe048d97) published on `main`; [four immutable public downloads](publication.json) return HTTP200 and exact frozen bytes/SHA-256, 38,006,707 bytes total |
+| Firebase Hosting | [Finalized delivery](../site-v1.13/deployment.json) from `67774c14`, 28 October 2026,16:03:50.235 UTC, version `170cf6d048c1b40f`; [public-origin verification](../site-v1.13/public-origin.json) matches all 108 payloads /77,610,834 bytes and three aliases, HTTP200 and exact SHA-256 |
 | Google Play | No 1.13 upload, review or publication claimed |
 
 The targeted RC2 pilot preserves the exact active tutorial states `T1|1|1|ACTIVE|` and `T1|3|1|ACTIVE|`. Recorded quick Resume timings are 766ms and 1145ms, both below the former 2400ms feedback window. This is a focused regression result, not completion of the full room/Journey, fresh-install or production acceptance routes.
