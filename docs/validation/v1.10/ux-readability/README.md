@@ -2,7 +2,7 @@
 
 The exact rc3 [Lab full-route run](../ui-sdk-final3-full100/host-report.json) passes **2,514 assertions / 96 original PNGs**. [Fresh guest I](../ui-sdk-fresh-guest-i/host-report.json) separately passes 91 checks, and [production startup/audio](../ui-sdk-production-final3/host-report.json) passes 7. The main run restores original preferences and rotation; the genuine first installation retains its new guest because no previous Lab profile existed. [Final method and limits](../SDK_UI_FINAL.md).
 
-[The matrix](matrix.csv) separates native observations from source-only, provider and physical-device gaps. [provenance.json](provenance.json) records exact current hashes and retained intermediate results. **The website is source ready; no 1.10 browser review or Hosting deployment is claimed.** The last verified public site remains 1.9.
+[The matrix](matrix.csv) separates native observations from source-only, provider and physical-device gaps. [provenance.json](provenance.json) records exact current hashes and retained intermediate results. **Hosting 1.10 delivery is confirmed** from source `9be35d2b` at 28 October 2026, 10:44:28.535 UTC. [Delivery](../../site-v1.10/deployment.json). The [localhost browser review](../../site-v1.10/browser-20261028/observations.json) passes 12 FR/EN DOM states with six accepted desktop renders. Six incomplete mobile provider frames are excluded from visual acceptance; mobile coverage is DOM-only.
 
 ## Observed rc3 changes
 
@@ -31,4 +31,4 @@ The [rc2 full route](../ui-sdk-final2-full100/host-report.json) then passed 2,50
 
 [Portrait/translation host checks](../avatar/README.md), [objective/store models](../objectives/model-tests.json), [local-save regression](../objectives/local-save-regression/summary.json) and [read-only story models](../prism-story/README.md) retain distinct scopes. In particular, reduced-motion determinism is a host drawing contract. No native 1.10 filesystem-fault pass is claimed: those selectors remain blocked. Prior 1.9 fault reports are historical, not new 1.10 acceptance.
 
-Browser rendering, Hosting delivery, large-font comfort, TalkBack, native-speaker review, physical-device performance, real Google/two-account acceptance, commercial providers, human difficulty, retention and revenue remain unqualified. No public Firebase-origin request or personal tester data is used here.
+Complete mobile browser visual acceptance, deployed-origin byte/render verification, large-font comfort, TalkBack, native-speaker review, physical-device performance, real Google/two-account acceptance, commercial providers, human difficulty, retention and revenue remain unqualified. No public Firebase-origin request or personal tester data is used here.

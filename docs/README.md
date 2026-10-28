@@ -6,7 +6,7 @@
 
 Production 1.10.0-rc3 / Lab 1.10.0-sandbox-rc3, code 11. Home, the complete animated companion, wardrobe previews, a pinned collection objective, four reward tabs, event/shop navigation and durable local claims are delivered. Exact final native checks pass2,514 for the 100-level route,91 for a genuine fresh guest and7 for production startup/audio. Existing puzzle/catalog sources and save identities remain unchanged; human difficulty and provider qualification remain separate.
 
-The [website source/gallery](validation/site-v1.10/README.md) follows RC3. Hosting 1.10 deployment and local browser review remain pending while the Mac is locked; last confirmed hosted version 1.9. [Public GitHub delivery proof](validation/v1.10/publication.json).
+The [website source/gallery](validation/site-v1.10/README.md) follows RC3. Hosting 1.10 is confirmed from clean source 9be35d2 at 28 October 2026, 10:44:28.535 UTC. [Deployment receipt](validation/site-v1.10/deployment.json). Local browser review covers 12 DOM states and 6 desktop rasters; incomplete mobile provider frames are excluded from visual acceptance. [Public GitHub delivery proof](validation/v1.10/publication.json).
 
 Earlier guides below retain their dated evidence; their package downloads are historical.
 

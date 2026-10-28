@@ -1,8 +1,8 @@
 {
   "edition": "1.10",
-  "executed": false,
-  "passing_states": 0,
-  "reason": "Desktop locked; local CUA browser unavailable.",
+  "executed": true,
+  "passing_states": 12,
+  "reason": "Localhost review completed; original 341x248 mobile provider outputs remain insufficient for visual acceptance.",
   "png_review_only": [
     "home-fr-localized",
     "avatar-fr",
@@ -11,5 +11,22 @@
     "shop-looks-fr",
     "avatar-preview-cupid-en"
   ],
-  "scope": "Local native PNG visual review only, separate from website browser rendering."
+  "scope": "12 actual localhost FR/EN DOM states and 6 accepted desktop rasters. Mobile DOM-only; no public Firebase-origin, identity/deletion or commerce action.",
+  "passing_dom_states": 12,
+  "accepted_desktop_rasters": 6,
+  "mobile_dom_states": 6,
+  "mobile_raster_acceptance": false,
+  "excluded_incomplete_mobile_rasters": 6,
+  "actual_css_viewports": [
+    [
+      1649,
+      1198
+    ],
+    [
+      354,
+      767
+    ]
+  ],
+  "observation_record": "docs/validation/site-v1.10/browser-20261028/observations.json",
+  "source_manifest_sha256": "3f4528d0a85346e4924dc598cba87a1a37a9a5c26cfd4f4f5c49f88d57cdfe1d"
 }

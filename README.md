@@ -7,7 +7,7 @@
 
 Unedited **Lab 1.10.0-sandbox-rc3** Android captures. The native route really completes the first 100 Journey levels, then replays boards: Home resumes **L11**, while the journal shows chapter 2. The Cupid goal is affordable but still unowned; its preview grants nothing. These are local guest states, not Google identity or payment evidence. [Capture provenance](docs/validation/site-v1.10/captures.json).
 
-**Website delivery:** the 1.10 website source and current screenshots are prepared in this repository. The [last confirmed Firebase Hosting delivery remains 1.9](docs/validation/site-v1.9/deployment.json); local browser review and Hosting 1.10 deployment are pending because the desktop is locked. The [website record](docs/validation/site-v1.10/README.md) distinguishes source validation from deployment. A source push does not deploy the site.
+**Website delivery:** [Luma Drift 1.10 is deployed](https://luma-drift-production.web.app/). Firebase CLI and live-channel management confirm 89 files from source `9be35d2b`, finalized at **28 October 2026, 10:44:28.535 UTC**. [Exact delivery proof](docs/validation/site-v1.10/deployment.json). Local browser review covers 12 FR/EN DOM states and six accepted desktop renders; the incomplete mobile provider images are excluded from visual acceptance. No public-origin byte probe, account action or provider transaction is inferred. [Scope and limits](docs/validation/site-v1.10/README.md).
 
 ## Companion & Objectives — 1.10
 

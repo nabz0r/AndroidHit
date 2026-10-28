@@ -1,6 +1,6 @@
 # Luma Drift 1.10 — companion and objectives
 
-Implemented and qualified 28 October 2026 as production 1.10.0-rc3 / Lab 1.10.0-sandbox-rc3, code 11. Signed artifacts and exact native evidence are retained in this repository. Website source is updated; Hosting 1.10 deployment is pending because the authenticated browser session is unavailable while the Mac is locked. Last confirmed hosted version 1.9.
+Implemented and qualified 28 October 2026 as production 1.10.0-rc3 / Lab 1.10.0-sandbox-rc3, code 11. Signed artifacts and exact native evidence are retained in this repository. Website 1.10 is now deployed from exact clean source 9be35d2, after 89 payload hashes matched. Firebase confirms FINALIZED/DEPLOY at 28 October 2026, 10:44:28.535 UTC. [Hosting receipt](validation/site-v1.10/deployment.json). The local browser review distinguishes 12 DOM states from 6 accepted desktop rasters and limited mobile screenshot output.
 
 The owner paused the Play Console walkthrough and requested further app development. Their screenshots showed an existing draft package `com.androidhit.lumadrift` and the internal-tester list form; no uploaded release, tester acceptance or public launch was observed. No personal tester address is retained here.
 

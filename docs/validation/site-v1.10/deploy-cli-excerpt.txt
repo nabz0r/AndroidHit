@@ -1,0 +1,21 @@
+Authenticated Cloud Shell CLI excerpt observed on 28 October 2026.
+Command: firebase deploy --only hosting --project luma-drift-production --non-interactive
+CLI version: 15.33.0
+Source: 9be35d2bb4af136edbbba689d109cfb28b70de9e
+
+=== Deploying to 'luma-drift-production'...
+i  deploying hosting
+i  hosting[luma-drift-production]: beginning deploy...
+i  hosting[luma-drift-production]: found 89 files in public
+i  hosting: uploading new files [16/20] (80%)
+i  hosting: upload complete
+✔  hosting[luma-drift-production]: file upload complete
+i  hosting[luma-drift-production]: finalizing version...
+✔  hosting[luma-drift-production]: version finalized
+i  hosting[luma-drift-production]: releasing new version...
+✔  hosting[luma-drift-production]: release complete
+✔  Deploy complete!
+Project Console: https://console.firebase.google.com/project/luma-drift-production/overview
+Hosting URL: https://luma-drift-production.web.app
+
+This is a transcribed excerpt of observed CLI output, not the complete remote log. Live management metadata and the original browser screenshot are retained separately. No public-origin response is inferred.

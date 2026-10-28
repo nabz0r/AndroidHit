@@ -20,5 +20,5 @@ languages,Six languages,Navigation and recorded localized frames en fr de es pt 
 viewport,All surfaces,Native scroll rotation footer bounds observed; large text and TalkBack untested,scoped-native-pass-physical-accessibility-open,docs/validation/v1.10/SDK_UI_FINAL.md
 public-captures,Website,Eighteen unchanged rc3 PNG copies; five core French frames and EN alternatives,byte-hash-provenance-pass,docs/validation/site-v1.10/captures.json
 artifact-links,Website,Actual production rc3 bytes size and manifest match independent freeze,offline-release-source-pass,docs/validation/site-v1.10/release/static-check.json
-browser-review,Website,FR EN mobile desktop rendering,not-executed-desktop-locked,docs/validation/site-v1.10/browser-review-status.json
-hosting,Delivery,Source main publication differs from Hosting deployment,not-deployed-last-confirmed1.9,docs/validation/site-v1.10/deployment-status.json
+browser-review,Website,12 actual FR EN localhost DOM states; 6 desktop rasters accepted; incomplete mobile rasters excluded,scoped-browser-pass-mobile-dom-only,docs/validation/site-v1.10/browser-20261028/observations.json
+hosting,Delivery,89 clean-source hashes then CLI completion and finalized live release; no public-origin probe,deployed-management-confirmed,docs/validation/site-v1.10/deployment.json

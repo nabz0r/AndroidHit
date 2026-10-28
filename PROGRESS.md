@@ -7,7 +7,7 @@
 - RC3 Lab: **2,514 installed checks / 96 original PNGs**, including all100 first Journey levels; genuine fresh guest **91/17**; exact production launch/audio **7/1**. Preference files and rotation restored.
 - Source/artifacts published together at [e785b115](https://github.com/nabz0r/AndroidHit/commit/e785b1158a02a810ac7045cecc120d70b124b28f); all four public downloads return HTTP 200 with exact sizes/SHA-256. [Receipt](docs/validation/v1.10/publication.json).
 - Four signed APK/AAB outputs built; signature, bundletool and static16KiB checks passed. Lint retains11 warnings per flavor, zero errors. Existing25 engine/catalog classes remain byte-identical to1.9.
-- README, UX, roadmap, release notes and website source/gallery updated with exact RC3 evidence. **Hosting deployment pending**: the authenticated browser session is unavailable while the Mac is locked; last confirmed hosted version 1.9.
+- README, UX, roadmap, release notes and website source/gallery updated with exact RC3 evidence. **Hosting 1.10 deployed** from clean source 9be35d2 at 28 October 2026, 10:44:28.535 UTC; 89 payload hashes match and active version cc107bd698c853bf is FINALIZED. [Receipt](docs/validation/site-v1.10/deployment.json). Local browser review distinguishes 12 DOM states/6 desktop rasters from the incomplete mobile-provider images.
 - Real ads, purchases, paid draws and production-provider/social acceptance remain gated. No human balance/retention claim.
 
 [Release and signed packages](docs/RELEASE_1_10.md) · [Evidence and limits](docs/validation/v1.10/README.md).

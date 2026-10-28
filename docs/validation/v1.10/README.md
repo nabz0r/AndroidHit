@@ -2,7 +2,7 @@
 
 Final signed candidates: production **1.10.0-rc3**, Lab **1.10.0-sandbox-rc3**, code 11. [Release notes and full hashes](../../RELEASE_1_10.md).
 
-[Source and four public downloads verified](publication.json): source commit e785b115, HTTP 200 and exact tested sizes/SHA-256. The delivery receipt changes documentation only. Hosting remains pending.
+[Source and four public downloads verified](publication.json): source commit e785b115, HTTP 200 and exact tested sizes/SHA-256. That dated Android delivery receipt changes documentation only and retains its earlier Hosting context. The subsequent [1.10 Hosting confirmation](../site-v1.10/deployment.json) is separate.
 
 ## Final candidate evidence
 
@@ -33,4 +33,4 @@ Original final PNGs are in [full route](../../screenshots/v1.10/ui-sdk-final3-fu
 
 These runs establish the recorded emulator behavior, not enjoyment, retention, global difficulty calibration, physical-device performance or production-service acceptance. Existing L23/G5 difficulty discontinuities and horizontal G1 pieces remain documented. No paid draw, real checkout, real Google account or two-account social acceptance was executed.
 
-[Website validation](../site-v1.10/) checks the RC3 source/gallery/download linkage locally. Firebase Hosting 1.10 deployment remains pending because the authenticated browser session is unavailable while the Mac is locked. The last confirmed Hosting release was1.9. No public-origin served-byte assertion is made.
+[Website validation](../site-v1.10/) checks the RC3 source/gallery/download linkage locally. Firebase Hosting 1.10 is confirmed at 28 October 2026, 10:44:28.535 UTC after 89 source payload hashes matched on the clean deployment checkout. [Delivery receipt](../site-v1.10/deployment.json). Local browser review covers 12 DOM states and 6 accepted desktop rasters; incomplete mobile provider captures stay excluded from visual acceptance. No public-origin served-byte assertion is made.

@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-28T10:46:57.249864+00:00",
+  "site": "luma-drift-production",
+  "hosting_url": "https://luma-drift-production.web.app",
+  "edition": "1.10",
+  "android_release": "1.10.0-rc3",
+  "source_commit": "9be35d2bb4af136edbbba689d109cfb28b70de9e",
+  "source_public_tree": "f99bd6ceb2a11c746fbaa493d91be800d9edf23f",
+  "source_checkout_clean": true,
+  "hosting_payloads": 89,
+  "all_source_payloads_hash_verified_on_deployment_checkout": true,
+  "source_manifest": "deployment-source/source-manifest.json",
+  "source_manifest_sha256": "3f4528d0a85346e4924dc598cba87a1a37a9a5c26cfd4f4f5c49f88d57cdfe1d",
+  "firebase_cli_version": "15.33.0",
+  "cli_deploy_complete": true,
+  "live_management": {
+    "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+    "url": "https://luma-drift-production.web.app",
+    "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793184268535000",
+    "release_type": "DEPLOY",
+    "release_time": "2026-10-28T10:44:28.535Z",
+    "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/cc107bd698c853bf",
+    "version_status": "FINALIZED"
+  },
+  "public_origin_requested": false,
+  "public_origin_byte_or_render_verified": false,
+  "local_browser_matrix": "browser-20261028/observations.json",
+  "local_browser_dom_states_pass": 12,
+  "local_browser_desktop_rasters_reviewed": 6,
+  "mobile_dom_acceptance": true,
+  "mobile_raster_acceptance": false,
+  "scope": "Authenticated Firebase Hosting deployment from exact clean published source after89 local payload hashes matched on Cloud Shell, CLI completion and whitelisted active management metadata. Browser review uses localhost. Six mobile provider frames are incomplete and excluded from visual acceptance. No public-origin response/render, Cloud Run, provider login, ad or checkout acceptance is inferred. Android artifacts are unchanged.",
+  "evidence": [
+    "deployment-preflight.json",
+    "deploy-cli-excerpt.txt",
+    "live-management.json",
+    "hosting-confirmation.jpg",
+    "browser-20261028/observations.json",
+    "hosting-confirmation-detail.jpg"
+  ],
+  "evidence_sha256": {
+    "deployment-preflight.json": "b20918f154d67cc9e366db8e701004dbdeeb2b4b8a19f5337b3ad139f8a74149",
+    "deploy-cli-excerpt.txt": "580552f67852a02552916796bd9453a40fc8738565482a2a6bbec5bc14cb9eff",
+    "live-management.json": "4528baf96a9057afc99f16b33d2efd81598d78d450c3dd5643027d2b5a3fe8bb",
+    "hosting-confirmation.jpg": "b5dcce30b22182aa24c327a6e3c34ef7c34a9fdf0db7339756d1f2d0490a2b17",
+    "browser-20261028/observations.json": "2bc4862142744b7208b8b285f62b26d9b031af3d99e7b8c27ecce332c75c9c1f",
+    "hosting-confirmation-detail.jpg": "3fc64d7984c5fa1956ca36808ec5ebe33323c241efe067e91064790f3a695997"
+  }
+}

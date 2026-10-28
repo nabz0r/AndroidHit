@@ -1,9 +1,9 @@
 {
   "edition": "1.10",
-  "state": "rc3-native-qualified-website-source-only",
+  "state": "rc3-native-qualified-website-deployed-management-scope",
   "native_qualified": true,
   "artifact_frozen": true,
-  "website_published": false,
+  "website_published": true,
   "source_evidence": [
     "docs/validation/v1.10/avatar/host-validation.json",
     "docs/validation/v1.10/avatar/android-api-compile.json",
@@ -31,7 +31,7 @@
     "public/assets/screenshots/v1.10/avatar-studio-en.png",
     "public/assets/screenshots/v1.10/avatar-preview-en.png"
   ],
-  "scope": "Current rc3 source and specifically scoped Android evidence. Browser/Hosting, personal account state and retention outcomes are not inferred.",
+  "scope": "Current rc3 native scopes, localhost DOM/desktop review and authenticated Hosting completion/live management are separate evidence. Mobile visual acceptance, public-origin verification, personal account/provider and retention outcomes are not inferred.",
   "intermediate_native_runs": [
     {
       "report": "docs/validation/v1.10/ui-sdk-fresh-guest-f/host-report.json",
@@ -51,10 +51,18 @@
     }
   ],
   "hosting": {
-    "last_confirmed_edition": "1.9",
-    "edition1_10_deployed": false,
+    "last_confirmed_edition": "1.10",
+    "edition1_10_deployed": true,
     "origin_requested": false,
-    "scope": "Last confirmed Hosting remains1.9; locked desktop prevents current browser/deployment step. Main source publication is separate."
+    "scope": "Cloud Shell clean-source hash verification, Firebase CLI Deploy complete and live-management FINALIZED/DEPLOY. No public-origin request.",
+    "source_commit": "9be35d2bb4af136edbbba689d109cfb28b70de9e",
+    "public_tree": "f99bd6ceb2a11c746fbaa493d91be800d9edf23f",
+    "source_manifest_sha256": "3f4528d0a85346e4924dc598cba87a1a37a9a5c26cfd4f4f5c49f88d57cdfe1d",
+    "payloads": 89,
+    "release_time_utc": "2026-10-28T10:44:28.535Z",
+    "version": "cc107bd698c853bf",
+    "release": "1793184268535000",
+    "proof": "docs/validation/site-v1.10/deployment.json"
   },
   "current_candidate": "1.10.0-rc3",
   "current_lab_candidate": "1.10.0-sandbox-rc3",
@@ -91,6 +99,15 @@
     "docs/validation/v1.10/ui-sdk-fresh-guest-i/host-report.json",
     "docs/validation/v1.10/ui-sdk-production-final3/host-report.json"
   ],
-  "source_website_report": "docs/validation/site-v1.10/release/static-check.json",
-  "last_independently_verified_public_release": "1.9.0-rc1"
+  "source_website_report": "docs/validation/site-v1.10/deployment-source/static-check.json",
+  "last_independently_verified_public_release": "1.10.0-rc3",
+  "public_artifact_record": "docs/validation/v1.10/publication.json",
+  "browser": {
+    "record": "docs/validation/site-v1.10/browser-20261028/observations.json",
+    "dom_states_pass": 12,
+    "accepted_desktop_rasters": 6,
+    "mobile_dom_states": 6,
+    "mobile_raster_acceptance": false,
+    "scope": "Localhost only; six incomplete mobile frames are retained and excluded from visual acceptance."
+  }
 }

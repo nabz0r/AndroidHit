@@ -4,7 +4,7 @@
 
 Install the signed [production 1.10.0-rc3 APK](../releases/luma-drift-1.10.0-rc3.apk), package `com.androidhit.lumadrift`, code 11. Keep the existing application and its data to retain device-local progress. The separate [Lab APK](../releases/luma-drift-1.10.0-sandbox-rc3.apk) uses its own profile; no transfer into production is implied. Android 8/API 26 or later. Existing signing identity is retained.
 
-[Four APK/AAB files and full hashes](RELEASE_1_10.md) · [Manifest](../releases/manifest-1.10.0-rc3.json) · [Native acceptance](validation/v1.10/README.md) · [Public download verification](validation/v1.10/publication.json). Test ads are forced and real checkout stays gated. The 1.10 website source is prepared; Hosting deployment is pending.
+[Four APK/AAB files and full hashes](RELEASE_1_10.md) · [Manifest](../releases/manifest-1.10.0-rc3.json) · [Native acceptance](validation/v1.10/README.md) · [Public download verification](validation/v1.10/publication.json). Test ads are forced and real checkout stays gated. The1.10 website is deployed from verified source 9be35d2; [Firebase confirmation](validation/site-v1.10/deployment.json).
 
 ## Preserved 1.9 installation
 
