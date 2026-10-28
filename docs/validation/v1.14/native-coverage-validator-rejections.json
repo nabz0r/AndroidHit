@@ -1,0 +1,29 @@
+{
+  "scope": "Negative coverage-validator checks and actual pinned setup helper; no complete coverage receipt written",
+  "checkedAtUtc": "2026-10-28T19:14:29.030776+00:00",
+  "validatorSha256": "8d12262e5c19c3909d94e77153f6e571be67cf87141530ffd15385876ad585a4",
+  "cases": [
+    {
+      "name": "ongoing-D-without-final-host-report",
+      "exitCode": 1,
+      "refusal": "COVERAGE REFUSED: Missing final evidence file: /Users/n/androidhit/docs/validation/v1.14/ui-bugs/ui-sdk-coverage801-1000-rc2-d/host-report.json"
+    },
+    {
+      "name": "failed-C-reused-as-tail",
+      "exitCode": 1,
+      "refusal": "COVERAGE REFUSED: Both original hosts must retain their true result and restored=true"
+    },
+    {
+      "name": "actual-pinned-setup-helper-only",
+      "setupAccepted": true,
+      "fullCoverageAccepted": false,
+      "restorationAssumed": false
+    },
+    {
+      "name": "altered-prerequisite-with-updated-host-sha",
+      "refusal": "Setup proof is not the exact independently reviewed live prerequisite"
+    }
+  ],
+  "originalCReportSha256": "d35c7a1b2ffd676f466408ee5e93a2a2a82efb00599f76ec83201bfcdbc69cd1",
+  "coverageReceiptWritten": false
+}

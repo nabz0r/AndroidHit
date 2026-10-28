@@ -79,7 +79,7 @@ public final class ObjectiveDashboard {
             weeklyEventReady=store.weeklyCompletedCount()==Catalog.WEEKLY_COUNT&&!store.weeklyBonusClaimed();
             eventReadyCount=(dailyEventReady?1:0)+(weeklyEventReady?1:0);
             List<Trial> trialList=new ArrayList<>(); List<String> readyIds=new ArrayList<>();
-            for(Catalog.BoosterItem item:Catalog.BOOSTERS) {
+            for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id)) {
                 Trial trial=new Trial(store,item); trialList.add(trial); if(trial.ready)readyIds.add(trial.id);
             }
             trials=Collections.unmodifiableList(trialList); readyTrialIds=Collections.unmodifiableList(readyIds);

@@ -128,7 +128,7 @@ public final class InventoryPresentationTest {
         context.prefs.edit().putInt("booster_hint",0).putInt("booster_vision",6).commit();
         Map<String,?> before=context.prefs.getAll();
         List<InventoryPresentation.Power> powers=InventoryPresentation.powers(store,Set.of("hint","unknown"));
-        check(powers.size()==6,"Exactly six known powers; unknown active IDs cannot create a seventh");
+        check(powers.size()==5,"Exactly five current offers; retired/unknown active IDs cannot create another");
         check(power(powers,"hint").state==InventoryPresentation.PowerState.ACTIVE&&!power(powers,"hint").canUse(),"Last spent charge remains visibly active and cannot be activated again");
         check(power(powers,"vision").state==InventoryPresentation.PowerState.LOCKED&&!power(powers,"vision").canUse(),"Saved stock does not bypass an unlock milestone");
         check(power(InventoryPresentation.powers(store,null),"hint").state==InventoryPresentation.PowerState.EMPTY,"Empty unlocked power is distinct from locked and active");
@@ -140,7 +140,7 @@ public final class InventoryPresentationTest {
         }
         check(power(InventoryPresentation.powers(store,Set.of()),"hint").canUse(),"Positive stock unlocked power is available");
         check("vision".equals(InventoryPresentation.nextPower(1).id)&&"flow".equals(InventoryPresentation.nextPower(5).id),"Next milestone advances at exact unlock levels");
-        check(InventoryPresentation.nextPower(75)==null,"No fictional unlock after all six powers");
+        check(InventoryPresentation.nextPower(75)==null,"No fictional unlock after all current powers");
         for(int total:new int[]{0,1,6,10,11,240,1000,Integer.MAX_VALUE}){
             InventoryPresentation.Page page=InventoryPresentation.sagaPage(total,Integer.MAX_VALUE);
             check(page.pageCount==(total==0?0:(total-1)/10+1),"Page count rounds up: "+total);

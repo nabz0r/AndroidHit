@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "scope": "Read-only RC2 marathon input/source review; fixture replay in a separate host implementation, not Android execution or another minimum proof",
+  "fixtureBoards": 1000,
+  "fixtureActions": 19920,
+  "assertions": 23946,
+  "sourceLayoutSha256": "0a6de06054a377d37b5b8ab1e2374cdbe694c03983adeb1b5714f86aec54dafc",
+  "fixtureManifestSourceDrift": [
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionInfo.java",
+      "recorded": "56b9bbe36ded43a50904527720584790ddd054a3a29b538b8e718808dc54eba2",
+      "current": "74bb55d2fc2be61bd8a98a6e3665f7280d6fbcd0dc2213bb4b518caaf91483fe"
+    }
+  ],
+  "sourceDriftExplanation": "Only ProgressionInfo provenance metadata changed after fixture generation; neither fixture payloads nor geometry, action plan, minimum or allowance changed. Do not claim all recorded fixture-generation source hashes match the final app.",
+  "perActionChecks": "Every encoded opening/exit is legal against independently replayed tiles, keys/seals and gates; fixture metadata, certificate order, before/after masks and SHA match frozen layout",
+  "nativeRunnerReview": "bulkCache path checks exact appended typed history and budget+1 after every action; native victory and visible3 Stars after each board; process batching retains earned progress and restores original preferences only at final cleanup",
+  "limits": "Native cached route does not separately assert every rendered gate/key label after each action; source/runtime independent audits establish those rule transitions. Known-solution replay is not human solving."
+}

@@ -1,0 +1,2314 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "journey,level15-audit",
+  "journey_through": 14,
+  "serial": "emulator-5580",
+  "capture_policy": "all",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+  "expected_apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+  "test_apk_sha256": "36f86da89d831cbccaf57fca961319c93159aa693981326071bc451eb271961b",
+  "wrapper_source_sha256": "ce017b5c9e9c2f6f05beba0caaafbf4473b814e619c6779073fc52694ac4b8a8",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "aac22e9a2fab47b9c8bcd070b7241fc9ef762e6a8f0b76295c969e4f22df81cc",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v113-ui-original-prefs-jm0jt1md",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "installed_test_apk_sha256": "36f86da89d831cbccaf57fca961319c93159aa693981326071bc451eb271961b",
+  "phases": [
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": true,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.13.0-sandbox-rc2/code14"
+          },
+          {
+            "pass": true,
+            "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+          },
+          {
+            "pass": true,
+            "message": "Native dialog text input accepts SDK action"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 native piece count matches the certified fixture: 6"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 native piece count matches the certified fixture: 9"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 native piece count matches the certified fixture: 11"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 native piece count matches the certified fixture: 11"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 native piece count matches the certified fixture: 12"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 11 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 native piece count matches the certified fixture: 10"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Real native preview cancellation spends no action and changes no history"
+          },
+          {
+            "pass": true,
+            "message": "Canceled native preview returns to actual board controls"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 native piece count matches the certified fixture: 9"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 native piece count matches the certified fixture: 10"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 native piece count matches the certified fixture: 11"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 65 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "L15 branch audit uses genuinely earned access through level14"
+          },
+          {
+            "pass": true,
+            "message": "Native dialog text input accepts SDK action"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "L15 diagnostic has an actual earned Spark stock, never injected"
+          },
+          {
+            "pass": true,
+            "message": "SDK gesture target is the observed accessible piece: Piece, row 4, column 1, arrow down, Gate open"
+          },
+          {
+            "pass": true,
+            "message": "L15 opposite-direction drag leaves both board history and budget unchanged"
+          },
+          {
+            "pass": true,
+            "message": "SDK gesture target is the observed accessible piece: Piece, row 4, column 1, arrow down, Gate open"
+          },
+          {
+            "pass": true,
+            "message": "L15 arrow-direction drag exits its real tile exactly once"
+          },
+          {
+            "pass": true,
+            "message": "L15 Undo refunds the successful drag and restores its tile"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "L15 a physical tap follows the same fixed-arrow exit rule as a correct drag"
+          },
+          {
+            "pass": true,
+            "message": "L15 touching an already open gate neither closes it nor spends a move"
+          },
+          {
+            "pass": true,
+            "message": "L15 cancelling a manual gate preview is free"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "L15 cancelling a switch preview leaves its piece and gates unchanged"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "L15 taking the legal switch early visibly closes the up gate"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "L15 the closed up gate can be reopened with one visible productive action"
+          },
+          {
+            "pass": true,
+            "message": "L15 Undo reverses the manual up opening and refunds it"
+          },
+          {
+            "pass": true,
+            "message": "L15 Undo restores the switch tile and its prior open up gate"
+          },
+          {
+            "pass": true,
+            "message": "L15 the gate/switch branch can be fully reversed without remaining move overhead"
+          },
+          {
+            "pass": true,
+            "message": "L15 one blocked tile tap spends a move while recording no productive history"
+          },
+          {
+            "pass": true,
+            "message": "L15 Undo cannot refund a blocked attempt when no productive move exists"
+          },
+          {
+            "pass": true,
+            "message": "L15 five blocked attempts spend five moves with the initial board still unchanged"
+          },
+          {
+            "pass": true,
+            "message": "L15 Spark offers no usable hint charge after blocked attempts leave fewer than the necessary12 actions"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "L15 free Restart clears the unrecoverable failed-attempt budget"
+          },
+          {
+            "pass": true,
+            "message": "L15 the same actual Spark works after Restart, without consuming a move or playing a tile"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "L15 repeated blocked taps genuinely exhaust all16 moves after one productive exit"
+          },
+          {
+            "pass": true,
+            "message": "L15 zero-move Undo restores the productive tile but refunds only one move, leaving15 failed-attempt charges"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "L15 also finishes with three stars in an alternate legal gate/switch-first order"
+          },
+          {
+            "pass": true,
+            "message": "L15 branch audit earns only its real victory reward and spends exactly the one confirmed Spark"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "journey-1-start-en",
+          "journey-1-cleared-en",
+          "journey-2-start-en",
+          "journey-2-cleared-en",
+          "journey-3-start-en",
+          "journey-3-cleared-en",
+          "journey-4-start-en",
+          "journey-4-cleared-en",
+          "journey-5-start-en",
+          "journey-5-cleared-en",
+          "journey-6-start-en",
+          "journey-6-cleared-en",
+          "journey-7-start-en",
+          "journey-7-cleared-en",
+          "journey-8-start-en",
+          "journey-8-cleared-en",
+          "journey-9-start-en",
+          "journey-9-cleared-en",
+          "journey-10-start-en",
+          "journey-10-cleared-en",
+          "journey-11-start-en",
+          "gate-preview-visible-before-cancel-en",
+          "journey-11-cleared-en",
+          "journey-12-start-en",
+          "journey-12-cleared-en",
+          "journey-13-start-en",
+          "journey-13-cleared-en",
+          "journey-14-start-en",
+          "journey-14-cleared-en",
+          "level15-initial-en",
+          "level15-opposite-drag-en",
+          "level15-correct-drag-en",
+          "level15-left-preview-en",
+          "level15-switch-preview-en",
+          "level15-early-switch-up-closed-en",
+          "level15-up-reopened-en",
+          "level15-gate-branch-fully-undone-en",
+          "level15-five-blocks-no-piece-moved-en",
+          "level15-five-blocks-spark-refused-en",
+          "level15-fresh-spark-works-en",
+          "level15-zero-after-blocks-en",
+          "level15-zero-undone-still-insufficient-en",
+          "level15-restart-restores-sixteen-en",
+          "level15-alternate-order-won-en"
+        ],
+        "checkCount": 263,
+        "package": "com.androidhit.lumadrift.sandbox",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 4897,
+        "visualPhase": "prepare",
+        "firstLightPhase": "none",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "houseCheckpointReady": false,
+        "firstLightCheckpointReady": false,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "prepare/journey-1-cleared-en.png": "90799063d4e2edf95ff03e1ae64a28fc7276c0f5dc9092974f41b0dfd2f89bd8",
+        "prepare/level15-five-blocks-no-piece-moved-en.png": "c9dec1ed1557bcebfd7be738d31e215ed225f3b7a06c3e870ef04442e15aa831",
+        "prepare/journey-9-cleared-en.png": "e9dde630b2a0a820a23d9f695808b0da6c1d6b8cb489cff38af76d79ed8d758a",
+        "prepare/journey-6-cleared-en.png": "278761b3f0c22684a26e6e4c7d57202e2de3f780cd46ac151f724dfbdd695d0d",
+        "prepare/level15-opposite-drag-en.png": "65d4370575962a4583ffb1035ea2eeb56e5ae5f4516f2159241626b41af5c4ad",
+        "prepare/level15-five-blocks-spark-refused-en.png": "6e4566c462ca213c37126e5f9410b32eb84615a89f0a361b4d8267166114b2d7",
+        "prepare/journey-7-cleared-en.png": "4d65cc96adad850a7a73c51a7c707fc749fb621af637c665cac7c1e4e4d27ab4",
+        "prepare/journey-8-cleared-en.png": "f581bdfa832caa5252546f705ffb57fb8f7afbc590e5e0d69666fbd27a4da8ed",
+        "prepare/level15-switch-preview-en.png": "3761f8d898396c8ecebe6af0350d791990f18e4e4038e661a9e2d7a8dc649efa",
+        "prepare/level15-restart-restores-sixteen-en.png": "6ea578f2f7dfd2c2da5f0b1e5f125ea743f62ce83cf1405e13311814b0d48aa0",
+        "prepare/journey-6-start-en.png": "78542d8686242a7043b079a3da21af4b6ce0d545f0058c8cc3d14c6b10a8f97c",
+        "prepare/journey-1-start-en.png": "7c4007272f1027831646878d83b608fd47278cac124d296ecdd02fc662c6b1b4",
+        "prepare/level15-gate-branch-fully-undone-en.png": "0652f38f479b20218e56357568c175cca526459977b06823a960007a7ed3a933",
+        "prepare/journey-11-start-en.png": "f32c1318b5ce852f6e8a219f31309862d31a65b0946fbe15e3e7dd37840aa033",
+        "prepare/level15-zero-after-blocks-en.png": "3097190abfcbe431fee7592823a88064d25a2fe0d5fc46d28256eec3b1244bd5",
+        "prepare/journey-2-cleared-en.png": "ef89d6ce9636055e5ac65e28eeac727d4c58d24b1f81d4e2e033ebdc495398a8",
+        "prepare/level15-initial-en.png": "0652f38f479b20218e56357568c175cca526459977b06823a960007a7ed3a933",
+        "prepare/journey-5-cleared-en.png": "ecf4f17606f2cca3409df86773e72490d045ce6259928ca0be4431695643068c",
+        "prepare/journey-4-cleared-en.png": "ef280ae50ff799e314e482b630ea0b15c84c5dfb416949943c4e2b56e0fdc8e3",
+        "prepare/journey-7-start-en.png": "d2fda5c1f01ebcd77fcf6fbe2189824fa1297bce1bb2525bca96c9cb159fbf07",
+        "prepare/journey-10-start-en.png": "15a05b39a31845503f5b0af0c92a27ea80b4908c315c7c4e313c7be825348072",
+        "prepare/journey-3-cleared-en.png": "45bd62f206970dbd1aa00bb93962944266fe4b58b2d6524ee8af12313b238c03",
+        "prepare/home-en.png": "4b1fc21cfc2335c7b3d0f9741f3b15a118890bebb8eb345fab75bd78cae587b8",
+        "prepare/level15-correct-drag-en.png": "b441cbd6eb6c181443c06faea9439d2af52a8fb1f1023e470c170e2699a61e5f",
+        "prepare/level15-fresh-spark-works-en.png": "8a20f5de21e7db75b70f85f6261f2d3bf9ec0871ba61cd1ebd9a9b624e6b36bc",
+        "prepare/journey-11-cleared-en.png": "7c0a6b8993b80c10b01df2c997317b45929544df17182d63ee5dacd5784ebfaf",
+        "prepare/journey-12-start-en.png": "4fcafd97aa1bae85d2b508e5e5d8e536ff2bc8dae9f2512fc8bcb32dc27e5c86",
+        "prepare/journey-5-start-en.png": "4a85a7d55b5b60558354952c33bc15d7186445b217e4f667e5998030e53d3e32",
+        "prepare/journey-2-start-en.png": "732799bda3c588f786196402ee4f17ce95bf18afc4c92241b59171297b3e7bb5",
+        "prepare/journey-14-start-en.png": "fdd07e388c0fc9a07665b2c481061c1efb75a02b2eb6ea8e8913104259e45913",
+        "prepare/journey-13-start-en.png": "b20c8f7aa75061250f9d3ee9f65e07014daa06cd368bbdca119a258395b16c35",
+        "prepare/journey-3-start-en.png": "8b127364d8f039bd516e0ea332a65ed18978e0246f661e1321334d9c46ff0679",
+        "prepare/journey-4-start-en.png": "c8826954b0f59504391d034f0ae7bf53075e590e6ed9b25d6a58f403cac31ca3",
+        "prepare/level15-zero-undone-still-insufficient-en.png": "2d34e99cffdd707d6d8c83056adc6844cbe08ed04e9fadcd69a98a735f8ce0f5",
+        "prepare/journey-10-cleared-en.png": "30a6ad4847cc0e74b0bedb750a8fd474c1afe435351c01d3f75bd4dc4ffdef84",
+        "prepare/journey-12-cleared-en.png": "b2ecb2953bfd5133b5cd3ce73972ceef2664de3dce557ab4f2f37ae12c4b82c9",
+        "prepare/journey-9-start-en.png": "bb02690853856df812e2c3f5de8da8525f25bb2a32c216ee754f539b75da67f8",
+        "prepare/level15-up-reopened-en.png": "49b31835f5eb8b2ae7ae37a60b31b45a6f7faad54879bc7dd3766c96c28e489b",
+        "prepare/gate-preview-visible-before-cancel-en.png": "3170be455ca35a46928b66d99f3ea7812cd6f09bef4a026e0d33a4304b64144e",
+        "prepare/journey-14-cleared-en.png": "92d7368502cbe0ec13c34383402a864d4133e38129d77698329554a4c41f7131",
+        "prepare/journey-8-start-en.png": "7ebd10771bad30b158f81db200bdbba85dc4ff3ee8d9dec793e47011c15ca2d6",
+        "prepare/level15-alternate-order-won-en.png": "0e05cc1eb33eef9bcd58a058791c36861be527c911927281f55d0ab599aaa23d",
+        "prepare/level15-left-preview-en.png": "8427c2d5159bc7de218a4e92eacf584758de05415351b7e6fb18215b49b99a22",
+        "prepare/level15-early-switch-up-closed-en.png": "d3c85110f8c5cee3d6fee6e15829a0fa58c08a33d63f478706e7f26c050e141f",
+        "prepare/journey-13-cleared-en.png": "cae599e4be1b2d4526185d62142b91f1e090d270cd4b6028137d1843779bb367"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/journey-1-cleared-en.png": "90799063d4e2edf95ff03e1ae64a28fc7276c0f5dc9092974f41b0dfd2f89bd8",
+    "prepare/level15-five-blocks-no-piece-moved-en.png": "c9dec1ed1557bcebfd7be738d31e215ed225f3b7a06c3e870ef04442e15aa831",
+    "prepare/journey-9-cleared-en.png": "e9dde630b2a0a820a23d9f695808b0da6c1d6b8cb489cff38af76d79ed8d758a",
+    "prepare/journey-6-cleared-en.png": "278761b3f0c22684a26e6e4c7d57202e2de3f780cd46ac151f724dfbdd695d0d",
+    "prepare/level15-opposite-drag-en.png": "65d4370575962a4583ffb1035ea2eeb56e5ae5f4516f2159241626b41af5c4ad",
+    "prepare/level15-five-blocks-spark-refused-en.png": "6e4566c462ca213c37126e5f9410b32eb84615a89f0a361b4d8267166114b2d7",
+    "prepare/journey-7-cleared-en.png": "4d65cc96adad850a7a73c51a7c707fc749fb621af637c665cac7c1e4e4d27ab4",
+    "prepare/journey-8-cleared-en.png": "f581bdfa832caa5252546f705ffb57fb8f7afbc590e5e0d69666fbd27a4da8ed",
+    "prepare/level15-switch-preview-en.png": "3761f8d898396c8ecebe6af0350d791990f18e4e4038e661a9e2d7a8dc649efa",
+    "prepare/level15-restart-restores-sixteen-en.png": "6ea578f2f7dfd2c2da5f0b1e5f125ea743f62ce83cf1405e13311814b0d48aa0",
+    "prepare/journey-6-start-en.png": "78542d8686242a7043b079a3da21af4b6ce0d545f0058c8cc3d14c6b10a8f97c",
+    "prepare/journey-1-start-en.png": "7c4007272f1027831646878d83b608fd47278cac124d296ecdd02fc662c6b1b4",
+    "prepare/level15-gate-branch-fully-undone-en.png": "0652f38f479b20218e56357568c175cca526459977b06823a960007a7ed3a933",
+    "prepare/journey-11-start-en.png": "f32c1318b5ce852f6e8a219f31309862d31a65b0946fbe15e3e7dd37840aa033",
+    "prepare/level15-zero-after-blocks-en.png": "3097190abfcbe431fee7592823a88064d25a2fe0d5fc46d28256eec3b1244bd5",
+    "prepare/journey-2-cleared-en.png": "ef89d6ce9636055e5ac65e28eeac727d4c58d24b1f81d4e2e033ebdc495398a8",
+    "prepare/level15-initial-en.png": "0652f38f479b20218e56357568c175cca526459977b06823a960007a7ed3a933",
+    "prepare/journey-5-cleared-en.png": "ecf4f17606f2cca3409df86773e72490d045ce6259928ca0be4431695643068c",
+    "prepare/journey-4-cleared-en.png": "ef280ae50ff799e314e482b630ea0b15c84c5dfb416949943c4e2b56e0fdc8e3",
+    "prepare/journey-7-start-en.png": "d2fda5c1f01ebcd77fcf6fbe2189824fa1297bce1bb2525bca96c9cb159fbf07",
+    "prepare/journey-10-start-en.png": "15a05b39a31845503f5b0af0c92a27ea80b4908c315c7c4e313c7be825348072",
+    "prepare/journey-3-cleared-en.png": "45bd62f206970dbd1aa00bb93962944266fe4b58b2d6524ee8af12313b238c03",
+    "prepare/home-en.png": "4b1fc21cfc2335c7b3d0f9741f3b15a118890bebb8eb345fab75bd78cae587b8",
+    "prepare/level15-correct-drag-en.png": "b441cbd6eb6c181443c06faea9439d2af52a8fb1f1023e470c170e2699a61e5f",
+    "prepare/level15-fresh-spark-works-en.png": "8a20f5de21e7db75b70f85f6261f2d3bf9ec0871ba61cd1ebd9a9b624e6b36bc",
+    "prepare/journey-11-cleared-en.png": "7c0a6b8993b80c10b01df2c997317b45929544df17182d63ee5dacd5784ebfaf",
+    "prepare/journey-12-start-en.png": "4fcafd97aa1bae85d2b508e5e5d8e536ff2bc8dae9f2512fc8bcb32dc27e5c86",
+    "prepare/journey-5-start-en.png": "4a85a7d55b5b60558354952c33bc15d7186445b217e4f667e5998030e53d3e32",
+    "prepare/journey-2-start-en.png": "732799bda3c588f786196402ee4f17ce95bf18afc4c92241b59171297b3e7bb5",
+    "prepare/journey-14-start-en.png": "fdd07e388c0fc9a07665b2c481061c1efb75a02b2eb6ea8e8913104259e45913",
+    "prepare/journey-13-start-en.png": "b20c8f7aa75061250f9d3ee9f65e07014daa06cd368bbdca119a258395b16c35",
+    "prepare/journey-3-start-en.png": "8b127364d8f039bd516e0ea332a65ed18978e0246f661e1321334d9c46ff0679",
+    "prepare/journey-4-start-en.png": "c8826954b0f59504391d034f0ae7bf53075e590e6ed9b25d6a58f403cac31ca3",
+    "prepare/level15-zero-undone-still-insufficient-en.png": "2d34e99cffdd707d6d8c83056adc6844cbe08ed04e9fadcd69a98a735f8ce0f5",
+    "prepare/journey-10-cleared-en.png": "30a6ad4847cc0e74b0bedb750a8fd474c1afe435351c01d3f75bd4dc4ffdef84",
+    "prepare/journey-12-cleared-en.png": "b2ecb2953bfd5133b5cd3ce73972ceef2664de3dce557ab4f2f37ae12c4b82c9",
+    "prepare/journey-9-start-en.png": "bb02690853856df812e2c3f5de8da8525f25bb2a32c216ee754f539b75da67f8",
+    "prepare/level15-up-reopened-en.png": "49b31835f5eb8b2ae7ae37a60b31b45a6f7faad54879bc7dd3766c96c28e489b",
+    "prepare/gate-preview-visible-before-cancel-en.png": "3170be455ca35a46928b66d99f3ea7812cd6f09bef4a026e0d33a4304b64144e",
+    "prepare/journey-14-cleared-en.png": "92d7368502cbe0ec13c34383402a864d4133e38129d77698329554a4c41f7131",
+    "prepare/journey-8-start-en.png": "7ebd10771bad30b158f81db200bdbba85dc4ff3ee8d9dec793e47011c15ca2d6",
+    "prepare/level15-alternate-order-won-en.png": "0e05cc1eb33eef9bcd58a058791c36861be527c911927281f55d0ab599aaa23d",
+    "prepare/level15-left-preview-en.png": "8427c2d5159bc7de218a4e92eacf584758de05415351b7e6fb18215b49b99a22",
+    "prepare/level15-early-switch-up-closed-en.png": "d3c85110f8c5cee3d6fee6e15829a0fa58c08a33d63f478706e7f26c050e141f",
+    "prepare/journey-13-cleared-en.png": "cae599e4be1b2d4526185d62142b91f1e090d270cd4b6028137d1843779bb367"
+  },
+  "capture_kind_counts": {
+    "original_full_frames": 45,
+    "unscaled_analysis_crops": 0
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed exact target 1.13.0-sandbox-rc2/code14"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 native piece count matches the certified fixture: 5"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 native piece count matches the certified fixture: 6"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 native piece count matches the certified fixture: 9"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 native piece count matches the certified fixture: 11"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 native piece count matches the certified fixture: 11"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 native piece count matches the certified fixture: 12"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 native piece count matches the certified fixture: 10"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Real native preview cancellation spends no action and changes no history"
+      },
+      {
+        "pass": true,
+        "message": "Canceled native preview returns to actual board controls"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 native piece count matches the certified fixture: 9"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 native piece count matches the certified fixture: 10"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 native piece count matches the certified fixture: 11"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "L15 branch audit uses genuinely earned access through level14"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "L15 diagnostic has an actual earned Spark stock, never injected"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 4, column 1, arrow down, Gate open"
+      },
+      {
+        "pass": true,
+        "message": "L15 opposite-direction drag leaves both board history and budget unchanged"
+      },
+      {
+        "pass": true,
+        "message": "SDK gesture target is the observed accessible piece: Piece, row 4, column 1, arrow down, Gate open"
+      },
+      {
+        "pass": true,
+        "message": "L15 arrow-direction drag exits its real tile exactly once"
+      },
+      {
+        "pass": true,
+        "message": "L15 Undo refunds the successful drag and restores its tile"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "L15 a physical tap follows the same fixed-arrow exit rule as a correct drag"
+      },
+      {
+        "pass": true,
+        "message": "L15 touching an already open gate neither closes it nor spends a move"
+      },
+      {
+        "pass": true,
+        "message": "L15 cancelling a manual gate preview is free"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "L15 cancelling a switch preview leaves its piece and gates unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "L15 taking the legal switch early visibly closes the up gate"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "L15 the closed up gate can be reopened with one visible productive action"
+      },
+      {
+        "pass": true,
+        "message": "L15 Undo reverses the manual up opening and refunds it"
+      },
+      {
+        "pass": true,
+        "message": "L15 Undo restores the switch tile and its prior open up gate"
+      },
+      {
+        "pass": true,
+        "message": "L15 the gate/switch branch can be fully reversed without remaining move overhead"
+      },
+      {
+        "pass": true,
+        "message": "L15 one blocked tile tap spends a move while recording no productive history"
+      },
+      {
+        "pass": true,
+        "message": "L15 Undo cannot refund a blocked attempt when no productive move exists"
+      },
+      {
+        "pass": true,
+        "message": "L15 five blocked attempts spend five moves with the initial board still unchanged"
+      },
+      {
+        "pass": true,
+        "message": "L15 Spark offers no usable hint charge after blocked attempts leave fewer than the necessary12 actions"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "L15 free Restart clears the unrecoverable failed-attempt budget"
+      },
+      {
+        "pass": true,
+        "message": "L15 the same actual Spark works after Restart, without consuming a move or playing a tile"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "L15 repeated blocked taps genuinely exhaust all16 moves after one productive exit"
+      },
+      {
+        "pass": true,
+        "message": "L15 zero-move Undo restores the productive tile but refunds only one move, leaving15 failed-attempt charges"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "L15 also finishes with three stars in an alternate legal gate/switch-first order"
+      },
+      {
+        "pass": true,
+        "message": "L15 branch audit earns only its real victory reward and spends exactly the one confirmed Spark"
+      }
+    ],
+    "checkCount": 263,
+    "scope": "Actual SDK single-process observation; no profile seeding"
+  },
+  "isolated_test_package_removed": true,
+  "rotation_settings_restored": true
+}

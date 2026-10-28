@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "scope": "Read-only independent review of migration fixes, supported by one current targeted JVM regression; no native or package acceptance",
+  "applicationSourcesEditedByReviewer": false,
+  "findings": [
+    {
+      "id": "earned-continuation-after-refund",
+      "status": "fixed",
+      "evidence": "Settlement validates earned receipt, run identity and next ordinal, permits previously earned extension after rejected-tap refund; budget/token saved together before acknowledgement; mutation guards wait."
+    },
+    {
+      "id": "policy1-active-allocation",
+      "status": "fixed",
+      "evidence": "toDeliberate refuses policy1 and restore keeps the original validated ledger. A deliberate attempt starts only after an explicit restart/new attempt."
+    }
+  ],
+  "targetedChecks": 24775,
+  "productiveActions": 20221,
+  "executionLog": "docs/validation/v1.14/audit-core-review-fixed.txt",
+  "newBlockingFindings": [],
+  "reviewedFiles": [
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/engine/MoveBudget.java",
+      "sha256": "132bb7f2737fa9becba115e3388e68180a5e10be0e01bf44ea54de560b9916bc"
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/engine/Board.java",
+      "sha256": "f223cfcbb09683ca817d845c840da5192b0e445ae6f25bfec3135b8c588b8080"
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/engine/Level.java",
+      "sha256": "a506cc9926709d1c23403b2db8329cc7cf85ac9d45d919b1c87b2291fe5614b9"
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/engine/ChallengeCode.java",
+      "sha256": "21e842d87bef45b46d617f8676a63ce249c9f48f8de05edb6c9248769537c230"
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+      "sha256": "8de526fdded0207217cab3fb57d123d957a5e8a1aa07e5776c708721bcc26e49"
+    },
+    {
+      "path": "scripts/DeliberatePlayV114Test.java",
+      "sha256": "524b1b072964bc5da63b8beafcdecc00cc458740dd6fea63dea59f9fcad28f13"
+    }
+  ]
+}

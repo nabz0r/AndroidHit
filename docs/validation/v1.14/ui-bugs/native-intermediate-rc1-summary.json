@@ -1,0 +1,77 @@
+{
+  "scope": "Independent historical runs; counts overlap and are not unique gameplay scenarios. RC1 failure remains a failure; no RC2 runtime claim.",
+  "runs": [
+    {
+      "label": "upgrade-a",
+      "report": "docs/validation/v1.14/ui-bugs/ui-sdk-upgrade-a/host-report.json",
+      "report_sha256": "40801b4b66e3bc617a376a5872be514f4ca4906114d5356908a112b4008fb929",
+      "passed": true,
+      "restored": true,
+      "checks": 283,
+      "apk_before": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+      "apk_after": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "test_package_absent": true,
+      "scope": "Historical RC1 evidence only, with RC2 old-app legacy checkpoint where explicitly recorded"
+    },
+    {
+      "label": "pilot10-cache-a",
+      "report": "docs/validation/v1.14/ui-bugs/ui-sdk-pilot10-cache-a/host-report.json",
+      "report_sha256": "2fc5f66f9650729364a01be7ccbfd96fb695f1a9dafc432b2c2587f04d89a150",
+      "passed": true,
+      "restored": true,
+      "checks": 153,
+      "apk_before": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "apk_after": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "test_package_absent": true,
+      "scope": "Historical RC1 evidence only, with RC2 old-app legacy checkpoint where explicitly recorded"
+    },
+    {
+      "label": "pilot30-rc1-a",
+      "report": "docs/validation/v1.14/ui-bugs/ui-sdk-pilot30-rc1-a/host-report.json",
+      "report_sha256": "2c964f1874b92be05ca67a9b9bc7c293547a4e1044aa7415d7b57958d9909a4f",
+      "passed": false,
+      "restored": true,
+      "checks": 622,
+      "apk_before": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "apk_after": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "test_package_absent": true,
+      "scope": "Historical RC1 evidence only, with RC2 old-app legacy checkpoint where explicitly recorded"
+    },
+    {
+      "label": "pilot30-rc1-b",
+      "report": "docs/validation/v1.14/ui-bugs/ui-sdk-pilot30-rc1-b/host-report.json",
+      "report_sha256": "38d99da8f76c596d5d222546a8ea7c9adca1016c951016aaa646922d656c963f",
+      "passed": true,
+      "restored": true,
+      "checks": 716,
+      "apk_before": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "apk_after": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "test_package_absent": true,
+      "scope": "Historical RC1 evidence only, with RC2 old-app legacy checkpoint where explicitly recorded"
+    },
+    {
+      "label": "queued10-rc1-a",
+      "report": "docs/validation/v1.14/ui-bugs/ui-sdk-queued10-rc1-a/host-report.json",
+      "report_sha256": "96e235fad46207115cc33946a5ceafe825e8661adfeae6db6ff132f3f2380838",
+      "passed": true,
+      "restored": true,
+      "checks": 153,
+      "apk_before": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "apk_after": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "test_package_absent": true,
+      "scope": "Historical RC1 evidence only, with RC2 old-app legacy checkpoint where explicitly recorded"
+    },
+    {
+      "label": "queued30-core-rc1-a",
+      "report": "docs/validation/v1.14/ui-bugs/ui-sdk-queued30-core-rc1-a/host-report.json",
+      "report_sha256": "8eb9100661060fbd196c94c992e9f87e74693d284e7046cad18e5c3ec055e385",
+      "passed": true,
+      "restored": true,
+      "checks": 629,
+      "apk_before": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "apk_after": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+      "test_package_absent": true,
+      "scope": "Historical RC1 evidence only, with RC2 old-app legacy checkpoint where explicitly recorded"
+    }
+  ]
+}

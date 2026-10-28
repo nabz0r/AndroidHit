@@ -129,4 +129,9 @@ public final class Catalog {
         for (BoosterItem item : BOOSTERS) if (item.id.equals(id)) return item;
         return null;
     }
+
+    /** Current offers only. Retired definitions remain addressable for old stock and receipts. */
+    public static boolean isPowerOffered(String id) {
+        return booster(id) != null && !"shield".equals(id);
+    }
 }

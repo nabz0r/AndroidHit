@@ -1,5 +1,7 @@
 # Luma Drift gameplay and economy
 
+> Historical rules for the retained 1.8–1.9 releases. The current 1.14 candidate uses one Return per attempt, free blocked tries and a real action limit; see [1.14 gameplay](GAMEPLAY_1_14.md) and [1.14 qualification](validation/v1.14/README.md). Statements below about default routes, powers or policy3 describe those historical releases.
+
 ## Current 1.9 additions
 
 [Guardians](GUARDIANS.md) are optional separate encounters every ten Journey clears: two-layer thickness, one-cell pieces from the fifth, free recovery and one earned fragment reward. They do not alter the L/M/T boards below. [UX](UX_1_9.md) records visible fixed-window gate previews, stable gifts and explicit free power trials. Three stars allow `minimum + floor((base - minimum) / 2)` actions, two allow the original base, and an extension produces one star. Hint/power use, elapsed time and Undo count are not grading inputs; Undo's real action refund still matters.

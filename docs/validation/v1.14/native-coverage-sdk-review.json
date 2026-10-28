@@ -1,0 +1,51 @@
+{
+  "scope": "Independent SDK delta/source and setup-helper review only; tail run ongoing, no coverage acceptance or restoration assumed",
+  "reviewedAtUtc": "2026-10-28T19:09:52.340162+00:00",
+  "tailSdkSha256": "474477eac3f613834b78c66a90001e280e1ba6bf88e3bfafdfcd2a0d2f6f95ea",
+  "tailSourceSnapshotSha256": "2f8f305a645409b08f9299c4915240f26f49221e6668559c4571faf57fcc8874",
+  "exactReviewedDiffSha256": "6f288d8052b6531f80bdb351fbdade4f5a000f62b8412d9560e961fe1f6abac8",
+  "changedPaths": [
+    "java/com/androidhit/lumadrift/qa/v114/CandidateUiInstrumentation.java",
+    "run.py"
+  ],
+  "unchangedNFixtureCount": 1000,
+  "finalAppInputCount": 116,
+  "helperCases": [
+    {
+      "case": "actual-setup-only",
+      "setupDeltaAccepted": true,
+      "fullCoverageAccepted": false,
+      "note": "Actual live setup proof only; ongoing host restoration not invented"
+    },
+    {
+      "case": "injected-coins",
+      "refused": "Setup changed a typed value beyond the single authorized unlocked preference"
+    },
+    {
+      "case": "changed-session-bytes",
+      "refused": "Setup raw XML changes extend beyond the single authorized preference file"
+    },
+    {
+      "case": "wrong-unlock-type",
+      "refused": "Setup changed a typed value beyond the single authorized unlocked preference"
+    },
+    {
+      "case": "false-delta-count",
+      "refused": "Wrong synthetic prerequisite receipt"
+    },
+    {
+      "case": "wrong-backup",
+      "refused": "Synthetic before-snapshot is not the exact host original backup/file set"
+    }
+  ],
+  "originalEvidenceModified": false,
+  "coverageReceiptWritten": false,
+  "validatorSha256": "4f5b5eb3d2176de10df7808c57aa3974ca951c476930731e0ae028fe3220a03d",
+  "currentValidatorSha256": "8d12262e5c19c3909d94e77153f6e571be67cf87141530ffd15385876ad585a4",
+  "subsequentGuardChanges": [
+    "Strict integer types for tail mode/policy/content",
+    "Pin unchanged marathon helper bytes",
+    "Require emulator-5580 in each host",
+    "Pin exact independently reviewed live prerequisite bytes"
+  ]
+}

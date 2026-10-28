@@ -43,7 +43,7 @@ public final class ProgressionInfo {
         this.difficulty = difficulty;
         this.beat = beat;
         this.sourceNumber = sourceNumber;
-        this.sourceFamily = level.progressionVersion==4?(remix?"K":"J"):(remix ? "H" : "G");
+        this.sourceFamily = level.progressionVersion==5?(sourceNumber>0?"L":"N"):level.progressionVersion==4?(remix?"K":"J"):(remix ? "H" : "G");
         this.mistakeAllowance = allowance;
         this.pieces = level.tiles.size();
         this.size = level.size;

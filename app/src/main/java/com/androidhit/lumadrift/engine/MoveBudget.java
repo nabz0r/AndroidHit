@@ -1,16 +1,18 @@
 package com.androidhit.lumadrift.engine;
 
 /**
- * Pure per-run action budget. Every present-piece attempt (including a block)
- * and every successful undo costs one action. Selection, empty taps, an empty
- * undo, menus, hints and Vision do not; Flow pays for each actual attempt.
- * The controller validates the Board action and consumes its matching action.
- * A blocked attempt protected by an active Shield is deliberately not consumed.
+ * Pure per-run action budget. Policy4 charges productive actions, rejects blocked
+ * taps for free, and permits one refunded return per attempt. Historical policies
+ * retain their own accounting. Selection, menus and previews never spend actions.
+ * Flow pays for each committed action. Board, ledger and return count save together.
  * No spending, advertising, clock or individual player signals affect policy.
  */
 public final class MoveBudget {
     public static final int POLICY_VERSION = 2;
     public static final int REVERSIBLE_POLICY_VERSION = 3;
+    /** Real action limit, free rejected taps, one refunded correction per attempt. */
+    public static final int DELIBERATE_POLICY_VERSION = 4;
+    public static final int UNDO_LIMIT = 1;
     public static final int MAX_EXTENSIONS = 2;
     public static final int GOLD_EXTENSION_COST = 100;
     private final int mode;
@@ -50,8 +52,10 @@ public final class MoveBudget {
 
     /** 0 Journey, 1 daily, 2 weekly, 3 Remix, 4 fair unlimited friend challenge. */
     public static MoveBudget start(int mode, Level level) {
-        return create(mode, level, level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
+        return create(mode, level, level != null && level.progressionVersion == 5 ? DELIBERATE_POLICY_VERSION
+                : level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
     }
+    public static MoveBudget startDeliberate(int mode, Level level) { return create(mode, level, DELIBERATE_POLICY_VERSION); }
     /** New attempts on preserved content may opt into free, refunding Undo without changing its geometry. */
     public static MoveBudget startReversible(int mode,Level level) { return create(mode,level,REVERSIBLE_POLICY_VERSION); }
 
@@ -68,13 +72,15 @@ public final class MoveBudget {
             throw new IllegalArgumentException("Campaign mode requires a numbered campaign board");
         }
         if ((mode == 1 || mode == 2) && !level.isEvent) throw new IllegalArgumentException("Event mode requires an event board");
-        int minimum = policyVersion == REVERSIBLE_POLICY_VERSION ? level.minimumActions : level.tiles.size();
+        int minimum = policyVersion >= REVERSIBLE_POLICY_VERSION ? level.minimumActions : level.tiles.size();
         // N exits are necessary because each exit removes one tile; certified content solves in N.
         int margin;
         if (policyVersion == 1) {
             if (mode == 0) margin = level.number <= 3 ? 8 : level.number <= 6 ? 6 : level.number <= 30 ? 5 : level.number <= 90 ? 4 : 3;
             else if (mode == 3) margin = level.number <= 3 ? 6 : level.number <= 12 ? 5 : level.number <= 60 ? 4 : 3;
             else margin = mode == 1 ? 5 : 4;
+        } else if (mode == 0 && level.progressionVersion == 5) {
+            margin = LearningCatalog.allowance(level.number);
         } else if ((mode == 0 || mode == 3) && level.progressionVersion == 4) {
             margin = StrategyCatalog.allowance(level.number,mode==3);
         } else if (mode == 0 || mode == 3) {
@@ -101,14 +107,24 @@ public final class MoveBudget {
     public static MoveBudget restore(int mode, Level level, int used, int extensions,
                                      int extraActions, int boardMoves, int undos) {
         return restorePolicy(mode, level, used, extensions, extraActions, boardMoves, undos,
-                level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
+                level != null && level.progressionVersion == 5 ? DELIBERATE_POLICY_VERSION
+                        : level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
     }
     /** Explicit version routing preserves policy-1/2 saves; no guessing from the current release. */
     public static MoveBudget restoreVersion(int policy,int mode,Level level,int used,int extensions,
                                             int extraActions,int boardActions,int undos) {
-        if(policy<1||policy>REVERSIBLE_POLICY_VERSION)return null;
-        if(level!=null&&level.progressionVersion==4&&policy!=REVERSIBLE_POLICY_VERSION)return null;
+        if(policy<1||policy>DELIBERATE_POLICY_VERSION)return null;
+        if(level!=null&&level.progressionVersion>=4&&policy<REVERSIBLE_POLICY_VERSION)return null;
+        if(level!=null&&level.progressionVersion==5&&policy!=DELIBERATE_POLICY_VERSION)return null;
         return restorePolicy(mode,level,used,extensions,extraActions,boardActions,undos,policy);
+    }
+    /** Upgrade the ledger, retaining geometry and earned extensions. Rejected taps have no history entry. */
+    public static MoveBudget toDeliberate(int mode, Level level, MoveBudget previous, int boardActions, int undos) {
+        // Policy1 has different historical allowances: finish it intact, then start a new policy4 attempt.
+        if (previous == null || previous.policyVersion == 1 || boardActions < 0 || undos < 0) return null;
+        MoveBudget candidate = restorePolicy(mode, level, previous.isUnlimited() ? 0 : boardActions,
+                previous.extensions, previous.extraActions, boardActions, undos, DELIBERATE_POLICY_VERSION);
+        return candidate;
     }
     /** Deterministic policy-2 upgrade: retain its base/extensions; refund historical Undo overhead only. */
     public static MoveBudget toReversible(int mode,Level level,int used,int extensions,int extraActions,int boardActions,int undos) {
@@ -132,16 +148,17 @@ public final class MoveBudget {
         try { candidate = create(mode, level, policyVersion); }
         catch (IllegalArgumentException invalid) { return null; }
         if (used < 0 || extensions < 0 || extensions > MAX_EXTENSIONS || extraActions < 0
-                || boardMoves < 0 || (policyVersion!=3&&boardMoves>candidate.minimum) || undos < 0) return null;
+                || boardMoves < 0 || (policyVersion<3&&boardMoves>candidate.minimum) || undos < 0) return null;
         if (candidate.isUnlimited()) {
             return used == 0 && extensions == 0 && extraActions == 0 ? candidate : null;
         }
-        int maxExtension = Math.max(5, policyVersion==3?candidate.minimum*3+7:candidate.minimum+3);
+        int maxExtension = Math.max(5, policyVersion>=3?candidate.minimum*3+7:candidate.minimum+3);
         if (extensions == 0 && extraActions != 0) return null;
         if (extensions > 0 && (extraActions < extensions * 5
                 || extraActions > extensions * maxExtension
-                || policyVersion!=3&&used<candidate.base+(extensions-1)*5)) return null;
-        long minimumUsed = policyVersion==3?boardMoves:(long)boardMoves+2L*undos;
+                || policyVersion<3&&used<candidate.base+(extensions-1)*5)) return null;
+        long minimumUsed = policyVersion>=3?boardMoves:(long)boardMoves+2L*undos;
+        if (policyVersion == DELIBERATE_POLICY_VERSION && used != boardMoves) return null;
         if (used < minimumUsed || used > candidate.base + extraActions) return null;
         candidate.used = used;
         candidate.extensions = extensions;
@@ -151,6 +168,24 @@ public final class MoveBudget {
 
     public int minimumActions() { return minimum; }
     public int policyVersion() { return policyVersion; }
+    public boolean rejectsAreFree() { return policyVersion == DELIBERATE_POLICY_VERSION; }
+    public int undoRemaining(int usedUndos) { return policyVersion == DELIBERATE_POLICY_VERSION ? Math.max(0, UNDO_LIMIT - usedUndos) : Integer.MAX_VALUE; }
+    public boolean refundsUndo() { return policyVersion >= REVERSIBLE_POLICY_VERSION; }
+    /** Policy 4 commits a real action or returns the physical refusal without charging it. */
+    public Board.MoveResult attempt(Board board, int action) {
+        if (!rejectsAreFree()) throw new IllegalStateException("Use the historical controller for preserved policies");
+        if (board == null || !canAct()) return null;
+        Board.MoveResult result = board.performAction(action);
+        if (result.success && !consumeAction()) throw new IllegalStateException("Action allowance changed during commit");
+        return result;
+    }
+    /** Validate quota before changing either board or ledger. Caller persists usedUndos + 1 together. */
+    public boolean undo(Board board, int usedUndos) {
+        if (board == null || board.level == null || usedUndos < 0 || undoRemaining(usedUndos) == 0
+                || !board.canUndo() || !refundsUndo() || (!isUnlimited() && used <= 0)) return false;
+        if (!board.undo()) return false;
+        return refundAction();
+    }
     /** Initial errors/undo allowance, displayed separately from necessary piece exits. */
     public int mistakeAllowance() { return isUnlimited() ? 0 : base - minimum; }
     public int base() { return base; }
@@ -174,7 +209,7 @@ public final class MoveBudget {
     }
     /** Refund exactly the productive action just undone. The controller must first undo a real action. */
     public boolean refundAction() {
-        if(policyVersion!=REVERSIBLE_POLICY_VERSION)return false;
+        if(policyVersion<REVERSIBLE_POLICY_VERSION)return false;
         if(isUnlimited())return true;
         if(used<=0)return false;
         used--;return true;
@@ -182,7 +217,7 @@ public final class MoveBudget {
 
     /** Enough for every remaining exit plus three mistakes; invalid/solved counts return zero. */
     public int extensionActions(int remainingPieces) {
-        int max=policyVersion==3?minimum*3+4:minimum;
+        int max=policyVersion>=3?minimum*3+4:minimum;
         return remainingPieces >= 1 && remainingPieces <= max ? Math.max(5, remainingPieces + 3) : 0;
     }
 
@@ -192,8 +227,14 @@ public final class MoveBudget {
      * or an idempotently persisted gold debit, and guards stale run callbacks.
      */
     public boolean extend(int remainingPieces) {
+        if (!canExtend()) return false;
+        return settleEarnedExtension(extensions + 1, remainingPieces);
+    }
+
+    /** A previously earned receipt must settle even if a migration refunded rejected taps. */
+    public boolean settleEarnedExtension(int ordinal, int remainingPieces) {
         int amount = extensionActions(remainingPieces);
-        if (!canExtend() || amount == 0) return false;
+        if (isUnlimited() || ordinal != extensions + 1 || extensions >= MAX_EXTENSIONS || amount == 0) return false;
         extraActions += amount;
         extensions++;
         return true;

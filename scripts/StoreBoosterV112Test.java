@@ -17,7 +17,7 @@ public final class StoreBoosterV112Test {
     private static int disk(RewardsCosmeticsV17Test.Ctx c,String key){return (Integer)c.save().disk.getOrDefault(key,0);}
 
     private static void ordinaryPurchases(){
-        for(Catalog.BoosterItem item:Catalog.BOOSTERS){
+        for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id)){
             RewardsCosmeticsV17Test.Ctx c=new RewardsCosmeticsV17Test.Ctx();GameStore s=unlocked(c,item);fund(s,item.id,s.boosterPrice(item.id));
             int before=s.coins(),stock=s.boosterStock(item.id),price=s.boosterPrice(item.id);
             check(s.purchaseBooster(item.id),"ordinary purchase succeeds "+item.id);
@@ -31,7 +31,7 @@ public final class StoreBoosterV112Test {
         int coins=s.coins(),stock=s.boosterStock("hint");check(!s.purchaseBooster("hint")&&s.coins()==coins&&s.boosterStock("hint")==stock,"underfunded purchase is read only");
     }
     private static void failedPurchaseAndRetry(){
-        for(Catalog.BoosterItem item:Catalog.BOOSTERS)for(boolean memory:new boolean[]{false,true}){
+        for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id))for(boolean memory:new boolean[]{false,true}){
             String label=item.id+" memory-before-disk="+memory;
             RewardsCosmeticsV17Test.Ctx c=new RewardsCosmeticsV17Test.Ctx();GameStore first=unlocked(c,item),second=store(c);fund(first,item.id,first.boosterPrice(item.id));
             int before=first.coins(),stock=first.boosterStock(item.id),price=first.boosterPrice(item.id);
@@ -50,7 +50,7 @@ public final class StoreBoosterV112Test {
         }
     }
     private static void processLossBeforeRetry(){
-        for(Catalog.BoosterItem item:Catalog.BOOSTERS)for(boolean memory:new boolean[]{false,true}){
+        for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id))for(boolean memory:new boolean[]{false,true}){
             RewardsCosmeticsV17Test.Ctx c=new RewardsCosmeticsV17Test.Ctx();GameStore first=unlocked(c,item);fund(first,item.id,first.boosterPrice(item.id));
             int before=first.coins(),stock=first.boosterStock(item.id),price=first.boosterPrice(item.id);
             c.save().fail(memory);check(refused(()->first.purchaseBooster(item.id)),"cold failure surfaced "+item.id);
@@ -67,7 +67,7 @@ public final class StoreBoosterV112Test {
     }
     public static void main(String[] args)throws Exception{
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));ordinaryPurchases();failedPurchaseAndRetry();processLossBeforeRetry();capacity();
-        String report="{\n  \"passed\": true,\n  \"checks\": "+checks+",\n  \"powers\": 6,\n  \"failure_models\": [\"commit refused before memory update\", \"Android memory updated before disk refusal\"],\n  \"scope\": \"Actual store API on JVM preference doubles with public progression and earned grants; failure, exact retry, multi-handle, cold recreation and stock capacity. No Android device or payment acceptance claim.\"\n}\n";
+        String report="{\n  \"passed\": true,\n  \"checks\": "+checks+",\n  \"powers\": 5,\n  \"failure_models\": [\"commit refused before memory update\", \"Android memory updated before disk refusal\"],\n  \"scope\": \"Actual store API on JVM preference doubles with public progression and earned grants; failure, exact retry, multi-handle, cold recreation and stock capacity. No Android device or payment acceptance claim.\"\n}\n";
         if(args.length>0){Path out=Path.of(args[0]);Files.createDirectories(out.getParent());Files.writeString(out,report);}
         System.out.println("PASS "+checks+" booster purchase durability checks");
     }

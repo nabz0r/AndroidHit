@@ -1,0 +1,23 @@
+{
+  "release": "1.14.0-sandbox-rc2",
+  "learningLayoutsSha256": "0a6de06054a377d37b5b8ab1e2374cdbe694c03983adeb1b5714f86aec54dafc",
+  "scope": "Existence of a finite legal path exceeding the actual initial N budget; no blocked taps, powers, Undo or extensions; not player failure rates",
+  "boards": 1000,
+  "policies": {
+    "maximum_all_legal": {
+      "boardsWithSomePathOverBudget": 910,
+      "firstLevel": 28,
+      "first30BoardsWithSomePathOverBudget": 3
+    },
+    "maximum_immediately_useful": {
+      "boardsWithSomePathOverBudget": 848,
+      "firstLevel": 28,
+      "first30BoardsWithSomePathOverBudget": 3
+    },
+    "maximum_exits_first": {
+      "boardsWithSomePathOverBudget": 626,
+      "firstLevel": 102,
+      "first30BoardsWithSomePathOverBudget": 0
+    }
+  }
+}

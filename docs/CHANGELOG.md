@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.14.0-rc2 / code 16 — clear rules, deliberate actions
+
+28 October 2026. [Release](RELEASE_1_14.md) · [Rules](GAMEPLAY_1_14.md) · [UX](UX_1_14.md) · [Qualification](validation/v1.14/README.md).
+
+- Add the versioned N Journey: thirty authored opening boards and 970 existing later piece layouts, with a global episodic pacing pass and reauthored initial gate states where appropriate. All1,000 final boards have recorded native three-star wins in ten complete batches across two sessions; the last200 use a declared access-only test prerequisite.
+- Teach exits, blockers, keys, manual gates, switches and combinations in staged main-route boards, contextual HUD copy and a visible prelevel explanation.
+- Give closed gates a separate button, −1 action cost and matching touch geometry; show actual gate changes and newly freed exits.
+- Keep real budgets; make refused attempts free; limit Return to one refunded correction per attempt with a persisted quota and a free restart. New paid continuation offers are removed from that policy.
+- Preserve the meaning of older challenge codes and active saved-board geometry; retire obsolete Shield offers while retaining recorded ownership and transaction decisions.
+- Prepare the FR/EN Firebase page with current rules, immutable artifact links and exact final native capture provenance. Scoped installed acceptance is complete; public delivery retains separate receipts.
+
+Source checks establish their stated mechanical contracts. Human difficulty, enjoyment and retention remain unmeasured. The house, earned collection and commercial gates are retained.
+
 ## 1.13.0-rc2 / code 14 — a little home around the puzzle
 
 28 October 2026. [Release/artifacts](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Executed qualification](validation/v1.13/README.md).

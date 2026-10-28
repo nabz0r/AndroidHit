@@ -1,3 +1,19 @@
+# Luma Drift 1.14 — puzzle reliability and learning first
+
+Owner priority: recurrent blocked/impossible-feeling levels, including Journey 15 on the latest release. Audit every one of the 1,000 Journey boards and rebuild their learning curve before further home polish.
+
+1. Reproduce Journey 15 in the installed 1.13, including plausible failed taps and alternate legal orders. Preserve the failed experience and distinguish it from a known-solution clear.
+2. Independently audit all 1,000 starting boards and reachable branches, budgets and runtime guidance. Identify budget traps and abrupt mechanic/complexity jumps.
+3. Deliver a separately identified, frozen learning route: teach one rule at a time, practice it, combine gradually, and bound adjacent complexity changes. Preserve historical shared boards and recover active saves.
+4. Make closed gates clearly interactive and explain switches/keys at their introduction. Keep real action limits and meaningful failure; rejected taps cost nothing, Undo is limited to one refunded correction per attempt, and a new attempt is free. Inspiration from Candy Crush and Crash Fever must inform goals, decision/consequence feedback and teaching, not just presentation.
+5. Validate all new boards and certificates, save/code compatibility, failure/recovery and actual installed play. Publish exact tested packages on main and update the existing site only after acceptance.
+
+Technical solvability is necessary but does not establish that a first-time player understands the rules or that the curve is human calibrated.
+
+Implemented and qualified as RC2/code16: all1,000 final boards have recorded native wins across ten complete batches in two sessions, with the final200 explicitly using an access-only synthetic prerequisite. Original profiles are restored. [Full scope and limits](docs/validation/v1.14/ui-bugs/ui-sdk-coverage801-1000-rc2-d/independent-coverage-check/coverage.json). Main publication and Hosting delivery follow their own exact-byte checks.
+
+## Preserved 1.13 delivery
+
 # Luma Drift 1.13 — a home for your companion
 
 Owner scope: deliver the interactive home, preserve puzzles as the main game, publish source and signed packages on main, and update the existing Firebase website.

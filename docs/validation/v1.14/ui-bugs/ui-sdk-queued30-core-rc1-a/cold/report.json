@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "pass": true,
+      "message": "Installed exact target 1.14.0-sandbox-rc1\/code15"
+    },
+    {
+      "pass": true,
+      "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+    },
+    {
+      "pass": true,
+      "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+    },
+    {
+      "pass": true,
+      "message": "Cold phase contains explicit persistent verification and recovery only"
+    },
+    {
+      "pass": true,
+      "message": "N15 exact board, spent one-Undo quota, policy, coins and stock survive a distinct cold process"
+    },
+    {
+      "pass": true,
+      "message": "Cold relaunch cannot renew N15 Undo quota"
+    },
+    {
+      "pass": true,
+      "message": "Visible free restart restores a fresh attempt"
+    },
+    {
+      "pass": true,
+      "message": "Free N15 Restart creates a fresh full-budget attempt and renews exactly one Undo"
+    },
+    {
+      "pass": true,
+      "message": "Typed action 1 is recorded exactly once through UI"
+    },
+    {
+      "pass": true,
+      "message": "Typed action 2 is recorded exactly once through UI"
+    },
+    {
+      "pass": true,
+      "message": "Typed action 3 is recorded exactly once through UI"
+    },
+    {
+      "pass": true,
+      "message": "Real native preview cancellation spends no action and changes no history"
+    },
+    {
+      "pass": true,
+      "message": "Canceled native preview returns to actual board controls"
+    },
+    {
+      "pass": true,
+      "message": "Opening preview changes neither history nor action allowance"
+    },
+    {
+      "pass": true,
+      "message": "Typed action 66 is recorded exactly once through UI"
+    },
+    {
+      "pass": true,
+      "message": "Typed action 0 is recorded exactly once through UI"
+    },
+    {
+      "pass": true,
+      "message": "Typed action 4 is recorded exactly once through UI"
+    },
+    {
+      "pass": true,
+      "message": "New N15 wins natively on its authored path after blocked taps, quota refusal, cold relaunch and free Restart"
+    }
+  ],
+  "captures": [
+    "home-en",
+    "n15-cold-quota-retained",
+    "gate-preview-visible-before-cancel-en",
+    "n15-restart-win"
+  ],
+  "checkCount": 18,
+  "package": "com.androidhit.lumadrift.sandbox",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "processId": 10295,
+  "visualPhase": "cold",
+  "firstLightPhase": "none",
+  "visualSoftFailures": 0,
+  "visualCheckpointReady": false,
+  "houseCheckpointReady": false,
+  "firstLightCheckpointReady": false,
+  "legacyCheckpointReady": false,
+  "learningCheckpointReady": true,
+  "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+}

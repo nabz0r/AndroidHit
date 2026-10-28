@@ -464,7 +464,7 @@ public final class GameStore {
     private static String powerTrialReceipt(String id) { return "power_trial_v19_" + id; }
 
     /** One free, explicitly claimed sample per local profile and catalog power. */
-    public enum PowerTrialStatus { GRANTED, ALREADY_CLAIMED, LOCKED, STORAGE_FULL, INVALID_POWER }
+    public enum PowerTrialStatus { GRANTED, ALREADY_CLAIMED, LOCKED, STORAGE_FULL, INVALID_POWER, NOT_OFFERED }
 
     public synchronized boolean powerTrialClaimed(String id) {
         if (Catalog.booster(id) == null) return false;
@@ -477,7 +477,8 @@ public final class GameStore {
     /** An earned pending sample; full stock leaves it available for a later retry. */
     public synchronized boolean powerTrialAvailable(String id) {
         synchronized (GOLD_GRANT_LOCK) {
-            return boosterUnlocked(id) && !powerTrialClaimed(id);
+            LocalSaveTransactions.flush(prefs);
+            return Catalog.isPowerOffered(id) && boosterUnlocked(id) && !powerTrialClaimed(id);
         }
     }
 
@@ -491,6 +492,7 @@ public final class GameStore {
         synchronized (GOLD_GRANT_LOCK) {
             LocalSaveTransactions.flush(prefs);
             if (powerTrialClaimed(id)) return PowerTrialStatus.ALREADY_CLAIMED;
+            if (!Catalog.isPowerOffered(id)) return PowerTrialStatus.NOT_OFFERED;
             if (!boosterUnlocked(id)) return PowerTrialStatus.LOCKED;
             int stock = storedBoosterStock(id);
             if (stock >= MAX_STOCK) return PowerTrialStatus.STORAGE_FULL;
@@ -519,8 +521,11 @@ public final class GameStore {
 
     public synchronized boolean purchaseBooster(String id) {
         synchronized (GOLD_GRANT_LOCK) {
+            // Settle any already-decided purchase before refusing a retired offer.
+            // The pending transaction owns its old exact debit/stock pair.
+            LocalSaveTransactions.flush(prefs);
             Catalog.BoosterItem item = Catalog.booster(id);
-            if (item == null || !boosterUnlocked(id)) return false;
+            if (item == null || !Catalog.isPowerOffered(id) || !boosterUnlocked(id)) return false;
             int price = boosterPrice(id);
             if (coins() < price || storedBoosterStock(id) > MAX_STOCK - item.amount) return false;
             Map<String,Object> write = new HashMap<>();
@@ -604,11 +609,11 @@ public final class GameStore {
         if (milestone < 5 || milestone > Catalog.LEVEL_COUNT || milestone % 5 != 0) return "";
         int eligible = 0;
         int earnedUnlock = Math.min(Catalog.LEVEL_COUNT, milestone + 1);
-        for (Catalog.BoosterItem item : Catalog.BOOSTERS) if (item.unlockLevel <= earnedUnlock) eligible++;
+        for (Catalog.BoosterItem item : Catalog.BOOSTERS) if (Catalog.isPowerOffered(item.id) && item.unlockLevel <= earnedUnlock) eligible++;
         if (eligible == 0) return "";
         int target = (milestone / 5 - 1) % eligible;
         for (Catalog.BoosterItem item : Catalog.BOOSTERS)
-            if (item.unlockLevel <= earnedUnlock && target-- == 0) return item.id;
+            if (Catalog.isPowerOffered(item.id) && item.unlockLevel <= earnedUnlock && target-- == 0) return item.id;
         return "";
     }
 
@@ -638,7 +643,9 @@ public final class GameStore {
                 LOOT_RETRIES.remove(prefs);
                 return recorded;
             }
-            String id = milestoneLootId(milestone);
+            // A pending decision can predate retirement. Never replace its item
+            // with the contents of a newly generated offer during exact retry.
+            String id = pending == null ? milestoneLootId(milestone) : pending.item;
             if (id.isEmpty()) return "";
             int stock = storedBoosterStock(id);
             if (stock >= MAX_STOCK) return "";

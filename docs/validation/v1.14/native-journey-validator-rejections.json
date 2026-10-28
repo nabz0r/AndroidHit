@@ -1,0 +1,47 @@
+{
+  "scope": "Refusal checks only; no marathon accepted and no PASS attestation created",
+  "checkedAtUtc": "2026-10-28T18:40:02.898542+00:00",
+  "validatorSha256": "9d807475061ac0ace8ede65d538a4ccfa19f358c9b618aedf686072a9e8459ed",
+  "acceptedReports": 0,
+  "rejectedReports": [
+    {
+      "run": "ui-sdk-marathon1000-rc2-a",
+      "exitCode": 1,
+      "refusal": "REFUSED: Global passed AND restored are required; progress/subsection PASS is insufficient",
+      "attestationWritten": false,
+      "originalReportUnchanged": true,
+      "reportSha256": "20d031677674fd7c7dff7afa3b2bccb930a53955bb2b8aca6255494951b93759"
+    },
+    {
+      "run": "ui-sdk-marathon1000-rc2-b",
+      "exitCode": 1,
+      "refusal": "REFUSED: Global passed AND restored are required; progress/subsection PASS is insufficient",
+      "attestationWritten": false,
+      "originalReportUnchanged": true,
+      "reportSha256": "8679d5ed1bb7de38b09c17792c1b9bd1c3404e9c799b55f7916c0c604f717173"
+    },
+    {
+      "run": "ui-sdk-marathon1000-rc2-c",
+      "exitCode": 1,
+      "refusal": "REFUSED: Missing final evidence file: /Users/n/androidhit/docs/validation/v1.14/ui-bugs/ui-sdk-marathon1000-rc2-c/host-report.json",
+      "attestationWritten": false,
+      "originalReportUnchanged": true,
+      "reportSha256": null
+    }
+  ],
+  "businessEngineRerun": false,
+  "originalEvidenceModified": false,
+  "syntheticPartialGlobalFlagsRefused": {
+    "scope": "In-memory negative validator test only; original failed report stays byte-identical and no attestation is written",
+    "case": "False success/cleanup flags cannot promote a one-batch run to complete",
+    "refusal": "Exactly ten completed phases are required",
+    "archiveAnd1000FixturePrerequisitesReadBeforeRefusal": true
+  },
+  "syntheticDuplicateBatchesRefused": {
+    "scope": "In-memory negative validator test; no false completed report file or attestation created",
+    "case": "Repeating the real first batch ten times is refused at batch2",
+    "refusal": "Missing, duplicated or reordered batch: batch-0101-0200",
+    "firstRealRawBatchObservationAnd68IndexedPngsValidated": true,
+    "originalReportUnchanged": true
+  }
+}

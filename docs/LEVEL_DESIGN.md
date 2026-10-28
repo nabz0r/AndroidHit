@@ -1,5 +1,7 @@
 # Level design, typed actions and challenge identities
 
+> Historical rules for the retained 1.8–1.9 releases. The current 1.14 candidate uses one Return per attempt, free blocked tries and a real action limit; see [1.14 gameplay](GAMEPLAY_1_14.md) and [1.14 qualification](validation/v1.14/README.md). Statements below about default routes, powers or policy3 describe those historical releases.
+
 ## Current V4 route
 
 The 1.8 default is **L Journey 1–1,000 and M Remix 1–240** through `StrategyCatalog`, with T events for new daily/weekly attempts. Historical J/K continue through `BalancedCatalog.get/remix`; those APIs are not aliases for V4. Source behavior and [engine evidence](validation/v1.8/engine/README.md) remain separate from installed Android acceptance.

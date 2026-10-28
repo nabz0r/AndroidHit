@@ -208,7 +208,7 @@ public final class ObjectiveModelsV110Test {
         RewardsCosmeticsV17Test.Ctx c=context();RewardsCosmeticsV17Test.Clock k=clock("2026-10-28");GameStore s=store(c,k);MetaProgress meta=new MetaProgress(c,k);
         Map<String,?> save=c.save().getAll(),progress=c.meta().getAll();ObjectiveDashboard.Snapshot fresh=ObjectiveDashboard.snapshot(s,meta);
         check(fresh.readyCount==2&&fresh.dailyReadyCount==1&&fresh.weeklyReadyCount==0&&fresh.trialsReadyCount==1&&fresh.eventReadyCount==0,"fresh dashboard shows actual login and one explicit hint sample only");
-        check(fresh.dailyQuests.size()==3&&fresh.weeklyQuests.size()==3&&fresh.trials.size()==6,"six real typed quests and all catalog samples are present");
+        check(fresh.dailyQuests.size()==3&&fresh.weeklyQuests.size()==3&&fresh.trials.size()==5,"six real typed quests and all current samples are present");
         check(fresh.nextAction.kind==ObjectiveDashboard.ActionKind.CLAIM_LOGIN&&fresh.loginCoins==40,"next action has actual existing login reward");
         check(c.save().getAll().equals(save)&&c.meta().getAll().equals(progress),"clean dashboard rendering creates no reward, visit, receipt or stock");
         boolean immutable=false;try{fresh.dailyQuests.clear();}catch(UnsupportedOperationException expected){immutable=true;}check(immutable,"quest collections are immutable snapshots");
@@ -217,8 +217,8 @@ public final class ObjectiveModelsV110Test {
         for(int index=0;index<3;index++){s.completeDaily(index,3);meta.recordWin(1,index,3,s.dailyId());}
         for(int index=0;index<7;index++){s.completeWeekly(index,3);meta.recordWin(2,index,3,s.weeklyId());}
         ObjectiveDashboard.Snapshot full=ObjectiveDashboard.snapshot(s,meta);
-        check(full.dailyQuestReadyCount==3&&full.weeklyQuestReadyCount==3&&full.eventReadyCount==2&&full.trialsReadyCount==5&&full.journeyReady,"real progress exposes existing earned claims without changing them");
-        check(full.readyCount==14&&full.dailyReadyCount==4&&full.weeklyReadyCount==4,"ready total counts visible distinct actions, including one oldest Journey gift");
+        check(full.dailyQuestReadyCount==3&&full.weeklyQuestReadyCount==3&&full.eventReadyCount==2&&full.trialsReadyCount==4&&full.journeyReady,"real progress exposes current useful earned claims without changing them");
+        check(full.readyCount==13&&full.dailyReadyCount==4&&full.weeklyReadyCount==4,"ready total counts visible distinct actions, including one oldest Journey gift");
         for(ObjectiveDashboard.Quest quest:full.dailyQuests)check(quest.ready&&!quest.claimed&&quest.progress==quest.target&&quest.coins==meta.missionCoins(quest.index),"daily quest carries real progress/target/reward/state");
         for(ObjectiveDashboard.Quest quest:full.weeklyQuests)check(quest.ready&&quest.weekly&&quest.period.equals(meta.weekId())&&quest.coins==meta.weeklyMissionCoins(quest.index),"weekly quest keeps its own period and existing amount");
         save=c.save().getAll();progress=c.meta().getAll();ObjectiveDashboard.snapshot(s,meta);check(save.equals(c.save().getAll())&&progress.equals(c.meta().getAll()),"completed dashboard never claims automatically");

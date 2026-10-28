@@ -1,0 +1,5204 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "journey,learning-core",
+  "journey_from": 1,
+  "journey_through": 30,
+  "batch_size": 0,
+  "bulk": true,
+  "bulk_cache": true,
+  "queued_input": true,
+  "catalog_family": "N",
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "apk_sha256": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+  "expected_apk_sha256": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+  "test_apk_sha256": "37d6a0b516ab516a51294ca9eebbea0e36d9cc1a46277193e2f93b5198698426",
+  "wrapper_source_sha256": "4eb72ecd960bf2f1c5b807991b2a9e00689170c0e914fd49451910e09079caaf",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "573f6292bbad4567a1d83b9f88ede73f1d2380d34957869f4e4f0a5f0efb4a4f",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v114-ui-original-prefs-k0euqwrj",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "installed_test_apk_sha256": "37d6a0b516ab516a51294ca9eebbea0e36d9cc1a46277193e2f93b5198698426",
+  "phases": [
+    {
+      "phase": "prepare",
+      "journey_from": 1,
+      "journey_through": 30,
+      "native": {
+        "passed": true,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.14.0-sandbox-rc1/code15"
+          },
+          {
+            "pass": true,
+            "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+          },
+          {
+            "pass": true,
+            "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey batch range is bounded1..1000"
+          },
+          {
+            "pass": true,
+            "message": "Native dialog text input accepts SDK action"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 native piece count matches the certified fixture: 2"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 native piece count matches the certified fixture: 3"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 native piece count matches the certified fixture: 4"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 native piece count matches the certified fixture: 6"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 native piece count matches the certified fixture: 7"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 7 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 native piece count matches the certified fixture: 4"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 native piece count matches the certified fixture: 6"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 native piece count matches the certified fixture: 7"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 native piece count matches the certified fixture: 3"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Real cached native preview cancellation spends no action and changes no history"
+          },
+          {
+            "pass": true,
+            "message": "Canceled cached native preview returns to actual board controls"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 64 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 native piece count matches the certified fixture: 4"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 65 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 65 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 66 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 66 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 native piece count matches the certified fixture: 6"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 67 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 native piece count matches the certified fixture: 4"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 native piece count matches the certified fixture: 6"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 native piece count matches the certified fixture: 7"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 21 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 21 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 21 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 21 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 21 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 22 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 22 native piece count matches the certified fixture: 6"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 22 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 22 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 22 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 23 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 23 native piece count matches the certified fixture: 7"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 23 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 23 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 23 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 24 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 24 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 7 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 24 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 24 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 24 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 25 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 25 native piece count matches the certified fixture: 7"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 25 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 25 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 25 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 26 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 26 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 7 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 26 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 26 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 26 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 27 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 27 native piece count matches the certified fixture: 9"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 8 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 7 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 27 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 27 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 27 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 28 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 28 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Budget failure uses the actual unlocked N28 deliberate attempt"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 65 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 65 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 66 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 66 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 67 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 65 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 65 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 66 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 66 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 67 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "N28 spends its whole budget through source-certified legal productive choices, without blocked taps"
+          },
+          {
+            "pass": true,
+            "message": "N28 genuinely fails before all pieces are cleared"
+          },
+          {
+            "pass": true,
+            "message": "N28 real failure permits exactly one refunding return"
+          },
+          {
+            "pass": true,
+            "message": "N28 second return is refused with one action left"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Replaying the returned productive action reaches real zero budget with no return quota"
+          },
+          {
+            "pass": true,
+            "message": "Exhausted N28 cannot offer a renewed return quota"
+          },
+          {
+            "pass": true,
+            "message": "Free N28 failure Restart restores full attempt budget and exactly one return"
+          },
+          {
+            "pass": true,
+            "message": "The real failure, limited return and free Restart spend no currency or hint stock"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 7 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 28 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 28 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 28 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 29 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 29 native piece count matches the certified fixture: 9"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 8 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 7 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 29 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 29 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 29 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 30 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 30 native piece count matches the certified fixture: 10"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 0 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 1 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Observed cached preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 2 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 3 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 4 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 5 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 6 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 8 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 7 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through cached observed UI coordinates"
+          },
+          {
+            "pass": true,
+            "message": "Cached native action 9 spends exactly one productive move"
+          },
+          {
+            "pass": true,
+            "message": "Journey 30 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 30 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 30 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "New N15 core audit uses legitimately earned level access"
+          },
+          {
+            "pass": true,
+            "message": "Native dialog text input accepts SDK action"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "A new N15 attempt has the distinct N identity and one-Undo policy"
+          },
+          {
+            "pass": true,
+            "message": "N15 exposes a real blocked piece for the five-attempt regression"
+          },
+          {
+            "pass": true,
+            "message": "Five N15 blocked taps are free and preserve board, quota, wallet and stock"
+          },
+          {
+            "pass": true,
+            "message": "N15 Spark regression uses genuine existing stock"
+          },
+          {
+            "pass": true,
+            "message": "Spark still works after five blocked N15 taps, consuming one stock and no action"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "N15 first Undo restores its action and spends its only return quota"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "N15 second Undo is refused without changing history or action budget"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "journey-1-start-en",
+          "journey-1-cleared-en",
+          "gate-preview-visible-before-cancel-en",
+          "n28-real-budget-failure-return-available",
+          "n28-real-budget-failure-no-return",
+          "n28-free-restart-after-failure",
+          "journey-30-start-en",
+          "journey-30-cleared-en",
+          "n15-initial",
+          "n15-five-blocks-free",
+          "n15-spark-after-blocks",
+          "n15-second-undo-refused"
+        ],
+        "checkCount": 611,
+        "package": "com.androidhit.lumadrift.sandbox",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 9801,
+        "visualPhase": "prepare",
+        "firstLightPhase": "none",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "houseCheckpointReady": false,
+        "firstLightCheckpointReady": false,
+        "legacyCheckpointReady": false,
+        "learningCheckpointReady": true,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "prepare/journey-1-cleared-en.png": "d6164212dfcd1480b5a90c3e2f72033224d433467ab341c73e8a2ab3448e281a",
+        "prepare/journey-1-start-en.png": "f57c308a079a2763936ae1d993eb233e8cc2791c635bcff0d1c384ec896f6151",
+        "prepare/n15-spark-after-blocks.png": "f0b3ef4eecd2efcc38315ea6e67d78913a4b40a6e1d0877c6f723c3cd7b38eac",
+        "prepare/journey-30-cleared-en.png": "9c199475bbb0044e59019077ad8b22daa19a4c8248f363ecc40913d6e2eef739",
+        "prepare/n28-free-restart-after-failure.png": "9ef104a30c2b3c59e3f5d8897f2c092f0f3ee4aa9d3e0dbf75f4f512e79e23de",
+        "prepare/home-en.png": "39fbf68866aa19fa8c6774a110d89449c897a170d70238be6814758014a26182",
+        "prepare/n28-real-budget-failure-no-return.png": "50d2c33bd0e228604004044f6c8e9e17922034860323f300d96161c8739cff27",
+        "prepare/n28-real-budget-failure-return-available.png": "5daae0c2107704ae24e473cd7856addf03aad620b9dc1e7215ca5d8986943d55",
+        "prepare/n15-initial.png": "72353a29fa31c157d634620a9035588ea5b1ba8f88d7057f5ebd2a8bfdc763fd",
+        "prepare/journey-30-start-en.png": "ba619574d3f0d96593eebdf7a9931df49698940fec9b246039a758d82e46c83e",
+        "prepare/n15-five-blocks-free.png": "6b49eb3526ee81d6e15d7b4b58740f8d20508f4cb67756573440a0bb148a1566",
+        "prepare/gate-preview-visible-before-cancel-en.png": "33f44cb72b1a418636bfaf921320dbceb444c5bd001f7e17523e09f5b492388e",
+        "prepare/n15-second-undo-refused.png": "f02dfe1e0f516b94427c3a04162313ceccd690fa07543336194086eed35994c5"
+      }
+    },
+    {
+      "phase": "cold",
+      "journey_from": 1,
+      "journey_through": 30,
+      "native": {
+        "passed": true,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.14.0-sandbox-rc1/code15"
+          },
+          {
+            "pass": true,
+            "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+          },
+          {
+            "pass": true,
+            "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+          },
+          {
+            "pass": true,
+            "message": "Cold phase contains explicit persistent verification and recovery only"
+          },
+          {
+            "pass": true,
+            "message": "N15 exact board, spent one-Undo quota, policy, coins and stock survive a distinct cold process"
+          },
+          {
+            "pass": true,
+            "message": "Cold relaunch cannot renew N15 Undo quota"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "Free N15 Restart creates a fresh full-budget attempt and renews exactly one Undo"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Real native preview cancellation spends no action and changes no history"
+          },
+          {
+            "pass": true,
+            "message": "Canceled native preview returns to actual board controls"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 66 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "New N15 wins natively on its authored path after blocked taps, quota refusal, cold relaunch and free Restart"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "n15-cold-quota-retained",
+          "gate-preview-visible-before-cancel-en",
+          "n15-restart-win"
+        ],
+        "checkCount": 18,
+        "package": "com.androidhit.lumadrift.sandbox",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 10295,
+        "visualPhase": "cold",
+        "firstLightPhase": "none",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "houseCheckpointReady": false,
+        "firstLightCheckpointReady": false,
+        "legacyCheckpointReady": false,
+        "learningCheckpointReady": true,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "cold/n15-cold-quota-retained.png": "5ad26c0abe54759afd7d618e1b0b652cfbbf25022d5323fe55ea6a9c666f166a",
+        "cold/home-en.png": "fc54d26be71b906012e2a4326f57c48c1d8ec6eba048726bb656ad677fc4713e",
+        "cold/n15-restart-win.png": "46dce438f6ef0f0aa4b772031fd70b9ece57232c7d337e9bdc8d8b9139aa79e8",
+        "cold/gate-preview-visible-before-cancel-en.png": "46f1203b122dcc602499e42f109bde7446255fc1906c28020bc07a0ed1cb5eb7"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/journey-1-cleared-en.png": "d6164212dfcd1480b5a90c3e2f72033224d433467ab341c73e8a2ab3448e281a",
+    "prepare/journey-1-start-en.png": "f57c308a079a2763936ae1d993eb233e8cc2791c635bcff0d1c384ec896f6151",
+    "prepare/n15-spark-after-blocks.png": "f0b3ef4eecd2efcc38315ea6e67d78913a4b40a6e1d0877c6f723c3cd7b38eac",
+    "prepare/journey-30-cleared-en.png": "9c199475bbb0044e59019077ad8b22daa19a4c8248f363ecc40913d6e2eef739",
+    "prepare/n28-free-restart-after-failure.png": "9ef104a30c2b3c59e3f5d8897f2c092f0f3ee4aa9d3e0dbf75f4f512e79e23de",
+    "prepare/home-en.png": "39fbf68866aa19fa8c6774a110d89449c897a170d70238be6814758014a26182",
+    "prepare/n28-real-budget-failure-no-return.png": "50d2c33bd0e228604004044f6c8e9e17922034860323f300d96161c8739cff27",
+    "prepare/n28-real-budget-failure-return-available.png": "5daae0c2107704ae24e473cd7856addf03aad620b9dc1e7215ca5d8986943d55",
+    "prepare/n15-initial.png": "72353a29fa31c157d634620a9035588ea5b1ba8f88d7057f5ebd2a8bfdc763fd",
+    "prepare/journey-30-start-en.png": "ba619574d3f0d96593eebdf7a9931df49698940fec9b246039a758d82e46c83e",
+    "prepare/n15-five-blocks-free.png": "6b49eb3526ee81d6e15d7b4b58740f8d20508f4cb67756573440a0bb148a1566",
+    "prepare/gate-preview-visible-before-cancel-en.png": "33f44cb72b1a418636bfaf921320dbceb444c5bd001f7e17523e09f5b492388e",
+    "prepare/n15-second-undo-refused.png": "f02dfe1e0f516b94427c3a04162313ceccd690fa07543336194086eed35994c5",
+    "cold/n15-cold-quota-retained.png": "5ad26c0abe54759afd7d618e1b0b652cfbbf25022d5323fe55ea6a9c666f166a",
+    "cold/home-en.png": "fc54d26be71b906012e2a4326f57c48c1d8ec6eba048726bb656ad677fc4713e",
+    "cold/n15-restart-win.png": "46dce438f6ef0f0aa4b772031fd70b9ece57232c7d337e9bdc8d8b9139aa79e8",
+    "cold/gate-preview-visible-before-cancel-en.png": "46f1203b122dcc602499e42f109bde7446255fc1906c28020bc07a0ed1cb5eb7"
+  },
+  "capture_kind_counts": {
+    "original_full_frames": 17,
+    "unscaled_analysis_crops": 0
+  },
+  "cold_process_boundary": {
+    "force_stop": true,
+    "package_absent_from_pidof_before_restart": true,
+    "previous_instrumented_process_id": 9801,
+    "restarted_instrumented_process_id": 10295
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed exact target 1.14.0-sandbox-rc1/code15"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey batch range is bounded1..1000"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 native piece count matches the certified fixture: 2"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 native piece count matches the certified fixture: 3"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 native piece count matches the certified fixture: 4"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 native piece count matches the certified fixture: 5"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 native piece count matches the certified fixture: 5"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 native piece count matches the certified fixture: 6"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 native piece count matches the certified fixture: 7"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 7 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 native piece count matches the certified fixture: 4"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 native piece count matches the certified fixture: 5"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 native piece count matches the certified fixture: 6"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 native piece count matches the certified fixture: 7"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 native piece count matches the certified fixture: 3"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Real cached native preview cancellation spends no action and changes no history"
+      },
+      {
+        "pass": true,
+        "message": "Canceled cached native preview returns to actual board controls"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 64 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 native piece count matches the certified fixture: 4"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 65 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 native piece count matches the certified fixture: 5"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 66 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 native piece count matches the certified fixture: 6"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 67 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 native piece count matches the certified fixture: 4"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 native piece count matches the certified fixture: 5"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 native piece count matches the certified fixture: 6"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 native piece count matches the certified fixture: 7"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 native piece count matches the certified fixture: 5"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 21 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 native piece count matches the certified fixture: 6"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 22 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 native piece count matches the certified fixture: 7"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 23 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 7 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 24 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 native piece count matches the certified fixture: 7"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 25 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 7 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 26 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 native piece count matches the certified fixture: 9"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 8 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 7 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 27 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 native piece count matches the certified fixture: 8"
+      },
+      {
+        "pass": true,
+        "message": "Budget failure uses the actual unlocked N28 deliberate attempt"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 65 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 66 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 67 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 65 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 66 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 67 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "N28 spends its whole budget through source-certified legal productive choices, without blocked taps"
+      },
+      {
+        "pass": true,
+        "message": "N28 genuinely fails before all pieces are cleared"
+      },
+      {
+        "pass": true,
+        "message": "N28 real failure permits exactly one refunding return"
+      },
+      {
+        "pass": true,
+        "message": "N28 second return is refused with one action left"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Replaying the returned productive action reaches real zero budget with no return quota"
+      },
+      {
+        "pass": true,
+        "message": "Exhausted N28 cannot offer a renewed return quota"
+      },
+      {
+        "pass": true,
+        "message": "Free N28 failure Restart restores full attempt budget and exactly one return"
+      },
+      {
+        "pass": true,
+        "message": "The real failure, limited return and free Restart spend no currency or hint stock"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 7 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 28 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 native piece count matches the certified fixture: 9"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 8 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 7 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 29 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 starts its real fresh board with no injected or inherited actions"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 native piece count matches the certified fixture: 10"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 0 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 1 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Observed cached preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 2 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 3 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 4 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 5 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 6 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 8 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 7 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through cached observed UI coordinates"
+      },
+      {
+        "pass": true,
+        "message": "Cached native action 9 spends exactly one productive move"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 30 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "New N15 core audit uses legitimately earned level access"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "A new N15 attempt has the distinct N identity and one-Undo policy"
+      },
+      {
+        "pass": true,
+        "message": "N15 exposes a real blocked piece for the five-attempt regression"
+      },
+      {
+        "pass": true,
+        "message": "Five N15 blocked taps are free and preserve board, quota, wallet and stock"
+      },
+      {
+        "pass": true,
+        "message": "N15 Spark regression uses genuine existing stock"
+      },
+      {
+        "pass": true,
+        "message": "Spark still works after five blocked N15 taps, consuming one stock and no action"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "N15 first Undo restores its action and spends its only return quota"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "N15 second Undo is refused without changing history or action budget"
+      },
+      {
+        "pass": true,
+        "message": "Installed exact target 1.14.0-sandbox-rc1/code15"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+      },
+      {
+        "pass": true,
+        "message": "Cold phase contains explicit persistent verification and recovery only"
+      },
+      {
+        "pass": true,
+        "message": "N15 exact board, spent one-Undo quota, policy, coins and stock survive a distinct cold process"
+      },
+      {
+        "pass": true,
+        "message": "Cold relaunch cannot renew N15 Undo quota"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "Free N15 Restart creates a fresh full-budget attempt and renews exactly one Undo"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Real native preview cancellation spends no action and changes no history"
+      },
+      {
+        "pass": true,
+        "message": "Canceled native preview returns to actual board controls"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "New N15 wins natively on its authored path after blocked taps, quota refusal, cold relaunch and free Restart"
+      }
+    ],
+    "checkCount": 629,
+    "scope": "Separate real prepare and cold processes; observed raster deltas plus persistent identities; no seeding"
+  },
+  "isolated_test_package_removed": true,
+  "installed_apk_sha256_after_run": "abba40b4f592a0002470419a9f4c72bfdb59473697f6326b76c5fa730a5c695c",
+  "installed_apk_matches_expected_after_run": true,
+  "rotation_settings_restored": true
+}

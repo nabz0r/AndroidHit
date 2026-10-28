@@ -94,7 +94,7 @@ public final class CommerceActivity extends Activity {
     private boolean isAdPurpose(){return isContinuation()||isPower();}
     private boolean isRewardComplete(){return isContinuation()?hasContinuationReward(this,continuationRequest):isPower()&&powerRewarded;}
     private String powerName(){Catalog.BoosterItem item=Catalog.booster(powerId);return item==null?"":t(item.nameKey);}
-    private boolean powerAvailable(){return isPower()&&Catalog.booster(powerId)!=null&&store.boosterUnlocked(powerId)&&store.boosterStock(powerId)<store.boosterStockLimit();}
+    private boolean powerAvailable(){return isPower()&&Catalog.isPowerOffered(powerId)&&store.boosterUnlocked(powerId)&&store.boosterStock(powerId)<store.boosterStockLimit();}
     private boolean allowPurposeRequest(){
         if(isRewardComplete())return false;
         if(isPower()&&!powerAvailable()){adStatus.setText(t("ads_power_unavailable"));refresh();return false;}

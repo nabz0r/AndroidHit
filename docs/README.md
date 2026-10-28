@@ -1,6 +1,12 @@
 # Luma Drift documentation
 
-## Current 1.13 — solve a little, come home
+## Current 1.14 — deliberate puzzles and visible rules
+
+[Release and qualification status](RELEASE_1_14.md) · [Rules and compatibility](GAMEPLAY_1_14.md) · [UX decisions](UX_1_14.md) · [Execution register](validation/v1.14/README.md) · [Website register](validation/site-v1.14/README.md).
+
+A versioned 1,000-board N Journey introduces its mechanics through thirty authored opening boards. Visible gate buttons, causal feedback and contextual help accompany real productive-action limits, free refused attempts and one saved Return per attempt. The companion’s furnished home and local earned economy remain. Source, installed-byte, publication and Hosting evidence have separate scopes; RC2 source curriculum checks and its independent episode review pass; signed-byte/native qualification continues. Retained RC1 evidence is intermediate.
+
+## Preserved 1.13 — solve a little, come home
 
 [Release and frozen artifacts](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Qualification](validation/v1.13/README.md) · [Production APK](../releases/luma-drift-1.13.0-rc2.apk) · [AAB](../releases/luma-drift-1.13.0-rc2.aab).
 

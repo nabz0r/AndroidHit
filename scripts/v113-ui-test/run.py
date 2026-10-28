@@ -18,7 +18,7 @@ def main():
   PACKAGE='com.androidhit.lumadrift';runner_class='ProductionStartupInstrumentation' if a.cases=='startup' else 'CandidateUiInstrumentation';RUNNER=TEST_PACKAGE+'/com.androidhit.lumadrift.qa.v113.'+runner_class;REMOTE='/sdcard/Android/data/'+PACKAGE+'/files/v113-sdk-ui'
  elif 'startup' in a.cases.split(','):raise SystemExit('Startup observer is production-only')
  if not a.test_apk:a.test_apk=str(ROOT/'app/build/qualification-artifacts/v1.13'/('home-'+a.variant+'-rc2-test.apk'))
- allowed={'tutorial','gestures','map','challenge','journey','recovery','powers','landscape','startup','guardians','hub','avatar','story','menus','rewards','styles','languages','avatar-visual','shop-focus','shop-locales','power-return','house-smoke','house','house-locales','house-layout','firstlight','puzzle-locales'}
+ allowed={'tutorial','gestures','map','challenge','journey','recovery','powers','landscape','startup','guardians','hub','avatar','story','menus','rewards','styles','languages','avatar-visual','shop-focus','shop-locales','power-return','house-smoke','house','house-locales','house-layout','firstlight','puzzle-locales','level15-audit'}
  pending={'event-retry','guardian-storage-fault'}
  requested=set(a.cases.split(','))
  if requested & pending:raise SystemExit('UI cases await the stable1.10 contract: '+','.join(sorted(requested & pending)))

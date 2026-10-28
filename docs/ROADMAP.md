@@ -1,6 +1,20 @@
 # Luma Drift roadmap
 
-## Current 1.13 — a home around the main puzzle
+## Current 1.14 — make the puzzle understandable and consequential
+
+[Release](RELEASE_1_14.md) · [Gameplay](GAMEPLAY_1_14.md) · [UX](UX_1_14.md) · [Qualification](validation/v1.14/README.md). Replace implicit gate controls with visible one-action openings, teach the core mechanics through thirty authored opening boards, and introduce the versioned N progression across 1,000 Journey boards. Keep a real action budget, free refusals and one persisted Return per attempt. Existing challenge identities and active geometry remain reconstructible.
+
+RC1 source checks covered N certificates/minima, opening-state contracts and the strict ledger. A further review found an excessive Hard/Expert streak and a long easy valley, so RC2 reauthors the later route with global episodic pacing and reserved recoveries. The corrected source passes 201,143 content checks and an independent 4,970-assertion curriculum review: all 97 later episodes have three free starts and at least three Normals, the maximum Hard/Expert run is four, and 200-board score medians rise. There are 291 opening-only initial gate changes in N while old L identities stay fixed. RC2 signed-byte checks and native coverage of all1,000 boards pass, with the declared access prerequisite for the final200 in a separate session. Public download and Hosting delivery retain their own receipts. Historical 1.13 delivery is retained below.
+
+Next product decisions:
+
+1. Observe first-time players explaining a closed side, large/small arrow, K association and costly switch order while playing the exact candidate.
+2. Review costly legal branches and progression transitions against observed mistakes; structural labels alone do not establish human difficulty.
+3. Check physical Android phones, large text, TalkBack, interruptions and native-speaker copy.
+4. Measure voluntary replay and completed return cohorts before adding more rooms, furniture or progression systems.
+5. Resume the separately controlled Play/provider qualification with real checkout and premium draws closed until their own evidence passes.
+
+## Preserved 1.13 — a home around the main puzzle
 
 [Release](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Executed qualification](validation/v1.13/README.md). Connect existing earned puzzle rewards to a room the player can arrange: twelve furnishings, a companion who wears the actual equipped look, hugs, path-based movement, interactive furniture, wall/floor choices and a pinned wish. Introduce the core gesture immediately with a skippable three-piece board; keep the existing optional seven-lesson route.
 

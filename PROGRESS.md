@@ -1,3 +1,16 @@
+# Luma Drift 1.14 — delivery in progress
+
+- User reports Journey 15 and recurrent impossible-feeling boards across releases; puzzle reliability and progressive teaching take priority over home changes.
+- Latest 1.13 installed SDK route clears Journey 1–24 using known certificates (410 checks, 50 original captures). This proves that scripted route only; it does not invalidate the reported player experience.
+- Native reproduction confirms five rejected taps make old L15 unwinnable without moving any piece. The correction makes rejected taps free, presents manual gates as visible −1 controls, teaches the actual blocking cause, and limits refunded Undo to one per attempt with cold persistence. Real action limits, defeat and free restart remain.
+- RC1 real upgrade passes283 checks: exact old L15 geometry retained, rejected fees refunded, one-return quota survives a cold process, old L15 and new N15 won. RC1 pilot30 B passes716 checks with actual budget defeat/retry and house synchronization. These remain RC1 evidence, not final RC2 acceptance.
+- Curriculum review rejected RC1's153 consecutive Hard/Expert stretch. RC2 keeps30 explicit lessons, redistributes970 physical bases into97 episodes, and opens additional initial gates on291 bases with exact metrics recomputed. Independent tests pass201143 checks; 200-board median structural scores rise46→66→79.5→90→100, each episode retains at least3Normal levels and the longest challenge run is4. Human difficulty remains unmeasured.
+- RC2/code16 build/lint and four signed-package checks pass; all116 app inputs and four package hashes remain frozen. Final Lab gallery passes716 checks, coreN15/cold quota passes270, production startup passes7 and production30-level/six-language/compact-layout route passes779. Original preferences and display settings are restored after these completed runs.
+- All 1,000 final N boards have recorded native three-star wins across ten complete passed batches: **55,423 checks, 19,920 productive actions and 142 indexed original PNGs**. This is coverage across two sessions, not a passed continuous marathon. C keeps its global FAIL/restored result: its eight complete batches cover N1–800; its failed ninth batch contributes nothing. The separate restored D session covers N801–1000 after the explicitly recorded synthetic prerequisite `unlocked=801`; no stars, coins, session, history or solution actions are injected by that setup. [Independent coverage receipt](docs/validation/v1.14/ui-bugs/ui-sdk-coverage801-1000-rc2-d/independent-coverage-check/coverage.json). Failed A/B/C and B recovery evidence remain unchanged. Both contributing hosts restored their original profiles and removed their SDK packages.
+- The FR/EN site is prepared with nine original final-RC2 frames and passes19 responsive/browser states. Puzzle CI now covers the1000 contracts, saved Undo/budgets, six-language rules and preserved power decisions. Publication onmain, remote CI and Firebase deployment remain pending acceptance.
+
+## Preserved 1.13 delivery
+
 # Luma Drift 1.13 — delivered
 
 - Scope accepted: interactive home, companion movement/cuddle, existing wardrobe integration, earned furniture/decorating and immediate puzzle access; main publication and existing Firebase website update.

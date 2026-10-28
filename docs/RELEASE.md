@@ -1,6 +1,12 @@
 # Installation and release artifacts
 
-## Current 1.12 installation
+## Current 1.14 installation
+
+Install the signed [production 1.14.0-rc2 APK](../releases/luma-drift-1.14.0-rc2.apk), code16, over the existing app to retain its local saves. The [Lab APK](../releases/luma-drift-1.14.0-sandbox-rc2.apk) has a separate profile. Android8/API26+, existing signing identity.
+
+[Four artifacts and exact hashes](RELEASE_1_14.md) · [Current rules](GAMEPLAY_1_14.md) · [Qualification and limits](validation/v1.14/README.md) · [Production manifest](../releases/manifest-1.14.0-rc2.json). Download publication and website deployment are recorded separately from binary checks and installed Android observations.
+
+## Preserved 1.12 installation
 
 Install the signed [production 1.12.0-rc2 APK](../releases/luma-drift-1.12.0-rc2.apk), code13, over the existing app to retain its local saves. The [Lab APK](../releases/luma-drift-1.12.0-sandbox-rc2.apk) is an isolated package/profile. Android8/API26+, unchanged signing identity.
 

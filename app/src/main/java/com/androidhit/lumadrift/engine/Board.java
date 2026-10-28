@@ -120,7 +120,7 @@ public final class Board {
     public Board(Level level) {
         if (level == null) throw new IllegalArgumentException("A level is required");
         this.level = level;
-        strategy = level.progressionVersion == 4 ? new StrategySolver.Session(level) : null;
+        strategy = level.progressionVersion >= 4 ? new StrategySolver.Session(level) : null;
         restart();
     }
 

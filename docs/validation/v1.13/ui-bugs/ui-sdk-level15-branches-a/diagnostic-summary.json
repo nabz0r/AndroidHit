@@ -1,0 +1,175 @@
+{
+  "scope": "Diagnostic observation of original RC2 behavior, not acceptance of this product policy; native checks pass because they reproduce the blocked-attempt defect and recovery behavior",
+  "indexed_at_utc": "2026-10-28T16:38:19.237045+00:00",
+  "host_report_sha256": "0f34a9e5d5665fe0dadd8e453adc3b2d83ff61e4b18943f65a16449c1350892b",
+  "release_apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+  "test_apk_sha256": "36f86da89d831cbccaf57fca961319c93159aa693981326071bc451eb271961b",
+  "native_checks": 263,
+  "earned_access_and_navigation_checks": 211,
+  "l15_branch_and_helper_checks": 52,
+  "original_full_frames": 45,
+  "l15_original_full_frames": 15,
+  "passed": true,
+  "original_preferences_restored_byte_exact": true,
+  "rotation_restored": true,
+  "isolated_test_package_removed": true,
+  "confirmed_defect": {
+    "blocked_attempts_spend_budget_without_undoable_board_history": true,
+    "initial_minimum_actions": 12,
+    "initial_budget": 16,
+    "blocked_attempts": 5,
+    "productive_history_after_attempts": "",
+    "budget_used_after_attempts": 5,
+    "remaining_after_attempts": 11,
+    "pieces_remaining": 10,
+    "spark_stock_before_and_after_refusal": [
+      3,
+      3
+    ],
+    "native_toast_visually_checked": "Not enough moves to clear this attempt",
+    "undo_cannot_refund_failed_attempts": true,
+    "zero_move_undo_result": {
+      "history": "",
+      "used": 15,
+      "remaining": 1,
+      "pieces": 10
+    }
+  },
+  "recovery_observed": {
+    "wrong_direction_drag_spends_no_move": true,
+    "correct_drag_and_tap_each_exit_once": true,
+    "gate_and_switch_previews_cancel_freely": true,
+    "early_legal_switch_closes_up_gate": true,
+    "manual_up_reopening_costs_one_action": true,
+    "three_successive_current_policy_undos_reverse_gate_switch_branch": true,
+    "free_restart_restores_initial_16_moves": true,
+    "spark_after_restart_spends_one_stock_and_no_move": true,
+    "alternate_legal_order_wins_in_12_actions": [
+      67,
+      4,
+      8,
+      0,
+      2,
+      1,
+      3,
+      7,
+      9,
+      64,
+      5,
+      6
+    ]
+  },
+  "frames": [
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-five-blocks-no-piece-moved-en.png",
+      "sha256": "c9dec1ed1557bcebfd7be738d31e215ed225f3b7a06c3e870ef04442e15aa831",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-opposite-drag-en.png",
+      "sha256": "65d4370575962a4583ffb1035ea2eeb56e5ae5f4516f2159241626b41af5c4ad",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-five-blocks-spark-refused-en.png",
+      "sha256": "6e4566c462ca213c37126e5f9410b32eb84615a89f0a361b4d8267166114b2d7",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-switch-preview-en.png",
+      "sha256": "3761f8d898396c8ecebe6af0350d791990f18e4e4038e661a9e2d7a8dc649efa",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-restart-restores-sixteen-en.png",
+      "sha256": "6ea578f2f7dfd2c2da5f0b1e5f125ea743f62ce83cf1405e13311814b0d48aa0",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-gate-branch-fully-undone-en.png",
+      "sha256": "0652f38f479b20218e56357568c175cca526459977b06823a960007a7ed3a933",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-zero-after-blocks-en.png",
+      "sha256": "3097190abfcbe431fee7592823a88064d25a2fe0d5fc46d28256eec3b1244bd5",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-initial-en.png",
+      "sha256": "0652f38f479b20218e56357568c175cca526459977b06823a960007a7ed3a933",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-correct-drag-en.png",
+      "sha256": "b441cbd6eb6c181443c06faea9439d2af52a8fb1f1023e470c170e2699a61e5f",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-fresh-spark-works-en.png",
+      "sha256": "8a20f5de21e7db75b70f85f6261f2d3bf9ec0871ba61cd1ebd9a9b624e6b36bc",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-zero-undone-still-insufficient-en.png",
+      "sha256": "2d34e99cffdd707d6d8c83056adc6844cbe08ed04e9fadcd69a98a735f8ce0f5",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-up-reopened-en.png",
+      "sha256": "49b31835f5eb8b2ae7ae37a60b31b45a6f7faad54879bc7dd3766c96c28e489b",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-alternate-order-won-en.png",
+      "sha256": "0e05cc1eb33eef9bcd58a058791c36861be527c911927281f55d0ab599aaa23d",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-left-preview-en.png",
+      "sha256": "8427c2d5159bc7de218a4e92eacf584758de05415351b7e6fb18215b49b99a22",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    },
+    {
+      "source": "docs/screenshots/v1.13/ui-bugs/ui-sdk-level15-branches-a/prepare/level15-early-switch-up-closed-en.png",
+      "sha256": "d3c85110f8c5cee3d6fee6e15829a0fa58c08a33d63f478706e7f26c050e141f",
+      "width": 1080,
+      "height": 2340,
+      "capture_kind": "original-full-frame"
+    }
+  ],
+  "limits": [
+    "Original RC2 APK only; user-requested future limited Undo policy is not implemented or validated here",
+    "Current Undo refunds productive actions only and is not quota-limited; this diagnostic does not recommend unlimited Undo",
+    "A real alternative legal path is exercised, but all possible human actions are not enumerated",
+    "No provider, ad, payment, app source, public site or release artifact is changed"
+  ]
+}

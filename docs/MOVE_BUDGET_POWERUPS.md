@@ -1,5 +1,7 @@
 # Productive budgets, refundable Undo and six powers
 
+> Historical rules for the retained 1.8–1.9 releases. The current 1.14 candidate uses one Return per attempt, free blocked tries and a real action limit; see [1.14 gameplay](GAMEPLAY_1_14.md) and [1.14 qualification](validation/v1.14/README.md). Statements below about default routes, powers or policy3 describe those historical releases.
+
 ## Current 1.8 accounting
 
 Fresh attempts use **policy 3**, including new attempts on preserved content. Default L/M and T boards support manual gate openings. Their allowance is the **exact minimum productive exits/openings plus a fixed margin**. No power or purchase is needed to finish an authored initial board. [V4 specification](PROGRESSION_V4.md).

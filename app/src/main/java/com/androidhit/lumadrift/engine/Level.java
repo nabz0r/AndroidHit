@@ -58,12 +58,12 @@ public final class Level {
         this.initialGateMask = initialGateMask;
         this.isEvent = isEvent;
         this.seed = seed;
-        if (progressionVersion != 0 && progressionVersion != 2 && progressionVersion != 3 && progressionVersion != 4)
+        if (progressionVersion != 0 && progressionVersion != 2 && progressionVersion != 3 && progressionVersion != 4 && progressionVersion != 5)
             throw new IllegalArgumentException("Unsupported progression version");
         if (minimumActions < tiles.size() || actionSolution == null || actionSolution.length != minimumActions
                 || minimumActions > tiles.size() * 5 + 4)
             throw new IllegalArgumentException("Invalid productive-action certificate");
-        if (progressionVersion != 4 && (minimumActions != tiles.size()
+        if (progressionVersion < 4 && (minimumActions != tiles.size()
                 || !java.util.Arrays.equals(solution, actionSolution)))
             throw new IllegalArgumentException("Historical action certificate changed");
         this.progressionVersion = progressionVersion;
@@ -99,7 +99,7 @@ public final class Level {
         this.parMoves = minimumActions;
         this.actionSolution = actionSolution.clone();
         this.allTilesMask = (1L << tiles.size()) - 1L;
-        if(progressionVersion==4){
+        if(progressionVersion>=4){
             long mask=allTilesMask;int gates=initialGateMask;
             for(int action:this.actionSolution){
                 if(Board.isGateAction(action)){

@@ -1,0 +1,7 @@
+# Final RC2 marathonB — interrupted, global FAIL preserved
+
+The real N1–100 native batch passed3506 assertions. A second distinct process genuinely reached N139 according to the last recovered native journal, but batch101–200 did not finalize. At that time every emulator process disappeared and ADB lost all devices, while the existing ADB server remained alive. The cause is not established. The target had final RC2/code16 SHA cbc74c3214f3c64c888f34b9452be162d3e3e168f1c218d1a4537410ef005ff0 and frozen revised SDK16fc8a4275c1998fd64ab4cd01b39088f59b1f84d924f87b7feef8031ff56784.
+
+Original host-report remains passed=false/restored=false, including the actual ADB255 and failed cleanup errors. It is not rewritten into a PASS. Only the owned5580 AVD was restarted. Before restoration, the interrupted guest bytes were saved outside the repository and unfinalized SDK journals/four raw PNGs were recovered under interrupted-batch-0101-0200-raw, explicitly without a passing native report.
+
+The separate recovery-report.json proves the exact three original preference files, rotation, target APK hash and absence of the isolated test package after manual recovery. It retains the SHA of the untouched original failed host-report. No earned progression is injected or restored as a seed for the next attempt: marathonC restarts from the real original baseline at N1. Neither N139 nor the successful first batch is described as a1000-level PASS.

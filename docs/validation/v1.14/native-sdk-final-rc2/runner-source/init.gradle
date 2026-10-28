@@ -1,0 +1,31 @@
+// Test-only SDK framework runner. No application source or dependency is changed.
+// AGP uses the tested release variant's existing signing configuration.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig {
+                testApplicationId 'com.androidhit.lumadrift.learningtest'
+                testInstrumentationRunner (project.findProperty('lumaUiTarget') == 'production' ? 'com.androidhit.lumadrift.qa.v114.ProductionStartupInstrumentation' : 'com.androidhit.lumadrift.qa.v114.CandidateUiInstrumentation')
+            }
+            sourceSets {
+                androidTest {
+                    java.srcDirs = [new File(rootDir, 'scripts/v114-ui-test/java')]
+                    assets.srcDirs = [new File(rootDir, 'scripts/v114-ui-test/assets')]
+                    manifest.srcFile new File(rootDir, 'scripts/v114-ui-test/AndroidManifest.xml')
+                }
+            }
+        }
+        ['Lab', 'Production'].each { variant ->
+            project.tasks.matching { it.name == 'package' + variant + 'ReleaseAndroidTest' }.configureEach {
+                doLast {
+                    copy {
+                        from project.layout.buildDirectory.file('outputs/apk/androidTest/' + variant.toLowerCase() + '/release/app-' + variant.toLowerCase() + '-release-androidTest.apk')
+                        into project.layout.buildDirectory.dir('qualification-artifacts/v1.14')
+                        rename { 'learning-' + variant.toLowerCase() + '-rc2-test.apk' }
+                    }
+                }
+            }
+        }
+    }
+}

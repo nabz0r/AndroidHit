@@ -1,0 +1,9041 @@
+{
+  "release": "1.14.0-sandbox-rc2",
+  "learningLayoutsSha256": "0a6de06054a377d37b5b8ab1e2374cdbe694c03983adeb1b5714f86aec54dafc",
+  "scope": "RC2 content composition and structural metrics; not human learning, win rates, engagement, native testing or binary qualification",
+  "first30UnchangedFromRc1": true,
+  "preservedPhysicalBases": 970,
+  "initialGateStatesReauthoredByOpeningOnly": 291,
+  "initialStatesWithFreeExit": 321,
+  "normalBoards": 520,
+  "hardBoards": 442,
+  "expertBoards": 38,
+  "firstHard": 49,
+  "firstExpert": 429,
+  "maximumHardExpertRun": 4,
+  "maximumPositiveJumps": {
+    "structural_score": 35,
+    "pieces": 2,
+    "minimum_actions": 4,
+    "required_gate_opens": 2
+  },
+  "largestPositiveScoreSteps": [
+    {
+      "from": 47,
+      "to": 48,
+      "structural_score": 35,
+      "pieces": -1,
+      "minimum_actions": -2,
+      "required_gate_opens": -1
+    },
+    {
+      "from": 58,
+      "to": 59,
+      "structural_score": 35,
+      "pieces": 2,
+      "minimum_actions": 4,
+      "required_gate_opens": 2
+    },
+    {
+      "from": 63,
+      "to": 64,
+      "structural_score": 35,
+      "pieces": 2,
+      "minimum_actions": 2,
+      "required_gate_opens": 0
+    },
+    {
+      "from": 67,
+      "to": 68,
+      "structural_score": 35,
+      "pieces": -4,
+      "minimum_actions": -6,
+      "required_gate_opens": -2
+    },
+    {
+      "from": 73,
+      "to": 74,
+      "structural_score": 35,
+      "pieces": 2,
+      "minimum_actions": 4,
+      "required_gate_opens": 2
+    },
+    {
+      "from": 77,
+      "to": 78,
+      "structural_score": 35,
+      "pieces": 1,
+      "minimum_actions": 1,
+      "required_gate_opens": 0
+    },
+    {
+      "from": 88,
+      "to": 89,
+      "structural_score": 35,
+      "pieces": 0,
+      "minimum_actions": -2,
+      "required_gate_opens": -2
+    },
+    {
+      "from": 115,
+      "to": 116,
+      "structural_score": 35,
+      "pieces": -1,
+      "minimum_actions": 1,
+      "required_gate_opens": 2
+    },
+    {
+      "from": 128,
+      "to": 129,
+      "structural_score": 35,
+      "pieces": 0,
+      "minimum_actions": 0,
+      "required_gate_opens": 0
+    },
+    {
+      "from": 152,
+      "to": 153,
+      "structural_score": 35,
+      "pieces": 0,
+      "minimum_actions": -1,
+      "required_gate_opens": -1
+    },
+    {
+      "from": 211,
+      "to": 212,
+      "structural_score": 35,
+      "pieces": -2,
+      "minimum_actions": 0,
+      "required_gate_opens": 2
+    },
+    {
+      "from": 268,
+      "to": 269,
+      "structural_score": 35,
+      "pieces": 0,
+      "minimum_actions": -1,
+      "required_gate_opens": -1
+    }
+  ],
+  "windows100": [
+    {
+      "first": 1,
+      "last": 100,
+      "count": 100,
+      "medians": {
+        "size": 5.0,
+        "pieces": 12.0,
+        "minimum_actions": 14.0,
+        "required_gate_opens": 2.0,
+        "switches": 3.0,
+        "keys": 0.0,
+        "decision_points": 2.0,
+        "dependency_depth": 5.0,
+        "structural_score": 31.5,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          4,
+          6
+        ],
+        "pieces": [
+          2,
+          15
+        ],
+        "minimum_actions": [
+          2,
+          19
+        ],
+        "required_gate_opens": [
+          0,
+          5
+        ],
+        "switches": [
+          0,
+          5
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          14
+        ],
+        "dependency_depth": [
+          1,
+          9
+        ],
+        "structural_score": [
+          1,
+          104
+        ],
+        "margin": [
+          4,
+          5
+        ]
+      },
+      "normal": 90,
+      "hard": 10,
+      "expert": 0,
+      "recovery": 22,
+      "initialFreeExit": 51
+    },
+    {
+      "first": 101,
+      "last": 200,
+      "count": 100,
+      "medians": {
+        "size": 6.0,
+        "pieces": 16.0,
+        "minimum_actions": 18.5,
+        "required_gate_opens": 2.5,
+        "switches": 5.0,
+        "keys": 0.0,
+        "decision_points": 7.0,
+        "dependency_depth": 6.0,
+        "structural_score": 58.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          12,
+          19
+        ],
+        "minimum_actions": [
+          14,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          3,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          0,
+          15
+        ],
+        "dependency_depth": [
+          3,
+          10
+        ],
+        "structural_score": [
+          13,
+          104
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 70,
+      "hard": 30,
+      "expert": 0,
+      "recovery": 30,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 201,
+      "last": 300,
+      "count": 100,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.0,
+        "switches": 8.0,
+        "keys": 0.0,
+        "decision_points": 9.0,
+        "dependency_depth": 6.0,
+        "structural_score": 62.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          14,
+          20
+        ],
+        "minimum_actions": [
+          15,
+          26
+        ],
+        "required_gate_opens": [
+          0,
+          7
+        ],
+        "switches": [
+          4,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          19
+        ],
+        "dependency_depth": [
+          3,
+          11
+        ],
+        "structural_score": [
+          37,
+          108
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 60,
+      "hard": 40,
+      "expert": 0,
+      "recovery": 35,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 301,
+      "last": 400,
+      "count": 100,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.5,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 8.0,
+        "keys": 1.0,
+        "decision_points": 10.0,
+        "dependency_depth": 6.0,
+        "structural_score": 66.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          16,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          26
+        ],
+        "required_gate_opens": [
+          1,
+          7
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          13
+        ],
+        "structural_score": [
+          32,
+          107
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 60,
+      "hard": 40,
+      "expert": 0,
+      "recovery": 40,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 401,
+      "last": 500,
+      "count": 100,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.5,
+        "dependency_depth": 7.5,
+        "structural_score": 79.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          27
+        ],
+        "required_gate_opens": [
+          0,
+          7
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          0,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          12
+        ],
+        "structural_score": [
+          27,
+          114
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 50,
+      "hard": 46,
+      "expert": 4,
+      "recovery": 23,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 501,
+      "last": 600,
+      "count": 100,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 11.5,
+        "dependency_depth": 7.0,
+        "structural_score": 73.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          15,
+          20
+        ],
+        "minimum_actions": [
+          17,
+          25
+        ],
+        "required_gate_opens": [
+          0,
+          5
+        ],
+        "switches": [
+          4,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          22
+        ],
+        "dependency_depth": [
+          3,
+          11
+        ],
+        "structural_score": [
+          42,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 50,
+      "hard": 46,
+      "expert": 4,
+      "recovery": 28,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 601,
+      "last": 700,
+      "count": 100,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 14.0,
+        "dependency_depth": 7.0,
+        "structural_score": 90.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          0,
+          5
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          21
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          47,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 40,
+      "hard": 54,
+      "expert": 6,
+      "recovery": 29,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 701,
+      "last": 800,
+      "count": 100,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 15.0,
+        "dependency_depth": 6.5,
+        "structural_score": 94.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          0,
+          6
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          4,
+          20
+        ],
+        "dependency_depth": [
+          3,
+          11
+        ],
+        "structural_score": [
+          41,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 40,
+      "hard": 54,
+      "expert": 6,
+      "recovery": 28,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 801,
+      "last": 900,
+      "count": 100,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 16.0,
+        "dependency_depth": 7.0,
+        "structural_score": 100.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          17,
+          25
+        ],
+        "required_gate_opens": [
+          0,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          22
+        ],
+        "dependency_depth": [
+          3,
+          11
+        ],
+        "structural_score": [
+          56,
+          114
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 30,
+      "hard": 61,
+      "expert": 9,
+      "recovery": 20,
+      "initialFreeExit": 30
+    },
+    {
+      "first": 901,
+      "last": 1000,
+      "count": 100,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 17.0,
+        "dependency_depth": 7.0,
+        "structural_score": 104.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          16,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          7
+        ],
+        "switches": [
+          5,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          22
+        ],
+        "dependency_depth": [
+          4,
+          12
+        ],
+        "structural_score": [
+          46,
+          124
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 30,
+      "hard": 61,
+      "expert": 9,
+      "recovery": 24,
+      "initialFreeExit": 30
+    }
+  ],
+  "windows200": [
+    {
+      "first": 1,
+      "last": 200,
+      "count": 200,
+      "medians": {
+        "size": 6.0,
+        "pieces": 14.0,
+        "minimum_actions": 16.0,
+        "required_gate_opens": 2.0,
+        "switches": 4.0,
+        "keys": 0.0,
+        "decision_points": 5.0,
+        "dependency_depth": 6.0,
+        "structural_score": 46.0,
+        "margin": 3.5
+      },
+      "ranges": {
+        "size": [
+          4,
+          6
+        ],
+        "pieces": [
+          2,
+          19
+        ],
+        "minimum_actions": [
+          2,
+          24
+        ],
+        "required_gate_opens": [
+          0,
+          6
+        ],
+        "switches": [
+          0,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          0,
+          15
+        ],
+        "dependency_depth": [
+          1,
+          10
+        ],
+        "structural_score": [
+          1,
+          104
+        ],
+        "margin": [
+          3,
+          5
+        ]
+      },
+      "normal": 160,
+      "hard": 40,
+      "expert": 0,
+      "recovery": 52,
+      "initialFreeExit": 81
+    },
+    {
+      "first": 201,
+      "last": 400,
+      "count": 200,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 8.0,
+        "keys": 0.0,
+        "decision_points": 10.0,
+        "dependency_depth": 6.0,
+        "structural_score": 66.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          14,
+          20
+        ],
+        "minimum_actions": [
+          15,
+          26
+        ],
+        "required_gate_opens": [
+          0,
+          7
+        ],
+        "switches": [
+          4,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          19
+        ],
+        "dependency_depth": [
+          3,
+          13
+        ],
+        "structural_score": [
+          32,
+          108
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 120,
+      "hard": 80,
+      "expert": 0,
+      "recovery": 75,
+      "initialFreeExit": 60
+    },
+    {
+      "first": 401,
+      "last": 600,
+      "count": 200,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.5,
+        "dependency_depth": 7.0,
+        "structural_score": 79.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          15,
+          20
+        ],
+        "minimum_actions": [
+          17,
+          27
+        ],
+        "required_gate_opens": [
+          0,
+          7
+        ],
+        "switches": [
+          4,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          0,
+          22
+        ],
+        "dependency_depth": [
+          3,
+          12
+        ],
+        "structural_score": [
+          27,
+          114
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 100,
+      "hard": 92,
+      "expert": 8,
+      "recovery": 51,
+      "initialFreeExit": 60
+    },
+    {
+      "first": 601,
+      "last": 800,
+      "count": 200,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 14.0,
+        "dependency_depth": 7.0,
+        "structural_score": 90.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          0,
+          6
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          4,
+          21
+        ],
+        "dependency_depth": [
+          3,
+          11
+        ],
+        "structural_score": [
+          41,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 80,
+      "hard": 108,
+      "expert": 12,
+      "recovery": 57,
+      "initialFreeExit": 60
+    },
+    {
+      "first": 801,
+      "last": 1000,
+      "count": 200,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 17.0,
+        "dependency_depth": 7.0,
+        "structural_score": 100.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          16,
+          20
+        ],
+        "minimum_actions": [
+          17,
+          25
+        ],
+        "required_gate_opens": [
+          0,
+          7
+        ],
+        "switches": [
+          5,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          22
+        ],
+        "dependency_depth": [
+          3,
+          12
+        ],
+        "structural_score": [
+          46,
+          124
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 60,
+      "hard": 122,
+      "expert": 18,
+      "recovery": 44,
+      "initialFreeExit": 60
+    }
+  ],
+  "episodes": [
+    {
+      "first": 31,
+      "last": 40,
+      "count": 10,
+      "medians": {
+        "size": 5.0,
+        "pieces": 12.0,
+        "minimum_actions": 15.0,
+        "required_gate_opens": 3.0,
+        "switches": 3.0,
+        "keys": 0.0,
+        "decision_points": 0.0,
+        "dependency_depth": 5.0,
+        "structural_score": 19.5,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          5
+        ],
+        "pieces": [
+          11,
+          13
+        ],
+        "minimum_actions": [
+          13,
+          18
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          3,
+          4
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          4
+        ],
+        "dependency_depth": [
+          4,
+          7
+        ],
+        "structural_score": [
+          14,
+          42
+        ],
+        "margin": [
+          4,
+          4
+        ]
+      },
+      "normal": 10,
+      "hard": 0,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 41,
+      "last": 50,
+      "count": 10,
+      "medians": {
+        "size": 5.0,
+        "pieces": 12.5,
+        "minimum_actions": 14.5,
+        "required_gate_opens": 2.0,
+        "switches": 3.0,
+        "keys": 1.0,
+        "decision_points": 3.0,
+        "dependency_depth": 5.0,
+        "structural_score": 34.0,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          5
+        ],
+        "pieces": [
+          11,
+          13
+        ],
+        "minimum_actions": [
+          13,
+          17
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          3,
+          4
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          1,
+          10
+        ],
+        "dependency_depth": [
+          4,
+          7
+        ],
+        "structural_score": [
+          25,
+          91
+        ],
+        "margin": [
+          4,
+          4
+        ]
+      },
+      "normal": 9,
+      "hard": 1,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 51,
+      "last": 60,
+      "count": 10,
+      "medians": {
+        "size": 5.0,
+        "pieces": 12.0,
+        "minimum_actions": 15.0,
+        "required_gate_opens": 2.5,
+        "switches": 3.0,
+        "keys": 1.0,
+        "decision_points": 2.0,
+        "dependency_depth": 7.0,
+        "structural_score": 33.5,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          5
+        ],
+        "pieces": [
+          11,
+          13
+        ],
+        "minimum_actions": [
+          12,
+          16
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          3,
+          4
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          13
+        ],
+        "dependency_depth": [
+          3,
+          9
+        ],
+        "structural_score": [
+          13,
+          103
+        ],
+        "margin": [
+          4,
+          4
+        ]
+      },
+      "normal": 9,
+      "hard": 1,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 61,
+      "last": 70,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 13.0,
+        "minimum_actions": 15.5,
+        "required_gate_opens": 2.5,
+        "switches": 4.0,
+        "keys": 0.0,
+        "decision_points": 3.5,
+        "dependency_depth": 5.5,
+        "structural_score": 38.5,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          11,
+          15
+        ],
+        "minimum_actions": [
+          13,
+          19
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          3,
+          5
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          10
+        ],
+        "dependency_depth": [
+          4,
+          7
+        ],
+        "structural_score": [
+          19,
+          85
+        ],
+        "margin": [
+          4,
+          4
+        ]
+      },
+      "normal": 8,
+      "hard": 2,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 71,
+      "last": 80,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 13.5,
+        "minimum_actions": 16.0,
+        "required_gate_opens": 3.0,
+        "switches": 4.0,
+        "keys": 1.0,
+        "decision_points": 3.5,
+        "dependency_depth": 6.0,
+        "structural_score": 38.5,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          12,
+          15
+        ],
+        "minimum_actions": [
+          15,
+          19
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          3,
+          5
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          10
+        ],
+        "dependency_depth": [
+          3,
+          9
+        ],
+        "structural_score": [
+          14,
+          81
+        ],
+        "margin": [
+          4,
+          4
+        ]
+      },
+      "normal": 8,
+      "hard": 2,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 81,
+      "last": 90,
+      "count": 10,
+      "medians": {
+        "size": 5.5,
+        "pieces": 13.5,
+        "minimum_actions": 16.5,
+        "required_gate_opens": 3.0,
+        "switches": 4.0,
+        "keys": 0.5,
+        "decision_points": 7.0,
+        "dependency_depth": 5.5,
+        "structural_score": 61.5,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          12,
+          15
+        ],
+        "minimum_actions": [
+          14,
+          19
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          3,
+          5
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          14
+        ],
+        "dependency_depth": [
+          3,
+          8
+        ],
+        "structural_score": [
+          22,
+          104
+        ],
+        "margin": [
+          4,
+          4
+        ]
+      },
+      "normal": 8,
+      "hard": 2,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 91,
+      "last": 100,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 14.0,
+        "minimum_actions": 16.0,
+        "required_gate_opens": 2.0,
+        "switches": 4.0,
+        "keys": 1.0,
+        "decision_points": 4.0,
+        "dependency_depth": 5.0,
+        "structural_score": 43.0,
+        "margin": 4.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          12,
+          15
+        ],
+        "minimum_actions": [
+          14,
+          17
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          4,
+          5
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          14
+        ],
+        "dependency_depth": [
+          4,
+          8
+        ],
+        "structural_score": [
+          11,
+          99
+        ],
+        "margin": [
+          4,
+          4
+        ]
+      },
+      "normal": 8,
+      "hard": 2,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 101,
+      "last": 110,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 15.0,
+        "minimum_actions": 17.5,
+        "required_gate_opens": 2.0,
+        "switches": 5.0,
+        "keys": 0.5,
+        "decision_points": 7.5,
+        "dependency_depth": 6.0,
+        "structural_score": 61.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          13,
+          17
+        ],
+        "minimum_actions": [
+          15,
+          19
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          4,
+          6
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          0,
+          11
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          13,
+          84
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 111,
+      "last": 120,
+      "count": 10,
+      "medians": {
+        "size": 5.5,
+        "pieces": 14.0,
+        "minimum_actions": 16.0,
+        "required_gate_opens": 2.0,
+        "switches": 4.5,
+        "keys": 0.5,
+        "decision_points": 6.0,
+        "dependency_depth": 6.0,
+        "structural_score": 51.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          12,
+          16
+        ],
+        "minimum_actions": [
+          14,
+          19
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          3,
+          6
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          2,
+          13
+        ],
+        "dependency_depth": [
+          5,
+          7
+        ],
+        "structural_score": [
+          29,
+          104
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 121,
+      "last": 130,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 14.5,
+        "minimum_actions": 17.0,
+        "required_gate_opens": 3.0,
+        "switches": 5.0,
+        "keys": 1.0,
+        "decision_points": 7.0,
+        "dependency_depth": 6.0,
+        "structural_score": 60.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          13,
+          17
+        ],
+        "minimum_actions": [
+          15,
+          20
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          4,
+          6
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          4,
+          14
+        ],
+        "dependency_depth": [
+          4,
+          7
+        ],
+        "structural_score": [
+          40,
+          93
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 131,
+      "last": 140,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 15.0,
+        "minimum_actions": 18.0,
+        "required_gate_opens": 3.0,
+        "switches": 4.5,
+        "keys": 1.0,
+        "decision_points": 6.5,
+        "dependency_depth": 6.0,
+        "structural_score": 59.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          12,
+          17
+        ],
+        "minimum_actions": [
+          15,
+          21
+        ],
+        "required_gate_opens": [
+          2,
+          5
+        ],
+        "switches": [
+          3,
+          5
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          4,
+          13
+        ],
+        "dependency_depth": [
+          4,
+          8
+        ],
+        "structural_score": [
+          38,
+          92
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 141,
+      "last": 150,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 15.0,
+        "minimum_actions": 18.0,
+        "required_gate_opens": 3.0,
+        "switches": 5.0,
+        "keys": 0.0,
+        "decision_points": 8.5,
+        "dependency_depth": 5.5,
+        "structural_score": 63.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          14,
+          17
+        ],
+        "minimum_actions": [
+          16,
+          20
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          4,
+          6
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          4,
+          15
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          44,
+          96
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 151,
+      "last": 160,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 14.0,
+        "minimum_actions": 16.0,
+        "required_gate_opens": 2.0,
+        "switches": 4.5,
+        "keys": 0.0,
+        "decision_points": 7.0,
+        "dependency_depth": 6.0,
+        "structural_score": 59.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          13,
+          17
+        ],
+        "minimum_actions": [
+          15,
+          20
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          4,
+          5
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          4,
+          13
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          43,
+          99
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 161,
+      "last": 170,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.0,
+        "minimum_actions": 19.0,
+        "required_gate_opens": 2.0,
+        "switches": 6.0,
+        "keys": 1.0,
+        "decision_points": 9.0,
+        "dependency_depth": 6.5,
+        "structural_score": 70.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          15,
+          18
+        ],
+        "minimum_actions": [
+          16,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          5,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          4,
+          15
+        ],
+        "dependency_depth": [
+          3,
+          9
+        ],
+        "structural_score": [
+          45,
+          95
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 171,
+      "last": 180,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.5,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.5,
+        "switches": 6.0,
+        "keys": 0.0,
+        "decision_points": 8.0,
+        "dependency_depth": 5.5,
+        "structural_score": 58.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          14,
+          19
+        ],
+        "minimum_actions": [
+          15,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          4,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          4,
+          14
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          47,
+          100
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 181,
+      "last": 190,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 16.5,
+        "minimum_actions": 19.5,
+        "required_gate_opens": 3.0,
+        "switches": 6.0,
+        "keys": 0.5,
+        "decision_points": 6.5,
+        "dependency_depth": 7.5,
+        "structural_score": 54.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          15,
+          19
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          5,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          3,
+          14
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          34,
+          87
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 191,
+      "last": 200,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.0,
+        "minimum_actions": 19.5,
+        "required_gate_opens": 2.0,
+        "switches": 6.0,
+        "keys": 0.0,
+        "decision_points": 8.0,
+        "dependency_depth": 7.0,
+        "structural_score": 60.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          15,
+          18
+        ],
+        "minimum_actions": [
+          17,
+          21
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          5,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          2,
+          14
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          36,
+          88
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 7,
+      "hard": 3,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 201,
+      "last": 210,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.0,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 3.0,
+        "switches": 6.0,
+        "keys": 0.5,
+        "decision_points": 9.0,
+        "dependency_depth": 7.0,
+        "structural_score": 60.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          16,
+          19
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          5,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          13
+        ],
+        "dependency_depth": [
+          4,
+          11
+        ],
+        "structural_score": [
+          47,
+          85
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 211,
+      "last": 220,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.0,
+        "minimum_actions": 19.5,
+        "required_gate_opens": 2.0,
+        "switches": 6.0,
+        "keys": 0.5,
+        "decision_points": 8.5,
+        "dependency_depth": 6.0,
+        "structural_score": 60.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          16,
+          19
+        ],
+        "minimum_actions": [
+          17,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          5,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          14
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          49,
+          88
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 221,
+      "last": 230,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 16.5,
+        "minimum_actions": 19.0,
+        "required_gate_opens": 1.5,
+        "switches": 6.0,
+        "keys": 0.0,
+        "decision_points": 9.5,
+        "dependency_depth": 5.5,
+        "structural_score": 68.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          5,
+          6
+        ],
+        "pieces": [
+          14,
+          19
+        ],
+        "minimum_actions": [
+          15,
+          21
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          4,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          15
+        ],
+        "dependency_depth": [
+          3,
+          9
+        ],
+        "structural_score": [
+          45,
+          103
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 231,
+      "last": 240,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 4.0,
+        "switches": 6.0,
+        "keys": 0.5,
+        "decision_points": 10.0,
+        "dependency_depth": 7.0,
+        "structural_score": 69.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          19,
+          26
+        ],
+        "required_gate_opens": [
+          2,
+          7
+        ],
+        "switches": [
+          6,
+          7
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          19
+        ],
+        "dependency_depth": [
+          6,
+          10
+        ],
+        "structural_score": [
+          39,
+          108
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 241,
+      "last": 250,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.0,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.0,
+        "dependency_depth": 7.0,
+        "structural_score": 73.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          3,
+          17
+        ],
+        "dependency_depth": [
+          4,
+          11
+        ],
+        "structural_score": [
+          40,
+          107
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 251,
+      "last": 260,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.5,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.5,
+        "switches": 8.5,
+        "keys": 0.0,
+        "decision_points": 9.5,
+        "dependency_depth": 5.5,
+        "structural_score": 66.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          15
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          37,
+          86
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 261,
+      "last": 270,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.5,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 10.0,
+        "dependency_depth": 6.0,
+        "structural_score": 66.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          15,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          5,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          6,
+          17
+        ],
+        "dependency_depth": [
+          5,
+          8
+        ],
+        "structural_score": [
+          44,
+          101
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 271,
+      "last": 280,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 9.5,
+        "dependency_depth": 6.5,
+        "structural_score": 65.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          15
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          46,
+          91
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 281,
+      "last": 290,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 19.5,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 8.5,
+        "dependency_depth": 6.0,
+        "structural_score": 59.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          0,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          7,
+          14
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          47,
+          90
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 291,
+      "last": 300,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 17.5,
+        "minimum_actions": 19.5,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 9.0,
+        "dependency_depth": 6.5,
+        "structural_score": 61.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          18,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          16
+        ],
+        "dependency_depth": [
+          5,
+          8
+        ],
+        "structural_score": [
+          46,
+          99
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 301,
+      "last": 310,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 8.5,
+        "keys": 0.0,
+        "decision_points": 10.0,
+        "dependency_depth": 6.5,
+        "structural_score": 65.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          26
+        ],
+        "required_gate_opens": [
+          1,
+          7
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          19
+        ],
+        "dependency_depth": [
+          5,
+          8
+        ],
+        "structural_score": [
+          52,
+          99
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 311,
+      "last": 320,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.5,
+        "required_gate_opens": 2.0,
+        "switches": 8.0,
+        "keys": 1.0,
+        "decision_points": 9.0,
+        "dependency_depth": 6.0,
+        "structural_score": 60.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          15
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          54,
+          92
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 321,
+      "last": 330,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 8.0,
+        "keys": 0.0,
+        "decision_points": 9.0,
+        "dependency_depth": 6.0,
+        "structural_score": 63.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          15
+        ],
+        "dependency_depth": [
+          5,
+          11
+        ],
+        "structural_score": [
+          55,
+          94
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 331,
+      "last": 340,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.5,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 3.0,
+        "switches": 7.0,
+        "keys": 1.0,
+        "decision_points": 8.5,
+        "dependency_depth": 8.0,
+        "structural_score": 64.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          16,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          2,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          15
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          54,
+          97
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 341,
+      "last": 350,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 3.0,
+        "switches": 7.0,
+        "keys": 1.0,
+        "decision_points": 10.0,
+        "dependency_depth": 7.0,
+        "structural_score": 64.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          18,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          24
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          16
+        ],
+        "dependency_depth": [
+          6,
+          10
+        ],
+        "structural_score": [
+          54,
+          93
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 351,
+      "last": 360,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 10.0,
+        "dependency_depth": 6.0,
+        "structural_score": 65.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          18,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          17
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          32,
+          92
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 361,
+      "last": 370,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 8.5,
+        "keys": 1.0,
+        "decision_points": 10.5,
+        "dependency_depth": 6.0,
+        "structural_score": 66.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          17
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          56,
+          100
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 371,
+      "last": 380,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 7.5,
+        "keys": 1.0,
+        "decision_points": 9.5,
+        "dependency_depth": 6.5,
+        "structural_score": 69.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          18
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          38,
+          107
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 381,
+      "last": 390,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 8.5,
+        "keys": 0.0,
+        "decision_points": 10.0,
+        "dependency_depth": 6.5,
+        "structural_score": 67.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          19
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          58,
+          103
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 391,
+      "last": 400,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.5,
+        "switches": 8.5,
+        "keys": 0.5,
+        "decision_points": 11.0,
+        "dependency_depth": 7.0,
+        "structural_score": 69.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          6
+        ],
+        "pieces": [
+          18,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          18
+        ],
+        "dependency_depth": [
+          4,
+          13
+        ],
+        "structural_score": [
+          59,
+          97
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 6,
+      "hard": 4,
+      "expert": 0,
+      "recovery": 4,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 401,
+      "last": 410,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 3.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 11.5,
+        "dependency_depth": 7.0,
+        "structural_score": 73.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          0,
+          18
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          27,
+          104
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 411,
+      "last": 420,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 11.0,
+        "dependency_depth": 7.5,
+        "structural_score": 74.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          27
+        ],
+        "required_gate_opens": [
+          1,
+          7
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          2,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          28,
+          105
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 421,
+      "last": 430,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 17.5,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 13.0,
+        "dependency_depth": 7.0,
+        "structural_score": 86.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          2,
+          20
+        ],
+        "dependency_depth": [
+          5,
+          11
+        ],
+        "structural_score": [
+          28,
+          110
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 431,
+      "last": 440,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 4.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.0,
+        "dependency_depth": 7.0,
+        "structural_score": 77.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          26
+        ],
+        "required_gate_opens": [
+          0,
+          7
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          15
+        ],
+        "dependency_depth": [
+          6,
+          10
+        ],
+        "structural_score": [
+          39,
+          91
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 1,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 441,
+      "last": 450,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 4.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.0,
+        "dependency_depth": 8.0,
+        "structural_score": 74.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          25
+        ],
+        "required_gate_opens": [
+          2,
+          6
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          18
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          32,
+          110
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 1,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 451,
+      "last": 460,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 17.0,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.0,
+        "dependency_depth": 7.5,
+        "structural_score": 79.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          18,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          3,
+          16
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          34,
+          99
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 461,
+      "last": 470,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 12.5,
+        "dependency_depth": 7.0,
+        "structural_score": 80.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          3,
+          16
+        ],
+        "dependency_depth": [
+          5,
+          11
+        ],
+        "structural_score": [
+          38,
+          102
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 471,
+      "last": 480,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 12.0,
+        "dependency_depth": 9.0,
+        "structural_score": 79.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          1,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          12
+        ],
+        "structural_score": [
+          31,
+          114
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 481,
+      "last": 490,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.5,
+        "dependency_depth": 8.0,
+        "structural_score": 73.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          3,
+          18
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          39,
+          101
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 491,
+      "last": 500,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.5,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 11.5,
+        "dependency_depth": 8.0,
+        "structural_score": 74.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          2,
+          19
+        ],
+        "dependency_depth": [
+          5,
+          12
+        ],
+        "structural_score": [
+          41,
+          110
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 501,
+      "last": 510,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 11.5,
+        "dependency_depth": 7.0,
+        "structural_score": 73.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          5,
+          16
+        ],
+        "dependency_depth": [
+          4,
+          8
+        ],
+        "structural_score": [
+          42,
+          102
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 511,
+      "last": 520,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 12.0,
+        "dependency_depth": 7.0,
+        "structural_score": 75.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          0,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          17
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          61,
+          105
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 521,
+      "last": 530,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.5,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 11.5,
+        "dependency_depth": 7.5,
+        "structural_score": 75.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          15,
+          19
+        ],
+        "minimum_actions": [
+          17,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          4,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          18
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          53,
+          110
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 531,
+      "last": 540,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 12.0,
+        "dependency_depth": 7.0,
+        "structural_score": 76.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          20,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          18
+        ],
+        "dependency_depth": [
+          5,
+          11
+        ],
+        "structural_score": [
+          61,
+          106
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 541,
+      "last": 550,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 12.0,
+        "dependency_depth": 6.5,
+        "structural_score": 73.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          22
+        ],
+        "dependency_depth": [
+          6,
+          9
+        ],
+        "structural_score": [
+          60,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 551,
+      "last": 560,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 12.0,
+        "dependency_depth": 6.5,
+        "structural_score": 76.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          5,
+          15
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          43,
+          88
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 561,
+      "last": 570,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 12.0,
+        "dependency_depth": 7.5,
+        "structural_score": 77.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          15
+        ],
+        "dependency_depth": [
+          4,
+          8
+        ],
+        "structural_score": [
+          58,
+          88
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 571,
+      "last": 580,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 12.0,
+        "dependency_depth": 6.0,
+        "structural_score": 77.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          24
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          21
+        ],
+        "dependency_depth": [
+          3,
+          9
+        ],
+        "structural_score": [
+          60,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 581,
+      "last": 590,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 11.5,
+        "dependency_depth": 8.0,
+        "structural_score": 73.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          17
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          61,
+          106
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 5,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 591,
+      "last": 600,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 11.5,
+        "dependency_depth": 7.0,
+        "structural_score": 78.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          19
+        ],
+        "dependency_depth": [
+          6,
+          10
+        ],
+        "structural_score": [
+          61,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 5,
+      "hard": 4,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 601,
+      "last": 610,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 14.0,
+        "dependency_depth": 6.0,
+        "structural_score": 89.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          25
+        ],
+        "required_gate_opens": [
+          2,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          8,
+          16
+        ],
+        "dependency_depth": [
+          5,
+          8
+        ],
+        "structural_score": [
+          55,
+          90
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 611,
+      "last": 620,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.5,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 13.5,
+        "dependency_depth": 7.0,
+        "structural_score": 90.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          58,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 621,
+      "last": 630,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 13.5,
+        "dependency_depth": 7.0,
+        "structural_score": 90.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          15
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          47,
+          91
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 631,
+      "last": 640,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 13.0,
+        "dependency_depth": 7.5,
+        "structural_score": 82.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          21
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          61,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 641,
+      "last": 650,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 14.0,
+        "dependency_depth": 7.0,
+        "structural_score": 91.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          18
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          2,
+          5
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          19
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          59,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 651,
+      "last": 660,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 13.0,
+        "dependency_depth": 7.0,
+        "structural_score": 86.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          0,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          10,
+          16
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          61,
+          91
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 661,
+      "last": 670,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 15.0,
+        "dependency_depth": 6.5,
+        "structural_score": 91.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          18,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          20
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          51,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 671,
+      "last": 680,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 14.5,
+        "dependency_depth": 6.5,
+        "structural_score": 92.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          17
+        ],
+        "dependency_depth": [
+          4,
+          8
+        ],
+        "structural_score": [
+          60,
+          92
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 681,
+      "last": 690,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 15.0,
+        "dependency_depth": 7.0,
+        "structural_score": 92.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          23
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          19
+        ],
+        "dependency_depth": [
+          6,
+          8
+        ],
+        "structural_score": [
+          59,
+          111
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 691,
+      "last": 700,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 14.5,
+        "dependency_depth": 6.5,
+        "structural_score": 87.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          21
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          51,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 701,
+      "last": 710,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.5,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 14.0,
+        "dependency_depth": 7.0,
+        "structural_score": 93.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          21
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          8,
+          17
+        ],
+        "dependency_depth": [
+          5,
+          8
+        ],
+        "structural_score": [
+          60,
+          94
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 711,
+      "last": 720,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 15.0,
+        "dependency_depth": 6.0,
+        "structural_score": 94.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          10,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          11
+        ],
+        "structural_score": [
+          59,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 721,
+      "last": 730,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 17.5,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 15.0,
+        "dependency_depth": 7.0,
+        "structural_score": 94.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          15
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          59,
+          95
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 731,
+      "last": 740,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 13.0,
+        "dependency_depth": 7.0,
+        "structural_score": 81.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          7,
+          20
+        ],
+        "dependency_depth": [
+          3,
+          9
+        ],
+        "structural_score": [
+          53,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 1,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 741,
+      "last": 750,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 15.0,
+        "dependency_depth": 6.0,
+        "structural_score": 95.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          59,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 751,
+      "last": 760,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 16.0,
+        "dependency_depth": 7.0,
+        "structural_score": 96.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          3
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          4,
+          18
+        ],
+        "dependency_depth": [
+          5,
+          11
+        ],
+        "structural_score": [
+          41,
+          97
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 761,
+      "last": 770,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 1.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 13.5,
+        "dependency_depth": 6.0,
+        "structural_score": 88.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          22
+        ],
+        "required_gate_opens": [
+          0,
+          3
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          20
+        ],
+        "dependency_depth": [
+          5,
+          7
+        ],
+        "structural_score": [
+          59,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 771,
+      "last": 780,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 15.0,
+        "dependency_depth": 7.0,
+        "structural_score": 97.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          18
+        ],
+        "dependency_depth": [
+          4,
+          11
+        ],
+        "structural_score": [
+          50,
+          97
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 6,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 781,
+      "last": 790,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 14.0,
+        "dependency_depth": 6.5,
+        "structural_score": 90.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          19,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          60,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 791,
+      "last": 800,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 14.0,
+        "dependency_depth": 7.0,
+        "structural_score": 90.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          5,
+          19
+        ],
+        "dependency_depth": [
+          5,
+          8
+        ],
+        "structural_score": [
+          51,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 4,
+      "hard": 5,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 801,
+      "last": 810,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 14.0,
+        "dependency_depth": 6.5,
+        "structural_score": 84.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          10,
+          18
+        ],
+        "dependency_depth": [
+          3,
+          9
+        ],
+        "structural_score": [
+          58,
+          99
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 7,
+      "expert": 0,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 811,
+      "last": 820,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 17.0,
+        "dependency_depth": 6.0,
+        "structural_score": 100.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          7,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          2,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          7
+        ],
+        "structural_score": [
+          62,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 821,
+      "last": 830,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.5,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 16.0,
+        "dependency_depth": 7.0,
+        "structural_score": 98.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          17,
+          23
+        ],
+        "required_gate_opens": [
+          0,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          19
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          61,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 831,
+      "last": 840,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 16.0,
+        "dependency_depth": 6.5,
+        "structural_score": 101.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          60,
+          112
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 841,
+      "last": 850,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 16.0,
+        "dependency_depth": 7.5,
+        "structural_score": 91.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          58,
+          113
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 851,
+      "last": 860,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 16.0,
+        "dependency_depth": 7.0,
+        "structural_score": 101.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          22
+        ],
+        "required_gate_opens": [
+          2,
+          4
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          9,
+          19
+        ],
+        "dependency_depth": [
+          6,
+          11
+        ],
+        "structural_score": [
+          61,
+          113
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 861,
+      "last": 870,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 17.0,
+        "dependency_depth": 7.0,
+        "structural_score": 102.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          8,
+          22
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          57,
+          113
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 871,
+      "last": 880,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 16.5,
+        "dependency_depth": 7.0,
+        "structural_score": 102.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          22
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          8
+        ],
+        "structural_score": [
+          58,
+          113
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 881,
+      "last": 890,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 20.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 17.0,
+        "dependency_depth": 7.0,
+        "structural_score": 99.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          7,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          58,
+          113
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 891,
+      "last": 900,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 17.5,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 16.5,
+        "dependency_depth": 7.0,
+        "structural_score": 103.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          20
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          56,
+          114
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 901,
+      "last": 910,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 15.5,
+        "dependency_depth": 5.0,
+        "structural_score": 91.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          5,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          10
+        ],
+        "structural_score": [
+          57,
+          104
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 7,
+      "expert": 0,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 911,
+      "last": 920,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.5,
+        "minimum_actions": 22.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 17.0,
+        "dependency_depth": 7.5,
+        "structural_score": 104.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          7
+        ],
+        "switches": [
+          7,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          20
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          56,
+          110
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 921,
+      "last": 930,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 22.0,
+        "required_gate_opens": 3.5,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 13.5,
+        "dependency_depth": 7.0,
+        "structural_score": 81.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          16,
+          20
+        ],
+        "minimum_actions": [
+          18,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          5,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          19
+        ],
+        "dependency_depth": [
+          4,
+          12
+        ],
+        "structural_score": [
+          59,
+          114
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 931,
+      "last": 940,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 22.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 17.5,
+        "dependency_depth": 6.5,
+        "structural_score": 105.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          20,
+          24
+        ],
+        "required_gate_opens": [
+          2,
+          5
+        ],
+        "switches": [
+          9,
+          9
+        ],
+        "keys": [
+          0,
+          1
+        ],
+        "decision_points": [
+          7,
+          20
+        ],
+        "dependency_depth": [
+          5,
+          11
+        ],
+        "structural_score": [
+          55,
+          114
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 941,
+      "last": 950,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.5,
+        "minimum_actions": 20.0,
+        "required_gate_opens": 2.0,
+        "switches": 9.0,
+        "keys": 0.5,
+        "decision_points": 17.5,
+        "dependency_depth": 6.0,
+        "structural_score": 105.5,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          21
+        ],
+        "dependency_depth": [
+          4,
+          9
+        ],
+        "structural_score": [
+          60,
+          115
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 951,
+      "last": 960,
+      "count": 10,
+      "medians": {
+        "size": 6.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 8.5,
+        "keys": 0.5,
+        "decision_points": 18.5,
+        "dependency_depth": 5.5,
+        "structural_score": 109.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          25
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          21
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          55,
+          115
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 961,
+      "last": 970,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 19.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 16.0,
+        "dependency_depth": 7.5,
+        "structural_score": 98.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          4
+        ],
+        "switches": [
+          8,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          8,
+          22
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          52,
+          117
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 3,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 971,
+      "last": 980,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.5,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 17.0,
+        "dependency_depth": 6.5,
+        "structural_score": 96.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          16,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          25
+        ],
+        "required_gate_opens": [
+          2,
+          5
+        ],
+        "switches": [
+          5,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          7,
+          21
+        ],
+        "dependency_depth": [
+          5,
+          9
+        ],
+        "structural_score": [
+          51,
+          117
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 981,
+      "last": 990,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 1.0,
+        "decision_points": 17.5,
+        "dependency_depth": 7.0,
+        "structural_score": 106.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          20
+        ],
+        "minimum_actions": [
+          19,
+          24
+        ],
+        "required_gate_opens": [
+          1,
+          6
+        ],
+        "switches": [
+          6,
+          9
+        ],
+        "keys": [
+          1,
+          2
+        ],
+        "decision_points": [
+          6,
+          21
+        ],
+        "dependency_depth": [
+          4,
+          11
+        ],
+        "structural_score": [
+          50,
+          121
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    },
+    {
+      "first": 991,
+      "last": 1000,
+      "count": 10,
+      "medians": {
+        "size": 7.0,
+        "pieces": 18.0,
+        "minimum_actions": 21.0,
+        "required_gate_opens": 3.0,
+        "switches": 9.0,
+        "keys": 0.0,
+        "decision_points": 17.0,
+        "dependency_depth": 6.0,
+        "structural_score": 106.0,
+        "margin": 3.0
+      },
+      "ranges": {
+        "size": [
+          6,
+          7
+        ],
+        "pieces": [
+          17,
+          19
+        ],
+        "minimum_actions": [
+          19,
+          23
+        ],
+        "required_gate_opens": [
+          1,
+          5
+        ],
+        "switches": [
+          5,
+          9
+        ],
+        "keys": [
+          0,
+          2
+        ],
+        "decision_points": [
+          6,
+          21
+        ],
+        "dependency_depth": [
+          5,
+          10
+        ],
+        "structural_score": [
+          46,
+          124
+        ],
+        "margin": [
+          3,
+          3
+        ]
+      },
+      "normal": 3,
+      "hard": 6,
+      "expert": 1,
+      "recovery": 2,
+      "initialFreeExit": 3
+    }
+  ],
+  "openingOnlyChanges": [
+    {
+      "number": 31,
+      "source": 67,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 36,
+      "source": 49,
+      "oldInitial": 8,
+      "newInitial": 10
+    },
+    {
+      "number": 40,
+      "source": 44,
+      "oldInitial": 8,
+      "newInitial": 9
+    },
+    {
+      "number": 41,
+      "source": 48,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 45,
+      "source": 83,
+      "oldInitial": 2,
+      "newInitial": 3
+    },
+    {
+      "number": 50,
+      "source": 69,
+      "oldInitial": 0,
+      "newInitial": 15
+    },
+    {
+      "number": 51,
+      "source": 35,
+      "oldInitial": 4,
+      "newInitial": 7
+    },
+    {
+      "number": 55,
+      "source": 39,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 60,
+      "source": 50,
+      "oldInitial": 8,
+      "newInitial": 9
+    },
+    {
+      "number": 61,
+      "source": 94,
+      "oldInitial": 4,
+      "newInitial": 5
+    },
+    {
+      "number": 66,
+      "source": 116,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 70,
+      "source": 65,
+      "oldInitial": 8,
+      "newInitial": 12
+    },
+    {
+      "number": 71,
+      "source": 73,
+      "oldInitial": 0,
+      "newInitial": 7
+    },
+    {
+      "number": 76,
+      "source": 113,
+      "oldInitial": 4,
+      "newInitial": 12
+    },
+    {
+      "number": 80,
+      "source": 54,
+      "oldInitial": 0,
+      "newInitial": 11
+    },
+    {
+      "number": 81,
+      "source": 150,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 86,
+      "source": 147,
+      "oldInitial": 0,
+      "newInitial": 9
+    },
+    {
+      "number": 90,
+      "source": 61,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 91,
+      "source": 79,
+      "oldInitial": 4,
+      "newInitial": 14
+    },
+    {
+      "number": 96,
+      "source": 145,
+      "oldInitial": 9,
+      "newInitial": 11
+    },
+    {
+      "number": 100,
+      "source": 135,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 101,
+      "source": 78,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 105,
+      "source": 95,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 110,
+      "source": 233,
+      "oldInitial": 3,
+      "newInitial": 7
+    },
+    {
+      "number": 111,
+      "source": 63,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 115,
+      "source": 206,
+      "oldInitial": 1,
+      "newInitial": 13
+    },
+    {
+      "number": 120,
+      "source": 131,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 121,
+      "source": 109,
+      "oldInitial": 0,
+      "newInitial": 11
+    },
+    {
+      "number": 125,
+      "source": 148,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 130,
+      "source": 165,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 131,
+      "source": 179,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 135,
+      "source": 64,
+      "oldInitial": 5,
+      "newInitial": 7
+    },
+    {
+      "number": 140,
+      "source": 174,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 141,
+      "source": 235,
+      "oldInitial": 1,
+      "newInitial": 9
+    },
+    {
+      "number": 145,
+      "source": 157,
+      "oldInitial": 8,
+      "newInitial": 10
+    },
+    {
+      "number": 150,
+      "source": 153,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 151,
+      "source": 97,
+      "oldInitial": 4,
+      "newInitial": 5
+    },
+    {
+      "number": 155,
+      "source": 132,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 160,
+      "source": 144,
+      "oldInitial": 0,
+      "newInitial": 6
+    },
+    {
+      "number": 161,
+      "source": 255,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 165,
+      "source": 229,
+      "oldInitial": 4,
+      "newInitial": 12
+    },
+    {
+      "number": 170,
+      "source": 226,
+      "oldInitial": 1,
+      "newInitial": 11
+    },
+    {
+      "number": 171,
+      "source": 268,
+      "oldInitial": 4,
+      "newInitial": 5
+    },
+    {
+      "number": 175,
+      "source": 134,
+      "oldInitial": 2,
+      "newInitial": 11
+    },
+    {
+      "number": 180,
+      "source": 215,
+      "oldInitial": 4,
+      "newInitial": 13
+    },
+    {
+      "number": 181,
+      "source": 228,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 185,
+      "source": 182,
+      "oldInitial": 8,
+      "newInitial": 11
+    },
+    {
+      "number": 190,
+      "source": 222,
+      "oldInitial": 0,
+      "newInitial": 11
+    },
+    {
+      "number": 191,
+      "source": 241,
+      "oldInitial": 2,
+      "newInitial": 11
+    },
+    {
+      "number": 195,
+      "source": 208,
+      "oldInitial": 2,
+      "newInitial": 14
+    },
+    {
+      "number": 200,
+      "source": 149,
+      "oldInitial": 4,
+      "newInitial": 6
+    },
+    {
+      "number": 201,
+      "source": 163,
+      "oldInitial": 3,
+      "newInitial": 7
+    },
+    {
+      "number": 206,
+      "source": 192,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 210,
+      "source": 227,
+      "oldInitial": 1,
+      "newInitial": 15
+    },
+    {
+      "number": 211,
+      "source": 224,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 216,
+      "source": 286,
+      "oldInitial": 12,
+      "newInitial": 14
+    },
+    {
+      "number": 220,
+      "source": 203,
+      "oldInitial": 1,
+      "newInitial": 15
+    },
+    {
+      "number": 221,
+      "source": 296,
+      "oldInitial": 2,
+      "newInitial": 15
+    },
+    {
+      "number": 226,
+      "source": 81,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 230,
+      "source": 258,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 231,
+      "source": 234,
+      "oldInitial": 0,
+      "newInitial": 9
+    },
+    {
+      "number": 236,
+      "source": 181,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 240,
+      "source": 252,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 241,
+      "source": 330,
+      "oldInitial": 0,
+      "newInitial": 9
+    },
+    {
+      "number": 246,
+      "source": 350,
+      "oldInitial": 1,
+      "newInitial": 7
+    },
+    {
+      "number": 250,
+      "source": 406,
+      "oldInitial": 1,
+      "newInitial": 9
+    },
+    {
+      "number": 251,
+      "source": 356,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 256,
+      "source": 318,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 260,
+      "source": 283,
+      "oldInitial": 9,
+      "newInitial": 15
+    },
+    {
+      "number": 261,
+      "source": 127,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 266,
+      "source": 365,
+      "oldInitial": 12,
+      "newInitial": 13
+    },
+    {
+      "number": 270,
+      "source": 359,
+      "oldInitial": 1,
+      "newInitial": 7
+    },
+    {
+      "number": 271,
+      "source": 306,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 276,
+      "source": 409,
+      "oldInitial": 8,
+      "newInitial": 12
+    },
+    {
+      "number": 280,
+      "source": 461,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 281,
+      "source": 194,
+      "oldInitial": 1,
+      "newInitial": 9
+    },
+    {
+      "number": 286,
+      "source": 348,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 290,
+      "source": 392,
+      "oldInitial": 2,
+      "newInitial": 15
+    },
+    {
+      "number": 291,
+      "source": 366,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 296,
+      "source": 217,
+      "oldInitial": 2,
+      "newInitial": 3
+    },
+    {
+      "number": 300,
+      "source": 238,
+      "oldInitial": 2,
+      "newInitial": 6
+    },
+    {
+      "number": 301,
+      "source": 271,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 306,
+      "source": 298,
+      "oldInitial": 2,
+      "newInitial": 11
+    },
+    {
+      "number": 310,
+      "source": 433,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 311,
+      "source": 372,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 316,
+      "source": 323,
+      "oldInitial": 5,
+      "newInitial": 15
+    },
+    {
+      "number": 320,
+      "source": 440,
+      "oldInitial": 0,
+      "newInitial": 11
+    },
+    {
+      "number": 321,
+      "source": 336,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 326,
+      "source": 257,
+      "oldInitial": 12,
+      "newInitial": 15
+    },
+    {
+      "number": 330,
+      "source": 355,
+      "oldInitial": 1,
+      "newInitial": 9
+    },
+    {
+      "number": 331,
+      "source": 216,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 336,
+      "source": 263,
+      "oldInitial": 9,
+      "newInitial": 13
+    },
+    {
+      "number": 340,
+      "source": 346,
+      "oldInitial": 0,
+      "newInitial": 15
+    },
+    {
+      "number": 341,
+      "source": 424,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 346,
+      "source": 240,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 350,
+      "source": 382,
+      "oldInitial": 4,
+      "newInitial": 13
+    },
+    {
+      "number": 351,
+      "source": 467,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 356,
+      "source": 429,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 360,
+      "source": 439,
+      "oldInitial": 1,
+      "newInitial": 3
+    },
+    {
+      "number": 361,
+      "source": 459,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 366,
+      "source": 304,
+      "oldInitial": 2,
+      "newInitial": 15
+    },
+    {
+      "number": 370,
+      "source": 377,
+      "oldInitial": 12,
+      "newInitial": 15
+    },
+    {
+      "number": 371,
+      "source": 186,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 376,
+      "source": 466,
+      "oldInitial": 10,
+      "newInitial": 14
+    },
+    {
+      "number": 380,
+      "source": 435,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 381,
+      "source": 343,
+      "oldInitial": 8,
+      "newInitial": 10
+    },
+    {
+      "number": 386,
+      "source": 416,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 390,
+      "source": 403,
+      "oldInitial": 0,
+      "newInitial": 7
+    },
+    {
+      "number": 391,
+      "source": 357,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 396,
+      "source": 204,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 400,
+      "source": 388,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 401,
+      "source": 578,
+      "oldInitial": 0,
+      "newInitial": 7
+    },
+    {
+      "number": 404,
+      "source": 710,
+      "oldInitial": 8,
+      "newInitial": 13
+    },
+    {
+      "number": 410,
+      "source": 958,
+      "oldInitial": 8,
+      "newInitial": 15
+    },
+    {
+      "number": 411,
+      "source": 831,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 414,
+      "source": 770,
+      "oldInitial": 3,
+      "newInitial": 11
+    },
+    {
+      "number": 420,
+      "source": 836,
+      "oldInitial": 3,
+      "newInitial": 15
+    },
+    {
+      "number": 421,
+      "source": 992,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 424,
+      "source": 689,
+      "oldInitial": 2,
+      "newInitial": 7
+    },
+    {
+      "number": 430,
+      "source": 796,
+      "oldInitial": 11,
+      "newInitial": 15
+    },
+    {
+      "number": 431,
+      "source": 678,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 434,
+      "source": 814,
+      "oldInitial": 8,
+      "newInitial": 10
+    },
+    {
+      "number": 440,
+      "source": 910,
+      "oldInitial": 0,
+      "newInitial": 6
+    },
+    {
+      "number": 441,
+      "source": 614,
+      "oldInitial": 2,
+      "newInitial": 14
+    },
+    {
+      "number": 444,
+      "source": 978,
+      "oldInitial": 0,
+      "newInitial": 6
+    },
+    {
+      "number": 450,
+      "source": 944,
+      "oldInitial": 8,
+      "newInitial": 9
+    },
+    {
+      "number": 451,
+      "source": 993,
+      "oldInitial": 0,
+      "newInitial": 15
+    },
+    {
+      "number": 454,
+      "source": 532,
+      "oldInitial": 9,
+      "newInitial": 13
+    },
+    {
+      "number": 460,
+      "source": 703,
+      "oldInitial": 10,
+      "newInitial": 15
+    },
+    {
+      "number": 461,
+      "source": 529,
+      "oldInitial": 1,
+      "newInitial": 13
+    },
+    {
+      "number": 464,
+      "source": 604,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 470,
+      "source": 647,
+      "oldInitial": 12,
+      "newInitial": 13
+    },
+    {
+      "number": 471,
+      "source": 929,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 474,
+      "source": 818,
+      "oldInitial": 6,
+      "newInitial": 15
+    },
+    {
+      "number": 480,
+      "source": 976,
+      "oldInitial": 6,
+      "newInitial": 15
+    },
+    {
+      "number": 481,
+      "source": 559,
+      "oldInitial": 1,
+      "newInitial": 7
+    },
+    {
+      "number": 484,
+      "source": 807,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 490,
+      "source": 940,
+      "oldInitial": 6,
+      "newInitial": 7
+    },
+    {
+      "number": 491,
+      "source": 725,
+      "oldInitial": 3,
+      "newInitial": 15
+    },
+    {
+      "number": 494,
+      "source": 846,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 500,
+      "source": 970,
+      "oldInitial": 6,
+      "newInitial": 7
+    },
+    {
+      "number": 501,
+      "source": 989,
+      "oldInitial": 1,
+      "newInitial": 9
+    },
+    {
+      "number": 504,
+      "source": 848,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 510,
+      "source": 811,
+      "oldInitial": 2,
+      "newInitial": 14
+    },
+    {
+      "number": 511,
+      "source": 730,
+      "oldInitial": 2,
+      "newInitial": 11
+    },
+    {
+      "number": 514,
+      "source": 964,
+      "oldInitial": 1,
+      "newInitial": 15
+    },
+    {
+      "number": 520,
+      "source": 859,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 521,
+      "source": 554,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 524,
+      "source": 632,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 530,
+      "source": 631,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 531,
+      "source": 692,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 534,
+      "source": 809,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 540,
+      "source": 648,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 541,
+      "source": 582,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 544,
+      "source": 833,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 550,
+      "source": 937,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 551,
+      "source": 612,
+      "oldInitial": 0,
+      "newInitial": 9
+    },
+    {
+      "number": 554,
+      "source": 491,
+      "oldInitial": 9,
+      "newInitial": 13
+    },
+    {
+      "number": 560,
+      "source": 618,
+      "oldInitial": 0,
+      "newInitial": 3
+    },
+    {
+      "number": 561,
+      "source": 488,
+      "oldInitial": 0,
+      "newInitial": 7
+    },
+    {
+      "number": 564,
+      "source": 615,
+      "oldInitial": 0,
+      "newInitial": 9
+    },
+    {
+      "number": 570,
+      "source": 893,
+      "oldInitial": 1,
+      "newInitial": 13
+    },
+    {
+      "number": 571,
+      "source": 782,
+      "oldInitial": 1,
+      "newInitial": 11
+    },
+    {
+      "number": 574,
+      "source": 701,
+      "oldInitial": 5,
+      "newInitial": 13
+    },
+    {
+      "number": 580,
+      "source": 872,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 581,
+      "source": 986,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 584,
+      "source": 616,
+      "oldInitial": 0,
+      "newInitial": 6
+    },
+    {
+      "number": 590,
+      "source": 911,
+      "oldInitial": 1,
+      "newInitial": 15
+    },
+    {
+      "number": 591,
+      "source": 985,
+      "oldInitial": 0,
+      "newInitial": 3
+    },
+    {
+      "number": 594,
+      "source": 752,
+      "oldInitial": 8,
+      "newInitial": 11
+    },
+    {
+      "number": 600,
+      "source": 673,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 601,
+      "source": 518,
+      "oldInitial": 4,
+      "newInitial": 6
+    },
+    {
+      "number": 607,
+      "source": 635,
+      "oldInitial": 2,
+      "newInitial": 6
+    },
+    {
+      "number": 610,
+      "source": 637,
+      "oldInitial": 2,
+      "newInitial": 6
+    },
+    {
+      "number": 611,
+      "source": 952,
+      "oldInitial": 8,
+      "newInitial": 10
+    },
+    {
+      "number": 617,
+      "source": 908,
+      "oldInitial": 10,
+      "newInitial": 15
+    },
+    {
+      "number": 620,
+      "source": 504,
+      "oldInitial": 0,
+      "newInitial": 11
+    },
+    {
+      "number": 621,
+      "source": 607,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 627,
+      "source": 482,
+      "oldInitial": 8,
+      "newInitial": 13
+    },
+    {
+      "number": 630,
+      "source": 489,
+      "oldInitial": 0,
+      "newInitial": 3
+    },
+    {
+      "number": 631,
+      "source": 520,
+      "oldInitial": 2,
+      "newInitial": 3
+    },
+    {
+      "number": 637,
+      "source": 651,
+      "oldInitial": 0,
+      "newInitial": 11
+    },
+    {
+      "number": 640,
+      "source": 540,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 641,
+      "source": 281,
+      "oldInitial": 8,
+      "newInitial": 12
+    },
+    {
+      "number": 647,
+      "source": 729,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 650,
+      "source": 536,
+      "oldInitial": 5,
+      "newInitial": 13
+    },
+    {
+      "number": 651,
+      "source": 514,
+      "oldInitial": 4,
+      "newInitial": 14
+    },
+    {
+      "number": 657,
+      "source": 998,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 660,
+      "source": 734,
+      "oldInitial": 0,
+      "newInitial": 6
+    },
+    {
+      "number": 661,
+      "source": 894,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 667,
+      "source": 817,
+      "oldInitial": 8,
+      "newInitial": 12
+    },
+    {
+      "number": 670,
+      "source": 867,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 671,
+      "source": 825,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 677,
+      "source": 608,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 680,
+      "source": 947,
+      "oldInitial": 8,
+      "newInitial": 14
+    },
+    {
+      "number": 681,
+      "source": 655,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 687,
+      "source": 378,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 690,
+      "source": 895,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 691,
+      "source": 627,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 697,
+      "source": 921,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 700,
+      "source": 760,
+      "oldInitial": 8,
+      "newInitial": 11
+    },
+    {
+      "number": 701,
+      "source": 572,
+      "oldInitial": 1,
+      "newInitial": 11
+    },
+    {
+      "number": 707,
+      "source": 495,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 710,
+      "source": 980,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 711,
+      "source": 670,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 717,
+      "source": 715,
+      "oldInitial": 1,
+      "newInitial": 13
+    },
+    {
+      "number": 720,
+      "source": 653,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 721,
+      "source": 932,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 727,
+      "source": 448,
+      "oldInitial": 5,
+      "newInitial": 15
+    },
+    {
+      "number": 730,
+      "source": 759,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 731,
+      "source": 881,
+      "oldInitial": 4,
+      "newInitial": 12
+    },
+    {
+      "number": 737,
+      "source": 644,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 740,
+      "source": 594,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 741,
+      "source": 442,
+      "oldInitial": 1,
+      "newInitial": 3
+    },
+    {
+      "number": 747,
+      "source": 486,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 750,
+      "source": 570,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 751,
+      "source": 838,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 757,
+      "source": 481,
+      "oldInitial": 4,
+      "newInitial": 6
+    },
+    {
+      "number": 760,
+      "source": 806,
+      "oldInitial": 4,
+      "newInitial": 6
+    },
+    {
+      "number": 761,
+      "source": 754,
+      "oldInitial": 4,
+      "newInitial": 6
+    },
+    {
+      "number": 767,
+      "source": 672,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 770,
+      "source": 747,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 771,
+      "source": 548,
+      "oldInitial": 0,
+      "newInitial": 6
+    },
+    {
+      "number": 777,
+      "source": 375,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 780,
+      "source": 769,
+      "oldInitial": 1,
+      "newInitial": 15
+    },
+    {
+      "number": 781,
+      "source": 865,
+      "oldInitial": 2,
+      "newInitial": 15
+    },
+    {
+      "number": 787,
+      "source": 988,
+      "oldInitial": 4,
+      "newInitial": 5
+    },
+    {
+      "number": 790,
+      "source": 897,
+      "oldInitial": 0,
+      "newInitial": 3
+    },
+    {
+      "number": 791,
+      "source": 914,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 797,
+      "source": 802,
+      "oldInitial": 1,
+      "newInitial": 5
+    },
+    {
+      "number": 800,
+      "source": 861,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 801,
+      "source": 850,
+      "oldInitial": 2,
+      "newInitial": 3
+    },
+    {
+      "number": 805,
+      "source": 841,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 810,
+      "source": 583,
+      "oldInitial": 4,
+      "newInitial": 6
+    },
+    {
+      "number": 811,
+      "source": 720,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 815,
+      "source": 853,
+      "oldInitial": 2,
+      "newInitial": 6
+    },
+    {
+      "number": 820,
+      "source": 671,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 821,
+      "source": 862,
+      "oldInitial": 3,
+      "newInitial": 11
+    },
+    {
+      "number": 825,
+      "source": 584,
+      "oldInitial": 1,
+      "newInitial": 3
+    },
+    {
+      "number": 830,
+      "source": 732,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 831,
+      "source": 497,
+      "oldInitial": 0,
+      "newInitial": 6
+    },
+    {
+      "number": 835,
+      "source": 666,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 840,
+      "source": 924,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 841,
+      "source": 925,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 845,
+      "source": 984,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 850,
+      "source": 820,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 851,
+      "source": 560,
+      "oldInitial": 9,
+      "newInitial": 11
+    },
+    {
+      "number": 855,
+      "source": 902,
+      "oldInitial": 0,
+      "newInitial": 13
+    },
+    {
+      "number": 860,
+      "source": 667,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 861,
+      "source": 513,
+      "oldInitial": 0,
+      "newInitial": 7
+    },
+    {
+      "number": 865,
+      "source": 933,
+      "oldInitial": 0,
+      "newInitial": 5
+    },
+    {
+      "number": 870,
+      "source": 739,
+      "oldInitial": 10,
+      "newInitial": 11
+    },
+    {
+      "number": 871,
+      "source": 247,
+      "oldInitial": 10,
+      "newInitial": 14
+    },
+    {
+      "number": 875,
+      "source": 757,
+      "oldInitial": 2,
+      "newInitial": 10
+    },
+    {
+      "number": 880,
+      "source": 892,
+      "oldInitial": 8,
+      "newInitial": 15
+    },
+    {
+      "number": 881,
+      "source": 792,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 885,
+      "source": 601,
+      "oldInitial": 2,
+      "newInitial": 6
+    },
+    {
+      "number": 890,
+      "source": 708,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 891,
+      "source": 810,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 895,
+      "source": 851,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 900,
+      "source": 502,
+      "oldInitial": 12,
+      "newInitial": 14
+    },
+    {
+      "number": 901,
+      "source": 325,
+      "oldInitial": 0,
+      "newInitial": 3
+    },
+    {
+      "number": 905,
+      "source": 844,
+      "oldInitial": 2,
+      "newInitial": 7
+    },
+    {
+      "number": 910,
+      "source": 531,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 911,
+      "source": 868,
+      "oldInitial": 0,
+      "newInitial": 9
+    },
+    {
+      "number": 915,
+      "source": 254,
+      "oldInitial": 8,
+      "newInitial": 11
+    },
+    {
+      "number": 920,
+      "source": 795,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 921,
+      "source": 485,
+      "oldInitial": 6,
+      "newInitial": 7
+    },
+    {
+      "number": 925,
+      "source": 129,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 930,
+      "source": 990,
+      "oldInitial": 0,
+      "newInitial": 2
+    },
+    {
+      "number": 931,
+      "source": 741,
+      "oldInitial": 0,
+      "newInitial": 1
+    },
+    {
+      "number": 935,
+      "source": 761,
+      "oldInitial": 8,
+      "newInitial": 9
+    },
+    {
+      "number": 940,
+      "source": 979,
+      "oldInitial": 0,
+      "newInitial": 8
+    },
+    {
+      "number": 941,
+      "source": 313,
+      "oldInitial": 8,
+      "newInitial": 12
+    },
+    {
+      "number": 945,
+      "source": 896,
+      "oldInitial": 10,
+      "newInitial": 15
+    },
+    {
+      "number": 950,
+      "source": 898,
+      "oldInitial": 8,
+      "newInitial": 15
+    },
+    {
+      "number": 951,
+      "source": 931,
+      "oldInitial": 12,
+      "newInitial": 13
+    },
+    {
+      "number": 955,
+      "source": 994,
+      "oldInitial": 4,
+      "newInitial": 14
+    },
+    {
+      "number": 960,
+      "source": 585,
+      "oldInitial": 0,
+      "newInitial": 12
+    },
+    {
+      "number": 961,
+      "source": 774,
+      "oldInitial": 0,
+      "newInitial": 11
+    },
+    {
+      "number": 965,
+      "source": 476,
+      "oldInitial": 0,
+      "newInitial": 7
+    },
+    {
+      "number": 970,
+      "source": 679,
+      "oldInitial": 2,
+      "newInitial": 15
+    },
+    {
+      "number": 971,
+      "source": 646,
+      "oldInitial": 12,
+      "newInitial": 13
+    },
+    {
+      "number": 975,
+      "source": 674,
+      "oldInitial": 2,
+      "newInitial": 6
+    },
+    {
+      "number": 980,
+      "source": 596,
+      "oldInitial": 2,
+      "newInitial": 11
+    },
+    {
+      "number": 981,
+      "source": 834,
+      "oldInitial": 0,
+      "newInitial": 10
+    },
+    {
+      "number": 985,
+      "source": 231,
+      "oldInitial": 0,
+      "newInitial": 14
+    },
+    {
+      "number": 990,
+      "source": 568,
+      "oldInitial": 2,
+      "newInitial": 15
+    },
+    {
+      "number": 991,
+      "source": 973,
+      "oldInitial": 0,
+      "newInitial": 4
+    },
+    {
+      "number": 995,
+      "source": 889,
+      "oldInitial": 9,
+      "newInitial": 11
+    },
+    {
+      "number": 1000,
+      "source": 764,
+      "oldInitial": 12,
+      "newInitial": 13
+    }
+  ]
+}

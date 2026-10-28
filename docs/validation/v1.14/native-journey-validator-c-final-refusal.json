@@ -1,0 +1,29 @@
+{
+  "scope": "Final C refusal; no complete marathon or PASS attestation",
+  "checkedAtUtc": "2026-10-28T18:57:29.998801+00:00",
+  "validatorSha256": "9d807475061ac0ace8ede65d538a4ccfa19f358c9b618aedf686072a9e8459ed",
+  "hostReport": "docs/validation/v1.14/ui-bugs/ui-sdk-marathon1000-rc2-c/host-report.json",
+  "hostReportSha256": "d35c7a1b2ffd676f466408ee5e93a2a2a82efb00599f76ec83201bfcdbc69cd1",
+  "globalPassed": false,
+  "restored": true,
+  "exitCode": 1,
+  "refusal": "REFUSED: Global passed AND restored are required; progress/subsection PASS is insufficient",
+  "completedPassedBatches": 8,
+  "recordedVictories": 873,
+  "lastRecordedVictory": 873,
+  "nativeFailures": [
+    {
+      "pass": false,
+      "message": "Journey 874 native piece count matches the certified fixture: 0"
+    }
+  ],
+  "attestationWritten": false,
+  "originalReportUnchanged": true,
+  "noDeviceAccess": true,
+  "failureCaptureReview": {
+    "path": "docs/screenshots/v1.14/ui-bugs/ui-sdk-marathon1000-rc2-c/batch-0801-0900/failure.png",
+    "sha256": "bccfc99bc98b9927eeac068af1bfef43c3e1dc14979ba34bd92a8b7967a59014",
+    "visible": "N874 board visibly has 19 pieces and 23/23 moves, Undo\u00d71, without a dialog",
+    "interpretation": "Screenshot was taken after failed count assertion; snapshot timing/invalidation is plausible. Neither empty live board nor exact cause established by this receipt."
+  }
+}

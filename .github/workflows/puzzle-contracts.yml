@@ -1,0 +1,76 @@
+name: Puzzle contracts
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: puzzle-contracts-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-puzzle-contracts:
+    name: Offline puzzle contracts (Java 17)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: sh
+    steps:
+      - name: Check out the tested revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+          # Sparse checkout automatically fetches blob:none in this pinned action.
+          # Do not also set filter: it overrides the documented sparse option.
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.gitattributes
+            /.gitignore
+            /.github/workflows/puzzle-contracts.yml
+            /app/src/main/java/com/androidhit/lumadrift/engine/*.java
+            /app/src/main/java/com/androidhit/lumadrift/data/*.java
+            /app/src/main/java/com/androidhit/lumadrift/progression/LearningGuide.java
+            /app/src/main/java/com/androidhit/lumadrift/progression/LearningStrings.java
+            /scripts/test-learning-v114.sh
+            /scripts/test-deliberate-play-v114.sh
+            /scripts/test-learning-guide.sh
+            /scripts/test-power-offers-v114.sh
+            /scripts/LearningV114Test.java
+            /scripts/DeliberatePlayV114Test.java
+            /scripts/LearningGuideTest.java
+            /scripts/PowerOffersV114Test.java
+            /scripts/RewardsCosmeticsV17Test.java
+            /scripts/AuditJourneyV114.java
+            /scripts/ProgressionAnalysis.java
+            /scripts/test-support/android/annotation/*.java
+            /scripts/test-support/android/content/*.java
+            /scripts/test-support/android/graphics/*.java
+            /docs/validation/v1.14/audit-learning-rc1/LearningLayouts.java
+
+      - name: Set up Java 17
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache-jdk: false
+          overwrite-settings: false
+
+      - name: Qualify all 1000 N boards and their pacing
+        run: sh scripts/test-learning-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/learning"
+
+      - name: Check strict budgets, the saved Return and legacy continuations
+        run: sh scripts/test-deliberate-play-v114.sh
+
+      - name: Check contextual rules and six-language feedback
+        run: sh scripts/test-learning-guide.sh
+
+      - name: Check power offers and preserved reward decisions
+        run: sh scripts/test-power-offers-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json"

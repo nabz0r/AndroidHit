@@ -1,0 +1,13 @@
+# Native SDK qualification — 1.14 learning
+
+Independent copy of v113, whose exact inventory is retained in provenance-v113.json. Historical v113 sources and reports are not changed. This harness targets the explicitly owned 5580 Lab / hexkeep-play-36-16k runtime, or the separately allowed production runtime; it refuses signed-in Google profiles and restores the original guest preference file set and rotation byte-exactly. The isolated test package is com.androidhit.lumadrift.learningtest and is proved absent after cleanup.
+
+N fixtures are separate from preserved L fixtures. generate-learning-fixtures.py mechanically replays each authored N certificate on a host Board and records exact source/fixture hashes. This does not seed Android state or independently prove shortest-path difficulty. The owner-ready switch must only be used after the catalogue owner declares its inputs ready.
+
+Bulk mode keeps all per-action assertions and actual SDK touchscreen events. It polls the expected saved history and visible preview controls instead of sleeping 180ms after each tap. Reduced motion is enabled through the real visible setting. Generic navigation and screenshots retain bounded waits; no renderer or app-internal action is invoked. Pilot10/30 measurements must precede a claimed marathon ETA.
+
+Journey batches retain their genuinely earned progress between distinct force-stopped native processes. A single original guest backup is held across all batches and restored only at final cleanup; restoring between batches would erase the earned continuation. Captures cover the first30 levels, batch endpoints, multiples of50 and selected boundary levels; --capture-all remains available. --batch-size is Journey-only.
+
+The legacy-upgrade route creates a real RC2 L15 partial attempt, waits for an explicitly supplied frozen APK gate, verifies that APK installation preserves its bytes before first new launch, then checks migration and one-Undo quotas across distinct cold processes on L15 and N15. Original preferences are restored at the end while the authorized1.14 APK update remains installed; no downgrade or profile injection occurs. The gate contains apk,sha256,version,code and optionally source_freeze/source_freeze_sha256, and must be written atomically.
+
+All output uses new docs/validation/v1.14 and docs/screenshots/v1.14 labels. A report is final only when passed, restored, rotation restored, final APK hash matched and learningtest removed are all true. Native SDK execution with known certificates does not measure human comprehension, fun, retention or physical-device comfort.

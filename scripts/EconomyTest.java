@@ -289,7 +289,7 @@ public final class EconomyTest {
             store.completeLevel(level,3);
         }
         check(!store.boosterUnlocked("missing")&&!store.useBooster("missing")&&!store.purchaseBooster("missing"),"Unknown power cannot bypass milestone gates");
-        for(String id:ids)check(store.purchaseBooster(id),"Every power is purchasable after milestone75");
+        for(String id:ids)check(store.purchaseBooster(id)==Catalog.isPowerOffered(id),"Only currently offered powers are purchasable after milestone75");
     }
     private static void testPowerRewards() throws InterruptedException {
         TestContext context=new TestContext();GameStore store=new GameStore(context);int initial=store.boosterStock("hint");
@@ -318,7 +318,7 @@ public final class EconomyTest {
         int rewards=0;
         for(int level=1;level<=Catalog.LEVEL_COUNT;level++){
             store.completeLevel(level,3);
-            if(level%5==0){int before=totalPowerStock(store);List<String> eligible=new ArrayList<>();for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(store.boosterUnlocked(item.id))eligible.add(item.id);
+            if(level%5==0){int before=totalPowerStock(store);List<String> eligible=new ArrayList<>();for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id)&&store.boosterUnlocked(item.id))eligible.add(item.id);
                 String expected=eligible.get((level/5-1)%eligible.size());String got=store.claimMilestoneLoot();check(expected.equals(got),"Deterministic cycle at Journey milestone"+level);check(totalPowerStock(store)==before+1,"One unit per earned milestone");
                 rewards++;check(store.nextLootMilestone()==(level+5<=Catalog.LEVEL_COUNT?level+5:0),"Next milestone advances once");check(store.claimMilestoneLoot().isEmpty()&&totalPowerStock(store)==before+1,"Repeated claim cannot farm stock");
                 store.completeLevel(level,3);check(store.claimMilestoneLoot().isEmpty(),"Replaying cleared Journey cannot earn another loot milestone");
@@ -340,7 +340,7 @@ public final class EconomyTest {
         TestContext catchup=progressed(75);GameStore late=new GameStore(catchup);
         for(int i=0;i<15;i++){
             int milestone=(i+1)*5;List<String> eligible=new ArrayList<>();
-            for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(item.unlockLevel<=milestone+1)eligible.add(item.id);
+            for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id)&&item.unlockLevel<=milestone+1)eligible.add(item.id);
             String expected=eligible.get(i%eligible.size());
             check(late.nextMilestoneLootId().equals(expected)&&late.claimMilestoneLoot().equals(expected),"Late gift preserves its milestone-time preview");
         }

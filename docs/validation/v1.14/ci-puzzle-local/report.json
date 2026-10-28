@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "observedAtUtc": "2026-10-28T17:45:20.417994+00:00",
+  "scope": "Local YAML/trigger/permission/pin/shell checks and the four offline runner commands on Java17; not a GitHub-hosted Actions execution",
+  "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Homebrew (build 17.0.20.1+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.20.1+0, mixed mode, sharing)",
+  "yamlParser": "Ruby Psych; quoted on key retained as a string; expected main push/PR/manual triggers, permissions, action hashes and four explicit sh calls asserted",
+  "shellSyntax": "sh -n passed for all four runners; PowerOffers converted to POSIX syntax without changing tested store semantics",
+  "localTests": {
+    "learning-v114": 201143,
+    "deliberate-play-v114": 24474,
+    "learning-guide": 4867,
+    "power-offers-v114": 868
+  },
+  "actionPins": {
+    "actions/checkout": {
+      "version": "v7.0.1",
+      "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "officialRelease": "https://github.com/actions/checkout/releases/tag/v7.0.1",
+      "verification": "Current official releases page plus git ls-remote from https://github.com/actions/checkout.git refs/tags/v7.0.1"
+    },
+    "actions/setup-java": {
+      "version": "v6.1.0",
+      "sha": "b843ebf9b913146b38da2eaa7aeddf76074ae1ad",
+      "officialRelease": "https://github.com/actions/setup-java/releases/tag/v6.1.0",
+      "verification": "Current official releases page plus git ls-remote from https://github.com/actions/setup-java.git refs/tags/v6.1.0"
+    }
+  },
+  "filesSha256": {
+    ".github/workflows/puzzle-contracts.yml": "3d48e8c897a588acbf6096c322b7e8bfc6f828045f72e0f98d1127f973dc76ba",
+    "scripts/test-learning-v114.sh": "ecf960c3087435fdced664599e6a2a38e009b70ed91f9cbf30fc4a749527869a",
+    "scripts/test-deliberate-play-v114.sh": "56d40a3f5268a4c0ef327fe4570e2cabbe2c2e936b0e3f67070933ef00ac8f6c",
+    "scripts/test-learning-guide.sh": "2a6ea06efc212407546d86eb35599bafee1a74f3a35d750222389f0ca41d148b",
+    "scripts/test-power-offers-v114.sh": "35d2df04e113a2b9368818447b89e66feb7191616e37eab56beb933f69d4c5c2"
+  },
+  "finalAppFreezeUnchanged": true,
+  "finalAppFreezeSha256": "cd49a002b96a384d28b2320a1063ab4043d2f873cccb1c7270d371fd7c3150be",
+  "remoteActionsExecutionObserved": false,
+  "remoteStatusAtLocalVerification": "Workflow not yet pushed or run remotely by this review; GitHub-hosted Ubuntu/Temurin execution and required-branch-check settings are not claimed.",
+  "subsequentCheckoutOnlyChange": {
+    "scope": "Only checkout inputs changed after the recorded local Java17 runs; commands, runner bytes and frozen app inputs remain identical",
+    "currentWorkflowSha256": "afe400ea63309e9f182fe5caa9b7b66df0ce00e51a1513bdb98ed710d6e65398",
+    "verification": "sparse-checkout.json",
+    "businessTestsRepeated": false
+  }
+}

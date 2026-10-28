@@ -138,13 +138,13 @@ public final class InventoryPresentation {
     /** activeIds is supplied from actual run state; inventory stock is not evidence of an active effect. */
     public static List<Power> powers(GameStore store, Set<String> activeIds) {
         Objects.requireNonNull(store,"store"); List<Power> result=new ArrayList<>();
-        for(Catalog.BoosterItem item:Catalog.BOOSTERS)result.add(new Power(item,store.boosterStock(item.id),store.boosterUnlocked(item.id),
+        for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id))result.add(new Power(item,store.boosterStock(item.id),store.boosterUnlocked(item.id),
                 activeIds!=null&&activeIds.contains(item.id),store.boosterPrice(item.id)));
         return Collections.unmodifiableList(result);
     }
     public static Catalog.BoosterItem nextPower(int unlockedJourneyLevel) {
         Catalog.BoosterItem next=null;
-        for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(item.unlockLevel>unlockedJourneyLevel&&(next==null||item.unlockLevel<next.unlockLevel))next=item;
+        for(Catalog.BoosterItem item:Catalog.BOOSTERS)if(Catalog.isPowerOffered(item.id)&&item.unlockLevel>unlockedJourneyLevel&&(next==null||item.unlockLevel<next.unlockLevel))next=item;
         return next;
     }
     public static String sourceCaption(String language, Entry entry) {
@@ -164,7 +164,7 @@ public final class InventoryPresentation {
         if(item.winBonusCoins>1)return ExperienceStrings.get(language,"effect_win",item.winBonusCoins);
         if(item.packDiscountCoins==1)return ExperienceStrings.get(language,"effect_discount_one");
         if(item.packDiscountCoins>1)return ExperienceStrings.get(language,"effect_discount",item.packDiscountCoins);
-        return ExperienceStrings.get(language,item.blockedGrace>0?"effect_grace":"effect_appearance");
+        return ExperienceStrings.get(language,"effect_appearance");
     }
     public static Page page(int total, int pageSize, int requestedPage) { return new Page(total,pageSize,requestedPage); }
     public static Page sagaPage(int total, int requestedPage) { return page(total,10,requestedPage); }

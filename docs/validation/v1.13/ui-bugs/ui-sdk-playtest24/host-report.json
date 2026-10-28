@@ -1,0 +1,366 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "journey",
+  "journey_through": 24,
+  "serial": "emulator-5580",
+  "capture_policy": "all",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+  "expected_apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+  "test_apk_sha256": "b12e938f34f47a64f481ec3fbcc2e74238abb13fe5c8abdd74c823445a7687ee",
+  "wrapper_source_sha256": "5704a0ea1da8f1dc6ee4470f16123cc316b777a62b430dca6e360c63a470563d",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "71ac5d807835321c22926f72487ddfa141696ceec96c819f78c1a973db72d9b6",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v113-ui-original-prefs-fqjp4lc9",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "installed_test_apk_sha256": "b12e938f34f47a64f481ec3fbcc2e74238abb13fe5c8abdd74c823445a7687ee",
+  "phases": [
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": false,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.13.0-sandbox-rc2/code14"
+          },
+          {
+            "pass": true,
+            "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+          },
+          {
+            "pass": true,
+            "message": "Native dialog text input accepts SDK action"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 native piece count matches the certified fixture: 5"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 native piece count matches the certified fixture: 6"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 native piece count matches the certified fixture: 8"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 starts its real fresh board with no injected or inherited actions"
+          },
+          {
+            "pass": false,
+            "message": "Journey 6 native piece count matches the certified fixture: 8"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "journey-1-start-en",
+          "journey-1-cleared-en",
+          "journey-2-start-en",
+          "journey-2-cleared-en",
+          "journey-3-start-en",
+          "journey-3-cleared-en",
+          "journey-4-start-en",
+          "journey-4-cleared-en",
+          "journey-5-start-en",
+          "journey-5-cleared-en",
+          "failure"
+        ],
+        "checkCount": 65,
+        "package": "com.androidhit.lumadrift.sandbox",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 3550,
+        "visualPhase": "prepare",
+        "firstLightPhase": "none",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "houseCheckpointReady": false,
+        "firstLightCheckpointReady": false,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "prepare/journey-1-cleared-en.png": "91a1779042ea1cf7a5676d3fed577c65ff62f4c157a1ddd846d94fc890de50fb",
+        "prepare/journey-1-start-en.png": "0975e0b572026ada9918bc89c76dcac699d713bd75fef0f5e89e9450c64eff71",
+        "prepare/journey-2-cleared-en.png": "bc3b022870d0d2be41a2ff019e67d7952c3aa66a7d52855e1e60a63ef8b56db7",
+        "prepare/journey-5-cleared-en.png": "49b93d19f56239edb90e5c6ae7d253d311bcec9934a1102dc98838f8c68371cb",
+        "prepare/journey-4-cleared-en.png": "a38624481eec50ca1c782338f89830e4daa34bcd7ad4c5a815f3fc031e302cc0",
+        "prepare/journey-3-cleared-en.png": "6777dc0251686ef55201f5f29dcb2890709181009516b93dc0c32197f536b5e0",
+        "prepare/home-en.png": "22d609754e5cfea5661931176d6a0d98faa2b75719cd5333ccce423b32b170ed",
+        "prepare/journey-5-start-en.png": "3ceb3544437dccd1b772530d860c7c04f6fa3e7c05de47af9e6d88dfd1b9d940",
+        "prepare/journey-2-start-en.png": "f9301b9801dc8b0d266542049f889d3e0f9d0e85dfd4ab10d6bde1f104cf13be",
+        "prepare/journey-3-start-en.png": "e97a8c98b64cb738c4b862755c69b2e9acce64af41ea3111bda31fb64c9809ac",
+        "prepare/journey-4-start-en.png": "84d6fd8ef4394d978ac3543b810e2e45976e628b1c9f91dd361a4ba8b8567029",
+        "prepare/failure.png": "7f2ec9855aa85660c4ca9f082b5b37d09c5254b6ceaf26525e579971d051dff4"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/journey-1-cleared-en.png": "91a1779042ea1cf7a5676d3fed577c65ff62f4c157a1ddd846d94fc890de50fb",
+    "prepare/journey-1-start-en.png": "0975e0b572026ada9918bc89c76dcac699d713bd75fef0f5e89e9450c64eff71",
+    "prepare/journey-2-cleared-en.png": "bc3b022870d0d2be41a2ff019e67d7952c3aa66a7d52855e1e60a63ef8b56db7",
+    "prepare/journey-5-cleared-en.png": "49b93d19f56239edb90e5c6ae7d253d311bcec9934a1102dc98838f8c68371cb",
+    "prepare/journey-4-cleared-en.png": "a38624481eec50ca1c782338f89830e4daa34bcd7ad4c5a815f3fc031e302cc0",
+    "prepare/journey-3-cleared-en.png": "6777dc0251686ef55201f5f29dcb2890709181009516b93dc0c32197f536b5e0",
+    "prepare/home-en.png": "22d609754e5cfea5661931176d6a0d98faa2b75719cd5333ccce423b32b170ed",
+    "prepare/journey-5-start-en.png": "3ceb3544437dccd1b772530d860c7c04f6fa3e7c05de47af9e6d88dfd1b9d940",
+    "prepare/journey-2-start-en.png": "f9301b9801dc8b0d266542049f889d3e0f9d0e85dfd4ab10d6bde1f104cf13be",
+    "prepare/journey-3-start-en.png": "e97a8c98b64cb738c4b862755c69b2e9acce64af41ea3111bda31fb64c9809ac",
+    "prepare/journey-4-start-en.png": "84d6fd8ef4394d978ac3543b810e2e45976e628b1c9f91dd361a4ba8b8567029",
+    "prepare/failure.png": "7f2ec9855aa85660c4ca9f082b5b37d09c5254b6ceaf26525e579971d051dff4"
+  },
+  "capture_kind_counts": {
+    "original_full_frames": 12,
+    "unscaled_analysis_crops": 0
+  },
+  "error": "Prepare failed before persistent checkpoint; raw failure preserved",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v113-ui-test/run.py\", line 105, in main\n    if not native.get('passed') and not native.get('visualCheckpointReady') and not native.get('houseCheckpointReady'):raise AssertionError('Prepare failed before persistent checkpoint; raw failure preserved')\nAssertionError: Prepare failed before persistent checkpoint; raw failure preserved\n",
+  "isolated_test_package_removed": true,
+  "rotation_settings_restored": true
+}

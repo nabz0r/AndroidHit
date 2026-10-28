@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "recorded_at_utc": "2026-10-28T19:26:07.292750+00:00",
+  "scope": "Read-only final exact baseline verification, then graceful shutdown of only owned emulator5580; no app launch, no test, no global ADB or other-device mutation",
+  "serial": "emulator-5580",
+  "expected_avd": "hexkeep-play-36-16k",
+  "source_host_report": "docs/validation/v1.14/ui-bugs/ui-sdk-coverage801-1000-rc2-d/host-report.json",
+  "source_host_report_sha256": "272019e6354f59d955fb0bac733c1dea312fe9dda8aa19cd7e54633a951e6de3",
+  "actual_avd": "hexkeep-play-36-16k",
+  "original_preferences_byte_exact": true,
+  "final_preference_sha256": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "rotation": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "rotation_matches_original": true,
+  "display_size": "Physical size: 1080x2340",
+  "display_density": "Physical density: 440",
+  "display_matches_original": true,
+  "isolated_test_packages_absent": {
+    "com.androidhit.lumadrift.learningtest": true,
+    "com.androidhit.lumadrift.hometest": true
+  },
+  "app_stopped_without_relaunch": true,
+  "installed_lab_apk_sha256": "cbc74c3214f3c64c888f34b9452be162d3e3e168f1c218d1a4537410ef005ff0",
+  "before_shutdown_checks_passed": true,
+  "shutdown_command_target": "adb -s emulator-5580 emu kill",
+  "shutdown_response": "OK: killing emulator, bye bye\r\nOK",
+  "owned_emulator_disconnected": true,
+  "no_global_adb_stop_or_other_device_command": true
+}
