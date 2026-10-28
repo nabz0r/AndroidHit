@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "apk_sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "version": "1.15.0-rc1/code17",
+  "avd": "Luma-Refonte115-QA",
+  "profile": "Retained genuine U1-U1000 QA profile; no state injection or user device access",
+  "checks": 272,
+  "screenshots": 30,
+  "initial_coins_before_attempt_a": 55180,
+  "initial_coins_resumed_b": 54800,
+  "final_coins": 52290,
+  "total_actual_furniture_cost": 2890,
+  "actual_purchases": [
+    "library",
+    "aquarium",
+    "fireplace",
+    "piano",
+    "sofa",
+    "table",
+    "easel",
+    "arcade",
+    "record_player"
+  ],
+  "stored_via_ui": [
+    "bed",
+    "lamp",
+    "cushion"
+  ],
+  "existing_retained": [
+    "plant",
+    "rug"
+  ],
+  "living_layout": "2|3,3|plant,0,5,0;rug,2,2,0;library,0,0,0;aquarium,4,0,0;fireplace,8,0,0;piano,0,3,0;sofa,7,5,0;table,6,7,0;easel,9,3,0;arcade,0,7,0;record_player,9,7,0;",
+  "scope": "9 genuinely purchased designs explicitly placed using real UI floor touches; complete cold persistence, unchanged earned progress, power inventory and puzzle session; 4 French destinations",
+  "selected_images": {
+    "salon-furnished-fr": {
+      "path": "docs/screenshots/v1.15/site-furnished/furnished-b/websiteCold/salon-furnished-fr.png",
+      "sha256": "bae7fbbd93cdedcd148f0ff41764f691b8ad193238e4216ddc21970d447b073f",
+      "bytes": 222705,
+      "language": "fr",
+      "capture": "unaltered native PNG after distinct cold process"
+    },
+    "adventure-fr": {
+      "path": "docs/screenshots/v1.15/site-furnished/furnished-b/websiteCold/adventure-fr.png",
+      "sha256": "6f94ff69d0b82f298e0e1181229d1af288ca3a89b800db0b117bb957a1035ac1",
+      "bytes": 171224,
+      "language": "fr",
+      "capture": "unaltered native PNG after distinct cold process"
+    },
+    "collection-fr": {
+      "path": "docs/screenshots/v1.15/site-furnished/furnished-b/websiteCold/collection-fr.png",
+      "sha256": "fd7a827fd442c39e149897b3c538c68f742df002eafa565cd69f56fa5d603705",
+      "bytes": 161177,
+      "language": "fr",
+      "capture": "unaltered native PNG after distinct cold process"
+    },
+    "atelier-fr": {
+      "path": "docs/screenshots/v1.15/site-furnished/furnished-b/websiteCold/atelier-fr.png",
+      "sha256": "653a168355185885dbeaccf18e953b09a4b15f684b6aafa06ff8bcb8c42b1232",
+      "bytes": 145061,
+      "language": "fr",
+      "capture": "unaltered native PNG after distinct cold process"
+    }
+  },
+  "host_report": "docs/validation/site-v1.15/native-furnished/furnished-b/host-report.json",
+  "prior_attempt": "furnished-a preserved a harness failure from checking only raw persisted starter layout; actual library purchase380 retained; invalid placement refused; resumed same profile without reset or double purchase",
+  "visual_review": "Full-room salon frame keeps all nine new furnishings readable; optional actual zoom frame slightly clips fireplace at right edge",
+  "source_freeze": "Each attempt archives observer APK, exact runner-source copy, source-snapshot.json, wrapper and observer hashes"
+}

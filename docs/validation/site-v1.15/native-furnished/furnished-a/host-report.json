@@ -1,0 +1,247 @@
+{
+  "passed": false,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "expected_version": "1.15.0-rc1",
+  "expected_code": 17,
+  "apk_sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "test_apk_sha256": "ffbff0a371bfb81a68fad53d0d5d3f5d7132347e881751e1af2bd614c9e90b31",
+  "wrapper_source_sha256": "64ce75a51a5d7b938a25423c1a6f66e5603e1bde60f1f055000b0c57b9825c60",
+  "runner_source_sha256": "009460850d400618e712649a8589c44c9178c819c4afe30cf4213054d443a4c0",
+  "candidate_present_before_test": true,
+  "scope": "New task-owned QA AVD; exact candidate bytes; actual native accessibility and touchscreen actions; no prior user device, no profile seeding, no provider actions. Owned QA profile intentionally retained.",
+  "phases": [
+    {
+      "phase": "websiteFurnish",
+      "native": {
+        "passed": false,
+        "checkCount": 29,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Home"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Living room"
+          },
+          {
+            "passed": true,
+            "message": "Retained profile genuinely completed U1000"
+          },
+          {
+            "passed": true,
+            "message": "Genuinely earned profile funds furnishing"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Furniture · 42"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Wall of stories, 380 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Get for 380 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Real UI owns library"
+          },
+          {
+            "passed": true,
+            "message": "Exact actual purchase balance for library"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": true,
+            "message": "Placement observes actual native Home scene bounds"
+          },
+          {
+            "passed": true,
+            "message": "Observed floor touch lies inside real visible room"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": false,
+            "message": "Explicit native floor touch and Place retain exact library location"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[623,169][756,302]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1462]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Home",
+            "bounds": "[270,2046][540,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Living room",
+            "bounds": "[66,396][371,529]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[810,2046][1080,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Furniture · 42",
+            "bounds": "[66,1780][1013,1913]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Wall of stories, 380 LumaCoins",
+            "bounds": "[556,1817][1013,2010]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Get for 380 LumaCoins",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Place",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "UiAutomation touchscreen on observed room bounds",
+            "cell": "0,0",
+            "x": 539.5,
+            "y": 965.9296875
+          },
+          {
+            "label": "Place",
+            "bounds": "[725,1767][1013,1900]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "salon-before-en",
+          "library-preview-en",
+          "library-draft-en",
+          "failure"
+        ],
+        "processId": 3536,
+        "phase": "websiteFurnish",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Native accessibility/touch navigation, three rooms, local zoom, decoration mode, six-language UI and cold persistence; no private reflection, profile seeding, purchases, provider action or puzzle solvability claim"
+      }
+    }
+  ],
+  "screenshots": {
+    "websiteFurnish/salon-before-en.png": "98d08120b1edbab7899c0f28af9f9e2aac68abf18eb7ffdb65d2fa41d0c2b8fb",
+    "websiteFurnish/library-preview-en.png": "59c6abf2d430b2f18d7dd65c249497ff05a83fca95a691e2d5f1353ed10fcae3",
+    "websiteFurnish/library-draft-en.png": "4667c99a25960680e200a5d6f0225c541a7586f5c80c91f72364b92c7fb76ecc",
+    "websiteFurnish/failure.png": "4dd48118f228a5d84dab5a9f3f81d485bddcda216baf5ff8369b21cf71a1b5f5"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/site-v1.15/native-furnished/furnished-a/interface-observer.apk",
+  "compact": false,
+  "route": "websiteFurnish",
+  "font_scale": "1.0",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "error": "Native interface websiteFurnish failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v115-site-capture/run.py\", line 123, in main\n    assert native['passed'],'Native interface '+phase+' failed'\nAssertionError: Native interface websiteFurnish failed\n",
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true
+}

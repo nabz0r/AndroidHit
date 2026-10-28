@@ -57,7 +57,7 @@
       image.alt = language === "en" ? image.dataset.altEn : image.dataset.altFr;
     });
     if (document.querySelector("#hero-title")) {
-      document.title = language === "en" ? "Luma Drift 1.14 — Make every move count." : "Luma Drift 1.14 — Chaque action compte.";
+      document.title = language === "en" ? "Luma Drift 1.15 — Room to play." : "Luma Drift 1.15 — De la place pour jouer.";
     }
     document.querySelectorAll("[data-content-fr]").forEach(meta => { meta.setAttribute("content", language === "en" ? meta.dataset.contentEn : meta.dataset.contentFr); });
     syncConfiguration();
