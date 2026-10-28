@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checkCount": 7,
+  "checks": [
+    {
+      "pass": true,
+      "message": "Actual production1.10.0-rc3\/code11 package loaded"
+    },
+    {
+      "pass": true,
+      "message": "Production launch exposes its actual native accessible window"
+    },
+    {
+      "pass": true,
+      "message": "Production music has an active track owned by its actual process"
+    },
+    {
+      "pass": true,
+      "message": "The same production audio track advances real mixed frames"
+    },
+    {
+      "pass": true,
+      "message": "SDK sends the app to background for lifecycle audio observation"
+    },
+    {
+      "pass": true,
+      "message": "Production music pauses after actual background lifecycle"
+    },
+    {
+      "pass": true,
+      "message": "Production music resumes after actual foreground lifecycle"
+    }
+  ],
+  "captures": [
+    "startup-production-native"
+  ],
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Production startup and lifecycle\/audio SDK observation only; no piece\/menu\/account\/ad\/payment action"
+}

@@ -1,90 +1,73 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>A soft little world. Every move matters.</strong><br>Learn the gates. Restore the Prism. Dress your little companion.</p>
-<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.9.0-rc1.apk"><strong>Download signed Android APK · 1.9.0-rc1</strong></a><br><a href="https://luma-drift-production.web.app/">Website</a> · <a href="docs/RELEASE_1_9.md">Release & evidence</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
+<p align="center"><strong>Your companion. A goal of your own.</strong><br>Read the gates. Restore the Prism. Put together a little look.</p>
+<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.10.0-rc3.apk"><strong>Download signed Android APK · 1.10.0-rc3</strong></a><br><a href="docs/RELEASE_1_10.md">Release & evidence</a> · <a href="docs/UX_1_10.md">Experience</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
 <p align="center">1,000 Journey boards · 240 Remix · 100 optional guardians<br>7 playable lessons · 24 companions × 12 free visual treatments · 6 powers · 6 languages</p>
 
-<p align="center"><img src="docs/screenshots/v1.9/ui-sdk-final5-full100/home-fr-localized.png" width="230" alt="Actual final Lab 1.9 French guest home after the tested qualification route"><img src="docs/screenshots/v1.9/ui-sdk-fresh-guest-d/tutorial-gate-drift-fixed-en.png" width="230" alt="Actual first-install Lab 1.9 lesson 4 with the fixed gate preview"><img src="docs/screenshots/v1.9/ui-sdk-final5-full100/guardian-5-one-cell-en.png" width="230" alt="Actual final Lab 1.9 guardian with layered and cellwise pieces"></p>
+<p align="center"><img src="docs/screenshots/v1.10/ui-sdk-final3-full100/home-fr-localized.png" width="230" alt="Actual French rc3 Home: guest, pinned Cupid goal and resumed level11"><img src="docs/screenshots/v1.10/ui-sdk-final3-full100/avatar-fr.png" width="230" alt="Actual French rc3 companion with four cosmetic and three equipment slots"><img src="docs/screenshots/v1.10/ui-sdk-final3-full100/story-fr.png" width="230" alt="Actual French rc3 journal: chapter2, two claimed fragments and zero clears in its band"></p>
 
-Unedited **Lab 1.9** Android SDK captures: a completed test route and a separate genuine first installation. These are guest states; they do not establish Google login or real purchases. [Exact APKs, actions and limitations](docs/validation/v1.9/README.md).
+Unedited **Lab 1.10.0-sandbox-rc3** Android captures. The native route really completes the first 100 Journey levels, then replays boards: Home resumes **L11**, while the journal shows chapter 2. The Cupid goal is affordable but still unowned; its preview grants nothing. These are local guest states, not Google identity or payment evidence. [Capture provenance](docs/validation/site-v1.10/captures.json).
 
-## Understand a move, then choose it
+**Website delivery:** the 1.10 website source and current screenshots are prepared in this repository. The [last confirmed Firebase Hosting delivery remains 1.9](docs/validation/site-v1.9/deployment.json); local browser review and Hosting 1.10 deployment are pending because the desktop is locked. The [website record](docs/validation/site-v1.10/README.md) distinguishes source validation from deployment. A source push does not deploy the site.
 
-A piece follows its arrow. Pieces, numbered seals and closed exits can block it. A matching key removes a seal; an exiting switch changes gates. A closed gate can also be opened manually for one action. Exact minimum productive actions plus a fixed margin determine each board's allowance.
+## Companion & Objectives — 1.10
 
-- **Readable consequences.** Gate and switch previews show their immediate changes. Confirm costs one action; cancel costs none. In 1.9 both controls stay inside compact windows.
-- **Free recovery.** Undo restores the last productive action and refunds its move, including at zero. Restart is free. Every reachable state of the current L/M route remains recoverable.
-- **Useful powers.** Spark highlights a next move; Focus, Trail and Flow also understand gate openings. One confirmed charge has one durable effect. Each of the six powers now has an explicit free one-unit sample at its existing unlock level.
-- **Honest stars and gifts.** Briefings show the exact three-star action threshold. Victory shows actual coins/XP, the next five-clear gift and available power samples. The promised gift stays stable until claimed, including a storage retry.
+- **Know what is available.** Home displays real unclaimed rewards, a chosen collection goal and its actual progress. Today, This week, Journey and Ready to collect each have a distinct objective tab. Viewing a page does not collect anything.
+- **See the same companion everywhere.** One portrait combines the selected character/style with hat, dress, shoes, gloves, head equipment, aura and charm. Inventory, wardrobe and full-character previews share it. Twelve visual treatments are free; existing equipment retains its stated bounded effects.
+- **Choose one item to work towards.** Pin an item from the existing 24 cosmetics and 18 equipment pieces. Read its progress and actual acquisition source. Previewing, viewing a source, purchasing and equipping stay separate actions; unowned items cannot be equipped by previewing them.
+- **Read the Prism journal.** Ten original chapter stories follow the existing biomes. Journey clears and claimed optional guardian fragments are separate facts. Reading the journal grants no reward and makes no guardian mandatory.
+- **Find the next event action.** The next daily/weekly stage and the existing 100/250-LumaCoin completion bonuses are visible earlier. Bonus claims retain their once-only receipt across local-save failure and retry.
+- **Keep the currencies clear.** The shop separates Powers, Appearance and the account LumaGold wallet. Local earned LumaCoins remain distinct from premium account funds. Test ads are forced, real checkout is gated and paid cosmetic draws stay disabled.
 
-[Gameplay](docs/GAMEPLAY.md) · [Exact route audit](docs/PROGRESSION_V4.md) · [Six powers](docs/MOVE_BUDGET_POWERUPS.md) · [1.9 UX contract](docs/UX_1_9.md).
+<p align="center"><img src="docs/screenshots/v1.10/ui-sdk-final3-full100/ready-fr.png" width="230" alt="Actual French rc3 ready list: six unclaimed rewards"><img src="docs/screenshots/v1.10/ui-sdk-final3-full100/shop-looks-fr.png" width="230" alt="Actual French rc3 appearance shop: earned-coin capsule and unowned hats"><img src="docs/screenshots/v1.10/ui-sdk-final3-full100/avatar-preview-cupid-en.png" width="230" alt="Actual English rc3 unowned Cupid preview with price, goal and Close controls"></p>
 
-## A little star school that works
+The pastel native dialogs, visible selected tabs and reachable lower controls are checked separately from their accessibility state. The earlier candidate's transparent selection surfaces and clipped footers remain in the [qualification history](docs/validation/v1.10/README.md). [UX contract](docs/UX_1_10.md) · [Readability/provenance matrix](docs/validation/v1.10/ux-readability/README.md) · [Journal model](docs/PRISM_STORY_1_10.md).
 
-Seven small, optional boards teach arrows, blockers, keys, gates, switches, refunded Undo and Spark. A glowing target and illustrated fingertip demonstrate the action. **Tap or drag along the arrow; skip, resume at the same step, or replay from Help.**
+## Every move still matters
 
-This release reproduces and fixes the lesson-4 touch/scroll conflict, makes its confirmation visible, and takes completed learners straight to the first adventure briefing. Finishing all lessons grants **100 LumaCoins + 2 Sparks once**. Practice consumes no inventory and grants no campaign wins.
+A piece follows its arrow. Keys dissolve matching seals, switches preview their gate changes, and a closed gate can be opened manually for one action. Each L/M board keeps its fixed productive-action allowance and margin. **Undo is free and refunds the reversed action, including at zero moves. Restart is free.** Briefings show the action target for three stars; hints and Undo counters are not score penalties.
 
-[Tutorial](docs/TUTORIAL.md) · [Actual fresh-install native report](docs/validation/v1.9/ui-sdk-fresh-guest-d/host-report.json).
+Seven optional, replayable practice boards teach arrows, blockers, keys, gates, switches, refunded Undo and Spark. Completing them grants **100 LumaCoins + two Sparks once**. Practice consumes no inventory and grants no campaign wins. Six powers retain explicit free one-charge samples at their existing unlock levels.
 
-## Restore the Prism, one encounter at a time
+Every ten distinct Journey clears unlocks another optional Prism guardian. Two-layer pieces need two actions; from guardian 5, marked pieces move one cell per action. Free guidance, Undo and restart remain. A solved guardian offers its existing **100 earned LumaCoins once**, only when claimed. The main route does not require it.
 
-Every ten distinct Journey clears unlock another optional Prism guardian: **100 encounters** across the thousand-board route. Restore Nova's fragments in separate puzzles, with one saved active guardian attempt. They do not block the main Journey.
+The world retains ten 100-level atmospheres, original synthesized music, separate music/effects controls and reduced motion. The 24 companions × 12 styles are **288 code-drawn combinations**, not 288 hand-painted images. Cosmetic clothing and existing bounded-benefit equipment remain different systems. A missed visit does not reset the seven-gift cycle.
 
-**Thick slabs marked ×2 need two actions.** From guardian 5, footprint-marked pieces move **one cell per action** along their arrow. Layers, remaining work and used actions are explicit. Free guidance, refunded Undo and restart are available; these encounters consume no power stock or premium currency. A first solved encounter offers **100 earned LumaCoins**, once.
+[Gameplay](docs/GAMEPLAY.md) · [Tutorial](docs/TUTORIAL.md) · [Guardians](docs/GUARDIANS.md) · [Art/audio](docs/ART_AUDIO.md) · [Economy](docs/ECONOMY_1_7.md).
 
-<p align="center"><img src="docs/screenshots/v1.9/ui-sdk-final5-full100/guardian-1-peeled-en.png" width="230" alt="Actual guardian after removing one real layer"><img src="docs/screenshots/v1.9/ui-sdk-final5-full100/guardian-5-one-cell-en.png" width="230" alt="Actual one-cell movement and saved guardian progress"><img src="docs/screenshots/v1.9/ui-sdk-final5-full100/avatar-style-cyberpunk_neon-en.png" width="230" alt="Actual free cyberpunk treatment selected in Avatar Studio"></p>
+## Executed checks and limits
 
-[Rules, story and compatibility](docs/GUARDIANS.md) · [All reachable productive guardian states](docs/validation/v1.9/journey/guardians/summary.json).
+The final rc3 [native full-route run](docs/validation/v1.10/ui-sdk-final3-full100/host-report.json) passes **2,514 assertions** with **96 original PNGs**, covering the first 100 Journey levels, objectives, preview/ownership, goal persistence, all ten journal chapters, styles, guardians, navigation, footer bounds and six languages. Original preferences and rotation are restored. A [genuine fresh installation I](docs/validation/v1.10/ui-sdk-fresh-guest-i/README.md) separately passes **91 checks** and retains its new guest. [Production startup and actual audio](docs/validation/v1.10/SDK_UI_FINAL.md) are separate from the Lab route. These are emulator observations, not physical-device or human-comprehension acceptance.
 
-## Make the world yours
+Source checks separately cover **6,544 portrait/translation assertions**, **443 objective/store assertions**, and **308,412 read-only journal assertions** across every clear-count boundary from 0 to 1000. Existing economy, inventory, data, local-save and Journey regressions are retained in the [qualification index](docs/validation/v1.10/README.md). Signed APK/AAB checks, official bundletool and 16KiB ZIP/native alignment belong to the [exact binary audit](docs/validation/v1.10/binaries/binary-final-candidate.json).
 
-Avatar Studio offers twelve free treatments: plush, cyberpunk, retro arcade, modern pixel, sakura, ocean, space, steampunk, candy, Halloween, Valentine and ice. **24 existing companions × 12 treatments = 288 combinations**, with distinct geometry and five expression poses. Treatments change appearance; owning one does not unlock an unowned companion. They are original code-drawn variations, not 288 hand-painted sprites.
+**Puzzle geometry and difficulty are unchanged.** The documented L22→L23 structural jump from 17 to 85 remains. Structural scores, source simulations and successful scripted clears do not predict human enjoyment, D1/D7 retention or revenue. [The 2026 research and synthetic audit](docs/PLAYER_AUDIT_2026.md) keeps published survey aggregates distinct from assumed game profiles. No individual social data is scraped. [Current backlog](docs/PRISM_STORY_1_10.md#unchanged-structural-backlog).
 
-The companion reacts on home, in play and at victory. Restrained scenery follows actual cleared progress while controls stay fixed; reduced motion freezes the movement. Original synthesized music and separate effects/music controls remain. The map scrolls across ten hundred-level atmospheres.
+## Signed artifacts
 
-The wardrobe keeps its 24 cosmetic pieces and explicit owned/equipped/unowned states. Older Head/Aura/Charm equipment keeps its documented bounded benefits. Daily visit gifts and daily/weekly quests remain separate; missed days lose nothing. Earned **LumaCoins** and premium account **LumaGold** have distinct shops and balances. Real checkout and premium draws remain closed in this candidate.
-
-[Art and audio](docs/ART_AUDIO.md) · [Native art atlases](docs/validation/v1.9/avatar/README.md) · [Economy](docs/ECONOMY_1_7.md).
-
-## Tested behaviour, with clear limits
-
-The exact route audit passes again on all **1,240 L/M boards**, **13,254,058 reachable states** and **57,403,554 transitions**. The new independent guardian audit covers **100 unique encounters**, **6,197,718 states** and **34,045,573 productive transitions**. Native SDK gestures finish the first 100 Journey levels; a separate fresh Android installation exercises the seven lessons. Signatures, official bundletool, 16KB ZIP/native alignment and both release lint checks pass.
-
-The [final-byte native suite](docs/validation/v1.9/ui-sdk-final5-full100/host-report.json) passes **2,277 checks**, including 300 individual clear/grade/budget assertions across the first 100 Journey levels. A separate genuine first install passes **85 checks** on 4KB-page Android; production startup and actual audio lifecycle pass **7 checks** on 16KB-page Android. Earlier candidate and harness failures remain in the [validation history](docs/validation/v1.9/README.md), with their original results and different APK hashes. These are emulator observations, not physical-device acceptance.
-
-The [new-player audit](docs/PLAYER_AUDIT_2026.md) uses six declared behaviour profiles, 16,000 independent trials and 72 sequential journeys per version. A separate 720-encounter guardian simulation checks layered movement, interruptions and receipts. [Public primary research published in 2026](docs/research/2026-new-player/README.md) anchors design priorities, including adult Gen Z and 50+ contexts. Error rates and timing are **hypotheses**, not survey-derived Luma behaviour. No individual records are scraped. These results do not predict human appeal, D1/D7 retention or revenue. Physical phones and real player comprehension still need testing.
-
-[Complete evidence and earlier failures](docs/validation/v1.9/README.md) · [Roadmap](docs/ROADMAP.md).
-
-| Artifact | Download | SHA-256 |
+| Artifact | Download | SHA-256 / manifest |
 | --- | --- | --- |
-| Production APK · 7.74 MB | [1.9.0-rc1](releases/luma-drift-1.9.0-rc1.apk) | `b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05` |
-| Production AAB | [1.9.0-rc1](releases/luma-drift-1.9.0-rc1.aab) | [Manifest](releases/manifest-1.9.0-rc1.json) |
-| Separate Lab APK/AAB | [Lab APK](releases/luma-drift-1.9.0-sandbox.apk) · [AAB](releases/luma-drift-1.9.0-sandbox.aab) | [Manifest](releases/manifest-1.9.0-sandbox.json) |
+| Production APK · 7.76 MB | [1.10.0-rc3](releases/luma-drift-1.10.0-rc3.apk) | `29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4` |
+| Production AAB | [1.10.0-rc3](releases/luma-drift-1.10.0-rc3.aab) | [Manifest](releases/manifest-1.10.0-rc3.json) |
+| Separate Lab APK/AAB | [Lab APK](releases/luma-drift-1.10.0-sandbox-rc3.apk) · [AAB](releases/luma-drift-1.10.0-sandbox-rc3.aab) | [Manifest](releases/manifest-1.10.0-sandbox-rc3.json) |
 
-[Published source 6fbb1649](https://github.com/nabz0r/AndroidHit/commit/6fbb1649432c9a86b7de6c5ed9a8e3af33a049ba) · [Independent public download verification](docs/validation/v1.9/publication.json). All four selected APK/AAB downloads match the frozen manifests. [Firebase website delivery](docs/validation/site-v1.9/deployment.json) is confirmed from the same source revision.
+Android 8+ / API26; version code **11**; production package `com.androidhit.lumadrift`. Install over the existing app to retain saves. Signing identity is unchanged. [Installation](docs/RELEASE.md) · [Checksums](releases/SHA256SUMS.txt) · [Historical 1.9 release and publication](docs/RELEASE_1_9.md). Intermediate rc1/rc2 reports remain identified by their original hashes; their unshipped binaries are retained locally and their manifests are archived, not offered as current downloads.
 
-Android 8+ / API 26; version code **10**; production package `com.androidhit.lumadrift`. Install over the existing app to retain saves. Signing identity is unchanged. [Installation](docs/RELEASE.md) · [All checksums](releases/SHA256SUMS.txt) · [Historical 1.8](docs/RELEASE_1_8.md).
-
-## Compatibility and service status
-
-Published L/M/T boards and older C/R/B/Q/G/H/J/K/P/E layouts, allowances and codes remain unchanged. Guardian saves and style/claim receipts are separate. Existing balances, possessions and completed-level rewards remain. Three-star grading for new victories is now based on the displayed action threshold; existing saved stars are retained.
-
-Google remains optional and does not synchronize local gameplay saves. Friend/account services are prepared for real two-account qualification; this release fabricates no friendships or transactions. **Test advertising is forced, real checkout is gated and paid cosmetic draws are disabled.** No server code or remote gameplay analytics SDK changed. The owner reports the Play developer account approved; creating the app and qualifying its internal release is the next step after this delivery, not an achieved store publication.
+Google sign-in is optional and does not synchronize local gameplay saves. Actual two-account friends/gifts, consent, live ads and Play purchase lifecycle still need provider qualification. The Play Console walkthrough is paused for app improvement; this release does not announce a Play launch. No server code or remote gameplay-analytics SDK changes here.
 
 [Privacy](docs/PRIVACY.md) · [Production setup](docs/DEPLOIEMENT_PAS_A_PAS.md) · [Social qualification](docs/QUALIFICATION_SOCIALE.md) · [Server](server/README.md).
 
-## Build and explore
+## Build and inspect
 
-Use JDK 21, the Android SDK and the Gradle wrapper; Java source compatibility remains 17. Private signing files are ignored and never published.
+Use JDK21, the Android SDK and the Gradle wrapper; Java source compatibility is17. Private signing files are ignored and never published.
 
 ```sh
 ./gradlew assembleProductionRelease bundleProductionRelease lintProductionRelease
 ./gradlew assembleLabRelease bundleLabRelease lintLabRelease
-bash scripts/test-strategy-v4.sh
-bash scripts/test-new-player-v19.sh candidate
-bash scripts/test-guardian-v19.sh
-bash scripts/test-guardian-profiles-v19.sh
+bash scripts/test-objective-models-v110.sh
+bash scripts/test-prism-story-v110.sh
+./docs/validation/v1.10/avatar/run-host.sh
+python3 scripts/check-site-v110.py --phase release --apk-sha256 29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4
+node --test public/tests/*.test.mjs
 ```
 
-[Development and additional regressions](docs/DEVELOPMENT.md) · [Native SDK QA runner](scripts/v19-ui-test/README.md). Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Candy Crush or Crash Fever artwork, characters, audio or code is included.
+[Development](docs/DEVELOPMENT.md) · [Native SDK QA runner](scripts/v110-ui-test/README.md) · [Roadmap](docs/ROADMAP.md). Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Candy Crush or Crash Fever artwork, characters, audio or code is included.

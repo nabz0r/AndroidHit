@@ -4,6 +4,15 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowActionModeOverlay">true</item>
         <item name="android:colorAccent">#FFAC91</item>
+        <item name="android:alertDialogTheme">@style/LumaDialogTheme</item>
         <item name="android:windowBackground">#10152C</item>
+    </style>
+    <style name="LumaDialogTheme" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#24796F</item>
+        <item name="android:colorBackground">#FFF7FC</item>
+        <item name="android:windowBackground">@drawable/luma_dialog_background</item>
+        <item name="android:textColorPrimary">#493458</item>
+        <item name="android:textColorSecondary">#705D7A</item>
     </style>
 </resources>

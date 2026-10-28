@@ -1,13 +1,21 @@
 # Development and architecture
 
-## Current 1.9 additions
+## Current1.10 additions
+
+`CompanionPortrait` composes the selected character/style with four clothes and three equipment slots. `CollectionGoal` reads one explicitly pinned item. `ObjectiveDashboard` reads earned, unclaimed actions across the existing local stores. `PrismStory` supplies a read-only ten-chapter narrative from actual Journey clears and claimed guardian receipts. `V110Strings` and `PrismStoryStrings` cover six languages. Native dialogs share the pastel game palette.
+
+GameStore uses the existing typed durable transaction boundary for event completion bonuses, automatic gear grants, character/theme/gear purchases and equipment. Keys, prices, rewards and ownership rules are preserved. An incomplete local write blocks acknowledgment and retries the original operation. No remote server or payment activation is introduced.
+
+Run `bash scripts/test-objective-models-v110.sh`, `bash scripts/test-prism-story-v110.sh`, and the two renderer runners under `docs/validation/v1.10/avatar/`. The native framework is `scripts/v110-ui-test/`; it requires the named owned emulator and exact installed APK, never seeds player progress, and records original screenshots. Retained-profile tests restore original preferences/settings; first-install tests retain a genuinely new guest profile. [UX contract](UX_1_10.md) · [Qualification index](validation/v1.10/README.md).
+
+## Historical1.9 additions
 
 `GuardianCatalog`/`GuardianEncounter` isolate optional layered/cellwise puzzles from published Board/L/M/T rules. `JourneyExperience` grades real action budgets. `AvatarStyles`/`AvatarStage` draw the 288 combinations; `V19Strings` keeps new copy in all six languages. GameStore retains explicit versioned receipts for samples, gifts and guardian coins, plus a free style preference. [Audit](PLAYER_AUDIT_2026.md) · [Guardian design](GUARDIANS.md) · [Executed checks](validation/v1.9/README.md).
 
 Run the dedicated scripts `test-new-player-v19.sh`, `test-guardian-v19.sh`, `test-guardian-store-v19.sh` and `test-journey-rewards-v19.sh`. Native instrumentation lives in `scripts/v19-ui-test/`; it targets the named QA emulator, checks exact APK bytes and restores original preferences/display settings. Earlier 1.8 scripts/reports retain their scope.
 
 
-Current source declares **production 1.9.0-rc1** and **Lab 1.9.0-sandbox**, code **10**. [Current release and exact bytes](RELEASE_1_9.md) · [V4 engine](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [UX contract](UX_1_9.md). Build with JDK21 for the pinned lint analyzer; Java17 source remains supported.
+Current source declares **production1.10.0-rc3** and **Lab1.10.0-sandbox-rc3**, code **11**. [Qualification and exact-byte evidence](validation/v1.10/README.md) · [V4 engine](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [Current UX contract](UX_1_10.md). Build with JDK21 for the pinned lint analyzer; Java17 source remains supported.
 
 The component/build details below retain their earlier historical references; current content uses StrategyCatalog L/M/T, content save5 and reversible budget policy3. Current 1.7 policy2 saves migrate with their exact old layout/base; historical codes are unchanged. New exact guidance runs off the UI thread on one worker with one coalesced queued request.
 

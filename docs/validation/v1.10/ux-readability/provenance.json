@@ -1,0 +1,96 @@
+{
+  "edition": "1.10",
+  "state": "rc3-native-qualified-website-source-only",
+  "native_qualified": true,
+  "artifact_frozen": true,
+  "website_published": false,
+  "source_evidence": [
+    "docs/validation/v1.10/avatar/host-validation.json",
+    "docs/validation/v1.10/avatar/android-api-compile.json",
+    "docs/validation/v1.10/objectives/model-tests.json",
+    "docs/validation/v1.10/objectives/local-save-regression/summary.json",
+    "docs/validation/v1.10/prism-story/summary.json"
+  ],
+  "native_captures_promoted": [
+    "public/assets/screenshots/v1.10/home-fr.png",
+    "public/assets/screenshots/v1.10/home-en.png",
+    "public/assets/screenshots/v1.10/wardrobe-fr.png",
+    "public/assets/screenshots/v1.10/wardrobe-en.png",
+    "public/assets/screenshots/v1.10/rewards-fr.png",
+    "public/assets/screenshots/v1.10/rewards-en.png",
+    "public/assets/screenshots/v1.10/story-fr.png",
+    "public/assets/screenshots/v1.10/story-en.png",
+    "public/assets/screenshots/v1.10/shop-looks-fr.png",
+    "public/assets/screenshots/v1.10/shop-looks-en.png",
+    "public/assets/screenshots/v1.10/tutorial-key-fr.png",
+    "public/assets/screenshots/v1.10/tutorial-key-en.png",
+    "public/assets/screenshots/v1.10/map-1000-fr.png",
+    "public/assets/screenshots/v1.10/map-1000-en.png",
+    "public/assets/screenshots/v1.10/first-practice-en.png",
+    "public/assets/screenshots/v1.10/guardian-5-one-cell-en.png",
+    "public/assets/screenshots/v1.10/avatar-studio-en.png",
+    "public/assets/screenshots/v1.10/avatar-preview-en.png"
+  ],
+  "scope": "Current rc3 source and specifically scoped Android evidence. Browser/Hosting, personal account state and retention outcomes are not inferred.",
+  "intermediate_native_runs": [
+    {
+      "report": "docs/validation/v1.10/ui-sdk-fresh-guest-f/host-report.json",
+      "apk_sha256": "aee689d42d2266c866a7f21939540e260a1fd406273f69f885559fc87433a9a5",
+      "passed": true,
+      "checks": 85,
+      "qualifies_final_binary": false,
+      "scope": "Genuine first installation; new guest retained; final source subsequently changed."
+    },
+    {
+      "report": "docs/validation/v1.10/ui-sdk-companion-pilot/host-report.json",
+      "apk_sha256": "aee689d42d2266c866a7f21939540e260a1fd406273f69f885559fc87433a9a5",
+      "passed": false,
+      "checks": 202,
+      "qualifies_final_binary": false,
+      "scope": "Menu pilot stopped at Journey-gift-earned prerequisite. Original profile restored. No image promoted."
+    }
+  ],
+  "hosting": {
+    "last_confirmed_edition": "1.9",
+    "edition1_10_deployed": false,
+    "origin_requested": false,
+    "scope": "Last confirmed Hosting remains1.9; locked desktop prevents current browser/deployment step. Main source publication is separate."
+  },
+  "current_candidate": "1.10.0-rc3",
+  "current_lab_candidate": "1.10.0-sandbox-rc3",
+  "previous_candidate_first_install_run": {
+    "report": "docs/validation/v1.10/ui-sdk-fresh-guest-g/host-report.json",
+    "apk_sha256": "70e693abb589f409a74446cc2593a0faefe30967c73c32fc6d6bebf7bc5272f4",
+    "passed": true,
+    "checks": 91,
+    "qualifies": "Lab first-install/tutorial on API36 16KB runtime only",
+    "full_gameplay_and_menu_acceptance": false,
+    "promoted": false
+  },
+  "previous_candidate_full_run": {
+    "report": "docs/validation/v1.10/ui-sdk-final-full100/host-report.json",
+    "apk_sha256": "70e693abb589f409a74446cc2593a0faefe30967c73c32fc6d6bebf7bc5272f4",
+    "passed": true,
+    "assertions": 2472,
+    "qualifies_current_candidate": false,
+    "scope": "rc1 functional pass followed by visual defects; retained intermediate evidence only."
+  },
+  "visual_defects_requiring_rc2": [
+    "Seven selected/item surfaces used palette indices as ARGB colours and became transparent despite accessibility selected=true.",
+    "Journal ornament touched the first introductory line."
+  ],
+  "visual_defects_requiring_rc3": [
+    "Wardrobe footer extended below content clip; journal footer lost about15 logical points; pager lost about4.",
+    "Rc3 increases content heights and raises pager; final native checks require fully visible scroll-reached footer bounds at least47dp high."
+  ],
+  "native_qualification_scope": "Lab full route2514; freshI91; production startup/audio7 on exact identified rc3. No filesystem-fault, real provider, physical-device or human-retention acceptance.",
+  "production_apk_sha256": "29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4",
+  "lab_apk_sha256": "d1b085b4d9bbcf450037069ed15c7cea89b0e3e759b16e587cf3ca016a7c493f",
+  "current_native_reports": [
+    "docs/validation/v1.10/ui-sdk-final3-full100/host-report.json",
+    "docs/validation/v1.10/ui-sdk-fresh-guest-i/host-report.json",
+    "docs/validation/v1.10/ui-sdk-production-final3/host-report.json"
+  ],
+  "source_website_report": "docs/validation/site-v1.10/release/static-check.json",
+  "last_independently_verified_public_release": "1.9.0-rc1"
+}

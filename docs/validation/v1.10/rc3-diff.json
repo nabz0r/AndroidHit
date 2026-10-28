@@ -1,0 +1,61 @@
+{
+  "scope": "RC2 to RC3: extend three scrollable surfaces and move inventory pager clear of fixed navigation; candidate version labels. No puzzle, state, price or reward changes. Exact installed-byte qualification recorded separately.",
+  "files": [
+    {
+      "retained_path": "docs/validation/v1.10/rc2-source/LumaView.java",
+      "current_path": "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+      "retained_sha256": "328e44d463a4714c1e0819514239ca7e79863a3d691fed16e313a5401933f3f3",
+      "current_sha256": "67508e537e1604df621d022bffd1218f2a15c01241050ed90699d76aab1ddfb4",
+      "diff": [
+        "--- docs/validation/v1.10/rc2-source/LumaView.java",
+        "+++ app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+        "@@ -336,7 +336,7 @@",
+        "     private void drawFrame(Canvas c){",
+        "         frameTime=SystemClock.uptimeMillis();",
+        "         layout=new ExperienceLayout(getWidth(),getHeight(),safeTop,safeBottom,getResources().getDisplayMetrics().density,getResources().getConfiguration().fontScale);",
+        "-        scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;H=screen.equals(\"journey\")&&!(journeyTab==1&&!store.remixAvailable())?SagaMap.height(journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):Math.max(layout.contentHeight,screen.equals(\"guardians\")?4570:screen.equals(\"guardian\")?900:screen.equals(\"styles\")?1140:screen.equals(\"rewards\")?rewardContentHeight():screen.equals(\"wardrobe\")?1290:screen.equals(\"shop\")?1060:screen.equals(\"story\")?1040:screen.equals(\"home\")?1110:screen.equals(\"briefing\")?950:screen.equals(\"tutorial\")?viewportH<480&&!tutorial.complete()?433:820:840);",
+        "+        scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;H=screen.equals(\"journey\")&&!(journeyTab==1&&!store.remixAvailable())?SagaMap.height(journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):Math.max(layout.contentHeight,screen.equals(\"guardians\")?4570:screen.equals(\"guardian\")?900:screen.equals(\"styles\")?1140:screen.equals(\"rewards\")?rewardContentHeight():screen.equals(\"wardrobe\")?1344:screen.equals(\"shop\")?1060:screen.equals(\"story\")?1080:screen.equals(\"home\")?1136:screen.equals(\"briefing\")?950:screen.equals(\"tutorial\")?viewportH<480&&!tutorial.complete()?433:820:840);",
+        "         if(screen.equals(\"tutorial\")&&viewportH<480&&!tutorial.complete())H=Math.max(viewportH,433);",
+        "         contentScroll=clampScroll(contentScroll);",
+        "         boolean navigation=!screen.equals(\"play\")&&!screen.equals(\"settings\")&&!screen.equals(\"briefing\")&&!screen.equals(\"tutorial\")&&!screen.equals(\"guardian\");",
+        "@@ -1158,7 +1158,7 @@",
+        "     }",
+        "     private int characterIndex(String id){for(int i=0;i<Catalog.CHARACTERS.length;i++)if(Catalog.CHARACTERS[i].id.equals(id))return i;return 0;}",
+        "     private int themeIndex(String id){for(int i=0;i<Catalog.SKINS.length;i++)if(Catalog.SKINS[i].id.equals(id))return i;return 0;}",
+        "-    private void inventoryPager(Canvas c,InventoryPresentation.Page page){if(page.pageCount<=1)return;float y=H-139;quietButton(c,\"\u2039\",24,y,62,()->{if(page.hasPrevious())collectionPage--;});fit(c,e(\"saga_page\",page.page+1,page.pageCount),195,y+29,14,190,TEXT,true,true);quietButton(c,\"\u203a\",304,y,62,()->{if(page.hasNext())collectionPage++;});}",
+        "+    private void inventoryPager(Canvas c,InventoryPresentation.Page page){if(page.pageCount<=1)return;float y=H-151;quietButton(c,\"\u2039\",24,y,62,()->{if(page.hasPrevious())collectionPage--;});fit(c,e(\"saga_page\",page.page+1,page.pageCount),195,y+29,14,190,TEXT,true,true);quietButton(c,\"\u203a\",304,y,62,()->{if(page.hasNext())collectionPage++;});}",
+        "     private void drawPowerInventory(Canvas c){",
+        "         HashSet<String> active=new HashSet<>();for(Catalog.BoosterItem booster:Catalog.BOOSTERS)if(board!=null&&powerActive(booster.id))active.add(booster.id);",
+        "         ArrayList<InventoryPresentation.Power> shown=new ArrayList<>();for(InventoryPresentation.Power power:InventoryPresentation.powers(store,active))if(inventoryFilter==0||inventoryFilter==1&&power.unlocked&&(power.stock>0||power.active)||inventoryFilter==2&&!power.unlocked)shown.add(power);"
+      ]
+    },
+    {
+      "retained_path": "docs/validation/v1.10/rc2-source/app-build.gradle",
+      "current_path": "app/build.gradle",
+      "retained_sha256": "093a3e0fdd1df96531ce462f24ccb875b3424e1cb06ba00703f1cdaebacde7fd",
+      "current_sha256": "132737bdfd1b5ca56193e4d7a3e46da4b17a9c2ea9da5c7d36aca422ae4e5938",
+      "diff": [
+        "--- docs/validation/v1.10/rc2-source/app-build.gradle",
+        "+++ app/build.gradle",
+        "@@ -16,7 +16,7 @@",
+        "         minSdk 26",
+        "         targetSdk 36",
+        "         versionCode 11",
+        "-        versionName '1.10.0-rc2'",
+        "+        versionName '1.10.0-rc3'",
+        "         buildConfigField 'String', 'WALLET_API_BASE_URL', '\"' + walletUrl + '\"'",
+        "         buildConfigField 'String', 'SOCIAL_API_BASE_URL', '\"https://luma-wallet-369472826910.europe-west1.run.app\"'",
+        "         buildConfigField 'boolean', 'PAID_COSMETIC_DRAWS_ENABLED', 'false'",
+        "@@ -33,7 +33,7 @@",
+        "         lab {",
+        "             dimension 'channel'",
+        "             applicationIdSuffix '.sandbox'",
+        "-            versionName '1.10.0-sandbox-rc2'",
+        "+            versionName '1.10.0-sandbox-rc3'",
+        "             buildConfigField 'boolean', 'MODE_SANDBOX', 'true'",
+        "             buildConfigField 'boolean', 'FORCE_TEST_ADS', 'true'",
+        "             manifestPlaceholders = [appLabel: 'Luma Drift Lab', admobAppId: 'ca-app-pub-3940256099942544~3347511713']"
+      ]
+    }
+  ]
+}

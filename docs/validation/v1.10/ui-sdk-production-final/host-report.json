@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "startup",
+  "journey_through": 100,
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "apk_sha256": "c5b6c1fd155867d887674b820f813209c1fa23ab759f180e4c6c349f3caf2579",
+  "expected_apk_sha256": "c5b6c1fd155867d887674b820f813209c1fa23ab759f180e4c6c349f3caf2579",
+  "test_apk_sha256": "a3cb6875d59067ad064e3d01b2c545cef2cb3914aa9a4e8009e1e163c8524e09",
+  "wrapper_source_sha256": "377b07c736281e9eb1c34b6db562c05f67a59b3c692efa801b05b1a3e05e56df",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "fa38dbec59f4ca1868a357529fd1ca2e3e5279e69d886930b104e914c4c6294b",
+  "package": "com.androidhit.lumadrift",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v110-ui-original-prefs-93b4q29n",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "51dd90a498290f542c07106aa518b8860d2cc5a5659977c34e2f11d56e783200"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "screenshots": {
+    "startup-production-native.png": "206627e1d9b33811e7f29552960d468a37aa04b73d603de644b14d21197145a3"
+  },
+  "native": {
+    "passed": true,
+    "checkCount": 7,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Actual production1.10.0-rc1/code11 package loaded"
+      },
+      {
+        "pass": true,
+        "message": "Production launch exposes its actual native accessible window"
+      },
+      {
+        "pass": true,
+        "message": "Production music has an active track owned by its actual process"
+      },
+      {
+        "pass": true,
+        "message": "The same production audio track advances real mixed frames"
+      },
+      {
+        "pass": true,
+        "message": "SDK sends the app to background for lifecycle audio observation"
+      },
+      {
+        "pass": true,
+        "message": "Production music pauses after actual background lifecycle"
+      },
+      {
+        "pass": true,
+        "message": "Production music resumes after actual foreground lifecycle"
+      }
+    ],
+    "captures": [
+      "startup-production-native"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Production startup and lifecycle/audio SDK observation only; no piece/menu/account/ad/payment action"
+  }
+}

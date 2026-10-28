@@ -1,0 +1,86 @@
+{
+  "state": "promoted-byte-identical-rc3",
+  "expected_native_directory": "docs/screenshots/v1.10/ui-sdk-final3-full100",
+  "required_host_report": "docs/validation/v1.10/ui-sdk-final3-full100/host-report.json",
+  "capture_slots": [
+    {
+      "slot": "home",
+      "expected_fr": "home-fr-localized.png",
+      "expected_en": "home-en-localized.png",
+      "promoted": true,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "png_sha256": {
+        "home-fr.png": "86fa494e76ea77e9e1934b2831a8e326e7cee01a3c0239bb28368527c8cbd7de",
+        "home-en.png": "46358cbb40cd77f5eb9032ab775f6c7f0edd385e25c1363e724a8e014c82130d"
+      },
+      "observed_profile": "Local guest after100 clears/replays; original bytes restored. Home resumesL11; journal chapter2 shows2/100 claimed fragments and0/100 in101–200."
+    },
+    {
+      "slot": "companion",
+      "expected_fr": "avatar-fr.png",
+      "expected_en": "avatar-en.png",
+      "promoted": true,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "png_sha256": {
+        "wardrobe-fr.png": "0b1a9569a90c3309f6b47428cf04159539a60cb0e64e176b4068596347002787",
+        "wardrobe-en.png": "4c42b0889cb72d96304cd51444cc82d0a639f56474f98e3bf346fe7a1c7063c5"
+      },
+      "observed_profile": "Local guest after100 clears/replays; original bytes restored. Home resumesL11; journal chapter2 shows2/100 claimed fragments and0/100 in101–200."
+    },
+    {
+      "slot": "objectives",
+      "expected_fr": "ready-fr.png",
+      "expected_en": "ready-en.png",
+      "promoted": true,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "png_sha256": {
+        "rewards-fr.png": "d269b8a39ecd22954d0f096111ab77fa56068113160bcb75f1e2d58cb8202dd3",
+        "rewards-en.png": "5794a7f8e18e9c4c63ce282cca523f26fa5c6cd1563410a929cfb2f28ec87044"
+      },
+      "observed_profile": "Local guest after100 clears/replays; original bytes restored. Home resumesL11; journal chapter2 shows2/100 claimed fragments and0/100 in101–200."
+    },
+    {
+      "slot": "journal",
+      "expected_fr": "story-fr.png",
+      "expected_en": "story-en.png",
+      "promoted": true,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "png_sha256": {
+        "story-fr.png": "7b365caea6fdd3c1bb831efa982cae5a945ab9bcf9b5ecf342c2d509b41568b1",
+        "story-en.png": "9404e6443d33538297392d4220d88a5bf73c29ca140fed1201d45186113475e7"
+      },
+      "observed_profile": "Local guest after100 clears/replays; original bytes restored. Home resumesL11; journal chapter2 shows2/100 claimed fragments and0/100 in101–200."
+    },
+    {
+      "slot": "shop",
+      "expected_fr": "shop-looks-fr.png",
+      "expected_en": "shop-looks-en.png",
+      "promoted": true,
+      "dimensions": [
+        1080,
+        2340
+      ],
+      "png_sha256": {
+        "shop-looks-fr.png": "cb6fa8aa93d3e3de5d6b871f4708fa6cab55a2bd5f5188f2932dc2d0076d8e41",
+        "shop-looks-en.png": "842be7c8bcd21443424889d9a47d04617575df6dde7783c610a5609b642d3d51"
+      },
+      "observed_profile": "Local guest after100 clears/replays; original bytes restored. Home resumesL11; journal chapter2 shows2/100 claimed fragments and0/100 in101–200."
+    }
+  ],
+  "scope": "Five core FR/EN positions promoted after exact-rc3 passing host/native report. All public source PNG copies are unchanged; no browser or Hosting acceptance inferred.",
+  "deployment": "No Hosting1.10 publication. The last confirmed public site remains1.9; a source push does not establish Hosting delivery.",
+  "required_candidate": "1.10.0-rc3",
+  "required_lab_candidate": "1.10.0-sandbox-rc3"
+}

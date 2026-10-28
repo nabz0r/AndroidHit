@@ -1,6 +1,26 @@
 # Public developer, privacy and account-deletion pages
 
-## Current 1.9 delivery · 27 October 2026
+## Current 1.10 source · Hosting deployment pending · 28 October 2026
+
+The repository homepage presents **Luma Drift 1.10.0-rc3 / code 11**, production package `com.androidhit.lumadrift`. Its [signed APK](../releases/luma-drift-1.10.0-rc3.apk) is **7,757,410 bytes / 7.76 MB decimal**, SHA-256 `29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4`. [Manifest](../releases/manifest-1.10.0-rc3.json) · [Release](RELEASE_1_10.md) · [UX](UX_1_10.md) · [Readability/provenance matrix](validation/v1.10/ux-readability/README.md).
+
+The new FR/EN source presents the shared dressed companion and seven slots, one chosen goal from 42 existing cosmetics/equipment items, actual ready-to-collect objectives, separate shop categories and the read-only ten-chapter journal. Existing L/M/T puzzles, budgets and G1 guardians remain unchanged. It claims no stronger addiction, measured retention, Play publication or live commerce.
+
+**Eighteen unedited current PNG copies** have [exact source/hash/profile records](validation/site-v1.10/captures.json). Seventeen come from the [2,514-check rc3 native full route](validation/v1.10/ui-sdk-final3-full100/host-report.json); the first-practice English image comes from [fresh guest I](validation/v1.10/ui-sdk-fresh-guest-i/host-report.json), 91 checks. The five core French images show Home, companion, available objectives, journal and appearance shop. Full-route PNGs are 1080×2340; the fresh invitation is 1080×2400. Home resumes L11 after 100 actual clears and replays. Cupid remains unowned despite 450 / 450 displayed affordability; the journal shows chapter 2, two claimed fragments and 0 / 100 Journey progress in 101–200. These are local guests, not authenticated Google or purchase demonstrations.
+
+The [offline release-source check](validation/site-v1.10/release/static-check.json) passes **3,271 assertions / three pages / 78 local references**. [32 current Node tests](validation/site-v1.10/node-tests-final.txt) pass. The checker permits only exact production/Lab rc3 bytes to qualify current screenshots, requires actual passing host/native records and checks dimensions and original PNG hashes. It cannot substitute for browser rendering, physical accessibility or deployment. Earlier rc1/rc2 results remain identified as intermediate, including their palette-index and clipped-footer defects.
+
+**The 1.10 website is not deployed.** The last confirmed Firebase Hosting version remains [the 1.9 delivery](validation/site-v1.9/deployment.json). The desktop remains locked, with no local authenticated Firebase CLI available; local CUA browser review and Hosting publication therefore remain pending. No Firebase public-origin probe has been performed. Source/artifact publication to main and Hosted-site delivery are separate outcomes. [Website record](validation/site-v1.10/README.md).
+
+Public runtime configuration, Google identity/deletion modules, the separate confirmation and authenticated server-first account-deletion protocol remain unchanged. Current homepage metadata and language-routing titles are 1.10. No new account information, personal tester addresses, tracking SDK or runtime service is added by these pages.
+
+```sh
+python3 scripts/check-site-v110.py --phase release \
+  --apk-sha256 29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4
+node --test public/tests/*.test.mjs
+```
+
+## Historical 1.9 delivery · 27 October 2026
 
 The current source presents **Luma Drift 1.9.0-rc1 / code 10**, production package `com.androidhit.lumadrift`, on the existing Firebase site. Its [signed APK](../releases/luma-drift-1.9.0-rc1.apk) is **7,740,394 bytes / 7.74 MB decimal**, SHA-256 `b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05`. [Exact release manifest](../releases/manifest-1.9.0-rc1.json) · [Release notes](RELEASE_1_9.md) · [Player audit](PLAYER_AUDIT_2026.md) · [UX contract](UX_1_9.md).
 

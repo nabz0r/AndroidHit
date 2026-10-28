@@ -39,12 +39,12 @@ function boot({url='https://luma.example/index.html',hero=true,preparation=true}
 test('French default exposes only French and exact current title',()=>{
   const s=boot();assert.equal(s.document.documentElement.lang,'fr');assert.equal(s.fr.hidden,false);assert.equal(s.en.hidden,true);
   assert.equal(s.frButton.attrs['aria-pressed'],'true');assert.equal(s.enButton.attrs['aria-pressed'],'false');
-  assert.equal(s.document.title,'Luma Drift 1.9 — Un monde tout doux. Chaque coup compte.');
+  assert.equal(s.document.title,'Luma Drift 1.10 — Ton compagnon. Un objectif à toi.');
   assert.equal(s.meta.attrs.content,'Description française');assert.equal(s.image.src,'assets/screenshots/v1.8/home-fr.png');assert.equal(s.image.alt,'Accueil réel');
 });
 test('English URL switches real source, alt, metadata and pressed language',()=>{
   const s=boot({url:'https://luma.example/index.html?lang=en'});assert.equal(s.document.documentElement.lang,'en');assert.equal(s.fr.hidden,true);assert.equal(s.en.hidden,false);
-  assert.equal(s.document.title,'Luma Drift 1.9 — Soft little worlds. Every move matters.');
+  assert.equal(s.document.title,'Luma Drift 1.10 — Your companion. A goal of your own.');
   assert.equal(s.image.src,'assets/screenshots/v1.8/home-en.png');assert.equal(s.image.alt,'Actual home');assert.equal(s.meta.attrs.content,'English description');
   assert.equal(s.enButton.attrs['aria-pressed'],'true');assert.equal(s.privacy.href,'/privacy/index.html?view=full&lang=en#main');
 });

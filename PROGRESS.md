@@ -1,3 +1,18 @@
+# Luma Drift 1.10 — delivery progress
+
+28 October 2026 · production `1.10.0-rc3` / Lab `1.10.0-sandbox-rc3`, code11.
+
+- Home, complete animated companion, wardrobe previews, one pinned item objective, four reward tabs, clearer events/shop and ten-chapter Prism journal implemented in six languages.
+- Durable completion-bonus, collection acquisition and equipment transactions repaired without changing prices, reward amounts or save identities.
+- RC3 Lab: **2,514 installed checks / 96 original PNGs**, including all100 first Journey levels; genuine fresh guest **91/17**; exact production launch/audio **7/1**. Preference files and rotation restored.
+- Four signed APK/AAB outputs built; signature, bundletool and static16KiB checks passed. Lint retains11 warnings per flavor, zero errors. Existing25 engine/catalog classes remain byte-identical to1.9.
+- README, UX, roadmap, release notes and website source/gallery updated with exact RC3 evidence. **Hosting deployment pending**: the authenticated browser session is unavailable while the Mac is locked; last confirmed hosted version1.9.
+- Real ads, purchases, paid draws and production-provider/social acceptance remain gated. No human balance/retention claim.
+
+[Release and signed packages](docs/RELEASE_1_10.md) · [Evidence and limits](docs/validation/v1.10/README.md).
+
+## Preserved earlier delivery progress
+
 # Luma Drift 1.7 — delivery progress
 
 27 October 2026 · production `1.7.0-rc1` / Lab `1.7.0-sandbox`, code 8.

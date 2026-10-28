@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "scoped_source_sha256": {
+    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "94627c0fd3fb8d02587d5654e5e5e4f0afc1238fa15fd866ff78a331388682be",
+    "app/src/main/java/com/androidhit/lumadrift/data/CollectionGoal.java": "048695dd5d11ea7a0e68e2dd9e15aa65f2ad0eaddab416f1ccae20c4b7b2628d",
+    "app/src/main/java/com/androidhit/lumadrift/data/ObjectiveDashboard.java": "f07b77303f28e22be7e4c069ae25fd3fc8689ba7f07ffd489a4fa92627effe31"
+  },
+  "checks": [
+    {
+      "name": "models",
+      "passed": true,
+      "assertions": 443,
+      "report": "model-tests.txt",
+      "sha256": "28eea102cc581b44acceb85edd7e32f83524cf7cd5b2d54df021d9bac3bb9de2"
+    },
+    {
+      "name": "data",
+      "passed": true,
+      "assertions": 8882,
+      "report": "data-regression.txt",
+      "sha256": "312a0fbc3422aafd67fe361e933bad1823e5f7a58d891c0ba61ff9f8a32353df"
+    },
+    {
+      "name": "meta",
+      "passed": true,
+      "assertions": 362,
+      "report": "meta-regression.txt",
+      "sha256": "039752232f000e3a5ee9e4e915507486e769d17f57c952d2f686aa609187d8ec"
+    },
+    {
+      "name": "economy",
+      "passed": true,
+      "assertions": 6611,
+      "report": "economy-regression.txt",
+      "sha256": "f4b1aae2fd14ead95ae73d4fbaa2f6cb8fb3ab60e45b122df14ac80e9d159310"
+    },
+    {
+      "name": "inventory",
+      "passed": true,
+      "assertions": 1482,
+      "report": "inventory-regression.txt",
+      "sha256": "ae9f48f80734d66e818a4a2176d778528d02cf845346bf173f425e08e762db05"
+    },
+    {
+      "name": "cosmetics",
+      "passed": true,
+      "assertions": 100953,
+      "report": "cosmetics-regression.txt",
+      "sha256": "c5720dc625ab0ee8f08d2c26dc36589c3a803d8f07028d9ad5d89c206cb532fc"
+    },
+    {
+      "name": "local_save",
+      "passed": true,
+      "assertions": 229,
+      "report": "local-save-regression.txt",
+      "sha256": "0a6b263a9944fb844e42feb8ab9805486536c4f02bc0a3e870215199e5efb5d5"
+    },
+    {
+      "name": "journey",
+      "passed": true,
+      "assertions": 65736,
+      "report": "journey-regression.txt",
+      "sha256": "c4c272a27021feda8cfd3ac651c9ce6be409a99f9b1fcb5e4053eb75fbaaf53f"
+    }
+  ],
+  "meta_export_json_unicode_check": true,
+  "scope": "JVM checks and simulated preference failure/reconstruction only; no native UI/provider/physical-storage/retention claim."
+}

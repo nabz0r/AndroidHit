@@ -162,31 +162,51 @@ public final class GameStore {
     }
 
     public synchronized boolean purchaseCharacter(String id) {
-        Catalog.CharacterItem item = Catalog.character(id);
-        if (item == null || ownsCharacter(id) || coins() < item.price) return false;
-        prefs.edit().putInt("coins", coins() - item.price)
-                .putBoolean("owned_character_" + id, true).commit();
-        return true;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            Catalog.CharacterItem item = Catalog.character(id);
+            if (item == null || ownsCharacter(id) || coins() < item.price) return false;
+            Map<String,Object> write = new HashMap<>();
+            write.put("coins", coins() - item.price);
+            write.put("owned_character_" + id, true);
+            LocalSaveTransactions.write(prefs, write);
+            return true;
+        }
     }
 
     public synchronized boolean purchaseSkin(String id) {
-        Catalog.SkinItem item = Catalog.skin(id);
-        if (item == null || ownsSkin(id) || coins() < item.price) return false;
-        prefs.edit().putInt("coins", coins() - item.price)
-                .putBoolean("owned_skin_" + id, true).commit();
-        return true;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            Catalog.SkinItem item = Catalog.skin(id);
+            if (item == null || ownsSkin(id) || coins() < item.price) return false;
+            Map<String,Object> write = new HashMap<>();
+            write.put("coins", coins() - item.price);
+            write.put("owned_skin_" + id, true);
+            LocalSaveTransactions.write(prefs, write);
+            return true;
+        }
     }
 
     public synchronized boolean equipCharacter(String id) {
-        if (!ownsCharacter(id)) return false;
-        prefs.edit().putString("character", id).commit();
-        return true;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            if (!ownsCharacter(id)) return false;
+            Map<String,Object> write = new HashMap<>();
+            write.put("character", id);
+            LocalSaveTransactions.write(prefs, write);
+            return true;
+        }
     }
 
     public synchronized boolean equipSkin(String id) {
-        if (!ownsSkin(id)) return false;
-        prefs.edit().putString("skin", id).commit();
-        return true;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            if (!ownsSkin(id)) return false;
+            Map<String,Object> write = new HashMap<>();
+            write.put("skin", id);
+            LocalSaveTransactions.write(prefs, write);
+            return true;
+        }
     }
 
     /** Available units exclude the one held by an unfinished effect reservation. */
@@ -336,38 +356,41 @@ public final class GameStore {
     /** Call on resume, after a win or opening equipment; not from every rendering frame. */
     public synchronized List<String> claimAvatarGearUnlocks() {
         synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
             AvatarGearCatalog.Progress progress=avatarGearProgress();
-            List<String> unlocked=new ArrayList<>();SharedPreferences.Editor edit=prefs.edit();
+            List<String> unlocked=new ArrayList<>();Map<String,Object> write=new HashMap<>();
             for(AvatarGearCatalog.Item item:AvatarGearCatalog.ITEMS)if(AvatarGearCatalog.claimable(item,progress)) {
                 String key="avatar_owned_v1_"+item.id;
                 if(!ownsAvatarGear(item.id))unlocked.add(item.id);
                 // Flush previously memory-applied writes too after a disk failure.
                 String acquired=prefs.getString(key, "");
-                edit.putString(key,acquired.isEmpty()?item.source.name():acquired);
+                write.put(key,acquired.isEmpty()?item.source.name():acquired);
             }
-            if(!edit.commit())throw new IllegalStateException("Could not persist earned avatar equipment");
+            LocalSaveTransactions.write(prefs,write);
             return Collections.unmodifiableList(unlocked);
         }
     }
     /** Existing ownership makes repeated purchase calls a no-op; only device-earned coins are debited. */
     public synchronized boolean purchaseAvatarGear(String id) {
-        AvatarGearCatalog.Item item=AvatarGearCatalog.find(id);
-        if(item==null||item.source!=AvatarGearCatalog.Source.EARNED_COINS)return false;
         synchronized(GOLD_GRANT_LOCK) {
-            String key="avatar_owned_v1_"+id,owned=prefs.getString(key,"");
-            if(!owned.isEmpty()) {
-                if(!prefs.edit().putString(key,owned).putInt("coins",coins()).commit())throw new IllegalStateException("Could not persist recorded avatar purchase");
-                return false;
-            }
+            LocalSaveTransactions.flush(prefs);
+            AvatarGearCatalog.Item item=AvatarGearCatalog.find(id);
+            if(item==null||item.source!=AvatarGearCatalog.Source.EARNED_COINS||ownsAvatarGear(id))return false;
             if(coins()<item.priceCoins)return false;
-            if(!prefs.edit().putString(key,item.source.name()).putInt("coins",coins()-item.priceCoins).commit())throw new IllegalStateException("Could not persist avatar purchase");
+            Map<String,Object> write=new HashMap<>();
+            write.put("avatar_owned_v1_"+id,item.source.name());
+            write.put("coins",coins()-item.priceCoins);
+            LocalSaveTransactions.write(prefs,write);
             return true;
         }
     }
     public synchronized boolean equipAvatarGear(String id) {
-        AvatarGearCatalog.Item item=AvatarGearCatalog.find(id);if(item==null||!ownsAvatarGear(id))return false;
         synchronized(GOLD_GRANT_LOCK) {
-            if(!prefs.edit().putString("avatar_slot_v1_"+item.slot.name(),id).commit())throw new IllegalStateException("Could not persist avatar equipment");
+            LocalSaveTransactions.flush(prefs);
+            AvatarGearCatalog.Item item=AvatarGearCatalog.find(id);if(item==null||!ownsAvatarGear(id))return false;
+            Map<String,Object> write=new HashMap<>();
+            write.put("avatar_slot_v1_"+item.slot.name(),id);
+            LocalSaveTransactions.write(prefs,write);
             return true;
         }
     }
@@ -742,30 +765,86 @@ public final class GameStore {
     }
 
     public synchronized int dailyCompletedCount() {
-        int count = 0;
-        for (int i = 0; i < Catalog.DAILY_COUNT; i++) if (dailyStars(i) > 0) count++;
-        return count;
+        return eventCompletedCount("daily", dailyId(), Catalog.DAILY_COUNT);
     }
 
     public synchronized int weeklyCompletedCount() {
+        return eventCompletedCount("weekly", weeklyId(), Catalog.WEEKLY_COUNT);
+    }
+
+    private int eventCompletedCount(String kind, String period, int limit) {
         int count = 0;
-        for (int i = 0; i < Catalog.WEEKLY_COUNT; i++) if (weeklyStars(i) > 0) count++;
+        for (int i = 0; i < limit; i++) if (eventStars(kind, period, i, limit) > 0) count++;
         return count;
     }
 
-    public synchronized boolean dailyBonusClaimed() { return prefs.getBoolean("daily_bonus_" + dailyId(), false); }
-    public synchronized boolean weeklyBonusClaimed() { return prefs.getBoolean("weekly_bonus_" + weeklyId(), false); }
+    public synchronized boolean dailyBonusClaimed() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            return prefs.getBoolean("daily_bonus_" + dailyId(), false);
+        }
+    }
+    public synchronized boolean weeklyBonusClaimed() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            return prefs.getBoolean("weekly_bonus_" + weeklyId(), false);
+        }
+    }
 
     public synchronized int claimDailyCompletionReward() {
-        if (dailyCompletedCount() != Catalog.DAILY_COUNT || dailyBonusClaimed()) return 0;
-        prefs.edit().putBoolean("daily_bonus_" + dailyId(), true).putInt("coins", safeAdd(coins(), 100)).commit();
-        return 100;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String period = dailyId();
+            if (eventCompletedCount("daily", period, Catalog.DAILY_COUNT) != Catalog.DAILY_COUNT
+                    || prefs.getBoolean("daily_bonus_" + period, false)) return 0;
+            Map<String,Object> write = new HashMap<>();
+            write.put("daily_bonus_" + period, true);
+            write.put("coins", safeAdd(coins(), 100));
+            LocalSaveTransactions.write(prefs, write);
+            return 100;
+        }
     }
 
     public synchronized int claimWeeklyCompletionReward() {
-        if (weeklyCompletedCount() != Catalog.WEEKLY_COUNT || weeklyBonusClaimed()) return 0;
-        prefs.edit().putBoolean("weekly_bonus_" + weeklyId(), true).putInt("coins", safeAdd(coins(), 250)).commit();
-        return 250;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String period = weeklyId();
+            if (eventCompletedCount("weekly", period, Catalog.WEEKLY_COUNT) != Catalog.WEEKLY_COUNT
+                    || prefs.getBoolean("weekly_bonus_" + period, false)) return 0;
+            Map<String,Object> write = new HashMap<>();
+            write.put("weekly_bonus_" + period, true);
+            write.put("coins", safeAdd(coins(), 250));
+            LocalSaveTransactions.write(prefs, write);
+            return 250;
+        }
+    }
+
+    /** One optional local catalog target; obtaining it never silently changes the pin. */
+    public synchronized String trackedCollectionGoal() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String key = prefs.getString("collection_goal_v110", "");
+            return CollectionGoal.validKey(key) ? key : "";
+        }
+    }
+    /** False means an unknown catalog target, never a failed persistence acknowledgement. */
+    public synchronized boolean setTrackedCollectionGoal(String key) {
+        if (!CollectionGoal.validKey(key)) return false;
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            Map<String,Object> write = new HashMap<>();
+            write.put("collection_goal_v110", key);
+            LocalSaveTransactions.write(prefs, write);
+            return true;
+        }
+    }
+    public synchronized void clearTrackedCollectionGoal() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            Map<String,Object> write = new HashMap<>();
+            write.put("collection_goal_v110", "");
+            LocalSaveTransactions.write(prefs, write);
+        }
     }
 
     /** Stable seeds make an event board repeatable throughout its local date. */

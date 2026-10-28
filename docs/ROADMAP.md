@@ -1,10 +1,22 @@
 # Luma Drift roadmap
 
-## Current 1.9 — first journey, guardians and expressive companions
+## Current candidate 1.10 — Companion & Objectives
+
+[Release](RELEASE_1_10.md) · [UX](UX_1_10.md) · [Native qualification](validation/v1.10/SDK_UI_FINAL.md) · [Screen/provenance matrix](validation/v1.10/ux-readability/README.md) · [Prism journal](PRISM_STORY_1_10.md). Production **1.10.0-rc3** and isolated **1.10.0-sandbox-rc3**, code 11, have identified signed artifacts and final-byte Android evidence. The Play Console walkthrough remains paused at the owner's request.
+
+Home connects actual unclaimed rewards, the next activity, a chosen collection goal and the companion's appearance. A shared portrait combines the existing 24 companions and 12 free styles with four cosmetic slots and three bounded-benefit equipment slots. Full-character previews distinguish looking, owning, buying and equipping. The read-only ten-chapter journal follows existing Journey clears and claimed optional guardian receipts; it creates no currency or new fragments.
+
+The rc3 main Android run passes **2,514 assertions / 96 original PNGs**, including Journey 1–100, menus, source-backed goal/preview behaviour, fourteen real selected-colour samples, four fully reachable footer targets and six-language navigation. A genuine first installation separately passes 91 checks; production startup/audio passes 7. Source models separately cover 6,544 portrait/copy assertions, 443 objective/store assertions and 308,412 journal assertions. Earlier functional passes did not catch transparent palette-index colours or clipped footers; those failures remain documented rather than being relabelled as current acceptance.
+
+**Website 1.10 is source only:** 18 unedited current PNG copies, the exact production APK route and 3,271 offline assertions / 32 unit tests are ready in the repository. Local browser review and Firebase Hosting deployment remain pending while the desktop is locked. The last confirmed Hosting publication is 1.9. A main/source push does not deploy the website. [Website delivery boundary](validation/site-v1.10/README.md).
+
+Next: inspect the current source in the local browser once desktop access returns, publish Hosting through its authenticated management path, then test modest physical phones, large fonts, TalkBack and native-speaker copy. Actual 1.10 filesystem-fault acceptance and commercial/provider qualification remain incomplete; source persistence tests do not replace them. L/M/T identities, budgets and G1 guardians remain unchanged, including the L23 structural jump. Human difficulty, enjoyment, retention and revenue remain unmeasured.
+
+## Published 1.9 — first journey, guardians and expressive companions
 
 [Release](RELEASE_1_9.md) · [2026 player audit](PLAYER_AUDIT_2026.md) · [UX](UX_1_9.md) · [Guardians](GUARDIANS.md). The release fixes reproduced native lesson-4 and compact preview failures, makes earned gifts and free power samples visible, grades actions rather than hint use, and adds 100 optional encounters plus 288 visual combinations. Synthetic policy experiments and original 2026 survey aggregates retain their separate scopes; human enjoyment and return rates remain unmeasured.
 
-The owner reports Play account approval on **27 October 2026**. After the tested gameplay release, the next owner workflow is to create the Play application, use the signed code-10 AAB on an internal track, and qualify actual Google identity, two-account gifts, consent and license-test purchases. Approval of the developer account does not itself publish an app or activate commerce.
+The owner reported Play account approval on **27 October 2026**. The Console walkthrough is now paused for further app development. Actual Google identity, two-account gifts, consent and license-test purchases remain later qualification work. Approval of the developer account does not itself publish an app or activate commerce.
 
 ## Preserved 1.8 milestone — all levels, learning and a readable world
 
