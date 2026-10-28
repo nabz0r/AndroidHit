@@ -48,6 +48,8 @@ The puzzle rules and catalogs are unchanged. Human difficulty, enjoyment and phy
 
 Keep the existing installed app and its local data when updating production. Lab has a separate package/profile. Both retain certificate SHA-256 `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. The [candidate record](validation/v1.11/candidate.json) gives full file sizes, hashes, source inputs and compiled gates. The website remains on its separately recorded 1.10 deployment; this app-only bug hunt does not imply a new Hosting deployment.
 
+Published on `main` in [source commit aef6f991](https://github.com/nabz0r/AndroidHit/commit/aef6f991caf34c7f3822d5080bc449fccda977f3), tree `c405ee48a62e059ceb092f62f6330b96f5e82de8`. Independent downloads of all four pinned artifacts return HTTP 200 with the exact candidate sizes and hashes. [GitHub publication receipt](validation/v1.11/publication.json). No Play upload accompanies this delivery.
+
 ## Intermediate retention
 
 RC1 was an unpublished qualification build. Its four original binaries are preserved locally in ignored build storage, with full sizes/hashes in the [retention record](validation/v1.11/intermediate-retention.json). The two exact RC1 source inputs changed by RC2 are preserved and hash-checked against the original manifest; all other inputs match RC2. RC1 fresh-install/follow-up results remain identified as RC1. The four public downloads above are RC2 only; no older published APK/AAB is removed or rewritten.

@@ -6,6 +6,8 @@
 
 Production 1.11.0-rc2 and isolated Lab 1.11.0-sandbox-rc2, code 12. Portrait composition, visible equipment feedback, worn item names, theme rendering, pending inventory reads and first-profile save recovery are corrected. Preview, purchase and equipment remain separate. The first native visual tests now compare actual art and cross a real cold-process boundary; see the qualification record for executed results and fixture failures. Earlier 1.10 state/selection tests do not establish item visibility.
 
+[GitHub delivery receipt](validation/v1.11/publication.json): source `aef6f991`, exact tree verified; four signed APK/AAB public downloads independently streamed, HTTP 200, matching sizes and SHA-256 hashes.
+
 The website remains on its separately confirmed 1.10 deployment. Play publication and live provider activation are paused during this bug hunt. Google identity does not synchronize local gameplay.
 
 

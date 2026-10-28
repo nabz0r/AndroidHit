@@ -1,0 +1,137 @@
+{
+  "verified_at_utc": "2026-10-28T12:29:56.727394+00:00",
+  "source_commit": "aef6f991caf34c7f3822d5080bc449fccda977f3",
+  "source_tree": "c405ee48a62e059ceb092f62f6330b96f5e82de8",
+  "repository": "nabz0r/AndroidHit",
+  "branch": "main",
+  "scope": "Pinned-source GitHub public downloads independently streamed and hashed; no Google Play or Firebase Hosting publication.",
+  "artifacts": [
+    {
+      "artifact": "luma-drift-1.11.0-rc2.aab",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/aef6f991caf34c7f3822d5080bc449fccda977f3/releases/luma-drift-1.11.0-rc2.aab",
+      "http_status": 200,
+      "bytes": 11149735,
+      "sha256": "5bd1fed5da2490a0e5f5c044f498f8248f6d4adae12a1f646f5b53da613c4f1f",
+      "expected_bytes": 11149735,
+      "expected_sha256": "5bd1fed5da2490a0e5f5c044f498f8248f6d4adae12a1f646f5b53da613c4f1f",
+      "passed": true
+    },
+    {
+      "artifact": "luma-drift-1.11.0-rc2.apk",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/aef6f991caf34c7f3822d5080bc449fccda977f3/releases/luma-drift-1.11.0-rc2.apk",
+      "http_status": 200,
+      "bytes": 7757406,
+      "sha256": "5a77d0c5b15dcdbb919bc3ea248ac9ac7b1b642898ee0fdd6cd8f855a1d09811",
+      "expected_bytes": 7757406,
+      "expected_sha256": "5a77d0c5b15dcdbb919bc3ea248ac9ac7b1b642898ee0fdd6cd8f855a1d09811",
+      "passed": true
+    },
+    {
+      "artifact": "luma-drift-1.11.0-sandbox-rc2.aab",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/aef6f991caf34c7f3822d5080bc449fccda977f3/releases/luma-drift-1.11.0-sandbox-rc2.aab",
+      "http_status": 200,
+      "bytes": 11142113,
+      "sha256": "c42e09138dc5b11389ed33268a9aa621d640ac66f82cab79ec29662c3c1e7752",
+      "expected_bytes": 11142113,
+      "expected_sha256": "c42e09138dc5b11389ed33268a9aa621d640ac66f82cab79ec29662c3c1e7752",
+      "passed": true
+    },
+    {
+      "artifact": "luma-drift-1.11.0-sandbox-rc2.apk",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/aef6f991caf34c7f3822d5080bc449fccda977f3/releases/luma-drift-1.11.0-sandbox-rc2.apk",
+      "http_status": 200,
+      "bytes": 7757097,
+      "sha256": "65bfbeab4f8b488e483a1622568540caf0315f72cf33d94876c75eafc9b4b642",
+      "expected_bytes": 7757097,
+      "expected_sha256": "65bfbeab4f8b488e483a1622568540caf0315f72cf33d94876c75eafc9b4b642",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_main_head_verified": true,
+  "source_tree_verified_against_local_index": true,
+  "signed_package_verification": {
+    "passed": true,
+    "report": "docs/validation/v1.11/binaries-rc2/binary-final-candidate.json",
+    "certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+    "source_input_hashes_verified": 103,
+    "lint_errors_per_flavor": 0,
+    "lint_warnings_per_flavor": 11
+  },
+  "native_evidence": {
+    "lab_retained_profile": {
+      "passed": true,
+      "checks": 1589,
+      "journey_clears": 50,
+      "original_pngs": 115,
+      "analysis_crops": 19,
+      "cold_process_verified": true,
+      "original_profile_restored": true,
+      "report": "docs/validation/v1.11/ui-bugs/ui-sdk-final-rc2-lab50/host-report.json"
+    },
+    "production_retained_profile": {
+      "passed": true,
+      "checks": 935,
+      "journey_clears": 40,
+      "original_pngs": 41,
+      "analysis_crops": 19,
+      "cold_process_verified": true,
+      "original_profile_restored": true,
+      "report": "docs/validation/v1.11/ui-bugs/ui-sdk-final-rc2-production40/host-report.json"
+    },
+    "fresh_lab_k": {
+      "passed": true,
+      "tutorial_checks": 83,
+      "avatar_checks": 45,
+      "language_checks": 36,
+      "original_pngs": 47,
+      "initial_grant_directly_observed_before_tutorial": true,
+      "report": "docs/validation/v1.11/fresh-install-rc2/README.md"
+    },
+    "first_production_startup_audio": {
+      "passed": true,
+      "checks": 7,
+      "original_pngs": 1,
+      "digital_mixed_audio_frames_observed": true,
+      "report": "docs/validation/v1.11/production-startup-k/README.md"
+    },
+    "limits": "SDK emulator observations qualify their exact APK bytes; not physical-device, physical-speaker, accessibility-service, human difficulty, retention or real-provider acceptance."
+  },
+  "compiled_gates": {
+    "production": {
+      "sandbox": false,
+      "force_test_ads": true,
+      "paid_cosmetic_draws_enabled": false,
+      "wallet_api_configured": false,
+      "social_api_configured": true,
+      "live_services_validated": false
+    },
+    "lab": {
+      "sandbox": true,
+      "force_test_ads": true,
+      "paid_cosmetic_draws_enabled": false,
+      "wallet_api_configured": false,
+      "social_api_configured": true,
+      "live_services_validated": false
+    }
+  },
+  "publication_boundaries": {
+    "google_play_uploaded": false,
+    "firebase_hosting_changed": false,
+    "backend_changed": false,
+    "live_services_validated": false,
+    "website_last_confirmed_edition": "1.10",
+    "website_delivery_record": "docs/validation/site-v1.10/deployment.json",
+    "public_firebase_origin_probe_executed": false
+  },
+  "remaining_work": [
+    "Physical-phone review including readability, audio and assistive technologies",
+    "Known L22-to-L23 and Guardian4-to-5 difficulty calibration with real players",
+    "Separate Google/two-account gifts, UMP consent and licensed Play purchase/pending/refund/recovery qualification"
+  ],
+  "profile_protection": {
+    "user_emulator_5582_untouched": true,
+    "original_profiles_and_rotation_restored_in_retained_profile_runs": true,
+    "new_owned_avds_and_their_data_preserved": true
+  }
+}

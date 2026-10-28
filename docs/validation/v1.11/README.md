@@ -2,6 +2,8 @@
 
 This record concerns the equipment-visibility bug hunt, not a Google Play upload or commercial activation. Exact binaries are production 1.11.0-rc2 and isolated Lab 1.11.0-sandbox-rc2, both code 12.
 
+[GitHub publication receipt](publication.json): source `aef6f991` and exact tree verified; four public pinned APK/AAB downloads independently match candidate sizes and SHA-256 hashes, with HTTP 200.
+
 | Evidence | Status and scope |
 | --- | --- |
 | [Baseline](baseline.json) | Published 1.10 RC3 source/artifact identities; native comparison is recorded separately, including unsuccessful fixture attempts. |

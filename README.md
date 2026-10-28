@@ -65,6 +65,8 @@ Source checks separately cover **6,544 portrait/translation assertions**, **443 
 
 Android 8+ / API26; version code **12**; production package `com.androidhit.lumadrift`. Install over the existing app to retain saves. Signing identity is unchanged. [Installation](docs/RELEASE.md) · [Checksums](releases/SHA256SUMS.txt) · [Exact candidate inputs and gates](docs/validation/v1.11/candidate.json) · [Preserved 1.10 delivery](docs/RELEASE_1_10.md). Intermediate RC1 evidence stays identified separately and is not relabelled as RC2 acceptance.
 
+Published on `main` from [source aef6f991](https://github.com/nabz0r/AndroidHit/commit/aef6f991caf34c7f3822d5080bc449fccda977f3). All four pinned GitHub downloads return HTTP 200 with the exact signed-candidate sizes and SHA-256 hashes. [Publication receipt](docs/validation/v1.11/publication.json).
+
 Google sign-in is optional and does not synchronize local gameplay saves. Actual two-account friends/gifts, consent, live ads and Play purchase lifecycle still need provider qualification. The Play Console walkthrough is paused for app improvement; this release does not announce a Play launch. No server code or remote gameplay-analytics SDK changes here.
 
 [Privacy](docs/PRIVACY.md) · [Production setup](docs/DEPLOIEMENT_PAS_A_PAS.md) · [Social qualification](docs/QUALIFICATION_SOCIALE.md) · [Server](server/README.md).
