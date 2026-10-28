@@ -1,0 +1,86 @@
+{
+  "verified_at_utc": "2026-10-28T05:16:22.769934+00:00",
+  "source_commit": "e785b1158a02a810ac7045cecc120d70b124b28f",
+  "repository": "nabz0r/AndroidHit",
+  "branch": "main",
+  "scope": "Pinned-source GitHub public downloads, independently streamed and hashed; not Google Play or Firebase Hosting delivery.",
+  "artifacts": [
+    {
+      "artifact": "luma-drift-1.10.0-rc3.apk",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/e785b1158a02a810ac7045cecc120d70b124b28f/releases/luma-drift-1.10.0-rc3.apk",
+      "http_status": 200,
+      "bytes": 7757410,
+      "sha256": "29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4",
+      "passed": true
+    },
+    {
+      "artifact": "luma-drift-1.10.0-rc3.aab",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/e785b1158a02a810ac7045cecc120d70b124b28f/releases/luma-drift-1.10.0-rc3.aab",
+      "http_status": 200,
+      "bytes": 11147415,
+      "sha256": "75396149b150b4b6bce01606ac359db858bb8e57a840f6cf5cfeab78d30d30dd",
+      "passed": true
+    },
+    {
+      "artifact": "luma-drift-1.10.0-sandbox-rc3.apk",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/e785b1158a02a810ac7045cecc120d70b124b28f/releases/luma-drift-1.10.0-sandbox-rc3.apk",
+      "http_status": 200,
+      "bytes": 7757097,
+      "sha256": "d1b085b4d9bbcf450037069ed15c7cea89b0e3e759b16e587cf3ca016a7c493f",
+      "passed": true
+    },
+    {
+      "artifact": "luma-drift-1.10.0-sandbox-rc3.aab",
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/e785b1158a02a810ac7045cecc120d70b124b28f/releases/luma-drift-1.10.0-sandbox-rc3.aab",
+      "http_status": 200,
+      "bytes": 11139206,
+      "sha256": "1f7c51e19866255bb4cb33bc76828db1dffaf9abc8f88ffbd47578abf2463247",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "source_tree": "32f6d806d9c9f059846e8b9be781f7a94fd78f77",
+  "native_evidence": {
+    "lab_full_route": {
+      "checks": 2514,
+      "screenshots": 96,
+      "passed": true,
+      "report": "docs/validation/v1.10/ui-sdk-final3-full100/host-report.json"
+    },
+    "fresh_guest": {
+      "checks": 91,
+      "screenshots": 17,
+      "passed": true,
+      "report": "docs/validation/v1.10/ui-sdk-fresh-guest-i/host-report.json"
+    },
+    "production_startup_audio": {
+      "checks": 7,
+      "screenshots": 1,
+      "passed": true,
+      "report": "docs/validation/v1.10/ui-sdk-production-final3/host-report.json"
+    }
+  },
+  "hosting": {
+    "deployed_1_10": false,
+    "last_confirmed_edition": "1.9",
+    "reason": "Mac locked; authenticated browser unavailable. Source publication is not Hosting deployment.",
+    "public_origin_probe_executed": false
+  },
+  "commercial": {
+    "force_test_ads": true,
+    "wallet_api_configured": false,
+    "paid_cosmetic_draws_enabled": false,
+    "live_services_validated": false
+  },
+  "cleanup": {
+    "owned_emulators_stopped": [
+      5580,
+      5592,
+      5594,
+      5596,
+      5598
+    ],
+    "profiles_preserved": true,
+    "user_emulator_5582_untouched": true
+  }
+}

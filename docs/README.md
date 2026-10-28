@@ -1,6 +1,16 @@
 # Luma Drift documentation
 
-## Current 1.9 candidate
+## Current 1.10 — Companion & Objectives
+
+[Signed production APK](../releases/luma-drift-1.10.0-rc3.apk) · [AAB](../releases/luma-drift-1.10.0-rc3.aab) · [Release and exact hashes](RELEASE_1_10.md) · [Illustrated experience](UX_1_10.md) · [Native qualification](validation/v1.10/README.md) · [Prism journal](PRISM_STORY_1_10.md) · [Roadmap](ROADMAP.md).
+
+Production 1.10.0-rc3 / Lab 1.10.0-sandbox-rc3, code 11. Home, the complete animated companion, wardrobe previews, a pinned collection objective, four reward tabs, event/shop navigation and durable local claims are delivered. Exact final native checks pass2,514 for the 100-level route,91 for a genuine fresh guest and7 for production startup/audio. Existing puzzle/catalog sources and save identities remain unchanged; human difficulty and provider qualification remain separate.
+
+The [website source/gallery](validation/site-v1.10/README.md) follows RC3. Hosting 1.10 deployment and local browser review remain pending while the Mac is locked; last confirmed hosted version 1.9. [Public GitHub delivery proof](validation/v1.10/publication.json).
+
+Earlier guides below retain their dated evidence; their package downloads are historical.
+
+## Preserved 1.9 candidate
 
 [Signed APK/AAB and exact hashes](RELEASE_1_9.md) · [New-player audit and 2026 sources](PLAYER_AUDIT_2026.md) · [1.9 UX](UX_1_9.md) · [Guardian rules](GUARDIANS.md) · [Executed qualification](validation/v1.9/README.md) · [Website](validation/site-v1.9/README.md).
 
@@ -8,7 +18,7 @@ The 1.8 route below remains the ordinary Journey foundation. The current release
 
 **A little spark. A great escape.** Read the actual rule, inspect the exact delivered bytes, and distinguish implementation, installed acceptance and service rollout.
 
-Current signed delivery: **[production 1.9.0-rc1 APK](../releases/luma-drift-1.9.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.9.0-rc1.aab) · [Exact hashes and release notes](RELEASE_1_9.md). Lab remains a separate `.sandbox` package. Source/package integrity, installed acceptance, Hosting delivery and real-provider qualification are separately recorded.
+Preserved 1.9 signed delivery: **[production 1.9.0-rc1 APK](../releases/luma-drift-1.9.0-rc1.apk)** · [Play AAB](../releases/luma-drift-1.9.0-rc1.aab) · [Exact hashes and release notes](RELEASE_1_9.md). Lab remains a separate `.sandbox` package. Source/package integrity, installed acceptance, Hosting delivery and real-provider qualification are separately recorded.
 
 The current game has 1,000 new L Journey boards, 240 M Remix, T daily/weekly events, six preserved sealed-passage practice challenges, 24 companions, six themes, 18 bounded functional equipment items, 24 appearance-only wardrobe items and six powers. Seven interactive lessons teach the actual rules. The ten-biome map remains scrollable from 1 to 1,000. Progress, earned inventory and tutorial receipts remain local; Google identity does not provide gameplay cloud saves.
 
@@ -53,7 +63,7 @@ LumaCoins are earned and device-local. LumaGold is the separate account premium 
 | [Art and audio](ART_AUDIO.md) | Native silhouettes and wardrobe, generated Dream Glade and retained Atlas, biome arrangements and playback evidence boundaries |
 | [Brand kit](store/README.md) | Original promotional artwork, editable assets and historical export provenance |
 | [Public pages](PUBLIC_PAGES.md) | FR/EN homepage, support/privacy/deletion routes and separate Hosting delivery |
-| [Store copy](STORE_LISTING.md) | Current 1.9 draft and clearly preserved earlier copy; no submitted Play listing |
+| [Store copy](STORE_LISTING.md) | Preserved 1.9 draft and earlier copy; no submitted Play listing |
 
 The previously published [website 1.6](validation/site-v1.6/README.md) has its own record of 18 local responsive states, real final-APK imagery, source hashes and Firebase completion. The [retained 1.5 site](validation/site-v1.5/README.md), original brand vectors and [Atlas pixel provenance](art/aurora-atlas-v1.json) remain distinct. Native screenshots do not independently establish a website revision or public-origin byte comparison.
 

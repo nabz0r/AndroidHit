@@ -1,4 +1,6 @@
-> **Current 1.9 validation:** [executed evidence](validation/v1.9/README.md) and [exact release](RELEASE_1_9.md). The [1.8 record](validation/v1.8/README.md) remains separate. The [1.7](VALIDATION_1_7.md), [1.6](VALIDATION_1_6.md) and 1.5 records below preserve their original hashes, captures and scopes.
+> **Current 1.10 validation:** [exact RC3 evidence](validation/v1.10/README.md), [release](RELEASE_1_10.md) and [public artifact verification](validation/v1.10/publication.json). The installed100-level route passes 2,514 checks, a genuine fresh guest 91 and production startup/audio 7. Model, emulator and delivery scopes remain separate; website Hosting 1.10 is pending.
+
+> **Preserved 1.9 validation:** [executed evidence](validation/v1.9/README.md) and [exact release](RELEASE_1_9.md). The [1.8 record](validation/v1.8/README.md) remains separate. The [1.7](VALIDATION_1_7.md), [1.6](VALIDATION_1_6.md) and 1.5 records below preserve their original hashes, captures and scopes.
 
 # Luma Drift 1.5 validation
 

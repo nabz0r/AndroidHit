@@ -46,3 +46,7 @@ Certificate SHA-256: `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5d
 Website source, FR/EN copy and the five-image gallery follow the exact RC3 Lab captures. **Firebase Hosting 1.10 deployment is pending:** the authenticated browser session is unavailable while the Mac is locked. The last confirmed Hosting delivery was 1.9; a source update is not a Hosting deployment. No public Firebase origin probe or served-byte claim is made.
 
 The documented L22→L23 structural increase, Guardian4→5 work increase and horizontal G1 pieces remain on the roadmap. This release preserves their logic rather than presenting a new human-calibrated difficulty curve. Google sign-in does not synchronize local gameplay saves. Test advertising is forced; real checkout and paid cosmetic draws stay gated. Two-account friendship/gift acceptance, provider acceptance, physical-device performance and human comprehension remain separate. No Cloud Run configuration or Google Play release is changed. No retention, revenue or hit outcome is inferred from these tests.
+
+## GitHub delivery
+
+Source, four signed artifacts and exact evidence are published together on [main source e785b115](https://github.com/nabz0r/AndroidHit/commit/e785b1158a02a810ac7045cecc120d70b124b28f). All four public downloads from that pinned commit return HTTP 200 and match the tested sizes/SHA-256. [Independent delivery record](validation/v1.10/publication.json). This documentation receipt changes no app, website payload or release artifact. Hosting 1.10 remains pending as described above.

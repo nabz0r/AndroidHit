@@ -1,6 +1,14 @@
 # Luma Drift — illustrated tour
 
-## Current 1.9: learn, plan and restore the Prism
+## Current 1.10: companion, objectives and journal
+
+The signed candidate is production 1.10.0-rc3 / Lab 1.10.0-sandbox-rc3, code 11. [Illustrated UX contract](UX_1_10.md) · [Release](RELEASE_1_10.md) · [Original capture provenance](validation/site-v1.10/captures.json).
+
+<p><img src="screenshots/v1.10/ui-sdk-final3-full100/home-fr-localized.png" width="225" alt="Actual RC3 guest Home with saved L11 and chosen Cupid goal"><img src="screenshots/v1.10/ui-sdk-final3-full100/avatar-fr.png" width="225" alt="Actual RC3 complete companion and clothing/equipment slots"><img src="screenshots/v1.10/ui-sdk-final3-full100/story-fr.png" width="225" alt="Actual RC3 Prism journal with claimed-fragment progress"></p>
+
+These unedited native images follow the actual 100-level route and later replays; they are guest states, with a resumed L11 and two claimed guardian fragments. Selection colours and four fully visible footer controls are checked on exact final pixels/bounds. The website uses these source images, but local browser review and Firebase Hosting 1.10 deployment remain pending while the Mac is locked. No FPS, physical-device, human-comprehension or live-account acceptance is inferred.
+
+## Preserved 1.9: learn, plan and restore the Prism
 
 The current signed release is **1.9.0-rc1 / code 10**. [Release](RELEASE_1_9.md) · [Native evidence and earlier failures](validation/v1.9/README.md) · [Research-linked first-100 audit](PLAYER_AUDIT_2026.md).
 
