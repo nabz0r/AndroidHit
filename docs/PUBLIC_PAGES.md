@@ -2,7 +2,7 @@
 
 ## Current 1.12 website refresh
 
-The homepage now presents the exact signed 1.12.0-rc2/code 13 APK, the atelier, illustrated powers, integrated item pages, visible equipped portrait and distinct earned/account currencies. Nine full native Lab RC2 PNG copies have exact source/hash records. Both languages retain explicit test-ad/closed-checkout state. Privacy metadata now identifies 28 October 2026/1.12; data terms and deletion behavior stay the same. [Current checks and source provenance](validation/site-v1.12/README.md). Hosting delivery is recorded separately after source publication.
+The homepage now presents the exact signed 1.12.0-rc2/code 13 APK, the atelier, illustrated powers, integrated item pages, visible equipped portrait and distinct earned/account currencies. Nine full native Lab RC2 PNG copies have exact source/hash records. Both languages retain explicit test-ad/closed-checkout state. Privacy metadata now identifies 28 October 2026/1.12; data terms and deletion behavior stay the same. [Current checks and source provenance](validation/site-v1.12/README.md). Hosting publication is confirmed at **28 October 2026,14:08:23.437 UTC**, source `91ffac7a`, all 98 payloads hash-checked before deploy, live version `180b7fc68c516c9b` FINALIZED/DEPLOY. [Receipt](validation/site-v1.12/deployment.json). Localhost review covers12 FR/EN desktop/mobile DOM states and full proportionally scaled viewport frames; no public-origin response/render check or provider action is inferred.
 
 ## Preserved 1.10 source and confirmed Hosting delivery · 28 October 2026
 

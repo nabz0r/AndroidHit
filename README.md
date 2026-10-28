@@ -16,6 +16,8 @@
 
 Unedited final **Lab 1.12.0-sandbox-rc2** frames. **1,179 native checks / 40 real Journey clears** pass, including all six shop languages, actual earned purchases, live-run return through rotation, equipped-art comparisons and a distinct cold process. The guest legitimately replays L13 for the return test; the 2,425 coins shown are its observed earned balance. The unknown account LumaGold is not a simulated balance. [Executed evidence](docs/validation/v1.12/ui-bugs/ui-sdk-final-rc2-lab40/README.md).
 
+**Website 1.12 is deployed:** [Open Luma Drift](https://luma-drift-production.web.app/). The refreshed FR/EN page shows nine exact native RC2 captures, the atelier, equipped portrait, clear currencies and the current signed APK. Firebase confirms98 source payloads from`91ffac7a`, with a finalized live release at**28 October 2026,14:08:23.437 UTC**. [Delivery and local checks](docs/validation/site-v1.12/README.md).
+
 ## Preserved equipment fixes — 1.11
 
 - **Apply, then see the result.** Equipping a companion, clothing or gear returns to the portrait. Compact clothing labels show the actual variant; all seven worn slots retain full names in their accessible descriptions and offers. Clothing purchase opens an owned offer with an explicit Equip button.
@@ -33,7 +35,7 @@ The first two unedited **Lab 1.11.0-sandbox-rc2** captures show a genuinely new 
 
 Unedited **Lab 1.10.0-sandbox-rc3** Android captures. The native route really completes the first 100 Journey levels, then replays boards: Home resumes **L11**, while the journal shows chapter 2. The Cupid goal is affordable but still unowned; its preview grants nothing. These are local guest states, not Google identity or payment evidence. [Capture provenance](docs/validation/site-v1.10/captures.json).
 
-**Website delivery:** [Luma Drift 1.10 is deployed](https://luma-drift-production.web.app/). Firebase CLI and live-channel management confirm 89 files from source `9be35d2b`, finalized at **28 October 2026, 10:44:28.535 UTC**. [Exact delivery proof](docs/validation/site-v1.10/deployment.json). Local browser review covers 12 FR/EN DOM states and six accepted desktop renders; the incomplete mobile provider images are excluded from visual acceptance. No public-origin byte probe, account action or provider transaction is inferred. [Scope and limits](docs/validation/site-v1.10/README.md).
+**Preserved 1.10 website delivery:** [Luma Drift 1.10 was deployed](https://luma-drift-production.web.app/). Firebase CLI and live-channel management confirm 89 files from source `9be35d2b`, finalized at **28 October 2026, 10:44:28.535 UTC**. [Exact delivery proof](docs/validation/site-v1.10/deployment.json). Local browser review covers 12 FR/EN DOM states and six accepted desktop renders; the incomplete mobile provider images are excluded from visual acceptance. No public-origin byte probe, account action or provider transaction is inferred. [Scope and limits](docs/validation/site-v1.10/README.md).
 
 ## Companion & Objectives — 1.10
 
@@ -80,7 +82,7 @@ Android 8+ / API 26; code 13; production package `com.androidhit.lumadrift`. Ins
 
 Published on `main` from [source 32bf07ea](https://github.com/nabz0r/AndroidHit/commit/32bf07ea2ef2aa9dd962d81145bf075c6ca05b2e). Four pinned public downloads independently return HTTP 200 with the exact signed-candidate sizes and SHA-256 hashes. [Delivery receipt](docs/validation/v1.12/publication.json).
 
-Google identity does not synchronize local gameplay. Actual two-account gifts, real consent/ads and Play purchase lifecycle remain separately qualified. Website 1.12 source and local qualification are recorded separately in [the site report](docs/validation/site-v1.12/README.md); its Hosting receipt is added after publication. No Play or server deployment occurs in the Android release.
+Google identity does not synchronize local gameplay. Actual two-account gifts, real consent/ads and Play purchase lifecycle remain separately qualified. Website 1.12 has its separate [Hosting receipt and local browser qualification](docs/validation/site-v1.12/README.md). No Play or server deployment occurs in the Android release.
 
 ## Build and inspect
 

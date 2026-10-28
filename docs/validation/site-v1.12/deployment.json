@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-28T14:11:10.364370+00:00",
+  "source_commit": "91ffac7a0f37ca1005824fea66906bd71a7d79a0",
+  "source_public_tree": "4453425d11ca3fd9d3218a2be27e79629c71e44b",
+  "source_checkout_clean": true,
+  "hosting_payloads": 98,
+  "payload_bytes": 70090893,
+  "source_manifest": "docs/validation/site-v1.12/release/source-manifest.json",
+  "source_manifest_sha256": "780e6280bf99c630d18f1fa601ace22929ebf370482ac945620b21c790c56308",
+  "all_source_payloads_hash_verified_on_deployment_checkout": true,
+  "public_origin_requested": false,
+  "firebase_cli_version": "15.33.0",
+  "site": "luma-drift-production",
+  "hosting_url": "https://luma-drift-production.web.app",
+  "edition": "1.12",
+  "android_release": "1.12.0-rc2",
+  "cli_deploy_complete": true,
+  "live_management": {
+    "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+    "url": "https://luma-drift-production.web.app",
+    "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793196503437000",
+    "release_type": "DEPLOY",
+    "release_time": "2026-10-28T14:08:23.437Z",
+    "release_message": "Website1.12 from 91ffac7a0f37ca1005824fea66906bd71a7d79a0",
+    "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/180b7fc68c516c9b",
+    "version_status": "FINALIZED",
+    "management_provider": "authenticated firebase hosting:channel:list --json",
+    "headers": [
+      {
+        "headers": {
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY"
+        },
+        "glob": "**"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-store"
+        },
+        "glob": "/site-config.js"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-cache"
+        },
+        "glob": "/"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-cache"
+        },
+        "glob": "**/*.html"
+      }
+    ]
+  },
+  "public_origin_byte_or_render_verified": false,
+  "postdeploy_inspection": "Original helper completed Hosting; gcloud metadata credential lookup failed. Existing authenticated Firebase CLI confirmed the exact live release without another deployment.",
+  "scope": "Exact clean source and98payload hashes checked before Firebase CLI completion. Authenticated live channel reports DEPLOY/FINALIZED and exact source-commit message. Browser review uses localhost. No public-origin request, real auth/deletion, ad, checkout or server deployment.",
+  "local_browser_matrix": "browser/report.json",
+  "local_browser_dom_states_pass": 12,
+  "public_payload_unchanged_after_deployment": true,
+  "evidence_sha256": {
+    "deployment-preflight.json": "7f79482e3b507c77ef3bfd4815d2815701f7d992305eabf98b33eb6fdf7d4c8f",
+    "deploy-cli-excerpt.txt": "25e3151b89135fdd316ee4f5fae63d84fd9d656680d3b6aae409dba1a035be20",
+    "live-management.json": "24835fe59995a882d4710857af5d6dd329f6a266ae33cd1c7af3afeb59d381f1",
+    "hosting-confirmation.jpg": "2f386a9638c472f624ce5190a29937819f4a6afff7272aa408be66c0d463d47e",
+    "browser/report.json": "80a61d98cec7be7b6e7f21ce6f6c7e5136c804807f0c967bffe227fe97e54fb1"
+  }
+}

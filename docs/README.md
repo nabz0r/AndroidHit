@@ -8,6 +8,8 @@
 
 Two explicit currencies, original illustrated powers, lighter Home/shop surfaces and ordinary navigable item pages replace dense modal browsing. Ownership, effect, stock, cost and Equip remain distinct. Account balance is last-known or unknown, never a fake zero. A reproduced refused-write power-purchase defect now uses the exact tracked save/retry boundary. Production and Lab retain test ads and closed checkout; no Play or Hosting mutation. Final native results: Lab **1,179 checks/40 clears**, production **7 startup +35 shop checks**, and account-wallet UI **45 checks/6 languages**. [Executed scopes](validation/v1.12/ui-bugs/SDK_UI_FINAL.md) · [Wallet replay](validation/v1.12/commerce-native/README.md).
 
+Website 1.12 is separately deployed: [FR/EN pages and actual native gallery](validation/site-v1.12/README.md), exact current APK route,12 responsive DOM states andFirebase CLI/live-channel receipt. Source`91ffac7a`, version `180b7fc68c516c9b`, finalized28 October 2026 at 14:08:23.437 UTC. The Android release itself made noHosting change.
+
 ## Preserved 1.11 — equipment visibility and bug hunting
 
 [Production APK](../releases/luma-drift-1.11.0-rc2.apk) · [AAB](../releases/luma-drift-1.11.0-rc2.aab) · [Changes and limits](RELEASE_1_11.md) · [Exact artifacts](validation/v1.11/candidate.json) · [Qualification](validation/v1.11/README.md) · [Roadmap](ROADMAP.md).
@@ -16,7 +18,7 @@ Production 1.11.0-rc2 and isolated Lab 1.11.0-sandbox-rc2, code 12. Portrait com
 
 [GitHub delivery receipt](validation/v1.11/publication.json): source `aef6f991`, exact tree verified; four signed APK/AAB public downloads independently streamed, HTTP 200, matching sizes and SHA-256 hashes.
 
-The website remains on its separately confirmed 1.10 deployment. Play publication and live provider activation are paused during this bug hunt. Google identity does not synchronize local gameplay.
+At the 1.11 app delivery, the website still had its separately confirmed 1.10 deployment; the later 1.12 refresh is linked above. Play publication and live provider activation are paused during this bug hunt. Google identity does not synchronize local gameplay.
 
 
 ## Preserved 1.10 — Companion & Objectives

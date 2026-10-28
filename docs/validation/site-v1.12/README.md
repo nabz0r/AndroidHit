@@ -1,12 +1,12 @@
 # Website 1.12 — atelier, items and clear currencies
 
-The site presents production **1.12.0-rc2 / code 13**, Android 8+, exact signed APK **7,773,794 bytes** / SHA-256 `de581253b64232ae45bcbd647862dd470d522068f26516f6417bf515e882403d`. Existing app bytes and commercial gates remain unchanged. Hosting publication is recorded separately after these source and local checks.
+The site presents production **1.12.0-rc2 / code 13**, Android 8+, exact signed APK **7,773,794 bytes** / SHA-256 `de581253b64232ae45bcbd647862dd470d522068f26516f6417bf515e882403d`. Existing app bytes and commercial gates remain unchanged. **Hosting 1.12 is deployed**, from exact clean source `91ffac7a0f37ca1005824fea66906bd71a7d79a0`, finalized **28 October 2026,14:08:23.437 UTC**. [Deployment receipt](deployment.json).
 
 ## What changed
 
 The FR/EN homepage leads with the actual 1.12 Home, then explains the new atelier, six recognizable powers, ordinary scrollable item pages, purchase/Equip distinction, equipped companion, earned LumaCoins and account LumaGold. It also keeps the seven free lessons, Undo/refund, 1,000 Journey boards, Remix and optional guardians. The full signed APK, exact version, byte count, checksum and release/qualification links replace the old1.10 download.
 
-Pastel cream/plum styling is retained, with quieter open surfaces, round earned coins and violet faceted premium tokens. Layouts adapt to small screens. There is no new tracking SDK, remote font, autoplay, account request or monetization activation. Privacy metadata is updated to28October2026/1.12; its substantive data terms and deletion code remain unchanged. Existing no-cache/no-store/security headers remain unchanged.
+Pastel cream/plum styling is retained, with quieter open surfaces, round earned coins and violet faceted premium tokens. Layouts adapt to small screens. There is no new tracking SDK, remote font, autoplay, account request or monetization activation. Privacy metadata is updated to28 October 2026/1.12; its substantive data terms and deletion code remain unchanged. Existing no-cache/no-store/security headers remain unchanged.
 
 ## Actual image provenance
 
@@ -29,4 +29,10 @@ node --test public/tests/site-language-v112.test.mjs public/tests/deletion-core.
 python3 -m http.server 8765 --directory public --bind 127.0.0.1
 ```
 
-The separate [deployment helper](../../../scripts/deploy-site-v112.py) accepts an exact clean commit and an output directory outside the checkout. It verifies the entire Hosting payload set and hashes, deploys only Hosting when `--deploy` is specified, and inspects whitelisted authenticated live-channel management metadata. Its access token stays in memory and is never printed. It never requests a public Hosting URL. The source manifest is not itself deployment proof.
+The separate [deployment helper](../../../scripts/deploy-site-v112.py) accepts an exact clean commit and an output directory outside the checkout. It verifies the entire Hosting payload set and hashes, deploys only Hosting when `--deploy` is specified, and inspects whitelisted authenticated live-channel management metadata. Authentication stays within Firebase CLI; the helper does not read or print tokens. It never requests a public Hosting URL. The source manifest is not itself deployment proof.
+
+## Confirmed Hosting delivery
+
+All **98 source payloads /70,090,893 bytes** matched [the manifest](release/source-manifest.json) on the clean Cloud Shell checkout before publishing. Firebase CLI 15.33.0 reports **Deploy complete**. The existing authenticated Firebase session then reports live version `180b7fc68c516c9b` **FINALIZED**, release `1793196503437000` **DEPLOY**, with message identifying the exact source commit. [CLI excerpt](deploy-cli-excerpt.txt) · [Management metadata](live-management.json) · [Preflight](deployment-preflight.json).
+
+The initial helper successfully deployed Hosting but its subsequent gcloud credential lookup failed. Management inspection was recovered with `firebase hosting:channel:list --json`; there was no second deployment, login or security change. The helper now uses that existing Firebase CLI authentication directly and checks the release message. Public files remain byte-identical to the deployed source. The later documentation/helper receipt commit does not require another Hosting deployment.
