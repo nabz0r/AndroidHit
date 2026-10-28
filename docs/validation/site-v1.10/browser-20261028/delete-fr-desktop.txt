@@ -1,0 +1,68 @@
+- link "Aller au contenu":
+  - /url: /delete-account/index.html#main
+- banner:
+  - link "Luma Drift":
+    - /url: /index.html
+    - text: LUMA
+    - generic: DRIFT
+  - navigation "Navigation":
+    - link "Confidentialité":
+      - /url: /privacy/index.html
+      - generic: Confidentialité
+    - link "Mon compte":
+      - /url: /delete-account/index.html
+      - generic: Mon compte
+  - group "Language / Langue":
+    - button "FR" [active] [pressed]
+    - button "EN"
+- complementary: Services en qualification · Achats et annonces réelles non activés.
+- main:
+  - article:
+    - paragraph: LUMA DRIFT · GESTION DU COMPTE
+    - heading "Ton compte. Ton choix." [level=1]:
+      - text: Ton compte.
+      - emphasis: Ton choix.
+    - paragraph: Supprime ton compte Luma Drift et son portefeuille associé. Ton compte Google reste intact.
+    - generic: "01"
+    - heading "Depuis le jeu" [level=2]
+    - paragraph:
+      - text: Ouvre
+      - strong: Paramètres → Compte → Supprimer mon compte
+      - text: . Reconnecte-toi si demandé, puis lis et confirme la suppression.
+    - paragraph: Cette action efface le compte de l’application ; elle ne ferme pas ton compte Google. Le serveur de portefeuille est déployé. Pour une version Android reliée à ce serveur, la suppression doit passer par son service ; ce parcours reste à qualifier.
+    - region "Sans réinstaller le jeu":
+      - generic: "02"
+      - heading "Sans réinstaller le jeu" [level=2]
+      - paragraph: Connecte-toi avec le même compte Google pour confirmer ton identité. La suppression utilise une connexion récente et une confirmation séparée. Une confirmation peut effacer réellement le compte Luma Drift et son portefeuille, y compris pendant la qualification.
+      - status: Connecte-toi avec Google pour vérifier le compte Luma Drift à supprimer.
+      - button "Se connecter avec Google":
+        - generic: Se connecter avec Google
+    - heading "Ce qui est supprimé" [level=2]
+    - paragraph: "Le parcours doit supprimer d’abord les données serveur : profil et code ami, relations, invitations, cadeaux et reçus sociaux associés, portefeuille actif et données d’opérations. L’identité Firebase de Luma Drift est supprimée après confirmation serveur ; si ce nettoyage échoue, elle doit être conservée pour réessayer. Les nouvelles routes sociales et le parcours complet restent à qualifier avec des comptes dédiés. La suppression ne s’applique pas aux autres jeux, au compte Google ni aux copies que tu as déjà partagées."
+    - paragraph: Un audit minimal haché des transactions est prévu pendant 365 jours pour la prévention des doubles crédits et la gestion des remboursements. La suppression automatique de cet audit n’est pas encore activée ni vérifiée. Cette durée et la suppression automatique restent à confirmer avant l’ouverture des achats. Les données conservées par Google suivent ses propres règles.
+    - heading "Et ma sauvegarde hors ligne ?" [level=2]
+    - paragraph: La sauvegarde du puzzle, les LumaCoins locaux, les cadeaux et quêtes locales, le dressing, les équipements d’avatar et le journal restent sur l’appareil. Pour les effacer, utilise les paramètres Android → Applications → Luma Drift → Stockage → Effacer les données. Cela ne supprime pas à lui seul un compte distant.
+    - heading "Un problème de connexion ?" [level=2]
+    - paragraph:
+      - text: "Pour une demande privée concernant Luma Drift, contacte nabilux :"
+      - link "nabz0r+gaming@gmail.com":
+        - /url: mailto:nabz0r%2Bgaming@gmail.com?subject=Luma%20Drift%20%E2%80%94%20account%20%2F%20privacy
+      - text: . N’envoie jamais ton mot de passe, un code de connexion ni tes coordonnées bancaires.
+    - paragraph: Le parcours de connexion et de suppression est en cours de vérification. Si tu rencontres un problème, utilise le contact privé ci-dessus. Ne publie aucune donnée de compte dans les issues GitHub.
+    - paragraph:
+      - link "Lire la politique de confidentialité":
+        - /url: /privacy/index.html#deletion
+- contentinfo:
+  - link "Luma Drift":
+    - /url: /index.html
+  - paragraph: Un mouvement peut tout changer.
+  - link "Confidentialité":
+    - /url: /privacy/index.html
+  - link "Supprimer mon compte":
+    - /url: /delete-account/index.html
+  - link "Projet & documentation":
+    - /url: https://github.com/nabz0r/AndroidHit
+  - paragraph:
+    - text: nabilux ·
+    - link "nabz0r+gaming@gmail.com":
+      - /url: mailto:nabz0r%2Bgaming@gmail.com

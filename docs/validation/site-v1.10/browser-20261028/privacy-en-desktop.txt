@@ -1,0 +1,89 @@
+- link "Skip to content":
+  - /url: /privacy/index.html?lang=en#main
+- banner:
+  - link "Luma Drift":
+    - /url: /index.html?lang=en
+    - text: LUMA
+    - generic: DRIFT
+  - navigation "Navigation":
+    - link "Privacy":
+      - /url: /privacy/index.html?lang=en
+      - generic: Privacy
+    - link "My account":
+      - /url: /delete-account/index.html?lang=en
+      - generic: My account
+  - group "Language / Langue":
+    - button "FR"
+    - button "EN" [active] [pressed]
+- complementary: Services under qualification · Real purchases and live ads are not activated.
+- main:
+  - article:
+    - paragraph: YOUR DATA, YOUR CHOICES
+    - heading "Privacy. Made clear." [level=1]:
+      - text: Privacy.
+      - emphasis: Made clear.
+    - paragraph:
+      - text: This page explains data in the Android game Luma Drift (
+      - code: com.androidhit.lumadrift
+      - text: ), optional services and the controls available to you.
+    - paragraph: "Last updated: 27 October 2026 · Luma Drift 1.9 · Services under qualification"
+    - strong: Before public launch.
+    - text: The online wallet is deployed and remains under review. Real purchases and live ads are not open yet. Luma Drift Lab has a separate save; its local qualification LumaCoins never become purchased LumaGold.
+    - heading "1. The puzzle, without an account" [level=2]
+    - paragraph: Progress, stars, settings, inventory, LumaCoins, local gifts and quests, wardrobe cosmetics, equipment and interrupted games stay on your device. Your chosen visual treatment, active guardian attempt and local gift/power-sample receipts also remain there, without age profiling or a new remote tracking tool. The device date is used for challenges and events. Google sign-in does not automatically upload this progress to the cloud. Clearing app data or uninstalling can remove the local save.
+    - heading "2. Optional Google sign-in" [level=2]
+    - paragraph: If you choose to sign in, Google and Firebase Authentication verify your identity. The app can show the returned name or email and the SDK can retain a session. The app does not ask for your Google password or put authentication tokens in its play journal. The wallet server uses your Firebase identifier to protect balances and purchases. Signing in does not give advertising consent.
+    - heading "3. Optional friends, profile and gifts" [level=2]
+    - paragraph: The prepared social service uses Firebase sign-in. If you create a profile, the server stores your friend code, chosen nickname and avatar identifier, together with the friendship relationships and requests it needs. The app does not import your address book or request your Google contact list.
+    - paragraph: "Progress sharing is a separate choice, off by default: your reported level and its timestamp are visible on mutual friends’ maps only when you enable sharing. These are app-reported snapshots, not live presence or a cloud save. You can withdraw sharing or remove a friendship. Gifts contain one hint, without paid currency; the prepared limits are 3 sends and 5 collections per UTC day, with one send per friend per day."
+    - paragraph: "Profiles and relationships remain until removal or account deletion. Invitations and gifts have a 7-day validity period. Technical social-operation receipts are planned for 30 days to prevent duplicate operations. Functional expiration does not by itself prove physical purging: server maintenance is prepared to remove expired records, but its automatic scheduler is not yet deployed or qualified. Account deletion also provides for their removal. The new flows are not presented as tested between two real accounts."
+    - heading "4. Advertising and privacy choices" [level=2]
+    - paragraph: Rewarded videos are optional. The game requires a declaration of adulthood and a separate opt-in before its advertising flow. Google UMP presents applicable choices; the privacy control lets you revisit them when available. You can disable new requests in settings. Declining an ad does not prevent a free restart.
+    - paragraph: When used, Google advertising services can process an IP address, device or account identifiers, interactions and diagnostics according to configuration and applicable choices. Luma Drift does not request precise location, contacts, microphone or camera access for play. Google services also follow their own policies.
+    - heading "5. LumaCoins, LumaGold and wallet" [level=2]
+    - paragraph: "LumaCoins are earned locally and remain separate from the premium wallet’s LumaGold. The local cosmetic capsule spends LumaCoins only, with no conversion to or from LumaGold. Premium capsule sales are prepared but remain closed by two conditions: activation is disabled in both the APK and server. Real qualification remains separate from those settings. The authenticated vault reads the account balance, cosmetic entitlements and conditional probabilities: these entitlements are separate from items earned only on this device. An item new to the account may already be owned locally. Real purchases will use Google Play, which handles payment. Luma Drift does not receive your payment-card number. The server is designed to verify the product, payment state and purchase token with Google Play before granting gold. It retains the account identifier, balance, operations and references needed to prevent duplicate credits and process cancellations or refunds. This flow remains under review; purchases are not open yet. Gold has no cash redemption value inside the game; purchase refund requests use Google Play’s options."
+    - paragraph: The purchased wallet will be separate from coins earned locally and will buy permanent companions and cosmetics. Purchase terms will be presented before purchases open.
+    - heading "6. Local journal and sharing" [level=2]
+    - paragraph: The play journal is off by default. When enabled, it keeps up to 2,000 gameplay events, dates, results and diagnostics on the device, including ad or purchase events where supported by the version. The game does not automatically send this journal to the publisher and does not include Firebase Analytics. Disabling it stops new entries; clearing it removes local observations and exports still held by the app.
+    - paragraph: Sharing a challenge or exporting the journal opens the Android chooser. You select the recipient; the selected app may send the file under its own rules. Clearing the journal cannot recall copies already shared.
+    - heading "7. Delete your account and data" [level=2]
+    - paragraph:
+      - text: Use
+      - strong: Settings → Account → Delete my account
+      - text: ", or the"
+      - link "account deletion page":
+        - /url: /delete-account/index.html?lang=en
+      - text: . A recent sign-in may be required. The server must first remove the social profile, relationships, invitations, gifts and associated receipts, together with the active wallet, before deleting the Luma Drift Firebase identity. If that server step fails, the app retains the identity so it can retry. Deletion does not affect your Google Account. Confirmed deletion does not automatically refund purchases. To erase the offline save on this device, also clear the app’s data in Android settings.
+    - paragraph: The server is designed to remove the active wallet, operation data and raw purchase references after deletion. A minimal audit containing hashed identifiers, products, quantities and dates is retained to prevent fraud, duplicate credits and inconsistent refunds. The current configuration plans to retain this audit for 365 days. Automatic removal of this audit has not been activated or verified yet. This period and automatic removal must be confirmed before purchases open. Copies and logs Google retains for its own services follow Google’s rules.
+    - heading "8. This website and service providers" [level=2]
+    - paragraph: The Android game has six languages; these web pages are available in French and English. This site includes no ads, audience analytics, remote fonts or Luma Drift tracking cookies. Its host receives information needed to serve pages, such as IP addresses and requests. The web deletion flow loads Firebase and Google only after a sign-in action, when configured. Its deletion session stays in memory; the site does not store your token in the browser.
+    - paragraph:
+      - text: The planned providers are Google/Firebase for identity, AdMob for optional advertising, Google Play for purchases and Google Cloud for the wallet. Their infrastructure may process information outside your country. Read
+      - link "Google’s privacy policy":
+        - /url: https://policies.google.com/privacy
+      - text: and
+      - link "Firebase’s privacy information":
+        - /url: https://firebase.google.com/support/privacy
+      - text: .
+    - heading "9. Questions and requests" [level=2]
+    - paragraph:
+      - text: "For a private Luma Drift request, contact nabilux:"
+      - link "nabz0r+gaming@gmail.com":
+        - /url: mailto:nabz0r%2Bgaming@gmail.com?subject=Luma%20Drift%20%E2%80%94%20account%20%2F%20privacy
+      - text: . Never send a password, sign-in code or payment-card details.
+    - paragraph: Do not post a player’s email, receipt, token or identity document in GitHub issues.
+    - paragraph: Depending on your situation and applicable rules, you may request access, correction or deletion and revisit advertising choices. You can use the contact above to exercise these rights or ask a question.
+- contentinfo:
+  - link "Luma Drift":
+    - /url: /index.html?lang=en
+  - paragraph: One move can change everything.
+  - link "Privacy":
+    - /url: /privacy/index.html?lang=en
+  - link "Delete my account":
+    - /url: /delete-account/index.html?lang=en
+  - link "Project & documentation":
+    - /url: https://github.com/nabz0r/AndroidHit
+  - paragraph:
+    - text: nabilux ·
+    - link "nabz0r+gaming@gmail.com":
+      - /url: mailto:nabz0r%2Bgaming@gmail.com

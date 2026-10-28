@@ -1,0 +1,68 @@
+- link "Skip to content":
+  - /url: /delete-account/index.html?lang=en#main
+- banner:
+  - link "Luma Drift":
+    - /url: /index.html?lang=en
+    - text: LUMA
+    - generic: DRIFT
+  - navigation "Navigation":
+    - link "Privacy":
+      - /url: /privacy/index.html?lang=en
+      - generic: Privacy
+    - link "My account":
+      - /url: /delete-account/index.html?lang=en
+      - generic: My account
+  - group "Language / Langue":
+    - button "FR"
+    - button "EN" [active] [pressed]
+- complementary: Services under qualification · Real purchases and live ads are not activated.
+- main:
+  - article:
+    - paragraph: LUMA DRIFT · ACCOUNT CONTROLS
+    - heading "Your account. Your choice." [level=1]:
+      - text: Your account.
+      - emphasis: Your choice.
+    - paragraph: Delete your Luma Drift account and its associated wallet. Your Google Account stays intact.
+    - generic: "01"
+    - heading "From the game" [level=2]
+    - paragraph:
+      - text: Open
+      - strong: Settings → Account → Delete my account
+      - text: . Sign in again if requested, then read and confirm deletion.
+    - paragraph: This deletes the app account; it does not close your Google Account. The wallet server is deployed. For an Android version connected to that server, deletion must use its service; this flow still needs qualification.
+    - region "Without reinstalling":
+      - generic: "02"
+      - heading "Without reinstalling" [level=2]
+      - paragraph: Sign in with the same Google account to verify your identity. Deletion uses a recent sign-in and a separate confirmation. Confirming can delete the real Luma Drift account and wallet, including during qualification.
+      - status: Sign in with Google to verify the Luma Drift account you want to delete.
+      - button "Sign in with Google":
+        - generic: Sign in with Google
+    - heading "What is deleted" [level=2]
+    - paragraph: "The flow must first remove server data: profile and friend code, relationships, invitations, gifts and associated social receipts, active wallet and operation data. The Luma Drift Firebase identity is deleted after server confirmation; if cleanup fails, the identity must remain available to retry. The new social routes and complete flow still need qualification with dedicated accounts. Deletion does not affect other games, your Google Account or copies you have already shared."
+    - paragraph: A minimal hashed transaction audit is planned for 365 days to prevent duplicate credits and reconcile refunds. Automatic removal of this audit has not been activated or verified yet. This period and automatic removal must be confirmed before purchases open. Information Google retains follows its own rules.
+    - heading "What about my offline save?" [level=2]
+    - paragraph: The puzzle save, local LumaCoins, local gifts and quests, wardrobe, avatar equipment and journal stay on your device. To remove them, use Android Settings → Apps → Luma Drift → Storage → Clear data. This alone does not delete a remote account.
+    - heading "Trouble signing in?" [level=2]
+    - paragraph:
+      - text: "For a private Luma Drift request, contact nabilux:"
+      - link "nabz0r+gaming@gmail.com":
+        - /url: mailto:nabz0r%2Bgaming@gmail.com?subject=Luma%20Drift%20%E2%80%94%20account%20%2F%20privacy
+      - text: . Never send a password, sign-in code or payment-card details.
+    - paragraph: The sign-in and deletion flow is under review. If you have a problem, use the private contact above. Never post account details in GitHub issues.
+    - paragraph:
+      - link "Read the privacy information":
+        - /url: /privacy/index.html?lang=en#deletion
+- contentinfo:
+  - link "Luma Drift":
+    - /url: /index.html?lang=en
+  - paragraph: One move can change everything.
+  - link "Privacy":
+    - /url: /privacy/index.html?lang=en
+  - link "Delete my account":
+    - /url: /delete-account/index.html?lang=en
+  - link "Project & documentation":
+    - /url: https://github.com/nabz0r/AndroidHit
+  - paragraph:
+    - text: nabilux ·
+    - link "nabz0r+gaming@gmail.com":
+      - /url: mailto:nabz0r%2Bgaming@gmail.com

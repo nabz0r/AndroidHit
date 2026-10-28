@@ -1,0 +1,89 @@
+- link "Aller au contenu":
+  - /url: /privacy/index.html#main
+- banner:
+  - link "Luma Drift":
+    - /url: /index.html
+    - text: LUMA
+    - generic: DRIFT
+  - navigation "Navigation":
+    - link "Confidentialité":
+      - /url: /privacy/index.html
+      - generic: Confidentialité
+    - link "Mon compte":
+      - /url: /delete-account/index.html
+      - generic: Mon compte
+  - group "Language / Langue":
+    - button "FR" [active] [pressed]
+    - button "EN"
+- complementary: Services en qualification · Achats et annonces réelles non activés.
+- main:
+  - article:
+    - paragraph: TES DONNÉES, TES CHOIX
+    - heading "Confidentialité. En clair." [level=1]:
+      - text: Confidentialité.
+      - emphasis: En clair.
+    - paragraph:
+      - text: Cette page explique les données du jeu Android Luma Drift (
+      - code: com.androidhit.lumadrift
+      - text: ), les services facultatifs et les moyens de garder le contrôle.
+    - paragraph: "Dernière mise à jour : 27 octobre 2026 · Luma Drift 1.9 · Services en qualification"
+    - strong: Avant l’ouverture au public.
+    - text: Le portefeuille en ligne est déployé et reste en cours de vérification. Les achats réels et les annonces réelles ne sont pas encore ouverts. Luma Drift Lab possède une sauvegarde séparée ; ses LumaCoins locaux de qualification ne deviennent jamais du LumaGold acheté.
+    - heading "1. Le puzzle, sans compte" [level=2]
+    - paragraph: La progression, les étoiles, les paramètres, l’inventaire, les LumaCoins, les cadeaux et quêtes locales, les compagnons, le dressing cosmétique, les équipements d’avatar et les parties interrompues sont conservés sur ton appareil. Le style visuel choisi, l’essai de gardien actif et les reçus locaux des cadeaux et échantillons de pouvoirs y restent également, sans profilage d’âge ni nouvel outil de suivi distant. La date de l’appareil sert aux défis et événements. La connexion Google n’envoie pas automatiquement cette progression dans le cloud. Effacer les données de l’application ou la désinstaller peut supprimer la sauvegarde locale.
+    - heading "2. Connexion Google facultative" [level=2]
+    - paragraph: Si tu choisis de te connecter, Google et Firebase Authentication vérifient ton identité. L’application peut afficher le nom ou l’adresse e-mail renvoyés et conserver une session via le SDK. Elle ne demande pas ton mot de passe Google et n’ajoute pas tes jetons d’authentification au journal de jeu. Le serveur de portefeuille utilise ton identifiant Firebase pour protéger le solde et les achats. La connexion ne vaut pas consentement publicitaire.
+    - heading "3. Amis, profil et cadeaux facultatifs" [level=2]
+    - paragraph: Le service social préparé utilise la connexion Firebase. Si tu crées un profil, le serveur conserve ton code ami, ton surnom choisi et l’identifiant de ton avatar, ainsi que les relations et demandes d’amitié nécessaires. L’application n’importe pas ton carnet d’adresses et ne demande pas la liste de tes contacts Google.
+    - paragraph: "Le partage de progression est un choix séparé, désactivé par défaut : ton niveau déclaré et sa date ne sont visibles sur la carte de tes amis mutuels que si tu actives ce partage. Ce sont des instantanés déclarés par l’application, pas une présence en direct ni une sauvegarde cloud. Tu peux retirer le partage ou une amitié. Les cadeaux contiennent un indice, sans monnaie payante ; les limites prévues sont 3 envois et 5 récupérations par jour UTC, avec un envoi par ami et par jour."
+    - paragraph: "Le profil et les relations restent jusqu’à leur retrait ou la suppression du compte. Les invitations et cadeaux ont une durée de validité de 7 jours. Les reçus techniques d’opérations sociales sont prévus pour 30 jours afin d’éviter les doublons. L’expiration fonctionnelle ne prouve pas à elle seule une purge physique : la maintenance du serveur est prévue pour retirer les enregistrements expirés, mais le planificateur automatique n’est pas encore déployé ni qualifié. La suppression de compte prévoit également leur retrait. Les nouveaux parcours ne sont pas présentés comme testés entre deux vrais comptes."
+    - heading "4. Publicités et choix de confidentialité" [level=2]
+    - paragraph: Les vidéos récompensées sont facultatives. Le jeu demande une déclaration d’âge adulte et une activation distincte avant son parcours publicitaire. Le formulaire Google UMP présente les choix applicables ; le contrôle de confidentialité permet de les revoir lorsqu’il est disponible. Tu peux désactiver les nouvelles demandes dans les paramètres. Refuser une publicité n’empêche pas de recommencer un plateau gratuitement.
+    - paragraph: Lorsqu’ils sont utilisés, les services publicitaires Google peuvent traiter l’adresse IP, des identifiants d’appareil ou de compte, les interactions et les diagnostics suivant les paramètres et les choix applicables. Luma Drift ne demande pas la localisation précise, les contacts, le microphone ou la caméra pour jouer. Les données et paramètres propres aux services Google suivent aussi leurs politiques.
+    - heading "5. LumaCoins, LumaGold et portefeuille" [level=2]
+    - paragraph: "Les LumaCoins sont gagnés localement et restent distincts du LumaGold du portefeuille premium. La capsule cosmétique locale dépense uniquement des LumaCoins, sans conversion vers ou depuis le LumaGold. La vente de capsules premium est préparée mais reste fermée par deux conditions : activation désactivée dans l’APK et sur le serveur. La qualification réelle reste distincte de ces réglages. Le coffre authentifié consulte le solde, les droits cosmétiques du compte et les probabilités conditionnelles : ces droits sont distincts des objets gagnés uniquement sur cet appareil. Un objet nouveau pour le compte peut déjà être possédé localement. Les achats réels passeront par Google Play, qui gère le paiement. Luma Drift ne reçoit pas ton numéro de carte bancaire. Le serveur est conçu pour vérifier le produit, l’état du paiement et le jeton d’achat auprès de Google Play avant d’accorder du gold. Il conserve l’identifiant de compte, le solde, les opérations et les références nécessaires pour éviter les doubles crédits et traiter les annulations ou remboursements. Ce parcours est encore en vérification ; les achats ne sont pas encore ouverts. Le gold n’a pas de valeur monétaire remboursable dans le jeu ; les demandes de remboursement d’un achat passent par les options de Google Play."
+    - paragraph: Le portefeuille acheté sera distinct des pièces gagnées localement et servira aux compagnons et cosmétiques permanents. Les conditions des achats seront présentées avant leur ouverture.
+    - heading "6. Journal local et partage" [level=2]
+    - paragraph: Le journal de jeu est désactivé par défaut. S’il est activé, il garde sur l’appareil jusqu’à 2 000 événements de jeu, dates, résultats et diagnostics, dont les événements publicitaires ou d’achat selon la version. Le jeu n’envoie pas automatiquement ce journal à l’éditeur et n’intègre pas Firebase Analytics. Le désactiver arrête les nouvelles entrées ; l’effacer supprime les observations locales et les exports encore présents dans l’application.
+    - paragraph: Partager un défi ou exporter le journal ouvre le sélecteur Android. Tu choisis le destinataire ; l’application choisie peut alors envoyer le fichier selon ses propres règles. Effacer le journal ne retire pas les copies déjà partagées.
+    - heading "7. Supprimer ton compte et tes données" [level=2]
+    - paragraph:
+      - text: Utilise
+      - strong: Paramètres → Compte → Supprimer mon compte
+      - text: ", ou la"
+      - link "page de suppression de compte":
+        - /url: /delete-account/index.html
+      - text: . Une connexion récente peut être nécessaire. Le serveur doit d’abord supprimer le profil social, les relations, les invitations, les cadeaux et reçus associés, ainsi que le portefeuille actif, avant de supprimer l’identité Firebase de Luma Drift. Si cette étape serveur échoue, l’application conserve l’identité pour permettre une nouvelle tentative. La suppression ne concerne pas ton compte Google. Une suppression confirmée n’est pas un remboursement automatique. Pour effacer la sauvegarde hors ligne de cet appareil, efface aussi les données de l’application dans Android.
+    - paragraph: Après suppression, le serveur est prévu pour effacer le portefeuille actif, les données d’opérations et les références brutes des achats. Un audit minimal contenant des identifiants hachés, les produits, quantités et dates est conservé pour prévenir la fraude, les doubles crédits et les remboursements incohérents. La configuration actuelle prévoit une conservation de cet audit pendant 365 jours. La suppression automatique de cet audit n’est pas encore activée ni vérifiée. Cette durée et la suppression automatique restent à confirmer avant l’ouverture des achats. Les copies et journaux que Google conserve pour son propre service relèvent de ses règles.
+    - heading "8. Le site web et les prestataires" [level=2]
+    - paragraph: Le jeu Android propose six langues ; ces pages web existent en français et en anglais. Ce site n’inclut ni publicité, ni outil d’analyse d’audience, ni police distante, ni cookie de suivi ajouté par Luma Drift. Son hébergeur reçoit les informations nécessaires pour servir la page, comme l’adresse IP et la requête. Le parcours de suppression web ne charge Firebase et Google qu’après une action de connexion, lorsque sa configuration est active. La session de suppression reste en mémoire ; le site ne stocke pas ton jeton dans le navigateur.
+    - paragraph:
+      - text: Les prestataires prévus sont Google/Firebase pour l’identité, AdMob pour les publicités facultatives, Google Play pour les achats et Google Cloud pour le portefeuille. Leur infrastructure peut traiter des données hors de ton pays. Consulte les
+      - link "règles de confidentialité Google":
+        - /url: https://policies.google.com/privacy
+      - text: et les
+      - link "informations Firebase sur la confidentialité":
+        - /url: https://firebase.google.com/support/privacy
+      - text: .
+    - heading "9. Questions et demandes" [level=2]
+    - paragraph:
+      - text: "Pour une demande privée concernant Luma Drift, contacte nabilux :"
+      - link "nabz0r+gaming@gmail.com":
+        - /url: mailto:nabz0r%2Bgaming@gmail.com?subject=Luma%20Drift%20%E2%80%94%20account%20%2F%20privacy
+      - text: . N’envoie jamais ton mot de passe, un code de connexion ni tes coordonnées bancaires.
+    - paragraph: Ne publie pas d’adresse e-mail de joueur, de reçu, de jeton ou de document d’identité dans les issues GitHub.
+    - paragraph: Selon ta situation et les règles applicables, tu peux demander l’accès, la rectification ou la suppression de tes données et revoir tes choix publicitaires. Tu peux utiliser le contact ci-dessus pour exercer ces droits ou poser une question.
+- contentinfo:
+  - link "Luma Drift":
+    - /url: /index.html
+  - paragraph: Un mouvement peut tout changer.
+  - link "Confidentialité":
+    - /url: /privacy/index.html
+  - link "Supprimer mon compte":
+    - /url: /delete-account/index.html
+  - link "Projet & documentation":
+    - /url: https://github.com/nabz0r/AndroidHit
+  - paragraph:
+    - text: nabilux ·
+    - link "nabz0r+gaming@gmail.com":
+      - /url: mailto:nabz0r%2Bgaming@gmail.com
