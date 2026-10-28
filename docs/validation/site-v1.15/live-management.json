@@ -1,0 +1,39 @@
+{
+  "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+  "url": "https://luma-drift-production.web.app",
+  "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793227644055000",
+  "release_type": "DEPLOY",
+  "release_time": "2026-10-28T22:47:24.055Z",
+  "release_message": "Website1.15 from 79034ede32cacb6fdd7acb4ed975212da1c9747d",
+  "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/15064558e636a355",
+  "version_status": "FINALIZED",
+  "management_provider": "authenticated firebase hosting:channel:list --json",
+  "headers": [
+    {
+      "headers": {
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "no-referrer"
+      },
+      "glob": "**"
+    },
+    {
+      "headers": {
+        "Cache-Control": "no-store"
+      },
+      "glob": "/site-config.js"
+    },
+    {
+      "headers": {
+        "Cache-Control": "no-cache"
+      },
+      "glob": "/"
+    },
+    {
+      "headers": {
+        "Cache-Control": "no-cache"
+      },
+      "glob": "**/*.html"
+    }
+  ]
+}

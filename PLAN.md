@@ -1,4 +1,4 @@
-# Luma Drift 1.15 — delivered locally
+# Luma Drift 1.15 — Android and website delivered
 
 Owner scope: implement separated premium screens, piece-controlled gates, a larger home with distinctive objects; test and deliver signed APK.
 
@@ -8,7 +8,7 @@ Owner scope: implement separated premium screens, piece-controlled gates, a larg
 4. Validate host regressions, final signed bytes, fresh and upgrade native flows, languages and compact views.
 5. Deliver exact signed APK, manifest, original screenshots and honest validation limits.
 
-Completed as **1.15.0-rc1 / code17**, implementation `84830c16`. Exact signed bytes pass all1,000 U levels on Android (49,575 checks/12,016 actual touches), normal/compact six-language screens, actual Lab upgrade, powers, earned decoration, cold persistence and a separate wrong-order/Undo recovery probe. Both task-owned emulators are stopped with profiles retained. [Production APK](releases/luma-drift-1.15.0-rc1.apk) · [Release](docs/RELEASE_1_15.md) · [Executed evidence and limits](docs/validation/v1.15/README.md). This is local delivery; no new remote publication or website deployment.
+Completed as **1.15.0-rc1 / code17**, implementation `84830c16`. Exact signed bytes pass all1,000 U levels on Android (49,575 checks/12,016 actual touches), normal/compact six-language screens, actual Lab upgrade, powers, earned decoration, cold persistence and a separate wrong-order/Undo recovery probe. Both task-owned emulators are stopped with profiles retained. [Production APK](releases/luma-drift-1.15.0-rc1.apk) · [Release](docs/RELEASE_1_15.md) · [Executed evidence and limits](docs/validation/v1.15/README.md). The subsequent owner-requested [website refresh](docs/validation/site-v1.15/README.md) is published to the existing Firebase site, with native furnished-salon images and exact public production downloads. No GitHub/Play publication or provider activation.
 
 # Luma Drift 1.14 — puzzle reliability and learning first
 

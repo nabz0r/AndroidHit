@@ -4,7 +4,7 @@
 
 Install the signed [production 1.15.0-rc1 APK](../releases/luma-drift-1.15.0-rc1.apk), code17, over the existing app to retain local saves. The [Lab APK](../releases/luma-drift-1.15.0-sandbox-rc1.apk) has a separate profile. Android8/API26+, existing signing identity. An older active puzzle retains its rules; tap the current numbered level in Adventure to start the new U board.
 
-[Four artifacts and exact hashes](RELEASE_1_15.md) · [Current rules](GAMEPLAY_1_15.md) · [Qualification and limits](validation/v1.15/README.md) · [Production manifest](../releases/manifest-1.15.0-rc1.json). This delivery is local; it does not publish a remote release, upload to Play or update the website.
+[Four artifacts and exact hashes](RELEASE_1_15.md) · [Current rules](GAMEPLAY_1_15.md) · [Qualification and limits](validation/v1.15/README.md) · [Production manifest](../releases/manifest-1.15.0-rc1.json). The [existing website](https://luma-drift-production.web.app/) now serves the [same production APK](https://luma-drift-production.web.app/releases/luma-drift-1.15.0-rc1.apk) and AAB with verified public bytes. [Hosting receipt](validation/site-v1.15/README.md). No Play upload or GitHub publication is performed.
 
 ## Preserved 1.14 installation
 

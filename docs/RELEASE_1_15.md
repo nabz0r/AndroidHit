@@ -2,7 +2,7 @@
 
 28 October 2026 · production **1.15.0-rc1**, Lab **1.15.0-sandbox-rc1**, Android version code **17**.
 
-**Delivered locally.** The frozen E artifacts complete native acceptance: all1,000 U boards, normal/compact interfaces, six languages, actual Lab upgrade, powers, earned decoration, cold persistence and wrong-order recovery. Both task-owned QA emulators are stopped with their profiles retained. No remote publication is implied.
+**Android delivered; website follow-up published.** The frozen E artifacts complete native acceptance: all1,000 U boards, normal/compact interfaces, six languages, actual Lab upgrade, powers, earned decoration, cold persistence and wrong-order recovery. Both task-owned QA emulators are stopped with their profiles retained. The [existing website](https://luma-drift-production.web.app/) now presents the refactor and serves the exact signed production APK/AAB/manifest, with [independent public-byte and browser proof](validation/site-v1.15/README.md). Lab remains separately delivered locally.
 
 The release responds to a concrete player report: manual gate openings felt like an extra click without a useful decision, the home was too small, objects differed too little, and long pages and text-heavy panels made the interface crowded.
 
@@ -32,6 +32,6 @@ An older active puzzle keeps its original rules. To start U immediately at your 
 
 ## Scope and limits
 
-The home supports one instance of a design per room; it does not implement arbitrary quantities within one room. All three rooms are directly accessible. U stars acknowledge completion; no extra optimization score or measured human difficulty is claimed. Portrait phone layouts are the supported presentation. The pre-existing website, Play publication and provider activation are outside this APK delivery.
+The home supports one instance of a design per room; it does not implement arbitrary quantities within one room. All three rooms are directly accessible. U stars acknowledge completion; no extra optimization score or measured human difficulty is claimed. Portrait phone layouts are the supported presentation. The website has its own subsequent delivery record; Play publication and provider activation remain separate.
 
 [Gameplay and compatibility](GAMEPLAY_1_15.md) · [Evidence](validation/v1.15/README.md) · [Design audit](AUDIT_REFONTE_UI_2026_10_28.md).

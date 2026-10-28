@@ -1,4 +1,4 @@
-# Luma Drift 1.15 — delivered locally
+# Luma Drift 1.15 — Android and website delivered
 
 - Owner approved the full redesign on28 October2026. Baseline1.14 RC2/code16 atadc51c8f; local branch `codex/luma-refonte-1-15`, implementation commit `84830c16`.
 - U relay family implemented: 1,000 boards, 13,312,469 independent host checks and preserved historical-family regressions pass. Gates follow piece exits; corrections and rejected taps are free in the new route.
@@ -10,7 +10,8 @@
 - Earlier C image/observer failures and the real D compact furniture-target failure remain preserved. E centres expanded targets and accepts their margin while retaining foreground sprite priority. Minor observed causal-toast copy/timing is documented separately.
 - Separate U31 legal-wrong-order probe passes167 native checks/16 actual touches/7 PNGs: real dead-end warning and illustrated panel, free Undo, distinct cold process, then actual challenge victory with no currency/stock/progression change. French Adventure is restored.
 - Two task-owned AVDs only: primary `Luma-Refonte115-QA` / `emulator-5586` and fresh `Luma-Refonte115-Showcase-QA` / `emulator-5588`. Both are stopped, their disks/profiles retained, display restored and test packages removed. No prior user device/profile touched.
-- Signed production [APK](releases/luma-drift-1.15.0-rc1.apk), separate Lab APK, both AABs, manifests and original screenshots are delivered locally. [Release](docs/RELEASE_1_15.md) and [qualification register](docs/validation/v1.15/README.md) record exact scopes. No remote publication, Play upload or website deployment. Physical-phone experience and human enjoyment remain separate from emulator acceptance.
+- Signed production [APK](releases/luma-drift-1.15.0-rc1.apk), separate Lab APK, both AABs, manifests and original screenshots are delivered locally. [Release](docs/RELEASE_1_15.md) and [qualification register](docs/validation/v1.15/README.md) record exact scopes. Physical-phone experience and human enjoyment remain separate from emulator acceptance.
+- The requested website follow-up is delivered from clean source `79034ede32cacb6fdd7acb4ed975212da1c9747d`:132 payloads, three aliases and exact production APK/AAB/manifest publicly verified; live Firebase version `15064558e636a355`, finalized2026-10-28T22:47:24.055Z. Four French destination frames and a salon with11 actual designs follow9 genuine furniture purchases on the retained1,000-win QA profile;272 native checks and a distinct cold process pass. Browser FR/EN desktop/mobile/compact and keyboard checks pass after two scoped decorative overflow corrections. No GitHub/Play upload, provider activation or user-device mutation. [Website receipt](docs/validation/site-v1.15/README.md).
 
 # Luma Drift 1.14 — delivered
 

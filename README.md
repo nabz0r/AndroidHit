@@ -3,6 +3,8 @@
 <p align="center"><strong>1.15.0-rc1 · separated screens, relay puzzles and a larger home</strong><br><a href="docs/RELEASE_1_15.md">Release & evidence</a> · <a href="docs/GAMEPLAY_1_15.md">Gameplay and compatibility</a> · <a href="docs/validation/v1.15/README.md">Qualification</a></p>
 <p align="center">1,000 versioned relay Journey boards · 30 staged opening boards · 6 languages<br>Four dedicated destinations · Three 10 × 10 rooms · 42 furniture designs</p>
 
+**[See the redesigned website and native gallery](https://luma-drift-production.web.app/#screens)** · **[Download the signed 1.15 APK](https://luma-drift-production.web.app/releases/luma-drift-1.15.0-rc1.apk)**. The existing Firebase site now serves the exact delivered production APK/AAB and twelve unedited native frames. [Website source, browser and public-byte evidence](docs/validation/site-v1.15/README.md).
+
 ## Make your move, then make yourself at home — 1.15
 
 Adventure, Home, Collection and Atelier now have dedicated screens. Adventure starts the next puzzle directly. Play keeps the board and its essential controls together; the wallet and global navigation return when you leave the puzzle. Illustrated item pages, a visual inventory grid, a larger wardrobe and concise reward panels give artwork and choices more space.
