@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "dom_states": 12,
+  "pages": 3,
+  "languages": [
+    "fr",
+    "en"
+  ],
+  "requested_viewports": {
+    "desktop": [
+      1440,
+      1000
+    ],
+    "mobile": [
+      390,
+      844
+    ]
+  },
+  "provider_rasters": {
+    "desktop": [
+      1425,
+      990
+    ],
+    "mobile": [
+      375,
+      812
+    ]
+  },
+  "raster_scope": "Complete proportionally scaled viewport frames; not full-page captures. Original provider JPEGs retained unchanged.",
+  "checks": [
+    "No horizontal overflow in each state",
+    "Only selected language visible and pressed",
+    "Internal HTML links retain selected language",
+    "Final home hero loaded in each state",
+    "Permanent deletion remains disabled before identity/confirmation; Cancel is a separate available control"
+  ],
+  "extra_rasters": [
+    "gallery-desktop-en.jpg",
+    "currencies-mobile-fr.jpg",
+    "collection-mobile-fr.jpg"
+  ],
+  "evidence_sha256": {
+    "collection-mobile-fr.jpg": "ba717a2c774b8024e6e9545cf799df5222518b1ce8a899a6ad194dcfc35d4540",
+    "currencies-mobile-fr.jpg": "6b1b9514adcdc75f6415e9178305feca330684522a1b9ad729388e582708f5a7",
+    "deletion-desktop-en.jpg": "c9893045781be680519ac06346f0b19fb9f203f84f2e91d003d6dea359cdc2fb",
+    "deletion-desktop-fr.jpg": "c7c42f3311538961d930431745db1f0fa49266f169478867165958b39212cde2",
+    "deletion-mobile-en.jpg": "580dc23f7c70795adad80a4042fa45e4a3d5187fa44d8280164d015c21658f94",
+    "deletion-mobile-fr.jpg": "5a7eb1bbf71c0b42d883a4872d37e5e27ccb42ef0b860f87e42f178d34924a09",
+    "gallery-desktop-en.jpg": "6c2da2e5044b08449ef4984f55993b9bdb21c04162af57e9c8219cd2cc35ff84",
+    "home-desktop-en.jpg": "bffc1a5aa2c1856769deb6190dbcae9731ba97a3b4338ffd5245b64aa00d67a2",
+    "home-desktop-fr.jpg": "2328b568d95d5d54a81cc2de4f689b8bc567aef269766e74d74440561c4e501a",
+    "home-mobile-en.jpg": "dfe0a7edfbe32b9a74316f0b254d13be7668e10c7dc608a2db1f9da050c9ebb2",
+    "home-mobile-fr.jpg": "98e2e27014e9cd9cbf19b4e46348b1f3943b22107ae705e6720910c8240dce85",
+    "privacy-desktop-en.jpg": "54a374701aa851b267f8cb744b591e0f75643d967b0494184459ce50fc126464",
+    "privacy-desktop-fr.jpg": "f10666dd19b4a4e9f188ff23387f22398334a1efa632698f9c19da223aec178e",
+    "privacy-mobile-en.jpg": "4d4d781cefa9c042db15f4149e6b9d17ca7653f24c8c0420e00d453166a9e39a",
+    "privacy-mobile-fr.jpg": "f03e3204f7f0311e471f39f73216c90c17d4ac726f9ca9224db001903c24dbdc"
+  }
+}

@@ -1,5 +1,5 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>Your companion. A goal of your own.</strong><br>Read the gates. Restore the Prism. Put together a little look.</p>
+<p align="center"><strong>A little world of your own.</strong><br>Read the gates. Restore the Prism. Put together a little look.</p>
 <p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.12.0-rc2.apk"><strong>Download signed Android APK · 1.12.0-rc2</strong></a><br><a href="docs/RELEASE_1_12.md">Release & evidence</a> · <a href="docs/RELEASE_1_12.md#what-changes-for-the-player">What changed</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
 <p align="center">1,000 Journey boards · 240 Remix · 100 optional guardians<br>7 playable lessons · 24 companions × 12 free visual treatments · 6 powers · 6 languages</p>
 
@@ -80,7 +80,7 @@ Android 8+ / API 26; code 13; production package `com.androidhit.lumadrift`. Ins
 
 Published on `main` from [source 32bf07ea](https://github.com/nabz0r/AndroidHit/commit/32bf07ea2ef2aa9dd962d81145bf075c6ca05b2e). Four pinned public downloads independently return HTTP 200 with the exact signed-candidate sizes and SHA-256 hashes. [Delivery receipt](docs/validation/v1.12/publication.json).
 
-Google identity does not synchronize local gameplay. Actual two-account gifts, real consent/ads and Play purchase lifecycle remain separately qualified. The website retains its recorded 1.10 deployment. No Play or server deployment occurs here.
+Google identity does not synchronize local gameplay. Actual two-account gifts, real consent/ads and Play purchase lifecycle remain separately qualified. Website 1.12 source and local qualification are recorded separately in [the site report](docs/validation/site-v1.12/README.md); its Hosting receipt is added after publication. No Play or server deployment occurs in the Android release.
 
 ## Build and inspect
 
@@ -100,8 +100,8 @@ bash scripts/test-objective-models-v110.sh
 bash scripts/test-prism-story-v110.sh
 ./docs/validation/v1.11/avatar-bugs/run-raster.sh candidate
 ./docs/validation/v1.11/avatar-bugs/run-api-command.sh
-python3 scripts/check-site-v110.py --phase release --apk-sha256 29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4
-node --test public/tests/*.test.mjs
+python3 scripts/check-site-v112.py
+node --test public/tests/site-language-v112.test.mjs public/tests/deletion-core.test.mjs
 ```
 
 [Development](docs/DEVELOPMENT.md) · [Native SDK QA runner](scripts/v112-ui-test/README.md) · [Roadmap](docs/ROADMAP.md). Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Candy Crush or Crash Fever artwork, characters, audio or code is included.

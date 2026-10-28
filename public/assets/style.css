@@ -65,3 +65,17 @@ h1{font-size:clamp(3.1rem,5.7vw,5.3rem);font-weight:850;letter-spacing:-3.8px;li
 }
 @media(max-width:380px){.wrap{padding-inline:19px}.site-header nav{gap:4px 19px}.site-header nav a{font-size:12px}.hero-art{height:505px}.hero-phone{width:202px;right:16px}.hero-mascot{width:162px;left:0;top:300px}.hero h1{font-size:2.8rem}.actions{gap:10px}.actions .button{font-size:13px;padding:13px 16px}.way-grid{grid-template-columns:1fr}.version-strip p{min-width:145px}.lesson-list{padding-inline:17px}.lesson-list h3{font-size:15px}.lesson-icon{width:41px;height:41px}.tutorial-gift{padding:16px}.tutorial-gift>span{font-size:28px}.tutorial-gift strong{font-size:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover:not(:disabled){transform:none}}
+/* 1.12: open atelier surfaces and distinct earned/premium tokens. */
+.landing-v112 .hero h1{font-size:clamp(3.2rem,5.8vw,5.25rem)}
+.landing-v112 .hero-art{height:625px}.landing-v112 .hero-phone{width:251px}
+.landing-v112 .rule-card{box-shadow:none;border-color:transparent;border-radius:34px 34px 34px 12px}
+.landing-v112 .screenshot-grid{gap:42px}.landing-v112 .screenshot-grid figure{min-width:0;max-width:310px;margin-inline:auto}
+.landing-v112 .screen-frame{padding:7px;border-radius:33px;background:#fffdf8;box-shadow:0 14px 35px #725c8214}
+.landing-v112 .screen-frame img{border-radius:25px}
+.journey-note{margin-top:32px;padding:24px 0 0;border-top:1px solid var(--line)}.journey-note strong{font-size:21px}.journey-note p{color:var(--muted);max-width:760px;margin:10px 0 0}
+.collection-v112{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:80px;border-block:1px solid var(--line)}.collection-copy .section-heading{margin-bottom:25px}.collection-phone{max-width:275px;width:100%;margin:auto;transform:rotate(2deg)}.collection-copy .lead{font-size:16px}
+.token{display:grid;place-items:center;width:60px;height:60px;font-size:30px;font-weight:900;line-height:1}.token-coin{border-radius:50%;color:#80511d;background:#ffcd64;border:4px solid #ffe5aa;box-shadow:0 4px 0 #dfa94e55}.token-gold{color:#6b3b91;background:#dfc4fb;clip-path:polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)}
+.landing-v112 .currency-card{border:0;border-radius:36px;padding:36px}.landing-v112 .capsule-card{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:26px 0 0}.capsule-card p:last-child{margin-bottom:0}
+.release-v112{border-top:1px solid var(--line)}.release-details{max-width:850px;color:var(--muted);font-size:15px;margin-bottom:28px}.release-details a{font-weight:700}.integrity{margin:16px 0 25px;color:var(--muted);font-size:13px}.integrity summary{cursor:pointer;min-height:44px;padding-block:10px}.integrity code{display:block;padding:12px 0}.release-v112 .preview-notice{max-width:850px}
+@media(max-width:760px){.landing-v112 .hero h1{font-size:clamp(2.9rem,11.5vw,4.5rem)}.landing-v112 .hero-art{height:555px}.landing-v112 .hero-phone{width:225px}.landing-v112 .screenshot-grid{gap:36px}.collection-v112{grid-template-columns:1fr;gap:34px}.collection-phone{max-width:250px}.landing-v112 .currency-card{padding:28px}.journey-note strong{font-size:19px}}
+@media(max-width:380px){.landing-v112 .hero-art{height:510px}.landing-v112 .hero-phone{width:202px}.landing-v112 .hero h1{font-size:2.8rem}}

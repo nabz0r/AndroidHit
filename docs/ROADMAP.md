@@ -4,6 +4,8 @@
 
 [Release](RELEASE_1_12.md) · [Qualification](validation/v1.12/README.md) · [Grounded UX decisions](research/ux-v112.md). Replace repeated item dialogs with normal pages; expose both currencies and honest wallet state; make power silhouettes/effects recognizable; lighten stacked surfaces. Correct the reproduced earned-power refused-write transaction and preserve live-run/rotation navigation. Scoped final native checks pass: Lab 1,179/40 clears, production 7 startup +35 shop, account-wallet 45/6 languages.
 
+Website 1.12 source now reflects the atelier, original powers, equipped companion and both currencies. [Local checks and delivery record](validation/site-v1.12/README.md) remain separate from app qualification.
+
 Next: validate the exact APK on physical phones, observe first-time comprehension of the two currencies and purchase/Equip distinction, then resume internal Play/provider qualification. The L22→L23 and Guardian 4→5 difficulty jumps remain separate work. Cosmetic improvements are not measured retention.
 
 ## Preserved candidate 1.11 — pre-Play bug hunt

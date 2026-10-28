@@ -1,6 +1,10 @@
 # Public developer, privacy and account-deletion pages
 
-## Current 1.10 source and confirmed Hosting delivery · 28 October 2026
+## Current 1.12 website refresh
+
+The homepage now presents the exact signed 1.12.0-rc2/code 13 APK, the atelier, illustrated powers, integrated item pages, visible equipped portrait and distinct earned/account currencies. Nine full native Lab RC2 PNG copies have exact source/hash records. Both languages retain explicit test-ad/closed-checkout state. Privacy metadata now identifies 28 October 2026/1.12; data terms and deletion behavior stay the same. [Current checks and source provenance](validation/site-v1.12/README.md). Hosting delivery is recorded separately after source publication.
+
+## Preserved 1.10 source and confirmed Hosting delivery · 28 October 2026
 
 The repository homepage presents **Luma Drift 1.10.0-rc3 / code 11**, production package `com.androidhit.lumadrift`. Its [signed APK](../releases/luma-drift-1.10.0-rc3.apk) is **7,757,410 bytes / 7.76 MB decimal**, SHA-256 `29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4`. [Manifest](../releases/manifest-1.10.0-rc3.json) · [Release](RELEASE_1_10.md) · [UX](UX_1_10.md) · [Readability/provenance matrix](validation/v1.10/ux-readability/README.md).
 
