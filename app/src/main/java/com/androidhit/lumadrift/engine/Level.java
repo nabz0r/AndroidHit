@@ -58,7 +58,7 @@ public final class Level {
         this.initialGateMask = initialGateMask;
         this.isEvent = isEvent;
         this.seed = seed;
-        if (progressionVersion != 0 && progressionVersion != 2 && progressionVersion != 3 && progressionVersion != 4 && progressionVersion != 5)
+        if (progressionVersion != 0 && progressionVersion != 2 && progressionVersion != 3 && progressionVersion != 4 && progressionVersion != 5 && progressionVersion != 6)
             throw new IllegalArgumentException("Unsupported progression version");
         if (minimumActions < tiles.size() || actionSolution == null || actionSolution.length != minimumActions
                 || minimumActions > tiles.size() * 5 + 4)
@@ -66,6 +66,9 @@ public final class Level {
         if (progressionVersion < 4 && (minimumActions != tiles.size()
                 || !java.util.Arrays.equals(solution, actionSolution)))
             throw new IllegalArgumentException("Historical action certificate changed");
+        if (progressionVersion == 6 && (tiles.size() > RelaySolver.MAX_PIECES || minimumActions != tiles.size()
+                || !java.util.Arrays.equals(solution, actionSolution)))
+            throw new IllegalArgumentException("Relay certificates contain exits only");
         this.progressionVersion = progressionVersion;
         this.tiles = Collections.unmodifiableList(new ArrayList<Tile>(tiles));
         this.byId = new Tile[tiles.size()];
@@ -103,6 +106,7 @@ public final class Level {
             long mask=allTilesMask;int gates=initialGateMask;
             for(int action:this.actionSolution){
                 if(Board.isGateAction(action)){
+                    if(progressionVersion==6)throw new IllegalArgumentException("Relay gates are controlled by pieces");
                     int bit=Board.gateDirection(action).bit;
                     if(mask==0||(gates&bit)!=0)throw new IllegalArgumentException("Illegal gate action certificate");
                     gates|=bit;

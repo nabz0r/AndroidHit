@@ -15,7 +15,7 @@ import java.util.List;
 public final class LearningGuide {
     private static final List<String> LESSONS = Arrays.asList(
             "exits", "blockers", "key", "gate", "switch", "switch_order",
-            "key_switch", "combination", "practice");
+            "key_switch", "combination", "practice", "relay", "relay_order", "relay_key", "relay_mastery");
 
     public static final class Context {
         public final String lessonKey, titleKey, descriptionKey, hudKey;
@@ -77,6 +77,11 @@ public final class LearningGuide {
         int switches = 0;
         for (Barrier barrier : board.level.barriers) if (board.isBarrierActive(barrier)) key = true;
         for (Tile tile : board.remainingTiles()) if (tile.isSwitch()) switches++;
+        if(board.level.progressionVersion==6){
+            if(key&&switches>0)return "relay_key";
+            if(switches>1)return "relay_order";
+            if(switches==1)return "relay";
+        }
         if (key && switches > 0) return "key_switch";
         if (key) return "key";
         for (Tile tile : board.remainingTiles()) if (!board.isGateOpen(tile.direction)) {
@@ -97,7 +102,7 @@ public final class LearningGuide {
         if (tile == null || reason == Board.BlockReason.MISSING_TILE)
             return new Feedback("piece_gone", null, -1, 0);
         if (reason == Board.BlockReason.CLOSED_GATE)
-            return new Feedback(board.supportsManualGates() ? "blocked_gate_manual" : "blocked_gate_switch",
+            return new Feedback(board.level.progressionVersion==6?"blocked_gate_relay":board.supportsManualGates() ? "blocked_gate_manual" : "blocked_gate_switch",
                     tile.direction, -1, 0, tile.direction);
         if (reason == Board.BlockReason.LOCKED_BARRIER) {
             Barrier barrier = board.blockingBarrier(tileId);

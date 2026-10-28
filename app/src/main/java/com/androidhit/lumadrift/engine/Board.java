@@ -116,11 +116,13 @@ public final class Board {
     private int gates;
     private final ArrayList<Integer> history = new ArrayList<Integer>();
     private final StrategySolver.Session strategy;
+    private final RelaySolver.Session relay;
 
     public Board(Level level) {
         if (level == null) throw new IllegalArgumentException("A level is required");
         this.level = level;
-        strategy = level.progressionVersion >= 4 ? new StrategySolver.Session(level) : null;
+        strategy = level.progressionVersion == 4 || level.progressionVersion == 5 ? new StrategySolver.Session(level) : null;
+        relay = level.progressionVersion == 6 ? new RelaySolver.Session(level) : null;
         restart();
     }
 
@@ -135,8 +137,8 @@ public final class Board {
     }
     public boolean isGateOpen(Direction direction) { return (gates & direction.bit) != 0; }
     public boolean supportsManualGates() { return strategy != null; }
-    public int plannerCachedStates() { return strategy == null ? 0 : strategy.cachedStates(); }
-    public int plannerCacheBytes() { return strategy == null ? 0 : strategy.cacheBytes(); }
+    public int plannerCachedStates() { return relay != null ? relay.cachedStates() : strategy == null ? 0 : strategy.cachedStates(); }
+    public int plannerCacheBytes() { return relay != null ? relay.cacheBytes() : strategy == null ? 0 : strategy.cacheBytes(); }
     public Snapshot snapshot() { return new Snapshot(remainingMask, gates, moves(), level.tiles.size()); }
 
     public List<Tile> remainingTiles() {
@@ -258,6 +260,7 @@ public final class Board {
 
     /** Exact completion, or null when the current position cannot be completed. */
     public int[] solve() {
+        if(relay!=null)return relay.solve(remainingMask,gates);
         if(strategy==null)return Solver.solve(level, remainingMask, gates);
         // Every suffix of a globally shortest certificate is itself shortest.
         boolean prefix=history.size()<=level.actionSolution.length;
@@ -304,6 +307,7 @@ public final class Board {
     public boolean isSafeMove(int id) {
         if(supportsManualGates())return canPerformAction(id);
         Tile tile = level.tile(id);
+        if(relay!=null)return canMove(id)&&relay.hasSolution(remainingMask&~(1L<<id),gates^tile.switchMask);
         return canMove(id) && Solver.solve(level, remainingMask & ~(1L << id),
                 gates ^ tile.switchMask) != null;
     }

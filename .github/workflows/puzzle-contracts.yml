@@ -39,6 +39,14 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/data/*.java
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningGuide.java
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningStrings.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/HomeScene.java
+            /scripts/test-relay-v115.sh
+            /scripts/RelayV115Test.java
+            /scripts/test-home-v115.sh
+            /scripts/test-home-v115-geometry.sh
+            /scripts/HomeV115Test.java
+            /scripts/HomeV115GeometryTest.java
+            /scripts/home-render-support/
             /scripts/test-learning-v114.sh
             /scripts/test-deliberate-play-v114.sh
             /scripts/test-learning-guide.sh
@@ -65,6 +73,14 @@ jobs:
 
       - name: Qualify all 1000 N boards and their pacing
         run: sh scripts/test-learning-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/learning"
+
+      - name: Qualify all 1000 U boards and every reachable relay state
+        run: sh scripts/test-relay-v115.sh "$RUNNER_TEMP/luma-puzzle-contracts/relay"
+
+      - name: Check three-room ownership, migration and camera geometry
+        run: |
+          bash scripts/test-home-v115.sh
+          bash scripts/test-home-v115-geometry.sh
 
       - name: Check strict budgets, the saved Return and legacy continuations
         run: sh scripts/test-deliberate-play-v114.sh

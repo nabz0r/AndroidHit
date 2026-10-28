@@ -12,6 +12,8 @@ public final class MoveBudget {
     public static final int REVERSIBLE_POLICY_VERSION = 3;
     /** Real action limit, free rejected taps, one refunded correction per attempt. */
     public static final int DELIBERATE_POLICY_VERSION = 4;
+    /** U relay route: rejected taps are free and every real exit can be undone and refunded. */
+    public static final int RELAY_POLICY_VERSION = 5;
     public static final int UNDO_LIMIT = 1;
     public static final int MAX_EXTENSIONS = 2;
     public static final int GOLD_EXTENSION_COST = 100;
@@ -52,7 +54,7 @@ public final class MoveBudget {
 
     /** 0 Journey, 1 daily, 2 weekly, 3 Remix, 4 fair unlimited friend challenge. */
     public static MoveBudget start(int mode, Level level) {
-        return create(mode, level, level != null && level.progressionVersion == 5 ? DELIBERATE_POLICY_VERSION
+        return create(mode, level, level != null && level.progressionVersion == 6 ? RELAY_POLICY_VERSION : level != null && level.progressionVersion == 5 ? DELIBERATE_POLICY_VERSION
                 : level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
     }
     public static MoveBudget startDeliberate(int mode, Level level) { return create(mode, level, DELIBERATE_POLICY_VERSION); }
@@ -66,6 +68,8 @@ public final class MoveBudget {
 
     private static MoveBudget create(int mode, Level level, int policyVersion) {
         if (level == null || mode < 0 || mode > 4) throw new IllegalArgumentException("Valid mode and level required");
+        if((level.progressionVersion==6)!=(policyVersion==RELAY_POLICY_VERSION))
+            throw new IllegalArgumentException("U boards require the distinct relay budget policy");
         int count = policyVersion == 1 ? (mode == 3 ? LevelCatalog.REMIX_COUNT : LevelCatalog.LEVEL_COUNT)
                 : mode == 3 ? BalancedCatalog.REMIX_COUNT : BalancedCatalog.LEVEL_COUNT;
         if ((mode == 0 || mode == 3) && (level.isEvent || level.number < 1 || level.number > count)) {
@@ -79,6 +83,8 @@ public final class MoveBudget {
             if (mode == 0) margin = level.number <= 3 ? 8 : level.number <= 6 ? 6 : level.number <= 30 ? 5 : level.number <= 90 ? 4 : 3;
             else if (mode == 3) margin = level.number <= 3 ? 6 : level.number <= 12 ? 5 : level.number <= 60 ? 4 : 3;
             else margin = mode == 1 ? 5 : 4;
+        } else if (mode == 0 && level.progressionVersion == 6) {
+            margin = RelayCatalog.allowance(level.number);
         } else if (mode == 0 && level.progressionVersion == 5) {
             margin = LearningCatalog.allowance(level.number);
         } else if ((mode == 0 || mode == 3) && level.progressionVersion == 4) {
@@ -107,15 +113,17 @@ public final class MoveBudget {
     public static MoveBudget restore(int mode, Level level, int used, int extensions,
                                      int extraActions, int boardMoves, int undos) {
         return restorePolicy(mode, level, used, extensions, extraActions, boardMoves, undos,
-                level != null && level.progressionVersion == 5 ? DELIBERATE_POLICY_VERSION
+                level != null && level.progressionVersion == 6 ? RELAY_POLICY_VERSION : level != null && level.progressionVersion == 5 ? DELIBERATE_POLICY_VERSION
                         : level != null && level.progressionVersion == 4 ? REVERSIBLE_POLICY_VERSION : POLICY_VERSION);
     }
     /** Explicit version routing preserves policy-1/2 saves; no guessing from the current release. */
     public static MoveBudget restoreVersion(int policy,int mode,Level level,int used,int extensions,
                                             int extraActions,int boardActions,int undos) {
-        if(policy<1||policy>DELIBERATE_POLICY_VERSION)return null;
+        if(policy<1||policy>RELAY_POLICY_VERSION)return null;
         if(level!=null&&level.progressionVersion>=4&&policy<REVERSIBLE_POLICY_VERSION)return null;
         if(level!=null&&level.progressionVersion==5&&policy!=DELIBERATE_POLICY_VERSION)return null;
+        if(level!=null&&level.progressionVersion==6&&policy!=RELAY_POLICY_VERSION)return null;
+        if(policy==RELAY_POLICY_VERSION&&(level==null||level.progressionVersion!=6))return null;
         return restorePolicy(mode,level,used,extensions,extraActions,boardActions,undos,policy);
     }
     /** Upgrade the ledger, retaining geometry and earned extensions. Rejected taps have no history entry. */
@@ -149,6 +157,7 @@ public final class MoveBudget {
         catch (IllegalArgumentException invalid) { return null; }
         if (used < 0 || extensions < 0 || extensions > MAX_EXTENSIONS || extraActions < 0
                 || boardMoves < 0 || (policyVersion<3&&boardMoves>candidate.minimum) || undos < 0) return null;
+        if(policyVersion==RELAY_POLICY_VERSION&&boardMoves>level.tiles.size())return null;
         if (candidate.isUnlimited()) {
             return used == 0 && extensions == 0 && extraActions == 0 ? candidate : null;
         }
@@ -158,7 +167,7 @@ public final class MoveBudget {
                 || extraActions > extensions * maxExtension
                 || policyVersion<3&&used<candidate.base+(extensions-1)*5)) return null;
         long minimumUsed = policyVersion>=3?boardMoves:(long)boardMoves+2L*undos;
-        if (policyVersion == DELIBERATE_POLICY_VERSION && used != boardMoves) return null;
+        if (policyVersion >= DELIBERATE_POLICY_VERSION && used != boardMoves) return null;
         if (used < minimumUsed || used > candidate.base + extraActions) return null;
         candidate.used = used;
         candidate.extensions = extensions;
@@ -168,7 +177,7 @@ public final class MoveBudget {
 
     public int minimumActions() { return minimum; }
     public int policyVersion() { return policyVersion; }
-    public boolean rejectsAreFree() { return policyVersion == DELIBERATE_POLICY_VERSION; }
+    public boolean rejectsAreFree() { return policyVersion >= DELIBERATE_POLICY_VERSION; }
     public int undoRemaining(int usedUndos) { return policyVersion == DELIBERATE_POLICY_VERSION ? Math.max(0, UNDO_LIMIT - usedUndos) : Integer.MAX_VALUE; }
     public boolean refundsUndo() { return policyVersion >= REVERSIBLE_POLICY_VERSION; }
     /** Policy 4 commits a real action or returns the physical refusal without charging it. */

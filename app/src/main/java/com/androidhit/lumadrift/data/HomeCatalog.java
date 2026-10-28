@@ -6,7 +6,10 @@ import java.util.List;
 
 /** Original room collection. Every paid object uses existing, earned LumaCoins. */
 public final class HomeCatalog {
-    public static final int SIZE = 6;
+    public static final int SIZE = 10;
+    public static final String DEFAULT_ROOM = "living";
+    public static final List<String> ROOMS=Collections.unmodifiableList(Arrays.asList("living","bedroom","garden"));
+    public static boolean validRoom(String id){return ROOMS.contains(id);}
     public static final String DEFAULT_WALLPAPER = "wallpaper_cream";
     public static final String DEFAULT_FLOOR = "floor_oak";
     public static final class Item {
@@ -39,7 +42,37 @@ public final class HomeCatalog {
         new Item("plush",1,1,120,true,"cuddle",0xffd6b6ca,0xfffbefd9),
         new Item("gate_lamp",1,1,180,true,"switch",0xff9dbdc2,0xfff9d98d),
         new Item("mobile",1,1,160,true,"watch",0xffb7a7d2,0xfff4d497),
-        new Item("stool",1,1,100,true,"sit",0xffc6ac94,0xffc1d8c1)
+        new Item("stool",1,1,100,true,"sit",0xffc6ac94,0xffc1d8c1),
+        new Item("aquarium",3,1,420,true,"watch",0xff83d4df,0xffe8b987),
+        new Item("piano",3,2,560,true,"watch",0xff47425c,0xfffff1d7),
+        new Item("greenhouse",3,3,640,true,"admire",0xffa1d6bc,0xfff2d18c),
+        new Item("library",3,1,380,true,"read",0xffbb8d69,0xffc9bcdf),
+        new Item("bay_window",3,1,280,true,"watch",0xffa4d8e8,0xfff3d5b6),
+        new Item("telescope",2,2,390,true,"watch",0xffd8ba80,0xffa8b9d7),
+        new Item("fireplace",2,1,350,true,"relax",0xffc99380,0xffffd080),
+        new Item("desk",2,1,230,true,"read",0xffcda780,0xffa7c9c2),
+        new Item("easel",1,1,190,true,"watch",0xffc89b72,0xffedb3cb),
+        new Item("record_player",1,1,210,true,"watch",0xffbc8e71,0xff675a75),
+        new Item("arcade",1,1,400,true,"watch",0xff9f8fd0,0xff8ce3da),
+        new Item("terrarium",1,1,170,true,"admire",0xffa6d8c9,0xffd5ad8c),
+        new Item("bonsai",1,1,150,true,"admire",0xff84b294,0xffbfa083),
+        new Item("cactus",1,1,130,true,"admire",0xff8fbb9d,0xffd8a08f),
+        new Item("cherry_tree",2,2,460,true,"admire",0xffeab5cc,0xffbd967a),
+        new Item("fountain",2,2,370,true,"watch",0xffb7cbd6,0xff9ddfea),
+        new Item("pond",3,2,420,true,"watch",0xff8dd0d1,0xff9ac49c),
+        new Item("hammock",3,1,270,true,"rest",0xffe5b7c9,0xffc4a080),
+        new Item("swing",2,2,320,true,"sit",0xffd3b185,0xffb1cfbc),
+        new Item("bench",2,1,180,true,"sit",0xffa3c4b2,0xffd5b78f),
+        new Item("picnic",2,2,220,true,"tea",0xffe3bd9a,0xfff2d6c7),
+        new Item("flowerbed",2,1,0,true,"admire",0xffa5c993,0xffebb6c7),
+        new Item("garden_path",2,2,0,false,"relax",0xffc8d0c9,0xffe6eadf),
+        new Item("lantern",1,1,160,true,"light",0xffbba5cc,0xffffd48e),
+        new Item("canopy_bed",3,2,520,true,"rest",0xffc8b5df,0xfff4e3dc),
+        new Item("wardrobe",2,1,280,true,"watch",0xffc7aed5,0xfff1dbb2),
+        new Item("bath",2,1,340,true,"relax",0xffdce9ea,0xffa5d7db),
+        new Item("mirror",1,1,150,true,"watch",0xffdac29a,0xffb8dce5),
+        new Item("kitchen",3,1,440,true,"tea",0xffa9c6bc,0xfff1d1af),
+        new Item("chess_table",2,2,240,true,"watch",0xffbd9c86,0xffefdfc6)
     ));
     public static final List<Surface> WALLPAPERS=Collections.unmodifiableList(Arrays.asList(
         new Surface("wallpaper_cream",0,0xfff8eadb,0xffefcfbf),
@@ -53,6 +86,15 @@ public final class HomeCatalog {
         new Surface("floor_rose",180,0xffdec2c9,0xffbd929e),
         new Surface("floor_mint",160,0xffc9dccf,0xff9db8a9)
     ));
+    /** Art direction used by the workshop; ownership never depends on a theme. */
+    public static String theme(String id){
+        if(id==null)return "stellar";
+        switch(id){
+            case "greenhouse":case "plant":case "terrarium":case "bonsai":case "cactus":case "cherry_tree":case "fountain":case "pond":case "hammock":case "swing":case "bench":case "picnic":case "flowerbed":case "garden_path":return "forest";
+            case "arcade":case "record_player":case "kitchen":case "desk":case "easel":case "piano":case "chess_table":case "gate_lamp":return "neon";
+            default:return "stellar";
+        }
+    }
     private HomeCatalog(){}
     public static Item item(String id){for(Item item:ITEMS)if(item.id.equals(id))return item;return null;}
     public static Surface wallpaper(String id){for(Surface item:WALLPAPERS)if(item.id.equals(id))return item;return null;}

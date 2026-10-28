@@ -1238,16 +1238,28 @@ public final class GameStore {
         synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return prefs.getBoolean("tutorial_v18_fresh_profile",false)&&!firstLightSeen()&&!tutorialSeen()&&!tutorialRewardClaimed()&&tutorialState().isEmpty()&&unlockedLevel()==1&&completedLevels()==0;}
     }
 
-    /** Room state lives in the existing local save; missing room keys leave legacy progression untouched. */
-    public synchronized HomeLayout homeLayout() {
-        synchronized(LocalSaveTransactions.LOCK){
-            LocalSaveTransactions.flush(prefs);
-            HomeLayout layout=HomeLayout.decode(prefs.getString("home_layout_v113", ""));
-            if(layout==null)return HomeLayout.starter();
-            // A malformed/imported room must not display an unowned paid item.
-            for(HomeLayout.Placement p:new ArrayList<>(layout.placements()))if(!ownsHomeItemLocked(p.id))layout=layout.tryRemove(p.id);
-            return layout;
-        }
+    /** Each room has a complete atomic layout. The living room keeps its original save key. */
+    public synchronized String homeRoom(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return homeRoomLocked();}
+    }
+    private String homeRoomLocked(){String id=prefs.getString("home_room_v115",HomeCatalog.DEFAULT_ROOM);return HomeCatalog.validRoom(id)?id:HomeCatalog.DEFAULT_ROOM;}
+    public synchronized boolean setHomeRoom(String room){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if(!HomeCatalog.validRoom(room))return false;Map<String,Object> write=new HashMap<>();write.put("home_room_v115",room);LocalSaveTransactions.write(prefs,write);return true;}
+    }
+    private static String homeLayoutKey(String room){return HomeCatalog.DEFAULT_ROOM.equals(room)?"home_layout_v113":"home_layout_v115_"+room;}
+    private static String homeSurfaceKey(String room,boolean wall){String kind=wall?"wallpaper":"floor";return HomeCatalog.DEFAULT_ROOM.equals(room)?"home_"+kind+"_v113":"home_"+kind+"_v115_"+room;}
+    public synchronized HomeLayout homeLayout(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return homeLayoutLocked(homeRoomLocked());}
+    }
+    /** Invalid room ids return null. Reading an old save never rewrites or relocates it. */
+    public synchronized HomeLayout homeLayout(String room){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return HomeCatalog.validRoom(room)?homeLayoutLocked(room):null;}
+    }
+    private HomeLayout homeLayoutLocked(String room){
+        HomeLayout layout=HomeLayout.decode(prefs.getString(homeLayoutKey(room),""));
+        if(layout==null)return HomeLayout.starter(room);
+        for(HomeLayout.Placement p:new ArrayList<>(layout.placements()))if(!ownsHomeItemLocked(p.itemId))layout=layout.tryRemove(p.id);
+        return layout;
     }
     private boolean ownsHomeItemLocked(String id){int price=HomeCatalog.price(id);return price>=0&&(price==0||prefs.getBoolean("home_owned_v113_"+id,false));}
     public synchronized boolean ownsHomeItem(String id){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return ownsHomeItemLocked(id);}}
@@ -1261,27 +1273,30 @@ public final class GameStore {
         }
     }
     public synchronized boolean placeHomeItem(String id,int x,int y,int rotation){
-        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if(HomeCatalog.item(id)==null||!ownsHomeItemLocked(id))return false;HomeLayout next=homeLayout().tryPlace(id,x,y,rotation);return saveHomeLayoutLocked(next);}
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if(HomeCatalog.item(id)==null||!ownsHomeItemLocked(id))return false;String room=homeRoomLocked();return saveHomeLayoutLocked(room,homeLayoutLocked(room).tryPlace(id,x,y,rotation));}
     }
     public synchronized boolean removeHomeItem(String id){
-        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return saveHomeLayoutLocked(homeLayout().tryRemove(id));}
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String room=homeRoomLocked();return saveHomeLayoutLocked(room,homeLayoutLocked(room).tryRemove(id));}
     }
     public synchronized boolean moveHomeCompanion(int x,int y){
-        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return saveHomeLayoutLocked(homeLayout().tryMove(x,y));}
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String room=homeRoomLocked();return saveHomeLayoutLocked(room,homeLayoutLocked(room).tryMove(x,y));}
     }
-    private boolean saveHomeLayoutLocked(HomeLayout next){
-        if(next==null)return false;Map<String,Object> write=new HashMap<>();write.put("home_layout_v113",next.encode());LocalSaveTransactions.write(prefs,write);return true;
+    private boolean saveHomeLayoutLocked(String room,HomeLayout next){
+        if(next==null)return false;Map<String,Object> write=new HashMap<>();write.put(homeLayoutKey(room),next.encode());LocalSaveTransactions.write(prefs,write);return true;
     }
-    public synchronized String homeWallpaper(){
-        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String id=prefs.getString("home_wallpaper_v113",HomeCatalog.DEFAULT_WALLPAPER);return HomeCatalog.wallpaper(id)!=null&&ownsHomeItemLocked(id)?id:HomeCatalog.DEFAULT_WALLPAPER;}
-    }
-    public synchronized String homeFloor(){
-        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String id=prefs.getString("home_floor_v113",HomeCatalog.DEFAULT_FLOOR);return HomeCatalog.floor(id)!=null&&ownsHomeItemLocked(id)?id:HomeCatalog.DEFAULT_FLOOR;}
+    public synchronized String homeWallpaper(){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return homeSurfaceLocked(homeRoomLocked(),true);}}
+    public synchronized String homeFloor(){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return homeSurfaceLocked(homeRoomLocked(),false);}}
+    public synchronized String homeWallpaper(String room){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return HomeCatalog.validRoom(room)?homeSurfaceLocked(room,true):null;}}
+    public synchronized String homeFloor(String room){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return HomeCatalog.validRoom(room)?homeSurfaceLocked(room,false):null;}}
+    private String homeSurfaceLocked(String room,boolean wall){
+        String fallback=wall&&!HomeCatalog.DEFAULT_ROOM.equals(room)?"wallpaper_sage":wall?HomeCatalog.DEFAULT_WALLPAPER:HomeCatalog.DEFAULT_FLOOR;
+        String id=prefs.getString(homeSurfaceKey(room,wall),fallback);
+        return (wall?HomeCatalog.wallpaper(id):HomeCatalog.floor(id))!=null&&ownsHomeItemLocked(id)?id:fallback;
     }
     public synchronized boolean setHomeWallpaper(String id){return setHomeSurface(id,true);}
     public synchronized boolean setHomeFloor(String id){return setHomeSurface(id,false);}
     private boolean setHomeSurface(String id,boolean wall){
-        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if((wall?HomeCatalog.wallpaper(id):HomeCatalog.floor(id))==null||!ownsHomeItemLocked(id))return false;Map<String,Object> write=new HashMap<>();write.put(wall?"home_wallpaper_v113":"home_floor_v113",id);LocalSaveTransactions.write(prefs,write);return true;}
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if((wall?HomeCatalog.wallpaper(id):HomeCatalog.floor(id))==null||!ownsHomeItemLocked(id))return false;Map<String,Object> write=new HashMap<>();write.put(homeSurfaceKey(homeRoomLocked(),wall),id);LocalSaveTransactions.write(prefs,write);return true;}
     }
     public synchronized String homeGoal(){
         synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String id=prefs.getString("home_goal_v113","");return HomeCatalog.item(id)!=null&&!ownsHomeItemLocked(id)?id:"";}

@@ -11,13 +11,13 @@ import com.androidhit.lumadrift.engine.Direction;
 public final class SweetUi {
     public static final int PEACH = 0, MINT = 1, LILAC = 2, CREAM = 3;
     public static final int HAPPY = 0, THINKING = 1, CELEBRATE = 2;
-    public static final int INK = 0xff343149, MUTED = 0xff625d78;
+    public static final int INK = 0xff30344b, MUTED = 0xff686a80;
     private static final int WHITE = 0xfffffcff;
-    private static final int[] LIGHT = {0xffffebe4,0xffe1fff2,0xfff0eaff,0xfffff7dc};
-    private static final int[] MAIN = {0xffffbbad,0xffa6e8cf,0xffc7b3f5,0xffffdf94};
-    private static final int[] EDGE = {0xffd28581,0xff6baa97,0xff9780c4,0xffc2a164};
+    private static final int[] LIGHT = {0xfff5e2da,0xffdceee6,0xffe8e3f3,0xfff5ebd1};
+    private static final int[] MAIN = {0xffe9ae96,0xff8ccbb5,0xffb5a7d9,0xffe6c16e};
+    private static final int[] EDGE = {0xffbf8374,0xff5b9b85,0xff8979b5,0xffb39853};
     private static final int[] DIRECTION_COLORS = {0xff91e5cc,0xffffb398,0xffceb3f7,0xffa4cefa};
-    private static final int[] DARK = {0xff81394f,0xff315f58,0xff56427a,0xff76602d};
+    private static final int[] DARK = {0xff8c5149,0xff386f5d,0xff64518d,0xff80652e};
     private final Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path path = new Path();
     private final RectF rect = new RectF();
@@ -49,8 +49,6 @@ public final class SweetUi {
         int i=Math.floorMod(tone,4);float rad=Math.min(32,box.height()*.32f);
         if(elevated)round(c,box.left,box.top+3,box.right,box.bottom+3,rad,0x123a3159);
         round(c,box.left,box.top,box.right,box.bottom,rad,LIGHT[i]);
-        rect.set(box.left+.6f,box.top+.6f,box.right-.6f,box.bottom-.6f);
-        outline(c,rect,rad,0xafffffff,1.2f);
     }
 
     /** The caller draws a dark label with ink(tone). Reserve at least 48 logical units for a touch target. */
@@ -58,7 +56,6 @@ public final class SweetUi {
         int i=Math.floorMod(tone,4);float rad=box.height()*.5f,drop=pressed?.5f:2;
         round(c,box.left,box.top+drop,box.right,box.bottom+drop,rad,mix(MAIN[i],EDGE[i],.64f));
         round(c,box.left,box.top,box.right,box.bottom,rad,pressed?mix(MAIN[i],EDGE[i],.12f):MAIN[i]);
-        rect.set(box.left+.8f,box.top+.8f,box.right-.8f,box.bottom-.8f);outline(c,rect,rad,0x9cffffff,1.2f);
     }
 
     /** Progress always represents measured completion; no fabricated near-miss or changing goal. */
@@ -159,7 +156,7 @@ public final class SweetUi {
         round(c,box.left,box.top+size*.025f,box.right,box.bottom+size*.025f,radius,edge);
         round(c,box.left,box.top,box.right,box.bottom,radius,bodyColor);
         rect.set(box.left+.7f,box.top+.7f,box.right-.7f,box.bottom-.7f);outline(c,rect,radius,alpha(WHITE,210),Math.max(.8f,size*.025f));
-        round(c,box.left+size*.12f,box.top+size*.07f,box.right-size*.12f,box.top+size*.34f,radius*.6f,alpha(WHITE,120));
+        round(c,box.left+size*.12f,box.top+size*.07f,box.right-size*.12f,box.top+size*.25f,radius*.6f,alpha(WHITE,70));
         ellipse(c,box.left+size*.14f,box.top+size*.11f,box.left+size*.26f,box.top+size*.18f,WHITE);
         c.save();c.translate(box.centerX(),box.centerY()+size*.015f);c.rotate(direction.ordinal()*90);
         float arrow=size*.27f;

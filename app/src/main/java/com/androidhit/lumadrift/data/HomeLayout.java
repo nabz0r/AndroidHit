@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-/** Immutable six-by-six room state. No Android dependency or hidden relocation. */
+/** Immutable ten-by-ten room state with exact legacy six-by-six decoding. No Android dependency or hidden relocation. */
 public final class HomeLayout {
     public static final int SIZE=HomeCatalog.SIZE;
     public static final class Cell {
@@ -31,7 +31,11 @@ public final class HomeLayout {
         this.objects=Collections.unmodifiableList(new ArrayList<>(placements));this.companionX=companionX;this.companionY=companionY;
         if(!valid())throw new IllegalArgumentException("Invalid room layout");
     }
-    public static HomeLayout starter(){
+    public static HomeLayout starter(){return starter(HomeCatalog.DEFAULT_ROOM);}
+    public static HomeLayout starter(String room){
+        if(!HomeCatalog.validRoom(room))throw new IllegalArgumentException("Unknown room");
+        if("bedroom".equals(room)){List<Placement> p=new ArrayList<>();p.add(new Placement("bed",2,1,0));p.add(new Placement("lamp",7,1,0));p.add(new Placement("rug",4,4,0));p.add(new Placement("cushion",7,6,0));return new HomeLayout(p,5,5);}
+        if("garden".equals(room)){List<Placement> p=new ArrayList<>();p.add(new Placement("plant",1,1,0));p.add(new Placement("flowerbed",5,1,0));p.add(new Placement("garden_path",4,4,0));return new HomeLayout(p,5,5);}
         List<Placement> p=new ArrayList<>();p.add(new Placement("bed",0,0,0));p.add(new Placement("lamp",5,0,0));
         p.add(new Placement("plant",0,5,0));p.add(new Placement("rug",2,2,0));p.add(new Placement("cushion",4,4,0));
         return new HomeLayout(p,3,3);
@@ -76,13 +80,15 @@ public final class HomeLayout {
     }
     public HomeLayout tryMove(int x,int y){if(!inBounds(x,y)||isBlocked(x,y))return null;if(x==companionX&&y==companionY)return this;if(pathTo(x,y).isEmpty())return null;return new HomeLayout(objects,x,y);}
     /** Stable compact record; all room edits save this single complete state atomically. */
-    public String encode(){StringBuilder out=new StringBuilder("1|").append(companionX).append(',').append(companionY).append('|');for(Placement p:objects)out.append(p.id).append(',').append(p.x).append(',').append(p.y).append(',').append(p.rotation).append(';');return out.toString();}
+    public String encode(){StringBuilder out=new StringBuilder("2|").append(companionX).append(',').append(companionY).append('|');for(Placement p:objects)out.append(p.id).append(',').append(p.x).append(',').append(p.y).append(',').append(p.rotation).append(';');return out.toString();}
     /** Invalid records never partially restore a room. The caller can use the safe starter state. */
     public static HomeLayout decode(String record){
-        if(record==null||record.length()>2048)return null;try{
-            String[] sections=record.split("\\|",-1);if(sections.length!=3||!"1".equals(sections[0]))return null;String[] companion=sections[1].split(",",-1);if(companion.length!=2)return null;
+        if(record==null||record.length()>8192)return null;try{
+            String[] sections=record.split("\\|",-1);if(sections.length!=3||!("1".equals(sections[0])||"2".equals(sections[0])))return null;boolean legacy="1".equals(sections[0]);String[] companion=sections[1].split(",",-1);if(companion.length!=2)return null;
             List<Placement> placements=new ArrayList<>();if(!sections[2].isEmpty())for(String object:sections[2].split(";")){String[] p=object.split(",",-1);if(p.length!=4)return null;placements.add(new Placement(p[0],Integer.parseInt(p[1]),Integer.parseInt(p[2]),Integer.parseInt(p[3])));}
-            return new HomeLayout(placements,Integer.parseInt(companion[0]),Integer.parseInt(companion[1]));
+            int cx=Integer.parseInt(companion[0]),cy=Integer.parseInt(companion[1]);
+            if(legacy){if(cx<0||cy<0||cx>=6||cy>=6)return null;for(Placement p:placements)if(p.x<0||p.y<0||p.x+p.width()>6||p.y+p.depth()>6)return null;}
+            return new HomeLayout(placements,cx,cy);
         }catch(IllegalArgumentException invalid){return null;}
     }
 }
