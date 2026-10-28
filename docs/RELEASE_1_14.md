@@ -26,7 +26,7 @@ Google sign-in does not synchronize gameplay or the house. Test ads remain force
 
 ## Frozen RC2 artifacts
 
-The [RC2 binary audit](validation/v1.14/binaries-rc2/binary-final-candidate.json) passes signature, alignment, native-library and bundle checks for all four exact outputs. Their source inputs and bytes stayed unchanged during verification. These files are local release artifacts; public download availability has its own pending receipt.
+The [RC2 binary audit](validation/v1.14/binaries-rc2/binary-final-candidate.json) passes signature, alignment, native-library and bundle checks for all four exact outputs. Their source inputs and bytes stayed unchanged during verification. The four exact files are published at [source/artifact commit578661da](https://github.com/nabz0r/AndroidHit/commit/578661daf81be8896668d427bef061f5f0fff700); [independent public HTTP checks](validation/v1.14/publication.json) confirm every size and SHA-256.
 
 | Signed artifact | Bytes | SHA-256 |
 | --- | ---: | --- |

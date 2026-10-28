@@ -1,9 +1,44 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>Solve a little. Come home.</strong><br>Find the move that opens the puzzle. Make a little home for your companion.</p>
-<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.13.0-rc2.apk"><strong>Signed Android candidate · 1.13.0-rc2</strong></a><br><a href="docs/RELEASE_1_13.md">Release & artifacts</a> · <a href="docs/HOME_1_13.md">Your little home</a> · <a href="docs/validation/v1.13/README.md">Qualification</a> · <a href="docs/README.md">Documentation</a></p>
-<p align="center">1,000 Journey boards + 240 Remix · 12 home furnishings<br>24 companions × 12 free visual styles · 6 powers · 6 languages</p>
+<p align="center"><strong>Read the board. Make your move. Come home.</strong><br>A puzzle Journey with visible rules and a little home for your companion.</p>
+<p align="center"><strong>1.14.0-rc2 · source and signed artifacts published · website delivery pending</strong><br><a href="docs/RELEASE_1_14.md">Release & evidence</a> · <a href="docs/GAMEPLAY_1_14.md">Gameplay rules</a> · <a href="docs/UX_1_14.md">Puzzle clarity</a> · <a href="docs/validation/v1.14/README.md">Qualification</a></p>
+<p align="center">1,000 versioned Journey boards + 240 Remix · 30 staged opening boards<br>One Return per attempt · free blocked tries · real action budgets · 6 languages</p>
 
-## Your little home — 1.13
+## Every action has a clear meaning — 1.14
+
+The main puzzle now teaches its rules in the route itself. Straight exits lead to blockers, matching K keys, manual gate openings and switch order before those mechanics combine. A closed side is a real button with a visible one-action cost. The large arrow gives movement; small arrows name the gates changed after exit.
+
+- **Make decisions within a real budget.** A successful exit or gate opening costs one action. A blocked try costs nothing. One Return per attempt restores the preceding position and refunds its action; its used quota survives a cold process restart. Inefficient productive choices can still lose an attempt. Restarting is free.
+- **Learn through the first thirty boards.** The new N route starts with thirty authored teaching boards, then combines 970 existing piece layouts with a globally paced sequence and revised initial gate states where needed. Contextual rules and immediate causal feedback explain changes without a constant solution overlay.
+- **Keep old puzzles identifiable.** N challenge codes have their own resolver. Existing L/M/T and earlier codes retain their boards. An in-progress save keeps its original geometry when its ledger is upgraded; the next new Journey attempt uses N.
+- **Come home between puzzles.** Arrange twelve furnishings, dress and hug the companion, move it along a clear floor path, preview placements and work towards a chosen furnishing with existing earned LumaCoins.
+
+[Release scope and current evidence](docs/RELEASE_1_14.md) · [The reported L15 diagnosis](docs/validation/v1.14/puzzle-ui-audit.md). The RC2 source contracts, independent curriculum review, signed-byte checks and scoped native acceptance pass. Installed-candidate acceptance, signed artifact hashes, public download verification and Firebase delivery remain separate recorded steps. Mathematical solvability is not a human difficulty or retention result.
+
+The RC2 [content contracts](docs/validation/v1.14/audit-learning/audit-learning-contracts.json) pass 201,143 checks across 1,000 boards. A separate [curriculum review](docs/validation/v1.14/independent-pacing-review/README.md) recomputes every score and class: all 97 later episodes retain three starts with a free exit, and the longest Hard/Expert run is four. The median structural score rises over each 200-board stage. [Archived RC1 content](docs/validation/v1.14/audit-learning-rc1/README.md), intermediate installed runs and older release images do not certify the final RC2 APK. The final native images are original RC2 captures. Public artifact delivery has its own exact-byte receipt.
+
+<p align="center"><img src="public/assets/screenshots/v1.14/puzzle-en.png" width="230" alt="Final native RC2 N15 puzzle with a one-action gate and one Undo"><img src="public/assets/screenshots/v1.14/home-en.png" width="230" alt="Final native RC2 companion home with an earned sofa"><img src="public/assets/screenshots/v1.14/furniture-en.png" width="230" alt="Final native RC2 furniture catalogue with earned prices and ownership"></p>
+
+Unedited **1.14.0-sandbox-rc2** full frames from the globally passed/restored [716-check native first30/gallery route](docs/validation/v1.14/ui-bugs/ui-sdk-final30-gallery-rc2-a/host-report.json). [Exact image provenance](docs/validation/site-v1.14/screenshot-provenance.json). All 1,000 final N boards have recorded native three-star wins across ten complete passed batches: **55,423 checks, 19,920 productive actions and 142 indexed original PNGs**. This is coverage across two sessions, not a passed continuous marathon. C keeps its global FAIL/restored result: its eight complete batches cover N1–800; its failed ninth batch contributes nothing. The separate restored D session covers N801–1000 after the explicitly recorded synthetic prerequisite `unlocked=801`; no stars, coins, session, history or solution actions are injected by that setup. [Coverage receipt](docs/validation/v1.14/ui-bugs/ui-sdk-coverage801-1000-rc2-d/independent-coverage-check/coverage.json).
+
+[Production APK](releases/luma-drift-1.14.0-rc2.apk) · [AAB](releases/luma-drift-1.14.0-rc2.aab) · [Production manifest](releases/manifest-1.14.0-rc2.json) · [Lab APK](releases/luma-drift-1.14.0-sandbox-rc2.apk) · [Lab manifest](releases/manifest-1.14.0-sandbox-rc2.json). The [RC2 four-artifact binary audit](docs/validation/v1.14/binaries-rc2/binary-final-candidate.json) passes. Source and signed artifacts are published on [main at `578661da`](https://github.com/nabz0r/AndroidHit/commit/578661daf81be8896668d427bef061f5f0fff700); [four independent public-download checks](docs/validation/v1.14/publication.json) return HTTP200 with exact sizes and SHA-256. The [puzzle-contract CI run](https://github.com/nabz0r/AndroidHit/actions/runs/40754557397) succeeds. Website Hosting delivery has its own pending receipt.
+
+Android 8+ / API 26. Production package `com.androidhit.lumadrift`; separate Lab package `com.androidhit.lumadrift.sandbox`. Gameplay, house state and earned LumaCoins remain local. Google sign-in does not synchronize them. Test ads are forced; real checkout and premium draws remain disabled.
+
+```sh
+./gradlew assembleProductionRelease bundleProductionRelease lintProductionRelease
+./gradlew assembleLabRelease bundleLabRelease lintLabRelease
+bash scripts/test-learning-v114.sh
+bash scripts/test-deliberate-play-v114.sh
+bash scripts/test-learning-guide.sh
+bash scripts/test-home-v113.sh
+node --test public/tests/site-language-v114.test.mjs public/tests/deletion-core.test.mjs
+```
+
+[Development](docs/DEVELOPMENT.md) · [Roadmap](docs/ROADMAP.md) · [Documentation](docs/README.md). Source and original repository assets: **AGPL-3.0**. [Third-party notices](docs/THIRD_PARTY_NOTICES.md).
+
+The sections below preserve dated releases and their original rules. Their free-Undo wording, test counts and deployment receipts do not certify the current one-Return candidate.
+
+## Preserved 1.13 — your little home
 
 The puzzle remains the main game. Clear pieces in the right order, earn existing LumaCoins, then return to a room you can arrange around your companion.
 

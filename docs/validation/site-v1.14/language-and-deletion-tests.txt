@@ -1,0 +1,40 @@
+✔ incomplete config cannot activate network: undefined (0.574917ms)
+✔ incomplete config cannot activate network: {} (0.050667ms)
+✔ incomplete config cannot activate network: {"walletApiBaseUrl":"https://wallet.example.com/","firebase":{}} (0.05575ms)
+✔ incomplete config cannot activate network: {"walletApiBaseUrl":"","firebase":{"apiKey":"public-api-key","authDomain":"luma-drift-production.firebaseapp.com","projectId":"luma-drift-production","appId":"1:123:web:abcdef"}} (0.214417ms)
+✔ valid configuration maps to the account endpoint (0.133375ms)
+✔ unsafe API address rejected: http://wallet.example.com (0.05675ms)
+✔ unsafe API address rejected: javascript:alert(1) (0.048875ms)
+✔ unsafe API address rejected: https://user:password@wallet.example.com (0.040666ms)
+✔ unsafe API address rejected: https://wallet.example.com?token=secret (0.051834ms)
+✔ unsafe API address rejected: https://wallet.example.com#fragment (0.090459ms)
+✔ loopback HTTP is allowed only for a local development server (0.08ms)
+✔ Android app configuration cannot activate web auth (0.047042ms)
+✔ unrelated auth domains are rejected (0.04575ms)
+✔ auth domain must match the project (0.04375ms)
+✔ a user and a fresh token are required before any request (0.384583ms)
+✔ authenticated deletion sends no tokens in URL/body/cookies and rejects redirects (0.353042ms)
+✔ HTTP 401 never reports deletion success (0.701209ms)
+✔ HTTP 403 never reports deletion success (0.0575ms)
+✔ HTTP 429 never reports deletion success (0.099459ms)
+✔ HTTP 503 never reports deletion success (0.102625ms)
+✔ ambiguous success body rejected: {} (0.097458ms)
+✔ ambiguous success body rejected: {"deleted":false} (0.047083ms)
+✔ ambiguous success body rejected: {"deleted":"true"} (0.047416ms)
+✔ non-JSON response cannot announce success (0.110542ms)
+✔ French default exposes only French and exact current title (2.705833ms)
+✔ English URL switches real source, alt, metadata and pressed language (0.659459ms)
+✔ Switching back keeps unrelated route state and removes only language parameter (0.628375ms)
+✔ Immutable download and GitHub addresses never acquire a language parameter (0.545542ms)
+✔ Legal page does not inherit the product-page title (0.577125ms)
+✔ Exact support plus-tag is an encoded mailto and remains a text node (0.916833ms)
+✔ Existing qualification control is preserved (0.836125ms)
+✔ Unsupported requested language keeps the French site default (0.563209ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 58.820417
