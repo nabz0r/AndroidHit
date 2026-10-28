@@ -53,3 +53,5 @@ The website retains its separately recorded 1.10 deployment. No Play upload, liv
 | Isolated Lab | [1.12.0-sandbox-rc2](../releases/luma-drift-1.12.0-sandbox-rc2.apk) | [1.12.0-sandbox-rc2](../releases/luma-drift-1.12.0-sandbox-rc2.aab) |
 
 Install over the existing production app to retain local saves. The signing identity remains unchanged. Test ads are forced, the wallet checkout origin is empty and paid cosmetic draws are disabled. [Preserved 1.11](RELEASE_1_11.md).
+
+Published on `main` in [source commit 32bf07ea](https://github.com/nabz0r/AndroidHit/commit/32bf07ea2ef2aa9dd962d81145bf075c6ca05b2e), with tree `4095186a79611c243a32add7def51d66e08b8529` verified against exact local inputs. Four independent pinned public downloads return HTTP 200 with matching signed-candidate sizes/hashes. [Publication receipt](validation/v1.12/publication.json).

@@ -2,6 +2,8 @@
 
 ## Current 1.12 — the little atelier
 
+[Verified GitHub delivery](validation/v1.12/publication.json): source `32bf07ea`, four exact signed APK/AAB public downloads, with native acceptance and commercial boundaries recorded separately.
+
 [Production APK](../releases/luma-drift-1.12.0-rc2.apk) · [AAB](../releases/luma-drift-1.12.0-rc2.aab) · [Changes and limits](RELEASE_1_12.md) · [Qualification](validation/v1.12/README.md) · [Research](research/ux-v112.md).
 
 Two explicit currencies, original illustrated powers, lighter Home/shop surfaces and ordinary navigable item pages replace dense modal browsing. Ownership, effect, stock, cost and Equip remain distinct. Account balance is last-known or unknown, never a fake zero. A reproduced refused-write power-purchase defect now uses the exact tracked save/retry boundary. Production and Lab retain test ads and closed checkout; no Play or Hosting mutation. Final native results: Lab **1,179 checks/40 clears**, production **7 startup +35 shop checks**, and account-wallet UI **45 checks/6 languages**. [Executed scopes](validation/v1.12/ui-bugs/SDK_UI_FINAL.md) · [Wallet replay](validation/v1.12/commerce-native/README.md).

@@ -19,3 +19,5 @@ Scope: native shop/Home/item-page presentation and the earned-power purchase tra
 | [SDK harness provenance](../../../scripts/v112-ui-test/provenance-v111.json) | Separate new harness; historical 1.11 inputs/fixtures are not rewritten. |
 
 Native observations concern exact installed APKs. Host rasters, source models, emulator screenshots, physical-device quality and human comprehension have distinct scopes. The signed commercial gates remain closed; no Firebase public-origin probe, production ad, payment or Play upload is part of the qualification.
+
+[GitHub publication receipt](publication.json): source `32bf07ea`, exact tree verified, four pinned APK/AAB downloads independently streamed with HTTP 200 and matching sizes/SHA-256 hashes. Hosting, server and Play are unchanged.
