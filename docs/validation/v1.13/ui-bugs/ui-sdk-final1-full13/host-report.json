@@ -1,0 +1,42 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "journey,tutorial,gestures,recovery,powers,power-return,house-smoke,house,house-locales,house-layout,puzzle-locales",
+  "journey_through": 13,
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "display_size_before": "Physical size: 1080x2340",
+  "apk_sha256": "3726e9779d7c00d4667412e5020e4d1a9b15f11b49388c957b473954c1e67ebb",
+  "expected_apk_sha256": "3726e9779d7c00d4667412e5020e4d1a9b15f11b49388c957b473954c1e67ebb",
+  "test_apk_sha256": "d1d280dbd76d964b5027c966e74f483359245a4b578c6db042e23893421a5fe1",
+  "wrapper_source_sha256": "4c20bdf100b008574e819144126f6ee0c9d072de2697cb4f360d5f5144bd0f91",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "6215d35f73f9f3dacb64c6633db7c2724b3c1de9e3dcc9bef8aa0d63bda68cd2",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v113-ui-original-prefs-8oknyghd",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "7b6ff2288ed69d9c75c1d2ae4c59fd1c04d607702cf93d1bb9e9df079e0a8ac0",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "ffeacec81dd1c21191f04a839fd2672cd82707f0c4af8eedcab5719ee097f01c"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "installed_test_apk_sha256": "d1d280dbd76d964b5027c966e74f483359245a4b578c6db042e23893421a5fe1",
+  "phases": [],
+  "screenshots": {},
+  "error": "Native instrumentation produced no report; inspect instrumentation.txt",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v113-ui-test/run.py\", line 84, in main\n    assert (pulled/'report.json').is_file(),'Native instrumentation produced no report; inspect instrumentation.txt'\nAssertionError: Native instrumentation produced no report; inspect instrumentation.txt\n",
+  "isolated_test_package_removed": true,
+  "display_size_restored": true,
+  "rotation_settings_restored": true
+}

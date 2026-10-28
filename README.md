@@ -1,9 +1,57 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>A little world of your own.</strong><br>Read the gates. Restore the Prism. Put together a little look.</p>
-<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.12.0-rc2.apk"><strong>Download signed Android APK · 1.12.0-rc2</strong></a><br><a href="docs/RELEASE_1_12.md">Release & evidence</a> · <a href="docs/RELEASE_1_12.md#what-changes-for-the-player">What changed</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
-<p align="center">1,000 Journey boards · 240 Remix · 100 optional guardians<br>7 playable lessons · 24 companions × 12 free visual treatments · 6 powers · 6 languages</p>
+<p align="center"><strong>Solve a little. Come home.</strong><br>Find the move that opens the puzzle. Make a little home for your companion.</p>
+<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.13.0-rc2.apk"><strong>Signed Android candidate · 1.13.0-rc2</strong></a><br><a href="docs/RELEASE_1_13.md">Release & artifacts</a> · <a href="docs/HOME_1_13.md">Your little home</a> · <a href="docs/validation/v1.13/README.md">Qualification</a> · <a href="docs/README.md">Documentation</a></p>
+<p align="center">1,000 Journey boards + 240 Remix · 12 home furnishings<br>24 companions × 12 free visual styles · 6 powers · 6 languages</p>
 
-## Your little atelier — 1.12
+## Your little home — 1.13
+
+The puzzle remains the main game. Clear pieces in the right order, earn existing LumaCoins, then return to a room you can arrange around your companion.
+
+- **Make yourself at home.** Move, rotate and store furniture in a room seen from three quarters. Preview a placement before confirming. Bed, lamp, plant, rug and cushion are included; seven more furnishings use earned LumaCoins. Four wall finishes and four floors include two free choices each.
+- **Spend a moment together.** Tap a clear floor tile to call your companion, share a hug or use a furnished corner. The room displays the companion and clothing you actually equipped. Hugs, light and rest animations are temporary; furniture, ownership, colours and companion position are saved.
+- **Choose a little wish.** Pin one unowned furnishing, see your actual coin progress, then buy and place it when you choose. A purchase grants ownership; it never silently places furniture. Stored objects stay yours.
+- **Find the first click sooner.** A three-piece opening introduces one switch on a real puzzle board, with skip and exact local history recovery. It grants no campaign progress or invented reward. The existing seven optional lessons remain replayable.
+
+[Home rules and economy](docs/HOME_1_13.md) · [Changes and limits](docs/RELEASE_1_13.md). Puzzle layouts, fixed budgets, old challenges, earned progression and existing equipment are preserved. The L22→L23 structural jump and the Guardian 4→5 transition remain separate design work. Human enjoyment, comprehension and D1/D7 retention are unmeasured.
+
+<p align="center"><img src="public/assets/screenshots/v1.13/home-en.png" width="230" alt="Actual English RC2 personalised home and equipped companion"><img src="public/assets/screenshots/v1.13/house-decor-fr.png" width="230" alt="Actual French RC2 room editor and furniture placement preview"><img src="public/assets/screenshots/v1.13/puzzle-en.png" width="230" alt="Actual English RC2 main puzzle"></p>
+
+Unedited **Lab 1.13.0-sandbox-rc2** full frames from the [798-check restored native route](docs/validation/v1.13/ui-bugs/ui-sdk-rc2-full13/host-report.json), with actual Journey play and earned purchases. These are emulator observations, not human retention evidence. [Exact nine-image source/hash provenance](docs/validation/site-v1.13/screenshot-provenance.json).
+
+## Candidate and delivery status
+
+Production **1.13.0-rc2** and separate Lab **1.13.0-sandbox-rc2**, version code **14**, replace the unshipped RC1 candidate after a real tutorial Later→Resume crash was reproduced. The new signed production APK is **7,806,558 bytes / 7.81 MB**, SHA-256 `c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b`.
+
+[Production APK](releases/luma-drift-1.13.0-rc2.apk) · [AAB](releases/luma-drift-1.13.0-rc2.aab) · [Production manifest](releases/manifest-1.13.0-rc2.json) · [Lab APK](releases/luma-drift-1.13.0-sandbox-rc2.apk) · [Lab manifest](releases/manifest-1.13.0-sandbox-rc2.json).
+
+The [current qualification record](docs/validation/v1.13/README.md) separates source checks, exact binary checks, final installed acceptance and publication. The completed source checks include **891 home model/durability assertions** and **18 checks of the actual three-piece opening**. RC1 observations and its successful build/binary checks remain historical: they do not qualify the corrected RC2. The [RC2 build](docs/validation/v1.13/build-rc2.txt) and [binary audit](docs/validation/v1.13/binaries-rc2/binary-verification.txt) pass. The [targeted RC2 tutorial pilot](docs/validation/v1.13/ui-bugs/ui-sdk-rc2-tutorial-fast/host-report.json) passes 90 native checks, including quick Later→Resume below the old feedback window. Separate RC2 scopes pass **55 genuine fresh-Lab checks**, **7 production startup checks** and **35 production house checks**. The complete [retained-Lab route](docs/validation/v1.13/ui-bugs/ui-sdk-rc2-full13/host-report.json) passes **798 checks /13 actually played Journey boards**, including six languages, compact/landscape room controls and a distinct cold process; original preferences and display settings are restored. GitHub and Hosting results have their own delivery receipts.
+
+The FR/EN [website](https://luma-drift-production.web.app/) has a qualified local 1.13 home/puzzle presentation: 2,150 source assertions and 14 browser states, with actual RC2 game captures. Local qualification does not confirm that the live site has changed; the [site qualification record](docs/validation/site-v1.13/) tracks that separately. The preserved 1.12 deployment remains historical evidence.
+
+Android 8+ / API 26; production package `com.androidhit.lumadrift`. Installing the same signed package over the existing app retains its local save. Google identity does not synchronize gameplay or the house. Test ads remain forced; real checkout and premium draws remain disabled. This delivery does not establish a Google Play upload, approval, live purchase or real-account acceptance.
+
+## Build and inspect
+
+Use JDK 21, the Android SDK and the Gradle wrapper; Java source compatibility is 17. Private signing files are ignored and never published.
+
+```sh
+./gradlew assembleProductionRelease bundleProductionRelease lintProductionRelease
+./gradlew assembleLabRelease bundleLabRelease lintLabRelease
+bash scripts/test-home-v113.sh
+bash scripts/test-first-light-v113.sh
+bash scripts/test-store-appearance-v111.sh
+bash scripts/test-store-init-v111.sh
+bash scripts/test-store-booster-v112.sh
+bash scripts/test-tutorial-v18.sh
+python3 scripts/check-site-v113.py --apk-sha256 c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b
+node --test public/tests/site-language-v113.test.mjs public/tests/deletion-core.test.mjs
+```
+
+[Development](docs/DEVELOPMENT.md) · [Native SDK runner](scripts/v113-ui-test/README.md) · [Roadmap](docs/ROADMAP.md). Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Animal Crossing, Candy Crush or Crash Fever artwork, characters, audio or code is included.
+
+The sections below preserve earlier releases and their dated evidence. Their test totals and deployment receipts do not certify 1.13.
+
+## Preserved little atelier — 1.12
 
 - **Know which currency you are using.** Amber round LumaCoins and violet/cyan LumaGold diamonds have complete names and distinct balances. Unknown account funds show a dash and an explicit state; last-known funds cannot authorize a spend.
 - **Browse without interruptions.** Power, companion, theme, clothing and equipment details are ordinary pages with a large preview, effect/source, stock/state, price and Close. Buying and equipping are separate choices.
@@ -16,7 +64,7 @@
 
 Unedited final **Lab 1.12.0-sandbox-rc2** frames. **1,179 native checks / 40 real Journey clears** pass, including all six shop languages, actual earned purchases, live-run return through rotation, equipped-art comparisons and a distinct cold process. The guest legitimately replays L13 for the return test; the 2,425 coins shown are its observed earned balance. The unknown account LumaGold is not a simulated balance. [Executed evidence](docs/validation/v1.12/ui-bugs/ui-sdk-final-rc2-lab40/README.md).
 
-**Website 1.12 is deployed:** [Open Luma Drift](https://luma-drift-production.web.app/). The refreshed FR/EN page shows nine exact native RC2 captures, the atelier, equipped portrait, clear currencies and the current signed APK. Firebase confirms98 source payloads from`91ffac7a`, with a finalized live release at**28 October 2026,14:08:23.437 UTC**. [Delivery and local checks](docs/validation/site-v1.12/README.md).
+**Preserved website 1.12 delivery:** [Open Luma Drift](https://luma-drift-production.web.app/). The refreshed FR/EN page shows nine exact native RC2 captures, the atelier, equipped portrait, clear currencies and the current signed APK. Firebase confirms98 source payloads from`91ffac7a`, with a finalized live release at**28 October 2026,14:08:23.437 UTC**. [Delivery and local checks](docs/validation/site-v1.12/README.md).
 
 ## Preserved equipment fixes — 1.11
 
@@ -70,7 +118,7 @@ Source checks separately cover **6,544 portrait/translation assertions**, **443 
 
 **Puzzle geometry and difficulty are unchanged.** The documented L22→L23 structural jump from 17 to 85 remains. Structural scores, source simulations and successful scripted clears do not predict human enjoyment, D1/D7 retention or revenue. [The 2026 research and synthetic audit](docs/PLAYER_AUDIT_2026.md) keeps published survey aggregates distinct from assumed game profiles. No individual social data is scraped. [Current backlog](docs/PRISM_STORY_1_10.md#unchanged-structural-backlog).
 
-## Signed 1.12 artifacts
+## Preserved signed 1.12 artifacts
 
 | Artifact | Download | SHA-256 / manifest |
 | --- | --- | --- |
@@ -83,27 +131,3 @@ Android 8+ / API 26; code 13; production package `com.androidhit.lumadrift`. Ins
 Published on `main` from [source 32bf07ea](https://github.com/nabz0r/AndroidHit/commit/32bf07ea2ef2aa9dd962d81145bf075c6ca05b2e). Four pinned public downloads independently return HTTP 200 with the exact signed-candidate sizes and SHA-256 hashes. [Delivery receipt](docs/validation/v1.12/publication.json).
 
 Google identity does not synchronize local gameplay. Actual two-account gifts, real consent/ads and Play purchase lifecycle remain separately qualified. Website 1.12 has its separate [Hosting receipt and local browser qualification](docs/validation/site-v1.12/README.md). No Play or server deployment occurs in the Android release.
-
-## Build and inspect
-
-Use JDK 21, the Android SDK and the Gradle wrapper; Java source compatibility is 17. Private signing files are ignored and never published.
-
-```sh
-./gradlew assembleProductionRelease bundleProductionRelease lintProductionRelease
-./gradlew assembleLabRelease bundleLabRelease lintLabRelease
-python3 scripts/test-commerce-v112.py
-python3 scripts/test-v112-copy.py
-bash scripts/test-store-booster-v112.sh
-./docs/validation/v1.12/art-rc2/run.sh
-bash scripts/test-store-appearance-v111.sh
-bash scripts/test-store-init-v111.sh
-bash scripts/test-store-externals-v111.sh
-bash scripts/test-objective-models-v110.sh
-bash scripts/test-prism-story-v110.sh
-./docs/validation/v1.11/avatar-bugs/run-raster.sh candidate
-./docs/validation/v1.11/avatar-bugs/run-api-command.sh
-python3 scripts/check-site-v112.py
-node --test public/tests/site-language-v112.test.mjs public/tests/deletion-core.test.mjs
-```
-
-[Development](docs/DEVELOPMENT.md) · [Native SDK QA runner](scripts/v112-ui-test/README.md) · [Roadmap](docs/ROADMAP.md). Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Candy Crush or Crash Fever artwork, characters, audio or code is included.

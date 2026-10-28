@@ -1,10 +1,18 @@
 # Production candidate and activation boundary
 
-## Current 1.12 — atelier UI and purchase recovery
+## Current 1.13 — home candidate and preserved activation gates
+
+Production **1.13.0-rc2 / code 14**, isolated Lab **1.13.0-sandbox-rc2**. [Release/artifacts](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Qualification](validation/v1.13/README.md). The exact RC2 production APK is `c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b` and Lab APK is `85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa`. Its [build](validation/v1.13/build-rc2.txt), [source freeze](validation/v1.13/source-freeze-rc2.json) and [binary verification](validation/v1.13/binaries-rc2/binary-verification.txt) pass. RC1 hashes and native observations stay historical after the reproduced tutorial Later→Resume crash.
+
+The candidate adds a local furnished home and a real three-piece opening around the unchanged puzzle route. House purchases use earned LumaCoins; they do not activate server money, paid cosmetics or cloud saves. Its corrected source and verified binary freeze are distinct from final installed qualification, GitHub publication and the prepared 1.13 website deployment; consult their receipts before describing any step as delivered.
+
+The owner’s existing Play draft application and internal-tester workflow are background context. This work does not establish an APK/AAB upload, review, approval or public Play release. Real Google/two-account/social acceptance, UMP consent/decline, ad eligibility and licensed purchase/pending/refund/recovery remain independently qualified. These APKs force test ads, leave the purchase wallet origin empty and keep premium draws disabled. Server deployment is unchanged.
+
+## Preserved 1.12 — atelier UI and purchase recovery
 
 Production **1.12.0-rc2 / code 13**, Lab **1.12.0-sandbox-rc2**. [Release](RELEASE_1_12.md) · [Qualification](validation/v1.12/README.md). The current work revises native Home/shop/item pages and the account wallet presentation. An optional cached account balance is display-only; real spending still requires a fresh server wallet and all existing gates. The earned-power transaction now retries its exact debit/grant on storage refusal.
 
-Play publication, real Google/two-account/social acceptance, UMP consent and licensed purchase/pending/refund/recovery remain separate. These bytes force test ads, have no wallet purchase origin and disable paid cosmetic draws. The confirmed website remains 1.10; server deployment is unchanged.
+Play publication, real Google/two-account/social acceptance, UMP consent and licensed purchase/pending/refund/recovery remain separate. These bytes force test ads, have no wallet purchase origin and disable paid cosmetic draws. At the start of that preserved work the website was 1.10; its later confirmed 1.12 Hosting receipt is preserved in [the site record](validation/site-v1.12/README.md). Server deployment was unchanged.
 
 ## Preserved 1.11 — pre-Play bug hunt
 
@@ -19,7 +27,7 @@ The website remains on its confirmed 1.10 Hosting version; Cloud Run is unchange
 
 Current 1.9 source, signed APK/AAB files and site are [delivered from main 6fbb1649](RELEASE_1_9.md), with independent public-download hashes and a finalized Hosting receipt. Real commerce stays gated; creating the Play application is the next owner step.
 
-## Current delivery · 27 October 2026
+## Preserved 1.9 delivery · 27 October 2026
 
 **Production 1.9.0-rc1 / code 10** uses `com.androidhit.lumadrift`; the separate Lab package uses `.sandbox`. The [production APK](../releases/luma-drift-1.9.0-rc1.apk) is SHA-256 `b02225c0464bf35cc1c04f64f0a4c8b1db610bde36b293bae9790f1a9e2c2b05`; the [Lab APK](../releases/luma-drift-1.9.0-sandbox.apk) is `acb3e1b0cfa71f84435d6cb0cf0fc73e3d4b434009deef972c54d86d9e7c09c7`. The [release record](RELEASE_1_9.md) identifies all four signed outputs, source hashes, binary checks and native-test scope. Production and Lab bytes, source oracles, native acceptance, GitHub delivery and website deployment are separate evidence layers in the [validation index](validation/v1.9/README.md).
 

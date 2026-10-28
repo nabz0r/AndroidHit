@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "release": "1.13.0-rc2",
+  "passed": true,
+  "scope": "Local CUA browser rendering review only",
+  "tool": "Brave extension through CUA",
+  "origin": "http://127.0.0.1:8763",
+  "observations": 14,
+  "domChecksPath": "docs/validation/site-v1.13/browser/dom-checks.json",
+  "domChecksSha256": "5c76c41ec1ab9cfbf9376cc366e1e159da065f8f0b5af65df1a4c27d7ae91b78",
+  "requestedViewportPhysicalPixels": {
+    "desktop": [
+      1503,
+      990
+    ],
+    "mobile": [
+      429,
+      929
+    ],
+    "compact": [
+      352,
+      814
+    ]
+  },
+  "actualViewportCssPixels": {
+    "desktop": [
+      1366,
+      900
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "compact": [
+      320,
+      740
+    ]
+  },
+  "existingZoomPercent": 110,
+  "screenshots": [
+    {
+      "path": "docs/validation/site-v1.13/browser/compact-companion-fr.jpg",
+      "mimeType": "image/jpeg",
+      "width": 306,
+      "height": 708,
+      "bytes": 26926,
+      "sha256": "3de46a5f0eec2ee85deeb42d9725302336516aeef99010f1459f240c8b676ceb",
+      "edited": false,
+      "scope": "Original browser viewport capture; not an Android image or Hosting delivery receipt"
+    },
+    {
+      "path": "docs/validation/site-v1.13/browser/desktop-en.jpg",
+      "mimeType": "image/jpeg",
+      "width": 1353,
+      "height": 891,
+      "bytes": 75042,
+      "sha256": "98071d631be8afb2c0d25a2c61b9ceeab9f5320e515b54e00ecdbb19b6dc7850",
+      "edited": false,
+      "scope": "Original browser viewport capture; not an Android image or Hosting delivery receipt"
+    },
+    {
+      "path": "docs/validation/site-v1.13/browser/desktop-fr.jpg",
+      "mimeType": "image/jpeg",
+      "width": 1353,
+      "height": 891,
+      "bytes": 78460,
+      "sha256": "0e2456c75f38b82f57cf9294e52dc7642394d1928ac568cdb0d5209dc614cbe4",
+      "edited": false,
+      "scope": "Original browser viewport capture; not an Android image or Hosting delivery receipt"
+    },
+    {
+      "path": "docs/validation/site-v1.13/browser/mobile-catalog-en.jpg",
+      "mimeType": "image/jpeg",
+      "width": 376,
+      "height": 814,
+      "bytes": 31154,
+      "sha256": "11cd05836640c9b5ce6f06d7621ffcf751cc63b6447d5e70eeb2421d47941252",
+      "edited": false,
+      "scope": "Original browser viewport capture; not an Android image or Hosting delivery receipt"
+    },
+    {
+      "path": "docs/validation/site-v1.13/browser/mobile-en.jpg",
+      "mimeType": "image/jpeg",
+      "width": 376,
+      "height": 814,
+      "bytes": 31729,
+      "sha256": "3f60e68d32abc0b68989098da88bb3dfac0a0006aaa9a5df2e841925f8032117",
+      "edited": false,
+      "scope": "Original browser viewport capture; not an Android image or Hosting delivery receipt"
+    },
+    {
+      "path": "docs/validation/site-v1.13/browser/mobile-fr.jpg",
+      "mimeType": "image/jpeg",
+      "width": 376,
+      "height": 814,
+      "bytes": 31195,
+      "sha256": "a3c0bcef51fcc2492825343e8563893449c05c155c869294dcad3a2e55687622",
+      "edited": false,
+      "scope": "Original browser viewport capture; not an Android image or Hosting delivery receipt"
+    },
+    {
+      "path": "docs/validation/site-v1.13/browser/mobile-puzzle-en.jpg",
+      "mimeType": "image/jpeg",
+      "width": 376,
+      "height": 814,
+      "bytes": 23824,
+      "sha256": "539d5994410848f57b931d591d496a0da13590e8bbddfc5580fc218561bdd1e4",
+      "edited": false,
+      "scope": "Original browser viewport capture; not an Android image or Hosting delivery receipt"
+    }
+  ],
+  "htmlSha256": "582dadd69781150ce9e70bae4a99245dd3ee09e83480ca016803cf0dbf287cac",
+  "cssSha256": "4b0f0bb8a5feacd366aead8666a441eb811d0954b8b221b7b8c8634f6a512c60",
+  "review": [
+    "FR/EN titles, descriptions, language selection, image source and alt switching",
+    "All final Android images decode at 1080x2340; hug remains explicitly English",
+    "Desktop FR/EN and mobile FR/EN hero views visually inspected",
+    "Additional mobile catalogue and puzzle original viewports visually inspected; native frame horizontal bounds fit mats",
+    "Room/decor/catalogue/puzzle/hug/download section and image bounds checked",
+    "320px EN disclosure and checksum layout; FR/EN document has no horizontal overflow",
+    "Both APK actions identify exact production RC2; legal URL language preserved",
+    "Skip link receives visible keyboard focus; Enter changes anchor to #main",
+    "Privacy home/opening/optional local journal disclosures present"
+  ],
+  "correctedIssue": "A rotated decorative heart caused three CSS pixels of overflow at a 320 CSS-pixel viewport. Its own font size and centering are corrected below 360px; there is no global overflow mask.",
+  "viewportRestored": true,
+  "ownedPreviewTabClosed": true,
+  "localPreviewServerStopped": true,
+  "limitations": [
+    "No Hosting receipt or remote-byte availability is established",
+    "Provider screenshots are JPEG; not relabelled or transcoded as PNG",
+    "Browser rendering does not qualify physical Android, TalkBack, large-font comfort or human enjoyment"
+  ]
+}

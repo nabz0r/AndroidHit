@@ -1,6 +1,20 @@
 # Luma Drift roadmap
 
-## Current 1.12 — readable shop and choices
+## Current 1.13 — a home around the main puzzle
+
+[Release](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Executed qualification](validation/v1.13/README.md). Connect existing earned puzzle rewards to a room the player can arrange: twelve furnishings, a companion who wears the actual equipped look, hugs, path-based movement, interactive furniture, wall/floor choices and a pinned wish. Introduce the core gesture immediately with a skippable three-piece board; keep the existing optional seven-lesson route.
+
+The implementation preserves puzzle geometry, budgets, progression, inventory and commercial gates. The six-language home model has 891 source/durability checks; the actual opening has 18 source checks. Final-byte Android, public artifacts and Hosting acceptance remain separate receipts in the current record. No human retention result is inferred from these checks.
+
+Next decisions:
+
+1. Observe new players through the first switch, their first room interaction and the return to the main puzzle. Measure what they understand and what they choose to repeat.
+2. Test the exact candidate on physical Android phones, large text and TalkBack, then obtain native-speaker review of the new home copy.
+3. Review the preserved L22→L23 structural jump and Guardian 4→5 mechanic introduction with human error/comprehension observations. The house release does not recalibrate difficulty.
+4. Validate small real player cohorts and voluntary return before extending the furniture catalogue or adding rooms. D1/D7 retention and international appeal remain hypotheses.
+5. Resume owner-controlled Play internal testing and qualify Google/two-account/social, consent, real ad eligibility and the licensed purchase/pending/refund/recovery lifecycle independently. Keep live checkout and premium draws closed until those gates are satisfied.
+
+## Preserved 1.12 — readable shop and choices
 
 [Release](RELEASE_1_12.md) · [Qualification](validation/v1.12/README.md) · [Grounded UX decisions](research/ux-v112.md). Replace repeated item dialogs with normal pages; expose both currencies and honest wallet state; make power silhouettes/effects recognizable; lighten stacked surfaces. Correct the reproduced earned-power refused-write transaction and preserve live-run/rotation navigation. Scoped final native checks pass: Lab 1,179/40 clears, production 7 startup +35 shop, account-wallet 45/6 languages.
 

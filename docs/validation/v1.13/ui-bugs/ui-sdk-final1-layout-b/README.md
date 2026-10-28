@@ -1,0 +1,7 @@
+# Native compact/landscape qualification — final1, corrected harness
+
+The unchanged final1 Lab APK passes **329 native checks**, retaining **16 original full frames plus 4 explicitly labelled unscaled analysis crops**. The corrected test reaches every tested button by actual fine touchscreen scrolling, verifies its full 48 logical-unit height in the short viewport, and physically operates the house/footer controls. The earlier immediate-visibility assumption is preserved as a separate failed run.
+
+The protocol observes the actual 320 dp portrait width, portrait and landscape house controls, decoration selection/Rotate/Store/Place/Cancel reachability, the catalogue's last card, physical Inventory/Home footer navigation, and reduced motion. Uncommitted editor inspection changes no room state; actual board/economy values remain unchanged. The normal house smoke additionally checks movement, cuddle pixels, visible eight-second bed rest, lamp ON/OFF/restoration and the exact wardrobe.
+
+Original preferences, display override and rotation are restored, and isolated hometest is removed. [Host report](host-report.json), [native report](prepare/report.json), [actual touch/geometry observations](prepare/actions.json), [independent PNG analysis](host-house-raster-verification.json), [exact pre-run sources](source-snapshot.json). These are native emulator observations, not a human comfort or retention score.

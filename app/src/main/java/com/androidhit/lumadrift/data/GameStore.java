@@ -1208,5 +1208,81 @@ public final class GameStore {
         }
     }
 
+    /** The three-piece first touch is practice only: it never grants progress, currency or items. */
+    public synchronized boolean firstLightSeen(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return prefs.getBoolean("first_light_seen_v113",false);}
+    }
+    public synchronized String firstLightHistory(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String history=prefs.getString("first_light_history_v113","");return validFirstLightHistory(history)?history:"";}
+    }
+    public synchronized void saveFirstLightHistory(String history){
+        if(!validFirstLightHistory(history))throw new IllegalArgumentException("Invalid first light history");
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if(firstLightSeen())return;Map<String,Object> write=new HashMap<>();write.put("first_light_history_v113",history);LocalSaveTransactions.write(prefs,write);}
+    }
+    private static boolean validFirstLightHistory(String history){
+        if(history==null||history.length()>5||!history.matches("(?:[0-2](?:,[0-2])*)?"))return false;
+        boolean[] seen=new boolean[3];if(!history.isEmpty())for(String id:history.split(",")){int index=Integer.parseInt(id);if(seen[index])return false;seen[index]=true;}return true;
+    }
+    /** Completion and explicit skip share one durable marker; neither simulates a Journey victory. */
+    public synchronized void finishFirstLight(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if(firstLightSeen())return;Map<String,Object> write=new HashMap<>();write.put("first_light_seen_v113",true);write.put("first_light_history_v113","");LocalSaveTransactions.write(prefs,write);}
+    }
+    public synchronized boolean shouldStartFirstLight(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return prefs.getBoolean("tutorial_v18_fresh_profile",false)&&!firstLightSeen()&&!tutorialSeen()&&!tutorialRewardClaimed()&&tutorialState().isEmpty()&&unlockedLevel()==1&&completedLevels()==0;}
+    }
+
+    /** Room state lives in the existing local save; missing room keys leave legacy progression untouched. */
+    public synchronized HomeLayout homeLayout() {
+        synchronized(LocalSaveTransactions.LOCK){
+            LocalSaveTransactions.flush(prefs);
+            HomeLayout layout=HomeLayout.decode(prefs.getString("home_layout_v113", ""));
+            if(layout==null)return HomeLayout.starter();
+            // A malformed/imported room must not display an unowned paid item.
+            for(HomeLayout.Placement p:new ArrayList<>(layout.placements()))if(!ownsHomeItemLocked(p.id))layout=layout.tryRemove(p.id);
+            return layout;
+        }
+    }
+    private boolean ownsHomeItemLocked(String id){int price=HomeCatalog.price(id);return price>=0&&(price==0||prefs.getBoolean("home_owned_v113_"+id,false));}
+    public synchronized boolean ownsHomeItem(String id){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return ownsHomeItemLocked(id);}}
+    /** Debit and permanent ownership are one exact, retryable transaction. Buying never places an object. */
+    public synchronized boolean purchaseHomeItem(String id){
+        synchronized(LocalSaveTransactions.LOCK){
+            LocalSaveTransactions.flush(prefs);int price=HomeCatalog.price(id);if(price<0||ownsHomeItemLocked(id)||coins()<price)return false;
+            Map<String,Object> write=new HashMap<>();write.put("coins",coins()-price);write.put("home_owned_v113_"+id,true);
+            if(id.equals(prefs.getString("home_goal_v113","")))write.put("home_goal_v113","");
+            LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+    public synchronized boolean placeHomeItem(String id,int x,int y,int rotation){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if(HomeCatalog.item(id)==null||!ownsHomeItemLocked(id))return false;HomeLayout next=homeLayout().tryPlace(id,x,y,rotation);return saveHomeLayoutLocked(next);}
+    }
+    public synchronized boolean removeHomeItem(String id){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return saveHomeLayoutLocked(homeLayout().tryRemove(id));}
+    }
+    public synchronized boolean moveHomeCompanion(int x,int y){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return saveHomeLayoutLocked(homeLayout().tryMove(x,y));}
+    }
+    private boolean saveHomeLayoutLocked(HomeLayout next){
+        if(next==null)return false;Map<String,Object> write=new HashMap<>();write.put("home_layout_v113",next.encode());LocalSaveTransactions.write(prefs,write);return true;
+    }
+    public synchronized String homeWallpaper(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String id=prefs.getString("home_wallpaper_v113",HomeCatalog.DEFAULT_WALLPAPER);return HomeCatalog.wallpaper(id)!=null&&ownsHomeItemLocked(id)?id:HomeCatalog.DEFAULT_WALLPAPER;}
+    }
+    public synchronized String homeFloor(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String id=prefs.getString("home_floor_v113",HomeCatalog.DEFAULT_FLOOR);return HomeCatalog.floor(id)!=null&&ownsHomeItemLocked(id)?id:HomeCatalog.DEFAULT_FLOOR;}
+    }
+    public synchronized boolean setHomeWallpaper(String id){return setHomeSurface(id,true);}
+    public synchronized boolean setHomeFloor(String id){return setHomeSurface(id,false);}
+    private boolean setHomeSurface(String id,boolean wall){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if((wall?HomeCatalog.wallpaper(id):HomeCatalog.floor(id))==null||!ownsHomeItemLocked(id))return false;Map<String,Object> write=new HashMap<>();write.put(wall?"home_wallpaper_v113":"home_floor_v113",id);LocalSaveTransactions.write(prefs,write);return true;}
+    }
+    public synchronized String homeGoal(){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String id=prefs.getString("home_goal_v113","");return HomeCatalog.item(id)!=null&&!ownsHomeItemLocked(id)?id:"";}
+    }
+    /** One optional furniture wish. Empty clears it; owned furniture cannot become a shopping wish. */
+    public synchronized boolean setHomeGoal(String id){
+        synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);if(id==null||(!id.isEmpty()&&(HomeCatalog.item(id)==null||ownsHomeItemLocked(id))))return false;Map<String,Object> write=new HashMap<>();write.put("home_goal_v113",id);LocalSaveTransactions.write(prefs,write);return true;}
+    }
+
     private static int safeAdd(int balance, int amount) { return (int) Math.min(MAX_COINS, (long) balance + Math.max(0, amount)); }
 }

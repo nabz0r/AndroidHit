@@ -1,0 +1,397 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "house-smoke",
+  "journey_through": 100,
+  "serial": "emulator-5586",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "apk_sha256": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b",
+  "expected_apk_sha256": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b",
+  "test_apk_sha256": "9797c919d9fc97e61b320e3f3aed8986b5c1f6ebfc8d3e46ef2c7700c1da8eda",
+  "wrapper_source_sha256": "5704a0ea1da8f1dc6ee4470f16123cc316b777a62b430dca6e360c63a470563d",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "eaf3a717c818266dee5e6f9f4eafd63f058d7fc607f4a9e71bb5cac14177b202",
+  "package": "com.androidhit.lumadrift",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v113-ui-original-prefs-jpcyk4uq",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1d370c640b2895f9781629c4e6059540ac5c23762ef8ee0643528e9f58a0b285",
+    "luma_drift_save_v1.xml": "cc1d9083483859ff5c5a7400f185383928dd55d4c80a8e58e34f3ba7a0d9858c",
+    "luma_session.xml": "70c64b0ed52c38a4b43369564a1dba6cfdfb53e4ed407fb0cb53f117ae91a356"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "installed_test_apk_sha256": "9797c919d9fc97e61b320e3f3aed8986b5c1f6ebfc8d3e46ef2c7700c1da8eda",
+  "phases": [
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": true,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.13.0-rc2/code14"
+          },
+          {
+            "pass": true,
+            "message": "Production visual route is restricted to earned cosmetics, bounded Journey and no provider controls"
+          },
+          {
+            "pass": true,
+            "message": "First arrival displays the optional learning invitation"
+          },
+          {
+            "pass": true,
+            "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes reachable companion wardrobe and room editor controls"
+          },
+          {
+            "pass": true,
+            "message": "House wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "House wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "House decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "House decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "House cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "House cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Touching an observed free floor tile persistently moves the real companion to that tile"
+          },
+          {
+            "pass": true,
+            "message": "Companion movement changes the complete saved room record"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Cuddle visibly changes the actual companion drawing beyond observed idle noise"
+          },
+          {
+            "pass": true,
+            "message": "A physical bed touch stays in the actual house"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "The reduced-motion companion remains visibly resting at the same bed position after8seconds"
+          },
+          {
+            "pass": true,
+            "message": "A physical touch on the resting companion reaches its current visible cuddle target"
+          },
+          {
+            "pass": true,
+            "message": "A physical lamp touch toggles its interaction without opening the puzzle door"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Toggling the same reachable lamp changes actual lamp pixels with the companion in the same position"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "A second lamp toggle restores the exact prior reduced-motion lamp drawing"
+          },
+          {
+            "pass": true,
+            "message": "Home wardrobe opens the exact existing companion and equipment without silent changes"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes reachable companion wardrobe and room editor controls"
+          },
+          {
+            "pass": true,
+            "message": "Moving, cuddling and opening the wardrobe leave actual puzzle history, ownership, balance and rewards unchanged"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "house-initial-en",
+          "house-companion-moved-en",
+          "house-cuddle-idle-analysis-crop",
+          "house-cuddle-active-analysis-crop",
+          "house-cuddle-active-en",
+          "house-rest-on-bed-en",
+          "house-rest-after-eight-seconds-en",
+          "house-cuddle-from-bed-en",
+          "house-lamp-state-a-analysis-crop",
+          "house-lamp-state-a-en",
+          "house-lamp-state-b-analysis-crop",
+          "house-lamp-state-b-en",
+          "house-wardrobe-en"
+        ],
+        "checkCount": 35,
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 5210,
+        "visualPhase": "prepare",
+        "firstLightPhase": "none",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "houseCheckpointReady": false,
+        "firstLightCheckpointReady": false,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "prepare/house-wardrobe-en.png": "147e9070a8909cd46a79d635f988e7da355864c5a77d0f2d44ca72c046237793",
+        "prepare/house-companion-moved-en.png": "853493d1022309c5db8935c4b5baca7289736cb833199cfe8aa2e3c470236693",
+        "prepare/house-lamp-state-a-analysis-crop.png": "f4f555128e1d786516ae24a9b537cedeb66cf0afab947991f56da59ce87fbed2",
+        "prepare/house-lamp-state-b-analysis-crop.png": "a8c24f6adf8c4ee2a1dc0eb36d14561aa8d283ac26a9c65e10219c427490c552",
+        "prepare/house-cuddle-active-en.png": "2d3a8cd6eb2bcb29c648a335cfe5a32ac396ccd2fdf4779d35b3a6c4f6dad489",
+        "prepare/house-lamp-state-b-en.png": "36b58b4a5814de4846d03adc9ea0fae06fc25eb47fd463e9790d628bbdd537f7",
+        "prepare/home-en.png": "4ece7614c71dcf651a723e739ca2806720264b790b11366b54cde48039367e16",
+        "prepare/house-cuddle-idle-analysis-crop.png": "03d6b534bc9e66c6a47c345d79c1351e668f2d88e5097535aa570bf56f2504ab",
+        "prepare/house-cuddle-from-bed-en.png": "067b741b8a43a20dacd7eedfb7f591158942b0e907ebd49e3ea9eb1e9760d3e5",
+        "prepare/house-cuddle-active-analysis-crop.png": "4d9b5c61bc1ad12a86e25cd21cb3acd2994bdfef54c206206756f6ae805bbf47",
+        "prepare/house-initial-en.png": "0e50105452f495f90e3e1d655c6d52ccf54c892470e8edecf5b6536de127201a",
+        "prepare/house-lamp-state-a-en.png": "2a3d2e1752e2a935d9897fbcf9afee656d8e0fc7144d816c372df34a019c6e0a",
+        "prepare/house-rest-after-eight-seconds-en.png": "72ee71eed6c9f4438632b4807aa38f3872f5c5bd631fbdb36eda6df7b105eb47",
+        "prepare/house-rest-on-bed-en.png": "2bf20f009e977037879bd95c3e6725d350a09b09f508af19edeec6ea4ce555ff"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/house-wardrobe-en.png": "147e9070a8909cd46a79d635f988e7da355864c5a77d0f2d44ca72c046237793",
+    "prepare/house-companion-moved-en.png": "853493d1022309c5db8935c4b5baca7289736cb833199cfe8aa2e3c470236693",
+    "prepare/house-lamp-state-a-analysis-crop.png": "f4f555128e1d786516ae24a9b537cedeb66cf0afab947991f56da59ce87fbed2",
+    "prepare/house-lamp-state-b-analysis-crop.png": "a8c24f6adf8c4ee2a1dc0eb36d14561aa8d283ac26a9c65e10219c427490c552",
+    "prepare/house-cuddle-active-en.png": "2d3a8cd6eb2bcb29c648a335cfe5a32ac396ccd2fdf4779d35b3a6c4f6dad489",
+    "prepare/house-lamp-state-b-en.png": "36b58b4a5814de4846d03adc9ea0fae06fc25eb47fd463e9790d628bbdd537f7",
+    "prepare/home-en.png": "4ece7614c71dcf651a723e739ca2806720264b790b11366b54cde48039367e16",
+    "prepare/house-cuddle-idle-analysis-crop.png": "03d6b534bc9e66c6a47c345d79c1351e668f2d88e5097535aa570bf56f2504ab",
+    "prepare/house-cuddle-from-bed-en.png": "067b741b8a43a20dacd7eedfb7f591158942b0e907ebd49e3ea9eb1e9760d3e5",
+    "prepare/house-cuddle-active-analysis-crop.png": "4d9b5c61bc1ad12a86e25cd21cb3acd2994bdfef54c206206756f6ae805bbf47",
+    "prepare/house-initial-en.png": "0e50105452f495f90e3e1d655c6d52ccf54c892470e8edecf5b6536de127201a",
+    "prepare/house-lamp-state-a-en.png": "2a3d2e1752e2a935d9897fbcf9afee656d8e0fc7144d816c372df34a019c6e0a",
+    "prepare/house-rest-after-eight-seconds-en.png": "72ee71eed6c9f4438632b4807aa38f3872f5c5bd631fbdb36eda6df7b105eb47",
+    "prepare/house-rest-on-bed-en.png": "2bf20f009e977037879bd95c3e6725d350a09b09f508af19edeec6ea4ce555ff"
+  },
+  "capture_kind_counts": {
+    "original_full_frames": 10,
+    "unscaled_analysis_crops": 4
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed exact target 1.13.0-rc2/code14"
+      },
+      {
+        "pass": true,
+        "message": "Production visual route is restricted to earned cosmetics, bounded Journey and no provider controls"
+      },
+      {
+        "pass": true,
+        "message": "First arrival displays the optional learning invitation"
+      },
+      {
+        "pass": true,
+        "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes reachable companion wardrobe and room editor controls"
+      },
+      {
+        "pass": true,
+        "message": "House wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "House wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "House decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "House decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "House cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "House cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Touching an observed free floor tile persistently moves the real companion to that tile"
+      },
+      {
+        "pass": true,
+        "message": "Companion movement changes the complete saved room record"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Cuddle visibly changes the actual companion drawing beyond observed idle noise"
+      },
+      {
+        "pass": true,
+        "message": "A physical bed touch stays in the actual house"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "The reduced-motion companion remains visibly resting at the same bed position after8seconds"
+      },
+      {
+        "pass": true,
+        "message": "A physical touch on the resting companion reaches its current visible cuddle target"
+      },
+      {
+        "pass": true,
+        "message": "A physical lamp touch toggles its interaction without opening the puzzle door"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Toggling the same reachable lamp changes actual lamp pixels with the companion in the same position"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "A second lamp toggle restores the exact prior reduced-motion lamp drawing"
+      },
+      {
+        "pass": true,
+        "message": "Home wardrobe opens the exact existing companion and equipment without silent changes"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes reachable companion wardrobe and room editor controls"
+      },
+      {
+        "pass": true,
+        "message": "Moving, cuddling and opening the wardrobe leave actual puzzle history, ownership, balance and rewards unchanged"
+      }
+    ],
+    "checkCount": 35,
+    "scope": "Actual SDK single-process observation; no profile seeding"
+  },
+  "isolated_test_package_removed": true,
+  "rotation_settings_restored": true
+}

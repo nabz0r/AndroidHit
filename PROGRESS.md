@@ -1,3 +1,14 @@
+# Luma Drift 1.13 — delivery in progress
+
+- Scope accepted: interactive home, companion movement/cuddle, existing wardrobe integration, earned furniture/decorating and immediate puzzle access; main publication and existing Firebase website update.
+- Interactive room, 12 original furniture objects, 8 surface choices, walk/cuddle/use, explicit earned purchase/placement, furniture wish and quick first encounter implemented in six languages. Existing puzzle identities and saved gameplay remain unchanged.
+- RC2 fixes the rapid tutorial Later/Resume crash found before publication. The final build/lint and four signed APK/AAB signature, bundletool and static 16 KiB checks pass. All 108 public application inputs remain frozen. Host checks pass: home 891, actual first encounter 18, prior appearance 683, initialization 41, powers 1,670 and tutorial 1,454.
+- RC2 native acceptance passes: full retained-Lab route 798 checks, including 13 real clears, six languages, compact portrait/landscape and a distinct cold process; fast tutorial regression 90 checks; genuine fresh arrival 55; production startup/audio 7 and house 35. Original guest preferences and display settings restored; isolated test packages removed. Six outer-baseline preference files restored exactly and three owned emulators shut down with saved data retained.
+- RC1 observations and its later real tutorial crash remain historical, separate from RC2 acceptance. The failed Lab20 whole run and intermediate smoke checks retain their original labels.
+- Baseline is main `589d8bc`; historical 1.12 signed packages/evidence are preserved. Main publication, final native acceptance and Hosting 1.13 deployment are not yet recorded as complete.
+
+## Preserved earlier delivery progress
+
 # Luma Drift 1.10 — delivery progress
 
 28 October 2026 · production `1.10.0-rc3` / Lab `1.10.0-sandbox-rc3`, code 11.

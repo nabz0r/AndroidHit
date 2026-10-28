@@ -1,6 +1,16 @@
 # Luma Drift documentation
 
-## Current 1.12 — the little atelier
+## Current 1.13 — solve a little, come home
+
+[Release and frozen artifacts](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Qualification](validation/v1.13/README.md) · [Production APK](../releases/luma-drift-1.13.0-rc2.apk) · [AAB](../releases/luma-drift-1.13.0-rc2.aab).
+
+The main game remains 1,000 Journey +240 Remix puzzles. A three-piece first encounter leads into a furnished room with the actual equipped companion, hugs, clear-path movement, placement previews, rotation, storage and one furniture wish. Five starter furnishings and two wall/floor choices are included; seven other furnishings and two additional choices of each surface use existing earned LumaCoins. Furniture ownership, placement and appearance have exact local-save recovery. [Architecture](DEVELOPMENT.md).
+
+Current version: production **1.13.0-rc2**, isolated Lab **1.13.0-sandbox-rc2**, code **14**. Source checks pass 891 home/durability assertions and 18 real opening-board checks. The complete RC2 Lab route passes 798 native checks/13 actually played boards, with separate 90-check fast-tutorial, 55-check fresh, seven-check production startup and 35-check production house scopes. See the qualification record for exact hashes, restore/cold boundaries, binary and delivery results; historical RC1/1.12 observations are not current acceptance. The FR/EN website source follows the house and main puzzle; its deployment needs its own receipt.
+
+Test ads, closed checkout and disabled premium draws are retained. Local house/gameplay saves are not synchronized by Google sign-in. Physical-device comfort, native-speaker review, human comprehension/retention and real provider lifecycle remain distinct work.
+
+## Preserved 1.12 — the little atelier
 
 [Verified GitHub delivery](validation/v1.12/publication.json): source `32bf07ea`, four exact signed APK/AAB public downloads, with native acceptance and commercial boundaries recorded separately.
 

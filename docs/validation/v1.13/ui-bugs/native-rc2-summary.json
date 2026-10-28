@@ -1,0 +1,175 @@
+{
+  "scope": "Final RC2 native evidence index; every run is separately passing, exact signed test bytes and source archived before execution; counts are assertions in these routes, not unique product properties",
+  "runs": [
+    {
+      "label": "rc2-full13",
+      "host_report": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-full13/host-report.json",
+      "host_report_sha256": "cded58a9535c343125f7c0f404d810499974517d73d9cf04160edee675f40684",
+      "passed": true,
+      "native_checks": 798,
+      "original_full_frames": 83,
+      "labelled_unscaled_analysis_crops": 4,
+      "apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+      "test_apk_sha256": "4b5751af3144da82f46812641e192afec6dc4392daf23746987fc368d3b25d3d",
+      "source_snapshot": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-full13/source-snapshot.json",
+      "runner_source_sha256": "eaf3a717c818266dee5e6f9f4eafd63f058d7fc607f4a9e71bb5cac14177b202",
+      "wrapper_source_sha256": "5704a0ea1da8f1dc6ee4470f16123cc316b777a62b430dca6e360c63a470563d",
+      "isolated_test_package_removed": true,
+      "rotation_restored": true,
+      "original_guest_restored": true,
+      "display_size_restored": true,
+      "cold_process_boundary": {
+        "force_stop": true,
+        "package_absent_from_pidof_before_restart": true,
+        "previous_instrumented_process_id": 7218,
+        "restarted_instrumented_process_id": 8396
+      },
+      "rapid_tutorial_resumptions": [
+        {
+          "observation": "rapid-tutorial-resume",
+          "label": "Blocked lesson2 phase1",
+          "feedbackSdkActionUpAt": 3405150,
+          "resumedAt": 3405840,
+          "elapsedMs": 690,
+          "deadlineMs": 2400,
+          "savedBefore": "T1|1|1|ACTIVE|",
+          "restoredAfter": "T1|1|1|ACTIVE|"
+        },
+        {
+          "observation": "rapid-tutorial-resume",
+          "label": "Gate preview lesson4 phase1",
+          "feedbackSdkActionUpAt": 3410986,
+          "resumedAt": 3412109,
+          "elapsedMs": 1123,
+          "deadlineMs": 2400,
+          "savedBefore": "T1|3|1|ACTIVE|",
+          "restoredAfter": "T1|3|1|ACTIVE|"
+        }
+      ]
+    },
+    {
+      "label": "rc2-fresh",
+      "host_report": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-fresh/host-report.json",
+      "host_report_sha256": "a99d7ed064ae47a89a52ce584755420048df10ac64c569231fa6c1889652b7af",
+      "passed": true,
+      "native_checks": 55,
+      "original_full_frames": 17,
+      "labelled_unscaled_analysis_crops": 4,
+      "apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+      "test_apk_sha256": "4b5751af3144da82f46812641e192afec6dc4392daf23746987fc368d3b25d3d",
+      "source_snapshot": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-fresh/source-snapshot.json",
+      "runner_source_sha256": "eaf3a717c818266dee5e6f9f4eafd63f058d7fc607f4a9e71bb5cac14177b202",
+      "wrapper_source_sha256": "9ab43756a8f0d5e7e35bccb81e77ed0671c202ec79d8af5ffaeedb16eeab07af",
+      "isolated_test_package_removed": true,
+      "rotation_restored": true,
+      "fresh_lab_package_absent_before_install": true,
+      "new_guest_test_profile_retained": true,
+      "production_state_unchanged": true,
+      "production_package_present_before_and_after": false,
+      "production_apk_hash_comparison": null,
+      "cold_process_boundary": {
+        "force_stop": true,
+        "absent_before_relaunch": true,
+        "prepare_process_id": 5161,
+        "cold_process_id": 5361
+      }
+    },
+    {
+      "label": "rc2-production-startup",
+      "host_report": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-production-startup/host-report.json",
+      "host_report_sha256": "f8dceeecaec84dabcbb2f81d53a5a633eb197af97f376a4b968c5efcef056a2f",
+      "passed": true,
+      "native_checks": 7,
+      "original_full_frames": 1,
+      "labelled_unscaled_analysis_crops": 0,
+      "apk_sha256": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b",
+      "test_apk_sha256": "b6f7433e1e53a42c8a86baa8b7c99c472f4a15ae0f23b2118b724c42eddcd141",
+      "source_snapshot": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-production-startup/source-snapshot.json",
+      "runner_source_sha256": "c297f612ab2901e58601a2da0ad4c71d83ed7706b30972b2f46adbabf0e2a4b0",
+      "wrapper_source_sha256": "5704a0ea1da8f1dc6ee4470f16123cc316b777a62b430dca6e360c63a470563d",
+      "isolated_test_package_removed": true,
+      "rotation_restored": true,
+      "original_guest_restored": true
+    },
+    {
+      "label": "rc2-production-house",
+      "host_report": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-production-house/host-report.json",
+      "host_report_sha256": "00b336be3a7db1291fe800f0531eb7adb6517edcc273446d22045cae084f9ff8",
+      "passed": true,
+      "native_checks": 35,
+      "original_full_frames": 10,
+      "labelled_unscaled_analysis_crops": 4,
+      "apk_sha256": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b",
+      "test_apk_sha256": "9797c919d9fc97e61b320e3f3aed8986b5c1f6ebfc8d3e46ef2c7700c1da8eda",
+      "source_snapshot": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-production-house/source-snapshot.json",
+      "runner_source_sha256": "eaf3a717c818266dee5e6f9f4eafd63f058d7fc607f4a9e71bb5cac14177b202",
+      "wrapper_source_sha256": "5704a0ea1da8f1dc6ee4470f16123cc316b777a62b430dca6e360c63a470563d",
+      "isolated_test_package_removed": true,
+      "rotation_restored": true,
+      "original_guest_restored": true
+    },
+    {
+      "label": "rc2-tutorial-fast",
+      "host_report": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-tutorial-fast/host-report.json",
+      "host_report_sha256": "4ab6e4a2379fbb094b33194337ef975e97bcb634732c3ddceffea740f4d1b698",
+      "passed": true,
+      "native_checks": 90,
+      "original_full_frames": 15,
+      "labelled_unscaled_analysis_crops": 0,
+      "apk_sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+      "test_apk_sha256": "4b5751af3144da82f46812641e192afec6dc4392daf23746987fc368d3b25d3d",
+      "source_snapshot": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-tutorial-fast/source-snapshot.json",
+      "runner_source_sha256": "eaf3a717c818266dee5e6f9f4eafd63f058d7fc607f4a9e71bb5cac14177b202",
+      "wrapper_source_sha256": "5704a0ea1da8f1dc6ee4470f16123cc316b777a62b430dca6e360c63a470563d",
+      "isolated_test_package_removed": true,
+      "rotation_restored": true,
+      "original_guest_restored": true,
+      "rapid_tutorial_resumptions": [
+        {
+          "observation": "rapid-tutorial-resume",
+          "label": "Blocked lesson2 phase1",
+          "feedbackSdkActionUpAt": 3364379,
+          "resumedAt": 3365145,
+          "elapsedMs": 766,
+          "deadlineMs": 2400,
+          "savedBefore": "T1|1|1|ACTIVE|",
+          "restoredAfter": "T1|1|1|ACTIVE|"
+        },
+        {
+          "observation": "rapid-tutorial-resume",
+          "label": "Gate preview lesson4 phase1",
+          "feedbackSdkActionUpAt": 3370604,
+          "resumedAt": 3371749,
+          "elapsedMs": 1145,
+          "deadlineMs": 2400,
+          "savedBefore": "T1|3|1|ACTIVE|",
+          "restoredAfter": "T1|3|1|ACTIVE|"
+        }
+      ]
+    }
+  ],
+  "frozen_source": {
+    "source": "docs/validation/v1.13/source-freeze-rc2.json",
+    "sha256": "1f53b9221dd3803ec29a7cb03a87637d2e1d34fc9d44a8a516d9a15f758426f3",
+    "inputs_and_build_files_verified_unchanged": 111,
+    "artifacts_verified_unchanged": {
+      "releases/luma-drift-1.13.0-sandbox-rc2.aab": "1e109751f93ef80d94b2b71251700e019f6bd73af28aa59229fb686f79d52f18",
+      "releases/luma-drift-1.13.0-sandbox-rc2.apk": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa",
+      "releases/luma-drift-1.13.0-rc2.aab": "dd8d4ddc67e03f9dc6f8f85a816b494d5628b6f11cb64cb24ad97e48e7264982",
+      "releases/luma-drift-1.13.0-rc2.apk": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b"
+    }
+  },
+  "historical_harness": {
+    "source": "scripts/v112-ui-test",
+    "all_original_source_files_verified_unchanged": 121,
+    "fixture_files_identical_to_v113": 106
+  },
+  "public_image_sources": "docs/validation/v1.13/ui-bugs/ui-sdk-rc2-full13/public-image-sources.json",
+  "limits": [
+    "Owned Android API36 arm64 emulators with16KiB pages; physical-device compatibility is not measured",
+    "No provider sign-in, external payment or real advertisement was exercised",
+    "No human preference, international appeal or retention measurement is inferred",
+    "Historical RC1 failures remain failures and are not used as final website screenshot sources"
+  ],
+  "device_handoff": "No additional device action after parent took ownership of outer backup restore and emulator shutdown"
+}

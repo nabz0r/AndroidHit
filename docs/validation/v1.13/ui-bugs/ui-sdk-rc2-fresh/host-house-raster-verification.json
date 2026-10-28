@@ -1,0 +1,69 @@
+{
+  "measurement_verified": true,
+  "product_native_passed": true,
+  "scope": "Independent Pillow/ImageChops read of retained native PNG pixels; no expected renderer image or human preference score",
+  "method": "Exact unscaled original crop at observed native bounds; maximum RGB channel difference above8",
+  "host_report_sha256": "a99d7ed064ae47a89a52ce584755420048df10ac64c569231fa6c1889652b7af",
+  "analysis_source_sha256": "6645baeb9a9a8b3f63ee1993a7d39bef807f94279014cece47a1c6bbc459ccb4",
+  "comparisons": [
+    {
+      "phase": "cold",
+      "kind": "actual-cuddle-raster",
+      "bounds": [
+        202,
+        820,
+        412,
+        1108
+      ],
+      "native_count_matches": true,
+      "changed_pixels": 4069,
+      "mean_absolute_rgb": 2.7022211199294532,
+      "observations": [
+        {
+          "frame": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-companion-moved-en.png",
+          "crop": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-cuddle-idle-analysis-crop.png",
+          "frame_sha256": "777390811d94d46d8e55b5137f1d3798829077af0e48a1dd988cd3a7f0e38aac",
+          "crop_sha256": "5e8cce9ab74f87285f1451f3e2ee9b936af38a988d29c74c9f18091b788e4ffe",
+          "pixel_exact_unscaled_crop": true
+        },
+        {
+          "frame": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-cuddle-active-en.png",
+          "crop": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-cuddle-active-analysis-crop.png",
+          "frame_sha256": "f2f2981e0bd54792a3f81cbc5110b9294a2ec751a31d6e7f3a9d5e13d18b0e7a",
+          "crop_sha256": "235e3dd1bc3509d0c2bd9b7d61e897c7a4b93ac3599a85173380fd49d1c5f7cc",
+          "pixel_exact_unscaled_crop": true
+        }
+      ]
+    },
+    {
+      "phase": "cold",
+      "kind": "actual-lamp-switch-raster",
+      "bounds": [
+        861,
+        944,
+        994,
+        1105
+      ],
+      "native_count_matches": true,
+      "changed_pixels": 10460,
+      "mean_absolute_rgb": 14.790345428789365,
+      "observations": [
+        {
+          "frame": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-lamp-state-a-en.png",
+          "crop": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-lamp-state-a-analysis-crop.png",
+          "frame_sha256": "450d407e4dffa8ec06e35d11b097faca7d9ec6e3b45f5c3d5f713904910d24e8",
+          "crop_sha256": "f8bce321398b0e38d94fbb916a5a8c1933d1cc5938bd402d614a9c6bc243abe1",
+          "pixel_exact_unscaled_crop": true
+        },
+        {
+          "frame": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-lamp-state-b-en.png",
+          "crop": "docs/screenshots/v1.13/ui-bugs/ui-sdk-rc2-fresh/cold/house-lamp-state-b-analysis-crop.png",
+          "frame_sha256": "290c650f4c076d3147be8de704509f16ce5d6b7d6bc40a2bbcd54f2fd6401b65",
+          "crop_sha256": "a7e8f80412bc630fdccf693c2aca025be770ccd8730d4d61880e573c5cef95dd",
+          "pixel_exact_unscaled_crop": true
+        }
+      ]
+    }
+  ],
+  "limits": "Only retained before/after frames are independently re-read. Idle noise sampling and any third restoration observation remain separate native checks."
+}

@@ -1,0 +1,40 @@
+{
+  "measurement_verified": true,
+  "product_native_passed": true,
+  "scope": "Independent Pillow/ImageChops read of retained native PNG pixels; no expected renderer image or human preference score",
+  "method": "Exact unscaled original crop at observed native bounds; maximum RGB channel difference above8",
+  "host_report_sha256": "9873754400422bbd3317f1fad39482787fbca2601381b989cbd957a5e62c75cf",
+  "analysis_source_sha256": "6645baeb9a9a8b3f63ee1993a7d39bef807f94279014cece47a1c6bbc459ccb4",
+  "comparisons": [
+    {
+      "phase": "prepare",
+      "kind": "actual-cuddle-raster",
+      "bounds": [
+        202,
+        828,
+        412,
+        1116
+      ],
+      "native_count_matches": true,
+      "changed_pixels": 3974,
+      "mean_absolute_rgb": 2.4580302028218695,
+      "observations": [
+        {
+          "frame": "docs/screenshots/v1.13/ui-bugs/ui-sdk-intermediate-a-house-smoke/prepare/house-companion-moved-en.png",
+          "crop": "docs/screenshots/v1.13/ui-bugs/ui-sdk-intermediate-a-house-smoke/prepare/house-cuddle-idle-analysis-crop.png",
+          "frame_sha256": "449264ff062b795096171bbe1c4811e30df2419c7072e1ea39761f4d6fba6920",
+          "crop_sha256": "050cd35f8301da530f78a79108ca5fed1e08117dd49184d4199d81ce59bf7e3e",
+          "pixel_exact_unscaled_crop": true
+        },
+        {
+          "frame": "docs/screenshots/v1.13/ui-bugs/ui-sdk-intermediate-a-house-smoke/prepare/house-cuddle-active-en.png",
+          "crop": "docs/screenshots/v1.13/ui-bugs/ui-sdk-intermediate-a-house-smoke/prepare/house-cuddle-active-analysis-crop.png",
+          "frame_sha256": "f55ebdc8422250e25885ab4e715edd9bf54517d1bed1891d17bc5ca35524e4e9",
+          "crop_sha256": "242e0266fa7ec6fbf62f8fcd072b1fae5d509b87a5443c64eee3c623cc21be7f",
+          "pixel_exact_unscaled_crop": true
+        }
+      ]
+    }
+  ],
+  "limits": "Only retained before/after frames are independently re-read. Idle noise sampling and any third restoration observation remain separate native checks."
+}

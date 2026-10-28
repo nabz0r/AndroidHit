@@ -1,0 +1,7 @@
+# Preserved application crash — final1 full13 attempt
+
+The result is **FAIL** and no native final report exists because the target process crashes. The wrapper preserves the frozen APK/test hashes and restores every original preference byte, rotation and isolated test package state. Supplemental SDK originals are retained unedited with a separate manifest; none are public-site acceptance evidence.
+
+Observed sequence: open the optional school from the new home, complete lesson 1 through native gestures, attempt the blocked piece in lesson 2 phase 0, reach lesson 2 phase 1, choose Later, then quickly reopen the school. AndroidRuntime in PID 6223 throws `IllegalArgumentException: Unknown tutorial text: ` from the main drawing thread at 16:20:43. The test confirms the practice is paused before resuming, but crashes before its equality assertion can complete. The exact post-crash tutorial preference was restored by the wrapper and is not retrospectively claimed as retained evidence.
+
+Source diagnosis: openTutorial cleared the feedback key while its previous 2400 ms deadline remained active, so the renderer translated an empty key during a quick resume. The empty cache/deadline correction and its explicit timed regression belong to RC2. [Original crash](native-crash-buffer.txt), [instrumentation](prepare/instrumentation.txt), [host failure/restoration](host-report.json), [frozen source](source-snapshot.json), [supplemental original inventory](crash-originals.json).

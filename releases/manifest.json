@@ -1,6 +1,6 @@
 {
-  "version": "1.12.0-sandbox-rc2",
-  "version_code": 13,
+  "version": "1.13.0-sandbox-rc2",
+  "version_code": 14,
   "channel": "lab",
   "application_id": "com.androidhit.lumadrift.sandbox",
   "build_date": "2026-10-28",
@@ -13,12 +13,12 @@
     "live_services_validated": false
   },
   "source_inputs_sha256": {
-    "app/build.gradle": "26bc8a9787c0978edac7366eb69edb61b0b5bc23bae7a3456518e710074065ae",
+    "app/build.gradle": "7f6f1fe24d5783e69cb684c914da4a8883181fb26bbfa47872eb5629760e8fe1",
     "app/src/main/AndroidManifest.xml": "ffc6f37f6f0522eecb1906aaa59d44a6795bec5a592fb7fa3d7334be98c98994",
     "app/src/main/assets/LICENSE.txt": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
     "app/src/main/assets/THIRD_PARTY_NOTICES.txt": "bc3de00ad30b7d76e04bbd4af3b918c8b8eda113d344560638f6387a95260df3",
     "app/src/main/assets/identity-config.example.json": "4c26ad1413e8b6b99ef4d05865cd1c23eda25ac2c79f08323754d05b400789ea",
-    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "0bd5b4b8ea86d946b9c921a675801dbe0d878a3be1ad3176a7f8a3dbd6ea883d",
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "16caf96fbf4211a1e0c9e61e6f6ff161db13707cca86501901e596904c9368dc",
     "app/src/main/java/com/androidhit/lumadrift/MainActivity.java": "c1d3e32c3d3cf0ab2ce1dce783717125a82c8f21faf29aa3fe760d86f6216828",
     "app/src/main/java/com/androidhit/lumadrift/audio/AudioEngine.java": "c3996a9acad55c93b3da020f8d6d4dd65359af98f9e0b0d2c91775ca643f633f",
     "app/src/main/java/com/androidhit/lumadrift/audio/Synth.java": "047d95688ad31d8bcde77251fc37cfc99e22a3465f33efc724c63b825bd190d5",
@@ -39,8 +39,11 @@
     "app/src/main/java/com/androidhit/lumadrift/data/EconomyCurve.java": "1f5e230948603e61b4522f0d790a764312c381a12216449d7a45b0f9e17b261a",
     "app/src/main/java/com/androidhit/lumadrift/data/EventSchedule.java": "2bb723df3bd9d79224d1d50bdda997e99e1d1a7575439406f93b21a847c17198",
     "app/src/main/java/com/androidhit/lumadrift/data/ExperienceStrings.java": "4626fc70b4ed9db4d4c9a0468265121b649eaafa9bce06cbf89a68558029e1c5",
-    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "ed629c1aa51712deb5a1c3fe86b9ff0101bd2d55d874fc765e1495e616c43fd9",
+    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "ad698df4f907e5db521a98e4b0e0c3d483f9daf60ce7662cccf761e609769f35",
     "app/src/main/java/com/androidhit/lumadrift/data/GearStrings.java": "5a07fad279f751aab01506a863f0b4182dedda2a94dd035b04cfd6a2d49a6171",
+    "app/src/main/java/com/androidhit/lumadrift/data/HomeCatalog.java": "54a7c4e5607f0a8e1620752fb9338cabf1cdb912f4a0187cab21db32e3ac95bd",
+    "app/src/main/java/com/androidhit/lumadrift/data/HomeLayout.java": "4542742a178ae81ce949b9adf71f31d7a5a61fd140e315df25163f8491771f2d",
+    "app/src/main/java/com/androidhit/lumadrift/data/HomeStrings.java": "0b719c856ac9a44ebd9653542b37be521aa041dde3c5e6da8be7e47243d5d6eb",
     "app/src/main/java/com/androidhit/lumadrift/data/InventoryPresentation.java": "a2655902ece6005bfbbd3cf56ad51123aaf52fad81cf81686f3d7faf41e95d63",
     "app/src/main/java/com/androidhit/lumadrift/data/LocalSaveTransactions.java": "395fdb444c436eb5d05d4f6b40fae2eec208698f353c6f1c2dab749d25863fd2",
     "app/src/main/java/com/androidhit/lumadrift/data/MetaProgress.java": "c21a163323828dfa0e9726e2a97aff48ef4d2a094e1709f1bfa6916ced48eab4",
@@ -86,6 +89,7 @@
     "app/src/main/java/com/androidhit/lumadrift/identity/IdentitySessionAccess.java": "911fc7130c32fd7ba4a00245741d148c4168c8f565b42e6b56ac11f46ace544b",
     "app/src/main/java/com/androidhit/lumadrift/identity/SessionSnapshot.java": "6a546abcb44525fe690183244ffa0494a0c12abaac3af27a54d0eec5dccd3dad",
     "app/src/main/java/com/androidhit/lumadrift/identity/SessionTracker.java": "5e55515ac78dfba32134e634d2744e93db695410372a688994d698027620d2ee",
+    "app/src/main/java/com/androidhit/lumadrift/onboarding/FirstLight.java": "c5cd0c0ca823039faaf58a4dbd934c5008e63c9185333a56834bd914b4f43045",
     "app/src/main/java/com/androidhit/lumadrift/onboarding/TutorialSession.java": "d2a3d18bbc8eb8ea3d307d287caae018129121d4231c494fb25134e615f4a3f0",
     "app/src/main/java/com/androidhit/lumadrift/onboarding/TutorialStrings.java": "132ec1648b8057a3d853030c0111d0e1734f5cd0c156a63155494fb44a5131b5",
     "app/src/main/java/com/androidhit/lumadrift/sharing/ShareComposer.java": "fc7653f450887b352a9dc1e5db83b4b866d66994fd8ae58bd67ff6b977a7c747",
@@ -100,6 +104,7 @@
     "app/src/main/java/com/androidhit/lumadrift/ui/AvatarStage.java": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
     "app/src/main/java/com/androidhit/lumadrift/ui/CompanionPortrait.java": "8a770995271daaa1a95d18665998de81aefc1cc4b19a853037ddd2699cba55b8",
     "app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java": "601d1a9074b6241d848baab9f1b8697045a122f1cc629eed81e78aea618fb67d",
+    "app/src/main/java/com/androidhit/lumadrift/ui/HomeScene.java": "5640666d9a8c5f9bccdd85db61d8681ff3a514c65c4ba15deacc878b2b8f021b",
     "app/src/main/java/com/androidhit/lumadrift/ui/KawaiiArt.java": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
     "app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java": "cdf19d5ecc308bde6a7f06d7b9bb414f53cb7b0cbfac76158afcab2d49b33145",
     "app/src/main/java/com/androidhit/lumadrift/ui/ShopIllustrations.java": "15f553839bd01ccd38dacc83ccca4dac116c6567236f7d7e51b1478c6d613ee2",
@@ -187,6 +192,38 @@
     "luma-drift-1.12.0-sandbox-rc2.apk": {
       "bytes": 7757097,
       "sha256": "0f55c38c29d5872588200a5675cb154809eb62897d1133d96b48a82ab12b91e4"
+    },
+    "luma-drift-1.13.0-rc1.aab": {
+      "bytes": 11210041,
+      "sha256": "ccc89c4b524bdbcaea9f717c83e062748ae599c5d248e492975874da72ee76e4"
+    },
+    "luma-drift-1.13.0-rc1.apk": {
+      "bytes": 7806562,
+      "sha256": "9ded8f30d51479454f2ccc40ef4f4e5d6444812850a4779572bc69c818484762"
+    },
+    "luma-drift-1.13.0-rc2.aab": {
+      "bytes": 11210021,
+      "sha256": "dd8d4ddc67e03f9dc6f8f85a816b494d5628b6f11cb64cb24ad97e48e7264982"
+    },
+    "luma-drift-1.13.0-rc2.apk": {
+      "bytes": 7806558,
+      "sha256": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b"
+    },
+    "luma-drift-1.13.0-sandbox-rc1.aab": {
+      "bytes": 11200257,
+      "sha256": "1b2637adae149cc21d7f69ec3547a21a4609897da17e8e4a139b3b445ac87284"
+    },
+    "luma-drift-1.13.0-sandbox-rc1.apk": {
+      "bytes": 7789865,
+      "sha256": "3726e9779d7c00d4667412e5020e4d1a9b15f11b49388c957b473954c1e67ebb"
+    },
+    "luma-drift-1.13.0-sandbox-rc2.aab": {
+      "bytes": 11200263,
+      "sha256": "1e109751f93ef80d94b2b71251700e019f6bd73af28aa59229fb686f79d52f18"
+    },
+    "luma-drift-1.13.0-sandbox-rc2.apk": {
+      "bytes": 7789865,
+      "sha256": "85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa"
     },
     "luma-drift-1.2.0-sandbox.aab": {
       "bytes": 7166459,

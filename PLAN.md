@@ -1,3 +1,17 @@
+# Luma Drift 1.13 — a home for your companion
+
+Owner scope: deliver the interactive home, preserve puzzles as the main game, publish source and signed packages on main, and update the existing Firebase website.
+
+1. Native inhabited room: equipped companion, walk-to-floor, cuddle, usable furniture, wardrobe and immediate Play/Resume.
+2. Earned decoration: original furniture, wallpaper and floor choices, explicit purchase/placement, a chosen furniture goal, collision-safe layout and durable local saves.
+3. First delight: a short first playable encounter, an expressive companion and clear gate feedback, retaining replayable lessons and every historical puzzle identity/save.
+4. Validate model transactions, existing progression/economy, signed packages and installed room/wardrobe/puzzle routes, six languages, compact/landscape/reduced-motion and true cold persistence. Keep original guest profiles recoverable.
+5. Publish exact signed APK/AAB files and source on main; refresh release/store/privacy/development documentation and the FR/EN website with actual new native captures. Deploy only the existing Firebase Hosting site and record the returned result.
+
+Commercial/provider gates remain at their current settings. Native checks do not measure human enjoyment or retention; report physical-device/provider limits explicitly.
+
+## Preserved earlier plan
+
 # Luma Drift 1.7 — delivery plan
 
 1.7 — clarity, rewards and social wardrobe

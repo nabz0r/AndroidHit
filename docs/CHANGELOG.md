@@ -1,6 +1,20 @@
 # Changelog
 
-## 1.12.0-rc2 / code13 — the little atelier
+## 1.13.0-rc2 / code 14 — a little home around the puzzle
+
+28 October 2026. [Release/artifacts](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Executed qualification](validation/v1.13/README.md).
+
+- Add an original room seen from three quarters, twelve furnishings, five free starter objects, four wall finishes and four floors with two free choices each.
+- Add clear-path companion movement, a cuddle and furniture activities, using the actually equipped character, style, clothing and gear.
+- Add separate purchase/ownership, placement preview, rotation, storage and one unowned furnishing wish; use existing earned LumaCoins, without a new currency or starter-wallet change.
+- Persist complete immutable layout/companion position, ownership, surfaces and wish through exact tracked writes/read-flush recovery; preserve older saves and refuse unsafe placements.
+- Add a skippable real three-piece first switch encounter with durable history/finish marker and no invented campaign progress or reward. Preserve the existing seven optional lessons.
+- Fix the reproduced RC1 tutorial Later→Resume crash by resetting obsolete feedback state and guarding completed/skipped lesson text lookup; RC1 evidence is preserved and excluded from RC2 acceptance.
+- Prepare a FR/EN website presentation around the home and main puzzle, with current-byte native capture provenance and exact release/source checks; Hosting is independently recorded.
+
+Puzzle layouts/budgets, existing challenge identities, rewards, equipment and commercial gates remain. Source checks pass 891 home assertions and 18 actual-opening checks; final native, artifact and publication receipts retain their own scope. No Play publication, cloud progression or human retention result is implied.
+
+## Preserved 1.12.0-rc2 / code13 — the little atelier
 
 - Label and distinguish local earned LumaCoins and account LumaGold, including unknown/last-known balance.
 - Replace item preview/earned-purchase/equip popups with integrated scrollable pages and explicit purchase then Equip.

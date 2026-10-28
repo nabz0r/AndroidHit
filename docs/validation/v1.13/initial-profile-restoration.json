@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-28T15:41:37.397158+00:00",
+  "serial": "emulator-5580",
+  "avd": "hexkeep-play-36-16k",
+  "initial_baseline_manifest_sha256": "a5691cea2c214b49f10e6a73c31b50e2b76e37b5d9236f4aec12fb3d94507b43",
+  "packages": [
+    {
+      "package": "com.androidhit.lumadrift.sandbox",
+      "files": 3,
+      "restoration_required": true,
+      "before_sha256": {
+        "luma_drift_meta_v1.xml": "7b6ff2288ed69d9c75c1d2ae4c59fd1c04d607702cf93d1bb9e9df079e0a8ac0",
+        "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+        "luma_session.xml": "ffeacec81dd1c21191f04a839fd2672cd82707f0c4af8eedcab5719ee097f01c"
+      },
+      "restored_sha256": {
+        "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+        "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+        "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+      },
+      "matches_initial_baseline": true
+    },
+    {
+      "package": "com.androidhit.lumadrift",
+      "files": 3,
+      "restoration_required": false,
+      "before_sha256": {
+        "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+        "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+        "luma_session.xml": "51dd90a498290f542c07106aa518b8860d2cc5a5659977c34e2f11d56e783200"
+      },
+      "restored_sha256": {
+        "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+        "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+        "luma_session.xml": "51dd90a498290f542c07106aa518b8860d2cc5a5659977c34e2f11d56e783200"
+      },
+      "matches_initial_baseline": true
+    }
+  ],
+  "test_package_checks": [
+    {
+      "serial": "emulator-5580",
+      "isolated_test_package_absent": true
+    },
+    {
+      "serial": "emulator-5586",
+      "isolated_test_package_absent": true
+    },
+    {
+      "serial": "emulator-5590",
+      "isolated_test_package_absent": true
+    }
+  ],
+  "scope": "Exact six original preference files from before the first 1.13 manual preview restored after all native qualification. Preference values remain private outside the repository; only hashes are recorded. Native wrappers independently restored their own guest/display baselines. The unrelated emulator-5582 was not modified."
+}

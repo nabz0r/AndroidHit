@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "startup",
+  "journey_through": 100,
+  "serial": "emulator-5586",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "apk_sha256": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b",
+  "expected_apk_sha256": "c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b",
+  "test_apk_sha256": "b6f7433e1e53a42c8a86baa8b7c99c472f4a15ae0f23b2118b724c42eddcd141",
+  "wrapper_source_sha256": "5704a0ea1da8f1dc6ee4470f16123cc316b777a62b430dca6e360c63a470563d",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "c297f612ab2901e58601a2da0ad4c71d83ed7706b30972b2f46adbabf0e2a4b0",
+  "package": "com.androidhit.lumadrift",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v113-ui-original-prefs-ulzk35b1",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1d370c640b2895f9781629c4e6059540ac5c23762ef8ee0643528e9f58a0b285",
+    "luma_drift_save_v1.xml": "cc1d9083483859ff5c5a7400f185383928dd55d4c80a8e58e34f3ba7a0d9858c",
+    "luma_session.xml": "70c64b0ed52c38a4b43369564a1dba6cfdfb53e4ed407fb0cb53f117ae91a356"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "installed_test_apk_sha256": "b6f7433e1e53a42c8a86baa8b7c99c472f4a15ae0f23b2118b724c42eddcd141",
+  "phases": [
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": true,
+        "checkCount": 7,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Actual production 1.13.0-rc2/code14 package loaded"
+          },
+          {
+            "pass": true,
+            "message": "Production launch exposes its actual native accessible window"
+          },
+          {
+            "pass": true,
+            "message": "Production music has an active track owned by its actual process"
+          },
+          {
+            "pass": true,
+            "message": "The same production audio track advances real mixed frames"
+          },
+          {
+            "pass": true,
+            "message": "SDK sends the app to background for lifecycle audio observation"
+          },
+          {
+            "pass": true,
+            "message": "Production music pauses after actual background lifecycle"
+          },
+          {
+            "pass": true,
+            "message": "Production music resumes after actual foreground lifecycle"
+          }
+        ],
+        "captures": [
+          "startup-production-native"
+        ],
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Production startup and lifecycle/audio SDK observation only; no piece/menu/account/ad/payment action"
+      },
+      "screenshots": {
+        "prepare/startup-production-native.png": "bb44fa9e89379949e915c6b3faec2495e62715e447ae02baca22dc6c850eb37c"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/startup-production-native.png": "bb44fa9e89379949e915c6b3faec2495e62715e447ae02baca22dc6c850eb37c"
+  },
+  "capture_kind_counts": {
+    "original_full_frames": 1,
+    "unscaled_analysis_crops": 0
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Actual production 1.13.0-rc2/code14 package loaded"
+      },
+      {
+        "pass": true,
+        "message": "Production launch exposes its actual native accessible window"
+      },
+      {
+        "pass": true,
+        "message": "Production music has an active track owned by its actual process"
+      },
+      {
+        "pass": true,
+        "message": "The same production audio track advances real mixed frames"
+      },
+      {
+        "pass": true,
+        "message": "SDK sends the app to background for lifecycle audio observation"
+      },
+      {
+        "pass": true,
+        "message": "Production music pauses after actual background lifecycle"
+      },
+      {
+        "pass": true,
+        "message": "Production music resumes after actual foreground lifecycle"
+      }
+    ],
+    "checkCount": 7,
+    "scope": "Actual SDK single-process observation; no profile seeding"
+  },
+  "isolated_test_package_removed": true,
+  "rotation_settings_restored": true
+}

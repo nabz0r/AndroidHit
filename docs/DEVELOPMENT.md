@@ -1,6 +1,22 @@
 # Development and architecture
 
-## Current 1.12 UI and transaction boundary
+## Current 1.13 room and first-touch architecture
+
+`HomeCatalog` defines twelve original furnishings and separate four-choice wall/floor collections, all using existing LumaCoins. `HomeLayout` is immutable and Android-independent: a six-by-six room, integer furniture coordinates, two rotations and a persisted companion cell. Solid footprints cannot overlap or cover the companion; the two-by-two rug is traversable and may underlay furniture. Four-neighbour breadth-first search rejects unreachable companion destinations.
+
+`GameStore` owns the durable boundary in the existing `luma_drift_save_v1` preferences. Furniture/surface debit and ownership commit together through `LocalSaveTransactions.LOCK` and `write`; all house reads flush exact pending writes. A single complete layout record saves placement and companion position. Missing home keys return the free starter layout without a migration write or wallet reset. Refused mutations do not partially modify durable state. A retry flushes the original transaction instead of spending twice. Purchase, placement, storage and equipped surface are separate actions.
+
+`HomeScene` draws the room and returns actual tile/object hit geometry. `LumaView` owns selection, draft placement/rotation, catalogue/details and accessible actions; the shared `CompanionPortrait` supplies actual equipped clothing and gear. Movement persists the valid destination before acknowledgement, then animates its safe path. Cuddle, rest and lamp/activity poses are transient; they are not ownership, need or reward state. Confirmed room state, not a placement preview or temporary pose, is restored across a cold process.
+
+`FirstLight` uses a real three-piece `Board`. Only its local exit history and finished/skip marker are saved; it never awards a campaign win, LumaCoins or inventory. Existing progressed/tutorial profiles are not forced through it. The regular seven optional lessons remain separate and retain their existing once-only reward. Source tests invoke the actual board and store.
+
+The RC2 replacement corrects a reproduced RC1 tutorial Later→Resume crash: obsolete feedback timing must be cleared when practice state changes, and terminal/skipped lesson state must never request an empty tutorial copy key. RC1 native smoke passes did not exercise that path; the failing whole run and corrected candidate retain separate evidence.
+
+Run `bash scripts/test-home-v113.sh` and `bash scripts/test-first-light-v113.sh`, then the retained store, tutorial and engine regressions appropriate to the change. The new native runner is `scripts/v113-ui-test`; its protocol records exact APKs, genuine earned funding, profile restoration, distinct cold processes and original capture files. [Home rules](HOME_1_13.md) · [Qualification](validation/v1.13/README.md).
+
+Current source declares production **1.13.0-rc2** and Lab **1.13.0-sandbox-rc2**, code **14**. Build with JDK21 for the pinned lint analyzer; Java17 source remains supported. The sections below retain earlier implementation details and dated test scope.
+
+## Preserved 1.12 UI and transaction boundary
 
 `LumaView` adds ordinary `item` pages with measured semantic text, explicit purchase/Equip and caller-aware Close/Back. Item kind/identity, long-page height and return history survive Activity recreation. Displayed premium balance is sampled on UI refresh/resume/auth changes, outside the frame loop; `ProductionWalletClient.cachedBalance` validates the active UID, exact integer fields, version and range, and never supplies spend authorization.
 
@@ -30,7 +46,7 @@ Run `bash scripts/test-objective-models-v110.sh`, `bash scripts/test-prism-story
 Run the dedicated scripts `test-new-player-v19.sh`, `test-guardian-v19.sh`, `test-guardian-store-v19.sh` and `test-journey-rewards-v19.sh`. Native instrumentation lives in `scripts/v19-ui-test/`; it targets the named QA emulator, checks exact APK bytes and restores original preferences/display settings. Earlier 1.8 scripts/reports retain their scope.
 
 
-Current source declares **production 1.11.0-rc2** and **Lab 1.11.0-sandbox-rc2**, code **12**. [Qualification and exact-byte evidence](validation/v1.11/README.md) · [V4 engine](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [Current UX contract](UX_1_10.md). Build with JDK21 for the pinned lint analyzer; Java17 source remains supported.
+Preserved 1.11 source declared **production 1.11.0-rc2** and **Lab 1.11.0-sandbox-rc2**, code **12**. [Qualification and exact-byte evidence](validation/v1.11/README.md) · [V4 engine](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [Preserved 1.10 UX contract](UX_1_10.md). Build with JDK21 for the pinned lint analyzer; Java17 source remains supported.
 
 The component/build details below retain their earlier historical references; current content uses StrategyCatalog L/M/T, content save5 and reversible budget policy3. Current 1.7 policy2 saves migrate with their exact old layout/base; historical codes are unchanged. New exact guidance runs off the UI thread on one worker with one coalesced queued request.
 

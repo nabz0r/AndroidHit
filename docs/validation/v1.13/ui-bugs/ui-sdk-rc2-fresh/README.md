@@ -1,0 +1,5 @@
+# RC2 genuine first installation
+
+Frozen 1.13.0-sandbox-rc2/code14 passes **55 native checks**, retaining **17 original full frames and 4 explicitly labelled unscaled analysis crops** on owned emulator-5590 / Luma-Release113-Home-RC2. Lab was genuinely absent before install. A real switch action is saved, the target is force-stopped and absent from pidof, and a distinct process resumes exactly that history before completing the other two exits. Entering the home grants no invented Journey clear or currency.
+
+House smoke additionally observes real movement, distinct cuddle pixels, visible bed rest stable for eight seconds, physical targeting of the resting companion, real lamp ON/OFF/restoration pixels and the existing wardrobe. Original rotation and existing production-package presence/hash are unchanged, isolated hometest is removed and this genuinely new QA guest is retained. [Host report](host-report.json), [prepare](prepare/report.json), [cold process](cold/report.json), [independent PNG analysis](host-house-raster-verification.json), [exact pre-run source](source-snapshot.json).

@@ -1,0 +1,4291 @@
+{
+  "passed": false,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "journey,house-smoke,house,house-locales,house-layout",
+  "journey_through": 20,
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "display_size_before": "Physical size: 1080x2340",
+  "apk_sha256": "3726e9779d7c00d4667412e5020e4d1a9b15f11b49388c957b473954c1e67ebb",
+  "expected_apk_sha256": "3726e9779d7c00d4667412e5020e4d1a9b15f11b49388c957b473954c1e67ebb",
+  "test_apk_sha256": "79030f8ec876bce2be15a5d8de8162b764bc3e2a4d3b89afb4f42325d01f9bde",
+  "wrapper_source_sha256": "41073c66dee94d04795381d41ccce2b9f67adea03e2c547c786fd2f5bb83e219",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "5d7e62748bed392c5e84a58c6165e9791b1b6938e2fbc4e40660ad10baf81066",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v113-ui-original-prefs-fqv0n11a",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "7b6ff2288ed69d9c75c1d2ae4c59fd1c04d607702cf93d1bb9e9df079e0a8ac0",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "ffeacec81dd1c21191f04a839fd2672cd82707f0c4af8eedcab5719ee097f01c"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "installed_test_apk_sha256": "79030f8ec876bce2be15a5d8de8162b764bc3e2a4d3b89afb4f42325d01f9bde",
+  "phases": [
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": false,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.13.0-sandbox-rc1/code14"
+          },
+          {
+            "pass": true,
+            "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+          },
+          {
+            "pass": true,
+            "message": "Native dialog text input accepts SDK action"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 1 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 2 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 3 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 4 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 5 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 6 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 7 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 8 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 9 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 11 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 10 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Real native preview cancellation spends no action and changes no history"
+          },
+          {
+            "pass": true,
+            "message": "Canceled native preview returns to actual board controls"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 11 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 12 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 13 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 65 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 14 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 15 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 16 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 66 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 17 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 66 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 18 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 64 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 65 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 19 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 65 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 66 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Opening preview changes neither history nor action allowance"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 67 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 1 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 2 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 3 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 4 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 5 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 6 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 7 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 8 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 9 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 10 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 cleared by certified real UI actions, without profile injection"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 perfect action path visibly awards three stars"
+          },
+          {
+            "pass": true,
+            "message": "Journey 20 exact productive path stays within its certified allowance"
+          },
+          {
+            "pass": true,
+            "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "House wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "House wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "House decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "House decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "House cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "House cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Touching an observed free floor tile persistently moves the real companion to that tile"
+          },
+          {
+            "pass": true,
+            "message": "Companion movement changes the complete saved room record"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Cuddle visibly changes the actual companion drawing beyond observed idle noise"
+          },
+          {
+            "pass": true,
+            "message": "A physical bed touch stays in the actual house"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "The reduced-motion companion remains visibly resting at the same bed position after8seconds"
+          },
+          {
+            "pass": true,
+            "message": "A physical touch on the resting companion reaches its current visible cuddle target"
+          },
+          {
+            "pass": true,
+            "message": "A physical lamp touch toggles its interaction without opening the puzzle door"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "Toggling the same reachable lamp changes actual lamp pixels with the companion in the same position"
+          },
+          {
+            "pass": true,
+            "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+          },
+          {
+            "pass": true,
+            "message": "A second lamp toggle restores the exact prior reduced-motion lamp drawing"
+          },
+          {
+            "pass": true,
+            "message": "Home wardrobe opens the exact existing companion and equipment without silent changes"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Moving, cuddling and opening the wardrobe leave actual puzzle history, ownership, balance and rewards unchanged"
+          },
+          {
+            "pass": true,
+            "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Furniture qualification calls the companion to an actual free floor tile before editing"
+          },
+          {
+            "pass": true,
+            "message": "Home purchase test has at least240 genuinely earned LumaCoins; no injected balance"
+          },
+          {
+            "pass": true,
+            "message": "Qualification starts before the new sofa is owned, so an actual purchase can be observed"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Opening furniture details leaves the wallet and placed room unchanged"
+          },
+          {
+            "pass": true,
+            "message": "Explicit visible wish action persists the selected furniture goal"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Actual visible sofa purchase stores ownership and debits exactly240 earned LumaCoins"
+          },
+          {
+            "pass": true,
+            "message": "Purchasing furniture does not automatically place it or move the companion"
+          },
+          {
+            "pass": true,
+            "message": "Furniture purchase does not change the existing companion, visual style or worn equipment"
+          },
+          {
+            "pass": true,
+            "message": "Explicit invalid placement overlapping the starter bed cannot alter the persisted room"
+          },
+          {
+            "pass": true,
+            "message": "Choosing a valid tile and rotating the preview make no persisted edit before Place"
+          },
+          {
+            "pass": true,
+            "message": "Furniture preview landscape: SDK rotation accepted"
+          },
+          {
+            "pass": true,
+            "message": "Furniture preview landscape: actual rotation 1, PNG 2340\u00d71080, game view [0,0][2340,1080]"
+          },
+          {
+            "pass": true,
+            "message": "Activity recreation preserves the uncommitted furniture preview without silently placing it"
+          },
+          {
+            "pass": true,
+            "message": "Furniture preview portrait return: SDK rotation accepted"
+          },
+          {
+            "pass": true,
+            "message": "Furniture preview portrait return: actual rotation 0, PNG 1080\u00d72340, game view [0,0][1080,2340]"
+          },
+          {
+            "pass": true,
+            "message": "Explicit Place commits exactly the selected cell and rotated two-cell footprint"
+          },
+          {
+            "pass": true,
+            "message": "Selecting an already placed sofa and confirming a new free tile persists its move"
+          },
+          {
+            "pass": true,
+            "message": "Store away removes only the placement while retaining ownership and the exact wallet"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Owned sofa can be placed again with a newly selected orientation without another debit"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Explicit free floor Equip persists the requested surface"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Explicit free wall Equip persists Sage walls without another debit"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Native dialog text input accepts SDK action"
+          },
+          {
+            "pass": true,
+            "message": "Visible free restart restores a fresh attempt"
+          },
+          {
+            "pass": true,
+            "message": "Typed action 0 is recorded exactly once through UI"
+          },
+          {
+            "pass": true,
+            "message": "Cold persistence checkpoint includes an actual unfinished puzzle action"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Localized en wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "Localized en wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized en decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized en decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized en cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized en cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized en room exposes the actual scene and current companion art"
+          },
+          {
+            "pass": true,
+            "message": "Localized en category Furniture has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized en category Furniture native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized en category Walls has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized en category Walls native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized en category Floor has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized en category Floor native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized en detail names the observed furniture rather than exposing a copy key"
+          },
+          {
+            "pass": true,
+            "message": "Localized en house/category/detail browsing preserves room, current board, ownership and exact economy"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr room exposes the actual scene and current companion art"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr category Meubles has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr category Meubles native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr category Murs has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr category Murs native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr category Sol has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr category Sol native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr detail names the observed furniture rather than exposing a copy key"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr house/category/detail browsing preserves room, current board, ownership and exact economy"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Localized de wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "Localized de wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized de decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized de decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized de cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized de cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized de room exposes the actual scene and current companion art"
+          },
+          {
+            "pass": true,
+            "message": "Localized de category M\u00f6bel has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized de category M\u00f6bel native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized de category W\u00e4nde has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized de category W\u00e4nde native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized de category Boden has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized de category Boden native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized de detail names the observed furniture rather than exposing a copy key"
+          },
+          {
+            "pass": true,
+            "message": "Localized de house/category/detail browsing preserves room, current board, ownership and exact economy"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Localized es wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "Localized es wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized es decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized es decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized es cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized es cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized es room exposes the actual scene and current companion art"
+          },
+          {
+            "pass": true,
+            "message": "Localized es category Muebles has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized es category Muebles native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized es category Paredes has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized es category Paredes native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized es category Suelo has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized es category Suelo native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized es detail names the observed furniture rather than exposing a copy key"
+          },
+          {
+            "pass": true,
+            "message": "Localized es house/category/detail browsing preserves room, current board, ownership and exact economy"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt room exposes the actual scene and current companion art"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt category M\u00f3veis has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt category M\u00f3veis native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt category Paredes has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt category Paredes native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt category Ch\u00e3o has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt category Ch\u00e3o native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt detail names the observed furniture rather than exposing a copy key"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt house/category/detail browsing preserves room, current board, ownership and exact economy"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Localized it wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+          },
+          {
+            "pass": true,
+            "message": "Localized it wardrobe native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized it decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized it decorate native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized it cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized it cuddle native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized it room exposes the actual scene and current companion art"
+          },
+          {
+            "pass": true,
+            "message": "Localized it category Mobili has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized it category Mobili native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized it category Pareti has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized it category Pareti native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized it category Pavimento has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+          },
+          {
+            "pass": true,
+            "message": "Localized it category Pavimento native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Localized it detail names the observed furniture rather than exposing a copy key"
+          },
+          {
+            "pass": true,
+            "message": "Localized it house/category/detail browsing preserves room, current board, ownership and exact economy"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Owned QA display is configured to an actual320dp-wide portrait surface"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Observed native house viewport is actually320dp wide"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Cuddle compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Wardrobe compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Decorate compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual footer touch opens Inventory instead of a floor action compact320-portrait-en"
+          },
+          {
+            "pass": true,
+            "message": "Actual footer Home touch restores the house without moving its companion compact320-portrait-en"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Furniture catalogue compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Done compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Room editor Rotate compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Room editor Store away compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Room editor Place compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Room editor Cancel compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Catalogue Furniture compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Catalogue Walls compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Observed home art has a nonempty real native region"
+          },
+          {
+            "pass": true,
+            "message": "Catalogue Floor compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+          },
+          {
+            "pass": true,
+            "message": "Last furniture card is reachable through ordinary native scrolling compact320-portrait-en"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "320dp house landscape: SDK rotation accepted"
+          },
+          {
+            "pass": true,
+            "message": "320dp house landscape: actual rotation 1, PNG 1760\u00d7880, game view [0,0][1760,880]"
+          },
+          {
+            "pass": false,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "320dp house portrait return: SDK rotation accepted"
+          },
+          {
+            "pass": true,
+            "message": "320dp house portrait return: actual rotation 0, PNG 880\u00d71760, game view [0,0][880,1760]"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "journey-1-start-en",
+          "journey-1-cleared-en",
+          "journey-7-start-en",
+          "journey-7-cleared-en",
+          "journey-8-start-en",
+          "journey-8-cleared-en",
+          "gate-preview-visible-before-cancel-en",
+          "journey-13-start-en",
+          "journey-13-cleared-en",
+          "house-initial-en",
+          "house-companion-moved-en",
+          "house-cuddle-idle-analysis-crop",
+          "house-cuddle-active-analysis-crop",
+          "house-cuddle-active-en",
+          "house-rest-on-bed-en",
+          "house-rest-after-eight-seconds-en",
+          "house-cuddle-from-bed-en",
+          "house-lamp-state-a-analysis-crop",
+          "house-lamp-state-a-en",
+          "house-lamp-state-b-analysis-crop",
+          "house-lamp-state-b-en",
+          "house-wardrobe-en",
+          "house-sofa-preview-en",
+          "house-wish-progress-en",
+          "house-sofa-owned-unplaced-en",
+          "house-placement-blocked-en",
+          "house-sofa-rotated-preview-en",
+          "house-preview-landscape-en",
+          "house-sofa-placed-en",
+          "house-sofa-stored-en",
+          "house-personalised-en",
+          "house-checkpoint-partial-puzzle-en",
+          "house-final-checkpoint-en",
+          "house-locale-room-en",
+          "house-locale-catalog-en",
+          "house-locale-detail-en",
+          "house-locale-room-fr",
+          "house-locale-catalog-fr",
+          "house-locale-detail-fr",
+          "house-locale-room-de",
+          "house-locale-catalog-de",
+          "house-locale-detail-de",
+          "house-locale-room-es",
+          "house-locale-catalog-es",
+          "house-locale-detail-es",
+          "house-locale-room-pt",
+          "house-locale-catalog-pt",
+          "house-locale-detail-pt",
+          "house-locale-room-it",
+          "house-locale-catalog-it",
+          "house-locale-detail-it",
+          "house-layout-compact320-portrait-en",
+          "house-layout-editor-compact320-portrait-en",
+          "house-layout-catalog-last-compact320-portrait-en",
+          "failure"
+        ],
+        "checkCount": 495,
+        "package": "com.androidhit.lumadrift.sandbox",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 4531,
+        "visualPhase": "prepare",
+        "firstLightPhase": "none",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "houseCheckpointReady": true,
+        "firstLightCheckpointReady": false,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "prepare/journey-1-cleared-en.png": "62037a48ab1fd8db3b390c780658464401c39679a9e415f750809b3a6e04e11d",
+        "prepare/house-locale-catalog-it.png": "bcc6226e8deb2327f639775a18716aa97a16f84961ec99635a5907bb6932a3d4",
+        "prepare/house-wardrobe-en.png": "8ce15e892061c1c77c4ba97c4d104e2204de8dc3807511027848a3fb94251408",
+        "prepare/house-sofa-rotated-preview-en.png": "951bc0e0b1b69aeebc995bafcb8fe5e56593a5aa6424bb6ed7483ffba866c167",
+        "prepare/house-locale-catalog-de.png": "22acdc5874a8d7769c78aa124d2a08411d27cbfe9e3e02dd9aab1321fba8481e",
+        "prepare/house-companion-moved-en.png": "67c6f55578ce3540cd56519b72ebf659b34f52757e02404c853047c98ae9231d",
+        "prepare/house-locale-catalog-pt.png": "6ef6364a55f823df0ebf5521807e151c5847ddc2b275031e3782319195244413",
+        "prepare/journey-7-cleared-en.png": "df2cdff6e6f36b3a25802c12f748bd7516d1a82611fd89307d78db0e46c99170",
+        "prepare/house-sofa-placed-en.png": "0921083c0c5e71de851091b1df2dd0856276b6dacef985eed26cd479914479e0",
+        "prepare/house-lamp-state-a-analysis-crop.png": "e46086c7d63a7e781fd8af8aec38e4b6abcea7e44df4553a88f96aff0679b355",
+        "prepare/journey-8-cleared-en.png": "e678a43a3b36d7c9c84d4d90d3221fe0ad0182ae9a4482d3cca5b82602dec215",
+        "prepare/house-locale-catalog-es.png": "262ddfa2d7ce38fd52bd6d8b17ef3a4f49edb85611ad89cd4e6d2f3a7665eb9c",
+        "prepare/house-locale-room-it.png": "e9f9ab145be20e62f47fd680a56558fd1ded7285e0c0f3a9d2fb053b46873b93",
+        "prepare/journey-1-start-en.png": "11be19d3a491cd7babf157d20eb7094f9777a3fa61fb2ffe77aa12f009cff03f",
+        "prepare/house-locale-room-de.png": "0fd235fde1ae32180a710a47e44472c2849abe153e3b111d2166f6f507ac8b72",
+        "prepare/house-lamp-state-b-analysis-crop.png": "46841d1b2926a06f05006ffd39528b261f15575632956d175eafb463e536b773",
+        "prepare/house-personalised-en.png": "0289b71efa7485f63767d1f3cbbbcbdad7a5faaaddc2a7a55e8075917b8ef289",
+        "prepare/house-cuddle-active-en.png": "2ac14088f32cf29df65c5e9abbd7b496e051e60eb7882812314964f6c7f1afde",
+        "prepare/house-locale-detail-en.png": "fdda75a039864c6f809a3a7ac47935d489f632cfb602902a96ede90f81b0697e",
+        "prepare/house-locale-room-pt.png": "1513cd945c0bb068c60d5c1e31bab9c1f8d577c313b63e58a65b6bb955fdbd8c",
+        "prepare/house-preview-landscape-en.png": "b202e60bf1bf656892c3a61066a87e38cdc05ab1c3e877cb1d81fddecca79117",
+        "prepare/house-wish-progress-en.png": "5a7a8d04f1eba0f379c8fd7d092e53400c9edcdbf5f0a1d6c829950650b04c99",
+        "prepare/house-sofa-owned-unplaced-en.png": "a81b067cfb052907f8a1b20da1b4a704b0561bf699a022db442a3639f117fc36",
+        "prepare/journey-7-start-en.png": "ca43fc9c1883a1cc46636e94940c9fd5c6a62479059b48cd66992c89ec01e590",
+        "prepare/house-checkpoint-partial-puzzle-en.png": "82437070929b23647fea3939990b8e3e7a632ccd5d49dffa7104de5d2d29173c",
+        "prepare/house-locale-detail-fr.png": "98472685be3b2094409c117c9eddb825cc505f1e10c4820fcf5a407000592def",
+        "prepare/house-final-checkpoint-en.png": "aaa017e4b7c2bfdb2925559cb780226918523eb94ab710cd3cbf487ba623aa81",
+        "prepare/house-locale-room-es.png": "85f11e79329e1ada546c09dde891a90ea45b0786b81ae57c99401f4129712e1c",
+        "prepare/house-lamp-state-b-en.png": "9fadfdcb8054b063e29d113085295e7d6e9292c22080e1d3cb31dfb8a85c93e3",
+        "prepare/home-en.png": "ecaa6fdaa2da2ef09bbf0674df83a782acb60cd67a31ccc3cc07e1561d7fbce7",
+        "prepare/house-locale-room-fr.png": "1931237c989bf9fe1f0da3b7d34b5be53628dea035ba533be1fc5160549c0d82",
+        "prepare/house-sofa-preview-en.png": "f9085c6ee345e8d7bc63c2b1c0943beb3bcf0e6de44cc2b97d79025e9233a342",
+        "prepare/house-locale-detail-es.png": "eceb0f5934abc00f2cde031bd94856f1f0bb8bbd34c015dfd380853edc02e933",
+        "prepare/house-placement-blocked-en.png": "44b5223e0cb409846c782a5f769bbe2fc39ed2042245d6a682c18f0598a834a8",
+        "prepare/journey-13-start-en.png": "a2ac90a927e1f46a580fe9775d560dd5bd069bc86228d8b3ac97a4b87a760bad",
+        "prepare/house-sofa-stored-en.png": "19883354cb7df1d569b9ed8fb05ae847a06cd0ee88d29c49d08b7c86c83844a0",
+        "prepare/house-locale-detail-pt.png": "9c655d9fdf05619af73c286e7c27586f5256bbf6aafc7b8ea6e3cc3193a5c9cc",
+        "prepare/house-locale-room-en.png": "e31bc48fd64b527434ccedd9371c6e509f23ec12049f8614115a209bc83ca3d7",
+        "prepare/house-layout-catalog-last-compact320-portrait-en.png": "dc7099759edb9de91e60fabd8ba77f91e612d563888e433c2a2ad494f464ac4b",
+        "prepare/house-locale-detail-it.png": "89ce71fcaa479293186ede5b878123eb2c3869ef100a7c2f3ef11e7e8f15ce96",
+        "prepare/house-locale-detail-de.png": "9c1a39bc9654bebed2acf588b90b1930841dcf67d175bddabae17484ce44e503",
+        "prepare/house-cuddle-idle-analysis-crop.png": "da9ad2fc39f605d97ce3d999b04258ae183d2ba0496493902c05964623585f5e",
+        "prepare/house-cuddle-from-bed-en.png": "7173862a6a85d6d976779a7a16479b4a476f4ecd244640d91933b5f95d9c0f46",
+        "prepare/house-locale-catalog-fr.png": "699dfc5a126fa34962c7d136e44f5bf6ba0cfb647c4e9990ed3e7ccccecc4f6d",
+        "prepare/failure.png": "47b2f80906256ae4316bc98d19aa774d2d3a644a019de1ff8d7b3c6449030812",
+        "prepare/house-cuddle-active-analysis-crop.png": "f82ebace8de62c2f48a202abec5da308be19621d78df8393e947d129c3afba15",
+        "prepare/house-initial-en.png": "d34fb1cda11bb4b2467e00021eb15deaa3c54fbec3fb7fb802b03ef89283dcda",
+        "prepare/house-lamp-state-a-en.png": "49cdfee29c43edda14609c11b317e6579e77af25712f0df68a959ead32ca4771",
+        "prepare/house-layout-compact320-portrait-en.png": "70df1d8084d0cd0271ae7ad55a89a9033139e81e334f6aa90e9906a5c8030c0a",
+        "prepare/house-rest-after-eight-seconds-en.png": "6d129fdfb399e4eae034f9e0395fe16825bd59e6ef207a495d2207ec82fcfb32",
+        "prepare/gate-preview-visible-before-cancel-en.png": "4de56a9297f9978aad353dcf59be3681286d92afc486696f4e131ec87ed80e5f",
+        "prepare/house-layout-editor-compact320-portrait-en.png": "61f90efe5eba09277fd76dbe6e84c1ecbcf5af4222f3dcf59bc86427f7e09917",
+        "prepare/house-locale-catalog-en.png": "7d022c3d528988aec4d3b2e1e1aeb014d75d4ad1ea19ae77a276bcada6000a34",
+        "prepare/journey-8-start-en.png": "d0c6e3e881373471c1f05d156c20696276a40fdd72e3c70e0f5bfdb2c3e14a07",
+        "prepare/journey-13-cleared-en.png": "6f26999f89c559923586df613095a10d49e4c48e3cf35c4058d20880d80edc68",
+        "prepare/house-rest-on-bed-en.png": "4766adf769a8a00326b10c7de48322cb9fa9f183d3088cdf2afbc7d4dd5b0527"
+      }
+    },
+    {
+      "phase": "cold",
+      "native": {
+        "passed": true,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.13.0-sandbox-rc1/code14"
+          },
+          {
+            "pass": true,
+            "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+          },
+          {
+            "pass": true,
+            "message": "Cold phase contains persistent verification only"
+          },
+          {
+            "pass": true,
+            "message": "Actual home exposes the companion wardrobe and room editor"
+          },
+          {
+            "pass": true,
+            "message": "Exact room layout, owned items, surfaces and wish survive a distinct cold process"
+          },
+          {
+            "pass": true,
+            "message": "Actual current puzzle history, economy and progression survive a distinct cold process"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "house-cold-restored-en"
+        ],
+        "checkCount": 6,
+        "package": "com.androidhit.lumadrift.sandbox",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 5240,
+        "visualPhase": "cold",
+        "firstLightPhase": "none",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "houseCheckpointReady": true,
+        "firstLightCheckpointReady": false,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "cold/house-cold-restored-en.png": "9aea3bf39537e0d0b8664cc54470f7e1461c7c31a4a09eeed8eb9f29bf5c9532",
+        "cold/home-en.png": "9aea3bf39537e0d0b8664cc54470f7e1461c7c31a4a09eeed8eb9f29bf5c9532"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/journey-1-cleared-en.png": "62037a48ab1fd8db3b390c780658464401c39679a9e415f750809b3a6e04e11d",
+    "prepare/house-locale-catalog-it.png": "bcc6226e8deb2327f639775a18716aa97a16f84961ec99635a5907bb6932a3d4",
+    "prepare/house-wardrobe-en.png": "8ce15e892061c1c77c4ba97c4d104e2204de8dc3807511027848a3fb94251408",
+    "prepare/house-sofa-rotated-preview-en.png": "951bc0e0b1b69aeebc995bafcb8fe5e56593a5aa6424bb6ed7483ffba866c167",
+    "prepare/house-locale-catalog-de.png": "22acdc5874a8d7769c78aa124d2a08411d27cbfe9e3e02dd9aab1321fba8481e",
+    "prepare/house-companion-moved-en.png": "67c6f55578ce3540cd56519b72ebf659b34f52757e02404c853047c98ae9231d",
+    "prepare/house-locale-catalog-pt.png": "6ef6364a55f823df0ebf5521807e151c5847ddc2b275031e3782319195244413",
+    "prepare/journey-7-cleared-en.png": "df2cdff6e6f36b3a25802c12f748bd7516d1a82611fd89307d78db0e46c99170",
+    "prepare/house-sofa-placed-en.png": "0921083c0c5e71de851091b1df2dd0856276b6dacef985eed26cd479914479e0",
+    "prepare/house-lamp-state-a-analysis-crop.png": "e46086c7d63a7e781fd8af8aec38e4b6abcea7e44df4553a88f96aff0679b355",
+    "prepare/journey-8-cleared-en.png": "e678a43a3b36d7c9c84d4d90d3221fe0ad0182ae9a4482d3cca5b82602dec215",
+    "prepare/house-locale-catalog-es.png": "262ddfa2d7ce38fd52bd6d8b17ef3a4f49edb85611ad89cd4e6d2f3a7665eb9c",
+    "prepare/house-locale-room-it.png": "e9f9ab145be20e62f47fd680a56558fd1ded7285e0c0f3a9d2fb053b46873b93",
+    "prepare/journey-1-start-en.png": "11be19d3a491cd7babf157d20eb7094f9777a3fa61fb2ffe77aa12f009cff03f",
+    "prepare/house-locale-room-de.png": "0fd235fde1ae32180a710a47e44472c2849abe153e3b111d2166f6f507ac8b72",
+    "prepare/house-lamp-state-b-analysis-crop.png": "46841d1b2926a06f05006ffd39528b261f15575632956d175eafb463e536b773",
+    "prepare/house-personalised-en.png": "0289b71efa7485f63767d1f3cbbbcbdad7a5faaaddc2a7a55e8075917b8ef289",
+    "prepare/house-cuddle-active-en.png": "2ac14088f32cf29df65c5e9abbd7b496e051e60eb7882812314964f6c7f1afde",
+    "prepare/house-locale-detail-en.png": "fdda75a039864c6f809a3a7ac47935d489f632cfb602902a96ede90f81b0697e",
+    "prepare/house-locale-room-pt.png": "1513cd945c0bb068c60d5c1e31bab9c1f8d577c313b63e58a65b6bb955fdbd8c",
+    "prepare/house-preview-landscape-en.png": "b202e60bf1bf656892c3a61066a87e38cdc05ab1c3e877cb1d81fddecca79117",
+    "prepare/house-wish-progress-en.png": "5a7a8d04f1eba0f379c8fd7d092e53400c9edcdbf5f0a1d6c829950650b04c99",
+    "prepare/house-sofa-owned-unplaced-en.png": "a81b067cfb052907f8a1b20da1b4a704b0561bf699a022db442a3639f117fc36",
+    "prepare/journey-7-start-en.png": "ca43fc9c1883a1cc46636e94940c9fd5c6a62479059b48cd66992c89ec01e590",
+    "prepare/house-checkpoint-partial-puzzle-en.png": "82437070929b23647fea3939990b8e3e7a632ccd5d49dffa7104de5d2d29173c",
+    "prepare/house-locale-detail-fr.png": "98472685be3b2094409c117c9eddb825cc505f1e10c4820fcf5a407000592def",
+    "prepare/house-final-checkpoint-en.png": "aaa017e4b7c2bfdb2925559cb780226918523eb94ab710cd3cbf487ba623aa81",
+    "prepare/house-locale-room-es.png": "85f11e79329e1ada546c09dde891a90ea45b0786b81ae57c99401f4129712e1c",
+    "prepare/house-lamp-state-b-en.png": "9fadfdcb8054b063e29d113085295e7d6e9292c22080e1d3cb31dfb8a85c93e3",
+    "prepare/home-en.png": "ecaa6fdaa2da2ef09bbf0674df83a782acb60cd67a31ccc3cc07e1561d7fbce7",
+    "prepare/house-locale-room-fr.png": "1931237c989bf9fe1f0da3b7d34b5be53628dea035ba533be1fc5160549c0d82",
+    "prepare/house-sofa-preview-en.png": "f9085c6ee345e8d7bc63c2b1c0943beb3bcf0e6de44cc2b97d79025e9233a342",
+    "prepare/house-locale-detail-es.png": "eceb0f5934abc00f2cde031bd94856f1f0bb8bbd34c015dfd380853edc02e933",
+    "prepare/house-placement-blocked-en.png": "44b5223e0cb409846c782a5f769bbe2fc39ed2042245d6a682c18f0598a834a8",
+    "prepare/journey-13-start-en.png": "a2ac90a927e1f46a580fe9775d560dd5bd069bc86228d8b3ac97a4b87a760bad",
+    "prepare/house-sofa-stored-en.png": "19883354cb7df1d569b9ed8fb05ae847a06cd0ee88d29c49d08b7c86c83844a0",
+    "prepare/house-locale-detail-pt.png": "9c655d9fdf05619af73c286e7c27586f5256bbf6aafc7b8ea6e3cc3193a5c9cc",
+    "prepare/house-locale-room-en.png": "e31bc48fd64b527434ccedd9371c6e509f23ec12049f8614115a209bc83ca3d7",
+    "prepare/house-layout-catalog-last-compact320-portrait-en.png": "dc7099759edb9de91e60fabd8ba77f91e612d563888e433c2a2ad494f464ac4b",
+    "prepare/house-locale-detail-it.png": "89ce71fcaa479293186ede5b878123eb2c3869ef100a7c2f3ef11e7e8f15ce96",
+    "prepare/house-locale-detail-de.png": "9c1a39bc9654bebed2acf588b90b1930841dcf67d175bddabae17484ce44e503",
+    "prepare/house-cuddle-idle-analysis-crop.png": "da9ad2fc39f605d97ce3d999b04258ae183d2ba0496493902c05964623585f5e",
+    "prepare/house-cuddle-from-bed-en.png": "7173862a6a85d6d976779a7a16479b4a476f4ecd244640d91933b5f95d9c0f46",
+    "prepare/house-locale-catalog-fr.png": "699dfc5a126fa34962c7d136e44f5bf6ba0cfb647c4e9990ed3e7ccccecc4f6d",
+    "prepare/failure.png": "47b2f80906256ae4316bc98d19aa774d2d3a644a019de1ff8d7b3c6449030812",
+    "prepare/house-cuddle-active-analysis-crop.png": "f82ebace8de62c2f48a202abec5da308be19621d78df8393e947d129c3afba15",
+    "prepare/house-initial-en.png": "d34fb1cda11bb4b2467e00021eb15deaa3c54fbec3fb7fb802b03ef89283dcda",
+    "prepare/house-lamp-state-a-en.png": "49cdfee29c43edda14609c11b317e6579e77af25712f0df68a959ead32ca4771",
+    "prepare/house-layout-compact320-portrait-en.png": "70df1d8084d0cd0271ae7ad55a89a9033139e81e334f6aa90e9906a5c8030c0a",
+    "prepare/house-rest-after-eight-seconds-en.png": "6d129fdfb399e4eae034f9e0395fe16825bd59e6ef207a495d2207ec82fcfb32",
+    "prepare/gate-preview-visible-before-cancel-en.png": "4de56a9297f9978aad353dcf59be3681286d92afc486696f4e131ec87ed80e5f",
+    "prepare/house-layout-editor-compact320-portrait-en.png": "61f90efe5eba09277fd76dbe6e84c1ecbcf5af4222f3dcf59bc86427f7e09917",
+    "prepare/house-locale-catalog-en.png": "7d022c3d528988aec4d3b2e1e1aeb014d75d4ad1ea19ae77a276bcada6000a34",
+    "prepare/journey-8-start-en.png": "d0c6e3e881373471c1f05d156c20696276a40fdd72e3c70e0f5bfdb2c3e14a07",
+    "prepare/journey-13-cleared-en.png": "6f26999f89c559923586df613095a10d49e4c48e3cf35c4058d20880d80edc68",
+    "prepare/house-rest-on-bed-en.png": "4766adf769a8a00326b10c7de48322cb9fa9f183d3088cdf2afbc7d4dd5b0527",
+    "cold/house-cold-restored-en.png": "9aea3bf39537e0d0b8664cc54470f7e1461c7c31a4a09eeed8eb9f29bf5c9532",
+    "cold/home-en.png": "9aea3bf39537e0d0b8664cc54470f7e1461c7c31a4a09eeed8eb9f29bf5c9532"
+  },
+  "capture_kind_counts": {
+    "original_full_frames": 54,
+    "unscaled_analysis_crops": 4
+  },
+  "cold_process_boundary": {
+    "force_stop": true,
+    "package_absent_from_pidof_before_restart": true,
+    "previous_instrumented_process_id": 4531,
+    "restarted_instrumented_process_id": 5240
+  },
+  "native": {
+    "passed": false,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed exact target 1.13.0-sandbox-rc1/code14"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 1 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 2 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 3 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 4 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 5 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 6 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 7 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 8 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 9 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 11 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 10 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Real native preview cancellation spends no action and changes no history"
+      },
+      {
+        "pass": true,
+        "message": "Canceled native preview returns to actual board controls"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 11 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 12 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 13 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 14 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 15 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 16 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 17 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 18 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 64 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 19 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 65 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 66 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Opening preview changes neither history nor action allowance"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 67 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 1 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 2 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 3 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 4 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 5 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 6 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 7 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 8 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 9 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 10 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 cleared by certified real UI actions, without profile injection"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 perfect action path visibly awards three stars"
+      },
+      {
+        "pass": true,
+        "message": "Journey 20 exact productive path stays within its certified allowance"
+      },
+      {
+        "pass": true,
+        "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "House wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "House wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "House decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "House decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "House cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "House cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Touching an observed free floor tile persistently moves the real companion to that tile"
+      },
+      {
+        "pass": true,
+        "message": "Companion movement changes the complete saved room record"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Cuddle visibly changes the actual companion drawing beyond observed idle noise"
+      },
+      {
+        "pass": true,
+        "message": "A physical bed touch stays in the actual house"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "The reduced-motion companion remains visibly resting at the same bed position after8seconds"
+      },
+      {
+        "pass": true,
+        "message": "A physical touch on the resting companion reaches its current visible cuddle target"
+      },
+      {
+        "pass": true,
+        "message": "A physical lamp touch toggles its interaction without opening the puzzle door"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "Toggling the same reachable lamp changes actual lamp pixels with the companion in the same position"
+      },
+      {
+        "pass": true,
+        "message": "Home raster region lies inside its actual unscaled SDK screenshot"
+      },
+      {
+        "pass": true,
+        "message": "A second lamp toggle restores the exact prior reduced-motion lamp drawing"
+      },
+      {
+        "pass": true,
+        "message": "Home wardrobe opens the exact existing companion and equipment without silent changes"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Moving, cuddling and opening the wardrobe leave actual puzzle history, ownership, balance and rewards unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Furniture qualification calls the companion to an actual free floor tile before editing"
+      },
+      {
+        "pass": true,
+        "message": "Home purchase test has at least240 genuinely earned LumaCoins; no injected balance"
+      },
+      {
+        "pass": true,
+        "message": "Qualification starts before the new sofa is owned, so an actual purchase can be observed"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Opening furniture details leaves the wallet and placed room unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Explicit visible wish action persists the selected furniture goal"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Actual visible sofa purchase stores ownership and debits exactly240 earned LumaCoins"
+      },
+      {
+        "pass": true,
+        "message": "Purchasing furniture does not automatically place it or move the companion"
+      },
+      {
+        "pass": true,
+        "message": "Furniture purchase does not change the existing companion, visual style or worn equipment"
+      },
+      {
+        "pass": true,
+        "message": "Explicit invalid placement overlapping the starter bed cannot alter the persisted room"
+      },
+      {
+        "pass": true,
+        "message": "Choosing a valid tile and rotating the preview make no persisted edit before Place"
+      },
+      {
+        "pass": true,
+        "message": "Furniture preview landscape: SDK rotation accepted"
+      },
+      {
+        "pass": true,
+        "message": "Furniture preview landscape: actual rotation 1, PNG 2340\u00d71080, game view [0,0][2340,1080]"
+      },
+      {
+        "pass": true,
+        "message": "Activity recreation preserves the uncommitted furniture preview without silently placing it"
+      },
+      {
+        "pass": true,
+        "message": "Furniture preview portrait return: SDK rotation accepted"
+      },
+      {
+        "pass": true,
+        "message": "Furniture preview portrait return: actual rotation 0, PNG 1080\u00d72340, game view [0,0][1080,2340]"
+      },
+      {
+        "pass": true,
+        "message": "Explicit Place commits exactly the selected cell and rotated two-cell footprint"
+      },
+      {
+        "pass": true,
+        "message": "Selecting an already placed sofa and confirming a new free tile persists its move"
+      },
+      {
+        "pass": true,
+        "message": "Store away removes only the placement while retaining ownership and the exact wallet"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Owned sofa can be placed again with a newly selected orientation without another debit"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Explicit free floor Equip persists the requested surface"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Explicit free wall Equip persists Sage walls without another debit"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Native dialog text input accepts SDK action"
+      },
+      {
+        "pass": true,
+        "message": "Visible free restart restores a fresh attempt"
+      },
+      {
+        "pass": true,
+        "message": "Typed action 0 is recorded exactly once through UI"
+      },
+      {
+        "pass": true,
+        "message": "Cold persistence checkpoint includes an actual unfinished puzzle action"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Localized en wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "Localized en wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized en decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized en decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized en cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized en cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized en room exposes the actual scene and current companion art"
+      },
+      {
+        "pass": true,
+        "message": "Localized en category Furniture has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized en category Furniture native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized en category Walls has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized en category Walls native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized en category Floor has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized en category Floor native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized en detail names the observed furniture rather than exposing a copy key"
+      },
+      {
+        "pass": true,
+        "message": "Localized en house/category/detail browsing preserves room, current board, ownership and exact economy"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr room exposes the actual scene and current companion art"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr category Meubles has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr category Meubles native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr category Murs has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr category Murs native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr category Sol has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr category Sol native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr detail names the observed furniture rather than exposing a copy key"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr house/category/detail browsing preserves room, current board, ownership and exact economy"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Localized de wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "Localized de wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized de decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized de decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized de cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized de cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized de room exposes the actual scene and current companion art"
+      },
+      {
+        "pass": true,
+        "message": "Localized de category M\u00f6bel has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized de category M\u00f6bel native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized de category W\u00e4nde has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized de category W\u00e4nde native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized de category Boden has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized de category Boden native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized de detail names the observed furniture rather than exposing a copy key"
+      },
+      {
+        "pass": true,
+        "message": "Localized de house/category/detail browsing preserves room, current board, ownership and exact economy"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Localized es wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "Localized es wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized es decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized es decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized es cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized es cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized es room exposes the actual scene and current companion art"
+      },
+      {
+        "pass": true,
+        "message": "Localized es category Muebles has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized es category Muebles native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized es category Paredes has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized es category Paredes native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized es category Suelo has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized es category Suelo native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized es detail names the observed furniture rather than exposing a copy key"
+      },
+      {
+        "pass": true,
+        "message": "Localized es house/category/detail browsing preserves room, current board, ownership and exact economy"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt room exposes the actual scene and current companion art"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt category M\u00f3veis has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt category M\u00f3veis native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt category Paredes has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt category Paredes native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt category Ch\u00e3o has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt category Ch\u00e3o native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt detail names the observed furniture rather than exposing a copy key"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt house/category/detail browsing preserves room, current board, ownership and exact economy"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Localized it wardrobe has an actual native touch target of at least48dp (rounding tolerance0.5dp): 58.545456x92.72727"
+      },
+      {
+        "pass": true,
+        "message": "Localized it wardrobe native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized it decorate has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized it decorate native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized it cuddle has an actual native touch target of at least48dp (rounding tolerance0.5dp): 104.72727x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized it cuddle native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized it room exposes the actual scene and current companion art"
+      },
+      {
+        "pass": true,
+        "message": "Localized it category Mobili has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized it category Mobili native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized it category Pareti has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized it category Pareti native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized it category Pavimento has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x49.090908"
+      },
+      {
+        "pass": true,
+        "message": "Localized it category Pavimento native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Localized it detail names the observed furniture rather than exposing a copy key"
+      },
+      {
+        "pass": true,
+        "message": "Localized it house/category/detail browsing preserves room, current board, ownership and exact economy"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Reduced motion is enabled by the actual visible setting, never by preference injection"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Owned QA display is configured to an actual320dp-wide portrait surface"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Observed native house viewport is actually320dp wide"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Cuddle compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Wardrobe compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Decorate compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual footer touch opens Inventory instead of a floor action compact320-portrait-en"
+      },
+      {
+        "pass": true,
+        "message": "Actual footer Home touch restores the house without moving its companion compact320-portrait-en"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Furniture catalogue compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Done compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Room editor Rotate compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Room editor Store away compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Room editor Place compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Room editor Cancel compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Catalogue Furniture compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Catalogue Walls compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Observed home art has a nonempty real native region"
+      },
+      {
+        "pass": true,
+        "message": "Catalogue Floor compact320-portrait-en has a nonempty native target fully reachable inside the observed viewport"
+      },
+      {
+        "pass": true,
+        "message": "Last furniture card is reachable through ordinary native scrolling compact320-portrait-en"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "320dp house landscape: SDK rotation accepted"
+      },
+      {
+        "pass": true,
+        "message": "320dp house landscape: actual rotation 1, PNG 1760\u00d7880, game view [0,0][1760,880]"
+      },
+      {
+        "pass": false,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "320dp house portrait return: SDK rotation accepted"
+      },
+      {
+        "pass": true,
+        "message": "320dp house portrait return: actual rotation 0, PNG 880\u00d71760, game view [0,0][880,1760]"
+      },
+      {
+        "pass": true,
+        "message": "Installed exact target 1.13.0-sandbox-rc1/code14"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Cold phase contains persistent verification only"
+      },
+      {
+        "pass": true,
+        "message": "Actual home exposes the companion wardrobe and room editor"
+      },
+      {
+        "pass": true,
+        "message": "Exact room layout, owned items, surfaces and wish survive a distinct cold process"
+      },
+      {
+        "pass": true,
+        "message": "Actual current puzzle history, economy and progression survive a distinct cold process"
+      }
+    ],
+    "checkCount": 501,
+    "scope": "Separate real prepare and cold processes; observed raster deltas plus persistent identities; no seeding"
+  },
+  "error": "Instrumentation checks failed; inspect phase reports/actions and original images",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v113-ui-test/run.py\", line 102, in main\n    report['passed']=report['native']['passed'];assert report['passed'],'Instrumentation checks failed; inspect phase reports/actions and original images'\nAssertionError: Instrumentation checks failed; inspect phase reports/actions and original images\n",
+  "isolated_test_package_removed": true,
+  "display_size_restored": true,
+  "rotation_settings_restored": true
+}

@@ -1,6 +1,40 @@
-# Store presentation kit — Luma Drift 1.9
+# Store presentation kit — Luma Drift 1.13
 
-## Current candidate · 27 October 2026
+## Current candidate draft · 28 October 2026
+
+Draft copy for production **1.13.0-rc2 / code 14**. The owner has shown an existing Play draft application/internal-tester workflow; this document does not establish an upload, submitted listing, review or public release. Candidate identity and actual Android/publication evidence are separate in [the release](RELEASE_1_13.md) and [qualification](validation/v1.13/README.md).
+
+The RC2 replacement fixes a reproduced tutorial Later→Resume crash. The signed production APK is **7,806,558 bytes**, SHA-256 `c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b`. RC1 package observations do not qualify it. Final store media must come from the exact submitted build and state its true locale/profile. Source art, decorative website compositions and historical 1.12 screenshots are not 1.13 installed captures. The website has separate source/browser/Hosting acceptance.
+
+### English short description draft
+
+Solve clever puzzles. Make a little home for your companion.
+
+### English description draft
+
+Luma Drift brings arrow-and-gate puzzles and a little companion’s home together.
+
+Find the right order to let every piece out. A switch changes the gates; a key releases a seal. Explore 1,000 Journey puzzles and 240 Remix boards, with daily and weekly challenges. Undo is free and refunds the action you take back. A short first puzzle introduces the gesture, and seven optional lessons let you practise the rules.
+
+Between boards, come back to your little home. Call your companion over, share a hug and change their outfit. Arrange furniture, try another position, rotate it or store it for later. Your bed, lamp, plant, rug and cushion are included; collect seven more furnishings with the LumaCoins you earn through play. Choose your walls and floor, or save one furnishing as your next wish.
+
+Explore the existing collection of 24 companions, 12 free visual styles and clothing for the companions you own. Play in English, French, German, Spanish, Portuguese or Italian, with separate music, effects, haptic and reduced-motion controls.
+
+This candidate uses test advertisements and keeps real checkout and premium draws closed. Gameplay, earned items and the home stay on your device; optional Google sign-in does not synchronize them. Clearing app data or uninstalling can remove the local save.
+
+### French short description draft
+
+Des puzzles malins. Un petit chez-toi pour ton compagnon.
+
+### Review boundary
+
+These are copy drafts, not measured promises of fun, cognitive benefit, retention or an international hit. Check native-speaker phrasing, actual store character limits, audience/content declarations, privacy/Data safety and the exact submission build in the owner’s Play workflow. The prepared test candidate does not activate real ads, purchases, social acceptance or cloud saves.
+
+## Preserved 1.9 copy and evidence
+
+The sections below retain their original dated scope. Their old developer/application status, test totals and next steps do not describe the current 1.13 draft.
+
+## Preserved 1.9 candidate · 27 October 2026
 
 **Draft copy for production 1.9.0-rc1 / code 10. No Play application, submitted listing or public Play release is established by this delivery.** The owner reports that the developer account is approved; that is owner testimony, not independent Console observation. Creating the Play application and qualifying its test track, Google identity and commerce are subsequent work.
 
@@ -36,7 +70,7 @@ The candidate forces **test ads**, has **no embedded paid-wallet origin**, and k
 
 This is an identified candidate draft, not copy for an already approved commercial release. Final store media, native-speaker review, audience/content declarations, privacy/Data safety and the actual submitted build need their own review. Do not advertise measured enjoyment, cognitive benefit, retention, revenue or a hit outcome from the simulation audit. [Player-audit limits](PLAYER_AUDIT_2026.md).
 
-## Current short-description drafts
+## Preserved 1.9 short-description drafts
 
 | Locale | Draft, within 80 characters |
 | --- | --- |
@@ -57,9 +91,9 @@ The [website release record](validation/site-v1.9/README.md) separately identifi
 
 ## Preserved 1.8 presentation record
 
-The following 1.8 sections retain their original wording and evidence. References to their then-current candidate, media and publication status are historical, not the current 1.9 status.
+The following 1.8 sections retain their original wording and evidence. References to their then-current candidate, media and publication status are historical, not the current 1.13 status.
 
-## Current candidate and copy boundary · 27 October 2026
+## Preserved 1.8 candidate and copy boundary · 27 October 2026
 
 **Draft presentation for production 1.8.0-rc1 / code 9, not a submitted or approved Google Play listing.** The [signed APK](../releases/luma-drift-1.8.0-rc1.apk) is **7,707,626 bytes / 7.71 MB decimal**, SHA-256 `aab583241c42179e5cffb80bdd32f9a502be124a3e8a75ccf94936e538db87d4`. [Release](RELEASE_1_8.md) · [Exact manifest](../releases/manifest-1.8.0-rc1.json). Source preparation and native screenshots do not establish completed 1.8 website publication; use the separate [website delivery record](validation/site-v1.8/README.md).
 
@@ -69,7 +103,7 @@ Seven interactive lessons teach the real controls, blockers, keys, gates, switch
 
 The candidate retains 24 companions, six themes, 18 legacy functional equipment items, six powers and a separate 24-item visual wardrobe. Earned LumaCoins and account LumaGold remain distinct. Test ads are forced and real checkout/paid draws remain closed; any commercial build needs its own identified qualification and accurate store/privacy copy. No retention, download, revenue or hit outcome is asserted.
 
-## Positioning and current English description draft
+## Preserved 1.8 positioning and English description draft
 
 **One line:** Soft little worlds. Every move matters.
 
@@ -93,7 +127,7 @@ The candidate retains 24 companions, six themes, 18 legacy functional equipment 
 
 This is copy for the named candidate. Native-speaker review, final Play media exports, console declarations and review remain separate. A later commercial build must replace only the claims its actual qualified configuration changes.
 
-## Current six-language short-description drafts
+## Preserved 1.8 six-language short-description drafts
 
 These are drafts within the 80-character target, not evidence of native-speaker or store approval.
 
@@ -106,7 +140,7 @@ These are drafts within the 80-character target, not evidence of native-speaker 
 | pt-PT | Abre portas, desfaz grátis e descobre um mundo de puzzles com setas |
 | it-IT | Apri porte, annulla gratis e scopri un mondo di rompicapi con frecce |
 
-## Current screenshot story and media provenance
+## Preserved 1.8 screenshot story and media provenance
 
 The website uses **10 exact native Lab 1.8 PNG copies**, paired FR/EN for Home, tutorial key, wardrobe, rewards and map level 1,000. The [capture manifest](validation/site-v1.8/captures.json) binds them to the [passing/restored 47-check Lab menu run](validation/v1.8/ui-sdk-final-menus/host-report.json), exact Lab APK `f93467a11073a0f01c9b09ae6e73aebe211f700661a21c54097cebf1063a034d`. That photographed guest profile has zero completed Journey levels, with no injected progression, stock or account. These images are not the evidence for the separate hundred-level playthrough, nor completed production Play media exports.
 
@@ -120,7 +154,7 @@ The website uses **10 exact native Lab 1.8 PNG copies**, paired FR/EN for Home, 
 
 The [website source manifest](validation/site-v1.8/release/source-manifest.json) lists **58 Hosting payloads**; the checker validates **67 local references**, a different count. The [website delivery record](validation/site-v1.8/README.md) tracks local browser review/publication separately. Dream Glade environment art, the retained Nova vector, screenshot frames and page composition must not be labelled installed gameplay. Use the exact submitted production build for eventual store captures and keep aspect ratio and profile provenance explicit.
 
-## Current submission boundary
+## Preserved 1.8 submission boundary
 
 The public contact remains **nabilux / nabz0r+gaming@gmail.com**. That display label does not establish a legal publisher identity. Review Play identity, signing, audience/content rating, Data safety, privacy/deletion, actual consent/ad eligibility, payment products and required testing against the build chosen for submission. A GitHub artifact or prepared developer site is not Google Play publication. [Onboarding](PRODUCTION_ONBOARDING.md) · [Privacy inventory](PRIVACY.md) · [Public pages](PUBLIC_PAGES.md).
 
