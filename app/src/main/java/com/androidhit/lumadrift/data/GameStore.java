@@ -18,6 +18,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Local game progression and sandbox economy ledger. These methods never verify
@@ -1096,6 +1098,181 @@ public final class GameStore {
         }
     }
 
+    /** The player card is a local cosmetic identity, never an account display name or a location claim. */
+    public synchronized String playerNickname() {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            String clean=PlayerProfile.normalizeNickname(prefs.getString("player_nickname_v116",PlayerProfile.DEFAULT_NICKNAME));
+            return clean.isEmpty()?PlayerProfile.DEFAULT_NICKNAME:clean;
+        }
+    }
+    public synchronized String playerFlag() {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);String flag=prefs.getString("player_flag_v116",PlayerProfile.DEFAULT_FLAG);
+            return PlayerProfile.validFlag(flag)?flag:PlayerProfile.DEFAULT_FLAG;
+        }
+    }
+    public synchronized boolean setPlayerNickname(String nickname) {
+        String clean=PlayerProfile.normalizeNickname(nickname);if(clean.isEmpty())return false;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);Map<String,Object> write=new HashMap<>();
+            write.put("player_nickname_v116",clean);LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+    public synchronized boolean setPlayerFlag(String flag) {
+        if(!PlayerProfile.validFlag(flag))return false;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);Map<String,Object> write=new HashMap<>();
+            write.put("player_flag_v116",flag);LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+    /** Distinct furniture designs placed across all rooms, rather than repeated copies or floor surfaces. */
+    private int placedHomeDesignsLocked(String replacementRoom,HomeLayout replacement) {
+        Set<String> designs=new HashSet<>();
+        for(String room:HomeCatalog.ROOMS) {
+            HomeLayout layout=room.equals(replacementRoom)?replacement:homeLayoutLocked(room);
+            if(layout!=null)for(HomeLayout.Placement item:layout.placements())designs.add(item.itemId);
+        }
+        return designs.size();
+    }
+    private int ownedCharacterCountLocked() {
+        int total=0;for(Catalog.CharacterItem item:Catalog.CHARACTERS)if(ownsCharacter(item.id))total++;return total;
+    }
+    private int badgeProgressLocked(BadgeCatalog.Item item,String replacementRoom,HomeLayout replacement,int additionalAvatar) {
+        if(item==null)return 0;
+        return item.metric==BadgeCatalog.Metric.LEVELS?completedLevels():item.metric==BadgeCatalog.Metric.AVATARS?
+                ownedCharacterCountLocked()+additionalAvatar:placedHomeDesignsLocked(replacementRoom,replacement);
+    }
+    /** Merge newly earned permanent awards into the same local transaction as the triggering change. */
+    private void appendBadgeAwardsLocked(Map<String,Object> write,String room,HomeLayout layout,int additionalAvatar) {
+        for(BadgeCatalog.Item item:BadgeCatalog.ITEMS)if(!prefs.getBoolean("badge_earned_v116_"+item.id,false)
+                &&badgeProgressLocked(item,room,layout,additionalAvatar)>=item.requirement)
+            write.put("badge_earned_v116_"+item.id,true);
+    }
+    private void refreshBadgeAwardsLocked() {
+        Map<String,Object> write=new HashMap<>();appendBadgeAwardsLocked(write,null,null,0);
+        if(!write.isEmpty())LocalSaveTransactions.write(prefs,write);
+    }
+    public synchronized int badgeProgress(String id) {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);BadgeCatalog.Item item=BadgeCatalog.find(id);
+            if(item==null)return 0;refreshBadgeAwardsLocked();
+            int progress=badgeProgressLocked(item,null,null,0);
+            return prefs.getBoolean("badge_earned_v116_"+id,false)?Math.max(progress,item.requirement):progress;
+        }
+    }
+    public synchronized boolean badgeUnlocked(String id) {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);if(BadgeCatalog.find(id)==null)return false;
+            refreshBadgeAwardsLocked();return prefs.getBoolean("badge_earned_v116_"+id,false);
+        }
+    }
+    /** Always three slots. Empty strings represent deliberately empty slots. No automatic badges are worn. */
+    public synchronized List<String> equippedBadges() {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);refreshBadgeAwardsLocked();List<String> result=new ArrayList<>();Set<String> seen=new HashSet<>();
+            for(int slot=0;slot<BadgeCatalog.EQUIPPED_SLOTS;slot++) {
+                String id=prefs.getString("player_badge_v116_"+slot,"");
+                result.add(BadgeCatalog.find(id)!=null&&prefs.getBoolean("badge_earned_v116_"+id,false)&&seen.add(id)?id:"");
+            }
+            return Collections.unmodifiableList(result);
+        }
+    }
+    /** Moving an existing badge clears its previous slot in the same commit. */
+    public synchronized boolean equipBadge(int slot,String id) {
+        if(slot<0||slot>=BadgeCatalog.EQUIPPED_SLOTS||id==null)return false;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);if(!id.isEmpty()&&!badgeUnlocked(id))return false;
+            List<String> before=equippedBadges();Map<String,Object> write=new HashMap<>();
+            for(int index=0;index<BadgeCatalog.EQUIPPED_SLOTS;index++)
+                write.put("player_badge_v116_"+index,index==slot?id:before.get(index).equals(id)?"":before.get(index));
+            LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+    public synchronized boolean ownsSignatureOutfit(String id) {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);SignatureOutfits.Outfit outfit=SignatureOutfits.find(id);if(outfit==null)return false;
+            for(String cosmetic:outfit.cosmeticIds)if(!ownsCosmetic(cosmetic))return false;return true;
+        }
+    }
+    /** All four visual slots change together; existing gear and free avatar styles keep their selections. */
+    public synchronized boolean equipSignatureOutfit(String id) {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);if(!ownsSignatureOutfit(id))return false;
+            SignatureOutfits.Outfit outfit=SignatureOutfits.find(id);Map<String,Object> write=new HashMap<>();
+            for(CosmeticCatalog.Slot slot:CosmeticCatalog.Slot.values())write.put("cosmetic_slot_v17_"+slot.name(),outfit.item(slot));
+            LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
+    public synchronized boolean ownsSummonItem(String id) {
+        SummonCatalog.Item item=SummonCatalog.find(id);
+        return item!=null&&(item.kind==SummonCatalog.Kind.AVATAR?ownsCharacter(item.avatarId):ownsSignatureOutfit(item.outfitId));
+    }
+    public synchronized boolean equipSummonItem(String id) {
+        SummonCatalog.Item item=SummonCatalog.find(id);
+        return item!=null&&(item.kind==SummonCatalog.Kind.AVATAR?equipCharacter(item.avatarId):equipSignatureOutfit(item.outfitId));
+    }
+    public static final class SummonResult {
+        public final SummonCatalog.Banner banner;
+        public final String itemId, requestId;
+        public final boolean duplicate,replayed;
+        public final int compensationCoins,chargedCoins;
+        private SummonResult(SummonCatalog.Banner banner,String itemId,String requestId,boolean duplicate,int compensation,int charged,boolean replayed) {
+            this.banner=banner;this.itemId=itemId;this.requestId=requestId;this.duplicate=duplicate;
+            compensationCoins=compensation;chargedCoins=charged;this.replayed=replayed;
+        }
+    }
+    private static String summonToken(String requestId) { return "summon_"+SummonCatalog.VERSION+"_"+sha256(requestId); }
+    private SummonResult readSummonReceipt(String record,String requestId,boolean replayed) {
+        String[] parts=record.split(":",-1);if(parts.length!=4)return null;
+        SummonCatalog.Banner banner;
+        try{banner=SummonCatalog.Banner.valueOf(parts[0]);}catch(IllegalArgumentException invalid){return null;}
+        SummonCatalog.Item item=SummonCatalog.find(banner,parts[1]);
+        if(item==null||!("0".equals(parts[2])||"1".equals(parts[2])))return null;
+        int compensation;try{compensation=Integer.parseInt(parts[3]);}catch(NumberFormatException invalid){return null;}
+        boolean duplicate="1".equals(parts[2]);if(compensation!=(duplicate?item.duplicateCoins:0))return null;
+        return new SummonResult(banner,item.id,requestId,duplicate,compensation,replayed?0:SummonCatalog.priceCoins(banner),replayed);
+    }
+    /** A read recovers only a completed transaction. It never creates a new draw or debits coins. */
+    public synchronized SummonResult summonReceipt(String requestId) {
+        if(!validRewardId(requestId))return null;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);return readSummonReceipt(prefs.getString(summonToken(requestId),""),requestId,true);
+        }
+    }
+    public synchronized String lastSummonRequestId() {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);String id=prefs.getString("summon_last_request_"+SummonCatalog.VERSION,"");
+            return validRewardId(id)&&readSummonReceipt(prefs.getString(summonToken(id),""),id,true)!=null?id:"";
+        }
+    }
+    public synchronized SummonResult lastSummonResult() { return summonReceipt(lastSummonRequestId()); }
+    /** Versioned pool, seed, exact outcome, debit, ownership and last reveal identity commit atomically. */
+    public synchronized SummonResult drawSummon(SummonCatalog.Banner banner,String requestId) {
+        if(banner==null||!validRewardId(requestId))return null;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);String token=summonToken(requestId),record=prefs.getString(token,"");
+            if(!record.isEmpty()) {
+                SummonResult old=readSummonReceipt(record,requestId,true);return old!=null&&old.banner==banner?old:null;
+            }
+            int price=SummonCatalog.priceCoins(banner);if(coins()<price)return null;
+            String seed=prefs.getString("summon_seed_"+SummonCatalog.VERSION,"");if(seed.isEmpty())seed=UUID.randomUUID().toString();
+            SummonCatalog.Item item=SummonCatalog.draw(seed,banner,requestId);boolean duplicate=ownsSummonItem(item.id);
+            int compensation=duplicate?item.duplicateCoins:0;Map<String,Object> write=new HashMap<>();
+            write.put("summon_seed_"+SummonCatalog.VERSION,seed);write.put("coins",safeAdd(coins()-price,compensation));
+            if(!duplicate) {
+                if(item.kind==SummonCatalog.Kind.AVATAR)write.put("owned_character_"+item.avatarId,true);
+                else for(String cosmetic:SignatureOutfits.find(item.outfitId).cosmeticIds)if(!ownsCosmetic(cosmetic))
+                    write.put("cosmetic_owned_v17_"+cosmetic,"EARNED_SUMMON_"+SummonCatalog.VERSION);
+            }
+            write.put(token,banner.name()+":"+item.id+":"+(duplicate?"1":"0")+":"+compensation);
+            write.put("summon_last_request_"+SummonCatalog.VERSION,requestId);
+            appendBadgeAwardsLocked(write,null,null,!duplicate&&item.kind==SummonCatalog.Kind.AVATAR?1:0);
+            LocalSaveTransactions.write(prefs,write);
+            return new SummonResult(banner,item.id,requestId,duplicate,compensation,price,false);
+        }
+    }
+
     /**
      * Whether this save currently records the transaction ID. Call grantGold without
      * a persistence error before treating an in-memory token as durably fulfilled.
@@ -1282,7 +1459,10 @@ public final class GameStore {
         synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);String room=homeRoomLocked();return saveHomeLayoutLocked(room,homeLayoutLocked(room).tryMove(x,y));}
     }
     private boolean saveHomeLayoutLocked(String room,HomeLayout next){
-        if(next==null)return false;Map<String,Object> write=new HashMap<>();write.put(homeLayoutKey(room),next.encode());LocalSaveTransactions.write(prefs,write);return true;
+        if(next==null)return false;Map<String,Object> write=new HashMap<>();
+        // Preserve awards achieved by the old arrangement even if this edit removes furniture.
+        appendBadgeAwardsLocked(write,null,null,0);appendBadgeAwardsLocked(write,room,next,0);
+        write.put(homeLayoutKey(room),next.encode());LocalSaveTransactions.write(prefs,write);return true;
     }
     public synchronized String homeWallpaper(){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return homeSurfaceLocked(homeRoomLocked(),true);}}
     public synchronized String homeFloor(){synchronized(LocalSaveTransactions.LOCK){LocalSaveTransactions.flush(prefs);return homeSurfaceLocked(homeRoomLocked(),false);}}

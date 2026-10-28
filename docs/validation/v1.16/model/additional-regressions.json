@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "command": "bash scripts/test-local-save-v19.sh",
+      "assertions": 229,
+      "scenarios": 13,
+      "commit_failures_exercised": 44,
+      "memory_before_disk_modes": [
+        false,
+        true
+      ]
+    },
+    {
+      "command": "bash scripts/test-rewards-cosmetics-v17.sh",
+      "checks": 100953,
+      "draw_simulation": {
+        "outcomes": 100000,
+        "common": 60072,
+        "rare": 29862,
+        "epic": 10066
+      }
+    }
+  ],
+  "scope": "Host GameStore persistence failure/retry and legacy earned-clothing/rewards/quests/gift compatibility. No physical-device flash or provider qualification."
+}

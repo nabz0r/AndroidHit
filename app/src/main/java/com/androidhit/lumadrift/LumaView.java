@@ -51,7 +51,7 @@ public final class LumaView extends View {
     private final KawaiiArt art=new KawaiiArt();
     private final SweetUi sweet=new SweetUi();
     private final PremiumUi premium=new PremiumUi();
-    private float homeSceneScale=1, homeSceneTop=144, homeSceneHeight=440;
+    private float homeSceneScale=1, homeSceneTop=144, homeSceneHeight=440,homeToolbarTop=620;
     private int premiumCollectionTab=0;
     private float homeDragPanX,homeDragPanY;
     private boolean homePanning;
@@ -67,6 +67,8 @@ public final class LumaView extends View {
     private Board firstLight;
     private static final float HOME_TOP=104;
     private Long displayedGold;
+    private int summonTab=0,profileBadgeSlot=0;
+    private String summonRequest="",summonPreview="";
     private String detailKind="",detailId="",detailMessage="",capsuleRequest="",detailParent="shop";
     private float detailHeight=1100;
     private final AvatarStage avatarStage=new AvatarStage();
@@ -169,6 +171,7 @@ public final class LumaView extends View {
     private String b(String key,Object...args){return V111Strings.get(store.resolvedLanguage(),key,args);}
     private String z(String key,Object...args){return V112Strings.get(store.resolvedLanguage(),key,args);}
     private String r(String key,Object...args){return V115Strings.get(store.resolvedLanguage(),key,args);}
+    private String d(String key,Object...args){return V116Strings.get(store.resolvedLanguage(),key,args);}
     private String h(String key,Object...args){return HomeStrings.get(store.resolvedLanguage(),key,args);}
     private String hn(String id){return HomeStrings.name(store.resolvedLanguage(),id);}
     private String storyText(String key){return PrismStoryStrings.get(store.resolvedLanguage(),key);}
@@ -203,7 +206,8 @@ public final class LumaView extends View {
     public void release(){if(mapSocial!=null){mapSocial.close();mapSocial=null;}identity.close();actionGeneration++;running=false;audio.release();backdrop.close();guideWorker.shutdownNow();}
     public String screenName(){return screen;}
     public void saveUiState(Bundle out){
-        out.putInt("home_catalog_group_v115",homeCatalogGroup);out.putFloat("home_zoom_v115",homeScene.cameraZoom());out.putFloat("home_pan_x_v115",homeScene.cameraPanX());out.putFloat("home_pan_y_v115",homeScene.cameraPanY());out.putBoolean("home_decorating_v113",homeDecorating);out.putString("home_selection_v113",homeSelection);out.putString("home_detail_v113",homeDetail);out.putInt("home_catalog_tab_v113",homeCatalogTab);out.putInt("home_draft_x_v113",homeDraftX);out.putInt("home_draft_y_v113",homeDraftY);out.putInt("home_draft_rotation_v113",homeDraftRotation);
+        out.putInt("summon_tab_v116",summonTab);out.putString("summon_request_v116",summonRequest);out.putString("summon_preview_v116",summonPreview);out.putInt("badge_slot_v116",profileBadgeSlot);
+        out.putInt("home_catalog_group_v115",homeCatalogGroup);out.putFloat("home_viewport_height_v116",homeScene.viewportHeight());out.putFloat("home_zoom_v116",homeScene.cameraZoom());out.putFloat("home_pan_x_v115",homeScene.cameraPanX());out.putFloat("home_pan_y_v115",homeScene.cameraPanY());out.putBoolean("home_decorating_v113",homeDecorating);out.putString("home_selection_v113",homeSelection);out.putString("home_detail_v113",homeDetail);out.putInt("home_catalog_tab_v113",homeCatalogTab);out.putInt("home_draft_x_v113",homeDraftX);out.putInt("home_draft_y_v113",homeDraftY);out.putInt("home_draft_rotation_v113",homeDraftRotation);
         out.putFloat("detail_height_v112",detailHeight);out.putString("detail_kind_v112",detailKind);out.putString("detail_id_v112",detailId);out.putString("detail_message_v112",detailMessage);out.putString("capsule_request_v112",capsuleRequest);out.putString("detail_parent_v112",detailParent);
         out.putInt("reward_tab_v110",rewardTab);out.putInt("wardrobe_mode_v110",wardrobeMode);out.putInt("wardrobe_gear_v110",wardrobeGearSlot);out.putInt("shop_category_v110",shopCategory);out.putInt("shop_look_page_v110",shopLookPage);out.putInt("story_chapter_v110",storyChapter);
         out.putString("screen",screen);out.putBoolean("ui_paused",paused);out.putBoolean("ui_help",help);out.putBoolean("ui_restart",restartConfirm);out.putInt("wardrobe_slot",wardrobeSlot);out.putInt("wardrobe_page",wardrobePage);out.putInt("quest_tab",questTab);out.putInt("chapter",chapter);out.putInt("journey_tab",journeyTab);out.putInt("collection_tab",collectionTab);out.putInt("collection_page",collectionPage);out.putInt("inventory_filter",inventoryFilter);out.putInt("gear_slot",gearSlotFilter);out.putInt("event_tab",eventTab);out.putInt("shop_page",shopPage);out.putFloat("content_scroll",contentScroll);out.putStringArrayList("menu_history",new ArrayList<>(menuHistory));
@@ -211,7 +215,8 @@ public final class LumaView extends View {
         if(briefingLevel!=null){out.putInt("preview_index",briefingIndex);out.putInt("preview_mode",briefingMode);out.putInt("preview_event",briefingEvent);out.putString("preview_return",briefingReturn);}
     }
     public void restoreUiState(Bundle state){
-        homeCatalogGroup=Math.max(0,Math.min(3,state.getInt("home_catalog_group_v115",0)));homeScene.setCamera(state.getFloat("home_zoom_v115",1f),state.getFloat("home_pan_x_v115",0),state.getFloat("home_pan_y_v115",0));homeDecorating=state.getBoolean("home_decorating_v113",false);homeSelection=state.getString("home_selection_v113","");homeDetail=state.getString("home_detail_v113","");homeCatalogTab=Math.max(0,Math.min(2,state.getInt("home_catalog_tab_v113",0)));homeDraftX=state.getInt("home_draft_x_v113",0);homeDraftY=state.getInt("home_draft_y_v113",0);homeDraftRotation=state.getInt("home_draft_rotation_v113",0);if(!homeSelection.isEmpty())refreshHomeDraft();
+        summonTab=Math.max(0,Math.min(1,state.getInt("summon_tab_v116",0)));summonRequest=state.getString("summon_request_v116","");summonPreview=state.getString("summon_preview_v116","");profileBadgeSlot=Math.max(0,Math.min(2,state.getInt("badge_slot_v116",0)));
+        homeCatalogGroup=Math.max(0,Math.min(3,state.getInt("home_catalog_group_v115",0)));homeScene.setViewport(390,state.getFloat("home_viewport_height_v116",440));homeScene.setCamera(state.getFloat("home_zoom_v116",HomeScene.DETAIL_ZOOM),state.getFloat("home_pan_x_v115",0),state.getFloat("home_pan_y_v115",0));homeDecorating=state.getBoolean("home_decorating_v113",false);homeSelection=state.getString("home_selection_v113","");homeDetail=state.getString("home_detail_v113","");homeCatalogTab=Math.max(0,Math.min(2,state.getInt("home_catalog_tab_v113",0)));homeDraftX=state.getInt("home_draft_x_v113",0);homeDraftY=state.getInt("home_draft_y_v113",0);homeDraftRotation=state.getInt("home_draft_rotation_v113",0);if(!homeSelection.isEmpty())refreshHomeDraft();
         rewardTab=Math.max(0,Math.min(3,state.getInt("reward_tab_v110",0)));wardrobeMode=Math.max(0,Math.min(1,state.getInt("wardrobe_mode_v110",0)));wardrobeGearSlot=Math.max(0,Math.min(2,state.getInt("wardrobe_gear_v110",0)));shopCategory=Math.max(0,Math.min(2,state.getInt("shop_category_v110",0)));shopLookPage=Math.max(0,Math.min(2,state.getInt("shop_look_page_v110",0)));storyChapter=Math.max(0,Math.min(10,state.getInt("story_chapter_v110",0)));
         wardrobeSlot=Math.max(0,Math.min(3,state.getInt("wardrobe_slot",0)));wardrobePage=Math.max(0,Math.min(1,state.getInt("wardrobe_page",0)));questTab=state.getInt("quest_tab",0)==1?1:0;chapter=Math.max(0,state.getInt("chapter",chapter));journeyTab=state.getInt("journey_tab",0)==1?1:0;collectionTab=Math.max(0,Math.min(3,state.getInt("collection_tab",0)));collectionPage=Math.max(0,state.getInt("collection_page",0));inventoryFilter=Math.max(0,Math.min(2,state.getInt("inventory_filter",0)));gearSlotFilter=Math.max(-1,Math.min(2,state.getInt("gear_slot",-1)));eventTab=Math.max(0,Math.min(2,state.getInt("event_tab",0)));shopPage=Math.max(0,Math.min(1,state.getInt("shop_page",0)));
         if(state.containsKey("preview_index")){briefingMode=Math.max(0,Math.min(3,state.getInt("preview_mode",0)));briefingIndex=Math.max(1,Math.min(briefingMode==3?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT,state.getInt("preview_index",1)));briefingEvent=Math.max(0,Math.min(briefingMode==1?2:6,state.getInt("preview_event",0)));briefingReturn=state.getString("preview_return","home");briefingLevel=briefingMode==0?RelayCatalog.get(briefingIndex):briefingMode==3?StrategyCatalog.remix(briefingIndex):StrategyCatalog.event(briefingMode==1?store.dailySeed(briefingEvent):store.weeklySeed(briefingEvent));}
@@ -221,7 +226,7 @@ public final class LumaView extends View {
         detailKind=state.getString("detail_kind_v112","");detailId=state.getString("detail_id_v112","");detailMessage=state.getString("detail_message_v112","");capsuleRequest=state.getString("capsule_request_v112","");detailParent=state.getString("detail_parent_v112","shop");
         restoreScreen(state.getString("screen"));if(screen.equals("play")){paused=state.getBoolean("ui_paused",false);help=state.getBoolean("ui_help",false);restartConfirm=paused&&state.getBoolean("ui_restart",false);if(paused||help){actionGeneration++;stopTimer();freezeEffects();}}menuHistory.clear();ArrayList<String> history=state.getStringArrayList("menu_history");if(history!=null)for(String item:history)if(isMenu(item)||item.equals("play")&&board!=null)menuHistory.addLast(item);contentScroll=Math.max(0,state.getFloat("content_scroll",0));
     }
-    private boolean isMenu(String value){return Arrays.asList("adventure","rules","collection_hub","atelier","home","home_catalog","home_item","firstlight","journey","collection","events","shop","settings","briefing","missions","journal","wardrobe","rewards","tutorial","styles","guardians","story","item").contains(value);}
+    private boolean isMenu(String value){return Arrays.asList("profile","badges","summon","summon_pool","summon_reveal","adventure","rules","collection_hub","atelier","home","home_catalog","home_item","firstlight","journey","collection","events","shop","settings","briefing","missions","journal","wardrobe","rewards","tutorial","styles","guardians","story","item").contains(value);}
     public void restoreScreen(String name){
         if("guardian".equals(name)){
             if(guardian==null)guardian=GuardianEncounter.restore(prefs.getString("guardian_v19_session",""));
@@ -385,7 +390,12 @@ public final class LumaView extends View {
         premium.setMinimumTextSize(layout.minimumTextSize);scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;H=screen.equals("journey")&&!(journeyTab==1&&!store.remixAvailable())?SagaMap.height(journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):Math.max(layout.contentHeight,screen.equals("guardians")?4570:screen.equals("guardian")?900:screen.equals("styles")?1140:screen.equals("rewards")?rewardContentHeight():screen.equals("wardrobe")?890:screen.equals("item")?detailHeight:screen.equals("shop")?1250:screen.equals("story")?1080:screen.equals("home")?(homeDecorating&&!homeSelection.isEmpty()?1433:1253):screen.equals("briefing")?950:screen.equals("tutorial")?viewportH<480&&!tutorial.complete()?433:820:840);
         if(screen.equals("tutorial")&&viewportH<480&&!tutorial.complete())H=Math.max(viewportH,433);
         if(screen.equals("home_catalog"))H=Math.max(viewportH,246+(float)Math.ceil(homeCatalogIds().size()/2.0)*196+110);
-        if(Arrays.asList("adventure","home","collection_hub","atelier","play","briefing").contains(screen))H=Math.max(viewportH,screen.equals("atelier")?655:screen.equals("collection_hub")?650:screen.equals("home")?550:screen.equals("adventure")?610:screen.equals("play")?550:600);
+        if(Arrays.asList("adventure","home","collection_hub","atelier","play","briefing").contains(screen))H=Math.max(viewportH,screen.equals("atelier")?910:screen.equals("collection_hub")?820:screen.equals("home")?550:screen.equals("adventure")?610:screen.equals("play")?550:600);
+        if(screen.equals("profile"))H=Math.max(viewportH,980);
+        if(screen.equals("badges"))H=Math.max(viewportH,1015);
+        if(screen.equals("summon"))H=Math.max(viewportH,880);
+        if(screen.equals("summon_pool"))H=Math.max(viewportH,248+(float)Math.ceil(SummonCatalog.items(summonBanner()).size()/2f)*232+110);
+        if(screen.equals("summon_reveal"))H=Math.max(viewportH,840);
         if(screen.equals("home_item"))H=Math.max(layout.contentHeight,920);
         if(screen.equals("firstlight"))H=Math.max(layout.contentHeight,790);
         contentScroll=clampScroll(contentScroll);
@@ -394,7 +404,7 @@ public final class LumaView extends View {
         background(c);c.save();drawingScroll=contentScroll;drawingClipBottom=viewportH-(navigation?95:0);
         c.clipRect(0,0,390,drawingClipBottom);c.translate(0,-contentScroll);
         switch(screen){
-            case "rules":drawRelayRules(c);break;case "adventure":drawAdventure(c);break;case "collection_hub":drawCollectionHub(c);break;case "atelier":drawAtelier(c);break;case "firstlight":drawFirstLight(c);break;case "home_catalog":drawHomeCatalog(c);break;case "home_item":drawHomeItem(c);break;
+            case "profile":drawPlayerProfile(c);break;case "badges":drawBadges(c);break;case "summon":drawSummon(c);break;case "summon_pool":drawSummonPool(c);break;case "summon_reveal":drawSummonReveal(c);break;case "rules":drawRelayRules(c);break;case "adventure":drawAdventure(c);break;case "collection_hub":drawCollectionHub(c);break;case "atelier":drawAtelier(c);break;case "firstlight":drawFirstLight(c);break;case "home_catalog":drawHomeCatalog(c);break;case "home_item":drawHomeItem(c);break;
             case "story":drawPrismStory(c);break;case "guardians":drawGuardians(c);break;case "guardian":drawGuardian(c);break;case "styles":drawStyles(c);break;case "tutorial":drawTutorial(c);break;case "play":drawPlay(c);break;case "journey":drawJourney(c);break;
             case "item":drawItemDetail(c);break;case "briefing":drawBriefing(c);break;case "shop":drawShop(c);break;case "collection":drawCollection(c);break;
             case "wardrobe":drawWardrobe(c);break;case "rewards":drawRewards(c);break;case "events":drawEvents(c);break;case "settings":drawSettings(c);break;case "missions":drawMissions(c);break;case "journal":drawJournal(c);break;
@@ -466,7 +476,7 @@ public final class LumaView extends View {
     }
     private void label(float x,float y,float w,float h,String name){hit(x,y,w,h,name,null);}
     private void button(Canvas c,String label,float x,float y,float w,float h,int color,Runnable action){
-        boolean down=pressed!=null&&pressed.name.equals(label);premium.heroButton(c,new RectF(x,y,x+w,y+h),down);
+        boolean down=pressed!=null&&pressed.name.equals(label);premium.heroButton(c,new RectF(x,y,x+w,y+h),down,color);
         premium.fit(c,label,x+w/2,y+h/2+6,17,w-24,PremiumUi.ON_INDIGO,true,true);hit(x,y,w,Math.max(48,h),label,action);
     }
     private void quietButton(Canvas c,String label,float x,float y,float w,Runnable action){
@@ -765,7 +775,7 @@ public final class LumaView extends View {
             }else if(tutorial.expectedGate()!=null){Direction direction=tutorial.expectedGate();float x=left+width/2+direction.dc*(width/2+15),y=top+width/2+direction.dr*(width/2+15);sweet.handCoach(c,x,y,x,y,frameTime-tutorialChangedAt,reduceMotion);}
         }
     }
-    private String screenTitle(String key){return key.equals("adventure")?r("adventure"):key.equals("collection_hub")?r("collection"):key.equals("atelier")?r("atelier"):key.equals("home")?h("room_title"):key.equals("home_catalog")||key.equals("home_item")?h("furniture"):key.equals("firstlight")?h("first_title"):key.equals("item")?a("preview"):key.equals("story")?a("story_book"):key.equals("wardrobe")?a("avatar"):key.equals("styles")?q("styles"):key.equals("guardians")||key.equals("guardian")?q("guardians"):key.equals("briefing")?e("objective"):key.equals("tutorial")?n("learn"):t(key);}
+    private String screenTitle(String key){return key.equals("profile")?r("profile"):key.equals("badges")?d("badges"):key.equals("summon")?d("summon"):key.equals("summon_pool")?d("odds"):key.equals("summon_reveal")?r("preview"):key.equals("adventure")?r("adventure"):key.equals("collection_hub")?r("collection"):key.equals("atelier")?r("atelier"):key.equals("home")?h("room_title"):key.equals("home_catalog")||key.equals("home_item")?h("furniture"):key.equals("firstlight")?h("first_title"):key.equals("item")?a("preview"):key.equals("story")?a("story_book"):key.equals("wardrobe")?a("avatar"):key.equals("styles")?q("styles"):key.equals("guardians")||key.equals("guardian")?q("guardians"):key.equals("briefing")?e("objective"):key.equals("tutorial")?n("learn"):t(key);}
     private void drawStyles(Canvas c){
         header(c,q("styles"),q("style_count"));
         int i=0;for(AvatarStyles.Style style:AvatarStyles.all()){
@@ -923,7 +933,7 @@ public final class LumaView extends View {
     private String navParent(){
         if(screen.equals("home_catalog")||screen.equals("home_item"))return "home";
         if(screen.equals("item"))return detailParent.equals("shop")?"shop":"collection";
-        if(Arrays.asList("collection","wardrobe","styles").contains(screen))return "collection";
+        if(Arrays.asList("collection","wardrobe","styles","profile","badges","summon","summon_pool","summon_reveal").contains(screen))return "collection";
         if(Arrays.asList("events","rewards","missions").contains(screen))return "events";
         if(Arrays.asList("journey","guardians","story").contains(screen))return "journey";
         return screen;
@@ -986,8 +996,9 @@ public final class LumaView extends View {
         }else moveHomeCompanion(x,y,"idle");
     }
     private boolean homePointer(float x,float y,Hit expandedTarget){
-        if(x<12||x>378||y<homeSceneTop||y>homeSceneTop+homeSceneHeight)return false;
-        float left=(390-HomeScene.WIDTH*homeSceneScale)/2,lx=(x-left)/homeSceneScale,ly=(y-homeSceneTop)/homeSceneScale;
+        if(x<0||x>390||y<homeSceneTop||y>=homeToolbarTop)return false;
+        if(expandedTarget!=null&&!expandedTarget.homeItem&&expandedTarget.action!=null)return false;
+        float lx=x,ly=y-homeSceneTop;
         HomeLayout state=store.homeLayout();float[] pos=homeVisualPosition();String activity=!homePath.isEmpty()?"walk":frameTime<homeActivityUntil?homeActivity:"idle";
         if(homeDecorating&&!homeSelection.isEmpty()){int[] cell=homeScene.cellAtCamera(lx,ly);if(cell!=null){homeFloorTap(cell[0],cell[1]);return true;}}
         int target=homeScene.targetAt(state,lx,ly,pos[0],pos[1],activity);
@@ -1033,75 +1044,181 @@ public final class LumaView extends View {
         icon(c,"settings",249,36,19,PremiumUi.INDIGO);hit(225,12,48,48,t("settings"),()->go("settings"));
     }
     private void drawCollectionHub(Canvas c){
-        header(c,r("collection"),t(character.nameKey));float hero=Math.max(100,Math.min(205,viewportH-440));
-        premium.illustrationStage(c,new RectF(24,104,366,104+hero),PremiumUi.LILAC);dressedMascot(c,195,104+(hero-42)/2,(hero-42)/4.2f);
-        fit(c,r("wardrobe")+"  →",195,104+hero-18,15,300,TEXT,true,true);hit(24,104,342,hero,r("wardrobe"),()->go("wardrobe"));
-        float y=126+hero,tileH=Math.min(133,Math.max(72,(viewportH-y-175)/2));
-        String[] labels={r("companions"),r("equipment"),r("powers"),r("wardrobe")};
-        for(int i=0;i<4;i++){final int item=i;float x=24+(i%2)*177,yy=y+(i/2)*(tileH+12);
-            premium.surface(c,new RectF(x,yy,x+165,yy+tileH),PremiumUi.PAPER,false);
-            if(i==0)companionPortrait.draw(c,Catalog.CHARACTERS[(characterIndex(character.id)+1)%Catalog.CHARACTERS.length],x+82,yy+tileH*.39f,21,AvatarStyles.find(avatarStyle),AvatarStage.Pose.HAPPY,frameTime,reduceMotion,loadout,wornCosmetics);
-            else if(i==1)gearGlyph(c,loadout.item(AvatarGearCatalog.Slot.HEAD),x+82,yy+tileH*.39f,25);
-            else if(i==2)shopArt.power(c,"spark",x+82,yy+tileH*.39f,28,frameTime,reduceMotion);
-            else art.cosmetic(c,"HAT",3,x+82,yy+tileH*.39f,28,0xffb7a0e8);
-            fit(c,labels[i],x+82,yy+tileH-19,15,147,TEXT,true,true);
-            hit(x,yy,165,tileH,labels[i],()->{if(item==3)go("wardrobe");else{collectionTab=item==0?0:item==1?2:3;collectionPage=0;inventoryFilter=0;go("collection");}});
+        playerRibbon(c,18,16,354,70,true);
+        float hero=Math.max(245,Math.min(330,viewportH-450)),top=103;
+        premium.rarityHalo(c,new RectF(18,top,372,top+hero),0xff8262ca,frameTime,reduceMotion);
+        fit(c,t(character.nameKey),39,top+31,22,240,TEXT,true,false);fit(c,d("look_book"),39,top+54,12,225,PremiumUi.MUTED,false,false);
+        dressedMascot(c,195,top+hero*.53f,Math.min(71,(hero-54)/4.05f));
+        premium.quietButton(c,new RectF(247,top+hero-53,355,top+hero-10),false);fit(c,r("wardrobe")+"  ›",301,top+hero-26,13,96,TEXT,true,true);hit(247,top+hero-56,108,48,r("wardrobe"),()->go("wardrobe"));
+        label(38,top+64,314,hero-125,equippedPortraitDescription());
+        float y=top+hero+18;
+        premium.rarityHalo(c,new RectF(18,y,372,y+133),0xff527fd1,frameTime,reduceMotion);
+        companionPortrait.draw(c,Catalog.character("inky"),310,y+61,25,AvatarStyles.find("plush_classic"),AvatarStage.Pose.HAPPY,frameTime,reduceMotion,null,Collections.emptyList());
+        premium.capsule(c,259,y+77,29,0xffd49543,frameTime,reduceMotion);
+        fit(c,d("summon"),35,y+36,21,212,TEXT,true,false);twoLines(c,d("summon_intro"),35,y+49,202,13,PremiumUi.MUTED);
+        premium.heroButton(c,new RectF(34,y+83,222,y+122),false,0xff506ec8);premium.fit(c,d("discover") ,128,y+109,14,171,PremiumUi.ON_INDIGO,true,true);
+        hit(18,y,354,133,d("summon"),()->go("summon"));
+        float yy=y+151;String[] labels={d("my_companions"),d("badges"),r("equipment")};
+        for(int i=0;i<3;i++){final int slot=i;float x=18+i*121;premium.quietButton(c,new RectF(x,yy,x+112,yy+82),false);
+            if(i==0)icon(c,"collection",x+56,yy+26,27,0xff6c63bb);else if(i==1)premium.badge(c,x+56,yy+26,19,0xffdb9b38,2,true);else icon(c,"shield",x+56,yy+26,25,0xff14857d);
+            fit(c,labels[i],x+56,yy+64,12,102,TEXT,true,true);hit(x,yy,112,82,labels[i],()->{if(slot==1){profileBadgeSlot=0;go("badges");}else{collectionTab=slot==0?0:2;collectionPage=0;inventoryFilter=0;go("collection");}});
         }
-        float footer=y+2*(tileH+12)+8;quietButton(c,t("shop")+"  →",24,footer,165,()->go("shop"));quietButton(c,r("profile"),201,footer,165,()->go("settings"));
+        H=Math.max(viewportH,820);
     }
+    private String flagGlyph(String code){
+        if("WORLD".equals(code))return "◎";
+        return new String(Character.toChars(0x1f1e6+code.charAt(0)-'A'))+new String(Character.toChars(0x1f1e6+code.charAt(1)-'A'));
+    }
+    private int badgeAccent(int index){return new int[]{0xffd79a31,0xff567fc7,0xff8b60bd,0xff278c76,0xffcf707f,0xff5688af}[Math.max(0,index)%6];}
+    private int badgeIndex(String id){for(int i=0;i<BadgeCatalog.ITEMS.size();i++)if(BadgeCatalog.ITEMS.get(i).id.equals(id))return i;return 0;}
+    private void playerRibbon(Canvas c,float x,float y,float width,float height,boolean clickable){
+        premium.surface(c,new RectF(x,y,x+width,y+height),0xffede9fa,true);
+        premium.fit(c,flagGlyph(store.playerFlag()),x+27,y+43,24,42,PremiumUi.INK,false,true);
+        fit(c,store.playerNickname(),x+57,y+29,20,width-135,TEXT,true,false);
+        fit(c,d("player_card")+"  ›",x+57,y+height-15,12,width-135,PremiumUi.MUTED,false,false);
+        List<String> badges=store.equippedBadges();for(int i=0;i<3;i++){String id=badges.get(i);premium.badge(c,x+width-30-i*27,y+height/2,11,id.isEmpty()?0xffc3bfd3:badgeAccent(badgeIndex(id)),id.isEmpty()?0:badgeIndex(id),!id.isEmpty());}
+        if(clickable)hit(x,y,width,height,r("profile"),()->go("profile"));
+    }
+    private void editPlayerNickname(){
+        android.widget.LinearLayout box=new android.widget.LinearLayout(getContext());box.setOrientation(android.widget.LinearLayout.VERTICAL);int pad=(int)(24*getResources().getDisplayMetrics().density);box.setPadding(pad,pad,pad,pad/2);
+        android.widget.TextView title=new android.widget.TextView(getContext());title.setText(d("edit_nickname"));title.setTextSize(22);title.setTypeface(bold);title.setTextColor(PremiumUi.INK);box.addView(title);
+        android.widget.EditText input=new android.widget.EditText(getContext());input.setSingleLine(true);input.setText(store.playerNickname());input.setSelectAllOnFocus(true);input.setTextColor(PremiumUi.INK);input.setTextSize(18);input.setHint(d("nickname_hint"));input.setInputType(android.text.InputType.TYPE_CLASS_TEXT|android.text.InputType.TYPE_TEXT_FLAG_CAP_WORDS|android.text.InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);input.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(72)});box.addView(input,new android.widget.LinearLayout.LayoutParams(-1,(int)(62*getResources().getDisplayMetrics().density)));
+        android.widget.TextView note=new android.widget.TextView(getContext());note.setText(d("nickname_hint"));note.setTextColor(PremiumUi.MUTED);note.setTextSize(13);box.addView(note);
+        android.app.AlertDialog dialog=new android.app.AlertDialog.Builder(getContext()).setView(box).setNegativeButton(t("cancel"),(di,which)->{}).setPositiveButton(d("save"),null).create();
+        dialog.setOnShowListener(di->{android.graphics.drawable.GradientDrawable bg=new android.graphics.drawable.GradientDrawable();bg.setColor(PremiumUi.PAPER);bg.setCornerRadius(28*getResources().getDisplayMetrics().density);dialog.getWindow().setBackgroundDrawable(bg);dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE).setTextColor(0xff356baf);dialog.getButton(android.app.AlertDialog.BUTTON_NEGATIVE).setTextColor(PremiumUi.MUTED);dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE).setOnClickListener(vw->{String value=PlayerProfile.normalizeNickname(input.getText().toString());if(value.isEmpty()){input.setError(d("nickname_error"));return;}try{if(store.setPlayerNickname(value)){dialog.dismiss();notice(d("saved"));invalidate();}}catch(GameStore.LocalSaveException failure){dialog.dismiss();blockLocalSave();}});});
+        dialog.show();
+    }
+    private void drawPlayerProfile(Canvas c){
+        header(c,r("profile"),d("local_profile"));
+        premium.rarityHalo(c,new RectF(24,107,366,397),0xff8d71cc,frameTime,reduceMotion);
+        premium.fit(c,flagGlyph(store.playerFlag()),58,149,26,49,TEXT,false,true);fit(c,store.playerNickname(),94,149,24,244,TEXT,true,false);
+        dressedMascot(c,195,255,53);label(64,168,262,169,equippedPortraitDescription());
+        List<String> badges=store.equippedBadges();for(int i=0;i<3;i++){final int slot=i;String id=badges.get(i);float x=139+i*56;premium.badge(c,x,362,20,id.isEmpty()?0xffbdb6d0:badgeAccent(badgeIndex(id)),badgeIndex(id),!id.isEmpty());hit(x-25,337,50,51,d("badge_slot",i+1),()->{profileBadgeSlot=slot;go("badges");});}
+        button(c,d("edit_nickname"),24,415,342,54,0xff6b5abb,()->editPlayerNickname());
+        fit(c,d("choose_flag"),24,510,20,342,TEXT,true,false);twoLines(c,d("flag_note"),24,522,342,13,PremiumUi.MUTED);
+        for(int i=0;i<PlayerProfile.FLAGS.size();i++){final String flag=PlayerProfile.FLAGS.get(i);float x=24+(i%5)*69,y=562+(i/5)*62;boolean selected=flag.equals(store.playerFlag());premium.chip(c,new RectF(x,y,x+64,y+53),PremiumUi.LILAC,selected);premium.fit(c,flagGlyph(flag),x+32,y+27,23,54,TEXT,false,true);fit(c,flag.equals("WORLD")?d("world"):flag,x+32,y+46,11,56,TEXT,true,true);hit(x,y,64,53,flag.equals("WORLD")?d("world"):flag,()->savedAction(()->{store.setPlayerFlag(flag);notice(d("saved"));}));}
+        button(c,d("badges")+"  ›",24,763,342,54,0xffbc8433,()->{profileBadgeSlot=0;go("badges");});
+        twoLines(c,d("profile_note"),24,837,342,13,PremiumUi.MUTED);H=Math.max(viewportH,980);
+    }
+    private String badgeProgressText(BadgeCatalog.Item item){return d(item.metric==BadgeCatalog.Metric.LEVELS?"metric_levels":item.metric==BadgeCatalog.Metric.PLACED_ITEMS?"metric_placed":"metric_avatars",Math.min(item.requirement,store.badgeProgress(item.id)),item.requirement);}
+    private void drawBadges(Canvas c){
+        header(c,d("badges"),d("badge_slots"));List<String> worn=store.equippedBadges();
+        for(int i=0;i<3;i++){final int slot=i;float x=24+i*116;String id=worn.get(i);premium.chip(c,new RectF(x,112,x+110,207),PremiumUi.LILAC,profileBadgeSlot==i);premium.badge(c,x+55,148,22,id.isEmpty()?0xffbfbacf:badgeAccent(badgeIndex(id)),badgeIndex(id),!id.isEmpty());fit(c,"0"+(i+1),x+55,190,13,94,TEXT,true,true);hit(x,112,110,95,d("badge_slot",i+1),()->{profileBadgeSlot=slot;invalidate();});}
+        for(int i=0;i<BadgeCatalog.ITEMS.size();i++){final BadgeCatalog.Item item=BadgeCatalog.ITEMS.get(i);float x=24+(i%2)*177,y=229+(i/2)*207;boolean earned=store.badgeUnlocked(item.id),selected=worn.contains(item.id);premium.surface(c,new RectF(x,y,x+165,y+192),selected?0xffeee7fc:PremiumUi.PAPER,true);premium.badge(c,x+82.5f,y+47,30,badgeAccent(i),i,earned);fit(c,d(item.nameKey),x+82.5f,y+101,15,145,TEXT,true,true);premium.copy(c,badgeProgressText(item),x+12,y+125,141,12,PremiumUi.MUTED,2);fit(c,d(selected?"equipped":earned?"badge_earned":"badge_locked"),x+82.5f,y+174,12,146,earned?0xff5c4a9c:PremiumUi.MUTED,true,true);hit(x,y,165,192,d(item.nameKey)+", "+badgeProgressText(item),()->{if(!store.badgeUnlocked(item.id)){notice(d("badge_locked"));return;}savedAction(()->{if(store.equipBadge(profileBadgeSlot,item.id)){notice(d("equipped"));go("profile");}});});}
+        quietButton(c,d("remove_badge"),24,866,342,()->savedAction(()->{store.equipBadge(profileBadgeSlot,"");go("profile");}));H=Math.max(viewportH,1015);
+    }
+    private SummonCatalog.Banner summonBanner(){return summonTab==0?SummonCatalog.Banner.AVATARS:SummonCatalog.Banner.SIGNATURES;}
+    private String summonName(SummonCatalog.Item item){return item.kind==SummonCatalog.Kind.AVATAR?t(item.nameKey):d(item.nameKey);}
+    private int summonAccent(SummonCatalog.Item item){return item.rarity==SummonCatalog.Rarity.EPIC?0xffb78236:item.rarity==SummonCatalog.Rarity.RARE?0xff8a62c0:0xff4b92b6;}
+    private String summonRarity(SummonCatalog.Item item){return d(item.rarity==SummonCatalog.Rarity.EPIC?"rarity_epic":item.rarity==SummonCatalog.Rarity.RARE?"rarity_rare":"rarity_common");}
+    private void drawSummonPortrait(Canvas c,SummonCatalog.Item item,float x,float y,float radius){
+        if(item==null)return;List<CosmeticCatalog.Item> clothes=new ArrayList<>();
+        if(item.kind==SummonCatalog.Kind.OUTFIT)for(String id:SignatureOutfits.find(item.outfitId).cosmeticIds){CosmeticCatalog.Item piece=CosmeticCatalog.find(id);if(piece!=null)clothes.add(piece);}
+        companionPortrait.draw(c,item.kind==SummonCatalog.Kind.AVATAR?Catalog.character(item.avatarId):character,x,y,radius,AvatarStyles.find("plush_classic"),AvatarStage.Pose.HAPPY,frameTime,reduceMotion,null,clothes);
+    }
+    private void summonTabs(Canvas c){String[] names={d("companions_banner"),d("outfits_banner")};for(int i=0;i<2;i++){final int tab=i;float x=24+i*177;premium.chip(c,new RectF(x,105,x+165,151),PremiumUi.LILAC,summonTab==i);fit(c,names[i],x+82.5f,134,14,151,TEXT,true,true);hit(x,103,165,49,names[i],()->{summonTab=tab;summonPreview="";contentScroll=0;});}}
+    private void returnToMenu(String destination){while(!menuHistory.isEmpty()&&!menuHistory.peek().equals(destination))menuHistory.pop();if(!menuHistory.isEmpty())menuHistory.pop();navigatingBack=true;try{go(destination);}finally{navigatingBack=false;}}
+    private void performSummon(){
+        final SummonCatalog.Banner banner=summonBanner();final String request=UUID.randomUUID().toString();summonRequest=request;
+        savedAction(()->{GameStore.SummonResult result=store.drawSummon(banner,request);if(result==null){notice(d("summon_funds"));return;}summonPreview="";actionGeneration++;hits.clear();sfx(AudioEngine.Sound.PURCHASE);go("summon_reveal");});
+    }
+    private void drawSummon(Canvas c){
+        header(c,d("summon"),d("summon_intro"));summonTabs(c);
+        List<SummonCatalog.Item> pool=SummonCatalog.items(summonBanner());SummonCatalog.Item item=pool.get(summonTab==0?pool.size()-1:pool.size()-1);
+        premium.rarityHalo(c,new RectF(18,169,372,491),summonTab==0?0xff6a79cb:0xffb67ac1,frameTime,reduceMotion);
+        if(summonTab==0){drawSummonPortrait(c,pool.get(8),84,337,37);drawSummonPortrait(c,pool.get(15),306,337,37);}
+        drawSummonPortrait(c,item,195,328,64);
+        fit(c,d(summonTab==0?"companions_banner":"outfits_banner"),195,467,22,324,TEXT,true,true);
+        twoLines(c,d(summonTab==0?"companions_detail":"outfits_detail"),24,509,342,14,PremiumUi.MUTED);
+        button(c,d("summon_once",SummonCatalog.priceCoins(summonBanner())),24,557,342,56,summonTab==0?0xff506ec8:0xff925aaf,()->performSummon());
+        fit(c,d("earned_only"),195,639,12,342,PremiumUi.MUTED,false,true);
+        quietButton(c,d("odds"),24,663,342,()->{summonPreview="";go("summon_pool");});
+        if(store.lastSummonResult()!=null)quietButton(c,d("last_reveal"),24,727,342,()->{summonRequest=store.lastSummonRequestId();summonPreview="";go("summon_reveal");});
+        H=Math.max(viewportH,880);
+    }
+    private void drawSummonPool(Canvas c){
+        header(c,d("odds"),d(summonTab==0?"companions_banner":"outfits_banner"));summonTabs(c);
+        premium.copy(c,d("odds_note"),24,186,342,14,PremiumUi.MUTED,3);
+        List<SummonCatalog.Item> items=SummonCatalog.items(summonBanner());
+        for(int i=0;i<items.size();i++){final SummonCatalog.Item item=items.get(i);float x=24+(i%2)*177,y=248+(i/2)*232;boolean owned=store.ownsSummonItem(item.id);premium.rarityHalo(c,new RectF(x,y,x+165,y+216),summonAccent(item),0,true);drawSummonPortrait(c,item,x+82.5f,y+70,31);fit(c,summonName(item),x+82.5f,y+148,16,147,TEXT,true,true);fit(c,summonRarity(item)+(owned?" · "+r("owned"):""),x+82.5f,y+170,12,147,PremiumUi.MUTED,true,true);
+            String chance=String.format(Locale.forLanguageTag(store.resolvedLanguage()),"%.2f",item.chanceBasisPoints/100f);premium.copy(c,d("chance",chance,item.duplicateCoins),x+11,y+193,143,12,PremiumUi.MUTED,2);
+            hit(x,y,165,216,summonName(item)+", "+chance+"%",()->{summonPreview=item.id;go("summon_reveal");});
+        }
+        H=Math.max(viewportH,248+(float)Math.ceil(items.size()/2f)*232+110);
+    }
+    private void drawSummonReveal(Canvas c){
+        GameStore.SummonResult result=summonPreview.isEmpty()?store.summonReceipt(summonRequest):null;
+        if(result==null&&summonPreview.isEmpty()){result=store.lastSummonResult();if(result!=null)summonRequest=result.requestId;}
+        SummonCatalog.Item item=SummonCatalog.find(result!=null?result.itemId:summonPreview);if(item==null){go("summon");return;}
+        final boolean preview=!summonPreview.isEmpty();header(c,preview?r("preview"):d(result.duplicate?"duplicate":"new_arrival"),summonRarity(item));
+        premium.rarityHalo(c,new RectF(18,108,372,475),summonAccent(item),frameTime,reduceMotion);drawSummonPortrait(c,item,195,290,76);
+        fit(c,summonName(item),195,447,25,325,TEXT,true,true);
+        fit(c,preview?(store.ownsSummonItem(item.id)?r("owned"):r("preview")):result.duplicate?d("duplicate_coins",result.compensationCoins):d("saved"),195,512,16,342,TEXT,true,true);
+        if(store.ownsSummonItem(item.id))button(c,d("equip"),24,543,342,56,summonAccent(item),()->savedAction(()->{if(store.equipSummonItem(item.id)){notice(d("equipped"));syncStyle();}}));
+        quietButton(c,preview?t("back"):d("back_banner"),24,619,342,()->{if(preview)returnToMenu("summon_pool");else{summonRequest="";returnToMenu("summon");}});
+        quietButton(c,d("look_book"),24,683,342,()->goRoot("collection_hub"));H=Math.max(viewportH,840);
+    }
+
     private void drawAtelier(Canvas c){
-        header(c,r("atelier"),h("room_title"));float hero=Math.max(100,Math.min(210,viewportH-535));
-        premium.illustrationStage(c,new RectF(24,106,366,106+hero),PremiumUi.MINT);
-        java.util.List<HomeCatalog.Item> items=HomeCatalog.ITEMS;
-        homeScene.drawItem(c,items.get(Math.min(items.size()-1,13)).id,new RectF(42,122,174,96+hero),frameTime,reduceMotion);
-        homeScene.drawItem(c,items.get(Math.min(items.size()-1,17)).id,new RectF(190,122,340,96+hero),frameTime,reduceMotion);
-        float y=135+hero;fit(c,r("sets"),24,y,19,342,TEXT,true,false);
-        String[] setNames={r("stellar"),r("forest"),r("neon")};
-        for(int i=0;i<3;i++){final int group=i;float yy=y+20+i*73;premium.surface(c,new RectF(24,yy,366,yy+62),PremiumUi.PAPER,false);String id=new String[]{"aquarium","greenhouse","arcade"}[i];homeScene.drawItem(c,id,new RectF(38,yy+5,93,yy+57),frameTime,reduceMotion);fit(c,setNames[i],109,yy+27,16,215,TEXT,true,false);fit(c,r("preview")+"  →",109,yy+48,12,215,PremiumUi.MUTED,false,false);hit(24,yy,342,62,setNames[i],()->{homeCatalogTab=0;homeCatalogGroup=group+1;go("home_catalog");});}
-        quietButton(c,h("furniture")+" · "+items.size(),24,y+249,342,()->{homeCatalogGroup=0;homeCatalogTab=0;go("home_catalog");});
+        header(c,r("atelier"),h("room_title"));
+        premium.rarityHalo(c,new RectF(18,105,372,363),0xff419a91,frameTime,reduceMotion);
+        homeScene.drawItem(c,"aquarium",new RectF(35,125,177,260),frameTime,reduceMotion);
+        homeScene.drawItem(c,"sofa",new RectF(133,195,353,330),frameTime,reduceMotion);
+        fit(c,r("decoration_title"),38,340,23,315,TEXT,true,false);
+        String[] names={r("stellar"),r("forest"),r("neon")};String[] ids={"aquarium","greenhouse","arcade"};int[] accents={0xff6b75be,0xff469a7e,0xffa774b5};
+        for(int i=0;i<3;i++){final int group=i;float x=i==2?18:18+i*186,y=i==2?591:382,width=i==2?354:168,height=i==2?139:192;premium.rarityHalo(c,new RectF(x,y,x+width,y+height),accents[i],frameTime,reduceMotion);
+            if(i==2){homeScene.drawItem(c,"piano",new RectF(x+154,y+1,x+width-8,y+height-8),frameTime,reduceMotion);homeScene.drawItem(c,"arcade",new RectF(x+100,y+34,x+207,y+height-7),frameTime,reduceMotion);fit(c,names[i]+"  ›",x+19,y+42,22,128,TEXT,true,false);}
+            else{homeScene.drawItem(c,ids[i],new RectF(x+19,y+8,x+149,y+139),frameTime,reduceMotion);fit(c,names[i]+"  ›",x+84,y+169,19,149,TEXT,true,true);}
+            hit(x,y,width,height,names[i],()->{homeCatalogTab=0;homeCatalogGroup=group+1;go("home_catalog");});
+        }
+        button(c,h("furniture")+" · "+HomeCatalog.ITEMS.size(),24,751,342,54,0xff14857d,()->{homeCatalogGroup=0;homeCatalogTab=0;go("home_catalog");});H=Math.max(viewportH,910);
     }
     private void houseZoom(Canvas c,String glyph,String description,float x,float y,Runnable action){premium.quietButton(c,new RectF(x,y,x+48,y+48),false);fit(c,glyph,x+24,y+31,20,40,TEXT,true,true);hit(x,y,48,48,description,action);}
     private void switchHomeRoom(String room){
-        savedAction(()->{if(!store.setHomeRoom(room))return;homeSelection="";homeDraft=null;homePath=Collections.emptyList();homeActivity="idle";homeUsingItem="";homeScene.resetCamera();invalidate();});
+        savedAction(()->{if(!store.setHomeRoom(room))return;homeSelection="";homeDraft=null;homePath=Collections.emptyList();homeActivity="idle";homeUsingItem="";invalidate();});
     }
     private void drawPremiumHome(Canvas c){
         homeLayout=store.homeLayout();HomeLayout displayed=homeLayout;
         if(homeDecorating&&!homeSelection.isEmpty()){refreshHomeDraft();if(homeDraft!=null)displayed=homeDraft;}
-        header(c,homeDecorating?h("decorate"):r("house"),h("room_"+store.homeRoom()));
-        float tabsY=94;int index=0;for(String room:HomeCatalog.ROOMS){final String id=room;float x=24+index++*116;boolean on=room.equals(store.homeRoom());premium.chip(c,new RectF(x,tabsY,x+110,tabsY+42),PremiumUi.LILAC,on);fit(c,h("room_"+room),x+55,tabsY+27,13,99,TEXT,true,true);hit(x,tabsY,110,48,h("room_"+room),()->switchHomeRoom(id));}
-        homeSceneTop=148;float controls=Math.max(330,viewportH-225);homeSceneHeight=controls-homeSceneTop;homeSceneScale=Math.min(1f,homeSceneHeight/HomeScene.HEIGHT);
-        float sceneLeft=(390-HomeScene.WIDTH*homeSceneScale)/2;
+        fit(c,homeDecorating?h("decorate"):r("house"),20,46,28,242,TEXT,true,false);wallet(c,282,15);
+        float tabsY=63;int index=0;for(String room:HomeCatalog.ROOMS){final String id=room;float x=16+index++*121;boolean on=room.equals(store.homeRoom());premium.chip(c,new RectF(x,tabsY,x+116,tabsY+39),PremiumUi.MINT,on);fit(c,h("room_"+room),x+58,tabsY+25,13,106,TEXT,true,true);hit(x,tabsY,116,44,h("room_"+room),()->switchHomeRoom(id));}
+        homeSceneTop=108;homeSceneHeight=Math.max(280,viewportH-200);homeSceneScale=1f;
+        float sceneBottom=homeSceneTop+homeSceneHeight;homeToolbarTop=sceneBottom-(homeDecorating&&!homeSelection.isEmpty()?132:71)-9;
+        homeScene.setViewport(390,homeSceneHeight);homeScene.setRoom(store.homeRoom());homeScene.setInteraction(homeUsingItem,homeScene.isLightOn(homeUsingItem));
         float[] position=homeVisualPosition();String activity=!homePath.isEmpty()?"walk":frameTime<homeActivityUntil?homeActivity:"idle";
         int selection=-1;for(int i=0;i<displayed.placements().size();i++)if(displayed.placements().get(i).id.equals(homeSelection))selection=i;
-        homeScene.setRoom(store.homeRoom());homeScene.setInteraction(homeUsingItem,homeScene.isLightOn(homeUsingItem));
-        c.save();c.clipRect(12,homeSceneTop,378,controls);c.translate(sceneLeft,homeSceneTop);c.scale(homeSceneScale,homeSceneScale);
-        homeScene.draw(c,0,displayed,store.homeWallpaper(),store.homeFloor(),character,AvatarStyles.find(avatarStyle),loadout,wornCosmetics,frameTime,reduceMotion,position[0],position[1],activity,selection,homeDecorating);if(homeInvalidPlacement){PointF point=homeScene.projectedFloorPoint(homeDraftX,homeDraftY);stroke(c,new RectF(point.x-20,point.y-12,point.x+20,point.y+12),5,0xffb64c6c,3);icon(c,"close",point.x,point.y,15,0xffb64c6c);}c.restore();
-        label(12,homeSceneTop,366,homeSceneHeight,h("scene_accessible"));
+        c.save();c.clipRect(0,homeSceneTop,390,sceneBottom);c.translate(0,homeSceneTop);
+        homeScene.draw(c,0,displayed,store.homeWallpaper(),store.homeFloor(),character,AvatarStyles.find(avatarStyle),loadout,wornCosmetics,frameTime,reduceMotion,position[0],position[1],activity,selection,homeDecorating);
+        if(homeInvalidPlacement){PointF point=homeScene.projectedFloorPoint(homeDraftX,homeDraftY);stroke(c,new RectF(point.x-20,point.y-12,point.x+20,point.y+12),5,0xffb64c6c,3);icon(c,"close",point.x,point.y,15,0xffb64c6c);}c.restore();
+        label(0,homeSceneTop,390,homeSceneHeight,h("scene_accessible"));
         for(HomeLayout.Placement item:homeLayout.placements()){
-            RectF rect=new RectF();homeScene.projectedBoundsFor(item,rect);rect.left=sceneLeft+rect.left*homeSceneScale;rect.right=sceneLeft+rect.right*homeSceneScale;rect.top=homeSceneTop+rect.top*homeSceneScale;rect.bottom=homeSceneTop+rect.bottom*homeSceneScale;
-            if(rect.intersect(12,homeSceneTop,378,controls)){
+            RectF rect=new RectF();homeScene.projectedBoundsFor(item,rect);rect.offset(0,homeSceneTop);
+            if(rect.intersect(0,homeSceneTop,390,homeToolbarTop)){
                 float centerX=rect.centerX(),centerY=rect.centerY(),width=Math.max(36,rect.width()),height=Math.max(40,rect.height());
-                rect.set(centerX-width/2,centerY-height/2,centerX+width/2,centerY+height/2);rect.intersect(12,homeSceneTop,378,controls);
-                int before=hits.size();hit(rect.left,rect.top,rect.width(),rect.height(),hn(item.id),()->{if(homeDecorating)selectHomeItem(item.id);else homeUse(item);});
-                if(hits.size()>before)hits.get(before).homeItem=true;
+                rect.set(centerX-width/2,centerY-height/2,centerX+width/2,centerY+height/2);rect.intersect(0,homeSceneTop,390,homeToolbarTop);
+                int before=hits.size();hit(rect.left,rect.top,rect.width(),rect.height(),hn(item.id),()->{if(homeDecorating)selectHomeItem(item.id);else homeUse(item);});if(hits.size()>before)hits.get(before).homeItem=true;
             }
         }
-        houseZoom(c,"−",r("zoom_out"),264,controls-51,()->{homeScene.setCamera(homeScene.cameraZoom()-.2f,homeScene.cameraPanX(),homeScene.cameraPanY());invalidate();});
-        houseZoom(c,"+",r("zoom_in"),318,controls-51,()->{homeScene.setCamera(homeScene.cameraZoom()+.2f,homeScene.cameraPanX(),homeScene.cameraPanY());invalidate();});
-        float y=controls+8;
+        boolean overview=homeScene.cameraZoom()<1.05f;
+        premium.quietButton(c,new RectF(16,homeSceneTop+8,171,homeSceneTop+50),false);fit(c,d(overview?"detail_view":"overview"),93.5f,homeSceneTop+35,13,139,TEXT,true,true);
+        hit(16,homeSceneTop+5,155,48,d(overview?"detail_view":"overview"),()->{if(overview)homeScene.resetCamera();else homeScene.resetOverview();invalidate();});
+        houseZoom(c,"−",r("zoom_out"),266,homeSceneTop+6,()->{homeScene.setCamera(homeScene.cameraZoom()-.2f,homeScene.cameraPanX(),homeScene.cameraPanY());invalidate();});
+        houseZoom(c,"+",r("zoom_in"),322,homeSceneTop+6,()->{homeScene.setCamera(homeScene.cameraZoom()+.2f,homeScene.cameraPanX(),homeScene.cameraPanY());invalidate();});
+        float toolbar=sceneBottom-(homeDecorating&&!homeSelection.isEmpty()?132:71);homeToolbarTop=toolbar-9;
         if(homeDecorating){
+            premium.surface(c,new RectF(12,toolbar-9,378,sceneBottom-3),PremiumUi.PAPER,true);
             if(homeSelection.isEmpty()){
-                quietButton(c,h("furniture"),24,y,165,()->{homeCatalogGroup=0;homeCatalogTab=0;go("home_catalog");});button(c,h("done"),201,y,165,48,PEACH,()->{homeDecorating=false;homeSelection="";homeDraft=null;});
-                fit(c,h("placement_hint"),195,y+79,12,342,PremiumUi.MUTED,false,true);
+                quietButton(c,h("furniture"),24,toolbar,165,()->{homeCatalogGroup=0;homeCatalogTab=0;go("home_catalog");});button(c,h("done"),201,toolbar,165,50,0xff14857d,()->{homeDecorating=false;homeSelection="";homeDraft=null;});
             }else{
-                fit(c,hn(homeSelection),24,y+19,17,342,TEXT,true,false);float yy=y+34;
+                fit(c,hn(homeSelection),24,toolbar+19,17,230,TEXT,true,false);fit(c,t("cancel"),320,toolbar+19,13,90,PremiumUi.INDIGO,true,true);hit(274,toolbar-4,92,43,t("cancel"),()->{homeSelection="";homeDraft=null;});float yy=toolbar+34;
                 quietButton(c,h("rotate"),24,yy,104,()->{homeDraftRotation=1-homeDraftRotation;refreshHomeDraft();});quietButton(c,h("remove"),143,yy,104,()->savedAction(()->{if(store.removeHomeItem(homeSelection)){homeSelection="";homeDraft=null;}}));
-                button(c,h("place"),262,yy,104,48,PEACH,()->savedAction(()->{if(store.placeHomeItem(homeSelection,homeDraftX,homeDraftY,homeDraftRotation)){notice(h("placed"));homeSelection="";homeDraft=null;sfx(AudioEngine.Sound.SELECT);}else notice(h("placement_blocked"));}));
-                fit(c,t("cancel"),195,yy+79,14,342,PremiumUi.INDIGO,true,true);hit(24,yy+54,342,39,t("cancel"),()->{homeSelection="";homeDraft=null;});
+                button(c,h("place"),262,yy,104,50,0xff14857d,()->savedAction(()->{if(store.placeHomeItem(homeSelection,homeDraftX,homeDraftY,homeDraftRotation)){notice(h("placed"));homeSelection="";homeDraft=null;sfx(AudioEngine.Sound.SELECT);}else notice(h("placement_blocked"));}));
+                fit(c,h("placement_hint"),195,yy+74,12,334,PremiumUi.MUTED,false,true);
             }
         }else{
-            button(c,h("decorate"),24,y,342,51,PEACH,()->startHomeDecorating());
-            quietButton(c,h("cuddle"),24,y+67,165,()->homeCuddle());quietButton(c,h("dress_up"),201,y+67,165,()->go("wardrobe"));
+            button(c,h("decorate"),16,toolbar,174,54,0xff14857d,()->startHomeDecorating());
+            premium.quietButton(c,new RectF(202,toolbar,280,toolbar+54),false);icon(c,"heart",241,toolbar+22,22,0xffd86c91);fit(c,h("cuddle"),241,toolbar+46,12,70,TEXT,true,true);hit(202,toolbar,78,54,h("cuddle"),()->homeCuddle());
+            premium.quietButton(c,new RectF(292,toolbar,374,toolbar+54),false);art.cosmetic(c,"HAT",3,333,toolbar+20,15,0xffb7a0e8);fit(c,r("wardrobe"),333,toolbar+46,12,76,TEXT,true,true);hit(292,toolbar,82,54,h("dress_up"),()->go("wardrobe"));
         }
     }
     private java.util.List<String> homeCatalogIds(){ArrayList<String> ids=new ArrayList<>();if(homeCatalogTab==0){String theme=homeCatalogGroup==1?"stellar":homeCatalogGroup==2?"forest":homeCatalogGroup==3?"neon":"";for(HomeCatalog.Item item:HomeCatalog.ITEMS)if(theme.isEmpty()||theme.equals(HomeCatalog.theme(item.id)))ids.add(item.id);}else for(HomeCatalog.Surface item:homeCatalogTab==1?HomeCatalog.WALLPAPERS:HomeCatalog.FLOORS)ids.add(item.id);return ids;}
@@ -1255,6 +1372,7 @@ public final class LumaView extends View {
     private String acquisitionCaption(String source,String fallback){
         if(source==null||source.isEmpty())return a("source_account");
         if(source.equals("EARNED_CAPSULE"))return a("acquired_with",a("source_capsule"));
+        if(source.equals("EARNED_SUMMON_"+SummonCatalog.VERSION))return a("acquired_with",d("summon"));
         if(source.equals("EARNED_COINS"))return a("acquired_with","LumaCoins");
         return a("acquired_with",fallback);
     }
@@ -1398,13 +1516,14 @@ public final class LumaView extends View {
         String[] filters={e("filter_all"),e("filter_owned"),e("filter_locked")};for(int i=0;i<3;i++){final int filter=i;float x=24+i*116;premium.chip(c,new RectF(x,163,x+110,204),PremiumUi.PAPER,inventoryFilter==i);fit(c,filters[i],x+55,189,12,102,TEXT,true,true);hit(x,160,110,48,filters[i],()->{inventoryFilter=filter;collectionPage=0;});}
         if(powers){drawPowerInventory(c);return;}
         InventoryPresentation.Filter filter=inventoryFilter==1?InventoryPresentation.Filter.OWNED:inventoryFilter==2?InventoryPresentation.Filter.LOCKED:InventoryPresentation.Filter.ALL;
-        java.util.List<InventoryPresentation.Entry> shown=InventoryPresentation.filter(all,filter);InventoryPresentation.Page page=InventoryPresentation.page(shown.size(),6,collectionPage);collectionPage=page.page;
-        for(int i=0;i<page.size();i++){InventoryPresentation.Entry entry=shown.get(page.first-1+i);float x=24+(i%2)*177,y=225+(i/2)*148;boolean selected=entry.selected(),owned=entry.owned();premium.surface(c,new RectF(x,y,x+165,y+136),selected?PremiumUi.MINT:PremiumUi.PAPER,false);
-            if(gear)gearGlyph(c,entry.gear,x+82,y+43,28);else if(chars)companionPortrait.draw(c,Catalog.character(entry.id),x+82,y+39,19.5f,AvatarStyles.find(avatarStyle),AvatarStage.Pose.HAPPY,frameTime,reduceMotion,loadout,wornCosmetics);else{Catalog.SkinItem theme=Catalog.skin(entry.id);round(c,x+49,y+17,67,56,17,theme.bg);round(c,x+58,y+27,20,20,8,theme.accent);round(c,x+86,y+42,18,18,7,theme.accent2);}
-            String title=gear?g(entry.nameKey):t(entry.nameKey);fit(c,title,x+82,y+103,16,149,TEXT,true,true);fit(c,e(entry.stateKey()),x+82,y+125,12,149,owned?PremiumUi.INDIGO:PremiumUi.MUTED,false,true);
-            hit(x,y,165,136,title+", "+e(entry.stateKey()),()->{if(gear)previewGear(entry.gear);else previewCosmetic(chars,chars?characterIndex(entry.id):themeIndex(entry.id));});
+        java.util.List<InventoryPresentation.Entry> shown=InventoryPresentation.filter(all,filter);InventoryPresentation.Page page=InventoryPresentation.page(shown.size(),chars?4:6,collectionPage);collectionPage=page.page;
+        for(int i=0;i<page.size();i++){InventoryPresentation.Entry entry=shown.get(page.first-1+i);float x=24+(i%2)*177,y=225+(i/2)*(chars?216:148);boolean selected=entry.selected(),owned=entry.owned();premium.surface(c,new RectF(x,y,x+165,y+(chars?202:136)),selected?PremiumUi.MINT:PremiumUi.PAPER,false);
+            if(chars)premium.rarityHalo(c,new RectF(x,y,x+165,y+202),selected?0xff389b85:0xff8a70c3,frameTime,reduceMotion);
+            if(gear)gearGlyph(c,entry.gear,x+82,y+43,28);else if(chars)companionPortrait.draw(c,Catalog.character(entry.id),x+82,y+76,34f,AvatarStyles.find(avatarStyle),AvatarStage.Pose.HAPPY,frameTime,reduceMotion,null,Collections.emptyList());else{Catalog.SkinItem theme=Catalog.skin(entry.id);round(c,x+49,y+17,67,56,17,theme.bg);round(c,x+58,y+27,20,20,8,theme.accent);round(c,x+86,y+42,18,18,7,theme.accent2);}
+            String title=gear?g(entry.nameKey):t(entry.nameKey);fit(c,title,x+82,y+(chars?170:103),16,149,TEXT,true,true);fit(c,e(entry.stateKey()),x+82,y+(chars?192:125),12,149,owned?PremiumUi.INDIGO:PremiumUi.MUTED,false,true);
+            hit(x,y,165,chars?202:136,title+", "+e(entry.stateKey()),()->{if(gear)previewGear(entry.gear);else previewCosmetic(chars,chars?characterIndex(entry.id):themeIndex(entry.id));});
         }
-        if(shown.isEmpty())wrap(c,e("collection_empty"),195,363,294,18,TEXT,true,25);H=Math.max(viewportH,840);inventoryPager(c,page);
+        if(shown.isEmpty())wrap(c,e("collection_empty"),195,363,294,18,TEXT,true,25);H=Math.max(viewportH,chars?805:840);inventoryPager(c,page);
     }
     private int characterIndex(String id){for(int i=0;i<Catalog.CHARACTERS.length;i++)if(Catalog.CHARACTERS[i].id.equals(id))return i;return 0;}
     private int themeIndex(String id){for(int i=0;i<Catalog.SKINS.length;i++)if(Catalog.SKINS[i].id.equals(id))return i;return 0;}
@@ -2107,7 +2226,7 @@ public final class LumaView extends View {
             invalidate();return true;
         }
         if(event.getAction()==MotionEvent.ACTION_MOVE){
-            if(screen.equals("home")&&downY>=homeSceneTop&&downY<=homeSceneTop+homeSceneHeight&&homeScene.cameraZoom()>1.01f&&(homePanning||Math.hypot(x-downX,y-downY)>18)){
+            if(screen.equals("home")&&(pressed==null||pressed.homeItem||pressed.action==null)&&downY>=homeSceneTop&&downY<homeToolbarTop&&homeScene.cameraZoom()>1.01f&&(homePanning||Math.hypot(x-downX,y-downY)>18)){
                 homePanning=true;pressed=null;homeScene.setCamera(homeScene.cameraZoom(),homeDragPanX+(x-downX)/homeSceneScale,homeDragPanY+(y-downY)/homeSceneScale);invalidate();return true;
             }
             if(gesturePiece<0&&gestureGate<0&&layout!=null&&maximumScroll()>0&&Math.abs(y-downY)>=22&&Math.abs(y-downY)>Math.abs(x-downX)){

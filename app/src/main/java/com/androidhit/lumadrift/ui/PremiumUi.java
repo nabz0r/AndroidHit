@@ -11,20 +11,21 @@ import android.graphics.Typeface;
 import android.text.TextUtils;
 
 /**
- * Original 1.15 visual language. Drawing only: navigation, touch targets, copy and
+ * Original 1.16 visual language. Drawing only: navigation, touch targets, copy and
  * ownership remain with the caller. Coordinates are the caller's logical units.
  * Keep one instance per UI thread. No remote assets or random reward presentation.
  */
 public final class PremiumUi {
-    public static final int BG=0xfff6f5fa, PAPER=0xfffffdfb, INK=0xff30344b,
-            MUTED=0xff686a80, INDIGO=0xff56538b, ON_INDIGO=0xffffffff,
-            MINT=0xff8ccbb5, PEACH=0xffe9ae96, LILAC=0xffb5a7d9,
-            GOLD=0xffe6c16e;
+    public static final int BG=0xfff3f1fc, PAPER=0xfffffdfb, INK=0xff282943,
+            MUTED=0xff62647c, INDIGO=0xff5551c8, ON_INDIGO=0xffffffff,
+            MINT=0xff55d9bf, PEACH=0xffffa58d, LILAC=0xffbea4f6,
+            GOLD=0xffffce69;
     public static final float PAD=24f, GAP=12f, TOUCH=48f;
-    private static final int INDIGO_DEEP=0xff3d3b69, LINE=0xffdedce8;
+    private static final int INDIGO_DEEP=0xff36338f, LINE=0xffdedbea;
     private static final int[] TONE={PEACH,MINT,LILAC,GOLD};
-    private static final int[] SOFT={0xfff5e2da,0xffdceee6,0xffe8e3f3,0xfff5ebd1};
-    private static final int[] DEEP={0xff8c5149,0xff386f5d,0xff64518d,0xff80652e};
+    private static final int[] SOFT={0xffffe8e0,0xffd9f4ec,0xffeae2fc,0xffffedc9};
+    private static final int[] DEEP={0xff9c3c57,0xff176b65,0xff63429b,0xff886020};
+    private static final int[] ACTION={0xffb33960,0xff0d736e,0xff6d45bd,0xff915510};
     private final Paint p=new Paint(Paint.ANTI_ALIAS_FLAG);
     private final android.text.TextPaint text=new android.text.TextPaint(Paint.ANTI_ALIAS_FLAG);
     private final Path path=new Path();
@@ -36,10 +37,19 @@ public final class PremiumUi {
     /** Pass ExperienceLayout.minimumTextSize after layout so narrow windows keep the physical font floor. */
     public void setMinimumTextSize(float size){minimumTextSize=Float.isFinite(size)?Math.max(11,Math.min(30,size)):11f;}
 
-    private static int toneIndex(int value){if(value==PEACH)return 0;if(value==MINT)return 1;if(value==LILAC||value==PAPER||value==BG)return 2;if(value==GOLD)return 3;return Math.floorMod(value,4);}
+    private static int toneIndex(int value){
+        if(value>=0&&value<4)return value;
+        if(value==PEACH)return 0;if(value==MINT)return 1;if(value==LILAC||value==PAPER||value==BG||value==INDIGO)return 2;if(value==GOLD)return 3;
+        int r=Color.red(value),g=Color.green(value),b=Color.blue(value);
+        if(b>=r&&b>=g)return 2;
+        if(g>r||g>r*.85f&&b>r*.75f)return 1;
+        return g>r*.77f&&g>b*1.18f?3:0;
+    }
     public static int tone(int value){return TONE[toneIndex(value)];}
     public static int soft(int value){return SOFT[toneIndex(value)];}
     public static int ink(int value){return DEEP[toneIndex(value)];}
+    /** Saturated action face; each value keeps white labels above 4.5:1 contrast. */
+    public static int action(int value){return value==INDIGO?INDIGO:ACTION[toneIndex(value)];}
     private static int alpha(int color,int a){return (color&0xffffff)|(Math.max(0,Math.min(255,a))<<24);}
     private static int mix(int a,int b,float t){float v=Math.max(0,Math.min(1,t));return Color.rgb(Math.round(Color.red(a)*(1-v)+Color.red(b)*v),Math.round(Color.green(a)*(1-v)+Color.green(b)*v),Math.round(Color.blue(a)*(1-v)+Color.blue(b)*v));}
     private void paint(int color){p.setShader(null);p.setColor(color);p.setStyle(Paint.Style.FILL);}
@@ -51,49 +61,69 @@ public final class PremiumUi {
 
     /** An opaque bounded surface. Tone uses SweetUi's PEACH/MINT/LILAC/CREAM values. */
     public void surface(Canvas c,RectF box,int tone,boolean elevated){
-        float r=Math.min(28,box.height()*.24f);
-        if(elevated)round(c,box.left,box.top+4,box.right,box.bottom+4,r,0x143f3a66);
-        round(c,box.left,box.top,box.right,box.bottom,r,tone==PAPER||tone==BG?tone:soft(tone));
+        float r=Math.min(28,box.height()*.27f);int fill=tone==PAPER||tone==BG?tone:soft(tone);
+        if(elevated){round(c,box.left,box.top+5,box.right,box.bottom+5,r,0x183b315d);round(c,box.left,box.top+2,box.right,box.bottom+2,r,mix(fill,ink(tone),.12f));}
+        round(c,box.left,box.top,box.right,box.bottom,r,fill);
+        if(elevated)line(c,box.left+r,box.top+1.3f,box.right-r,box.top+1.3f,0xb3ffffff,1.3f);
     }
 
     /** Primary action background. Caller uses ON_INDIGO for its label and owns the hit area. */
     public void heroButton(Canvas c,RectF box,boolean pressed){
-        float radius=Math.min(20,box.height()*.36f),drop=pressed?1:4;
-        round(c,box.left,box.top+drop,box.right,box.bottom+drop,radius,INDIGO_DEEP);
-        paint(pressed?INDIGO_DEEP:INDIGO);c.drawRoundRect(box,radius,radius,p);
-        if(!pressed)line(c,box.left+radius,box.top+2,box.right-radius,box.top+2,0x226e74bd,1.5f);
+        heroButton(c,box,pressed,INDIGO);
+    }
+
+    /** Jewel-like action pill. Accent may be a palette color or a SweetUi tone index. */
+    public void heroButton(Canvas c,RectF box,boolean pressed,int accent){
+        if(box.width()<=0||box.height()<=0)return;
+        int face=action(accent),edge=mix(face,INK,.32f);float radius=Math.min(29,box.height()*.49f),drop=pressed?1:5;
+        round(c,box.left,box.top+drop+2,box.right,box.bottom+drop+2,radius,0x15322a60);
+        round(c,box.left,box.top+drop,box.right,box.bottom+drop,radius,edge);
+        round(c,box.left,box.top,box.right,box.bottom,radius,pressed?mix(face,edge,.2f):face);
+        if(!pressed){
+            c.save();path.reset();path.addRoundRect(box,radius,radius,Path.Direction.CW);c.clipPath(path);
+            oval(c,box.left-box.width()*.15f,box.top-box.height()*1.62f,box.right+box.width()*.08f,box.top+box.height()*.59f,0x10ffffff);
+            paint(0x0affffff);path.reset();path.moveTo(box.right-box.width()*.23f,box.top);path.lineTo(box.right-box.width()*.08f,box.top);path.lineTo(box.right-box.width()*.27f,box.bottom);path.lineTo(box.right-box.width()*.42f,box.bottom);path.close();c.drawPath(path,p);
+            c.restore();line(c,box.left+radius*.8f,box.top+2.5f,box.right-radius*.8f,box.top+2.5f,0x70ffffff,1.5f);
+        }
     }
 
     /** Secondary action background; dark text on an opaque neutral or selected indigo wash. */
     public void quietButton(Canvas c,RectF box,boolean selected){
-        float radius=Math.min(17,box.height()*.34f);
-        round(c,box.left,box.top,box.right,box.bottom,radius,selected?SOFT[2]:PAPER);
-        if(selected)stroke(c,box,radius,alpha(INDIGO,130),1.4f);
+        float radius=Math.min(26,box.height()*.49f);
+        round(c,box.left,box.top+2,box.right,box.bottom+2,radius,selected?0xffc9b9ee:0x183e325e);
+        round(c,box.left,box.top,box.right,box.bottom,radius,selected?0xffe9dffc:PAPER);
+        stroke(c,box,radius,selected?0xffa88bdf:0xffe5dfef,selected?1.5f:1f);
+        if(selected&&box.width()>80)line(c,box.centerX()-12,box.bottom-3,box.centerX()+12,box.bottom-3,INDIGO,2.5f);
     }
 
     /** Compact display or selection chip; this does not create a touch target. */
     public void chip(Canvas c,RectF box,int tone,boolean selected){
         boolean neutral=tone==PAPER||tone==BG;float radius=box.height()*.5f;
-        round(c,box.left,box.top,box.right,box.bottom,radius,neutral?selected?SOFT[2]:PAPER:selected?PremiumUi.tone(tone):soft(tone));
-        if(neutral&&selected)stroke(c,box,radius,alpha(INDIGO,130),1.4f);
+        int fill=neutral?selected?SOFT[2]:PAPER:selected?mix(PremiumUi.tone(tone),PAPER,.24f):soft(tone);
+        if(selected)round(c,box.left,box.top+2,box.right,box.bottom+2,radius,mix(fill,ink(tone),.2f));
+        round(c,box.left,box.top,box.right,box.bottom,radius,fill);
+        if(selected)stroke(c,box,radius,alpha(neutral?INDIGO:ink(tone),115),1.2f);
     }
 
     /** A large, uncluttered illustration field, reserved for one actual object or portrait. */
     public void illustrationStage(Canvas c,RectF box,int tone){
         float radius=Math.min(32,box.width()*.12f);
-        round(c,box.left,box.top,box.right,box.bottom,radius,soft(tone));
-        c.save();c.clipRect(box);
-        oval(c,box.left+box.width()*.11f,box.top+box.height()*.12f,box.right-box.width()*.11f,box.bottom+box.height()*.2f,alpha(PAPER,155));
-        oval(c,box.left+box.width()*.24f,box.bottom-box.height()*.18f,box.right-box.width()*.24f,box.bottom-box.height()*.08f,alpha(ink(tone),22));
-        sparkle(c,box.left+box.width()*.16f,box.top+box.height()*.24f,7,tone(tone));
-        sparkle(c,box.right-box.width()*.14f,box.top+box.height()*.43f,5,ink(tone));
+        round(c,box.left,box.top+4,box.right,box.bottom+4,radius,alpha(ink(tone),28));
+        paint(soft(tone));p.setShader(new LinearGradient(box.left,box.top,box.right,box.bottom,new int[]{mix(soft(tone),PAPER,.24f),soft(tone),mix(tone(tone),PAPER,.52f)},null,Shader.TileMode.CLAMP));c.drawRoundRect(box,radius,radius,p);p.setShader(null);
+        c.save();path.reset();path.addRoundRect(box,radius,radius,Path.Direction.CW);c.clipPath(path);
+        rarityHalo(c,box,tone,0,true);
+        oval(c,box.left+box.width()*.21f,box.bottom-box.height()*.17f,box.right-box.width()*.21f,box.bottom-box.height()*.06f,alpha(ink(tone),25));
+        sparkle(c,box.left+box.width()*.12f,box.top+box.height()*.24f,8,tone(tone));
+        sparkle(c,box.right-box.width()*.12f,box.top+box.height()*.43f,6,ink(tone));
         c.restore();
     }
 
     /** Reward panel paper and illustration backdrop only, leaving title/one sentence/action to the caller. */
     public void rewardPanel(Canvas c,RectF box,int tone){
-        round(c,box.left,box.top+5,box.right,box.bottom+5,30,0x203b3455);
+        round(c,box.left-2,box.top+7,box.right+2,box.bottom+7,32,0x183b3455);
+        round(c,box.left,box.top+3,box.right,box.bottom+3,30,mix(PAPER,ink(tone),.13f));
         round(c,box.left,box.top,box.right,box.bottom,30,PAPER);
+        line(c,box.centerX()-25,box.top+9,box.centerX()+25,box.top+9,tone(tone),3);
         float radius=Math.min(box.width()*.31f,box.height()*.22f),cy=box.top+radius+28;
         circle(c,box.centerX(),cy,radius,soft(tone));
         sparkle(c,box.centerX()-radius*.96f,cy-radius*.44f,8,tone(tone));
@@ -103,15 +133,59 @@ public final class PremiumUi {
 
     /** Four destinations, in order: Aventure, Maison, Collection, Atelier. Caller adds 4 semantic hit areas. */
     public void navigation(Canvas c,RectF bounds,int active,String[] labels){
-        round(c,bounds.left,bounds.top,bounds.right,bounds.bottom,24,PAPER);
+        round(c,bounds.left,bounds.top+3,bounds.right,bounds.bottom+3,28,0x143e325e);
+        round(c,bounds.left,bounds.top,bounds.right,bounds.bottom,28,PAPER);
         float slot=bounds.width()/4f;
         for(int i=0;i<4;i++){
             boolean selected=i==active;float x=bounds.left+slot*(i+.5f),top=bounds.top+8;
-            if(selected)round(c,bounds.left+i*slot+5,top,bounds.left+(i+1)*slot-5,bounds.bottom-7,18,INDIGO);
+            if(selected){circle(c,x,top+18,23,0xffded5fb);circle(c,x,top+17,20,INDIGO);oval(c,x-13,top+1,x+13,top+14,0x26ffffff);}
             destinationIcon(c,i,x,top+18,20,selected?ON_INDIGO:MUTED);
             String label=labels!=null&&i<labels.length?labels[i]:new String[]{"Aventure","Maison","Collection","Atelier"}[i];
-            fit(c,label,x,bounds.bottom-17,11.5f,slot-10,selected?ON_INDIGO:MUTED,true,true);
+            fit(c,label,x,bounds.bottom-17,11.5f,slot-10,selected?INDIGO:MUTED,true,true);
         }
+    }
+
+    /** Transparent portrait aura; motion is decorative and freezes for reduced motion. */
+    public void rarityHalo(Canvas c,RectF box,int accent,long time,boolean still){
+        float x=box.centerX(),y=box.centerY(),r=Math.min(box.width()*.36f,box.height()*.43f);if(r<=0)return;
+        int color=tone(accent);circle(c,x,y,r,alpha(PAPER,105));circle(c,x,y,r*.79f,alpha(PAPER,90));
+        paint(alpha(color,100));p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(1.3f);c.drawCircle(x,y,r,p);p.setStyle(Paint.Style.FILL);
+        float turn=still?12:(time%36000)*.01f;c.save();c.rotate(turn,x,y);
+        paint(alpha(color,118));p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(2);c.drawArc(x-r*1.12f,y-r*.92f,x+r*1.12f,y+r*.92f,19,104,false,p);c.drawArc(x-r*1.12f,y-r*.92f,x+r*1.12f,y+r*.92f,199,104,false,p);p.setStyle(Paint.Style.FILL);
+        sparkle(c,x-r*.85f,y-r*.67f,6,color);sparkle(c,x+r*.88f,y+r*.68f,4,ink(accent));c.restore();
+    }
+
+    /** Earned medallion. radius includes ribbons; motif is 0..5. Contains no text or hit state. */
+    public void badge(Canvas c,float x,float y,float radius,int accent,int motif,boolean unlocked){
+        if(radius<=0)return;c.save();c.translate(x,y);c.scale(radius/30f,radius/30f);
+        int color=unlocked?tone(accent):0xffd4d1df,dark=unlocked?ink(accent):0xff858295;
+        paint(dark);path.reset();path.moveTo(-15,11);path.lineTo(-20,29);path.lineTo(-7,25);path.lineTo(0,30);path.lineTo(7,25);path.lineTo(20,29);path.lineTo(15,11);path.close();c.drawPath(path,p);
+        circle(c,0,1,25,dark);circle(c,0,-1,24,color);circle(c,0,-1,19,mix(color,PAPER,.57f));
+        paint(alpha(PAPER,180));p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(1.6f);c.drawCircle(0,-1,21,p);p.setStyle(Paint.Style.FILL);
+        int ink=unlocked?dark:0xff858295;
+        switch(Math.floorMod(motif,6)){
+            case 0:sparkle(c,0,-1,12,ink);break;
+            case 1:paint(ink);path.reset();path.moveTo(-12,-6);path.lineTo(-7,1);path.lineTo(0,-11);path.lineTo(7,1);path.lineTo(12,-6);path.lineTo(9,9);path.lineTo(-9,9);path.close();c.drawPath(path,p);line(c,-8,12,8,12,ink,2);break;
+            case 2:paint(ink);path.reset();path.moveTo(-10,8);path.cubicTo(-12,-10,1,-14,12,-12);path.cubicTo(13,2,4,11,-10,8);path.close();c.drawPath(path,p);line(c,-10,9,6,-6,mix(color,PAPER,.7f),2);break;
+            case 3:circle(c,-4,-6,6,ink);circle(c,-4,-6,2.5f,mix(color,PAPER,.7f));line(c,0,-2,10,9,ink,4);line(c,7,4,11,0,ink,3);break;
+            case 4:circle(c,0,-1,12,ink);circle(c,6,-6,10,mix(color,PAPER,.57f));sparkle(c,9,7,4,ink);break;
+            default:line(c,-12,-1,0,-12,ink,3);line(c,0,-12,12,-1,ink,3);line(c,-8,-2,-8,10,ink,3);line(c,8,-2,8,10,ink,3);line(c,-8,10,8,10,ink,3);line(c,0,10,0,3,ink,3);break;
+        }
+        c.restore();
+    }
+
+    /** Summon capsule; size is body width. Contains no reward, random or transaction state. */
+    public void capsule(Canvas c,float x,float y,float size,int accent,long time,boolean still){
+        if(size<=0)return;c.save();c.translate(x,y+(still?0:(float)Math.sin(time*.0025)*2));c.scale(size/120f,size/120f);
+        int color=tone(accent),deep=action(accent);oval(c,-54,63,54,78,0x193a315e);
+        circle(c,0,-5,58,mix(deep,INK,.15f));circle(c,0,-8,56,color);
+        c.save();path.reset();path.addCircle(0,-8,53,Path.Direction.CW);c.clipPath(path);
+        paint(alpha(deep,80));c.drawRect(-58,-8,58,62,p);oval(c,-59,-74,50,-1,0x65ffffff);
+        paint(deep);c.drawRect(-58,7,58,63,p);paint(mix(deep,PAPER,.12f));c.drawRect(-58,7,58,18,p);
+        line(c,-58,5,58,5,mix(color,PAPER,.7f),5);line(c,-58,10,58,10,mix(deep,INK,.2f),3);c.restore();
+        round(c,-17,-13,17,29,11,mix(deep,INK,.18f));round(c,-14,-15,14,24,10,GOLD);sparkle(c,0,3,8,mix(deep,INK,.1f));
+        oval(c,-28,-47,-5,-29,0x90ffffff);circle(c,-32,-21,4,0x80ffffff);
+        sparkle(c,-74,-24,10,GOLD);sparkle(c,70,-48,8,color);sparkle(c,75,32,5,deep);c.restore();
     }
 
     /** size is the icon's full width. No glyph font dependency. */

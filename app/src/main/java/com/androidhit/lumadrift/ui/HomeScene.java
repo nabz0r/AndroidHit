@@ -13,9 +13,10 @@ import com.androidhit.lumadrift.data.HomeLayout;
 import com.androidhit.lumadrift.data.HomeCatalog;
 import java.util.List;
 
-/** Original, bitmap-free little home. A ten-by-ten world projected into a 390 × 440 viewport; camera geometry is shared with hit targets. */
+/** Original, bitmap-free home. The room camera uses the actual available viewport for drawing and hit targets. */
 public final class HomeScene {
     public static final float WIDTH = 390, HEIGHT = 440;
+    public static final float DETAIL_ZOOM = 1.6f;
     public static final float ORIGIN_X = 320, ORIGIN_Y = 140, TILE_X = 28, TILE_Y = 15.5f;
     public static final int TARGET_FLOOR=-1,TARGET_COMPANION=-2,TARGET_WARDROBE=-3,TARGET_PUZZLE=-4,TARGET_OUTSIDE=-5;
     private static final int INK = 0xff59475f, WHITE = 0xfffffcf7;
@@ -29,26 +30,41 @@ public final class HomeScene {
     private final int[] orderIndices = new int[64];
     private String interactionItem = "";
     private boolean lampOn = true, gateLampOn = true;
-    private float cameraZoom=1f,cameraPanX,cameraPanY;
+    private float viewportWidth=WIDTH,viewportHeight=HEIGHT;
+    private float cameraZoom=DETAIL_ZOOM,cameraPanX,cameraPanY;
     private String room="living";
-    private static final float FIT=.62f, WORLD_WIDTH=640, WORLD_HEIGHT=480;
+    private static final float WORLD_WIDTH=640, WORLD_HEIGHT=480;
     public void setRoom(String value){room=HomeCatalog.validRoom(value)?value:HomeCatalog.DEFAULT_ROOM;}
     public String room(){return room;}
+    /**
+     * The host supplies its usable scene area directly, without applying a second fit scale.
+     * Keep the user's zoom and re-clamp pan when controls or the display size change.
+     */
+    public void setViewport(float width,float height){
+        viewportWidth=finite(width)&&width>=1&&width<=4096?width:WIDTH;
+        viewportHeight=finite(height)&&height>=1&&height<=4096?height:HEIGHT;
+        setCamera(cameraZoom,cameraPanX,cameraPanY);
+    }
+    public float viewportWidth(){return viewportWidth;}
+    public float viewportHeight(){return viewportHeight;}
     /** Pan is expressed in viewport logical pixels. Invalid gesture values leave a safe fit view. */
     public void setCamera(float zoom,float panX,float panY){
-        cameraZoom=finite(zoom)?clamp(zoom,.85f,2.5f):1f;
-        float scale=cameraScale(),maxX=Math.max(0,(WORLD_WIDTH*scale-WIDTH)*.5f+12),maxY=Math.max(0,(WORLD_HEIGHT*scale-HEIGHT)*.5f+12);
+        cameraZoom=finite(zoom)?clamp(zoom,1f,2.5f):1f;
+        float scale=cameraScale(),maxX=Math.max(0,(WORLD_WIDTH*scale-viewportWidth)*.5f),maxY=Math.max(0,(WORLD_HEIGHT*scale-viewportHeight)*.5f);
         cameraPanX=finite(panX)?clamp(panX,-maxX,maxX):0;cameraPanY=finite(panY)?clamp(panY,-maxY,maxY):0;
     }
-    public void resetCamera(){setCamera(1,0,0);}
+    /** Return to the close room view used on first arrival. */
+    public void resetCamera(){setCamera(DETAIL_ZOOM,0,0);}
+    /** Fit the entire cutaway into the current viewport. */
+    public void resetOverview(){setCamera(1,0,0);}
     public float cameraZoom(){return cameraZoom;}
     public float cameraPanX(){return cameraPanX;}
     public float cameraPanY(){return cameraPanY;}
-    private float cameraScale(){return FIT*cameraZoom;}
-    private float projectX(float value){return WIDTH*.5f+(value-ORIGIN_X)*cameraScale()+cameraPanX;}
-    private float projectY(float value){return HEIGHT*.5f+(value-WORLD_HEIGHT*.5f)*cameraScale()+cameraPanY;}
-    private float worldX(float value){return (value-WIDTH*.5f-cameraPanX)/cameraScale()+ORIGIN_X;}
-    private float worldY(float value){return (value-HEIGHT*.5f-cameraPanY)/cameraScale()+WORLD_HEIGHT*.5f;}
+    private float cameraScale(){return Math.min(viewportWidth/WORLD_WIDTH,viewportHeight/WORLD_HEIGHT)*cameraZoom;}
+    private float projectX(float value){return viewportWidth*.5f+(value-ORIGIN_X)*cameraScale()+cameraPanX;}
+    private float projectY(float value){return viewportHeight*.5f+(value-WORLD_HEIGHT*.5f)*cameraScale()+cameraPanY;}
+    private float worldX(float value){return (value-viewportWidth*.5f-cameraPanX)/cameraScale()+ORIGIN_X;}
+    private float worldY(float value){return (value-viewportHeight*.5f-cameraPanY)/cameraScale()+WORLD_HEIGHT*.5f;}
     public PointF projectedFloorPoint(float x,float y){return new PointF(projectX(px(x,y)),projectY(py(x,y)));}
     public int[] cellAtCamera(float x,float y){return cellAt(worldX(x),worldY(y));}
     public void projectedBoundsFor(HomeLayout.Placement placement,RectF out){if(placement==null||out==null)return;boundsFor(placement,out);out.set(projectX(out.left),projectY(out.top),projectX(out.right),projectY(out.bottom));}
@@ -133,7 +149,7 @@ public final class HomeScene {
                      List<CosmeticCatalog.Item> clothes,long time,boolean reduceMotion,
                      float companionX,float companionY,String activity,int selectedIndex,boolean decorating) {
         if(c==null)return;
-        c.save();c.clipRect(0,top,WIDTH,top+HEIGHT);c.translate(WIDTH*.5f+cameraPanX,top+HEIGHT*.5f+cameraPanY);c.scale(cameraScale(),cameraScale());c.translate(-ORIGIN_X,-WORLD_HEIGHT*.5f);
+        c.save();c.clipRect(0,top,viewportWidth,top+viewportHeight);c.translate(viewportWidth*.5f+cameraPanX,top+viewportHeight*.5f+cameraPanY);c.scale(cameraScale(),cameraScale());c.translate(-ORIGIN_X,-WORLD_HEIGHT*.5f);
         shell(c,wallpaper,floor,time,reduceMotion);
         List<HomeLayout.Placement> placed=layout==null?null:layout.placements();
         int count=placed==null?0:Math.min(ordered.length,placed.size());
