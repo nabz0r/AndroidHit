@@ -1,6 +1,26 @@
 # Development and architecture
 
-## Current 1.13 room and first-touch architecture
+## Current 1.15 destinations, relay route and rooms
+
+Production is **1.15.0-rc1**, Lab **1.15.0-sandbox-rc1**, version code **17**. The four release artifacts and both lint tasks pass using the locally verified JDK17. Release lint reports zero errors and13 warnings per flavor; the new portrait presentation accounts for two orientation advisories. Phone portrait is the qualified layout scope.
+
+`LumaView` remains the native Canvas controller, with dedicated renderers for `adventure`, `home`, `collection_hub`, `atelier` and isolated `play`. `PremiumUi` supplies draw-only surfaces, illustrations and four-destination navigation; it owns no state or hit targets. The controller owns clipped semantic targets and touch dispatch. Modal scrims clear background targets and block board gestures. Item detail retains its caller-aware return path. New copy is in `V115Strings`; existing catalogues and account/provider boundaries remain in place.
+
+`RelayCatalog`/`RelayLayouts` identify the new **U** family independently of historical boards. U uses engine progression version6, campaign content version7 and budget policy5. Piece exits XOR their linked gate mask; matching keys release seals. Manual gate actions are absent. `RelaySolver` is bounded to16 pieces; independent host tests enumerate reachable states and transitions. A legal order can deadlock, rejected taps are free, and repeated Undo refunds committed exits. Three stars represent completion. Saved N campaign content6 retains its board and policy4; explicit historical challenge codes retain their resolvers. A loaded old attempt is preserved until the player starts a new one.
+
+`HomeCatalog` has42 designs and three rooms (`living`, `bedroom`, `garden`). `HomeLayout` uses a10 ×10 grid and two orientations. The strict old6 ×6 record retains its exact coordinates in the living room; other rooms have separate durable records. Permanent ownership is global, with one instance per design per room. `GameStore` keeps ownership/debit atomic and separates purchase, draft, placement and surfaces. `HomeScene` owns a bounded zoom/pan transform shared by painting and hit geometry. Enlarged furniture targets stay centred; painter-order sprite targeting takes precedence, with the outer touch margin accepted as a fallback.
+
+The new host contracts are included in `.github/workflows/puzzle-contracts.yml`, alongside retained N/guide/power contracts. A local rehearsal using only its exact sparse checkout passes; remote CI is a separate publication step.
+
+```sh
+sh scripts/test-relay-v115.sh
+bash scripts/test-home-v115.sh
+bash scripts/test-home-v115-geometry.sh
+```
+
+Native observers are separate signed SDK test packages: `scripts/v115-ui-test`, `scripts/v115-relay-ui` and `scripts/v115-upgrade-ui`. Their wrappers require the exact owned AVD, package/version and APK hashes. State changes use actual visible controls and touchscreen input; preference reads independently check persistence. No player progress, wallet or piece history is injected. Keep original failures, signed observer identities and unedited PNGs distinct from later passed scopes. [Gameplay contract](GAMEPLAY_1_15.md) · [Release](RELEASE_1_15.md) · [Qualification](validation/v1.15/README.md).
+
+## Preserved 1.13 room and first-touch architecture
 
 `HomeCatalog` defines twelve original furnishings and separate four-choice wall/floor collections, all using existing LumaCoins. `HomeLayout` is immutable and Android-independent: a six-by-six room, integer furniture coordinates, two rotations and a persisted companion cell. Solid footprints cannot overlap or cover the companion; the two-by-two rug is traversable and may underlay furniture. Four-neighbour breadth-first search rejects unreachable companion destinations.
 

@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "checkCount": 27,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact Luma target package"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed candidate version and code"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Settings"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for English"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Adventure"
+    },
+    {
+      "passed": true,
+      "message": "Native destination selected: Adventure"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Adventure"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Home"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Collection"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Atelier"
+    },
+    {
+      "passed": true,
+      "message": "Compact power panels use the genuinely progressed QA profile"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Resume  →"
+    },
+    {
+      "passed": true,
+      "message": "Compact unsolved board is visible"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Powers"
+    },
+    {
+      "passed": true,
+      "message": "Compact illustrated powers panel exposes a close action"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Spark"
+    },
+    {
+      "passed": true,
+      "message": "Compact power confirmation has a real Cancel action"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Cancel"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for How to play"
+    },
+    {
+      "passed": true,
+      "message": "Compact contextual help has a return action"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Let’s drift"
+    },
+    {
+      "passed": true,
+      "message": "Compact help returns to the board"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Pause"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Leave level"
+    },
+    {
+      "passed": true,
+      "message": "Compact panels preserve exact puzzle actions and effects"
+    },
+    {
+      "passed": true,
+      "message": "Compact preview\/cancel consumes no stock"
+    },
+    {
+      "passed": true,
+      "message": "Compact panels preserve earned coins and progression"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Settings",
+      "bounds": "[507,111][616,219]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "English",
+      "bounds": "[315,1083][564,1164]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Adventure",
+      "bounds": "[0,1188][219,1374]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Resume  →",
+      "bounds": "[54,801][825,927]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Powers",
+      "bounds": "[54,1245][825,1353]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Spark",
+      "bounds": "[76,390][306,661]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Cancel",
+      "bounds": "[99,1103][780,1211]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "How to play",
+      "bounds": "[726,115][834,223]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Let’s drift",
+      "bounds": "[99,1128][780,1250]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Pause",
+      "bounds": "[45,115][153,223]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Leave level",
+      "bounds": "[99,970][780,1078]",
+      "input": "UiAutomation touchscreen"
+    }
+  ],
+  "captures": [
+    "compact-board-before-en",
+    "compact-powers-panel-en",
+    "compact-power-preview-en",
+    "compact-help-en",
+    "compact-board-after-en"
+  ],
+  "processId": 6910,
+  "phase": "panels",
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Native power tray, preview\/cancel and help on the retained progressed profile; no stock debit, piece move, purchase, preference edit or provider action"
+}

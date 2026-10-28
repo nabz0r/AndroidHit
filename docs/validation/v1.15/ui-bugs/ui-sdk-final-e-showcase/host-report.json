@@ -1,0 +1,1060 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5588",
+  "avd": "Luma-Refonte115-Showcase-QA",
+  "expected_version": "1.15.0-rc1",
+  "expected_code": 17,
+  "apk_sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "test_apk_sha256": "fbcb7725371e3f824f321b5b972c2a78a6d1f4c8664ad90fdd6b1fc74c1b9cb2",
+  "wrapper_source_sha256": "2b6eadd5d7671beef8d5f56bbedbd7208dec87d543df8f84107aaa62fab7bae9",
+  "runner_source_sha256": "986e267a5a39fa1689cb5961f48b9c6feecbae160c3bd9fd2b1627b16ffb9f0c",
+  "candidate_present_before_test": true,
+  "scope": "Retained progressed QA profile on the task-owned AVD; native power preview/cancel and help, exactly one owned Spark activation, actual 420+560+640 coin furniture purchases and placement, cold verification; no preference edits, progress injection or provider actions.",
+  "phases": [
+    {
+      "phase": "showcase",
+      "native": {
+        "passed": true,
+        "checkCount": 121,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Showcase starts only after the retained profile has completed U100"
+          },
+          {
+            "passed": true,
+            "message": "Earned retained balance covers the three actual purchases"
+          },
+          {
+            "passed": true,
+            "message": "Purchase starts with unowned item aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Purchase starts with unowned item piano"
+          },
+          {
+            "passed": true,
+            "message": "Purchase starts with unowned item greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Retained earned or initial Spark stock is available for preview"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Resume  →"
+          },
+          {
+            "passed": true,
+            "message": "Unsolved native board opens without playing a piece"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Powers  →"
+          },
+          {
+            "passed": true,
+            "message": "Native illustrated powers tray is visible"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Spark"
+          },
+          {
+            "passed": true,
+            "message": "Spark opens the illustrated confirmation before any debit"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Cancel"
+          },
+          {
+            "passed": true,
+            "message": "Cancel returns from power confirmation to the board"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Illustrated contextual help opens"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Help returns to the same board"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Power preview and cancellation preserve every booster ledger value"
+          },
+          {
+            "passed": true,
+            "message": "Preview, cancellation and help preserve history, budget and power effects"
+          },
+          {
+            "passed": true,
+            "message": "Power preview and help preserve coins and progression"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Resume  →"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Powers  →"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Spark"
+          },
+          {
+            "passed": true,
+            "message": "An owned Spark can be explicitly confirmed"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Use one charge"
+          },
+          {
+            "passed": true,
+            "message": "Confirmed Spark debits exactly one existing charge"
+          },
+          {
+            "passed": true,
+            "message": "Confirmed Spark durably records its visible timed hint effect"
+          },
+          {
+            "passed": true,
+            "message": "Spark leaves piece history, budget, level and undo count unchanged"
+          },
+          {
+            "passed": true,
+            "message": "Spark preserves other stock value booster_vision"
+          },
+          {
+            "passed": true,
+            "message": "Spark preserves other stock value booster_flow"
+          },
+          {
+            "passed": true,
+            "message": "Spark settles one durable used receipt with no pending reservation"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Confirmed Spark preserves earned coins and level progression"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Home"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Garden"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Stellar"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Moon reef aquarium, 420 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Get for 420 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Real purchase durably owns aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Purchase debits exactly 420 coins for aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Buying aquarium does not silently place it"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": true,
+            "message": "Placement draft and Cancel are visible for aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": true,
+            "message": "Explicit Place durably writes aquarium to the Garden"
+          },
+          {
+            "passed": true,
+            "message": "Placement returns to decoration for aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Done"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Midnight grand piano, 560 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Get for 560 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Real purchase durably owns piano"
+          },
+          {
+            "passed": true,
+            "message": "Purchase debits exactly 560 coins for piano"
+          },
+          {
+            "passed": true,
+            "message": "Buying piano does not silently place it"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": true,
+            "message": "Placement draft and Cancel are visible for piano"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": true,
+            "message": "Explicit Place durably writes piano to the Garden"
+          },
+          {
+            "passed": true,
+            "message": "Placement returns to decoration for piano"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Done"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Forest"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Glass garden greenhouse, 640 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Get for 640 LumaCoins"
+          },
+          {
+            "passed": true,
+            "message": "Real purchase durably owns greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Purchase debits exactly 640 coins for greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Buying greenhouse does not silently place it"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": true,
+            "message": "Placement draft and Cancel are visible for greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Place"
+          },
+          {
+            "passed": true,
+            "message": "Explicit Place durably writes greenhouse to the Garden"
+          },
+          {
+            "passed": true,
+            "message": "Placement returns to decoration for greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Done"
+          },
+          {
+            "passed": true,
+            "message": "Furnished room exposes distinct native object aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Furnished room exposes distinct native object piano"
+          },
+          {
+            "passed": true,
+            "message": "Furnished room exposes distinct native object greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Zoom in"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Zoom out"
+          },
+          {
+            "passed": true,
+            "message": "House purchases and placement preserve all level stars and unlocks"
+          },
+          {
+            "passed": true,
+            "message": "House purchases do not consume powers"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Settings",
+            "bounds": "[623,169][756,302]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1462]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[0,2046][270,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Resume  →",
+            "bounds": "[66,1482][1013,1637]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Powers  →",
+            "bounds": "[66,2088][1013,2176]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Spark",
+            "bounds": "[94,789][376,1121]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Cancel",
+            "bounds": "[121,1664][958,1797]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[891,174][1024,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[121,1695][958,1844]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[55,174][188,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[121,1501][958,1634]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[0,2046][270,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Resume  →",
+            "bounds": "[66,1482][1013,1637]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Powers  →",
+            "bounds": "[66,2088][1013,2176]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Spark",
+            "bounds": "[94,789][376,1121]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Use one charge",
+            "bounds": "[121,1501][958,1639]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[55,174][188,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[121,1501][958,1634]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Home",
+            "bounds": "[270,2046][540,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Garden",
+            "bounds": "[708,396][1013,529]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[810,2046][1080,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Stellar",
+            "bounds": "[66,1146][1013,1318]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Moon reef aquarium, 420 LumaCoins",
+            "bounds": "[66,732][523,1227]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Get for 420 LumaCoins",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Place",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Place",
+            "bounds": "[725,1767][1013,1900]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Done",
+            "bounds": "[556,1673][1013,1806]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[810,2046][1080,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Neon",
+            "bounds": "[66,1551][1013,1722]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Midnight grand piano, 560 LumaCoins",
+            "bounds": "[556,797][1013,1293]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Get for 560 LumaCoins",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Place",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Place",
+            "bounds": "[725,1767][1013,1900]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Done",
+            "bounds": "[556,1673][1013,1806]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[810,2046][1080,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Forest",
+            "bounds": "[66,1348][1013,1520]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Glass garden greenhouse, 640 LumaCoins",
+            "bounds": "[556,797][1013,1293]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Get for 640 LumaCoins",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Place",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Place",
+            "bounds": "[725,1767][1013,1900]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Done",
+            "bounds": "[556,1673][1013,1806]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Zoom in",
+            "bounds": "[880,1509][1013,1642]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Zoom out",
+            "bounds": "[731,1509][864,1642]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "showcase-board-before-en",
+          "showcase-powers-tray-en",
+          "showcase-power-preview-en",
+          "showcase-power-cancelled-en",
+          "showcase-help-en",
+          "showcase-spark-active-en",
+          "showcase-aquarium-before-purchase-en",
+          "showcase-aquarium-owned-en",
+          "showcase-aquarium-draft-en",
+          "showcase-aquarium-placed-en",
+          "showcase-piano-before-purchase-en",
+          "showcase-piano-owned-en",
+          "showcase-piano-draft-en",
+          "showcase-piano-placed-en",
+          "showcase-greenhouse-before-purchase-en",
+          "showcase-greenhouse-owned-en",
+          "showcase-greenhouse-draft-en",
+          "showcase-greenhouse-placed-en",
+          "showcase-three-objects-garden-en",
+          "showcase-three-objects-garden-zoom-en"
+        ],
+        "processId": 7244,
+        "phase": "showcase",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained progressed QA profile; native power preview/cancel, help and exactly one owned Spark activation; three real furniture purchases and placement with cold persistence; no private reflection, preference edits, progress injection or provider actions"
+      }
+    },
+    {
+      "phase": "showcaseCold",
+      "native": {
+        "passed": true,
+        "checkCount": 43,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Furnished cold verification uses a distinct process"
+          },
+          {
+            "passed": true,
+            "message": "Cold launch preserves every home ownership, room, exact layout and equipment value"
+          },
+          {
+            "passed": true,
+            "message": "Cold launch preserves the actual purchase debits and all progress"
+          },
+          {
+            "passed": true,
+            "message": "Cold launch preserves the unchanged powers ledger"
+          },
+          {
+            "passed": true,
+            "message": "Cold launch preserves the unchanged puzzle action state"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Home"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Cold room remains the furnished Garden"
+          },
+          {
+            "passed": true,
+            "message": "Cold ownership and exact placement retained for aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Cold room renders native object aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Cold ownership and exact placement retained for piano"
+          },
+          {
+            "passed": true,
+            "message": "Cold room renders native object piano"
+          },
+          {
+            "passed": true,
+            "message": "Cold ownership and exact placement retained for greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Cold room renders native object greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Zoom in"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Zoom out"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Maison"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Maison"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Aventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Maison"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Jardin"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Aventure"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Aventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Aventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Maison"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Reprendre  →"
+          },
+          {
+            "passed": true,
+            "message": "French delivery board is the retained real game"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Quitter le niveau"
+          },
+          {
+            "passed": true,
+            "message": "Delivery profile finishes in French with the furnished Garden retained"
+          },
+          {
+            "passed": true,
+            "message": "French delivery captures add no coin, power or progress change"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Home",
+            "bounds": "[270,2046][540,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Zoom in",
+            "bounds": "[880,1509][1013,1642]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Zoom out",
+            "bounds": "[731,1509][864,1642]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[623,169][756,302]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[708,1362][1013,1462]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Maison",
+            "bounds": "[270,2046][540,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Jardin",
+            "bounds": "[708,396][1013,529]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Aventure",
+            "bounds": "[0,2046][270,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Reprendre  →",
+            "bounds": "[66,1482][1013,1637]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[55,174][188,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Quitter le niveau",
+            "bounds": "[121,1501][958,1634]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "showcase-cold-three-objects-garden-en",
+          "showcase-cold-three-objects-garden-zoom-en",
+          "delivery-house-garden-fr",
+          "delivery-adventure-fr",
+          "delivery-play-fr"
+        ],
+        "processId": 7358,
+        "phase": "showcaseCold",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained progressed QA profile; native power preview/cancel, help and exactly one owned Spark activation; three real furniture purchases and placement with cold persistence; no private reflection, preference edits, progress injection or provider actions"
+      }
+    }
+  ],
+  "screenshots": {
+    "showcase/showcase-greenhouse-placed-en.png": "c8033a82793dd551f46b9e4b28d2a7f6e2df35a6fd8fc485bdbfba93c9743101",
+    "showcase/showcase-piano-placed-en.png": "a71799b386242f666df81ab2a399730cfce00a8ccc40baebe4acc6d7d8df0f0e",
+    "showcase/showcase-piano-owned-en.png": "ed9557e217026b4ce931ed1335e0daff0072900330eb0ab144b4bb5ba714f5bb",
+    "showcase/showcase-greenhouse-draft-en.png": "87b7f12469fa24720f5cec18e6ef6febe922f08db6aba6759e23138d2ca397e1",
+    "showcase/showcase-power-cancelled-en.png": "dc8eccb822c27cc170572c59b6fda795f6a7ae5b43ae176f4905c343909520ca",
+    "showcase/showcase-three-objects-garden-en.png": "c8033a82793dd551f46b9e4b28d2a7f6e2df35a6fd8fc485bdbfba93c9743101",
+    "showcase/showcase-piano-before-purchase-en.png": "5e26a436a149f7cf087222234bf4c10a01ec91bc2c41d3906ffe5ee6a8566d37",
+    "showcase/showcase-three-objects-garden-zoom-en.png": "8ca5a9836a4411609eac858ac8589badcc57df689f6f61af07f3b4e3d20ebc6d",
+    "showcase/showcase-aquarium-placed-en.png": "5237069d7e9a7f0ff7ef60fc592e756e141ae791b65f0f52a245f910a95df684",
+    "showcase/showcase-greenhouse-before-purchase-en.png": "62a13876e4843385987db9456455fe63ee83b3822345bd59244676dc260e0a8c",
+    "showcase/showcase-aquarium-draft-en.png": "01fcb883670cde896e624d0b3708e40dc6b520c6c26d7cc7a7ac2ca7628a3ed9",
+    "showcase/showcase-power-preview-en.png": "1b35fa0fd4c7d290b16b261d49492512386ef947691ea93a9da51def949bb867",
+    "showcase/showcase-help-en.png": "514c51c632b4fb5f756025b68ceb9aa2d7a4a44d8c725797e76280922524f8bc",
+    "showcase/showcase-aquarium-before-purchase-en.png": "a173fe1a585f6ffc478b3759520b579ed32c1057f90f7ee21e9f7c93f7741238",
+    "showcase/showcase-spark-active-en.png": "3fbee53f56434640197953436df5adc5d4c5f332aadf78cc62389460c3e2f934",
+    "showcase/showcase-aquarium-owned-en.png": "a4084c57c5427178e69920b15e322726b144d4e7cf43fe241fe05df0c7061765",
+    "showcase/showcase-piano-draft-en.png": "597bc5d7dfc9484604bd6feea84316a1fcffbde69dc8f5659fd4bb77d33bc24d",
+    "showcase/showcase-powers-tray-en.png": "b25d37e76bc647c85a10e279b4a4f2a76a46a47fdf2ac8c399aba9859fd206ae",
+    "showcase/showcase-board-before-en.png": "dc8eccb822c27cc170572c59b6fda795f6a7ae5b43ae176f4905c343909520ca",
+    "showcase/showcase-greenhouse-owned-en.png": "5ca9d10f991f432d082dd14ed34e9d1275a01000afb3370d37ae746b375f9f0f",
+    "showcaseCold/showcase-cold-three-objects-garden-zoom-en.png": "a23b0cdbbd4b50236f00f63492f1675bae56d5d39d08d37850cab3f6a4ecd14f",
+    "showcaseCold/delivery-play-fr.png": "614666cca3c9a89bd5349776c591fc12df57a67afa7c6e246afde5149802f36b",
+    "showcaseCold/delivery-adventure-fr.png": "0cde98c4a6b737c8701302f27fa4807b3dad1f425c91d8a8f80817ca4dc05e63",
+    "showcaseCold/showcase-cold-three-objects-garden-en.png": "4480e6133024d6a7523b1acfd65004171bc2483d7937b08bc06ca189a1a13023",
+    "showcaseCold/delivery-house-garden-fr.png": "8227d0d28c0a067552827ee66cce41f6080dce49b81e400c9d0a7d10c392e822"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.15/ui-bugs/ui-sdk-final-e-showcase/interface-observer.apk",
+  "compact": false,
+  "route": "showcase",
+  "font_scale": "1.0",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true
+}

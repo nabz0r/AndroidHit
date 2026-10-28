@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "avd": "Luma-Refonte115-Showcase-QA",
+  "serial": "emulator-5588",
+  "apk_sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "observed_before": "Reduce motion: Off",
+  "observed_after": "Reduce motion: On",
+  "observed_cold": "Reduce motion: On",
+  "value_confirmed_via": "Actual native accessibility control state, including a distinct cold launch; no preference edit",
+  "actions": [
+    {
+      "label": "Settings",
+      "bounds": [
+        623,
+        169,
+        756,
+        302
+      ],
+      "tap": [
+        689,
+        235
+      ],
+      "input": "ADB native touchscreen at observed accessibility bounds"
+    },
+    {
+      "label": "Reduce motion: Off",
+      "bounds": [
+        66,
+        1052,
+        1013,
+        1207
+      ],
+      "tap": [
+        539,
+        1129
+      ],
+      "input": "ADB native touchscreen at observed accessibility bounds"
+    },
+    {
+      "label": "Settings",
+      "bounds": [
+        623,
+        169,
+        756,
+        302
+      ],
+      "tap": [
+        689,
+        235
+      ],
+      "input": "ADB native touchscreen at observed accessibility bounds"
+    }
+  ],
+  "scope": "Only the second fresh showcase profile; genuine U1\u2013U100 already completed; app setting changed through the visible control; no coins, stock or progress edited",
+  "screenshots": {
+    "docs/screenshots/v1.15/ui-bugs/showcase-reduce-motion/settings-motion-on-cold.png": "9427e6251669124ec9fbe9d5d656158f7c5023fd0d6aee651ae7a6a9b829d20e",
+    "docs/screenshots/v1.15/ui-bugs/showcase-reduce-motion/settings-motion-off.png": "a51b776864a92af12a46aff485fe16c88a3814c3e3eeb17df1f464998868a7f3",
+    "docs/screenshots/v1.15/ui-bugs/showcase-reduce-motion/settings-motion-on.png": "9427e6251669124ec9fbe9d5d656158f7c5023fd0d6aee651ae7a6a9b829d20e"
+  }
+}

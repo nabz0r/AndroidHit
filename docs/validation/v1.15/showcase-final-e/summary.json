@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "candidate": "production 1.15.0-rc1 / code17",
+  "apk_sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "scope": "Separate fresh showcase profile after100 real U victories; distinct from the primary1000-level qualification profile",
+  "avd": "Luma-Refonte115-Showcase-QA",
+  "serial": "emulator-5588",
+  "bootstrapped_real_victories": 100,
+  "earned_victory_coins": 5500,
+  "bootstrap_checks": 3194,
+  "bootstrap_actual_touches": 764,
+  "reduced_motion_observed_before": "Reduce motion: Off",
+  "reduced_motion_observed_after": "Reduce motion: On",
+  "reduced_motion_observed_after_cold": "Reduce motion: On",
+  "panel_checks": 27,
+  "showcase_checks": 164,
+  "initial_coins": 5680,
+  "real_furniture_spend": 1620,
+  "coins_after_purchases": 4060,
+  "spark_stock_after_one_real_activation": 2,
+  "exact_garden_layout": "2|5,5|plant,1,1,0;flowerbed,5,1,0;garden_path,4,4,0;aquarium,0,0,0;piano,7,0,0;greenhouse,2,1,0;",
+  "native_showcase_processes": [
+    7244,
+    7358
+  ],
+  "reports": {
+    "bootstrap": "docs/validation/v1.15/relay-native-showcase-bootstrap100/host-report.json",
+    "motion": "docs/validation/v1.15/ui-bugs/showcase-reduce-motion/report.json",
+    "panels": "docs/validation/v1.15/ui-bugs/ui-sdk-final-e-panels/host-report.json",
+    "showcase": "docs/validation/v1.15/ui-bugs/ui-sdk-final-e-showcase/host-report.json"
+  },
+  "delivery_originals": {
+    "delivery-house-garden-fr": {
+      "path": "docs/screenshots/v1.15/ui-bugs/ui-sdk-final-e-showcase/showcaseCold/delivery-house-garden-fr.png",
+      "sha256": "8227d0d28c0a067552827ee66cce41f6080dce49b81e400c9d0a7d10c392e822"
+    },
+    "delivery-adventure-fr": {
+      "path": "docs/screenshots/v1.15/ui-bugs/ui-sdk-final-e-showcase/showcaseCold/delivery-adventure-fr.png",
+      "sha256": "0cde98c4a6b737c8701302f27fa4807b3dad1f425c91d8a8f80817ca4dc05e63"
+    },
+    "delivery-play-fr": {
+      "path": "docs/screenshots/v1.15/ui-bugs/ui-sdk-final-e-showcase/showcaseCold/delivery-play-fr.png",
+      "sha256": "614666cca3c9a89bd5349776c591fc12df57a67afa7c6e246afde5149802f36b"
+    }
+  },
+  "limits": "Emulator API36 arm64 16KB pages, reduced motion; no physical device or human comprehension/playtime inference; no synthetic balance, stock, stars or layouts",
+  "report_sha256": {
+    "bootstrap": "7e8710f1df22f35a896d0e4fffee4ec9ff2435a3393e8e3ceb3064d284a05c58",
+    "motion": "d652c1cc5ff14ca7af68669de806e01508a45533b237584b6dfefed400711558",
+    "panels": "5a7bb97d0e9965f35993fd1c65cc52ec72c43bbb7e7c281d51ec96f0bec9320c",
+    "showcase": "3872e33df152a4935f04a86cdd224f07e7d3494613fd39a56b589ee2eb89cae3"
+  },
+  "showcase_avd_shutdown_report": "docs/validation/v1.15/showcase-avd/shutdown.json",
+  "visual_limit": "The automatically placed greenhouse partially occludes the aquarium in the final room; earlier original aquarium-placed and piano-placed captures retain their unobscured in-room art."
+}

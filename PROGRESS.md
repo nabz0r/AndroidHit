@@ -1,3 +1,17 @@
+# Luma Drift 1.15 — delivered locally
+
+- Owner approved the full redesign on28 October2026. Baseline1.14 RC2/code16 atadc51c8f; local branch `codex/luma-refonte-1-15`, implementation commit `84830c16`.
+- U relay family implemented: 1,000 boards, 13,312,469 independent host checks and preserved historical-family regressions pass. Gates follow piece exits; corrections and rejected taps are free in the new route.
+- Dedicated Adventure/Home/Collection/Atelier, isolated puzzle HUD, illustrated panels and visual collection/wardrobe implemented. Three10×10 rooms and42 furniture designs pass2,074 model and6,494 geometry checks; economy/save/rewards regressions pass.
+- Final candidate E build/lint passes (zero errors,13 warnings per flavor). All four signed binaries pass signature, manifest, bundle and static alignment checks against121 frozen inputs. Core app inputs remain unchanged. Exact E bytes are packaged in `releases/` as1.15.0-rc1/code17 and the separate Lab variant; no remote publication is claimed.
+- E normal+320dp interface passes432 native checks/74 original PNGs. Actual1.14→E Lab migration passes68 checks/11 PNGs, including retained partial N15, old furniture and actual cactus purchase/cancel/rotate/place. A separate source review finds no further actionable routing/panel/session defect in its stated scope.
+- The genuine native U1–U1000 route passes49,575 checks/12,016 touchscreen gestures/112 original PNGs. Strict aggregation verifies gap-free coverage, exact certificate histories, three stars per level and55,000 genuinely earned first-win coins. No unlock, wallet, history or stars are injected. Pilot234 seconds; continuation2,787 seconds, scoped as QA execution durations.
+- A separately created fresh-E showcase profile genuinely wins its first100 boards, then passes27 compact power-panel checks and164 earned-decoration/power/cold checks. One Spark charge debits exactly once; aquarium, piano and greenhouse are actually bought and placed with earned coins. French final captures have original-image provenance. This duplicate first100 scope is excluded from main-route coverage.
+- Earlier C image/observer failures and the real D compact furniture-target failure remain preserved. E centres expanded targets and accepts their margin while retaining foreground sprite priority. Minor observed causal-toast copy/timing is documented separately.
+- Separate U31 legal-wrong-order probe passes167 native checks/16 actual touches/7 PNGs: real dead-end warning and illustrated panel, free Undo, distinct cold process, then actual challenge victory with no currency/stock/progression change. French Adventure is restored.
+- Two task-owned AVDs only: primary `Luma-Refonte115-QA` / `emulator-5586` and fresh `Luma-Refonte115-Showcase-QA` / `emulator-5588`. Both are stopped, their disks/profiles retained, display restored and test packages removed. No prior user device/profile touched.
+- Signed production [APK](releases/luma-drift-1.15.0-rc1.apk), separate Lab APK, both AABs, manifests and original screenshots are delivered locally. [Release](docs/RELEASE_1_15.md) and [qualification register](docs/validation/v1.15/README.md) record exact scopes. No remote publication, Play upload or website deployment. Physical-phone experience and human enjoyment remain separate from emulator acceptance.
+
 # Luma Drift 1.14 — delivered
 
 - User reports Journey 15 and recurrent impossible-feeling boards across releases; puzzle reliability and progressive teaching take priority over home changes.

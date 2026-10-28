@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/v115-upgrade-ui/run.py", line 112, in <module>
+    if __name__=='__main__':main()
+  File "/Users/n/androidhit/scripts/v115-upgrade-ui/run.py", line 109, in main
+    if error:raise error
+  File "/Users/n/androidhit/scripts/v115-upgrade-ui/run.py", line 95, in main
+    report['phases'].append({'phase':phase,'native':native});assert native['passed'],'Native '+phase+' upgrade observation failed'
+AssertionError: Native old upgrade observation failed

@@ -1,6 +1,12 @@
 # Luma Drift documentation
 
-## Current 1.14 — deliberate puzzles and visible rules
+## Current 1.15 — relay puzzles and dedicated destinations
+
+[Release and exact bytes](RELEASE_1_15.md) · [Gameplay and compatibility](GAMEPLAY_1_15.md) · [Qualification register](validation/v1.15/README.md) · [Design audit](AUDIT_REFONTE_UI_2026_10_28.md).
+
+Adventure, immersive play, Home, Collection and Atelier separate the main tasks. A 1,000-board U Journey uses piece-controlled gates, keys and freely refunded correction. Three 10 × 10 rooms, zoom/pan, forty-two furniture designs and illustrated item previews extend the home. Existing challenge identities, an active run, purchases and room coordinates are retained. The exact signed [production APK](../releases/luma-drift-1.15.0-rc1.apk) completes U1–U1000 on Android with49,575 native checks and12,016 actual touches. Build, lint, signatures, manifests, bundles, normal/compact interfaces, six languages, real Lab upgrade, earned purchases and cold restoration pass their separate scopes. Delivery is local; the website and remote releases remain at their earlier versions.
+
+## Preserved 1.14 — deliberate puzzles and visible rules
 
 [Release and qualification status](RELEASE_1_14.md) · [Rules and compatibility](GAMEPLAY_1_14.md) · [UX decisions](UX_1_14.md) · [Execution register](validation/v1.14/README.md) · [Website register](validation/site-v1.14/README.md).
 

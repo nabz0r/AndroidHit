@@ -1,0 +1,26 @@
+PASS U1–U100 reachable_states=2818 transitions=5620
+PASS U1–U200 reachable_states=5910 transitions=10732
+PASS U1–U300 reachable_states=9989 transitions=17838
+PASS U1–U400 reachable_states=15713 transitions=28016
+PASS U1–U500 reachable_states=23969 transitions=44179
+PASS U1–U600 reachable_states=36376 transitions=70940
+PASS U1–U700 reachable_states=57498 transitions=120581
+PASS U1–U800 reachable_states=85191 transitions=186514
+PASS U1–U900 reachable_states=137759 transitions=327670
+PASS U1–U1000 reachable_states=191954 transitions=471517
+{
+  "passed": true,
+  "boards": 1000,
+  "checks": 13312469,
+  "reachable_states": 191954,
+  "legal_transitions": 471517,
+  "post_teaching_boards_with_order_consequence": 970,
+  "boards_with_keys": 652,
+  "relay_pieces": 5698,
+  "max_reachable_states_per_board": 2362,
+  "max_planner_cache_bytes": 65600,
+  "slowest_host_viability_ms": 0.019,
+  "seconds": 1.402,
+  "scope": "Host exact model, all reachable U states, transitions, previews, Undo, save/budget, six-language guide and historical identifiers. Not Android execution or human enjoyment."
+}
+

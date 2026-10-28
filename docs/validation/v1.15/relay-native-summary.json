@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "candidate_apk_sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "fixture_manifest_sha256": "1a7155deace55682adf85972bee71279c58d3643367306976a1ef9eac823eea8",
+  "levels": 1000,
+  "actual_certificate_exits": 10974,
+  "extra_probe_exits": 2,
+  "native_checks": 49575,
+  "actual_touch_gestures": 12016,
+  "native_original_pngs": 112,
+  "earned_first_win_coins": 55000,
+  "observer_versions": [
+    {
+      "report": "docs/validation/v1.15/relay-native-e-pilot100/host-report.json",
+      "report_sha256": "7342768029adf789d14db1833747edc85df15a906df5d9c4e2003ee511af3ac5",
+      "apk_sha256": "66345209b15a5a198213c6f66f95eff7bd7ff73a200951e5c4cdee7a26ed8868",
+      "runner_source_sha256": "c03df3939d28dcd42ad0684bf1b1e6415eb475c71b541b4307a65c283633e275",
+      "completed": 100,
+      "wall_seconds": 233.962,
+      "timing": {
+        "observed_levels": 100,
+        "observed_level_loop_ms": 210846,
+        "observed_exits_including_undo_probes": 626,
+        "average_ms_per_observed_exit_including_capture_and_next_overhead": 336.81,
+        "note": "Observed emulator execution time with screenshots and SDK checks, not human completion time; no unplayed level is counted as tested.",
+        "unplayed_certificate_exits": 10350,
+        "projection_seconds_if_observed_rate_persisted": 3486.0
+      }
+    },
+    {
+      "report": "docs/validation/v1.15/relay-native-e-continue1000/host-report.json",
+      "report_sha256": "5e40a5de02783677e7e801b9f87ce411fab76da5bd915ea8c48a68666de48f28",
+      "apk_sha256": "1da776d1b65c9208a85d0d88d8940845d9765323e70b1747a5e68b059d3e5f47",
+      "runner_source_sha256": "1d30cf84dbe1c778906e2db23d039a04b7defc467fced49443acebb2a7015e3e",
+      "completed": 900,
+      "wall_seconds": 2786.929,
+      "timing": {
+        "observed_levels": 900,
+        "observed_level_loop_ms": 2555953,
+        "observed_exits_including_undo_probes": 10350,
+        "average_ms_per_observed_exit_including_capture_and_next_overhead": 246.95,
+        "note": "Observed emulator execution time with screenshots and SDK checks, not human completion time; no unplayed level is counted as tested."
+      }
+    }
+  ],
+  "scope": "Exactly U1\u2013U1000 completed by Android SDK touchscreen actions and real Next controls on the exact signed candidate; read-only target preferences; no progression, history or reward injection. Distinct host model solvability evidence is separate. The two observer timing scopes cover different boards, and continuation shares the development host with another owned QA emulator. These are QA durations, not a controlled app-performance or physical-phone benchmark. Human enjoyment/difficulty remain unmeasured."
+}

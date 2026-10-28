@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "checkCount": 7,
+  "phase": "old",
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact installed Lab version and code"
+    },
+    {
+      "passed": true,
+      "message": "Fresh upgrade checkpoint; no previous observation overwritten"
+    },
+    {
+      "passed": true,
+      "message": "Retained old profile still has the genuinely moved6x6 house and exact180 starter coins"
+    },
+    {
+      "passed": true,
+      "message": "Preserved failed run contains exactly its already observed first N15 exit"
+    },
+    {
+      "passed": true,
+      "message": "Preserved unlimited N15 uses policy4 and correctly retains a zero budget counter"
+    },
+    {
+      "passed": true,
+      "message": "Continuation observes the exact retained session and room without replay, reset or preference edits"
+    },
+    {
+      "passed": true,
+      "message": "Retained native N15 exposes the same four remaining pieces"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Resume · Friend challenge  →",
+      "bounds": "[66,1672][1013,1822]",
+      "input": "actual touchscreen events at SDK-observed bounds"
+    },
+    {
+      "continuationOfPriorNativeReportSha256": "9c1c44c0c1983ffa9df6e79caa146138b4e59a4118b12631f97230ea6d5e62bb",
+      "scope": "The first exit was already touched and captured in the preserved earlier run; no new exit is claimed in this continuation."
+    }
+  ],
+  "captures": [
+    "old-old-n15-retained-first-exit"
+  ],
+  "processId": 8528,
+  "scope": "Native Lab-only upgrade: observed first real N15 piece exit, preserved historical challenge\/session\/coins\/ownership, untouched six-by-six placement record and actual resumed board geometry. Preferences are read-only; no app\/engine calls or synthetic progress. Optional genuine130-coin cactus purchase and explicit placement when requested; optional finish only when explicitly requested."
+}

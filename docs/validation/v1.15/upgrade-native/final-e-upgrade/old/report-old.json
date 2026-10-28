@@ -1,0 +1,75 @@
+{
+  "passed": false,
+  "checkCount": 7,
+  "phase": "old",
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact installed Lab version and code"
+    },
+    {
+      "passed": true,
+      "message": "Fresh upgrade checkpoint; no previous observation overwritten"
+    },
+    {
+      "passed": true,
+      "message": "Actual observed floor tile moves and saves companion in original six-by-six room"
+    },
+    {
+      "passed": true,
+      "message": "Genuine historical N15 challenge starts empty through public deep link"
+    },
+    {
+      "passed": true,
+      "message": "Read-only host certificate begins with a genuine piece exit"
+    },
+    {
+      "passed": true,
+      "message": "Actual native action durably saves exact history 1"
+    },
+    {
+      "passed": false,
+      "message": "One actual old-rule N15 exit consumes exactly one action under policy4"
+    }
+  ],
+  "actions": [
+    {
+      "label": "I know how to play",
+      "bounds": "[66,2074][1013,2207]",
+      "input": "actual touchscreen events at SDK-observed bounds"
+    },
+    {
+      "label": "Settings",
+      "bounds": "[902,172][1035,304]",
+      "input": "actual touchscreen events at SDK-observed bounds"
+    },
+    {
+      "label": "English",
+      "bounds": "[387,1362][692,1462]",
+      "input": "actual touchscreen events at SDK-observed bounds"
+    },
+    {
+      "label": "Home",
+      "bounds": "[33,2041][227,2235]",
+      "input": "actual touchscreen events at SDK-observed bounds"
+    },
+    {
+      "label": "Come here (1,4)",
+      "bounds": "[265,1049][348,1116]",
+      "input": "actual touchscreen events at SDK-observed bounds"
+    },
+    {
+      "label": "Piece, row 4, column 1, arrow left, Gate open",
+      "bounds": "[152,1362][307,1517]",
+      "input": "actual touchscreen events at SDK-observed bounds"
+    }
+  ],
+  "captures": [
+    "old-old-house-before",
+    "old-old-house-moved",
+    "old-old-n15-initial",
+    "old-failure"
+  ],
+  "processId": 8212,
+  "scope": "Native Lab-only upgrade: observed first real N15 piece exit, preserved historical challenge\/session\/coins\/ownership, untouched six-by-six placement record and actual resumed board geometry. Preferences are read-only; no app\/engine calls or synthetic progress. Optional genuine130-coin cactus purchase and explicit placement when requested; optional finish only when explicitly requested."
+}

@@ -1,0 +1,13 @@
+PASS exact production/Lab package names, RC1 version names, code17, minSdk26 and targetSdk36 in all four artifacts.
+PASS production + Lab APK signatures against the pinned public RSA certificate.
+PASS both AAB signatures, every non-META-INF payload checked by JarFile.
+PASS both APK ZIP alignments with -P 16.
+PASS 8 64-bit native ELF payloads / 20 LOAD segments.
+PASS official pinned bundletool 1.18.1 validation for both AABs.
+PASS exact source freeze matched before/after; game/build source and four artifact hashes remained stable.
+No emulator accessed; no claim of Play acceptance, real checkout or OS 16KB-page execution.
+43e2628158252f4e009a528443dbfba94e197794ea44bdc48fe322623ae4a595  app/build/outputs/apk/production/release/app-production-release.apk  (7970422 bytes)
+bffcfc9aba910ec783acce966b70ac94308a2b8302c1a45a18749b3c39eb0ac0  app/build/outputs/bundle/productionRelease/app-production-release.aab  (11382385 bytes)
+242e967b7925f731674955f6261c725f542926f590d28d9e4442fcdce08c0e38  app/build/outputs/apk/lab/release/app-lab-release.apk  (7953725 bytes)
+1be18855a9ac62d9e07970d0d270618a64afb8d57fd79598558cc2111ce295f0  app/build/outputs/bundle/labRelease/app-lab-release.aab  (11374573 bytes)
+Reports: /Users/n/androidhit/docs/validation/v1.15/binaries-d

@@ -1,0 +1,731 @@
+{
+  "passed": true,
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "apk_sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "test_apk_sha256": "500d858d3bf1b21792c8e85309f2227c6b6636d002c6a7b598472843e81ffb12",
+  "fixture_sha256": "b8884a259ecaea1da6d65420bf2bc955ce775c3d4f8f5d95396f6ae515863182",
+  "phases": [
+    {
+      "passed": true,
+      "phase": "prepare",
+      "processId": 29012,
+      "checkCount": 79,
+      "touchCount": 5,
+      "checks": [
+        {
+          "passed": true,
+          "message": "Exact production target package"
+        },
+        {
+          "passed": true,
+          "message": "Unique safe evidence label"
+        },
+        {
+          "passed": true,
+          "message": "Exact frozen candidate version and code"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge ACTION_VIEW resolves to the installed application"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract mode=4"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract content_version=4"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract budget_policy=5"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract challenge_code=LD1-U-V-8C422CA9"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract budget_used=0"
+        },
+        {
+          "passed": true,
+          "message": "Public intent opens U31"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: native target 0"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: legal-exit semantics 0"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: native target 1"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: legal-exit semantics 1"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: native target 2"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: legal-exit semantics 2"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: native target 4"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: legal-exit semantics 4"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "Initial public U31: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "One physical touch commits the expected history 4"
+        },
+        {
+          "passed": true,
+          "message": "Public mode4 keeps its unlimited used ledger at zero"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: native target 0"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: legal-exit semantics 0"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: native target 1"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: legal-exit semantics 1"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: native target 2"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: legal-exit semantics 2"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "legal-wrong-order after 4: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: native target 0"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: legal-exit semantics 0"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: native target 1"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: legal-exit semantics 1"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: native target 2"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: legal-exit semantics 2"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "Legal wrong order leaves a dead end with two legal exits: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "Native guidance warns about the real dead end"
+        },
+        {
+          "passed": true,
+          "message": "Illustrated dead-end recovery panel is visible"
+        },
+        {
+          "passed": true,
+          "message": "Recovery panel exposes only a free action: Undo"
+        },
+        {
+          "passed": true,
+          "message": "Recovery panel exposes only a free action: Restart · Free"
+        },
+        {
+          "passed": true,
+          "message": "Recovery panel exposes only a free action: ×"
+        },
+        {
+          "passed": true,
+          "message": "Dead-end panel offers Undo, free restart and close, with no paid continuation"
+        },
+        {
+          "passed": true,
+          "message": "Wrong order and panel spend no currency or stock and change no progression"
+        },
+        {
+          "passed": true,
+          "message": "Dead-end panel has not applied a continuation"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: native target 0"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: legal-exit semantics 0"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: native target 1"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: legal-exit semantics 1"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: native target 2"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: legal-exit semantics 2"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: native target 4"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: legal-exit semantics 4"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "Undo restores the exact soluble board: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "Exactly one real Undo was persisted"
+        },
+        {
+          "passed": true,
+          "message": "Dead-end warning clears after restoring the soluble state"
+        },
+        {
+          "passed": true,
+          "message": "Free Undo preserves currency, stock and all earned progress"
+        }
+      ],
+      "captures": [
+        "public-u31-initial",
+        "public-u31-deadend-warning",
+        "public-u31-deadend-panel",
+        "public-u31-undo-restored"
+      ],
+      "scope": "Actual public U challenge intent, legal wrong order, native dead-end warning/panel, free Undo, cold resume and actual challenge victory; target preferences read only; no injected balance/history/progress, provider action or private engine call"
+    },
+    {
+      "passed": true,
+      "phase": "cold",
+      "processId": 29164,
+      "checkCount": 88,
+      "touchCount": 11,
+      "checks": [
+        {
+          "passed": true,
+          "message": "Exact production target package"
+        },
+        {
+          "passed": true,
+          "message": "Unique safe evidence label"
+        },
+        {
+          "passed": true,
+          "message": "Exact frozen candidate version and code"
+        },
+        {
+          "passed": true,
+          "message": "Cold verification uses a distinct process"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract mode=4"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract content_version=4"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract budget_policy=5"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract challenge_code=LD1-U-V-8C422CA9"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge stored contract budget_used=0"
+        },
+        {
+          "passed": true,
+          "message": "Public intent opens U31"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: native target 0"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: legal-exit semantics 0"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: native target 1"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: legal-exit semantics 1"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: native target 2"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: legal-exit semantics 2"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: native target 4"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: legal-exit semantics 4"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume retains the exact restored challenge: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "Cold resume preserves the real Undo count"
+        },
+        {
+          "passed": true,
+          "message": "Cold resumed board is free of the dead-end warning"
+        },
+        {
+          "passed": true,
+          "message": "One physical touch commits the expected history 0"
+        },
+        {
+          "passed": true,
+          "message": "Public mode4 keeps its unlimited used ledger at zero"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: native target 1"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: legal-exit semantics 1"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: native target 2"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: legal-exit semantics 2"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: native target 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: legal-exit semantics 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 0: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "One physical touch commits the expected history 0,1"
+        },
+        {
+          "passed": true,
+          "message": "Public mode4 keeps its unlimited used ledger at zero"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: native target 2"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: legal-exit semantics 2"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: native target 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: legal-exit semantics 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 1: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "One physical touch commits the expected history 0,1,2"
+        },
+        {
+          "passed": true,
+          "message": "Public mode4 keeps its unlimited used ledger at zero"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: native target 3"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: legal-exit semantics 3"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: native target 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: legal-exit semantics 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 2: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "One physical touch commits the expected history 0,1,2,3"
+        },
+        {
+          "passed": true,
+          "message": "Public mode4 keeps its unlimited used ledger at zero"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 3: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 3: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 3: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 3: native target 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 3: legal-exit semantics 4"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 3: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 3: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "One physical touch commits the expected history 0,1,2,3,4"
+        },
+        {
+          "passed": true,
+          "message": "Public mode4 keeps its unlimited used ledger at zero"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 4: exact persisted history"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 4: actual gates"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 4: native remaining piece count"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 4: native target 5"
+        },
+        {
+          "passed": true,
+          "message": "restored-solution after 4: legal-exit semantics 5"
+        },
+        {
+          "passed": true,
+          "message": "One physical touch commits the expected history 0,1,2,3,4,5"
+        },
+        {
+          "passed": true,
+          "message": "Public mode4 keeps its unlimited used ledger at zero"
+        },
+        {
+          "passed": true,
+          "message": "Actual restored challenge reaches native victory"
+        },
+        {
+          "passed": true,
+          "message": "Actual victory has the exact complete recovery history"
+        },
+        {
+          "passed": true,
+          "message": "Public challenge victory awards or debits no coins, stock or earned progression"
+        },
+        {
+          "passed": true,
+          "message": "Primary QA profile is restored to French Adventure"
+        }
+      ],
+      "captures": [
+        "public-u31-cold-resumed",
+        "public-u31-restored-victory",
+        "after-probe-adventure-fr"
+      ],
+      "scope": "Actual public U challenge intent, legal wrong order, native dead-end warning/panel, free Undo, cold resume and actual challenge victory; target preferences read only; no injected balance/history/progress, provider action or private engine call"
+    }
+  ],
+  "screenshots": {
+    "prepare/public-u31-initial.png": "28f5c0c9880701392655024ae95c1f4e43a1876a0629d6a1d922074170ec0527",
+    "prepare/public-u31-deadend-warning.png": "db3448b9511defb37aee58baa538ca2bf4a0451d734afeb8b81dcd9777cb8551",
+    "prepare/public-u31-deadend-panel.png": "61e30032ca86665202d7be17a1b49f021de1a36a34fa42450820e4d29e6c647f",
+    "prepare/public-u31-undo-restored.png": "8058506bf1e8a25bd7ac91e96d82bf3f0e773f41cfdae5547dd5439533b03435",
+    "cold/public-u31-cold-resumed.png": "e81e954a9613b410e8107552a2de3d81654d4bf65bcbbc43420c7968e98c0a18",
+    "cold/public-u31-restored-victory.png": "bcc20d68f37c2dbd6643912a2373a54793e5317fa75c3313528cce72619b62fa",
+    "cold/after-probe-adventure-fr.png": "fc9aebebfd365c6b2c9917e2be0cb367da70b7b1e0ab7f45785da099376e836b"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "scope": "Real ACTION_VIEW public U31; legal wrong order; native dead-end panel and free Undo; cold resume and complete solution in unrewarded mode4; no injected preferences/history/currency/stock or private engine call",
+  "test_package_absent": true,
+  "candidate_sha256_after": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "exact_candidate_retained": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_unchanged": true
+}

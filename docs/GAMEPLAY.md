@@ -1,6 +1,6 @@
 # Luma Drift gameplay and economy
 
-> Historical rules for the retained 1.8–1.9 releases. The current 1.14 candidate uses one Return per attempt, free blocked tries and a real action limit; see [1.14 gameplay](GAMEPLAY_1_14.md) and [1.14 qualification](validation/v1.14/README.md). Statements below about default routes, powers or policy3 describe those historical releases.
+> Historical rules for the retained 1.8–1.9 releases. The current 1.15 U Journey uses piece-controlled gates, repeated refunded Undo and free blocked tries; see [1.15 gameplay](GAMEPLAY_1_15.md) and [1.15 qualification](validation/v1.15/README.md). Retained older attempts keep their original rules. Statements below about default routes, powers or policy3 describe those historical releases.
 
 ## Current 1.9 additions
 

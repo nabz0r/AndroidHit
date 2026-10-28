@@ -1,3 +1,15 @@
+# Luma Drift 1.15 — delivered locally
+
+Owner scope: implement separated premium screens, piece-controlled gates, a larger home with distinctive objects; test and deliver signed APK.
+
+1. Build U-family relay puzzles with independent solvability and historical save compatibility.
+2. Deliver Aventure, immersive play, Maison, Collection and Atelier with concise illustrated panels.
+3. Expand home to10x10 and three rooms, with distinctive furniture and preserved durable ownership.
+4. Validate host regressions, final signed bytes, fresh and upgrade native flows, languages and compact views.
+5. Deliver exact signed APK, manifest, original screenshots and honest validation limits.
+
+Completed as **1.15.0-rc1 / code17**, implementation `84830c16`. Exact signed bytes pass all1,000 U levels on Android (49,575 checks/12,016 actual touches), normal/compact six-language screens, actual Lab upgrade, powers, earned decoration, cold persistence and a separate wrong-order/Undo recovery probe. Both task-owned emulators are stopped with profiles retained. [Production APK](releases/luma-drift-1.15.0-rc1.apk) · [Release](docs/RELEASE_1_15.md) · [Executed evidence and limits](docs/validation/v1.15/README.md). This is local delivery; no new remote publication or website deployment.
+
 # Luma Drift 1.14 — puzzle reliability and learning first
 
 Owner priority: recurrent blocked/impossible-feeling levels, including Journey 15 on the latest release. Audit every one of the 1,000 Journey boards and rebuild their learning curve before further home polish.

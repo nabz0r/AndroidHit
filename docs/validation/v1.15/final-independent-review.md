@@ -1,0 +1,15 @@
+# Revue indépendante finale — candidat E
+
+**PASS dans le périmètre relu : aucun nouveau défaut actionnable établi.** Revue de source et d’artefacts uniquement ; aucune interaction avec emulator-5586 et aucun test déjà validé relancé.
+
+Le gel E correspond toujours aux **121 / 121 entrées**, sans fichier manquant ou modifié. Tous les fichiers actuels de `app/src/main` figurent dans le gel. Les cinq autres entrées couvrent la configuration de compilation et l’asset d’identité de production. SHA-256 de `LumaView.java` : `9f0b009ed7aebf28f2678e6bb9e494080d10db04f22eef1f166a6d2559f03ca0`.
+
+| Point relu | Constat et preuves |
+| --- | --- |
+| Fond des panneaux | Les panneaux effacent les cibles précédentes via `scrim` ou `hits.clear`. La prise de geste du plateau exclut pause, aide, victoire, confirmation de pouvoir, impasse, tiroir, fin de budget et aperçu d’action. Les opérations de jeu refusent aussi les erreurs de sauvegarde. Pointeurs : `LumaView.java:1698,1877,1882,2057,2094`. |
+| Navigation et session | Les destinations changent l’écran sans recréer le plateau ; les actions validées sauvegardent la session avant la navigation. Les détails ouverts depuis le jeu gardent un retour vers `play`. Le parcours natif d’upgrade a conservé le même N15 après Maison, catalogue, achat, placement et Aventure. Pointeurs : `LumaView.java:247,305,306,1426,1854` ; `upgrade-native/final-e-upgrade-resumed/host-report.json`. |
+| Acquisition et placement | Le bouton d’achat accorde la possession sans placer ; l’aperçu utilise un brouillon ; Annuler efface ce brouillon ; seul Placer écrit le plan. Le contrôle natif a observé 180 → 50 coins, Annuler sans édition, puis cactus `(2,0)` tourné et placé, avec les cinq anciens meubles inchangés. Pointeurs : `LumaView.java:933,974,1067,1129` ; `upgrade-native/final-e-upgrade-resumed/new/cactus-purchase-proof.json`. |
+| Cibles Maison et commandes | La conversion caméra et la découpe des cibles suivent la scène. Le correctif E reprend les marges élargies des meubles dans le routage tactile. La revue des captures E ne révèle pas de commande coupée sur les écrans inspectés ; les qualifications normal/compact déjà obtenues couvrent les dimensions testées. Pointeurs : `LumaView.java:988,1067,2094` ; rapports `ui-sdk-final-e-interface` et `ui-sdk-final-e-compact`. |
+| U et sessions historiques | Nouvelle entrée Journey : contenu 7 / catalogue U / politique 5. Reprise N campagne : contenu 6 / catalogue N ; les défis utilisent leur code explicite en mode 4. Les anciennes portes manuelles et l’Undo limité restent attachés à leur ancien plateau ; l’aide prend la règle du plateau courant. La migration native N15 a conservé code, géométrie, historique et politique 4. Pointeurs : `LumaView.java:269,280,322,1949,2087`. |
+
+Limites : cette revue ne démontre pas tous les entrelacements de callbacks, tous les formats d’écran, tous les anciens schémas ou tous les parcours de paiement tiers. L’exécution native des nouveaux niveaux U est qualifiée séparément. Le premier échec du harnais d’upgrade reste conservé ; sa continuation corrige uniquement l’attente erronée du compteur d’un défi illimité.

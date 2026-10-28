@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "checkCount": 19,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact Luma target package"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed candidate version and code"
+    },
+    {
+      "passed": true,
+      "message": "Cold verification runs in a distinct process"
+    },
+    {
+      "passed": true,
+      "message": "Language, room, home objects and equipped choices survive cold launch byte-for-value"
+    },
+    {
+      "passed": true,
+      "message": "Earned coins and progression survive cold launch"
+    },
+    {
+      "passed": true,
+      "message": "Cold language remains French"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Maison"
+    },
+    {
+      "passed": true,
+      "message": "Native destination selected: Maison"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Aventure"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Maison"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Collection"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Atelier"
+    },
+    {
+      "passed": true,
+      "message": "Cold room remains the Garden"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Aventure"
+    },
+    {
+      "passed": true,
+      "message": "Native destination selected: Aventure"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Aventure"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Maison"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Collection"
+    },
+    {
+      "passed": true,
+      "message": "Four-destination navigation exposes Atelier"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Maison",
+      "bounds": "[270,2046][540,2274]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Aventure",
+      "bounds": "[0,2046][270,2274]",
+      "input": "UiAutomation touchscreen"
+    }
+  ],
+  "captures": [
+    "cold-house-garden-fr",
+    "cold-adventure-fr"
+  ],
+  "processId": 6640,
+  "phase": "cold",
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Native accessibility\/touch navigation, three rooms, local zoom, decoration mode, six-language UI and cold persistence; no private reflection, profile seeding, purchases, provider action or puzzle solvability claim"
+}

@@ -1,7 +1,29 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>Read the board. Make your move. Come home.</strong><br>A puzzle Journey with visible rules and a little home for your companion.</p>
-<p align="center"><strong>1.14.0-rc2 · source, signed artifacts and website delivered</strong><br><a href="docs/RELEASE_1_14.md">Release & evidence</a> · <a href="docs/GAMEPLAY_1_14.md">Gameplay rules</a> · <a href="docs/UX_1_14.md">Puzzle clarity</a> · <a href="docs/validation/v1.14/README.md">Qualification</a></p>
-<p align="center">1,000 versioned Journey boards + 240 Remix · 30 staged opening boards<br>One Return per attempt · free blocked tries · real action budgets · 6 languages</p>
+<p align="center"><strong>Read the board. Make your move. Come home.</strong><br>A puzzle Journey with visible rules and a three-room home for your companion.</p>
+<p align="center"><strong>1.15.0-rc1 · separated screens, relay puzzles and a larger home</strong><br><a href="docs/RELEASE_1_15.md">Release & evidence</a> · <a href="docs/GAMEPLAY_1_15.md">Gameplay and compatibility</a> · <a href="docs/validation/v1.15/README.md">Qualification</a></p>
+<p align="center">1,000 versioned relay Journey boards · 30 staged opening boards · 6 languages<br>Four dedicated destinations · Three 10 × 10 rooms · 42 furniture designs</p>
+
+## Make your move, then make yourself at home — 1.15
+
+Adventure, Home, Collection and Atelier now have dedicated screens. Adventure starts the next puzzle directly. Play keeps the board and its essential controls together; the wallet and global navigation return when you leave the puzzle. Illustrated item pages, a visual inventory grid, a larger wardrobe and concise reward panels give artwork and choices more space.
+
+The new **U Journey** changes gates through piece exits and matching keys. There is no manual gate-opening action in U. Choose an order that keeps later exits possible; a wrong order can deadlock the position. Blocked tries cost nothing, every correction can be undone and refunded, and restart is free. Three stars acknowledge completion, rather than an unmeasured efficiency grade. Historical challenge codes and an active saved run retain their original boards and rules.
+
+The home has a living room, bedroom and garden, each with a **10 × 10** floor, zoom and pan. **Forty-two furniture designs**, including an aquarium, grand piano, greenhouse, telescope, arcade cabinet and pond, have distinct original drawings and two orientations. Previewing, buying, placing, rotating and cancelling remain separate actions. Old furnishings, positions and earned balances are preserved.
+
+[Download the signed 1.15 APK](releases/luma-drift-1.15.0-rc1.apk). The exact final production bytes complete **U1–U1000 on Android: 49,575 native checks, 12,016 actual touch gestures and 55,000 genuinely earned victory coins**, with no injected progression. Normal/320 dp screens, six languages, a real Lab 1.14 upgrade, charged powers, earned furniture purchases and cold restoration have separate passing records. The four signed binaries pass the independent [signature, manifest, bundle and static alignment audit](docs/validation/v1.15/binaries-e/binary-final-candidate.json). The [independent relay audit](docs/validation/v1.15/relay-engine/relay-host.json) passes **13,312,469 checks** across all 1,000 U boards; home transactions and projected geometry pass **2,074** and **6,494** checks. See the [qualification register](docs/validation/v1.15/README.md) for exact scopes and limits.
+
+An active older puzzle keeps its original rules. To start the new U board at your current Journey level, tap its numbered node in Adventure; restarting the retained old attempt preserves that old board. Install the APK over the existing signed production app to keep local data.
+
+<p align="center"><img src="docs/screenshots/v1.15/gallery/adventure-fr.png" width="230" alt="Actual 1.15 Adventure destination in French"><img src="docs/screenshots/v1.15/gallery/puzzle-u13-en.png" width="230" alt="Actual 1.15 U13 puzzle with piece-controlled gates"><img src="docs/screenshots/v1.15/gallery/atelier-en.png" width="230" alt="Actual 1.15 Atelier with distinct illustrated furniture worlds"></p>
+
+Unedited final-E production frames from the passed native interface and U1–100 scopes. [Exact source/hash provenance](docs/screenshots/v1.15/gallery/provenance.json).
+
+Portrait phones are the supported presentation. Gameplay and home saves remain local. Source/model checks, emulator execution, physical-phone experience and live commercial services are distinct scopes. No external game's artwork, characters, audio or code is included.
+
+## Preserved 1.14 delivery
+
+<p><strong>1.14.0-rc2 · source, signed artifacts and website delivered</strong><br><a href="docs/RELEASE_1_14.md">Release & evidence</a> · <a href="docs/GAMEPLAY_1_14.md">Historical gameplay rules</a> · <a href="docs/validation/v1.14/README.md">Qualification</a></p>
 
 ## Every action has a clear meaning — 1.14
 
@@ -36,7 +58,7 @@ node --test public/tests/site-language-v114.test.mjs public/tests/deletion-core.
 
 [Development](docs/DEVELOPMENT.md) · [Roadmap](docs/ROADMAP.md) · [Documentation](docs/README.md). Source and original repository assets: **AGPL-3.0**. [Third-party notices](docs/THIRD_PARTY_NOTICES.md).
 
-The sections below preserve dated releases and their original rules. Their free-Undo wording, test counts and deployment receipts do not certify the current one-Return candidate.
+The sections below preserve dated releases and their original rules. Their test counts and deployment receipts do not certify the current 1.15 release, whose U recovery rules and evidence are recorded above.
 
 ## Preserved 1.13 — your little home
 

@@ -1,0 +1,9 @@
+# Native wrong-order recovery — 1.15
+
+This separate SDK-only observer opens the public `lumadrift://challenge/LD1-U-V-8C422CA9` ACTION_VIEW intent against the exact installed production E APK. It imports no target engine, renderer or private API. It reads preferences for evidence and sends real touchscreen input to observed accessible piece and button bounds.
+
+The host fixture identifies a legal U31 exit that closes the UP gate and removes every complete solution while leaving two other exits legal. The observer verifies the exact stored history, four native gate states, piece count and each remaining piece's legal/blocked semantics. It opens the real illustrated dead-end panel, checks that only Undo, free restart and close are offered, and verifies no currency, stock, progress or paid continuation changes. A real Undo restores the initial history and gates.
+
+A distinct cold process resumes the retained public challenge and follows the fixture's complete six-exit solution to actual victory, proving that the restored state is soluble. Public challenges use mode4/content_version4 with relay budget_policy5; their unlimited `budget_used` stays0. Victory must leave earned coins, gold, stock and Journey stars/unlocks unchanged. The observer returns to French Adventure and is removed without stopping the handed-off AVD.
+
+Build with `-I scripts/v115-deadend-ui/init.gradle :app:assembleProductionReleaseAndroidTest`. The observer copies to `app/build/qualification-artifacts/v1.15/deadend-production-test.apk`. `run.py` requires the frozen E APK/hash, explicit serial5586/name `Luma-Refonte115-QA`, matching packaged fixture and unchanged host provenance. Run only after the primary runner explicitly releases the device. It never starts or targets the second Showcase AVD. Failed scopes and original PNGs remain archived; no balance, stock, history or progression is injected.

@@ -1,0 +1,494 @@
+{
+  "passed": true,
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "target": "com.androidhit.lumadrift.sandbox",
+  "candidates": {
+    "old": "cbc74c3214f3c64c888f34b9452be162d3e3e168f1c218d1a4537410ef005ff0",
+    "new": "edf9810ec093e6dd87bf59c25a72e310e1f9a478ab15b85a87532b97333200df",
+    "test": "ee42757edf34536daa8243beb9257379e284e1f60afe8d62ff563f5a1173d964"
+  },
+  "identities": {
+    "old": {
+      "package": "com.androidhit.lumadrift.sandbox",
+      "code": 16,
+      "version": "1.14.0-sandbox-rc2"
+    },
+    "new": {
+      "package": "com.androidhit.lumadrift.sandbox",
+      "code": 17,
+      "version": "1.15.0-sandbox-rc1"
+    },
+    "test": {
+      "package": "com.androidhit.lumadrift.upgradetest",
+      "code": null,
+      "version": ""
+    }
+  },
+  "verified_certificates": {
+    "old": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+    "new": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+    "test": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+  },
+  "continued_old_native_report_sha256": "9c1c44c0c1983ffa9df6e79caa146138b4e59a4118b12631f97230ea6d5e62bb",
+  "finish_old_requested": false,
+  "purchase_cactus_requested": true,
+  "source_sha256": "544694e514b250ecb4095d7061168a985e0d7d1c0deb18dcffbe26475b3e0f4a",
+  "observer_source_sha256": "64fa065a686e5e774577dd39b3c0fd9deee748cfaf9a9436b407fe6f8b671954",
+  "production_apk_sha256_before": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "phases": [
+    {
+      "phase": "old",
+      "native": {
+        "passed": true,
+        "checkCount": 7,
+        "phase": "old",
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact installed Lab version and code"
+          },
+          {
+            "passed": true,
+            "message": "Fresh upgrade checkpoint; no previous observation overwritten"
+          },
+          {
+            "passed": true,
+            "message": "Retained old profile still has the genuinely moved6x6 house and exact180 starter coins"
+          },
+          {
+            "passed": true,
+            "message": "Preserved failed run contains exactly its already observed first N15 exit"
+          },
+          {
+            "passed": true,
+            "message": "Preserved unlimited N15 uses policy4 and correctly retains a zero budget counter"
+          },
+          {
+            "passed": true,
+            "message": "Continuation observes the exact retained session and room without replay, reset or preference edits"
+          },
+          {
+            "passed": true,
+            "message": "Retained native N15 exposes the same four remaining pieces"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Resume · Friend challenge  →",
+            "bounds": "[66,1672][1013,1822]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "continuationOfPriorNativeReportSha256": "9c1c44c0c1983ffa9df6e79caa146138b4e59a4118b12631f97230ea6d5e62bb",
+            "scope": "The first exit was already touched and captured in the preserved earlier run; no new exit is claimed in this continuation."
+          }
+        ],
+        "captures": [
+          "old-old-n15-retained-first-exit"
+        ],
+        "processId": 8528,
+        "scope": "Native Lab-only upgrade: observed first real N15 piece exit, preserved historical challenge/session/coins/ownership, untouched six-by-six placement record and actual resumed board geometry. Preferences are read-only; no app/engine calls or synthetic progress. Optional genuine130-coin cactus purchase and explicit placement when requested; optional finish only when explicitly requested."
+      }
+    },
+    {
+      "phase": "new",
+      "native": {
+        "passed": true,
+        "checkCount": 61,
+        "phase": "new",
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact installed Lab version and code"
+          },
+          {
+            "passed": true,
+            "message": "Upgrade observation runs in a new app process"
+          },
+          {
+            "passed": true,
+            "message": "Installed upgrade initially retains exact historical coins, ownership and room record"
+          },
+          {
+            "passed": true,
+            "message": "Old N15 active session, exact history, run id and budget policy survive native upgrade and Resume"
+          },
+          {
+            "passed": true,
+            "message": "Resumed N15 keeps exact observed rows, columns and arrow directions"
+          },
+          {
+            "passed": true,
+            "message": "Resume preserves coins, earned ownership and all original room placement bytes"
+          },
+          {
+            "passed": true,
+            "message": "Viewing enlarged house preserves the exact saved six-by-six room record and companion position"
+          },
+          {
+            "passed": true,
+            "message": "Viewing enlarged house grants no ownership and consumes no coins"
+          },
+          {
+            "passed": true,
+            "message": "Home and Adventure round trip retains the exact old partial challenge"
+          },
+          {
+            "passed": true,
+            "message": "Cactus purchase begins with actual180 starter coins and no paid cactus ownership"
+          },
+          {
+            "passed": true,
+            "message": "Paid-item route starts after exact native house migration proof"
+          },
+          {
+            "passed": true,
+            "message": "Real room control selects Living room before purchase and placement"
+          },
+          {
+            "passed": true,
+            "message": "Actual cactus preview does not charge, grant ownership or place anything"
+          },
+          {
+            "passed": true,
+            "message": "Real visible purchase debits exactly130 LumaCoins and grants one permanent cactus ownership"
+          },
+          {
+            "passed": true,
+            "message": "Purchase never silently places or relocates furniture"
+          },
+          {
+            "passed": true,
+            "message": "Room placement preview leaves saved placements untouched"
+          },
+          {
+            "passed": true,
+            "message": "Visible Cancel discards only the placement preview and retains exact purchase and old room"
+          },
+          {
+            "passed": true,
+            "message": "Real Rotate changes the draft without changing saved room or charging again"
+          },
+          {
+            "passed": true,
+            "message": "Actual placement saves complete version2 ten-by-ten record and keeps companion coordinates"
+          },
+          {
+            "passed": true,
+            "message": "Room companion record contains exactly two coordinates"
+          },
+          {
+            "passed": true,
+            "message": "Companion remains within the enlarged floor"
+          },
+          {
+            "passed": true,
+            "message": "Every recorded object has one id, position and orientation"
+          },
+          {
+            "passed": true,
+            "message": "No duplicate furniture ids in committed room"
+          },
+          {
+            "passed": true,
+            "message": "Committed orientation is valid"
+          },
+          {
+            "passed": true,
+            "message": "Entire committed object footprint is inside10x10 floor"
+          },
+          {
+            "passed": true,
+            "message": "Committed solid furniture does not overlap another object or companion"
+          },
+          {
+            "passed": true,
+            "message": "Committed solid furniture does not overlap another object or companion"
+          },
+          {
+            "passed": true,
+            "message": "Every recorded object has one id, position and orientation"
+          },
+          {
+            "passed": true,
+            "message": "No duplicate furniture ids in committed room"
+          },
+          {
+            "passed": true,
+            "message": "Committed orientation is valid"
+          },
+          {
+            "passed": true,
+            "message": "Entire committed object footprint is inside10x10 floor"
+          },
+          {
+            "passed": true,
+            "message": "Committed solid furniture does not overlap another object or companion"
+          },
+          {
+            "passed": true,
+            "message": "Every recorded object has one id, position and orientation"
+          },
+          {
+            "passed": true,
+            "message": "No duplicate furniture ids in committed room"
+          },
+          {
+            "passed": true,
+            "message": "Committed orientation is valid"
+          },
+          {
+            "passed": true,
+            "message": "Entire committed object footprint is inside10x10 floor"
+          },
+          {
+            "passed": true,
+            "message": "Committed solid furniture does not overlap another object or companion"
+          },
+          {
+            "passed": true,
+            "message": "Every recorded object has one id, position and orientation"
+          },
+          {
+            "passed": true,
+            "message": "No duplicate furniture ids in committed room"
+          },
+          {
+            "passed": true,
+            "message": "Committed orientation is valid"
+          },
+          {
+            "passed": true,
+            "message": "Entire committed object footprint is inside10x10 floor"
+          },
+          {
+            "passed": true,
+            "message": "Every recorded object has one id, position and orientation"
+          },
+          {
+            "passed": true,
+            "message": "No duplicate furniture ids in committed room"
+          },
+          {
+            "passed": true,
+            "message": "Committed orientation is valid"
+          },
+          {
+            "passed": true,
+            "message": "Entire committed object footprint is inside10x10 floor"
+          },
+          {
+            "passed": true,
+            "message": "Committed solid furniture does not overlap another object or companion"
+          },
+          {
+            "passed": true,
+            "message": "Every recorded object has one id, position and orientation"
+          },
+          {
+            "passed": true,
+            "message": "No duplicate furniture ids in committed room"
+          },
+          {
+            "passed": true,
+            "message": "Committed orientation is valid"
+          },
+          {
+            "passed": true,
+            "message": "Entire committed object footprint is inside10x10 floor"
+          },
+          {
+            "passed": true,
+            "message": "Committed solid furniture does not overlap another object or companion"
+          },
+          {
+            "passed": true,
+            "message": "Actual Rotate persists a quarter-turn for the acquired cactus"
+          },
+          {
+            "passed": true,
+            "message": "Exactly one acquired cactus is added to the original furnished room"
+          },
+          {
+            "passed": true,
+            "message": "Original object placement preserved exactly: bed"
+          },
+          {
+            "passed": true,
+            "message": "Original object placement preserved exactly: cushion"
+          },
+          {
+            "passed": true,
+            "message": "Original object placement preserved exactly: lamp"
+          },
+          {
+            "passed": true,
+            "message": "Original object placement preserved exactly: plant"
+          },
+          {
+            "passed": true,
+            "message": "Original object placement preserved exactly: rug"
+          },
+          {
+            "passed": true,
+            "message": "Actual placement and quarter-turn consume no second payment"
+          },
+          {
+            "passed": true,
+            "message": "Actual placed cactus exposes its own visible native object label"
+          },
+          {
+            "passed": true,
+            "message": "Paid decoration route leaves exact historical partial N15 session untouched"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Resume  →",
+            "bounds": "[66,1482][1013,1637]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[121,1501][958,1634]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Home",
+            "bounds": "[270,2046][540,2274]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[0,2046][270,2274]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Resume  →",
+            "bounds": "[66,1482][1013,1637]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[121,1501][958,1634]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Home",
+            "bounds": "[270,2046][540,2274]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Living room",
+            "bounds": "[66,396][371,529]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Decorate",
+            "bounds": "[66,1673][1013,1814]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Furniture",
+            "bounds": "[66,1673][523,1806]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Desert cactus, 130 LumaCoins",
+            "bounds": "[556,1752][1013,2010]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Get for 130 LumaCoins",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Place",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Cancel",
+            "bounds": "[66,1916][1013,2010]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Furniture",
+            "bounds": "[66,1673][523,1806]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Desert cactus, Yours",
+            "bounds": "[556,1752][1013,2010]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Place",
+            "bounds": "[66,1578][1013,1728]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Rotate",
+            "bounds": "[66,1767][354,1900]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Place",
+            "bounds": "[725,1767][1013,1900]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Done",
+            "bounds": "[556,1673][1013,1806]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[0,2046][270,2274]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Resume  →",
+            "bounds": "[66,1482][1013,1637]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          }
+        ],
+        "captures": [
+          "new-new-n15-resumed",
+          "new-new-house-migrated",
+          "new-new-n15-after-house-roundtrip",
+          "new-new-cactus-unowned-preview",
+          "new-new-cactus-owned-preview",
+          "new-new-cactus-placement-preview",
+          "new-new-cactus-placement-cancelled",
+          "new-new-cactus-quarter-turn-preview",
+          "new-new-cactus-rotated-placed",
+          "new-new-n15-after-paid-cactus"
+        ],
+        "processId": 8657,
+        "scope": "Native Lab-only upgrade: observed first real N15 piece exit, preserved historical challenge/session/coins/ownership, untouched six-by-six placement record and actual resumed board geometry. Preferences are read-only; no app/engine calls or synthetic progress. Optional genuine130-coin cactus purchase and explicit placement when requested; optional finish only when explicitly requested."
+      }
+    }
+  ],
+  "scope": "Lab-only real APK update on newly owned QA AVD. Original six-by-six state created by actual observed floor touch, then genuine N15 public challenge first exit. Typed preference reads, native accessibility and screenshots compare exact migration. No save values or progress are injected. Production installation is not modified.",
+  "screenshots": {
+    "old/old-old-n15-retained-first-exit.png": "4cd18a38802b880882e2ff698f69f380b72c85ea2554f888041d21eb7275773d",
+    "new/new-new-n15-after-house-roundtrip.png": "2adfa8cd187bf1a1118f0f015abf8d2830e2a7250013ca08dff3fc0e6fb3e09e",
+    "new/new-new-cactus-unowned-preview.png": "95e1190f59ee79e377c9471ceccb43c02f63bbf2f999cb63a4f43ee44256998d",
+    "new/new-new-cactus-rotated-placed.png": "2e45402acb1e404340393aa84254e31911da5bea444cbb97ac9357965ac692ef",
+    "new/new-new-n15-resumed.png": "1bc688e1902adda68133d74c4f3d414363f30091d01aafcf75639f7538c91c57",
+    "new/new-new-cactus-quarter-turn-preview.png": "f50f04c864b1584621f295f03da51a9f78247a07193ab69336476dc67d1566ca",
+    "new/new-new-cactus-placement-cancelled.png": "6e780d3d64ae8be9a165c601761ffa918090f72ec17c7f2507ac51672917a494",
+    "new/new-new-cactus-owned-preview.png": "1b08bcd2253e5b888d8cff6685904dba5d1f9fe9a7c09e64350726ae901b3d3c",
+    "new/new-new-cactus-placement-preview.png": "cca7e2a2261e3b45b7e0faf745ea38654eb6353946aa02a8259d24460234730e",
+    "new/new-new-n15-after-paid-cactus.png": "5e5cd4e2641151bef2b0a935e30f82f4e02973131a5dbcb871dbc41e27b58b68",
+    "new/new-new-house-migrated.png": "6371fbcd9775b5c167ea9c5ac973ab8f2edaa56b8e62c43c2d464b97eb4fe275"
+  },
+  "observer_absent_after": true,
+  "retained_target_sha256": "edf9810ec093e6dd87bf59c25a72e310e1f9a478ab15b85a87532b97333200df",
+  "owned_qa_lab_profile_retained": true,
+  "production_apk_sha256_after": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "production_installation_unchanged": true
+}

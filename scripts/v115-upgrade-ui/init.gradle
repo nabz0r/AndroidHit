@@ -1,0 +1,28 @@
+// Framework-only observer targeting the separate Lab package, on both app versions.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig {
+                testApplicationId 'com.androidhit.lumadrift.upgradetest'
+                testInstrumentationRunner 'com.androidhit.lumadrift.qa.v115upgrade.UpgradeInstrumentation'
+            }
+            sourceSets {
+                androidTest {
+                    java.srcDirs = [new File(rootDir, 'scripts/v115-upgrade-ui/java')]
+                    assets.srcDirs = [new File(rootDir, 'scripts/v115-upgrade-ui/assets')]
+                    manifest.srcFile new File(rootDir, 'scripts/v115-upgrade-ui/AndroidManifest.xml')
+                }
+            }
+        }
+        project.tasks.matching { it.name == 'packageLabReleaseAndroidTest' }.configureEach {
+            doLast {
+                copy {
+                    from project.layout.buildDirectory.file('outputs/apk/androidTest/lab/release/app-lab-release-androidTest.apk')
+                    into project.layout.buildDirectory.dir('qualification-artifacts/v1.15')
+                    rename { 'upgrade-lab-test.apk' }
+                }
+            }
+        }
+    }
+}

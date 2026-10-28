@@ -1,0 +1,30 @@
+// Separate framework-only observer of the installed release. Production source is unchanged.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig {
+                testApplicationId 'com.androidhit.lumadrift.relaytest'
+                testInstrumentationRunner 'com.androidhit.lumadrift.qa.v115relay.RelayInstrumentation'
+            }
+            sourceSets {
+                androidTest {
+                    java.srcDirs = [new File(rootDir, 'scripts/v115-relay-ui/java')]
+                    assets.srcDirs = [new File(rootDir, 'scripts/v115-relay-ui/assets')]
+                    manifest.srcFile new File(rootDir, 'scripts/v115-relay-ui/AndroidManifest.xml')
+                }
+            }
+        }
+        ['Lab','Production'].each { variant ->
+            project.tasks.matching { it.name == 'package' + variant + 'ReleaseAndroidTest' }.configureEach {
+                doLast {
+                    copy {
+                        from project.layout.buildDirectory.file('outputs/apk/androidTest/' + variant.toLowerCase() + '/release/app-' + variant.toLowerCase() + '-release-androidTest.apk')
+                        into project.layout.buildDirectory.dir('qualification-artifacts/v1.15')
+                        rename { 'relay-' + variant.toLowerCase() + '-test.apk' }
+                    }
+                }
+            }
+        }
+    }
+}

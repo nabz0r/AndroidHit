@@ -1,0 +1,331 @@
+{
+  "passed": false,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "expected_version": "1.15.0-rc1",
+  "expected_code": 17,
+  "apk_sha256": "43e2628158252f4e009a528443dbfba94e197794ea44bdc48fe322623ae4a595",
+  "test_apk_sha256": "dc91e3fba547206328b29a4877b9a9fd0563fc3963349e3574cdfb598db9d652",
+  "wrapper_source_sha256": "966a14d0b0562e458122ebc55e85893604c585471440e576ff71bb3e82746a8f",
+  "runner_source_sha256": "46787533893780b82db5916a7f43d7bd6ecd3be96de2090ad5d6dcceef7478dd",
+  "candidate_present_before_test": true,
+  "scope": "New task-owned QA AVD; exact candidate bytes; actual native accessibility and touchscreen actions; no prior user device, no profile seeding, no provider actions. Owned QA profile intentionally retained.",
+  "phases": [
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": false,
+        "checkCount": 43,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Home"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Home"
+          },
+          {
+            "passed": true,
+            "message": "Native destination selected: Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Home"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Collection"
+          },
+          {
+            "passed": true,
+            "message": "Four-destination navigation exposes Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Living room"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Bedroom"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Garden"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Zoom in"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Zoom out"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Decorate"
+          },
+          {
+            "passed": true,
+            "message": "Decoration mode exposes a bounded furniture/done action"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Little leaf plant"
+          },
+          {
+            "passed": false,
+            "message": "Placement has an explicit visible Cancel action"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[507,111][616,219]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[315,1083][564,1164]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[0,1188][219,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Home",
+            "bounds": "[219,1188][440,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[440,1188][660,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[660,1188][880,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Home",
+            "bounds": "[219,1188][440,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Living room",
+            "bounds": "[54,296][302,404]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Bedroom",
+            "bounds": "[315,296][564,404]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Garden",
+            "bounds": "[577,296][825,404]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Zoom in",
+            "bounds": "[717,751][825,859]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Zoom out",
+            "bounds": "[595,751][704,859]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Decorate",
+            "bounds": "[54,884][825,999]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Little leaf plant",
+            "bounds": "[424,565][505,655]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "adventure-start-en",
+          "house-overview-en",
+          "collection-en",
+          "atelier-en",
+          "house-living-room-en",
+          "house-bedroom-en",
+          "house-garden-en",
+          "house-garden-zoom-in-en",
+          "house-garden-zoom-out-en",
+          "house-garden-decorate-en",
+          "failure"
+        ],
+        "processId": 6989,
+        "phase": "prepare",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Native accessibility/touch navigation, three rooms, local zoom, decoration mode, six-language UI and cold persistence; no private reflection, profile seeding, purchases, provider action or puzzle solvability claim"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/house-bedroom-en.png": "847770d6b39c3ff725d9cba12ba896fc1c86d68b0d0a17a64520be6f56c616e6",
+    "prepare/house-garden-decorate-en.png": "4b480ff18b47029e68b4946e1d0a81343d0adc7bbdf36edc303ec69a27c700a0",
+    "prepare/collection-en.png": "5d23b0831c45280938daeed88ba1e3edbc383ae902e6bd26197d3dc72b0b30f2",
+    "prepare/house-overview-en.png": "ac687d1eff0afac4d6dc9208c1e780d3e6401beb7b064e5491bca03a15f10ff5",
+    "prepare/house-garden-zoom-out-en.png": "54156f63a2cdf5661eef31508d032f17c5ef6ceb36b961a73a35ed614929a4d1",
+    "prepare/house-garden-zoom-in-en.png": "5b6ac9d8c556e0d0beb764479217c1c025807b7e9dc2bd48bfc914fccbc78e2f",
+    "prepare/house-garden-en.png": "92b209a11c0860b73d1263582c07392584e2e13da27b4a5ad90867cebc424f96",
+    "prepare/house-living-room-en.png": "457631c2096115a7c5dcbc300dc6488924bb3b2ca8555448ee84be0c3d1d6410",
+    "prepare/failure.png": "1fa30f2767d8e9b9bed12e32ce539d5929bf5e9d468460216d738e5c1d9fb6b9",
+    "prepare/adventure-start-en.png": "78a4201cb4bf27a90932b361bf31fad23fd662a5fce8ed2c584933876a354cf7",
+    "prepare/atelier-en.png": "6ae872df40b765a7eee54d1721ba064b11b41e531198ff0e4029abe706db8463"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.15/ui-bugs/ui-sdk-final-d-compact/interface-observer.apk",
+  "compact": true,
+  "font_scale": "1.0",
+  "compact_scope": "Actual native320dp-wide display,880x1440 pixels at440dpi; original display restored after both native processes",
+  "display_during": {
+    "size": "Physical size: 1080x2340\nOverride size: 880x1440",
+    "density": "Physical density: 440"
+  },
+  "error": "Native interface prepare failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v115-ui-test/run.py\", line 117, in main\n    assert native['passed'],'Native interface '+phase+' failed'\nAssertionError: Native interface prepare failed\n",
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "43e2628158252f4e009a528443dbfba94e197794ea44bdc48fe322623ae4a595",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true
+}

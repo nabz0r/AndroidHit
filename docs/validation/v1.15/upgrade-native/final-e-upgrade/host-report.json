@@ -1,0 +1,132 @@
+{
+  "passed": false,
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "target": "com.androidhit.lumadrift.sandbox",
+  "candidates": {
+    "old": "cbc74c3214f3c64c888f34b9452be162d3e3e168f1c218d1a4537410ef005ff0",
+    "new": "edf9810ec093e6dd87bf59c25a72e310e1f9a478ab15b85a87532b97333200df",
+    "test": "800085dd6821c479ab273ef02aa73426fe42d1e3f65f5632a766186c86c05cf0"
+  },
+  "identities": {
+    "old": {
+      "package": "com.androidhit.lumadrift.sandbox",
+      "code": 16,
+      "version": "1.14.0-sandbox-rc2"
+    },
+    "new": {
+      "package": "com.androidhit.lumadrift.sandbox",
+      "code": 17,
+      "version": "1.15.0-sandbox-rc1"
+    },
+    "test": {
+      "package": "com.androidhit.lumadrift.upgradetest",
+      "code": null,
+      "version": ""
+    }
+  },
+  "verified_certificates": {
+    "old": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+    "new": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+    "test": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+  },
+  "finish_old_requested": false,
+  "purchase_cactus_requested": true,
+  "source_sha256": "feca479a8dacb8d57ef3101335048533cc4a6cb5c2570f1aa06e5cbdcf800db2",
+  "observer_source_sha256": "e4a46484abe5e38ea780e9b9505af1a78a73fd2a9ca5e5dcdf9f1f1f0aed41a6",
+  "production_apk_sha256_before": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "phases": [
+    {
+      "phase": "old",
+      "native": {
+        "passed": false,
+        "checkCount": 7,
+        "phase": "old",
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact installed Lab version and code"
+          },
+          {
+            "passed": true,
+            "message": "Fresh upgrade checkpoint; no previous observation overwritten"
+          },
+          {
+            "passed": true,
+            "message": "Actual observed floor tile moves and saves companion in original six-by-six room"
+          },
+          {
+            "passed": true,
+            "message": "Genuine historical N15 challenge starts empty through public deep link"
+          },
+          {
+            "passed": true,
+            "message": "Read-only host certificate begins with a genuine piece exit"
+          },
+          {
+            "passed": true,
+            "message": "Actual native action durably saves exact history 1"
+          },
+          {
+            "passed": false,
+            "message": "One actual old-rule N15 exit consumes exactly one action under policy4"
+          }
+        ],
+        "actions": [
+          {
+            "label": "I know how to play",
+            "bounds": "[66,2074][1013,2207]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[902,172][1035,304]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1462]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Home",
+            "bounds": "[33,2041][227,2235]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Come here (1,4)",
+            "bounds": "[265,1049][348,1116]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          },
+          {
+            "label": "Piece, row 4, column 1, arrow left, Gate open",
+            "bounds": "[152,1362][307,1517]",
+            "input": "actual touchscreen events at SDK-observed bounds"
+          }
+        ],
+        "captures": [
+          "old-old-house-before",
+          "old-old-house-moved",
+          "old-old-n15-initial",
+          "old-failure"
+        ],
+        "processId": 8212,
+        "scope": "Native Lab-only upgrade: observed first real N15 piece exit, preserved historical challenge/session/coins/ownership, untouched six-by-six placement record and actual resumed board geometry. Preferences are read-only; no app/engine calls or synthetic progress. Optional genuine130-coin cactus purchase and explicit placement when requested; optional finish only when explicitly requested."
+      }
+    }
+  ],
+  "scope": "Lab-only real APK update on newly owned QA AVD. Original six-by-six state created by actual observed floor touch, then genuine N15 public challenge first exit. Typed preference reads, native accessibility and screenshots compare exact migration. No save values or progress are injected. Production installation is not modified.",
+  "screenshots": {
+    "old/old-old-house-before.png": "1be6234f76629bbae03554f6e9cd425f83cf3611f93b7cb288e714d4e762f070",
+    "old/old-old-n15-initial.png": "068fdd3757855f07dec3aca2db53104a56cdf7ce452cb133d4f09240caf57dba",
+    "old/old-old-house-moved.png": "958647581319491aed79e42a4d2a4ccde5ea126aa67eed255072d6bb26e47a23",
+    "old/old-failure.png": "d0816fee27b65088a0969added7b521be5578cd4d8951b50b686113d1c624b80"
+  },
+  "error": "Native old upgrade observation failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v115-upgrade-ui/run.py\", line 95, in main\n    report['phases'].append({'phase':phase,'native':native});assert native['passed'],'Native '+phase+' upgrade observation failed'\nAssertionError: Native old upgrade observation failed\n",
+  "observer_absent_after": true,
+  "retained_target_sha256": "cbc74c3214f3c64c888f34b9452be162d3e3e168f1c218d1a4537410ef005ff0",
+  "owned_qa_lab_profile_retained": true,
+  "production_apk_sha256_after": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+  "production_installation_unchanged": true
+}
