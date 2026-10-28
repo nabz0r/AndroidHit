@@ -9,7 +9,7 @@
 - Give closed gates a separate button, −1 action cost and matching touch geometry; show actual gate changes and newly freed exits.
 - Keep real budgets; make refused attempts free; limit Return to one refunded correction per attempt with a persisted quota and a free restart. New paid continuation offers are removed from that policy.
 - Preserve the meaning of older challenge codes and active saved-board geometry; retire obsolete Shield offers while retaining recorded ownership and transaction decisions.
-- Prepare the FR/EN Firebase page with current rules, immutable artifact links and exact final native capture provenance. Scoped installed acceptance is complete; public delivery retains separate receipts.
+- Publish the FR/EN Firebase page with current rules, immutable artifact links and exact final native capture provenance. Source/artifacts at578661da and website from4466cb4a have independently verified public bytes; actual public FR/EN rendering passes.
 
 Source checks establish their stated mechanical contracts. Human difficulty, enjoyment and retention remain unmeasured. The house, earned collection and commercial gates are retained.
 

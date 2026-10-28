@@ -1,6 +1,6 @@
 # Luma Drift 1.14 qualification
 
-This register separates source contracts, signed-byte integrity, installed Android observations, public binary delivery and website deployment. **RC2 / code16 signed-byte and scoped native qualification is complete; public delivery is in progress.** The RC2 source curriculum contracts pass after episodic pacing and 291 opening-only initial gate changes. RC1 native/binary evidence remains intermediate and does not certify RC2. Historical 1.13 results do not qualify 1.14.
+This register separates source contracts, signed-byte integrity, installed Android observations, public binary delivery and website deployment. **RC2 / code16 signed-byte and scoped native qualification is complete; source, four public packages and the existing Firebase website are delivered.** The RC2 source curriculum contracts pass after episodic pacing and 291 opening-only initial gate changes. RC1 native/binary evidence remains intermediate and does not certify RC2. Historical 1.13 results do not qualify 1.14.
 
 - [Independent historical Journey branch audit](audit-journey/README.md): reproduced the difference between a certified starting solution and a costly legal order.
 - [RC2 1,000-board N route](audit-learning/audit-learning-contracts.json): 201,143 checks, 6,052 reached opening states and 20,429 opening transitions; all 970 later physical bases are accounted for, with 291 opening-only initial gate changes.

@@ -10,7 +10,7 @@ Owner priority: recurrent blocked/impossible-feeling levels, including Journey 1
 
 Technical solvability is necessary but does not establish that a first-time player understands the rules or that the curve is human calibrated.
 
-Implemented and qualified as RC2/code16: all1,000 final boards have recorded native wins across ten complete batches in two sessions, with the final200 explicitly using an access-only synthetic prerequisite. Original profiles are restored. [Full scope and limits](docs/validation/v1.14/ui-bugs/ui-sdk-coverage801-1000-rc2-d/independent-coverage-check/coverage.json). Main publication and Hosting delivery follow their own exact-byte checks.
+Implemented and qualified as RC2/code16: all1,000 final boards have recorded native wins across ten complete batches in two sessions, with the final200 explicitly using an access-only synthetic prerequisite. Original profiles are restored. [Full scope and limits](docs/validation/v1.14/ui-bugs/ui-sdk-coverage801-1000-rc2-d/independent-coverage-check/coverage.json). Main source and four packages are published at578661da; the existing Firebase website is deployed from4466cb4a with all117 payloads and three aliases verified over public HTTPS. [Website delivery](docs/validation/site-v1.14/README.md).
 
 ## Preserved 1.13 delivery
 
