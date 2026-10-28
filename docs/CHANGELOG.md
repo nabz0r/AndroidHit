@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.11.0-rc2 / code 12 — equipment visibility and pre-Play bug hunt
+
+- Expose the applied portrait after character/clothing/gear equipment; show all seven worn item names and a direct companion picker. Clothing purchase reopens an owned offer with explicit Equip.
+- Free the silhouette from clothing, separate/enlarge gear, and apply the selected theme to garden/play scenes.
+- Check rejected equipment before success feedback; use the existing save barrier for capsule equipment and ignore obsolete offer callbacks.
+- Settle seven ownership/loadout readers and the initial starter grant through exact pending transactions.
+- Add independent native art comparisons/cold processes, host occlusion measurements, all-catalog store/fault tests and fresh-install qualification; retain raw baseline/fixture outcomes.
+
+[Release and executed scope](RELEASE_1_11.md) · [Qualification](validation/v1.11/README.md). No Play upload or live monetization activation.
+
+## 1.10.0-rc3 / code 11 — preserved Companion & Objectives
+
+Shared companion portrait, wardrobe previews, goal pinning, four objective tabs, journal and durable claims. [Release](RELEASE_1_10.md). Historical tests checked state/selection controls rather than actual equipped clothing pixels;1.11 closes that coverage gap.
+
 ## 1.9.0-rc1 / 1.9.0-sandbox — first journey and Prism guardians
 
 - Reproduced/fixed the lesson-4 physical gesture/scroll conflict and L11 compact-window preview clipping; Confirm/Cancel stay visible and preview itself stays free.

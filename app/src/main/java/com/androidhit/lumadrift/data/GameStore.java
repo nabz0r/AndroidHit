@@ -78,18 +78,28 @@ public final class GameStore {
         this.clock = clock;
         externalOwnership = ownership;
         prefs = context.getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE);
-        if (!prefs.contains("initialized")) {
-            prefs.edit().putBoolean("initialized", true)
-                    .putBoolean("tutorial_v18_fresh_profile", true)
-                    .putInt("coins", 180)
-                    .putInt("booster_hint", 3)
-                    .putInt("booster_vision", 3)
-                    .putInt("booster_flow", 2)
-                    .putString("character", "nova")
-                    .putString("skin", "lumina")
-                    .putBoolean("owned_character_nova", true)
-                    .putBoolean("owned_skin_lumina", true)
-                    .commit();
+        synchronized (GOLD_GRANT_LOCK) {
+            try {
+                // Another handle may hold an initialization applied only to memory.
+                LocalSaveTransactions.flush(prefs);
+                if (!prefs.contains("initialized")) {
+                    Map<String,Object> write = new HashMap<>();
+                    write.put("initialized", true);
+                    write.put("tutorial_v18_fresh_profile", true);
+                    write.put("coins", 180);
+                    write.put("booster_hint", 3);
+                    write.put("booster_vision", 3);
+                    write.put("booster_flow", 2);
+                    write.put("character", "nova");
+                    write.put("skin", "lumina");
+                    write.put("owned_character_nova", true);
+                    write.put("owned_skin_lumina", true);
+                    LocalSaveTransactions.write(prefs, write);
+                }
+            } catch (LocalSaveException pending) {
+                // Construction must remain safe. The exact write stays pending;
+                // the first guarded read/action retries it or exposes the error.
+            }
         }
     }
 
@@ -142,21 +152,25 @@ public final class GameStore {
     }
 
     public synchronized String equippedCharacter() {
+        LocalSaveTransactions.flush(prefs);
         String id = prefs.getString("character", "nova");
         return Catalog.character(id) != null && ownsCharacter(id) ? id : "nova";
     }
 
     public synchronized String equippedSkin() {
+        LocalSaveTransactions.flush(prefs);
         String id = prefs.getString("skin", "lumina");
         return Catalog.skin(id) != null && ownsSkin(id) ? id : "lumina";
     }
 
     public synchronized boolean ownsCharacter(String id) {
+        LocalSaveTransactions.flush(prefs);
         return Catalog.character(id) != null && ("nova".equals(id) || prefs.getBoolean("owned_character_" + id, false)
                 || externalOwnership != null && externalOwnership.ownsCharacter(id));
     }
 
     public synchronized boolean ownsSkin(String id) {
+        LocalSaveTransactions.flush(prefs);
         return Catalog.skin(id) != null && ("lumina".equals(id) || prefs.getBoolean("owned_skin_" + id, false)
                 || externalOwnership != null && externalOwnership.ownsSkin(id));
     }
@@ -345,10 +359,12 @@ public final class GameStore {
         return new AvatarGearCatalog.Progress(completedLevels(),weekly,eventStars);
     }
     public synchronized boolean ownsAvatarGear(String id) {
+        LocalSaveTransactions.flush(prefs);
         AvatarGearCatalog.Item item=AvatarGearCatalog.find(id);
         return item!=null&&(item.source==AvatarGearCatalog.Source.STARTER||!prefs.getString("avatar_owned_v1_"+id,"").isEmpty());
     }
     public synchronized String avatarGearAcquisitionSource(String id) {
+        LocalSaveTransactions.flush(prefs);
         AvatarGearCatalog.Item item=AvatarGearCatalog.find(id);
         if(item==null)return "";
         return item.source==AvatarGearCatalog.Source.STARTER?AvatarGearCatalog.Source.STARTER.name():prefs.getString("avatar_owned_v1_"+id,"");
@@ -395,6 +411,7 @@ public final class GameStore {
         }
     }
     public synchronized AvatarLoadout avatarLoadout() {
+        LocalSaveTransactions.flush(prefs);
         String[] ids=new String[3];int i=0;
         for(AvatarGearCatalog.Slot slot:AvatarGearCatalog.Slot.values()) {
             String id=prefs.getString("avatar_slot_v1_"+slot.name(),AvatarGearCatalog.starter(slot).id);

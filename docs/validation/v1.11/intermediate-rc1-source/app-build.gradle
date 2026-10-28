@@ -1,0 +1,76 @@
+plugins { id 'com.android.application' }
+def signingFile = rootProject.file('signing.properties')
+def releaseKeys = new Properties()
+if (signingFile.exists()) signingFile.withInputStream { releaseKeys.load(it) }
+def walletUrl = providers.gradleProperty('lumaWalletUrl').getOrElse('')
+if (walletUrl && !(walletUrl ==~ /https:\/\/[A-Za-z0-9.-]+(?::[0-9]+)?/)) {
+    throw new GradleException('lumaWalletUrl must be an HTTPS origin without a path, query or credentials')
+}
+def liveAds = providers.gradleProperty('lumaLiveAds').getOrElse('false')
+if (!(liveAds in ['true', 'false'])) throw new GradleException('lumaLiveAds must be true or false')
+android {
+    namespace 'com.androidhit.lumadrift'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.androidhit.lumadrift'
+        minSdk 26
+        targetSdk 36
+        versionCode 12
+        versionName '1.11.0-rc1'
+        buildConfigField 'String', 'WALLET_API_BASE_URL', '"' + walletUrl + '"'
+        buildConfigField 'String', 'SOCIAL_API_BASE_URL', '"https://luma-wallet-369472826910.europe-west1.run.app"'
+        buildConfigField 'boolean', 'PAID_COSMETIC_DRAWS_ENABLED', 'false'
+    }
+    buildFeatures { buildConfig true }
+    flavorDimensions += 'channel'
+    productFlavors {
+        production {
+            dimension 'channel'
+            buildConfigField 'boolean', 'MODE_SANDBOX', 'false'
+            buildConfigField 'boolean', 'FORCE_TEST_ADS', liveAds == 'true' ? 'false' : 'true'
+            manifestPlaceholders = [appLabel: 'Luma Drift', admobAppId: 'ca-app-pub-6914185503996225~9670436379']
+        }
+        lab {
+            dimension 'channel'
+            applicationIdSuffix '.sandbox'
+            versionName '1.11.0-sandbox-rc1'
+            buildConfigField 'boolean', 'MODE_SANDBOX', 'true'
+            buildConfigField 'boolean', 'FORCE_TEST_ADS', 'true'
+            manifestPlaceholders = [appLabel: 'Luma Drift Lab', admobAppId: 'ca-app-pub-3940256099942544~3347511713']
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    signingConfigs {
+        if (signingFile.exists()) {
+            release {
+                storeFile rootProject.file(releaseKeys.storeFile)
+                storePassword releaseKeys.storePassword
+                keyAlias releaseKeys.keyAlias
+                keyPassword releaseKeys.keyPassword
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            if (signingFile.exists()) signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+    implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.6.0'
+    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
+    implementation 'com.android.billingclient:billing:9.1.0'
+    implementation 'androidx.credentials:credentials:1.6.0'
+    implementation 'androidx.credentials:credentials-play-services-auth:1.6.0'
+    implementation 'com.google.android.libraries.identity.googleid:googleid:1.2.1'
+    implementation 'com.google.firebase:firebase-auth:25.0.0'
+}

@@ -1,0 +1,215 @@
+{
+  "recorded_at_utc": "2026-10-28T11:12:03.222956+00:00",
+  "baseline_commit": "10c78c7cfead1c20b7fb2c7636273c21c11d2f56",
+  "current_head_at_audit": "10c78c7cfead1c20b7fb2c7636273c21c11d2f56",
+  "scope": "Independent Java2D raster, command recording, String.format and standalone Android36 API compilation. No app binary, native screenshot, emulator, device profile or provider action.",
+  "sources": [
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/Catalog.java",
+      "baseline_sha256": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+      "candidate_sha256": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/AvatarStyles.java",
+      "baseline_sha256": "3f6fc31444ffdd3a1c5db7662da4ec8db0b95fab55f4ef103479d8c1b65246fc",
+      "candidate_sha256": "3f6fc31444ffdd3a1c5db7662da4ec8db0b95fab55f4ef103479d8c1b65246fc",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/AvatarGearCatalog.java",
+      "baseline_sha256": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
+      "candidate_sha256": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/AvatarLoadout.java",
+      "baseline_sha256": "5b0222cef743df57f8d029ff102b62d54b94660b02be9801edc2660764f0bcb2",
+      "candidate_sha256": "5b0222cef743df57f8d029ff102b62d54b94660b02be9801edc2660764f0bcb2",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/CosmeticCatalog.java",
+      "baseline_sha256": "d75a2a94b7b3b927a35c63c2256eb2e7e3e6a704a47ee3741d08f4b69f8c2e1f",
+      "candidate_sha256": "d75a2a94b7b3b927a35c63c2256eb2e7e3e6a704a47ee3741d08f4b69f8c2e1f",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/Strings.java",
+      "baseline_sha256": "e2a0d26242888c400a4db3208384ee1331d070ca8421cc3993be64c5fc02ba85",
+      "candidate_sha256": "e2a0d26242888c400a4db3208384ee1331d070ca8421cc3993be64c5fc02ba85",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/V110Strings.java",
+      "baseline_sha256": "5c6761325a59c83b748d9eabf35617876c4a405ea6b2f05dfcc2eef7ce556efc",
+      "candidate_sha256": "5c6761325a59c83b748d9eabf35617876c4a405ea6b2f05dfcc2eef7ce556efc",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/ui/AvatarStage.java",
+      "baseline_sha256": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+      "candidate_sha256": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/ui/KawaiiArt.java",
+      "baseline_sha256": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
+      "candidate_sha256": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
+      "changed": false
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/ui/CompanionPortrait.java",
+      "baseline_sha256": "8fb001b7b65f14e50d6972ce729c86a90a4ff54ccccd32f1f893a12990509ac7",
+      "candidate_sha256": "8a770995271daaa1a95d18665998de81aefc1cc4b19a853037ddd2699cba55b8",
+      "changed": true
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/V111Strings.java",
+      "candidate_sha256": "373711dc679486b9fa79acefb8f0126b75263e8bb2592d4d85be310c5fb2ad1f",
+      "scope": "root-owned strings; all 4 keys host-tested"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/README.md",
+      "bytes": 6594,
+      "sha256": "bbaadd7999d25a761ada2e1cc76acd4b47cf61867dbbd99f7927d424126c2e8f"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/RasterAudit.java",
+      "bytes": 5828,
+      "sha256": "c55c0b892a1e3db50ce52338e934945a9a3d1db7d18ce8591b719a0395d227a8"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/RasterContract.java",
+      "bytes": 3952,
+      "sha256": "9a687343dbc521ce24e1f5c6ab7b1156eec7dbe25fe3be61be1f1146d6e4b6fe"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/V111StringsTest.java",
+      "bytes": 5133,
+      "sha256": "460fcfa4679007d9eb634a06c0e69d92530a6e67130aa3967e4896becc930043"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/android-api-compile.txt",
+      "bytes": 78,
+      "sha256": "ba96156127c737fbc8398324b673e0126897bdf8d569a1424c0f9a09310fd0a2"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/baseline-equipment-pixels.csv",
+      "bytes": 255993,
+      "sha256": "b2d19c7f033f6dd14a6b81e8df1db5dc9d95cf3de9c97a230e04ac5c3d44ef5c"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/baseline-fully-dressed-atlas.png",
+      "bytes": 229207,
+      "sha256": "08c0e0b7eaae0f4260f97c83e58ab2934b478c5a1044c3fbb83d2400d3510937"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/baseline-identity-pixels.csv",
+      "bytes": 248438,
+      "sha256": "2609b12321ad61f70f89f3aac3ae570512760a072719924495d744996aa0e811"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/baseline-reproduction.json",
+      "bytes": 562,
+      "sha256": "28bd7f850df6e18002bcb3801ffcd3c4082783d828e4aa2b00df780ecf1564a5"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/baseline-summary.json",
+      "bytes": 559,
+      "sha256": "171fde699a83e385b9e0160752057096a6a270d5ff04b985579f10a611d1207a"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/candidate-equipment-pixels.csv",
+      "bytes": 258824,
+      "sha256": "015c082b44941524f9f79b29b28179e6c079e5bd7dc47a752157b8d209fac4ce"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/candidate-fully-dressed-atlas.png",
+      "bytes": 264921,
+      "sha256": "6f374aadba67d00ae07a57e3623c17c5ead9ecc75f0db0a5e43581a243435c60"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/candidate-identity-pixels.csv",
+      "bytes": 250036,
+      "sha256": "82414a45ad8da68adcad10798442a71556e5d14378461817a7f78345c996ac69"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/candidate-summary.json",
+      "bytes": 560,
+      "sha256": "9f64eeee7ff9e6486783aca10077311fcd1eb1f9eef36703e7282229f7a2a123"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/command-regression/command-fingerprints.csv",
+      "bytes": 128266,
+      "sha256": "0a7a8d8eb17b35428036fca85610fe44997589fb95111b238c8af6d0b76823fb"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/command-regression/host-validation.json",
+      "bytes": 351,
+      "sha256": "5d62867c2e798533c73c6f982dc036a1980553954cdba101025a2e6951c86e8b"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/command-regression.txt",
+      "bytes": 351,
+      "sha256": "5d62867c2e798533c73c6f982dc036a1980553954cdba101025a2e6951c86e8b"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/compare-raster.py",
+      "bytes": 1476,
+      "sha256": "8313ab172cb67d896769ece90803ac2d60d671ef7a29ea72942623c936677eab"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/comparison.json",
+      "bytes": 1988,
+      "sha256": "1f9e2bd930333d1abeceb9ce6db36c267fada13548d9da610954b9267fd83736"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/host/android/graphics/Canvas.java",
+      "bytes": 2545,
+      "sha256": "cf0446a637932dce03d76a121398f03fa0071160c68e2fd5cea20735619a571c"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/host/android/graphics/Color.java",
+      "bytes": 414,
+      "sha256": "148fb593715b7e627e8f704b6a0212bbe07ceaf7d4228ac9e27372b7aa073631"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/host/android/graphics/Paint.java",
+      "bytes": 888,
+      "sha256": "f09c58e81daa864f96bb2d2dcf530cbe5cf81cb30c9a9ab172d2c4874492b84f"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/host/android/graphics/Path.java",
+      "bytes": 511,
+      "sha256": "0702c0250ec0a238a0205ee4dddf9bac96041644e746162f1629c4e254dd6232"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/raster-contract.json",
+      "bytes": 408,
+      "sha256": "01a5eb5bb73703b7adbdb9409c9ef2091545944b294db76bce9aa47a23d31d6c"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/run-api-command.sh",
+      "bytes": 1568,
+      "sha256": "698f5bce4f4559164b133e4f0efa95af712d3cb4216767123df0d6ec15621f7c"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/run-raster.sh",
+      "bytes": 1648,
+      "sha256": "2227342555b79171cf932dee1b1e45c2c9404f3124b45215eaecbe1976a08872"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/v111-strings.json",
+      "bytes": 342,
+      "sha256": "4b37c0579c47e83c8079ae1884648cf2d352f5ee7ecaf4281c310eb473f2ac5a"
+    },
+    {
+      "path": "docs/validation/v1.11/avatar-bugs/v111-strings.txt",
+      "bytes": 342,
+      "sha256": "4b37c0579c47e83c8079ae1884648cf2d352f5ee7ecaf4281c310eb473f2ac5a"
+    }
+  ]
+}

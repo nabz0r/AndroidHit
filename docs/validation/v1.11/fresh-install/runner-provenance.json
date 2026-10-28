@@ -1,0 +1,48 @@
+{
+  "recorded_at_utc": "2026-10-28T11:27:49.279180+00:00",
+  "app": {
+    "path": "releases/luma-drift-1.11.0-sandbox-rc1.apk",
+    "bytes": 7757097,
+    "sha256": "6f9edf10cddc283a6ae6d0ae876f3196b52660ddc6ed992aeea18bcdb698db78"
+  },
+  "test_apk": {
+    "path": "app/build/qualification-artifacts/v1.11/v111-identity-lab-test.apk",
+    "bytes": 126863,
+    "sha256": "7a0e2b6a48a19eaf6ea80a1338f420aea7253249c32172e0716203f47c16c61f"
+  },
+  "source": [
+    {
+      "source_path": "scripts/v111-ui-test/run-fresh-tutorial.py",
+      "retained_path": "docs/validation/v1.11/fresh-install/runner-source/run-fresh-tutorial.py",
+      "sha256": "c01c970f611e5389c0fe5f6f95d050483a50780f68c419f3f2943524a2b87d17"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/AndroidManifest.xml",
+      "retained_path": "docs/validation/v1.11/fresh-install/runner-source/AndroidManifest.xml",
+      "sha256": "1d09fed9ed867f702459f6880200c3c315196540c60e18f78f5eebb15330b305"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/init.gradle",
+      "retained_path": "docs/validation/v1.11/fresh-install/runner-source/init.gradle",
+      "sha256": "c4755304cbbc34862cf43b814b82d51d51fbdfda0fca812f90d116acf4ff1cfb"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/CandidateUiInstrumentation.java",
+      "retained_path": "docs/validation/v1.11/fresh-install/runner-source/CandidateUiInstrumentation.java",
+      "sha256": "5e29a15ec184114010a70255c0c29d7ae68a99baa691dc0265712860fee589db"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/RasterObservation.java",
+      "retained_path": "docs/validation/v1.11/fresh-install/runner-source/RasterObservation.java",
+      "sha256": "d3654df4ece79b72294769d304dc7d9b6e9d66cc43bd5699c4d37b9b5b5fba07"
+    }
+  ],
+  "instrumentation": "com.androidhit.lumadrift.sandbox.test/com.androidhit.lumadrift.qa.v111.CandidateUiInstrumentation",
+  "arguments": {
+    "cases": "tutorial",
+    "expectFreshTutorial": "true",
+    "expectedVersion": "1.11.0-sandbox-rc1",
+    "expectedCode": "12"
+  },
+  "scope": "Exact source snapshot immediately before invoking the final Lab first-install wrapper; no app or runner sources modified."
+}

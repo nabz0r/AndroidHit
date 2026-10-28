@@ -1,0 +1,34 @@
+{
+  "scope": "Independent native test APKs only; product Java and product R8 excluded. Java runner stays frozen; wrapper device-guard extensions have their own archived source/run provenance. Local retained QA binaries, not public game downloads.",
+  "artifacts": [
+    {
+      "path": "app/build/qualification-artifacts/v1.11/v111-identity-lab-test.apk",
+      "bytes": 126863,
+      "sha256": "7a0e2b6a48a19eaf6ea80a1338f420aea7253249c32172e0716203f47c16c61f"
+    },
+    {
+      "path": "app/build/qualification-artifacts/v1.11/v111-identity-production-test.apk",
+      "bytes": 126851,
+      "sha256": "30a76bf57c54bdc62e32a5c4027fe8ccc3ffb687495fd82d1e4e83e58e1d5faf"
+    },
+    {
+      "path": "app/build/qualification-artifacts/v1.11/v111-audio-production-test.apk",
+      "bytes": 126851,
+      "sha256": "e801e396c3365a7e63ecb17903c0556fd93d7dda76bf0bb01dfe3c9cb0a191fa"
+    }
+  ],
+  "source_sha256": {
+    "scripts/v111-ui-test/run.py": "08dec7a2347472c781aa58fed55a37e12c1fbf3c97dbbeb44e2040a76b8a40ea",
+    "scripts/v111-ui-test/run-fresh-tutorial.py": "ca5c96862e33deb68635e35ea8e7100dfdfc5fea5bd2b97182bfdcaf13af64a3",
+    "scripts/v111-ui-test/install-candidate.py": "f50955d3739478658ab7e4fa2842d13e3b1e587794d9ab81034e2341ec39054a",
+    "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/CandidateUiInstrumentation.java": "5e29a15ec184114010a70255c0c29d7ae68a99baa691dc0265712860fee589db",
+    "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/ProductionStartupInstrumentation.java": "e81a6a0327d040913f076d8bc7c094809a999ba6640633cbb5591940d9cd8d76",
+    "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/RasterObservation.java": "d3654df4ece79b72294769d304dc7d9b6e9d66cc43bd5699c4d37b9b5b5fba07"
+  },
+  "historical_wrapper_sources": [
+    "rc2-lab-runner-provenance.json",
+    "rc1-fresh-wrapper-provenance.json",
+    "baseline-c-runner-source/manifest.json",
+    "baseline-runner-source/manifest.json"
+  ]
+}

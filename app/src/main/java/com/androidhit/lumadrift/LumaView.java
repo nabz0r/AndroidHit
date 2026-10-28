@@ -141,6 +141,7 @@ public final class LumaView extends View {
     private String v(String key,Object...args){return SagaStrings.get(store.resolvedLanguage(),key,args);}
     private String q(String key,Object...args){return V19Strings.get(store.resolvedLanguage(),key,args);}
     private String a(String key,Object...args){return V110Strings.get(store.resolvedLanguage(),key,args);}
+    private String b(String key,Object...args){return V111Strings.get(store.resolvedLanguage(),key,args);}
     private String storyText(String key){return PrismStoryStrings.get(store.resolvedLanguage(),key);}
     private String n(String key,Object...args){return V18Strings.get(store.resolvedLanguage(),key,args);}
     private String tt(String key,Object...args){return TutorialStrings.get(store.resolvedLanguage(),key,args);}
@@ -361,7 +362,7 @@ public final class LumaView extends View {
     private void background(Canvas c){
         int visibleLevel=screen.equals("journey")?SagaMap.at(contentScroll+viewportH*.5f,journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):screen.equals("play")?levelIndex:store.unlockedLevel();int biome=SagaMap.biome(visibleLevel);if(biome!=activeBiome){activeBiome=biome;audio.setBiome(biome);}backdrop.setBiome(biome);
         backdrop.draw(c,390,viewportH,screen.equals("play")||screen.equals("collection")||screen.equals("shop")||screen.equals("settings"),skin.bg);
-        if(screen.equals("play")||screen.equals("guardian")){float progress=screen.equals("guardian")&&guardian!=null?1f-guardian.snapshot().remainingWork/(float)guardian.snapshot().totalWork:board==null?0:1f-board.remainingCount()/(float)board.level.tiles.size();avatarStage.drawBackdrop(c,390,viewportH,avatarStyle,progress,frameTime,reduceMotion);}
+        if(screen.equals("play")||screen.equals("guardian")){float progress=screen.equals("guardian")&&guardian!=null?1f-guardian.snapshot().remainingWork/(float)guardian.snapshot().totalWork:board==null?0:1f-board.remainingCount()/(float)board.level.tiles.size();avatarStage.drawBackdrop(c,390,viewportH,avatarStyle,progress,frameTime,reduceMotion);backdrop.drawThemeWash(c,390,viewportH,skin.bg,72);}
         for(int i=0;i<18;i++){float x=(i*79+23)%390,y=(i*137+42)%Math.max(1,(int)viewportH);float pulse=reduceMotion?1f:.65f+.35f*(float)Math.sin(frameTime*.0008+i);p.setColor(alpha(WHITE,(int)(35*pulse)));c.drawCircle(x,y,i%4==0?1.4f:.7f,p);}
     }
     private static int alpha(int c,int a){return (c&0x00ffffff)|((Math.max(0,Math.min(255,a)))<<24);}
@@ -931,21 +932,23 @@ public final class LumaView extends View {
 
     private String cosmeticSource(CosmeticCatalog.Item item){String key=item.source==CosmeticCatalog.Source.LOGIN_DAYS?"source_login":item.source==CosmeticCatalog.Source.WEEKLY_WINS?"source_weekly":item.source==CosmeticCatalog.Source.EVENT_STARS?"source_event":item.source==CosmeticCatalog.Source.EARNED_COINS?"source_coins":"source_starter";return V17Strings.format(store.resolvedLanguage(),key,item.requirement);}
     private void drawWardrobe(Canvas c){
-        header(c,a("avatar"),a("owned_count",store.ownedCosmeticCount(),24));
+        header(c,a("avatar"),b("clothes_owned",store.ownedCosmeticCount(),24));
         sweet.surface(c,new RectF(24,103,366,422),SweetUi.LILAC,true);
         dressedMascot(c,195,213,43);
+        label(109,127,172,172,equippedPortraitDescription());
         for(int i=0;i<4;i++){
             final int slot=i;CosmeticCatalog.Slot type=CosmeticCatalog.Slot.values()[i];CosmeticCatalog.Item item=CosmeticCatalog.find(store.equippedCosmetic(type));float x=i%2==0?36:286,y=i<2?130:230;
-            round(c,x,y,68,72,15,wardrobeMode==0&&wardrobeSlot==i?SweetUi.light(SweetUi.MINT):skin.card);art.cosmetic(c,type.name(),CosmeticCatalog.ITEMS.indexOf(item)%6,x+34,y+25,17,cosmeticColor(item));fit(c,v(new String[]{"hat","dress","shoes","gloves"}[i]),x+34,y+57,12,62,TEXT,true,true);
-            int before=hits.size();hit(x,y,68,72,v(new String[]{"hat","dress","shoes","gloves"}[i])+", "+w(item.nameKey)+", "+e("equipped"),()->{wardrobeMode=0;wardrobeSlot=slot;wardrobePage=0;});if(hits.size()>before)hits.get(hits.size()-1).selected=wardrobeMode==0&&wardrobeSlot==i;
+            round(c,x,y,68,90,15,wardrobeMode==0&&wardrobeSlot==i?SweetUi.light(SweetUi.MINT):skin.card);art.cosmetic(c,type.name(),CosmeticCatalog.ITEMS.indexOf(item)%6,x+34,y+25,17,cosmeticColor(item));fit(c,v(new String[]{"hat","dress","shoes","gloves"}[i]),x+34,y+57,12,62,TEXT,true,true);wornCosmeticName(c,item,x+34,y+78);
+            int before=hits.size();hit(x,y,68,90,v(new String[]{"hat","dress","shoes","gloves"}[i])+", "+w(item.nameKey)+", "+e("equipped"),()->{wardrobeMode=0;wardrobeSlot=slot;wardrobePage=0;});if(hits.size()>before)hits.get(hits.size()-1).selected=wardrobeMode==0&&wardrobeSlot==i;
         }
         fit(c,t(character.nameKey),195,331,20,300,TEXT,true,true);fit(c,AvatarStyles.find(avatarStyle).name(store.resolvedLanguage()),195,353,12,300,skin.muted,false,true);
-        quietButton(c,a("visual_styles"),111,366,168,()->go("styles"));
+        quietButton(c,e("tab_companions"),36,366,152,()->{collectionTab=0;collectionPage=0;inventoryFilter=1;go("collection");});
+        quietButton(c,a("visual_styles"),202,366,152,()->go("styles"));
         fit(c,a("gear_slots"),24,453,15,342,TEXT,true,false);
         for(int i=0;i<3;i++){
             final int slot=i;AvatarGearCatalog.Item worn=loadout.item(AvatarGearCatalog.Slot.values()[i]);float x=24+i*120;
-            sweet.surface(c,new RectF(x,469,x+102,554),wardrobeMode==1&&wardrobeGearSlot==i?SweetUi.MINT:SweetUi.CREAM,true);gearGlyph(c,worn,x+51,496,19);fit(c,g(worn.slot.key()),x+51,538,12,94,TEXT,true,true);
-            hit(x,469,102,85,g(worn.nameKey)+", "+e("equipped"),()->{wardrobeMode=1;wardrobeGearSlot=slot;wardrobePage=0;});
+            sweet.surface(c,new RectF(x,469,x+102,554),wardrobeMode==1&&wardrobeGearSlot==i?SweetUi.MINT:SweetUi.CREAM,true);gearGlyph(c,worn,x+51,496,19);fit(c,g(worn.slot.key()),x+51,526,12,94,TEXT,true,true);fit(c,g(worn.nameKey),x+51,546,12,94,skin.muted,false,true);
+            int before=hits.size();hit(x,469,102,85,g(worn.nameKey)+", "+e("equipped"),()->{wardrobeMode=1;wardrobeGearSlot=slot;wardrobePage=0;});if(hits.size()>before)hits.get(hits.size()-1).selected=wardrobeMode==1&&wardrobeGearSlot==i;
         }
         String[] tabs={a("appearance"),a("equipment")};for(int i=0;i<2;i++){final int mode=i;float x=24+i*174;round(c,x,574,168,50,16,wardrobeMode==i?SweetUi.light(SweetUi.MINT):skin.card);fit(c,tabs[i],x+84,605,15,156,TEXT,true,true);int before=hits.size();hit(x,574,168,50,tabs[i],()->{wardrobeMode=mode;wardrobePage=0;});if(hits.size()>before)hits.get(hits.size()-1).selected=wardrobeMode==i;}
         if(wardrobeMode==0){
@@ -967,6 +970,24 @@ public final class LumaView extends View {
         art.cosmetic(c,item.slot.name(),CosmeticCatalog.ITEMS.indexOf(item)%6,67,y+54,25,owned?cosmeticColor(item):0xff8c91ad);fit(c,w(item.nameKey),113,y+29,18,235,TEXT,true,false);
         String state=on?e("equipped"):owned?e("owned"):e("to_unlock");fit(c,state+" · "+w(item.rarity.name().toLowerCase(Locale.ROOT)),113,y+53,12,235,owned?skin.accent2:skin.muted,true,false);fit(c,owned?v("cosmetic_only"):cosmeticSource(item),113,y+78,12,235,skin.muted,false,false);fit(c,on?e("equipped"):owned?e("action_equip"):item.priceCoins>0?item.priceCoins+" LumaCoins":store.cosmeticProgress(item.id)+" / "+item.requirement,113,y+102,12,235,GOLD,true,false);hit(24,y,342,116,w(item.nameKey)+", "+state+", "+cosmeticSource(item),()->cosmeticOffer(item));
     }
+    private void wornCosmeticName(Canvas c,CosmeticCatalog.Item item,float x,float baseline){
+        String name=w(item.nameKey);int separator=name.indexOf(" · ");if(separator>=0)name=name.substring(separator+3);
+        p.setTypeface(regular);p.setTextSize(Math.max(12,minimumTextSize()));
+        int space=name.indexOf(' ');
+        if(space>0&&p.measureText(name)>62){
+            fit(c,name.substring(0,space),x,baseline-6,12,62,skin.muted,false,true);
+            fit(c,name.substring(space+1),x,baseline+8,12,62,skin.muted,false,true);
+        }else fit(c,name,x,baseline,12,62,skin.muted,false,true);
+    }
+    private String equippedPortraitDescription(){
+        StringJoiner items=new StringJoiner(", ");for(CosmeticCatalog.Item item:wornCosmetics)items.add(w(item.nameKey));
+        for(AvatarGearCatalog.Slot slot:AvatarGearCatalog.Slot.values())items.add(g(loadout.item(slot).nameKey));
+        return b("portrait_current",t(character.nameKey),AvatarStyles.find(avatarStyle).name(store.resolvedLanguage()),items.toString());
+    }
+    private void showAppliedLook(String name,boolean showCompanion){
+        if(showCompanion)go("wardrobe");else{contentScroll=0;actionGeneration++;hits.clear();}
+        sfx(AudioEngine.Sound.SELECT);haptic();notice(b("look_applied",name));
+    }
     private View companionPreview(Catalog.CharacterItem who,AvatarLoadout gear,List<CosmeticCatalog.Item> clothes){
         final AvatarStyles.Style style=AvatarStyles.find(avatarStyle);final ArrayList<CosmeticCatalog.Item> snapshot=new ArrayList<>(clothes);final boolean still=reduceMotion;
         View preview=new View(getContext()){
@@ -985,13 +1006,13 @@ public final class LumaView extends View {
         boolean owned=store.ownsCosmetic(item.id),equipped=item.id.equals(store.equippedCosmetic(item.slot));String key="cosmetic:"+item.id;
         String state=equipped?e("equipped"):owned?e("owned"):e("to_unlock");
         android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(getContext()).setTitle(w(item.nameKey)).setView(cosmeticPreview(item)).setMessage(state+"\n"+v("cosmetic_only")+"\n"+(owned?acquisitionCaption(store.cosmeticAcquisitionSource(item.id),cosmeticSource(item)):cosmeticSource(item))+"\n"+a("preview_only")).setNegativeButton(t("close"),null).setNeutralButton(a(key.equals(store.trackedCollectionGoal())?"untrack_item":"track_item"),(d,w)->toggleGoal(key));
-        if(owned&&!equipped)dialog.setPositiveButton(e("action_equip"),(d,w)->savedAction(()->{if(store.equipCosmetic(item.id))sfx(AudioEngine.Sound.SELECT);}));
-        else if(!owned&&item.priceCoins>0)dialog.setPositiveButton(item.priceCoins+" LumaCoins",(d,w)->savedAction(()->{if(store.purchaseCosmetic(item.id)){sfx(AudioEngine.Sound.PURCHASE);notice(e("owned"));}else notice(t("not_enough"));}));
+        if(owned&&!equipped)dialog.setPositiveButton(e("action_equip"),(d,w)->savedAction(()->{if(store.equipCosmetic(item.id))showAppliedLook(w(item.nameKey),true);else notice(b("item_unavailable"));}));
+        else if(!owned&&item.priceCoins>0)dialog.setPositiveButton(item.priceCoins+" LumaCoins",(d,w)->savedAction(()->{if(store.purchaseCosmetic(item.id)){sfx(AudioEngine.Sound.PURCHASE);notice(e("owned"));long token=actionGeneration;post(()->{if(running&&!localSaveBlocked&&token==actionGeneration)cosmeticOffer(item);});}else notice(t("not_enough"));}));
         else if(!owned)dialog.setPositiveButton(a("view_source"),(d,w)->{if(item.source==CosmeticCatalog.Source.LOGIN_DAYS)openRewards(0);else{eventTab=item.source==CosmeticCatalog.Source.WEEKLY_WINS?1:0;go("events");}});
         dialog.show();
     }
     private void openCapsule(){String receipt=UUID.randomUUID().toString();new android.app.AlertDialog.Builder(getContext()).setTitle(v("loot")).setMessage(w("capsule_note")+"\n\n"+w("capsule_odds")+"\n"+w("capsule_item_odds")+"\n\n"+w("capsule_duplicates")).setNegativeButton(t("cancel"),null).setPositiveButton(v("open_capsule"),(d,w)->performCapsule(receipt)).show();}
-    private void performCapsule(String receipt){try{GameStore.LootResult got=store.drawCosmeticLoot(receipt);if(got==null){notice(w("not_enough_coins"));return;}syncStyle();CosmeticCatalog.Item item=CosmeticCatalog.find(got.itemId);new android.app.AlertDialog.Builder(getContext()).setTitle(w(item.nameKey)).setView(cosmeticPreview(item)).setMessage(got.duplicate?v("duplicate",got.compensationCoins):v("cosmetic_only")).setPositiveButton(e("action_equip"),(dialog,which)->{try{if(store.equipCosmetic(item.id))syncStyle();else notice(t("save_error"));}catch(IllegalStateException failure){notice(t("save_error"));}}).setNegativeButton(t("close"),null).show();sfx(AudioEngine.Sound.PURCHASE);}catch(IllegalStateException failure){new android.app.AlertDialog.Builder(getContext()).setTitle(t("save_error")).setMessage(t("commerce_save_error")).setPositiveButton(t("retry"),(d,w)->performCapsule(receipt)).setNegativeButton(t("close"),null).show();}}
+    private void performCapsule(String receipt){try{GameStore.LootResult got=store.drawCosmeticLoot(receipt);if(got==null){notice(w("not_enough_coins"));return;}syncStyle();CosmeticCatalog.Item item=CosmeticCatalog.find(got.itemId);new android.app.AlertDialog.Builder(getContext()).setTitle(w(item.nameKey)).setView(cosmeticPreview(item)).setMessage(got.duplicate?v("duplicate",got.compensationCoins):v("cosmetic_only")).setPositiveButton(e("action_equip"),(dialog,which)->savedAction(()->{if(store.equipCosmetic(item.id))showAppliedLook(w(item.nameKey),true);else notice(b("item_unavailable"));})).setNegativeButton(t("close"),null).show();sfx(AudioEngine.Sound.PURCHASE);}catch(IllegalStateException failure){new android.app.AlertDialog.Builder(getContext()).setTitle(t("save_error")).setMessage(t("commerce_save_error")).setPositiveButton(t("retry"),(d,w)->performCapsule(receipt)).setNegativeButton(t("close"),null).show();}}
     private void claimJourneyGift(){
         try{String got=store.claimMilestoneLoot();syncStyle();if(got.isEmpty())notice(q("stock_full"));else{sfx(AudioEngine.Sound.COIN);notice(t("loot_received",t("booster_"+got)));}}catch(IllegalStateException failed){notice(t("save_error"));}
     }
@@ -1180,7 +1201,7 @@ public final class LumaView extends View {
         String message=g(item.slot.key())+" · "+g(item.rarity.key())+"\n"+(equipped?t("equipped"):owned?u("owned"):u("get"))+"\n\n"+GearStrings.effectCaption(store.resolvedLanguage(),item)+"\n"+(owned?acquisitionCaption(store.avatarGearAcquisitionSource(item.id),GearStrings.sourceCaption(store.resolvedLanguage(),item,gearProgress)):GearStrings.sourceCaption(store.resolvedLanguage(),item,gearProgress))+"\n\n"+a("preview_only");
         android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(getContext()).setTitle(g(item.nameKey)).setView(companionPreview(character,preview,wornCosmetics)).setMessage(message).setNegativeButton(t("close"),null).setNeutralButton(a(key.equals(store.trackedCollectionGoal())?"untrack_item":"track_item"),(d,w)->toggleGoal(key));
         if(!equipped&&(owned||item.source==AvatarGearCatalog.Source.EARNED_COINS))dialog.setPositiveButton(owned?t("equip"):u("coin_price",item.priceCoins),(d,w)->savedAction(()->{
-            if(!owned&&!store.purchaseAvatarGear(item.id)){notice(t("not_enough"));return;}if(store.equipAvatarGear(item.id)){sfx(owned?AudioEngine.Sound.SELECT:AudioEngine.Sound.PURCHASE);haptic();}
+            if(!owned&&!store.purchaseAvatarGear(item.id)){notice(t("not_enough"));return;}if(store.equipAvatarGear(item.id)){if(!owned)sfx(AudioEngine.Sound.PURCHASE);showAppliedLook(g(item.nameKey),true);}else notice(b("item_unavailable"));
         }));
         else if(!owned)dialog.setPositiveButton(a("view_source"),(d,w)->{sourceRoute(item.source==AvatarGearCatalog.Source.JOURNEY_CLEARS?CollectionGoal.Route.JOURNEY:item.source==AvatarGearCatalog.Source.WEEKLY_WINS?CollectionGoal.Route.WEEKLY:item.source==AvatarGearCatalog.Source.EVENT_STARS?CollectionGoal.Route.DAILY:CollectionGoal.Route.REWARDS);});
         dialog.show();
@@ -1195,7 +1216,7 @@ public final class LumaView extends View {
         android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(getContext()).setTitle(t(chars?ch.nameKey:sk.nameKey)).setView(layout).setNegativeButton(t("close"),(d,w)->{});
         if(!equipped)dialog.setPositiveButton(owned?t("equip"):t("companion_purchase",price),(d,w)->savedAction(()->{
             boolean success=owned||(chars?store.purchaseCharacter(id):store.purchaseSkin(id));if(!success){notice(t("not_enough"));return;}
-            if(chars)store.equipCharacter(id);else store.equipSkin(id);syncStyle();sfx(owned?AudioEngine.Sound.SELECT:AudioEngine.Sound.PURCHASE);haptic();invalidate();
+            boolean applied=chars?store.equipCharacter(id):store.equipSkin(id);if(!applied){notice(b("item_unavailable"));return;}if(!owned)sfx(AudioEngine.Sound.PURCHASE);showAppliedLook(t(chars?ch.nameKey:sk.nameKey),chars);
         }));else dialog.setPositiveButton(t("equipped"),(d,w)->{});
         dialog.show();
     }
@@ -1764,7 +1785,7 @@ public final class LumaView extends View {
     @Override public AccessibilityNodeProvider getAccessibilityNodeProvider(){return new AccessibilityNodeProvider(){
         @Override public AccessibilityNodeInfo createAccessibilityNodeInfo(int id){
             if(id==HOST_VIEW_ID){AccessibilityNodeInfo info=AccessibilityNodeInfo.obtain(LumaView.this);onInitializeAccessibilityNodeInfo(info);info.setContentDescription("Luma Drift · "+screenTitle(screen));if(layout!=null&&maximumScroll()>0){info.setScrollable(true);info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_FORWARD);info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_SCROLL_BACKWARD);}for(int i=0;i<hits.size();i++)info.addChild(LumaView.this,i);return info;}
-            if(id<0||id>=hits.size())return null;Hit h=hits.get(id);AccessibilityNodeInfo info=AccessibilityNodeInfo.obtain();info.setSource(LumaView.this,id);info.setParent(LumaView.this);info.setPackageName(getContext().getPackageName());info.setClassName(h.action==null?"android.widget.TextView":"android.widget.Button");info.setContentDescription(h.name);info.setText(h.name);info.setSelected(h.selected);info.setClickable(h.action!=null);info.setEnabled(true);info.setFocusable(true);info.setVisibleToUser(true);info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_CLICK);info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_ACCESSIBILITY_FOCUS);info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_CLEAR_ACCESSIBILITY_FOCUS);info.setAccessibilityFocused(focused==id);Rect r=new Rect((int)(ox+h.r.left*scale),(int)(top+h.r.top*scale),(int)(ox+h.r.right*scale),(int)(top+h.r.bottom*scale));info.setBoundsInParent(r);int[] loc=new int[2];getLocationOnScreen(loc);r.offset(loc[0],loc[1]);info.setBoundsInScreen(r);return info;
+            if(id<0||id>=hits.size())return null;Hit h=hits.get(id);AccessibilityNodeInfo info=AccessibilityNodeInfo.obtain();info.setSource(LumaView.this,id);info.setParent(LumaView.this);info.setPackageName(getContext().getPackageName());info.setClassName(h.action==null?"android.widget.TextView":"android.widget.Button");info.setContentDescription(h.name);info.setText(h.name);info.setSelected(h.selected);info.setClickable(h.action!=null);info.setEnabled(true);info.setFocusable(true);info.setVisibleToUser(true);if(h.action!=null)info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_CLICK);info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_ACCESSIBILITY_FOCUS);info.addAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_CLEAR_ACCESSIBILITY_FOCUS);info.setAccessibilityFocused(focused==id);Rect r=new Rect((int)(ox+h.r.left*scale),(int)(top+h.r.top*scale),(int)(ox+h.r.right*scale),(int)(top+h.r.bottom*scale));info.setBoundsInParent(r);int[] loc=new int[2];getLocationOnScreen(loc);r.offset(loc[0],loc[1]);info.setBoundsInScreen(r);return info;
         }
         @Override public boolean performAction(int id,int action,Bundle args){if(id==HOST_VIEW_ID&&layout!=null&&(action==AccessibilityNodeInfo.ACTION_SCROLL_FORWARD||action==AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD)){contentScroll=clampScroll(contentScroll+(action==AccessibilityNodeInfo.ACTION_SCROLL_FORWARD?1:-1)*viewportH*.65f);invalidate();sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_SCROLLED);sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED);return true;}if(id<0||id>=hits.size())return false;if(action==AccessibilityNodeInfo.ACTION_CLICK){final Hit target=hits.get(id);if(target.action==null)return false;final long token=actionGeneration;post(()->{if(running&&token==actionGeneration){target.action.run();invalidate();sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED);}});return true;}if(action==AccessibilityNodeInfo.ACTION_ACCESSIBILITY_FOCUS){focused=id;accessibilityEvent(id,AccessibilityEvent.TYPE_VIEW_ACCESSIBILITY_FOCUSED);invalidate();return true;}if(action==AccessibilityNodeInfo.ACTION_CLEAR_ACCESSIBILITY_FOCUS){focused=-1;invalidate();return true;}return false;}
     };}

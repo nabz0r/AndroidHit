@@ -1,0 +1,259 @@
+{
+  "passed": true,
+  "case": "avatar",
+  "serial": "emulator-5584",
+  "scope": "Existing installed native SDK case. No new test/app source or build, no profile injection/restoration, no purchases or progression. Avatar case may pin the explicitly authorized reversible cosmetic goal.",
+  "app_sha256": "6f9edf10cddc283a6ae6d0ae876f3196b52660ddc6ed992aeea18bcdb698db78",
+  "test_sha256": "7a0e2b6a48a19eaf6ea80a1338f420aea7253249c32172e0716203f47c16c61f",
+  "rotation_before": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed exact target 1.11.0-sandbox-rc1/code12"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Avatar offer exposes a real companion preview with an explicit no-grant label"
+      },
+      {
+        "pass": true,
+        "message": "Preview grants no cosmetic and changes no coins, equipment, stock, receipt or XP"
+      },
+      {
+        "pass": true,
+        "message": "Closing a preview leaves the profile unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Explicit native pin stores the real catalog identity"
+      },
+      {
+        "pass": true,
+        "message": "Pinning changes neither ownership nor balance, equipment, stock, receipts or XP"
+      },
+      {
+        "pass": true,
+        "message": "Home reads the pinned goal without claiming it"
+      },
+      {
+        "pass": true,
+        "message": "Pinned Home goal opens the same explicit preview"
+      },
+      {
+        "pass": true,
+        "message": "Pinned goal preview still does not grant or equip"
+      },
+      {
+        "pass": true,
+        "message": "Avatar separates equipment from cosmetic appearance"
+      },
+      {
+        "pass": true,
+        "message": "Flat selection is semantically selected: Equipment"
+      },
+      {
+        "pass": true,
+        "message": "Flat selection has actual opaque mint pixels above its text: Equipment actual=ffe1fff2"
+      },
+      {
+        "pass": true,
+        "message": "Equipment tab is read-only before an explicit action"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Appearance remains its distinct selected tab"
+      },
+      {
+        "pass": true,
+        "message": "Flat selection is semantically selected: Appearance"
+      },
+      {
+        "pass": true,
+        "message": "Flat selection has actual opaque mint pixels above its text: Appearance actual=ffe1fff2"
+      },
+      {
+        "pass": true,
+        "message": "Landscape layout: SDK rotation accepted"
+      },
+      {
+        "pass": true,
+        "message": "Landscape layout: actual rotation 1, PNG 2340\u00d71080, game view [0,0][2340,1080]"
+      },
+      {
+        "pass": true,
+        "message": "Avatar recreation does not apply a preview or grant an item"
+      },
+      {
+        "pass": true,
+        "message": "Portrait return layout: SDK rotation accepted"
+      },
+      {
+        "pass": true,
+        "message": "Portrait return layout: actual rotation 0, PNG 1080\u00d72340, game view [0,0][1080,2340]"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Inventory / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Avatar portrait return keeps economic and equipped state"
+      },
+      {
+        "pass": true,
+        "message": "Footer target reaches stable observed bottom position: Open inventory"
+      },
+      {
+        "pass": true,
+        "message": "Footer target retains at least47dp of actual visible native height: Open inventory actual=48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Entire footer target stays above fixed native navigation: Open inventory"
+      },
+      {
+        "pass": true,
+        "message": "Footer target reaches stable observed bottom position: \u203a"
+      },
+      {
+        "pass": true,
+        "message": "Footer target retains at least47dp of actual visible native height: \u203a actual=48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Entire footer target stays above fixed native navigation: \u203a"
+      },
+      {
+        "pass": true,
+        "message": "Avatar and Collection footer inspection changes no ownership, equipment or currency"
+      }
+    ],
+    "captures": [
+      "home-en",
+      "avatar-preview-cupid-en",
+      "hub-pinned-goal-en",
+      "avatar-equipment-en",
+      "avatar-slots-en",
+      "footer-target-open-inventory-en",
+      "footer-target-collection-next-page-en"
+    ],
+    "checkCount": 45,
+    "package": "com.androidhit.lumadrift.sandbox",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "processId": 6866,
+    "visualPhase": "prepare",
+    "visualSoftFailures": 0,
+    "visualCheckpointReady": false,
+    "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+  },
+  "screenshots": [
+    {
+      "name": "home-en.png",
+      "sha256": "851c2dc29ecc25f5aab81994270f37a27fca6852c2637f5f6486565a57671e9f"
+    },
+    {
+      "name": "avatar-preview-cupid-en.png",
+      "sha256": "0ab82239aa183526a63e5b68547365a64c72cf576ff397697eba532c689e7b6b"
+    },
+    {
+      "name": "hub-pinned-goal-en.png",
+      "sha256": "971777a485e888b86a7dab65468e17b1765ab5d3eea00a7444fb731e268e29b1"
+    },
+    {
+      "name": "avatar-equipment-en.png",
+      "sha256": "e02695a65e1a8160ad3ab35bfa8ed8052b2422af21478ecb746975651326a037"
+    },
+    {
+      "name": "avatar-slots-en.png",
+      "sha256": "262c07edc64275abd5b2c5761a8dbb81eb0bebd6ed0e26633c61472e0021f6fc"
+    },
+    {
+      "name": "footer-target-open-inventory-en.png",
+      "sha256": "d35e74fe7bdf3110898ae9dc2498692436b0689b424dc482944a6ddbc5d7cd81"
+    },
+    {
+      "name": "footer-target-collection-next-page-en.png",
+      "sha256": "886fa13e68ba83ee07e4d89a933bad5de4bd4d6fd63010c85cc8999883b06ee8"
+    }
+  ],
+  "persisted_changes": {
+    "luma_drift_save_v1/collection_goal_v110": {
+      "before": null,
+      "after": "cosmetic:hat_cupid"
+    }
+  },
+  "crash_buffer_unchanged": true,
+  "rotation_after": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "rotation_preserved": true,
+  "completed_at_utc": "2026-10-28T11:36:36.036255+00:00",
+  "new_guest_retained": true
+}

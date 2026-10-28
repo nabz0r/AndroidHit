@@ -55,16 +55,17 @@ public final class CompanionPortrait {
             if (item == null) continue;
             int variant = CosmeticCatalog.ITEMS.indexOf(item) % 6;
             int color = cosmeticColor(item);
-            if (item.slot == CosmeticCatalog.Slot.HAT) clothes.cosmetic(canvas, item.slot.name(), variant, 0, -.85f, .72f, color);
-            else if (item.slot == CosmeticCatalog.Slot.DRESS) clothes.cosmetic(canvas, item.slot.name(), variant, 0, .85f, .70f, color);
-            else if (item.slot == CosmeticCatalog.Slot.SHOES) clothes.cosmetic(canvas, item.slot.name(), variant, 0, 1.4f, .71f, color);
-            else clothes.cosmetic(canvas, item.slot.name(), variant, 0, .63f, 1.08f, color);
+            // Keep each character's ears, face and upper silhouette readable when fully dressed.
+            if (item.slot == CosmeticCatalog.Slot.HAT) clothes.cosmetic(canvas, item.slot.name(), variant, 0, -1.10f, .60f, color);
+            else if (item.slot == CosmeticCatalog.Slot.DRESS) clothes.cosmetic(canvas, item.slot.name(), variant, 0, 1.10f, .64f, color);
+            else if (item.slot == CosmeticCatalog.Slot.SHOES) clothes.cosmetic(canvas, item.slot.name(), variant, 0, 1.67f, .60f, color);
+            else clothes.cosmetic(canvas, item.slot.name(), variant, 0, 1.02f, .86f, color);
         }
         if (loadout != null) {
-            // The smaller legacy head ornament sits to one side of a wardrobe hat, not over its face.
-            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.HEAD), .65f, -.96f, .32f);
-            line(canvas, .75f, .49f, .75f, .77f, selected.secondary, .035f);
-            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.CHARM), .75f, .9f, .25f);
+            // Equipment occupies its own side of the portrait instead of competing with the hat/glove.
+            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.HEAD), .98f, -.80f, .42f);
+            line(canvas, 1.02f, .49f, 1.02f, 1.02f, selected.secondary, .035f);
+            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.CHARM), 1.02f, 1.15f, .37f);
         }
         canvas.restore();
     }
@@ -146,7 +147,7 @@ public final class CompanionPortrait {
     private void aura(Canvas canvas, AvatarGearCatalog.Item item, AvatarStyles.Style style) {
         if (item == null) return;
         int variant = AvatarGearCatalog.ITEMS.indexOf(item) % 6;
-        canvas.save(); canvas.scale(1.34f, 1.19f);
+        canvas.save(); canvas.scale(1.50f, 1.38f);
         auraGlyph(canvas, variant, blend(gearColor(item), style.accent, .2f), blend(style.secondary, WHITE, .45f));
         canvas.restore();
     }

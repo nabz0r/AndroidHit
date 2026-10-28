@@ -1,6 +1,15 @@
 # Luma Drift documentation
 
-## Current 1.10 — Companion & Objectives
+## Current 1.11 — equipment visibility and bug hunting
+
+[Production APK](../releases/luma-drift-1.11.0-rc2.apk) · [AAB](../releases/luma-drift-1.11.0-rc2.aab) · [Changes and limits](RELEASE_1_11.md) · [Exact artifacts](validation/v1.11/candidate.json) · [Qualification](validation/v1.11/README.md) · [Roadmap](ROADMAP.md).
+
+Production 1.11.0-rc2 and isolated Lab 1.11.0-sandbox-rc2, code 12. Portrait composition, visible equipment feedback, worn item names, theme rendering, pending inventory reads and first-profile save recovery are corrected. Preview, purchase and equipment remain separate. The first native visual tests now compare actual art and cross a real cold-process boundary; see the qualification record for executed results and fixture failures. Earlier 1.10 state/selection tests do not establish item visibility.
+
+The website remains on its separately confirmed 1.10 deployment. Play publication and live provider activation are paused during this bug hunt. Google identity does not synchronize local gameplay.
+
+
+## Preserved 1.10 — Companion & Objectives
 
 [Signed production APK](../releases/luma-drift-1.10.0-rc3.apk) · [AAB](../releases/luma-drift-1.10.0-rc3.aab) · [Release and exact hashes](RELEASE_1_10.md) · [Illustrated experience](UX_1_10.md) · [Native qualification](validation/v1.10/README.md) · [Prism journal](PRISM_STORY_1_10.md) · [Roadmap](ROADMAP.md).
 
@@ -92,7 +101,7 @@ A configured service URL is not proof that new routes are deployed. The prepared
 | [Notices](THIRD_PARTY_NOTICES.md) | SDK/Google mark and original source/art/audio provenance |
 | [Research archive](RESEARCH.md) | Dated market, initial concept and licensing work |
 
-Historical reports remain available: [1.8](RELEASE_1_8.md), [1.7](RELEASE_1_7.md), [1.6](RELEASE_1_6.md), [1.5](RELEASE_1_5.md), [1.4](RELEASE_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](RELEASE_1_2.md) and [1.1](RELEASE_1_1.md). Their packages, dates, synthetic profiles, screenshots and limits are not relabelled as 1.9 evidence. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; new runs belong under their own version. The current 1.9 result is indexed above.
+Historical reports remain available: [1.8](RELEASE_1_8.md), [1.7](RELEASE_1_7.md), [1.6](RELEASE_1_6.md), [1.5](RELEASE_1_5.md), [1.4](RELEASE_1_4.md), [1.3](VALIDATION_1_3.md), [1.2](RELEASE_1_2.md) and [1.1](RELEASE_1_1.md). Their packages, dates, synthetic profiles, screenshots and limits are not relabelled as 1.9 evidence. [VALIDATION.md](VALIDATION.md) is the preserved 1.5 acceptance record; new runs belong under their own version. The preserved 1.9 result is indexed above.
 
 ## Qualification sociale en attente
 

@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-10-28T11:53:18.072710+00:00",
+  "serial": "emulator-5586",
+  "avd": "Luma-Release111-K",
+  "retained_K_restarted_without_reset": true,
+  "production_absent_before_first_install": true,
+  "production_test_absent_before_first_install": true,
+  "lab_preferences_before": {
+    "luma_drift_meta_v1.xml": "1d370c640b2895f9781629c4e6059540ac5c23762ef8ee0643528e9f58a0b285",
+    "luma_drift_save_v1.xml": "63cbf6dce359f6f05cd1f625080bc32fa51f554965281a77074bb828512c52b6",
+    "luma_session.xml": "70c64b0ed52c38a4b43369564a1dba6cfdfb53e4ed407fb0cb53f117ae91a356"
+  },
+  "lab_package_path_before": "/data/app/~~NlHA6K5KAX99Fu21L-g4Dg==/com.androidhit.lumadrift.sandbox-qlw6eD1skCdH0u0oy44TnA==/base.apk",
+  "lab_apk_sha256_before": "65bfbeab4f8b488e483a1622568540caf0315f72cf33d94876c75eafc9b4b642",
+  "artifacts": {
+    "releases/luma-drift-1.11.0-rc2.apk": {
+      "bytes": 7757406,
+      "sha256": "5a77d0c5b15dcdbb919bc3ea248ac9ac7b1b642898ee0fdd6cd8f855a1d09811"
+    },
+    "app/build/qualification-artifacts/v1.11/v111-identity-production-test.apk": {
+      "bytes": 126851,
+      "sha256": "30a76bf57c54bdc62e32a5c4027fe8ccc3ffb687495fd82d1e4e83e58e1d5faf"
+    },
+    "app/build/qualification-artifacts/v1.11/v111-audio-production-test.apk": {
+      "bytes": 126851,
+      "sha256": "e801e396c3365a7e63ecb17903c0556fd93d7dda76bf0bb01dfe3c9cb0a191fa"
+    }
+  },
+  "source_snapshot": {
+    "scripts/v111-ui-test/run.py": "08dec7a2347472c781aa58fed55a37e12c1fbf3c97dbbeb44e2040a76b8a40ea",
+    "scripts/v111-ui-test/storage_fault.py": "7ec7137995eda1e47a95fb1fa2e2fd43479758fed25263afd5c6401a03f2b4f8",
+    "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/CandidateUiInstrumentation.java": "5e29a15ec184114010a70255c0c29d7ae68a99baa691dc0265712860fee589db",
+    "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/ProductionStartupInstrumentation.java": "e81a6a0327d040913f076d8bc7c094809a999ba6640633cbb5591940d9cd8d76",
+    "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/RasterObservation.java": "d3654df4ece79b72294769d304dc7d9b6e9d66cc43bd5699c4d37b9b5b5fba07"
+  }
+}

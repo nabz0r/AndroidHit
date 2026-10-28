@@ -1,0 +1,35 @@
+{
+  "started_at_utc": "2026-10-28T10:57:47.021112+00:00",
+  "baseline_commit": "10c78c7cfead1c20b7fb2c7636273c21c11d2f56",
+  "reported_symptoms": [
+    "Character/style choices seem to have no visible effect",
+    "Equipped items are not visibly represented"
+  ],
+  "source_sha256": {
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "67508e537e1604df621d022bffd1218f2a15c01241050ed90699d76aab1ddfb4",
+    "app/src/main/java/com/androidhit/lumadrift/ui/CompanionPortrait.java": "8fb001b7b65f14e50d6972ce729c86a90a4ff54ccccd32f1f893a12990509ac7",
+    "app/src/main/java/com/androidhit/lumadrift/ui/AvatarStage.java": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+    "app/src/main/java/com/androidhit/lumadrift/ui/WorldBackdrop.java": "bc1b0d70091bfeebbf771c3244011dc5ae80f5061f47e2de907907a2c9d6699d",
+    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "94627c0fd3fb8d02587d5654e5e5e4f0afc1238fa15fd866ff78a331388682be"
+  },
+  "baseline_apks": {
+    "releases/luma-drift-1.10.0-rc3.apk": "29a68cdcaeb61850d55afd101f03bd8c42a075cc6d6631205fc176e499dd70b4",
+    "releases/luma-drift-1.10.0-sandbox-rc3.apk": "d1b085b4d9bbcf450037069ed15c7cea89b0e3e759b16e587cf3ca016a7c493f"
+  },
+  "play_publication_performed": false,
+  "baseline_native_reproduction": {
+    "report": "ui-bugs/ui-sdk-baseline-rc3-c/host-report.json",
+    "overall_passed": false,
+    "checks": 929,
+    "genuine_journey_clears": 40,
+    "theme_home_changed_pixels": 0,
+    "theme_play_changed_pixels": 0,
+    "expected_scene_changes_missing": 2,
+    "cold_phase_passed": true,
+    "cold_checks": 22,
+    "clothing_character_style_changes_already_visible": true,
+    "original_profile_and_rotation_restored": true,
+    "fixture_failures_a_b_retained": true
+  },
+  "scope": "Bug hunting and fixes before Play publication. Source hypotheses are not treated as reproduced installed defects."
+}

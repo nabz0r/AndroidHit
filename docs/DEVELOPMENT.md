@@ -1,6 +1,13 @@
 # Development and architecture
 
-## Current1.10 additions
+## Current 1.11 bug fixes
+
+`CompanionPortrait` adjusts composition within its existing `2r` extent. `WorldBackdrop` reuses a selected-theme HSV wash on the garden and after the animated play scene. `LumaView` returns to the actual equipped portrait, names worn slots and handles failed/obsolete equipment callbacks. `GameStore` settles exact pending transactions before ownership/loadout reads and tracks first-profile initialization without throwing from its constructor. `V111Strings` supplies four feedback/accessibility keys in six languages. IDs, prices, effects and saved puzzle models are unchanged.
+
+Run `test-store-appearance-v111.sh`, `test-store-init-v111.sh` and `test-store-externals-v111.sh`. Renderer/copy runners are in `validation/v1.11/avatar-bugs/`; native instrumentation is `scripts/v111-ui-test/`. Its approved devices are explicit, purchase budgets come from real clears, exact APK hashes are checked and retained profiles are restored. Actual art comparisons and separate cold processes replace reliance on stored IDs alone. [Qualification](validation/v1.11/README.md).
+
+
+## Preserved 1.10 additions
 
 `CompanionPortrait` composes the selected character/style with four clothes and three equipment slots. `CollectionGoal` reads one explicitly pinned item. `ObjectiveDashboard` reads earned, unclaimed actions across the existing local stores. `PrismStory` supplies a read-only ten-chapter narrative from actual Journey clears and claimed guardian receipts. `V110Strings` and `PrismStoryStrings` cover six languages. Native dialogs share the pastel game palette.
 
@@ -15,7 +22,7 @@ Run `bash scripts/test-objective-models-v110.sh`, `bash scripts/test-prism-story
 Run the dedicated scripts `test-new-player-v19.sh`, `test-guardian-v19.sh`, `test-guardian-store-v19.sh` and `test-journey-rewards-v19.sh`. Native instrumentation lives in `scripts/v19-ui-test/`; it targets the named QA emulator, checks exact APK bytes and restores original preferences/display settings. Earlier 1.8 scripts/reports retain their scope.
 
 
-Current source declares **production1.10.0-rc3** and **Lab1.10.0-sandbox-rc3**, code **11**. [Qualification and exact-byte evidence](validation/v1.10/README.md) · [V4 engine](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [Current UX contract](UX_1_10.md). Build with JDK21 for the pinned lint analyzer; Java17 source remains supported.
+Current source declares **production 1.11.0-rc2** and **Lab 1.11.0-sandbox-rc2**, code **12**. [Qualification and exact-byte evidence](validation/v1.11/README.md) · [V4 engine](PROGRESSION_V4.md) · [Tutorial](TUTORIAL.md) · [Current UX contract](UX_1_10.md). Build with JDK21 for the pinned lint analyzer; Java17 source remains supported.
 
 The component/build details below retain their earlier historical references; current content uses StrategyCatalog L/M/T, content save5 and reversible budget policy3. Current 1.7 policy2 saves migrate with their exact old layout/base; historical codes are unchanged. New exact guidance runs off the UI thread on one worker with one coalesced queued request.
 

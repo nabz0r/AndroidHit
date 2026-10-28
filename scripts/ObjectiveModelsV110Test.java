@@ -122,13 +122,14 @@ public final class ObjectiveModelsV110Test {
 
     private static void goalFailures(){
         for(boolean memory:new boolean[]{false,true}){
-            RewardsCosmeticsV17Test.Ctx c=context();RewardsCosmeticsV17Test.Clock k=clock("2026-10-28");GameStore s=store(c,k);s.setTrackedCollectionGoal("gear:moonbud");
+            RewardsCosmeticsV17Test.Ctx c=context();RewardsCosmeticsV17Test.Clock k=clock("2026-10-28");GameStore s=store(c,k),second=store(c,k);s.setTrackedCollectionGoal("gear:moonbud");
             c.save().fail(memory);saveFails(()->s.setTrackedCollectionGoal("cosmetic:hat_moon"),"pin disk refusal is typed and never false success");
             check(c.save().disk.get("collection_goal_v110").equals("gear:moonbud"),"pin failure leaves previous durable selection");
-            c.save().fail(memory);saveFails(()->store(c,k).trackedCollectionGoal(),"another handle cannot present an undurable pin as acknowledged");
+            // Construct first: constructor recovery is separate from a refused read flush.
+            c.save().fail(memory);saveFails(second::trackedCollectionGoal,"another handle cannot present an undurable pin as acknowledged");
             check(store(c,k).trackedCollectionGoal().equals("cosmetic:hat_moon")&&store(c.reboot(),k).trackedCollectionGoal().equals("cosmetic:hat_moon"),"pin exact pending update retries durably across handles");
             c.save().fail(memory);saveFails(s::clearTrackedCollectionGoal,"clear failure is visible");
-            c.save().fail(memory);saveFails(()->CollectionGoal.snapshot(store(c,k)),"goal snapshot surfaces a repeatedly refused clear flush");
+            c.save().fail(memory);saveFails(()->CollectionGoal.snapshot(second),"goal snapshot surfaces a repeatedly refused clear flush");
             check(store(c,k).trackedCollectionGoal().isEmpty()&&store(c.reboot(),k).trackedCollectionGoal().isEmpty(),"recovered clear does not resurrect the previous target");
         }
     }

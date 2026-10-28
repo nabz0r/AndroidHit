@@ -1,6 +1,13 @@
 # Installation and release artifacts
 
-## Current 1.10 installation
+## Current 1.11 installation
+
+Use the signed [production 1.11.0-rc2 APK](../releases/luma-drift-1.11.0-rc2.apk), code 12, package `com.androidhit.lumadrift`. Install over the existing app and retain its data to preserve device-local progression and inventory. The separate [Lab APK](../releases/luma-drift-1.11.0-sandbox-rc2.apk) has its own profile; no cross-package transfer is implied. Android 8/API 26 or later, existing signing identity retained.
+
+[Four files and changes](RELEASE_1_11.md) · [Full sizes/hashes and gates](validation/v1.11/candidate.json) · [Production manifest](../releases/manifest-1.11.0-rc2.json) · [Qualification and its limits](validation/v1.11/README.md). This bug hunt does not upload to Play or activate real ads/purchases. The Firebase website remains the separately recorded 1.10 deployment.
+
+
+## Preserved 1.10 installation
 
 Install the signed [production 1.10.0-rc3 APK](../releases/luma-drift-1.10.0-rc3.apk), package `com.androidhit.lumadrift`, code 11. Keep the existing application and its data to retain device-local progress. The separate [Lab APK](../releases/luma-drift-1.10.0-sandbox-rc3.apk) uses its own profile; no transfer into production is implied. Android 8/API 26 or later. Existing signing identity is retained.
 

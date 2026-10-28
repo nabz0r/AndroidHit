@@ -1,0 +1,30 @@
+{
+  "observed_at_utc": "2026-10-28T12:10:07.178068+00:00",
+  "scope": "Read-only post-run verification. Lab APK/test APK and all3 Lab preference files match their preserved qualified identities; all3 production preference files match exact original guest backup after explicit wrapper restoration. This does not claim every file on the virtual device was restored.",
+  "lab_preferences_after": {
+    "luma_drift_meta_v1.xml": "1d370c640b2895f9781629c4e6059540ac5c23762ef8ee0643528e9f58a0b285",
+    "luma_drift_save_v1.xml": "63cbf6dce359f6f05cd1f625080bc32fa51f554965281a77074bb828512c52b6",
+    "luma_session.xml": "70c64b0ed52c38a4b43369564a1dba6cfdfb53e4ed407fb0cb53f117ae91a356"
+  },
+  "lab_preferences_unchanged": true,
+  "lab_apk_sha256_after": "65bfbeab4f8b488e483a1622568540caf0315f72cf33d94876c75eafc9b4b642",
+  "lab_test_apk_sha256_after": "7a0e2b6a48a19eaf6ea80a1338f420aea7253249c32172e0716203f47c16c61f",
+  "production_preferences_after": {
+    "luma_drift_meta_v1.xml": "1d370c640b2895f9781629c4e6059540ac5c23762ef8ee0643528e9f58a0b285",
+    "luma_drift_save_v1.xml": "cc1d9083483859ff5c5a7400f185383928dd55d4c80a8e58e34f3ba7a0d9858c",
+    "luma_session.xml": "70c64b0ed52c38a4b43369564a1dba6cfdfb53e4ed407fb0cb53f117ae91a356"
+  },
+  "production_matches_original_guest_backup": true,
+  "production_restored_starter_fields": {
+    "coins": 180,
+    "booster_hint": 3,
+    "booster_vision": 3,
+    "booster_flow": 2,
+    "character": "nova",
+    "skin": "lumina",
+    "tutorial_v18_state": "T1|0|0|ACTIVE|"
+  },
+  "production_campaign_clears_after_restoration": 0,
+  "qualification_clears_before_restoration": 40,
+  "restoration_was_explicit_and_not_seeded_test_progress": true
+}

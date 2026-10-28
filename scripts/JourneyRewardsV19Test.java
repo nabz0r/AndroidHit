@@ -58,10 +58,11 @@ public final class JourneyRewardsV19Test {
         check(heldStore.reserveBoosterUse("hint","v19:physical-cap"),"reserve physical unit fixture");
         check(heldStore.boosterStock("hint")==998&&heldStore.claimPowerTrial("hint")==GameStore.PowerTrialStatus.STORAGE_FULL,"escrow counts towards physical stock cap");
         for(boolean memory:new boolean[]{false,true}){
-            RewardsCosmeticsV17Test.Ctx c=context();GameStore s=store(c);c.save().fail(memory);
+            RewardsCosmeticsV17Test.Ctx c=context();GameStore s=store(c),second=store(c);c.save().fail(memory);
             saveFailure(()->s.claimPowerTrial("hint"),"failed grant is never reported as durable");
             check(c.save().disk.get("booster_hint").equals(3)&&!c.save().disk.containsKey("power_trial_v19_hint"),"disk contains neither half of failed grant");
-            c.save().fail(memory);saveFailure(()->store(c).claimPowerTrial("hint"),"cross-handle retry waits for durability");
+            // Isolate the claim's flush from constructor recovery of the same pending write.
+            c.save().fail(memory);saveFailure(()->second.claimPowerTrial("hint"),"cross-handle retry waits for durability");
             check(store(c).claimPowerTrial("hint")==GameStore.PowerTrialStatus.ALREADY_CLAIMED&&s.boosterStock("hint")==4,"retry flushes original sample once");
             GameStore cold=store(c.reboot());check(cold.powerTrialClaimed("hint")&&cold.boosterStock("hint")==4,"receipt and exact stock reload together");
             check(s.useBooster("hint")&&s.boosterStock("hint")==3&&s.claimPowerTrial("hint")==GameStore.PowerTrialStatus.ALREADY_CLAIMED,"later use cannot be overwritten by duplicate retry");

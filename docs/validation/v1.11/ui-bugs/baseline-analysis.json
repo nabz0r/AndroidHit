@@ -1,0 +1,37 @@
+{
+  "subject": "Installed frozen1.10.0-sandbox-rc3/code11",
+  "apk_sha256": "d1b085b4d9bbcf450037069ed15c7cea89b0e3e759b16e587cf3ca016a7c493f",
+  "host_report": "ui-sdk-baseline-rc3-c/host-report.json",
+  "host_report_sha256": "e92c712c6267b00db90be80671134838b5f10a9fd38699728e32c6ff8cc0e4d9",
+  "global_passed": false,
+  "recorded_checks": 929,
+  "failed_checks": [
+    {
+      "pass": false,
+      "message": "Theme changes the actual blank Home canvas, excluding labels/cards: actual changedPixels=0, threshold=64, expectedChange=true"
+    },
+    {
+      "pass": false,
+      "message": "Theme changes the actual blank gameplay canvas: actual changedPixels=0, threshold=64, expectedChange=true"
+    }
+  ],
+  "journey_levels": 40,
+  "individual_board_assertions_verified": 120,
+  "original_full_frames": 41,
+  "unscaled_analysis_crops": 19,
+  "raster_observations": 19,
+  "worst_repeat_noise_pixels": 0,
+  "comparison_count": 16,
+  "cold_phase_passed": true,
+  "cold_phase_checks": 22,
+  "cold_process_boundary": {
+    "force_stop": true,
+    "package_absent_from_pidof_before_restart": true,
+    "previous_instrumented_process_id": 6347,
+    "restarted_instrumented_process_id": 7336
+  },
+  "final_observed_earned_coins": 290,
+  "original_profile_restored": true,
+  "rotation_settings_restored": true,
+  "limits": "Deterministic real rendering and ordinary cold persistence only. No inferred user error, perceptual score, human difficulty/retention, provider, payment or storage-failure qualification."
+}

@@ -1,4 +1,15 @@
-# Luma Drift 1.9 — production candidate and activation boundary
+# Production candidate and activation boundary
+
+## Current 1.11 — pre-Play bug hunt
+
+Production **1.11.0-rc2 / code 12** and isolated **1.11.0-sandbox-rc2** fix equipment visibility, application feedback and local-save defects. [Exact release](RELEASE_1_11.md) · [Qualification](validation/v1.11/README.md) · [Artifact identities](validation/v1.11/candidate.json).
+
+The owner's supplied Play screenshots show the Luma Drift draft app and the internal tester-list workflow. The walkthrough is paused for app bug hunting; this turn performs no Play upload or submission. Creating the app does not activate products, ads or Google sign-in acceptance. Test ads remain forced, the wallet purchase origin is empty, and paid cosmetic draws are disabled. Google identity does not synchronize local gameplay. Provider qualification and physical-phone acceptance are separate from package/SDK tests.
+
+The website remains on its confirmed 1.10 Hosting version; Cloud Run is unchanged. Earlier deliveries below retain their dated package/test scope and their historical next steps.
+
+## Preserved 1.9 production boundary
+
 
 Current 1.9 source, signed APK/AAB files and site are [delivered from main 6fbb1649](RELEASE_1_9.md), with independent public-download hashes and a finalized Hosting receipt. Real commerce stays gated; creating the Play application is the next owner step.
 

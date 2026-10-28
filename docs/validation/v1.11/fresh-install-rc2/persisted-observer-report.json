@@ -1,0 +1,45 @@
+{
+  "scope": "Read-only adb exec-out su0 cat of the real persisted XML on fresh emulator5586. Observer starts before installation/launch; never writes device state. No profile injection or disk-fault simulation.",
+  "samples": 36,
+  "unavailable_or_incomplete_reads": 644,
+  "first_initialized": {
+    "observed_at_utc": "2026-10-28T11:42:33.167617+00:00",
+    "elapsed_seconds": 185.104,
+    "xml_sha256": "9b93303b29f778136d14a04e18d7384668c6fabb6b602920769bbe9724c5812a",
+    "fields": {
+      "initialized": true,
+      "coins": 180,
+      "booster_hint": 3,
+      "booster_vision": 3,
+      "booster_flow": 2,
+      "character": "nova",
+      "skin": "lumina",
+      "owned_character_nova": true,
+      "owned_skin_lumina": true,
+      "tutorial_v18_fresh_profile": true,
+      "tutorial_v18_reward_claimed": null,
+      "tutorial_v18_state": null
+    }
+  },
+  "last_observed": {
+    "observed_at_utc": "2026-10-28T11:43:13.038052+00:00",
+    "elapsed_seconds": 224.975,
+    "xml_sha256": "50fada24a8834c3a3532d8e5726cce3f22171ccf8a548dde2b70e74f47b6f099",
+    "fields": {
+      "initialized": true,
+      "coins": 280,
+      "booster_hint": 5,
+      "booster_vision": 3,
+      "booster_flow": 2,
+      "character": "nova",
+      "skin": "lumina",
+      "owned_character_nova": true,
+      "owned_skin_lumina": true,
+      "tutorial_v18_fresh_profile": true,
+      "tutorial_v18_reward_claimed": true,
+      "tutorial_v18_state": "T1|0|0|SKIPPED|"
+    }
+  },
+  "stopped_by_sentinel": true,
+  "observed_starter_exact": true
+}

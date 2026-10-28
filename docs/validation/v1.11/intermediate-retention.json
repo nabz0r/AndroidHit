@@ -1,0 +1,35 @@
+{
+  "scope": "Unpublished intermediate RC1 binaries retained locally under ignored build qualification storage, not current public downloads. Historical RC1 manifests/native outcomes retain their original scope. No previously committed artifact removed.",
+  "artifacts": [
+    {
+      "original_path": "releases/luma-drift-1.11.0-rc1.apk",
+      "retained_local_path": "app/build/qualification-artifacts/v1.11/rc1/luma-drift-1.11.0-rc1.apk",
+      "bytes": 7757406,
+      "sha256": "8b4456b484efeb75d43115830a5b87d3355326fc855c322b34598783b2eb2936"
+    },
+    {
+      "original_path": "releases/luma-drift-1.11.0-rc1.aab",
+      "retained_local_path": "app/build/qualification-artifacts/v1.11/rc1/luma-drift-1.11.0-rc1.aab",
+      "bytes": 11149415,
+      "sha256": "480286c32c10cd783fc7f1f3582465630c0d8b4dd0c318597d0cc9746b3ecd8d"
+    },
+    {
+      "original_path": "releases/luma-drift-1.11.0-sandbox-rc1.apk",
+      "retained_local_path": "app/build/qualification-artifacts/v1.11/rc1/luma-drift-1.11.0-sandbox-rc1.apk",
+      "bytes": 7757097,
+      "sha256": "6f9edf10cddc283a6ae6d0ae876f3196b52660ddc6ed992aeea18bcdb698db78"
+    },
+    {
+      "original_path": "releases/luma-drift-1.11.0-sandbox-rc1.aab",
+      "retained_local_path": "app/build/qualification-artifacts/v1.11/rc1/luma-drift-1.11.0-sandbox-rc1.aab",
+      "bytes": 11141824,
+      "sha256": "ef910ecca9052bac81cf47ea8290ca0ad6e3e248c09984a9e2245dea7b172d4d"
+    }
+  ],
+  "exact_changed_rc1_sources": {
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "504c0af3911929bf8e0d4ab5398e829f2e8f9f1f254e409ac793f29c902d541b",
+    "app/build.gradle": "42d5b6ad41b6197384020f43755320b70729c5312bdd4b2a5956ed75d3040258"
+  },
+  "all_other_rc1_source_inputs_identical_to_rc2": 104,
+  "source_preservation": "Exact previous bytes reconstructed from the limited RC2 caption/version patch and verified against the frozen RC1 manifest before writing; not a new source of runtime acceptance."
+}

@@ -1,0 +1,17 @@
+phase,label,expected_change,width,height,changed_pixels,changed_ratio,mean_absolute_rgb,rgb_tolerance,minimum_changed_pixels_exclusive
+prepare,Closed preview leaves actual equipped art unchanged,False,478,478,0,0,0,8,64
+prepare,Purchase without Equip leaves actual worn art unchanged: hat_cupid,False,478,478,0,0,0,8,64
+prepare,Equipping visibly changes the art for hat_cupid,True,478,478,12582,0.0550673132473171,2.9309112818986596,8,64
+prepare,Purchase without Equip leaves actual worn art unchanged: dress_witch,False,478,478,0,0,0,8,64
+prepare,Equipping visibly changes the art for dress_witch,True,478,478,9209,0.040304791582780414,3.0145714068964713,8,64
+prepare,Purchase without Equip leaves actual worn art unchanged: shoes_cupid,False,478,478,0,0,0,8,64
+prepare,Equipping visibly changes the art for shoes_cupid,True,478,478,4771,0.020881112025349695,1.0890069618295666,8,64
+prepare,Purchase without Equip leaves actual worn art unchanged: gloves_witch,False,478,478,0,0,0,8,64
+prepare,Equipping visibly changes the art for gloves_witch,True,478,478,18290,0.08004936888359798,4.906215168968798,8,64
+prepare,Earned gear visibly changes worn portrait,True,478,478,2328,0.01018889725319935,0.6063911112667262,8,64
+prepare,Companion identity visibly changes independent of its label,True,478,478,27815,0.12173718947497418,4.783666835898065,8,64
+prepare,"Free visual style changes the actual portrait, excluding text",True,478,478,15584,0.06820608882897708,6.327119915034167,8,64
+prepare,"Theme changes the actual blank Home canvas, excluding labels/cards",True,44,604,0,0,0,8,64
+prepare,Theme changes the actual blank gameplay canvas,True,44,604,0,0,0,8,64
+prepare,Changing theme leaves the worn portrait identity unchanged,False,478,478,0,0,0,8,64
+cold,Actual equipped drawing survives a cold process relaunch,False,478,478,0,0,0,8,64

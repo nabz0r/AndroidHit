@@ -1,0 +1,546 @@
+{
+  "recorded_at_utc": "2026-10-28T11:15:10.264112+00:00",
+  "baseline_commit": "10c78c7cfead1c20b7fb2c7636273c21c11d2f56",
+  "scope": "Read-only source fingerprints and targeted manual review of working1.11 against delivered1.10 source. No build, emulator, provider request or source modification.",
+  "overall": "No additional release-blocking defect established by this static review. Native/artifact qualification remains separate.",
+  "fingerprint_algorithm": "SHA256 of exact file bytes; group SHA256 of sorted relative path + NUL + file SHA256 + LF.",
+  "unchanged_groups": {
+    "engine": {
+      "files": 23,
+      "all_unchanged": true,
+      "baseline_tree_sha256": "a3cbcd939ec43d8a49adfa8e1da2a4ca2f6193c311df30665d6127bffc6b81b6",
+      "working_tree_sha256": "a3cbcd939ec43d8a49adfa8e1da2a4ca2f6193c311df30665d6127bffc6b81b6",
+      "entries": [
+        {
+          "path": "engine/BalancedCatalog.java",
+          "baseline_sha256": "f75fbdfef8e121c488cfe336fb1c1a750365433d9b19bf8abed636d35971fe27",
+          "working_sha256": "f75fbdfef8e121c488cfe336fb1c1a750365433d9b19bf8abed636d35971fe27",
+          "unchanged": true
+        },
+        {
+          "path": "engine/Barrier.java",
+          "baseline_sha256": "87999219c061bbd24e8a7332ea1f0c9916be19aab384f02148e657eae81d36ed",
+          "working_sha256": "87999219c061bbd24e8a7332ea1f0c9916be19aab384f02148e657eae81d36ed",
+          "unchanged": true
+        },
+        {
+          "path": "engine/Board.java",
+          "baseline_sha256": "e59583150d8aec84a100d1c8742d7abbea325c7225430a2c0f8cb5051c5531cd",
+          "working_sha256": "e59583150d8aec84a100d1c8742d7abbea325c7225430a2c0f8cb5051c5531cd",
+          "unchanged": true
+        },
+        {
+          "path": "engine/ChallengeCode.java",
+          "baseline_sha256": "0424770131b542e35d5e6f928ae419992286ec731f18d23373d1b0922f762165",
+          "working_sha256": "0424770131b542e35d5e6f928ae419992286ec731f18d23373d1b0922f762165",
+          "unchanged": true
+        },
+        {
+          "path": "engine/Direction.java",
+          "baseline_sha256": "7787796aa6543887f1ff2916420c3708cf9fa9095e5424f17ce89505beb45795",
+          "working_sha256": "7787796aa6543887f1ff2916420c3708cf9fa9095e5424f17ce89505beb45795",
+          "unchanged": true
+        },
+        {
+          "path": "engine/GuardianCatalog.java",
+          "baseline_sha256": "cd6ec026e71f4755bb4206ea809b9784a7fce676167c51318b9b7de732845a9d",
+          "working_sha256": "cd6ec026e71f4755bb4206ea809b9784a7fce676167c51318b9b7de732845a9d",
+          "unchanged": true
+        },
+        {
+          "path": "engine/GuardianEncounter.java",
+          "baseline_sha256": "dfb3c916f75d07f2cb36b99a34bb8691c0c017af45bc773390a39803f2f737d5",
+          "working_sha256": "dfb3c916f75d07f2cb36b99a34bb8691c0c017af45bc773390a39803f2f737d5",
+          "unchanged": true
+        },
+        {
+          "path": "engine/JourneyExperience.java",
+          "baseline_sha256": "13c0298a94184309a82b2c7c2897181ea7df27e178608e843235c91a38463a3a",
+          "working_sha256": "13c0298a94184309a82b2c7c2897181ea7df27e178608e843235c91a38463a3a",
+          "unchanged": true
+        },
+        {
+          "path": "engine/Level.java",
+          "baseline_sha256": "33cc2e2e713d34327960a8ab833cb78df2fa098b5e4bca581597d66399194d94",
+          "working_sha256": "33cc2e2e713d34327960a8ab833cb78df2fa098b5e4bca581597d66399194d94",
+          "unchanged": true
+        },
+        {
+          "path": "engine/LevelCatalog.java",
+          "baseline_sha256": "8f74d1dc9b1bfab7488bdb7a53cb8ff8a0b0f90911daa2d7a0eb681710f82a0b",
+          "working_sha256": "8f74d1dc9b1bfab7488bdb7a53cb8ff8a0b0f90911daa2d7a0eb681710f82a0b",
+          "unchanged": true
+        },
+        {
+          "path": "engine/MoveBudget.java",
+          "baseline_sha256": "8d791e3111146d8c48b2fad4eac10765591df93b78160227b6533fdd0df88a1c",
+          "working_sha256": "8d791e3111146d8c48b2fad4eac10765591df93b78160227b6533fdd0df88a1c",
+          "unchanged": true
+        },
+        {
+          "path": "engine/PrismStory.java",
+          "baseline_sha256": "2f5fb52fe01c823fb81244fc268de8ac888780a4bed0772a34564b8eb8482a8c",
+          "working_sha256": "2f5fb52fe01c823fb81244fc268de8ac888780a4bed0772a34564b8eb8482a8c",
+          "unchanged": true
+        },
+        {
+          "path": "engine/ProgressionInfo.java",
+          "baseline_sha256": "ad91593fc3f805b88281fa92588a34316a32495343c030fa39b8267aaa84dd13",
+          "working_sha256": "ad91593fc3f805b88281fa92588a34316a32495343c030fa39b8267aaa84dd13",
+          "unchanged": true
+        },
+        {
+          "path": "engine/ProgressionV2Layouts.java",
+          "baseline_sha256": "7e13d7d6951ccf739f002327c5bd153aaac0f334cd689763430ae349bc15b8cd",
+          "working_sha256": "7e13d7d6951ccf739f002327c5bd153aaac0f334cd689763430ae349bc15b8cd",
+          "unchanged": true
+        },
+        {
+          "path": "engine/ProgressionV3Catalog.java",
+          "baseline_sha256": "fd02bcd590baecc151ac8b84ebb2fcd9ff5a9b1e33fb88176a5bab008c466a62",
+          "working_sha256": "fd02bcd590baecc151ac8b84ebb2fcd9ff5a9b1e33fb88176a5bab008c466a62",
+          "unchanged": true
+        },
+        {
+          "path": "engine/ProgressionV3Layouts.java",
+          "baseline_sha256": "55aa4100e84365f12405b6633aaa928c37a5b5acb47afecfd877e8835d6b437b",
+          "working_sha256": "55aa4100e84365f12405b6633aaa928c37a5b5acb47afecfd877e8835d6b437b",
+          "unchanged": true
+        },
+        {
+          "path": "engine/RemixCatalog.java",
+          "baseline_sha256": "14b79977f22ea94e3381b32928e5768252cd06d81c5be0b262a15b1498e4abcc",
+          "working_sha256": "14b79977f22ea94e3381b32928e5768252cd06d81c5be0b262a15b1498e4abcc",
+          "unchanged": true
+        },
+        {
+          "path": "engine/SealedCatalog.java",
+          "baseline_sha256": "f1ed9eedfea2d3c2c311bc31a7a584b3b7a40e353e418aff1121ce126035788f",
+          "working_sha256": "f1ed9eedfea2d3c2c311bc31a7a584b3b7a40e353e418aff1121ce126035788f",
+          "unchanged": true
+        },
+        {
+          "path": "engine/Solver.java",
+          "baseline_sha256": "d6acaecc6262472c59884d4c1f29da32ca7c738675594fcf2f3cd1c3d38cedb4",
+          "working_sha256": "d6acaecc6262472c59884d4c1f29da32ca7c738675594fcf2f3cd1c3d38cedb4",
+          "unchanged": true
+        },
+        {
+          "path": "engine/StrategyCatalog.java",
+          "baseline_sha256": "c64e8b0987bf52e2ab2eac4635d5b7fa7580307710e9ca27792fb3ae09a4d970",
+          "working_sha256": "c64e8b0987bf52e2ab2eac4635d5b7fa7580307710e9ca27792fb3ae09a4d970",
+          "unchanged": true
+        },
+        {
+          "path": "engine/StrategySolver.java",
+          "baseline_sha256": "a5a763dabdcb87351aa8e5a0dcfd76d05f1f5fab3099b770298e6001e988c33e",
+          "working_sha256": "a5a763dabdcb87351aa8e5a0dcfd76d05f1f5fab3099b770298e6001e988c33e",
+          "unchanged": true
+        },
+        {
+          "path": "engine/StrategyV4Layouts.java",
+          "baseline_sha256": "5b8fbddc141892a3b7ead3c0051b14b64be4effcd0449a126a896c2a686699f2",
+          "working_sha256": "5b8fbddc141892a3b7ead3c0051b14b64be4effcd0449a126a896c2a686699f2",
+          "unchanged": true
+        },
+        {
+          "path": "engine/Tile.java",
+          "baseline_sha256": "1c43d18aa122b2b37dfce18fb77e09f9a445c6920b9e6f0459c9f4594dc6d7bf",
+          "working_sha256": "1c43d18aa122b2b37dfce18fb77e09f9a445c6920b9e6f0459c9f4594dc6d7bf",
+          "unchanged": true
+        }
+      ]
+    },
+    "catalogs": {
+      "files": 4,
+      "all_unchanged": true,
+      "baseline_tree_sha256": "853cff50a2db3081aa0044c6a71f09a116261c6c1365acbbabbeeeb400d56b76",
+      "working_tree_sha256": "853cff50a2db3081aa0044c6a71f09a116261c6c1365acbbabbeeeb400d56b76",
+      "entries": [
+        {
+          "path": "data/AvatarGearCatalog.java",
+          "baseline_sha256": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
+          "working_sha256": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
+          "unchanged": true
+        },
+        {
+          "path": "data/AvatarStyles.java",
+          "baseline_sha256": "3f6fc31444ffdd3a1c5db7662da4ec8db0b95fab55f4ef103479d8c1b65246fc",
+          "working_sha256": "3f6fc31444ffdd3a1c5db7662da4ec8db0b95fab55f4ef103479d8c1b65246fc",
+          "unchanged": true
+        },
+        {
+          "path": "data/Catalog.java",
+          "baseline_sha256": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+          "working_sha256": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+          "unchanged": true
+        },
+        {
+          "path": "data/CosmeticCatalog.java",
+          "baseline_sha256": "d75a2a94b7b3b927a35c63c2256eb2e7e3e6a704a47ee3741d08f4b69f8c2e1f",
+          "working_sha256": "d75a2a94b7b3b927a35c63c2256eb2e7e3e6a704a47ee3741d08f4b69f8c2e1f",
+          "unchanged": true
+        }
+      ]
+    },
+    "onboarding": {
+      "files": 2,
+      "all_unchanged": true,
+      "baseline_tree_sha256": "de21d2c7aba4b089110dd5a6f58b6819c828c03e6350af1cb271dac33ffde521",
+      "working_tree_sha256": "de21d2c7aba4b089110dd5a6f58b6819c828c03e6350af1cb271dac33ffde521",
+      "entries": [
+        {
+          "path": "onboarding/TutorialSession.java",
+          "baseline_sha256": "d2a3d18bbc8eb8ea3d307d287caae018129121d4231c494fb25134e615f4a3f0",
+          "working_sha256": "d2a3d18bbc8eb8ea3d307d287caae018129121d4231c494fb25134e615f4a3f0",
+          "unchanged": true
+        },
+        {
+          "path": "onboarding/TutorialStrings.java",
+          "baseline_sha256": "132ec1648b8057a3d853030c0111d0e1734f5cd0c156a63155494fb44a5131b5",
+          "working_sha256": "132ec1648b8057a3d853030c0111d0e1734f5cd0c156a63155494fb44a5131b5",
+          "unchanged": true
+        }
+      ]
+    },
+    "support_models_and_unmodified_drawing": {
+      "files": 12,
+      "all_unchanged": true,
+      "baseline_tree_sha256": "48efb65de747713573b581fd8a2efb7d501548c084f982ff87be41d911bbe35f",
+      "working_tree_sha256": "48efb65de747713573b581fd8a2efb7d501548c084f982ff87be41d911bbe35f",
+      "entries": [
+        {
+          "path": "data/CollectionGoal.java",
+          "baseline_sha256": "048695dd5d11ea7a0e68e2dd9e15aa65f2ad0eaddab416f1ccae20c4b7b2628d",
+          "working_sha256": "048695dd5d11ea7a0e68e2dd9e15aa65f2ad0eaddab416f1ccae20c4b7b2628d",
+          "unchanged": true
+        },
+        {
+          "path": "data/EconomyCurve.java",
+          "baseline_sha256": "1f5e230948603e61b4522f0d790a764312c381a12216449d7a45b0f9e17b261a",
+          "working_sha256": "1f5e230948603e61b4522f0d790a764312c381a12216449d7a45b0f9e17b261a",
+          "unchanged": true
+        },
+        {
+          "path": "data/EventSchedule.java",
+          "baseline_sha256": "2bb723df3bd9d79224d1d50bdda997e99e1d1a7575439406f93b21a847c17198",
+          "working_sha256": "2bb723df3bd9d79224d1d50bdda997e99e1d1a7575439406f93b21a847c17198",
+          "unchanged": true
+        },
+        {
+          "path": "data/InventoryPresentation.java",
+          "baseline_sha256": "a2655902ece6005bfbbd3cf56ad51123aaf52fad81cf81686f3d7faf41e95d63",
+          "working_sha256": "a2655902ece6005bfbbd3cf56ad51123aaf52fad81cf81686f3d7faf41e95d63",
+          "unchanged": true
+        },
+        {
+          "path": "data/LocalSaveTransactions.java",
+          "baseline_sha256": "395fdb444c436eb5d05d4f6b40fae2eec208698f353c6f1c2dab749d25863fd2",
+          "working_sha256": "395fdb444c436eb5d05d4f6b40fae2eec208698f353c6f1c2dab749d25863fd2",
+          "unchanged": true
+        },
+        {
+          "path": "data/ObjectiveDashboard.java",
+          "baseline_sha256": "f07b77303f28e22be7e4c069ae25fd3fc8689ba7f07ffd489a4fa92627effe31",
+          "working_sha256": "f07b77303f28e22be7e4c069ae25fd3fc8689ba7f07ffd489a4fa92627effe31",
+          "unchanged": true
+        },
+        {
+          "path": "data/PowerUsePolicy.java",
+          "baseline_sha256": "33c726840a8e0e618eb1aaef7bf145a3e1bb7ae0411174faae1fa4a8286350f8",
+          "working_sha256": "33c726840a8e0e618eb1aaef7bf145a3e1bb7ae0411174faae1fa4a8286350f8",
+          "unchanged": true
+        },
+        {
+          "path": "ui/AvatarStage.java",
+          "baseline_sha256": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+          "working_sha256": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+          "unchanged": true
+        },
+        {
+          "path": "ui/ExperienceLayout.java",
+          "baseline_sha256": "601d1a9074b6241d848baab9f1b8697045a122f1cc629eed81e78aea618fb67d",
+          "working_sha256": "601d1a9074b6241d848baab9f1b8697045a122f1cc629eed81e78aea618fb67d",
+          "unchanged": true
+        },
+        {
+          "path": "ui/KawaiiArt.java",
+          "baseline_sha256": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
+          "working_sha256": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
+          "unchanged": true
+        },
+        {
+          "path": "ui/SagaMap.java",
+          "baseline_sha256": "cdf19d5ecc308bde6a7f06d7b9bb414f53cb7b0cbfac76158afcab2d49b33145",
+          "working_sha256": "cdf19d5ecc308bde6a7f06d7b9bb414f53cb7b0cbfac76158afcab2d49b33145",
+          "unchanged": true
+        },
+        {
+          "path": "ui/SweetUi.java",
+          "baseline_sha256": "b3990b4a99a1fb26807b863f9c828f2818cf9ffd37116d66a1ff512ce0577c04",
+          "working_sha256": "b3990b4a99a1fb26807b863f9c828f2818cf9ffd37116d66a1ff512ce0577c04",
+          "unchanged": true
+        }
+      ]
+    }
+  },
+  "unchanged_source_files": 41,
+  "tutorial_view_segment": {
+    "start_anchor": "private void openTutorial(boolean replay)",
+    "end_anchor": "private String screenTitle(String key)",
+    "baseline_sha256": "776c0fdd85f5098aa4ef6ffbe8557fcb9cbab7f1eeef4cc0123f3291fa31fb83",
+    "working_sha256": "776c0fdd85f5098aa4ef6ffbe8557fcb9cbab7f1eeef4cc0123f3291fa31fb83",
+    "unchanged": true
+  },
+  "explicit_changed_sources": [
+    {
+      "path": "LumaView.java",
+      "baseline_sha256": "67508e537e1604df621d022bffd1218f2a15c01241050ed90699d76aab1ddfb4",
+      "working_sha256": "504c0af3911929bf8e0d4ab5398e829f2e8f9f1f254e409ac793f29c902d541b",
+      "change": "modified"
+    },
+    {
+      "path": "data/GameStore.java",
+      "baseline_sha256": "94627c0fd3fb8d02587d5654e5e5e4f0afc1238fa15fd866ff78a331388682be",
+      "working_sha256": "b6b2df5a55849cc46ecacd00d3f332e6f2084c4bff00e9a6f01b300056d927f2",
+      "change": "modified"
+    },
+    {
+      "path": "ui/WorldBackdrop.java",
+      "baseline_sha256": "bc1b0d70091bfeebbf771c3244011dc5ae80f5061f47e2de907907a2c9d6699d",
+      "working_sha256": "41bddbb5d7497c879cc54f54fd0cf02edf67ecc1f4da1209513c1140c7e61ce6",
+      "change": "modified"
+    },
+    {
+      "path": "ui/CompanionPortrait.java",
+      "baseline_sha256": "8fb001b7b65f14e50d6972ce729c86a90a4ff54ccccd32f1f893a12990509ac7",
+      "working_sha256": "8a770995271daaa1a95d18665998de81aefc1cc4b19a853037ddd2699cba55b8",
+      "change": "modified"
+    },
+    {
+      "path": "data/V111Strings.java",
+      "baseline_sha256": null,
+      "working_sha256": "373711dc679486b9fa79acefb8f0126b75263e8bb2592d4d85be310c5fb2ad1f",
+      "change": "new"
+    }
+  ],
+  "review": {
+    "six_languages": {
+      "report": "avatar-bugs/v111-strings.json",
+      "assertions": 249,
+      "keys": 4,
+      "languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "result": "PASS formatting/selection/default-region/unsupported/unknown/invalid arguments. Existing V110 command contracts also remain PASS6544. Not a translation, TalkBack or font-layout acceptance."
+    },
+    "changed_geometry": {
+      "coordinate_space": "390-wide design Canvas; numbers are design units, not measured physical dp. Actual pixels scale with ExperienceLayout.",
+      "wardrobe_method_line": 934,
+      "clothing_cards": {
+        "count": 4,
+        "size": [
+          68,
+          88
+        ],
+        "same_hit_size": true,
+        "x_positions": [
+          36,
+          286
+        ],
+        "y_positions": [
+          130,
+          230
+        ],
+        "vertical_gap": 12,
+        "name_baseline_from_top": 78,
+        "baseline_to_card_bottom": 10
+      },
+      "portrait": {
+        "art_reserved_bounds": [
+          109,
+          127,
+          281,
+          299
+        ],
+        "readonly_accessible_bounds": [
+          109,
+          127,
+          281,
+          299
+        ],
+        "action": null,
+        "horizontal_gap_to_each_clothing_column": 5
+      },
+      "shortcuts": {
+        "count": 2,
+        "visual_size": [
+          152,
+          47
+        ],
+        "hit_size": [
+          152,
+          48
+        ],
+        "bounds": [
+          [
+            36,
+            366,
+            188,
+            414
+          ],
+          [
+            202,
+            366,
+            354,
+            414
+          ]
+        ],
+        "horizontal_gap": 14,
+        "parent_surface_bottom": 422,
+        "result": "No mutual overlap or overlap with clothing/portrait bounds."
+      },
+      "gear_cards": {
+        "count": 3,
+        "size": [
+          102,
+          85
+        ],
+        "same_hit_size": true,
+        "x_positions": [
+          24,
+          144,
+          264
+        ],
+        "y": 469,
+        "name_baseline": 546,
+        "baseline_to_card_bottom": 8,
+        "inter_card_gap": 18
+      },
+      "text_limit": "fit() retains the inherited physical-size floor and ellipsizes long item/style names. Full names remain in hit/portrait descriptions. Baseline margins are arithmetic, not a measurement of font descenders or native six-language glyph bounds."
+    },
+    "transactions": {
+      "result": "Source order reviewed: boolean equip results gate Applied feedback; thrown LocalSaveException reaches savedAction; purchase callbacks do not claim equip before it succeeds. GameStore persistence changes have separate owner tests.",
+      "details": [
+        "Clothing purchase reopens the now-owned offer for explicit Equip. Posted callback is guarded by running, !localSaveBlocked and unchanged actionGeneration.",
+        "Theme selection stays on the current page and resets scroll; outer savedAction refreshes style and invalidates.",
+        "Companion/clothing/gear equipment opens wardrobe; go() refreshes style and the outer savedAction refreshes again. These are two reads, not two purchases/equipment writes.",
+        "syncStyle catches an unrelated later local-save read failure and shows the full-screen barrier. This review does not test that runtime fault path."
+      ]
+    },
+    "return_history": {
+      "same_screen": "Equipping from wardrobe does not push wardrobe again because go() checks screen equality. backMenu uses navigatingBack to avoid repushing popped pages.",
+      "round_trip_trace": [
+        "Home -> wardrobe: stack[Home]",
+        "wardrobe -> companion collection: stack[wardrobe,Home]",
+        "Equip -> wardrobe: stack[collection,wardrobe,Home]",
+        "Back -> collection; Back -> prior wardrobe; Back -> Home"
+      ],
+      "observation": "The new picker plus automatic wardrobe destination retains an older wardrobe visit in chronological history. Repeating the round trip grows that history. Reported to parent as a navigation UX choice/limit, not a double purchase or proven crash.",
+      "source_changed": false
+    },
+    "theme": {
+      "result": "skin.bg is now passed through a hue wash on the shared garden and, separately, after AvatarStage during play/guardian. Cached HSV array avoids introducing per-frame allocation here. Source inspection does not quantify native contrast or perceptibility.",
+      "world_backdrop_file": "ui/WorldBackdrop.java"
+    },
+    "accessibility": "Read-only portrait hit has no action. Accessibility provider now omits ACTION_CLICK when hit.action is null; clothing and gear hits retain full names and selected state. Native screen-reader behavior remains untested here."
+  },
+  "limits": [
+    "Source equality establishes unchanged definitions for the listed engine/catalog/onboarding files, not proof that their integration is bug-free.",
+    "This evidence does not replace native smoke tests for changed UI, real cold launch, purchase/equip state, theme pixels, save failure/retry or scrolling.",
+    "No replay of1000 levels was performed by this reviewer; fixed engine/layout source hashes support using prior scoped engine evidence alongside new integration testing.",
+    "Device font scale, clipping, toast timing, speech order and visual preference cannot be settled by static geometry.",
+    "GameStore and LumaView are intentionally modified; they are excluded from unchanged-engine claims."
+  ],
+  "rc2_followup": {
+    "recorded_at_utc": "2026-10-28T11:46:08.579389+00:00",
+    "scope": "Additive RC1-to-RC2 source review. The original RC1 hashes,88-unit card geometry and initial review above remain unchanged; native RC1 visual inspection later reproduced a truncated starter glove name.",
+    "app": {
+      "path": "releases/luma-drift-1.11.0-sandbox-rc2.apk",
+      "sha256": "65bfbeab4f8b488e483a1622568540caf0315f72cf33d94876c75eafc9b4b642",
+      "version": "1.11.0-sandbox-rc2",
+      "code": 12
+    },
+    "previous_unchanged_sources_revalidated": 41,
+    "previous_unchanged_sources_still_equal": true,
+    "source_comparison": [
+      {
+        "path": "LumaView.java",
+        "rc1_review_sha256": "504c0af3911929bf8e0d4ab5398e829f2e8f9f1f254e409ac793f29c902d541b",
+        "rc2_frozen_sha256": "d489c7c0ffadb4d5683d0cefe4600d50cccd3901203be47cc147b9c3385cec3b",
+        "unchanged_since_rc1_review": false
+      },
+      {
+        "path": "data/GameStore.java",
+        "rc1_review_sha256": "b6b2df5a55849cc46ecacd00d3f332e6f2084c4bff00e9a6f01b300056d927f2",
+        "rc2_frozen_sha256": "b6b2df5a55849cc46ecacd00d3f332e6f2084c4bff00e9a6f01b300056d927f2",
+        "unchanged_since_rc1_review": true
+      },
+      {
+        "path": "ui/WorldBackdrop.java",
+        "rc1_review_sha256": "41bddbb5d7497c879cc54f54fd0cf02edf67ecc1f4da1209513c1140c7e61ce6",
+        "rc2_frozen_sha256": "41bddbb5d7497c879cc54f54fd0cf02edf67ecc1f4da1209513c1140c7e61ce6",
+        "unchanged_since_rc1_review": true
+      },
+      {
+        "path": "ui/CompanionPortrait.java",
+        "rc1_review_sha256": "8a770995271daaa1a95d18665998de81aefc1cc4b19a853037ddd2699cba55b8",
+        "rc2_frozen_sha256": "8a770995271daaa1a95d18665998de81aefc1cc4b19a853037ddd2699cba55b8",
+        "unchanged_since_rc1_review": true
+      },
+      {
+        "path": "data/V111Strings.java",
+        "rc1_review_sha256": "373711dc679486b9fa79acefb8f0126b75263e8bb2592d4d85be310c5fb2ad1f",
+        "rc2_frozen_sha256": "373711dc679486b9fa79acefb8f0126b75263e8bb2592d4d85be310c5fb2ad1f",
+        "unchanged_since_rc1_review": true
+      }
+    ],
+    "root_owned_correction": {
+      "method": "wornCosmeticName",
+      "slot_prefix": "Remove the redundant slot prefix before the first literal separator space-middle-dot-space. Full accessible labels/list/offers retain their actual catalog names.",
+      "bounds": "If a multiword name exceeds62 design units, split at the first space into two fitted lines. Long components can still ellipsize; no claim that every catalog name fits in full.",
+      "clothing_visual_and_hit_size_before": [
+        68,
+        88
+      ],
+      "clothing_visual_and_hit_size_after": [
+        68,
+        90
+      ],
+      "two_line_baselines_from_top": [
+        72,
+        86
+      ],
+      "single_line_baseline_from_top": 78,
+      "vertical_gap_between_rows_after": 10,
+      "portrait_and_all_other_hit_geometry_unchanged": true
+    },
+    "rc1_visual_defect": {
+      "report": "fresh-install/avatar-followup/visual-review.json",
+      "native_frame": "docs/screenshots/v1.11/fresh-install/avatar-followup/avatar-slots-en.png",
+      "observation": "Gloves · Dew was truncated to Gloves · D… despite45 passing native assertions.",
+      "retained_immutable": true
+    },
+    "rc2_native": {
+      "fresh_report": "fresh-install-rc2/host-report.json",
+      "fresh_checks_pass": 83,
+      "starter_observer_report": "fresh-install-rc2/persisted-observer-report.json",
+      "starter_exact_observed_on_disk_before_gift": true,
+      "avatar_report": "fresh-install-rc2/avatar-followup/host-report.json",
+      "avatar_checks_pass": 45,
+      "english_frame": "docs/screenshots/v1.11/fresh-install-rc2/avatar-followup/avatar-slots-en.png",
+      "english_visual_observation": "Dew is fully visible under all four clothing slots, including Gloves; the portrait and three gear labels remain visible.",
+      "languages_report": "fresh-install-rc2/languages-followup/host-report.json",
+      "languages_checks_pass": 36,
+      "french_frame": "docs/screenshots/v1.11/fresh-install-rc2/languages-followup/avatar-fr.png",
+      "french_visual_observation": "Rosée is fully visible under all four starter clothing slots; observed gear labels and portrait remain visible.",
+      "visual_review": "fresh-install-rc2/wardrobe-visual-review.json"
+    },
+    "limits": "Native labels inspected here are the observed starter wardrobe; no exhaustive144-name native typography, larger font-scale or all physical-device claim. No product/test code or build performed by this reviewer."
+  }
+}

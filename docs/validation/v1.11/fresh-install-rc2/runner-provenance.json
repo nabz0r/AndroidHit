@@ -1,0 +1,49 @@
+{
+  "recorded_at_utc": "2026-10-28T11:42:31.144936+00:00",
+  "app": {
+    "path": "releases/luma-drift-1.11.0-sandbox-rc2.apk",
+    "bytes": 7757097,
+    "sha256": "65bfbeab4f8b488e483a1622568540caf0315f72cf33d94876c75eafc9b4b642"
+  },
+  "test_apk": {
+    "path": "app/build/qualification-artifacts/v1.11/v111-identity-lab-test.apk",
+    "bytes": 126863,
+    "sha256": "7a0e2b6a48a19eaf6ea80a1338f420aea7253249c32172e0716203f47c16c61f"
+  },
+  "source": [
+    {
+      "source_path": "scripts/v111-ui-test/run-fresh-tutorial.py",
+      "retained_path": "docs/validation/v1.11/fresh-install-rc2/runner-source/run-fresh-tutorial.py",
+      "sha256": "ca5c96862e33deb68635e35ea8e7100dfdfc5fea5bd2b97182bfdcaf13af64a3"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/AndroidManifest.xml",
+      "retained_path": "docs/validation/v1.11/fresh-install-rc2/runner-source/AndroidManifest.xml",
+      "sha256": "1d09fed9ed867f702459f6880200c3c315196540c60e18f78f5eebb15330b305"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/init.gradle",
+      "retained_path": "docs/validation/v1.11/fresh-install-rc2/runner-source/init.gradle",
+      "sha256": "c4755304cbbc34862cf43b814b82d51d51fbdfda0fca812f90d116acf4ff1cfb"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/CandidateUiInstrumentation.java",
+      "retained_path": "docs/validation/v1.11/fresh-install-rc2/runner-source/CandidateUiInstrumentation.java",
+      "sha256": "5e29a15ec184114010a70255c0c29d7ae68a99baa691dc0265712860fee589db"
+    },
+    {
+      "source_path": "scripts/v111-ui-test/java/com/androidhit/lumadrift/qa/v111/RasterObservation.java",
+      "retained_path": "docs/validation/v1.11/fresh-install-rc2/runner-source/RasterObservation.java",
+      "sha256": "d3654df4ece79b72294769d304dc7d9b6e9d66cc43bd5699c4d37b9b5b5fba07"
+    }
+  ],
+  "instrumentation": "com.androidhit.lumadrift.sandbox.test/com.androidhit.lumadrift.qa.v111.CandidateUiInstrumentation",
+  "arguments": {
+    "cases": "tutorial",
+    "expectFreshTutorial": "true",
+    "expectedVersion": "1.11.0-sandbox-rc2",
+    "expectedCode": "12"
+  },
+  "observer_precedes_install": true,
+  "scope": "New K installation on final RC2 bytes. RC1/J evidence is retained unchanged. No product or test source/build modified."
+}

@@ -1,0 +1,43 @@
+{
+  "recorded_at_utc": "2026-10-28T11:49:53.838743+00:00",
+  "scope": "Parent-authorized graceful emulator stop after final K qualification, only owned J5584 and K5586. Their directories/userdata remain. No reset/uninstall, no mutation of5580/5582. Native/profile evidence remains in its original folders. This receipt is outside the self-manifested J/K evidence.",
+  "before": {
+    "emulator-5580": "device",
+    "emulator-5582": "device",
+    "emulator-5584": "device",
+    "emulator-5586": "device"
+  },
+  "operations": [
+    {
+      "serial": "emulator-5584",
+      "avd": "Luma-Release111-J",
+      "command": "adb -s emulator-5584 emu kill",
+      "stdout": "OK: killing emulator, bye bye\r\nOK\r\n",
+      "stderr": "",
+      "exit_code": 0,
+      "avd_directory_preserved": true,
+      "userdata_files_preserved": [
+        "userdata-qemu.img",
+        "userdata-qemu.img.qcow2"
+      ]
+    },
+    {
+      "serial": "emulator-5586",
+      "avd": "Luma-Release111-K",
+      "command": "adb -s emulator-5586 emu kill",
+      "stdout": "OK: killing emulator, bye bye\r\nOK\r\n",
+      "stderr": "",
+      "exit_code": 0,
+      "avd_directory_preserved": true,
+      "userdata_files_preserved": [
+        "userdata-qemu.img",
+        "userdata-qemu.img.qcow2"
+      ]
+    }
+  ],
+  "after": {
+    "emulator-5580": "device",
+    "emulator-5582": "device"
+  },
+  "other_two_existing_devices_state_preserved": true
+}

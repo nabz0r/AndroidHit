@@ -1,6 +1,17 @@
 # Luma Drift roadmap
 
-## Current candidate 1.10 — Companion & Objectives
+## Current candidate 1.11 — pre-Play bug hunt
+
+[Release](RELEASE_1_11.md) · [Exact artifacts](validation/v1.11/candidate.json) · [Qualification](validation/v1.11/README.md). Fix actual equipment visibility and clear success feedback before adding more content: show the applied portrait, name each worn object, retain character silhouette under clothes, separate small equipment and apply the selected scene theme. Correct refused-save read consistency and the first-profile grant transaction. Keep all existing catalog IDs, prices, effects, puzzle layouts and saved progression.
+
+The new native visual audit purchases with genuinely earned coins and compares actual art through a cold process restart. Host tests cover 72 ownership/equipment identities and exact finite-state strategy/guardian rules; these are not human difficulty, engagement or retention measurements. The known L22→L23 and Guardian4→5 progression jumps remain a separate design task.
+
+Scoped native qualification is complete: 1,589 Lab checks over 50 clears, 935 production checks over 40 clears, and 164 fresh-install tutorial/avatar/language checks. [Final native report](validation/v1.11/ui-bugs/SDK_UI_FINAL.md).
+
+Next: review the exact new APK on a physical phone, then resume internal Play testing. Qualify Google and two real accounts, UMP consent/decline, licensed Play purchase/pending/refund/recovery and real ad eligibility separately. These signed bytes force test ads, keep wallet checkout unconfigured and paid draws disabled. The website's current confirmed deployment remains 1.10.
+
+
+## Preserved candidate 1.10 — Companion & Objectives
 
 [Release](RELEASE_1_10.md) · [UX](UX_1_10.md) · [Native qualification](validation/v1.10/SDK_UI_FINAL.md) · [Screen/provenance matrix](validation/v1.10/ux-readability/README.md) · [Prism journal](PRISM_STORY_1_10.md). Production **1.10.0-rc3** and isolated **1.10.0-sandbox-rc3**, code 11, have identified signed artifacts and final-byte Android evidence. The Play Console walkthrough remains paused at the owner's request.
 
@@ -80,7 +91,7 @@ Equipment gives explicit, limited benefits rather than changing the puzzle's gat
 
 Completed technical checks: signed production/Lab APK/AAB and lint; fixed board bounds and legacy identities; actual old active-save upgrade; all six power activations and interrupted Flow recovery; earned-coin equipment purchase/equip/restore; all six sealed challenges; six-language emulator navigation; final share images and advancing Android audio. [Executed evidence and exact-byte scope](VALIDATION.md).
 
-The current website/GitHub presentation work uses the [shared design system](DESIGN_SYSTEM.md), actual game captures and truthful release links. [Web revision checks](PUBLIC_PAGES.md#15-visual-refresh-and-new-evidence) and [independent Hosting delivery](validation/site-v1.5/delivery.json) now record this completed visual update. This is separate from provider readiness, player acceptance and a new Android release.
+The current website/GitHub presentation work uses the [shared design system](DESIGN_SYSTEM.md), actual game captures and truthful release links. [Web revision checks](PUBLIC_PAGES.md) and [independent Hosting delivery](validation/site-v1.5/delivery.json) now record this completed visual update. This is separate from provider readiness, player acceptance and a new Android release.
 
 Product checks recorded for the 1.5 milestone:
 
@@ -166,7 +177,7 @@ The [installed collection/event run](validation/lab/collection-events-ui-smoke.t
 | Honest test ads | Ordinary commerce +35 test gold, continuation +actions, or +1 selected unlocked power; each placement grants only its announced reward | Actual continuation and Spark callbacks pass with zero extra gold; no-watch Back grants zero; ordinary +35 remains historical 1.2 evidence |
 | Compatibility | C/R/E layouts preserved; balanced B/Q codes; old interrupted sandbox board resets with notice while progression/wallet remain | Restore/migration/deep-link cases, separate from stable package compatibility |
 
-[Difficulty audit and CSV](DIFFICULTY.md) document lower structural score jumps, not measured enjoyment. [Move-limit research](MOVE_LIMITS_RESEARCH.md) distinguishes finite-move puzzle precedents from Crash Fever's different defeat/continue model. [Exact gameplay contract](GAMEPLAY.md#lab-13-action-allowance).
+[Difficulty audit and CSV](DIFFICULTY.md) document lower structural score jumps, not measured enjoyment. [Move-limit research](MOVE_LIMITS_RESEARCH.md) distinguishes finite-move puzzle precedents from Crash Fever's different defeat/continue model. [Exact gameplay contract](GAMEPLAY.md#historical-lab-13-reference).
 
 The [final installed 1.3 run](validation/v1.3/move-power-ui-smoke.txt) covers the recorded action/power/gold/loot cases and two actual Google sample-ad rewards: +10 actions and Spark ×1, with no extra gold. Its temporary Journey-75 access, wallet/inventory and five-clear profile were synthetic; six original game-owned preference files were restored byte for byte. [Final package integrity and scope](VALIDATION.md). The earlier +35-gold report remains 1.2 history. A separate [non-fixture Journey-1 run](validation/v1.3/exact-zero-ui.txt) confirms victory on the final available action and normal two-star rewards. Do not replace the missing player study with more successful scripted clears.
 

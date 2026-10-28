@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "store_source_sha256": "b6b2df5a55849cc46ecacd00d3f332e6f2084c4bff00e9a6f01b300056d927f2",
+  "reports": [
+    {
+      "name": "appearance",
+      "passed": true,
+      "assertions": 683,
+      "report": "fixed.txt",
+      "sha256": "f97de19c19f03c978b1cad997d6889c584e3c838c3f0074a33bb15624210bcea"
+    },
+    {
+      "name": "initialization",
+      "passed": true,
+      "assertions": 41,
+      "report": "initialization-fixed.txt",
+      "sha256": "f78bb4976cf803606be452b38baedd7f3d84f231c19d6b808d0f0d196d35fc2a"
+    },
+    {
+      "name": "external",
+      "passed": true,
+      "assertions": 17,
+      "report": "externals.txt",
+      "sha256": "37de484954097a126490a12d226ae66e348e1b613833e3e1fa9f9676c9d0ca4d"
+    },
+    {
+      "name": "data",
+      "passed": true,
+      "assertions": 8882,
+      "report": "data-regression.txt",
+      "sha256": "312a0fbc3422aafd67fe361e933bad1823e5f7a58d891c0ba61ff9f8a32353df"
+    },
+    {
+      "name": "meta",
+      "passed": true,
+      "assertions": 362,
+      "report": "meta-regression.txt",
+      "sha256": "039752232f000e3a5ee9e4e915507486e769d17f57c952d2f686aa609187d8ec"
+    },
+    {
+      "name": "economy",
+      "passed": true,
+      "assertions": 6611,
+      "report": "economy-regression.txt",
+      "sha256": "f4b1aae2fd14ead95ae73d4fbaa2f6cb8fb3ab60e45b122df14ac80e9d159310"
+    },
+    {
+      "name": "inventory",
+      "passed": true,
+      "assertions": 1482,
+      "report": "inventory-regression.txt",
+      "sha256": "ae9f48f80734d66e818a4a2176d778528d02cf845346bf173f425e08e762db05"
+    },
+    {
+      "name": "cosmetics",
+      "passed": true,
+      "assertions": 100953,
+      "report": "cosmetics-regression.txt",
+      "sha256": "c5720dc625ab0ee8f08d2c26dc36589c3a803d8f07028d9ad5d89c206cb532fc"
+    },
+    {
+      "name": "objectives",
+      "passed": true,
+      "assertions": 443,
+      "report": "objectives-regression.txt",
+      "sha256": "28eea102cc581b44acceb85edd7e32f83524cf7cd5b2d54df021d9bac3bb9de2"
+    },
+    {
+      "name": "journey",
+      "passed": true,
+      "assertions": 65736,
+      "report": "journey-regression.txt",
+      "sha256": "c4c272a27021feda8cfd3ac651c9ce6be409a99f9b1fcb5e4053eb75fbaaf53f"
+    },
+    {
+      "name": "tutorial",
+      "passed": true,
+      "assertions": 1454,
+      "report": "tutorial-regression.txt",
+      "sha256": "d1ce6fb1bd85ed850f30765b1419948485ac275cc61f6a7569e38dc394ce82ba"
+    },
+    {
+      "name": "move_budget",
+      "passed": true,
+      "assertions": 390327,
+      "report": "move-budget-regression.txt",
+      "sha256": "c3558cacba6b9c3bf3f30a3be26acf816bffa28564efeff7867104f5a434c54a"
+    },
+    {
+      "name": "local_save",
+      "passed": true,
+      "assertions": 229,
+      "report": "local-save-regression/summary.json",
+      "sha256": "c87b5137178647784c4d46ef830212a9e9575aa35a1612c758ec3fd3448db6c3"
+    },
+    {
+      "name": "guardians",
+      "passed": true,
+      "assertions": 472484607,
+      "report": "guardian-regression/summary.json",
+      "sha256": "3ff06a0d294c895a4eb562f54afdc92e60c3c657cc16b5347f1bf07eb687e732"
+    },
+    {
+      "name": "strategy_v4",
+      "passed": true,
+      "audit_assertions": 773092810,
+      "contract_assertions": 33611,
+      "report": "strategy-regression/strategy-all-states.txt",
+      "sha256": "60c688b5e75c008bdf964ad01809b50ab3ae385a35a9a3fb12baf3ebed5d4109"
+    }
+  ],
+  "historical_v18_v19_report_files_unchanged": true,
+  "scope": "JVM model/failure/reconstruction and exact finite-state engine checks only; no native rendering/provider/physical-flash/human-difficulty/retention assertion."
+}

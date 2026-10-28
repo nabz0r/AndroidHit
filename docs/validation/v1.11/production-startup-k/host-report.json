@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "scope": "First real production installation on retained K, production package genuinely absent before install. Native SDK startup/audio only; no menu, gameplay, account, ad or payment action. No older production profile exists to restore. Lab guest remains byte-identical.",
+  "observed_at_utc": "2026-10-28T11:55:09.335814+00:00",
+  "native": {
+    "passed": true,
+    "checkCount": 7,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Actual production 1.11.0-rc2/code12 package loaded"
+      },
+      {
+        "pass": true,
+        "message": "Production launch exposes its actual native accessible window"
+      },
+      {
+        "pass": true,
+        "message": "Production music has an active track owned by its actual process"
+      },
+      {
+        "pass": true,
+        "message": "The same production audio track advances real mixed frames"
+      },
+      {
+        "pass": true,
+        "message": "SDK sends the app to background for lifecycle audio observation"
+      },
+      {
+        "pass": true,
+        "message": "Production music pauses after actual background lifecycle"
+      },
+      {
+        "pass": true,
+        "message": "Production music resumes after actual foreground lifecycle"
+      }
+    ],
+    "captures": [
+      "startup-production-native"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "scope": "Production startup and lifecycle/audio SDK observation only; no piece/menu/account/ad/payment action"
+  },
+  "installed_apk_sha256": "5a77d0c5b15dcdbb919bc3ea248ac9ac7b1b642898ee0fdd6cd8f855a1d09811",
+  "test_apk_sha256": "e801e396c3365a7e63ecb17903c0556fd93d7dda76bf0bb01dfe3c9cb0a191fa",
+  "production_absent_before_first_install": true,
+  "original_production_profile_restoration_applicable": false,
+  "new_production_guest_retained": true,
+  "persisted_xml_sha256": "cc1d9083483859ff5c5a7400f185383928dd55d4c80a8e58e34f3ba7a0d9858c",
+  "starter_fields_observed": {
+    "initialized": true,
+    "coins": 180,
+    "booster_hint": 3,
+    "booster_vision": 3,
+    "booster_flow": 2,
+    "character": "nova",
+    "skin": "lumina",
+    "owned_character_nova": true,
+    "owned_skin_lumina": true,
+    "tutorial_v18_reward_claimed": null,
+    "tutorial_v18_state": "T1|0|0|ACTIVE|"
+  },
+  "lab_preferences_after_startup": {
+    "luma_drift_meta_v1.xml": "1d370c640b2895f9781629c4e6059540ac5c23762ef8ee0643528e9f58a0b285",
+    "luma_drift_save_v1.xml": "63cbf6dce359f6f05cd1f625080bc32fa51f554965281a77074bb828512c52b6",
+    "luma_session.xml": "70c64b0ed52c38a4b43369564a1dba6cfdfb53e4ed407fb0cb53f117ae91a356"
+  },
+  "lab_preferences_unchanged": true,
+  "crash_buffer_unchanged": true,
+  "screenshots": {
+    "startup-production-native.png": {
+      "sha256": "2fbf292ad600294143d019cc1fb8e30ebc9389223fd8de39f443d7f6b501ed31",
+      "dimensions": [
+        1080,
+        2340
+      ]
+    }
+  }
+}

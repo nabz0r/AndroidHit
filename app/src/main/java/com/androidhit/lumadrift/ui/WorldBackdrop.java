@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
@@ -16,6 +17,7 @@ public final class WorldBackdrop {
     private final RectF destination = new RectF();
     private Bitmap bitmap;
     private int biome;
+    private final float[] themeHsv=new float[3];
     private static final int[] TINTS={
         0x00fff0e8,0x1a9ce0c0,0x1cffc4aa,0x1abdc5ff,0x1a99dcec,
         0x1cffdc92,0x20c9b1e9,0x1cecae8d,0x20ffc8e0,0x1ecab8ef
@@ -38,11 +40,21 @@ public final class WorldBackdrop {
         destination.set(0, 0, width, height);
         paint.setAlpha(255);
         canvas.drawBitmap(bitmap, source, destination, paint);
+        drawThemeWash(canvas,width,height,background,94);
         paint.setColor(TINTS[biome]);canvas.drawRect(destination,paint);
         // Quiet scenes keep the garden's warmth while making the board and inventory the focus.
         // The veil is always light, including when an older save has selected a previously dark theme.
         paint.setColor(quiet ? 0x87fff8f3 : 0x25fff8f3);
         canvas.drawRect(destination, paint);
+    }
+    /** Apply the selected theme on both the garden and the animated play scene. */
+    public void drawThemeWash(Canvas canvas,float width,float height,int background,int opacity) {
+        if(width<=0||height<=0)return;
+        Color.colorToHSV(background,themeHsv);
+        // Catalog themes are deliberately pastel; a restrained wash makes their hue visible.
+        themeHsv[1]=Math.min(.42f,themeHsv[1]*2.6f);themeHsv[2]=1f;
+        paint.setColor(Color.HSVToColor(Math.max(0,Math.min(255,opacity)),themeHsv));
+        canvas.drawRect(0,0,width,height,paint);
     }
     public void close() {
         if (bitmap != null) { bitmap.recycle(); bitmap = null; }

@@ -1,5 +1,9 @@
 # Luma Drift design system — 1.9
 
+## 1.11 visibility corrections
+
+Keep the companion face/silhouette readable under four clothing slots, give the three equipment overlays separate space within the existing2r extent, name the actual worn objects and return to the portrait after applying them. The selected theme has a restrained scene wash while cards/text retain their readable light surfaces. Preview, acquisition and Equip remain separate explicit actions. [Renderer audit](validation/v1.11/avatar-bugs/README.md) · [Native scope](validation/v1.11/ui-bugs/README.md).
+
 The cream/lilac/plum visual family remains. [1.9 UX](UX_1_9.md) adds an action-preview modal anchored to the visible window, explicit reward/sample states, visibly stacked boss pieces with layer counts, footprint-marked one-cell movement and the [288 original companion combinations](validation/v1.9/avatar/README.md). Animation changes art only, preserves fixed controls and follows actual progress; reduced motion disables the movement. The retained 1.8 foundation follows.
 
 [Current UX contract](UX_1_8.md) · [Native capture provenance](RELEASE_1_8.md) · [Original illustration prompt and hash](art/dream-glade-v18.json).

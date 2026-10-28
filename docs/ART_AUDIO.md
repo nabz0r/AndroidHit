@@ -1,5 +1,9 @@
 # Art direction and original audio
 
+## 1.11 equipment visibility
+
+The shared portrait now leaves more character silhouette visible under clothing and separates/enlarges Head, Aura and Charm. Existing original code art, styles, identities, equipment effects and music are retained. The selected scene theme now tints both the garden and animated gameplay. [Measured composition and limits](validation/v1.11/avatar-bugs/README.md) · [Release](RELEASE_1_11.md).
+
 ## Current 1.9 companions and moving stages
 
 The original code renderer adds **24 companion silhouettes × 12 visual treatments**, five poses and actual-progress parallax with a quiet central reading area. Cyberpunk, arcade, modern pixel, sakura, ocean, space, steampunk, candy, Halloween, Valentine, ice and plush treatments change geometry/accessories as well as colour. These are 288 combinations, not 288 hand-painted assets. Styles are free and do not grant unowned companions or gameplay benefits. Reduced motion freezes the temporal and travelling effects. [Renderer and native atlas evidence](validation/v1.9/avatar/README.md) · [UX](UX_1_9.md).
