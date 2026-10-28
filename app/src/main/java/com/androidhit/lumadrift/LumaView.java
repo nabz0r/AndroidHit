@@ -394,7 +394,7 @@ public final class LumaView extends View {
         if(screen.equals("profile"))H=Math.max(viewportH,980);
         if(screen.equals("badges"))H=Math.max(viewportH,1015);
         if(screen.equals("summon"))H=Math.max(viewportH,880);
-        if(screen.equals("summon_pool"))H=Math.max(viewportH,248+(float)Math.ceil(SummonCatalog.items(summonBanner()).size()/2f)*232+110);
+        if(screen.equals("summon_pool"))H=Math.max(viewportH,248+(float)Math.ceil(SummonCatalog.items(summonBanner()).size()/2f)*248+110);
         if(screen.equals("summon_reveal"))H=Math.max(viewportH,840);
         if(screen.equals("home_item"))H=Math.max(layout.contentHeight,920);
         if(screen.equals("firstlight"))H=Math.max(layout.contentHeight,790);
@@ -1140,19 +1140,19 @@ public final class LumaView extends View {
         header(c,d("odds"),d(summonTab==0?"companions_banner":"outfits_banner"));summonTabs(c);
         premium.copy(c,d("odds_note"),24,186,342,14,PremiumUi.MUTED,3);
         List<SummonCatalog.Item> items=SummonCatalog.items(summonBanner());
-        for(int i=0;i<items.size();i++){final SummonCatalog.Item item=items.get(i);float x=24+(i%2)*177,y=248+(i/2)*232;boolean owned=store.ownsSummonItem(item.id);premium.rarityHalo(c,new RectF(x,y,x+165,y+216),summonAccent(item),0,true);drawSummonPortrait(c,item,x+82.5f,y+70,31);fit(c,summonName(item),x+82.5f,y+148,16,147,TEXT,true,true);fit(c,summonRarity(item)+(owned?" · "+r("owned"):""),x+82.5f,y+170,12,147,PremiumUi.MUTED,true,true);
-            String chance=String.format(Locale.forLanguageTag(store.resolvedLanguage()),"%.2f",item.chanceBasisPoints/100f);premium.copy(c,d("chance",chance,item.duplicateCoins),x+11,y+193,143,12,PremiumUi.MUTED,2);
-            hit(x,y,165,216,summonName(item)+", "+chance+"%",()->{summonPreview=item.id;go("summon_reveal");});
+        for(int i=0;i<items.size();i++){final SummonCatalog.Item item=items.get(i);float x=24+(i%2)*177,y=248+(i/2)*248;boolean owned=store.ownsSummonItem(item.id);premium.rarityHalo(c,new RectF(x,y,x+165,y+232),summonAccent(item),0,true);drawSummonPortrait(c,item,x+82.5f,y+70,31);fit(c,summonName(item),x+82.5f,y+160,16,147,TEXT,true,true);fit(c,summonRarity(item)+(owned?" · "+r("owned"):""),x+82.5f,y+182,12,147,PremiumUi.MUTED,true,true);
+            String chance=String.format(Locale.forLanguageTag(store.resolvedLanguage()),"%.2f",item.chanceBasisPoints/100f);premium.copy(c,d("chance",chance,item.duplicateCoins),x+11,y+205,143,12,PremiumUi.MUTED,2);
+            hit(x,y,165,232,summonName(item)+", "+chance+"%",()->{summonPreview=item.id;go("summon_reveal");});
         }
-        H=Math.max(viewportH,248+(float)Math.ceil(items.size()/2f)*232+110);
+        H=Math.max(viewportH,248+(float)Math.ceil(items.size()/2f)*248+110);
     }
     private void drawSummonReveal(Canvas c){
         GameStore.SummonResult result=summonPreview.isEmpty()?store.summonReceipt(summonRequest):null;
         if(result==null&&summonPreview.isEmpty()){result=store.lastSummonResult();if(result!=null)summonRequest=result.requestId;}
         SummonCatalog.Item item=SummonCatalog.find(result!=null?result.itemId:summonPreview);if(item==null){go("summon");return;}
         final boolean preview=!summonPreview.isEmpty();header(c,preview?r("preview"):d(result.duplicate?"duplicate":"new_arrival"),summonRarity(item));
-        premium.rarityHalo(c,new RectF(18,108,372,475),summonAccent(item),frameTime,reduceMotion);drawSummonPortrait(c,item,195,290,76);
-        fit(c,summonName(item),195,447,25,325,TEXT,true,true);
+        premium.rarityHalo(c,new RectF(18,108,372,500),summonAccent(item),frameTime,reduceMotion);drawSummonPortrait(c,item,195,282,item.kind==SummonCatalog.Kind.OUTFIT?66:76);
+        fit(c,summonName(item),195,470,25,325,TEXT,true,true);
         fit(c,preview?(store.ownsSummonItem(item.id)?r("owned"):r("preview")):result.duplicate?d("duplicate_coins",result.compensationCoins):d("saved"),195,512,16,342,TEXT,true,true);
         if(store.ownsSummonItem(item.id))button(c,d("equip"),24,543,342,56,summonAccent(item),()->savedAction(()->{if(store.equipSummonItem(item.id)){notice(d("equipped"));syncStyle();}}));
         quietButton(c,preview?t("back"):d("back_banner"),24,619,342,()->{if(preview)returnToMenu("summon_pool");else{summonRequest="";returnToMenu("summon");}});
