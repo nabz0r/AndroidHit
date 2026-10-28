@@ -44,28 +44,21 @@ public final class SweetUi {
                 Math.round(Color.blue(color)*(1-t)+Color.blue(target)*t));
     }
 
-    /** A readable cream/pastel paper surface with a real lower edge and a restrained top highlight. */
+    /** Quiet paper: one soft silhouette, without a stack of bevels around every section. */
     public void surface(Canvas c,RectF box,int tone,boolean elevated) {
-        int i=Math.floorMod(tone,4);float rad=Math.min(25,box.height()*.24f);
-        if(elevated) {
-            round(c,box.left,box.top+5,box.right,box.bottom+5,rad,0x1f3a3159);
-            round(c,box.left+2,box.top+2,box.right-2,box.bottom+3,rad,alpha(EDGE[i],165));
-        }
+        int i=Math.floorMod(tone,4);float rad=Math.min(32,box.height()*.32f);
+        if(elevated)round(c,box.left,box.top+3,box.right,box.bottom+3,rad,0x123a3159);
         round(c,box.left,box.top,box.right,box.bottom,rad,LIGHT[i]);
-        rect.set(box.left+.7f,box.top+.7f,box.right-.7f,box.bottom-.7f);outline(c,rect,rad,0xcfffffff,1.4f);
-        if(box.width()>80&&box.height()>35) {
-            line(c,box.left+rad,box.top+5,box.right-rad,box.top+5,0xadffffff,1.6f);
-        }
+        rect.set(box.left+.6f,box.top+.6f,box.right-.6f,box.bottom-.6f);
+        outline(c,rect,rad,0xafffffff,1.2f);
     }
 
     /** The caller draws a dark label with ink(tone). Reserve at least 48 logical units for a touch target. */
     public void button(Canvas c,RectF box,int tone,boolean pressed) {
-        int i=Math.floorMod(tone,4);float rad=Math.min(22,box.height()*.4f),drop=pressed?1:4;
-        round(c,box.left,box.top+drop,box.right,box.bottom+drop,rad,EDGE[i]);
+        int i=Math.floorMod(tone,4);float rad=box.height()*.5f,drop=pressed?.5f:2;
+        round(c,box.left,box.top+drop,box.right,box.bottom+drop,rad,mix(MAIN[i],EDGE[i],.64f));
         round(c,box.left,box.top,box.right,box.bottom,rad,pressed?mix(MAIN[i],EDGE[i],.12f):MAIN[i]);
-        rect.set(box.left+1,box.top+1,box.right-1,box.bottom-1);outline(c,rect,rad,0xcaffffff,1.5f);
-        round(c,box.left+7,box.top+4,box.right-7,box.top+box.height()*.38f,rad*.6f,0x50ffffff);
-        disk(c,box.right-13,box.top+11,2.2f,0x98ffffff);
+        rect.set(box.left+.8f,box.top+.8f,box.right-.8f,box.bottom-.8f);outline(c,rect,rad,0x9cffffff,1.2f);
     }
 
     /** Progress always represents measured completion; no fabricated near-miss or changing goal. */
@@ -188,14 +181,12 @@ public final class SweetUi {
         }
     }
 
-    /** Draw under a navigation icon and label. The raised active tab is readable without a glow effect. */
+    /** Draw under a navigation icon and label. A single filled pill identifies the active destination. */
     public void navCapsule(Canvas c,RectF box,int tone,boolean active) {
-        float rad=Math.min(21,box.height()*.38f);
+        float rad=box.height()*.5f;
         if(active) {
-            round(c,box.left,box.top+2.5f,box.right,box.bottom+2.5f,rad,EDGE[Math.floorMod(tone,4)]);
             round(c,box.left,box.top,box.right,box.bottom,rad,fill(tone));
-            line(c,box.left+rad*.8f,box.top+4,box.right-rad*.8f,box.top+4,0x9affffff,1.3f);
-        } else round(c,box.left,box.top,box.right,box.bottom,rad,0x50ffffff);
+        } else round(c,box.left,box.top,box.right,box.bottom,rad,0x35ffffff);
     }
 
     public void gate(Canvas c,float x,float y,float r,Direction direction,boolean open,boolean highlight,long time,boolean still) {

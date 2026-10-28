@@ -1,0 +1,27 @@
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig {
+                testApplicationId 'com.androidhit.lumadrift.commercetest'
+                testInstrumentationRunner 'com.androidhit.lumadrift.qa.commerce112.CommerceInstrumentation'
+            }
+            sourceSets {
+                androidTest {
+                    java.srcDirs = [new File(rootDir, 'scripts/v112-commerce-ui/java')]
+                    assets.srcDirs = []
+                    manifest.srcFile new File(rootDir, 'scripts/v112-commerce-ui/AndroidManifest.xml')
+                }
+            }
+        }
+        project.tasks.matching { it.name == 'packageProductionReleaseAndroidTest' }.configureEach {
+            doLast {
+                copy {
+                    from project.layout.buildDirectory.file('outputs/apk/androidTest/production/release/app-production-release-androidTest.apk')
+                    into project.layout.buildDirectory.dir('qualification-artifacts/v1.12')
+                    rename { 'commerce-isolated-rc2-test.apk' }
+                }
+            }
+        }
+    }
+}

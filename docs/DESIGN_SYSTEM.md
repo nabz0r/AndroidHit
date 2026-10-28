@@ -1,4 +1,10 @@
-# Luma Drift design system — 1.9
+# Luma Drift design system
+
+## 1.12 atelier direction
+
+Use open illustrated compositions instead of nesting panels around every group. Surfaces have one soft fill, buttons use pill outlines and decorative swashes have curved ends. Amber round tokens identify LumaCoins; violet/cyan diamonds identify LumaGold, with complete names and honest balance state. `ShopIllustrations` supplies six original friendly power identities shared by shop, HUD, rewards and inventory; `KawaiiArt` retains the clothing system.
+
+Item details are normal navigable pages. Show effect, stock, ownership and price together; preview does not spend or equip. Cached premium funds are display-only and labelled last-known. Decorative motion is bounded and freezes in reduced motion. [Art proof](validation/v1.12/art-rc2/README.md) · [Research](research/ux-v112.md) · [Release](RELEASE_1_12.md).
 
 ## 1.11 visibility corrections
 
@@ -16,7 +22,7 @@ The game and Firebase pages share cream/lilac paper surfaces, dark plum typograp
 | --- | --- |
 | Text / secondary | Plum `#463252` / muted plum, separate from white artwork highlights |
 | Main action | Peach soft-volume button, dark label, short press feedback |
-| Standard surface | Warm paper or pale lilac, fine top highlight and restrained lower edge |
+| Standard surface | Warm paper or pale lilac, flat soft fill with no stacked bevel |
 | Actual progress | Mint bar with measured completion, never a fabricated near miss |
 | Arrow direction | Up mint; Right peach; Down lilac; Left blue; arrow shapes remain essential |
 | Key / seal | Gold key plus matching identifier; a lock is a fixed cell, not a movable piece |
@@ -26,7 +32,7 @@ The direction palette is the same in `LumaView` and `SweetUi`. No meaning relies
 
 ## Shape, composition and motion
 
-`SweetUi` draws plush arrow pieces, an original expressive star guide, an illustrated moving fingertip, gate controls, progress and soft surfaces. `KawaiiArt` supplies six differentiated power silhouettes and 24 clothing drawings. Canvas helper drawing reuses its Paint/Path/RectF objects. `WorldBackdrop` decodes one RGB565 image and reuses it with ten gentle biome tints; this is one original scene, not ten separately painted scenes.
+`SweetUi` draws plush arrow pieces, an original expressive star guide, an illustrated moving fingertip, gate controls, progress and soft surfaces. `ShopIllustrations` supplies the six power silhouettes; `KawaiiArt` supplies the clothing drawings. Canvas helper drawing reuses its Paint/Path/RectF objects. `WorldBackdrop` decodes one RGB565 image and reuses it with ten gentle biome tints; this is one original scene, not ten separately painted scenes.
 
 The current adventure is the home focus. Session status is explicit, with direct map/events/inventory/shop navigation. Details such as acquisition sources and cost confirmation remain adjacent to the action. The tutorial is skippable, replayable and self-paced; small landscape windows use two columns. Long menus scroll rather than scaling the entire UI down to fit.
 

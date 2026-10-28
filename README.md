@@ -1,9 +1,22 @@
 <h1 align="center">Luma Drift</h1>
 <p align="center"><strong>Your companion. A goal of your own.</strong><br>Read the gates. Restore the Prism. Put together a little look.</p>
-<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.11.0-rc2.apk"><strong>Download signed Android APK · 1.11.0-rc2</strong></a><br><a href="docs/RELEASE_1_11.md">Release & evidence</a> · <a href="docs/RELEASE_1_11.md#player-facing-fixes">What changed</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/nabz0r/AndroidHit/main/releases/luma-drift-1.12.0-rc2.apk"><strong>Download signed Android APK · 1.12.0-rc2</strong></a><br><a href="docs/RELEASE_1_12.md">Release & evidence</a> · <a href="docs/RELEASE_1_12.md#what-changes-for-the-player">What changed</a> · <a href="docs/README.md">Documentation</a> · <a href="docs/ROADMAP.md">Roadmap</a></p>
 <p align="center">1,000 Journey boards · 240 Remix · 100 optional guardians<br>7 playable lessons · 24 companions × 12 free visual treatments · 6 powers · 6 languages</p>
 
-## Equipment you can see — 1.11
+## Your little atelier — 1.12
+
+- **Know which currency you are using.** Amber round LumaCoins and violet/cyan LumaGold diamonds have complete names and distinct balances. Unknown account funds show a dash and an explicit state; last-known funds cannot authorize a spend.
+- **Browse without interruptions.** Power, companion, theme, clothing and equipment details are ordinary pages with a large preview, effect/source, stock/state, price and Close. Buying and equipping are separate choices.
+- **Recognize your tools.** Six original friendly power illustrations match the shop, inventory, rewards and play HUD. Flatter surfaces, pills and open curved accents replace stacked bevels and repeated panels.
+- **Keep the action dependable.** Exact earned-power debit/grant is tracked through storage refusal and retry. Empty-power browsing returns to the same live run, including through Activity recreation.
+
+[Changes, exact artifacts and acceptance](docs/RELEASE_1_12.md) · [Primary research and UX hypotheses](docs/research/ux-v112.md). Human enjoyment and retention remain unmeasured. Test ads and commercial gates are retained; no Play upload is part of this release.
+
+<p align="center"><img src="docs/screenshots/v1.12/ui-bugs/ui-sdk-final-rc2-lab40/prepare/ux-home-wallets-fr.png" width="230" alt="Actual French 1.12 RC2 Home with separate earned/premium balances"><img src="docs/screenshots/v1.12/ui-bugs/ui-sdk-final-rc2-lab40/prepare/ux-shop-powers-fr.png" width="230" alt="Actual French1.12RC2 atelier, illustrated powers, stock and price"><img src="docs/screenshots/v1.12/ui-bugs/ui-sdk-final-rc2-lab40/prepare/ux-power-detail-fr.png" width="230" alt="Actual French1.12RC2 integrated power detail, effect, price and Close"></p>
+
+Unedited final **Lab 1.12.0-sandbox-rc2** frames. **1,179 native checks / 40 real Journey clears** pass, including all six shop languages, actual earned purchases, live-run return through rotation, equipped-art comparisons and a distinct cold process. The guest legitimately replays L13 for the return test; the 2,425 coins shown are its observed earned balance. The unknown account LumaGold is not a simulated balance. [Executed evidence](docs/validation/v1.12/ui-bugs/ui-sdk-final-rc2-lab40/README.md).
+
+## Preserved equipment fixes — 1.11
 
 - **Apply, then see the result.** Equipping a companion, clothing or gear returns to the portrait. Compact clothing labels show the actual variant; all seven worn slots retain full names in their accessible descriptions and offers. Clothing purchase opens an owned offer with an explicit Equip button.
 - **Keep the companion recognizable.** Clothing leaves more of the face and silhouette visible. Headwear, aura and charm have their own space and are larger. The same original renderer is used in Home, wardrobe, inventory, previews and gameplay.
@@ -55,29 +68,29 @@ Source checks separately cover **6,544 portrait/translation assertions**, **443 
 
 **Puzzle geometry and difficulty are unchanged.** The documented L22→L23 structural jump from 17 to 85 remains. Structural scores, source simulations and successful scripted clears do not predict human enjoyment, D1/D7 retention or revenue. [The 2026 research and synthetic audit](docs/PLAYER_AUDIT_2026.md) keeps published survey aggregates distinct from assumed game profiles. No individual social data is scraped. [Current backlog](docs/PRISM_STORY_1_10.md#unchanged-structural-backlog).
 
-## Signed 1.11 artifacts
+## Signed 1.12 artifacts
 
 | Artifact | Download | SHA-256 / manifest |
 | --- | --- | --- |
-| Production APK · 7.76 MB | [1.11.0-rc2](releases/luma-drift-1.11.0-rc2.apk) | `5a77d0c5b15dcdbb919bc3ea248ac9ac7b1b642898ee0fdd6cd8f855a1d09811` |
-| Production AAB | [1.11.0-rc2](releases/luma-drift-1.11.0-rc2.aab) | [Manifest](releases/manifest-1.11.0-rc2.json) |
-| Separate Lab APK/AAB | [Lab APK](releases/luma-drift-1.11.0-sandbox-rc2.apk) · [AAB](releases/luma-drift-1.11.0-sandbox-rc2.aab) | [Manifest](releases/manifest-1.11.0-sandbox-rc2.json) |
+| Production APK · 7.77 MB | [1.12.0-rc2](releases/luma-drift-1.12.0-rc2.apk) | `de581253b64232ae45bcbd647862dd470d522068f26516f6417bf515e882403d` |
+| Production AAB | [1.12.0-rc2](releases/luma-drift-1.12.0-rc2.aab) | [Manifest](releases/manifest-1.12.0-rc2.json) |
+| Separate Lab APK/AAB | [Lab APK](releases/luma-drift-1.12.0-sandbox-rc2.apk) · [AAB](releases/luma-drift-1.12.0-sandbox-rc2.aab) | [Manifest](releases/manifest-1.12.0-sandbox-rc2.json) |
 
-Android 8+ / API26; version code **12**; production package `com.androidhit.lumadrift`. Install over the existing app to retain saves. Signing identity is unchanged. [Installation](docs/RELEASE.md) · [Checksums](releases/SHA256SUMS.txt) · [Exact candidate inputs and gates](docs/validation/v1.11/candidate.json) · [Preserved 1.10 delivery](docs/RELEASE_1_10.md). Intermediate RC1 evidence stays identified separately and is not relabelled as RC2 acceptance.
+Android 8+ / API 26; code 13; production package `com.androidhit.lumadrift`. Install over the existing app to retain local saves; signing identity is unchanged. [Installation](docs/RELEASE.md) · [Checksums](releases/SHA256SUMS.txt) · [Qualification](docs/validation/v1.12/README.md). [Preserved 1.11 delivery](docs/RELEASE_1_11.md) and its exact artifacts remain available.
 
-Published on `main` from [source aef6f991](https://github.com/nabz0r/AndroidHit/commit/aef6f991caf34c7f3822d5080bc449fccda977f3). All four pinned GitHub downloads return HTTP 200 with the exact signed-candidate sizes and SHA-256 hashes. [Publication receipt](docs/validation/v1.11/publication.json).
-
-Google sign-in is optional and does not synchronize local gameplay saves. Actual two-account friends/gifts, consent, live ads and Play purchase lifecycle still need provider qualification. The Play Console walkthrough is paused for app improvement; this release does not announce a Play launch. No server code or remote gameplay-analytics SDK changes here.
-
-[Privacy](docs/PRIVACY.md) · [Production setup](docs/DEPLOIEMENT_PAS_A_PAS.md) · [Social qualification](docs/QUALIFICATION_SOCIALE.md) · [Server](server/README.md).
+Google identity does not synchronize local gameplay. Actual two-account gifts, real consent/ads and Play purchase lifecycle remain separately qualified. The website retains its recorded 1.10 deployment. No Play or server deployment occurs here.
 
 ## Build and inspect
 
-Use JDK21, the Android SDK and the Gradle wrapper; Java source compatibility is17. Private signing files are ignored and never published.
+Use JDK 21, the Android SDK and the Gradle wrapper; Java source compatibility is 17. Private signing files are ignored and never published.
 
 ```sh
 ./gradlew assembleProductionRelease bundleProductionRelease lintProductionRelease
 ./gradlew assembleLabRelease bundleLabRelease lintLabRelease
+python3 scripts/test-commerce-v112.py
+python3 scripts/test-v112-copy.py
+bash scripts/test-store-booster-v112.sh
+./docs/validation/v1.12/art-rc2/run.sh
 bash scripts/test-store-appearance-v111.sh
 bash scripts/test-store-init-v111.sh
 bash scripts/test-store-externals-v111.sh
@@ -89,4 +102,4 @@ python3 scripts/check-site-v110.py --phase release --apk-sha256 29a68cdcaeb61850
 node --test public/tests/*.test.mjs
 ```
 
-[Development](docs/DEVELOPMENT.md) · [Native SDK QA runner](scripts/v111-ui-test/README.md) · [Roadmap](docs/ROADMAP.md). Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Candy Crush or Crash Fever artwork, characters, audio or code is included.
+[Development](docs/DEVELOPMENT.md) · [Native SDK QA runner](scripts/v112-ui-test/README.md) · [Roadmap](docs/ROADMAP.md). Original game source and repository assets: **AGPL-3.0**. [Notices](docs/THIRD_PARTY_NOTICES.md). No Candy Crush or Crash Fever artwork, characters, audio or code is included.

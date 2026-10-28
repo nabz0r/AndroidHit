@@ -1,0 +1,71 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.experimental.lint.version=9.4.0' is experimental.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preProductionReleaseBuild UP-TO-DATE
+> Task :app:checkProductionReleaseAarMetadata UP-TO-DATE
+> Task :app:generateProductionReleaseResValues UP-TO-DATE
+> Task :app:mapProductionReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateProductionReleaseResources UP-TO-DATE
+> Task :app:mergeProductionReleaseResources UP-TO-DATE
+> Task :app:packageProductionReleaseResources UP-TO-DATE
+> Task :app:parseProductionReleaseLocalResources UP-TO-DATE
+> Task :app:createProductionReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksProductionRelease UP-TO-DATE
+> Task :app:processProductionReleaseMainManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifestForPackage UP-TO-DATE
+> Task :app:processProductionReleaseResources UP-TO-DATE
+> Task :app:bundleProductionReleaseClassesToCompileJar UP-TO-DATE
+> Task :app:preProductionReleaseAndroidTestBuild SKIPPED
+> Task :app:processProductionReleaseAndroidTestManifest
+> Task :app:generateProductionReleaseAndroidTestBuildConfig
+> Task :app:javaPreCompileProductionReleaseAndroidTest UP-TO-DATE
+> Task :app:checkProductionReleaseAndroidTestAarMetadata UP-TO-DATE
+> Task :app:generateProductionReleaseAndroidTestResValues UP-TO-DATE
+> Task :app:mapProductionReleaseAndroidTestSourceSetPaths UP-TO-DATE
+> Task :app:generateProductionReleaseAndroidTestResources UP-TO-DATE
+> Task :app:mergeProductionReleaseAndroidTestResources UP-TO-DATE
+> Task :app:mergeProductionReleaseAndroidTestShaders UP-TO-DATE
+> Task :app:compileProductionReleaseAndroidTestShaders NO-SOURCE
+> Task :app:generateProductionReleaseAndroidTestAssets UP-TO-DATE
+> Task :app:mergeProductionReleaseAndroidTestAssets
+> Task :app:compressProductionReleaseAndroidTestAssets
+> Task :app:expandProductionReleaseAndroidTestL8ArtProfileWildcards UP-TO-DATE
+> Task :app:checkProductionReleaseAndroidTestDuplicateClasses UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:processProductionReleaseAndroidTestJavaRes NO-SOURCE
+> Task :app:mergeProductionReleaseAndroidTestJavaResource UP-TO-DATE
+> Task :app:mergeProductionReleaseAndroidTestJniLibFolders UP-TO-DATE
+> Task :app:mergeProductionReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeProductionReleaseNativeLibs UP-TO-DATE
+> Task :app:mergeProductionReleaseAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripProductionReleaseAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningProductionReleaseAndroidTest UP-TO-DATE
+> Task :app:writeProductionReleaseAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :app:processProductionReleaseAndroidTestResources
+
+> Task :app:compileProductionReleaseAndroidTestJavaWithJavac
+Note: /Users/n/androidhit/scripts/v112-commerce-ui/java/com/androidhit/lumadrift/qa/commerce112/CommerceInstrumentation.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:minifyProductionReleaseAndroidTestWithR8
+> Task :app:l8DexDesugarLibProductionReleaseAndroidTest
+> Task :app:packageProductionReleaseAndroidTest
+> Task :app:createProductionReleaseAndroidTestApkListingFileRedirect
+> Task :app:assembleProductionReleaseAndroidTest
+
+[Incubating] Problems report is available at: file:///Users/n/androidhit/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 13s
+40 actionable tasks: 10 executed, 30 up-to-date

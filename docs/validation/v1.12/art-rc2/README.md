@@ -1,0 +1,7 @@
+# RC2 shop art: rounded flowing accents
+
+The original nine illustrations are unchanged from the [RC1 evidence](../art/README.md). Only `heroAccent` and `ribbon` were revised after native inspection found straight, cropped-looking decoration edges. They now use closed cubic curves with rounded ends and stay within their supplied rectangle. The [accent sheet](accent-atlas.png) shows four palettes: the open header decoration on the left, the label swash on the right. These are host-rendered drawings, not app screenshots.
+
+The same [438 independent raster checks](raster-result.json) pass against [these exact source inputs](source-inputs.json). Both changed UI sources also compiled against Android 36. Glyph silhouettes, reduced-motion invariance, canvas balance and bounds remain covered. No pricing, action, game geometry or catalog behavior changed in the art helpers. Host checks establish rendering properties; human preference and exact Android layout remain separate checks.
+
+Run `./docs/validation/v1.12/art-rc2/run.sh /tmp/luma-v112-art-rerun` from the repository root. The Java2D adapters are copied from the [original proof](../art/host/android/graphics/), using JDK 21 and no extra dependency. The [original atlas](shop-art-atlas.png) is identical because glyphs were retained. Exact RC1 implementation is preserved in [intermediate-source](../art/intermediate-source/ShopIllustrations.java).

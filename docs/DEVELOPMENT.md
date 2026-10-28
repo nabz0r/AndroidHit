@@ -1,6 +1,14 @@
 # Development and architecture
 
-## Current 1.11 bug fixes
+## Current 1.12 UI and transaction boundary
+
+`LumaView` adds ordinary `item` pages with measured semantic text, explicit purchase/Equip and caller-aware Close/Back. Item kind/identity, long-page height and return history survive Activity recreation. Displayed premium balance is sampled on UI refresh/resume/auth changes, outside the frame loop; `ProductionWalletClient.cachedBalance` validates the active UID, exact integer fields, version and range, and never supplies spend authorization.
+
+`ShopIllustrations` is draw-only; shared `SweetUi` APIs retain their bounds. `CommerceArt`/`CommerceCopy` style the native wallet and retain provider-supplied prices. `GameStore.purchaseBooster` now tracks its exact coin/stock write through `LocalSaveTransactions`, under the existing lock. IDs, prices, payouts, stock limits and rules are unchanged.
+
+Run `python3 scripts/test-commerce-v112.py`, `python3 scripts/test-v112-copy.py`, `bash scripts/test-store-booster-v112.sh`, and the preserved art/store checks. The new native runners live in `scripts/v112-ui-test` and `scripts/v112-commerce-ui`; historical 1.11 harness/results are not rewritten. [Acceptance](validation/v1.12/README.md).
+
+## Preserved 1.11 bug fixes
 
 `CompanionPortrait` adjusts composition within its existing `2r` extent. `WorldBackdrop` reuses a selected-theme HSV wash on the garden and after the animated play scene. `LumaView` returns to the actual equipped portrait, names worn slots and handles failed/obsolete equipment callbacks. `GameStore` settles exact pending transactions before ownership/loadout reads and tracks first-profile initialization without throwing from its constructor. `V111Strings` supplies four feedback/accessibility keys in six languages. IDs, prices, effects and saved puzzle models are unchanged.
 

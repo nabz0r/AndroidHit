@@ -1,0 +1,1664 @@
+{
+  "passed": true,
+  "restored": true,
+  "scope": "Native SDK Instrumentation, AccessibilityNodeProvider actions and touchscreen events from observed native node bounds; no browser/desktop/shell input/profile injection",
+  "cases": "shop-focus,shop-locales,menus",
+  "journey_through": 100,
+  "serial": "emulator-5580",
+  "capture_policy": "curated-original-milestones",
+  "apk_sha256": "1def32cda6fef292d757009280439e4108fa6a7b24fcea83a7f35b79a3051694",
+  "expected_apk_sha256": "1def32cda6fef292d757009280439e4108fa6a7b24fcea83a7f35b79a3051694",
+  "test_apk_sha256": "2e51bf2648587e3f1f97f2a53996a108b84bb11cc3768b7e9cfe85a31bb5d7b4",
+  "wrapper_source_sha256": "474ac4d67fa2a9fdb2409d34b907edade2836fa1c95f1f25fe8249f76b4734d7",
+  "storage_fault_source_sha256": null,
+  "runner_source_sha256": "89175841cc761edf2713a9df4215fa6bf189f61c34878a6c37531b45bd39d2c1",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "backup_location": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v112-ui-original-prefs-mmmuw4la",
+  "backup_manifest": {
+    "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+    "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+    "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+  },
+  "device": {
+    "api": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "phases": [
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": true,
+        "checks": [
+          {
+            "pass": true,
+            "message": "Installed exact target 1.12.0-sandbox-rc1/code13"
+          },
+          {
+            "pass": true,
+            "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+          },
+          {
+            "pass": true,
+            "message": "Footer target reaches stable observed bottom position: Enter a challenge"
+          },
+          {
+            "pass": true,
+            "message": "Footer target retains at least47dp of actual visible native height: Enter a challenge actual=48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Entire footer target stays above fixed native navigation: Enter a challenge"
+          },
+          {
+            "pass": true,
+            "message": "Scrolling Home footer cannot claim or spend anything"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Home"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Map"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Events"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Inventory"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Shop"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Today / Today"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Today / This week"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Today / Journey"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Today / Ready to collect"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Home"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Map"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Events"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Inventory"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Shop"
+          },
+          {
+            "pass": true,
+            "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: Today"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: This week / Today"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: This week / This week"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: This week / Journey"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: This week / Ready to collect"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Home"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Map"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Events"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Inventory"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Shop"
+          },
+          {
+            "pass": true,
+            "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: This week"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Journey / Today"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Journey / This week"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Journey / Journey"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Journey / Ready to collect"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Home"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Map"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Events"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Inventory"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Shop"
+          },
+          {
+            "pass": true,
+            "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: Journey"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Ready to collect / Today"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Ready to collect / This week"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Ready to collect / Journey"
+          },
+          {
+            "pass": true,
+            "message": "Only requested objective tab is selected: Ready to collect / Ready to collect"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Home"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Map"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Events"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Inventory"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Events / Shop"
+          },
+          {
+            "pass": true,
+            "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: Ready to collect"
+          },
+          {
+            "pass": true,
+            "message": "Reward tab stays physically reachable after a deeply scrolled list"
+          },
+          {
+            "pass": true,
+            "message": "Tab switching after deep scroll does not trigger a hidden claim"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Home / Home"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Home / Map"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Home / Events"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Home / Inventory"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Home / Shop"
+          },
+          {
+            "pass": true,
+            "message": "Objectives Back returns to its caller without a gift"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Shop / Home"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Shop / Map"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Shop / Events"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Shop / Inventory"
+          },
+          {
+            "pass": true,
+            "message": "Navigation marks only its actual parent: Shop / Shop"
+          },
+          {
+            "pass": true,
+            "message": "Shop opens its earned-power category"
+          },
+          {
+            "pass": true,
+            "message": "Organic category retains selected semantics: Powers"
+          },
+          {
+            "pass": true,
+            "message": "Selected shop category Powers has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x50.18182"
+          },
+          {
+            "pass": true,
+            "message": "Selected shop category Powers native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Shop separates cosmetic appearances"
+          },
+          {
+            "pass": true,
+            "message": "Organic category retains selected semantics: Appearance"
+          },
+          {
+            "pass": true,
+            "message": "Selected shop category Appearance has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x50.18182"
+          },
+          {
+            "pass": true,
+            "message": "Selected shop category Appearance native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Distinct premium category is labelled without entering wallet or purchase flows"
+          },
+          {
+            "pass": true,
+            "message": "Browsing shop categories does not debit or grant anything"
+          },
+          {
+            "pass": true,
+            "message": "Home earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Home named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Home guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Shop earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Shop named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Shop guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Shop selects the explicit named category: Powers"
+          },
+          {
+            "pass": true,
+            "message": "Category selection is read-only: Powers"
+          },
+          {
+            "pass": true,
+            "message": "Shop selects the explicit named category: Appearance"
+          },
+          {
+            "pass": true,
+            "message": "Category selection is read-only: Appearance"
+          },
+          {
+            "pass": true,
+            "message": "Shop selects the explicit named category: LumaGold"
+          },
+          {
+            "pass": true,
+            "message": "Category selection is read-only: LumaGold"
+          },
+          {
+            "pass": true,
+            "message": "Power details retain the normal canvas page instead of an AlertDialog"
+          },
+          {
+            "pass": true,
+            "message": "Power detail Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Power detail Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Opening a power explanation does not buy stock"
+          },
+          {
+            "pass": true,
+            "message": "Power stock is accessible as actual text rather than decorative art"
+          },
+          {
+            "pass": true,
+            "message": "Spark detail exposes its complete accessible effect and no-move cost"
+          },
+          {
+            "pass": true,
+            "message": "Explicit Close returns to the Shop caller"
+          },
+          {
+            "pass": true,
+            "message": "Closing power details leaves the entire economy unchanged"
+          },
+          {
+            "pass": true,
+            "message": "Earned-power offer states both exact quantity and exact currency price"
+          },
+          {
+            "pass": true,
+            "message": "Real earned balance can fund the explicitly displayed three-Spark pack"
+          },
+          {
+            "pass": true,
+            "message": "Earned Spark purchase has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x54.545456"
+          },
+          {
+            "pass": true,
+            "message": "Earned Spark purchase native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual earned purchase grants exactly the displayed stock and debits exactly the displayed price"
+          },
+          {
+            "pass": true,
+            "message": "Earned purchase feedback leaves the normal item page usable"
+          },
+          {
+            "pass": true,
+            "message": "Close after an earned purchase returns to its original shop"
+          },
+          {
+            "pass": true,
+            "message": "Clothing has a normal canvas preview and explicit no-grant state"
+          },
+          {
+            "pass": true,
+            "message": "Clothing detail Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Clothing detail Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Clothing Close returns to the companion caller"
+          },
+          {
+            "pass": true,
+            "message": "Clothing preview and Close grant, equip and debit nothing"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home en earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home en named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home en guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop en earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop en named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop en guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Actual en power category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual en power detail remains on the canvas"
+          },
+          {
+            "pass": true,
+            "message": "Localized en Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized en Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual en appearance category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual en premium category remains a distinct named destination"
+          },
+          {
+            "pass": true,
+            "message": "Actual en shop/category/Close navigation makes no economic or progression change"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home fr earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home fr named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home fr guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop fr earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop fr named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop fr guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Actual fr power category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual fr power detail remains on the canvas"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized fr Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual fr appearance category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual fr premium category remains a distinct named destination"
+          },
+          {
+            "pass": true,
+            "message": "Actual fr shop/category/Close navigation makes no economic or progression change"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home de earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home de named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home de guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop de earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop de named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop de guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Actual de power category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual de power detail remains on the canvas"
+          },
+          {
+            "pass": true,
+            "message": "Localized de Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized de Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual de appearance category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual de premium category remains a distinct named destination"
+          },
+          {
+            "pass": true,
+            "message": "Actual de shop/category/Close navigation makes no economic or progression change"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home es earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home es named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home es guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop es earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop es named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop es guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Actual es power category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual es power detail remains on the canvas"
+          },
+          {
+            "pass": true,
+            "message": "Localized es Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized es Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual es appearance category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual es premium category remains a distinct named destination"
+          },
+          {
+            "pass": true,
+            "message": "Actual es shop/category/Close navigation makes no economic or progression change"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home pt earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home pt named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home pt guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop pt earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop pt named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop pt guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Actual pt power category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual pt power detail remains on the canvas"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized pt Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual pt appearance category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual pt premium category remains a distinct named destination"
+          },
+          {
+            "pass": true,
+            "message": "Actual pt shop/category/Close navigation makes no economic or progression change"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home it earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home it named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Home it guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop it earned currency exposes the exact actual balance"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop it named currency nodes have distinct, nonoverlapping bounds"
+          },
+          {
+            "pass": true,
+            "message": "Localized Shop it guest premium state is not represented as a verified zero"
+          },
+          {
+            "pass": true,
+            "message": "Actual it power category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual it power detail remains on the canvas"
+          },
+          {
+            "pass": true,
+            "message": "Localized it Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+          },
+          {
+            "pass": true,
+            "message": "Localized it Close native bounds are within the visible game viewport"
+          },
+          {
+            "pass": true,
+            "message": "Actual it appearance category is translated and selected"
+          },
+          {
+            "pass": true,
+            "message": "Actual it premium category remains a distinct named destination"
+          },
+          {
+            "pass": true,
+            "message": "Actual it shop/category/Close navigation makes no economic or progression change"
+          }
+        ],
+        "captures": [
+          "home-en",
+          "footer-target-enter-a-challenge-en",
+          "objectives-today-en",
+          "objectives-this-week-en",
+          "objectives-journey-en",
+          "objectives-ready-to-collect-en",
+          "hub-home-en",
+          "shop-appearance-en",
+          "ux-home-wallets-en",
+          "ux-shop-powers-en",
+          "ux-shop-appearance-en",
+          "ux-shop-lumagold-en",
+          "ux-power-detail-en",
+          "ux-power-purchased-en",
+          "ux-clothing-detail-en",
+          "ux-home-wallets-en",
+          "ux-shop-powers-en",
+          "ux-power-detail-en",
+          "ux-shop-appearance-en",
+          "ux-shop-gold-en",
+          "ux-home-wallets-fr",
+          "ux-shop-powers-fr",
+          "ux-power-detail-fr",
+          "ux-shop-appearance-fr",
+          "ux-shop-gold-fr",
+          "ux-home-wallets-de",
+          "ux-shop-powers-de",
+          "ux-power-detail-de",
+          "ux-shop-appearance-de",
+          "ux-shop-gold-de",
+          "ux-home-wallets-es",
+          "ux-shop-powers-es",
+          "ux-power-detail-es",
+          "ux-shop-appearance-es",
+          "ux-shop-gold-es",
+          "ux-home-wallets-pt",
+          "ux-shop-powers-pt",
+          "ux-power-detail-pt",
+          "ux-shop-appearance-pt",
+          "ux-shop-gold-pt",
+          "ux-home-wallets-it",
+          "ux-shop-powers-it",
+          "ux-power-detail-it",
+          "ux-shop-appearance-it",
+          "ux-shop-gold-it"
+        ],
+        "checkCount": 184,
+        "package": "com.androidhit.lumadrift.sandbox",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "processId": 4257,
+        "visualPhase": "prepare",
+        "visualSoftFailures": 0,
+        "visualCheckpointReady": false,
+        "scope": "Actual SDK AccessibilityNodeProvider actions and native touchscreen SDK drags from observed bounds; read-only preference assertions; no profile injection, account, ad or payment"
+      },
+      "screenshots": {
+        "prepare/ux-shop-gold-pt.png": "b2973aea80dd23048a79b1764d30aca6cd82db50c748924bd3ab50dfa6573e5f",
+        "prepare/ux-shop-appearance-es.png": "7fa022d42afd3c4931218a96e559055e66b30ec7906012ac0be7fbd2b997ba63",
+        "prepare/ux-shop-gold-de.png": "49417077acd4c6b824106558a787877dac2d0dca221e1dc513a6a49d345b08c8",
+        "prepare/ux-shop-gold-it.png": "c76630c7ef41224869d580f6f965164ff7f352ce5fea1cbc475f835e5431a5be",
+        "prepare/objectives-today-en.png": "f90a4dd298d2f9567d135dd00f3d4c94c9718f6993fcad7332fafdc8a229d07f",
+        "prepare/ux-shop-appearance-pt.png": "e468c121fd4d411ecde47049b7e62f60f2b136b27fc882afcbfeeb26b8675545",
+        "prepare/ux-shop-gold-es.png": "666d3d9a8578eaa3a5f38b5f1d47291e973c23146cae641da13c6912088c701b",
+        "prepare/ux-shop-appearance-de.png": "8553ab736b79436a8911e2423eb778a4734c0e9a0bac77cda13d6395ae8c4b6c",
+        "prepare/ux-shop-appearance-it.png": "0a08d6bf13167444b7fcf0762a1fb6b2d98d917db673f4483fee48d4855c698a",
+        "prepare/ux-home-wallets-fr.png": "b3b11ba4a591f6d191148cb064aa9a9bc9066bd4e836b29f96e9bde458235ba0",
+        "prepare/ux-power-detail-pt.png": "05f9d3171c891ae0d3a5bc1fe78445ea46bea71188b89d7a6e8f79b70cc9a845",
+        "prepare/objectives-ready-to-collect-en.png": "c35814a6e1f89c6e92174a4ca452b626dc71015d6b875b356b54f018cdb825c6",
+        "prepare/ux-power-detail-de.png": "a51b16d7f072fcd972ea91fee546c7fc1906bdb339b7be3ca7c0f2ec537aee1f",
+        "prepare/ux-shop-powers-fr.png": "470043f20925c591e0f9644a79e983679c64cacb4455de11abc5af76c610b97e",
+        "prepare/ux-power-detail-it.png": "9d9cd579bc544b689396e0c4832cb1a2b3ca73cbed37a75bac650cb7da2f14ea",
+        "prepare/ux-power-detail-es.png": "333aa35b4b1d6334636ad09f815ce825be8d5b79f1c45cadcbd522e14af3cb21",
+        "prepare/ux-home-wallets-en.png": "0c347bc816d57b5e78739ff75b404665f38000cb29f235e34d7dd66bd01121ed",
+        "prepare/objectives-this-week-en.png": "2c188d8ac92a6bcc6d636305655460f32c2f1256cf5f2eb13c9cab0921695ffd",
+        "prepare/ux-shop-powers-en.png": "50e75d955088935532078a7b2059470f209e4e6a04f7d4a0afbaca5454f79adb",
+        "prepare/shop-appearance-en.png": "b0ddd1e4f54172a0f070830d785a24f1c363e76087479da3b5e1bd0abe2a7534",
+        "prepare/home-en.png": "75943ba195963556912381777c2b9cc12a4828a96017cd6675056412eed2f046",
+        "prepare/ux-home-wallets-it.png": "30cdfa0184da2ded925646a67ec2435ac942bcbc4f2828f400d490039d573093",
+        "prepare/ux-shop-powers-pt.png": "a60dfd6257088c722011fdb2df35e7d211c65a4bc26eedbf8cf7f8724f0af443",
+        "prepare/ux-home-wallets-de.png": "ddb13d68d2c91ab257f34bed156a7e273c04581068d37fc5a8a61bd8e4b907e1",
+        "prepare/ux-clothing-detail-en.png": "bc8687bf9b8ee8994d02961cd84928d3835917b43211898c79bca039a95e41e0",
+        "prepare/ux-shop-powers-de.png": "b7c592cb3227b7bb7bb765744cf8dd78823058611e3fa3fd3a132a58d82a4d84",
+        "prepare/ux-home-wallets-pt.png": "3b73568773898ab0e741b82dfef8ed27686f298990ceb53632a49d3464926f7a",
+        "prepare/ux-power-detail-fr.png": "72eabe5cd71b8bc3694ee5cea844752934a5c026b08ebf18fb4093bdb1bc0e36",
+        "prepare/ux-shop-powers-it.png": "acaed86d48e15ebd7264c401667c85e16a4ba61f8c42260cb2132ea2d7e9d838",
+        "prepare/ux-shop-lumagold-en.png": "bf29b32d6b58d2c315124129d02ebd2061bfe08fadb73d0794b73c4bd1c209bf",
+        "prepare/ux-shop-powers-es.png": "61081308b273d90173ca7d00e045d26603f52932ae93c44e47d62880e9e3472e",
+        "prepare/ux-power-detail-en.png": "9e869f8db7253a47577bec43ddc197dd250a75939d10646c9433931e1d928a86",
+        "prepare/ux-home-wallets-es.png": "6fee3db0733e17d60b21920a4cc0ddf46554c4c258c0f317dba9ee85d15fc89b",
+        "prepare/footer-target-enter-a-challenge-en.png": "46ad957928640479a1f74d4fdce7ddc3d7fba81be51a3c0b0deb18fea244b11d",
+        "prepare/ux-shop-appearance-en.png": "b52428673a55ed9fca8e93f59c8f925c809291a8b15caa1a8ee528296d9d81e4",
+        "prepare/ux-shop-gold-fr.png": "d7874e3a0525a050fda96df62476cd0a6370fbc433b45bf4ec380ee67aa349bd",
+        "prepare/objectives-journey-en.png": "bc99fbf21f983b579edfede6671874da91b7760a807a9d62bdd0e7e8dff1754f",
+        "prepare/ux-power-purchased-en.png": "73ad142860ccf5cd8eb039ea5ffa8082b1225a879528ad8d90d2fb23ca6672c8",
+        "prepare/ux-shop-gold-en.png": "c1b3cd9a0fa7bee3c8ffa35204beaf09df0df9d0a56c7b2a0d4fd4f70010efe3",
+        "prepare/ux-shop-appearance-fr.png": "80c6fa4758055898a26a124b772c49a8624761efe0f637f881657bb44923983a",
+        "prepare/hub-home-en.png": "cc39d9d941fee110c5deb1d591df3647eeb16319cddbf6d436dbeb88c4ff3df3"
+      }
+    }
+  ],
+  "screenshots": {
+    "prepare/ux-shop-gold-pt.png": "b2973aea80dd23048a79b1764d30aca6cd82db50c748924bd3ab50dfa6573e5f",
+    "prepare/ux-shop-appearance-es.png": "7fa022d42afd3c4931218a96e559055e66b30ec7906012ac0be7fbd2b997ba63",
+    "prepare/ux-shop-gold-de.png": "49417077acd4c6b824106558a787877dac2d0dca221e1dc513a6a49d345b08c8",
+    "prepare/ux-shop-gold-it.png": "c76630c7ef41224869d580f6f965164ff7f352ce5fea1cbc475f835e5431a5be",
+    "prepare/objectives-today-en.png": "f90a4dd298d2f9567d135dd00f3d4c94c9718f6993fcad7332fafdc8a229d07f",
+    "prepare/ux-shop-appearance-pt.png": "e468c121fd4d411ecde47049b7e62f60f2b136b27fc882afcbfeeb26b8675545",
+    "prepare/ux-shop-gold-es.png": "666d3d9a8578eaa3a5f38b5f1d47291e973c23146cae641da13c6912088c701b",
+    "prepare/ux-shop-appearance-de.png": "8553ab736b79436a8911e2423eb778a4734c0e9a0bac77cda13d6395ae8c4b6c",
+    "prepare/ux-shop-appearance-it.png": "0a08d6bf13167444b7fcf0762a1fb6b2d98d917db673f4483fee48d4855c698a",
+    "prepare/ux-home-wallets-fr.png": "b3b11ba4a591f6d191148cb064aa9a9bc9066bd4e836b29f96e9bde458235ba0",
+    "prepare/ux-power-detail-pt.png": "05f9d3171c891ae0d3a5bc1fe78445ea46bea71188b89d7a6e8f79b70cc9a845",
+    "prepare/objectives-ready-to-collect-en.png": "c35814a6e1f89c6e92174a4ca452b626dc71015d6b875b356b54f018cdb825c6",
+    "prepare/ux-power-detail-de.png": "a51b16d7f072fcd972ea91fee546c7fc1906bdb339b7be3ca7c0f2ec537aee1f",
+    "prepare/ux-shop-powers-fr.png": "470043f20925c591e0f9644a79e983679c64cacb4455de11abc5af76c610b97e",
+    "prepare/ux-power-detail-it.png": "9d9cd579bc544b689396e0c4832cb1a2b3ca73cbed37a75bac650cb7da2f14ea",
+    "prepare/ux-power-detail-es.png": "333aa35b4b1d6334636ad09f815ce825be8d5b79f1c45cadcbd522e14af3cb21",
+    "prepare/ux-home-wallets-en.png": "0c347bc816d57b5e78739ff75b404665f38000cb29f235e34d7dd66bd01121ed",
+    "prepare/objectives-this-week-en.png": "2c188d8ac92a6bcc6d636305655460f32c2f1256cf5f2eb13c9cab0921695ffd",
+    "prepare/ux-shop-powers-en.png": "50e75d955088935532078a7b2059470f209e4e6a04f7d4a0afbaca5454f79adb",
+    "prepare/shop-appearance-en.png": "b0ddd1e4f54172a0f070830d785a24f1c363e76087479da3b5e1bd0abe2a7534",
+    "prepare/home-en.png": "75943ba195963556912381777c2b9cc12a4828a96017cd6675056412eed2f046",
+    "prepare/ux-home-wallets-it.png": "30cdfa0184da2ded925646a67ec2435ac942bcbc4f2828f400d490039d573093",
+    "prepare/ux-shop-powers-pt.png": "a60dfd6257088c722011fdb2df35e7d211c65a4bc26eedbf8cf7f8724f0af443",
+    "prepare/ux-home-wallets-de.png": "ddb13d68d2c91ab257f34bed156a7e273c04581068d37fc5a8a61bd8e4b907e1",
+    "prepare/ux-clothing-detail-en.png": "bc8687bf9b8ee8994d02961cd84928d3835917b43211898c79bca039a95e41e0",
+    "prepare/ux-shop-powers-de.png": "b7c592cb3227b7bb7bb765744cf8dd78823058611e3fa3fd3a132a58d82a4d84",
+    "prepare/ux-home-wallets-pt.png": "3b73568773898ab0e741b82dfef8ed27686f298990ceb53632a49d3464926f7a",
+    "prepare/ux-power-detail-fr.png": "72eabe5cd71b8bc3694ee5cea844752934a5c026b08ebf18fb4093bdb1bc0e36",
+    "prepare/ux-shop-powers-it.png": "acaed86d48e15ebd7264c401667c85e16a4ba61f8c42260cb2132ea2d7e9d838",
+    "prepare/ux-shop-lumagold-en.png": "bf29b32d6b58d2c315124129d02ebd2061bfe08fadb73d0794b73c4bd1c209bf",
+    "prepare/ux-shop-powers-es.png": "61081308b273d90173ca7d00e045d26603f52932ae93c44e47d62880e9e3472e",
+    "prepare/ux-power-detail-en.png": "9e869f8db7253a47577bec43ddc197dd250a75939d10646c9433931e1d928a86",
+    "prepare/ux-home-wallets-es.png": "6fee3db0733e17d60b21920a4cc0ddf46554c4c258c0f317dba9ee85d15fc89b",
+    "prepare/footer-target-enter-a-challenge-en.png": "46ad957928640479a1f74d4fdce7ddc3d7fba81be51a3c0b0deb18fea244b11d",
+    "prepare/ux-shop-appearance-en.png": "b52428673a55ed9fca8e93f59c8f925c809291a8b15caa1a8ee528296d9d81e4",
+    "prepare/ux-shop-gold-fr.png": "d7874e3a0525a050fda96df62476cd0a6370fbc433b45bf4ec380ee67aa349bd",
+    "prepare/objectives-journey-en.png": "bc99fbf21f983b579edfede6671874da91b7760a807a9d62bdd0e7e8dff1754f",
+    "prepare/ux-power-purchased-en.png": "73ad142860ccf5cd8eb039ea5ffa8082b1225a879528ad8d90d2fb23ca6672c8",
+    "prepare/ux-shop-gold-en.png": "c1b3cd9a0fa7bee3c8ffa35204beaf09df0df9d0a56c7b2a0d4fd4f70010efe3",
+    "prepare/ux-shop-appearance-fr.png": "80c6fa4758055898a26a124b772c49a8624761efe0f637f881657bb44923983a",
+    "prepare/hub-home-en.png": "cc39d9d941fee110c5deb1d591df3647eeb16319cddbf6d436dbeb88c4ff3df3"
+  },
+  "capture_kind_counts": {
+    "original_full_frames": 41,
+    "unscaled_analysis_crops": 0
+  },
+  "native": {
+    "passed": true,
+    "checks": [
+      {
+        "pass": true,
+        "message": "Installed exact target 1.12.0-sandbox-rc1/code13"
+      },
+      {
+        "pass": true,
+        "message": "Existing profile preserved; automatic first-arrival offer is not claimed on this run"
+      },
+      {
+        "pass": true,
+        "message": "Footer target reaches stable observed bottom position: Enter a challenge"
+      },
+      {
+        "pass": true,
+        "message": "Footer target retains at least47dp of actual visible native height: Enter a challenge actual=48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Entire footer target stays above fixed native navigation: Enter a challenge"
+      },
+      {
+        "pass": true,
+        "message": "Scrolling Home footer cannot claim or spend anything"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Today / Today"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Today / This week"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Today / Journey"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Today / Ready to collect"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: Today"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: This week / Today"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: This week / This week"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: This week / Journey"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: This week / Ready to collect"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: This week"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Journey / Today"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Journey / This week"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Journey / Journey"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Journey / Ready to collect"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: Journey"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Ready to collect / Today"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Ready to collect / This week"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Ready to collect / Journey"
+      },
+      {
+        "pass": true,
+        "message": "Only requested objective tab is selected: Ready to collect / Ready to collect"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Events / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Opening objective tab never auto-claims currency, stock, receipts or XP: Ready to collect"
+      },
+      {
+        "pass": true,
+        "message": "Reward tab stays physically reachable after a deeply scrolled list"
+      },
+      {
+        "pass": true,
+        "message": "Tab switching after deep scroll does not trigger a hidden claim"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Home / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Home / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Home / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Home / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Home / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Objectives Back returns to its caller without a gift"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Shop / Home"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Shop / Map"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Shop / Events"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Shop / Inventory"
+      },
+      {
+        "pass": true,
+        "message": "Navigation marks only its actual parent: Shop / Shop"
+      },
+      {
+        "pass": true,
+        "message": "Shop opens its earned-power category"
+      },
+      {
+        "pass": true,
+        "message": "Organic category retains selected semantics: Powers"
+      },
+      {
+        "pass": true,
+        "message": "Selected shop category Powers has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x50.18182"
+      },
+      {
+        "pass": true,
+        "message": "Selected shop category Powers native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Shop separates cosmetic appearances"
+      },
+      {
+        "pass": true,
+        "message": "Organic category retains selected semantics: Appearance"
+      },
+      {
+        "pass": true,
+        "message": "Selected shop category Appearance has an actual native touch target of at least48dp (rounding tolerance0.5dp): 110.90909x50.18182"
+      },
+      {
+        "pass": true,
+        "message": "Selected shop category Appearance native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Distinct premium category is labelled without entering wallet or purchase flows"
+      },
+      {
+        "pass": true,
+        "message": "Browsing shop categories does not debit or grant anything"
+      },
+      {
+        "pass": true,
+        "message": "Home earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Home named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Home guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Shop earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Shop named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Shop guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Shop selects the explicit named category: Powers"
+      },
+      {
+        "pass": true,
+        "message": "Category selection is read-only: Powers"
+      },
+      {
+        "pass": true,
+        "message": "Shop selects the explicit named category: Appearance"
+      },
+      {
+        "pass": true,
+        "message": "Category selection is read-only: Appearance"
+      },
+      {
+        "pass": true,
+        "message": "Shop selects the explicit named category: LumaGold"
+      },
+      {
+        "pass": true,
+        "message": "Category selection is read-only: LumaGold"
+      },
+      {
+        "pass": true,
+        "message": "Power details retain the normal canvas page instead of an AlertDialog"
+      },
+      {
+        "pass": true,
+        "message": "Power detail Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Power detail Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Opening a power explanation does not buy stock"
+      },
+      {
+        "pass": true,
+        "message": "Power stock is accessible as actual text rather than decorative art"
+      },
+      {
+        "pass": true,
+        "message": "Spark detail exposes its complete accessible effect and no-move cost"
+      },
+      {
+        "pass": true,
+        "message": "Explicit Close returns to the Shop caller"
+      },
+      {
+        "pass": true,
+        "message": "Closing power details leaves the entire economy unchanged"
+      },
+      {
+        "pass": true,
+        "message": "Earned-power offer states both exact quantity and exact currency price"
+      },
+      {
+        "pass": true,
+        "message": "Real earned balance can fund the explicitly displayed three-Spark pack"
+      },
+      {
+        "pass": true,
+        "message": "Earned Spark purchase has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x54.545456"
+      },
+      {
+        "pass": true,
+        "message": "Earned Spark purchase native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual earned purchase grants exactly the displayed stock and debits exactly the displayed price"
+      },
+      {
+        "pass": true,
+        "message": "Earned purchase feedback leaves the normal item page usable"
+      },
+      {
+        "pass": true,
+        "message": "Close after an earned purchase returns to its original shop"
+      },
+      {
+        "pass": true,
+        "message": "Clothing has a normal canvas preview and explicit no-grant state"
+      },
+      {
+        "pass": true,
+        "message": "Clothing detail Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Clothing detail Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Clothing Close returns to the companion caller"
+      },
+      {
+        "pass": true,
+        "message": "Clothing preview and Close grant, equip and debit nothing"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home en earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home en named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home en guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop en earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop en named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop en guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Actual en power category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual en power detail remains on the canvas"
+      },
+      {
+        "pass": true,
+        "message": "Localized en Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized en Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual en appearance category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual en premium category remains a distinct named destination"
+      },
+      {
+        "pass": true,
+        "message": "Actual en shop/category/Close navigation makes no economic or progression change"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home fr earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home fr named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home fr guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop fr earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop fr named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop fr guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Actual fr power category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual fr power detail remains on the canvas"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized fr Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual fr appearance category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual fr premium category remains a distinct named destination"
+      },
+      {
+        "pass": true,
+        "message": "Actual fr shop/category/Close navigation makes no economic or progression change"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home de earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home de named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home de guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop de earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop de named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop de guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Actual de power category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual de power detail remains on the canvas"
+      },
+      {
+        "pass": true,
+        "message": "Localized de Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized de Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual de appearance category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual de premium category remains a distinct named destination"
+      },
+      {
+        "pass": true,
+        "message": "Actual de shop/category/Close navigation makes no economic or progression change"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home es earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home es named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home es guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop es earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop es named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop es guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Actual es power category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual es power detail remains on the canvas"
+      },
+      {
+        "pass": true,
+        "message": "Localized es Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized es Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual es appearance category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual es premium category remains a distinct named destination"
+      },
+      {
+        "pass": true,
+        "message": "Actual es shop/category/Close navigation makes no economic or progression change"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home pt earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home pt named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home pt guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop pt earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop pt named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop pt guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Actual pt power category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual pt power detail remains on the canvas"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized pt Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual pt appearance category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual pt premium category remains a distinct named destination"
+      },
+      {
+        "pass": true,
+        "message": "Actual pt shop/category/Close navigation makes no economic or progression change"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home it earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home it named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Home it guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop it earned currency exposes the exact actual balance"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop it named currency nodes have distinct, nonoverlapping bounds"
+      },
+      {
+        "pass": true,
+        "message": "Localized Shop it guest premium state is not represented as a verified zero"
+      },
+      {
+        "pass": true,
+        "message": "Actual it power category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual it power detail remains on the canvas"
+      },
+      {
+        "pass": true,
+        "message": "Localized it Close has an actual native touch target of at least48dp (rounding tolerance0.5dp): 344.36365x48.363636"
+      },
+      {
+        "pass": true,
+        "message": "Localized it Close native bounds are within the visible game viewport"
+      },
+      {
+        "pass": true,
+        "message": "Actual it appearance category is translated and selected"
+      },
+      {
+        "pass": true,
+        "message": "Actual it premium category remains a distinct named destination"
+      },
+      {
+        "pass": true,
+        "message": "Actual it shop/category/Close navigation makes no economic or progression change"
+      }
+    ],
+    "checkCount": 184,
+    "scope": "Separate real prepare and cold processes; observed raster deltas plus persistent identities; no seeding"
+  }
+}

@@ -45,6 +45,10 @@ public final class LumaView extends View {
 
     private final KawaiiArt art=new KawaiiArt();
     private final SweetUi sweet=new SweetUi();
+    private final ShopIllustrations shopArt=new ShopIllustrations();
+    private Long displayedGold;
+    private String detailKind="",detailId="",detailMessage="",capsuleRequest="",detailParent="shop";
+    private float detailHeight=1100;
     private final AvatarStage avatarStage=new AvatarStage();
     private final CompanionPortrait companionPortrait=new CompanionPortrait();
     private final ArrayList<CosmeticCatalog.Item> wornCosmetics=new ArrayList<>();
@@ -119,7 +123,7 @@ public final class LumaView extends View {
         }); prefs=c.getSharedPreferences("luma_session",0);
         meta=new MetaProgress(c);journal=new PlayJournal(c);
         audio=new AudioEngine(c);backdrop=new WorldBackdrop(c);
-        identity=new GoogleAccountController((Activity)c,snapshot->{if(mapSocial!=null&&(profileSnapshot==null||!profileSnapshot.uid.equals(snapshot.uid))){mapSocial.close();mapSocial=null;}profileSnapshot=snapshot;profileSignedIn=snapshot.signedIn;profileName=snapshot.displayName;postInvalidate();});
+        identity=new GoogleAccountController((Activity)c,snapshot->{if(mapSocial!=null&&(profileSnapshot==null||!profileSnapshot.uid.equals(snapshot.uid))){mapSocial.close();mapSocial=null;}profileSnapshot=snapshot;profileSignedIn=snapshot.signedIn;profileName=snapshot.displayName;displayedGold=com.androidhit.lumadrift.wallet.ProductionWalletClient.cachedBalance(getContext());postInvalidate();});
         profileSnapshot=identity.snapshot();chapter=(store.unlockedLevel()-1)/10;
         setFocusable(true); setFocusableInTouchMode(true);
         setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_YES);
@@ -142,6 +146,7 @@ public final class LumaView extends View {
     private String q(String key,Object...args){return V19Strings.get(store.resolvedLanguage(),key,args);}
     private String a(String key,Object...args){return V110Strings.get(store.resolvedLanguage(),key,args);}
     private String b(String key,Object...args){return V111Strings.get(store.resolvedLanguage(),key,args);}
+    private String z(String key,Object...args){return V112Strings.get(store.resolvedLanguage(),key,args);}
     private String storyText(String key){return PrismStoryStrings.get(store.resolvedLanguage(),key);}
     private String n(String key,Object...args){return V18Strings.get(store.resolvedLanguage(),key,args);}
     private String tt(String key,Object...args){return TutorialStrings.get(store.resolvedLanguage(),key,args);}
@@ -154,6 +159,7 @@ public final class LumaView extends View {
         try{syncStyleUnsafe();}catch(GameStore.LocalSaveException failure){blockLocalSave();}
     }
     private void syncStyleUnsafe(){
+        displayedGold=com.androidhit.lumadrift.wallet.ProductionWalletClient.cachedBalance(getContext());
         skin=Catalog.skin(store.equippedSkin()); if(skin==null)skin=Catalog.SKINS[0];
         character=Catalog.character(store.equippedCharacter());if(character==null)character=Catalog.CHARACTERS[0];
         try{store.claimAvatarGearUnlocks();store.claimCosmeticUnlocks();}catch(IllegalStateException failed){/* Keep the last durable wardrobe. */}
@@ -173,6 +179,7 @@ public final class LumaView extends View {
     public void release(){if(mapSocial!=null){mapSocial.close();mapSocial=null;}identity.close();actionGeneration++;running=false;audio.release();backdrop.close();guideWorker.shutdownNow();}
     public String screenName(){return screen;}
     public void saveUiState(Bundle out){
+        out.putFloat("detail_height_v112",detailHeight);out.putString("detail_kind_v112",detailKind);out.putString("detail_id_v112",detailId);out.putString("detail_message_v112",detailMessage);out.putString("capsule_request_v112",capsuleRequest);out.putString("detail_parent_v112",detailParent);
         out.putInt("reward_tab_v110",rewardTab);out.putInt("wardrobe_mode_v110",wardrobeMode);out.putInt("wardrobe_gear_v110",wardrobeGearSlot);out.putInt("shop_category_v110",shopCategory);out.putInt("shop_look_page_v110",shopLookPage);out.putInt("story_chapter_v110",storyChapter);
         out.putString("screen",screen);out.putBoolean("ui_paused",paused);out.putBoolean("ui_help",help);out.putBoolean("ui_restart",restartConfirm);out.putInt("wardrobe_slot",wardrobeSlot);out.putInt("wardrobe_page",wardrobePage);out.putInt("quest_tab",questTab);out.putInt("chapter",chapter);out.putInt("journey_tab",journeyTab);out.putInt("collection_tab",collectionTab);out.putInt("collection_page",collectionPage);out.putInt("inventory_filter",inventoryFilter);out.putInt("gear_slot",gearSlotFilter);out.putInt("event_tab",eventTab);out.putInt("shop_page",shopPage);out.putFloat("content_scroll",contentScroll);out.putStringArrayList("menu_history",new ArrayList<>(menuHistory));
         if(guardian!=null){out.putString("guardian_ui_attempt",guardian.encode());out.putBoolean("guardian_ui_save_blocked",guardianSaveBlocked);}
@@ -184,9 +191,11 @@ public final class LumaView extends View {
         if(state.containsKey("preview_index")){briefingMode=Math.max(0,Math.min(3,state.getInt("preview_mode",0)));briefingIndex=Math.max(1,Math.min(briefingMode==3?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT,state.getInt("preview_index",1)));briefingEvent=Math.max(0,Math.min(briefingMode==1?2:6,state.getInt("preview_event",0)));briefingReturn=state.getString("preview_return","home");briefingLevel=briefingMode==0?StrategyCatalog.get(briefingIndex):briefingMode==3?StrategyCatalog.remix(briefingIndex):StrategyCatalog.event(briefingMode==1?store.dailySeed(briefingEvent):store.weeklySeed(briefingEvent));}
         GuardianEncounter restoredGuardian=GuardianEncounter.restore(state.getString("guardian_ui_attempt",""));
         if(restoredGuardian!=null&&store.guardianUnlocked(restoredGuardian.definition.number)){guardian=restoredGuardian;guardianSaveBlocked=state.getBoolean("guardian_ui_save_blocked",false);}
-        restoreScreen(state.getString("screen"));if(screen.equals("play")){paused=state.getBoolean("ui_paused",false);help=state.getBoolean("ui_help",false);restartConfirm=paused&&state.getBoolean("ui_restart",false);if(paused||help){actionGeneration++;stopTimer();freezeEffects();}}menuHistory.clear();ArrayList<String> history=state.getStringArrayList("menu_history");if(history!=null)for(String item:history)if(isMenu(item))menuHistory.addLast(item);contentScroll=Math.max(0,state.getFloat("content_scroll",0));
+        detailHeight=state.getFloat("detail_height_v112",1100);if(!Float.isFinite(detailHeight)||detailHeight<840||detailHeight>10000)detailHeight=1100;
+        detailKind=state.getString("detail_kind_v112","");detailId=state.getString("detail_id_v112","");detailMessage=state.getString("detail_message_v112","");capsuleRequest=state.getString("capsule_request_v112","");detailParent=state.getString("detail_parent_v112","shop");
+        restoreScreen(state.getString("screen"));if(screen.equals("play")){paused=state.getBoolean("ui_paused",false);help=state.getBoolean("ui_help",false);restartConfirm=paused&&state.getBoolean("ui_restart",false);if(paused||help){actionGeneration++;stopTimer();freezeEffects();}}menuHistory.clear();ArrayList<String> history=state.getStringArrayList("menu_history");if(history!=null)for(String item:history)if(isMenu(item)||item.equals("play")&&board!=null)menuHistory.addLast(item);contentScroll=Math.max(0,state.getFloat("content_scroll",0));
     }
-    private boolean isMenu(String value){return Arrays.asList("home","journey","collection","events","shop","settings","briefing","missions","journal","wardrobe","rewards","tutorial","styles","guardians","story").contains(value);}
+    private boolean isMenu(String value){return Arrays.asList("home","journey","collection","events","shop","settings","briefing","missions","journal","wardrobe","rewards","tutorial","styles","guardians","story","item").contains(value);}
     public void restoreScreen(String name){
         if("guardian".equals(name)){
             if(guardian==null)guardian=GuardianEncounter.restore(prefs.getString("guardian_v19_session",""));
@@ -337,16 +346,16 @@ public final class LumaView extends View {
     private void drawFrame(Canvas c){
         frameTime=SystemClock.uptimeMillis();
         layout=new ExperienceLayout(getWidth(),getHeight(),safeTop,safeBottom,getResources().getDisplayMetrics().density,getResources().getConfiguration().fontScale);
-        scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;H=screen.equals("journey")&&!(journeyTab==1&&!store.remixAvailable())?SagaMap.height(journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):Math.max(layout.contentHeight,screen.equals("guardians")?4570:screen.equals("guardian")?900:screen.equals("styles")?1140:screen.equals("rewards")?rewardContentHeight():screen.equals("wardrobe")?1344:screen.equals("shop")?1060:screen.equals("story")?1080:screen.equals("home")?1136:screen.equals("briefing")?950:screen.equals("tutorial")?viewportH<480&&!tutorial.complete()?433:820:840);
+        scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;H=screen.equals("journey")&&!(journeyTab==1&&!store.remixAvailable())?SagaMap.height(journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):Math.max(layout.contentHeight,screen.equals("guardians")?4570:screen.equals("guardian")?900:screen.equals("styles")?1140:screen.equals("rewards")?rewardContentHeight():screen.equals("wardrobe")?1344:screen.equals("item")?detailHeight:screen.equals("shop")?1250:screen.equals("story")?1080:screen.equals("home")?1180:screen.equals("briefing")?950:screen.equals("tutorial")?viewportH<480&&!tutorial.complete()?433:820:840);
         if(screen.equals("tutorial")&&viewportH<480&&!tutorial.complete())H=Math.max(viewportH,433);
         contentScroll=clampScroll(contentScroll);
-        boolean navigation=!screen.equals("play")&&!screen.equals("settings")&&!screen.equals("briefing")&&!screen.equals("tutorial")&&!screen.equals("guardian");
+        boolean navigation=!screen.equals("play")&&!screen.equals("settings")&&!screen.equals("briefing")&&!screen.equals("tutorial")&&!screen.equals("guardian")&&!(screen.equals("item")&&detailParent.equals("play"));
         c.drawColor(skin.bg);c.save();c.translate(ox,top);c.scale(scale,scale);hits.clear();
         background(c);c.save();drawingScroll=contentScroll;drawingClipBottom=viewportH-(navigation?95:0);
         c.clipRect(0,0,390,drawingClipBottom);c.translate(0,-contentScroll);
         switch(screen){
             case "story":drawPrismStory(c);break;case "guardians":drawGuardians(c);break;case "guardian":drawGuardian(c);break;case "styles":drawStyles(c);break;case "tutorial":drawTutorial(c);break;case "play":drawPlay(c);break;case "journey":drawJourney(c);break;
-            case "briefing":drawBriefing(c);break;case "shop":drawShop(c);break;case "collection":drawCollection(c);break;
+            case "item":drawItemDetail(c);break;case "briefing":drawBriefing(c);break;case "shop":drawShop(c);break;case "collection":drawCollection(c);break;
             case "wardrobe":drawWardrobe(c);break;case "rewards":drawRewards(c);break;case "events":drawEvents(c);break;case "settings":drawSettings(c);break;case "missions":drawMissions(c);break;case "journal":drawJournal(c);break;
             default:drawHome(c);
         }
@@ -710,7 +719,7 @@ public final class LumaView extends View {
             }else if(tutorial.expectedGate()!=null){Direction direction=tutorial.expectedGate();float x=left+width/2+direction.dc*(width/2+15),y=top+width/2+direction.dr*(width/2+15);sweet.handCoach(c,x,y,x,y,frameTime-tutorialChangedAt,reduceMotion);}
         }
     }
-    private String screenTitle(String key){return key.equals("story")?a("story_book"):key.equals("wardrobe")?a("avatar"):key.equals("styles")?q("styles"):key.equals("guardians")||key.equals("guardian")?q("guardians"):key.equals("briefing")?e("objective"):key.equals("tutorial")?n("learn"):t(key);}
+    private String screenTitle(String key){return key.equals("item")?a("preview"):key.equals("story")?a("story_book"):key.equals("wardrobe")?a("avatar"):key.equals("styles")?q("styles"):key.equals("guardians")||key.equals("guardian")?q("guardians"):key.equals("briefing")?e("objective"):key.equals("tutorial")?n("learn"):t(key);}
     private void drawStyles(Canvas c){
         header(c,q("styles"),q("style_count"));
         int i=0;for(AvatarStyles.Style style:AvatarStyles.all()){
@@ -866,6 +875,7 @@ public final class LumaView extends View {
     }
     private float rewardContentHeight(){ensureHub();return rewardTab==3?Math.max(600,320+hubObjectives.readyCount*153):rewardTab==2?1510:rewardTab==0?1070:880;}
     private String navParent(){
+        if(screen.equals("item"))return detailParent.equals("shop")?"shop":"collection";
         if(Arrays.asList("collection","wardrobe","styles").contains(screen))return "collection";
         if(Arrays.asList("events","rewards","missions").contains(screen))return "events";
         if(Arrays.asList("journey","guardians","story").contains(screen))return "journey";
@@ -875,38 +885,38 @@ public final class LumaView extends View {
 
     private void drawHome(Canvas c){
         ensureHub();ObjectiveDashboard.Snapshot dash=hubObjectives;
-        text(c,"LUMA DRIFT",24,44,27,TEXT,true);wallet(c,229,17);
+        text(c,"LUMA DRIFT",24,43,27,TEXT,true);dualWallet(c,65);
         sweet.surface(c,new RectF(325,15,366,60),SweetUi.LILAC,false);icon(c,"settings",345,37,21,TEXT);hit(320,12,50,50,t("settings"),()->go("settings"));
-        sweet.surface(c,new RectF(24,77,366,148),SweetUi.CREAM,true);
+        round(c,24,143,342,71,35,0xeafff8ff);
         String name=profileName.trim();if(name.contains(" "))name=name.substring(0,name.indexOf(' '));
         boolean guest=profileSnapshot==null||profileSnapshot.state==SessionSnapshot.State.GUEST;
         String title=profileSignedIn?u("welcome",name):guest?u("guest"):t(profileSnapshot.statusKey);
-        round(c,36,89,45,45,15,profileSignedIn?0xffd2f3e7:0xfff6d8e1);icon(c,profileSignedIn?"check":"profile",58,111,24,TEXT);
-        fit(c,title,94,107,18,191,TEXT,true,false);fit(c,profileSignedIn?u("signed"):guest?u("guest_note"):t("account"),94,132,12,190,skin.muted,false,false);
-        hit(24,77,276,71,t("account")+": "+title+", "+(profileSignedIn?u("signed"):u("guest_note")),()->openAccount());
-        star(c,334,105,14,GOLD);fit(c,""+dash.readyCount,334,133,13,48,TEXT,true,true);hit(309,83,48,59,a("ready_count",dash.readyCount),()->openRewards(3));
+        round(c,36,155,45,45,22,profileSignedIn?0xffd2f3e7:0xfff6d8e1);icon(c,profileSignedIn?"check":"profile",58,177,24,TEXT);
+        fit(c,title,94,173,18,191,TEXT,true,false);fit(c,profileSignedIn?u("signed"):guest?u("guest_note"):t("account"),94,198,12,190,skin.muted,false,false);
+        hit(24,143,276,71,t("account")+": "+title+", "+(profileSignedIn?u("signed"):u("guest_note")),()->openAccount());
+        star(c,334,171,14,GOLD);fit(c,""+dash.readyCount,334,199,13,48,TEXT,true,true);hit(309,149,48,59,a("ready_count",dash.readyCount),()->openRewards(3));
         boolean active=board!=null&&!won&&!board.isSolved();int display=active&&mode==0?levelIndex:Math.min(BalancedCatalog.LEVEL_COUNT,store.unlockedLevel());
-        sweet.surface(c,new RectF(24,166,366,354),SweetUi.LILAC,true);
-        fit(c,a("chapter",(display-1)/100+1)+" · "+worldName(display),43,193,12,190,skin.muted,true,false);
-        fit(c,active&&mode!=0?t(mode==1?"daily":mode==2?"weekly":mode==3?"remix":"friend_challenge"):t("level_number",display),43,232,27,181,TEXT,true,false);
-        dressedMascot(c,296,220,32);hit(232,166,128,112,a("show_avatar"),()->go("wardrobe"));
-        if(!active||mode==0&&contentVersion>=5)difficultyPill(c,StrategyCatalog.info(display,false),43,249,181);
-        button(c,t(active?"resume":"play")+"  →",43,291,304,49,PEACH,()->continueGame());
-        if(hubGoal!=null)drawGoalCard(c,373,hubGoal);else{
-            sweet.surface(c,new RectF(24,373,366,543),SweetUi.CREAM,true);art.power(c,dash.readyCount>0?"hint":"trail",326,414,22,frameTime,reduceMotion);
-            fit(c,a("objectives"),44,402,13,240,skin.muted,true,false);fit(c,dash.readyCount>0?a("ready_count",dash.readyCount):a("next_action"),44,432,22,242,TEXT,true,false);
-            fit(c,dash.readyCount>0?a("claim_reward"):a("play_journey"),44,460,13,290,skin.muted,false,false);
-            button(c,a(dash.readyCount>0?"rewards_all":"play_journey")+"  →",44,482,302,48,PEACH,()->{if(dash.readyCount>0)openRewards(3);else launchObjective(dash.nextAction);});
+        shopArt.heroAccent(c,new RectF(10,225,380,413),SweetUi.LILAC,frameTime,reduceMotion);
+        fit(c,a("chapter",(display-1)/100+1)+" · "+worldName(display),43,255,12,190,skin.muted,true,false);
+        fit(c,active&&mode!=0?t(mode==1?"daily":mode==2?"weekly":mode==3?"remix":"friend_challenge"):t("level_number",display),43,294,27,181,TEXT,true,false);
+        dressedMascot(c,296,282,32);hit(232,228,128,112,a("show_avatar"),()->go("wardrobe"));
+        if(!active||mode==0&&contentVersion>=5)difficultyPill(c,StrategyCatalog.info(display,false),43,311,181);
+        button(c,t(active?"resume":"play")+"  →",24,353,342,54,PEACH,()->continueGame());
+        if(hubGoal!=null)drawGoalCard(c,435,hubGoal);else{
+            sweet.surface(c,new RectF(24,435,366,605),SweetUi.CREAM,true);shopArt.power(c,dash.readyCount>0?"hint":"trail",326,476,22,frameTime,reduceMotion);
+            fit(c,a("objectives"),44,464,13,240,skin.muted,true,false);fit(c,dash.readyCount>0?a("ready_count",dash.readyCount):a("next_action"),44,494,22,242,TEXT,true,false);
+            fit(c,dash.readyCount>0?a("claim_reward"):a("play_journey"),44,522,13,290,skin.muted,false,false);
+            button(c,a(dash.readyCount>0?"rewards_all":"play_journey")+"  →",44,544,302,48,PEACH,()->{if(dash.readyCount>0)openRewards(3);else launchObjective(dash.nextAction);});
         }
-        lobbyTile(c,24,563,"events",a("today"),store.dailyCompletedCount()+" / 3",a("ready_count",dash.dailyReadyCount),()->{eventTab=0;go("events");});
+        lobbyTile(c,24,625,"events",a("today"),store.dailyCompletedCount()+" / 3",a("ready_count",dash.dailyReadyCount),()->{eventTab=0;go("events");});
         int guardian=hubStory.nextGuardian();boolean guardianReady=guardian>0&&hubStory.guardianUnlocked(guardian);
-        lobbyTile(c,202,563,"journey",a("story_book"),a("chapter",hubStory.currentChapter().chapter.number),guardianReady?q("guardian",guardian):guardian>0?t("level_number",guardian*10):a("all_claimed"),()->go("story"));
-        sweet.surface(c,new RectF(24,677,366,815),SweetUi.MINT,true);dressedMascot(c,81,733,24);
-        fit(c,a("avatar"),139,710,19,208,TEXT,true,false);fit(c,a("owned_count",store.ownedCosmeticCount(),24),139,738,12,206,skin.muted,false,false);
-        quietButton(c,a("appearance"),139,755,208,()->go("wardrobe"));hit(24,677,108,138,a("show_avatar"),()->go("wardrobe"));
-        quietButton(c,tutorial.complete()&&!tutorialGiftClaimed?n("tutorial_claim"):tutorial.complete()?n("learn_replay"):n("learn_continue"),24,835,342,()->openTutorial(false));
-        quietButton(c,v("friends"),24,902,165,()->openSocial());quietButton(c,a("visual_styles"),201,902,165,()->go("styles"));
-        quietButton(c,t("import_challenge"),24,969,342,()->importCode());
+        lobbyTile(c,202,625,"journey",a("story_book"),a("chapter",hubStory.currentChapter().chapter.number),guardianReady?q("guardian",guardian):guardian>0?t("level_number",guardian*10):a("all_claimed"),()->go("story"));
+        sweet.surface(c,new RectF(24,739,366,877),SweetUi.MINT,true);dressedMascot(c,81,795,24);
+        fit(c,a("avatar"),139,772,19,208,TEXT,true,false);fit(c,a("owned_count",store.ownedCosmeticCount(),24),139,800,12,206,skin.muted,false,false);
+        quietButton(c,a("appearance"),139,817,208,()->go("wardrobe"));hit(24,739,108,138,a("show_avatar"),()->go("wardrobe"));
+        quietButton(c,tutorial.complete()&&!tutorialGiftClaimed?n("tutorial_claim"):tutorial.complete()?n("learn_replay"):n("learn_continue"),24,897,342,()->openTutorial(false));
+        quietButton(c,v("friends"),24,964,165,()->openSocial());quietButton(c,a("visual_styles"),201,964,165,()->go("styles"));
+        quietButton(c,t("import_challenge"),24,1031,342,()->importCode());
     }
 
     private void lobbyTile(Canvas c,float x,float y,String ico,String title,String subtitle,String detail,Runnable action){
@@ -962,7 +972,7 @@ public final class LumaView extends View {
             }
         }
         quietButton(c,"‹",24,1040,67,()->wardrobePage=0);fit(c,(wardrobePage+1)+" / 2",195,1069,14,170,TEXT,true,true);quietButton(c,"›",299,1040,67,()->wardrobePage=1);
-        for(int k=0;k<Catalog.BOOSTERS.length;k++){Catalog.BoosterItem power=Catalog.BOOSTERS[k];float xx=47+k*59;art.power(c,power.id,xx,1122,14,frameTime,reduceMotion);fit(c,"×"+store.boosterStock(power.id),xx,1152,12,47,TEXT,true,true);hit(xx-24,1101,48,58,t(power.nameKey)+", "+e("power_stock",store.boosterStock(power.id)),()->powerOffer(power.id));}
+        for(int k=0;k<Catalog.BOOSTERS.length;k++){Catalog.BoosterItem power=Catalog.BOOSTERS[k];float xx=47+k*59;shopArt.power(c,power.id,xx,1122,14,frameTime,reduceMotion);fit(c,"×"+store.boosterStock(power.id),xx,1152,12,47,TEXT,true,true);hit(xx-24,1101,48,58,t(power.nameKey)+", "+e("power_stock",store.boosterStock(power.id)),()->powerOffer(power.id));}
         quietButton(c,a("open_inventory")+"  →",24,1176,342,()->go("collection"));
     }
     private void drawWardrobeItem(Canvas c,CosmeticCatalog.Item item,float y){
@@ -1002,17 +1012,12 @@ public final class LumaView extends View {
         if(source.equals("EARNED_COINS"))return a("acquired_with","LumaCoins");
         return a("acquired_with",fallback);
     }
-    private void cosmeticOffer(CosmeticCatalog.Item item){
-        boolean owned=store.ownsCosmetic(item.id),equipped=item.id.equals(store.equippedCosmetic(item.slot));String key="cosmetic:"+item.id;
-        String state=equipped?e("equipped"):owned?e("owned"):e("to_unlock");
-        android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(getContext()).setTitle(w(item.nameKey)).setView(cosmeticPreview(item)).setMessage(state+"\n"+v("cosmetic_only")+"\n"+(owned?acquisitionCaption(store.cosmeticAcquisitionSource(item.id),cosmeticSource(item)):cosmeticSource(item))+"\n"+a("preview_only")).setNegativeButton(t("close"),null).setNeutralButton(a(key.equals(store.trackedCollectionGoal())?"untrack_item":"track_item"),(d,w)->toggleGoal(key));
-        if(owned&&!equipped)dialog.setPositiveButton(e("action_equip"),(d,w)->savedAction(()->{if(store.equipCosmetic(item.id))showAppliedLook(w(item.nameKey),true);else notice(b("item_unavailable"));}));
-        else if(!owned&&item.priceCoins>0)dialog.setPositiveButton(item.priceCoins+" LumaCoins",(d,w)->savedAction(()->{if(store.purchaseCosmetic(item.id)){sfx(AudioEngine.Sound.PURCHASE);notice(e("owned"));long token=actionGeneration;post(()->{if(running&&!localSaveBlocked&&token==actionGeneration)cosmeticOffer(item);});}else notice(t("not_enough"));}));
-        else if(!owned)dialog.setPositiveButton(a("view_source"),(d,w)->{if(item.source==CosmeticCatalog.Source.LOGIN_DAYS)openRewards(0);else{eventTab=item.source==CosmeticCatalog.Source.WEEKLY_WINS?1:0;go("events");}});
-        dialog.show();
-    }
-    private void openCapsule(){String receipt=UUID.randomUUID().toString();new android.app.AlertDialog.Builder(getContext()).setTitle(v("loot")).setMessage(w("capsule_note")+"\n\n"+w("capsule_odds")+"\n"+w("capsule_item_odds")+"\n\n"+w("capsule_duplicates")).setNegativeButton(t("cancel"),null).setPositiveButton(v("open_capsule"),(d,w)->performCapsule(receipt)).show();}
-    private void performCapsule(String receipt){try{GameStore.LootResult got=store.drawCosmeticLoot(receipt);if(got==null){notice(w("not_enough_coins"));return;}syncStyle();CosmeticCatalog.Item item=CosmeticCatalog.find(got.itemId);new android.app.AlertDialog.Builder(getContext()).setTitle(w(item.nameKey)).setView(cosmeticPreview(item)).setMessage(got.duplicate?v("duplicate",got.compensationCoins):v("cosmetic_only")).setPositiveButton(e("action_equip"),(dialog,which)->savedAction(()->{if(store.equipCosmetic(item.id))showAppliedLook(w(item.nameKey),true);else notice(b("item_unavailable"));})).setNegativeButton(t("close"),null).show();sfx(AudioEngine.Sound.PURCHASE);}catch(IllegalStateException failure){new android.app.AlertDialog.Builder(getContext()).setTitle(t("save_error")).setMessage(t("commerce_save_error")).setPositiveButton(t("retry"),(d,w)->performCapsule(receipt)).setNegativeButton(t("close"),null).show();}}
+    private void cosmeticOffer(CosmeticCatalog.Item item){openItem("cosmetic",item.id);}
+    private void openCapsule(){capsuleRequest=UUID.randomUUID().toString();openItem("capsule","");}
+    private void performCapsule(String receipt){savedAction(()->{
+        GameStore.LootResult got=store.drawCosmeticLoot(receipt);if(got==null){notice(w("not_enough_coins"));return;}
+        detailKind="cosmetic";detailId=got.itemId;detailMessage=got.duplicate?v("duplicate",got.compensationCoins):v("cosmetic_only");contentScroll=0;actionGeneration++;hits.clear();sfx(AudioEngine.Sound.PURCHASE);notice(detailMessage);
+    });}
     private void claimJourneyGift(){
         try{String got=store.claimMilestoneLoot();syncStyle();if(got.isEmpty())notice(q("stock_full"));else{sfx(AudioEngine.Sound.COIN);notice(t("loot_received",t("booster_"+got)));}}catch(IllegalStateException failed){notice(t("save_error"));}
     }
@@ -1027,7 +1032,7 @@ public final class LumaView extends View {
     }
     private void rewardRow(Canvas c,float y,String title,String detail,String action,String power,Runnable run){
         sweet.surface(c,new RectF(24,y,366,y+141),SweetUi.CREAM,true);
-        if(power==null)coin(c,49,y+35,12);else art.power(c,power,49,y+35,17,frameTime,reduceMotion);
+        if(power==null)coin(c,49,y+35,12);else shopArt.power(c,power,49,y+35,17,frameTime,reduceMotion);
         fit(c,title,77,y+35,18,270,TEXT,true,false);fit(c,detail,44,y+67,13,302,skin.muted,false,false);
         label(24,y,342,81,title+", "+detail);button(c,action,44,y+83,302,48,PEACH,run);
     }
@@ -1184,7 +1189,7 @@ public final class LumaView extends View {
         HashSet<String> active=new HashSet<>();for(Catalog.BoosterItem booster:Catalog.BOOSTERS)if(board!=null&&powerActive(booster.id))active.add(booster.id);
         ArrayList<InventoryPresentation.Power> shown=new ArrayList<>();for(InventoryPresentation.Power power:InventoryPresentation.powers(store,active))if(inventoryFilter==0||inventoryFilter==1&&power.unlocked&&(power.stock>0||power.active)||inventoryFilter==2&&!power.unlocked)shown.add(power);
         InventoryPresentation.Page page=InventoryPresentation.page(shown.size(),3,collectionPage);collectionPage=page.page;
-        for(int i=0;i<page.size();i++){InventoryPresentation.Power power=shown.get(page.first-1+i);float y=323+i*124;round(c,24,y,342,112,21,power.active?0xffdbf0ea:0xfffcf4ff);round(c,37,y+23,57,62,17,alpha(power.unlocked?skin.accent2:skin.muted,26));if(power.unlocked)art.power(c,power.id,65,y+52,27,frameTime,reduceMotion);else icon(c,"lock",65,y+52,27,skin.muted);
+        for(int i=0;i<page.size();i++){InventoryPresentation.Power power=shown.get(page.first-1+i);float y=323+i*124;round(c,24,y,342,112,21,power.active?0xffdbf0ea:0xfffcf4ff);round(c,37,y+23,57,62,17,alpha(power.unlocked?skin.accent2:skin.muted,26));if(power.unlocked)shopArt.power(c,power.id,65,y+52,27,frameTime,reduceMotion);else icon(c,"lock",65,y+52,27,skin.muted);
             fit(c,t(power.nameKey),111,y+31,20,225,TEXT,true,false);fit(c,e(power.state.key()),111,y+57,14,220,power.active?skin.accent2:power.unlocked?TEXT:GOLD,true,false);
             fit(c,power.unlocked?e("power_stock",power.stock):e("power_unlock_at",power.unlockLevel),111,y+87,13,230,power.unlocked?skin.muted:GOLD,false,false);
             hit(24,y,342,112,t(power.nameKey)+", "+e(power.state.key())+", "+e("power_stock",power.stock),()->powerOffer(power.id));
@@ -1195,61 +1200,139 @@ public final class LumaView extends View {
         String source=item.source==AvatarGearCatalog.Source.JOURNEY_CLEARS?t("journey"):item.source==AvatarGearCatalog.Source.WEEKLY_WINS?t("weekly"):item.source==AvatarGearCatalog.Source.EVENT_STARS?t("events"):g(item.source.key());
         return source+" · "+Math.min(item.requirement,gearProgress.value(item.source))+"/"+item.requirement;
     }
-    private void previewGear(AvatarGearCatalog.Item item){
-        boolean owned=store.ownsAvatarGear(item.id),equipped=item.id.equals(loadout.item(item.slot).id);String key="gear:"+item.id;
-        AvatarLoadout preview=new AvatarLoadout(item.slot==AvatarGearCatalog.Slot.HEAD?item.id:loadout.headId,item.slot==AvatarGearCatalog.Slot.AURA?item.id:loadout.auraId,item.slot==AvatarGearCatalog.Slot.CHARM?item.id:loadout.charmId);
-        String message=g(item.slot.key())+" · "+g(item.rarity.key())+"\n"+(equipped?t("equipped"):owned?u("owned"):u("get"))+"\n\n"+GearStrings.effectCaption(store.resolvedLanguage(),item)+"\n"+(owned?acquisitionCaption(store.avatarGearAcquisitionSource(item.id),GearStrings.sourceCaption(store.resolvedLanguage(),item,gearProgress)):GearStrings.sourceCaption(store.resolvedLanguage(),item,gearProgress))+"\n\n"+a("preview_only");
-        android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(getContext()).setTitle(g(item.nameKey)).setView(companionPreview(character,preview,wornCosmetics)).setMessage(message).setNegativeButton(t("close"),null).setNeutralButton(a(key.equals(store.trackedCollectionGoal())?"untrack_item":"track_item"),(d,w)->toggleGoal(key));
-        if(!equipped&&(owned||item.source==AvatarGearCatalog.Source.EARNED_COINS))dialog.setPositiveButton(owned?t("equip"):u("coin_price",item.priceCoins),(d,w)->savedAction(()->{
-            if(!owned&&!store.purchaseAvatarGear(item.id)){notice(t("not_enough"));return;}if(store.equipAvatarGear(item.id)){if(!owned)sfx(AudioEngine.Sound.PURCHASE);showAppliedLook(g(item.nameKey),true);}else notice(b("item_unavailable"));
-        }));
-        else if(!owned)dialog.setPositiveButton(a("view_source"),(d,w)->{sourceRoute(item.source==AvatarGearCatalog.Source.JOURNEY_CLEARS?CollectionGoal.Route.JOURNEY:item.source==AvatarGearCatalog.Source.WEEKLY_WINS?CollectionGoal.Route.WEEKLY:item.source==AvatarGearCatalog.Source.EVENT_STARS?CollectionGoal.Route.DAILY:CollectionGoal.Route.REWARDS);});
-        dialog.show();
+    private void previewGear(AvatarGearCatalog.Item item){openItem("gear",item.id);}
+    private void previewCosmetic(boolean chars,int index){openItem(chars?"character":"theme",chars?Catalog.CHARACTERS[index].id:Catalog.SKINS[index].id);}
+    /** Ordinary scrollable item page: looking never grants, spends or equips an item. */
+    private void openItem(String kind,String id){
+        boolean fromPlay=screen.equals("play");if(!screen.equals("item"))detailParent=navParent();
+        detailKind=kind;detailId=id;detailMessage="";detailHeight=1100;go("item");if(fromPlay)menuHistory.push("play");
     }
-    private void previewCosmetic(boolean chars,int index){
-        Catalog.CharacterItem ch=chars?Catalog.CHARACTERS[index]:null;Catalog.SkinItem sk=chars?null:Catalog.SKINS[index];
-        String id=chars?ch.id:sk.id;boolean owned=chars?store.ownsCharacter(id):store.ownsSkin(id),equipped=id.equals(chars?store.equippedCharacter():store.equippedSkin());int price=chars?ch.price:sk.price;
-        android.widget.LinearLayout layout=new android.widget.LinearLayout(getContext());layout.setOrientation(android.widget.LinearLayout.VERTICAL);layout.setPadding(30,10,30,20);
-        View preview=new View(getContext()){@Override protected void onDraw(Canvas canvas){super.onDraw(canvas);float center=getWidth()/2f,unit=getHeight()/3.3f;if(chars)companionPortrait.draw(canvas,ch,center,getHeight()*.5f,Math.min(getWidth(),getHeight())/4.3f,AvatarStyles.find(avatarStyle),AvatarStage.Pose.HAPPY,SystemClock.uptimeMillis(),reduceMotion,loadout,wornCosmetics);else{round(canvas,center-unit,getHeight()*.2f,unit*2,unit*1.65f,unit*.3f,sk.bg);for(int i=0;i<4;i++)round(canvas,center-unit*.8f+(i%2)*unit*.85f,getHeight()*.3f+(i/2)*unit*.65f,unit*.65f,unit*.5f,unit*.1f,i%2==0?sk.accent:sk.accent2);}}};
-        preview.setContentDescription(t(chars?ch.nameKey:sk.nameKey)+". "+t("cosmetic_only"));layout.addView(preview,new android.widget.LinearLayout.LayoutParams(-1,(int)(165*getResources().getDisplayMetrics().density)));
-        android.widget.TextView note=new android.widget.TextView(getContext());note.setText((equipped?t("equipped"):owned?u("owned"):u("get"))+"\n"+t("companion_wallet_note",store.coins())+"\n"+t("cosmetic_only"));note.setTextColor(skin.muted);note.setGravity(Gravity.CENTER);note.setTextSize(16);layout.addView(note);
-        android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(getContext()).setTitle(t(chars?ch.nameKey:sk.nameKey)).setView(layout).setNegativeButton(t("close"),(d,w)->{});
-        if(!equipped)dialog.setPositiveButton(owned?t("equip"):t("companion_purchase",price),(d,w)->savedAction(()->{
-            boolean success=owned||(chars?store.purchaseCharacter(id):store.purchaseSkin(id));if(!success){notice(t("not_enough"));return;}
-            boolean applied=chars?store.equipCharacter(id):store.equipSkin(id);if(!applied){notice(b("item_unavailable"));return;}if(!owned)sfx(AudioEngine.Sound.PURCHASE);showAppliedLook(t(chars?ch.nameKey:sk.nameKey),chars);
-        }));else dialog.setPositiveButton(t("equipped"),(d,w)->{});
-        dialog.show();
+    private float prose(Canvas c,String value,float y,int color){
+        float size=Math.max(14,minimumTextSize()),line=size+8;p.setTypeface(regular);p.setTextSize(size);int lines=0;
+        for(String paragraph:value.split("\\n",-1)){String row="";for(String word:paragraph.split(" ")){if(!row.isEmpty()&&p.measureText(row+" "+word)>302){lines++;row="";}row+=row.isEmpty()?word:" "+word;}lines++;}
+        wrap(c,value,44,y,302,size,color,false,line);label(44,y-size,302,lines*line+4,value);return y+lines*line+14;
     }
+    private void dualWallet(Canvas c,float y){
+        Long gold=displayedGold;
+        String amount=gold==null?"—":String.valueOf(gold),state=gold==null?z("gold_unloaded"):z("gold_last");
+        for(int i=0;i<2;i++){float x=i==0?24:202;round(c,x,y,164,76,35,i==0?0xfffff8e5:0xfff1eaff);}
+        shopArt.coin(c,47,y+37,14,frameTime,true);shopArt.gold(c,225,y+37,14,frameTime,true);
+        fit(c,"LumaCoins",70,y+20,12,112,TEXT,true,false);fit(c,String.valueOf(store.coins()),70,y+46,21,110,TEXT,true,false);
+        fit(c,"LumaGold",248,y+20,12,108,TEXT,true,false);fit(c,amount,248,y+46,20,102,TEXT,true,false);
+        fit(c,v("earned"),70,y+65,12,108,skin.muted,false,false);fit(c,z(gold==null?"gold_short":"gold_cached_short"),248,y+65,12,108,skin.muted,false,false);
+        hit(24,y,164,76,"LumaCoins: "+store.coins()+". "+z("coins_note"),()->{shopCategory=0;if(!screen.equals("shop"))go("shop");});
+        hit(202,y,164,76,"LumaGold: "+amount+". "+state,()->{shopCategory=2;if(!screen.equals("shop"))go("shop");else selectShopCategory(2);});
+    }
+    private void drawItemDetail(Canvas c){
+        round(c,24,20,48,48,24,0xfffaf6ff);icon(c,"back",48,44,21,TEXT);hit(24,20,48,48,t("back"),()->backMenu());
+        fit(c,a("preview"),91,51,22,270,TEXT,true,false);dualWallet(c,86);
+        Catalog.BoosterItem power=detailKind.equals("power")?Catalog.booster(detailId):null;
+        CosmeticCatalog.Item cloth=detailKind.equals("cosmetic")?CosmeticCatalog.find(detailId):null;
+        AvatarGearCatalog.Item gear=detailKind.equals("gear")?AvatarGearCatalog.find(detailId):null;
+        Catalog.CharacterItem who=detailKind.equals("character")?Catalog.character(detailId):null;
+        Catalog.SkinItem theme=detailKind.equals("theme")?Catalog.skin(detailId):null;
+        boolean capsule=detailKind.equals("capsule");
+        if(power==null&&cloth==null&&gear==null&&who==null&&theme==null&&!capsule){quietButton(c,t("close"),24,210,342,()->backMenu());return;}
+        String name=power!=null?t(power.nameKey):cloth!=null?w(cloth.nameKey):gear!=null?g(gear.nameKey):who!=null?t(who.nameKey):theme!=null?t(theme.nameKey):v("loot");
+        fit(c,name,195,185,25,342,TEXT,true,true);
+        shopArt.heroAccent(c,new RectF(24,205,366,447),capsule?SweetUi.LILAC:SweetUi.MINT,frameTime,reduceMotion);
+        if(power!=null)shopArt.power(c,power.id,195,323,77,frameTime,reduceMotion);
+        else if(capsule)shopArt.capsule(c,195,323,76,frameTime,reduceMotion);
+        else if(theme!=null){round(c,106,246,178,150,55,theme.bg);for(int i=0;i<4;i++)round(c,124+(i%2)*78,268+(i/2)*54,64,41,20,i%2==0?theme.accent:theme.accent2);}
+        else{
+            ArrayList<CosmeticCatalog.Item> clothes=new ArrayList<>(wornCosmetics);if(cloth!=null){clothes.removeIf(it->it.slot==cloth.slot);clothes.add(cloth);}
+            AvatarLoadout preview=gear==null?loadout:new AvatarLoadout(gear.slot==AvatarGearCatalog.Slot.HEAD?gear.id:loadout.headId,gear.slot==AvatarGearCatalog.Slot.AURA?gear.id:loadout.auraId,gear.slot==AvatarGearCatalog.Slot.CHARM?gear.id:loadout.charmId);
+            companionPortrait.draw(c,who==null?character:who,195,323,58,AvatarStyles.find(avatarStyle),AvatarStage.Pose.HAPPY,frameTime,reduceMotion,preview,clothes);
+        }
+        label(24,205,342,242,a("preview_only")+". "+name);
+        float y=prose(c,a("preview_only"),477,skin.muted);
+        if(!detailMessage.isEmpty())y=prose(c,detailMessage,y,TEXT);
+        if(power!=null){
+            boolean unlocked=store.boosterUnlocked(power.id);int stock=store.boosterStock(power.id);
+            y=prose(c,unlocked?t("stock")+": "+stock:t("power_unlock",power.unlockLevel),y,TEXT);
+            y=prose(c,t(power.descriptionKey),y,skin.muted);
+            if(unlocked){
+                if(stock<=store.boosterStockLimit()-power.amount){final String id=power.id;button(c,t("power_buy",power.amount,store.boosterPrice(id)),24,y,342,54,PEACH,()->savedAction(()->{if(store.purchaseBooster(id)){sfx(AudioEngine.Sound.PURCHASE);notice(t("purchase_success"));}else notice(t("not_enough"));}));y+=72;}
+                else y=prose(c,q("stock_full"),y,TEXT);
+                if(stock<store.boosterStockLimit()){final String id=power.id;quietButton(c,t("power_ad"),24,y,342,()->getContext().startActivity(com.androidhit.lumadrift.commerce.CommerceActivity.powerIntent(getContext(),id)));y+=65;}
+            }
+        }else if(capsule){
+            y=prose(c,w("capsule_note"),y,TEXT);y=prose(c,w("capsule_odds"),y,skin.muted);y=prose(c,w("capsule_item_odds"),y,skin.muted);y=prose(c,w("capsule_duplicates"),y,skin.muted);
+            button(c,v("open_capsule"),24,y,342,54,PEACH,()->performCapsule(capsuleRequest));y+=73;
+        }else{
+            final boolean owned=cloth!=null?store.ownsCosmetic(cloth.id):gear!=null?store.ownsAvatarGear(gear.id):who!=null?store.ownsCharacter(who.id):store.ownsSkin(theme.id);
+            final boolean equipped=cloth!=null?cloth.id.equals(store.equippedCosmetic(cloth.slot)):gear!=null?gear.id.equals(loadout.item(gear.slot).id):who!=null?who.id.equals(store.equippedCharacter()):theme.id.equals(store.equippedSkin());
+            String key=cloth!=null?"cosmetic:"+cloth.id:gear!=null?"gear:"+gear.id:"";
+            y=prose(c,e(equipped?"equipped":owned?"owned":"to_unlock"),y,TEXT);
+            y=prose(c,gear!=null?GearStrings.effectCaption(store.resolvedLanguage(),gear):v("cosmetic_only"),y,skin.muted);
+            if(cloth!=null)y=prose(c,owned?acquisitionCaption(store.cosmeticAcquisitionSource(cloth.id),cosmeticSource(cloth)):cosmeticSource(cloth),y,skin.muted);
+            if(gear!=null)y=prose(c,GearStrings.sourceCaption(store.resolvedLanguage(),gear,gearProgress),y,skin.muted);
+            int price=cloth!=null?cloth.priceCoins:gear!=null?gear.priceCoins:who!=null?who.price:theme.price;
+            boolean direct=cloth!=null?cloth.priceCoins>0:gear!=null?gear.source==AvatarGearCatalog.Source.EARNED_COINS:true;
+            if(!equipped&&(owned||direct)){
+                String action=owned?e("action_equip"):price+" LumaCoins";
+                button(c,action,24,y,342,54,PEACH,()->savedAction(()->{
+                    if(!owned){boolean bought=cloth!=null?store.purchaseCosmetic(cloth.id):gear!=null?store.purchaseAvatarGear(gear.id):who!=null?store.purchaseCharacter(who.id):store.purchaseSkin(theme.id);
+                        if(!bought){notice(t("not_enough"));return;}sfx(AudioEngine.Sound.PURCHASE);notice(e("owned"));actionGeneration++;hits.clear();return;}
+                    boolean applied=cloth!=null?store.equipCosmetic(cloth.id):gear!=null?store.equipAvatarGear(gear.id):who!=null?store.equipCharacter(who.id):store.equipSkin(theme.id);
+                    if(applied)showAppliedLook(name,theme==null);else notice(b("item_unavailable"));
+                }));y+=73;
+            }else if(!owned){quietButton(c,a("view_source"),24,y,342,()->{
+                if(cloth!=null){if(cloth.source==CosmeticCatalog.Source.LOGIN_DAYS)openRewards(0);else{eventTab=cloth.source==CosmeticCatalog.Source.WEEKLY_WINS?1:0;go("events");}}
+                else if(gear!=null)sourceRoute(gear.source==AvatarGearCatalog.Source.JOURNEY_CLEARS?CollectionGoal.Route.JOURNEY:gear.source==AvatarGearCatalog.Source.WEEKLY_WINS?CollectionGoal.Route.WEEKLY:gear.source==AvatarGearCatalog.Source.EVENT_STARS?CollectionGoal.Route.DAILY:CollectionGoal.Route.REWARDS);
+            });y+=65;}
+            if(!key.isEmpty()){final String goalKey=key;quietButton(c,a(key.equals(store.trackedCollectionGoal())?"untrack_item":"track_item"),24,y,342,()->toggleGoal(goalKey));y+=65;}
+        }
+        quietButton(c,t("close"),24,y,342,()->backMenu());detailHeight=Math.max(840,y+170);H=Math.max(viewportH,detailHeight);
+    }
+
     private void selectShopCategory(int category){shopCategory=category;contentScroll=0;actionGeneration++;hits.clear();invalidate();}
     private void drawShop(Canvas c){
-        header(c,t("shop"),"LumaCoins  /  LumaGold");
-        sweet.surface(c,new RectF(24,102,366,180),SweetUi.CREAM,true);coin(c,54,135,17);fit(c,""+store.coins(),84,143,27,232,skin.accent2,true,false);fit(c,"LumaCoins · "+v("earned"),43,165,12,290,skin.muted,false,false);
-        String[] tabs={e("tab_powers"),a("appearance"),"LumaGold"};for(int i=0;i<3;i++){final int category=i;float x=24+i*116;round(c,x,198,110,50,16,shopCategory==i?SweetUi.light(SweetUi.MINT):skin.card);fit(c,tabs[i],x+55,229,13,103,TEXT,true,true);int before=hits.size();hit(x,198,110,50,tabs[i],()->selectShopCategory(category));if(hits.size()>before)hits.get(hits.size()-1).selected=shopCategory==i;}
+        fit(c,t("shop"),24,49,29,342,TEXT,true,false);fit(c,z("shop_tag"),24,76,13,342,skin.muted,false,false);dualWallet(c,96);
+        shopArt.heroAccent(c,new RectF(18,174,372,287),SweetUi.PEACH,frameTime,reduceMotion);
+        fit(c,z("workshop"),33,209,23,245,TEXT,true,false);wrap(c,z("shop_note"),33,238,235,13,TEXT,false,20);
+        shopArt.capsule(c,321,232,37,frameTime,reduceMotion);
+        String[] tabs={e("tab_powers"),a("appearance"),"LumaGold"};
+        for(int i=0;i<3;i++){final int category=i;float x=24+i*116;boolean on=shopCategory==i;
+            if(on)round(c,x,306,110,50,25,SweetUi.light(i));fit(c,tabs[i],x+55,337,13,103,TEXT,on,true);
+            if(on)round(c,x+31,351,48,3,2,SweetUi.ink(i));int before=hits.size();hit(x,306,110,50,tabs[i],()->selectShopCategory(category));if(hits.size()>before)hits.get(hits.size()-1).selected=on;
+        }
         if(shopCategory==0){
             for(int i=0;i<3;i++){
-                Catalog.BoosterItem item=Catalog.BOOSTERS[shopPage*3+i];String id=item.id;boolean unlocked=store.boosterUnlocked(id);float y=272+i*124;
-                sweet.surface(c,new RectF(24,y,366,y+112),SweetUi.CREAM,true);if(unlocked)art.power(c,id,61,y+44,25,frameTime,reduceMotion);else icon(c,"lock",61,y+44,25,skin.muted);
-                fit(c,t(item.nameKey),104,y+30,19,238,TEXT,true,false);fit(c,unlocked?u("stock",store.boosterStock(id)):t("power_level",item.unlockLevel),104,y+55,12,238,skin.muted,false,false);
-                fit(c,unlocked?u("pack",item.amount,store.boosterPrice(id)):t("power_unlock",item.unlockLevel),44,y+91,13,289,skin.accent2,true,false);icon(c,"next",340,y+86,15,TEXT);hit(24,y,342,112,t(item.nameKey)+", "+(unlocked?u("pack",item.amount,store.boosterPrice(id)):t("power_unlock",item.unlockLevel)),()->powerOffer(id));
+                Catalog.BoosterItem item=Catalog.BOOSTERS[shopPage*3+i];String id=item.id;boolean unlocked=store.boosterUnlocked(id);float y=379+i*173;
+                p.setColor(alpha(SweetUi.light(i),225));c.drawOval(27,y+8,119,y+111,p);shopArt.power(c,id,73,y+59,36,frameTime,reduceMotion);
+                if(!unlocked)icon(c,"lock",102,y+91,15,TEXT);
+                fit(c,t(item.nameKey),135,y+28,20,225,TEXT,true,false);fit(c,unlocked?u("stock",store.boosterStock(id)):t("power_level",item.unlockLevel),135,y+53,12,220,skin.muted,false,false);
+                wrap(c,z("power_"+id),135,y+79,216,14,TEXT,false,20);
+                round(c,132,y+123,222,35,17,unlocked?0xffffedcf:0xffeee8f8);
+                fit(c,unlocked?"×"+item.amount+" · "+store.boosterPrice(id)+" LumaCoins":t("power_unlock",item.unlockLevel),243,y+146,13,206,TEXT,true,true);
+                hit(24,y,342,161,t(item.nameKey)+", "+(unlocked?u("pack",item.amount,store.boosterPrice(id)):t("power_unlock",item.unlockLevel)),()->powerOffer(id));
             }
-            quietButton(c,"‹",24,658,67,()->shopPage=0);fit(c,t("powers_page",shopPage+1,2),195,687,12,190,TEXT,true,true);quietButton(c,"›",299,658,67,()->shopPage=1);
-            quietButton(c,a("journey_rewards")+"  →",24,730,342,()->openRewards(2));quietButton(c,a("open_inventory")+"  →",24,796,342,()->{collectionTab=3;collectionPage=0;go("collection");});
+            quietButton(c,"‹",24,916,67,()->shopPage=0);fit(c,t("powers_page",shopPage+1,2),195,945,12,190,TEXT,true,true);quietButton(c,"›",299,916,67,()->shopPage=1);
+            quietButton(c,a("journey_rewards")+"  →",24,989,342,()->openRewards(2));quietButton(c,a("open_inventory")+"  →",24,1055,342,()->{collectionTab=3;collectionPage=0;go("collection");});
         }else if(shopCategory==1){
-            sweet.surface(c,new RectF(24,269,366,418),SweetUi.LILAC,true);art.power(c,"trail",61,309,23,frameTime,reduceMotion);fit(c,v("loot"),102,300,19,242,TEXT,true,false);fit(c,"150 LumaCoins",102,326,15,240,skin.accent2,true,false);wrap(c,w("capsule_odds"),44,362,300,12,skin.muted,false,18);hit(24,269,342,149,v("loot")+", "+w("capsule_note"),()->openCapsule());
+            shopArt.heroAccent(c,new RectF(24,378,366,545),SweetUi.LILAC,frameTime,reduceMotion);shopArt.capsule(c,80,443,41,frameTime,reduceMotion);
+            fit(c,v("loot"),139,411,21,209,TEXT,true,false);fit(c,"150 LumaCoins",139,442,16,211,TEXT,true,false);wrap(c,z("capsule_review"),139,469,205,13,skin.muted,false,19);
+            hit(24,378,342,167,v("loot")+", "+w("capsule_note"),()->openCapsule());
             ArrayList<CosmeticCatalog.Item> items=new ArrayList<>();for(CosmeticCatalog.Item item:CosmeticCatalog.ITEMS)if(item.priceCoins>0)items.add(item);
-            int pages=(items.size()+2)/3;shopLookPage=Math.max(0,Math.min(pages-1,shopLookPage));for(int i=0;i<3&&shopLookPage*3+i<items.size();i++)drawWardrobeItem(c,items.get(shopLookPage*3+i),437+i*124);
-            quietButton(c,"‹",24,830,67,()->{if(shopLookPage>0)shopLookPage--;});fit(c,(shopLookPage+1)+" / "+pages,195,859,14,170,TEXT,true,true);quietButton(c,"›",299,830,67,()->{if(shopLookPage+1<pages)shopLookPage++;});quietButton(c,a("avatar")+"  →",24,900,342,()->go("wardrobe"));
+            int pages=(items.size()+2)/3;shopLookPage=Math.max(0,Math.min(pages-1,shopLookPage));for(int i=0;i<3&&shopLookPage*3+i<items.size();i++)drawShopLook(c,items.get(shopLookPage*3+i),566+i*140);
+            quietButton(c,"‹",24,1000,67,()->{if(shopLookPage>0)shopLookPage--;});fit(c,(shopLookPage+1)+" / "+pages,195,1029,14,170,TEXT,true,true);quietButton(c,"›",299,1000,67,()->{if(shopLookPage+1<pages)shopLookPage++;});quietButton(c,a("avatar")+"  →",24,1074,342,()->go("wardrobe"));
         }else{
-            sweet.surface(c,new RectF(24,269,366,545),SweetUi.LILAC,true);star(c,60,310,20,0xff9460ac);fit(c,"LumaGold",101,315,25,242,TEXT,true,false);fit(c,a("gold_account"),44,355,17,300,TEXT,true,false);wrap(c,v("premium"),44,391,300,14,skin.muted,false,21);wrap(c,a("gold_closed"),44,467,300,14,TEXT,true,21);
-            button(c,a("view_wallet")+"  →",24,571,342,50,PEACH,()->openCommerce());quietButton(c,v("wardrobe")+" · LumaGold  →",24,641,342,()->getContext().startActivity(new android.content.Intent(getContext(),com.androidhit.lumadrift.social.CosmeticVaultActivity.class)));wrap(c,v("separate"),195,746,323,14,skin.muted,true,22);
+            shopArt.heroAccent(c,new RectF(24,382,366,562),SweetUi.LILAC,frameTime,reduceMotion);shopArt.gold(c,195,453,66,frameTime,reduceMotion);
+            fit(c,"LumaGold",195,568,29,342,TEXT,true,true);float y=prose(c,z("gold_note"),608,TEXT);
+            Long balance=displayedGold;y=prose(c,balance==null?z("gold_unloaded"):z("gold_last")+": "+balance,y,skin.muted);
+            y=prose(c,a("gold_closed"),y,TEXT);button(c,a("view_wallet")+"  →",24,y,342,54,PEACH,()->openCommerce());y+=76;
+            quietButton(c,v("wardrobe")+" · LumaGold  →",24,y,342,()->getContext().startActivity(new android.content.Intent(getContext(),com.androidhit.lumadrift.social.CosmeticVaultActivity.class)));float end=prose(c,v("separate"),y+86,skin.muted);H=Math.max(H,end+150);
         }
     }
-    private void powerOffer(String id){
-        Catalog.BoosterItem item=Catalog.booster(id);boolean unlocked=store.boosterUnlocked(id);
-        android.app.AlertDialog.Builder offer=new android.app.AlertDialog.Builder(getContext()).setTitle(t(item.nameKey)).setMessage(t(item.descriptionKey)+"\n\n"+(unlocked?t("stock")+": "+store.boosterStock(id):t("power_unlock",item.unlockLevel))).setNegativeButton(t("close"),(d,w)->{});
-        if(unlocked){offer.setPositiveButton(t("power_buy",item.amount,store.boosterPrice(id)),(d,w)->savedAction(()->{if(store.purchaseBooster(id)){sfx(AudioEngine.Sound.PURCHASE);notice(t("purchase_success"));}else notice(t("not_enough"));}));offer.setNeutralButton(t("power_ad"),(d,w)->getContext().startActivity(com.androidhit.lumadrift.commerce.CommerceActivity.powerIntent(getContext(),id)));}
-        offer.show();
+    private void drawShopLook(Canvas c,CosmeticCatalog.Item item,float y){
+        boolean owned=store.ownsCosmetic(item.id),on=item.id.equals(store.equippedCosmetic(item.slot));
+        p.setColor(alpha(cosmeticColor(item),55));c.drawOval(28,y+12,122,y+106,p);art.cosmetic(c,item.slot.name(),CosmeticCatalog.ITEMS.indexOf(item)%6,75,y+58,31,cosmeticColor(item));
+        fit(c,w(item.nameKey),138,y+31,18,216,TEXT,true,false);fit(c,on?e("equipped"):owned?e("owned"):v("cosmetic_only"),138,y+57,12,216,skin.muted,false,false);
+        fit(c,on?e("equipped"):owned?e("action_equip"):item.priceCoins+" LumaCoins",138,y+91,14,216,TEXT,true,false);icon(c,"next",346,y+91,13,TEXT);
+        hit(24,y,342,126,w(item.nameKey)+", "+(on?e("equipped"):owned?e("owned"):e("to_unlock"))+", "+item.priceCoins+" LumaCoins",()->cosmeticOffer(item));
     }
+    private void powerOffer(String id){openItem("power",id);}
     private void eventSegments(Canvas c){String[] names={t("daily"),t("weekly"),u("sealed")};round(c,24,103,342,50,15,skin.card);for(int i=0;i<3;i++){final int n=i;float x=27+i*113;if(eventTab==i)round(c,x,107,110,37,12,alpha(skin.accent,60));fit(c,names[i],x+55,132,12,100,TEXT,eventTab==i,true);int before=hits.size();hit(x,103,110,50,names[i],()->{eventTab=n;actionGeneration++;hits.clear();invalidate();});if(hits.size()>before)hits.get(hits.size()-1).selected=eventTab==i;}}
     private void drawSealedMenu(Canvas c){
         header(c,u("sealed"),u("sealed_note"));eventSegments(c);round(c,24,163,342,147,24,skin.card);
@@ -1469,7 +1552,7 @@ public final class LumaView extends View {
         if(mode==4){quietButton(c,t("copy_code"),24,yy+61,165,()->{android.content.ClipboardManager clipboard=(android.content.ClipboardManager)getContext().getSystemService(Context.CLIPBOARD_SERVICE);clipboard.setPrimaryClip(android.content.ClipData.newPlainText("Luma Drift",friendCode));notice(t("challenge_code")+": "+friendCode);});quietButton(c,t("share_challenge"),201,yy+61,165,()->shareBoard());wrap(c,t("challenge_note"),195,yy+130,330,11,skin.muted,true,16);}
         else{
         for(int i=0;i<Catalog.BOOSTERS.length;i++){Catalog.BoosterItem item=Catalog.BOOSTERS[i];final String id=item.id;float x=24+(i%3)*118,y=yy+57+(i/3)*57;boolean unlocked=store.boosterUnlocked(id);
-            boolean active=powerActive(id);round(c,x,y,106,51,15,active?blend(skin.card,skin.accent2,.17f):skin.card);if(active)stroke(c,new RectF(x,y,x+106,y+51),15,skin.accent2,1);if(unlocked)art.power(c,id,x+21,y+21,16,frameTime,reduceMotion);else icon(c,"lock",x+20,y+20,18,skin.muted);fit(c,unlocked?active?u("active"):"×"+store.boosterStock(id):t("power_level",item.unlockLevel),x+70,y+23,11,57,skin.muted,false,true);fit(c,t(item.nameKey),x+53,y+43,11,94,unlocked?TEXT:skin.muted,true,true);hit(x,y,106,51,t(item.nameKey)+(unlocked?": "+(active?u("active"):u("stock",store.boosterStock(id))):", "+t("power_level",item.unlockLevel)),()->useItem(id));
+            boolean active=powerActive(id);round(c,x,y,106,51,15,active?blend(skin.card,skin.accent2,.17f):skin.card);if(active)stroke(c,new RectF(x,y,x+106,y+51),15,skin.accent2,1);if(unlocked)shopArt.power(c,id,x+21,y+21,16,frameTime,reduceMotion);else icon(c,"lock",x+20,y+20,18,skin.muted);fit(c,unlocked?active?u("active"):"×"+store.boosterStock(id):t("power_level",item.unlockLevel),x+70,y+23,11,57,skin.muted,false,true);fit(c,t(item.nameKey),x+53,y+43,11,94,unlocked?TEXT:skin.muted,true,true);hit(x,y,106,51,t(item.nameKey)+(unlocked?": "+(active?u("active"):u("stock",store.boosterStock(id))):", "+t("power_level",item.unlockLevel)),()->useItem(id));
         }
         }
         if(won)hits.clear();

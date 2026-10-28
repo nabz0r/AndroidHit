@@ -69,6 +69,22 @@ public final class ProductionWalletClient {
     private static final String CACHE_PREFS = "luma_server_wallet_v1";
     public static boolean ownsCharacter(Context context, String id) { return owns(context, "characters", id); }
     public static boolean ownsSkin(Context context, String id) { return owns(context, "skins", id); }
+    /** Last server-confirmed account balance for display only; never authorizes a spend. */
+    public static Long cachedBalance(Context context) {
+        if (CommerceConfig.MODE_SANDBOX) return null;
+        String uid = currentUid(context); if (uid.isEmpty()) return null;
+        synchronized (CACHE_LOCK) {
+            try {
+                String saved = context.getSharedPreferences(CACHE_PREFS, 0).getString(BillingPolicy.accountHash(uid), "");
+                JSONObject value = new JSONObject(saved);
+                Object savedVersion=value.get("version"),savedBalance=value.get("balance");
+                if (!uid.equals(value.getString("uid")) || !(savedVersion instanceof Integer || savedVersion instanceof Long)
+                        || !(savedBalance instanceof Integer || savedBalance instanceof Long) || ((Number)savedVersion).longValue()<0) return null;
+                long balance = ((Number)savedBalance).longValue();
+                return balance < -1000000000L || balance > 1000000000L ? null : Long.valueOf(balance);
+            } catch (Exception absent) { return null; }
+        }
+    }
     private static boolean owns(Context context, String kind, String id) {
         if (CommerceConfig.MODE_SANDBOX || id == null || !id.matches("[a-z]{1,24}")) return false;
         String uid = currentUid(context); if (uid.isEmpty()) return false;
@@ -91,7 +107,7 @@ public final class ProductionWalletClient {
                 android.content.SharedPreferences prefs = context.getSharedPreferences(CACHE_PREFS, 0);
                 String key = BillingPolicy.accountHash(wallet.uid), previous = prefs.getString(key, "");
                 if (!previous.isEmpty() && new JSONObject(previous).optLong("version", -1) > wallet.version) return;
-                JSONObject value = new JSONObject().put("version", wallet.version).put("characters", wallet.characters).put("skins", wallet.skins);
+                JSONObject value = new JSONObject().put("uid", wallet.uid).put("version", wallet.version).put("balance", wallet.balance).put("characters", wallet.characters).put("skins", wallet.skins);
                 prefs.edit().putString(key, value.toString()).commit();
             } catch (Exception ignored) { /* A fresh server fetch restores this optional local cosmetic cache. */ }
         }

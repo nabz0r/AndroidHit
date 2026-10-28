@@ -1,6 +1,12 @@
 # Luma Drift roadmap
 
-## Current candidate 1.11 — pre-Play bug hunt
+## Current 1.12 — readable shop and choices
+
+[Release](RELEASE_1_12.md) · [Qualification](validation/v1.12/README.md) · [Grounded UX decisions](research/ux-v112.md). Replace repeated item dialogs with normal pages; expose both currencies and honest wallet state; make power silhouettes/effects recognizable; lighten stacked surfaces. Correct the reproduced earned-power refused-write transaction and preserve live-run/rotation navigation. Scoped final native checks pass: Lab 1,179/40 clears, production 7 startup +35 shop, account-wallet 45/6 languages.
+
+Next: validate the exact APK on physical phones, observe first-time comprehension of the two currencies and purchase/Equip distinction, then resume internal Play/provider qualification. The L22→L23 and Guardian 4→5 difficulty jumps remain separate work. Cosmetic improvements are not measured retention.
+
+## Preserved candidate 1.11 — pre-Play bug hunt
 
 [Release](RELEASE_1_11.md) · [Exact artifacts](validation/v1.11/candidate.json) · [Qualification](validation/v1.11/README.md). Fix actual equipment visibility and clear success feedback before adding more content: show the applied portrait, name each worn object, retain character silhouette under clothes, separate small equipment and apply the selected scene theme. Correct refused-save read consistency and the first-profile grant transaction. Keep all existing catalog IDs, prices, effects, puzzle layouts and saved progression.
 

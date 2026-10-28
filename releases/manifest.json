@@ -1,6 +1,6 @@
 {
-  "version": "1.11.0-sandbox-rc2",
-  "version_code": 12,
+  "version": "1.12.0-sandbox-rc2",
+  "version_code": 13,
   "channel": "lab",
   "application_id": "com.androidhit.lumadrift.sandbox",
   "build_date": "2026-10-28",
@@ -13,19 +13,21 @@
     "live_services_validated": false
   },
   "source_inputs_sha256": {
-    "app/build.gradle": "7f3b730df752c73afbf180de7b5b2f48b08f86e3d1b882e0e5a580927e6533ed",
+    "app/build.gradle": "26bc8a9787c0978edac7366eb69edb61b0b5bc23bae7a3456518e710074065ae",
     "app/src/main/AndroidManifest.xml": "ffc6f37f6f0522eecb1906aaa59d44a6795bec5a592fb7fa3d7334be98c98994",
     "app/src/main/assets/LICENSE.txt": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
     "app/src/main/assets/THIRD_PARTY_NOTICES.txt": "bc3de00ad30b7d76e04bbd4af3b918c8b8eda113d344560638f6387a95260df3",
     "app/src/main/assets/identity-config.example.json": "4c26ad1413e8b6b99ef4d05865cd1c23eda25ac2c79f08323754d05b400789ea",
-    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "d489c7c0ffadb4d5683d0cefe4600d50cccd3901203be47cc147b9c3385cec3b",
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "0bd5b4b8ea86d946b9c921a675801dbe0d878a3be1ad3176a7f8a3dbd6ea883d",
     "app/src/main/java/com/androidhit/lumadrift/MainActivity.java": "c1d3e32c3d3cf0ab2ce1dce783717125a82c8f21faf29aa3fe760d86f6216828",
     "app/src/main/java/com/androidhit/lumadrift/audio/AudioEngine.java": "c3996a9acad55c93b3da020f8d6d4dd65359af98f9e0b0d2c91775ca643f633f",
     "app/src/main/java/com/androidhit/lumadrift/audio/Synth.java": "047d95688ad31d8bcde77251fc37cfc99e22a3465f33efc724c63b825bd190d5",
     "app/src/main/java/com/androidhit/lumadrift/commerce/AdsController.java": "b2cc36c2f979e0a2efbd2544f7cea4af0a58febd280526b7160f2acfdd54d050",
     "app/src/main/java/com/androidhit/lumadrift/commerce/BillingPolicy.java": "648b1f8edaaaa13fc378e146993929887480a7d49cc7db0c9c85a778ba319bfb",
-    "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java": "7281de0400977a09eb589ee5a8d2d5c554e2b4146957c15816414de9bdade1f2",
+    "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java": "e64c1765c2f3371e32e3dbed829861ccae9baa04f44da152749ff72688525f90",
+    "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceArt.java": "f889bb01677bd19043b88f8be2c38136d2131cd99fbdc0d3a27fce40f936f4f1",
     "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceConfig.java": "e5a646b2e93ff066c31c3dac6092f2f174f58b47524f9cf172e558b3fe8f35ae",
+    "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceCopy.java": "cfcc3e52542b842faf1cceda8d04ad145cbf78a34b1e9123150de5e2cf1b745f",
     "app/src/main/java/com/androidhit/lumadrift/commerce/PlayGoldBilling.java": "ad1400afe1a3843afb2bb8d7bd8d6e1b40776c6c952ba6794c49d22cf6182cc5",
     "app/src/main/java/com/androidhit/lumadrift/commerce/WalletStrings.java": "0fdf9450e82b0117a440ae034498ce10a01538a99c8ddd7637f6ccf18fc632c8",
     "app/src/main/java/com/androidhit/lumadrift/data/AvatarGearCatalog.java": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
@@ -37,7 +39,7 @@
     "app/src/main/java/com/androidhit/lumadrift/data/EconomyCurve.java": "1f5e230948603e61b4522f0d790a764312c381a12216449d7a45b0f9e17b261a",
     "app/src/main/java/com/androidhit/lumadrift/data/EventSchedule.java": "2bb723df3bd9d79224d1d50bdda997e99e1d1a7575439406f93b21a847c17198",
     "app/src/main/java/com/androidhit/lumadrift/data/ExperienceStrings.java": "4626fc70b4ed9db4d4c9a0468265121b649eaafa9bce06cbf89a68558029e1c5",
-    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "b6b2df5a55849cc46ecacd00d3f332e6f2084c4bff00e9a6f01b300056d927f2",
+    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "ed629c1aa51712deb5a1c3fe86b9ff0101bd2d55d874fc765e1495e616c43fd9",
     "app/src/main/java/com/androidhit/lumadrift/data/GearStrings.java": "5a07fad279f751aab01506a863f0b4182dedda2a94dd035b04cfd6a2d49a6171",
     "app/src/main/java/com/androidhit/lumadrift/data/InventoryPresentation.java": "a2655902ece6005bfbbd3cf56ad51123aaf52fad81cf81686f3d7faf41e95d63",
     "app/src/main/java/com/androidhit/lumadrift/data/LocalSaveTransactions.java": "395fdb444c436eb5d05d4f6b40fae2eec208698f353c6f1c2dab749d25863fd2",
@@ -51,6 +53,7 @@
     "app/src/main/java/com/androidhit/lumadrift/data/UiStrings.java": "145686c50a59ab1369e739439bf420654cea79003cb91be7fb07456c3da9c06c",
     "app/src/main/java/com/androidhit/lumadrift/data/V110Strings.java": "5c6761325a59c83b748d9eabf35617876c4a405ea6b2f05dfcc2eef7ce556efc",
     "app/src/main/java/com/androidhit/lumadrift/data/V111Strings.java": "373711dc679486b9fa79acefb8f0126b75263e8bb2592d4d85be310c5fb2ad1f",
+    "app/src/main/java/com/androidhit/lumadrift/data/V112Strings.java": "6ec3aa67766d008086b372a01124f4b32aca466eeaa68a8ba6919f709f7d2a08",
     "app/src/main/java/com/androidhit/lumadrift/data/V17Strings.java": "4b6a8af32919d22bb7e64150a1bd330d3269ccf72c54eb970197b41efaf73e23",
     "app/src/main/java/com/androidhit/lumadrift/data/V18Strings.java": "aecd1a04f12e13a80b26defb6e6d7e28bd817551ea9ddaa08db6782546d8c39c",
     "app/src/main/java/com/androidhit/lumadrift/data/V19Strings.java": "42f1c38e955b46b2b6add81c0d9c70ade5214fc122e46d462436c731854dddd1",
@@ -99,9 +102,10 @@
     "app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java": "601d1a9074b6241d848baab9f1b8697045a122f1cc629eed81e78aea618fb67d",
     "app/src/main/java/com/androidhit/lumadrift/ui/KawaiiArt.java": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
     "app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java": "cdf19d5ecc308bde6a7f06d7b9bb414f53cb7b0cbfac76158afcab2d49b33145",
-    "app/src/main/java/com/androidhit/lumadrift/ui/SweetUi.java": "b3990b4a99a1fb26807b863f9c828f2818cf9ffd37116d66a1ff512ce0577c04",
+    "app/src/main/java/com/androidhit/lumadrift/ui/ShopIllustrations.java": "15f553839bd01ccd38dacc83ccca4dac116c6567236f7d7e51b1478c6d613ee2",
+    "app/src/main/java/com/androidhit/lumadrift/ui/SweetUi.java": "77a64c3bdef4442ad4b527bfe8577be89db1534e68ec85faf06452806f92ba90",
     "app/src/main/java/com/androidhit/lumadrift/ui/WorldBackdrop.java": "41bddbb5d7497c879cc54f54fd0cf02edf67ecc1f4da1209513c1140c7e61ce6",
-    "app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java": "24bb2bac80df2f5b29d64d9cb77d9645c9d64bda4291d789df236a7408772a9a",
+    "app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java": "c64f428cf3bbe990f7db4ff3467301605655324d9fc0acfc5835eb0d0afa767c",
     "app/src/main/java/com/androidhit/lumadrift/wallet/WalletRecoveryController.java": "2b5c5bb33fdd50b89fb6ffba114c66b87945a8b60acf00fbe532649f869fb8f8",
     "app/src/main/res/drawable-nodpi/aurora_atlas_v1.png": "2e9d230ab7212285b02aed51a3b98611062a813060819b229f1dcca64aff92eb",
     "app/src/main/res/drawable-nodpi/dream_glade_v18.png": "55ce44f733a70492884699f87d060c733e9a02a64b258b92df676c948f31b047",
@@ -167,6 +171,22 @@
     "luma-drift-1.11.0-sandbox-rc2.apk": {
       "bytes": 7757097,
       "sha256": "65bfbeab4f8b488e483a1622568540caf0315f72cf33d94876c75eafc9b4b642"
+    },
+    "luma-drift-1.12.0-rc2.aab": {
+      "bytes": 11165167,
+      "sha256": "6ecaaee2ca8f45e4d14235349f54a66bb24959be4a5f5f96ffb29050c93d7e56"
+    },
+    "luma-drift-1.12.0-rc2.apk": {
+      "bytes": 7773794,
+      "sha256": "de581253b64232ae45bcbd647862dd470d522068f26516f6417bf515e882403d"
+    },
+    "luma-drift-1.12.0-sandbox-rc2.aab": {
+      "bytes": 11156600,
+      "sha256": "1117416687d68c4e74250e42fbf052c53a3660c8fd539728e1ff2e8617a7992f"
+    },
+    "luma-drift-1.12.0-sandbox-rc2.apk": {
+      "bytes": 7757097,
+      "sha256": "0f55c38c29d5872588200a5675cb154809eb62897d1133d96b48a82ab12b91e4"
     },
     "luma-drift-1.2.0-sandbox.aab": {
       "bytes": 7166459,

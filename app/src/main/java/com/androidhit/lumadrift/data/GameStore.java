@@ -523,8 +523,12 @@ public final class GameStore {
             if (item == null || !boosterUnlocked(id)) return false;
             int price = boosterPrice(id);
             if (coins() < price || storedBoosterStock(id) > MAX_STOCK - item.amount) return false;
-            prefs.edit().putInt("coins", coins() - price)
-                    .putInt("booster_" + id, storedBoosterStock(id) + item.amount).commit();
+            Map<String,Object> write = new HashMap<>();
+            write.put("coins", coins() - price);
+            write.put("booster_" + id, storedBoosterStock(id) + item.amount);
+            // Do not report success while Android has only changed memory. Keep
+            // this exact debit and grant together for the guarded save retry.
+            LocalSaveTransactions.write(prefs, write);
             return true;
         }
     }

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "Read-only final integrity after both production SDK scopes. No game/test package or preference mutation is performed by this measurement.",
+  "observed_at_utc": "2026-10-28T13:23:40.226522+00:00",
+  "serial": "emulator-5580",
+  "packages": {
+    "com.androidhit.lumadrift.sandbox": {
+      "installed_apk_sha256": "0f55c38c29d5872588200a5675cb154809eb62897d1133d96b48a82ab12b91e4",
+      "preferences_sha256": {
+        "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+        "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+        "luma_session.xml": "3156f0bf5e71aa08fb9a6667fedb6f04504becc7646f97bec72018b4ec3b3af4"
+      }
+    },
+    "com.androidhit.lumadrift.sandbox.test": {
+      "installed_apk_sha256": "49d64c48b1a1f55a908d843dd00b6481d87a799f265f1b1e810b84c6d4d85b6f"
+    },
+    "com.androidhit.lumadrift": {
+      "installed_apk_sha256": "de581253b64232ae45bcbd647862dd470d522068f26516f6417bf515e882403d",
+      "preferences_sha256": {
+        "luma_drift_meta_v1.xml": "1cba74c7c44da0a3cfbcf0e375272070695f1d5697ed3076968ec641ef9368d3",
+        "luma_drift_save_v1.xml": "0a4e9ba00a6911bbc42f24dfbd177d65916649f818bac81bb95a308abe305081",
+        "luma_session.xml": "51dd90a498290f542c07106aa518b8860d2cc5a5659977c34e2f11d56e783200"
+      }
+    },
+    "com.androidhit.lumadrift.test": {
+      "installed_apk_sha256": "34897345f94597989fc91b1d4924711a16a092faab7345b84eec2d14f62d151e"
+    }
+  },
+  "lab_package_test_and_three_preference_files_unchanged": true,
+  "production_original_prefbytes_match_upgrade_startup_and_shop_snapshots": true,
+  "original_rotation_after_all_runs": {
+    "user_rotation": "0",
+    "accelerometer_rotation": "1"
+  },
+  "rotation_matches_original_lab_snapshot": true
+}

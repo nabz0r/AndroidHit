@@ -1,0 +1,281 @@
+{
+  "verified_at_utc": "2026-10-28T13:02:15.472649+00:00",
+  "baseline_commit": "954efd5ea63c4d471816202ece05d31bb9e55016",
+  "scope": "Exact source fingerprints only. Engine/catalog/onboarding inputs are byte-identical. Of 41 scoped sources, 40 are unchanged; shared SweetUi presentation is intentionally changed. No native or human difficulty claim.",
+  "intentional_presentation_changes": [
+    "ui/SweetUi.java"
+  ],
+  "groups": {
+    "engine": {
+      "files": 23,
+      "all_unchanged": true,
+      "entries": [
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/BalancedCatalog.java",
+          "baseline_sha256": "f75fbdfef8e121c488cfe336fb1c1a750365433d9b19bf8abed636d35971fe27",
+          "current_sha256": "f75fbdfef8e121c488cfe336fb1c1a750365433d9b19bf8abed636d35971fe27",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/Barrier.java",
+          "baseline_sha256": "87999219c061bbd24e8a7332ea1f0c9916be19aab384f02148e657eae81d36ed",
+          "current_sha256": "87999219c061bbd24e8a7332ea1f0c9916be19aab384f02148e657eae81d36ed",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/Board.java",
+          "baseline_sha256": "e59583150d8aec84a100d1c8742d7abbea325c7225430a2c0f8cb5051c5531cd",
+          "current_sha256": "e59583150d8aec84a100d1c8742d7abbea325c7225430a2c0f8cb5051c5531cd",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/ChallengeCode.java",
+          "baseline_sha256": "0424770131b542e35d5e6f928ae419992286ec731f18d23373d1b0922f762165",
+          "current_sha256": "0424770131b542e35d5e6f928ae419992286ec731f18d23373d1b0922f762165",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/Direction.java",
+          "baseline_sha256": "7787796aa6543887f1ff2916420c3708cf9fa9095e5424f17ce89505beb45795",
+          "current_sha256": "7787796aa6543887f1ff2916420c3708cf9fa9095e5424f17ce89505beb45795",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/GuardianCatalog.java",
+          "baseline_sha256": "cd6ec026e71f4755bb4206ea809b9784a7fce676167c51318b9b7de732845a9d",
+          "current_sha256": "cd6ec026e71f4755bb4206ea809b9784a7fce676167c51318b9b7de732845a9d",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/GuardianEncounter.java",
+          "baseline_sha256": "dfb3c916f75d07f2cb36b99a34bb8691c0c017af45bc773390a39803f2f737d5",
+          "current_sha256": "dfb3c916f75d07f2cb36b99a34bb8691c0c017af45bc773390a39803f2f737d5",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/JourneyExperience.java",
+          "baseline_sha256": "13c0298a94184309a82b2c7c2897181ea7df27e178608e843235c91a38463a3a",
+          "current_sha256": "13c0298a94184309a82b2c7c2897181ea7df27e178608e843235c91a38463a3a",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/Level.java",
+          "baseline_sha256": "33cc2e2e713d34327960a8ab833cb78df2fa098b5e4bca581597d66399194d94",
+          "current_sha256": "33cc2e2e713d34327960a8ab833cb78df2fa098b5e4bca581597d66399194d94",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/LevelCatalog.java",
+          "baseline_sha256": "8f74d1dc9b1bfab7488bdb7a53cb8ff8a0b0f90911daa2d7a0eb681710f82a0b",
+          "current_sha256": "8f74d1dc9b1bfab7488bdb7a53cb8ff8a0b0f90911daa2d7a0eb681710f82a0b",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/MoveBudget.java",
+          "baseline_sha256": "8d791e3111146d8c48b2fad4eac10765591df93b78160227b6533fdd0df88a1c",
+          "current_sha256": "8d791e3111146d8c48b2fad4eac10765591df93b78160227b6533fdd0df88a1c",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/PrismStory.java",
+          "baseline_sha256": "2f5fb52fe01c823fb81244fc268de8ac888780a4bed0772a34564b8eb8482a8c",
+          "current_sha256": "2f5fb52fe01c823fb81244fc268de8ac888780a4bed0772a34564b8eb8482a8c",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionInfo.java",
+          "baseline_sha256": "ad91593fc3f805b88281fa92588a34316a32495343c030fa39b8267aaa84dd13",
+          "current_sha256": "ad91593fc3f805b88281fa92588a34316a32495343c030fa39b8267aaa84dd13",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionV2Layouts.java",
+          "baseline_sha256": "7e13d7d6951ccf739f002327c5bd153aaac0f334cd689763430ae349bc15b8cd",
+          "current_sha256": "7e13d7d6951ccf739f002327c5bd153aaac0f334cd689763430ae349bc15b8cd",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionV3Catalog.java",
+          "baseline_sha256": "fd02bcd590baecc151ac8b84ebb2fcd9ff5a9b1e33fb88176a5bab008c466a62",
+          "current_sha256": "fd02bcd590baecc151ac8b84ebb2fcd9ff5a9b1e33fb88176a5bab008c466a62",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionV3Layouts.java",
+          "baseline_sha256": "55aa4100e84365f12405b6633aaa928c37a5b5acb47afecfd877e8835d6b437b",
+          "current_sha256": "55aa4100e84365f12405b6633aaa928c37a5b5acb47afecfd877e8835d6b437b",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/RemixCatalog.java",
+          "baseline_sha256": "14b79977f22ea94e3381b32928e5768252cd06d81c5be0b262a15b1498e4abcc",
+          "current_sha256": "14b79977f22ea94e3381b32928e5768252cd06d81c5be0b262a15b1498e4abcc",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/SealedCatalog.java",
+          "baseline_sha256": "f1ed9eedfea2d3c2c311bc31a7a584b3b7a40e353e418aff1121ce126035788f",
+          "current_sha256": "f1ed9eedfea2d3c2c311bc31a7a584b3b7a40e353e418aff1121ce126035788f",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/Solver.java",
+          "baseline_sha256": "d6acaecc6262472c59884d4c1f29da32ca7c738675594fcf2f3cd1c3d38cedb4",
+          "current_sha256": "d6acaecc6262472c59884d4c1f29da32ca7c738675594fcf2f3cd1c3d38cedb4",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/StrategyCatalog.java",
+          "baseline_sha256": "c64e8b0987bf52e2ab2eac4635d5b7fa7580307710e9ca27792fb3ae09a4d970",
+          "current_sha256": "c64e8b0987bf52e2ab2eac4635d5b7fa7580307710e9ca27792fb3ae09a4d970",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/StrategySolver.java",
+          "baseline_sha256": "a5a763dabdcb87351aa8e5a0dcfd76d05f1f5fab3099b770298e6001e988c33e",
+          "current_sha256": "a5a763dabdcb87351aa8e5a0dcfd76d05f1f5fab3099b770298e6001e988c33e",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/StrategyV4Layouts.java",
+          "baseline_sha256": "5b8fbddc141892a3b7ead3c0051b14b64be4effcd0449a126a896c2a686699f2",
+          "current_sha256": "5b8fbddc141892a3b7ead3c0051b14b64be4effcd0449a126a896c2a686699f2",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/engine/Tile.java",
+          "baseline_sha256": "1c43d18aa122b2b37dfce18fb77e09f9a445c6920b9e6f0459c9f4594dc6d7bf",
+          "current_sha256": "1c43d18aa122b2b37dfce18fb77e09f9a445c6920b9e6f0459c9f4594dc6d7bf",
+          "unchanged": true
+        }
+      ]
+    },
+    "catalogs": {
+      "files": 4,
+      "all_unchanged": true,
+      "entries": [
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/AvatarGearCatalog.java",
+          "baseline_sha256": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
+          "current_sha256": "ebc3122cb51854d8cc57328c3ade93dd0f7116cd6db207f1e0c89743361b9a6e",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/AvatarStyles.java",
+          "baseline_sha256": "3f6fc31444ffdd3a1c5db7662da4ec8db0b95fab55f4ef103479d8c1b65246fc",
+          "current_sha256": "3f6fc31444ffdd3a1c5db7662da4ec8db0b95fab55f4ef103479d8c1b65246fc",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/Catalog.java",
+          "baseline_sha256": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+          "current_sha256": "1ef81c5c80a8fb0961c8d30a7dd9ac7c4796f7ff4a0598e9307d9e773aca70b3",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/CosmeticCatalog.java",
+          "baseline_sha256": "d75a2a94b7b3b927a35c63c2256eb2e7e3e6a704a47ee3741d08f4b69f8c2e1f",
+          "current_sha256": "d75a2a94b7b3b927a35c63c2256eb2e7e3e6a704a47ee3741d08f4b69f8c2e1f",
+          "unchanged": true
+        }
+      ]
+    },
+    "onboarding": {
+      "files": 2,
+      "all_unchanged": true,
+      "entries": [
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/onboarding/TutorialSession.java",
+          "baseline_sha256": "d2a3d18bbc8eb8ea3d307d287caae018129121d4231c494fb25134e615f4a3f0",
+          "current_sha256": "d2a3d18bbc8eb8ea3d307d287caae018129121d4231c494fb25134e615f4a3f0",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/onboarding/TutorialStrings.java",
+          "baseline_sha256": "132ec1648b8057a3d853030c0111d0e1734f5cd0c156a63155494fb44a5131b5",
+          "current_sha256": "132ec1648b8057a3d853030c0111d0e1734f5cd0c156a63155494fb44a5131b5",
+          "unchanged": true
+        }
+      ]
+    },
+    "support_models_and_unmodified_drawing": {
+      "files": 12,
+      "all_unchanged": false,
+      "entries": [
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/CollectionGoal.java",
+          "baseline_sha256": "048695dd5d11ea7a0e68e2dd9e15aa65f2ad0eaddab416f1ccae20c4b7b2628d",
+          "current_sha256": "048695dd5d11ea7a0e68e2dd9e15aa65f2ad0eaddab416f1ccae20c4b7b2628d",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/EconomyCurve.java",
+          "baseline_sha256": "1f5e230948603e61b4522f0d790a764312c381a12216449d7a45b0f9e17b261a",
+          "current_sha256": "1f5e230948603e61b4522f0d790a764312c381a12216449d7a45b0f9e17b261a",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/EventSchedule.java",
+          "baseline_sha256": "2bb723df3bd9d79224d1d50bdda997e99e1d1a7575439406f93b21a847c17198",
+          "current_sha256": "2bb723df3bd9d79224d1d50bdda997e99e1d1a7575439406f93b21a847c17198",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/InventoryPresentation.java",
+          "baseline_sha256": "a2655902ece6005bfbbd3cf56ad51123aaf52fad81cf81686f3d7faf41e95d63",
+          "current_sha256": "a2655902ece6005bfbbd3cf56ad51123aaf52fad81cf81686f3d7faf41e95d63",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/LocalSaveTransactions.java",
+          "baseline_sha256": "395fdb444c436eb5d05d4f6b40fae2eec208698f353c6f1c2dab749d25863fd2",
+          "current_sha256": "395fdb444c436eb5d05d4f6b40fae2eec208698f353c6f1c2dab749d25863fd2",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/ObjectiveDashboard.java",
+          "baseline_sha256": "f07b77303f28e22be7e4c069ae25fd3fc8689ba7f07ffd489a4fa92627effe31",
+          "current_sha256": "f07b77303f28e22be7e4c069ae25fd3fc8689ba7f07ffd489a4fa92627effe31",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/data/PowerUsePolicy.java",
+          "baseline_sha256": "33c726840a8e0e618eb1aaef7bf145a3e1bb7ae0411174faae1fa4a8286350f8",
+          "current_sha256": "33c726840a8e0e618eb1aaef7bf145a3e1bb7ae0411174faae1fa4a8286350f8",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/ui/AvatarStage.java",
+          "baseline_sha256": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+          "current_sha256": "274c3a6194d8c604fae03d3eee74b68fb800fe1df59cb5d00b7e4603c6b5b1db",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java",
+          "baseline_sha256": "601d1a9074b6241d848baab9f1b8697045a122f1cc629eed81e78aea618fb67d",
+          "current_sha256": "601d1a9074b6241d848baab9f1b8697045a122f1cc629eed81e78aea618fb67d",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/ui/KawaiiArt.java",
+          "baseline_sha256": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
+          "current_sha256": "b7cd484b4dbad7b2f34901a0a7cf1cdb341ef8ed45d0386eace6db668fdf5682",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java",
+          "baseline_sha256": "cdf19d5ecc308bde6a7f06d7b9bb414f53cb7b0cbfac76158afcab2d49b33145",
+          "current_sha256": "cdf19d5ecc308bde6a7f06d7b9bb414f53cb7b0cbfac76158afcab2d49b33145",
+          "unchanged": true
+        },
+        {
+          "path": "app/src/main/java/com/androidhit/lumadrift/ui/SweetUi.java",
+          "baseline_sha256": "b3990b4a99a1fb26807b863f9c828f2818cf9ffd37116d66a1ff512ce0577c04",
+          "current_sha256": "77a64c3bdef4442ad4b527bfe8577be89db1534e68ec85faf06452806f92ba90",
+          "unchanged": false
+        }
+      ]
+    }
+  },
+  "passed": true
+}

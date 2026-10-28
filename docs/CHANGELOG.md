@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.12.0-rc2 / code13 — the little atelier
+
+- Label and distinguish local earned LumaCoins and account LumaGold, including unknown/last-known balance.
+- Replace item preview/earned-purchase/equip popups with integrated scrollable pages and explicit purchase then Equip.
+- Add original friendly power/currency/capsule illustrations, lighter surfaces, curved accents and pill controls; share power art across gameplay and inventory.
+- Rework the account-wallet presentation while retaining consent, source prices and financial confirmations/gates.
+- Fix failed earned-power purchase writes via exact tracked transaction/retry; preserve power-detail return to the active board and UI restoration.
+
+[Scope, evidence and limitations](RELEASE_1_12.md). No layout, budget, price, reward or item-effect change; no commercial activation or Play upload.
+
 ## 1.11.0-rc2 / code 12 — equipment visibility and pre-Play bug hunt
 
 - Expose the applied portrait after character/clothing/gear equipment; show all seven worn item names and a direct companion picker. Clothing purchase reopens an owned offer with explicit Equip.

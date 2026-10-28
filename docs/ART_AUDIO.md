@@ -1,5 +1,9 @@
 # Art direction and original audio
 
+## 1.12 original shop illustrations
+
+Six friendly power silhouettes, an amber coin, a faceted violet/cyan LumaGold gem and a capsule use code-native original art. The same powers appear in gameplay, inventory and the shop. Rounded accents and flatter pill surfaces reduce the stacked-box treatment. Draw helpers reuse Paint/Path/RectF objects, never change economy/state, and freeze temporal art in reduced motion. [Independent final raster scope](validation/v1.12/art-rc2/README.md). The existing original music and its separate controls are retained.
+
 ## 1.11 equipment visibility
 
 The shared portrait now leaves more character silhouette visible under clothing and separates/enlarges Head, Aura and Charm. Existing original code art, styles, identities, equipment effects and music are retained. The selected scene theme now tints both the garden and animated gameplay. [Measured composition and limits](validation/v1.11/avatar-bugs/README.md) · [Release](RELEASE_1_11.md).

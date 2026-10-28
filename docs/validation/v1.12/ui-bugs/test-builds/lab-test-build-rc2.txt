@@ -1,0 +1,71 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.experimental.lint.version=9.4.0' is experimental.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preLabReleaseBuild UP-TO-DATE
+> Task :app:checkLabReleaseAarMetadata UP-TO-DATE
+> Task :app:generateLabReleaseResValues UP-TO-DATE
+> Task :app:mapLabReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateLabReleaseResources UP-TO-DATE
+> Task :app:mergeLabReleaseResources UP-TO-DATE
+> Task :app:packageLabReleaseResources UP-TO-DATE
+> Task :app:parseLabReleaseLocalResources UP-TO-DATE
+> Task :app:createLabReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksLabRelease UP-TO-DATE
+> Task :app:processLabReleaseMainManifest UP-TO-DATE
+> Task :app:processLabReleaseManifest UP-TO-DATE
+> Task :app:processLabReleaseManifestForPackage UP-TO-DATE
+> Task :app:processLabReleaseResources UP-TO-DATE
+> Task :app:bundleLabReleaseClassesToCompileJar UP-TO-DATE
+> Task :app:preLabReleaseAndroidTestBuild SKIPPED
+> Task :app:processLabReleaseAndroidTestManifest UP-TO-DATE
+> Task :app:generateLabReleaseAndroidTestBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileLabReleaseAndroidTest UP-TO-DATE
+> Task :app:checkLabReleaseAndroidTestAarMetadata UP-TO-DATE
+> Task :app:generateLabReleaseAndroidTestResValues UP-TO-DATE
+> Task :app:mapLabReleaseAndroidTestSourceSetPaths UP-TO-DATE
+> Task :app:generateLabReleaseAndroidTestResources UP-TO-DATE
+> Task :app:mergeLabReleaseAndroidTestResources UP-TO-DATE
+> Task :app:processLabReleaseAndroidTestResources UP-TO-DATE
+
+> Task :app:compileLabReleaseAndroidTestJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:mergeLabReleaseAndroidTestShaders UP-TO-DATE
+> Task :app:compileLabReleaseAndroidTestShaders NO-SOURCE
+> Task :app:generateLabReleaseAndroidTestAssets UP-TO-DATE
+> Task :app:mergeLabReleaseAndroidTestAssets UP-TO-DATE
+> Task :app:compressLabReleaseAndroidTestAssets UP-TO-DATE
+> Task :app:expandLabReleaseAndroidTestL8ArtProfileWildcards UP-TO-DATE
+> Task :app:checkLabReleaseAndroidTestDuplicateClasses UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:processLabReleaseAndroidTestJavaRes NO-SOURCE
+> Task :app:mergeLabReleaseAndroidTestJavaResource UP-TO-DATE
+> Task :app:mergeLabReleaseAndroidTestJniLibFolders UP-TO-DATE
+> Task :app:mergeLabReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeLabReleaseNativeLibs UP-TO-DATE
+> Task :app:mergeLabReleaseAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripLabReleaseAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningLabReleaseAndroidTest UP-TO-DATE
+> Task :app:writeLabReleaseAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :app:minifyLabReleaseAndroidTestWithR8
+> Task :app:l8DexDesugarLibLabReleaseAndroidTest
+> Task :app:packageLabReleaseAndroidTest
+> Task :app:createLabReleaseAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleLabReleaseAndroidTest
+
+[Incubating] Problems report is available at: file:///Users/n/androidhit/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 12s
+40 actionable tasks: 4 executed, 36 up-to-date

@@ -1,0 +1,38 @@
+{
+  "reviewed_at_utc": "2026-10-28T12:57:18.886861+00:00",
+  "scope": "Point-in-time independent static root UI review plus executable actual-store JVM failure tests; not final APK/native acceptance",
+  "booster_purchase": {
+    "defect_reproduced": true,
+    "baseline_source_sha256": "b6b2df5a55849cc46ecacd00d3f332e6f2084c4bff00e9a6f01b300056d927f2",
+    "baseline_observation": "store/baseline-observation.json",
+    "baseline_result": "Both fail-once modes reported success and left no durable purchase, even after explicit retry. Memory-before-disk mode showed temporary 135 coins / 6 hints, then cold recreation restored 180 / 3.",
+    "patch": "Only purchaseBooster: same lock and validations; debit plus grant in LocalSaveTransactions.write Map; typed refusal and exact pending retry",
+    "candidate_source_sha256": "ed629c1aa51712deb5a1c3fe86b9ff0101bd2d55d874fc765e1495e616c43fd9",
+    "focused_regression": "store/booster-regression.json",
+    "focused_checks": 1670,
+    "existing_regressions": {
+      "appearance": 683,
+      "initialization": 41,
+      "external_ownership": 17,
+      "economy": 6611,
+      "local_save": 229
+    }
+  },
+  "item_detail_review": {
+    "root_source_sha256_at_review": "0bd5b4b8ea86d946b9c921a675801dbe0d878a3be1ad3176a7f8a3dbd6ea883d",
+    "preview": "Clones clothing list and constructs independent AvatarLoadout; rendering has no purchase/equip calls. Existing syncStyle navigation may settle previously earned unlocks.",
+    "motion": "Caller passes reduceMotion to ShopIllustrations and CompanionPortrait. Dual-wallet icons deliberately static.",
+    "clipping": "58-radius full portrait fits the documented 2r envelope inside x24..366, y205..447. New glyph allocation tested independently.",
+    "from_play_return": "openItem records play in history when leaving the board; restore history retains play only when board exists; item opened from play hides bottom navigation.",
+    "rotation": "Detail height is saved/restored with finite 840..10000 validation before drawFrame clamps restored scroll.",
+    "remaining_acceptance": "Exact-candidate native rotation, font scaling and gesture checks remain root qualification scope."
+  },
+  "art_rc2": {
+    "source_inputs": "art-rc2/source-inputs.json",
+    "checks": 438,
+    "host_atlas": "art-rc2/shop-art-atlas.png",
+    "rounded_accent_sheet": "art-rc2/accent-atlas.png",
+    "original_source_preserved": "art/intermediate-source/ShopIllustrations.java",
+    "visual_inspection": "Inspected four accent palettes and rounded label swashes; straight perpendicular ends removed. Original nine-glyph contact sheet unchanged."
+  }
+}

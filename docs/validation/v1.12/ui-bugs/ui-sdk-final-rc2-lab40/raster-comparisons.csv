@@ -1,0 +1,17 @@
+phase,label,changed_pixels_above_RGB8,native_threshold_exclusive,expected_change,independently_verified
+prepare,Closed preview leaves actual equipped art unchanged,0,64,False,True
+prepare,Purchase without Equip leaves actual worn art unchanged: hat_cupid,0,64,False,True
+prepare,Equipping visibly changes the art for hat_cupid,8841,64,True,True
+prepare,Purchase without Equip leaves actual worn art unchanged: dress_witch,0,64,False,True
+prepare,Equipping visibly changes the art for dress_witch,7801,64,True,True
+prepare,Purchase without Equip leaves actual worn art unchanged: shoes_cupid,0,64,False,True
+prepare,Equipping visibly changes the art for shoes_cupid,3395,64,True,True
+prepare,Purchase without Equip leaves actual worn art unchanged: gloves_witch,0,64,False,True
+prepare,Equipping visibly changes the art for gloves_witch,12160,64,True,True
+prepare,Earned gear visibly changes worn portrait,3969,64,True,True
+prepare,Companion identity visibly changes independent of its label,37465,64,True,True
+prepare,"Free visual style changes the actual portrait, excluding text",24626,64,True,True
+prepare,"Theme changes the actual blank Home canvas, excluding labels/cards",26576,64,True,True
+prepare,Theme changes the actual blank gameplay canvas,26576,64,True,True
+prepare,Changing theme leaves the worn portrait identity unchanged,0,64,False,True
+cold,Actual equipped drawing survives a cold process relaunch,0,64,False,True

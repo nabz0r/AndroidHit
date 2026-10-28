@@ -1,6 +1,12 @@
 # Production candidate and activation boundary
 
-## Current 1.11 — pre-Play bug hunt
+## Current 1.12 — atelier UI and purchase recovery
+
+Production **1.12.0-rc2 / code 13**, Lab **1.12.0-sandbox-rc2**. [Release](RELEASE_1_12.md) · [Qualification](validation/v1.12/README.md). The current work revises native Home/shop/item pages and the account wallet presentation. An optional cached account balance is display-only; real spending still requires a fresh server wallet and all existing gates. The earned-power transaction now retries its exact debit/grant on storage refusal.
+
+Play publication, real Google/two-account/social acceptance, UMP consent and licensed purchase/pending/refund/recovery remain separate. These bytes force test ads, have no wallet purchase origin and disable paid cosmetic draws. The confirmed website remains 1.10; server deployment is unchanged.
+
+## Preserved 1.11 — pre-Play bug hunt
 
 Production **1.11.0-rc2 / code 12** and isolated **1.11.0-sandbox-rc2** fix equipment visibility, application feedback and local-save defects. [Exact release](RELEASE_1_11.md) · [Qualification](validation/v1.11/README.md) · [Artifact identities](validation/v1.11/candidate.json).
 

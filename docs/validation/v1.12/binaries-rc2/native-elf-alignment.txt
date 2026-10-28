@@ -1,0 +1,17 @@
+64-bit arm64-v8a/x86_64 ELF PT_LOAD p_align >= 16384 and offset/address congruence modulo 16384.
+Uncompressed APK native ZIP payload offsets additionally checked for 16KB alignment.
+
+app/build/outputs/apk/production/release/app-production-release.apk SHA256 de581253b64232ae45bcbd647862dd470d522068f26516f6417bf515e882403d
+  PASS lib/arm64-v8a/libdatastore_shared_counter.so: 3 PT_LOAD segments, alignments=[16384], native SHA256=d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS lib/x86_64/libdatastore_shared_counter.so: 2 PT_LOAD segments, alignments=[16384], native SHA256=fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+app/build/outputs/bundle/productionRelease/app-production-release.aab SHA256 6ecaaee2ca8f45e4d14235349f54a66bb24959be4a5f5f96ffb29050c93d7e56
+  PASS base/lib/arm64-v8a/libdatastore_shared_counter.so: 3 PT_LOAD segments, alignments=[16384], native SHA256=d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS base/lib/x86_64/libdatastore_shared_counter.so: 2 PT_LOAD segments, alignments=[16384], native SHA256=fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+app/build/outputs/apk/lab/release/app-lab-release.apk SHA256 0f55c38c29d5872588200a5675cb154809eb62897d1133d96b48a82ab12b91e4
+  PASS lib/arm64-v8a/libdatastore_shared_counter.so: 3 PT_LOAD segments, alignments=[16384], native SHA256=d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS lib/x86_64/libdatastore_shared_counter.so: 2 PT_LOAD segments, alignments=[16384], native SHA256=fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+app/build/outputs/bundle/labRelease/app-lab-release.aab SHA256 1117416687d68c4e74250e42fbf052c53a3660c8fd539728e1ff2e8617a7992f
+  PASS base/lib/arm64-v8a/libdatastore_shared_counter.so: 3 PT_LOAD segments, alignments=[16384], native SHA256=d3e48717c9aa147e0ab21063ba0e8e0211cabf8bf40b222640829519edbf58e1
+  PASS base/lib/x86_64/libdatastore_shared_counter.so: 2 PT_LOAD segments, alignments=[16384], native SHA256=fb6c9208988c49ae94943bc3236fa763ba584722e044fa4ea9a12d2941027105
+
+PASS 8 native payloads and 20 PT_LOAD segments. Scope: binary alignment, not an OS with 16KB-page runtime test.
