@@ -1,0 +1,104 @@
+[
+  {
+    "op": "snapshot",
+    "name": "lab-cold-before-action"
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "400"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "400"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-same-attempt-cold-resumed"
+  },
+  {
+    "op": "capture",
+    "name": "lab-cold-u11-energy-nine-test-gold-400"
+  },
+  {
+    "op": "tap",
+    "regex": "Pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter.*"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "400"
+  },
+  {
+    "op": "capture",
+    "name": "lab-cold-no-recredit-test-gold-400"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "lab-final-en-test-gold-400"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-final-cold-journal"
+  }
+]

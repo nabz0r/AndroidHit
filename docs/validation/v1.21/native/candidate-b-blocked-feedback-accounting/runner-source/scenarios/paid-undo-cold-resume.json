@@ -1,0 +1,61 @@
+[
+  {
+    "op": "snapshot",
+    "name": "u44-paid-undo-cold-before-action"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-paid-undo",
+    "cost": 15
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "3"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "3"
+  },
+  {
+    "op": "snapshot",
+    "name": "u44-paid-undo-cold-restored"
+  },
+  {
+    "op": "capture",
+    "name": "en-third-undo-same-after-cold"
+  },
+  {
+    "op": "solve",
+    "level": 44
+  },
+  {
+    "op": "assert-victory",
+    "stars": 1,
+    "xp": 25
+  },
+  {
+    "op": "capture",
+    "name": "en-one-star-u44-paid-undo-reward"
+  },
+  {
+    "op": "snapshot",
+    "name": "u44-one-star-actual-receipt"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "adventure"
+  }
+]

@@ -137,12 +137,17 @@ public final class GameStore {
 
     /** First completion: 25 coins + 10/star; improved stars: 10/new star. */
     public synchronized int completeLevel(int level, int earnedStars) {
+        return completeLevel(level,earnedStars,false);
+    }
+    /** A new 1.21 attempt opts into its declared logarithmic entitlement; prior receipts stay final. */
+    public synchronized int completeLevel(int level, int earnedStars, boolean logarithmic) {
         synchronized (GOLD_GRANT_LOCK) {
             if (!isLevelUnlocked(level)) return 0;
             int nextStars = clampStars(earnedStars);
             if (nextStars == 0) return 0;
             int oldStars = stars(level);
             int reward = nextStars > oldStars ? (oldStars == 0 ? 25 : 0) + 10 * (nextStars - oldStars) : 0;
+            if(logarithmic&&nextStars>oldStars)reward=EconomyCurve121.campaignReward(level,nextStars)-(oldStars==0?0:EconomyCurve121.campaignReward(level,oldStars));
             SharedPreferences.Editor edit = prefs.edit();
             edit.putInt("stars_" + level, Math.max(oldStars, nextStars));
             edit.putInt("unlocked", Math.min(Catalog.LEVEL_COUNT, Math.max(unlockedLevel(), level + 1)));
@@ -518,7 +523,38 @@ public final class GameStore {
 
     public synchronized int boosterPrice(String id) {
         Catalog.BoosterItem item = Catalog.booster(id);
-        return item == null ? 0 : avatarLoadout().discountedPackPrice(EconomyCurve.price(item.price, economyProgress()));
+        return item == null ? 0 : avatarLoadout().discountedPackPrice(economy121Enabled()?EconomyCurve121.boostPrice(item.price,unlockedLevel()):EconomyCurve.price(item.price, economyProgress()));
+    }
+
+    public synchronized boolean economy121Enabled(){LocalSaveTransactions.flush(prefs);return prefs.getBoolean("economy_curve_v121",false);}
+    /** Activation changes future offers only; existing balances, stars and receipts are never rebased. */
+    public synchronized void activateEconomy121(){synchronized(GOLD_GRANT_LOCK){if(economy121Enabled())return;Map<String,Object> write=new HashMap<>();write.put("economy_curve_v121",true);LocalSaveTransactions.write(prefs,write);}}
+    public static final class UndoPurchase121 {
+        public final String requestId;public final int coins;
+        private UndoPurchase121(String requestId,int coins){this.requestId=requestId;this.coins=coins;}
+    }
+    public synchronized UndoPurchase121 pendingUndo121(){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);String request=prefs.getString("undo121_pending","");if(!validRewardId(request))return null;
+            String status=prefs.getString("undo121_receipt_"+request,"");if(!status.startsWith("reserved:"))return null;
+            try{return new UndoPurchase121(request,Integer.parseInt(status.substring(9)));}catch(RuntimeException invalid){return null;}}
+    }
+    /** Reserve an exact earned-Coin quote. This never touches account LumaGold. */
+    public synchronized boolean reserveUndo121(String request,int level,int paidIndex){
+        if(!validRewardId(request)||level<1||level>1000||paidIndex<1)return false;
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);int cost=EconomyCurve121.undoPrice(level,paidIndex);String key="undo121_receipt_"+request,status=prefs.getString(key,"");
+            UndoPurchase121 pending=pendingUndo121();if(status.equals("reserved:"+cost))return pending!=null&&pending.requestId.equals(request);
+            if(!status.isEmpty()||pending!=null||coins()<cost)return false;
+            Map<String,Object> write=new HashMap<>();write.put("coins",coins()-cost);write.put(key,"reserved:"+cost);write.put("undo121_pending",request);LocalSaveTransactions.write(prefs,write);return true;}
+    }
+    /** Complete only after the corresponding undo and request were durably saved in the attempt. */
+    public synchronized boolean completeUndo121(String request){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);if(!validRewardId(request))return false;String key="undo121_receipt_"+request,status=prefs.getString(key,"");if(status.startsWith("used:"))return true;
+            UndoPurchase121 pending=pendingUndo121();if(pending==null||!pending.requestId.equals(request))return false;Map<String,Object> write=new HashMap<>();write.put(key,"used:"+pending.coins);write.put("undo121_pending","");LocalSaveTransactions.write(prefs,write);return true;}
+    }
+    /** A reservation without a durable undo is refunded exactly once on recovery. */
+    public synchronized boolean cancelUndo121(String request){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);if(!validRewardId(request))return false;String key="undo121_receipt_"+request,status=prefs.getString(key,"");if(status.startsWith("cancelled:"))return true;
+            UndoPurchase121 pending=pendingUndo121();if(pending==null||!pending.requestId.equals(request))return false;Map<String,Object> write=new HashMap<>();write.put("coins",safeAdd(coins(),pending.coins));write.put(key,"cancelled:"+pending.coins);write.put("undo121_pending","");LocalSaveTransactions.write(prefs,write);return true;}
     }
 
     public synchronized boolean purchaseBooster(String id) {

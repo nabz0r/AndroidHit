@@ -1,0 +1,31 @@
+{
+  "scope": "Existing pure host/model/transaction/geometry regressions only. No Android package, device execution, real account/provider/payment or human playthrough claim.",
+  "source_inputs": "docs/validation/v1.21/host/candidate-b-site-model/source-inputs.json",
+  "source_inputs_sha256": "7c0235c1c07b6e6426143ce3ff70fb73f2e849718614db84265ddf773af57f1e",
+  "started_utc": "2026-10-29T23:24:52.556776+00:00",
+  "finished_utc": "2026-10-29T23:24:52.793831+00:00",
+  "elapsed_seconds": 0.237,
+  "parallel_workers": 3,
+  "suites": 1,
+  "passed": 1,
+  "failed": 0,
+  "results": [
+    {
+      "label": "site-and-simulation-121",
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-site-v121-runtime.mjs",
+        "scripts/test-simulation-v121.mjs"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-e0uca9v7",
+      "started_utc": "2026-10-29T23:24:52.558437+00:00",
+      "finished_utc": "2026-10-29T23:24:52.792752+00:00",
+      "elapsed_seconds": 0.234,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/candidate-b-site-model/site-and-simulation-121.log",
+      "log_sha256": "90bdd69f6b9e5ba79374dec396808fd872e8931ef0083323ce242d02dd32ecf0"
+    }
+  ]
+}

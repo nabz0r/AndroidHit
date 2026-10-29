@@ -1,0 +1,657 @@
+{
+  "schema": "luma-native-v121-acceptance-1",
+  "created_utc": "2026-10-29T23:44:39.142221+00:00",
+  "passed": true,
+  "candidate": "B",
+  "package": "com.androidhit.lumadrift",
+  "version": "1.21.0-rc1",
+  "version_code": 29,
+  "apk_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "observer_apk_sha256": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+  "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+  "frozen_source_manifest": "docs/validation/v1.21/candidate-b/candidate.json",
+  "frozen_source_manifest_sha256": "f6214cc1394c7fa48a90adbb0a01454bec39fec0eeae0ef510517871d686d70e",
+  "device": {
+    "avd": "Luma119-Battle-QA",
+    "serial": "emulator-5602",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "page_size": 16384,
+    "original_size": "1080x2400",
+    "original_density": 420,
+    "original_font_scale": 1.0,
+    "creation_receipt": "docs/validation/v1.19/native/device-creation/creation.json",
+    "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae"
+  },
+  "totals": {
+    "accepted_phase_count": 13,
+    "native_assertions": 574,
+    "actual_touch_actions": 149,
+    "original_pngs": 52,
+    "original_videos": 2,
+    "derived_comparisons": 38,
+    "verified_evidence_hash_entries": 295
+  },
+  "counting_scope": "Native assertions include runner identity/bounds/state checks and are summed only from exact candidate B passed native reports. Derived host comparisons remain separate. Gestures counted in native action logs; real scroll operations are additionally present in native scroll evidence and are not padded into touch counts. Original PNG/video counts exclude copied site exports and retained rejected candidate A artifacts. Final cleanup checks are reported separately and are not added to either total.",
+  "phases": [
+    {
+      "label": "candidate-b-blocked-feedback-accounting",
+      "report": "docs/validation/v1.21/native/candidate-b-blocked-feedback-accounting/report.json",
+      "report_sha256": "6a448b312f161bddf6db763ab0d4795f320e5829b8a4ec711adc35be73120143",
+      "passed": true,
+      "native_assertions": 42,
+      "touch_actions": 10,
+      "original_png_count": 1,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 16
+    },
+    {
+      "label": "candidate-b-compact-reduced-fr-en",
+      "report": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/report.json",
+      "report_sha256": "13fc412202b671e5f550c253b4d73ecc4710f3b0b7197fa48cf21868d8ee6cc2",
+      "passed": true,
+      "native_assertions": 41,
+      "touch_actions": 22,
+      "original_png_count": 12,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 38
+    },
+    {
+      "label": "candidate-b-earned-gacha-cold-recovery",
+      "report": "docs/validation/v1.21/native/candidate-b-earned-gacha-cold-recovery/report.json",
+      "report_sha256": "2c169d03d209d6ddd67a21d7187064510e21978005c6f3dea10e104984a8ec9b",
+      "passed": true,
+      "native_assertions": 8,
+      "touch_actions": 5,
+      "original_png_count": 1,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 17
+    },
+    {
+      "label": "candidate-b-earned-gacha-confirm-cancel",
+      "report": "docs/validation/v1.21/native/candidate-b-earned-gacha-confirm-cancel/report.json",
+      "report_sha256": "7fe1ea545b2bfbf1d9c628e437f0a5b640fe2ab529f47cbaf3c0a50100b9068f",
+      "passed": true,
+      "native_assertions": 23,
+      "touch_actions": 10,
+      "original_png_count": 4,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 24
+    },
+    {
+      "label": "candidate-b-media-fr-en",
+      "report": "docs/validation/v1.21/native/candidate-b-media-fr-en/report.json",
+      "report_sha256": "17fde51ceafcc12d4989657f0896ac6931bf6ba667318ddb5f73427dc88740dc",
+      "passed": true,
+      "native_assertions": 32,
+      "touch_actions": 26,
+      "original_png_count": 16,
+      "original_video_count": 1,
+      "evidence_hashes_verified": 47
+    },
+    {
+      "label": "candidate-b-paid-undo-cold-resume",
+      "report": "docs/validation/v1.21/native/candidate-b-paid-undo-cold-resume/report.json",
+      "report_sha256": "d50c1a0a08c471fc2fffec826a723c1e56f144e56d46d07f2c276058e62f267a",
+      "passed": true,
+      "native_assertions": 68,
+      "touch_actions": 11,
+      "original_png_count": 2,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 20
+    },
+    {
+      "label": "candidate-b-paid-undo-prepare-cold",
+      "report": "docs/validation/v1.21/native/candidate-b-paid-undo-prepare-cold/report.json",
+      "report_sha256": "dbb664b58f87ade1f701a88e87c73aaaac41c8762a0bad7122b50d7537ce6983",
+      "passed": true,
+      "native_assertions": 74,
+      "touch_actions": 15,
+      "original_png_count": 2,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 18
+    },
+    {
+      "label": "candidate-b-rooms-real-selectors",
+      "report": "docs/validation/v1.21/native/candidate-b-rooms-real-selectors/report.json",
+      "report_sha256": "88cb18c34bc8432bd729631dbdea3545e9af3524a3105047e10954ada1e2e435",
+      "passed": true,
+      "native_assertions": 16,
+      "touch_actions": 10,
+      "original_png_count": 4,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 23
+    },
+    {
+      "label": "candidate-b-shell-focus-cold-resume",
+      "report": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/report.json",
+      "report_sha256": "769094a6cb9fdf4a2173b31a13c0fe9d80565c28593e39fe37638e111b106cde",
+      "passed": true,
+      "native_assertions": 137,
+      "touch_actions": 26,
+      "original_png_count": 6,
+      "original_video_count": 1,
+      "evidence_hashes_verified": 33
+    },
+    {
+      "label": "candidate-b-shell-focus-prepare-cold",
+      "report": "docs/validation/v1.21/native/candidate-b-shell-focus-prepare-cold/report.json",
+      "report_sha256": "3c5a8962151de719f1c47578563a791400b6f1f7da1b0922ebac518e66eed8f5",
+      "passed": true,
+      "native_assertions": 115,
+      "touch_actions": 14,
+      "original_png_count": 4,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 22
+    },
+    {
+      "label": "candidate-b-upgrade-preservation",
+      "report": "docs/validation/v1.21/native/candidate-b-upgrade-preservation/report.json",
+      "report_sha256": "9939403cd35efaa5fc497a05d56a82036e8cd2e052cbb3d07e6fa4ceb701d6c0",
+      "passed": true,
+      "native_assertions": 6,
+      "touch_actions": 0,
+      "original_png_count": 0,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 13
+    },
+    {
+      "label": "production-after-lab",
+      "report": "docs/validation/v1.21/native/production-after-lab/report.json",
+      "report_sha256": "6f40321b9c01695d013dcce68a0820538aaeca8e61e0958f5a90dd6dc1d975c8",
+      "passed": true,
+      "native_assertions": 6,
+      "touch_actions": 0,
+      "original_png_count": 0,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 12
+    },
+    {
+      "label": "production-before-lab",
+      "report": "docs/validation/v1.21/native/production-before-lab/report.json",
+      "report_sha256": "781de5c76ef8a9ffa69984311b37015348724e4828929f74b85129585d39d69f",
+      "passed": true,
+      "native_assertions": 6,
+      "touch_actions": 0,
+      "original_png_count": 0,
+      "original_video_count": 0,
+      "evidence_hashes_verified": 12
+    }
+  ],
+  "derived_audits": [
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-preserved-profile-audit.json",
+      "sha256": "a7c1537d3870d03628193acd5bd29099ec3459bdd301242ed5c977f4c38b2a9e",
+      "passed": true,
+      "derived_comparisons": 1,
+      "counting_rule": "Each selected field/media check counts once; full preference-map preservation audit counts once regardless of field count."
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-audit.json",
+      "sha256": "c7fb51c0090dcd7d049fb50aaff2e4f01d43a88262c4250d6f4e3722fe0dc91b",
+      "passed": true,
+      "derived_comparisons": 11,
+      "counting_rule": "Each selected field/media check counts once; full preference-map preservation audit counts once regardless of field count."
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-earned-gacha-cold-audit.json",
+      "sha256": "a745db065561d17085d500e402b236e975e0df9700a5dcecabe4da224f64fa30",
+      "passed": true,
+      "derived_comparisons": 6,
+      "counting_rule": "Each selected field/media check counts once; full preference-map preservation audit counts once regardless of field count."
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-paid-undo-cold-audit.json",
+      "sha256": "6f8ac8b3bbe555722cf05f31f99cf2cf7c41ed36ae2ca46503400835438ab78e",
+      "passed": true,
+      "derived_comparisons": 11,
+      "counting_rule": "Each selected field/media check counts once; full preference-map preservation audit counts once regardless of field count."
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-rooms-neutrality-audit.json",
+      "sha256": "95c46057be596ed3e53cfd122a7787aafffd2212a24f5176f5b12e473c6f122b",
+      "passed": true,
+      "derived_comparisons": 4,
+      "counting_rule": "Each selected field/media check counts once; full preference-map preservation audit counts once regardless of field count."
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-display-motion-media-audit.json",
+      "sha256": "5d859ed6cf91b0fd7d57681ae7fbd5ced2453218151e642fe52fd75eed5f1459",
+      "passed": true,
+      "derived_comparisons": 4,
+      "counting_rule": "Each selected field/media check counts once; full preference-map preservation audit counts once regardless of field count."
+    },
+    {
+      "path": "docs/validation/v1.21/native/production-profile-preserved-after-lab.json",
+      "sha256": "301e2005a4bbe1f6ad33e1f736cb499cc8c7bb7c6a03ddfda6a96a3715132457",
+      "passed": true,
+      "derived_comparisons": 1,
+      "counting_rule": "Each selected field/media check counts once; full preference-map preservation audit counts once regardless of field count."
+    }
+  ],
+  "original_pngs": [
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-blocked-feedback-accounting/native/en-blocked-below-board-red-real-cost.png",
+      "sha256": "c25295b97d05e4b27e6de9f5878105080597e192b8cdfc4b6705e9ed380beca6",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-compact-home-fixed-wallet.png",
+      "sha256": "53e659d150809dd376a2a9dfcf20bad21df10b2fa6cb198b74115d9ca8f1dd15",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-compact-home.png",
+      "sha256": "6d11556bee4b24e363192260f1b2b610b48e9a8536c599b90674c65d1a1cf156",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-compact-map.png",
+      "sha256": "9e66cd7d5ee5cd4725d73c3f82f6454a2403b8a7d8721166fc0d2e3be86cf232",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-compact-shop.png",
+      "sha256": "0e520c3543d65d4a6d617cbf7afc1224fc44cfd312ed7afd996cf29e7c0d9da9",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-reduced-free-puzzle.png",
+      "sha256": "63dd6ebf2936a219915d08abb75222cdf8ec991519df12701fc8e4fe692545a1",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-reduced-home-static.png",
+      "sha256": "129fb8b23a395804031b445bb0367898ca54d22ca9e84b8cc764b0166b702f20",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-reduced-map-static-a.png",
+      "sha256": "3f828b3b9152918a3fd6adb6a7f753baac594704e9ac3f6508183cf6fc938ac1",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/en-reduced-map-static-b.png",
+      "sha256": "3f828b3b9152918a3fd6adb6a7f753baac594704e9ac3f6508183cf6fc938ac1",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/fr-compact-home-fixed-wallet.png",
+      "sha256": "e55a8a3715a9d02a580473760831fd97f2727ed17f59e9fdf1f78d51c7ee2f4b",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/fr-compact-home.png",
+      "sha256": "e6fee6f7cec2e68c91deeae965770637aa5711d85c79b3d99f037dadec846a1a",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/fr-compact-map.png",
+      "sha256": "90bf229c59d217fcabea929e62b709f8a7a87a0ed73cb1b9e121b096e859d971",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-compact-reduced-fr-en/native/fr-compact-shop.png",
+      "sha256": "baafe1e64bd7550f01389083c0f5e40cc1a1dea12bd9902a64904ccfa74fa904",
+      "width": 720,
+      "height": 1280,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-earned-gacha-cold-recovery/native/en-gacha-last-arrival-after-real-cold.png",
+      "sha256": "72b72b32b0f07a15ebe150db005668b94d2f9dbf27b32a4f146c152bdfd52a89",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-earned-gacha-confirm-cancel/native/gacha-actual-fixed-odds.png",
+      "sha256": "b2d21f776ccfc3e232e652bc0e8461732005f9491b449ae6a8e2b7a17a78429c",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-earned-gacha-confirm-cancel/native/gacha-cancelled-no-debit.png",
+      "sha256": "435f77f5b943119be80dfba08734f9bb92e74d982f225245998e62b0497732e5",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-earned-gacha-confirm-cancel/native/gacha-confirm-1.png",
+      "sha256": "ceea6cabd02d8e48e96e9ee8ae991884edca520cc8d3edffc958dd462c7f9332",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-earned-gacha-confirm-cancel/native/genuine-draw-1.png",
+      "sha256": "b1c6cb44fbf3df9c40cdc8b162b422a814a43f4eefbaac37267120886b5b6ecb",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/en-economy-purpose.png",
+      "sha256": "b347a79b1092e6e8ccc8a5089ede2f5b4f39db51e42eb17a49c01fe972e4fe8e",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/en-evolution-purpose.png",
+      "sha256": "c8bc64df32e7d6115d7c55d5f0b76cc9077626429cc427388b457059f2edb9c4",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/en-map-squad-talents.png",
+      "sha256": "e867271033dcd6f16a25dd12e8378e2aad9df7d3569f53290d63806926413ddf",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/en-shop-boosts.png",
+      "sha256": "c7bbbbda01d2234534711dbef32d3052814d40dfde787afa4f1483d5aaf66eb7",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/en-shop-gold-role.png",
+      "sha256": "5cab87e04544c12c7e6dd1fd48c377d53dcb4cf2ba7f4409484d04a820f6eb30",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/fr-economy-purpose.png",
+      "sha256": "9edd9b51d41f0cbd5e9cab72544022a13a0a62fe134dea879e5b9dad7ed27d5e",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/fr-evolution-purpose.png",
+      "sha256": "cc26b59ccbe4181077efe290f9fa5cb12c324d83118ef998564b2abc72c6657c",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/fr-map-squad-talents.png",
+      "sha256": "712b667c57b841ac36b710a88beb982f8a757054f7dabbb8bc1ab49756604ba1",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/fr-shop-boosts.png",
+      "sha256": "c8ebdd61b4d58bb7a06eb23bc3a4145961ba6bbee877e6e9baab3b255d5c8f41",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/fr-shop-gold-role.png",
+      "sha256": "5b9eaf225b41b10f937b1cebe6081508c19e9d43f5d6d0d943d0718f531296b7",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/home-en.png",
+      "sha256": "72672054ee604953c60b26ba9074489f96de2cd58565233561aaa2bd1a3d6310",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/home-fr.png",
+      "sha256": "be9ee21483efcd304730de10f87e58a7c079bad5c9f4b5f76a02529e1c67afaa",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/map-en.png",
+      "sha256": "69201c259fddef1e34fc0a42e743aab712a2230f017fc46acb50f3ae0200f8ab",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/map-fr.png",
+      "sha256": "7ba97516773243f6711baa84c3d6f89bc00e0e0651372f5acdfae6175d137162",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/shop-en.png",
+      "sha256": "eedbf949fc8e6ed08af9c31e1dd663e580596ef017ec7e5bb2aa7bf1b76177b4",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native/shop-fr.png",
+      "sha256": "5afee1253bccf48b88ca6b9b9194a5a995d9a76585a1e0a05163fc2968b2f9f7",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-paid-undo-cold-resume/native/en-one-star-u44-paid-undo-reward.png",
+      "sha256": "cb51741f695a7d52479edba2e707b1b1ca5c332c4dbb128c0842eb5416254166",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-paid-undo-cold-resume/native/en-third-undo-same-after-cold.png",
+      "sha256": "4523daba5df73149b68ad9149a4f0d93d411a3d99b54fa922b08f274866b0d65",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-paid-undo-prepare-cold/native/en-third-undo-disclosed-coin-confirm.png",
+      "sha256": "80747b0ed8694424e3b8995431c09bca2dec5283635d9c8b291eaee78c7946ca",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-paid-undo-prepare-cold/native/en-third-undo-earned-coins-durable.png",
+      "sha256": "e373df5bc77e8f38c925a32ce36f4463ac57df44b320ef3502267c259d1d8dec",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-rooms-real-selectors/native/en-actual-room-garden.png",
+      "sha256": "cf3d2411215185419da7dd76a75af9793cdd5e3a37ee1bb279274d6b67b4f69e",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-rooms-real-selectors/native/en-actual-room-kitchen.png",
+      "sha256": "d61b3c27319c5838be35b9268701a6b68775ee6669c40275d715cea9663b652e",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-rooms-real-selectors/native/en-actual-room-living-restored.png",
+      "sha256": "1be2bacfd91491fb8d25bc72a16a91fdb86a12af2a90607a157a797095a4f22b",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-rooms-real-selectors/native/en-actual-room-living.png",
+      "sha256": "87c9b2b819e2aeee49f43ce6cb7fd9558ed3a85bc18d96a73d6bd1d3b04d5f4a",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/native/en-first-clear-u43-exact-reward.png",
+      "sha256": "ecb98b1dc00297af39634889ad922b5d96a1b53fb271996bacf1fe95a19ae0a7",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/native/fr-cold-same-shell-and-focus-state.png",
+      "sha256": "c562c69b6492a8c389fd8ebbf95e6f5c9c61c22c3fc85168009fc7589a3d8511",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/native/fr-first-clear-u42-exact-reward.png",
+      "sha256": "f9ba0a1c4ea27407f0f50d53b40518bd6802d5b63bb3571ae474fe8db39042a0",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/native/fr-gifts-ready.png",
+      "sha256": "1cd52ad8cbbb84b269fabef306922856d2efe197b1d3c7b086987b70a050ba2c",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/native/fr-real-gift-reveal.png",
+      "sha256": "70886fc26e8588918fc927957b77768dd645cdd8730a5d98e765100026018969",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/native/puzzle-en.png",
+      "sha256": "2a164dc86c19729ae3abdbcde3f3ff0fb7b753bc8b7b839d06501b163b568456",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-prepare-cold/native/fr-focus-used-without-inventory.png",
+      "sha256": "262c9bd4dd4813c617efb9751f50ccdac28fb81fa550c73671869172f118d247",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-prepare-cold/native/fr-free-elements-cleared-before-exits.png",
+      "sha256": "2e4ac14d0a56ee632e154d864904a90f503f5748a5d20e78d4d5fc6d8f524fcf",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-prepare-cold/native/fr-three-exits-free-focus-ready.png",
+      "sha256": "ee65deb713ad093dd053582928200e5de1bc0c78b06796f0f36b68ac3f7e2317",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    },
+    {
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-prepare-cold/native/puzzle-fr.png",
+      "sha256": "f94782aa888f07775c776b4c6d0f0a8ae8304f1ca60fa95c75add6ca4f842400",
+      "width": 1080,
+      "height": 2400,
+      "edited": false
+    }
+  ],
+  "original_videos": [
+    {
+      "phase": "candidate-b-media-fr-en",
+      "path": "docs/validation/v1.21/native/candidate-b-media-fr-en/native-ui-recording.mp4",
+      "sha256": "c7ac05999c76648d6e9fec7f73cbaa83c59299e02cd83c87fa1794298f13f924",
+      "edited": false
+    },
+    {
+      "phase": "candidate-b-shell-focus-cold-resume",
+      "path": "docs/validation/v1.21/native/candidate-b-shell-focus-cold-resume/native-ui-recording.mp4",
+      "sha256": "91699496dc9cc314964e512298d56c0e2629382615e4f10295728baccadf93d3",
+      "edited": false
+    }
+  ],
+  "cleanup_receipt": "docs/validation/v1.21/native/final-device-handoff.json",
+  "cleanup_receipt_sha256": "b1a2e240b97afdda27f60493d85affcba0d43a2fe238798d16294cc1f7db7675",
+  "limits": [
+    "This task-owned headless Android36 arm64 16K emulator only; no physical-device or audio/frame-time benchmark.",
+    "No comprehension, enjoyment, retention, conversion or store/provider acceptance inference.",
+    "No preference writes, currency grants, unlock injection, profile clearing or clock modification by observers. Progress and spending use actual native UI.",
+    "Native campaign coverage is explicitly listed; all-puzzle engine/geometry host verification is a separate scope.",
+    "One actual gacha transaction verifies that receipt/reveal/cold path; it is not statistical validation of random rarity frequencies."
+  ],
+  "accepted_scope": [
+    "Exact A→B in-place upgrade preserves all six read-only maps; earlier F→A preservation remains retained separately.",
+    "FR/EN home, evolution, economy, shop and map routes reachable by actual UI; 8 original full-resolution site captures exported with phase provenance.",
+    "Fresh U42 ES121 shell removal free of action/history/currency cost; 3 distinct manual exits earn once-per-attempt free Focus; cold state restored.",
+    "Actual U42 and U43 three-star clears each award67Coins and35XP; earned gift50Coins delivered once.",
+    "Living/kitchen/garden/living room selectors persist and preserve wallet/progress/XP/squad.",
+    "Actual180Coin gacha: confirmation cancellation unchanged, new Prickly one copy, same receipt after cold recovery, no autoequip.",
+    "U44 two free Undo uses then cancelled15Coin confirmation unchanged; one confirmed15Coin debit with used receipt/pending empty; cold resume idempotent; actual one-star clear43Coins+25XP.",
+    "U45 blocked move displays red below-board0-move-loss feedback and consumes0budget/history/Coins; real shell first removed.",
+    "720x1280/density320/font1.3 FR/EN, reduce-motion map originalPNG bytes stable, actual U1 free replay rewards0Coins/0XP; display restored.",
+    "Full six-map production snapshot equality before and after separate Lab testing."
+  ],
+  "final_observed_earned_profile": {
+    "frontier": 45,
+    "coins": 767,
+    "xp": 1485,
+    "equipped": "nova",
+    "squad": "nova,miko,orbit",
+    "prickly_copies": 1,
+    "home_room": "living",
+    "language": "en",
+    "stored_energy": 7,
+    "capacity": 11,
+    "scope": "At final read-only snapshot; elapsed natural refill is not claimed frozen after the snapshot."
+  },
+  "site_capture_map": "docs/validation/v1.21/native/site-media-candidate-b-accepted/capture-map.json",
+  "site_capture_map_sha256": "e3d1bca15aa0431253a9fa6e35313d9727b48866a4ca44de5dbf96228d3d29db",
+  "retained_rejected_candidate_a": {
+    "review": "docs/validation/v1.21/native/CANDIDATE_A_REVIEW.md",
+    "failed_reports": [
+      "docs/validation/v1.21/native/candidate-a-media-fr-en/report.json",
+      "docs/validation/v1.21/native/candidate-a-media-fr-en-observer-b/report.json"
+    ],
+    "scope": "Both failures and original media retained. A has the measured-content scroll defect and home XP/rarity/map caption defects fixed by B. No A phase included in B totals."
+  },
+  "retained_export_failure": "docs/validation/v1.21/native/site-media-candidate-b/export-failure.json"
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "passed": true,
+      "preference": "luma_drift_save_v1",
+      "key": "coins",
+      "before": 919,
+      "after": 919
+    },
+    {
+      "passed": true,
+      "preference": "luma_drift_save_v1",
+      "key": "unlocked",
+      "before": 44,
+      "after": 44
+    },
+    {
+      "passed": true,
+      "preference": "luma_drift_meta_v1",
+      "key": "xp",
+      "before": 1460,
+      "after": 1460
+    },
+    {
+      "passed": true,
+      "preference": "luma_drift_save_v1",
+      "key": "companion_squad_v119",
+      "before": "nova,miko,orbit",
+      "after": "nova,miko,orbit"
+    }
+  ],
+  "scope": "Actual room selections preserve earned wallet, progress, player XP and squad; selected room changes intentionally and returns to living."
+}

@@ -1,0 +1,906 @@
+{
+  "scope": "Existing pure host/model/transaction/geometry regressions only. No Android package, device execution, real account/provider/payment or human playthrough claim.",
+  "source_inputs": "docs/validation/v1.21/host/final-integration/source-inputs.json",
+  "source_inputs_sha256": "27b72dcd8b6184ed6e826e1082c4178cfa848418e9d0283be7f79cd567824e0b",
+  "started_utc": "2026-10-29T23:10:00.596070+00:00",
+  "finished_utc": "2026-10-29T23:12:35.169353+00:00",
+  "elapsed_seconds": 154.573,
+  "parallel_workers": 3,
+  "suites": 58,
+  "passed": 57,
+  "failed": 1,
+  "results": [
+    {
+      "label": "relay-all-u-states",
+      "command": [
+        "sh",
+        "scripts/test-relay-v115.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/relay"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:00.597490+00:00",
+      "finished_utc": "2026-10-29T23:10:04.155267+00:00",
+      "elapsed_seconds": 3.558,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/relay-all-u-states.log",
+      "log_sha256": "1740cee3f21337ed7306dc8526d87d3ae028596da0fadc868b083b4b31c4f33e"
+    },
+    {
+      "label": "companion-all-u-identities",
+      "command": [
+        "bash",
+        "scripts/test-companion-action-v119.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/companion-policy6"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:00.597594+00:00",
+      "finished_utc": "2026-10-29T23:10:03.798985+00:00",
+      "elapsed_seconds": 3.201,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/companion-all-u-identities.log",
+      "log_sha256": "fa4f0c85ebc2d65664c91449cf45e20b782fedb7906e3721c85e3b90a4e98ceb"
+    },
+    {
+      "label": "focused-journey",
+      "command": [
+        "bash",
+        "scripts/test-focused-journey-v120.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/focused-journey.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:00.597785+00:00",
+      "finished_utc": "2026-10-29T23:10:03.111121+00:00",
+      "elapsed_seconds": 2.513,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/focused-journey.log",
+      "log_sha256": "54534f4659ad9ef1dd1f887829e1691e73dbda7e5f473bedad5e53db5dc20937"
+    },
+    {
+      "label": "learning-all-n",
+      "command": [
+        "sh",
+        "scripts/test-learning-v114.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/learning"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:03.111712+00:00",
+      "finished_utc": "2026-10-29T23:10:12.308942+00:00",
+      "elapsed_seconds": 9.197,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/learning-all-n.log",
+      "log_sha256": "16c03240634c2db54a9747f0dce70930e8d1c9c158fefd4ac63ef67274085dfe"
+    },
+    {
+      "label": "strategy-all-l-m-events",
+      "command": [
+        "sh",
+        "scripts/test-strategy-v4.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/strategy"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:03.800127+00:00",
+      "finished_utc": "2026-10-29T23:11:03.157288+00:00",
+      "elapsed_seconds": 59.357,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/strategy-all-l-m-events.log",
+      "log_sha256": "af1ceda9195e7382a5fcedcbe7eba0475b49c0f7e4d633be316f9d4de8e24ebb"
+    },
+    {
+      "label": "engine",
+      "command": [
+        "sh",
+        "scripts/test-engine.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:04.156589+00:00",
+      "finished_utc": "2026-10-29T23:10:12.285344+00:00",
+      "elapsed_seconds": 8.129,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/engine.log",
+      "log_sha256": "993de67fb14ab743a94c96a66683498ddef21344f6b27223a0ae8fe51f2c34b7"
+    },
+    {
+      "label": "sealed",
+      "command": [
+        "bash",
+        "scripts/test-sealed.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:12.286170+00:00",
+      "finished_utc": "2026-10-29T23:10:15.293855+00:00",
+      "elapsed_seconds": 3.008,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/sealed.log",
+      "log_sha256": "269c7139b687e3840da0f9a38ddfc6fa9e32673e28a2f49542946f490a10381d"
+    },
+    {
+      "label": "legacy-progression",
+      "command": [
+        "sh",
+        "scripts/test-progression-v3.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/progression-v3"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:12.309402+00:00",
+      "finished_utc": "2026-10-29T23:10:18.596587+00:00",
+      "elapsed_seconds": 6.287,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/legacy-progression.log",
+      "log_sha256": "65cf4c4cb6c8b6425d322078de21c3f83adff99b71b212cd21f97a1a4195d2a5"
+    },
+    {
+      "label": "move-budget",
+      "command": [
+        "bash",
+        "scripts/test-move-budget.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:15.294511+00:00",
+      "finished_utc": "2026-10-29T23:10:20.275907+00:00",
+      "elapsed_seconds": 4.981,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/move-budget.log",
+      "log_sha256": "2dbc19cab437ed014dcec43b6904a13a1490f0eaade795856745b6b5eac01173"
+    },
+    {
+      "label": "guardians-all-states",
+      "command": [
+        "bash",
+        "scripts/test-guardian-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/guardians"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:18.597791+00:00",
+      "finished_utc": "2026-10-29T23:11:37.176522+00:00",
+      "elapsed_seconds": 78.579,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/guardians-all-states.log",
+      "log_sha256": "65b88974ecf825840032b8b165dc1301a37ab4a6323db2ee81bea45cc249652b"
+    },
+    {
+      "label": "guardian-store",
+      "command": [
+        "bash",
+        "scripts/test-guardian-store-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/guardian-store"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:20.276517+00:00",
+      "finished_utc": "2026-10-29T23:10:21.923488+00:00",
+      "elapsed_seconds": 1.647,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/guardian-store.log",
+      "log_sha256": "a5bec4d88ab4ca82574150d476e081d8b2413004f0beaf5f32a20c8df06e91db"
+    },
+    {
+      "label": "data",
+      "command": [
+        "bash",
+        "scripts/test-data.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:21.924598+00:00",
+      "finished_utc": "2026-10-29T23:10:23.309645+00:00",
+      "elapsed_seconds": 1.385,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/data.log",
+      "log_sha256": "e67844138b51dfc6538d6333b7f5a482664f7444ec1e8b0f9dbb8ec2803779bf"
+    },
+    {
+      "label": "collection-events",
+      "command": [
+        "bash",
+        "scripts/test-collection-events.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:23.310704+00:00",
+      "finished_utc": "2026-10-29T23:10:23.926332+00:00",
+      "elapsed_seconds": 0.616,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/collection-events.log",
+      "log_sha256": "18ae70e1c09c1842d38eebea91db7e71a9854f7d9ec91056484c6b17a8645670"
+    },
+    {
+      "label": "economy",
+      "command": [
+        "bash",
+        "scripts/test-economy.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:23.926932+00:00",
+      "finished_utc": "2026-10-29T23:10:25.522311+00:00",
+      "elapsed_seconds": 1.595,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/economy.log",
+      "log_sha256": "f4cc2d8ddee985af5e0284ceedf121e9d6c6b30037c1fa637a06dd14e501094f"
+    },
+    {
+      "label": "meta",
+      "command": [
+        "bash",
+        "scripts/test-meta.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:25.522939+00:00",
+      "finished_utc": "2026-10-29T23:10:26.976486+00:00",
+      "elapsed_seconds": 1.454,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/meta.log",
+      "log_sha256": "a61483672aa789f34e95dc4d3f9405ddb0341dc0dd6eeedb0ec0c28fb544d038"
+    },
+    {
+      "label": "deliberate-play",
+      "command": [
+        "sh",
+        "scripts/test-deliberate-play-v114.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:26.977135+00:00",
+      "finished_utc": "2026-10-29T23:10:27.813591+00:00",
+      "elapsed_seconds": 0.836,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/deliberate-play.log",
+      "log_sha256": "64d64f9105a423fe48d727258cb04c19dffdf520600b72248e7ceca97ee082f8"
+    },
+    {
+      "label": "learning-guide",
+      "command": [
+        "sh",
+        "scripts/test-learning-guide.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:27.814205+00:00",
+      "finished_utc": "2026-10-29T23:10:28.653571+00:00",
+      "elapsed_seconds": 0.839,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/learning-guide.log",
+      "log_sha256": "e43aacd0a867a4a3066fe3dd95349bbe484b2f8217cb042dc621758cb3c2e318"
+    },
+    {
+      "label": "companion-battle",
+      "command": [
+        "bash",
+        "scripts/test-companion-battle-v119.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:28.654173+00:00",
+      "finished_utc": "2026-10-29T23:10:29.381964+00:00",
+      "elapsed_seconds": 0.728,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/companion-battle.log",
+      "log_sha256": "09318a1f36211cbb9b4b25c38c0554b729bab85bbbf65d6272fcaa8089c3814a"
+    },
+    {
+      "label": "squad-store",
+      "command": [
+        "bash",
+        "scripts/test-squad-store-v119.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:29.382592+00:00",
+      "finished_utc": "2026-10-29T23:10:30.553684+00:00",
+      "elapsed_seconds": 1.171,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/squad-store.log",
+      "log_sha256": "cfa70e9f5009a98574fea4477b6b202c8d3bc431727e8c77f8ef3a64fbf2a64c"
+    },
+    {
+      "label": "companion-battle-geometry",
+      "command": [
+        "bash",
+        "scripts/test-companion-battle-v119-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:30.554163+00:00",
+      "finished_utc": "2026-10-29T23:10:30.906935+00:00",
+      "elapsed_seconds": 0.353,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/companion-battle-geometry.log",
+      "log_sha256": "4f6cd80e2c88441266c4d13bb52b3ee78544df0b20f7257ab9f394898bc29fff"
+    },
+    {
+      "label": "adventure-geometry",
+      "command": [
+        "bash",
+        "scripts/test-adventure-v119-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:30.907480+00:00",
+      "finished_utc": "2026-10-29T23:10:31.256531+00:00",
+      "elapsed_seconds": 0.349,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/adventure-geometry.log",
+      "log_sha256": "47b9a01792d5c6b4bb3f35dd93166855785e172a3e1edb30ba89d10aee28d6ae"
+    },
+    {
+      "label": "expedition-model",
+      "command": [
+        "bash",
+        "scripts/test-expedition-v118-model.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/expedition-model.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:31.257616+00:00",
+      "finished_utc": "2026-10-29T23:10:32.469310+00:00",
+      "elapsed_seconds": 1.212,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/expedition-model.log",
+      "log_sha256": "eab91e4d989f9161d624d917660b0ad16d894182a52442ccf14f4c2bc62c5f06"
+    },
+    {
+      "label": "expedition-store",
+      "command": [
+        "bash",
+        "scripts/test-expedition-v118-store.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/expedition-store.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:32.469862+00:00",
+      "finished_utc": "2026-10-29T23:10:33.795645+00:00",
+      "elapsed_seconds": 1.326,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/expedition-store.log",
+      "log_sha256": "8c1f75591fbe5c9a5726c413a3d57fa6ce97c034f5fb0825a72982f5d162d0ad"
+    },
+    {
+      "label": "companion-motion",
+      "command": [
+        "bash",
+        "scripts/test-companion-motion-v118.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/companion-motion.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:33.796260+00:00",
+      "finished_utc": "2026-10-29T23:10:35.074074+00:00",
+      "elapsed_seconds": 1.278,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/companion-motion.log",
+      "log_sha256": "029f9a288a793cde482f13920d623a4948131c6b22e11bb9093dd5e9f95cd8f6"
+    },
+    {
+      "label": "session-energy",
+      "command": [
+        "bash",
+        "scripts/test-session-energy-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:35.074699+00:00",
+      "finished_utc": "2026-10-29T23:10:36.289551+00:00",
+      "elapsed_seconds": 1.215,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/session-energy.log",
+      "log_sha256": "dfaf2c6611ec87ceb01eeb0249ec8107196b42d7252e20c8bb9306fc5f35d8bf"
+    },
+    {
+      "label": "menu",
+      "command": [
+        "bash",
+        "scripts/test-menu-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:36.290139+00:00",
+      "finished_utc": "2026-10-29T23:10:37.520879+00:00",
+      "elapsed_seconds": 1.231,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/menu.log",
+      "log_sha256": "a73149464182f0233d3bc20a85190a475851dc82995d13d634874dcda358c82d"
+    },
+    {
+      "label": "power-offers",
+      "command": [
+        "sh",
+        "scripts/test-power-offers-v114.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/power-offers.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:37.521482+00:00",
+      "finished_utc": "2026-10-29T23:10:38.787464+00:00",
+      "elapsed_seconds": 1.266,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/power-offers.log",
+      "log_sha256": "82ce87ff2810a1b5cf58d8978473f7c6451eef68d38e82ea11d6fbca5dc275f1"
+    },
+    {
+      "label": "profile-summon",
+      "command": [
+        "bash",
+        "scripts/test-profile-summon-v116.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/profile-summon.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:38.788064+00:00",
+      "finished_utc": "2026-10-29T23:10:40.227575+00:00",
+      "elapsed_seconds": 1.44,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/profile-summon.log",
+      "log_sha256": "03641e37ee9ac1409d34f4dc2422bd244c0fea61480a74d98dfcec997129f411"
+    },
+    {
+      "label": "objectives",
+      "command": [
+        "bash",
+        "scripts/test-objective-models-v110.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/objective-models.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:40.228121+00:00",
+      "finished_utc": "2026-10-29T23:10:41.558142+00:00",
+      "elapsed_seconds": 1.33,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/objectives.log",
+      "log_sha256": "739fb5b9e21710d9260ba60d890a5eca80d8bcb99217f781a00522c8f95263d8"
+    },
+    {
+      "label": "journey-rewards",
+      "command": [
+        "bash",
+        "scripts/test-journey-rewards-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/journey-rewards.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:41.558751+00:00",
+      "finished_utc": "2026-10-29T23:10:42.951284+00:00",
+      "elapsed_seconds": 1.393,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/journey-rewards.log",
+      "log_sha256": "9e9f5b3853601f37e81c0b5fe24965f47fca976fcafaf74981e4604d0c5a61d7"
+    },
+    {
+      "label": "local-save",
+      "command": [
+        "bash",
+        "scripts/test-local-save-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/local-save"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:42.951906+00:00",
+      "finished_utc": "2026-10-29T23:10:44.244996+00:00",
+      "elapsed_seconds": 1.293,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/local-save.log",
+      "log_sha256": "3159e6a156d5de610b3b194aee15e6d4d39548dcd52e9d81f08573a5cf633ff1"
+    },
+    {
+      "label": "rewards-cosmetics",
+      "command": [
+        "bash",
+        "scripts/test-rewards-cosmetics-v17.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:44.245524+00:00",
+      "finished_utc": "2026-10-29T23:10:45.837204+00:00",
+      "elapsed_seconds": 1.592,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/rewards-cosmetics.log",
+      "log_sha256": "64f7fd698f9dab8f36e9ede1b35fdda9313ee486d79532d47b5bcf92987080e2"
+    },
+    {
+      "label": "tutorial",
+      "command": [
+        "bash",
+        "scripts/test-tutorial-v18.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:45.837620+00:00",
+      "finished_utc": "2026-10-29T23:10:47.391406+00:00",
+      "elapsed_seconds": 1.554,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/tutorial.log",
+      "log_sha256": "9392ab497bca79498e966161acaa8805ac1fe96b5c554e789769014fca739f77"
+    },
+    {
+      "label": "first-light",
+      "command": [
+        "bash",
+        "scripts/test-first-light-v113.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:47.391973+00:00",
+      "finished_utc": "2026-10-29T23:10:48.701429+00:00",
+      "elapsed_seconds": 1.309,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/first-light.log",
+      "log_sha256": "84032d8583b0812a22a8a33496000087b8de9e9b1429886213fa0455b50230e8"
+    },
+    {
+      "label": "inventory-presentation",
+      "command": [
+        "bash",
+        "scripts/test-inventory-presentation.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:48.702052+00:00",
+      "finished_utc": "2026-10-29T23:10:49.926519+00:00",
+      "elapsed_seconds": 1.225,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/inventory-presentation.log",
+      "log_sha256": "1749ee5be926bfdf3f7473cdac578a64404fe20c748db748b774b33f59db2b76"
+    },
+    {
+      "label": "board-audit",
+      "command": [
+        "bash",
+        "scripts/test-board-audit-v17.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/board-audit"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:10:49.927136+00:00",
+      "finished_utc": "2026-10-29T23:12:35.168027+00:00",
+      "elapsed_seconds": 105.241,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/board-audit.log",
+      "log_sha256": "89b88c37695e438995a668462edb88d070b9137ea2c32b3641a5149d93d832dc"
+    },
+    {
+      "label": "difficulty",
+      "command": [
+        "bash",
+        "scripts/test-difficulty.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:03.157917+00:00",
+      "finished_utc": "2026-10-29T23:11:06.821980+00:00",
+      "elapsed_seconds": 3.664,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/difficulty.log",
+      "log_sha256": "3140397514268744561c110aef1f378e4fd6ed3dbb9024ddebb21b3aa7255ec4"
+    },
+    {
+      "label": "saga-map",
+      "command": [
+        "bash",
+        "scripts/test-saga-map-v17.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:06.822461+00:00",
+      "finished_utc": "2026-10-29T23:11:07.272393+00:00",
+      "elapsed_seconds": 0.45,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/saga-map.log",
+      "log_sha256": "e4f4bd9601785f7e01d467fbca8954e078493219a3488ea566063efc50aca0b2"
+    },
+    {
+      "label": "store-appearance",
+      "command": [
+        "bash",
+        "scripts/test-store-appearance-v111.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:07.273058+00:00",
+      "finished_utc": "2026-10-29T23:11:08.590852+00:00",
+      "elapsed_seconds": 1.318,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/store-appearance.log",
+      "log_sha256": "ab619634ea271dcc4d88e5e538d3465d096105b65ed414ad79f5947f6a55d157"
+    },
+    {
+      "label": "store-external-faults",
+      "command": [
+        "bash",
+        "scripts/test-store-externals-v111.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:08.591530+00:00",
+      "finished_utc": "2026-10-29T23:11:09.748956+00:00",
+      "elapsed_seconds": 1.157,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/store-external-faults.log",
+      "log_sha256": "b8610c05d3922d1051ae21e204c2219c288505b52fd41201e6b1527978245297"
+    },
+    {
+      "label": "store-init",
+      "command": [
+        "bash",
+        "scripts/test-store-init-v111.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:09.749641+00:00",
+      "finished_utc": "2026-10-29T23:11:10.924037+00:00",
+      "elapsed_seconds": 1.174,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/store-init.log",
+      "log_sha256": "ac8e6ff3084ec519367bbeda195d32b93619237b9bd13509a785be58942653d2"
+    },
+    {
+      "label": "store-booster",
+      "command": [
+        "bash",
+        "scripts/test-store-booster-v112.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:10.924596+00:00",
+      "finished_utc": "2026-10-29T23:11:12.308149+00:00",
+      "elapsed_seconds": 1.384,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/store-booster.log",
+      "log_sha256": "7eec3c5492a62b9b6c56e15d5fe43cb891c677dd5116a19a7ffa986582a7e3cc"
+    },
+    {
+      "label": "billing-policy",
+      "command": [
+        "bash",
+        "scripts/test-billing-policy.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:12.308762+00:00",
+      "finished_utc": "2026-10-29T23:11:12.825049+00:00",
+      "elapsed_seconds": 0.516,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/billing-policy.log",
+      "log_sha256": "de758b33f43001b700de8f03fb5a35f66712c8b5f5b70de79831654c9c83342a"
+    },
+    {
+      "label": "wallet-recovery",
+      "command": [
+        "bash",
+        "scripts/test-wallet-recovery.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:12.825744+00:00",
+      "finished_utc": "2026-10-29T23:11:13.221097+00:00",
+      "elapsed_seconds": 0.395,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/wallet-recovery.log",
+      "log_sha256": "77c0b51bb7098d80502697bdc20ff6f09848de75b5643158ba57a8252a0cce45"
+    },
+    {
+      "label": "energy-purchase",
+      "command": [
+        "bash",
+        "scripts/test-energy-purchase-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:13.221669+00:00",
+      "finished_utc": "2026-10-29T23:11:13.834246+00:00",
+      "elapsed_seconds": 0.613,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/energy-purchase.log",
+      "log_sha256": "7835562a471a7fcb0c9072b08e4b178ffcee4fef25f8d3ee98bf53362008f8ae"
+    },
+    {
+      "label": "wallet-energy-transport",
+      "command": [
+        "bash",
+        "scripts/test-wallet-energy-transport-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:13.834860+00:00",
+      "finished_utc": "2026-10-29T23:11:14.460104+00:00",
+      "elapsed_seconds": 0.625,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/wallet-energy-transport.log",
+      "log_sha256": "a817af773f1626f02c95893d574a326ca96442fc602755ae2d3cb2ab561710ea"
+    },
+    {
+      "label": "home-store",
+      "command": [
+        "bash",
+        "scripts/test-home-v115.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:14.460806+00:00",
+      "finished_utc": "2026-10-29T23:11:15.687410+00:00",
+      "elapsed_seconds": 1.227,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/home-store.log",
+      "log_sha256": "ae2f5f2221214be9582520411a0997c07a16e105dd76c755405b3923ac643a3e"
+    },
+    {
+      "label": "home-geometry-115",
+      "command": [
+        "bash",
+        "scripts/test-home-v115-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:15.688016+00:00",
+      "finished_utc": "2026-10-29T23:11:16.841379+00:00",
+      "elapsed_seconds": 1.153,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/home-geometry-115.log",
+      "log_sha256": "dfa61f931a63215cf5d9a2d44056335ac602adaa8c8ade1035ba1fd24d9ca5e6"
+    },
+    {
+      "label": "home-geometry-116",
+      "command": [
+        "bash",
+        "scripts/test-home-v116-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:16.842102+00:00",
+      "finished_utc": "2026-10-29T23:11:18.602491+00:00",
+      "elapsed_seconds": 1.76,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/home-geometry-116.log",
+      "log_sha256": "d94f9223c45dfbcdd53eb79f398040323dd62076d30a887801bbcb4b9f43329a"
+    },
+    {
+      "label": "scene-transition",
+      "command": [
+        "bash",
+        "scripts/test-scene-transition-v117.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:18.603067+00:00",
+      "finished_utc": "2026-10-29T23:11:19.006267+00:00",
+      "elapsed_seconds": 0.403,
+      "exit_code": 1,
+      "passed": false,
+      "log": "docs/validation/v1.21/host/final-integration/scene-transition.log",
+      "log_sha256": "61cad6b24ea8e74f79e8ca948084dd30f85754f70ed20679219099c3c2f39096"
+    },
+    {
+      "label": "root-scenes",
+      "command": [
+        "bash",
+        "scripts/test-root-scenes-v117.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:19.006843+00:00",
+      "finished_utc": "2026-10-29T23:11:19.469843+00:00",
+      "elapsed_seconds": 0.463,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/root-scenes.log",
+      "log_sha256": "7febbb7e708e0666e77414ad2a3cbff552c52659dae1ff693839505f8bcc9bd2"
+    },
+    {
+      "label": "play-geometry",
+      "command": [
+        "bash",
+        "scripts/test-play-scene-v117-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:19.470453+00:00",
+      "finished_utc": "2026-10-29T23:11:19.979014+00:00",
+      "elapsed_seconds": 0.509,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/play-geometry.log",
+      "log_sha256": "8758841d2bda417a17eaf58b72039a028a502d1cff43351e8f66e274b48db547"
+    },
+    {
+      "label": "elemental-shells",
+      "command": [
+        "bash",
+        "scripts/test-elemental-shell-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/elemental-shells.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:19.979657+00:00",
+      "finished_utc": "2026-10-29T23:11:22.659304+00:00",
+      "elapsed_seconds": 2.68,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/elemental-shells.log",
+      "log_sha256": "99bef4f7839abc055d711c9e2c5c1e1371a8be0601c0a8a8074004c79c021f1f"
+    },
+    {
+      "label": "arcade-presentation",
+      "command": [
+        "bash",
+        "scripts/test-arcade-presentation-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/arcade-presentation.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:22.659919+00:00",
+      "finished_utc": "2026-10-29T23:11:23.444734+00:00",
+      "elapsed_seconds": 0.785,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/arcade-presentation.log",
+      "log_sha256": "0d4d5836a71881cee936a1cd475aafb89f7a0bbafd8bd0de2d93b2dc313691c9"
+    },
+    {
+      "label": "home-kitchen",
+      "command": [
+        "bash",
+        "scripts/test-home-kitchen-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/home-kitchen.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:23.445232+00:00",
+      "finished_utc": "2026-10-29T23:11:24.666842+00:00",
+      "elapsed_seconds": 1.222,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/home-kitchen.log",
+      "log_sha256": "a28b0744b4b5b11c95870727d957cc4312ef49e3815ca00c53422956858c0438"
+    },
+    {
+      "label": "economy-curve",
+      "command": [
+        "bash",
+        "scripts/test-economy-curve-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/economy-curve.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:24.667487+00:00",
+      "finished_utc": "2026-10-29T23:11:26.052353+00:00",
+      "elapsed_seconds": 1.385,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/economy-curve.log",
+      "log_sha256": "0e8df210418df37b971272331c630f842b90ad0058f26ed724d0f07c77b5b01d"
+    },
+    {
+      "label": "session-energy-121",
+      "command": [
+        "bash",
+        "scripts/test-session-energy-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/final-integration/session-energy-121.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:26.052858+00:00",
+      "finished_utc": "2026-10-29T23:11:27.201941+00:00",
+      "elapsed_seconds": 1.149,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/session-energy-121.log",
+      "log_sha256": "f7a78cfde95bb7ac3dd170849abfa59a476554102dba1410aed66652949f56c3"
+    },
+    {
+      "label": "menu-121",
+      "command": [
+        "bash",
+        "scripts/test-menu-v121.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-i93js0ks",
+      "started_utc": "2026-10-29T23:11:27.203187+00:00",
+      "finished_utc": "2026-10-29T23:11:27.675813+00:00",
+      "elapsed_seconds": 0.473,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/final-integration/menu-121.log",
+      "log_sha256": "6bb3c05abb4b8721d52b252ece832cd7fd86599c6ca402209977910551d3daa6"
+    }
+  ]
+}

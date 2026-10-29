@@ -1,0 +1,30 @@
+{
+  "scope": "Existing pure host/model/transaction/geometry regressions only. No Android package, device execution, real account/provider/payment or human playthrough claim.",
+  "source_inputs": "docs/validation/v1.21/host/economy-receipt-recovery/source-inputs.json",
+  "source_inputs_sha256": "46a37e8a5b06ee0a1aa42a5d69bc19d9d40087c91c859f252c57c999e5ad1715",
+  "started_utc": "2026-10-29T23:08:24.517009+00:00",
+  "finished_utc": "2026-10-29T23:08:25.841788+00:00",
+  "elapsed_seconds": 1.325,
+  "parallel_workers": 3,
+  "suites": 1,
+  "passed": 1,
+  "failed": 0,
+  "results": [
+    {
+      "label": "economy-curve",
+      "command": [
+        "bash",
+        "scripts/test-economy-curve-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/economy-receipt-recovery/economy-curve.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-4eao9xyu",
+      "started_utc": "2026-10-29T23:08:24.518397+00:00",
+      "finished_utc": "2026-10-29T23:08:25.840644+00:00",
+      "elapsed_seconds": 1.322,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/economy-receipt-recovery/economy-curve.log",
+      "log_sha256": "41821909216448a7eea2322d7bfabea62749c494c63e7ecc7ac3c2c7e69e8663"
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T23:25:42.108140+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "rooms-real-selectors",
+  "expected_version": "1.21.0-rc1",
+  "expected_code": 29,
+  "apk_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "observer_sha256": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "71e5e0cb-8b9d-4e5d-925b-349369371aba",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "rooms-real-selectors",
+    "runToken": "71e5e0cb-8b9d-4e5d-925b-349369371aba",
+    "processId": 19165,
+    "checkCount": 16,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_room_v115 = living"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_room_v115 = kitchen"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_room_v115 = garden"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_room_v115 = living"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 10,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 850384,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 850969,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "home_room_living",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 852285,
+        "label": "Living room",
+        "resourceId": "com.androidhit.lumadrift:id/home_room_living",
+        "bounds": [
+          308,
+          1878,
+          528,
+          2104
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 854646,
+        "label": "Home",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "home_room_kitchen",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 855464,
+        "label": "Kitchen",
+        "resourceId": "com.androidhit.lumadrift:id/home_room_kitchen",
+        "bounds": [
+          551,
+          1878,
+          771,
+          2104
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 857801,
+        "label": "Home",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "home_room_garden",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 858632,
+        "label": "Garden",
+        "resourceId": "com.androidhit.lumadrift:id/home_room_garden",
+        "bounds": [
+          793,
+          1878,
+          1013,
+          2104
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 860707,
+        "label": "Home",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "home_room_living",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 861528,
+        "label": "Living room",
+        "resourceId": "com.androidhit.lumadrift:id/home_room_living",
+        "bounds": [
+          308,
+          1878,
+          528,
+          2104
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 863883,
+        "label": "Home",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      }
+    ],
+    "captures": [
+      "en-actual-room-living",
+      "en-actual-room-kitchen",
+      "en-actual-room-garden",
+      "en-actual-room-living-restored"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 23.168,
+  "evidence_sha256": {
+    "battle-observer.apk": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "eabd3a2d3d7c5429123598740a94a731feb256ac36c8229e8f6010ef93f64df8",
+    "native/after.json": "53bb46b5e344f0f77e997411d20084e68385774807d22ea109447e3cbe811416",
+    "native/before-actual-room-selectors.json": "7d7732dc6a8fd79124ee2091b80562f38511ad6adef3c6046b1eee113cd3c948",
+    "native/before.json": "7d7732dc6a8fd79124ee2091b80562f38511ad6adef3c6046b1eee113cd3c948",
+    "native/en-actual-room-garden-accessibility.json": "ea006b918efe03ef75110517f0963382b2c2aa39794adddfb28be14152f4e18c",
+    "native/en-actual-room-garden.png": "cf3d2411215185419da7dd76a75af9793cdd5e3a37ee1bb279274d6b67b4f69e",
+    "native/en-actual-room-kitchen-accessibility.json": "3913fc4099fe73926a0d06868ec5dee737086e3de26bda02d5cc2768de9740c2",
+    "native/en-actual-room-kitchen.png": "d61b3c27319c5838be35b9268701a6b68775ee6669c40275d715cea9663b652e",
+    "native/en-actual-room-living-accessibility.json": "a5da5206dff13ff92dd2119a86ce20587a39ba22072406d73672c993a00a0583",
+    "native/en-actual-room-living-restored-accessibility.json": "a5da5206dff13ff92dd2119a86ce20587a39ba22072406d73672c993a00a0583",
+    "native/en-actual-room-living-restored.png": "1be2bacfd91491fb8d25bc72a16a91fdb86a12af2a90607a157a797095a4f22b",
+    "native/en-actual-room-living.png": "87c9b2b819e2aeee49f43ce6cb7fd9558ed3a85bc18d96a73d6bd1d3b04d5f4a",
+    "native/report.json": "823438990bfe612a504e519ac3089ccdabb4f73ff208d78074f8e807992ef4d4",
+    "native/requested-steps.json": "58fb2c0be7bc4a0ca0a71dee506b7a12151ce9f605d6ced4f2d82b414c034127",
+    "native/room-living-before-cold.json": "53bb46b5e344f0f77e997411d20084e68385774807d22ea109447e3cbe811416",
+    "observer-install.txt": "974fb3aabb4c4ef07416c7767f9c861fbef88ac76f14cefc8cf0e917100f3c8e",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "f4ce0f889c2ba23aac5a58509106d6e6c8d87b6e855c8eaed24654d5e7d56635",
+    "source-snapshot.json": "9fe0ca7d2bc881207bb8755ea703831e986c14a33bf1ec802f725861233c63bb"
+  }
+}

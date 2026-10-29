@@ -1,0 +1,85 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "snapshot",
+    "name": "before-actual-room-selectors"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_room_living"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "home_room_v115",
+    "value": "living"
+  },
+  {
+    "op": "capture",
+    "name": "en-actual-room-living"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_room_kitchen"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "home_room_v115",
+    "value": "kitchen"
+  },
+  {
+    "op": "capture",
+    "name": "en-actual-room-kitchen"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_room_garden"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "home_room_v115",
+    "value": "garden"
+  },
+  {
+    "op": "capture",
+    "name": "en-actual-room-garden"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_room_living"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "home_room_v115",
+    "value": "living"
+  },
+  {
+    "op": "capture",
+    "name": "en-actual-room-living-restored"
+  },
+  {
+    "op": "snapshot",
+    "name": "room-living-before-cold"
+  },
+  {
+    "op": "adventure"
+  }
+]

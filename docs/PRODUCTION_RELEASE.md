@@ -1,6 +1,14 @@
 # Production candidate and activation boundary
 
-## 1.17 — Android and existing website delivered
+## Current 1.21 — frozen B, final delivery pending
+
+Production `1.21.0-rc1` and isolated `1.21.0-sandbox-rc1`, code29, have exact signed local bytes in the [artifact manifest](../releases/manifest-1.21.0-rc1.json). [Release register](RELEASE_1_21.md) separates package identity, scoped native/model/browser evidence and the still-pending final production/Lab acceptance, GitHub source publication and Hosting delivery. The eight current native site captures belong to B; earlier A failures remain historical evidence.
+
+The update makes the avatar, its copy-based evolution, actual player XP, puzzle skills, illustrated shop and house/living/kitchen/garden access explicit. Campaign rewards and base boost prices follow the versioned level-only curve. Eligible new attempts have two free Undos before confirmed earned-Coin fees; energy capacity grows 10→16 without filling the counter, while regeneration stays one unit per ten minutes. The Gold refill remains a separate zero-energy Lab test route; earned Coins do not pay that premium refill.
+
+Test ads remain forced and real purchases/premium draws remain closed. The independent web simulation uses fictional in-memory state and makes no Android or account changes. Google sign-in does not synchronize the local game, home or earned Coins. Public-origin bytes/rendering, physical-phone acceptance, human enjoyment, retention, Play publication and real-provider transactions are not established by these package or local test results.
+
+## Preserved 1.17 — Android and existing website delivered
 
 Production is **1.17.0-rc6 / code24**, with isolated **1.17.0-sandbox-rc6**. H passes the [four-package binary audit](validation/v1.17/candidate-h/binaries/binary-final-candidate.json), release lint and the complete24-command sparse host workflow. Its installed native acceptance passes; public-delivery results remain separate in the [release register](RELEASE_1_17.md) and [qualification index](validation/v1.17/README.md).
 

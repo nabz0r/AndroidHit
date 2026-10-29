@@ -1,0 +1,29 @@
+{
+  "schema": "luma-v121-cloudshell-transfer-v1",
+  "recorded_at_utc": "2026-10-29T23:33:27.800152+00:00",
+  "transport_archive": {
+    "name": "luma-v121-b-transport.tar",
+    "bytes": 7833600,
+    "sha256": "0a0c980f5c8ddc8f525850148596c694e440f84a8255801ab4ed660f9b25b801"
+  },
+  "remote_transport_hash_verified": true,
+  "destination": "existing authenticated luma-drift-production Cloud Shell",
+  "receipts": {
+    "production": {
+      "path": "docs/validation/v1.21/apk-delta/production-cloudshell-apply.json",
+      "bytes": 962,
+      "sha256": "04e83d7ca471b7a884c9419b7b880b8f657c3a6d67cd1567dd9d90818c07d032",
+      "verified_target_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+      "verified_target_bytes": 368969685
+    },
+    "lab": {
+      "path": "docs/validation/v1.21/apk-delta/lab-cloudshell-apply.json",
+      "bytes": 956,
+      "sha256": "ec0e2ea0ca7ebad92579c518d0dc875c5ff32408583ff56d0ab82b454f2d5251",
+      "verified_target_sha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+      "verified_target_bytes": 368952988
+    }
+  },
+  "receipt_collection": "Exact original remote JSON bytes exported as base64 through the visible Cloud Shell terminal, decoded locally, never reserialized. No public-origin request.",
+  "deployed": false
+}

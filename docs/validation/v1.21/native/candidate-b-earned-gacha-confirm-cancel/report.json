@@ -1,0 +1,292 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T23:27:11.814882+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "earned-gacha-confirm-cancel",
+  "expected_version": "1.21.0-rc1",
+  "expected_code": 29,
+  "apk_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "observer_sha256": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "cb412cef-fcd2-4eba-818d-76a2a6662f4a",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "earned-gacha-confirm-cancel",
+    "runToken": "cb412cef-fcd2-4eba-818d-76a2a6662f4a",
+    "processId": 19415,
+    "checkCount": 23,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicitly requested earned draws"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Draw funded only by real earned balance"
+      },
+      {
+        "passed": true,
+        "message": "Confirmation alone never debits or creates an arrival"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual cancellation preserves Coins and last draw identity"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual draw request durably recorded"
+      },
+      {
+        "passed": true,
+        "message": "Actual avatar draw has a committed receipt"
+      },
+      {
+        "passed": true,
+        "message": "Actual arrival belongs to the disclosed fixed avatar pool"
+      },
+      {
+        "passed": true,
+        "message": "Exact disclosed rarity compensation and duplicate state match prior ownership"
+      },
+      {
+        "passed": true,
+        "message": "Exact earned draw debit and disclosed duplicate compensation"
+      },
+      {
+        "passed": true,
+        "message": "Draw never loses already owned characters"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one genuine companion copy recorded atomically with the arrival"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 10,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 940898,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 941479,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-collection-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 942812,
+        "label": "Collection",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_collection_hub",
+        "bounds": [
+          432,
+          2134,
+          648,
+          2303
+        ]
+      },
+      {
+        "reason": "open-real-earned-companion-draw",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 943501,
+        "label": "Star arrivals",
+        "bounds": [
+          735,
+          1284,
+          998,
+          1594
+        ]
+      },
+      {
+        "reason": "open-real-disclosed-odds-before-draw",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 950746,
+        "label": "Pool & exact odds",
+        "bounds": [
+          163,
+          1847,
+          418,
+          2149
+        ]
+      },
+      {
+        "reason": "request-real-earned-avatar-draw-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 953377,
+        "label": "Draw once · 180 LumaCoins",
+        "resourceId": "com.androidhit.lumadrift:id/summon_draw",
+        "bounds": [
+          276,
+          1875,
+          803,
+          2324
+        ]
+      },
+      {
+        "reason": "request-real-earned-avatar-after-cancel",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 957467,
+        "label": "Draw once · 180 LumaCoins",
+        "resourceId": "com.androidhit.lumadrift:id/summon_draw",
+        "bounds": [
+          276,
+          1875,
+          803,
+          2324
+        ]
+      },
+      {
+        "reason": "confirm-exact-real-earned-180-coin-draw-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 958096,
+        "label": "Yes",
+        "bounds": [
+          216,
+          1422,
+          459,
+          1712
+        ]
+      },
+      {
+        "reason": "close-actual-committed-reveal",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 962346,
+        "label": "Back to arrivals",
+        "resourceId": "com.androidhit.lumadrift:id/summon_done",
+        "bounds": [
+          66,
+          1686,
+          1013,
+          1841
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 963784,
+        "label": "Home",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      }
+    ],
+    "captures": [
+      "gacha-actual-fixed-odds",
+      "gacha-confirm-1",
+      "gacha-cancelled-no-debit",
+      "genuine-draw-1"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 33.223,
+  "evidence_sha256": {
+    "battle-observer.apk": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "938add69cba77ee7cf5d9756f115e89d20c99dc5809967cdf4db15bb3c6ed49b",
+    "native/after-earned-gacha.json": "4172b259cd534e464f047d3e3e3337809b2179b710342109440460c6ddbb1f23",
+    "native/after.json": "4172b259cd534e464f047d3e3e3337809b2179b710342109440460c6ddbb1f23",
+    "native/before-earned-gacha.json": "53bb46b5e344f0f77e997411d20084e68385774807d22ea109447e3cbe811416",
+    "native/before.json": "53bb46b5e344f0f77e997411d20084e68385774807d22ea109447e3cbe811416",
+    "native/gacha-actual-fixed-odds-accessibility.json": "fcefa049fc3bd5b66a42950a5f3a80e975267d6769780ee68392176534fbe5f5",
+    "native/gacha-actual-fixed-odds.png": "b2d21f776ccfc3e232e652bc0e8461732005f9491b449ae6a8e2b7a17a78429c",
+    "native/gacha-cancelled-no-debit-accessibility.json": "2154a89b986fac6d8ad9783c3f1ff0597d1cb63fea1c5bcac831722aae81d004",
+    "native/gacha-cancelled-no-debit.png": "435f77f5b943119be80dfba08734f9bb92e74d982f225245998e62b0497732e5",
+    "native/gacha-confirm-1-accessibility.json": "a5f8fe3a7125ebcac1e1ad10d02411bfaced7afaeed299ccdf9dc07dec665756",
+    "native/gacha-confirm-1.png": "ceea6cabd02d8e48e96e9ee8ae991884edca520cc8d3edffc958dd462c7f9332",
+    "native/genuine-draw-1-accessibility.json": "850ff10237e4e82a9daee0f618c785974be59c4812ef836fbad1bfb664cd3232",
+    "native/genuine-draw-1.json": "bef19725b1bd30a984c9daff9a38ad4e5d666ca5a87bcbcc82d98d2b5bd26185",
+    "native/genuine-draw-1.png": "b1c6cb44fbf3df9c40cdc8b162b422a814a43f4eefbaac37267120886b5b6ecb",
+    "native/report.json": "f7e6ac1ec4615c498fed3727078a673f61ab571f6d014f1b2749308dd4865e88",
+    "native/requested-steps.json": "7e1b4bbe29dbb97771675023dc13c75fab43a7dadc4bbe57bcc3d369da72b129",
+    "observer-install.txt": "5cf33a58520800aa684f3fe05320a8b0effd5c67026045fb284bc783a9edf696",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "2a640f9b2e43995aca0cebdedd99b515a440a25b06edcea2e12d257c8164f9f8",
+    "source-snapshot.json": "0b91884450fd1a9158890236f843597a61e2ac5c24d4aacf117470632fe28de1"
+  }
+}

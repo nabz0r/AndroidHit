@@ -188,7 +188,7 @@ public final class HomeScene {
     }
 
     private void shell(Canvas c,String wallpaper,String floor,long time,boolean reduceMotion) {
-        boolean garden="garden".equals(room),bedroom="bedroom".equals(room);
+        boolean garden="garden".equals(room),bedroom="bedroom".equals(room),kitchen="kitchen".equals(room);
         HomeCatalog.Surface walls=HomeCatalog.wallpaper(wallpaper),ground=HomeCatalog.floor(floor);
         int left=walls==null?0xfff8eadb:blend(walls.color,WHITE,.22f),right=blend(left,0xffaf9fc2,.16f);
         oval(c,50,394,590,477,0x126c607b);
@@ -237,10 +237,31 @@ public final class HomeScene {
         if(!garden){
             line(c,40,290,320,135,0xffba977e,7);line(c,320,135,600,290,0xffa98ba8,7);
             line(c,40,287,320,132,0xffffedc6,2);line(c,320,132,600,287,0xfff0d9e3,2);
-            c.save();c.translate(70,0);window(c,time,reduceMotion);c.restore();
+            if(kitchen)kitchenArchitecture(c);
+            else{c.save();c.translate(70,0);window(c,time,reduceMotion);c.restore();}
             wardrobe(c);
         }
         c.save();c.translate(210,32);puzzleDoor(c);c.restore();
+    }
+
+    /** Intrinsic rear-wall fixtures, clipped outside the editable floor; never a paid item grant. */
+    private void kitchenArchitecture(Canvas c){
+        c.save();path.reset();path.moveTo(40,155);path.lineTo(320,0);path.lineTo(320,140);path.lineTo(40,295);path.close();c.clipPath(path);
+        c.translate(66,153);c.skew(0,-.554f);
+        round(c,0,10,228,65,3,0xffdcebe4);
+        for(int col=0;col<=12;col++)line(c,col*19,10,col*19,65,0xfff7fbf1,1.4f);
+        for(int row=0;row<=4;row++)line(c,0,10+row*13.75f,228,10+row*13.75f,0xfff7fbf1,1.4f);
+        round(c,0,67,228,121,3,0xff9bbbae);
+        for(int col=0;col<4;col++){
+            round(c,5+col*56,75,54+col*56,115,2,0xffc8dccb);
+            line(c,36+col*56,81,46+col*56,81,0xff8e9274,2.2f);
+        }
+        round(c,-3,61,231,72,3,0xffead9ba);line(c,0,63,228,63,0xfffff2d8,2);
+        round(c,20,62,82,69,3,0xffa4c9c8);round(c,26,63,76,67,2,0xffd6e9df);
+        line(c,60,62,60,49,0xff7b9f9d,2.5f);arc(c,45,41,60,56,180,180,0xff7b9f9d,2.5f);
+        circle(c,162,65,7,0xff898d83);circle(c,192,65,7,0xff898d83);
+        round(c,12,0,111,8,2,0xffb5c9b5);round(c,132,0,217,8,2,0xffb5c9b5);
+        c.restore();
     }
 
     /** Subtle woven paper and gilded panel work remain tied to the player's chosen wall colour. */

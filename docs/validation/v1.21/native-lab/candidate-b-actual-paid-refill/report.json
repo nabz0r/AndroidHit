@@ -1,0 +1,802 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T23:37:37.853106+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "phase": "lab-actual-paid-refill",
+  "expected_version": "1.21.0-sandbox-rc1",
+  "expected_code": 29,
+  "apk_sha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+  "observer_sha256": "fdc7c422346018a6563c198e91d43c34571d8ba2548f8184a3eafe48702f5534",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "15c5fcf7-8e26-4f09-81c7-a31652735bbb",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 60,
+    "path": "native-ui-recording.mp4",
+    "sha256": "d208da8ca7f7ec70063ead56a014841fc0f4836208b8df19408c686ec2da53f2",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": true,
+    "phase": "lab-actual-paid-refill",
+    "runToken": "15c5fcf7-8e26-4f09-81c7-a31652735bbb",
+    "processId": 21378,
+    "checkCount": 73,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact separate Lab package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance = 450"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock = 0"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox = "
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference coins = 730"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference unlocked = 11"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Energy drain uses only a real active eligible campaign attempt"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Real bounded eligible restarts exhaust current session energy"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 0"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible semantic target energy_buy"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches (?s).*50 LumaGold.*"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 10"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance = 400"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock = 0"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox = "
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference coins = 730"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 9"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance = 400"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference coins = 730"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 34,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1566124,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1566707,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "menu_wallet_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1569732,
+        "label": "Énergie: 10 / 10. Énergie 10/10",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/menu_wallet_2",
+        "bounds": [
+          720,
+          150,
+          1035,
+          316
+        ]
+      },
+      {
+        "reason": "energy_back",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1571856,
+        "label": "‹ Retour",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/energy_back",
+        "bounds": [
+          55,
+          382,
+          343,
+          521
+        ]
+      },
+      {
+        "reason": "open-real-level-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1587600,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "open-real-U11",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1588196,
+        "label": "Niveau 11, Normal, Clés et murs, 0 étoiles sur 3, Prochain puzzle",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/map_level_journey_11",
+        "bounds": [
+          497,
+          1388,
+          707,
+          1607
+        ]
+      },
+      {
+        "reason": "start-real-U11",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1588831,
+        "label": "Jouer  →",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1608982,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1609751,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1610589,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1611325,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1612199,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1612922,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1613764,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1614594,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1615337,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1616131,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1617074,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1617944,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1619460,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1620256,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-8",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1622211,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-8",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1622958,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-9",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1623654,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2037,
+          686,
+          2292
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-9",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1624511,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "Pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1625232,
+        "label": "Pause",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/play_pause",
+        "bounds": [
+          55,
+          274,
+          188,
+          407
+        ]
+      },
+      {
+        "reason": "Quitter.*",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1626034,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      },
+      {
+        "reason": "menu_wallet_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1626809,
+        "label": "Énergie: 0 / 10. Énergie 0/10",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/menu_wallet_2",
+        "bounds": [
+          720,
+          150,
+          1035,
+          316
+        ]
+      },
+      {
+        "reason": "energy_buy",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1628771,
+        "label": "+10 énergie · 50 LumaGold",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/energy_buy",
+        "bounds": [
+          66,
+          1903,
+          1013,
+          2063
+        ]
+      },
+      {
+        "reason": "Oui",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1630702,
+        "label": "Oui",
+        "bounds": [
+          216,
+          1422,
+          459,
+          1712
+        ]
+      },
+      {
+        "reason": "energy_back",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1632646,
+        "label": "‹ Retour",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/energy_back",
+        "bounds": [
+          55,
+          382,
+          343,
+          521
+        ]
+      },
+      {
+        "reason": "open-real-level-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1643786,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "open-real-U11",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1644379,
+        "label": "Niveau 11, Normal, Clés et murs, 0 étoiles sur 3, Prochain puzzle",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/map_level_journey_11",
+        "bounds": [
+          497,
+          1388,
+          707,
+          1607
+        ]
+      },
+      {
+        "reason": "start-real-U11",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1644980,
+        "label": "Jouer  →",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      }
+    ],
+    "captures": [
+      "lab-preserved-450-test-gold-home",
+      "lab-capacity-ten-preserved-old-profile",
+      "lab-zero-energy-exact-test-gold-price",
+      "lab-test-gold-explicit-confirmation",
+      "lab-400-test-gold-energy-ten",
+      "lab-new-real-u11-attempt-energy-nine"
+    ],
+    "package": "com.androidhit.lumadrift.sandbox",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 91.249,
+  "evidence_sha256": {
+    "battle-observer.apk": "fdc7c422346018a6563c198e91d43c34571d8ba2548f8184a3eafe48702f5534",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "2a505dc89785fea7ecd3215c6407260e1e400b6afde973a3db146c483ac3993f",
+    "native/after.json": "aceedad0b997b67a70dadef8f75c0f42eaa9b4dcfa4e6975591dfcbb41758540",
+    "native/before.json": "81ecf227b7653ced71505aff6a4a105ab113886d2c4b55488522582745a8ac16",
+    "native/genuine-energy-restarts.json": "1cfac80155a94ff11cd494c48a6e2f4af277c1bbe296905d551898c1107c64df",
+    "native/lab-400-test-gold-energy-ten-accessibility.json": "0f22b51cac16e431c1c6e6cf5980e06f8498efb54089db0edce9f5b6990b106b",
+    "native/lab-400-test-gold-energy-ten.png": "bd483e2030e6d2f9d71415d80a90ab2098f82422841fad39bf4a33abb1a63716",
+    "native/lab-after-actual-test-refill.json": "1b1a882cfef8b3b41bf64c89a8c9dc75c7a959b82c5f68b8aaf3a87329b75be3",
+    "native/lab-before-actual-test-refill.json": "b54ae563cd8ff24f1ad50e5d60d5b7bc089b0499d4ab131b4e4ca57c362f5fa3",
+    "native/lab-capacity-ten-preserved-old-profile-accessibility.json": "cef307d6f65a5079a25b0852983efc4faafd67c43a87e56a299b6308013ac60a",
+    "native/lab-capacity-ten-preserved-old-profile.png": "47b75b383c3973eb4cf9a7511a21f76b45c2b40640dada4bc2e40760253edef7",
+    "native/lab-new-real-u11-attempt-energy-nine-accessibility.json": "f913604aa43069e7105312d5633b315270f965f744ab47769250b960d2b50a9c",
+    "native/lab-new-real-u11-attempt-energy-nine.png": "53ef86153d00267796659415c4af2a98a0fd495c0e7931a4aa00ff703ba95bfe",
+    "native/lab-preserved-450-test-gold-home-accessibility.json": "51767ab892baccce29154e6b1246397e76eee0b73bb6efb3bed5fff03f4511f9",
+    "native/lab-preserved-450-test-gold-home.png": "7f734455cd76d87921f0839b29ebad14e6ee8f8892f235429f4312215f2a561b",
+    "native/lab-test-gold-explicit-confirmation-accessibility.json": "f0ccc855b875bd4712de6b5b0a323c965ba5e651f45648f4f5b78912facdf81e",
+    "native/lab-test-gold-explicit-confirmation.png": "893c9c492580ea56f06444ae925330bf39a825e32e1e8aae5f85cf3753d12af2",
+    "native/lab-u11-credited-attempt-before-cold.json": "aceedad0b997b67a70dadef8f75c0f42eaa9b4dcfa4e6975591dfcbb41758540",
+    "native/lab-zero-energy-exact-test-gold-price-accessibility.json": "d5860941a7eafbfea80a88401b3f866dab212e2f8c8c9509bbf7cf7e156edcc4",
+    "native/lab-zero-energy-exact-test-gold-price.png": "f39a4b5430010e81ae34acb001981cd6a045355375ef01910769130fa7208fa9",
+    "native/report.json": "ada38e48a55db4887807596cb372a9883c59dfe7535f3d210053228b823bcff1",
+    "native/requested-steps.json": "987d0e0a547d8262064cd6972bbbdbd8a4c3a6af8c7d3bd1290213b9e96a55d6",
+    "native-ui-recording.mp4": "d208da8ca7f7ec70063ead56a014841fc0f4836208b8df19408c686ec2da53f2",
+    "observer-install.txt": "d9d3a368e539af31e2ca81a01b66cc9eb4215a394b4aeb591382b5b68e2e5c06",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "1fa219f965cf2f8c8bf363d48148e164733cedc58b7027880647b3817de39b0b",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "32a58db2e46833347581ac6996da7bb514d3b2337acc5722d0d4a315bdb2e9b0"
+  }
+}

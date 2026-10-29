@@ -1,0 +1,173 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "open-level",
+    "level": 44
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "economy_policy_v121",
+    "value": "true"
+  },
+  {
+    "op": "assert-shells",
+    "count": 3,
+    "layers": 5,
+    "allKinds": true
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-undos-coins"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 44,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "\u21b6.*Undo \u00b7.*|Undo \u00b7.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "1"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-undos-coins"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 44,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "\u21b6.*Undo \u00b7.*|Undo \u00b7.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-undos-coins"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 44,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "\u21b6.*Undo \u00b7 15 Coins|Undo \u00b7 15 Coins"
+  },
+  {
+    "op": "capture",
+    "name": "en-third-undo-disclosed-coin-confirm"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-undos-coins"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-undos-coins"
+  },
+  {
+    "op": "tap",
+    "regex": "\u21b6.*Undo \u00b7 15 Coins|Undo \u00b7 15 Coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Yes"
+  },
+  {
+    "op": "assert-int-delta",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-undos-coins",
+    "delta": -15
+  },
+  {
+    "op": "assert-paid-undo",
+    "cost": 15
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "3"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "3"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-chain",
+    "progress": 0,
+    "earned": false,
+    "spent": false
+  },
+  {
+    "op": "capture",
+    "name": "en-third-undo-earned-coins-durable"
+  },
+  {
+    "op": "snapshot",
+    "name": "u44-paid-undo-before-cold"
+  }
+]

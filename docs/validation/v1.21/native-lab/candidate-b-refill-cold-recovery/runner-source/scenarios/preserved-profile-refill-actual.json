@@ -1,0 +1,174 @@
+[
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "unlocked",
+    "value": "11"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "lab-preserved-450-test-gold-home"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "capture",
+    "name": "lab-capacity-ten-preserved-old-profile"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "open-level",
+    "level": 11
+  },
+  {
+    "op": "drain-energy"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "tap",
+    "regex": "Pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter.*"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "assert-label",
+    "regex": "(?s).*50 LumaGold.*"
+  },
+  {
+    "op": "capture",
+    "name": "lab-zero-energy-exact-test-gold-price"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-before-actual-test-refill"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "capture",
+    "name": "lab-test-gold-explicit-confirmation"
+  },
+  {
+    "op": "tap",
+    "regex": "Oui"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "400"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "capture",
+    "name": "lab-400-test-gold-energy-ten"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-after-actual-test-refill"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "open-level",
+    "level": 11
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "400"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "capture",
+    "name": "lab-new-real-u11-attempt-energy-nine"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-u11-credited-attempt-before-cold"
+  }
+]

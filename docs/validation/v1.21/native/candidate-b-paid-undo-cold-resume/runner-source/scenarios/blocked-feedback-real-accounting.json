@@ -1,0 +1,83 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "open-level",
+    "level": 45
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "economy_policy_v121",
+    "value": "true"
+  },
+  {
+    "op": "unseal-step",
+    "level": 45,
+    "index": 2
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-blocked-coins"
+  },
+  {
+    "op": "piece",
+    "row": 1,
+    "col": 1
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "assert-label",
+    "regex": "Blocked · 0 moves lost"
+  },
+  {
+    "op": "capture-fast",
+    "name": "en-blocked-below-board-red-real-cost"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "0"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-blocked-coins"
+  },
+  {
+    "op": "assert-chain",
+    "progress": 0,
+    "earned": false,
+    "spent": false
+  },
+  {
+    "op": "snapshot",
+    "name": "u45-real-blocked-cost-state"
+  },
+  {
+    "op": "tap",
+    "regex": "Pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quit.*"
+  },
+  {
+    "op": "adventure"
+  }
+]

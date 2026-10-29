@@ -1,0 +1,28 @@
+{
+  "status": "prepared_not_executed",
+  "required_handoff": [
+    "exact APK path",
+    "exact SHA256",
+    "version",
+    "code",
+    "final economy values"
+  ],
+  "device": "Luma119-Battle-QA / emulator-5602",
+  "prior_installed_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+  "phases": [
+    "snapshot-only upgrade preserving earned profile",
+    "full six-map prelaunch preservation audit",
+    "media-fr-en-menus",
+    "shell-focus-prepare-cold-fr",
+    "shell-focus-cold-resume-gift-en",
+    "rooms-real-selectors",
+    "earned-gacha-confirm-cancel",
+    "earned-gacha-cold-recovery",
+    "paid-undo-prepare-cold",
+    "paid-undo-cold-resume",
+    "guarded compact display + compact-reduced-fr-en + exact display restore",
+    "final read-only snapshot",
+    "original1080x2400 site media export with exact APK provenance"
+  ],
+  "limits": "No device start, install, Activity or gestures until exact candidate handoff. Any actual failure stops the dependent sequence and remains preserved; later builds require a new immutable phase and before-update profile snapshot."
+}

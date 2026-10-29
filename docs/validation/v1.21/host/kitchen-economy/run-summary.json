@@ -1,0 +1,91 @@
+{
+  "scope": "Existing pure host/model/transaction/geometry regressions only. No Android package, device execution, real account/provider/payment or human playthrough claim.",
+  "source_inputs": "docs/validation/v1.21/host/kitchen-economy/source-inputs.json",
+  "source_inputs_sha256": "ca288bdca86c352982585c670a6711d8582ad1843fe728dc26dc40b5eccbbb85",
+  "started_utc": "2026-10-29T23:05:59.088515+00:00",
+  "finished_utc": "2026-10-29T23:06:02.484937+00:00",
+  "elapsed_seconds": 3.396,
+  "parallel_workers": 3,
+  "suites": 5,
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "label": "home-store",
+      "command": [
+        "bash",
+        "scripts/test-home-v115.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-1ocxpqjy",
+      "started_utc": "2026-10-29T23:05:59.089826+00:00",
+      "finished_utc": "2026-10-29T23:06:00.956686+00:00",
+      "elapsed_seconds": 1.867,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-economy/home-store.log",
+      "log_sha256": "d89a99e093cc21c620c6d9947222f1554d3a567a2747fa4eda22eb8f8801aee9"
+    },
+    {
+      "label": "home-geometry-115",
+      "command": [
+        "bash",
+        "scripts/test-home-v115-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-1ocxpqjy",
+      "started_utc": "2026-10-29T23:05:59.089991+00:00",
+      "finished_utc": "2026-10-29T23:06:00.937699+00:00",
+      "elapsed_seconds": 1.848,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-economy/home-geometry-115.log",
+      "log_sha256": "41933f22be9cd8b16a45ab4daafe19774b13af0b5d8afd1449aa6965f8f56d25"
+    },
+    {
+      "label": "home-geometry-116",
+      "command": [
+        "bash",
+        "scripts/test-home-v116-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-1ocxpqjy",
+      "started_utc": "2026-10-29T23:05:59.090161+00:00",
+      "finished_utc": "2026-10-29T23:06:01.437463+00:00",
+      "elapsed_seconds": 2.347,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-economy/home-geometry-116.log",
+      "log_sha256": "acad7e3dfdbc333347c59aabedcb3e6e4b75be2e9bc830a9dea72362caaef637"
+    },
+    {
+      "label": "home-kitchen",
+      "command": [
+        "bash",
+        "scripts/test-home-kitchen-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/kitchen-economy/home-kitchen.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-1ocxpqjy",
+      "started_utc": "2026-10-29T23:06:00.938354+00:00",
+      "finished_utc": "2026-10-29T23:06:02.312013+00:00",
+      "elapsed_seconds": 1.374,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-economy/home-kitchen.log",
+      "log_sha256": "8fcdb3addf440d9839650e29226e74ed84de9a7b8601d7d270df9312715278a6"
+    },
+    {
+      "label": "economy-curve",
+      "command": [
+        "bash",
+        "scripts/test-economy-curve-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/kitchen-economy/economy-curve.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-1ocxpqjy",
+      "started_utc": "2026-10-29T23:06:00.957341+00:00",
+      "finished_utc": "2026-10-29T23:06:02.483702+00:00",
+      "elapsed_seconds": 1.526,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-economy/economy-curve.log",
+      "log_sha256": "8788107720719c0d5cbb734c58b3e700f4aee633fa10e7f530c47ab72616d33c"
+    }
+  ]
+}

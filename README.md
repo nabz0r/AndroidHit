@@ -1,7 +1,23 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>Small companions. Bigger adventures.</strong><br>1.20 · softer home, real gifts and an illustrated boutique · delivered for playtesting</p>
+<p align="center"><strong>Small companions. Bigger adventures.</strong><br>1.21 · an avatar in the spotlight, a living journey and progress you can understand · B signed candidate under final qualification</p>
 
-## Current 1.20 — delivered for playtesting
+## Current 1.21 — signed B, final acceptance and delivery pending
+
+**Production `1.21.0-rc1` and separate Lab `1.21.0-sandbox-rc1`, code 29, are frozen and collected locally.** [Exact bytes, sizes and signer](releases/manifest-1.21.0-rc1.json) · [Release scope and remaining gates](docs/RELEASE_1_21.md) · [Frozen B source/package record](docs/validation/v1.21/candidate-b/candidate.json). This status does not claim GitHub or Hosting delivery yet.
+
+The home puts a large full-body avatar, its copies/forms and the actual player XP first. Appearance and puzzle skills have separate explanations. Play is followed by direct **Home / Living room / Kitchen / Garden** shortcuts; the kitchen is a real independently saved room, separate from the optional 440-Coin furnishing. The illustrated boutique retains real prices, ownership, previews and fixed odds before confirmation.
+
+Ten map zones and animated puzzle worlds carry the adventure. Eligible new U11+ and expedition attempts add ice/fire/water shells cleared by free taps. Three distinct manual exits without correction earn one free Focus per attempt. Scene fades last 300 ms; balance and XP motion follows actual values and respects reduced motion.
+
+The economy is explicit: first-clear campaign rewards grow from ×1 to ×2 by U1000; base boost prices grow up to ×1.4 before avatar discounts. New eligible attempts have two free Undos, followed by a confirmed earned-Coin price capped at 40. Energy capacity grows from 10 to 16 without filling the counter, with unchanged one-per-ten-minute regeneration. Account Gold remains separate; real purchases stay closed.
+
+[Host/model evidence](docs/validation/v1.21/host/README.md) distinguishes the accepted A scopes, corrected historical transition-test expectation and unchanged B model dependencies. [Eight current B FR/EN native originals](docs/validation/v1.21/native/site-media-candidate-b-accepted/capture-map.json) bind the exact production APK. The complete B production and isolated Lab acceptance, remote CI, source publication and Hosting delivery remain pending in this draft. Local browser simulation passes 32 responsive view/language/width checks and a complete teaching loop; it changes no Android save. [Simulation source](docs/validation/site-v1.21/staging/lab/ui-1-21/index.html) · [Local browser report](docs/validation/site-v1.21/browser-local/simulation/report.json) · [Website workflow](docs/validation/site-v1.21/README.md).
+
+<p align="center"><img src="docs/validation/v1.21/native/candidate-b-media-fr-en/native/home-fr.png" width="230" alt="Original B Android home with a full-body avatar, actual XP and direct room shortcuts"><img src="docs/validation/v1.21/native/candidate-b-media-fr-en/native/map-fr.png" width="230" alt="Original B Android illustrated journey map"></p>
+
+Original unedited B frames. Emulator/model/browser checks do not establish physical-phone comfort, human enjoyment, retention, Play publication or real-provider purchases. The previous 1.20 delivery and all earlier receipts remain preserved below.
+
+## Preserved 1.20 — delivered for playtesting
 
 **[Production APK](https://luma-drift-production.web.app/releases/luma-drift-1.20.0-rc1.apk)** · **[Separate Lab APK](https://luma-drift-production.web.app/releases/luma-drift-1.20.0-sandbox-rc1.apk)** · [Exact sizes, signer and SHA-256](releases/manifest-1.20.0-rc1.json) · [Delivery record](docs/validation/v1.20/publication/release-delivery.json).
 

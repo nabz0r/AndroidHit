@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "passed": true,
+      "check": "Exactly50testGolddebit frompreserved450balance"
+    },
+    {
+      "passed": true,
+      "check": "Granted test energy fully consumed fromstock andoutboxempty"
+    },
+    {
+      "passed": true,
+      "check": "All old Lab purchase receipt/journal fields preserved"
+    },
+    {
+      "passed": true,
+      "check": "Exactlyone new actual spent_ receipt"
+    },
+    {
+      "passed": true,
+      "check": "Exactlyone new actual used_ receipt"
+    },
+    {
+      "passed": true,
+      "check": "Exactlyone new energycredit receipt"
+    },
+    {
+      "passed": true,
+      "check": "Old energycredit receipt preserved"
+    },
+    {
+      "passed": true,
+      "check": "Lab earned Coins unchanged by actual testGoldpurchase"
+    },
+    {
+      "passed": true,
+      "check": "Actualrefill10thenoneeligibleattempt9"
+    },
+    {
+      "passed": true,
+      "check": "Actualeligibleattempt bound totheenergydebitreceipt"
+    }
+  ],
+  "scope": "Read-only actual native journal comparisons, no grants/edits. Local sandbox testGold only."
+}

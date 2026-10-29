@@ -1,0 +1,653 @@
+{
+  "passed": true,
+  "scope": "Actual local browser QA of the exact B homepage staging preview, not public-origin observation, final native/Lab acceptance or deployment.",
+  "recorded_at_utc": "2026-10-29T23:39:29.525Z",
+  "production_apk_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "source_files": {
+    "docs/validation/site-v1.21/staging/index.preview.html": "edbaeec4bff7284a2efd9485d5297542adc16cb816a9ce0c3e6792d1dc9348af",
+    "docs/validation/site-v1.21/staging/site-v121.js": "be3addec5a55d1a71e1cb388f49aec2a99716b052d313a6f8a734edda87cfe25",
+    "docs/validation/site-v1.21/staging/site-v121.css": "8fdc4785d2d274b318fa096621359f36b20ee3c0bf905b10eb2cd189e59f4055",
+    "docs/validation/site-v1.21/staging/legal-update-final.json": "e9b91d653c839edaa48dbb0eecdf2408883d240ee786fbfe93f1016dd29ea34a",
+    "public/privacy/index.html": "859ea48b4611d6e4c91f0fb7779146ec1b8e1157018cde9c8c826269d68cc4e2",
+    "releases/manifest-1.21.0-rc1.json": "d2ef622b961b1b1b88e45239b9a3ad09a8f0440fb449c76c9505a8adcd30ad8e",
+    "docs/validation/v1.21/native/site-media-candidate-b-accepted/capture-map.json": "e3d1bca15aa0431253a9fa6e35313d9727b48866a4ca44de5dbf96228d3d29db",
+    "scripts/test-site-v121-runtime.mjs": "3f01e0d1830ddff2cbeb5885119e0b97bb6162a4a77cfa68dcd62659741e96ad"
+  },
+  "requested_widths": [
+    320,
+    375,
+    768,
+    1280
+  ],
+  "locales": [
+    "fr",
+    "en"
+  ],
+  "hero_states": [
+    {
+      "requestedWidth": 320,
+      "language": "fr",
+      "client": 305,
+      "heroImage": [],
+      "lang": "fr",
+      "scroll": 305,
+      "title": "Luma Drift 1.21 — Ton compagnon. Ta prochaine aventure."
+    },
+    {
+      "requestedWidth": 320,
+      "language": "en",
+      "client": 305,
+      "heroImage": [],
+      "lang": "en",
+      "scroll": 305,
+      "title": "Luma Drift 1.21 — Your companion. Your next adventure."
+    },
+    {
+      "requestedWidth": 375,
+      "language": "fr",
+      "client": 360,
+      "heroImage": [
+        {
+          "complete": true,
+          "naturalWidth": 1080,
+          "src": "assets/screenshots/v1.21/home-fr.png"
+        }
+      ],
+      "lang": "fr",
+      "scroll": 360,
+      "title": "Luma Drift 1.21 — Ton compagnon. Ta prochaine aventure."
+    },
+    {
+      "requestedWidth": 375,
+      "language": "en",
+      "client": 360,
+      "heroImage": [
+        {
+          "complete": true,
+          "naturalWidth": 1080,
+          "src": "assets/screenshots/v1.21/home-en.png"
+        }
+      ],
+      "lang": "en",
+      "scroll": 360,
+      "title": "Luma Drift 1.21 — Your companion. Your next adventure."
+    },
+    {
+      "requestedWidth": 768,
+      "language": "fr",
+      "client": 753,
+      "heroImage": [
+        {
+          "complete": true,
+          "naturalWidth": 1080,
+          "src": "assets/screenshots/v1.21/home-fr.png"
+        }
+      ],
+      "lang": "fr",
+      "scroll": 753,
+      "title": "Luma Drift 1.21 — Ton compagnon. Ta prochaine aventure."
+    },
+    {
+      "requestedWidth": 768,
+      "language": "en",
+      "client": 753,
+      "heroImage": [
+        {
+          "complete": true,
+          "naturalWidth": 1080,
+          "src": "assets/screenshots/v1.21/home-en.png"
+        }
+      ],
+      "lang": "en",
+      "scroll": 753,
+      "title": "Luma Drift 1.21 — Your companion. Your next adventure."
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "fr",
+      "client": 1265,
+      "heroImage": [
+        {
+          "complete": true,
+          "naturalWidth": 1080,
+          "src": "assets/screenshots/v1.21/home-fr.png"
+        }
+      ],
+      "lang": "fr",
+      "scroll": 1265,
+      "title": "Luma Drift 1.21 — Ton compagnon. Ta prochaine aventure."
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "en",
+      "client": 1265,
+      "heroImage": [
+        {
+          "complete": true,
+          "naturalWidth": 1080,
+          "src": "assets/screenshots/v1.21/home-en.png"
+        }
+      ],
+      "lang": "en",
+      "scroll": 1265,
+      "title": "Luma Drift 1.21 — Your companion. Your next adventure."
+    }
+  ],
+  "native_image_observations": [
+    {
+      "requestedWidth": 320,
+      "language": "fr",
+      "index": 0,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "fr",
+      "index": 1,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "fr",
+      "index": 2,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/shop-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "fr",
+      "index": 3,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/map-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "fr",
+      "index": 4,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/puzzle-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "en",
+      "index": 0,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "en",
+      "index": 1,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "en",
+      "index": 2,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/shop-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "en",
+      "index": 3,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/map-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 320,
+      "language": "en",
+      "index": 4,
+      "client": 305,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 305,
+      "src": "assets/screenshots/v1.21/puzzle-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "fr",
+      "index": 0,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "fr",
+      "index": 1,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "fr",
+      "index": 2,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/shop-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "fr",
+      "index": 3,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/map-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "fr",
+      "index": 4,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/puzzle-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "en",
+      "index": 0,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "en",
+      "index": 1,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "en",
+      "index": 2,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/shop-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "en",
+      "index": 3,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/map-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 375,
+      "language": "en",
+      "index": 4,
+      "client": 360,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 360,
+      "src": "assets/screenshots/v1.21/puzzle-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "fr",
+      "index": 0,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "fr",
+      "index": 1,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "fr",
+      "index": 2,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/shop-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "fr",
+      "index": 3,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/map-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "fr",
+      "index": 4,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/puzzle-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "en",
+      "index": 0,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "en",
+      "index": 1,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "en",
+      "index": 2,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/shop-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "en",
+      "index": 3,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/map-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 768,
+      "language": "en",
+      "index": 4,
+      "client": 753,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 753,
+      "src": "assets/screenshots/v1.21/puzzle-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "fr",
+      "index": 0,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "fr",
+      "index": 1,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/home-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "fr",
+      "index": 2,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/shop-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "fr",
+      "index": 3,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/map-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "fr",
+      "index": 4,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/puzzle-fr.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "en",
+      "index": 0,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "en",
+      "index": 1,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/home-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "en",
+      "index": 2,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/shop-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "en",
+      "index": 3,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/map-en.png",
+      "visible": true
+    },
+    {
+      "requestedWidth": 1280,
+      "language": "en",
+      "index": 4,
+      "client": 1265,
+      "complete": true,
+      "naturalWidth": 1080,
+      "scroll": 1265,
+      "src": "assets/screenshots/v1.21/puzzle-en.png",
+      "visible": true
+    }
+  ],
+  "all_40_native_image_observations_loaded_visible": true,
+  "no_horizontal_overflow": true,
+  "gallery": {
+    "hidden": false,
+    "label": "Miko. Jump. Form 2 / 4, visual level 3.",
+    "status": "Preview loaded · Miko · Jump"
+  },
+  "audio": {
+    "initial_all_paused": true,
+    "first_deliberate_play": [
+      {
+        "currentTime": 0.187282,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "currentTime": 0,
+        "paused": true,
+        "readyState": 0
+      },
+      {
+        "currentTime": 0,
+        "paused": true,
+        "readyState": 0
+      },
+      {
+        "currentTime": 0,
+        "paused": true,
+        "readyState": 0
+      }
+    ],
+    "second_play_pauses_first": [
+      {
+        "currentTime": 0.02322,
+        "paused": true,
+        "readyState": 4
+      },
+      {
+        "currentTime": 0.206393,
+        "paused": false,
+        "readyState": 4
+      },
+      {
+        "currentTime": 0,
+        "paused": true,
+        "readyState": 0
+      },
+      {
+        "currentTime": 0,
+        "paused": true,
+        "readyState": 0
+      }
+    ],
+    "scope": "HTML media playback states and advancing time for two preserved local previews; not physical speaker audibility."
+  },
+  "keyboard": {
+    "focusVisible": true,
+    "href": "/delete-account/index.html?lang=en",
+    "tag": "A",
+    "text": "Supprimer mon compteDelete my account"
+  },
+  "privacy": {
+    "hasCapacity": true,
+    "hasUndo": true,
+    "lang": "en",
+    "title": "Confidentialité / Privacy · Luma Drift 1.21",
+    "visibleHeading": [
+      "Privacy.\nMade clear."
+    ]
+  },
+  "console_errors": [],
+  "public_origin_requested": false,
+  "management_requested": false,
+  "primary_visual": "docs/validation/site-v1.21/browser-local/homepage/fr-1280-final-delivery-preview.png",
+  "native_surfaces_visual": "docs/validation/site-v1.21/browser-local/homepage/en-1280-native-surfaces-final.png"
+}

@@ -1,0 +1,239 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T23:39:25.689594+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "phase": "lab-refill-cold-recovery",
+  "expected_version": "1.21.0-sandbox-rc1",
+  "expected_code": 29,
+  "apk_sha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+  "observer_sha256": "fdc7c422346018a6563c198e91d43c34571d8ba2548f8184a3eafe48702f5534",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "f62a1f43-b8a7-40f0-b28a-231daf670659",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "lab-refill-cold-recovery",
+    "runToken": "f62a1f43-b8a7-40f0-b28a-231daf670659",
+    "processId": 26305,
+    "checkCount": 20,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact separate Lab package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 9"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance = 400"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock = 0"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox = "
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference coins = 730"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 9"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance = 400"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 9"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance = 400"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 7,
+    "actions": [
+      {
+        "reason": "journey_continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1674029,
+        "label": "Reprendre  ·  Niveau 11",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "Pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1676405,
+        "label": "Pause",
+        "bounds": [
+          55,
+          283,
+          188,
+          416
+        ]
+      },
+      {
+        "reason": "Quitter.*",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1677199,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      },
+      {
+        "reason": "menu_wallet_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1678046,
+        "label": "Énergie: 9 / 10. Énergie 9/10",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/menu_wallet_2",
+        "bounds": [
+          720,
+          150,
+          1035,
+          316
+        ]
+      },
+      {
+        "reason": "energy_back",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1680080,
+        "label": "‹ Retour",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/energy_back",
+        "bounds": [
+          55,
+          382,
+          343,
+          521
+        ]
+      },
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1680837,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1681479,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      }
+    ],
+    "captures": [
+      "lab-cold-u11-energy-nine-test-gold-400",
+      "lab-cold-no-recredit-test-gold-400",
+      "lab-final-en-test-gold-400"
+    ],
+    "package": "com.androidhit.lumadrift.sandbox",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 19.202,
+  "evidence_sha256": {
+    "battle-observer.apk": "fdc7c422346018a6563c198e91d43c34571d8ba2548f8184a3eafe48702f5534",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "d2e2978f0b2ee5b1be7f8b3ad0b39cecbeb6dea7a79c974bcb8b36da0d80d7b0",
+    "native/after.json": "c11d752c900411c31f241a543fa2b50cf64cb5fadc2a3b8fc45a62858aacd087",
+    "native/before.json": "aceedad0b997b67a70dadef8f75c0f42eaa9b4dcfa4e6975591dfcbb41758540",
+    "native/lab-cold-before-action.json": "aceedad0b997b67a70dadef8f75c0f42eaa9b4dcfa4e6975591dfcbb41758540",
+    "native/lab-cold-no-recredit-test-gold-400-accessibility.json": "e305fc0ef650066ed9d1d5371e4d13834ba8d94ff5e21acd259f8ff85c558cbb",
+    "native/lab-cold-no-recredit-test-gold-400.png": "ef6174a19a0523ff0665a638acc5da7d40a3597e3c924f9fd4a7b921f1288947",
+    "native/lab-cold-u11-energy-nine-test-gold-400-accessibility.json": "f913604aa43069e7105312d5633b315270f965f744ab47769250b960d2b50a9c",
+    "native/lab-cold-u11-energy-nine-test-gold-400.png": "759233a154c8b9e59d085488b31e1320c3f62b44a9420c3b7a2f668b07b03a9e",
+    "native/lab-final-cold-journal.json": "c11d752c900411c31f241a543fa2b50cf64cb5fadc2a3b8fc45a62858aacd087",
+    "native/lab-final-en-test-gold-400-accessibility.json": "e452818610c74e7e4405bb9c96a76e0017e3b95562cde6f1a20b7ad080e8f750",
+    "native/lab-final-en-test-gold-400.png": "3a6a886eb4a1cbf662398cf6f7db8f29e87675d74b4da6f8d21cbd5e6bea5d61",
+    "native/lab-same-attempt-cold-resumed.json": "aceedad0b997b67a70dadef8f75c0f42eaa9b4dcfa4e6975591dfcbb41758540",
+    "native/report.json": "235588aa4c233f6501f5ba213f0c3d7178b4fc93e261d90e0a37684e90947a5f",
+    "native/requested-steps.json": "81586409ddf7db2bff27844491fc6bae5e93db4c2a55543dc5e874558028556f",
+    "observer-install.txt": "30275158e491854dfd5519d4752fd7d79e36dd885049c2a525b0bda9d4b8cc84",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "b00f1334c8775ba85e28aba1b98ae13600b7794abac0bf33f6eff66a497596de",
+    "source-snapshot.json": "32a58db2e46833347581ac6996da7bb514d3b2337acc5722d0d4a315bdb2e9b0"
+  }
+}

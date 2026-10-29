@@ -22,6 +22,7 @@ public final class SceneTransitionV117Test {
         near(frame.outgoingOffsetX, 0f, "no outgoing translation after completion");
     }
     private static void transitionContracts() {
+        check(SceneTransition.DURATION_MS==300L,"1.21 scene duration is the explicit300ms contract");
         SceneTransition state = new SceneTransition();
         complete(state.frame(500));
         for (Direction direction : Direction.values()) {
@@ -47,12 +48,12 @@ public final class SceneTransitionV117Test {
                     float sign = direction == Direction.BACK || direction == Direction.RIGHT ? -1f : 1f;
                     check(sign * frame.incomingOffsetX >= 0f, "incoming follows direction");
                     check(sign * frame.outgoingOffsetX <= 0f, "outgoing recedes in matching direction");
-                    check(Math.abs(frame.incomingOffsetX) <= .04501f, "travel limited to 4.5 percent of viewport");
+                    check(Math.abs(frame.incomingOffsetX) <= .02501f, "1.21 travel limited to2.5percent of viewport");
                 }
                 priorAlpha = frame.incomingAlpha;
                 priorProgress = frame.progress;
             }
-            complete(state.frame(1220));
+            complete(state.frame(1000+SceneTransition.DURATION_MS));
             complete(state.frame(1100));
         }
         state.begin(2000, false, Direction.FORWARD);
@@ -64,7 +65,7 @@ public final class SceneTransitionV117Test {
         check(state.generation() > generation, "replacement invalidates old announcement token");
         near(state.frame(2110).progress, 0f, "replacement begins a new presentation timeline");
         check(state.frame(2210).active, "replacement does not inherit old deadline");
-        complete(state.frame(2330));
+        complete(state.frame(2110+SceneTransition.DURATION_MS));
 
         state.begin(3000, false, Direction.LEFT);
         state.frame(3040);

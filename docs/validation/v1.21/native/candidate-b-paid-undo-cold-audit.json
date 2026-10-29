@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "preference": "luma_session",
+      "key": "run_id",
+      "passed": true,
+      "before": "5bb31b18-176e-416a-9bc1-0cb903e2abec",
+      "after": "5bb31b18-176e-416a-9bc1-0cb903e2abec"
+    },
+    {
+      "preference": "luma_session",
+      "key": "history",
+      "passed": true,
+      "before": "",
+      "after": ""
+    },
+    {
+      "preference": "luma_session",
+      "key": "budget_used",
+      "passed": true,
+      "before": 3,
+      "after": 3
+    },
+    {
+      "preference": "luma_session",
+      "key": "undos",
+      "passed": true,
+      "before": 3,
+      "after": 3
+    },
+    {
+      "preference": "luma_session",
+      "key": "elements_v121",
+      "passed": true,
+      "before": "ES121|37999f233c5b03b980af65fe538dae46f4d90d719f6d98d5b3763a84a7d67907|6|1:WATER:1;4:ICE:2",
+      "after": "ES121|37999f233c5b03b980af65fe538dae46f4d90d719f6d98d5b3763a84a7d67907|6|1:WATER:1;4:ICE:2"
+    },
+    {
+      "preference": "luma_session",
+      "key": "exit_chain_v121",
+      "passed": true,
+      "before": "1:0:0:0:0",
+      "after": "1:0:0:0:0"
+    },
+    {
+      "preference": "luma_session",
+      "key": "economy_policy_v121",
+      "passed": true,
+      "before": true,
+      "after": true
+    },
+    {
+      "preference": "luma_session",
+      "key": "last_paid_undo_v121",
+      "passed": true,
+      "before": "425c9a0b-1a8e-4b2d-8121-49725156a175",
+      "after": "425c9a0b-1a8e-4b2d-8121-49725156a175"
+    },
+    {
+      "preference": "luma_drift_save_v1",
+      "key": "coins",
+      "passed": true,
+      "before": 724,
+      "after": 724
+    },
+    {
+      "preference": "luma_drift_save_v1",
+      "key": "undo121_receipt_425c9a0b-1a8e-4b2d-8121-49725156a175",
+      "passed": true,
+      "before": "used:15",
+      "after": "used:15"
+    },
+    {
+      "preference": "luma_drift_save_v1",
+      "key": "undo121_pending",
+      "passed": true,
+      "before": "",
+      "after": ""
+    }
+  ],
+  "before_sha256": "720c2f8c44b1dd5518a2927f9dbf87193c666f6b8330c0c82d860baa06fdadc1",
+  "after_sha256": "720c2f8c44b1dd5518a2927f9dbf87193c666f6b8330c0c82d860baa06fdadc1",
+  "scope": "Exact state equality across actual native process restart/resume. Elapsed-time fields are outside selected keys. No preferences written."
+}

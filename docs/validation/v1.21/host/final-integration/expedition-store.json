@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": 997,
+  "wardrobe_mode_checks": 118,
+  "actual_U_certificates_played": 52,
+  "certificate_actions_played": 320,
+  "checks_excluding_certificate_actions": 677,
+  "count_note": "Each real certificate action is one assertion. Random departure routes choose different real U boards, so the aggregate assertion count can vary; fixed-scope checks and52 played certificates remain explicit.",
+  "source_manifest_sha256": "3e76123e9d3f10c50c1d43b15a32ec999b4908fa320a8e83850d4aaa62de4ddc",
+  "source_file_count": 89,
+  "scope": "Actual GameStore APIs with durable JVM preference doubles, explicit historical receipt/maximum-copy/old-wardrobe-choice fixtures, earned paid draws, real U certificates, four-stage route, skill/choice resume, copy/discovery/home rewards, cap/surplus, failed writes before/after memory, repeated refusal, cold recreation, corrupt receipt refusal and concurrent store handles. Wardrobe mode preserves explicit selections and changes atomically with single-item/four-slot signature equip, including failed-write recovery. No Android rendering or device performance claim."
+}

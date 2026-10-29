@@ -1,0 +1,150 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 42
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_policy",
+    "value": "6"
+  },
+  {
+    "op": "assert-shells",
+    "count": 3,
+    "layers": 5,
+    "allKinds": true
+  },
+  {
+    "op": "assert-chain",
+    "progress": 0,
+    "earned": false,
+    "spent": false
+  },
+  {
+    "op": "capture",
+    "name": "puzzle-fr"
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 0
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 1
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 2
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 3
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 4
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 5
+  },
+  {
+    "op": "assert-shells",
+    "count": 0,
+    "layers": 0
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "0"
+  },
+  {
+    "op": "capture",
+    "name": "fr-free-elements-cleared-before-exits"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 0
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 1
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 2
+  },
+  {
+    "op": "assert-chain",
+    "progress": 3,
+    "earned": true,
+    "spent": false
+  },
+  {
+    "op": "capture",
+    "name": "fr-three-exits-free-focus-ready"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "booster_hint",
+    "name": "hint-stock"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-focus-coins"
+  },
+  {
+    "op": "tap-id",
+    "id": "arcade_focus"
+  },
+  {
+    "op": "assert-chain",
+    "progress": 3,
+    "earned": true,
+    "spent": true
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "booster_hint",
+    "name": "hint-stock"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-focus-coins"
+  },
+  {
+    "op": "capture",
+    "name": "fr-focus-used-without-inventory"
+  },
+  {
+    "op": "snapshot",
+    "name": "u42-live-before-cold"
+  }
+]

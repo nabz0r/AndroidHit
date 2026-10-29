@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T23:18:01.992160+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "before-b-preservation",
+  "expected_version": "1.21.0-rc1",
+  "expected_code": 29,
+  "apk_sha256": "1798dcf1d1949eb287006932f904f73a92ea51cf3fbadfcfb0f749d38663baff",
+  "observer_sha256": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": true,
+  "upgrade_from_sha256": null,
+  "run_token": "12ff4251-2734-457a-9aa2-0039ccb6534b",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "1798dcf1d1949eb287006932f904f73a92ea51cf3fbadfcfb0f749d38663baff",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "before-b-preservation",
+    "runToken": "12ff4251-2734-457a-9aa2-0039ccb6534b",
+    "processId": 7938,
+    "checkCount": 6,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Snapshot-only phase never launches an Activity or sends UI input"
+      }
+    ],
+    "touchCount": 0,
+    "actions": [],
+    "captures": [],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 4.629,
+  "evidence_sha256": {
+    "battle-observer.apk": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "7aff9809145651b8135b207132d9738e00fc811c1f62d0bb3997851700b0f587",
+    "native/after.json": "06d676f3890892a47399c38e203649dc9591a0e5c83c08d873c5bd4ff76f257a",
+    "native/before.json": "06d676f3890892a47399c38e203649dc9591a0e5c83c08d873c5bd4ff76f257a",
+    "native/report.json": "faf5b469f1598e02928a121f818f3a36fbe0a0e51e0495d9468dfbc62bdd93c4",
+    "observer-install.txt": "d9d3a368e539af31e2ca81a01b66cc9eb4215a394b4aeb591382b5b68e2e5c06",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "ae0febc966a21bcadc9c69b8656b71ed6367838eb22aca6d9a5abd3d49b3f6e0",
+    "source-snapshot.json": "6a6afe1cdbf665aab5008c53a3c41ac648155fc0a008a47c20253400d1487c4c"
+  }
+}

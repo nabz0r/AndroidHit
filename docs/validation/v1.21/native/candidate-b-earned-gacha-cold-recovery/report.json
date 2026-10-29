@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T23:29:58.200680+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "earned-gacha-cold-recovery",
+  "expected_version": "1.21.0-rc1",
+  "expected_code": 29,
+  "apk_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "observer_sha256": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "90a99a0c-d9c6-46aa-9e27-563e3edc0b8b",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "earned-gacha-cold-recovery",
+    "runToken": "90a99a0c-d9c6-46aa-9e27-563e3edc0b8b",
+    "processId": 19681,
+    "checkCount": 8,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Actual semantic control reachable by real UI scrolling: summon_done"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 5,
+    "actions": [
+      {
+        "reason": "root_nav_collection_hub",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1106748,
+        "label": "Collection",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_collection_hub",
+        "bounds": [
+          432,
+          2134,
+          648,
+          2303
+        ]
+      },
+      {
+        "reason": "Star arrivals",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1107913,
+        "label": "Star arrivals",
+        "bounds": [
+          735,
+          1284,
+          998,
+          1594
+        ]
+      },
+      {
+        "reason": "See last arrival",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1116513,
+        "label": "See last arrival",
+        "bounds": [
+          661,
+          1847,
+          916,
+          2149
+        ]
+      },
+      {
+        "reason": "summon_done",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1121496,
+        "label": "Back to arrivals",
+        "resourceId": "com.androidhit.lumadrift:id/summon_done",
+        "bounds": [
+          66,
+          1686,
+          1013,
+          1841
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1123440,
+        "label": "Home",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      }
+    ],
+    "captures": [
+      "en-gacha-last-arrival-after-real-cold"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 26.446,
+  "evidence_sha256": {
+    "battle-observer.apk": "6cd58cada407778df628704b9930982053867ee388935222d02ab2cfb68a0f66",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "255a0de759d63ab605aa1f3154d3e8c0bbb120d8ae09461bedac1d9e23d8e3fb",
+    "native/after.json": "4172b259cd534e464f047d3e3e3337809b2179b710342109440460c6ddbb1f23",
+    "native/before.json": "4172b259cd534e464f047d3e3e3337809b2179b710342109440460c6ddbb1f23",
+    "native/en-gacha-last-arrival-after-real-cold-accessibility.json": "f577eff9ea0308c6a392ee45e54ce6e9b9c608b1ca15b1fb4f96d9df5d4f2feb",
+    "native/en-gacha-last-arrival-after-real-cold.png": "72b72b32b0f07a15ebe150db005668b94d2f9dbf27b32a4f146c152bdfd52a89",
+    "native/gacha-cold-before-action.json": "4172b259cd534e464f047d3e3e3337809b2179b710342109440460c6ddbb1f23",
+    "native/gacha-cold-recovered.json": "4172b259cd534e464f047d3e3e3337809b2179b710342109440460c6ddbb1f23",
+    "native/report.json": "f9b3c024401e17ff1e9023c0bd5711bb505be41c6ee9ab8a03c7c5e6517a1dda",
+    "native/requested-steps.json": "d927bef41fad729a73525d8ae6b065f585452e7ef81ada38e74f9be5ee729c49",
+    "observer-install.txt": "f554f276b8dc10de597f3f18c8de86ec593be67f02a763b03968c5c2799b3acc",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "a9b6d7b84679c7b6b13a497a5530703114c7a310b046c7b00a9025ef8fe51135",
+    "source-snapshot.json": "0b91884450fd1a9158890236f843597a61e2ac5c24d4aacf117470632fe28de1"
+  }
+}

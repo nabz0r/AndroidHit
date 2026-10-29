@@ -52,9 +52,32 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/ui/PuzzleReaction.java
             /app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/Menu120Layout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/Menu121Layout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/RewardMotion121.java
             /app/src/main/java/com/androidhit/lumadrift/ui/VictoryLayout.java
             /scripts/test-menu-v120.sh
             /scripts/MenuV120Test.java
+            /scripts/test-menu-v121.sh
+            /scripts/Menu121LayoutTest.java
+            /scripts/test-elemental-shell-v121.sh
+            /scripts/ElementalShellV121Test.java
+            /scripts/test-arcade-presentation-v121.sh
+            /scripts/ArcadePresentationV121Test.java
+            /scripts/test-home-kitchen-v121.sh
+            /scripts/HomeKitchenV121Test.java
+            /scripts/test-economy-curve-v121.sh
+            /scripts/EconomyCurveV121Test.java
+            /scripts/test-session-energy-v121.sh
+            /scripts/SessionEnergyV121Test.java
+            /scripts/simulate-summon-economy-v121.sh
+            /scripts/SummonEconomyV121Simulation.java
+            /scripts/test-economy.sh
+            /scripts/EconomyTest.java
+            /scripts/test-meta.sh
+            /scripts/MetaTest.java
+            /scripts/test-saga-map-v17.sh
+            /scripts/SagaMapTest.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java
             /scripts/test-focused-journey-v120.sh
             /scripts/FocusedJourneyV120Test.java
             /app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java
@@ -87,6 +110,8 @@ jobs:
             /scripts/test-site-v118.mjs
             /scripts/test-site-v119.mjs
             /scripts/test-site-v120-runtime.mjs
+            /scripts/test-site-v121-runtime.mjs
+            /scripts/test-simulation-v121.mjs
             /scripts/apk-byte-delta.py
             /scripts/test-apk-byte-delta.py
             /public/assets/site.js
@@ -103,6 +128,10 @@ jobs:
             /docs/validation/site-v1.18/index.template.html
             /docs/validation/site-v1.19/index.template.html
             /docs/validation/site-v1.20/staging/site-v120.js
+            /docs/validation/site-v1.21/staging/site-v121.js
+            /docs/validation/site-v1.21/staging/lab/ui-1-21/simulation-core.mjs
+            /docs/validation/site-v1.21/staging/lab/ui-1-21/simulation.mjs
+            /docs/validation/site-v1.21/staging/native-economy-fixture.json
             /docs/validation/v1.7/audio/audio-biome-metrics.csv
             /docs/validation/v1.7/audio/legacy-pcm.sha256
             /scripts/test-relay-v115.sh
@@ -203,6 +232,8 @@ jobs:
         run: |
           bash scripts/test-data.sh
           bash scripts/test-collection-events.sh
+          bash scripts/test-economy.sh
+          bash scripts/test-meta.sh
 
       - name: Check three-room ownership, migration and camera geometry
         run: |
@@ -235,7 +266,7 @@ jobs:
       - name: Check 1.20 interactions and retained website language and media controls
         # Uses the runner's Node test runtime; no package install, SDK, network,
         # browser, Firebase deployment or native gameplay claim is involved.
-        run: node --test scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+        run: node --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
 
       - name: Check exact APK delta transport and refused artifact replacement
         # Small generated ZIP fixtures only; no APK download or SDK is needed.
@@ -263,6 +294,23 @@ jobs:
           bash scripts/test-focused-journey-v120.sh "$RUNNER_TEMP/luma-puzzle-contracts/focused-journey-v120.json"
           bash scripts/test-session-energy-v120.sh
           bash scripts/test-menu-v120.sh
+
+      - name: Check 1.21 elemental preparation, direct-exit Focus and confirmed-balance animation
+        run: |
+          bash scripts/test-elemental-shell-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/elemental-shells-v121.json"
+          bash scripts/test-arcade-presentation-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/arcade-presentation-v121.json"
+
+      - name: Check 1.21 menus, four independent rooms and chapter map
+        run: |
+          bash scripts/test-menu-v121.sh
+          bash scripts/test-home-kitchen-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/home-kitchen-v121.json"
+          sh scripts/test-saga-map-v17.sh
+
+      - name: Check 1.21 logarithmic entitlements, earned-Coin Undo receipts and energy capacity
+        run: |
+          bash scripts/test-economy-curve-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/economy-curve-v121.json"
+          bash scripts/test-session-energy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/session-energy-v121.json"
+          bash scripts/simulate-summon-economy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/summon-economy-v121"
 
       - name: Check transactional premium refill outbox with a pinned JSON parser
         run: |

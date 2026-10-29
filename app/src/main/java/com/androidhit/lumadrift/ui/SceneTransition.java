@@ -5,8 +5,8 @@ package com.androidhit.lumadrift.ui;
  * The caller supplies an uptime clock and composites its own outgoing and incoming scene layers.
  */
 public final class SceneTransition {
-    public static final long DURATION_MS = 220L;
-    private static final float TRAVEL = .045f;
+    public static final long DURATION_MS = 300L;
+    private static final float TRAVEL = .025f;
 
     public enum Direction { DISSOLVE, FORWARD, BACK, LEFT, RIGHT }
 

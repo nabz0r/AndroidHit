@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "observed_utc": "2026-10-29T23:43:53.499138+00:00",
+  "serial": "emulator-5602",
+  "avd_response": "Luma119-Battle-QA\nOK",
+  "packages": [
+    "package:com.androidhit.lumadrift",
+    "package:com.androidhit.lumadrift.sandbox"
+  ],
+  "size": "Physical size: 1080x2400",
+  "density": "Physical density: 420",
+  "font_scale": "1.0",
+  "creation_receipt": "docs/validation/v1.19/native/device-creation/creation.json",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "checks": [
+    {
+      "check": "Only the two game packages remain; no observer installed",
+      "passed": true
+    },
+    {
+      "check": "Original display, density and font restored",
+      "passed": true
+    },
+    {
+      "check": "Original creation receipt unchanged",
+      "passed": true
+    },
+    {
+      "check": "Task AVD remains alive for owner handoff",
+      "passed": true
+    }
+  ],
+  "scope": "Read-only final cleanup audit. Phase runners already uninstalled observers. App profiles retained; no game uninstall, clear, seed or clock modification. Emulator intentionally left running until owner authorizes shutdown."
+}

@@ -114,6 +114,7 @@ public final class HomeStrings {
         add("room_living","Living room","Salon","Wohnzimmer","Salón","Sala","Soggiorno");
         add("room_bedroom","Bedroom","Chambre","Schlafzimmer","Dormitorio","Quarto","Camera");
         add("room_garden","Garden","Jardin","Garten","Jardín","Jardim","Giardino");
+        add("room_kitchen","Kitchen","Cuisine","Küche","Cocina","Cozinha","Cucina");
         add("rooms","Rooms","Pièces","Räume","Estancias","Divisões","Stanze");
         add("camera_hint","Pinch to zoom · Drag to explore","Pince pour zoomer · Glisse pour explorer","Zum Zoomen zusammenziehen · Zum Erkunden ziehen","Pellizca para ampliar · Arrastra para explorar","Aperta para ampliar · Arrasta para explorar","Pizzica per ingrandire · Trascina per esplorare");
         add("camera_reset","Whole room","Vue d’ensemble","Ganzer Raum","Vista completa","Vista completa","Vista completa");

@@ -11,7 +11,8 @@ public final class HomeV115Test {
     private static boolean refused(Runnable task){try{task.run();return false;}catch(GameStore.LocalSaveException expected){return true;}}
     private static void catalog(){
         check(HomeCatalog.SIZE==10&&HomeCatalog.ITEMS.size()==42,"100 tiles and 42 distinctive furniture types");
-        check(HomeCatalog.ROOMS.equals(Arrays.asList("living","bedroom","garden")),"three stable room identities");
+        check(HomeCatalog.ROOMS.subList(0,3).equals(Arrays.asList("living","bedroom","garden")),"three original room identities and ordering stay stable");
+        check(HomeCatalog.ROOMS.equals(Arrays.asList("living","bedroom","garden","kitchen")),"1.21 adds only the separately saved kitchen");
         Set<String> ids=new HashSet<>();Set<String> themes=new HashSet<>();int large=0;
         for(HomeCatalog.Item item:HomeCatalog.ITEMS){
             check(ids.add(item.id),"unique furniture id");check(item.width>0&&item.depth>0&&item.width<=3&&item.depth<=3,"bounded footprint");
@@ -78,7 +79,7 @@ public final class HomeV115Test {
         }
     }
     public static void main(String[] args)throws Exception{
-        catalog();layouts();independentRooms();legacyAndFaults();String report="{\n  \"passed\":true,\n  \"checks\":"+checks+",\n  \"rooms\":3,\n  \"tiles_per_room\":100,\n  \"furniture_types\":42,\n  \"languages\":6,\n  \"scope\":\"Actual GameStore on host JVM: v1 migration without relocation, complete ten-by-ten paths, collisions, independent rooms and surfaces, exact ownership, failed writes before/after memory and cold restart. Rendering and touch require device validation.\"\n}\n";
+        catalog();layouts();independentRooms();legacyAndFaults();String report="{\n  \"passed\":true,\n  \"checks\":"+checks+",\n  \"rooms\":"+HomeCatalog.ROOMS.size()+",\n  \"tiles_per_room\":100,\n  \"furniture_types\":42,\n  \"languages\":6,\n  \"scope\":\"Actual GameStore on host JVM: v1 migration without relocation, complete ten-by-ten paths, collisions, independent rooms and surfaces, exact ownership, failed writes before/after memory and cold restart. Rendering and touch require device validation.\"\n}\n";
         if(args.length>0){Path out=Path.of(args[0]);if(out.getParent()!=null)Files.createDirectories(out.getParent());Files.writeString(out,report);}System.out.println("PASS "+checks+" v1.15 home upgrade and durability checks");
     }
 }

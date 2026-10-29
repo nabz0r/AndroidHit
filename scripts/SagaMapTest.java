@@ -55,6 +55,20 @@ public final class SagaMapTest {
                 "Pinned-header hit clipping omits the reproduced invisible level497 control");
     }
 
+    private static void illustratedWorldAndCompanion() {
+        for(int total:new int[]{240,1000})for(int level=1;level<=total;level++){
+            int start=SagaMap.sectorStart(level),end=SagaMap.sectorEnd(level,total);
+            check(start<=level&&end>=level&&end<=total,"World labels contain every real level, including the partial Remix world");
+            check(start%100==1&&end-start<100,"Illustrated world boundaries preserve the existing 100-level partitions");
+            float companion=SagaMap.companionX(level);
+            check(companion-48>=0&&companion+48<=390,"The dressed current captain stays inside the map");
+            check(Math.abs(companion-SagaMap.x(level))>=41+48,
+                    "Captain art and its squad target never cover the current node or its level target");
+        }
+        check(SagaMap.sectorEnd(240,240)==240,"Remix world three ends at 240, never a fictional level 300");
+        check(SagaMap.sectorStart(100)==1&&SagaMap.sectorStart(101)==101,"World label changes on the exact existing puzzle boundary");
+    }
+
     private static void bottomControls() {
         // Contracts match the fixed page extents and final content controls in LumaView.
         float[][] controls = {
@@ -73,9 +87,9 @@ public final class SagaMapTest {
     }
 
     public static void main(String[] args) {
-        allNodes(); landscapeAndPinnedHits(); bottomControls();
+        allNodes(); landscapeAndPinnedHits(); illustratedWorldAndCompanion(); bottomControls();
         System.out.println("PASS " + checks + " SagaMap/page geometry checks; every Journey1..1000 and Remix1..240 jump,"
-                + " 13 viewports including 266.67 landscape, virtual culling, biome boundaries, pinned hit clipping and final menu controls.");
+                + " 13 viewports including 266.67 landscape, virtual culling, biome/world boundaries, captain clearance, pinned hit clipping and final menu controls.");
         System.out.println("Scope: pure geometry and explicit fixed-page contracts; Android screenshots, real gesture delivery and text measurement are separate checks.");
     }
 }

@@ -1,0 +1,164 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "fr-compact-home"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "fr-compact-home-fixed-wallet"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_entry"
+  },
+  {
+    "op": "capture",
+    "name": "fr-compact-map"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_shop"
+  },
+  {
+    "op": "capture",
+    "name": "fr-compact-shop"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "en-compact-home"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "en-compact-home-fixed-wallet"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_entry"
+  },
+  {
+    "op": "capture",
+    "name": "en-compact-map"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_shop"
+  },
+  {
+    "op": "capture",
+    "name": "en-compact-shop"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "true"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "capture",
+    "name": "en-reduced-home-static"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_entry"
+  },
+  {
+    "op": "capture",
+    "name": "en-reduced-map-static-a"
+  },
+  {
+    "op": "wait",
+    "ms": 2000
+  },
+  {
+    "op": "capture",
+    "name": "en-reduced-map-static-b"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "capture",
+    "name": "en-reduced-free-puzzle"
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "coins": 0,
+    "xp": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "false"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "compact-reduced-restored"
+  }
+]

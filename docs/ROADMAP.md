@@ -1,6 +1,16 @@
 # Luma Drift roadmap
 
-## Current 1.20 — delivered for playtesting
+## Current 1.21 — B qualification, clear progression and a living world
+
+The signed B/code29 packages are frozen in the [artifact manifest](../releases/manifest-1.21.0-rc1.json). The full-body avatar, real player XP, companion-copy evolution, illustrated offers and direct house/living/kitchen/garden routes are implemented. Appearance, puzzle-team skills, player XP, copies, earned Coins and account Gold have distinct explanations. The kitchen is a separate free ambient room; its purchasable furnishing stays a separate 440-Coin object.
+
+The journey crosses ten illustrated zones. Eligible new U11+ and expedition attempts use free elemental-shell taps and a once-per-attempt Focus earned by three distinct manual exits without correction. Scene fades and real balance/XP feedback respect reduced motion. The versioned economy adds gradual first-clear rewards, gentler boost-price growth, two free Undos before explicit Coin fees, and a 10→16 session-energy capacity that grants no extra energy when it grows. Real checkout remains closed.
+
+[Host evidence](validation/v1.21/host/README.md) records executed model/store/geometry scopes separately from native runs, preserves the original transition-test failure and its corrected expectation, and verifies B's unchanged model dependencies. [Eight exact B site frames](validation/v1.21/native/site-media-candidate-b-accepted/capture-map.json) and the [independent simulation's local browser report](validation/site-v1.21/browser-local/simulation/report.json) are ready. Full production/Lab native acceptance, remote CI, source publication and Hosting are pending in this draft. [Release register](RELEASE_1_21.md).
+
+After delivery, use actual owner/physical-phone play to assess comprehension, touch comfort, perceived motion, audio and voluntary return. Model probabilities and controlled simulations do not establish an enjoyable or habit-forming game. Keep identity, consent, advertising and real purchase/refund acceptance separately qualified.
+
+## Preserved 1.20 — delivered for playtesting
 
 The menu source now implements a light home with one Play action, the equipped companion and owned team, actual ready-gift counts and a five-place navigation. Persistent Coins/Gold/session-energy stays outside the scrolling menu viewport. Daily/weekly gifts use the existing durable claims, remain visible until an explicit close and become non-interactive after collection. The shop is an illustrated single-product carousel with actual price/stock/ownership and preview routes. [Menu contract](UX_1_20_MENUS.md) · [73,838 latest menu assertions over 504 configurations](validation/v1.20/menu/shop-e/README.md).
 

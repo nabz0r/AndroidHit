@@ -1,0 +1,154 @@
+[
+  {
+    "op": "snapshot",
+    "name": "u42-cold-before-action"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-shells",
+    "count": 0,
+    "layers": 0
+  },
+  {
+    "op": "assert-chain",
+    "progress": 3,
+    "earned": true,
+    "spent": true
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0,1,2"
+  },
+  {
+    "op": "snapshot",
+    "name": "u42-cold-restored"
+  },
+  {
+    "op": "capture",
+    "name": "fr-cold-same-shell-and-focus-state"
+  },
+  {
+    "op": "solve",
+    "level": 42
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "coins": 67,
+    "xp": 35
+  },
+  {
+    "op": "capture",
+    "name": "fr-first-clear-u42-exact-reward"
+  },
+  {
+    "op": "snapshot",
+    "name": "u42-earned-receipt"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_gifts"
+  },
+  {
+    "op": "capture",
+    "name": "fr-gifts-ready"
+  },
+  {
+    "op": "snapshot",
+    "name": "before-real-gift"
+  },
+  {
+    "op": "tap",
+    "regex": "Ouvrir le cadeau|Ouvrir un cadeau|Ouvrir cadeau|Open gift"
+  },
+  {
+    "op": "assert-id",
+    "id": "gift_reveal_continue"
+  },
+  {
+    "op": "capture",
+    "name": "fr-real-gift-reveal"
+  },
+  {
+    "op": "snapshot",
+    "name": "after-real-gift"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "gift-durable-coins"
+  },
+  {
+    "op": "wait",
+    "ms": 5000
+  },
+  {
+    "op": "assert-id",
+    "id": "gift_reveal_continue"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "gift-durable-coins"
+  },
+  {
+    "op": "tap-id",
+    "id": "gift_reveal_continue"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "open-level",
+    "level": 43
+  },
+  {
+    "op": "assert-shells",
+    "count": 3,
+    "layers": 5,
+    "allKinds": true
+  },
+  {
+    "op": "capture",
+    "name": "puzzle-en"
+  },
+  {
+    "op": "solve",
+    "level": 43
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "coins": 67,
+    "xp": 35
+  },
+  {
+    "op": "capture",
+    "name": "en-first-clear-u43-exact-reward"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "native-core-finished"
+  }
+]

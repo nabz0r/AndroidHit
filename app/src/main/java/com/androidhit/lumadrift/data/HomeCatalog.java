@@ -8,7 +8,7 @@ import java.util.List;
 public final class HomeCatalog {
     public static final int SIZE = 10;
     public static final String DEFAULT_ROOM = "living";
-    public static final List<String> ROOMS=Collections.unmodifiableList(Arrays.asList("living","bedroom","garden"));
+    public static final List<String> ROOMS=Collections.unmodifiableList(Arrays.asList("living","bedroom","garden","kitchen"));
     public static boolean validRoom(String id){return ROOMS.contains(id);}
     public static final String DEFAULT_WALLPAPER = "wallpaper_cream";
     public static final String DEFAULT_FLOOR = "floor_oak";

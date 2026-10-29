@@ -1,0 +1,181 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-29T23:12:26.761330+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "media-fr-en",
+  "expected_version": "1.21.0-rc1",
+  "expected_code": 29,
+  "apk_sha256": "1798dcf1d1949eb287006932f904f73a92ea51cf3fbadfcfb0f749d38663baff",
+  "observer_sha256": "e479b9f72740a1d1d734b09d3345235df6716d195710fcb09bb95eec06d29449",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "0abeb2f0-2409-47b5-ada2-ea708ded8815",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "1798dcf1d1949eb287006932f904f73a92ea51cf3fbadfcfb0f749d38663baff",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 60,
+    "path": "native-ui-recording.mp4",
+    "sha256": "19a2873b519954712e2343bf7d5586a1effad69915f0f0ac1cceedde187a52ff",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": false,
+    "phase": "media-fr-en",
+    "runToken": "0abeb2f0-2409-47b5-ada2-ea708ded8815",
+    "processId": 3571,
+    "checkCount": 13,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible semantic target home_avatar"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": false,
+        "message": "Actual semantic control reachable by real UI scrolling: economy_shop"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 4,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 56495,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 57074,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "home_evolution",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 60327,
+        "label": "Évolution et talents",
+        "resourceId": "com.androidhit.lumadrift:id/home_evolution",
+        "bounds": [
+          94,
+          1457,
+          526,
+          1590
+        ]
+      },
+      {
+        "reason": "evolution_economy",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 63446,
+        "label": "Ta progression",
+        "resourceId": "com.androidhit.lumadrift:id/evolution_economy",
+        "bounds": [
+          66,
+          2098,
+          1013,
+          2253
+        ]
+      }
+    ],
+    "captures": [
+      "home-fr",
+      "fr-evolution-purpose",
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "error": "Current instrumentation execution failed",
+  "elapsed_seconds": 65.223,
+  "evidence_sha256": {
+    "battle-observer.apk": "e479b9f72740a1d1d734b09d3345235df6716d195710fcb09bb95eec06d29449",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "failure-android-runtime.txt": "e113520c058d29147635cee8441c6c75f389e28f291b7f1da3d13c25a38002ff",
+    "instrumentation.txt": "20bb9df5ea099a869f504efbd2772b821da1d7fa2bf3b5cace0cc62b96d8d648",
+    "native/before.json": "f1b895b40edb988ffb7e9101981b52554d5fbdbfb5155a23cb8183866627af77",
+    "native/failure-accessibility.json": "ef94fac7766178decec529d5d03bf12ac371f89a2c58605b629e25d351909e0b",
+    "native/failure.png": "1b5a8b0aaf7d7bf0b31620c49d0f96b3905d6bee42c90b8b55c5056ca313eff7",
+    "native/failure.txt": "315cd89aa6110d642ae254fd7982be4f08a250ec31b1fe6f52af7c187eb51e23",
+    "native/fr-evolution-purpose-accessibility.json": "e32d5c0250aa189a5d7f3ae2224d4bfb43a3ac88e89a91b5cd60fcd15ff8a0d7",
+    "native/fr-evolution-purpose.png": "375f582b39c9535561591cd38920e08271954e6ab2e4dac20b939e554879fdd7",
+    "native/home-fr-accessibility.json": "1745e55f6e3e98afe4d18dc56086b19e278f38b01dfeb98f3eae8e588238eb30",
+    "native/home-fr.png": "33dde653b1b5dd98467fde5d127bbca0045eda507cbbc2a5fd82e2f2ff8dc230",
+    "native/report.json": "e8ed66c43a40662c4b04ff004c6b3251cbb21d01735018d3dd385ef87dbb86d1",
+    "native/requested-steps.json": "e520bdf1f2bacb409aa23093ffead5295164b9a5e49dd5d89502263720a5fb09",
+    "native-ui-recording.mp4": "19a2873b519954712e2343bf7d5586a1effad69915f0f0ac1cceedde187a52ff",
+    "observer-install.txt": "974fb3aabb4c4ef07416c7767f9c861fbef88ac76f14cefc8cf0e917100f3c8e",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "38956496c84edce2f2cda1511d225c0a517e32662ec34fa64e455b01121c4785",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "9317a3215e8ae2ef3077f2c3da26c7ccd214d9a24f1cb593a5f75b9d7b4a9abd"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Existing pure host/model/transaction/geometry regressions only. No Android package, device execution, real account/provider/payment or human playthrough claim.",
+  "source_inputs": "docs/validation/v1.21/host/energy-retry/source-inputs.json",
+  "source_inputs_sha256": "a25c40561d7942ad79a0d0aa7a3f2ee4c110057acae3a3d512d661f09bbc5dc3",
+  "started_utc": "2026-10-29T23:07:48.694923+00:00",
+  "finished_utc": "2026-10-29T23:07:49.805837+00:00",
+  "elapsed_seconds": 1.111,
+  "parallel_workers": 3,
+  "suites": 1,
+  "passed": 1,
+  "failed": 0,
+  "results": [
+    {
+      "label": "session-energy-121",
+      "command": [
+        "bash",
+        "scripts/test-session-energy-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/energy-retry/session-energy-121.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-c9uarrm3",
+      "started_utc": "2026-10-29T23:07:48.696264+00:00",
+      "finished_utc": "2026-10-29T23:07:49.804790+00:00",
+      "elapsed_seconds": 1.109,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/energy-retry/session-energy-121.log",
+      "log_sha256": "085f766401fe59e9a4e90090affa14b51e672f7f7bdb23f15744df16434a5aad"
+    }
+  ]
+}

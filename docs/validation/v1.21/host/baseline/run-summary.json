@@ -1,0 +1,811 @@
+{
+  "scope": "Existing pure host/model/transaction/geometry regressions only. No Android package, device execution, real account/provider/payment or human playthrough claim.",
+  "source_inputs": "docs/validation/v1.21/host/baseline/source-inputs.json",
+  "source_inputs_sha256": "8f83cc00f328c37c4ea8427c8172b03fad5c0d437ea98303a974366cace3c8c8",
+  "started_utc": "2026-10-29T22:51:36.299270+00:00",
+  "finished_utc": "2026-10-29T22:53:55.343186+00:00",
+  "elapsed_seconds": 139.044,
+  "parallel_workers": 3,
+  "suites": 52,
+  "passed": 52,
+  "failed": 0,
+  "results": [
+    {
+      "label": "relay-all-u-states",
+      "command": [
+        "sh",
+        "scripts/test-relay-v115.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/relay"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:36.301687+00:00",
+      "finished_utc": "2026-10-29T22:51:39.085607+00:00",
+      "elapsed_seconds": 2.784,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/relay-all-u-states.log",
+      "log_sha256": "2671c9b1d251dda1f58337fdca9896f5ee305767696c5c0a4a4e0bd0e7842da1"
+    },
+    {
+      "label": "companion-all-u-identities",
+      "command": [
+        "bash",
+        "scripts/test-companion-action-v119.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/companion-policy6"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:36.301771+00:00",
+      "finished_utc": "2026-10-29T22:51:38.661392+00:00",
+      "elapsed_seconds": 2.36,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/companion-all-u-identities.log",
+      "log_sha256": "6405c5b4961cb18fbd7bf1f931d2709ea80d11b757ab41d3284566b26d637602"
+    },
+    {
+      "label": "focused-journey",
+      "command": [
+        "bash",
+        "scripts/test-focused-journey-v120.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/focused-journey.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:36.301883+00:00",
+      "finished_utc": "2026-10-29T22:51:38.278646+00:00",
+      "elapsed_seconds": 1.977,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/focused-journey.log",
+      "log_sha256": "3850f15a2597745da7834d7e08e67bcef7170f1e840b7708ca561f23e821e5f6"
+    },
+    {
+      "label": "learning-all-n",
+      "command": [
+        "sh",
+        "scripts/test-learning-v114.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/learning"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:38.279335+00:00",
+      "finished_utc": "2026-10-29T22:51:44.541260+00:00",
+      "elapsed_seconds": 6.262,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/learning-all-n.log",
+      "log_sha256": "8378c0048ab1d07aea7f9c8fff2b61f4a483d8e7a62bc71378b3fbd9de287652"
+    },
+    {
+      "label": "strategy-all-l-m-events",
+      "command": [
+        "sh",
+        "scripts/test-strategy-v4.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/strategy"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:38.662389+00:00",
+      "finished_utc": "2026-10-29T22:52:28.831560+00:00",
+      "elapsed_seconds": 50.169,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/strategy-all-l-m-events.log",
+      "log_sha256": "cffb7e92c9c0f951fc3670ada1f59ee3456c6773da25f8ff7647dd1312bbdd05"
+    },
+    {
+      "label": "engine",
+      "command": [
+        "sh",
+        "scripts/test-engine.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:39.086109+00:00",
+      "finished_utc": "2026-10-29T22:51:44.703138+00:00",
+      "elapsed_seconds": 5.617,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/engine.log",
+      "log_sha256": "27cf3707f501368c67f704d8ca7cc1dc00ef07e33047bd573202cff6908cfe40"
+    },
+    {
+      "label": "sealed",
+      "command": [
+        "bash",
+        "scripts/test-sealed.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:44.541713+00:00",
+      "finished_utc": "2026-10-29T22:51:46.193970+00:00",
+      "elapsed_seconds": 1.652,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/sealed.log",
+      "log_sha256": "fd31ecc01b6ad45e85e6b056823eb4f074d2b626233efb91d833e1259363271d"
+    },
+    {
+      "label": "legacy-progression",
+      "command": [
+        "sh",
+        "scripts/test-progression-v3.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/progression-v3"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:44.703842+00:00",
+      "finished_utc": "2026-10-29T22:51:48.196466+00:00",
+      "elapsed_seconds": 3.493,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/legacy-progression.log",
+      "log_sha256": "2dc86c51a30dedc492f0a957cef1b76e3627fe50c5b70d9435b684d2077d3f89"
+    },
+    {
+      "label": "move-budget",
+      "command": [
+        "bash",
+        "scripts/test-move-budget.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:46.194539+00:00",
+      "finished_utc": "2026-10-29T22:51:49.102540+00:00",
+      "elapsed_seconds": 2.908,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/move-budget.log",
+      "log_sha256": "bc0f53590197f8c122b925bde982001838122d863f35fca63b504bf7a2674569"
+    },
+    {
+      "label": "guardians-all-states",
+      "command": [
+        "bash",
+        "scripts/test-guardian-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/guardians"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:48.197017+00:00",
+      "finished_utc": "2026-10-29T22:53:02.341614+00:00",
+      "elapsed_seconds": 74.145,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/guardians-all-states.log",
+      "log_sha256": "45277bb50bed23755553669c2fc020e98204e1531cbd3ef16c8ca301de4b168f"
+    },
+    {
+      "label": "guardian-store",
+      "command": [
+        "bash",
+        "scripts/test-guardian-store-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/guardian-store"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:49.103156+00:00",
+      "finished_utc": "2026-10-29T22:51:50.491523+00:00",
+      "elapsed_seconds": 1.388,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/guardian-store.log",
+      "log_sha256": "77397b2b5636b1daa1bbc0e9299973050a8590324cf714de2d94a87b95ff8aaa"
+    },
+    {
+      "label": "data",
+      "command": [
+        "bash",
+        "scripts/test-data.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:50.492098+00:00",
+      "finished_utc": "2026-10-29T22:51:51.696606+00:00",
+      "elapsed_seconds": 1.205,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/data.log",
+      "log_sha256": "b771cbb8a7806f3ccab11af50b5069a6c0d27c063145364c0b997dd268eec5c1"
+    },
+    {
+      "label": "collection-events",
+      "command": [
+        "bash",
+        "scripts/test-collection-events.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:51.697229+00:00",
+      "finished_utc": "2026-10-29T22:51:52.214671+00:00",
+      "elapsed_seconds": 0.517,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/collection-events.log",
+      "log_sha256": "3d0fb627fd5a63e6ad21c0b4ce4a734d64097b7927ceeccf6a02a5f3d2a7f204"
+    },
+    {
+      "label": "economy",
+      "command": [
+        "bash",
+        "scripts/test-economy.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:52.215245+00:00",
+      "finished_utc": "2026-10-29T22:51:53.701183+00:00",
+      "elapsed_seconds": 1.486,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/economy.log",
+      "log_sha256": "23b9f73117d6604b574bd8f4ec3ae05f32362ad385c20d5b241038e5e7bb67fa"
+    },
+    {
+      "label": "meta",
+      "command": [
+        "bash",
+        "scripts/test-meta.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:53.701785+00:00",
+      "finished_utc": "2026-10-29T22:51:55.127832+00:00",
+      "elapsed_seconds": 1.426,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/meta.log",
+      "log_sha256": "8b95829a53bd47d9d47be0780bb9ba0683dee56c5b976f4b78ef810023158eb7"
+    },
+    {
+      "label": "deliberate-play",
+      "command": [
+        "sh",
+        "scripts/test-deliberate-play-v114.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:55.128489+00:00",
+      "finished_utc": "2026-10-29T22:51:55.911877+00:00",
+      "elapsed_seconds": 0.783,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/deliberate-play.log",
+      "log_sha256": "e0780c105c3bcc8021994b627b60b0bde67a3519e9b4d80cae4483e66bcbcd5f"
+    },
+    {
+      "label": "learning-guide",
+      "command": [
+        "sh",
+        "scripts/test-learning-guide.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:55.912441+00:00",
+      "finished_utc": "2026-10-29T22:51:56.741132+00:00",
+      "elapsed_seconds": 0.829,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/learning-guide.log",
+      "log_sha256": "85b2d494cb0437f2e513683f424d9637a895a5f1cade6d828ec8acc7bbdfbb71"
+    },
+    {
+      "label": "companion-battle",
+      "command": [
+        "bash",
+        "scripts/test-companion-battle-v119.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:56.741823+00:00",
+      "finished_utc": "2026-10-29T22:51:57.475351+00:00",
+      "elapsed_seconds": 0.734,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/companion-battle.log",
+      "log_sha256": "22e9805be9e1dede83626d59daf2720347cf4cd5bdad23b548ecc260a7a195be"
+    },
+    {
+      "label": "squad-store",
+      "command": [
+        "bash",
+        "scripts/test-squad-store-v119.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:57.476082+00:00",
+      "finished_utc": "2026-10-29T22:51:58.637522+00:00",
+      "elapsed_seconds": 1.161,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/squad-store.log",
+      "log_sha256": "6041dbcfe30125bc8db7cc61a9c216190f4219ba1adaa27dbb1f1f78b82bab00"
+    },
+    {
+      "label": "companion-battle-geometry",
+      "command": [
+        "bash",
+        "scripts/test-companion-battle-v119-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:58.638114+00:00",
+      "finished_utc": "2026-10-29T22:51:58.988581+00:00",
+      "elapsed_seconds": 0.351,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/companion-battle-geometry.log",
+      "log_sha256": "1eb43517cb19a3afb522fcc4f51aec3d0293033dfd6f13ab0c9cbc6080bd880a"
+    },
+    {
+      "label": "adventure-geometry",
+      "command": [
+        "bash",
+        "scripts/test-adventure-v119-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:58.989182+00:00",
+      "finished_utc": "2026-10-29T22:51:59.339664+00:00",
+      "elapsed_seconds": 0.351,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/adventure-geometry.log",
+      "log_sha256": "57b3facf404a40be97fa5147c81f3389aedbf23358da614aab77b646a23d75ec"
+    },
+    {
+      "label": "expedition-model",
+      "command": [
+        "bash",
+        "scripts/test-expedition-v118-model.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/expedition-model.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:51:59.340363+00:00",
+      "finished_utc": "2026-10-29T22:52:00.556347+00:00",
+      "elapsed_seconds": 1.216,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/expedition-model.log",
+      "log_sha256": "28743e474b7341cfccb9f9d97d3ffb408a8aa43796e287f604f3da0abf288a74"
+    },
+    {
+      "label": "expedition-store",
+      "command": [
+        "bash",
+        "scripts/test-expedition-v118-store.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/expedition-store.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:00.557111+00:00",
+      "finished_utc": "2026-10-29T22:52:01.880951+00:00",
+      "elapsed_seconds": 1.324,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/expedition-store.log",
+      "log_sha256": "9ba7b797ab7c5e98dbe25bf0295c27afc0a104f861e92a4760399d721a3f0df5"
+    },
+    {
+      "label": "companion-motion",
+      "command": [
+        "bash",
+        "scripts/test-companion-motion-v118.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/companion-motion.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:01.881413+00:00",
+      "finished_utc": "2026-10-29T22:52:03.095094+00:00",
+      "elapsed_seconds": 1.214,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/companion-motion.log",
+      "log_sha256": "1367e3e5c3c957a0e79a8a1ed17ba8130f13630a7855b21f4556e3805c600296"
+    },
+    {
+      "label": "session-energy",
+      "command": [
+        "bash",
+        "scripts/test-session-energy-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:03.096272+00:00",
+      "finished_utc": "2026-10-29T22:52:04.261246+00:00",
+      "elapsed_seconds": 1.165,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/session-energy.log",
+      "log_sha256": "402ae383bced6717b770c3b75f7e876547d785ea9ec00fd40af433a4bcf61873"
+    },
+    {
+      "label": "menu",
+      "command": [
+        "bash",
+        "scripts/test-menu-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:04.262045+00:00",
+      "finished_utc": "2026-10-29T22:52:05.524417+00:00",
+      "elapsed_seconds": 1.262,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/menu.log",
+      "log_sha256": "97058a4b15392ea39d71832812e4a65a6965f896d4bf818e3b6a7d960c987321"
+    },
+    {
+      "label": "power-offers",
+      "command": [
+        "sh",
+        "scripts/test-power-offers-v114.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/power-offers.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:05.525403+00:00",
+      "finished_utc": "2026-10-29T22:52:06.767108+00:00",
+      "elapsed_seconds": 1.242,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/power-offers.log",
+      "log_sha256": "5d145475ab1fd26b9981fa9c225af4f13d3063260eefa5e9f4a5af88c66883a7"
+    },
+    {
+      "label": "profile-summon",
+      "command": [
+        "bash",
+        "scripts/test-profile-summon-v116.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/profile-summon.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:06.767582+00:00",
+      "finished_utc": "2026-10-29T22:52:08.204269+00:00",
+      "elapsed_seconds": 1.437,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/profile-summon.log",
+      "log_sha256": "967f0b0ee5f6e397526163a72cf4dedb115c3b7594998700740cea69ae48843d"
+    },
+    {
+      "label": "objectives",
+      "command": [
+        "bash",
+        "scripts/test-objective-models-v110.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/objective-models.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:08.204890+00:00",
+      "finished_utc": "2026-10-29T22:52:09.477525+00:00",
+      "elapsed_seconds": 1.273,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/objectives.log",
+      "log_sha256": "dc0a774b42a6dac38db8c1a0739c0b9fe4bc0c017cb9653a2f92669ae360fc60"
+    },
+    {
+      "label": "journey-rewards",
+      "command": [
+        "bash",
+        "scripts/test-journey-rewards-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/journey-rewards.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:09.478439+00:00",
+      "finished_utc": "2026-10-29T22:52:10.763946+00:00",
+      "elapsed_seconds": 1.286,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/journey-rewards.log",
+      "log_sha256": "ab0c978919761f50eee5f0ed1eaff2f912220a44c9d4bfb8936511044d610211"
+    },
+    {
+      "label": "local-save",
+      "command": [
+        "bash",
+        "scripts/test-local-save-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/local-save"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:10.764568+00:00",
+      "finished_utc": "2026-10-29T22:52:12.036685+00:00",
+      "elapsed_seconds": 1.272,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/local-save.log",
+      "log_sha256": "1ab28f24d9f6ffc952576ccd6a7c407e3e9fd8e8691fbfbdc95c060bb1e61400"
+    },
+    {
+      "label": "rewards-cosmetics",
+      "command": [
+        "bash",
+        "scripts/test-rewards-cosmetics-v17.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:12.037337+00:00",
+      "finished_utc": "2026-10-29T22:52:13.410860+00:00",
+      "elapsed_seconds": 1.374,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/rewards-cosmetics.log",
+      "log_sha256": "fddf66e307cbdeaeb1aeaae727d50a4d8f50a66534772e62a36a223d565f31c0"
+    },
+    {
+      "label": "tutorial",
+      "command": [
+        "bash",
+        "scripts/test-tutorial-v18.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:13.411438+00:00",
+      "finished_utc": "2026-10-29T22:52:14.569142+00:00",
+      "elapsed_seconds": 1.158,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/tutorial.log",
+      "log_sha256": "6d7dd1169eeb78ed34e52995b1f260f185e0bd56e6c60e3dd620fe355d0cc611"
+    },
+    {
+      "label": "first-light",
+      "command": [
+        "bash",
+        "scripts/test-first-light-v113.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:14.588313+00:00",
+      "finished_utc": "2026-10-29T22:52:15.707168+00:00",
+      "elapsed_seconds": 1.119,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/first-light.log",
+      "log_sha256": "4ffcf8493ddf18bb2f527f5a8f2838bbf9a96964ae0edd4e63dcee7384668ddf"
+    },
+    {
+      "label": "inventory-presentation",
+      "command": [
+        "bash",
+        "scripts/test-inventory-presentation.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:15.707692+00:00",
+      "finished_utc": "2026-10-29T22:52:16.939999+00:00",
+      "elapsed_seconds": 1.232,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/inventory-presentation.log",
+      "log_sha256": "3bd74bc1594bec3858f0ee69fe596f6789909a5c815c78e7b2a7c18b1106e649"
+    },
+    {
+      "label": "board-audit",
+      "command": [
+        "bash",
+        "scripts/test-board-audit-v17.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/baseline/board-audit"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:16.940739+00:00",
+      "finished_utc": "2026-10-29T22:53:55.342262+00:00",
+      "elapsed_seconds": 98.402,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/board-audit.log",
+      "log_sha256": "29ca6f3b16d779682c1032bf6d970298a259facb188d642f6557aea3e1b24c29"
+    },
+    {
+      "label": "difficulty",
+      "command": [
+        "bash",
+        "scripts/test-difficulty.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:28.832136+00:00",
+      "finished_utc": "2026-10-29T22:52:32.284778+00:00",
+      "elapsed_seconds": 3.453,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/difficulty.log",
+      "log_sha256": "8bca3374a3140e3fb63fb36e144147b3325ca7d12432bd6246075afe825fb8a8"
+    },
+    {
+      "label": "saga-map",
+      "command": [
+        "bash",
+        "scripts/test-saga-map-v17.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:32.285272+00:00",
+      "finished_utc": "2026-10-29T22:52:32.686826+00:00",
+      "elapsed_seconds": 0.402,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/saga-map.log",
+      "log_sha256": "5b4a52ba79cf7fb88d3999aeea49cfdf3d89f4d121200cb4eba17790baa8e98d"
+    },
+    {
+      "label": "store-appearance",
+      "command": [
+        "bash",
+        "scripts/test-store-appearance-v111.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:32.687450+00:00",
+      "finished_utc": "2026-10-29T22:52:33.977240+00:00",
+      "elapsed_seconds": 1.29,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/store-appearance.log",
+      "log_sha256": "2d35f2f0dc2000ba6aecbc879659e0d31c74208eaefe02f7f5023db16159b7cc"
+    },
+    {
+      "label": "store-external-faults",
+      "command": [
+        "bash",
+        "scripts/test-store-externals-v111.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:33.977808+00:00",
+      "finished_utc": "2026-10-29T22:52:35.090003+00:00",
+      "elapsed_seconds": 1.112,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/store-external-faults.log",
+      "log_sha256": "25a3d1caf8aa7482a5f2d69b6f14747f23149a3f7e5b2553b829393e05d260dd"
+    },
+    {
+      "label": "store-init",
+      "command": [
+        "bash",
+        "scripts/test-store-init-v111.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:35.090600+00:00",
+      "finished_utc": "2026-10-29T22:52:36.255280+00:00",
+      "elapsed_seconds": 1.165,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/store-init.log",
+      "log_sha256": "d25cadd629b32403d2df4bc9aa951c3fe6b6e65105a4a55fa8510e6e3e1f019a"
+    },
+    {
+      "label": "store-booster",
+      "command": [
+        "bash",
+        "scripts/test-store-booster-v112.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:36.255986+00:00",
+      "finished_utc": "2026-10-29T22:52:37.557373+00:00",
+      "elapsed_seconds": 1.301,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/store-booster.log",
+      "log_sha256": "e7f568770c02a790829e58ca8ff3e34e4cef54fad4e9399e36f705c86aab6b5f"
+    },
+    {
+      "label": "billing-policy",
+      "command": [
+        "bash",
+        "scripts/test-billing-policy.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:37.558105+00:00",
+      "finished_utc": "2026-10-29T22:52:38.064873+00:00",
+      "elapsed_seconds": 0.507,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/billing-policy.log",
+      "log_sha256": "883d564fcfee17e90c50ce9b19f8e07046039b8bea2390afc725d393fb410529"
+    },
+    {
+      "label": "wallet-recovery",
+      "command": [
+        "bash",
+        "scripts/test-wallet-recovery.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:38.065473+00:00",
+      "finished_utc": "2026-10-29T22:52:38.471899+00:00",
+      "elapsed_seconds": 0.406,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/wallet-recovery.log",
+      "log_sha256": "e1fe6dfbf2aa2ba594488d7ea52753f4203ed59c1161b471d8bb17589fb0cde0"
+    },
+    {
+      "label": "energy-purchase",
+      "command": [
+        "bash",
+        "scripts/test-energy-purchase-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:38.472500+00:00",
+      "finished_utc": "2026-10-29T22:52:39.142469+00:00",
+      "elapsed_seconds": 0.67,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/energy-purchase.log",
+      "log_sha256": "1de2d9f875e6867e5e8163e1423fef9328625ddf76068afcca61eb04dc39b2bd"
+    },
+    {
+      "label": "wallet-energy-transport",
+      "command": [
+        "bash",
+        "scripts/test-wallet-energy-transport-v120.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:39.143064+00:00",
+      "finished_utc": "2026-10-29T22:52:39.764198+00:00",
+      "elapsed_seconds": 0.621,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/wallet-energy-transport.log",
+      "log_sha256": "83bc9db44c6c0a637b2605dd044506e48941455b33d95193d5ca1ce65745fff2"
+    },
+    {
+      "label": "home-store",
+      "command": [
+        "bash",
+        "scripts/test-home-v115.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:39.764822+00:00",
+      "finished_utc": "2026-10-29T22:52:41.028743+00:00",
+      "elapsed_seconds": 1.264,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/home-store.log",
+      "log_sha256": "58fc51f98432a872686c3b9f63fdba62deee277e746c532ab6c44590a8423f05"
+    },
+    {
+      "label": "home-geometry-115",
+      "command": [
+        "bash",
+        "scripts/test-home-v115-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:41.029385+00:00",
+      "finished_utc": "2026-10-29T22:52:42.142695+00:00",
+      "elapsed_seconds": 1.113,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/home-geometry-115.log",
+      "log_sha256": "a153187f2bed6a6a4abf15c43fd29a39c6d6616471dffe88c35c261cafb4cf49"
+    },
+    {
+      "label": "home-geometry-116",
+      "command": [
+        "bash",
+        "scripts/test-home-v116-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:42.143302+00:00",
+      "finished_utc": "2026-10-29T22:52:44.093912+00:00",
+      "elapsed_seconds": 1.951,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/home-geometry-116.log",
+      "log_sha256": "da3ad50ec02e9b0d22819a0e0b2ad6c79fee9c8c2a54f2a957de38ce65472563"
+    },
+    {
+      "label": "scene-transition",
+      "command": [
+        "bash",
+        "scripts/test-scene-transition-v117.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:44.094479+00:00",
+      "finished_utc": "2026-10-29T22:52:44.497532+00:00",
+      "elapsed_seconds": 0.403,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/scene-transition.log",
+      "log_sha256": "367050523dbe1e86cd9d653ae6777127b4083165755cff4407c92be48d5f1400"
+    },
+    {
+      "label": "root-scenes",
+      "command": [
+        "bash",
+        "scripts/test-root-scenes-v117.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:44.498106+00:00",
+      "finished_utc": "2026-10-29T22:52:44.951807+00:00",
+      "elapsed_seconds": 0.454,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/root-scenes.log",
+      "log_sha256": "7ed4740f30200ecb1a39a4cff9f7f7e810e3160d4a953cda4eed9482ad22e108"
+    },
+    {
+      "label": "play-geometry",
+      "command": [
+        "bash",
+        "scripts/test-play-scene-v117-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-xs784gae",
+      "started_utc": "2026-10-29T22:52:44.952400+00:00",
+      "finished_utc": "2026-10-29T22:52:45.405742+00:00",
+      "elapsed_seconds": 0.453,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/baseline/play-geometry.log",
+      "log_sha256": "09b925cecec0ef193896a726a2ce12bd1ca5ec3834ad5ca81522ddf65b702912"
+    }
+  ]
+}

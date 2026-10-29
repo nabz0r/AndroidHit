@@ -1,0 +1,75 @@
+{
+  "scope": "Existing pure host/model/transaction/geometry regressions only. No Android package, device execution, real account/provider/payment or human playthrough claim.",
+  "source_inputs": "docs/validation/v1.21/host/kitchen-initial/source-inputs.json",
+  "source_inputs_sha256": "4113620c9ce479f37a8aa89a4034bcb3c0dbca8b6559c29ea800194f24e558fe",
+  "started_utc": "2026-10-29T23:03:09.011532+00:00",
+  "finished_utc": "2026-10-29T23:03:12.010671+00:00",
+  "elapsed_seconds": 2.999,
+  "parallel_workers": 3,
+  "suites": 4,
+  "passed": 3,
+  "failed": 1,
+  "results": [
+    {
+      "label": "home-store",
+      "command": [
+        "bash",
+        "scripts/test-home-v115.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-yn085ccx",
+      "started_utc": "2026-10-29T23:03:09.012749+00:00",
+      "finished_utc": "2026-10-29T23:03:10.983582+00:00",
+      "elapsed_seconds": 1.971,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-initial/home-store.log",
+      "log_sha256": "d1c4da62d6217feac029306db00ec37a205c1c3ee3ea1ab4c297a0c0ddc33711"
+    },
+    {
+      "label": "home-geometry-115",
+      "command": [
+        "bash",
+        "scripts/test-home-v115-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-yn085ccx",
+      "started_utc": "2026-10-29T23:03:09.012861+00:00",
+      "finished_utc": "2026-10-29T23:03:10.909630+00:00",
+      "elapsed_seconds": 1.897,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-initial/home-geometry-115.log",
+      "log_sha256": "6335ad9883d0b7249ac6de0662a0a9c0f8072b9fff53a31e968553f272651b03"
+    },
+    {
+      "label": "home-geometry-116",
+      "command": [
+        "bash",
+        "scripts/test-home-v116-geometry.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-yn085ccx",
+      "started_utc": "2026-10-29T23:03:09.012941+00:00",
+      "finished_utc": "2026-10-29T23:03:11.421388+00:00",
+      "elapsed_seconds": 2.408,
+      "exit_code": 0,
+      "passed": true,
+      "log": "docs/validation/v1.21/host/kitchen-initial/home-geometry-116.log",
+      "log_sha256": "70fd02a4db9f2f0aa1467415098209e3ed89c32cde0c7d70e639ffbe5eeae04f"
+    },
+    {
+      "label": "home-kitchen",
+      "command": [
+        "bash",
+        "scripts/test-home-kitchen-v121.sh",
+        "/Users/n/androidhit/docs/validation/v1.21/host/kitchen-initial/home-kitchen.json"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-v121-host-yn085ccx",
+      "started_utc": "2026-10-29T23:03:10.910311+00:00",
+      "finished_utc": "2026-10-29T23:03:12.009488+00:00",
+      "elapsed_seconds": 1.099,
+      "exit_code": 1,
+      "passed": false,
+      "log": "docs/validation/v1.21/host/kitchen-initial/home-kitchen.log",
+      "log_sha256": "891be587b52ec5841857cd7bffceed601b8ef20233656ae47d7f947f826645ae"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "passed": true,
+      "check": "Reduced-motion original map PNG bytes identical across actual wait",
+      "scope": "Entire original screenshot including OS bars; no edits or crop",
+      "first_sha256": "3f828b3b9152918a3fd6adb6a7f753baac594704e9ac3f6508183cf6fc938ac1",
+      "second_sha256": "3f828b3b9152918a3fd6adb6a7f753baac594704e9ac3f6508183cf6fc938ac1"
+    },
+    {
+      "passed": true,
+      "check": "Original task display/density/font settings restored exactly"
+    },
+    {
+      "passed": true,
+      "check": "Actual bounded native screenrecord metadata",
+      "phase": "candidate-b-media-fr-en",
+      "duration_seconds": 59.890956,
+      "width": 720,
+      "height": 1600,
+      "scope": "Unedited actual emulator output; no phone frame-rate, audio or performance claim"
+    },
+    {
+      "passed": true,
+      "check": "Actual bounded native screenrecord metadata",
+      "phase": "candidate-b-shell-focus-cold-resume",
+      "duration_seconds": 59.964989,
+      "width": 720,
+      "height": 1600,
+      "scope": "Unedited actual emulator output; no phone frame-rate, audio or performance claim"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "preference": "luma_session",
+      "key": "run_id",
+      "passed": true,
+      "before": "57dab59f-56c3-4b6a-a0e6-8246f160d2a3",
+      "after": "57dab59f-56c3-4b6a-a0e6-8246f160d2a3"
+    },
+    {
+      "preference": "luma_session",
+      "key": "level",
+      "passed": true,
+      "before": 11,
+      "after": 11
+    },
+    {
+      "preference": "luma_session",
+      "key": "history",
+      "passed": true,
+      "before": "",
+      "after": ""
+    },
+    {
+      "preference": "luma_session",
+      "key": "budget_used",
+      "passed": true,
+      "before": 0,
+      "after": 0
+    },
+    {
+      "preference": "luma_session",
+      "key": "undos",
+      "passed": true,
+      "before": 0,
+      "after": 0
+    },
+    {
+      "preference": "luma_session",
+      "key": "battle_v119",
+      "passed": true,
+      "before": "v119_1|nova|3|0|0|-|0|0|",
+      "after": "v119_1|nova|3|0|0|-|0|0|"
+    },
+    {
+      "preference": "luma_session",
+      "key": "elements_v121",
+      "passed": true,
+      "before": "ES121|ae3dbea1d31c62198130868c52da233ac95e631c5db57dc3462ccf0318bf83c8|6|1:WATER:1;3:FIRE:2;4:ICE:2",
+      "after": "ES121|ae3dbea1d31c62198130868c52da233ac95e631c5db57dc3462ccf0318bf83c8|6|1:WATER:1;3:FIRE:2;4:ICE:2"
+    },
+    {
+      "preference": "luma_session",
+      "key": "exit_chain_v121",
+      "passed": true,
+      "before": "1:0:0:0:",
+      "after": "1:0:0:0:"
+    },
+    {
+      "preference": "luma_session",
+      "key": "economy_policy_v121",
+      "passed": true,
+      "before": true,
+      "after": true
+    },
+    {
+      "preference": "luma_session",
+      "key": "last_paid_undo_v121",
+      "passed": true,
+      "before": "",
+      "after": ""
+    },
+    {
+      "preference": "luma_energy_purchases_v120",
+      "comparison": "entire read-only map",
+      "passed": true,
+      "before_keys": 7,
+      "after_keys": 7
+    },
+    {
+      "preference": "luma_session_energy_v120",
+      "comparison": "entire read-only map",
+      "passed": true,
+      "before_keys": 3,
+      "after_keys": 3
+    }
+  ],
+  "before": "docs/validation/v1.21/native-lab/candidate-b-actual-paid-refill/native/lab-u11-credited-attempt-before-cold.json",
+  "after": "docs/validation/v1.21/native-lab/candidate-b-refill-cold-recovery/native/lab-same-attempt-cold-resumed.json",
+  "before_sha256": "aceedad0b997b67a70dadef8f75c0f42eaa9b4dcfa4e6975591dfcbb41758540",
+  "after_sha256": "aceedad0b997b67a70dadef8f75c0f42eaa9b4dcfa4e6975591dfcbb41758540",
+  "scope": "Derived exact comparisons across real process death and resume; 10 session fields, entire Lab purchase journal and entire energy journal. No preferences written."
+}
