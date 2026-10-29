@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T19:48:37.625293+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "restore-motion",
+  "expected_version": "1.19.0-prototype1",
+  "expected_code": 26,
+  "apk_sha256": "d7a9b562a35f085346c47669400466c79d069e9e4ad297a83fb0a60ec27ef5d5",
+  "observer_sha256": "7e14f2119c8362be41e796b2ea421ae26c7487b1a9e5f569c3fcbfb416b55c61",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "d9157542-5bab-42b4-8e57-9917e4e90101",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "d7a9b562a35f085346c47669400466c79d069e9e4ad297a83fb0a60ec27ef5d5",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "restore-motion",
+    "runToken": "d9157542-5bab-42b4-8e57-9917e4e90101",
+    "processId": 12662,
+    "checkCount": 11,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference reduce_motion = true"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference reduce_motion = false"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 4,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          911,
+          155,
+          1057,
+          316
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "label": "English",
+        "bounds": [
+          387,
+          1354,
+          692,
+          1515
+        ]
+      },
+      {
+        "reason": "Settings",
+        "input": "actual SDK touchscreen",
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          911,
+          155,
+          1057,
+          316
+        ]
+      },
+      {
+        "reason": "Reduce motion:.*",
+        "input": "actual SDK touchscreen",
+        "label": "Reduce motion: On",
+        "bounds": [
+          66,
+          1044,
+          1013,
+          1202
+        ]
+      }
+    ],
+    "captures": [
+      "real-ui-restored-motion-after-failed-compact-phase"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 14.076,
+  "evidence_sha256": {
+    "battle-observer.apk": "7e14f2119c8362be41e796b2ea421ae26c7487b1a9e5f569c3fcbfb416b55c61",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "71403d5f263aa18d3adc2801e040b5ed5cee7071a22499c316052eacd9d6a469",
+    "native/after-genuine-motion-restore.json": "5ae7a6e6372c56f4ac4766e736ff76a6931042681d5cd9c305b5159844b5bfd1",
+    "native/after.json": "5ae7a6e6372c56f4ac4766e736ff76a6931042681d5cd9c305b5159844b5bfd1",
+    "native/before.json": "b7802938897842c08701e9ad8d9f51803e1c1d1dc551efa9f24d35b438335fe5",
+    "native/real-ui-restored-motion-after-failed-compact-phase-accessibility.json": "a31defd15d9626849c01e32c4cc26095074d3b4aefbcf4806c907936ce35c8d0",
+    "native/real-ui-restored-motion-after-failed-compact-phase.png": "ab5b62c452f47e2ab03da3013a668f30b7e9f804dcf4d2d3bf06d824328e1f45",
+    "native/report.json": "a7bdfdb21718221018507527d650d79cc11c580f8a58c7c92c4048e1385681ed",
+    "native/requested-steps.json": "b0d4de5693e37e644cfa468a5c8c3a900db2a1d53f8748714c12e64186c4dd20",
+    "observer-install.txt": "1505ef189895bc21fcda0a34d0031aa668f1b271eb2507ec56611dd892e27d37",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "92f502aa70ddf2eccac539820a32cc9ba9d12c025ce0db7affbeaaf9c697c4dd",
+    "source-snapshot.json": "2c1f1473522d029abb83e526ba3688890f9ca6bf36ae9d7685e0c24b4f0fb860"
+  }
+}

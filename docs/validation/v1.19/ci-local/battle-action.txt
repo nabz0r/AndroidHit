@@ -1,0 +1,21 @@
+PASS actual U1–U250 × all 37 identities
+PASS actual U1–U500 × all 37 identities
+PASS actual U1–U750 × all 37 identities
+PASS actual U1–U1000 × all 37 identities
+{
+  "passed": true,
+  "checks": 1083113,
+  "boards": 1000,
+  "identities": 37,
+  "prepared_drafts": 37019,
+  "refused_drafts": 37308,
+  "identity_board_coverage": {
+    "GUIDE": 7000,
+    "VISION": 6000,
+    "TRAIL": 7000,
+    "PULSE": 6000,
+    "FLOW": 6000,
+    "REWIND": 5000
+  },
+  "scope": "Actual host U boards and MoveBudget, all 1000 boards times every identity, pure draft nonmutation and canonical restore. Not Android commits, gestures, rendering, disk failures or player acceptance."
+}

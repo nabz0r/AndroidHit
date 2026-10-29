@@ -1,0 +1,38 @@
+{
+  "status": "INTERMEDIATE_PREPARED_NOT_DEPLOYED",
+  "candidate": "b-final",
+  "reason": "Real compact Android navigation overlap found after B preparation; C uses a new immutable version identity.",
+  "files": {
+    "public/index.html": {
+      "archive": "docs/validation/site-v1.19/intermediate-b/frozen-inputs/public/index.html",
+      "sha256": "00f49ffb1e4cb14359344f278dff1cbd5a7aaf5d4a024338d0226b1132a43232"
+    },
+    "scripts/prepare-site-v119.py": {
+      "archive": "docs/validation/site-v1.19/intermediate-b/frozen-inputs/scripts/prepare-site-v119.py",
+      "sha256": "4ea07edc69c3e2675e4893a0e866e712925e2a9ec9fb00672dc6a2a5f6c87bde"
+    },
+    "scripts/package-release-v119.py": {
+      "archive": "docs/validation/site-v1.19/intermediate-b/frozen-inputs/scripts/package-release-v119.py",
+      "sha256": "b4396163c760e98733b4f80eec018145d709c19573b8bab3fb7f216d434b0ad8"
+    },
+    "scripts/check-site-v119.py": {
+      "archive": "docs/validation/site-v1.19/intermediate-b/frozen-inputs/scripts/check-site-v119.py",
+      "sha256": "0233eb4b71b0fe35a8342e1b5114b583a9d7b8f3129302deb0ff2648d2fcebfb"
+    },
+    "scripts/deploy-site-v119.py": {
+      "archive": "docs/validation/site-v1.19/intermediate-b/frozen-inputs/scripts/deploy-site-v119.py",
+      "sha256": "f57cefac18c916a731e92e1e8e6b2dc0d26bbbb373b5d8b88856c08418b6aba8"
+    },
+    "scripts/verify-site-v119-publication.py": {
+      "archive": "docs/validation/site-v1.19/intermediate-b/frozen-inputs/scripts/verify-site-v119-publication.py",
+      "sha256": "41dfeeead24dffd309a87a9f8f531c47d65bee2f0136ad69f0c8559bb41c0f14"
+    }
+  },
+  "public_staging_files_removed": [
+    "public/releases/luma-drift-1.19.0-prototype1.apk",
+    "public/releases/luma-drift-1.19.0-sandbox-prototype1.apk",
+    "public/releases/manifest-1.19.0-prototype1.json"
+  ],
+  "canonical_b_artifacts_retained": true,
+  "public_apk_binary_archives_retained": false
+}

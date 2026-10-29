@@ -2,11 +2,17 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { createHash } from 'node:crypto';
 import { BoundedCache, LEVELS, POSES, validateSheet, sheetViewport, drawFrame } from '../public/assets/gallery-core-v118.mjs';
 
-// Current 1.18 site contracts; historical test runners and reports remain unchanged.
+// Historical 1.18 contracts retain their exact HTML fixture when the current homepage advances.
 // A narrow local DOM double is used. No browser or network is started.
 const source=fs.readFileSync(new URL('../public/assets/site-v118.js',import.meta.url),'utf8');
+test('Historical 1.18 markup stays pinned to its recorded release instead of following the current homepage',()=>{
+ const bytes=fs.readFileSync(new URL('../docs/validation/site-v1.18/index.template.html',import.meta.url));
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),'a256963ec96ecf79d6e7c19ec3f4a6914df992c342808bd01bfc63c6209d9d3e');
+ assert.match(bytes.toString('utf8'),/data-edition="1\.18"/);
+});
 class Element {
   constructor(attrs={},text=''){this.attrs={...attrs};this.dataset={};this.textContent=text;this.hidden=Object.hasOwn(attrs,'hidden');this.listeners={};this.children=[];
     for(const [key,value] of Object.entries(attrs))if(key.startsWith('data-'))this.dataset[key.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=value;
@@ -80,7 +86,7 @@ test('A deliberate preview stops another preview without autoplaying anything',(
  const s=boot();assert.equal(s.players.every(player=>player.paused),true);s.players[0].paused=false;s.players[2].paused=false;s.players[2].listeners.play();assert.equal(s.players[0].paused,true);assert.equal(s.players[0].pauseCalls,1);assert.equal(s.players[2].paused,false);
 });
 test('Staged product has four accessible manually started audio sources',()=>{
- const html=fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8');const players=[...html.matchAll(/<audio\b([^>]+)>/g)];assert.equal(players.length,4);players.forEach(([,attrs])=>{assert.match(attrs,/\bcontrols\b/);assert.match(attrs,/preload="none"/);assert.match(attrs,/aria-labelledby="audio-[a-z]+-title"/);assert.doesNotMatch(attrs,/autoplay/);});assert.equal([...html.matchAll(/<source src="assets\/audio\/v1\.17\/scene-[a-z]+-preview\.wav"/g)].length,4);
+ const html=fs.readFileSync(new URL('../docs/validation/site-v1.18/index.template.html',import.meta.url),'utf8');const players=[...html.matchAll(/<audio\b([^>]+)>/g)];assert.equal(players.length,4);players.forEach(([,attrs])=>{assert.match(attrs,/\bcontrols\b/);assert.match(attrs,/preload="none"/);assert.match(attrs,/aria-labelledby="audio-[a-z]+-title"/);assert.doesNotMatch(attrs,/autoplay/);});assert.equal([...html.matchAll(/<source src="assets\/audio\/v1\.17\/scene-[a-z]+-preview\.wav"/g)].length,4);
 });
 
 test('Gallery does not download artwork or metadata before a deliberate choice',()=>{
@@ -88,7 +94,7 @@ test('Gallery does not download artwork or metadata before a deliberate choice',
  assert.match(gallery,/let opened = false/);assert.match(gallery,/if \(!opened\) return/);
  assert.doesNotMatch(gallery,/IntersectionObserver|preload|setInterval|requestAnimationFrame/);
  assert.match(gallery,/new BoundedCache\(4\)/);
- const html=fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8');
+ const html=fs.readFileSync(new URL('../docs/validation/site-v1.18/index.template.html',import.meta.url),'utf8');
  assert.doesNotMatch(html,/<(?:img|link)[^>]+companions-v118\/[^>]+\.webp/);
  assert.match(html,/data-gallery-load/);assert.match(html,/data-gallery-status role="status" aria-live="polite"/);
 });

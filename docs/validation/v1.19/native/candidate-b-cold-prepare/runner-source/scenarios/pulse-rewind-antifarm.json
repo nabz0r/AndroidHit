@@ -1,0 +1,147 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "lune",
+      "hoot"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 25
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,lune,hoot",
+    "energy": 3,
+    "used": 0
+  },
+  {
+    "op": "remember-battle",
+    "name": "no-history-before-rewind"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_2"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture",
+    "name": "rewind-empty-history-no-spend"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "no-history-before-rewind"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "capture",
+    "name": "lune-pulse-detail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 2,
+    "used": 2,
+    "credited": "1"
+  },
+  {
+    "op": "capture",
+    "name": "lune-real-certified-exit"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_2"
+  },
+  {
+    "op": "capture",
+    "name": "hoot-rewind-detail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 0,
+    "used": 6,
+    "credited": "1",
+    "comboReady": true,
+    "comboSpent": false
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "capture",
+    "name": "hoot-real-rewind-retains-credit-mask"
+  },
+  {
+    "op": "piece",
+    "row": 2,
+    "col": 4
+  },
+  {
+    "op": "assert-battle",
+    "energy": 0,
+    "used": 6,
+    "credited": "1",
+    "comboReady": true
+  },
+  {
+    "op": "capture",
+    "name": "same-piece-reexit-no-energy-farm"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_combo"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 6,
+    "credited": "3",
+    "comboReady": false,
+    "comboSpent": true
+  },
+  {
+    "op": "solve",
+    "level": 25
+  },
+  {
+    "op": "capture",
+    "name": "pulse-rewind-u25-real-victory"
+  },
+  {
+    "op": "snapshot",
+    "name": "pulse-rewind-combo-complete"
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "op": "capture",
+    "name": "cold-entry"
+  },
+  {
+    "op": "assert-owned-team",
+    "count": 3
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,miko,orbit",
+    "energy": 0,
+    "used": 3,
+    "credited": "1",
+    "comboReady": true,
+    "comboSpent": false
+  },
+  {
+    "op": "snapshot",
+    "name": "cold-restored-state"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "capture",
+    "name": "cold-three-actors-ready-combo"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_combo"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 3,
+    "credited": "3",
+    "comboReady": false,
+    "comboSpent": true
+  },
+  {
+    "op": "solve",
+    "level": 25
+  },
+  {
+    "op": "capture",
+    "name": "cold-resumed-real-victory"
+  }
+]

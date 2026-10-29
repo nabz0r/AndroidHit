@@ -11,6 +11,7 @@ else task_java_bin="$(dirname "$(command -v javac)")"; fi
     "$task_root"/scripts/test-support/android/content/*.java \
     "$task_root"/scripts/test-support/android/graphics/*.java \
     "$task_root"/app/src/main/java/com/androidhit/lumadrift/data/*.java \
+    "$task_root"/app/src/main/java/com/androidhit/lumadrift/engine/*.java \
     "$task_root/scripts/RewardsCosmeticsV17Test.java" \
     "$task_root/scripts/ObjectiveModelsV110Test.java"
 "$task_java_bin/java" -Xmx512m -cp "$task_build" ObjectiveModelsV110Test "${1:-$task_root/docs/validation/v1.10/objectives/model-tests.json}"

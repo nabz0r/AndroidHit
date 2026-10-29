@@ -1,0 +1,76 @@
+✔ French default exposes only French and exact current title (7.860291ms)
+✔ English URL switches real source, alt, metadata and pressed language (0.685291ms)
+✔ Switching back keeps unrelated route state and removes only language parameter (1.103542ms)
+✔ Same-origin APK download and GitHub addresses never acquire a language parameter (0.547667ms)
+✔ Legal page does not inherit the product-page title (0.879125ms)
+✔ Exact support plus-tag is an encoded mailto and remains a text node (2.665708ms)
+✔ Existing qualification control is preserved (1.43025ms)
+✔ Unsupported requested language keeps the French site default (0.686791ms)
+✔ French default exposes only French and exact current title (2.772875ms)
+✔ English URL switches real source, alt, metadata and pressed language (1.120959ms)
+✔ Switching back keeps unrelated route state and removes only language parameter (0.759584ms)
+✔ Same-origin APK download and GitHub addresses never acquire a language parameter (0.971834ms)
+✔ Legal page does not inherit the product-page title (2.351792ms)
+✔ Exact support plus-tag is an encoded mailto and remains a text node (0.658167ms)
+✔ Existing qualification control is preserved (0.936417ms)
+✔ Unsupported requested language keeps the French site default (0.688291ms)
+✔ A deliberate preview stops another preview without autoplaying anything (0.711875ms)
+✔ Staged product has four accessible manually started audio sources (0.781708ms)
+✔ Historical 1.18 markup stays pinned to its recorded release instead of following the current homepage (2.097167ms)
+✔ French default exposes only French and exact current title (8.229125ms)
+✔ English URL switches real source, alt, metadata and pressed language (2.500459ms)
+✔ Switching back keeps unrelated route state and removes only language parameter (3.074625ms)
+✔ Same-origin APK download and GitHub addresses never acquire a language parameter (1.46175ms)
+✔ Legal page does not inherit the product-page title (1.005959ms)
+✔ Exact support plus-tag is an encoded mailto and remains a text node (0.70375ms)
+✔ Existing qualification control is preserved (0.983041ms)
+✔ Unsupported requested language keeps the French site default (0.703125ms)
+✔ A deliberate preview stops another preview without autoplaying anything (0.642417ms)
+✔ Staged product has four accessible manually started audio sources (0.4245ms)
+✔ Gallery does not download artwork or metadata before a deliberate choice (0.31125ms)
+✔ Roster exposes exactly37 identities, four form metadata paths each and no initial image URLs (1.413917ms)
+✔ Image cache deduplicates concurrent requests, bounds references and permits retry (0.304ms)
+✔ SourceClip is applied before the original source rectangle is drawn (0.498875ms)
+✔ Every local gallery frame preserves the exact source domain and contains no garment rewrite (27.363875ms)
+✔ French default exposes only French and exact current title (2.521208ms)
+✔ English URL switches real source, alt, metadata and pressed language (0.959292ms)
+✔ Switching back keeps unrelated route state and removes only language parameter (0.81975ms)
+✔ Same-origin APK download and GitHub addresses never acquire a language parameter (1.494333ms)
+✔ Legal page does not inherit the product-page title (1.334625ms)
+✔ Exact support plus-tag is an encoded mailto and remains a text node (0.785958ms)
+✔ Existing qualification control is preserved (1.069792ms)
+✔ Unsupported requested language keeps the French site default (7.3005ms)
+✔ A deliberate preview stops another preview without autoplaying anything (3.136791ms)
+✔ Current homepage selects the 1.19 runtime and every advertised navigation destination exists (0.530584ms)
+✔ Current native screenshots switch as exactly three paired 1.19 FR/EN views (0.625417ms)
+✖ Squad copy explains once-only energy, two-role combo and local save limits in both languages (0.8585ms)
+✔ Only the signed current APK is primary and provider availability remains explicit (0.957583ms)
+✔ Current homepage retains four manually started audio previews and a deliberate gallery load (0.378708ms)
+ℹ tests 48
+ℹ suites 0
+ℹ pass 47
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 134.465875
+
+✖ failing tests:
+
+test at scripts/test-site-v119.mjs:102:1
+✖ Squad copy explains once-only energy, two-role combo and local save limits in both languages (0.8585ms)
+  AssertionError [ERR_ASSERTION]: 3 énergie au départ
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v119.mjs:104:323)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

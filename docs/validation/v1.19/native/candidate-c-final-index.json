@@ -1,0 +1,527 @@
+{
+  "passed": true,
+  "observed_utc": "2026-10-29T20:09:47.772945+00:00",
+  "candidate": "C",
+  "version": "1.19.0-prototype2",
+  "version_code": 27,
+  "apk_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+  "device": {
+    "avd": "Luma119-Battle-QA",
+    "serial": "emulator-5602",
+    "sdk": 36,
+    "abi": "arm64-v8a",
+    "page_size": 16384,
+    "normal_pixels": [
+      1080,
+      2400
+    ],
+    "normal_density": 420,
+    "normal_font_scale": 1.0,
+    "compact_pixels": [
+      720,
+      1280
+    ],
+    "compact_density": 320,
+    "compact_font_scale": 1.3
+  },
+  "candidate_groups": {
+    "a": {
+      "status": "historical intermediate; genuine fresh progression",
+      "apk_sha256": "6493f523f27736dea15cd860b02b79728fad1a87090a2ea84ae559aae8eb1f00",
+      "reports": [
+        {
+          "path": "candidate-a-before-upgrade/report.json",
+          "sha256": "bd2acf9c6fa439d49fd0c62e13304580735e946b6f3760b265bdf83176dad9fc",
+          "passed": true,
+          "phase": "before-upgrade",
+          "assertions": 6,
+          "touches": 0,
+          "original_pngs": 0,
+          "process_id": 7537
+        },
+        {
+          "path": "candidate-a-core-team-combo/report.json",
+          "sha256": "b102b652d6bd088b4c9661e17591214aa78e0b8608383840e39dc617e63b671b",
+          "passed": true,
+          "phase": "core-team-combo",
+          "assertions": 70,
+          "touches": 19,
+          "original_pngs": 8,
+          "process_id": 6522
+        },
+        {
+          "path": "candidate-a-earned30-draws/report.json",
+          "sha256": "4de704ad4a9a61320396c6f9cd85c0c955f451e120f3090922a2ae4a5c0285de",
+          "passed": true,
+          "phase": "earn-and-draw",
+          "assertions": 396,
+          "touches": 278,
+          "original_pngs": 6,
+          "process_id": 5595
+        },
+        {
+          "path": "candidate-a-fresh-guest/report.json",
+          "sha256": "0b009652d5f1a1e9127bf0c1df4ccedbe4284cde5c3c058c0af89aab3ba13899",
+          "passed": true,
+          "phase": "fresh-guest",
+          "assertions": 55,
+          "touches": 18,
+          "original_pngs": 10,
+          "process_id": 5324
+        },
+        {
+          "path": "candidate-a-owned-role-team/report.json",
+          "sha256": "600a1eda407cbbd49a7a54d8ace679e39b16b2d40a7885d89a78b1988f0d117d",
+          "passed": true,
+          "phase": "owned-role-team",
+          "assertions": 38,
+          "touches": 24,
+          "original_pngs": 9,
+          "process_id": 6248
+        },
+        {
+          "path": "candidate-a-pulse-rewind/report.json",
+          "sha256": "0ef86de5870c1b525be69fc31eaec75480c0448eeb3722915119ff6e4d36c94d",
+          "passed": true,
+          "phase": "pulse-rewind-antifarm",
+          "assertions": 66,
+          "touches": 33,
+          "original_pngs": 7,
+          "process_id": 6797
+        },
+        {
+          "path": "candidate-a-six-languages/report.json",
+          "sha256": "ad31444586cbc75748cea0b5018a630a767549e50adbf66657e48a35d4f77ade",
+          "passed": true,
+          "phase": "six-languages",
+          "assertions": 38,
+          "touches": 20,
+          "original_pngs": 6,
+          "process_id": 7055
+        },
+        {
+          "path": "candidate-a-vision-real-quests/report.json",
+          "sha256": "9026f4174e523d16a69c5bc3a014cf3240b83e1da957eafe1017092dbe4090a0",
+          "passed": true,
+          "phase": "vision-real-quests",
+          "assertions": 57,
+          "touches": 36,
+          "original_pngs": 7,
+          "process_id": 7286
+        }
+      ],
+      "passing_reports": 8,
+      "failed_reports": 0,
+      "passing_totals": {
+        "assertions": 726,
+        "touches": 428,
+        "original_pngs": 53
+      }
+    },
+    "b": {
+      "status": "superseded; compact centre-target regression failed",
+      "apk_sha256": "d7a9b562a35f085346c47669400466c79d069e9e4ad297a83fb0a60ec27ef5d5",
+      "reports": [
+        {
+          "path": "candidate-b-before-c-upgrade/report.json",
+          "sha256": "b56175daf190be743fe82adc2c11a4ceadf1e87e64ef8debd6cf106a07c042ed",
+          "passed": true,
+          "phase": "before-upgrade",
+          "assertions": 6,
+          "touches": 0,
+          "original_pngs": 0,
+          "process_id": 13595
+        },
+        {
+          "path": "candidate-b-cold-prepare/report.json",
+          "sha256": "1ea4e67350584241abb9f79338ffe4134ee3a00c13fa2fe56836d87b25a8f143",
+          "passed": true,
+          "phase": "cold-prepare",
+          "assertions": 24,
+          "touches": 19,
+          "original_pngs": 1,
+          "process_id": 13132
+        },
+        {
+          "path": "candidate-b-cold-resume/report.json",
+          "sha256": "c14a818234b9eb38c36ec5949b2325ca10ccfccc0a6bb21fa4e1d3dc5ab55f35",
+          "passed": true,
+          "phase": "cold-resume",
+          "assertions": 39,
+          "touches": 10,
+          "original_pngs": 3,
+          "process_id": 13360
+        },
+        {
+          "path": "candidate-b-compact-fr-en/report.json",
+          "sha256": "ec251d85fa43b57d63342159f84d2d56080a36f4e54405857b734b5ee0e0bbfb",
+          "passed": true,
+          "phase": "final-compact-fr-en",
+          "assertions": 16,
+          "touches": 8,
+          "original_pngs": 6,
+          "process_id": 12093
+        },
+        {
+          "path": "candidate-b-core-team-combo/report.json",
+          "sha256": "ab5428457ed25086a11df5270bf1735df8b49ba6cb9b9e975f77ed10dac86ac4",
+          "passed": true,
+          "phase": "final-core-team-combo",
+          "assertions": 78,
+          "touches": 30,
+          "original_pngs": 11,
+          "process_id": 7867
+        },
+        {
+          "path": "candidate-b-expedition-transient/report.json",
+          "sha256": "aaf519daf4de38f100633828eba4e19697140fa2bb4944ffb559d3e486d1380b",
+          "passed": true,
+          "phase": "final-expedition-transient",
+          "assertions": 44,
+          "touches": 26,
+          "original_pngs": 6,
+          "process_id": 12891
+        },
+        {
+          "path": "candidate-b-motion-restore/report.json",
+          "sha256": "e988f58d93c29f8360e955394bf30ec66fe79546429cc9eb4bc6ed75372fcbc0",
+          "passed": true,
+          "phase": "restore-motion",
+          "assertions": 11,
+          "touches": 4,
+          "original_pngs": 1,
+          "process_id": 12662
+        },
+        {
+          "path": "candidate-b-pulse-rewind/report.json",
+          "sha256": "e75bc3056e371a37c0a9194ac202d09934fe7ab9074e5596755ba4c4c1e3a7ee",
+          "passed": true,
+          "phase": "final-pulse-rewind",
+          "assertions": 66,
+          "touches": 34,
+          "original_pngs": 7,
+          "process_id": 11240
+        },
+        {
+          "path": "candidate-b-reduced-motion/report.json",
+          "sha256": "6897252131c83b941216a87f156598ea2196cc300ab5168f984168de512871e5",
+          "passed": false,
+          "phase": "final-reduced-motion",
+          "assertions": 12,
+          "touches": 5,
+          "original_pngs": 2,
+          "process_id": 12315
+        },
+        {
+          "path": "candidate-b-six-languages/report.json",
+          "sha256": "ec06ebaead09b67493a24a346d3134d320c745acb21670813912f35f681add23",
+          "passed": true,
+          "phase": "final-six-languages",
+          "assertions": 39,
+          "touches": 20,
+          "original_pngs": 7,
+          "process_id": 11746
+        },
+        {
+          "path": "candidate-b-upgrade-preservation/report.json",
+          "sha256": "39c80a5a78c8f358ee839838f4372099e332e1058b6c2250520181a60af03252",
+          "passed": true,
+          "phase": "after-upgrade-before-launch",
+          "assertions": 6,
+          "touches": 0,
+          "original_pngs": 0,
+          "process_id": 7716
+        },
+        {
+          "path": "candidate-b-vision/report.json",
+          "sha256": "a54a38d7d2cf3c42c262956f3667c2745b6901e03f007f1ca4a69abf65d928ac",
+          "passed": true,
+          "phase": "final-vision",
+          "assertions": 43,
+          "touches": 27,
+          "original_pngs": 3,
+          "process_id": 11492
+        }
+      ],
+      "passing_reports": 11,
+      "failed_reports": 1,
+      "passing_totals": {
+        "assertions": 372,
+        "touches": 178,
+        "original_pngs": 45
+      }
+    },
+    "c": {
+      "status": "accepted for the native scopes listed below",
+      "apk_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "reports": [
+        {
+          "path": "candidate-c-cold-prepare/report.json",
+          "sha256": "69d492d453343b77fcdcf7423f8e1eae4645e8e0c32712b9852400230de1979a",
+          "passed": true,
+          "phase": "final-cold-prepare",
+          "assertions": 24,
+          "touches": 19,
+          "original_pngs": 1,
+          "process_id": 18594
+        },
+        {
+          "path": "candidate-c-cold-resume/report.json",
+          "sha256": "63d3dc6b789e99a8aa650280ed717446f19d0120d7e9b75507a6e39c21ae5635",
+          "passed": true,
+          "phase": "final-cold-resume",
+          "assertions": 39,
+          "touches": 10,
+          "original_pngs": 3,
+          "process_id": 18793
+        },
+        {
+          "path": "candidate-c-compact-fr-en/report.json",
+          "sha256": "b968ffb74b9e94fded873beb34c59e395ebce0510a353393138475cdce470c81",
+          "passed": true,
+          "phase": "compact-fr-en",
+          "assertions": 33,
+          "touches": 21,
+          "original_pngs": 8,
+          "process_id": 14265
+        },
+        {
+          "path": "candidate-c-compact-reduced-motion/report.json",
+          "sha256": "8970f872d22ae864483572fa359b3a9fafd9d712341d3c9361a4ca3b5c99cb3c",
+          "passed": true,
+          "phase": "compact-reduced-motion",
+          "assertions": 39,
+          "touches": 23,
+          "original_pngs": 8,
+          "process_id": 14001
+        },
+        {
+          "path": "candidate-c-core-team-combo/report.json",
+          "sha256": "00e98ac7ea14804f2ce845d9a6bc9c91aa70ff8739b76a4f3b2c9789e412a2ca",
+          "passed": true,
+          "phase": "final-core-team-combo",
+          "assertions": 83,
+          "touches": 31,
+          "original_pngs": 15,
+          "process_id": 14631
+        },
+        {
+          "path": "candidate-c-expedition-transient/report.json",
+          "sha256": "2d9bcde94c152351cdf4aef23f0bc0b80195e950d4ee4c24675eb38ab29d9f9d",
+          "passed": true,
+          "phase": "final-expedition-transient",
+          "assertions": 47,
+          "touches": 24,
+          "original_pngs": 6,
+          "process_id": 18390
+        },
+        {
+          "path": "candidate-c-pulse-rewind/report.json",
+          "sha256": "18b28fabf8b32db4ba0d2b1f3bfc1bf7ec1e0dd9d7040ad0edbb3e3ef9cc82ef",
+          "passed": true,
+          "phase": "final-pulse-rewind-antifarm",
+          "assertions": 66,
+          "touches": 34,
+          "original_pngs": 7,
+          "process_id": 17713
+        },
+        {
+          "path": "candidate-c-six-languages/report.json",
+          "sha256": "17e47de0952cc62c537340eb007721de5a2716ee588ea7f26f37c8fad8974f2c",
+          "passed": true,
+          "phase": "final-six-languages",
+          "assertions": 39,
+          "touches": 20,
+          "original_pngs": 7,
+          "process_id": 18178
+        },
+        {
+          "path": "candidate-c-upgrade-preservation/report.json",
+          "sha256": "3207f5c1880520a41afabe4bc4577a3450ebea6eecb65417f331bc8551ce7421",
+          "passed": true,
+          "phase": "after-upgrade-before-launch",
+          "assertions": 6,
+          "touches": 0,
+          "original_pngs": 0,
+          "process_id": 13772
+        },
+        {
+          "path": "candidate-c-vision/report.json",
+          "sha256": "1d6d0863d5f1a81adbb1fc0d1a7b8c73316a4b7bb4671ad31b5eb0ebb27e58f1",
+          "passed": true,
+          "phase": "final-vision-owned",
+          "assertions": 43,
+          "touches": 27,
+          "original_pngs": 3,
+          "process_id": 17951
+        }
+      ],
+      "passing_reports": 10,
+      "failed_reports": 0,
+      "passing_totals": {
+        "assertions": 419,
+        "touches": 209,
+        "original_pngs": 58
+      }
+    }
+  },
+  "final_scope": [
+    "all six skill families executed through real campaign U25 input",
+    "three-member owned team, real combo, once-only usage refusal, empty-history rewind refusal and undo/re-exit credit protection",
+    "actual reduced-motion UI setting, skill scroll, Pause/Resume and exact unchanged battle; compact FR/EN actual centre navigation",
+    "six real language settings and squad screens: EN FR DE ES PT IT; not all screens in six languages",
+    "real expedition stage 2 after stage 1 on B, mode 5 preserved across squad/skill transient views",
+    "cold process restart with exact equality of four observed preference maps; explicit saved combo then real U25 finish",
+    "authorized A-to-B-to-C profile preservation before new Activity launch"
+  ],
+  "progress_provenance": {
+    "first_clears": 30,
+    "earned_on": "A; retained unchanged through B and C updates; not 30 fresh C wins",
+    "first_light": "genuine three introductory exits on A",
+    "earned_avatar_draws": 5,
+    "draw_outcomes_forced": false,
+    "owned_ids": [
+      "buzz",
+      "hoot",
+      "lune",
+      "miko",
+      "nova",
+      "orbit",
+      "pip",
+      "quill",
+      "tula",
+      "zig"
+    ],
+    "final_coins": 220,
+    "currency_or_ownership_injection": false,
+    "clock_or_seed_write": false
+  },
+  "website_originals": [
+    {
+      "locale": "fr",
+      "view": "adventure",
+      "path": "candidate-c-core-team-combo/native/fr-adventure-final.png",
+      "sha256": "e12c3804f460919a0591a0d728ee697b1db82ff28bf4723342fa78111c00c06c",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "scope": "Original current-C native pixels; guest profile with legitimately earned progression, not a browser proposal."
+    },
+    {
+      "locale": "fr",
+      "view": "team",
+      "path": "candidate-c-core-team-combo/native/fr-three-member-team-final.png",
+      "sha256": "e65e6390b8a3640ca8ff6f645748d802683701c912f0405c3eaea9ffb066c241",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "scope": "Original current-C native pixels; guest profile with legitimately earned progression, not a browser proposal."
+    },
+    {
+      "locale": "fr",
+      "view": "puzzle",
+      "path": "candidate-c-core-team-combo/native/three-real-actors-before-skills.png",
+      "sha256": "f5f14c267d746e1c4e8f645e8fa1481190e9eea21a1fc09a085843d587b52614",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "scope": "Original current-C native pixels; guest profile with legitimately earned progression, not a browser proposal."
+    },
+    {
+      "locale": "en",
+      "view": "adventure",
+      "path": "candidate-c-six-languages/native/en-adventure-final.png",
+      "sha256": "f09be8e4305453a2867488e369923733d0980306dc2d05f5b3e27c3e5134f765",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "scope": "Original current-C native pixels; guest profile with legitimately earned progression, not a browser proposal."
+    },
+    {
+      "locale": "en",
+      "view": "team",
+      "path": "candidate-c-six-languages/native/en-actual-team.png",
+      "sha256": "040bf778a46489be1453b2ac08a404d83fcaa7cfa558c5160eb17d9dbc5ed7aa",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "scope": "Original current-C native pixels; guest profile with legitimately earned progression, not a browser proposal."
+    },
+    {
+      "locale": "en",
+      "view": "puzzle",
+      "path": "candidate-c-vision/native/tula-real-legal-highlights.png",
+      "sha256": "1e21a600dd976db50c7a630c56ca8125331e2d641af662bcdf84fb617c48fb81",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "scope": "Original current-C native pixels; guest profile with legitimately earned progression, not a browser proposal."
+    }
+  ],
+  "video": {
+    "path": "candidate-c-core-team-combo/native-ui-recording.mp4",
+    "sha256": "1735f91b34187466f1544cd9466dbc6129a50cc3885095ed32db591c98f884df",
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 1600
+        },
+        {},
+        {}
+      ],
+      "format": {
+        "duration": "45.000889",
+        "size": "11495522"
+      }
+    },
+    "inspected_moments_seconds": [
+      30,
+      40,
+      44
+    ],
+    "scope": "Unedited real native recording. Miko page, explicit combo result and Orbit effect are visible; no audio or frame-rate/physical-device claim. Derived review frames outside git are not counted among original PNGs."
+  },
+  "derived_receipts": [
+    {
+      "path": "candidate-b-upgrade-preservation/preference-equality.json",
+      "sha256": "9b9b519f2509c84d8f5dd7a0fd02092fab16bccf5493797b7d7c583e847eead9"
+    },
+    {
+      "path": "candidate-c-upgrade-preservation/preference-equality.json",
+      "sha256": "96b276fde08e7d3f2f3be5faa7f78f89aed9fe121c193ed27830a976b42a3885"
+    },
+    {
+      "path": "candidate-c-cold-preservation.json",
+      "sha256": "d5b019d01c14ff0e56031651536550cc3bfc5c4ffcf31c214e03496e16053afa"
+    },
+    {
+      "path": "display-candidate-c-compact.json",
+      "sha256": "ba157ed61a4b6c0c5df134987d36f108c2c08cb9e9a938cbd36e22580c60439e"
+    },
+    {
+      "path": "display-candidate-c-restore.json",
+      "sha256": "d9fd29aa37b8dbc7c0734c9319f601a2924dde1dcf32ab1e407e0cefed68e895"
+    },
+    {
+      "path": "device-finish.json",
+      "sha256": "b5070a1c3d04c64ab2808e247aeb66afdc1041cd3e7ea45ba4418c5f9df59f39"
+    }
+  ],
+  "limits": [
+    "One isolated emulator profile; no physical phone acceptance, frame-time benchmark, sound quality, human comprehension, retention or enjoyment measurement.",
+    "Six languages cover team settings/ownership views. Compact FR/EN uses larger text and controlled ellipses; full labels remain in accessibility, some content requires normal vertical scrolling.",
+    "No external Google login, ad interaction, real-money payment, server transaction or Play publication is qualified by these observer runs.",
+    "B passing full-size phases are retained historical scope; B compact centre navigation failure is preserved and excluded from final C acceptance.",
+    "Assertions are executed report assertions, including shared preflight checks; they are not counts of distinct features or human playtesters."
+  ]
+}

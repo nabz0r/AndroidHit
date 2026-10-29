@@ -1,6 +1,28 @@
 # Luma Drift roadmap
 
-## Current 1.17 — an illustrated world to touch
+## Current 1.19 — companions that act in the puzzle
+
+[Release state](RELEASE_1_19.md) · [Gameplay](GAMEPLAY_1_19.md) · [UX](UX_1_19.md). All three owner-approved axes are implemented in Android source: owned teams of one to three; six role families across 37 identity definitions; and a portrait-led dock with reactions and bounded skill feedback. Team composition affects available commands, while outfits retain their separate visual role. Two different used role families enable one explicit Resonance action; three members are optional.
+
+The shared attempt starts with 3 energy, caps at 6, and credits each distinct exited piece once. Each member has one use; automatic exits pay the normal board budget and REWIND uses real refunded history. Current-attempt teams are fixed, with saved edits applied on the next board. U geometry, progression identities, inventory and commercial gates are retained.
+
+Host storage, model, action-draft and geometry checks have separate versioned evidence. C (`prototype2` / code 27) passes ten exact-package native scopes: 419 assertions, 209 real gestures, 58 original PNGs and a 45-second recording. These cover six skill families, owned teams, combo, anti-farm, compact FR/EN, six-language squad views, Expedition context and cold persistence on one isolated emulator. B’s compact navigation failure remains preserved. [Native report and limits](validation/v1.19/native/README.md).
+
+Both signed C packages are frozen at artifact/source commit `e267ac192f3aea268efe4e1a3a92a41d5b5f1518`. The FR/EN homepage is prepared from six accepted original C images; source checking passes 1,064 assertions over 497 physical payloads. Final browser checks, exact-byte publication and Hosting verification remain in progress. The 1.18 H APK/site remain the last separately recorded public delivery. [Site evidence and publication pipeline](validation/site-v1.19/README.md).
+
+Next, in order:
+
+1. Complete exact-C browser desktop/mobile FR/EN, gallery, audio and keyboard qualification of the prepared homepage; preserve the companion gallery and legal/account pages.
+2. Publish and deploy from one clean exact source commit, then independently verify complete public bytes, FR/EN rendering and both external APK downloads. Retain immutable metadata and all earlier failed/intermediate evidence.
+3. Broaden native lifecycle and accessibility acceptance where not covered: rotation, actual filesystem-failure handling, all screens in six languages and physical-device TalkBack/audio. Storage failure models do not establish an Android filesystem-fault pass.
+4. Obtain physical-phone and owner playtest acceptance of comprehension, visual feedback, readable states and comfort. Host/emulator counts do not establish enjoyment or voluntary return.
+5. Resume Play and provider qualification separately; do not activate real checkout, premium draws or live ads through a visual/gameplay release.
+
+## Preserved 1.18 — evolving companions and expedition prototype
+
+The H/code25 prototype and its existing Firebase website are recorded in [1.18 release evidence](RELEASE_1_18.md). Four forms and twenty poses cover 37 identities; the three expedition pilot skills remain distinct from the new 1.19 puzzle role system. The owner’s 29 October UI rejection remains historical evidence rather than being overwritten by automated passes.
+
+## Preserved 1.17 — an illustrated world to touch
 
 [Release](RELEASE_1_17.md) · [Object-navigation and original-art research](design/v1.17/reference-research.md) · [Design system](DESIGN_SYSTEM.md) · [Exact qualification](validation/v1.17/README.md). H is production1.17.0-rc6/code24. Four separate scenes, original companion/clothing/furniture sprites, visible object destinations, optional swipes, bounded transitions and five synthesized sound contexts replace the previous presentation. The three10×10 rooms, local nickname/flag/badges, earned-coin arrivals, save identities and U puzzle rules remain.
 

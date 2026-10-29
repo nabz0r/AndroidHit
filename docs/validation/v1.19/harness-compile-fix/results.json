@@ -1,0 +1,188 @@
+{
+  "passed": false,
+  "scope": "Only 17 affected javac shell harnesses rerun; each optional report/image output is temporary outside repository. No app source or historical evidence modified. C1 remote failure remains historical.",
+  "runners": [
+    {
+      "runner": "scripts/test-companion-motion-v118.sh",
+      "exit_code": 0,
+      "seconds": 1.288,
+      "runner_sha256": "003cf39bbfba6244385f488f765ca33156687f9294f20da6ca85087fba076860",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "}",
+      "temporary_output_sha256": "883355dbb32c3fa8600c1b0b056ae4b3c17be0d27ea73cb535bac31654223406",
+      "temporary_output_bytes": 375
+    },
+    {
+      "runner": "scripts/test-data.sh",
+      "exit_code": 0,
+      "seconds": 1.238,
+      "runner_sha256": "723295ee1a6c84dff387662bed439c95a1778edf88e0af868543916ea9d719a6",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 9142 data, economy, campaign, Remix, milestone, event and localization checks"
+    },
+    {
+      "runner": "scripts/test-economy.sh",
+      "exit_code": 0,
+      "seconds": 1.541,
+      "runner_sha256": "647cfa79b13b5c3b45a302b16c04c32b4d574c5b73f2e1b676dea0739f64af46",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "DURABILITY MODEL: memory-before-disk failures and process reload are simulated; no physical storage fault was injected"
+    },
+    {
+      "runner": "scripts/test-home-v113.sh",
+      "exit_code": 1,
+      "seconds": 1.221,
+      "runner_sha256": "878be4340b4bf0f0a45a33d348310cbaea235d6b8538dbbefeba50d514357e19",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "\tat HomeV113Test.main(HomeV113Test.java:101)"
+    },
+    {
+      "runner": "scripts/test-home-v115-geometry.sh",
+      "exit_code": 0,
+      "seconds": 1.999,
+      "runner_sha256": "95825d4a38ed638bcf410cabc540bfc3ea7899b3d710d9c0054f3b4013d08313",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 6494 home camera and geometry checks (Java2D preview is an approximation; native UI QA required)",
+      "temporary_output_sha256": "12f799f2fb2457281a562ab056eb67000bf140621653b0fe2f72603097cc6cd6",
+      "temporary_output_bytes": 58128
+    },
+    {
+      "runner": "scripts/test-home-v115.sh",
+      "exit_code": 0,
+      "seconds": 1.137,
+      "runner_sha256": "81191e1e8f659c14ea785cf26a9269cefef76a3b941ffe768433643ab5f503a9",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 2074 v1.15 home upgrade and durability checks",
+      "temporary_output_sha256": "784d1235e0a38e062bc74d1a784a077c2aff25dfee1e472561abccc7172bbdc4",
+      "temporary_output_bytes": 378
+    },
+    {
+      "runner": "scripts/test-home-v116-geometry.sh",
+      "exit_code": 0,
+      "seconds": 1.772,
+      "runner_sha256": "1926ea8979f04260564b31587ff9d65e1bbfd2d95f660cc3f49cdb0e6a1f61cd",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 149208 enlarged home viewport, inverse, picking, pan and render clip checks (native device review still required)"
+    },
+    {
+      "runner": "scripts/test-inventory-presentation.sh",
+      "exit_code": 1,
+      "seconds": 1.159,
+      "runner_sha256": "2f74ae9955b235337a6b00583c2403af634471edd791cdc7613336014b03f15a",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "\tat InventoryPresentationTest.main(InventoryPresentationTest.java:189)"
+    },
+    {
+      "runner": "scripts/test-meta.sh",
+      "exit_code": 0,
+      "seconds": 1.463,
+      "runner_sha256": "f485c67cc73118cfb28458d5f9224eb91234e82b7c7129d7ce2d2cca95bc96d4",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS exported journal parses as JSON and round-trips Unicode and control characters"
+    },
+    {
+      "runner": "scripts/test-objective-models-v110.sh",
+      "exit_code": 0,
+      "seconds": 1.303,
+      "runner_sha256": "616d086d6db320317c2755951e9b3aa9dabdc0ad22f8dcaac7b882f53d8a937f",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 443 v1.10 objective, pin, event bonus and durability checks",
+      "temporary_output_sha256": "9902cc5ecf326fc543dcbe6b82ebdb396ad4bf77e8e23006f199c17d47f5bf17",
+      "temporary_output_bytes": 420
+    },
+    {
+      "runner": "scripts/test-power-offers-v114.sh",
+      "exit_code": 0,
+      "seconds": 1.333,
+      "runner_sha256": "bb29797b2b88ad43d3c8b43914ef34fbfe0940ee6420935918d6c55da7701c6f",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "}",
+      "temporary_output_sha256": "5db680f3aaecb2978a448875f78f6adde8dc61b82ff4b1d55c643c5c6389741e",
+      "temporary_output_bytes": 366
+    },
+    {
+      "runner": "scripts/test-profile-summon-v116.sh",
+      "exit_code": 0,
+      "seconds": 1.458,
+      "runner_sha256": "99e2b844dfc25db8b71b624c5926139517a64a40510f7d87a8d2842723c827f1",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 60713 v1.16 profile, badge and summon store checks",
+      "temporary_output_sha256": "cfa9a7dfecb926dc4c2c12301a316d77d2138c2a8b1154e6c4e38542d99b74af",
+      "temporary_output_bytes": 477
+    },
+    {
+      "runner": "scripts/test-rewards-cosmetics-v17.sh",
+      "exit_code": 0,
+      "seconds": 1.433,
+      "runner_sha256": "02e1b993aab211cab513521420fbc5bd7068129f00e5c342a895ab37b9f5fe8c",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 100953 v1.7 rewards, wardrobe, earned capsules, quests and gift persistence checks"
+    },
+    {
+      "runner": "scripts/test-store-appearance-v111.sh",
+      "exit_code": 0,
+      "seconds": 1.316,
+      "runner_sha256": "47cfed99c7608a467d196c35132fe365d11ae653d7843e7c3c1114027878b449",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 761 store appearance checks; reproduced bugs=0",
+      "temporary_output_sha256": "9072cc9cf7d6fb218da34a5d5b0bfbaf618156940bd4d8b77fda5b318d5cd040",
+      "temporary_output_bytes": 344
+    },
+    {
+      "runner": "scripts/test-store-booster-v112.sh",
+      "exit_code": 0,
+      "seconds": 1.32,
+      "runner_sha256": "4be8f88de9c877441af6ada6889a23bd334b3b83a8f57cea275298982ce9ee38",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 1514 booster purchase durability checks",
+      "temporary_output_sha256": "9eaadd740ce4372b07602f77decdb53474f7ad142261c09f668fee8e42607eb1",
+      "temporary_output_bytes": 380
+    },
+    {
+      "runner": "scripts/test-store-externals-v111.sh",
+      "exit_code": 0,
+      "seconds": 1.205,
+      "runner_sha256": "79011280069cfe6a544b2224f8cd87b9d4c34d13e370c6de7914aeb3ccf972f9",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 17 external ownership and local wardrobe lifecycle checks",
+      "temporary_output_sha256": "524a33bb66bf0677ae80d98fa226b1cc3a284fa0e77ad26de09e465bcad36939",
+      "temporary_output_bytes": 237
+    },
+    {
+      "runner": "scripts/test-store-init-v111.sh",
+      "exit_code": 0,
+      "seconds": 1.227,
+      "runner_sha256": "be4399c97f89e4e30b2d9aeb62bca8aa6d38bffbd5de46af7b95082efd816658",
+      "output_argument_outside_repository": true,
+      "historical_evidence_overwritten": false,
+      "last_output_line": "PASS 41 first-initialization durability checks",
+      "temporary_output_sha256": "e3fc2acc593ad57b19778c378227a599a26ec6bb23ed317d85a052fa0454e187",
+      "temporary_output_bytes": 308
+    }
+  ],
+  "seconds": 12.308,
+  "app_source_changes": false,
+  "compile_dependency_fix_verified": true,
+  "runtime_passes": 15,
+  "runtime_historical_failures": 2,
+  "current_workflow_has_the_two_historical_runners": false,
+  "historical_remote_run_rewritten": false,
+  "audited_runners_with_engine_sources": 27,
+  "affected_runners_actually_compiled": 17
+}

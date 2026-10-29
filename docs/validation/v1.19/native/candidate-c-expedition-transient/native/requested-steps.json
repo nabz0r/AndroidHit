@@ -1,0 +1,164 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_entry"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_slot_2"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_remove"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_slot_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_remove"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_save"
+  },
+  {
+    "op": "assert-owned-team",
+    "count": 1
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "expedition_entry"
+  },
+  {
+    "op": "capture",
+    "name": "real-expedition-first-route"
+  },
+  {
+    "op": "assert-expedition-wins",
+    "count": 1
+  },
+  {
+    "op": "tap-id",
+    "id": "expedition_left"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_expedition_session_v118",
+    "key": "mode",
+    "value": "5"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova",
+    "energy": 3,
+    "used": 0
+  },
+  {
+    "op": "remember-battle",
+    "name": "expedition-before-transient"
+  },
+  {
+    "op": "capture",
+    "name": "expedition-real-puzzle"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_expedition_session_v118",
+    "key": "mode",
+    "value": "5"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "expedition-before-transient"
+  },
+  {
+    "op": "capture",
+    "name": "expedition-empty-slot-opens-team"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_back"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_expedition_session_v118",
+    "key": "mode",
+    "value": "5"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "expedition-nova-skill-page"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "expedition-before-transient"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "expedition-before-transient"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_expedition_session_v118",
+    "key": "mode",
+    "value": "5"
+  },
+  {
+    "op": "capture",
+    "name": "expedition-real-nova-guide"
+  },
+  {
+    "op": "solve-active"
+  },
+  {
+    "op": "assert-expedition-wins",
+    "count": 2
+  },
+  {
+    "op": "capture",
+    "name": "expedition-real-stage-victory"
+  },
+  {
+    "op": "tap",
+    "regex": "Next.*"
+  },
+  {
+    "op": "snapshot",
+    "name": "expedition-after-real-transient-stage"
+  }
+]

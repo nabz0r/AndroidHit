@@ -1,0 +1,227 @@
+{
+  "run": 40942831539,
+  "source_commit": "ef7684fcae2bfc36eb805364ba1f2f515fb76ebe",
+  "status": "completed",
+  "conclusion": "failure",
+  "scope": "Intermediate source publication. Data-only legacy test compilation omitted engine dependencies required by CompanionBattleAction; this is not a passing release gate.",
+  "jobs": [
+    {
+      "id": 123690391013,
+      "name": "Packaged 1.18 art and frozen rig revision",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 40942831539,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Check out only shipped art and its recorded rig baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Prepare the pinned image inspection runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Check polygon boundaries and refused asset revisions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Inspect all 148 shipped sheets and verify their committed asset tree",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Check out only shipped art and its recorded rig baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        }
+      ]
+    },
+    {
+      "id": 123690391519,
+      "name": "Offline puzzle contracts (Java 17)",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 40942831539,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Check out the tested revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Qualify all 1000 N boards and their pacing",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Qualify all 1000 U boards and every reachable relay state",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Preserve historical codes, six sealed challenges and original budgets",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Qualify every L and M state and the finite daily and weekly geometry pool",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Qualify every Guardian state and once-only reward transactions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Check daily, weekly and Remix transactions and calendar boundaries",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 9
+        },
+        {
+          "name": "Check three-room ownership, migration and camera geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10
+        },
+        {
+          "name": "Check strict budgets, the saved Return and legacy continuations",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11
+        },
+        {
+          "name": "Check adaptive home camera and recoverable player collection",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12
+        },
+        {
+          "name": "Check contextual rules and six-language feedback",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13
+        },
+        {
+          "name": "Check 1.17 scene transitions and original sprite geometry",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14
+        },
+        {
+          "name": "Check 50 synthesized arrangements, earcons and audio lifecycle model",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15
+        },
+        {
+          "name": "Check puzzle gates, budgets, feedback and compact action reachability",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16
+        },
+        {
+          "name": "Check 1.18 and retained website language and deliberate audio controls",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17
+        },
+        {
+          "name": "Check 1.18 expeditions, copies, durable costume choice and motion contracts",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18
+        },
+        {
+          "name": "Check power offers and preserved reward decisions",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19
+        },
+        {
+          "name": "Post Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37
+        },
+        {
+          "name": "Post Check out the tested revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 38
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 39
+        }
+      ]
+    }
+  ],
+  "error_excerpt": [
+    "2026-10-29T19:46:53.3867498Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:3: error: package com.androidhit.lumadrift.engine does not exist",
+    "2026-10-29T19:46:53.3877697Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:4: error: package com.androidhit.lumadrift.engine does not exist",
+    "2026-10-29T19:46:53.3879918Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:40: error: cannot find symbol",
+    "2026-10-29T19:46:53.3902939Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:40: error: cannot find symbol",
+    "2026-10-29T19:46:53.3906028Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:111: error: cannot find symbol",
+    "2026-10-29T19:46:53.3908573Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:18: error: cannot find symbol",
+    "2026-10-29T19:46:53.3910880Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:19: error: cannot find symbol",
+    "2026-10-29T19:46:53.3913289Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:25: error: cannot find symbol",
+    "2026-10-29T19:46:53.3916163Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:25: error: cannot find symbol",
+    "2026-10-29T19:46:53.7116170Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:44: error: package MoveBudget does not exist",
+    "2026-10-29T19:46:53.7155124Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:45: error: cannot find symbol",
+    "2026-10-29T19:46:53.7159144Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:46: error: package Board does not exist",
+    "2026-10-29T19:46:53.7162331Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:47: error: cannot find symbol",
+    "2026-10-29T19:46:53.7171092Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:47: error: cannot find symbol",
+    "2026-10-29T19:46:53.7178241Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:50: error: cannot find symbol",
+    "2026-10-29T19:46:53.7264275Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:50: error: cannot find symbol",
+    "2026-10-29T19:46:53.7278087Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:95: error: package Board does not exist",
+    "2026-10-29T19:46:53.7307830Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:113: error: cannot find symbol",
+    "2026-10-29T19:46:53.7345933Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:113: error: cannot find symbol",
+    "2026-10-29T19:46:53.7424078Z ##[error]/home/runner/work/AndroidHit/AndroidHit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:117: error: package Board does not exist",
+    "2026-10-29T19:46:53.8436662Z 20 errors",
+    "2026-10-29T19:46:53.8699261Z ##[error]Process completed with exit code 1."
+  ]
+}

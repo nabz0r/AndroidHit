@@ -1,0 +1,143 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "record-owned",
+    "name": "before-real-quest-claims"
+  },
+  {
+    "op": "tap",
+    "regex": "Rewards.*"
+  },
+  {
+    "op": "capture",
+    "name": "genuinely-earned-quests-ready"
+  },
+  {
+    "op": "tap",
+    "regex": "Collect today.s gift"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "175"
+  },
+  {
+    "op": "tap",
+    "regex": "Collect reward"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "210"
+  },
+  {
+    "op": "tap",
+    "regex": "Collect reward"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "250"
+  },
+  {
+    "op": "tap",
+    "regex": "Collect reward"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "400"
+  },
+  {
+    "op": "tap",
+    "regex": "Collect reward"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "580"
+  },
+  {
+    "op": "capture",
+    "name": "real-quests-and-gift-collected"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "buy-earned-avatar",
+    "id": "tula",
+    "price": 360
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "220"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "tula",
+      "orbit"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 25
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,tula,orbit",
+    "energy": 3,
+    "used": 0,
+    "credited": "0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "capture",
+    "name": "tula-vision-detail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 2,
+    "credited": "0",
+    "comboReady": false
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "capture",
+    "name": "tula-real-legal-highlights"
+  },
+  {
+    "op": "solve",
+    "level": 25
+  },
+  {
+    "op": "capture",
+    "name": "vision-role-real-u25-victory"
+  },
+  {
+    "op": "snapshot",
+    "name": "vision-after-earned-rewards"
+  }
+]

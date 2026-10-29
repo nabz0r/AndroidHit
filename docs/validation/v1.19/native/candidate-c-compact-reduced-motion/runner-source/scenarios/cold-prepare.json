@@ -1,0 +1,59 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 25
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "piece",
+    "row": 2,
+    "col": 4
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,miko,orbit",
+    "energy": 0,
+    "used": 3,
+    "credited": "1",
+    "comboReady": true,
+    "comboSpent": false
+  },
+  {
+    "op": "capture",
+    "name": "before-cold-ready-combo"
+  },
+  {
+    "op": "snapshot",
+    "name": "before-cold-ready-state"
+  }
+]

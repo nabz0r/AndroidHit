@@ -2,7 +2,7 @@ import com.androidhit.lumadrift.data.*;
 import java.nio.file.*;
 import java.util.*;
 
-/** Actual home store and pure layout contract, including Android memory-before-disk fault recovery. */
+/** Original home compatibility on the current expanded room/catalog, including durable save recovery. */
 public final class HomeV113Test {
     private static int checks,funding;
     private static void check(boolean value,String note){checks++;if(!value)throw new AssertionError(note);}
@@ -10,9 +10,11 @@ public final class HomeV113Test {
     private static GameStore store(RewardsCosmeticsV17Test.Ctx c){return new GameStore(c,null,new RewardsCosmeticsV17Test.Clock("2026-10-28"));}
     private static void fund(GameStore s,int cost){while(s.coins()<cost)check(s.grantMilestone("home-test:"+funding++,Math.min(500,cost-s.coins()))>0,"earned funding");}
     private static void catalogue(){
-        check(HomeCatalog.ITEMS.size()==12,"twelve original objects");Set<String> ids=new HashSet<>();int free=0,usable=0;
-        for(HomeCatalog.Item item:HomeCatalog.ITEMS){check(ids.add(item.id),"unique furniture id");check(item.width>0&&item.depth>0&&item.width<=2&&item.depth<=2,"small valid footprint");if(item.starter())free++;if(!item.interaction.isEmpty())usable++;}
-        check(free>=4&&usable==12,"several usable welcome objects");
+        check(HomeCatalog.ITEMS.size()==42&&HomeCatalog.SIZE==10,"current catalogue retains 42 objects on a 10x10 floor");Set<String> ids=new HashSet<>();int free=0,usable=0;
+        for(HomeCatalog.Item item:HomeCatalog.ITEMS){check(ids.add(item.id),"unique furniture id");check(item.width>0&&item.depth>0&&item.width<=3&&item.depth<=3,"bounded current footprint");if(item.starter())free++;if(!item.interaction.isEmpty())usable++;}
+        String[] original={"bed","sofa","lamp","plant","rug","table","bookshelf","cushion","plush","gate_lamp","mobile","stool"};
+        for(String id:original){HomeCatalog.Item item=HomeCatalog.item(id);check(item!=null&&item.width<=2&&item.depth<=2,"original furniture identity and legacy footprint preserved: "+id);}
+        check(free==7&&usable==42,"current welcome and usable object counts are explicit");
         for(List<HomeCatalog.Surface> surfaces:Arrays.asList(HomeCatalog.FLOORS,HomeCatalog.WALLPAPERS)){int starters=0,paid=0;for(HomeCatalog.Surface surface:surfaces){check(ids.add(surface.id),"surface ids disjoint");if(surface.starter())starters++;else paid++;}check(starters==2&&paid==2,"two starter and two earned finishes");}
         for(String language:new String[]{"en","fr","de","es","pt","it"}){
             for(String key:HomeStrings.keys()){String text=HomeStrings.get(language,key);check(text!=null&&!text.isBlank()&&!text.equals(key),"complete home translation "+language+" "+key);}
@@ -23,16 +25,21 @@ public final class HomeV113Test {
     }
     private static void layouts(){
         HomeLayout initial=HomeLayout.starter();check(initial.placements().size()==5,"five placed starters");check(initial.encode().equals(HomeLayout.decode(initial.encode()).encode()),"exact stable roundtrip");
-        check(initial.tryPlace("sofa",5,5,0)==null&&initial.tryPlace("sofa",5,4,1)!=null,"rotation respects full footprint");
+        check(initial.tryPlace("sofa",HomeLayout.SIZE-1,HomeLayout.SIZE-2,0)==null&&initial.tryPlace("sofa",HomeLayout.SIZE-1,HomeLayout.SIZE-2,1)!=null,"rotation respects the actual current floor boundary");
         check(initial.tryPlace("sofa",0,0,0)==null,"solid collision rejected");check(initial.tryPlace("table",3,3,0)==null,"companion cannot be covered");check(initial.tryPlace("table",2,2,0)!=null,"furniture may sit over rug");
         check(initial.tryPlace("rug",0,0,0)!=null,"rug may be slid under furniture");check(initial.tryPlace("lamp",2,2,-1)==null&&initial.tryPlace("lamp",2,2,2)==null,"invalid rotations rejected");
         check(initial.tryPlace(null,2,2,0)==null&&initial.tryPlace("missing",2,2,0)==null,"invalid ids rejected");
-        check(initial.tryMove(0,0)==null&&initial.tryMove(-1,3)==null&&initial.tryMove(6,3)==null,"blocked and invalid companion moves rejected");
+        check(initial.tryMove(0,0)==null&&initial.tryMove(-1,3)==null&&initial.tryMove(HomeLayout.SIZE,3)==null,"blocked and current out-of-bounds companion moves rejected");
+        check(initial.tryMove(6,3)!=null,"formerly out-of-bounds sixth column belongs to the expanded room");
         List<HomeLayout.Cell> path=initial.pathTo(2,0);check(!path.isEmpty(),"reachable path exists");HomeLayout.Cell previous=new HomeLayout.Cell(initial.companionX,initial.companionY);
         for(HomeLayout.Cell cell:path){check(Math.abs(cell.x-previous.x)+Math.abs(cell.y-previous.y)==1&&!initial.isBlocked(cell.x,cell.y),"path uses clear orthogonal steps");previous=cell;}
         check(previous.x==2&&previous.y==0,"path includes destination");check(initial.encode().equals(HomeLayout.starter().encode()),"operations leave original immutable");
-        List<HomeLayout.Placement> wall=new ArrayList<>();String[] objects={"lamp","plant","table","bookshelf","plush","stool"};for(int x=0;x<6;x++)wall.add(new HomeLayout.Placement(objects[x],x,2,0));
+        List<HomeLayout.Placement> wall=new ArrayList<>();String[] objects={"lamp","plant","table","bookshelf","plush","stool","cushion","gate_lamp","mobile","easel"};for(int x=0;x<HomeLayout.SIZE;x++)wall.add(new HomeLayout.Placement(objects[x],x,2,0));
         HomeLayout separated=new HomeLayout(wall,3,3);check(separated.pathTo(3,1).isEmpty()&&separated.tryMove(3,1)==null,"BFS forbids walking through a solid wall");
+        String legacy="1|3,3|bed,0,0,0;lamp,5,0,0;plant,0,5,0;rug,2,2,0;cushion,4,4,0;";
+        HomeLayout migrated=HomeLayout.decode(legacy);check(migrated!=null&&migrated.companionX==3&&migrated.companionY==3,"explicit legacy six-by-six record remains readable");
+        for(HomeLayout.Placement placement:initial.placements()){HomeLayout.Placement restored=migrated.placement(placement.id);check(restored!=null&&restored.x==placement.x&&restored.y==placement.y&&restored.rotation==placement.rotation,"original placement preserved during six-to-ten expansion");}
+        check(migrated.tryMove(9,9)!=null&&HomeLayout.decode("1|9,9|")==null,"current expansion does not relax historical encoded bounds");
         boolean immutable=false;try{initial.placements().clear();}catch(UnsupportedOperationException expected){immutable=true;}check(immutable,"placement view immutable");
         for(String invalid:new String[]{"","1|3,3|bed,0,0,2;","1|3,3|lamp,3,3,0;","1|6,3|","1|3,3|lamp,2,2,0;plant,2,2,0;","1|3,3|lamp,2,2,0;lamp,4,4,0;","1|3,3|missing,1,1,0;"})check(HomeLayout.decode(invalid)==null,"malformed layout rejected atomically");
     }
@@ -99,7 +106,7 @@ public final class HomeV113Test {
     }
     public static void main(String[] args)throws Exception{
         catalogue();layouts();storeActions();failures();coldFailureAndLegacy();firstLight();
-        String report="{\n  \"passed\": true,\n  \"checks\": "+checks+",\n  \"objects\": 12,\n  \"languages\": 6,\n  \"failure_models\": [\"refused before memory\", \"memory before disk refusal\"],\n  \"scope\": \"JVM actual GameStore API, six-by-six immutable room, paths, placements, earned coin ownership, six-language copy, multi-handle retries, cold recreation and legacy preservation. Separate device interaction validation required.\"\n}\n";
+        String report="{\n  \"passed\": true,\n  \"checks\": "+checks+",\n  \"objects\": 42,\n  \"preserved_original_objects\": 12,\n  \"room_size\": 10,\n  \"legacy_record_size\": 6,\n  \"languages\": 6,\n  \"failure_models\": [\"refused before memory\", \"memory before disk refusal\"],\n  \"scope\": \"JVM actual GameStore API, current ten-by-ten room and 42 objects with 12 original identities and explicit six-by-six save compatibility, paths, placements, earned coin ownership, six-language copy, multi-handle retries and cold recreation. Separate device interaction validation required.\"\n}\n";
         if(args.length>0){Path out=Path.of(args[0]);if(out.getParent()!=null)Files.createDirectories(out.getParent());Files.writeString(out,report);}
         System.out.println("PASS "+checks+" home model and durability checks");
     }

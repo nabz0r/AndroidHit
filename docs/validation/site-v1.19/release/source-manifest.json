@@ -1,0 +1,2581 @@
+{
+  "status": "PASS",
+  "edition": "1.19",
+  "release": "1.19.0-prototype2",
+  "artifact_manifest": "releases/manifest-1.19.0-prototype2.json",
+  "artifact_manifest_sha256": "3d7aaa0d344ec4376f4fe7d4529075ae5e0363e3fdd46967118171799c9eec59",
+  "artifact_source_commit": "e267ac192f3aea268efe4e1a3a92a41d5b5f1518",
+  "production_apk_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+  "lab_apk_sha256": "448d359abb6d4943c6eadf9f03c221fd35d5fa18c21441817bb4c7a31bb87d11",
+  "package_identity_verified": true,
+  "native_capture_provenance_verified": true,
+  "screenshots": [
+    {
+      "key": "home",
+      "locale": "fr",
+      "source": "docs/validation/v1.19/native/candidate-c-core-team-combo/native/fr-adventure-final.png",
+      "public": "public/assets/screenshots/v1.19/home-fr.png",
+      "sha256": "e12c3804f460919a0591a0d728ee697b1db82ff28bf4723342fa78111c00c06c",
+      "report": "docs/validation/v1.19/native/candidate-c-core-team-combo/report.json",
+      "reportSha256": "00e98ac7ea14804f2ce845d9a6bc9c91aa70ff8739b76a4f3b2c9789e412a2ca",
+      "apkSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "screenshotsEdited": false
+    },
+    {
+      "key": "squad",
+      "locale": "fr",
+      "source": "docs/validation/v1.19/native/candidate-c-core-team-combo/native/fr-three-member-team-final.png",
+      "public": "public/assets/screenshots/v1.19/squad-fr.png",
+      "sha256": "e65e6390b8a3640ca8ff6f645748d802683701c912f0405c3eaea9ffb066c241",
+      "report": "docs/validation/v1.19/native/candidate-c-core-team-combo/report.json",
+      "reportSha256": "00e98ac7ea14804f2ce845d9a6bc9c91aa70ff8739b76a4f3b2c9789e412a2ca",
+      "apkSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "screenshotsEdited": false
+    },
+    {
+      "key": "puzzle",
+      "locale": "fr",
+      "source": "docs/validation/v1.19/native/candidate-c-core-team-combo/native/three-real-actors-before-skills.png",
+      "public": "public/assets/screenshots/v1.19/puzzle-fr.png",
+      "sha256": "f5f14c267d746e1c4e8f645e8fa1481190e9eea21a1fc09a085843d587b52614",
+      "report": "docs/validation/v1.19/native/candidate-c-core-team-combo/report.json",
+      "reportSha256": "00e98ac7ea14804f2ce845d9a6bc9c91aa70ff8739b76a4f3b2c9789e412a2ca",
+      "apkSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "screenshotsEdited": false
+    },
+    {
+      "key": "home",
+      "locale": "en",
+      "source": "docs/validation/v1.19/native/candidate-c-six-languages/native/en-adventure-final.png",
+      "public": "public/assets/screenshots/v1.19/home-en.png",
+      "sha256": "f09be8e4305453a2867488e369923733d0980306dc2d05f5b3e27c3e5134f765",
+      "report": "docs/validation/v1.19/native/candidate-c-six-languages/report.json",
+      "reportSha256": "17e47de0952cc62c537340eb007721de5a2716ee588ea7f26f37c8fad8974f2c",
+      "apkSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "screenshotsEdited": false
+    },
+    {
+      "key": "squad",
+      "locale": "en",
+      "source": "docs/validation/v1.19/native/candidate-c-six-languages/native/en-actual-team.png",
+      "public": "public/assets/screenshots/v1.19/squad-en.png",
+      "sha256": "040bf778a46489be1453b2ac08a404d83fcaa7cfa558c5160eb17d9dbc5ed7aa",
+      "report": "docs/validation/v1.19/native/candidate-c-six-languages/report.json",
+      "reportSha256": "17e47de0952cc62c537340eb007721de5a2716ee588ea7f26f37c8fad8974f2c",
+      "apkSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "screenshotsEdited": false
+    },
+    {
+      "key": "puzzle",
+      "locale": "en",
+      "source": "docs/validation/v1.19/native/candidate-c-vision/native/tula-real-legal-highlights.png",
+      "public": "public/assets/screenshots/v1.19/puzzle-en.png",
+      "sha256": "1e21a600dd976db50c7a630c56ca8125331e2d641af662bcdf84fb617c48fb81",
+      "report": "docs/validation/v1.19/native/candidate-c-vision/report.json",
+      "reportSha256": "1d6d0863d5f1a81adbb1fc0d1a7b8c73316a4b7bb4671ad31b5eb0ebb27e58f1",
+      "apkSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "screenshotsEdited": false
+    }
+  ],
+  "preserved_files": {
+    "site-config.js": "6053074f0b45e54e14267e7d2316be8f68d981110c2376641653e039fc0f4f67",
+    "app-ads.txt": "1ec22f11296d1bf892fdd26f7019ca10049cc97977d31ce9ea806b888b6dbcba",
+    "robots.txt": "273a38ddf3d5e34a9cc9cc68079c1b46294c9d2d7946343f346f720bb03697aa",
+    "releases/luma-drift-1.18.0-sandbox-prototype1.apk": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+    "releases/manifest-1.18.0-prototype1.json": "d85b2b96bd4e5c38e21e49a093653116c573fd3b594c665bdffaf929fe6c055a",
+    "releases/manifest-1.16.0-rc1.json": "e5cbf5c7022d0231b24b6424b85a46b3a229fba409aea83c8956fe0905bd2987",
+    "releases/luma-drift-1.15.0-rc1.apk": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+    "releases/luma-drift-1.18.0-prototype1.apk": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+    "releases/luma-drift-1.15.0-rc1.aab": "5653697409d4fa73b48ae0e6cf826eaf76169bd26a718ecc8365fce8850c3659",
+    "releases/luma-drift-1.16.0-rc1.apk": "516be7f14ff2b80683de658b6df767f4b19dbb44580d57be36a307d330ed5a66",
+    "releases/luma-drift-1.16.0-rc1.aab": "d62c8cb03da3af9b5aadab55b7c57faf0846d831c8cacbcb899f233d54e1c202",
+    "releases/manifest-1.15.0-rc1.json": "6dc7942567d4129cff81bd2f531006a6076b5dec7292b18ea7555205628731c6",
+    "releases/luma-drift-1.17.0-rc6.aab": "cfad9ff262e843ef0a2c7982964ff7ca41abf0e6df57cefa2c7c6b3d7d4e799b",
+    "releases/luma-drift-1.17.0-rc6.apk": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+    "releases/manifest-1.17.0-rc6.json": "9133ae6db0c465fb33573b78fb89bfc366f2f0181f2540fe5afa83cff9da81c2",
+    "privacy/index.html": "3a4e666de4e8105c80dda2934ae12fec3c98ec4d2a8bb3e9c393254acc0093a3",
+    "delete-account/index.html": "0c30aed6e846765e3c3befa97d881c2402c7614c99c81fbdea00c8bc7e75e217",
+    "lab/ui-1-19/index.html": "525e6efcbd9bb34e26103e0bab213f46b6ce3719725745f954412459d88d2975",
+    "notices/index.html": "997076fccafc3de3691214e6ff79cb12803c5be4526d07a79d9f52c61e2f7588",
+    "assets/companion-gallery-v118.mjs": "02320ced57c4d9473a429d9b9251734a0b4ca7c7a59e28835477e8add3ecda33",
+    "assets/deletion-core.mjs": "67815fa6c57a157aa6d712e56b29bb356bdf3bf21da63f9b7275d4dcf2e512ad",
+    "assets/site-v118.css": "0d437e9749456ef554f552fd6603748ec4c898cf52b68489b974f5892f4b0db5",
+    "assets/icon.svg": "d168aab7fb3730f4ab969e4c8a8d2ffa9db8c3eb8a9cb5370e1b0fa75481d8e4",
+    "assets/style.css": "c96901e3af93b34774530dcde920ef9f215b68666d91d858ebbb3858cc7a2a0c",
+    "assets/delete-account.js": "68933dc4981d16a7473776c2cef6635799558923f3a11673951f1f9c768b0ce3",
+    "assets/site.css": "81cc9dee208368c477c2027c1069153c96dee55bc587fd64a0a2b4bda6a02ab1",
+    "assets/site.js": "29c0fed2ad0430c9d2b8506bdc31419dd47703a019a06fa451080b2bb227250e",
+    "assets/gallery-core-v118.mjs": "bbaef486f8b8fd7e621b005d7829439199f762c2acb57e51cd99cff546137645",
+    "assets/google_g.png": "d1ce9c2af0b10a7333abc99bc706f9a6a199e5b65bf3e3009624f076b8638e6a",
+    "assets/site-v118.js": "3625e49f1d2126b0e7d870087ccc419693f52db9bd28332a25e660ac39edfcbf",
+    "assets/screenshots/sealed-wall-before.png": "28df598902849b3aba1c3f85189194927b835ea329057cb0a94fc9fba06795e3",
+    "assets/screenshots/home-en.png": "2b2094ce9df91aaa4cb9ec0ac92d9944ec5df3911e38730d2589e709f5d71ad0",
+    "assets/screenshots/home-fr.png": "7a8e034c4ddd71f286bf656a4d2dd8ab412db314aa30b4499cfef8cfc807bd86",
+    "assets/screenshots/shop-en.png": "8f9b43f989983cb1ac8b41a794b7c54381d73c1aca77f6f099d350d4cfeaf080",
+    "assets/screenshots/collection-equipment-en.png": "04c058d950862ea142c7a1604b0412b6732b0f3ab8532cb0df3201ac992805df",
+    "assets/screenshots/sealed-p6-card.png": "f57c198b6ee8474df50af8a0c78403ebeae2c8d7b6677b61284d28d2edebf78d",
+    "assets/screenshots/shop-fr.png": "5de652ab7d177cce828cb6dc0ad73eb9d54a2ce06cbe0f70be3c1fc85ffd9576",
+    "assets/screenshots/collection-equipment-fr.png": "c6a6716ccab77d4e1806292d15419120028ef8e74f472804a58d657944987cf3",
+    "assets/screenshots/v1.16/reveal-fr.png": "598d376d74d2af307733961b679273cd804455c663f465c34cc7edfba579039f",
+    "assets/screenshots/v1.16/collection-fr.png": "66f8eeeb434d6c4ce8b60e15a9589a4fa68bf4ef2d0e5ce4c97bc9f2b858333a",
+    "assets/screenshots/v1.16/badges-fr.png": "07f3e5ad01adbe04dde5d14577e1994633eda00ca4218ea40d363cc4ba9daf4a",
+    "assets/screenshots/v1.16/reveal-en.png": "0de20161a6a08a37aa304fa91e2a6c2f5a2bd5d626704b619d56475d2be6ea44",
+    "assets/screenshots/v1.16/badges-en.png": "0d7a85de84df35020c398513e9c011ee3ea835cf48ca878d4ad7f7cec87a9bb5",
+    "assets/screenshots/v1.16/collection-en.png": "c05f2ce09e39ba63e84199a3131cf1063e769eb99140474c6a3f798e9d63f729",
+    "assets/screenshots/v1.16/home-en.png": "7866a8fef6cf271a74e6287ee43f4555c223fc2eea2229871292051fbf96829d",
+    "assets/screenshots/v1.16/profile-fr.png": "ddee68b47a3708c7fe8316e174ba3f41cee9054f969e9e75e626ae06db5a3a2d",
+    "assets/screenshots/v1.16/summon-fr.png": "9d40fbb71a15b1eabc3812a5c9d8bc44d68b91fd86b31b69e10a15a6cd928ff4",
+    "assets/screenshots/v1.16/profile-en.png": "1ce1b246cd8ec3730d665004a6c1d5cc67818bc12a21bba1dd7854a747e44dfe",
+    "assets/screenshots/v1.16/summon-en.png": "45bab4a923aa024ef423537435d772aaf0cc42cfb40d938ba975f1f5ad733530",
+    "assets/screenshots/v1.16/home-fr.png": "6e8a2a21f654b179e38c1d8a87301d8b72f90257c6f12138c5acc58c9b89000e",
+    "assets/screenshots/v1.16/atelier-fr.png": "2d68074e8f36c14a7290101930d87c05a0ad4bfd24aac1cc1124746a9e198a42",
+    "assets/screenshots/v1.16/adventure-fr.png": "8c9201e61caa2e5f9db740e3674f6e16fdd2ba69c6f8c39376a4123f00836e00",
+    "assets/screenshots/v1.16/atelier-en.png": "d2a37cd91011f5f18577e59b321bf0076fddc4ef1d2e3bcf408d5ddbaa2d4865",
+    "assets/screenshots/v1.16/adventure-en.png": "6ea993c118ee9b87cacf852c67737b2176b6cc8f00b349302eeeceea6a13ab85",
+    "assets/screenshots/v1.18/wardrobe-fr.png": "c2a2b191cf34c2938a52ffa21f394f91b0ceb6be721ef366042eeb714a341c47",
+    "assets/screenshots/v1.18/wardrobe-en.png": "4c98311f66f8b4b639b59ef4987c9f0bec1b5574673ea3dc52cd52dec12c8e31",
+    "assets/screenshots/v1.18/home-en.png": "8c89fef639dee7d4e56e3ba30bc3841cc84e49b9b3adb32332fefc7caccbc579",
+    "assets/screenshots/v1.18/studio-en.png": "63ceda1d01c8f09ccc512c295a494d54354e65dcaaed34e467050df3e89cce37",
+    "assets/screenshots/v1.18/studio-fr.png": "11406bd862ae4e6e4d6803b31d2bb856b82c19eb6b4795c8e5b9e7b5c32d81c1",
+    "assets/screenshots/v1.18/home-fr.png": "2616826c06a10a4dc9a3c82636afbc712d101d91e728e0991660acb8cae3eeed",
+    "assets/screenshots/v1.10/wardrobe-fr.png": "0b1a9569a90c3309f6b47428cf04159539a60cb0e64e176b4068596347002787",
+    "assets/screenshots/v1.10/tutorial-key-en.png": "c9835a478b7fc28678f28e7f862b02b47945a417807c5d16e6f4a15f7d2188b1",
+    "assets/screenshots/v1.10/map-1000-fr.png": "ca8323e74e4d138b656e3ac1724127ecedbe28bf2180c292d9cc80884f3b9b30",
+    "assets/screenshots/v1.10/tutorial-key-fr.png": "ca30e10a273c42bde6ec373030ba2162ab2ffdbb2af29756e076c92ef010a529",
+    "assets/screenshots/v1.10/wardrobe-en.png": "4c42b0889cb72d96304cd51444cc82d0a639f56474f98e3bf346fe7a1c7063c5",
+    "assets/screenshots/v1.10/map-1000-en.png": "5dc816f3d02054a338e07c9c062eb40f1f14ecbc6af3583ce5001a49005ae549",
+    "assets/screenshots/v1.10/home-en.png": "46358cbb40cd77f5eb9032ab775f6c7f0edd385e25c1363e724a8e014c82130d",
+    "assets/screenshots/v1.10/rewards-fr.png": "d269b8a39ecd22954d0f096111ab77fa56068113160bcb75f1e2d58cb8202dd3",
+    "assets/screenshots/v1.10/first-practice-en.png": "5174b1ce955d09c85b7db1313d873d8a1b3c0bbb374739cd0613b436e6edfd32",
+    "assets/screenshots/v1.10/shop-looks-fr.png": "cb6fa8aa93d3e3de5d6b871f4708fa6cab55a2bd5f5188f2932dc2d0076d8e41",
+    "assets/screenshots/v1.10/guardian-5-one-cell-en.png": "2508e4245f01cf2bfd83732649a5bedf40a5b324138f52a9aa0b6c1dd8353675",
+    "assets/screenshots/v1.10/rewards-en.png": "5794a7f8e18e9c4c63ce282cca523f26fa5c6cd1563410a929cfb2f28ec87044",
+    "assets/screenshots/v1.10/home-fr.png": "86fa494e76ea77e9e1934b2831a8e326e7cee01a3c0239bb28368527c8cbd7de",
+    "assets/screenshots/v1.10/shop-looks-en.png": "842be7c8bcd21443424889d9a47d04617575df6dde7783c610a5609b642d3d51",
+    "assets/screenshots/v1.10/avatar-studio-en.png": "506f53251d922c096cd5e5a1eb305faacb61746f45dbefcc73697d4edbd0877b",
+    "assets/screenshots/v1.10/story-en.png": "9404e6443d33538297392d4220d88a5bf73c29ca140fed1201d45186113475e7",
+    "assets/screenshots/v1.10/story-fr.png": "7b365caea6fdd3c1bb831efa982cae5a945ab9bcf9b5ecf342c2d509b41568b1",
+    "assets/screenshots/v1.10/avatar-preview-en.png": "933a595fda67a72161030abf6fffeff681383242a399a0bc201bd2b0d6b5a699",
+    "assets/screenshots/v1.17/reveal-fr.png": "49670fc960f329d192048810ecdeae1c68bee2b32e9a72eadcba0ebbb11e51fa",
+    "assets/screenshots/v1.17/collection-fr.png": "6f0e3db4e3eb2ea19c98db5339079567abe31352564dbc31af4ee3a9e7e0724e",
+    "assets/screenshots/v1.17/badges-fr.png": "970d530be4485f493ff1686780fc8c9f47e9f6669f587fd32a7ecc1de2df22e9",
+    "assets/screenshots/v1.17/reveal-en.png": "314c5ad6002bd0f1c77b408a9ddc8e566072db3d739fef4b171cbb5c10e854f5",
+    "assets/screenshots/v1.17/badges-en.png": "353be7b7bcadacca74229bfa162237e8d3b19b210d857c65cd5e25e1fdf936d3",
+    "assets/screenshots/v1.17/collection-en.png": "e6af71475cb12abe2af8f3396c126f6784f6fb999d56422466a53d6582646b0b",
+    "assets/screenshots/v1.17/home-en.png": "4e6e001d16dfe29ced04b998e3675539b3edf2b3fcd66395784a2b635851fa62",
+    "assets/screenshots/v1.17/profile-fr.png": "e420a94586233b1aeb68c1c1c86b5fc5e5d14fbf39588c81077c3ddea8d11b7b",
+    "assets/screenshots/v1.17/summon-fr.png": "33869bf245d72b2333a2f436aa30d4b80595a414c4235167a22c43d770225474",
+    "assets/screenshots/v1.17/profile-en.png": "426ccc14b8c5f698867603b998f379d207f745172b5b3fe5bce7730372ab0ff6",
+    "assets/screenshots/v1.17/summon-en.png": "1bb94abcf30499d276ab3dd0736bff29f19e9021b192dd6036f24b94f8eb9fc9",
+    "assets/screenshots/v1.17/home-fr.png": "51b2bfb6012e356e7eaee2e0e37be309d0c480113421dadbce78586678945d56",
+    "assets/screenshots/v1.17/atelier-fr.png": "03c06d6dde2e9478606c71a63049a0352effa5d8c2d3d288de724154bd2d4c1e",
+    "assets/screenshots/v1.17/adventure-fr.png": "15f88120d83b8c06419631ce053d7c498e20c3d389b41a074decdf12181dfc53",
+    "assets/screenshots/v1.17/atelier-en.png": "870a934016eff854bb3da9a4d5b47045b6e629975333e07ffe619b9b5fb7dd7c",
+    "assets/screenshots/v1.17/adventure-en.png": "6bf06dd0fcac93d3986e3a61e6543fd99c39cf85a623cc83ca9b7b4745cfc8d8",
+    "assets/screenshots/v1.9/wardrobe-fr.png": "096b51a5318c114869000251edb7ec70553357802ad784f4eb96935f03b86818",
+    "assets/screenshots/v1.9/tutorial-key-en.png": "200eb84ba93410bf1fe705ef05cb413cbbe81feb4ec1da91cdcea72fe484301f",
+    "assets/screenshots/v1.9/map-1000-fr.png": "91520a92bdacdcdd90aab7803d54bdafaf805c06421e6342e89267603750b59b",
+    "assets/screenshots/v1.9/tutorial-key-fr.png": "ec26fb7de54e8fa0417499dc34b9d3e94de50ee29e6de098fb6d7fca61b5ffed",
+    "assets/screenshots/v1.9/wardrobe-en.png": "9fc6e4e35bc6775723b72894e6b3ccd16d26dfcad832b9a0ff666b81b27aa900",
+    "assets/screenshots/v1.9/map-1000-en.png": "678d3bef79c2db8c2f2c9e5520c2db9567d41b8ba86d9f12e9063e44700cd054",
+    "assets/screenshots/v1.9/home-en.png": "09d626146b09ad56f07170c2d841f24ebbbe6f4b07f1f1d779ac8de62343945a",
+    "assets/screenshots/v1.9/rewards-fr.png": "2ca7b860b4e163521d617c101931636247f950bb956fd2d02c99e7f830c0df36",
+    "assets/screenshots/v1.9/first-practice-en.png": "24313a28c7d8ce64d79ed0272a4e0f71a3b151445c7c92de332b6cca69a19837",
+    "assets/screenshots/v1.9/guardian-5-one-cell-en.png": "fcf68d6d0a5f48f8da0b0fa9b11cf35a595be1232fd0f138dc9bd6508e09eea7",
+    "assets/screenshots/v1.9/rewards-en.png": "f0ce028305a8aca0365e592afb0524433fe694314d046336882020288bfb834f",
+    "assets/screenshots/v1.9/home-fr.png": "dc43b921a5d8182b833478583a4d52509a39d4e26b8c18c689275fc7574a1070",
+    "assets/screenshots/v1.9/avatar-studio-en.png": "6bece7be72fc47176348f16cc6f6a232297d0ea513cd12c2980a06130f4f313f",
+    "assets/screenshots/v1.7/wardrobe-fr.png": "3aa26a2fafbfa679dd49e1a3caf414343180f9636a8c91157b5968a3f10077e4",
+    "assets/screenshots/v1.7/map-1000-fr.png": "4d66eb3ee57c7e352ab92e2f620dba25bb2eef8a91a63e557dc31611618280d8",
+    "assets/screenshots/v1.7/rewards-before-en.png": "924e57c6dce62160743626e5082533c43c73b0a9e5906928cb173ca2d09ef97c",
+    "assets/screenshots/v1.7/shop-earned-en.png": "5f50419a15f370eaca45ea5cfa5da180d6df1ac455cd431d11612d25b2cdfb10",
+    "assets/screenshots/v1.7/map-1000-en.png": "faa488b53146e2c5a2a081e97de13cd24276d1f8fe87104de3a59f72f0d73a80",
+    "assets/screenshots/v1.7/wardrobe-hat-en.png": "4986ea8d44f0ec2513e887417a9fda1488276751f3b91affe2de0fa58a9abfa7",
+    "assets/screenshots/v1.7/home-en.png": "9993b77a2551ac2988fc0034f9091b4cdd735bfe50c937f9e2468f33bbc3fed6",
+    "assets/screenshots/v1.7/rewards-fr.png": "ca94955acd1a80b84167d9f260c3899da331e4e8b9232cf60f0b9c20d89ad894",
+    "assets/screenshots/v1.7/weekly-quests-en.png": "6f15474a1cd5e7c0dffb447043c1560ac25fb307ee6d5e7e69fbee70ce3f1bb5",
+    "assets/screenshots/v1.7/home-fr.png": "a4f9c24aaa49c057b596b0a830bec084adcb1bf92dcf8a51ab875fbc34cc41f4",
+    "assets/screenshots/v1.7/shop-premium-closed-en.png": "f966438fd6fe3b698ce0c8d178d3bb4b34f91987c9208befee3fb46f74915170",
+    "assets/screenshots/v1.6/inventory-en.png": "0e042f0ee0c0ef7df343de048717726014dedadc0019f6a91ecc67ad737fbcae",
+    "assets/screenshots/v1.6/map-en.png": "43bfd1cc154190749da8ee55b29e58aa72c74c69c8cd18f38638f1fdb01fdda6",
+    "assets/screenshots/v1.6/map-fr.png": "dd8405473aba30bb26ff0525ee07094349aa0a5d35a47265fc830413eb5cd84a",
+    "assets/screenshots/v1.6/inventory-fr.png": "8cc989026a781c496a43fc80ad00638e0962785953323ec3ca347c855c3cd8b0",
+    "assets/screenshots/v1.6/home-en.png": "d25140c5a03de6850046df7300a08d4295ce2f16554c76662f6d16b680fa6291",
+    "assets/screenshots/v1.6/briefing-fr.png": "e14bdf30b7e91fe55d004439d1db73b815d80c61b662a841fc86923334d618e0",
+    "assets/screenshots/v1.6/equipment-owned-en.png": "2afea249f1ee24aa584d175ebaba5e59b4885e64e4a3e2c74186bac846f4f963",
+    "assets/screenshots/v1.6/briefing-en.png": "e93e8fded1b34f94fdd18e4b4b746019a5887ace8ceacafd375ac9800c874828",
+    "assets/screenshots/v1.6/powers-en.png": "79767f5ac64c65c07d9016c12ed223191778094748005e9c1fd3d63723535a4c",
+    "assets/screenshots/v1.6/home-fr.png": "9eb674a7e815c838a8fa124f32e87968d22efe7adc56bb11652faaec1795cff7",
+    "assets/screenshots/v1.6/companions-en.png": "06cacfaa5ef1eac2ed734911b9ca32573ef06a9da4d64f619f1ac1b513bf1bab",
+    "assets/screenshots/v1.8/wardrobe-fr.png": "66643e02efb78176aa1a75a5d1338fba49692f1b5e9afeef1ffa765d03211ba9",
+    "assets/screenshots/v1.8/tutorial-key-en.png": "e70104b008d19a5f586f25f011338012e725debbbee0691fdb02bdfcfce5334c",
+    "assets/screenshots/v1.8/map-1000-fr.png": "7857061e0df65ce18f44aac3f94f9188ca0138245d422b6e2736583542b71fe1",
+    "assets/screenshots/v1.8/tutorial-key-fr.png": "6c4e78d785232be377ab3fa68d60e12171b0cc66382e503eaeb452eaac2a2c14",
+    "assets/screenshots/v1.8/wardrobe-en.png": "86c0626e7c9f8e96fbe7ee177cb7a3564662ae624d9da77388ff544c40acbdb3",
+    "assets/screenshots/v1.8/map-1000-en.png": "249ec18f754415193922b95bd8ef794baf8452aa16627856d4bad9ec756801a4",
+    "assets/screenshots/v1.8/home-en.png": "529eb0177ef41b77898f4dc15f6e7b24c70c95ad3f6ee9f9c7d463efa6380b12",
+    "assets/screenshots/v1.8/rewards-fr.png": "e810bf7084ee386464f2b0877f96db3c23fd194a55ea4ea154596ac77e1151a2",
+    "assets/screenshots/v1.8/rewards-en.png": "a966ec1a62564e0af77a9b998b84b3c2697105f20fae3e7376dbaade7c17cdc3",
+    "assets/screenshots/v1.8/home-fr.png": "4040c2df66829d84fc431811e974ac9862bfb07f7325077f3aaaff7c03103595",
+    "assets/screenshots/v1.12/shop-appearance-en.png": "6bc7f02d1f5c87efaefd5dda1101631626250b268447104dcd0f072299a53082",
+    "assets/screenshots/v1.12/home-en.png": "9ceacb46e61cc404c5d93c3ffbf6a9e0349dc87e145fe5b5ff665f14272b0102",
+    "assets/screenshots/v1.12/power-detail-en.png": "0c4189d3bfc1f8c753b9a5e09eca8e0a228f11945765b5023c955ba0ca5701eb",
+    "assets/screenshots/v1.12/shop-powers-en.png": "f3a137b3de7902c2b7deef926b977d395145fdcde9429d187234fa212215b02b",
+    "assets/screenshots/v1.12/shop-powers-fr.png": "5c4fe9c56b1ce3e0cf9839b6bcb60ef6c52899566648075e9fc0064a607546b5",
+    "assets/screenshots/v1.12/power-detail-fr.png": "de4286384d8fcb8bd80246edacaa861389baa9f0d2eb60569ff931d2a6d2b531",
+    "assets/screenshots/v1.12/home-fr.png": "8548b00b735f05643e87c6c816ee715a669503a50a9ffd2d9fe96094b1d7b5c0",
+    "assets/screenshots/v1.12/shop-appearance-fr.png": "aba0459b5ad0b661fd3542dce26f92d06b36d70858ad2fe7184eb3d888f7bf61",
+    "assets/screenshots/v1.12/equipped-en.png": "33a3d5f7bdb0be20a74bcbe9df86031602bda94bcbb8fc88ae010a588fc7f18b",
+    "assets/screenshots/v1.15/collection-fr.png": "fd7a827fd442c39e149897b3c538c68f742df002eafa565cd69f56fa5d603705",
+    "assets/screenshots/v1.15/piano-placed-en.png": "a71799b386242f666df81ab2a399730cfce00a8ccc40baebe4acc6d7d8df0f0e",
+    "assets/screenshots/v1.15/aquarium-placed-en.png": "5237069d7e9a7f0ff7ef60fc592e756e141ae791b65f0f52a245f910a95df684",
+    "assets/screenshots/v1.15/collection-en.png": "3030ac12a8eeec90bc34fb70be99e8683eeb4ca408bdee6abdd86812cc5f8923",
+    "assets/screenshots/v1.15/puzzle-en.png": "86a09581a2719adcee46cc07effb69ed4c8cc6ec601810d7b3818c8f0173bb2b",
+    "assets/screenshots/v1.15/puzzle-fr.png": "614666cca3c9a89bd5349776c591fc12df57a67afa7c6e246afde5149802f36b",
+    "assets/screenshots/v1.15/home-en.png": "4480e6133024d6a7523b1acfd65004171bc2483d7937b08bc06ca189a1a13023",
+    "assets/screenshots/v1.15/home-fr.png": "bae7fbbd93cdedcd148f0ff41764f691b8ad193238e4216ddc21970d447b073f",
+    "assets/screenshots/v1.15/atelier-fr.png": "653a168355185885dbeaccf18e953b09a4b15f684b6aafa06ff8bcb8c42b1232",
+    "assets/screenshots/v1.15/adventure-fr.png": "6f94ff69d0b82f298e0e1181229d1af288ca3a89b800db0b117bb957a1035ac1",
+    "assets/screenshots/v1.15/atelier-en.png": "7e9c003d9613da7388c40a55d8451f583349d6cf9aec39bf30073a6032f60793",
+    "assets/screenshots/v1.15/adventure-en.png": "7aebd8fbc7cf684bc9dd31612fca719ad7d5d44072cf924da76ddf0ca9ead424",
+    "assets/screenshots/v1.14/puzzle-en.png": "2166d230195b08394dabea6ef864ffc5dc9c9cab7c4592b45b8b9b44e95b3d39",
+    "assets/screenshots/v1.14/house-decor-en.png": "6e6e5452e483281a034102862cca71043bbc5364661325db684112be5d99875d",
+    "assets/screenshots/v1.14/house-decor-fr.png": "64fbc5a69797b5d7639d74492cf084794cd3fbac82b4b6aa8ff513c85831075a",
+    "assets/screenshots/v1.14/puzzle-fr.png": "b8c3d9e85bb2c1c9c67d1911cfcf9d449504bd5be664b2aaa6c552cc33ca7871",
+    "assets/screenshots/v1.14/home-en.png": "5b3ae55193f6e3f969b95ceaaa8fc4849bdc14e34d3e55cd26c83a9016d6da71",
+    "assets/screenshots/v1.14/house-hug-en.png": "4eba122d2b7a28ae4ba8083e032f88c3e9ac4f3ebc3c7c80210b7c8ea41c3c3b",
+    "assets/screenshots/v1.14/furniture-en.png": "0dc57a33dd203e1314ef4c00665120b79ca88cb84469b25be9b1386da0b7c142",
+    "assets/screenshots/v1.14/home-fr.png": "f5797ad34d32aec8a19f0f26e3a93d37b09c3ffe4baca3082069ba3f8f4c38c1",
+    "assets/screenshots/v1.14/furniture-fr.png": "a6c204982210704b568f24f8a45eafb9ab2096f157960f84d1256dff38cee647",
+    "assets/screenshots/v1.13/puzzle-en.png": "819032b50daad2fddb9af94d9b4f274523088011b0ef39c582313e329365d7a0",
+    "assets/screenshots/v1.13/house-decor-en.png": "33666387e7a39e378c09faa927fbead45cd128d020f25203f8aecd475aa363eb",
+    "assets/screenshots/v1.13/house-decor-fr.png": "2c27a5f23f46c0fee18d57ce040445b1d7ff95af08f66e9c4db49b154d09a4d7",
+    "assets/screenshots/v1.13/puzzle-fr.png": "733e3f3f4e012979e98acbf72a177c9c8fec146dddcc9b108316726dfea4de51",
+    "assets/screenshots/v1.13/home-en.png": "d66ff045eb2c13b8942aa958fdeea941a685e154b6f612e57f9e0603a85eecef",
+    "assets/screenshots/v1.13/house-hug-en.png": "d29209d2e0f62e71618614517a50ee54f4b82671263e69e2efe8f2230d304133",
+    "assets/screenshots/v1.13/furniture-en.png": "19df7f9114ad768d7eeea3623a515763cf643a58881488bf17da41f5938d3f6f",
+    "assets/screenshots/v1.13/home-fr.png": "feed6dc63206129a85ea426dfca84236ad1c3a443c735e601481d17f932f9e3e",
+    "assets/screenshots/v1.13/furniture-fr.png": "ea626bf1b87d85bfe1944f99eaa0015d74daa0f2d57d2d6f7935c18909080716",
+    "assets/brand/aurora-atlas-v1.png": "2e9d230ab7212285b02aed51a3b98611062a813060819b229f1dcca64aff92eb",
+    "assets/brand/nova-companion.svg": "71b04d36956705d7a54b9ebe228f33aa740c1a32e41c15e1c0d5f64878de9206",
+    "assets/brand/dream-glade-v18.png": "55ce44f733a70492884699f87d060c733e9a02a64b258b92df676c948f31b047",
+    "assets/brand/luma-drift-feature.png": "ea78c6b1bcc11a6050950d0fa2e6c0923e47753bb77bf6dd3d2e2fb564126170",
+    "assets/brand/brand-scene.svg": "06584a87464a3b9899a16ef4a42961ae1dc4114320559b93d695ecd9de8b41c8",
+    "assets/brand/key-rule-v16.svg": "f7040141b258b9a25a2d8c329ace68a60ad53f408eb9de0063308d5390115587",
+    "assets/audio/v1.17/scene-home-preview.wav": "305508c3018c3d92285690ef28447f79f6d19efba45bccebb693c414a43e0e46",
+    "assets/audio/v1.17/scene-collection-preview.wav": "e97164cda30b0429952fcc2b6b3aad342ba5c5d1beadd4212538b9466ab7fba5",
+    "assets/audio/v1.17/scene-adventure-preview.wav": "c4556e3b25e58f904bade96c34855778665e8b77971be412c9b000822938dbc8",
+    "assets/audio/v1.17/scene-atelier-preview.wav": "fbca4c9ccfc15424d37ab32bdc12d5d9f1d1d77c71b0c5697308d36d01802c67",
+    "assets/companions-v118/fenn-evo01-poses.json": "26b19ac0d567f8f8ae615c3ab1e0db126c72fbddc0a923b4e77f8dddf02d5363",
+    "assets/companions-v118/nimbi-evo01-poses.json": "12c3bcaf3a2482f9ce8367cec3ed8d538dec9c81082fafb7678565d690121189",
+    "assets/companions-v118/bambu-evo06-poses.json": "e92b1f270a3074779617cee826d3454db424f110be351f8350058dcc5554e615",
+    "assets/companions-v118/lol_ezreal-evo06-poses.json": "c08003d70f6f1054fa709740ac2770539e6819efe94df49f9ea8df43502edee7",
+    "assets/companions-v118/tula-evo01-poses.webp": "a198de07cd8f73e43c6d4ffaae386b7af58c8e4c6306ffb859dd19645c6b340a",
+    "assets/companions-v118/lol_lux-evo10-poses.json": "f0e45411774b814b0475f15272369ee503931990fc666f50dcbbb76083f1cd7b",
+    "assets/companions-v118/astra-evo01-poses.json": "6e26abee869ebd8c8c1f58f0955381c3f7c84b51b3aa5b946a26d96328bcf933",
+    "assets/companions-v118/pip-evo10-poses.json": "7fad117c01b4791c9559b412e8b0e2115c84304ed0a96414a10aa5fdd892c200",
+    "assets/companions-v118/orbit-evo10-poses.webp": "68750675658777d9f761a5ac5b31d0875ea3d1832cdc4a82dd01264490d97cf1",
+    "assets/companions-v118/lol_jinx-evo06-poses.webp": "a3171d558e7de5770835f32d3782b5d7961a436e921cc8e6583d89ee37a8a267",
+    "assets/companions-v118/miko-evo10-poses.webp": "d3f8a4c9f2a8634f6a7db3f2f439157f6fe0ad069f05686290a4f848308d2fea",
+    "assets/companions-v118/lol_sona-evo01-poses.json": "537e8ad956e029c460fab68d5dbbeeadcd44b8a65d639b2ceea09471cf3288b8",
+    "assets/companions-v118/soli-evo10-poses.json": "77236d0cdc39918c2ea475051d321c911f0cf3f50fa5204a22f2cd6197d55192",
+    "assets/companions-v118/lol_annie-evo06-poses.webp": "793c18d0c27601dac97b618ab177b7d7e38dc8d16000c94879aa9ef85ee69bee",
+    "assets/companions-v118/prickly-evo01-poses.webp": "467642021fc98af367ec4258dddcbfc6ec70dc72bada0c143893e483925ccc8e",
+    "assets/companions-v118/lol_ahri-evo01-poses.json": "53ce4df1f1241e5eddb22691175ab9f79f98be425a119e360298ec64bd007133",
+    "assets/companions-v118/nova-evo06-poses.webp": "84a02bf4920a4d4c61a679733dcac564c21656db14f72a9a14267a2d8ba7f216",
+    "assets/companions-v118/lol_yasuo-evo03-poses.webp": "84b86c65577cdb9513f55bac443b9224c4946203ca0b589258843ae787f1c178",
+    "assets/companions-v118/lol_ahri-evo10-poses.json": "f54681ee4ab285c4b48c8ab6f41a7daba5844b971374a5caf726eb08541c84a7",
+    "assets/companions-v118/prickly-evo10-poses.webp": "34ff8a50413536c66ffed834b7c9e4d35d7acdc13ee930280095a0a9979a3787",
+    "assets/companions-v118/mochi-evo06-poses.json": "8c64da4a7949a4b03d783fa1730c88bd0e91846f7df10dfc3b33593a7b47ff95",
+    "assets/companions-v118/hoot-evo03-poses.webp": "b0afb0fe878acf18a2bfc443d4b634120dc5c6b07be4ba2604f8ccea2d62d76d",
+    "assets/companions-v118/waddles-evo06-poses.json": "413b9f884504a078a35309093dc4f3282a81c4dad91827719c697e6bdde51bf3",
+    "assets/companions-v118/vela-evo06-poses.json": "ddf6c5b8526e3c95ba964371e082b300ce1a058a7afedd6e3ffbbdce80b2276f",
+    "assets/companions-v118/lol_miss_fortune-evo03-poses.json": "9bd4bfad6980d91cb5acd8cd977213f6cf81fe7b1b249f62adfd7d2af0333b3a",
+    "assets/companions-v118/soli-evo01-poses.json": "8de72143d07d20ad3b51d9daa113cdf542b2851e1a787c213c1c1a2f02eb95d2",
+    "assets/companions-v118/quill-evo06-poses.json": "358fa5435aeeb1cb25d87e40355e3766347bca151c9f268af170b91219716948",
+    "assets/companions-v118/lol_sona-evo10-poses.json": "a0acb689a1f31a4946936d590c32248d5635df977ce48bf12da28f2da3ff3a75",
+    "assets/companions-v118/miko-evo01-poses.webp": "714fec469079fc8aeb8ba967928535c3084011c67c91e8b71c0a161d00ea807a",
+    "assets/companions-v118/emberling-evo03-poses.json": "0b0f1499f6ab41a0ad79ac1b61b1e26345eda1b4899b24857ddc02498e7ce62f",
+    "assets/companions-v118/jelli-evo06-poses.json": "f5394de7cbe1af1e386c08da5ce441cd7deb960ad3b54005fd0e0310a3916365",
+    "assets/companions-v118/orbit-evo01-poses.webp": "d6f75af1aaf042c194febbcc467890de36068e3e88837b5518950a58ceb74450",
+    "assets/companions-v118/pip-evo01-poses.json": "76e44bd54cec93ab436197bba6a8f3d987215efe723363c9556a83824c0780e3",
+    "assets/companions-v118/astra-evo10-poses.json": "abc00f8215c9b7e12d008e5950625ab44f3cdc93f3ee51a8f22a48f9fc33e6d2",
+    "assets/companions-v118/zig-evo03-poses.json": "8100e5627f732ef342238a6a439976955ccc29c219ae0d7be60d55f2dd849055",
+    "assets/companions-v118/nixi-evo06-poses.webp": "c53b0505dc818d5f6854472362de888148b7557b318a411c9afe0899736df70f",
+    "assets/companions-v118/lol_lux-evo01-poses.json": "db9466ed6e1167410da01918308c53453fa44db497ed78a0901bff32e2bfb803",
+    "assets/companions-v118/tula-evo10-poses.webp": "15143ee2c5f0bb6b898298c62fa0ed36cd47315496efaa50e9522cb15fe0f62e",
+    "assets/companions-v118/lol_teemo-evo03-poses.webp": "cd46bb1c12babd3540fbcfb27d2cf22e99ccd630ad112a6a162610ba6555f459",
+    "assets/companions-v118/lol_soraka-evo06-poses.json": "23b1e4f86c37e873ed53208017887bf4c048b4d064b1507806b073d5a01ef517",
+    "assets/companions-v118/fenn-evo10-poses.json": "537565be0203425e4ffa066641689ba4c4db813d5e24c0fe15cd7e55f2e079a8",
+    "assets/companions-v118/nimbi-evo10-poses.json": "ee4c4b9ee0a0b968bfbe9306e15badd6426bd4b3ff7dfe5a54871b7cfedcf4c4",
+    "assets/companions-v118/vela-evo03-poses.json": "437d34db61521f3770c67439162136de98984cd094fe6f9dc8e2273f8023ff26",
+    "assets/companions-v118/hoot-evo06-poses.webp": "5d2355553655501995fd073c4e48579b9d96fc9ed2d9df3ca408b683804b0704",
+    "assets/companions-v118/lol_ashe-evo01-poses.json": "037708132fa38f878301e358f17bcbce751ef68374de61330e3078e1c3ecd66c",
+    "assets/companions-v118/waddles-evo03-poses.json": "fc123d01691d9e25d12ac9e607fc78487efdd1d7c3e60b6bec522a274a51496a",
+    "assets/companions-v118/inky-evo10-poses.webp": "a03d3a6aea6de5acfb8855b3d7d667302155691341dceb8ede177c7169ca102d",
+    "assets/companions-v118/quill-evo03-poses.json": "af0057b295eb93f1ef8a4fb430b07b9b43dc120d0dd9fd882af437b85caa2b7a",
+    "assets/companions-v118/lol_miss_fortune-evo06-poses.json": "f854b39a4fb8dcca74cace042d0dd512ecb95f4af619f8b0f8368fa1c75ece28",
+    "assets/companions-v118/lol_vi-evo10-poses.json": "ce4d2a30f7e889063d272d57fccec51cd00fe6c7f2d32d56a42b929772e6899f",
+    "assets/companions-v118/lune-evo01-poses.webp": "94816668dbf848da372f01538161c717fb2b867a0c17d6ab02f789bd40396b21",
+    "assets/companions-v118/lol_yasuo-evo06-poses.webp": "d45b6dc09eeb8005a463d572e9cff33fbe4f19ac691cd847790757583f034ec5",
+    "assets/companions-v118/lol_lulu-evo01-poses.json": "405ee46c3e01076c1099fd60778fb32acddc3ad871433a09815a3dd76c76de9b",
+    "assets/companions-v118/mochi-evo03-poses.json": "2cea39987b710775102bc145ff3ce7bbc6a97a8819bb80d351f705844f8b6789",
+    "assets/companions-v118/buzz-evo01-poses.json": "846d76149d372a2799db8e75e8e2878b723dbdc9a91b775bc093bcc9658b50d8",
+    "assets/companions-v118/lol_soraka-evo03-poses.json": "579e8ad1860a3f7d51b2f9a8ec9de1a4159eeac25ac43f4dd798141020698920",
+    "assets/companions-v118/lol_teemo-evo06-poses.webp": "026edc43c41697fa2931a7319b2c0b9cab7fecf611ed95e637f662f9b5cabe12",
+    "assets/companions-v118/emberling-evo06-poses.json": "a5f2086e08f54688302bbb3b33eecc297917c83a712f70fe781a482946922512",
+    "assets/companions-v118/jelli-evo03-poses.json": "8638aa061fb35bba69016041b84e9387bef41be2c1b25b7a4d10c8080379aaf8",
+    "assets/companions-v118/nixi-evo03-poses.webp": "626b3ed02f86ff47f61adaa73d1b063baa1d2f920a6b07aca34a3aefe67787dd",
+    "assets/companions-v118/zig-evo06-poses.json": "62846732c2d0cfedd88d544108adf998213da780e24d404c2bf43d1419148c43",
+    "assets/companions-v118/halo-evo01-poses.webp": "ec48b0a3749ce2d0a15ab9d1fafe11d46af08646873b01848477bf08bbe18659",
+    "assets/companions-v118/halo-evo10-poses.webp": "fad00eba02782443d8b4b8d9578f82e7aef400f5294c211a1821acf85829178c",
+    "assets/companions-v118/lol_jinx-evo03-poses.webp": "677d57cb341e569bc9f6ccf2ae0f32a742c7b1ee8e3a2a317aaa964bb2acfd22",
+    "assets/companions-v118/bambu-evo03-poses.json": "25109665beeea4f8ee9a5019a8b1e95d5a114501b6c3864af66f33866775af1c",
+    "assets/companions-v118/buzz-evo10-poses.json": "429c29cc378211558cdcefa0b2f82f75ff49520e6bde1905ad3877659d4542d0",
+    "assets/companions-v118/lol_ezreal-evo03-poses.json": "cc9e79fa9d6fe329fdb6986876d9e1ba361ec6309c6faf216769e1f4309b8d78",
+    "assets/companions-v118/nova-evo03-poses.webp": "b0db2571dffa632759f868a260b7684cdb9d8ab9760643661ad2456f647e6807",
+    "assets/companions-v118/lol_lulu-evo10-poses.json": "c484256303713c2a4eebcbfa7b6bd1062c33eb1a2cc4b6f938ea366ffb091a42",
+    "assets/companions-v118/lune-evo10-poses.webp": "46c3b50f691a08bbdc008671dd146be55806a366167f6898a1be3f7a14e0642f",
+    "assets/companions-v118/lol_vi-evo01-poses.json": "b7c894954cc7c240fb8baf6a7375ed837a45b1445fe8b94c225d0529d57d98cb",
+    "assets/companions-v118/inky-evo01-poses.webp": "00244ce8961799c230579fedc4d6962741cd0aac362b6e9546febb3f58cc097b",
+    "assets/companions-v118/lol_ashe-evo10-poses.json": "de0b3588292f2e8073d3f5e7ff32ec53ba83fd83fcdd855c7160e09fd583ae2e",
+    "assets/companions-v118/lol_annie-evo03-poses.webp": "fd14b501ac345472e50b2169b62945f1fbd5bbda0f242d7ba1b04291982d2a72",
+    "assets/companions-v118/lol_sona-evo03-poses.json": "d1939842205188ef3fc4dc1389262161c788246bd46195135838a96e922a75e3",
+    "assets/companions-v118/lol_miss_fortune-evo10-poses.json": "335bfcaa0f579fa28c59fdbd7b7659ce4a32dfa09f3400d82ac8759f254a9623",
+    "assets/companions-v118/inky-evo06-poses.webp": "fb797ffda718626ee8fd011d08529f1f1820e29d7aa6f321988e42bb3b1ddfc5",
+    "assets/companions-v118/hoot-evo10-poses.webp": "031f20d327024f0ea3527bba2026eb9f6b74e1292a7fc2c31229955f29314aec",
+    "assets/companions-v118/prickly-evo03-poses.webp": "ccf5c214c7e00e1c3132810091d6ec1a471f9b4e1b9342d019701d18d10ea335",
+    "assets/companions-v118/lol_ahri-evo03-poses.json": "d98cbc6381f5cfb79586921cec0ed87b43dcf13755ca78ca30301dcd3ebaf81d",
+    "assets/companions-v118/lol_yasuo-evo10-poses.webp": "4551d21fa7a4b17f7b26eb1f0cc584824d0fe6e0e35a9f7ea82ee3367396c428",
+    "assets/companions-v118/lol_vi-evo06-poses.json": "1f2b7bbff42f911fede34960d0ead6db469c9d89d39e5650ecf8ef4b70cdce96",
+    "assets/companions-v118/nimbi-evo03-poses.json": "3abf9e95a28011864816c56f02c1a4f9a71e7c9cc702704f326d3b96451b0daf",
+    "assets/companions-v118/fenn-evo03-poses.json": "e17a1e10cf0bbd8af0e6300f3c29cd2c86381a2584cd2e31df925bc71875430f",
+    "assets/companions-v118/lol_teemo-evo10-poses.webp": "b43e8d3528bdacdb60b839db1a10a3d4d58eda06e85cad13bed82fe644d95758",
+    "assets/companions-v118/tula-evo03-poses.webp": "89d6be05064e878e51c1010c8d9fbb9303e651f840a1761eaa263c078d9070b1",
+    "assets/companions-v118/astra-evo03-poses.json": "05ee4c86c34af60e2eb4c9ccc06eec85237cabc604461a01c5b00c064135b3ad",
+    "assets/companions-v118/zig-evo10-poses.json": "ec6b81ffa0adda99a7f1f1c595c091789f3bce166d69f6b7ac4ed089f5a27f19",
+    "assets/companions-v118/emberling-evo10-poses.json": "3db7b55db694b226f989d0107fb7aadc30a9299bbd827003c38f18aaead152c7",
+    "assets/companions-v118/emberling-evo01-poses.json": "0f6a7c9d7e0db48f588e18a84870b085fc7dda00b33d206ce06275a68a4724cc",
+    "assets/companions-v118/orbit-evo03-poses.webp": "206f33e6c1795e5cc81acd20a6f7a44d8885f88133453fc6ab471b13056a21ec",
+    "assets/companions-v118/zig-evo01-poses.json": "d9585b89ae6e95b4e8d3643790ab76c92de1381344f81c276826108abf017416",
+    "assets/companions-v118/halo-evo06-poses.webp": "3b8fe5eac30d6eca44f146f7a94fedafc28e6c307fdcbc7ef96549640a925ef6",
+    "assets/companions-v118/pip-evo03-poses.json": "82b79169e08a63971bf02f9830e6e961e05ec38c1bd497a6b71548aa4bd655ab",
+    "assets/companions-v118/lol_lux-evo03-poses.json": "de6d0e272ac330d1fe8ab917c20f261a4eeaa08c6ba43e7a69168d290023dbaa",
+    "assets/companions-v118/lol_teemo-evo01-poses.webp": "30456c79a12d00b7adac5e0a66b2ed6132a41a172521a34a285f686f5c0a2884",
+    "assets/companions-v118/buzz-evo06-poses.json": "1c37134e488d703164150a17108e4f20a7019d7d3ec426b722d8e546dee88df1",
+    "assets/companions-v118/lol_lulu-evo06-poses.json": "01ec04467d8167680dae0cc0fb766d1a6a098add0823dc609cdcdd8f96e0dbb2",
+    "assets/companions-v118/lune-evo06-poses.webp": "3329c1bda816cf26a2d2c3943571754bc7ef09ad9c5c0fad01e49d51030a2fd0",
+    "assets/companions-v118/lol_yasuo-evo01-poses.webp": "5a554c6342af41fe20f5e30a11269377045b6c762361b93d55963ca53b95907d",
+    "assets/companions-v118/lol_ashe-evo06-poses.json": "e052e3267e8790830e0c92c79798fecfa0626c84dd6ad2aa01d3e0f417c1ac56",
+    "assets/companions-v118/hoot-evo01-poses.webp": "50014c7de004d088e91f5dbc90208955d03fa66e8e49ff5b845fe65faf27ec33",
+    "assets/companions-v118/soli-evo03-poses.json": "e0e8005efad923d67f324500e8ad739c3819074008051878c4c19c05522c4886",
+    "assets/companions-v118/lol_miss_fortune-evo01-poses.json": "8935362853f2e16dc2650eb20d8cb3767c7e8a80c78a88a36d4930af356dec40",
+    "assets/companions-v118/miko-evo03-poses.webp": "687567addd36a681227060239f5f93952d5135d013b7a5bade8f118affaafe03",
+    "assets/companions-v118/lol_lux-evo06-poses.json": "dd57e569eb07da7f759465499eb0b6064b9542d57c04a55ef4db21c1b9f046ec",
+    "assets/companions-v118/lol_ezreal-evo10-poses.json": "557ee945784134ccfe9b4b657f451fa0a4bce5cfe2acedc8c2926ecc8ae323af",
+    "assets/companions-v118/lol_soraka-evo01-poses.json": "d5023725431586035c796bf608814bead9c7ecff43c517ab71c81772109d0de8",
+    "assets/companions-v118/buzz-evo03-poses.json": "0f92160d9b5189f3d6b8eecabdcc89c4a478646845a43fa43c23886019ee48d2",
+    "assets/companions-v118/roster.json": "adb6adaa441f336642905dfe4c611662228a70bed23a3ea2514707468f161b8c",
+    "assets/companions-v118/bambu-evo10-poses.json": "36d179b6a91ce6a62d9c578bc5398ea573abb67d3bcfe1779bc18284a0ba86e0",
+    "assets/companions-v118/lol_jinx-evo10-poses.webp": "d878c11a1d19c24fd606e99272b015a9a00862e21fe09fb34b975dca49e8bb04",
+    "assets/companions-v118/orbit-evo06-poses.webp": "00160e7633e4cadb2947ee30181c3f4b7e958855f6291e96bf87887b4daa6152",
+    "assets/companions-v118/jelli-evo01-poses.json": "c5c9399df5c34fa2fecc870a447ef90c85f92abc89a2edb23a210baaf90a80f3",
+    "assets/companions-v118/nixi-evo01-poses.webp": "bf05ef1641ddb39bf32f7c292bce59755d60432d28a2619d16852887cc35e2c9",
+    "assets/companions-v118/pip-evo06-poses.json": "6aa704e64934b0141b2801dfc0e8c56136ad2a889b1610a867ce83f8ba0d2478",
+    "assets/companions-v118/halo-evo03-poses.webp": "8c8ba002a476cc6bf4f50403a75494b62fc20e846348b412c2456c64d0e0123c",
+    "assets/companions-v118/lol_annie-evo10-poses.webp": "53a772bf6f04c33d10bba88583491f94c519135e1de348e1098f37670ea13c5c",
+    "assets/companions-v118/waddles-evo01-poses.json": "fe430c977fa7f2f7dd275beab0359149933a3500e2b1761d993a4df89f8dc95f",
+    "assets/companions-v118/lol_ashe-evo03-poses.json": "3f9276d4dd75968f4aa48691dced9e8d92396d6b9709d0171154c8fffe5f49de",
+    "assets/companions-v118/vela-evo01-poses.json": "775ada7e230d481708c4c74175503c9ac44fb4bbfc336288fdd542ec44004d21",
+    "assets/companions-v118/miko-evo06-poses.webp": "0220c8e485bfc447d8b4639989bd2fb66115aef01dfee90497c4ae7bfd6183b9",
+    "assets/companions-v118/soli-evo06-poses.json": "550e4efa42ce84606422ff1db8d9d1a1935433a3804448c3ee54eafb87e505f2",
+    "assets/companions-v118/quill-evo01-poses.json": "8df646ec25e65b41a7674565e2cd3ae3f6e61ed6da77ea2c98c11d91d96b325c",
+    "assets/companions-v118/lune-evo03-poses.webp": "6af47f27c6e303e2f5f475887547e78db17cbbb8db2438f482dce586c8d87c70",
+    "assets/companions-v118/nova-evo10-poses.webp": "8e8083942f6093bb466cb8f54f42abaab6c99fea7b041ba13a870d660c44c2cb",
+    "assets/companions-v118/lol_lulu-evo03-poses.json": "09fb76018ea29a8696ac9916f53df97e2487505f0e82c801d7e41d8c3eb7975b",
+    "assets/companions-v118/mochi-evo01-poses.json": "8a5fa141266788786b0b760540026e464bcc44081556d6e443373655961f37c4",
+    "assets/companions-v118/mochi-evo10-poses.json": "bc4c5722f97df3b75c4c6d4ba424844ac6876ad0a74c7a7db44fa431f0bc0513",
+    "assets/companions-v118/prickly-evo06-poses.webp": "2eb5217b4032c53ef60952d7746668ab89b2c82255e28831a78ae9940db77b3c",
+    "assets/companions-v118/nova-evo01-poses.webp": "1fb96f595218c741cc0d474598427ac44a975119c8d4548036e46301da935c2d",
+    "assets/companions-v118/lol_ahri-evo06-poses.json": "7159016cd12e2e7d837ba138e3f5b1f816eefee9533f4de95ee739290ccf6109",
+    "assets/companions-v118/lol_vi-evo03-poses.json": "3b92137d62fd84d97b0364bb14c1bf6bd938b8146163468e8852bbf043da5ed9",
+    "assets/companions-v118/quill-evo10-poses.json": "dabcd1788dca83c3b22b5c3d35ccac98bb11d50ed974f6b7ed1ef2da875535d9",
+    "assets/companions-v118/lol_sona-evo06-poses.json": "bc49d29ed515d8c5a04af3302fe45c910e7ce2ad750d485b4d6429783fc0a8a5",
+    "assets/companions-v118/vela-evo10-poses.json": "eb5e95865ae2ea12be563bced44fe7b5fb08ebed9ff65c39aac9248167dcd4bf",
+    "assets/companions-v118/inky-evo03-poses.webp": "ca9a4f6a7ae317c63e1a107eadf43bfd9882d4a6b26b4db77e0f3f258ed0ef9b",
+    "assets/companions-v118/waddles-evo10-poses.json": "c12d13eb9015c8e98d23ec2e537cd9a5faa77454057b9e373fafd253a9a7f646",
+    "assets/companions-v118/lol_annie-evo01-poses.webp": "5f6f1fbbefd6052eb293bcb29459541cbb367932aadae02118182257e28e22d7",
+    "assets/companions-v118/astra-evo06-poses.json": "3b56026515fb085eeeb9de2a964d7545854cdf3ec64c72e6f31c8e463334144a",
+    "assets/companions-v118/nixi-evo10-poses.webp": "8f6724a4c9c3b95dd228b4e2caee7d4211df8294e731dff94821bfb7b330ece4",
+    "assets/companions-v118/jelli-evo10-poses.json": "8d9f07478a58c49c777d98563696c0295959ddf1100553fc4baadb72b745a8b8",
+    "assets/companions-v118/lol_jinx-evo01-poses.webp": "85952f0a1ddbefb04b27fa2469288439bc8255bd401399bc32a172093bc77ae1",
+    "assets/companions-v118/bambu-evo01-poses.json": "437c9d1abfea1cac41691ad74c5de64a0419abd11e204f4f91861b6471f62556",
+    "assets/companions-v118/nimbi-evo06-poses.json": "c4894e6e2b6cb00d3be4a88e8871aa59ec95f379432a5f29b2d502126c169396",
+    "assets/companions-v118/fenn-evo06-poses.json": "11e1f07312e81b0f50134093e973098e5b99f86f61ed57fd92389c7561127bc1",
+    "assets/companions-v118/lol_soraka-evo10-poses.json": "32da25416bc001ca73a7f0981a59e4f4cb9bf80e0155890994e2cb42c2f70f5e",
+    "assets/companions-v118/tula-evo06-poses.webp": "d859bddd6b233fc3684368c85e76b932cf7f3d967bc0e7d16bc48d4a1ee1896b",
+    "assets/companions-v118/lol_ezreal-evo01-poses.json": "8de427b444f94a81e83bd4f6c0d56338db621998633f23ef9fa053e4f06f481e",
+    "assets/companions-v118/nixi-evo01-poses.json": "5b434abcff844fd78ee0c956af77ec47bc6d126cf0766fdd815ae23ac93f15c8",
+    "assets/companions-v118/halo-evo03-poses.json": "61c9e7f63fa9935061ac9474f8fd61c31a93858d14c20a015ce9536a5555b61e",
+    "assets/companions-v118/pip-evo06-poses.webp": "165d81f6602999fc979722f932e1fff143d000e53df0f362be763b6629e69a61",
+    "assets/companions-v118/lol_jinx-evo10-poses.json": "6facefdf7df32acdc5ede4a23ddd913d29b3d2a7c92c03a78e4bd9e31ed43dee",
+    "assets/companions-v118/orbit-evo06-poses.json": "e5fb618cc011143d6dc3826a334c0358ea91924872daaf08a70b42ea9ba18731",
+    "assets/companions-v118/jelli-evo01-poses.webp": "6d89ea86ebe34fe783a66303cb89447745ac9d684412bd0a586afe82abc40e66",
+    "assets/companions-v118/buzz-evo03-poses.webp": "126a588578ea342629c20ae5ca99753dbc269816a5c73f3d380bc02a3c2f7135",
+    "assets/companions-v118/lol_soraka-evo01-poses.webp": "d235258a7366992703b5b4805276f7f4c824f0e33472a8b7a1242aebcc946e38",
+    "assets/companions-v118/bambu-evo10-poses.webp": "ade3b368b32d7dee072f68e4a8655a5860e209e4ee2c3fe7ed8d4ca4cee0853a",
+    "assets/companions-v118/lol_ezreal-evo10-poses.webp": "ffaa080ee52fcf333d1f563b66ed7bb7728ba242888112017b11e3bb74b8f82d",
+    "assets/companions-v118/lol_lux-evo06-poses.webp": "0354048306d429127414c974f372d7448857650b9ae15a9ed90ce94363d6659d",
+    "assets/companions-v118/mochi-evo01-poses.webp": "1dd460981202a83ae7c2b58076ae5fe3ab87e8fcb0da0245c6225b31229b1ea9",
+    "assets/companions-v118/lune-evo03-poses.json": "27638f7ca5230637a97d12805f7d985347bce0e8202c248645f26efdb2892f00",
+    "assets/companions-v118/lol_lulu-evo03-poses.webp": "261e8bc8f060ba0ae453c0950ce14be55460e9a87e1e5243769204a56b25043e",
+    "assets/companions-v118/nova-evo10-poses.json": "da6ab4a9007fc0df26534d77931d158725255e051f3e85b608085c072997d74a",
+    "assets/companions-v118/miko-evo06-poses.json": "20183cd4890fa5a8e77a1d5628f20293a26926a197bc8fb1f2be9909c9c3bb61",
+    "assets/companions-v118/quill-evo01-poses.webp": "96860d2d4d2e1f0e76606ed86c2d7281e8c1501eae3fc131fdfbb9306a0c30b1",
+    "assets/companions-v118/soli-evo06-poses.webp": "dfbc9e2fd480388ed2184a524da1dd421dbb134f9de0d747e3cea93d81866a7a",
+    "assets/companions-v118/lol_annie-evo10-poses.json": "53e7ff13980147e158d3c90ca0a361f89beea96c2f43137158ee2bd4309e1553",
+    "assets/companions-v118/vela-evo01-poses.webp": "bf6ee10ef63372f3255bd1994cdf7dd4b2393035c01a34cd991d8e0420d2dbfc",
+    "assets/companions-v118/lol_ashe-evo03-poses.webp": "d06314a3ee2a54c5d5b9dda0761c541814bd8670befe3aede1963f1934540dc6",
+    "assets/companions-v118/waddles-evo01-poses.webp": "f96f4882b765fe8204eae8cb482bd44499de032fd7ef372d24d3ea890149e344",
+    "assets/companions-v118/inky-evo03-poses.json": "042484485c998725c6f5ef9b1646183be903207f7f9fb24cd72a569383047283",
+    "assets/companions-v118/waddles-evo10-poses.webp": "2e199d52723e1059e0665f83d5b3a4da8d351822103daaa4c3b855fb28bbf740",
+    "assets/companions-v118/vela-evo10-poses.webp": "d5af5c226cabc57a3a0292fe7267b0597bb273cc1aa67f29891fc227b77250d7",
+    "assets/companions-v118/lol_annie-evo01-poses.json": "1aac2a75ba6042de69499e014de9818d02df7ac0f56e17ac9270e71edbd2e1d7",
+    "assets/companions-v118/quill-evo10-poses.webp": "4233ccfacd99a9e364d8f0ed821a77604c07f662e51a15d837a1d3a9776d2176",
+    "assets/companions-v118/lol_sona-evo06-poses.webp": "7b5873e4cba5d266beab23ecad99d70bcf3f917f60eb06700645885b5419974c",
+    "assets/companions-v118/nova-evo01-poses.json": "7770d3449415811d9cc7f302c99f80de89cd743c103298a11edb580c44225ba1",
+    "assets/companions-v118/lol_vi-evo03-poses.webp": "407b2e421cc180012b0b858b84da7306349339fab89d99a341515dad55d1940a",
+    "assets/companions-v118/lol_ahri-evo06-poses.webp": "e493b891a089c88ec89738182aa98b4996644904b88d4a3cdbf6c3b00dbd3783",
+    "assets/companions-v118/prickly-evo06-poses.json": "30cd0b9408b648ad84876c1721c5c1ed280bf97304bfbd963bb9ca99eb48a867",
+    "assets/companions-v118/mochi-evo10-poses.webp": "8657e4f4f4ac8a4d9cf1438312f7dc981ad08ee28ae88c03fe58e36d0fb69a26",
+    "assets/companions-v118/lol_ezreal-evo01-poses.webp": "4e512a16427787d782f3804a3b891dc58078acc4c87666fe2612b30dd326019d",
+    "assets/companions-v118/tula-evo06-poses.json": "54d2ac9a52d6c09db9f4b25ae3e120c8a6feb4f904e1737c3f9b05a0b7797716",
+    "assets/companions-v118/bambu-evo01-poses.webp": "7506347472f39aea4e7e068480e1cc6978a9470421c86b272b9f2061576fbae5",
+    "assets/companions-v118/fenn-evo06-poses.webp": "aa9a9419de87f09e6091ea3fa3f5079f6a89a9f0d35e3cb348cc2ae8afe7e6e7",
+    "assets/companions-v118/lol_soraka-evo10-poses.webp": "265c2bb35bbf25f389d0af368e39bbcd63e07efca6a7d83300fd0304d677573f",
+    "assets/companions-v118/nimbi-evo06-poses.webp": "d1b54cde29266420ffb37ca88131fd73cdf38d367da6217eb40fce5e8bcd9286",
+    "assets/companions-v118/jelli-evo10-poses.webp": "d187d43d431a4c7605583c67aa2945ca0832c2b5ee103f59980184fb9c77c124",
+    "assets/companions-v118/lol_jinx-evo01-poses.json": "de728188554f8df3780738ea97b9b2452ac1da8b5aab2931abb24e3460349100",
+    "assets/companions-v118/astra-evo06-poses.webp": "e8e2df5d12219b44c631f13097905aea2cdf516ced27dab187d50c48840db790",
+    "assets/companions-v118/nixi-evo10-poses.json": "729c3159103624dcef5400935cf9a7c9aa76b8d2e65e250fc01b8a0ca57b5609",
+    "assets/companions-v118/lol_vi-evo06-poses.webp": "be108581401cec6d8ac256ad83afcc59ad53c2c658994645d30457be7fa04423",
+    "assets/companions-v118/lol_yasuo-evo10-poses.json": "f7462819c54e3790a36e34478ba84a4851d5ae7155c7d80edccf3c74173a51e5",
+    "assets/companions-v118/lol_ahri-evo03-poses.webp": "41193a5c4669b69015e7089873c315bb1d1ae35d09c7ecb1cfc1e5615d0c47fe",
+    "assets/companions-v118/prickly-evo03-poses.json": "93af1637a1c1f61feb94e478fd742af330d8fcf43f12d7c79dd37a1662370c2c",
+    "assets/companions-v118/hoot-evo10-poses.json": "f02f4f46474d09d53643fd8ab925c6380511969e87b5ee1a1b0806c87dc4aa2d",
+    "assets/companions-v118/inky-evo06-poses.json": "405d0e3afec1db553823a8871750b243452c13e28e71c6323fb0a7e4e955de13",
+    "assets/companions-v118/lol_sona-evo03-poses.webp": "d7927456d90437f3459f28d71d5b0d544b269f33546a7cd714e235068a413496",
+    "assets/companions-v118/lol_miss_fortune-evo10-poses.webp": "ee12a61112130ddf1e4a6b37f6949341a863c76b4c89ec4e47f9f10224369fb3",
+    "assets/companions-v118/emberling-evo10-poses.webp": "70a9dc0ddd426180f906c04ef74fa2e8409727353d51595d546b06efc5435297",
+    "assets/companions-v118/zig-evo10-poses.webp": "178f2b6720a8e47f5b7343140f0f892c6a165dd5edcd3487b18a39a889d5ab4b",
+    "assets/companions-v118/astra-evo03-poses.webp": "5d680341bbccb1679c5ef44db162c0792a1665ea619c008e47c04999366738d8",
+    "assets/companions-v118/tula-evo03-poses.json": "b278cd6dd2592fe4d5d4ec00b4ebc47e126de8a5688d82b0c3d7e9d25807fec4",
+    "assets/companions-v118/fenn-evo03-poses.webp": "ff484cae0ab5b25520e11cbcd0bbcb4b0dc13557afe14b603774c34ed38507be",
+    "assets/companions-v118/nimbi-evo03-poses.webp": "1a8a1c76604b846c7c2ea8e10ed2b27eea3bf05052a5aafdeb502cb4ccc34737",
+    "assets/companions-v118/lol_teemo-evo10-poses.json": "77e7543320893c635ca996271febb496bfeb7ad13792143c702d69e62afe7de3",
+    "assets/companions-v118/lol_teemo-evo01-poses.json": "71bcc2c212461ab0249c363ffdf1db5b6c79eae59e620a87704ba2d3f4229120",
+    "assets/companions-v118/buzz-evo06-poses.webp": "e5ee85e15f4c11d58cd8019a77a4d9aae09268f6b47e696dbba5fb5b726fa0ff",
+    "assets/companions-v118/lol_lux-evo03-poses.webp": "b7c33ad361c147564d97f7c9a79f9246f98f7159b6b42afa53fcea8028216fea",
+    "assets/companions-v118/pip-evo03-poses.webp": "0eda07831becce74ef17409f688f20557f6d7bb56635a5105c2e5290356abf08",
+    "assets/companions-v118/halo-evo06-poses.json": "c2ebb83bff67a6d26c8acf19ff08b3a5dd7ecd3dc4d2e74e18aeb4bffada2e8a",
+    "assets/companions-v118/zig-evo01-poses.webp": "061d98154179e4c8c75a47010eadc43b132c573d78c073f966ba61632bb77dff",
+    "assets/companions-v118/emberling-evo01-poses.webp": "01ec7c1686a4d672796a9e436395c002f750621081fd9f2ba280f07f596ce69c",
+    "assets/companions-v118/orbit-evo03-poses.json": "9a46131caf0e4a17621d38c6fb65dded80223c4229f9f686735e709c2522e5cc",
+    "assets/companions-v118/soli-evo03-poses.webp": "35dacf61630f89196462965f84908570f4f6cb8b650a66486c6402e144421230",
+    "assets/companions-v118/lol_miss_fortune-evo01-poses.webp": "4887eb05388b2651dc3c2ccd0d92e7c7a3b1af46b9343e488859a8c9689f18d9",
+    "assets/companions-v118/miko-evo03-poses.json": "5f3b68bc214bd2b8f2612d29cfa7665abe868dca7a2ad1f7bc459ae0f8077342",
+    "assets/companions-v118/hoot-evo01-poses.json": "a81610b25614df5f039ca1f16c794cecf8979625c9e6a8ba729aea6395babe9b",
+    "assets/companions-v118/lol_ashe-evo06-poses.webp": "152a60ec03908901e78d8ebad03f82c3c99ce12c6482cdffea57cad977a040b4",
+    "assets/companions-v118/lol_lulu-evo06-poses.webp": "1c86689251689dc24d5ed7e7877a692e30538e57216f8dbefa35762903ae0ce4",
+    "assets/companions-v118/lol_yasuo-evo01-poses.json": "f9c37f0ef7b267c7d0c031a9ba8103e4d194a028f01a83928839e6b487be7c6b",
+    "assets/companions-v118/lune-evo06-poses.json": "5f1bb29720a9825b12cbfbb2b54085af6b5513992264f89cea9d1276f5a009c2",
+    "assets/companions-v118/mochi-evo03-poses.webp": "3f4160bff40553471abb9e4b595d61185eff1dfd3cb0a000ac151975e18a6ab9",
+    "assets/companions-v118/lol_yasuo-evo06-poses.json": "fc4f6efff77305a15ffc860b3b2f835a6e9d7ee11e1d30c0a235ceba44d49ee5",
+    "assets/companions-v118/lol_vi-evo10-poses.webp": "b13bb7c37725dc7f279092eb43559117195811e92930ac3eeff94c4d21737747",
+    "assets/companions-v118/lune-evo01-poses.json": "77b68e946990ee94840ec3bc2f96d3a488c3ab5790b285d768743c6ee6640e9e",
+    "assets/companions-v118/lol_lulu-evo01-poses.webp": "3f75e1f2b83b9d246377fc95c24c72056b5d1265c6fb22f9b906445eb7464e24",
+    "assets/companions-v118/lol_miss_fortune-evo06-poses.webp": "14253ba469dbaca59a0ee7a633331bde3e76271d1f532ccbbe91e6ae42c510f7",
+    "assets/companions-v118/quill-evo03-poses.webp": "7cfab691bf5149140c71034627d60fe14f2821fcc45844149d5dffd5756c0653",
+    "assets/companions-v118/waddles-evo03-poses.webp": "d9487bd701b372b00d0b23844a2a2c542e5bf83e5a66681b1db79a6bd517255c",
+    "assets/companions-v118/inky-evo10-poses.json": "e4f2fc5a4adecf1f3bb7b43a37b260d9953029d62d1377581ef3d05b8d662b53",
+    "assets/companions-v118/lol_ashe-evo01-poses.webp": "1d449fed1a3ab597248af9e09ad1854cefbf91f182ec11e2df39c8c2b9504f4e",
+    "assets/companions-v118/hoot-evo06-poses.json": "e8cd62ba0d631946aa98d30aae128dd4e1382e1c776d211afc56991ec6a21c36",
+    "assets/companions-v118/vela-evo03-poses.webp": "210b7837a2a033767e223170415c2c274532efc9202be6569e8f8c91401fb978",
+    "assets/companions-v118/nixi-evo03-poses.json": "d60b28f4d0a3407ce7eb9307e4870046e150e74354feb40001df8b645df1d9db",
+    "assets/companions-v118/halo-evo01-poses.json": "b40726fed179f4bc0195826deb697e8f331c16dd0b7c2dd72c6a88199975be57",
+    "assets/companions-v118/zig-evo06-poses.webp": "b01358b34ac8246cf5f212df265e6db4ef645248a74c41588e494f2dcd4ac5b9",
+    "assets/companions-v118/jelli-evo03-poses.webp": "fc2b8866906df3d531bbfaf40c7cd7e712f001fe6a28fb36213bd9456cbe92b5",
+    "assets/companions-v118/emberling-evo06-poses.webp": "eb3d16bc266bd7b307d098af6e6fd040fb484352b2961d3588c49f993f724995",
+    "assets/companions-v118/lol_soraka-evo03-poses.webp": "a8be76c8432cd29a8684637d1cdaa49ab6efa662a1ccd379107c74a7e01ae361",
+    "assets/companions-v118/buzz-evo01-poses.webp": "dda1feb02bcaf1551e6c0c3140c57be4ed026716eb6000cf9fd37adbd5f37ecd",
+    "assets/companions-v118/lol_teemo-evo06-poses.json": "22588ad63a944eb6df93399a57c94d938b8ac016c6acc643f1f21aa1ee37c2f5",
+    "assets/companions-v118/lol_ezreal-evo03-poses.webp": "5b9e898f4ef49804666247639811828821a023e1d0ca8a0d8c31dadaba11416e",
+    "assets/companions-v118/bambu-evo03-poses.webp": "47ba02b2a6c8f30a046c0b7cbbf0ac175ab8083335c9b00b40091929c38f9851",
+    "assets/companions-v118/buzz-evo10-poses.webp": "44519359df0376da8f1c25864130738c85193ec0a5cb32ba1b4576dd8364511b",
+    "assets/companions-v118/lol_jinx-evo03-poses.json": "8d8fbf8f994d8f6dfe647caeb296ff9adb25d8e8837a05763c3974fccd94ac8a",
+    "assets/companions-v118/halo-evo10-poses.json": "e220c0cf73b0c458e33fafb6b4a7323293a6363e14ded3ebee63ae2c41cdd7a0",
+    "assets/companions-v118/lol_ashe-evo10-poses.webp": "3090878d7ccd3181673c2af527f3f333df360e44e8746e2eb54b623160e7c3d5",
+    "assets/companions-v118/inky-evo01-poses.json": "20f2f249f43ccca8c76e6de3d8ad25c177ecf7c92735286791ee4bef6c29c7a0",
+    "assets/companions-v118/lol_annie-evo03-poses.json": "7db71f83065d03a0eeb67525467870f421e10ce02a5321b9255b704368ae180a",
+    "assets/companions-v118/lol_lulu-evo10-poses.webp": "21de0319f36baa8ae10a3555f84f7d246f9f6ff8a8e37481af3f231051e4b779",
+    "assets/companions-v118/nova-evo03-poses.json": "3448f710bb4a4f60c4cd0f51b6026977989635f1ef139993bfbe0a35eebfd17b",
+    "assets/companions-v118/lune-evo10-poses.json": "e4f0e7ff09019c0a9a66b843ca0f8baf9d9605de6b932ba2f86e0c0e0c46fd06",
+    "assets/companions-v118/lol_vi-evo01-poses.webp": "d46c549d17098399a7317fa84db5374a373ece8dfac787a495834cc8f46047e0",
+    "assets/companions-v118/orbit-evo10-poses.json": "4dd125d75c796ea10ac31afd184ddedfcf5182b01a7ea90790a0d4f7ecf4a7b5",
+    "assets/companions-v118/lol_jinx-evo06-poses.json": "9d9ceaf237918ead631048a083da01b213a1ed66e5c7129479ca3883cbc6b828",
+    "assets/companions-v118/pip-evo10-poses.webp": "880fb4f0d6d2537332b7aef71ca2c5e6831a94530c0102c13dacd5172aae3ad0",
+    "assets/companions-v118/astra-evo01-poses.webp": "23b2ea5e87d93b7e8ccfad7be4d914a785d8f09bddb232c1a388a4ea296b452d",
+    "assets/companions-v118/lol_lux-evo10-poses.webp": "93e41a3e0a36528e364efe4546194510a166a305249cdebacc9721fb65194bd5",
+    "assets/companions-v118/tula-evo01-poses.json": "86234bcde9d04c8866c6ff39681f252b4f32b588515212fdd87430cc25098e97",
+    "assets/companions-v118/lol_ezreal-evo06-poses.webp": "dbed6de870e86294149ac6845db2804140fb1a81324a26daca60582bf13a7fa8",
+    "assets/companions-v118/nimbi-evo01-poses.webp": "2539de5c0f51a816ba4789b1a6fe56c03c6acab037efb1b1620fce7657ec5c4a",
+    "assets/companions-v118/fenn-evo01-poses.webp": "433116c703013313cedfbbf96ee99d5746a5dfeccefe7473271d2f1e3436e033",
+    "assets/companions-v118/bambu-evo06-poses.webp": "2e5691bd7da386018d3c5fc75ee3b1fd242f35bbfe6e8e7e49635efe3a5ccf2a",
+    "assets/companions-v118/lol_ahri-evo01-poses.webp": "41cf036243a3b08ef1368f574e2230457a1ecf0ba898e4bb98360373f82a3bb2",
+    "assets/companions-v118/nova-evo06-poses.json": "426c398a39f2018c1c03e3b169ee4150f8eed9ea4b7459f191763a0cbbe0391d",
+    "assets/companions-v118/prickly-evo01-poses.json": "82c93edb28b35cf678481af26eff03c5dd1529341f304ec7768e354016c5b5ee",
+    "assets/companions-v118/lol_annie-evo06-poses.json": "cace7d5cd03ab96f8585c902c06a22f4fbf8b4e20a91a5957390f5453d647e45",
+    "assets/companions-v118/lol_sona-evo01-poses.webp": "028cc0bb02e276838a512eb844734918100887cf8725a28043c69058b40ee8b8",
+    "assets/companions-v118/miko-evo10-poses.json": "ed6f8942fc44189f0f2c60cfd455a77a8e7ba711252fdfc845c134be65f80bfe",
+    "assets/companions-v118/soli-evo10-poses.webp": "b3ae17d471116a57095931088815a13f92f32af7caff73bb31b93846780f79b3",
+    "assets/companions-v118/quill-evo06-poses.webp": "33f8acaa70954e4a78859bca4f8788baa3a491b22430d943dca01a01eebaf7b2",
+    "assets/companions-v118/lol_miss_fortune-evo03-poses.webp": "1834960a863898ef0926dc73867f8ede64ddc06353f7c5a7710f96a6aeb5aa3a",
+    "assets/companions-v118/soli-evo01-poses.webp": "281fc9e0fada4ba06702c2feffb0270a730e6326de7521558ca299c1e1af0ca0",
+    "assets/companions-v118/miko-evo01-poses.json": "5816ca5362bbb65d36ba60dfe758509bedb548ba38e6b66277179fc8d25bbd19",
+    "assets/companions-v118/lol_sona-evo10-poses.webp": "7ffd5c1053d1b439efa208378b754b7dc5d376b86f5fc3a7a4ae2fe434a02272",
+    "assets/companions-v118/vela-evo06-poses.webp": "5a451cb425c8955829a8e49ed80199bb6fde642a58bf38217caf58205fa03e52",
+    "assets/companions-v118/waddles-evo06-poses.webp": "b0ffc2fcf55c964639ad0651ada0b052f368f9f0da7b164f1afd3ee14afb5031",
+    "assets/companions-v118/hoot-evo03-poses.json": "2e4014eae2fb68516d77b07c92a0c0b2dca09ba9702347ddff0176eb626a27a2",
+    "assets/companions-v118/mochi-evo06-poses.webp": "bfd501f0ac3d79be702beb2d2d685e2fa5512891e8c992add213705738efe5b3",
+    "assets/companions-v118/prickly-evo10-poses.json": "2bc52afee60101e1b51a538e9638170cbf81b460041d6c6e2fcb0d428b7bd044",
+    "assets/companions-v118/lol_ahri-evo10-poses.webp": "f3a0650e8e2b00320f7424606e4adf0065cc69e8270a09bbf4813e0c3ee53a91",
+    "assets/companions-v118/lol_yasuo-evo03-poses.json": "a3f9989d37f1b4ef67372cb5752f583b75485eaa3e6c2ba278f1449b34ced828",
+    "assets/companions-v118/lol_teemo-evo03-poses.json": "b389c569220b105a73b8f1f938bf04eb6a4084adec9c28799a107a53528fd4dd",
+    "assets/companions-v118/nimbi-evo10-poses.webp": "b160cba257634dd7c1d49c8b0e8c1637a94a1870b6976b51c7f4c1aae22e71a7",
+    "assets/companions-v118/lol_soraka-evo06-poses.webp": "de6295cce834948e9a60e88b6ee4e71b8a445614ebaf92076f77f345099f812b",
+    "assets/companions-v118/fenn-evo10-poses.webp": "ebb48dbdbd7a60034f8cec90907be8f0cdc3e0772262db5191e557d8e0814210",
+    "assets/companions-v118/tula-evo10-poses.json": "819b3af7adb8fd5bd0398d0026af1f19054454fb3945a5a2f491a2bd83b7cd82",
+    "assets/companions-v118/lol_lux-evo01-poses.webp": "b5be603fae474c29099ff73abc40e2fa742d4434e756d281cbea2e92bca0cdb0",
+    "assets/companions-v118/zig-evo03-poses.webp": "3c07d6ddea24af03ac1e0f4db60cef6d84639f923289a7a4434b04164e14ab59",
+    "assets/companions-v118/astra-evo10-poses.webp": "cbe4eb30fdc0c9cc07e5188392a80c5f0f3f3c6694db0ee2dd09c60e5d00979c",
+    "assets/companions-v118/pip-evo01-poses.webp": "627c1a36e6b9bd18d8c8c6fb5b9c2ff866f00212e782c9ff4c42943c85e34ec4",
+    "assets/companions-v118/nixi-evo06-poses.json": "65719176bc34c5e0b21e29126efc9357928632abdf29aa212cd71810c1f061b3",
+    "assets/companions-v118/jelli-evo06-poses.webp": "8a53f4121d8ee3cf5fa702075bd146b5f93d5ff60ee58269a2d1cf5727f9b972",
+    "assets/companions-v118/emberling-evo03-poses.webp": "a9f5b718e09beb3d5f2f953bd2b694f7afa70f40efd4ba4c3c61424a998670a2",
+    "assets/companions-v118/orbit-evo01-poses.json": "52517d6e693ec7f246f40c4abf6a11065a5ca59828093955d6ad4b4303bfed9f"
+  },
+  "gallery_markup_sha256": "ab9b102cf84d7cbfa8a46f85402d9ef349b972fabf70cd1e7594bc923c55d467",
+  "audio_markup_sha256": "f21c06c630578a3ac06fc00a4d6c8bde757ff8fded949af40d13207c1a7c67de",
+  "frozen_inputs": {
+    "releases/manifest-1.19.0-prototype2.json": "3d7aaa0d344ec4376f4fe7d4529075ae5e0363e3fdd46967118171799c9eec59",
+    "docs/validation/site-v1.19/capture-map.json": "10bb304b166300a4e4fde7cafcf8266812397c6b504c85951bade271e4a1f305",
+    "docs/validation/v1.19/native/candidate-c-core-team-combo/report.json": "00e98ac7ea14804f2ce845d9a6bc9c91aa70ff8739b76a4f3b2c9789e412a2ca",
+    "docs/validation/v1.19/native/candidate-c-core-team-combo/native/fr-adventure-final.png": "e12c3804f460919a0591a0d728ee697b1db82ff28bf4723342fa78111c00c06c",
+    "docs/validation/v1.19/native/candidate-c-core-team-combo/native/fr-three-member-team-final.png": "e65e6390b8a3640ca8ff6f645748d802683701c912f0405c3eaea9ffb066c241",
+    "docs/validation/v1.19/native/candidate-c-core-team-combo/native/three-real-actors-before-skills.png": "f5f14c267d746e1c4e8f645e8fa1481190e9eea21a1fc09a085843d587b52614",
+    "docs/validation/v1.19/native/candidate-c-six-languages/report.json": "17e47de0952cc62c537340eb007721de5a2716ee588ea7f26f37c8fad8974f2c",
+    "docs/validation/v1.19/native/candidate-c-six-languages/native/en-adventure-final.png": "f09be8e4305453a2867488e369923733d0980306dc2d05f5b3e27c3e5134f765",
+    "docs/validation/v1.19/native/candidate-c-six-languages/native/en-actual-team.png": "040bf778a46489be1453b2ac08a404d83fcaa7cfa558c5160eb17d9dbc5ed7aa",
+    "docs/validation/v1.19/native/candidate-c-vision/report.json": "1d6d0863d5f1a81adbb1fc0d1a7b8c73316a4b7bb4671ad31b5eb0ebb27e58f1",
+    "docs/validation/v1.19/native/candidate-c-vision/native/tula-real-legal-highlights.png": "1e21a600dd976db50c7a630c56ca8125331e2d641af662bcdf84fb617c48fb81",
+    "docs/validation/v1.19/candidate-c/candidate.json": "a3e8d25493335bd273fc120f5b784bfb0ba4d7ef61c327998196e281f2453317",
+    "scripts/prepare-site-v119.py": "c9090593e06ec8b38cd07a1932ec25424d1be8626042f5d13798e89f0f035652",
+    "scripts/package-release-v119.py": "460f342d90061409feb6d69f33c618c9db7397ce0f1e50de441965e91e8e54a1",
+    "scripts/check-site-v119.py": "98662cf9f89568a96e7a2d55cbb126ff2e9bae4e5b0f1e6a5e6dc7f807b674e8",
+    "scripts/deploy-site-v119.py": "1799dcca6f27870f58cf3be67d5e06635de58fa9a20385cebdd464b34ff562b2",
+    "scripts/verify-site-v119-publication.py": "3d8249af845068979962fbc8eb902dd90c349f8ab9fec831cb9f56ddeb78d5d1"
+  },
+  "firebase_config_sha256": "1a02cfbadae7edeff76275b7c2c223664b475d0406ba310cf45b07bd20842867",
+  "network_verified": false,
+  "deployed": false,
+  "files": {
+    "/app-ads.txt": {
+      "bytes": 59,
+      "sha256": "1ec22f11296d1bf892fdd26f7019ca10049cc97977d31ce9ea806b888b6dbcba"
+    },
+    "/assets/audio/v1.17/scene-adventure-preview.wav": {
+      "bytes": 441044,
+      "sha256": "c4556e3b25e58f904bade96c34855778665e8b77971be412c9b000822938dbc8"
+    },
+    "/assets/audio/v1.17/scene-atelier-preview.wav": {
+      "bytes": 441044,
+      "sha256": "fbca4c9ccfc15424d37ab32bdc12d5d9f1d1d77c71b0c5697308d36d01802c67"
+    },
+    "/assets/audio/v1.17/scene-collection-preview.wav": {
+      "bytes": 441044,
+      "sha256": "e97164cda30b0429952fcc2b6b3aad342ba5c5d1beadd4212538b9466ab7fba5"
+    },
+    "/assets/audio/v1.17/scene-home-preview.wav": {
+      "bytes": 441044,
+      "sha256": "305508c3018c3d92285690ef28447f79f6d19efba45bccebb693c414a43e0e46"
+    },
+    "/assets/brand/aurora-atlas-v1.png": {
+      "bytes": 1777468,
+      "sha256": "2e9d230ab7212285b02aed51a3b98611062a813060819b229f1dcca64aff92eb"
+    },
+    "/assets/brand/brand-scene.svg": {
+      "bytes": 8164,
+      "sha256": "06584a87464a3b9899a16ef4a42961ae1dc4114320559b93d695ecd9de8b41c8"
+    },
+    "/assets/brand/dream-glade-v18.png": {
+      "bytes": 2180210,
+      "sha256": "55ce44f733a70492884699f87d060c733e9a02a64b258b92df676c948f31b047"
+    },
+    "/assets/brand/key-rule-v16.svg": {
+      "bytes": 2714,
+      "sha256": "f7040141b258b9a25a2d8c329ace68a60ad53f408eb9de0063308d5390115587"
+    },
+    "/assets/brand/luma-drift-feature.png": {
+      "bytes": 478691,
+      "sha256": "ea78c6b1bcc11a6050950d0fa2e6c0923e47753bb77bf6dd3d2e2fb564126170"
+    },
+    "/assets/brand/nova-companion.svg": {
+      "bytes": 3246,
+      "sha256": "71b04d36956705d7a54b9ebe228f33aa740c1a32e41c15e1c0d5f64878de9206"
+    },
+    "/assets/companion-gallery-v118.mjs": {
+      "bytes": 4175,
+      "sha256": "02320ced57c4d9473a429d9b9251734a0b4ca7c7a59e28835477e8add3ecda33"
+    },
+    "/assets/companions-v118/astra-evo01-poses.json": {
+      "bytes": 8657,
+      "sha256": "6e26abee869ebd8c8c1f58f0955381c3f7c84b51b3aa5b946a26d96328bcf933"
+    },
+    "/assets/companions-v118/astra-evo01-poses.webp": {
+      "bytes": 1908494,
+      "sha256": "23b2ea5e87d93b7e8ccfad7be4d914a785d8f09bddb232c1a388a4ea296b452d"
+    },
+    "/assets/companions-v118/astra-evo03-poses.json": {
+      "bytes": 14920,
+      "sha256": "05ee4c86c34af60e2eb4c9ccc06eec85237cabc604461a01c5b00c064135b3ad"
+    },
+    "/assets/companions-v118/astra-evo03-poses.webp": {
+      "bytes": 2203542,
+      "sha256": "5d680341bbccb1679c5ef44db162c0792a1665ea619c008e47c04999366738d8"
+    },
+    "/assets/companions-v118/astra-evo06-poses.json": {
+      "bytes": 18402,
+      "sha256": "3b56026515fb085eeeb9de2a964d7545854cdf3ec64c72e6f31c8e463334144a"
+    },
+    "/assets/companions-v118/astra-evo06-poses.webp": {
+      "bytes": 2267650,
+      "sha256": "e8e2df5d12219b44c631f13097905aea2cdf516ced27dab187d50c48840db790"
+    },
+    "/assets/companions-v118/astra-evo10-poses.json": {
+      "bytes": 19454,
+      "sha256": "abc00f8215c9b7e12d008e5950625ab44f3cdc93f3ee51a8f22a48f9fc33e6d2"
+    },
+    "/assets/companions-v118/astra-evo10-poses.webp": {
+      "bytes": 2393674,
+      "sha256": "cbe4eb30fdc0c9cc07e5188392a80c5f0f3f3c6694db0ee2dd09c60e5d00979c"
+    },
+    "/assets/companions-v118/bambu-evo01-poses.json": {
+      "bytes": 18559,
+      "sha256": "437c9d1abfea1cac41691ad74c5de64a0419abd11e204f4f91861b6471f62556"
+    },
+    "/assets/companions-v118/bambu-evo01-poses.webp": {
+      "bytes": 1902248,
+      "sha256": "7506347472f39aea4e7e068480e1cc6978a9470421c86b272b9f2061576fbae5"
+    },
+    "/assets/companions-v118/bambu-evo03-poses.json": {
+      "bytes": 13616,
+      "sha256": "25109665beeea4f8ee9a5019a8b1e95d5a114501b6c3864af66f33866775af1c"
+    },
+    "/assets/companions-v118/bambu-evo03-poses.webp": {
+      "bytes": 1911984,
+      "sha256": "47ba02b2a6c8f30a046c0b7cbbf0ac175ab8083335c9b00b40091929c38f9851"
+    },
+    "/assets/companions-v118/bambu-evo06-poses.json": {
+      "bytes": 12634,
+      "sha256": "e92b1f270a3074779617cee826d3454db424f110be351f8350058dcc5554e615"
+    },
+    "/assets/companions-v118/bambu-evo06-poses.webp": {
+      "bytes": 2086002,
+      "sha256": "2e5691bd7da386018d3c5fc75ee3b1fd242f35bbfe6e8e7e49635efe3a5ccf2a"
+    },
+    "/assets/companions-v118/bambu-evo10-poses.json": {
+      "bytes": 13136,
+      "sha256": "36d179b6a91ce6a62d9c578bc5398ea573abb67d3bcfe1779bc18284a0ba86e0"
+    },
+    "/assets/companions-v118/bambu-evo10-poses.webp": {
+      "bytes": 1981638,
+      "sha256": "ade3b368b32d7dee072f68e4a8655a5860e209e4ee2c3fe7ed8d4ca4cee0853a"
+    },
+    "/assets/companions-v118/buzz-evo01-poses.json": {
+      "bytes": 9834,
+      "sha256": "846d76149d372a2799db8e75e8e2878b723dbdc9a91b775bc093bcc9658b50d8"
+    },
+    "/assets/companions-v118/buzz-evo01-poses.webp": {
+      "bytes": 2013428,
+      "sha256": "dda1feb02bcaf1551e6c0c3140c57be4ed026716eb6000cf9fd37adbd5f37ecd"
+    },
+    "/assets/companions-v118/buzz-evo03-poses.json": {
+      "bytes": 3555,
+      "sha256": "0f92160d9b5189f3d6b8eecabdcc89c4a478646845a43fa43c23886019ee48d2"
+    },
+    "/assets/companions-v118/buzz-evo03-poses.webp": {
+      "bytes": 1399148,
+      "sha256": "126a588578ea342629c20ae5ca99753dbc269816a5c73f3d380bc02a3c2f7135"
+    },
+    "/assets/companions-v118/buzz-evo06-poses.json": {
+      "bytes": 4228,
+      "sha256": "1c37134e488d703164150a17108e4f20a7019d7d3ec426b722d8e546dee88df1"
+    },
+    "/assets/companions-v118/buzz-evo06-poses.webp": {
+      "bytes": 1722760,
+      "sha256": "e5ee85e15f4c11d58cd8019a77a4d9aae09268f6b47e696dbba5fb5b726fa0ff"
+    },
+    "/assets/companions-v118/buzz-evo10-poses.json": {
+      "bytes": 5359,
+      "sha256": "429c29cc378211558cdcefa0b2f82f75ff49520e6bde1905ad3877659d4542d0"
+    },
+    "/assets/companions-v118/buzz-evo10-poses.webp": {
+      "bytes": 1839924,
+      "sha256": "44519359df0376da8f1c25864130738c85193ec0a5cb32ba1b4576dd8364511b"
+    },
+    "/assets/companions-v118/emberling-evo01-poses.json": {
+      "bytes": 16667,
+      "sha256": "0f6a7c9d7e0db48f588e18a84870b085fc7dda00b33d206ce06275a68a4724cc"
+    },
+    "/assets/companions-v118/emberling-evo01-poses.webp": {
+      "bytes": 2302416,
+      "sha256": "01ec7c1686a4d672796a9e436395c002f750621081fd9f2ba280f07f596ce69c"
+    },
+    "/assets/companions-v118/emberling-evo03-poses.json": {
+      "bytes": 25549,
+      "sha256": "0b0f1499f6ab41a0ad79ac1b61b1e26345eda1b4899b24857ddc02498e7ce62f"
+    },
+    "/assets/companions-v118/emberling-evo03-poses.webp": {
+      "bytes": 2471620,
+      "sha256": "a9f5b718e09beb3d5f2f953bd2b694f7afa70f40efd4ba4c3c61424a998670a2"
+    },
+    "/assets/companions-v118/emberling-evo06-poses.json": {
+      "bytes": 32176,
+      "sha256": "a5f2086e08f54688302bbb3b33eecc297917c83a712f70fe781a482946922512"
+    },
+    "/assets/companions-v118/emberling-evo06-poses.webp": {
+      "bytes": 2576778,
+      "sha256": "eb3d16bc266bd7b307d098af6e6fd040fb484352b2961d3588c49f993f724995"
+    },
+    "/assets/companions-v118/emberling-evo10-poses.json": {
+      "bytes": 14499,
+      "sha256": "3db7b55db694b226f989d0107fb7aadc30a9299bbd827003c38f18aaead152c7"
+    },
+    "/assets/companions-v118/emberling-evo10-poses.webp": {
+      "bytes": 2235374,
+      "sha256": "70a9dc0ddd426180f906c04ef74fa2e8409727353d51595d546b06efc5435297"
+    },
+    "/assets/companions-v118/fenn-evo01-poses.json": {
+      "bytes": 8886,
+      "sha256": "26b19ac0d567f8f8ae615c3ab1e0db126c72fbddc0a923b4e77f8dddf02d5363"
+    },
+    "/assets/companions-v118/fenn-evo01-poses.webp": {
+      "bytes": 1767290,
+      "sha256": "433116c703013313cedfbbf96ee99d5746a5dfeccefe7473271d2f1e3436e033"
+    },
+    "/assets/companions-v118/fenn-evo03-poses.json": {
+      "bytes": 12822,
+      "sha256": "e17a1e10cf0bbd8af0e6300f3c29cd2c86381a2584cd2e31df925bc71875430f"
+    },
+    "/assets/companions-v118/fenn-evo03-poses.webp": {
+      "bytes": 1792562,
+      "sha256": "ff484cae0ab5b25520e11cbcd0bbcb4b0dc13557afe14b603774c34ed38507be"
+    },
+    "/assets/companions-v118/fenn-evo06-poses.json": {
+      "bytes": 10197,
+      "sha256": "11e1f07312e81b0f50134093e973098e5b99f86f61ed57fd92389c7561127bc1"
+    },
+    "/assets/companions-v118/fenn-evo06-poses.webp": {
+      "bytes": 1785216,
+      "sha256": "aa9a9419de87f09e6091ea3fa3f5079f6a89a9f0d35e3cb348cc2ae8afe7e6e7"
+    },
+    "/assets/companions-v118/fenn-evo10-poses.json": {
+      "bytes": 15198,
+      "sha256": "537565be0203425e4ffa066641689ba4c4db813d5e24c0fe15cd7e55f2e079a8"
+    },
+    "/assets/companions-v118/fenn-evo10-poses.webp": {
+      "bytes": 1958122,
+      "sha256": "ebb48dbdbd7a60034f8cec90907be8f0cdc3e0772262db5191e557d8e0814210"
+    },
+    "/assets/companions-v118/halo-evo01-poses.json": {
+      "bytes": 13249,
+      "sha256": "b40726fed179f4bc0195826deb697e8f331c16dd0b7c2dd72c6a88199975be57"
+    },
+    "/assets/companions-v118/halo-evo01-poses.webp": {
+      "bytes": 2295286,
+      "sha256": "ec48b0a3749ce2d0a15ab9d1fafe11d46af08646873b01848477bf08bbe18659"
+    },
+    "/assets/companions-v118/halo-evo03-poses.json": {
+      "bytes": 15513,
+      "sha256": "61c9e7f63fa9935061ac9474f8fd61c31a93858d14c20a015ce9536a5555b61e"
+    },
+    "/assets/companions-v118/halo-evo03-poses.webp": {
+      "bytes": 2367552,
+      "sha256": "8c8ba002a476cc6bf4f50403a75494b62fc20e846348b412c2456c64d0e0123c"
+    },
+    "/assets/companions-v118/halo-evo06-poses.json": {
+      "bytes": 24317,
+      "sha256": "c2ebb83bff67a6d26c8acf19ff08b3a5dd7ecd3dc4d2e74e18aeb4bffada2e8a"
+    },
+    "/assets/companions-v118/halo-evo06-poses.webp": {
+      "bytes": 2451752,
+      "sha256": "3b8fe5eac30d6eca44f146f7a94fedafc28e6c307fdcbc7ef96549640a925ef6"
+    },
+    "/assets/companions-v118/halo-evo10-poses.json": {
+      "bytes": 10357,
+      "sha256": "e220c0cf73b0c458e33fafb6b4a7323293a6363e14ded3ebee63ae2c41cdd7a0"
+    },
+    "/assets/companions-v118/halo-evo10-poses.webp": {
+      "bytes": 2230170,
+      "sha256": "fad00eba02782443d8b4b8d9578f82e7aef400f5294c211a1821acf85829178c"
+    },
+    "/assets/companions-v118/hoot-evo01-poses.json": {
+      "bytes": 10410,
+      "sha256": "a81610b25614df5f039ca1f16c794cecf8979625c9e6a8ba729aea6395babe9b"
+    },
+    "/assets/companions-v118/hoot-evo01-poses.webp": {
+      "bytes": 1967648,
+      "sha256": "50014c7de004d088e91f5dbc90208955d03fa66e8e49ff5b845fe65faf27ec33"
+    },
+    "/assets/companions-v118/hoot-evo03-poses.json": {
+      "bytes": 16380,
+      "sha256": "2e4014eae2fb68516d77b07c92a0c0b2dca09ba9702347ddff0176eb626a27a2"
+    },
+    "/assets/companions-v118/hoot-evo03-poses.webp": {
+      "bytes": 2163752,
+      "sha256": "b0afb0fe878acf18a2bfc443d4b634120dc5c6b07be4ba2604f8ccea2d62d76d"
+    },
+    "/assets/companions-v118/hoot-evo06-poses.json": {
+      "bytes": 18045,
+      "sha256": "e8cd62ba0d631946aa98d30aae128dd4e1382e1c776d211afc56991ec6a21c36"
+    },
+    "/assets/companions-v118/hoot-evo06-poses.webp": {
+      "bytes": 2091434,
+      "sha256": "5d2355553655501995fd073c4e48579b9d96fc9ed2d9df3ca408b683804b0704"
+    },
+    "/assets/companions-v118/hoot-evo10-poses.json": {
+      "bytes": 15593,
+      "sha256": "f02f4f46474d09d53643fd8ab925c6380511969e87b5ee1a1b0806c87dc4aa2d"
+    },
+    "/assets/companions-v118/hoot-evo10-poses.webp": {
+      "bytes": 2157316,
+      "sha256": "031f20d327024f0ea3527bba2026eb9f6b74e1292a7fc2c31229955f29314aec"
+    },
+    "/assets/companions-v118/inky-evo01-poses.json": {
+      "bytes": 10228,
+      "sha256": "20f2f249f43ccca8c76e6de3d8ad25c177ecf7c92735286791ee4bef6c29c7a0"
+    },
+    "/assets/companions-v118/inky-evo01-poses.webp": {
+      "bytes": 2237748,
+      "sha256": "00244ce8961799c230579fedc4d6962741cd0aac362b6e9546febb3f58cc097b"
+    },
+    "/assets/companions-v118/inky-evo03-poses.json": {
+      "bytes": 14895,
+      "sha256": "042484485c998725c6f5ef9b1646183be903207f7f9fb24cd72a569383047283"
+    },
+    "/assets/companions-v118/inky-evo03-poses.webp": {
+      "bytes": 2347328,
+      "sha256": "ca9a4f6a7ae317c63e1a107eadf43bfd9882d4a6b26b4db77e0f3f258ed0ef9b"
+    },
+    "/assets/companions-v118/inky-evo06-poses.json": {
+      "bytes": 3960,
+      "sha256": "405d0e3afec1db553823a8871750b243452c13e28e71c6323fb0a7e4e955de13"
+    },
+    "/assets/companions-v118/inky-evo06-poses.webp": {
+      "bytes": 1855204,
+      "sha256": "fb797ffda718626ee8fd011d08529f1f1820e29d7aa6f321988e42bb3b1ddfc5"
+    },
+    "/assets/companions-v118/inky-evo10-poses.json": {
+      "bytes": 15585,
+      "sha256": "e4f2fc5a4adecf1f3bb7b43a37b260d9953029d62d1377581ef3d05b8d662b53"
+    },
+    "/assets/companions-v118/inky-evo10-poses.webp": {
+      "bytes": 2287556,
+      "sha256": "a03d3a6aea6de5acfb8855b3d7d667302155691341dceb8ede177c7169ca102d"
+    },
+    "/assets/companions-v118/jelli-evo01-poses.json": {
+      "bytes": 12011,
+      "sha256": "c5c9399df5c34fa2fecc870a447ef90c85f92abc89a2edb23a210baaf90a80f3"
+    },
+    "/assets/companions-v118/jelli-evo01-poses.webp": {
+      "bytes": 2150782,
+      "sha256": "6d89ea86ebe34fe783a66303cb89447745ac9d684412bd0a586afe82abc40e66"
+    },
+    "/assets/companions-v118/jelli-evo03-poses.json": {
+      "bytes": 3636,
+      "sha256": "8638aa061fb35bba69016041b84e9387bef41be2c1b25b7a4d10c8080379aaf8"
+    },
+    "/assets/companions-v118/jelli-evo03-poses.webp": {
+      "bytes": 1507084,
+      "sha256": "fc2b8866906df3d531bbfaf40c7cd7e712f001fe6a28fb36213bd9456cbe92b5"
+    },
+    "/assets/companions-v118/jelli-evo06-poses.json": {
+      "bytes": 3923,
+      "sha256": "f5394de7cbe1af1e386c08da5ce441cd7deb960ad3b54005fd0e0310a3916365"
+    },
+    "/assets/companions-v118/jelli-evo06-poses.webp": {
+      "bytes": 1510968,
+      "sha256": "8a53f4121d8ee3cf5fa702075bd146b5f93d5ff60ee58269a2d1cf5727f9b972"
+    },
+    "/assets/companions-v118/jelli-evo10-poses.json": {
+      "bytes": 17697,
+      "sha256": "8d9f07478a58c49c777d98563696c0295959ddf1100553fc4baadb72b745a8b8"
+    },
+    "/assets/companions-v118/jelli-evo10-poses.webp": {
+      "bytes": 2209544,
+      "sha256": "d187d43d431a4c7605583c67aa2945ca0832c2b5ee103f59980184fb9c77c124"
+    },
+    "/assets/companions-v118/lol_ahri-evo01-poses.json": {
+      "bytes": 9886,
+      "sha256": "53ce4df1f1241e5eddb22691175ab9f79f98be425a119e360298ec64bd007133"
+    },
+    "/assets/companions-v118/lol_ahri-evo01-poses.webp": {
+      "bytes": 1940954,
+      "sha256": "41cf036243a3b08ef1368f574e2230457a1ecf0ba898e4bb98360373f82a3bb2"
+    },
+    "/assets/companions-v118/lol_ahri-evo03-poses.json": {
+      "bytes": 12842,
+      "sha256": "d98cbc6381f5cfb79586921cec0ed87b43dcf13755ca78ca30301dcd3ebaf81d"
+    },
+    "/assets/companions-v118/lol_ahri-evo03-poses.webp": {
+      "bytes": 1938598,
+      "sha256": "41193a5c4669b69015e7089873c315bb1d1ae35d09c7ecb1cfc1e5615d0c47fe"
+    },
+    "/assets/companions-v118/lol_ahri-evo06-poses.json": {
+      "bytes": 13822,
+      "sha256": "7159016cd12e2e7d837ba138e3f5b1f816eefee9533f4de95ee739290ccf6109"
+    },
+    "/assets/companions-v118/lol_ahri-evo06-poses.webp": {
+      "bytes": 2090764,
+      "sha256": "e493b891a089c88ec89738182aa98b4996644904b88d4a3cdbf6c3b00dbd3783"
+    },
+    "/assets/companions-v118/lol_ahri-evo10-poses.json": {
+      "bytes": 21462,
+      "sha256": "f54681ee4ab285c4b48c8ab6f41a7daba5844b971374a5caf726eb08541c84a7"
+    },
+    "/assets/companions-v118/lol_ahri-evo10-poses.webp": {
+      "bytes": 2172316,
+      "sha256": "f3a0650e8e2b00320f7424606e4adf0065cc69e8270a09bbf4813e0c3ee53a91"
+    },
+    "/assets/companions-v118/lol_annie-evo01-poses.json": {
+      "bytes": 8411,
+      "sha256": "1aac2a75ba6042de69499e014de9818d02df7ac0f56e17ac9270e71edbd2e1d7"
+    },
+    "/assets/companions-v118/lol_annie-evo01-poses.webp": {
+      "bytes": 1564772,
+      "sha256": "5f6f1fbbefd6052eb293bcb29459541cbb367932aadae02118182257e28e22d7"
+    },
+    "/assets/companions-v118/lol_annie-evo03-poses.json": {
+      "bytes": 14781,
+      "sha256": "7db71f83065d03a0eeb67525467870f421e10ce02a5321b9255b704368ae180a"
+    },
+    "/assets/companions-v118/lol_annie-evo03-poses.webp": {
+      "bytes": 1683172,
+      "sha256": "fd14b501ac345472e50b2169b62945f1fbd5bbda0f242d7ba1b04291982d2a72"
+    },
+    "/assets/companions-v118/lol_annie-evo06-poses.json": {
+      "bytes": 3899,
+      "sha256": "cace7d5cd03ab96f8585c902c06a22f4fbf8b4e20a91a5957390f5453d647e45"
+    },
+    "/assets/companions-v118/lol_annie-evo06-poses.webp": {
+      "bytes": 1338150,
+      "sha256": "793c18d0c27601dac97b618ab177b7d7e38dc8d16000c94879aa9ef85ee69bee"
+    },
+    "/assets/companions-v118/lol_annie-evo10-poses.json": {
+      "bytes": 12190,
+      "sha256": "53e7ff13980147e158d3c90ca0a361f89beea96c2f43137158ee2bd4309e1553"
+    },
+    "/assets/companions-v118/lol_annie-evo10-poses.webp": {
+      "bytes": 1870000,
+      "sha256": "53a772bf6f04c33d10bba88583491f94c519135e1de348e1098f37670ea13c5c"
+    },
+    "/assets/companions-v118/lol_ashe-evo01-poses.json": {
+      "bytes": 7499,
+      "sha256": "037708132fa38f878301e358f17bcbce751ef68374de61330e3078e1c3ecd66c"
+    },
+    "/assets/companions-v118/lol_ashe-evo01-poses.webp": {
+      "bytes": 1882550,
+      "sha256": "1d449fed1a3ab597248af9e09ad1854cefbf91f182ec11e2df39c8c2b9504f4e"
+    },
+    "/assets/companions-v118/lol_ashe-evo03-poses.json": {
+      "bytes": 11181,
+      "sha256": "3f9276d4dd75968f4aa48691dced9e8d92396d6b9709d0171154c8fffe5f49de"
+    },
+    "/assets/companions-v118/lol_ashe-evo03-poses.webp": {
+      "bytes": 2115414,
+      "sha256": "d06314a3ee2a54c5d5b9dda0761c541814bd8670befe3aede1963f1934540dc6"
+    },
+    "/assets/companions-v118/lol_ashe-evo06-poses.json": {
+      "bytes": 12480,
+      "sha256": "e052e3267e8790830e0c92c79798fecfa0626c84dd6ad2aa01d3e0f417c1ac56"
+    },
+    "/assets/companions-v118/lol_ashe-evo06-poses.webp": {
+      "bytes": 2188444,
+      "sha256": "152a60ec03908901e78d8ebad03f82c3c99ce12c6482cdffea57cad977a040b4"
+    },
+    "/assets/companions-v118/lol_ashe-evo10-poses.json": {
+      "bytes": 15993,
+      "sha256": "de0b3588292f2e8073d3f5e7ff32ec53ba83fd83fcdd855c7160e09fd583ae2e"
+    },
+    "/assets/companions-v118/lol_ashe-evo10-poses.webp": {
+      "bytes": 2300386,
+      "sha256": "3090878d7ccd3181673c2af527f3f333df360e44e8746e2eb54b623160e7c3d5"
+    },
+    "/assets/companions-v118/lol_ezreal-evo01-poses.json": {
+      "bytes": 13315,
+      "sha256": "8de427b444f94a81e83bd4f6c0d56338db621998633f23ef9fa053e4f06f481e"
+    },
+    "/assets/companions-v118/lol_ezreal-evo01-poses.webp": {
+      "bytes": 1800932,
+      "sha256": "4e512a16427787d782f3804a3b891dc58078acc4c87666fe2612b30dd326019d"
+    },
+    "/assets/companions-v118/lol_ezreal-evo03-poses.json": {
+      "bytes": 15169,
+      "sha256": "cc9e79fa9d6fe329fdb6986876d9e1ba361ec6309c6faf216769e1f4309b8d78"
+    },
+    "/assets/companions-v118/lol_ezreal-evo03-poses.webp": {
+      "bytes": 1856672,
+      "sha256": "5b9e898f4ef49804666247639811828821a023e1d0ca8a0d8c31dadaba11416e"
+    },
+    "/assets/companions-v118/lol_ezreal-evo06-poses.json": {
+      "bytes": 15572,
+      "sha256": "c08003d70f6f1054fa709740ac2770539e6819efe94df49f9ea8df43502edee7"
+    },
+    "/assets/companions-v118/lol_ezreal-evo06-poses.webp": {
+      "bytes": 1983102,
+      "sha256": "dbed6de870e86294149ac6845db2804140fb1a81324a26daca60582bf13a7fa8"
+    },
+    "/assets/companions-v118/lol_ezreal-evo10-poses.json": {
+      "bytes": 16625,
+      "sha256": "557ee945784134ccfe9b4b657f451fa0a4bce5cfe2acedc8c2926ecc8ae323af"
+    },
+    "/assets/companions-v118/lol_ezreal-evo10-poses.webp": {
+      "bytes": 2013556,
+      "sha256": "ffaa080ee52fcf333d1f563b66ed7bb7728ba242888112017b11e3bb74b8f82d"
+    },
+    "/assets/companions-v118/lol_jinx-evo01-poses.json": {
+      "bytes": 17672,
+      "sha256": "de728188554f8df3780738ea97b9b2452ac1da8b5aab2931abb24e3460349100"
+    },
+    "/assets/companions-v118/lol_jinx-evo01-poses.webp": {
+      "bytes": 2003822,
+      "sha256": "85952f0a1ddbefb04b27fa2469288439bc8255bd401399bc32a172093bc77ae1"
+    },
+    "/assets/companions-v118/lol_jinx-evo03-poses.json": {
+      "bytes": 18808,
+      "sha256": "8d8fbf8f994d8f6dfe647caeb296ff9adb25d8e8837a05763c3974fccd94ac8a"
+    },
+    "/assets/companions-v118/lol_jinx-evo03-poses.webp": {
+      "bytes": 2118588,
+      "sha256": "677d57cb341e569bc9f6ccf2ae0f32a742c7b1ee8e3a2a317aaa964bb2acfd22"
+    },
+    "/assets/companions-v118/lol_jinx-evo06-poses.json": {
+      "bytes": 12510,
+      "sha256": "9d9ceaf237918ead631048a083da01b213a1ed66e5c7129479ca3883cbc6b828"
+    },
+    "/assets/companions-v118/lol_jinx-evo06-poses.webp": {
+      "bytes": 2128046,
+      "sha256": "a3171d558e7de5770835f32d3782b5d7961a436e921cc8e6583d89ee37a8a267"
+    },
+    "/assets/companions-v118/lol_jinx-evo10-poses.json": {
+      "bytes": 3606,
+      "sha256": "6facefdf7df32acdc5ede4a23ddd913d29b3d2a7c92c03a78e4bd9e31ed43dee"
+    },
+    "/assets/companions-v118/lol_jinx-evo10-poses.webp": {
+      "bytes": 1328892,
+      "sha256": "d878c11a1d19c24fd606e99272b015a9a00862e21fe09fb34b975dca49e8bb04"
+    },
+    "/assets/companions-v118/lol_lulu-evo01-poses.json": {
+      "bytes": 10573,
+      "sha256": "405ee46c3e01076c1099fd60778fb32acddc3ad871433a09815a3dd76c76de9b"
+    },
+    "/assets/companions-v118/lol_lulu-evo01-poses.webp": {
+      "bytes": 1704904,
+      "sha256": "3f75e1f2b83b9d246377fc95c24c72056b5d1265c6fb22f9b906445eb7464e24"
+    },
+    "/assets/companions-v118/lol_lulu-evo03-poses.json": {
+      "bytes": 9988,
+      "sha256": "09fb76018ea29a8696ac9916f53df97e2487505f0e82c801d7e41d8c3eb7975b"
+    },
+    "/assets/companions-v118/lol_lulu-evo03-poses.webp": {
+      "bytes": 1829756,
+      "sha256": "261e8bc8f060ba0ae453c0950ce14be55460e9a87e1e5243769204a56b25043e"
+    },
+    "/assets/companions-v118/lol_lulu-evo06-poses.json": {
+      "bytes": 8086,
+      "sha256": "01ec04467d8167680dae0cc0fb766d1a6a098add0823dc609cdcdd8f96e0dbb2"
+    },
+    "/assets/companions-v118/lol_lulu-evo06-poses.webp": {
+      "bytes": 1885122,
+      "sha256": "1c86689251689dc24d5ed7e7877a692e30538e57216f8dbefa35762903ae0ce4"
+    },
+    "/assets/companions-v118/lol_lulu-evo10-poses.json": {
+      "bytes": 12698,
+      "sha256": "c484256303713c2a4eebcbfa7b6bd1062c33eb1a2cc4b6f938ea366ffb091a42"
+    },
+    "/assets/companions-v118/lol_lulu-evo10-poses.webp": {
+      "bytes": 1934762,
+      "sha256": "21de0319f36baa8ae10a3555f84f7d246f9f6ff8a8e37481af3f231051e4b779"
+    },
+    "/assets/companions-v118/lol_lux-evo01-poses.json": {
+      "bytes": 4122,
+      "sha256": "db9466ed6e1167410da01918308c53453fa44db497ed78a0901bff32e2bfb803"
+    },
+    "/assets/companions-v118/lol_lux-evo01-poses.webp": {
+      "bytes": 1264924,
+      "sha256": "b5be603fae474c29099ff73abc40e2fa742d4434e756d281cbea2e92bca0cdb0"
+    },
+    "/assets/companions-v118/lol_lux-evo03-poses.json": {
+      "bytes": 14519,
+      "sha256": "de6d0e272ac330d1fe8ab917c20f261a4eeaa08c6ba43e7a69168d290023dbaa"
+    },
+    "/assets/companions-v118/lol_lux-evo03-poses.webp": {
+      "bytes": 1693532,
+      "sha256": "b7c33ad361c147564d97f7c9a79f9246f98f7159b6b42afa53fcea8028216fea"
+    },
+    "/assets/companions-v118/lol_lux-evo06-poses.json": {
+      "bytes": 17701,
+      "sha256": "dd57e569eb07da7f759465499eb0b6064b9542d57c04a55ef4db21c1b9f046ec"
+    },
+    "/assets/companions-v118/lol_lux-evo06-poses.webp": {
+      "bytes": 1889140,
+      "sha256": "0354048306d429127414c974f372d7448857650b9ae15a9ed90ce94363d6659d"
+    },
+    "/assets/companions-v118/lol_lux-evo10-poses.json": {
+      "bytes": 19103,
+      "sha256": "f0e45411774b814b0475f15272369ee503931990fc666f50dcbbb76083f1cd7b"
+    },
+    "/assets/companions-v118/lol_lux-evo10-poses.webp": {
+      "bytes": 1916076,
+      "sha256": "93e41a3e0a36528e364efe4546194510a166a305249cdebacc9721fb65194bd5"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo01-poses.json": {
+      "bytes": 11610,
+      "sha256": "8935362853f2e16dc2650eb20d8cb3767c7e8a80c78a88a36d4930af356dec40"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo01-poses.webp": {
+      "bytes": 1923044,
+      "sha256": "4887eb05388b2651dc3c2ccd0d92e7c7a3b1af46b9343e488859a8c9689f18d9"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo03-poses.json": {
+      "bytes": 12891,
+      "sha256": "9bd4bfad6980d91cb5acd8cd977213f6cf81fe7b1b249f62adfd7d2af0333b3a"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo03-poses.webp": {
+      "bytes": 2113216,
+      "sha256": "1834960a863898ef0926dc73867f8ede64ddc06353f7c5a7710f96a6aeb5aa3a"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo06-poses.json": {
+      "bytes": 19872,
+      "sha256": "f854b39a4fb8dcca74cace042d0dd512ecb95f4af619f8b0f8368fa1c75ece28"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo06-poses.webp": {
+      "bytes": 2189152,
+      "sha256": "14253ba469dbaca59a0ee7a633331bde3e76271d1f532ccbbe91e6ae42c510f7"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo10-poses.json": {
+      "bytes": 15133,
+      "sha256": "335bfcaa0f579fa28c59fdbd7b7659ce4a32dfa09f3400d82ac8759f254a9623"
+    },
+    "/assets/companions-v118/lol_miss_fortune-evo10-poses.webp": {
+      "bytes": 2172038,
+      "sha256": "ee12a61112130ddf1e4a6b37f6949341a863c76b4c89ec4e47f9f10224369fb3"
+    },
+    "/assets/companions-v118/lol_sona-evo01-poses.json": {
+      "bytes": 25627,
+      "sha256": "537e8ad956e029c460fab68d5dbbeeadcd44b8a65d639b2ceea09471cf3288b8"
+    },
+    "/assets/companions-v118/lol_sona-evo01-poses.webp": {
+      "bytes": 2458080,
+      "sha256": "028cc0bb02e276838a512eb844734918100887cf8725a28043c69058b40ee8b8"
+    },
+    "/assets/companions-v118/lol_sona-evo03-poses.json": {
+      "bytes": 23985,
+      "sha256": "d1939842205188ef3fc4dc1389262161c788246bd46195135838a96e922a75e3"
+    },
+    "/assets/companions-v118/lol_sona-evo03-poses.webp": {
+      "bytes": 2358796,
+      "sha256": "d7927456d90437f3459f28d71d5b0d544b269f33546a7cd714e235068a413496"
+    },
+    "/assets/companions-v118/lol_sona-evo06-poses.json": {
+      "bytes": 31127,
+      "sha256": "bc49d29ed515d8c5a04af3302fe45c910e7ce2ad750d485b4d6429783fc0a8a5"
+    },
+    "/assets/companions-v118/lol_sona-evo06-poses.webp": {
+      "bytes": 2485540,
+      "sha256": "7b5873e4cba5d266beab23ecad99d70bcf3f917f60eb06700645885b5419974c"
+    },
+    "/assets/companions-v118/lol_sona-evo10-poses.json": {
+      "bytes": 27913,
+      "sha256": "a0acb689a1f31a4946936d590c32248d5635df977ce48bf12da28f2da3ff3a75"
+    },
+    "/assets/companions-v118/lol_sona-evo10-poses.webp": {
+      "bytes": 2523994,
+      "sha256": "7ffd5c1053d1b439efa208378b754b7dc5d376b86f5fc3a7a4ae2fe434a02272"
+    },
+    "/assets/companions-v118/lol_soraka-evo01-poses.json": {
+      "bytes": 11151,
+      "sha256": "d5023725431586035c796bf608814bead9c7ecff43c517ab71c81772109d0de8"
+    },
+    "/assets/companions-v118/lol_soraka-evo01-poses.webp": {
+      "bytes": 1928304,
+      "sha256": "d235258a7366992703b5b4805276f7f4c824f0e33472a8b7a1242aebcc946e38"
+    },
+    "/assets/companions-v118/lol_soraka-evo03-poses.json": {
+      "bytes": 12125,
+      "sha256": "579e8ad1860a3f7d51b2f9a8ec9de1a4159eeac25ac43f4dd798141020698920"
+    },
+    "/assets/companions-v118/lol_soraka-evo03-poses.webp": {
+      "bytes": 2139888,
+      "sha256": "a8be76c8432cd29a8684637d1cdaa49ab6efa662a1ccd379107c74a7e01ae361"
+    },
+    "/assets/companions-v118/lol_soraka-evo06-poses.json": {
+      "bytes": 3862,
+      "sha256": "23b1e4f86c37e873ed53208017887bf4c048b4d064b1507806b073d5a01ef517"
+    },
+    "/assets/companions-v118/lol_soraka-evo06-poses.webp": {
+      "bytes": 1352552,
+      "sha256": "de6295cce834948e9a60e88b6ee4e71b8a445614ebaf92076f77f345099f812b"
+    },
+    "/assets/companions-v118/lol_soraka-evo10-poses.json": {
+      "bytes": 12662,
+      "sha256": "32da25416bc001ca73a7f0981a59e4f4cb9bf80e0155890994e2cb42c2f70f5e"
+    },
+    "/assets/companions-v118/lol_soraka-evo10-poses.webp": {
+      "bytes": 2305002,
+      "sha256": "265c2bb35bbf25f389d0af368e39bbcd63e07efca6a7d83300fd0304d677573f"
+    },
+    "/assets/companions-v118/lol_teemo-evo01-poses.json": {
+      "bytes": 14894,
+      "sha256": "71bcc2c212461ab0249c363ffdf1db5b6c79eae59e620a87704ba2d3f4229120"
+    },
+    "/assets/companions-v118/lol_teemo-evo01-poses.webp": {
+      "bytes": 1773498,
+      "sha256": "30456c79a12d00b7adac5e0a66b2ed6132a41a172521a34a285f686f5c0a2884"
+    },
+    "/assets/companions-v118/lol_teemo-evo03-poses.json": {
+      "bytes": 17287,
+      "sha256": "b389c569220b105a73b8f1f938bf04eb6a4084adec9c28799a107a53528fd4dd"
+    },
+    "/assets/companions-v118/lol_teemo-evo03-poses.webp": {
+      "bytes": 1791484,
+      "sha256": "cd46bb1c12babd3540fbcfb27d2cf22e99ccd630ad112a6a162610ba6555f459"
+    },
+    "/assets/companions-v118/lol_teemo-evo06-poses.json": {
+      "bytes": 5442,
+      "sha256": "22588ad63a944eb6df93399a57c94d938b8ac016c6acc643f1f21aa1ee37c2f5"
+    },
+    "/assets/companions-v118/lol_teemo-evo06-poses.webp": {
+      "bytes": 1588618,
+      "sha256": "026edc43c41697fa2931a7319b2c0b9cab7fecf611ed95e637f662f9b5cabe12"
+    },
+    "/assets/companions-v118/lol_teemo-evo10-poses.json": {
+      "bytes": 16683,
+      "sha256": "77e7543320893c635ca996271febb496bfeb7ad13792143c702d69e62afe7de3"
+    },
+    "/assets/companions-v118/lol_teemo-evo10-poses.webp": {
+      "bytes": 1907184,
+      "sha256": "b43e8d3528bdacdb60b839db1a10a3d4d58eda06e85cad13bed82fe644d95758"
+    },
+    "/assets/companions-v118/lol_vi-evo01-poses.json": {
+      "bytes": 12249,
+      "sha256": "b7c894954cc7c240fb8baf6a7375ed837a45b1445fe8b94c225d0529d57d98cb"
+    },
+    "/assets/companions-v118/lol_vi-evo01-poses.webp": {
+      "bytes": 1901032,
+      "sha256": "d46c549d17098399a7317fa84db5374a373ece8dfac787a495834cc8f46047e0"
+    },
+    "/assets/companions-v118/lol_vi-evo03-poses.json": {
+      "bytes": 14615,
+      "sha256": "3b92137d62fd84d97b0364bb14c1bf6bd938b8146163468e8852bbf043da5ed9"
+    },
+    "/assets/companions-v118/lol_vi-evo03-poses.webp": {
+      "bytes": 1992704,
+      "sha256": "407b2e421cc180012b0b858b84da7306349339fab89d99a341515dad55d1940a"
+    },
+    "/assets/companions-v118/lol_vi-evo06-poses.json": {
+      "bytes": 18366,
+      "sha256": "1f2b7bbff42f911fede34960d0ead6db469c9d89d39e5650ecf8ef4b70cdce96"
+    },
+    "/assets/companions-v118/lol_vi-evo06-poses.webp": {
+      "bytes": 2039846,
+      "sha256": "be108581401cec6d8ac256ad83afcc59ad53c2c658994645d30457be7fa04423"
+    },
+    "/assets/companions-v118/lol_vi-evo10-poses.json": {
+      "bytes": 15160,
+      "sha256": "ce4d2a30f7e889063d272d57fccec51cd00fe6c7f2d32d56a42b929772e6899f"
+    },
+    "/assets/companions-v118/lol_vi-evo10-poses.webp": {
+      "bytes": 1957588,
+      "sha256": "b13bb7c37725dc7f279092eb43559117195811e92930ac3eeff94c4d21737747"
+    },
+    "/assets/companions-v118/lol_yasuo-evo01-poses.json": {
+      "bytes": 11830,
+      "sha256": "f9c37f0ef7b267c7d0c031a9ba8103e4d194a028f01a83928839e6b487be7c6b"
+    },
+    "/assets/companions-v118/lol_yasuo-evo01-poses.webp": {
+      "bytes": 1849456,
+      "sha256": "5a554c6342af41fe20f5e30a11269377045b6c762361b93d55963ca53b95907d"
+    },
+    "/assets/companions-v118/lol_yasuo-evo03-poses.json": {
+      "bytes": 16769,
+      "sha256": "a3f9989d37f1b4ef67372cb5752f583b75485eaa3e6c2ba278f1449b34ced828"
+    },
+    "/assets/companions-v118/lol_yasuo-evo03-poses.webp": {
+      "bytes": 2125400,
+      "sha256": "84b86c65577cdb9513f55bac443b9224c4946203ca0b589258843ae787f1c178"
+    },
+    "/assets/companions-v118/lol_yasuo-evo06-poses.json": {
+      "bytes": 3994,
+      "sha256": "fc4f6efff77305a15ffc860b3b2f835a6e9d7ee11e1d30c0a235ceba44d49ee5"
+    },
+    "/assets/companions-v118/lol_yasuo-evo06-poses.webp": {
+      "bytes": 1687752,
+      "sha256": "d45b6dc09eeb8005a463d572e9cff33fbe4f19ac691cd847790757583f034ec5"
+    },
+    "/assets/companions-v118/lol_yasuo-evo10-poses.json": {
+      "bytes": 25326,
+      "sha256": "f7462819c54e3790a36e34478ba84a4851d5ae7155c7d80edccf3c74173a51e5"
+    },
+    "/assets/companions-v118/lol_yasuo-evo10-poses.webp": {
+      "bytes": 2207088,
+      "sha256": "4551d21fa7a4b17f7b26eb1f0cc584824d0fe6e0e35a9f7ea82ee3367396c428"
+    },
+    "/assets/companions-v118/lune-evo01-poses.json": {
+      "bytes": 13297,
+      "sha256": "77b68e946990ee94840ec3bc2f96d3a488c3ab5790b285d768743c6ee6640e9e"
+    },
+    "/assets/companions-v118/lune-evo01-poses.webp": {
+      "bytes": 1955758,
+      "sha256": "94816668dbf848da372f01538161c717fb2b867a0c17d6ab02f789bd40396b21"
+    },
+    "/assets/companions-v118/lune-evo03-poses.json": {
+      "bytes": 17158,
+      "sha256": "27638f7ca5230637a97d12805f7d985347bce0e8202c248645f26efdb2892f00"
+    },
+    "/assets/companions-v118/lune-evo03-poses.webp": {
+      "bytes": 2063030,
+      "sha256": "6af47f27c6e303e2f5f475887547e78db17cbbb8db2438f482dce586c8d87c70"
+    },
+    "/assets/companions-v118/lune-evo06-poses.json": {
+      "bytes": 3693,
+      "sha256": "5f1bb29720a9825b12cbfbb2b54085af6b5513992264f89cea9d1276f5a009c2"
+    },
+    "/assets/companions-v118/lune-evo06-poses.webp": {
+      "bytes": 1521890,
+      "sha256": "3329c1bda816cf26a2d2c3943571754bc7ef09ad9c5c0fad01e49d51030a2fd0"
+    },
+    "/assets/companions-v118/lune-evo10-poses.json": {
+      "bytes": 18137,
+      "sha256": "e4f0e7ff09019c0a9a66b843ca0f8baf9d9605de6b932ba2f86e0c0e0c46fd06"
+    },
+    "/assets/companions-v118/lune-evo10-poses.webp": {
+      "bytes": 2060570,
+      "sha256": "46c3b50f691a08bbdc008671dd146be55806a366167f6898a1be3f7a14e0642f"
+    },
+    "/assets/companions-v118/miko-evo01-poses.json": {
+      "bytes": 13994,
+      "sha256": "5816ca5362bbb65d36ba60dfe758509bedb548ba38e6b66277179fc8d25bbd19"
+    },
+    "/assets/companions-v118/miko-evo01-poses.webp": {
+      "bytes": 1733064,
+      "sha256": "714fec469079fc8aeb8ba967928535c3084011c67c91e8b71c0a161d00ea807a"
+    },
+    "/assets/companions-v118/miko-evo03-poses.json": {
+      "bytes": 25349,
+      "sha256": "5f3b68bc214bd2b8f2612d29cfa7665abe868dca7a2ad1f7bc459ae0f8077342"
+    },
+    "/assets/companions-v118/miko-evo03-poses.webp": {
+      "bytes": 1926266,
+      "sha256": "687567addd36a681227060239f5f93952d5135d013b7a5bade8f118affaafe03"
+    },
+    "/assets/companions-v118/miko-evo06-poses.json": {
+      "bytes": 3638,
+      "sha256": "20183cd4890fa5a8e77a1d5628f20293a26926a197bc8fb1f2be9909c9c3bb61"
+    },
+    "/assets/companions-v118/miko-evo06-poses.webp": {
+      "bytes": 1144936,
+      "sha256": "0220c8e485bfc447d8b4639989bd2fb66115aef01dfee90497c4ae7bfd6183b9"
+    },
+    "/assets/companions-v118/miko-evo10-poses.json": {
+      "bytes": 25295,
+      "sha256": "ed6f8942fc44189f0f2c60cfd455a77a8e7ba711252fdfc845c134be65f80bfe"
+    },
+    "/assets/companions-v118/miko-evo10-poses.webp": {
+      "bytes": 2091722,
+      "sha256": "d3f8a4c9f2a8634f6a7db3f2f439157f6fe0ad069f05686290a4f848308d2fea"
+    },
+    "/assets/companions-v118/mochi-evo01-poses.json": {
+      "bytes": 8591,
+      "sha256": "8a5fa141266788786b0b760540026e464bcc44081556d6e443373655961f37c4"
+    },
+    "/assets/companions-v118/mochi-evo01-poses.webp": {
+      "bytes": 1846516,
+      "sha256": "1dd460981202a83ae7c2b58076ae5fe3ab87e8fcb0da0245c6225b31229b1ea9"
+    },
+    "/assets/companions-v118/mochi-evo03-poses.json": {
+      "bytes": 15073,
+      "sha256": "2cea39987b710775102bc145ff3ce7bbc6a97a8819bb80d351f705844f8b6789"
+    },
+    "/assets/companions-v118/mochi-evo03-poses.webp": {
+      "bytes": 2104424,
+      "sha256": "3f4160bff40553471abb9e4b595d61185eff1dfd3cb0a000ac151975e18a6ab9"
+    },
+    "/assets/companions-v118/mochi-evo06-poses.json": {
+      "bytes": 9920,
+      "sha256": "8c64da4a7949a4b03d783fa1730c88bd0e91846f7df10dfc3b33593a7b47ff95"
+    },
+    "/assets/companions-v118/mochi-evo06-poses.webp": {
+      "bytes": 1908622,
+      "sha256": "bfd501f0ac3d79be702beb2d2d685e2fa5512891e8c992add213705738efe5b3"
+    },
+    "/assets/companions-v118/mochi-evo10-poses.json": {
+      "bytes": 11016,
+      "sha256": "bc4c5722f97df3b75c4c6d4ba424844ac6876ad0a74c7a7db44fa431f0bc0513"
+    },
+    "/assets/companions-v118/mochi-evo10-poses.webp": {
+      "bytes": 2214498,
+      "sha256": "8657e4f4f4ac8a4d9cf1438312f7dc981ad08ee28ae88c03fe58e36d0fb69a26"
+    },
+    "/assets/companions-v118/nimbi-evo01-poses.json": {
+      "bytes": 10243,
+      "sha256": "12c3bcaf3a2482f9ce8367cec3ed8d538dec9c81082fafb7678565d690121189"
+    },
+    "/assets/companions-v118/nimbi-evo01-poses.webp": {
+      "bytes": 1810388,
+      "sha256": "2539de5c0f51a816ba4789b1a6fe56c03c6acab037efb1b1620fce7657ec5c4a"
+    },
+    "/assets/companions-v118/nimbi-evo03-poses.json": {
+      "bytes": 17744,
+      "sha256": "3abf9e95a28011864816c56f02c1a4f9a71e7c9cc702704f326d3b96451b0daf"
+    },
+    "/assets/companions-v118/nimbi-evo03-poses.webp": {
+      "bytes": 2031642,
+      "sha256": "1a8a1c76604b846c7c2ea8e10ed2b27eea3bf05052a5aafdeb502cb4ccc34737"
+    },
+    "/assets/companions-v118/nimbi-evo06-poses.json": {
+      "bytes": 16950,
+      "sha256": "c4894e6e2b6cb00d3be4a88e8871aa59ec95f379432a5f29b2d502126c169396"
+    },
+    "/assets/companions-v118/nimbi-evo06-poses.webp": {
+      "bytes": 2016038,
+      "sha256": "d1b54cde29266420ffb37ca88131fd73cdf38d367da6217eb40fce5e8bcd9286"
+    },
+    "/assets/companions-v118/nimbi-evo10-poses.json": {
+      "bytes": 15830,
+      "sha256": "ee4c4b9ee0a0b968bfbe9306e15badd6426bd4b3ff7dfe5a54871b7cfedcf4c4"
+    },
+    "/assets/companions-v118/nimbi-evo10-poses.webp": {
+      "bytes": 2039822,
+      "sha256": "b160cba257634dd7c1d49c8b0e8c1637a94a1870b6976b51c7f4c1aae22e71a7"
+    },
+    "/assets/companions-v118/nixi-evo01-poses.json": {
+      "bytes": 10575,
+      "sha256": "5b434abcff844fd78ee0c956af77ec47bc6d126cf0766fdd815ae23ac93f15c8"
+    },
+    "/assets/companions-v118/nixi-evo01-poses.webp": {
+      "bytes": 1986870,
+      "sha256": "bf05ef1641ddb39bf32f7c292bce59755d60432d28a2619d16852887cc35e2c9"
+    },
+    "/assets/companions-v118/nixi-evo03-poses.json": {
+      "bytes": 17188,
+      "sha256": "d60b28f4d0a3407ce7eb9307e4870046e150e74354feb40001df8b645df1d9db"
+    },
+    "/assets/companions-v118/nixi-evo03-poses.webp": {
+      "bytes": 2219112,
+      "sha256": "626b3ed02f86ff47f61adaa73d1b063baa1d2f920a6b07aca34a3aefe67787dd"
+    },
+    "/assets/companions-v118/nixi-evo06-poses.json": {
+      "bytes": 18747,
+      "sha256": "65719176bc34c5e0b21e29126efc9357928632abdf29aa212cd71810c1f061b3"
+    },
+    "/assets/companions-v118/nixi-evo06-poses.webp": {
+      "bytes": 2292198,
+      "sha256": "c53b0505dc818d5f6854472362de888148b7557b318a411c9afe0899736df70f"
+    },
+    "/assets/companions-v118/nixi-evo10-poses.json": {
+      "bytes": 14380,
+      "sha256": "729c3159103624dcef5400935cf9a7c9aa76b8d2e65e250fc01b8a0ca57b5609"
+    },
+    "/assets/companions-v118/nixi-evo10-poses.webp": {
+      "bytes": 2144126,
+      "sha256": "8f6724a4c9c3b95dd228b4e2caee7d4211df8294e731dff94821bfb7b330ece4"
+    },
+    "/assets/companions-v118/nova-evo01-poses.json": {
+      "bytes": 11009,
+      "sha256": "7770d3449415811d9cc7f302c99f80de89cd743c103298a11edb580c44225ba1"
+    },
+    "/assets/companions-v118/nova-evo01-poses.webp": {
+      "bytes": 1674260,
+      "sha256": "1fb96f595218c741cc0d474598427ac44a975119c8d4548036e46301da935c2d"
+    },
+    "/assets/companions-v118/nova-evo03-poses.json": {
+      "bytes": 10177,
+      "sha256": "3448f710bb4a4f60c4cd0f51b6026977989635f1ef139993bfbe0a35eebfd17b"
+    },
+    "/assets/companions-v118/nova-evo03-poses.webp": {
+      "bytes": 1696428,
+      "sha256": "b0db2571dffa632759f868a260b7684cdb9d8ab9760643661ad2456f647e6807"
+    },
+    "/assets/companions-v118/nova-evo06-poses.json": {
+      "bytes": 14482,
+      "sha256": "426c398a39f2018c1c03e3b169ee4150f8eed9ea4b7459f191763a0cbbe0391d"
+    },
+    "/assets/companions-v118/nova-evo06-poses.webp": {
+      "bytes": 1856970,
+      "sha256": "84a02bf4920a4d4c61a679733dcac564c21656db14f72a9a14267a2d8ba7f216"
+    },
+    "/assets/companions-v118/nova-evo10-poses.json": {
+      "bytes": 17163,
+      "sha256": "da6ab4a9007fc0df26534d77931d158725255e051f3e85b608085c072997d74a"
+    },
+    "/assets/companions-v118/nova-evo10-poses.webp": {
+      "bytes": 1873016,
+      "sha256": "8e8083942f6093bb466cb8f54f42abaab6c99fea7b041ba13a870d660c44c2cb"
+    },
+    "/assets/companions-v118/orbit-evo01-poses.json": {
+      "bytes": 11229,
+      "sha256": "52517d6e693ec7f246f40c4abf6a11065a5ca59828093955d6ad4b4303bfed9f"
+    },
+    "/assets/companions-v118/orbit-evo01-poses.webp": {
+      "bytes": 1512224,
+      "sha256": "d6f75af1aaf042c194febbcc467890de36068e3e88837b5518950a58ceb74450"
+    },
+    "/assets/companions-v118/orbit-evo03-poses.json": {
+      "bytes": 16533,
+      "sha256": "9a46131caf0e4a17621d38c6fb65dded80223c4229f9f686735e709c2522e5cc"
+    },
+    "/assets/companions-v118/orbit-evo03-poses.webp": {
+      "bytes": 1724924,
+      "sha256": "206f33e6c1795e5cc81acd20a6f7a44d8885f88133453fc6ab471b13056a21ec"
+    },
+    "/assets/companions-v118/orbit-evo06-poses.json": {
+      "bytes": 5570,
+      "sha256": "e5fb618cc011143d6dc3826a334c0358ea91924872daaf08a70b42ea9ba18731"
+    },
+    "/assets/companions-v118/orbit-evo06-poses.webp": {
+      "bytes": 1500646,
+      "sha256": "00160e7633e4cadb2947ee30181c3f4b7e958855f6291e96bf87887b4daa6152"
+    },
+    "/assets/companions-v118/orbit-evo10-poses.json": {
+      "bytes": 3559,
+      "sha256": "4dd125d75c796ea10ac31afd184ddedfcf5182b01a7ea90790a0d4f7ecf4a7b5"
+    },
+    "/assets/companions-v118/orbit-evo10-poses.webp": {
+      "bytes": 1325254,
+      "sha256": "68750675658777d9f761a5ac5b31d0875ea3d1832cdc4a82dd01264490d97cf1"
+    },
+    "/assets/companions-v118/pip-evo01-poses.json": {
+      "bytes": 10124,
+      "sha256": "76e44bd54cec93ab436197bba6a8f3d987215efe723363c9556a83824c0780e3"
+    },
+    "/assets/companions-v118/pip-evo01-poses.webp": {
+      "bytes": 1911810,
+      "sha256": "627c1a36e6b9bd18d8c8c6fb5b9c2ff866f00212e782c9ff4c42943c85e34ec4"
+    },
+    "/assets/companions-v118/pip-evo03-poses.json": {
+      "bytes": 17540,
+      "sha256": "82b79169e08a63971bf02f9830e6e961e05ec38c1bd497a6b71548aa4bd655ab"
+    },
+    "/assets/companions-v118/pip-evo03-poses.webp": {
+      "bytes": 2059380,
+      "sha256": "0eda07831becce74ef17409f688f20557f6d7bb56635a5105c2e5290356abf08"
+    },
+    "/assets/companions-v118/pip-evo06-poses.json": {
+      "bytes": 12177,
+      "sha256": "6aa704e64934b0141b2801dfc0e8c56136ad2a889b1610a867ce83f8ba0d2478"
+    },
+    "/assets/companions-v118/pip-evo06-poses.webp": {
+      "bytes": 2057952,
+      "sha256": "165d81f6602999fc979722f932e1fff143d000e53df0f362be763b6629e69a61"
+    },
+    "/assets/companions-v118/pip-evo10-poses.json": {
+      "bytes": 18841,
+      "sha256": "7fad117c01b4791c9559b412e8b0e2115c84304ed0a96414a10aa5fdd892c200"
+    },
+    "/assets/companions-v118/pip-evo10-poses.webp": {
+      "bytes": 2243234,
+      "sha256": "880fb4f0d6d2537332b7aef71ca2c5e6831a94530c0102c13dacd5172aae3ad0"
+    },
+    "/assets/companions-v118/prickly-evo01-poses.json": {
+      "bytes": 12184,
+      "sha256": "82c93edb28b35cf678481af26eff03c5dd1529341f304ec7768e354016c5b5ee"
+    },
+    "/assets/companions-v118/prickly-evo01-poses.webp": {
+      "bytes": 1893366,
+      "sha256": "467642021fc98af367ec4258dddcbfc6ec70dc72bada0c143893e483925ccc8e"
+    },
+    "/assets/companions-v118/prickly-evo03-poses.json": {
+      "bytes": 9911,
+      "sha256": "93af1637a1c1f61feb94e478fd742af330d8fcf43f12d7c79dd37a1662370c2c"
+    },
+    "/assets/companions-v118/prickly-evo03-poses.webp": {
+      "bytes": 1882784,
+      "sha256": "ccf5c214c7e00e1c3132810091d6ec1a471f9b4e1b9342d019701d18d10ea335"
+    },
+    "/assets/companions-v118/prickly-evo06-poses.json": {
+      "bytes": 20247,
+      "sha256": "30cd0b9408b648ad84876c1721c5c1ed280bf97304bfbd963bb9ca99eb48a867"
+    },
+    "/assets/companions-v118/prickly-evo06-poses.webp": {
+      "bytes": 2171122,
+      "sha256": "2eb5217b4032c53ef60952d7746668ab89b2c82255e28831a78ae9940db77b3c"
+    },
+    "/assets/companions-v118/prickly-evo10-poses.json": {
+      "bytes": 17851,
+      "sha256": "2bc52afee60101e1b51a538e9638170cbf81b460041d6c6e2fcb0d428b7bd044"
+    },
+    "/assets/companions-v118/prickly-evo10-poses.webp": {
+      "bytes": 2193186,
+      "sha256": "34ff8a50413536c66ffed834b7c9e4d35d7acdc13ee930280095a0a9979a3787"
+    },
+    "/assets/companions-v118/quill-evo01-poses.json": {
+      "bytes": 9622,
+      "sha256": "8df646ec25e65b41a7674565e2cd3ae3f6e61ed6da77ea2c98c11d91d96b325c"
+    },
+    "/assets/companions-v118/quill-evo01-poses.webp": {
+      "bytes": 1991858,
+      "sha256": "96860d2d4d2e1f0e76606ed86c2d7281e8c1501eae3fc131fdfbb9306a0c30b1"
+    },
+    "/assets/companions-v118/quill-evo03-poses.json": {
+      "bytes": 14722,
+      "sha256": "af0057b295eb93f1ef8a4fb430b07b9b43dc120d0dd9fd882af437b85caa2b7a"
+    },
+    "/assets/companions-v118/quill-evo03-poses.webp": {
+      "bytes": 2118834,
+      "sha256": "7cfab691bf5149140c71034627d60fe14f2821fcc45844149d5dffd5756c0653"
+    },
+    "/assets/companions-v118/quill-evo06-poses.json": {
+      "bytes": 16897,
+      "sha256": "358fa5435aeeb1cb25d87e40355e3766347bca151c9f268af170b91219716948"
+    },
+    "/assets/companions-v118/quill-evo06-poses.webp": {
+      "bytes": 2037250,
+      "sha256": "33f8acaa70954e4a78859bca4f8788baa3a491b22430d943dca01a01eebaf7b2"
+    },
+    "/assets/companions-v118/quill-evo10-poses.json": {
+      "bytes": 14631,
+      "sha256": "dabcd1788dca83c3b22b5c3d35ccac98bb11d50ed974f6b7ed1ef2da875535d9"
+    },
+    "/assets/companions-v118/quill-evo10-poses.webp": {
+      "bytes": 2180608,
+      "sha256": "4233ccfacd99a9e364d8f0ed821a77604c07f662e51a15d837a1d3a9776d2176"
+    },
+    "/assets/companions-v118/roster.json": {
+      "bytes": 12738,
+      "sha256": "adb6adaa441f336642905dfe4c611662228a70bed23a3ea2514707468f161b8c"
+    },
+    "/assets/companions-v118/soli-evo01-poses.json": {
+      "bytes": 16193,
+      "sha256": "8de72143d07d20ad3b51d9daa113cdf542b2851e1a787c213c1c1a2f02eb95d2"
+    },
+    "/assets/companions-v118/soli-evo01-poses.webp": {
+      "bytes": 2057692,
+      "sha256": "281fc9e0fada4ba06702c2feffb0270a730e6326de7521558ca299c1e1af0ca0"
+    },
+    "/assets/companions-v118/soli-evo03-poses.json": {
+      "bytes": 15766,
+      "sha256": "e0e8005efad923d67f324500e8ad739c3819074008051878c4c19c05522c4886"
+    },
+    "/assets/companions-v118/soli-evo03-poses.webp": {
+      "bytes": 2219154,
+      "sha256": "35dacf61630f89196462965f84908570f4f6cb8b650a66486c6402e144421230"
+    },
+    "/assets/companions-v118/soli-evo06-poses.json": {
+      "bytes": 15587,
+      "sha256": "550e4efa42ce84606422ff1db8d9d1a1935433a3804448c3ee54eafb87e505f2"
+    },
+    "/assets/companions-v118/soli-evo06-poses.webp": {
+      "bytes": 2225688,
+      "sha256": "dfbc9e2fd480388ed2184a524da1dd421dbb134f9de0d747e3cea93d81866a7a"
+    },
+    "/assets/companions-v118/soli-evo10-poses.json": {
+      "bytes": 22023,
+      "sha256": "77236d0cdc39918c2ea475051d321c911f0cf3f50fa5204a22f2cd6197d55192"
+    },
+    "/assets/companions-v118/soli-evo10-poses.webp": {
+      "bytes": 2412184,
+      "sha256": "b3ae17d471116a57095931088815a13f92f32af7caff73bb31b93846780f79b3"
+    },
+    "/assets/companions-v118/tula-evo01-poses.json": {
+      "bytes": 16169,
+      "sha256": "86234bcde9d04c8866c6ff39681f252b4f32b588515212fdd87430cc25098e97"
+    },
+    "/assets/companions-v118/tula-evo01-poses.webp": {
+      "bytes": 1791218,
+      "sha256": "a198de07cd8f73e43c6d4ffaae386b7af58c8e4c6306ffb859dd19645c6b340a"
+    },
+    "/assets/companions-v118/tula-evo03-poses.json": {
+      "bytes": 21887,
+      "sha256": "b278cd6dd2592fe4d5d4ec00b4ebc47e126de8a5688d82b0c3d7e9d25807fec4"
+    },
+    "/assets/companions-v118/tula-evo03-poses.webp": {
+      "bytes": 2146326,
+      "sha256": "89d6be05064e878e51c1010c8d9fbb9303e651f840a1761eaa263c078d9070b1"
+    },
+    "/assets/companions-v118/tula-evo06-poses.json": {
+      "bytes": 17592,
+      "sha256": "54d2ac9a52d6c09db9f4b25ae3e120c8a6feb4f904e1737c3f9b05a0b7797716"
+    },
+    "/assets/companions-v118/tula-evo06-poses.webp": {
+      "bytes": 2117516,
+      "sha256": "d859bddd6b233fc3684368c85e76b932cf7f3d967bc0e7d16bc48d4a1ee1896b"
+    },
+    "/assets/companions-v118/tula-evo10-poses.json": {
+      "bytes": 18229,
+      "sha256": "819b3af7adb8fd5bd0398d0026af1f19054454fb3945a5a2f491a2bd83b7cd82"
+    },
+    "/assets/companions-v118/tula-evo10-poses.webp": {
+      "bytes": 2047762,
+      "sha256": "15143ee2c5f0bb6b898298c62fa0ed36cd47315496efaa50e9522cb15fe0f62e"
+    },
+    "/assets/companions-v118/vela-evo01-poses.json": {
+      "bytes": 12234,
+      "sha256": "775ada7e230d481708c4c74175503c9ac44fb4bbfc336288fdd542ec44004d21"
+    },
+    "/assets/companions-v118/vela-evo01-poses.webp": {
+      "bytes": 2261366,
+      "sha256": "bf6ee10ef63372f3255bd1994cdf7dd4b2393035c01a34cd991d8e0420d2dbfc"
+    },
+    "/assets/companions-v118/vela-evo03-poses.json": {
+      "bytes": 20148,
+      "sha256": "437d34db61521f3770c67439162136de98984cd094fe6f9dc8e2273f8023ff26"
+    },
+    "/assets/companions-v118/vela-evo03-poses.webp": {
+      "bytes": 2585052,
+      "sha256": "210b7837a2a033767e223170415c2c274532efc9202be6569e8f8c91401fb978"
+    },
+    "/assets/companions-v118/vela-evo06-poses.json": {
+      "bytes": 4418,
+      "sha256": "ddf6c5b8526e3c95ba964371e082b300ce1a058a7afedd6e3ffbbdce80b2276f"
+    },
+    "/assets/companions-v118/vela-evo06-poses.webp": {
+      "bytes": 2024206,
+      "sha256": "5a451cb425c8955829a8e49ed80199bb6fde642a58bf38217caf58205fa03e52"
+    },
+    "/assets/companions-v118/vela-evo10-poses.json": {
+      "bytes": 3601,
+      "sha256": "eb5e95865ae2ea12be563bced44fe7b5fb08ebed9ff65c39aac9248167dcd4bf"
+    },
+    "/assets/companions-v118/vela-evo10-poses.webp": {
+      "bytes": 2010976,
+      "sha256": "d5af5c226cabc57a3a0292fe7267b0597bb273cc1aa67f29891fc227b77250d7"
+    },
+    "/assets/companions-v118/waddles-evo01-poses.json": {
+      "bytes": 10799,
+      "sha256": "fe430c977fa7f2f7dd275beab0359149933a3500e2b1761d993a4df89f8dc95f"
+    },
+    "/assets/companions-v118/waddles-evo01-poses.webp": {
+      "bytes": 1795368,
+      "sha256": "f96f4882b765fe8204eae8cb482bd44499de032fd7ef372d24d3ea890149e344"
+    },
+    "/assets/companions-v118/waddles-evo03-poses.json": {
+      "bytes": 17178,
+      "sha256": "fc123d01691d9e25d12ac9e607fc78487efdd1d7c3e60b6bec522a274a51496a"
+    },
+    "/assets/companions-v118/waddles-evo03-poses.webp": {
+      "bytes": 1996710,
+      "sha256": "d9487bd701b372b00d0b23844a2a2c542e5bf83e5a66681b1db79a6bd517255c"
+    },
+    "/assets/companions-v118/waddles-evo06-poses.json": {
+      "bytes": 14352,
+      "sha256": "413b9f884504a078a35309093dc4f3282a81c4dad91827719c697e6bdde51bf3"
+    },
+    "/assets/companions-v118/waddles-evo06-poses.webp": {
+      "bytes": 2073478,
+      "sha256": "b0ffc2fcf55c964639ad0651ada0b052f368f9f0da7b164f1afd3ee14afb5031"
+    },
+    "/assets/companions-v118/waddles-evo10-poses.json": {
+      "bytes": 13534,
+      "sha256": "c12d13eb9015c8e98d23ec2e537cd9a5faa77454057b9e373fafd253a9a7f646"
+    },
+    "/assets/companions-v118/waddles-evo10-poses.webp": {
+      "bytes": 1988754,
+      "sha256": "2e199d52723e1059e0665f83d5b3a4da8d351822103daaa4c3b855fb28bbf740"
+    },
+    "/assets/companions-v118/zig-evo01-poses.json": {
+      "bytes": 11895,
+      "sha256": "d9585b89ae6e95b4e8d3643790ab76c92de1381344f81c276826108abf017416"
+    },
+    "/assets/companions-v118/zig-evo01-poses.webp": {
+      "bytes": 1817572,
+      "sha256": "061d98154179e4c8c75a47010eadc43b132c573d78c073f966ba61632bb77dff"
+    },
+    "/assets/companions-v118/zig-evo03-poses.json": {
+      "bytes": 11943,
+      "sha256": "8100e5627f732ef342238a6a439976955ccc29c219ae0d7be60d55f2dd849055"
+    },
+    "/assets/companions-v118/zig-evo03-poses.webp": {
+      "bytes": 1992794,
+      "sha256": "3c07d6ddea24af03ac1e0f4db60cef6d84639f923289a7a4434b04164e14ab59"
+    },
+    "/assets/companions-v118/zig-evo06-poses.json": {
+      "bytes": 3533,
+      "sha256": "62846732c2d0cfedd88d544108adf998213da780e24d404c2bf43d1419148c43"
+    },
+    "/assets/companions-v118/zig-evo06-poses.webp": {
+      "bytes": 1396606,
+      "sha256": "b01358b34ac8246cf5f212df265e6db4ef645248a74c41588e494f2dcd4ac5b9"
+    },
+    "/assets/companions-v118/zig-evo10-poses.json": {
+      "bytes": 16281,
+      "sha256": "ec6b81ffa0adda99a7f1f1c595c091789f3bce166d69f6b7ac4ed089f5a27f19"
+    },
+    "/assets/companions-v118/zig-evo10-poses.webp": {
+      "bytes": 2155400,
+      "sha256": "178f2b6720a8e47f5b7343140f0f892c6a165dd5edcd3487b18a39a889d5ab4b"
+    },
+    "/assets/delete-account.js": {
+      "bytes": 6001,
+      "sha256": "68933dc4981d16a7473776c2cef6635799558923f3a11673951f1f9c768b0ce3"
+    },
+    "/assets/deletion-core.mjs": {
+      "bytes": 2299,
+      "sha256": "67815fa6c57a157aa6d712e56b29bb356bdf3bf21da63f9b7275d4dcf2e512ad"
+    },
+    "/assets/gallery-core-v118.mjs": {
+      "bytes": 3470,
+      "sha256": "bbaef486f8b8fd7e621b005d7829439199f762c2acb57e51cd99cff546137645"
+    },
+    "/assets/google_g.png": {
+      "bytes": 33661,
+      "sha256": "d1ce9c2af0b10a7333abc99bc706f9a6a199e5b65bf3e3009624f076b8638e6a"
+    },
+    "/assets/icon.svg": {
+      "bytes": 6258,
+      "sha256": "d168aab7fb3730f4ab969e4c8a8d2ffa9db8c3eb8a9cb5370e1b0fa75481d8e4"
+    },
+    "/assets/screenshots/collection-equipment-en.png": {
+      "bytes": 271239,
+      "sha256": "04c058d950862ea142c7a1604b0412b6732b0f3ab8532cb0df3201ac992805df"
+    },
+    "/assets/screenshots/collection-equipment-fr.png": {
+      "bytes": 283094,
+      "sha256": "c6a6716ccab77d4e1806292d15419120028ef8e74f472804a58d657944987cf3"
+    },
+    "/assets/screenshots/home-en.png": {
+      "bytes": 308128,
+      "sha256": "2b2094ce9df91aaa4cb9ec0ac92d9944ec5df3911e38730d2589e709f5d71ad0"
+    },
+    "/assets/screenshots/home-fr.png": {
+      "bytes": 315485,
+      "sha256": "7a8e034c4ddd71f286bf656a4d2dd8ab412db314aa30b4499cfef8cfc807bd86"
+    },
+    "/assets/screenshots/sealed-p6-card.png": {
+      "bytes": 130689,
+      "sha256": "f57c198b6ee8474df50af8a0c78403ebeae2c8d7b6677b61284d28d2edebf78d"
+    },
+    "/assets/screenshots/sealed-wall-before.png": {
+      "bytes": 224968,
+      "sha256": "28df598902849b3aba1c3f85189194927b835ea329057cb0a94fc9fba06795e3"
+    },
+    "/assets/screenshots/shop-en.png": {
+      "bytes": 208920,
+      "sha256": "8f9b43f989983cb1ac8b41a794b7c54381d73c1aca77f6f099d350d4cfeaf080"
+    },
+    "/assets/screenshots/shop-fr.png": {
+      "bytes": 219158,
+      "sha256": "5de652ab7d177cce828cb6dc0ad73eb9d54a2ce06cbe0f70be3c1fc85ffd9576"
+    },
+    "/assets/screenshots/v1.10/avatar-preview-en.png": {
+      "bytes": 572297,
+      "sha256": "933a595fda67a72161030abf6fffeff681383242a399a0bc201bd2b0d6b5a699"
+    },
+    "/assets/screenshots/v1.10/avatar-studio-en.png": {
+      "bytes": 886791,
+      "sha256": "506f53251d922c096cd5e5a1eb305faacb61746f45dbefcc73697d4edbd0877b"
+    },
+    "/assets/screenshots/v1.10/first-practice-en.png": {
+      "bytes": 1300028,
+      "sha256": "5174b1ce955d09c85b7db1313d873d8a1b3c0bbb374739cd0613b436e6edfd32"
+    },
+    "/assets/screenshots/v1.10/guardian-5-one-cell-en.png": {
+      "bytes": 172636,
+      "sha256": "2508e4245f01cf2bfd83732649a5bedf40a5b324138f52a9aa0b6c1dd8353675"
+    },
+    "/assets/screenshots/v1.10/home-en.png": {
+      "bytes": 812240,
+      "sha256": "46358cbb40cd77f5eb9032ab775f6c7f0edd385e25c1363e724a8e014c82130d"
+    },
+    "/assets/screenshots/v1.10/home-fr.png": {
+      "bytes": 821329,
+      "sha256": "86fa494e76ea77e9e1934b2831a8e326e7cee01a3c0239bb28368527c8cbd7de"
+    },
+    "/assets/screenshots/v1.10/map-1000-en.png": {
+      "bytes": 1365684,
+      "sha256": "5dc816f3d02054a338e07c9c062eb40f1f14ecbc6af3583ce5001a49005ae549"
+    },
+    "/assets/screenshots/v1.10/map-1000-fr.png": {
+      "bytes": 1371112,
+      "sha256": "ca8323e74e4d138b656e3ac1724127ecedbe28bf2180c292d9cc80884f3b9b30"
+    },
+    "/assets/screenshots/v1.10/rewards-en.png": {
+      "bytes": 780305,
+      "sha256": "5794a7f8e18e9c4c63ce282cca523f26fa5c6cd1563410a929cfb2f28ec87044"
+    },
+    "/assets/screenshots/v1.10/rewards-fr.png": {
+      "bytes": 779632,
+      "sha256": "d269b8a39ecd22954d0f096111ab77fa56068113160bcb75f1e2d58cb8202dd3"
+    },
+    "/assets/screenshots/v1.10/shop-looks-en.png": {
+      "bytes": 645993,
+      "sha256": "842be7c8bcd21443424889d9a47d04617575df6dde7783c610a5609b642d3d51"
+    },
+    "/assets/screenshots/v1.10/shop-looks-fr.png": {
+      "bytes": 658508,
+      "sha256": "cb6fa8aa93d3e3de5d6b871f4708fa6cab55a2bd5f5188f2932dc2d0076d8e41"
+    },
+    "/assets/screenshots/v1.10/story-en.png": {
+      "bytes": 1004424,
+      "sha256": "9404e6443d33538297392d4220d88a5bf73c29ca140fed1201d45186113475e7"
+    },
+    "/assets/screenshots/v1.10/story-fr.png": {
+      "bytes": 1004542,
+      "sha256": "7b365caea6fdd3c1bb831efa982cae5a945ab9bcf9b5ecf342c2d509b41568b1"
+    },
+    "/assets/screenshots/v1.10/tutorial-key-en.png": {
+      "bytes": 1245478,
+      "sha256": "c9835a478b7fc28678f28e7f862b02b47945a417807c5d16e6f4a15f7d2188b1"
+    },
+    "/assets/screenshots/v1.10/tutorial-key-fr.png": {
+      "bytes": 1251274,
+      "sha256": "ca30e10a273c42bde6ec373030ba2162ab2ffdbb2af29756e076c92ef010a529"
+    },
+    "/assets/screenshots/v1.10/wardrobe-en.png": {
+      "bytes": 904798,
+      "sha256": "4c42b0889cb72d96304cd51444cc82d0a639f56474f98e3bf346fe7a1c7063c5"
+    },
+    "/assets/screenshots/v1.10/wardrobe-fr.png": {
+      "bytes": 915179,
+      "sha256": "0b1a9569a90c3309f6b47428cf04159539a60cb0e64e176b4068596347002787"
+    },
+    "/assets/screenshots/v1.12/equipped-en.png": {
+      "bytes": 854090,
+      "sha256": "33a3d5f7bdb0be20a74bcbe9df86031602bda94bcbb8fc88ae010a588fc7f18b"
+    },
+    "/assets/screenshots/v1.12/home-en.png": {
+      "bytes": 821461,
+      "sha256": "9ceacb46e61cc404c5d93c3ffbf6a9e0349dc87e145fe5b5ff665f14272b0102"
+    },
+    "/assets/screenshots/v1.12/home-fr.png": {
+      "bytes": 831185,
+      "sha256": "8548b00b735f05643e87c6c816ee715a669503a50a9ffd2d9fe96094b1d7b5c0"
+    },
+    "/assets/screenshots/v1.12/power-detail-en.png": {
+      "bytes": 1151109,
+      "sha256": "0c4189d3bfc1f8c753b9a5e09eca8e0a228f11945765b5023c955ba0ca5701eb"
+    },
+    "/assets/screenshots/v1.12/power-detail-fr.png": {
+      "bytes": 1150629,
+      "sha256": "de4286384d8fcb8bd80246edacaa861389baa9f0d2eb60569ff931d2a6d2b531"
+    },
+    "/assets/screenshots/v1.12/shop-appearance-en.png": {
+      "bytes": 1182726,
+      "sha256": "6bc7f02d1f5c87efaefd5dda1101631626250b268447104dcd0f072299a53082"
+    },
+    "/assets/screenshots/v1.12/shop-appearance-fr.png": {
+      "bytes": 1186732,
+      "sha256": "aba0459b5ad0b661fd3542dce26f92d06b36d70858ad2fe7184eb3d888f7bf61"
+    },
+    "/assets/screenshots/v1.12/shop-powers-en.png": {
+      "bytes": 1135002,
+      "sha256": "f3a137b3de7902c2b7deef926b977d395145fdcde9429d187234fa212215b02b"
+    },
+    "/assets/screenshots/v1.12/shop-powers-fr.png": {
+      "bytes": 1137201,
+      "sha256": "5c4fe9c56b1ce3e0cf9839b6bcb60ef6c52899566648075e9fc0064a607546b5"
+    },
+    "/assets/screenshots/v1.13/furniture-en.png": {
+      "bytes": 747307,
+      "sha256": "19df7f9114ad768d7eeea3623a515763cf643a58881488bf17da41f5938d3f6f"
+    },
+    "/assets/screenshots/v1.13/furniture-fr.png": {
+      "bytes": 753882,
+      "sha256": "ea626bf1b87d85bfe1944f99eaa0015d74daa0f2d57d2d6f7935c18909080716"
+    },
+    "/assets/screenshots/v1.13/home-en.png": {
+      "bytes": 1061589,
+      "sha256": "d66ff045eb2c13b8942aa958fdeea941a685e154b6f612e57f9e0603a85eecef"
+    },
+    "/assets/screenshots/v1.13/home-fr.png": {
+      "bytes": 1064392,
+      "sha256": "feed6dc63206129a85ea426dfca84236ad1c3a443c735e601481d17f932f9e3e"
+    },
+    "/assets/screenshots/v1.13/house-decor-en.png": {
+      "bytes": 1195183,
+      "sha256": "33666387e7a39e378c09faa927fbead45cd128d020f25203f8aecd475aa363eb"
+    },
+    "/assets/screenshots/v1.13/house-decor-fr.png": {
+      "bytes": 1197087,
+      "sha256": "2c27a5f23f46c0fee18d57ce040445b1d7ff95af08f66e9c4db49b154d09a4d7"
+    },
+    "/assets/screenshots/v1.13/house-hug-en.png": {
+      "bytes": 1055140,
+      "sha256": "d29209d2e0f62e71618614517a50ee54f4b82671263e69e2efe8f2230d304133"
+    },
+    "/assets/screenshots/v1.13/puzzle-en.png": {
+      "bytes": 213368,
+      "sha256": "819032b50daad2fddb9af94d9b4f274523088011b0ef39c582313e329365d7a0"
+    },
+    "/assets/screenshots/v1.13/puzzle-fr.png": {
+      "bytes": 213799,
+      "sha256": "733e3f3f4e012979e98acbf72a177c9c8fec146dddcc9b108316726dfea4de51"
+    },
+    "/assets/screenshots/v1.14/furniture-en.png": {
+      "bytes": 749186,
+      "sha256": "0dc57a33dd203e1314ef4c00665120b79ca88cb84469b25be9b1386da0b7c142"
+    },
+    "/assets/screenshots/v1.14/furniture-fr.png": {
+      "bytes": 755571,
+      "sha256": "a6c204982210704b568f24f8a45eafb9ab2096f157960f84d1256dff38cee647"
+    },
+    "/assets/screenshots/v1.14/home-en.png": {
+      "bytes": 1063054,
+      "sha256": "5b3ae55193f6e3f969b95ceaaa8fc4849bdc14e34d3e55cd26c83a9016d6da71"
+    },
+    "/assets/screenshots/v1.14/home-fr.png": {
+      "bytes": 1066126,
+      "sha256": "f5797ad34d32aec8a19f0f26e3a93d37b09c3ffe4baca3082069ba3f8f4c38c1"
+    },
+    "/assets/screenshots/v1.14/house-decor-en.png": {
+      "bytes": 1197021,
+      "sha256": "6e6e5452e483281a034102862cca71043bbc5364661325db684112be5d99875d"
+    },
+    "/assets/screenshots/v1.14/house-decor-fr.png": {
+      "bytes": 1198873,
+      "sha256": "64fbc5a69797b5d7639d74492cf084794cd3fbac82b4b6aa8ff513c85831075a"
+    },
+    "/assets/screenshots/v1.14/house-hug-en.png": {
+      "bytes": 1056610,
+      "sha256": "4eba122d2b7a28ae4ba8083e032f88c3e9ac4f3ebc3c7c80210b7c8ea41c3c3b"
+    },
+    "/assets/screenshots/v1.14/puzzle-en.png": {
+      "bytes": 176162,
+      "sha256": "2166d230195b08394dabea6ef864ffc5dc9c9cab7c4592b45b8b9b44e95b3d39"
+    },
+    "/assets/screenshots/v1.14/puzzle-fr.png": {
+      "bytes": 179463,
+      "sha256": "b8c3d9e85bb2c1c9c67d1911cfcf9d449504bd5be664b2aaa6c552cc33ca7871"
+    },
+    "/assets/screenshots/v1.15/adventure-en.png": {
+      "bytes": 159730,
+      "sha256": "7aebd8fbc7cf684bc9dd31612fca719ad7d5d44072cf924da76ddf0ca9ead424"
+    },
+    "/assets/screenshots/v1.15/adventure-fr.png": {
+      "bytes": 171224,
+      "sha256": "6f94ff69d0b82f298e0e1181229d1af288ca3a89b800db0b117bb957a1035ac1"
+    },
+    "/assets/screenshots/v1.15/aquarium-placed-en.png": {
+      "bytes": 171615,
+      "sha256": "5237069d7e9a7f0ff7ef60fc592e756e141ae791b65f0f52a245f910a95df684"
+    },
+    "/assets/screenshots/v1.15/atelier-en.png": {
+      "bytes": 141876,
+      "sha256": "7e9c003d9613da7388c40a55d8451f583349d6cf9aec39bf30073a6032f60793"
+    },
+    "/assets/screenshots/v1.15/atelier-fr.png": {
+      "bytes": 145061,
+      "sha256": "653a168355185885dbeaccf18e953b09a4b15f684b6aafa06ff8bcb8c42b1232"
+    },
+    "/assets/screenshots/v1.15/collection-en.png": {
+      "bytes": 158370,
+      "sha256": "3030ac12a8eeec90bc34fb70be99e8683eeb4ca408bdee6abdd86812cc5f8923"
+    },
+    "/assets/screenshots/v1.15/collection-fr.png": {
+      "bytes": 161177,
+      "sha256": "fd7a827fd442c39e149897b3c538c68f742df002eafa565cd69f56fa5d603705"
+    },
+    "/assets/screenshots/v1.15/home-en.png": {
+      "bytes": 176873,
+      "sha256": "4480e6133024d6a7523b1acfd65004171bc2483d7937b08bc06ca189a1a13023"
+    },
+    "/assets/screenshots/v1.15/home-fr.png": {
+      "bytes": 222705,
+      "sha256": "bae7fbbd93cdedcd148f0ff41764f691b8ad193238e4216ddc21970d447b073f"
+    },
+    "/assets/screenshots/v1.15/piano-placed-en.png": {
+      "bytes": 171316,
+      "sha256": "a71799b386242f666df81ab2a399730cfce00a8ccc40baebe4acc6d7d8df0f0e"
+    },
+    "/assets/screenshots/v1.15/puzzle-en.png": {
+      "bytes": 161690,
+      "sha256": "86a09581a2719adcee46cc07effb69ed4c8cc6ec601810d7b3818c8f0173bb2b"
+    },
+    "/assets/screenshots/v1.15/puzzle-fr.png": {
+      "bytes": 182990,
+      "sha256": "614666cca3c9a89bd5349776c591fc12df57a67afa7c6e246afde5149802f36b"
+    },
+    "/assets/screenshots/v1.16/adventure-en.png": {
+      "bytes": 179782,
+      "sha256": "6ea993c118ee9b87cacf852c67737b2176b6cc8f00b349302eeeceea6a13ab85"
+    },
+    "/assets/screenshots/v1.16/adventure-fr.png": {
+      "bytes": 185866,
+      "sha256": "8c9201e61caa2e5f9db740e3674f6e16fdd2ba69c6f8c39376a4123f00836e00"
+    },
+    "/assets/screenshots/v1.16/atelier-en.png": {
+      "bytes": 193739,
+      "sha256": "d2a37cd91011f5f18577e59b321bf0076fddc4ef1d2e3bcf408d5ddbaa2d4865"
+    },
+    "/assets/screenshots/v1.16/atelier-fr.png": {
+      "bytes": 196933,
+      "sha256": "2d68074e8f36c14a7290101930d87c05a0ad4bfd24aac1cc1124746a9e198a42"
+    },
+    "/assets/screenshots/v1.16/badges-en.png": {
+      "bytes": 219135,
+      "sha256": "0d7a85de84df35020c398513e9c011ee3ea835cf48ca878d4ad7f7cec87a9bb5"
+    },
+    "/assets/screenshots/v1.16/badges-fr.png": {
+      "bytes": 223467,
+      "sha256": "07f3e5ad01adbe04dde5d14577e1994633eda00ca4218ea40d363cc4ba9daf4a"
+    },
+    "/assets/screenshots/v1.16/collection-en.png": {
+      "bytes": 240104,
+      "sha256": "c05f2ce09e39ba63e84199a3131cf1063e769eb99140474c6a3f798e9d63f729"
+    },
+    "/assets/screenshots/v1.16/collection-fr.png": {
+      "bytes": 251072,
+      "sha256": "66f8eeeb434d6c4ce8b60e15a9589a4fa68bf4ef2d0e5ce4c97bc9f2b858333a"
+    },
+    "/assets/screenshots/v1.16/home-en.png": {
+      "bytes": 293732,
+      "sha256": "7866a8fef6cf271a74e6287ee43f4555c223fc2eea2229871292051fbf96829d"
+    },
+    "/assets/screenshots/v1.16/home-fr.png": {
+      "bytes": 294192,
+      "sha256": "6e8a2a21f654b179e38c1d8a87301d8b72f90257c6f12138c5acc58c9b89000e"
+    },
+    "/assets/screenshots/v1.16/profile-en.png": {
+      "bytes": 259688,
+      "sha256": "1ce1b246cd8ec3730d665004a6c1d5cc67818bc12a21bba1dd7854a747e44dfe"
+    },
+    "/assets/screenshots/v1.16/profile-fr.png": {
+      "bytes": 259145,
+      "sha256": "ddee68b47a3708c7fe8316e174ba3f41cee9054f969e9e75e626ae06db5a3a2d"
+    },
+    "/assets/screenshots/v1.16/reveal-en.png": {
+      "bytes": 171419,
+      "sha256": "0de20161a6a08a37aa304fa91e2a6c2f5a2bd5d626704b619d56475d2be6ea44"
+    },
+    "/assets/screenshots/v1.16/reveal-fr.png": {
+      "bytes": 173194,
+      "sha256": "598d376d74d2af307733961b679273cd804455c663f465c34cc7edfba579039f"
+    },
+    "/assets/screenshots/v1.16/summon-en.png": {
+      "bytes": 194171,
+      "sha256": "45bab4a923aa024ef423537435d772aaf0cc42cfb40d938ba975f1f5ad733530"
+    },
+    "/assets/screenshots/v1.16/summon-fr.png": {
+      "bytes": 198820,
+      "sha256": "9d40fbb71a15b1eabc3812a5c9d8bc44d68b91fd86b31b69e10a15a6cd928ff4"
+    },
+    "/assets/screenshots/v1.17/adventure-en.png": {
+      "bytes": 3147049,
+      "sha256": "6bf06dd0fcac93d3986e3a61e6543fd99c39cf85a623cc83ca9b7b4745cfc8d8"
+    },
+    "/assets/screenshots/v1.17/adventure-fr.png": {
+      "bytes": 3154451,
+      "sha256": "15f88120d83b8c06419631ce053d7c498e20c3d389b41a074decdf12181dfc53"
+    },
+    "/assets/screenshots/v1.17/atelier-en.png": {
+      "bytes": 2588304,
+      "sha256": "870a934016eff854bb3da9a4d5b47045b6e629975333e07ffe619b9b5fb7dd7c"
+    },
+    "/assets/screenshots/v1.17/atelier-fr.png": {
+      "bytes": 2589331,
+      "sha256": "03c06d6dde2e9478606c71a63049a0352effa5d8c2d3d288de724154bd2d4c1e"
+    },
+    "/assets/screenshots/v1.17/badges-en.png": {
+      "bytes": 322637,
+      "sha256": "353be7b7bcadacca74229bfa162237e8d3b19b210d857c65cd5e25e1fdf936d3"
+    },
+    "/assets/screenshots/v1.17/badges-fr.png": {
+      "bytes": 326640,
+      "sha256": "970d530be4485f493ff1686780fc8c9f47e9f6669f587fd32a7ecc1de2df22e9"
+    },
+    "/assets/screenshots/v1.17/collection-en.png": {
+      "bytes": 3109282,
+      "sha256": "e6af71475cb12abe2af8f3396c126f6784f6fb999d56422466a53d6582646b0b"
+    },
+    "/assets/screenshots/v1.17/collection-fr.png": {
+      "bytes": 3115204,
+      "sha256": "6f0e3db4e3eb2ea19c98db5339079567abe31352564dbc31af4ee3a9e7e0724e"
+    },
+    "/assets/screenshots/v1.17/home-en.png": {
+      "bytes": 2584427,
+      "sha256": "4e6e001d16dfe29ced04b998e3675539b3edf2b3fcd66395784a2b635851fa62"
+    },
+    "/assets/screenshots/v1.17/home-fr.png": {
+      "bytes": 2582419,
+      "sha256": "51b2bfb6012e356e7eaee2e0e37be309d0c480113421dadbce78586678945d56"
+    },
+    "/assets/screenshots/v1.17/profile-en.png": {
+      "bytes": 754595,
+      "sha256": "426ccc14b8c5f698867603b998f379d207f745172b5b3fe5bce7730372ab0ff6"
+    },
+    "/assets/screenshots/v1.17/profile-fr.png": {
+      "bytes": 750731,
+      "sha256": "e420a94586233b1aeb68c1c1c86b5fc5e5d14fbf39588c81077c3ddea8d11b7b"
+    },
+    "/assets/screenshots/v1.17/reveal-en.png": {
+      "bytes": 697210,
+      "sha256": "314c5ad6002bd0f1c77b408a9ddc8e566072db3d739fef4b171cbb5c10e854f5"
+    },
+    "/assets/screenshots/v1.17/reveal-fr.png": {
+      "bytes": 704279,
+      "sha256": "49670fc960f329d192048810ecdeae1c68bee2b32e9a72eadcba0ebbb11e51fa"
+    },
+    "/assets/screenshots/v1.17/summon-en.png": {
+      "bytes": 1037900,
+      "sha256": "1bb94abcf30499d276ab3dd0736bff29f19e9021b192dd6036f24b94f8eb9fc9"
+    },
+    "/assets/screenshots/v1.17/summon-fr.png": {
+      "bytes": 1044613,
+      "sha256": "33869bf245d72b2333a2f436aa30d4b80595a414c4235167a22c43d770225474"
+    },
+    "/assets/screenshots/v1.18/home-en.png": {
+      "bytes": 2428489,
+      "sha256": "8c89fef639dee7d4e56e3ba30bc3841cc84e49b9b3adb32332fefc7caccbc579"
+    },
+    "/assets/screenshots/v1.18/home-fr.png": {
+      "bytes": 2428319,
+      "sha256": "2616826c06a10a4dc9a3c82636afbc712d101d91e728e0991660acb8cae3eeed"
+    },
+    "/assets/screenshots/v1.18/studio-en.png": {
+      "bytes": 846871,
+      "sha256": "63ceda1d01c8f09ccc512c295a494d54354e65dcaaed34e467050df3e89cce37"
+    },
+    "/assets/screenshots/v1.18/studio-fr.png": {
+      "bytes": 849759,
+      "sha256": "11406bd862ae4e6e4d6803b31d2bb856b82c19eb6b4795c8e5b9e7b5c32d81c1"
+    },
+    "/assets/screenshots/v1.18/wardrobe-en.png": {
+      "bytes": 685820,
+      "sha256": "4c98311f66f8b4b639b59ef4987c9f0bec1b5574673ea3dc52cd52dec12c8e31"
+    },
+    "/assets/screenshots/v1.18/wardrobe-fr.png": {
+      "bytes": 706138,
+      "sha256": "c2a2b191cf34c2938a52ffa21f394f91b0ceb6be721ef366042eeb714a341c47"
+    },
+    "/assets/screenshots/v1.19/home-en.png": {
+      "bytes": 524026,
+      "sha256": "f09be8e4305453a2867488e369923733d0980306dc2d05f5b3e27c3e5134f765"
+    },
+    "/assets/screenshots/v1.19/home-fr.png": {
+      "bytes": 527767,
+      "sha256": "e12c3804f460919a0591a0d728ee697b1db82ff28bf4723342fa78111c00c06c"
+    },
+    "/assets/screenshots/v1.19/puzzle-en.png": {
+      "bytes": 300217,
+      "sha256": "1e21a600dd976db50c7a630c56ca8125331e2d641af662bcdf84fb617c48fb81"
+    },
+    "/assets/screenshots/v1.19/puzzle-fr.png": {
+      "bytes": 289005,
+      "sha256": "f5f14c267d746e1c4e8f645e8fa1481190e9eea21a1fc09a085843d587b52614"
+    },
+    "/assets/screenshots/v1.19/squad-en.png": {
+      "bytes": 699910,
+      "sha256": "040bf778a46489be1453b2ac08a404d83fcaa7cfa558c5160eb17d9dbc5ed7aa"
+    },
+    "/assets/screenshots/v1.19/squad-fr.png": {
+      "bytes": 697445,
+      "sha256": "e65e6390b8a3640ca8ff6f645748d802683701c912f0405c3eaea9ffb066c241"
+    },
+    "/assets/screenshots/v1.6/briefing-en.png": {
+      "bytes": 1042661,
+      "sha256": "e93e8fded1b34f94fdd18e4b4b746019a5887ace8ceacafd375ac9800c874828"
+    },
+    "/assets/screenshots/v1.6/briefing-fr.png": {
+      "bytes": 1050489,
+      "sha256": "e14bdf30b7e91fe55d004439d1db73b815d80c61b662a841fc86923334d618e0"
+    },
+    "/assets/screenshots/v1.6/companions-en.png": {
+      "bytes": 442566,
+      "sha256": "06cacfaa5ef1eac2ed734911b9ca32573ef06a9da4d64f619f1ac1b513bf1bab"
+    },
+    "/assets/screenshots/v1.6/equipment-owned-en.png": {
+      "bytes": 458890,
+      "sha256": "2afea249f1ee24aa584d175ebaba5e59b4885e64e4a3e2c74186bac846f4f963"
+    },
+    "/assets/screenshots/v1.6/home-en.png": {
+      "bytes": 708990,
+      "sha256": "d25140c5a03de6850046df7300a08d4295ce2f16554c76662f6d16b680fa6291"
+    },
+    "/assets/screenshots/v1.6/home-fr.png": {
+      "bytes": 710692,
+      "sha256": "9eb674a7e815c838a8fa124f32e87968d22efe7adc56bb11652faaec1795cff7"
+    },
+    "/assets/screenshots/v1.6/inventory-en.png": {
+      "bytes": 442688,
+      "sha256": "0e042f0ee0c0ef7df343de048717726014dedadc0019f6a91ecc67ad737fbcae"
+    },
+    "/assets/screenshots/v1.6/inventory-fr.png": {
+      "bytes": 453992,
+      "sha256": "8cc989026a781c496a43fc80ad00638e0962785953323ec3ca347c855c3cd8b0"
+    },
+    "/assets/screenshots/v1.6/map-en.png": {
+      "bytes": 1257772,
+      "sha256": "43bfd1cc154190749da8ee55b29e58aa72c74c69c8cd18f38638f1fdb01fdda6"
+    },
+    "/assets/screenshots/v1.6/map-fr.png": {
+      "bytes": 1262387,
+      "sha256": "dd8405473aba30bb26ff0525ee07094349aa0a5d35a47265fc830413eb5cd84a"
+    },
+    "/assets/screenshots/v1.6/powers-en.png": {
+      "bytes": 413043,
+      "sha256": "79767f5ac64c65c07d9016c12ed223191778094748005e9c1fd3d63723535a4c"
+    },
+    "/assets/screenshots/v1.7/home-en.png": {
+      "bytes": 636430,
+      "sha256": "9993b77a2551ac2988fc0034f9091b4cdd735bfe50c937f9e2468f33bbc3fed6"
+    },
+    "/assets/screenshots/v1.7/home-fr.png": {
+      "bytes": 639057,
+      "sha256": "a4f9c24aaa49c057b596b0a830bec084adcb1bf92dcf8a51ab875fbc34cc41f4"
+    },
+    "/assets/screenshots/v1.7/map-1000-en.png": {
+      "bytes": 991015,
+      "sha256": "faa488b53146e2c5a2a081e97de13cd24276d1f8fe87104de3a59f72f0d73a80"
+    },
+    "/assets/screenshots/v1.7/map-1000-fr.png": {
+      "bytes": 996847,
+      "sha256": "4d66eb3ee57c7e352ab92e2f620dba25bb2eef8a91a63e557dc31611618280d8"
+    },
+    "/assets/screenshots/v1.7/rewards-before-en.png": {
+      "bytes": 595529,
+      "sha256": "924e57c6dce62160743626e5082533c43c73b0a9e5906928cb173ca2d09ef97c"
+    },
+    "/assets/screenshots/v1.7/rewards-fr.png": {
+      "bytes": 602568,
+      "sha256": "ca94955acd1a80b84167d9f260c3899da331e4e8b9232cf60f0b9c20d89ad894"
+    },
+    "/assets/screenshots/v1.7/shop-earned-en.png": {
+      "bytes": 544809,
+      "sha256": "5f50419a15f370eaca45ea5cfa5da180d6df1ac455cd431d11612d25b2cdfb10"
+    },
+    "/assets/screenshots/v1.7/shop-premium-closed-en.png": {
+      "bytes": 519762,
+      "sha256": "f966438fd6fe3b698ce0c8d178d3bb4b34f91987c9208befee3fb46f74915170"
+    },
+    "/assets/screenshots/v1.7/wardrobe-fr.png": {
+      "bytes": 636234,
+      "sha256": "3aa26a2fafbfa679dd49e1a3caf414343180f9636a8c91157b5968a3f10077e4"
+    },
+    "/assets/screenshots/v1.7/wardrobe-hat-en.png": {
+      "bytes": 630631,
+      "sha256": "4986ea8d44f0ec2513e887417a9fda1488276751f3b91affe2de0fa58a9abfa7"
+    },
+    "/assets/screenshots/v1.7/weekly-quests-en.png": {
+      "bytes": 590811,
+      "sha256": "6f15474a1cd5e7c0dffb447043c1560ac25fb307ee6d5e7e69fbee70ce3f1bb5"
+    },
+    "/assets/screenshots/v1.8/home-en.png": {
+      "bytes": 913639,
+      "sha256": "529eb0177ef41b77898f4dc15f6e7b24c70c95ad3f6ee9f9c7d463efa6380b12"
+    },
+    "/assets/screenshots/v1.8/home-fr.png": {
+      "bytes": 916322,
+      "sha256": "4040c2df66829d84fc431811e974ac9862bfb07f7325077f3aaaff7c03103595"
+    },
+    "/assets/screenshots/v1.8/map-1000-en.png": {
+      "bytes": 1388369,
+      "sha256": "249ec18f754415193922b95bd8ef794baf8452aa16627856d4bad9ec756801a4"
+    },
+    "/assets/screenshots/v1.8/map-1000-fr.png": {
+      "bytes": 1393280,
+      "sha256": "7857061e0df65ce18f44aac3f94f9188ca0138245d422b6e2736583542b71fe1"
+    },
+    "/assets/screenshots/v1.8/rewards-en.png": {
+      "bytes": 792826,
+      "sha256": "a966ec1a62564e0af77a9b998b84b3c2697105f20fae3e7376dbaade7c17cdc3"
+    },
+    "/assets/screenshots/v1.8/rewards-fr.png": {
+      "bytes": 803754,
+      "sha256": "e810bf7084ee386464f2b0877f96db3c23fd194a55ea4ea154596ac77e1151a2"
+    },
+    "/assets/screenshots/v1.8/tutorial-key-en.png": {
+      "bytes": 1281805,
+      "sha256": "e70104b008d19a5f586f25f011338012e725debbbee0691fdb02bdfcfce5334c"
+    },
+    "/assets/screenshots/v1.8/tutorial-key-fr.png": {
+      "bytes": 1286613,
+      "sha256": "6c4e78d785232be377ab3fa68d60e12171b0cc66382e503eaeb452eaac2a2c14"
+    },
+    "/assets/screenshots/v1.8/wardrobe-en.png": {
+      "bytes": 839625,
+      "sha256": "86c0626e7c9f8e96fbe7ee177cb7a3564662ae624d9da77388ff544c40acbdb3"
+    },
+    "/assets/screenshots/v1.8/wardrobe-fr.png": {
+      "bytes": 844903,
+      "sha256": "66643e02efb78176aa1a75a5d1338fba49692f1b5e9afeef1ffa765d03211ba9"
+    },
+    "/assets/screenshots/v1.9/avatar-studio-en.png": {
+      "bytes": 761584,
+      "sha256": "6bece7be72fc47176348f16cc6f6a232297d0ea513cd12c2980a06130f4f313f"
+    },
+    "/assets/screenshots/v1.9/first-practice-en.png": {
+      "bytes": 684265,
+      "sha256": "24313a28c7d8ce64d79ed0272a4e0f71a3b151445c7c92de332b6cca69a19837"
+    },
+    "/assets/screenshots/v1.9/guardian-5-one-cell-en.png": {
+      "bytes": 138607,
+      "sha256": "fcf68d6d0a5f48f8da0b0fa9b11cf35a595be1232fd0f138dc9bd6508e09eea7"
+    },
+    "/assets/screenshots/v1.9/home-en.png": {
+      "bytes": 834363,
+      "sha256": "09d626146b09ad56f07170c2d841f24ebbbe6f4b07f1f1d779ac8de62343945a"
+    },
+    "/assets/screenshots/v1.9/home-fr.png": {
+      "bytes": 838060,
+      "sha256": "dc43b921a5d8182b833478583a4d52509a39d4e26b8c18c689275fc7574a1070"
+    },
+    "/assets/screenshots/v1.9/map-1000-en.png": {
+      "bytes": 1194696,
+      "sha256": "678d3bef79c2db8c2f2c9e5520c2db9567d41b8ba86d9f12e9063e44700cd054"
+    },
+    "/assets/screenshots/v1.9/map-1000-fr.png": {
+      "bytes": 1200030,
+      "sha256": "91520a92bdacdcdd90aab7803d54bdafaf805c06421e6342e89267603750b59b"
+    },
+    "/assets/screenshots/v1.9/rewards-en.png": {
+      "bytes": 1089745,
+      "sha256": "f0ce028305a8aca0365e592afb0524433fe694314d046336882020288bfb834f"
+    },
+    "/assets/screenshots/v1.9/rewards-fr.png": {
+      "bytes": 1100034,
+      "sha256": "2ca7b860b4e163521d617c101931636247f950bb956fd2d02c99e7f830c0df36"
+    },
+    "/assets/screenshots/v1.9/tutorial-key-en.png": {
+      "bytes": 1021382,
+      "sha256": "200eb84ba93410bf1fe705ef05cb413cbbe81feb4ec1da91cdcea72fe484301f"
+    },
+    "/assets/screenshots/v1.9/tutorial-key-fr.png": {
+      "bytes": 1025050,
+      "sha256": "ec26fb7de54e8fa0417499dc34b9d3e94de50ee29e6de098fb6d7fca61b5ffed"
+    },
+    "/assets/screenshots/v1.9/wardrobe-en.png": {
+      "bytes": 810596,
+      "sha256": "9fc6e4e35bc6775723b72894e6b3ccd16d26dfcad832b9a0ff666b81b27aa900"
+    },
+    "/assets/screenshots/v1.9/wardrobe-fr.png": {
+      "bytes": 814016,
+      "sha256": "096b51a5318c114869000251edb7ec70553357802ad784f4eb96935f03b86818"
+    },
+    "/assets/site-v118.css": {
+      "bytes": 8072,
+      "sha256": "0d437e9749456ef554f552fd6603748ec4c898cf52b68489b974f5892f4b0db5"
+    },
+    "/assets/site-v118.js": {
+      "bytes": 4234,
+      "sha256": "3625e49f1d2126b0e7d870087ccc419693f52db9bd28332a25e660ac39edfcbf"
+    },
+    "/assets/site-v119.css": {
+      "bytes": 1951,
+      "sha256": "5845f1b892c77f1ff3311fbcdf75b3b67fec28ccab8ae8864590c0a3ea7286d6"
+    },
+    "/assets/site-v119.js": {
+      "bytes": 4222,
+      "sha256": "b7171957f94531bf6d6e859dd6b097ddfc4ebebe29055f3c99797ebbe04d3c4b"
+    },
+    "/assets/site.css": {
+      "bytes": 28239,
+      "sha256": "81cc9dee208368c477c2027c1069153c96dee55bc587fd64a0a2b4bda6a02ab1"
+    },
+    "/assets/site.js": {
+      "bytes": 4405,
+      "sha256": "29c0fed2ad0430c9d2b8506bdc31419dd47703a019a06fa451080b2bb227250e"
+    },
+    "/assets/style.css": {
+      "bytes": 22884,
+      "sha256": "c96901e3af93b34774530dcde920ef9f215b68666d91d858ebbb3858cc7a2a0c"
+    },
+    "/delete-account/index.html": {
+      "bytes": 12587,
+      "sha256": "0c30aed6e846765e3c3befa97d881c2402c7614c99c81fbdea00c8bc7e75e217"
+    },
+    "/index.html": {
+      "bytes": 30668,
+      "sha256": "626d0247cf194cf6e075b78514f5b8a68c818d53a80a76ef33d630ba3a94d5ea"
+    },
+    "/lab/ui-1-19/index.html": {
+      "bytes": 4018204,
+      "sha256": "525e6efcbd9bb34e26103e0bab213f46b6ce3719725745f954412459d88d2975"
+    },
+    "/notices/index.html": {
+      "bytes": 3548,
+      "sha256": "997076fccafc3de3691214e6ff79cb12803c5be4526d07a79d9f52c61e2f7588"
+    },
+    "/privacy/index.html": {
+      "bytes": 24060,
+      "sha256": "3a4e666de4e8105c80dda2934ae12fec3c98ec4d2a8bb3e9c393254acc0093a3"
+    },
+    "/releases/luma-drift-1.15.0-rc1.aab": {
+      "bytes": 11382438,
+      "sha256": "5653697409d4fa73b48ae0e6cf826eaf76169bd26a718ecc8365fce8850c3659"
+    },
+    "/releases/luma-drift-1.15.0-rc1.apk": {
+      "bytes": 7970422,
+      "sha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9"
+    },
+    "/releases/luma-drift-1.16.0-rc1.aab": {
+      "bytes": 11415156,
+      "sha256": "d62c8cb03da3af9b5aadab55b7c57faf0846d831c8cacbcb899f233d54e1c202"
+    },
+    "/releases/luma-drift-1.16.0-rc1.apk": {
+      "bytes": 7986806,
+      "sha256": "516be7f14ff2b80683de658b6df767f4b19dbb44580d57be36a307d330ed5a66"
+    },
+    "/releases/luma-drift-1.17.0-rc6.aab": {
+      "bytes": 74724470,
+      "sha256": "cfad9ff262e843ef0a2c7982964ff7ca41abf0e6df57cefa2c7c6b3d7d4e799b"
+    },
+    "/releases/luma-drift-1.17.0-rc6.apk": {
+      "bytes": 71827197,
+      "sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47"
+    },
+    "/releases/luma-drift-1.18.0-prototype1.apk": {
+      "bytes": 368887773,
+      "sha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2"
+    },
+    "/releases/luma-drift-1.18.0-sandbox-prototype1.apk": {
+      "bytes": 368887460,
+      "sha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06"
+    },
+    "/releases/luma-drift-1.19.0-prototype2.apk": {
+      "bytes": 368904157,
+      "sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526"
+    },
+    "/releases/luma-drift-1.19.0-sandbox-prototype2.apk": {
+      "bytes": 368903840,
+      "sha256": "448d359abb6d4943c6eadf9f03c221fd35d5fa18c21441817bb4c7a31bb87d11"
+    },
+    "/releases/manifest-1.15.0-rc1.json": {
+      "bytes": 26792,
+      "sha256": "6dc7942567d4129cff81bd2f531006a6076b5dec7292b18ea7555205628731c6"
+    },
+    "/releases/manifest-1.16.0-rc1.json": {
+      "bytes": 28116,
+      "sha256": "e5cbf5c7022d0231b24b6424b85a46b3a229fba409aea83c8956fe0905bd2987"
+    },
+    "/releases/manifest-1.17.0-rc6.json": {
+      "bytes": 34496,
+      "sha256": "9133ae6db0c465fb33573b78fb89bfc366f2f0181f2540fe5afa83cff9da81c2"
+    },
+    "/releases/manifest-1.18.0-prototype1.json": {
+      "bytes": 854,
+      "sha256": "d85b2b96bd4e5c38e21e49a093653116c573fd3b594c665bdffaf929fe6c055a"
+    },
+    "/releases/manifest-1.19.0-prototype2.json": {
+      "bytes": 1246,
+      "sha256": "3d7aaa0d344ec4376f4fe7d4529075ae5e0363e3fdd46967118171799c9eec59"
+    },
+    "/robots.txt": {
+      "bytes": 41,
+      "sha256": "273a38ddf3d5e34a9cc9cc68079c1b46294c9d2d7946343f346f720bb03697aa"
+    },
+    "/site-config.js": {
+      "bytes": 790,
+      "sha256": "6053074f0b45e54e14267e7d2316be8f68d981110c2376641653e039fc0f4f67"
+    }
+  }
+}

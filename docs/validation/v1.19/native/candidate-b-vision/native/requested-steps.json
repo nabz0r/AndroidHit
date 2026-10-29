@@ -1,0 +1,69 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "tula",
+      "orbit"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 25
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,tula,orbit",
+    "energy": 3,
+    "used": 0,
+    "credited": "0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "capture",
+    "name": "tula-vision-detail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 2,
+    "credited": "0",
+    "comboReady": false
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "capture",
+    "name": "tula-real-legal-highlights"
+  },
+  {
+    "op": "solve",
+    "level": 25
+  },
+  {
+    "op": "capture",
+    "name": "vision-role-real-u25-victory"
+  },
+  {
+    "op": "snapshot",
+    "name": "vision-after-earned-rewards"
+  }
+]

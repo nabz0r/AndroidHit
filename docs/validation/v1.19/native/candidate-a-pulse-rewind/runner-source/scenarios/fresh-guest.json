@@ -1,0 +1,125 @@
+[
+  {
+    "op": "firstlight"
+  },
+  {
+    "op": "assert-starter"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "fr-adventure-first"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_home"
+  },
+  {
+    "op": "capture",
+    "name": "fr-home-first"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "squad_entry"
+  },
+  {
+    "op": "capture",
+    "name": "fr-starter-team"
+  },
+  {
+    "op": "assert-owned-team",
+    "count": 1
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova",
+    "energy": 3,
+    "used": 0,
+    "credited": "0",
+    "comboReady": false,
+    "comboSpent": false
+  },
+  {
+    "op": "capture",
+    "name": "u1-before-talent"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "nova-talent-sheet"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova",
+    "energy": 1,
+    "used": 1,
+    "credited": "0",
+    "comboReady": false
+  },
+  {
+    "op": "capture",
+    "name": "nova-real-guide"
+  },
+  {
+    "op": "remember-battle",
+    "name": "nova-used"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "nova-once-used-refusal"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "nova-used"
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "assert-battle",
+    "energy": 3,
+    "used": 1,
+    "credited": "3"
+  },
+  {
+    "op": "capture",
+    "name": "u1-real-victory-with-energy"
+  },
+  {
+    "op": "snapshot",
+    "name": "genuine-u1-earned"
+  },
+  {
+    "op": "record-owned",
+    "name": "owned-after-u1"
+  }
+]

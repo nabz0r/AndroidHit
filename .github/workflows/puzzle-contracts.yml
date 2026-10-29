@@ -47,6 +47,8 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleLayout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/Adventure119Layout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SpriteGeometry.java
             /app/src/main/java/com/androidhit/lumadrift/audio/*.java
             /scripts/test-scene-transition-v117.sh
@@ -63,14 +65,21 @@ jobs:
             /scripts/test-site-v117.mjs
             /scripts/test-site-v116.mjs
             /scripts/test-site-v118.mjs
+            /scripts/test-site-v119.mjs
+            /scripts/apk-byte-delta.py
+            /scripts/test-apk-byte-delta.py
             /public/assets/site.js
             /public/index.html
+            /public/releases/manifest-1.19.0-*.json
             /public/assets/site-v118.js
             /public/assets/site-v118.css
+            /public/assets/site-v119.js
+            /public/assets/site-v119.css
             /public/assets/companion-gallery-v118.mjs
             /public/assets/gallery-core-v118.mjs
             /public/assets/companions-v118/*.json
             /docs/validation/site-v1.17/index.template.html
+            /docs/validation/site-v1.18/index.template.html
             /docs/validation/v1.7/audio/audio-biome-metrics.csv
             /docs/validation/v1.7/audio/legacy-pcm.sha256
             /scripts/test-relay-v115.sh
@@ -120,6 +129,16 @@ jobs:
             /scripts/ExpeditionV118ModelTest.java
             /scripts/ExpeditionV118StoreTest.java
             /scripts/CompanionMotionV118Test.java
+            /scripts/test-companion-battle-v119.sh
+            /scripts/CompanionBattleV119Test.java
+            /scripts/test-companion-action-v119.sh
+            /scripts/CompanionBattleActionV119Test.java
+            /scripts/test-squad-store-v119.sh
+            /scripts/SquadV119StoreTest.java
+            /scripts/test-companion-battle-v119-geometry.sh
+            /scripts/CompanionBattleV119GeometryTest.java
+            /scripts/test-adventure-v119-geometry.sh
+            /scripts/AdventureV119GeometryTest.java
             /scripts/AuditJourneyV114.java
             /scripts/ProgressionAnalysis.java
             /scripts/test-support/android/annotation/*.java
@@ -190,10 +209,14 @@ jobs:
       - name: Check puzzle gates, budgets, feedback and compact action reachability
         run: bash scripts/test-play-scene-v117-geometry.sh
 
-      - name: Check 1.18 and retained website language and deliberate audio controls
+      - name: Check 1.19 and retained website language, squad copy and deliberate media controls
         # Uses the runner's Node test runtime; no package install, SDK, network,
         # browser, Firebase deployment or native gameplay claim is involved.
-        run: node --test scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+        run: node --test scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+
+      - name: Check exact APK delta transport and refused artifact replacement
+        # Small generated ZIP fixtures only; no APK download or SDK is needed.
+        run: python3 scripts/test-apk-byte-delta.py
 
       - name: Check 1.18 expeditions, copies, durable costume choice and motion contracts
         # Pure Java only. Native H APKs/captures remain separate frozen release evidence.
@@ -201,6 +224,16 @@ jobs:
           bash scripts/test-expedition-v118-model.sh "$RUNNER_TEMP/luma-puzzle-contracts/expedition-model.json"
           bash scripts/test-expedition-v118-store.sh "$RUNNER_TEMP/luma-puzzle-contracts/expedition-store.json"
           bash scripts/test-companion-motion-v118.sh "$RUNNER_TEMP/luma-puzzle-contracts/companion-motion.json"
+
+      - name: Check 1.19 team ownership, durable skills, U-board effects and adventure/dock geometry
+        # Pure host contracts only. They neither log in nor call ads/payments;
+        # actual Android gestures and rendered acceptance remain separate evidence.
+        run: |
+          bash scripts/test-companion-battle-v119.sh
+          bash scripts/test-companion-action-v119.sh "$RUNNER_TEMP/luma-puzzle-contracts/companion-action-v119"
+          bash scripts/test-squad-store-v119.sh
+          bash scripts/test-companion-battle-v119-geometry.sh
+          bash scripts/test-adventure-v119-geometry.sh
 
       - name: Check power offers and preserved reward decisions
         run: sh scripts/test-power-offers-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json"

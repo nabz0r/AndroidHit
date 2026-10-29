@@ -1,0 +1,30 @@
+{
+  "edition": "1.19",
+  "version": "1.19.0-prototype2",
+  "version_code": 27,
+  "artifact_policy": "Ignored external signed APK files; never require Git blobs",
+  "candidate_report": "docs/validation/v1.19/candidate-c/candidate.json",
+  "candidate_report_sha256": "a3e8d25493335bd273fc120f5b784bfb0ba4d7ef61c327998196e281f2453317",
+  "apks": {
+    "production": {
+      "path": "releases/luma-drift-1.19.0-prototype2.apk",
+      "sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "bytes": 368904157,
+      "version": "1.19.0-prototype2",
+      "code": 27,
+      "application_id": "com.androidhit.lumadrift",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    },
+    "lab": {
+      "path": "releases/luma-drift-1.19.0-sandbox-prototype2.apk",
+      "sha256": "448d359abb6d4943c6eadf9f03c221fd35d5fa18c21441817bb4c7a31bb87d11",
+      "bytes": 368903840,
+      "version": "1.19.0-sandbox-prototype2",
+      "code": 27,
+      "application_id": "com.androidhit.lumadrift.sandbox",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    }
+  },
+  "publicly_published": false,
+  "live_services_validated": false
+}

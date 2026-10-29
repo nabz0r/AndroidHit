@@ -1,0 +1,123 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "true"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduce-motion-enabled-in-real-ui"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 25
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-play-before-skill"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-skill-scrolled"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 1,
+    "credited": "0"
+  },
+  {
+    "op": "remember-battle",
+    "name": "reduced-skill-committed"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-guide-static-highlight"
+  },
+  {
+    "op": "tap",
+    "regex": "Pause"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Resume"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "reduced-skill-committed"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-resumed-play"
+  },
+  {
+    "op": "solve",
+    "level": 25
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "false"
+  },
+  {
+    "op": "capture",
+    "name": "compact-real-ui-restores-animation-choice"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "compact-reduced-motion-complete"
+  }
+]

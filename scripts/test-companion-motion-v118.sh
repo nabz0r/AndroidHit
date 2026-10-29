@@ -11,6 +11,7 @@ else task_java_bin="$(dirname "$(command -v javac)")"; fi
     "$task_root"/scripts/test-support/android/content/*.java \
     "$task_root"/scripts/test-support/android/graphics/*.java \
     "$task_root"/app/src/main/java/com/androidhit/lumadrift/data/*.java \
+    "$task_root"/app/src/main/java/com/androidhit/lumadrift/engine/*.java \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig.java" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/ui/CompanionMotion.java" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig118.java" \

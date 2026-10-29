@@ -1,0 +1,161 @@
+{
+  "total_runners": 27,
+  "changed_runners": 17,
+  "cause": "CompanionBattleAction in data now imports Board/MoveBudget; standalone javac runners must include engine source dependencies.",
+  "app_changes": false,
+  "historical_evidence_rewritten": false,
+  "runners": [
+    {
+      "path": "scripts/test-companion-motion-v118.sh",
+      "previous_sha256": "b351fc6ddfac02258ee43f8e2db21ab0a0ed03ef7060bc4bc4b46bdf6d7523a0",
+      "changed": true,
+      "sha256": "003cf39bbfba6244385f488f765ca33156687f9294f20da6ca85087fba076860"
+    },
+    {
+      "path": "scripts/test-data.sh",
+      "previous_sha256": "00ed88b9c6baa0ae3b6d149fb2712f4372422ca3d96fcb63e243ac8d2f319308",
+      "changed": true,
+      "sha256": "723295ee1a6c84dff387662bed439c95a1778edf88e0af868543916ea9d719a6"
+    },
+    {
+      "path": "scripts/test-economy.sh",
+      "previous_sha256": "aadd56520b934d1f3cf641220b15e84604826754240ecb2d860ae3d5af06897a",
+      "changed": true,
+      "sha256": "647cfa79b13b5c3b45a302b16c04c32b4d574c5b73f2e1b676dea0739f64af46"
+    },
+    {
+      "path": "scripts/test-expedition-v118-model.sh",
+      "previous_sha256": "52d78e8e2adc64b26394481e3f899869ce6f2288d59877bf8b67be06b125d611",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-expedition-v118-store.sh",
+      "previous_sha256": "63adeeeddbcfdd79ffc45402a8903bbec13edeade07976acaf34f3ba68aadebf",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-first-light-v113.sh",
+      "previous_sha256": "9e2c19f8887c3e9db29b17c0274f9b344629f41653427a072150cf7a7ed74703",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-guardian-profiles-v19.sh",
+      "previous_sha256": "2b7b1014e7352a8bd10a6203798a52e56512d20ba4f79863e59e8464a59a676c",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-guardian-store-v19.sh",
+      "previous_sha256": "5caf8b01d32adc90c5ccffa6fdc84bf337521bcb090a875b2a97628c5ed9e315",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-home-v113.sh",
+      "previous_sha256": "dd02d4211b96a4eaea6e7af461a8294e3ddde71839763ead281e470f11f68662",
+      "changed": true,
+      "sha256": "878be4340b4bf0f0a45a33d348310cbaea235d6b8538dbbefeba50d514357e19"
+    },
+    {
+      "path": "scripts/test-home-v115-geometry.sh",
+      "previous_sha256": "6055b44c32c8d446f2fc3d3207c6241a5d9ce8a54bbd364d787196d182277f6a",
+      "changed": true,
+      "sha256": "95825d4a38ed638bcf410cabc540bfc3ea7899b3d710d9c0054f3b4013d08313"
+    },
+    {
+      "path": "scripts/test-home-v115.sh",
+      "previous_sha256": "9bb2c0af19d966dd2cafb18508f7b90d7fd7ea17138fabad852734e950aae0cf",
+      "changed": true,
+      "sha256": "81191e1e8f659c14ea785cf26a9269cefef76a3b941ffe768433643ab5f503a9"
+    },
+    {
+      "path": "scripts/test-home-v116-geometry.sh",
+      "previous_sha256": "041d9cd1da762051cabb9c1ba09368098bb9ff6d6c6f755e89b4dc6bbe4f8c52",
+      "changed": true,
+      "sha256": "1926ea8979f04260564b31587ff9d65e1bbfd2d95f660cc3f49cdb0e6a1f61cd"
+    },
+    {
+      "path": "scripts/test-inventory-presentation.sh",
+      "previous_sha256": "477426b3a32043c7b39f71edab305333f24878f4a664821b6df41d8fd4ac9009",
+      "changed": true,
+      "sha256": "2f74ae9955b235337a6b00583c2403af634471edd791cdc7613336014b03f15a"
+    },
+    {
+      "path": "scripts/test-journey-rewards-v19.sh",
+      "previous_sha256": "f132b2c54692a631c8a0dc8cfd82fec75b57510c31a065fc6440b9b78dafca05",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-local-save-v19.sh",
+      "previous_sha256": "0ebcde3943469d6ddea8af216f12e8dc6ad3f5a30f4c6e5a47514cdddc89736f",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-meta.sh",
+      "previous_sha256": "d4dc9b0f7e9375610413b32dfa651a3636a4e5c1f1f2aafdf81e5ca5c1ed46e5",
+      "changed": true,
+      "sha256": "f485c67cc73118cfb28458d5f9224eb91234e82b7c7129d7ce2d2cca95bc96d4"
+    },
+    {
+      "path": "scripts/test-new-player-v19.sh",
+      "previous_sha256": "1f8a31635b84923ff4b5249504fd377d35ed0bde15686bfcf21c41eff3d2ebd5",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-objective-models-v110.sh",
+      "previous_sha256": "f897c3b437aaec3b8d75f70d2a98feb3106a5f1012006d79d5426405675573da",
+      "changed": true,
+      "sha256": "616d086d6db320317c2755951e9b3aa9dabdc0ad22f8dcaac7b882f53d8a937f"
+    },
+    {
+      "path": "scripts/test-power-offers-v114.sh",
+      "previous_sha256": "35d2df04e113a2b9368818447b89e66feb7191616e37eab56beb933f69d4c5c2",
+      "changed": true,
+      "sha256": "bb29797b2b88ad43d3c8b43914ef34fbfe0940ee6420935918d6c55da7701c6f"
+    },
+    {
+      "path": "scripts/test-profile-summon-v116.sh",
+      "previous_sha256": "ddf35ccec0e189123fafd373f52599936858f64e7052aa379487ec4969b0c3c7",
+      "changed": true,
+      "sha256": "99e2b844dfc25db8b71b624c5926139517a64a40510f7d87a8d2842723c827f1"
+    },
+    {
+      "path": "scripts/test-rewards-cosmetics-v17.sh",
+      "previous_sha256": "26c9d5c9f487e0d5d1e14ed4690358562171b983a05c18ef2e22700edc4b0895",
+      "changed": true,
+      "sha256": "02e1b993aab211cab513521420fbc5bd7068129f00e5c342a895ab37b9f5fe8c"
+    },
+    {
+      "path": "scripts/test-squad-store-v119.sh",
+      "previous_sha256": "9523a6b2e3f9ab100f4751a5d09961b0b6018efe1715ab828a8dd88eee09dd18",
+      "changed": false
+    },
+    {
+      "path": "scripts/test-store-appearance-v111.sh",
+      "previous_sha256": "56c39393619c82a72d8adc3c6e5aae577af351acd4ebfb4725b352e480a9826a",
+      "changed": true,
+      "sha256": "47cfed99c7608a467d196c35132fe365d11ae653d7843e7c3c1114027878b449"
+    },
+    {
+      "path": "scripts/test-store-booster-v112.sh",
+      "previous_sha256": "f3140fcec651914265501f0eacb6826fd49ef6eefeb10ca50c59d401557ad9c0",
+      "changed": true,
+      "sha256": "4be8f88de9c877441af6ada6889a23bd334b3b83a8f57cea275298982ce9ee38"
+    },
+    {
+      "path": "scripts/test-store-externals-v111.sh",
+      "previous_sha256": "5485273c3d4bc36e01d8e0d737d9b637dbf2ebe22cb4e23834be6e898f228ffc",
+      "changed": true,
+      "sha256": "79011280069cfe6a544b2224f8cd87b9d4c34d13e370c6de7914aeb3ccf972f9"
+    },
+    {
+      "path": "scripts/test-store-init-v111.sh",
+      "previous_sha256": "d86869e2c755446b6ca4b6cfcf35c1328be831e16987545fd8803cfbeb5f1ccd",
+      "changed": true,
+      "sha256": "be4399c97f89e4e30b2d9aeb62bca8aa6d38bffbd5de46af7b95082efd816658"
+    },
+    {
+      "path": "scripts/test-tutorial-v18.sh",
+      "previous_sha256": "0a5b422dae9ed7156beb8755c95a5f93aa6e40d79547d806946cd445fa55f223",
+      "changed": false
+    }
+  ]
+}

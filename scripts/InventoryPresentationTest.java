@@ -51,7 +51,15 @@ public final class InventoryPresentationTest {
         Map<String,?> before=context.prefs.getAll();
         List<InventoryPresentation.Entry> companions=InventoryPresentation.companions(store),themes=InventoryPresentation.themes(store);
         List<InventoryPresentation.Entry> gear=InventoryPresentation.gear(store,(AvatarGearCatalog.Slot)null);
-        check(companions.size()==24&&themes.size()==6&&gear.size()==18,"Full catalogs represented exactly once");
+        check(companions.size()==37&&themes.size()==6&&gear.size()==18,"Current full catalogs represented exactly once");
+        Set<String> companionIds=new HashSet<>(),catalogIds=new HashSet<>();int originals=0,guests=0;
+        for(Catalog.CharacterItem character:Catalog.CHARACTERS)check(catalogIds.add(character.id),"Unique companion catalogue ID "+character.id);
+        for(InventoryPresentation.Entry entry:companions){
+            check(companionIds.add(entry.id),"Presentation cannot duplicate companion "+entry.id);
+            check(entry.kind==InventoryPresentation.Kind.COMPANION&&Catalog.character(entry.id)!=null,"Companion snapshot has a real companion type/ID");
+            if(entry.id.startsWith("lol_"))guests++;else originals++;
+        }
+        check(companionIds.equals(catalogIds)&&originals==24&&guests==13,"All 24 original and 13 guest identities present exactly once");
         check(InventoryPresentation.counts(companions).owned==1,"Only starter companion on a fresh profile");
         check(InventoryPresentation.counts(themes).owned==1,"Only starter theme on a fresh profile");
         InventoryPresentation.Counts gearCounts=InventoryPresentation.counts(gear);

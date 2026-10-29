@@ -1,0 +1,206 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "capture",
+    "name": "fr-three-member-team-final"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "capture",
+    "name": "fr-adventure-final"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_home"
+  },
+  {
+    "op": "capture",
+    "name": "fr-home-final"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 25
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,miko,orbit",
+    "energy": 3,
+    "used": 0,
+    "comboReady": false,
+    "comboSpent": false
+  },
+  {
+    "op": "capture",
+    "name": "three-real-actors-before-skills"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture-fast",
+    "name": "nova-fast-vfx"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "piece",
+    "row": 2,
+    "col": 4
+  },
+  {
+    "op": "assert-battle",
+    "energy": 2,
+    "used": 1,
+    "credited": "1"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "capture",
+    "name": "miko-trail-detail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture-fast",
+    "name": "miko-fast-vfx"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 0,
+    "used": 3,
+    "comboReady": true
+  },
+  {
+    "op": "capture",
+    "name": "miko-real-trail-combo-ready"
+  },
+  {
+    "op": "remember-battle",
+    "name": "miko-used-ready-combo"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "capture",
+    "name": "miko-once-used-refusal"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "miko-used-ready-combo"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_combo"
+  },
+  {
+    "op": "capture",
+    "name": "real-combo-detail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 3,
+    "credited": "3",
+    "comboReady": false,
+    "comboSpent": true
+  },
+  {
+    "op": "capture",
+    "name": "real-explicit-combo-exit"
+  },
+  {
+    "op": "piece",
+    "row": 3,
+    "col": 0
+  },
+  {
+    "op": "piece",
+    "row": 0,
+    "col": 1
+  },
+  {
+    "op": "assert-battle",
+    "energy": 3,
+    "used": 3,
+    "credited": "f",
+    "comboSpent": true
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_2"
+  },
+  {
+    "op": "capture",
+    "name": "orbit-flow-detail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture-fast",
+    "name": "orbit-fast-vfx"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 2,
+    "used": 7,
+    "credited": "3f",
+    "comboSpent": true
+  },
+  {
+    "op": "capture",
+    "name": "orbit-real-two-certified-exits"
+  },
+  {
+    "op": "solve",
+    "level": 25
+  },
+  {
+    "op": "capture",
+    "name": "three-family-u25-real-victory"
+  },
+  {
+    "op": "snapshot",
+    "name": "core-team-combo-complete"
+  }
+]

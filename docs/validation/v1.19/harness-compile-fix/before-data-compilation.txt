@@ -1,0 +1,89 @@
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:3: error: package com.androidhit.lumadrift.engine does not exist
+import com.androidhit.lumadrift.engine.Board;
+                                      ^
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:4: error: package com.androidhit.lumadrift.engine does not exist
+import com.androidhit.lumadrift.engine.MoveBudget;
+                                      ^
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:40: error: cannot find symbol
+    public static Draft prepare(Board board,MoveBudget budget,int mode,int undos,
+                                ^
+  symbol:   class Board
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:40: error: cannot find symbol
+    public static Draft prepare(Board board,MoveBudget budget,int mode,int undos,
+                                            ^
+  symbol:   class MoveBudget
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:111: error: cannot find symbol
+    private static boolean certifiesCompletion(Board from,int[] plan) {
+                                               ^
+  symbol:   class Board
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:18: error: cannot find symbol
+        public final Board board;
+                     ^
+  symbol:   class Board
+  location: class Draft
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:19: error: cannot find symbol
+        public final MoveBudget budget;
+                     ^
+  symbol:   class MoveBudget
+  location: class Draft
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:25: error: cannot find symbol
+        private Draft(Board board,MoveBudget budget,CompanionBattle.State state,int undos,
+                      ^
+  symbol:   class Board
+  location: class Draft
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:25: error: cannot find symbol
+        private Draft(Board board,MoveBudget budget,CompanionBattle.State state,int undos,
+                                  ^
+  symbol:   class MoveBudget
+  location: class Draft
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:44: error: package MoveBudget does not exist
+        MoveBudget.Snapshot oldBudget=budget.snapshot();
+                  ^
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:45: error: cannot find symbol
+        if(oldBudget.mode!=0||oldBudget.policyVersion!=MoveBudget.RELAY_POLICY_VERSION)return null;
+                                                       ^
+  symbol:   variable MoveBudget
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:46: error: package Board does not exist
+        Board.Snapshot original=board.snapshot();int[] history=board.history();
+             ^
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:47: error: cannot find symbol
+        Board candidate=new Board(board.level);
+        ^
+  symbol:   class Board
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:47: error: cannot find symbol
+        Board candidate=new Board(board.level);
+                            ^
+  symbol:   class Board
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:50: error: cannot find symbol
+        MoveBudget ledger=MoveBudget.restoreVersion(oldBudget.policyVersion,oldBudget.mode,board.level,
+        ^
+  symbol:   class MoveBudget
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:50: error: cannot find symbol
+        MoveBudget ledger=MoveBudget.restoreVersion(oldBudget.policyVersion,oldBudget.mode,board.level,
+                          ^
+  symbol:   variable MoveBudget
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:95: error: package Board does not exist
+                        Board.MoveResult result=ledger.attempt(candidate,plan[index]);
+                             ^
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:113: error: cannot find symbol
+        Board verification=new Board(from.level);
+        ^
+  symbol:   class Board
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:113: error: cannot find symbol
+        Board verification=new Board(from.level);
+                               ^
+  symbol:   class Board
+  location: class CompanionBattleAction
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java:117: error: package Board does not exist
+            Board.MoveResult result=verification.performAction(id);
+                 ^
+20 errors

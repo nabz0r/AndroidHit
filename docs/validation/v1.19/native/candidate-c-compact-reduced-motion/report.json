@@ -1,0 +1,524 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T19:57:40.070538+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "compact-reduced-motion",
+  "expected_version": "1.19.0-prototype2",
+  "expected_code": 27,
+  "apk_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+  "observer_sha256": "821c3af1936e831807029da2a5bf221d79819f0d7d757d9dd78f9f6eaf52f82d",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "e08ff20d-ab7f-4b5c-9ff0-77d673c0b6ea",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400\nOverride size: 720x1280",
+    "density": "Physical density: 420\nOverride density: 320"
+  },
+  "native": {
+    "passed": true,
+    "phase": "compact-reduced-motion",
+    "runToken": "e08ff20d-ab7f-4b5c-9ff0-77d673c0b6ea",
+    "processId": 14001,
+    "checkCount": 39,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference reduce_motion = true"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U30 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy remains bounded"
+      },
+      {
+        "passed": true,
+        "message": "Actual board energy = 1"
+      },
+      {
+        "passed": true,
+        "message": "Actual once-per-avatar usage mask = 1"
+      },
+      {
+        "passed": true,
+        "message": "Actual once-per-piece receipt mask"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Battle remains exactly unchanged: reduced-skill-committed"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 5"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 6"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 7"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 8"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U25 step 9"
+      },
+      {
+        "passed": true,
+        "message": "Real native U25 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches .*Daily rewards.*"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference reduce_motion = false"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 23,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2717875,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          607,
+          86,
+          705,
+          193
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2718409,
+        "label": "English",
+        "bounds": [
+          258,
+          885,
+          461,
+          992
+        ]
+      },
+      {
+        "reason": "Settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2719425,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          607,
+          86,
+          705,
+          193
+        ]
+      },
+      {
+        "reason": "Reduce motion:.*",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2719962,
+        "label": "Reduce motion: Off",
+        "bounds": [
+          44,
+          679,
+          675,
+          784
+        ]
+      },
+      {
+        "reason": "open-real-level-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2722309,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          33,
+          928,
+          236,
+          1070
+        ]
+      },
+      {
+        "reason": "open-real-U25",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2723758,
+        "label": "Level 25, Normal, Keys & walls",
+        "bounds": [
+          273,
+          426,
+          413,
+          523
+        ]
+      },
+      {
+        "reason": "start-real-U25",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2724323,
+        "label": "Play  →",
+        "resourceId": "com.androidhit.lumadrift:id/briefing_play",
+        "bounds": [
+          44,
+          988,
+          675,
+          1091
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2726242,
+        "label": "Nova. Guiding star. Ready. 2 Energy",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          29,
+          215,
+          240,
+          381
+        ]
+      },
+      {
+        "reason": "battle_skill_activate",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2728458,
+        "label": "Activate",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_activate",
+        "bounds": [
+          44,
+          860,
+          675,
+          968
+        ]
+      },
+      {
+        "reason": "Pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2730342,
+        "label": "Pause",
+        "bounds": [
+          36,
+          93,
+          125,
+          182
+        ]
+      },
+      {
+        "reason": "Resume",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2732259,
+        "label": "Resume",
+        "bounds": [
+          81,
+          616,
+          638,
+          707
+        ]
+      },
+      {
+        "reason": "real-piece-2-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2734146,
+        "label": "Piece, row 3, column 5, arrow right, Gate open, Switch: down",
+        "bounds": [
+          505,
+          874,
+          601,
+          971
+        ]
+      },
+      {
+        "reason": "real-piece-4-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2734742,
+        "label": "Piece, row 5, column 4, arrow down, Gate open, Switch: left",
+        "bounds": [
+          408,
+          1067,
+          505,
+          1164
+        ]
+      },
+      {
+        "reason": "real-piece-3-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2735309,
+        "label": "Piece, row 4, column 1, arrow left, Gate open, Switch: up",
+        "bounds": [
+          118,
+          971,
+          214,
+          1067
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2735909,
+        "label": "Key 1, Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          214,
+          680,
+          311,
+          777
+        ]
+      },
+      {
+        "reason": "real-piece-4-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2736465,
+        "label": "Piece, row 5, column 2, arrow up, Gate open",
+        "bounds": [
+          214,
+          1067,
+          311,
+          1164
+        ]
+      },
+      {
+        "reason": "real-piece-1-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2737064,
+        "label": "Piece, row 2, column 4, arrow right, Gate open",
+        "bounds": [
+          408,
+          777,
+          505,
+          874
+        ]
+      },
+      {
+        "reason": "real-piece-1-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2737638,
+        "label": "Piece, row 2, column 1, arrow up, Gate open",
+        "bounds": [
+          118,
+          777,
+          214,
+          874
+        ]
+      },
+      {
+        "reason": "real-piece-4-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2738209,
+        "label": "Piece, row 5, column 3, arrow left, Gate open",
+        "bounds": [
+          311,
+          1067,
+          408,
+          1164
+        ]
+      },
+      {
+        "reason": "real-piece-3-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2738826,
+        "label": "Piece, row 4, column 3, arrow down, Gate open",
+        "bounds": [
+          311,
+          971,
+          408,
+          1067
+        ]
+      },
+      {
+        "reason": "rewards_entry",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2742692,
+        "label": "Rewards",
+        "resourceId": "com.androidhit.lumadrift:id/rewards_entry",
+        "bounds": [
+          92,
+          932,
+          627,
+          1032
+        ]
+      },
+      {
+        "reason": "Settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2745096,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          607,
+          86,
+          705,
+          193
+        ]
+      },
+      {
+        "reason": "Reduce motion:.*",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2745661,
+        "label": "Reduce motion: On",
+        "bounds": [
+          44,
+          679,
+          675,
+          784
+        ]
+      }
+    ],
+    "captures": [
+      "compact-reduce-motion-enabled-in-real-ui",
+      "compact-reduced-play-before-skill",
+      "compact-reduced-skill-scrolled",
+      "compact-reduced-guide-static-highlight",
+      "compact-reduced-pause",
+      "compact-reduced-resumed-play",
+      "compact-en-rewards-centre-reaches-rewards",
+      "compact-real-ui-restores-animation-choice"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 39.341,
+  "evidence_sha256": {
+    "battle-observer.apk": "821c3af1936e831807029da2a5bf221d79819f0d7d757d9dd78f9f6eaf52f82d",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "17c92e78aaccf94e17492d8d0a24354fd9434c0a926f10dc2b5a6c7abea37d22",
+    "native/after.json": "9af096676ee8c251eaa8b476da68b48f3f888c2507b1e8f7c6fa8a72ad78ede8",
+    "native/before.json": "7cd2d980557c7a39f22e20e602d9c9f21eb872ef96a78e3bb57ecd9518637fbd",
+    "native/compact-en-rewards-centre-reaches-rewards-accessibility.json": "fbcb218cb98dc64b952f17735c86ab17691d27f83a15ce342a17458e42d2ef2c",
+    "native/compact-en-rewards-centre-reaches-rewards.png": "a0066384a04c165f7a504ca14026c7b362dea719b6a5e848fa5002f94c75c789",
+    "native/compact-real-ui-restores-animation-choice-accessibility.json": "98f78a4a28269416deec6fbd89451372de3b04344cb280a9ebdff7656043eb7c",
+    "native/compact-real-ui-restores-animation-choice.png": "acd8d8057453a92bea2be7718ea7259ec034c19b5195320a6a94fdd4ee5021f4",
+    "native/compact-reduce-motion-enabled-in-real-ui-accessibility.json": "8a682fb46c436b9b420944226ede8c6c44d85e50246674015fc7e7a971640577",
+    "native/compact-reduce-motion-enabled-in-real-ui.png": "04710497371e0fb4172ef81bd41505937df51e6797150fe41044c2503426142c",
+    "native/compact-reduced-guide-static-highlight-accessibility.json": "cfa901836c876400ba076f9ded0325778a21b732a5ac69eba1575c1248370cd7",
+    "native/compact-reduced-guide-static-highlight.png": "b760d04f6cd6dcc3f16b10de1029124d8028957c444127b34599f5d3c2e277dc",
+    "native/compact-reduced-motion-complete.json": "9af096676ee8c251eaa8b476da68b48f3f888c2507b1e8f7c6fa8a72ad78ede8",
+    "native/compact-reduced-pause-accessibility.json": "bcd762f333e8fd5b8c443b565bfe9d8ca0bdacb4ecff16b1597a971bbd9474c8",
+    "native/compact-reduced-pause.png": "66ff1bee49b33e67f7b94ea50c4b804dedd70523d9fabdd60b7a655a4311bf68",
+    "native/compact-reduced-play-before-skill-accessibility.json": "63961ec5e6f0d4c13d29c397cc5f576f22f98d91224fc1f42f6850f0bcdd4dd2",
+    "native/compact-reduced-play-before-skill.png": "2a6c4b8625ef7ef2d110d97c37209f7511e0dab05fefc292bef58a4f0fd26a4b",
+    "native/compact-reduced-resumed-play-accessibility.json": "cfa901836c876400ba076f9ded0325778a21b732a5ac69eba1575c1248370cd7",
+    "native/compact-reduced-resumed-play.png": "b760d04f6cd6dcc3f16b10de1029124d8028957c444127b34599f5d3c2e277dc",
+    "native/compact-reduced-skill-scrolled-accessibility.json": "b6e533233b10bb37e4a719e49a2d157b3fd1850253f9f96e51f133d25ab254e2",
+    "native/compact-reduced-skill-scrolled.png": "ce3397d821f8e8160d125306322e56beb4d2c6f8682e080199d3b4083ebbe135",
+    "native/report.json": "866107fd6b4f13238e3c2936d2a0bd750ae5da1427891b899a7cb55e9ee53ba8",
+    "native/requested-steps.json": "9ba35ea61c25629c96b3dc0d86cc9e37ebf708d4784510bc3dc4e2458b64bd36",
+    "observer-install.txt": "731d4d4c2354a66e09f7465c03dd2d504690fd0e41dc874d89fa88d05928ff9c",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "37f89ebee055870197967a9275e06fe48b855ef7bcf3c1d16ef45d9d6d342ec6",
+    "source-snapshot.json": "f394539f5153ee2df8168db17ccfb47efe3cde77f4fbe91c935ce5f197ce0e89"
+  }
+}
