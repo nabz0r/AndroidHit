@@ -53,6 +53,7 @@ public final class LumaView extends View {
     private final PremiumUi premium=new PremiumUi();
     private final ScenicUi scenic=new ScenicUi();
     private final SceneTransition sceneTransition=new SceneTransition();
+    private SceneRootLayout sceneRootLayout;
     private final SceneTransition.RootSwipe rootSwipe=new SceneTransition.RootSwipe();
     private SceneTransition.Direction nextSceneDirection=SceneTransition.Direction.FORWARD;
     private final HashMap<String,Bitmap> scenery=new HashMap<>();
@@ -609,6 +610,16 @@ public final class LumaView extends View {
         scenic.object(c,bounds,accent,pressed!=null&&pressed.name.equals(name),kind);
         sceneCaption(c,name,x,y+size*.57f,Math.max(76,size+30),15);hit(bounds.left-6,bounds.top-5,bounds.width()+12,bounds.height()+29,name,action);
     }
+    private SceneRootLayout rootLayout(){
+        float minimumText=minimumTextSize(),minimumTouch=48*getResources().getDisplayMetrics().density/Math.max(.01f,scale);
+        if(sceneRootLayout==null||sceneRootLayout.height!=viewportH||sceneRootLayout.minimumText!=minimumText||sceneRootLayout.minimumTouch!=minimumTouch)sceneRootLayout=new SceneRootLayout(viewportH,minimumText,minimumTouch);
+        return sceneRootLayout;
+    }
+    private void sceneDestination(Canvas c,ScenicUi.Kind kind,String name,SceneRootLayout.Destination place,int accent,Runnable action){
+        sceneDestination(c,kind,name,place.x,place.y,place.size,accent,action);
+    }
+    private RectF sceneRect(SceneRootLayout.Rect rect){return new RectF(rect.left,rect.top,rect.right,rect.bottom);}
+    private void sceneHit(SceneRootLayout.Rect rect,String name,Runnable action){hit(rect.left,rect.top,rect.width(),rect.height(),name,action);}
     private void sceneCaption(Canvas c,String name,float x,float baseline,float width,float size){
         p.setTypeface(bold);p.setTextSize(Math.max(minimumTextSize(),size));p.setColor(0xff45315e);p.setShadowLayer(5,0,1,0xfffaf5ff);
         String value=android.text.TextUtils.ellipsize(name,p,width,android.text.TextUtils.TruncateAt.END).toString();c.drawText(value,x-p.measureText(value)/2,baseline,p);p.clearShadowLayer();
@@ -618,9 +629,9 @@ public final class LumaView extends View {
         fit(c,title,23,46,29,258,TEXT,true,false);if(subtitle!=null)fit(c,subtitle,24,70,12,326,TEXT,false,false);wallet(c,282,15);
     }
     private void sceneSiblings(Canvas c){
-        int index=rootIndex();float y=viewportH-78;
-        if(index>0){final String destination=rootPlaces[index-1];sceneDestination(c,index-1==0?ScenicUi.Kind.COMPASS:index-1==1?ScenicUi.Kind.HOUSE:ScenicUi.Kind.MIRROR,screenTitle(destination),42,y,51,0xff9b8fcb,()->{nextSceneDirection=SceneTransition.Direction.RIGHT;goRoot(destination);});}
-        if(index>=0&&index<rootPlaces.length-1){final String destination=rootPlaces[index+1];sceneDestination(c,index+1==1?ScenicUi.Kind.HOUSE:index+1==2?ScenicUi.Kind.MIRROR:ScenicUi.Kind.BLUEPRINT,screenTitle(destination),348,y,51,0xff789fca,()->{nextSceneDirection=SceneTransition.Direction.LEFT;goRoot(destination);});}
+        int index=rootIndex();SceneRootLayout positions=rootLayout();
+        if(index>0){final String destination=rootPlaces[index-1];sceneDestination(c,index-1==0?ScenicUi.Kind.COMPASS:index-1==1?ScenicUi.Kind.HOUSE:ScenicUi.Kind.MIRROR,screenTitle(destination),positions.previous,0xff9b8fcb,()->{nextSceneDirection=SceneTransition.Direction.RIGHT;goRoot(destination);});}
+        if(index>=0&&index<rootPlaces.length-1){final String destination=rootPlaces[index+1];sceneDestination(c,index+1==1?ScenicUi.Kind.HOUSE:index+1==2?ScenicUi.Kind.MIRROR:ScenicUi.Kind.BLUEPRINT,screenTitle(destination),positions.next,0xff789fca,()->{nextSceneDirection=SceneTransition.Direction.LEFT;goRoot(destination);});}
         for(int i=0;i<4;i++){p.setColor(i==index?0xff816596:0x55816596);c.drawCircle(180+i*10,viewportH-18,i==index?2.8f:1.7f,p);}
     }
     private void confirmInScene(String title,String message,Runnable action){sceneConfirmTitle=title;sceneConfirmText=message;sceneConfirmAction=action;pressed=null;hits.clear();invalidate();}
@@ -1173,28 +1184,29 @@ public final class LumaView extends View {
     /** Each destination owns a single visual task; the puzzle never carries this chrome. */
     private void drawAdventure(Canvas c){
         ensureHub();int current=Math.min(1000,store.unlockedLevel());drawScenery(c,"adventure");sceneHeading(c,r("adventure"),worldName(current));
-        float middle=viewportH*.45f;
+        SceneRootLayout positions=rootLayout();float middle=positions.adventurePortal.y;
         sceneAura(c,new RectF(70,middle-140,320,middle+115),0xff7c70cf,frameTime,reduceMotion);
-        sceneDestination(c,ScenicUi.Kind.PORTAL,t(board!=null&&!won&&!board.isSolved()?"resume":"play"),195,middle,178,0xff7c78d5,()->continueGame());
-        sceneCaption(c,t("level_number",current),195,middle+125,260,22);
-        sceneDestination(c,ScenicUi.Kind.BOOK,r("all_levels"),76,viewportH*.70f,92,0xffa686c6,()->{journeyTab=0;go("journey");});
-        sceneDestination(c,ScenicUi.Kind.LANTERN,r("events"),304,viewportH*.70f,92,0xffd59cbf,()->go("events"));
-        sceneDestination(c,ScenicUi.Kind.CHEST,r("rewards"),195,viewportH*.77f,97,0xffd4a25b,()->openRewards(3));
-        sceneDestination(c,ScenicUi.Kind.GEAR,t("settings"),349,99,43,0xffa99dc7,()->go("settings"));sceneSiblings(c);H=viewportH;
+        sceneDestination(c,ScenicUi.Kind.PORTAL,t(board!=null&&!won&&!board.isSolved()?"resume":"play"),positions.adventurePortal,0xff7c78d5,()->continueGame());
+        sceneCaption(c,t("level_number",current),195,positions.adventureLevelBaseline,positions.adventureLevelCaption.width(),22);
+        sceneDestination(c,ScenicUi.Kind.BOOK,r("all_levels"),positions.adventureLevels,0xffa686c6,()->{journeyTab=0;go("journey");});
+        sceneDestination(c,ScenicUi.Kind.LANTERN,r("events"),positions.adventureEvents,0xffd59cbf,()->go("events"));
+        sceneDestination(c,ScenicUi.Kind.CHEST,r("rewards"),positions.adventureRewards,0xffd4a25b,()->openRewards(3));
+        sceneDestination(c,ScenicUi.Kind.GEAR,t("settings"),positions.adventureSettings,0xffa99dc7,()->go("settings"));sceneSiblings(c);H=viewportH;
     }
     private void drawCollectionHub(Canvas c){
         drawScenery(c,"collection");sceneHeading(c,r("collection"),d("look_book"));
-        sceneCaption(c,flagGlyph(store.playerFlag())+"  "+store.playerNickname(),170,104,292,20);hit(24,78,306,46,r("profile"),()->go("profile"));
-        float cy=viewportH*.41f, radius=Math.min(84,viewportH*.105f);dressedMascot(c,195,cy,radius);
-        hit(85,cy-radius*1.95f,220,radius*3.9f,r("wardrobe"),()->go("wardrobe"));sceneCaption(c,t(character.nameKey),195,cy+radius*1.95f,280,22);
-        sceneDestination(c,ScenicUi.Kind.MIRROR,r("wardrobe"),62,viewportH*.54f,70,0xffae8fc5,()->go("wardrobe"));
-        sceneDestination(c,ScenicUi.Kind.CAPSULE,d("summon"),313,viewportH*.54f,83,0xffb9a0dc,()->go("summon"));
-        float companionsY=viewportH*.76f;
+        SceneRootLayout positions=rootLayout();
+        sceneCaption(c,flagGlyph(store.playerFlag())+"  "+store.playerNickname(),170,104,292,20);sceneHit(positions.collectionProfileHit,r("profile"),()->go("profile"));
+        float cy=positions.collectionPortraitY, radius=positions.collectionPortraitRadius;dressedMascot(c,195,cy,radius);
+        sceneHit(positions.collectionPortraitHit,r("wardrobe"),()->go("wardrobe"));sceneCaption(c,t(character.nameKey),195,positions.collectionNameBaseline,280,22);
+        sceneDestination(c,ScenicUi.Kind.MIRROR,r("wardrobe"),positions.collectionWardrobe,0xffae8fc5,()->go("wardrobe"));
+        sceneDestination(c,ScenicUi.Kind.CAPSULE,d("summon"),positions.collectionSummon,0xffb9a0dc,()->go("summon"));
+        float companionsY=positions.collectionRowY;
         companionPortrait.draw(c,Catalog.character("miko"),70,companionsY-3,18,AvatarStyles.find("plush_classic"),AvatarStage.Pose.IDLE,frameTime,reduceMotion,null,Collections.emptyList());
         companionPortrait.draw(c,Catalog.character("nova"),101,companionsY+4,22,AvatarStyles.find("plush_classic"),AvatarStage.Pose.IDLE,frameTime,reduceMotion,null,Collections.emptyList());
-        sceneCaption(c,d("my_companions"),88,companionsY+49,132,14);hit(30,companionsY-50,118,114,d("my_companions"),()->{collectionTab=0;collectionPage=0;inventoryFilter=0;go("collection");});
-        sceneDestination(c,ScenicUi.Kind.MEDAL,d("badges"),195,viewportH*.76f,79,0xffd8ab5d,()->{profileBadgeSlot=0;go("badges");});
-        sceneDestination(c,ScenicUi.Kind.DUMMY,r("equipment"),303,viewportH*.76f,83,0xff86b6ac,()->{collectionTab=2;collectionPage=0;inventoryFilter=0;go("collection");});
+        sceneCaption(c,d("my_companions"),88,companionsY+49,132,14);sceneHit(positions.collectionCompanionsHit,d("my_companions"),()->{collectionTab=0;collectionPage=0;inventoryFilter=0;go("collection");});
+        sceneDestination(c,ScenicUi.Kind.MEDAL,d("badges"),positions.collectionBadges,0xffd8ab5d,()->{profileBadgeSlot=0;go("badges");});
+        sceneDestination(c,ScenicUi.Kind.DUMMY,r("equipment"),positions.collectionEquipment,0xff86b6ac,()->{collectionTab=2;collectionPage=0;inventoryFilter=0;go("collection");});
         sceneSiblings(c);H=viewportH;
     }
     private String flagGlyph(String code){
@@ -1301,12 +1313,12 @@ public final class LumaView extends View {
 
     private void drawAtelier(Canvas c){
         drawScenery(c,"atelier");sceneHeading(c,r("atelier"),h("room_title"));
-        float y=viewportH*.31f;homeScene.drawItem(c,"sofa",new RectF(78,y-88,319,y+100),frameTime,reduceMotion);
-        sceneCaption(c,h("furniture")+" · "+HomeCatalog.ITEMS.size(),195,y+120,330,22);hit(48,y-105,294,254,h("furniture"),()->{homeCatalogGroup=0;homeCatalogTab=0;go("home_catalog");});
+        SceneRootLayout positions=rootLayout();homeScene.drawItem(c,"sofa",sceneRect(positions.atelierSofaArt),frameTime,reduceMotion);
+        sceneCaption(c,h("furniture")+" · "+HomeCatalog.ITEMS.size(),195,positions.atelierSofaBaseline,330,22);sceneHit(positions.atelierSofaHit,h("furniture"),()->{homeCatalogGroup=0;homeCatalogTab=0;go("home_catalog");});
         String[] names={r("stellar"),r("forest"),r("neon")};String[] ids={"aquarium","plant","arcade"};int[] colors={0xffa794d4,0xff8cb58d,0xffcf95bb};
-        for(int i=0;i<3;i++){final int group=i;float x=68+i*127,yy=viewportH*.61f;homeScene.drawItem(c,ids[i],new RectF(x-49,yy-65,x+49,yy+40),frameTime,reduceMotion);sceneCaption(c,names[i],x,yy+66,117,14);hit(x-56,yy-73,112,157,names[i],()->{homeCatalogTab=0;homeCatalogGroup=group+1;go("home_catalog");});}
-        sceneDestination(c,ScenicUi.Kind.BLUEPRINT,h("wallpaper"),123,viewportH*.80f,78,0xffc8a1cd,()->{homeCatalogTab=1;homeCatalogGroup=0;go("home_catalog");});
-        sceneDestination(c,ScenicUi.Kind.LEAF,h("floor"),268,viewportH*.80f,78,0xff9cb898,()->{homeCatalogTab=2;homeCatalogGroup=0;go("home_catalog");});sceneSiblings(c);H=viewportH;
+        for(int i=0;i<3;i++){final int group=i;float x=68+i*127,yy=positions.atelierGroupY;homeScene.drawItem(c,ids[i],sceneRect(positions.atelierGroupArt[i]),frameTime,reduceMotion);sceneCaption(c,names[i],x,yy+66,117,14);sceneHit(positions.atelierGroupHit[i],names[i],()->{homeCatalogTab=0;homeCatalogGroup=group+1;go("home_catalog");});}
+        sceneDestination(c,ScenicUi.Kind.BLUEPRINT,h("wallpaper"),positions.atelierWalls,0xffc8a1cd,()->{homeCatalogTab=1;homeCatalogGroup=0;go("home_catalog");});
+        sceneDestination(c,ScenicUi.Kind.LEAF,h("floor"),positions.atelierFloor,0xff9cb898,()->{homeCatalogTab=2;homeCatalogGroup=0;go("home_catalog");});sceneSiblings(c);H=viewportH;
     }
     private void houseZoom(Canvas c,String glyph,String description,float x,float y,Runnable action){
         scenic.object(c,new RectF(x,y,x+48,y+48),0xff9c99c8,false,glyph.equals("+")?ScenicUi.Kind.ZOOM_IN:ScenicUi.Kind.ZOOM_OUT);hit(x,y,48,48,description,action);
@@ -1353,8 +1365,9 @@ public final class LumaView extends View {
                 sceneAction(c,t("cancel"),135,viewportH-83,120,()->{homeSelection="";homeDraft=null;});
             }
         }else{
-            sceneDestination(c,ScenicUi.Kind.BLUEPRINT,h("decorate"),320,viewportH-174,74,0xff8bb7aa,()->startHomeDecorating());
-            sceneDestination(c,ScenicUi.Kind.MIRROR,r("wardrobe"),64,viewportH-174,74,0xffb79ed0,()->go("wardrobe"));
+            SceneRootLayout positions=rootLayout();
+            sceneDestination(c,ScenicUi.Kind.BLUEPRINT,h("decorate"),positions.homeDecorate,0xff8bb7aa,()->startHomeDecorating());
+            sceneDestination(c,ScenicUi.Kind.MIRROR,r("wardrobe"),positions.homeWardrobe,0xffb79ed0,()->go("wardrobe"));
             sceneSiblings(c);
         }
         H=viewportH;

@@ -15,8 +15,8 @@ android {
         applicationId 'com.androidhit.lumadrift'
         minSdk 26
         targetSdk 36
-        versionCode 21
-        versionName '1.17.0-rc3'
+        versionCode 22
+        versionName '1.17.0-rc4'
         buildConfigField 'String', 'WALLET_API_BASE_URL', '"' + walletUrl + '"'
         buildConfigField 'String', 'SOCIAL_API_BASE_URL', '"https://luma-wallet-369472826910.europe-west1.run.app"'
         buildConfigField 'boolean', 'PAID_COSMETIC_DRAWS_ENABLED', 'false'
@@ -33,7 +33,7 @@ android {
         lab {
             dimension 'channel'
             applicationIdSuffix '.sandbox'
-            versionName '1.17.0-sandbox-rc3'
+            versionName '1.17.0-sandbox-rc4'
             buildConfigField 'boolean', 'MODE_SANDBOX', 'true'
             buildConfigField 'boolean', 'FORCE_TEST_ADS', 'true'
             manifestPlaceholders = [appLabel: 'Luma Drift Lab', admobAppId: 'ca-app-pub-3940256099942544~3347511713']
