@@ -33,6 +33,10 @@ Production APK: **71,827,197bytes**, SHA-256 `15546854a856ecc5052aa79acdd4972443
 
 H clean audio is distinct from an observer-label failure and a separate11check/2PNG recovery. The clean result matches both its own initial snapshot and the original pre-failure snapshot across complete game/meta/non-active-session state. Recovery counts are not added. Native track counters establish digital execution; they do not establish physical-speaker quality or real external audio-focus competition.
 
+## Public delivery
+
+Four immutable GitHub package downloads match the [canonical hashes](publication.json). The deployed-source [remote contract workflow](ci-remote-website.json) passes. The existing Firebase site serves sixteen exact H native captures, four synthesizer previews and exact production downloads;174payloads/3aliases pass independent public-byte verification. Eight public responsive FR/EN states and four deliberate audio playbacks pass. [Website, browser and Hosting records](../site-v1.17/README.md).
+
 ## Host coverage and native boundaries
 
 U covers every one of1,000 boards and191954 reachable states/471517 transitions with13312469 assertions. The complete workflow also covers all1240 L/M strategy boards and all100 Guardians, retained codes/P challenges, budget/store/calendar/collection rules, learning, home/profile/summon, roots, sprites, transitions, DSP/lifecycle and website controllers. Historical E procedural seeds are sampled, not called an infinite exhaustive catalogue. [Expanded family coverage](legacy-host-f/README.md).

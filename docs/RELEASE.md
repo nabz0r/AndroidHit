@@ -1,6 +1,6 @@
 # Installation and release artifacts
 
-**Current status: H (1.17.0-rc6 / code 24) passes exact native acceptance. The four canonical signed packages match the frozen audited bytes. Git main and Firebase publication are being verified separately. Earlier candidates retain their original historical results.**
+**Delivered: H (1.17.0-rc6 / code 24), four exact signed packages, documentation and source on Git main, and the existing Firebase website. Native acceptance, public download hashes, responsive FR/EN browser states and deliberate audio playback pass within their recorded scopes. Earlier candidates retain their original historical results.**
 
 ## 1.17 installation — accepted H / code24
 
@@ -10,7 +10,7 @@ Install the signed [production APK](../releases/luma-drift-1.17.0-rc6.apk), pack
 
 The exact APK passes retained U1–U1000 Android replay, strict normal/320dp-font1.3 play actions, six-language primary screens, six-language compact secondary screens and normal EN/FR, owned equipment, fresh U1–U8/real draws/cold persistence and five-context digital audio. The isolated144-composite gallery is separate from application ownership. [Independent evidence index](validation/v1.17/acceptance-h.json).
 
-Git/public download and Hosting results have separate receipts. Test ads remain forced; real checkout and paid premium draws remain closed. Google identity does not synchronize local progress, wardrobe, house or player card.
+[Four public GitHub package downloads](validation/v1.17/publication.json) and [Firebase/public-browser delivery](validation/site-v1.17/README.md) pass with exact byte hashes. Test ads remain forced; real checkout and paid premium draws remain closed. Google identity does not synchronize local progress, wardrobe, house or player card.
 
 ## Preserved 1.15 installation
 

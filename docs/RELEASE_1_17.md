@@ -60,6 +60,12 @@ The source/clone/fresh test roles stay distinct. Retained5586 owns sound/replay;
 
 The pure-render gallery covers144 companion/look compositions,24 garments and24 style samples. It proves rendering separately from ownership. Actual UI routes equip only possessions earned by the QA save. Generated PCM exports, Android digital playback and physical-speaker listening are distinct evidence classes.
 
+## Public delivery
+
+The four canonical packages are on [Git main](https://github.com/nabz0r/AndroidHit) and their [independent immutable public downloads](validation/v1.17/publication.json) match293,094,697 total bytes and all four hashes. The remote [contract workflow](https://github.com/nabz0r/AndroidHit/actions/runs/40834726178) passes on the deployed source.
+
+The existing [website and native gallery](https://luma-drift-production.web.app/#screens) is deployed from clean `fb341930fc7820dcb19326ee4c0c354f3101f610`; Hosting `a8f7c1e30f14cd29` finalized **2026-10-29T07:19:42.453Z**. Its174 payloads/3aliases match exact public bytes. Eight responsive FR/EN states, localized gallery, keyboard focus and four deliberate10-second audio playbacks pass. [Delivery register](validation/site-v1.17/README.md). The [direct APK](https://luma-drift-production.web.app/releases/luma-drift-1.17.0-rc6.apk) is the exact accepted H file.
+
 ## Installation and measured limits
 
 Install production over the existing same-signed production app and retain application data. Lab has a separate package/profile. Android8/API26+ remains configured; older active puzzles retain their actual original rules and action ledger.

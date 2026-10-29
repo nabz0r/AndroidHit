@@ -1,17 +1,10 @@
 # Public developer, privacy and account-deletion pages
 
-## Current 1.17 website qualification
+## Current 1.17 website delivery
 
-The FR/EN replacement indexes sixteen exact H native captures and four
-app-synthesizer WAV excerpts. H native acceptance and all four canonical
-signed packages pass, including the complete retained U1–U1000 replay.
-Offline audit, clean-commit Hosting deployment and independent public-byte/browser
-results have separate receipts in the [website register](validation/site-v1.17/README.md).
-The preserved F localhost review remains historical preview evidence.
+The existing [FR/EN website](https://luma-drift-production.web.app/) is deployed from clean `fb341930fc7820dcb19326ee4c0c354f3101f610`: Hosting `a8f7c1e30f14cd29`, finalized **2026-10-29T07:19:42.453Z**. It serves sixteen unedited H native captures, four app-synthesizer WAV excerpts and exact signed H production APK/AAB/manifest. All174 payloads and three directory aliases independently match the source hashes. Eight public responsive FR/EN states at320/375/768/1280, localized gallery, visible keyboard focus and four deliberate audio playbacks pass. Media stop afterward and the viewport override is reset. [Complete website register](validation/site-v1.17/README.md).
 
-The existing privacy/deletion HTML, account modules, public configuration,
-Firebase setup and provider gates retain their audited bytes. The local
-nickname/flag/badges/draw-receipt inventory is documented in [PRIVACY](PRIVACY.md).
+The privacy/deletion HTML, account modules, public configuration, Firebase setup and provider gates retain their audited bytes. This Hosting delivery does not perform account deletion, identity/provider qualification or a Play upload. The local nickname/flag/badges/draw-receipt inventory is documented in [PRIVACY](PRIVACY.md). The preserved F localhost review remains historical preview evidence.
 
 ## Preserved 1.12 website refresh
 

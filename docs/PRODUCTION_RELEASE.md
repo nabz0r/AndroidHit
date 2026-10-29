@@ -1,6 +1,6 @@
 # Production candidate and activation boundary
 
-## 1.17 — native accepted, exact-byte publication
+## 1.17 — Android and existing website delivered
 
 Production is **1.17.0-rc6 / code24**, with isolated **1.17.0-sandbox-rc6**. H passes the [four-package binary audit](validation/v1.17/candidate-h/binaries/binary-final-candidate.json), release lint and the complete24-command sparse host workflow. Its installed native acceptance passes; public-delivery results remain separate in the [release register](RELEASE_1_17.md) and [qualification index](validation/v1.17/README.md).
 

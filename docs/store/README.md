@@ -55,4 +55,4 @@ Text uses the local Arial Black / Arial families with sans-serif fallbacks. Othe
 
 The [Google Play preview-asset requirements](https://support.google.com/googleplay/android-developer/answer/9866151?hl=en), checked 27 October 2026, specify a 1024 × 500 feature graphic without alpha and a 512 × 512 PNG icon with alpha, at most 1024 KB. Those file properties are verified here. The proposed icon does not replace the app's launcher resource.
 
-This kit does not establish listing approval or publication. Live advertising, Android identity and commercial checkout retain the qualification boundaries in the [project README](../../README.md#production-status) and [release documentation](../RELEASE_1_5.md). No APK was rebuilt for this kit, and no app or gameplay source was changed.
+This kit does not establish listing approval or publication. Live advertising, Android identity and commercial checkout retain the qualification boundaries in the [current production boundary](../PRODUCTION_RELEASE.md) and [release documentation](../RELEASE_1_5.md). No APK was rebuilt for this kit, and no app or gameplay source was changed.

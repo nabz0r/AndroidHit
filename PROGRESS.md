@@ -1,4 +1,4 @@
-# Luma Drift 1.17 — native H accepted
+# Luma Drift 1.17 — Android, Git and website delivered
 
 Production1.17.0-rc6 / Lab1.17.0-sandbox-rc6, code24, app source `bb622960f52e5ba41e75a6dfa8b30dbb4b98a291`. Four canonical signed packages match frozen/audited H exactly;162 app/config inputs remain unchanged. Complete sparse host rehearsal24commands/163files passes. [Release and hashes](docs/RELEASE_1_17.md) · [Independent native evidence index](docs/validation/v1.17/acceptance-h.json).
 
@@ -8,7 +8,7 @@ Primary screens pass six languages in normal/compact; secondary screens pass six
 
 The reproduced Guardian history loop, legacy gate/budget/help overlap and incorrect event-preview titles are fixed. All target APK bytes remain unchanged through qualification. Main/clone/fresh devices stop normally with their userdata retained and observers removed. F817/G101 interruptions and all raw probe failures remain historical.
 
-Git main, public package bytes, Firebase Hosting and actual public browser rendering are being verified separately before final delivery.
+The existing [FR/EN website](https://luma-drift-production.web.app/#screens) is delivered from clean source `fb341930fc7820dcb19326ee4c0c354f3101f610`, Hosting version `a8f7c1e30f14cd29`, finalized **2026-10-29T07:19:42.453Z**. All174 public payloads plus3 directory aliases independently match source bytes. Eight actual public FR/EN responsive states at320/375/768/1280, gallery localization, keyboard focus and four deliberate audio playbacks pass. [Hosting, browser and hash receipts](docs/validation/site-v1.17/README.md). Four GitHub package downloads at immutable artifact source `48feddfa3758b535d84014c5397268fc4c79eb1c` match all canonical sizes and SHA-256. The [remote contract workflow](https://github.com/nabz0r/AndroidHit/actions/runs/40834726178) passes on the deployed source.
 
 # Luma Drift 1.16 — Android and website delivered
 

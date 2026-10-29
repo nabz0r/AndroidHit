@@ -1,8 +1,8 @@
 # Luma Drift documentation
 
-**Current status: H (1.17.0-rc6 / code 24) passes exact native acceptance. The four canonical signed packages match the frozen audited bytes. Git main and Firebase publication are being verified separately. Earlier candidates retain their original historical results.**
+**Delivered: H (1.17.0-rc6 / code 24), four exact signed packages, documentation and source on Git main, and the existing Firebase website. Native acceptance, public download hashes, responsive FR/EN browser states and deliberate audio playback pass within their recorded scopes. Earlier candidates retain their original historical results.**
 
-## 1.17 — original art and object navigation, accepted H
+## 1.17 — original art and object navigation, delivered H
 
 [Release status](RELEASE_1_17.md) · [Qualification register](validation/v1.17/README.md) · [Primary-source research](design/v1.17/reference-research.md) · [Navigation contract](design/v1.17/navigation-spec.md) · [Website delivery register](validation/site-v1.17/README.md).
 

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "source_commit": "fb341930fc7820dcb19326ee4c0c354f3101f610",
+  "artifact_source_commit": "48feddfa3758b535d84014c5397268fc4c79eb1c",
+  "production_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "origin": "https://luma-drift-production.web.app",
+  "edition": "1.17.0-rc6",
+  "responsive_states": 8,
+  "widths": [
+    320,
+    375,
+    768,
+    1280
+  ],
+  "languages": [
+    "fr",
+    "en"
+  ],
+  "deliberate_audio_playbacks": 4,
+  "all_media_stopped": true,
+  "viewport_override_reset": true,
+  "keyboard": {
+    "focusedHref": "/releases/luma-drift-1.17.0-rc6.apk",
+    "focusedTag": "A",
+    "outline": "solid",
+    "outlineWidth": "3px"
+  },
+  "controls": "Actual UI clicks/keyboard and fresh AX observations; DOM evaluate is read-only.",
+  "observer_notes": [
+    "Rapid initial batching during resizing/language/image loading produced unaccepted transient observations. Final eight states use separate real UI actions; three early frames were replaced after anchor scrolling settled. No application or website source change was needed."
+  ],
+  "scope": "Actual public site responsive rendering, localized native image references, no horizontal document overflow, visible keyboard focus and four deliberate 10-second media playbacks with one player at a time. No account/provider action, listening-quality or reduced-motion browser emulation claim."
+}

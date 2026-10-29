@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.17.0-rc6 / code24 — illustrated places and object navigation (native accepted)
+## 1.17.0-rc6 / code24 — illustrated places and object navigation (delivered)
 
 29 October 2026. [Release status](RELEASE_1_17.md) · [Executed evidence](validation/v1.17/README.md).
 
@@ -10,7 +10,7 @@
 - Add forty place-specific synthesized arrangements to the ten historical puzzle themes, plus scene/fabric/reveal earcons. Keep old PCM, separate music/effects switches and worker request coalescing.
 - Fix the reproduced Guardian Back/list history cycle while preserving refused-save blocking. Correct Daily/Weekly preview identities and keep puzzle budgets, gates, copy and action targets in independent reading/touch bands.
 - Share the real PlaySceneLayout between drawing and hit registration; measure font height before scroll clamping, keep a safe board width, provide three compact object/caption columns, and anchor puzzle overlays after scrolling.
-- Qualify the exact production APK through U1–U1000 retained Android replay, screen/owned-outfit/art/audio routes and genuine new-install U1–U8 acquisition/cold persistence. Preserve all four audited packages unchanged. Prepare sixteen exact H native FR/EN frames and four app-DSP previews for separately verified publication.
+- Qualify the exact production APK through U1–U1000 retained Android replay, screen/owned-outfit/art/audio routes and genuine new-install U1–U8 acquisition/cold persistence. Preserve all four audited packages unchanged. Publish sixteen exact H native FR/EN frames, four app-DSP previews and exact production downloads to the existing Firebase site. All174 payloads/3aliases and four GitHub package downloads match their source hashes; eight public responsive states and four deliberate audio playbacks pass.
 
 H source is frozen across162 inputs; four-package build/lint and independent verification pass. The complete24-command sparse rehearsal passes from163 files, including379634 play-geometry assertions over3400 layouts and202444 root assertions over420 layouts. Earlier candidates keep original scoped outcomes: F's Guardian defect caused its replay to stop at817 certified levels; G's legacy HUD overlap caused its replay to stop at101. Neither is a completed1,000 run. H's exact installed and public records remain in the [qualification register](validation/v1.17/README.md).
 

@@ -1,21 +1,23 @@
 # Luma Drift 1.17 website delivery register
 
-**Current status: H (1.17.0-rc6 / code 24) passes exact native acceptance. The four canonical signed packages match the frozen audited bytes. Git main and Firebase publication are being verified separately. Earlier candidates retain their original historical results.**
+**Delivered: H (1.17.0-rc6 / code 24), four exact signed packages, documentation and source on Git main, and the existing Firebase website. Native acceptance, public download hashes, responsive FR/EN browser states and deliberate audio playback pass within their recorded scopes. Earlier candidates retain their original historical results.**
 
-**Status: exact H native acceptance and canonical packages pass; publication is being verified.** The existing
-Firebase Hosting site is `luma-drift-production.web.app`. Its public entry page
-still serves 1.16 until the separately recorded H deployment completes.
-This directory keeps preview, offline audit, deployment and public-browser
-results separate.
+**Delivered H.** The existing [Firebase site](https://luma-drift-production.web.app/#screens) is live from clean source `fb341930fc7820dcb19326ee4c0c354f3101f610`, public tree `dcaf3a3b090d0808529a3533e84d43411596b6dc`. Hosting version `a8f7c1e30f14cd29` is DEPLOY/FINALIZED at **2026-10-29T07:19:42.453Z**. Native H passes all1,000 retained replay boards and the complete scoped screen/art/audio/fresh routes before public preparation.
 
-The current [H capture map](capture-map.json) now contains16 actual FR/EN originals from the passed277check/177PNG normal6-language route. [Independent index/hash validation](capture-map-h-validation.json) and [native report](../v1.17/native-interface/candidate-h-sixlangs-normal/host-report.json) identify the exact H APK and fresh execution token. Final native replay and canonical integrity now pass. Public preparation/deployment has separate receipts. F’s map is archived separately and does not supply H evidence.
+| Scope | Result | Evidence |
+| --- | --- | --- |
+| Offline HTML/DOM/references/source/binary checks | PASS3261assertions,3HTMLpages,91localreferences | [Static audit](release/static-check.json) |
+| Exact Hosting payload set |174files /306,306,983bytes from clean source | [Frozen source manifest](release/source-manifest.json), [deployment](deployment.json), [management](live-management.json) |
+| Independent public HTTPS | PASS174payloads plus3directoryaliases,HTTP200/exactbytes/SHA-256 | [Public origin](public-origin.json) |
+| Actual public responsive browser | PASS8FR/ENstates, widths320/375/768/1280, localized gallery/nohorizontaloverflow, visible keyboard focus | [Browser report](browser-public/report.json) |
+| Deliberate browser audio | PASS4actual10second resources, noautoplay, oneplayeratatime; allpausedafterward | [Raw observations](browser-public/audio.json) |
+| Production and isolatedLab Git downloads | PASS4exactAPKs/AABs,293,094,697totalbytes | [Immutable Git publication](../v1.17/publication.json) |
 
-The FR/EN page presents the four illustrated places, 24 original companions,
-24 garments, 42 furnishings and 50 arrangements. It uses ordinary text links
-and language controls with visible keyboard focus. The game's no-visible-button
-contract does not remove accessible web audio controls.
+The [H capture map](capture-map.json) and [provenance](screenshot-provenance.json) identify16 original1080×2340PNG files, copied byte for byte from the passing normal277check/177PNG six-language run. They are native application captures, separate from isolated renderer sheets. The independent visual review directly inspects all16 site sources within its97-original H subset. F’s map and localhost preview remain historical below.
 
-## Completed exact F preview
+The four optional [audio previews](audio-provenance.json) are10second actual synthesizer exports, biome0/defaultgain0.27, with a sample ending fade. They are not physical phone recordings. The page uses ordinary text links and accessible native web media controls. Music/effects/native lifecycle/physical listening retain their distinct evidence scopes. No account/provider/Play operation is performed by this delivery.
+
+## Preserved exact F preview
 
 [Archived F capture map](capture-map-candidate-f.json) indexes **sixteen unedited 1080×2340 native
 F screenshots**, eight destinations in each FR/EN. They come from the passing
@@ -44,7 +46,7 @@ checks and all 18 current/previous controller tests. The final parser self-test
 also passes. Historical preview E remains separately labelled and does not
 supply F acceptance.
 
-## Final required inputs and procedure
+## Reproduce the prepared source and delivery checks
 
 1. Accepted production **1.17.0-rc6 / code24**, four canonical production/Lab
    APK/AAB files, manifests, independent hashes and the actual 162-input H freeze.
@@ -70,7 +72,7 @@ Dry run is the default; publication uses explicit `--deploy`. Its receipt
 stays outside the checkout until delivery is complete. Then
 `verify-site-v117-publication.py` compares every public HTTPS payload plus
 three directory aliases with that source receipt. Actual public FR/EN
-responsive, keyboard, gallery and audio browser acceptance follows.
+responsive, keyboard, gallery and audio browser acceptance is recorded separately above.
 
 The privacy page, account-deletion flow, configuration, commercial gates and
 Firebase setup retain their original bytes, checked by the final audit.
