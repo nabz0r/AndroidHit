@@ -51,7 +51,7 @@ def flag(name):
     return match.group(1) == 'true'
 
 inputs = [*(root/'app/src/main').rglob('*'), *(root/f'app/src/{variant}').rglob('*'),
-          root/'app/build.gradle', root/'build.gradle', root/'settings.gradle', root/'gradle.properties',
+          root/'app/build.gradle', root/'app/proguard-rules.pro', root/'build.gradle', root/'settings.gradle', root/'gradle.properties',
           *(root/'gradle').rglob('*'), root/'gradlew']
 paths = sorted({p for p in inputs if p.is_file()}, key=str)
 record = {
