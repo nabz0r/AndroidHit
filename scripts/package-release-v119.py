@@ -45,7 +45,7 @@ def main():
         identity=re.search(r"package: name='([^']+)' versionCode='(\d+)' versionName='([^']+)'",info);assert identity,'APK package identity missing'
         package,code,version=identity.group(1),int(identity.group(2)),identity.group(3)
         prefix='1.19.0-sandbox-' if channel=='lab' else '1.19.0-'
-        assert package==expected_package and code==26 and code==entry['code'] and version==entry['version'] and version.startswith(prefix),'Wrong 1.19 channel identity'
+        assert version==('1.19.0-sandbox-prototype2' if channel=='lab' else '1.19.0-prototype2') and package==expected_package and code==27 and code==entry['code'] and version==entry['version'] and version.startswith(prefix),'Wrong 1.19 channel identity'
         assert re.fullmatch('[A-Za-z0-9.-]+',version),'Unsafe canonical APK name'
         verified=subprocess.check_output([str(args.build_tools/'apksigner'),'verify','--print-certs',str(source)],text=True)
         signers=re.findall(r'Signer #\d+ certificate SHA-256 digest: ([a-f0-9]+)',verified)
@@ -56,7 +56,7 @@ def main():
         if target.exists():assert sha(target)==entry['sha256'] and target.stat().st_size==entry['bytes'],'Never replace earlier canonical bytes'
         apks[channel]={'path':relative,'sha256':entry['sha256'],'bytes':entry['bytes'],'version':version,'code':code,'application_id':package,'signer_certificate_sha256':SIGNER}
     production=apks['production'];manifest=ROOT/'releases'/('manifest-'+production['version']+'.json')
-    result={'edition':'1.19','version':production['version'],'version_code':26,'artifact_policy':'Ignored external signed APK files; never require Git blobs','candidate_report':str(candidate.relative_to(ROOT)),'candidate_report_sha256':sha(candidate),'apks':apks,'publicly_published':False,'live_services_validated':False}
+    result={'edition':'1.19','version':production['version'],'version_code':27,'artifact_policy':'Ignored external signed APK files; never require Git blobs','candidate_report':str(candidate.relative_to(ROOT)),'candidate_report_sha256':sha(candidate),'apks':apks,'publicly_published':False,'live_services_validated':False}
     encoded=json.dumps(result,indent=2)+'\n'
     if manifest.exists():assert manifest.read_text()==encoded,'Never overwrite an existing artifact metadata record'
     if args.collect:

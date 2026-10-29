@@ -502,7 +502,7 @@ public final class LumaView extends View {
         if(screen.equals("settings"))H=Math.max(viewportH,1110);
         if(screen.equals("home_item"))H=Math.max(layout.contentHeight,920);
         if(screen.equals("firstlight"))H=Math.max(layout.contentHeight,790);
-        if(rootIndex()>=0&&!screen.equals("squad"))H=screen.equals("adventure")?Math.max(650,viewportH):viewportH;
+        if(rootIndex()>=0&&!screen.equals("squad"))H=screen.equals("adventure")?new Adventure119Layout(viewportH,battleMinimumTouch()).contentHeight:viewportH;
         // Measure the real play content before clamping: short windows may scroll
         // the actions without shrinking either the board or the physical targets.
         if(screen.equals("play")&&board!=null){
@@ -1401,11 +1401,11 @@ public final class LumaView extends View {
     }
 
     private void drawAdventure(Canvas c){
-        float sceneHeight=Math.max(650,viewportH);ensureHub();int current=Math.min(1000,store.unlockedLevel());
-        p.setShader(new LinearGradient(0,0,390,sceneHeight,new int[]{0xfff6f2ff,0xffeaf5fa,0xfffff6ed},null,Shader.TileMode.CLAMP));c.drawRect(0,0,390,sceneHeight,p);p.setShader(null);
+        Adventure119Layout adventureLayout=new Adventure119Layout(viewportH,battleMinimumTouch());float sceneHeight=adventureLayout.sceneHeight;ensureHub();int current=Math.min(1000,store.unlockedLevel());
+        p.setShader(new LinearGradient(0,0,390,sceneHeight,new int[]{0xfff6f2ff,0xffeaf5fa,0xfffff6ed},null,Shader.TileMode.CLAMP));c.drawRect(0,0,390,adventureLayout.contentHeight,p);p.setShader(null);
         fit(c,t("play"),24,46,29,170,TEXT,true,false);fit(c,worldName(current),24,72,12,142,PremiumUi.MUTED,false,false);drawNamedWallet(c);
         round(c,333,15,44,49,18,0xffe9e1f7);center(c,"⚙",355,46,24,0xff6f598d,true);motionHit(new RectF(329,10,382,68),t("settings"),"settings_entry",()->go("settings"));
-        List<String> team=store.companionSquad();float middle=Math.max(228,Math.min(348,sceneHeight*.40f));float radius=Math.max(48,Math.min(77,sceneHeight*.09f));
+        List<String> team=store.companionSquad();float middle=adventureLayout.middle;float radius=adventureLayout.radius;
         for(int i=0;i<10;i++){double angle=i*2.399;float spread=80+i*9,x=195+(float)Math.cos(angle)*spread,y=middle+(float)Math.sin(angle)*spread*.6f;
             float bob=reduceMotion?0:(float)Math.sin(frameTime*.0015+i)*5;star(c,x,y+bob,i%3==0?6:3,alpha(i%2==0?0xffb7a2e3:0xff8cceb9,125));}
         p.setColor(0xffe4daf9);c.drawOval(new RectF(100,middle+radius*.85f,290,middle+radius*1.1f),p);
@@ -1414,12 +1414,12 @@ public final class LumaView extends View {
         float teamY=Math.max(95,middle-radius*1.9f-45);for(int i=0;i<3;i++){float x=146+i*49;RectF area=new RectF(x-24,teamY,x+24,teamY+48);
             if(i<team.size())drawBattleActor(c,team.get(i),area,CompanionMotion.Action.STANCE,CompanionMotion.Facing.FRONT,frameTime,reduceMotion);else{p.setColor(0xffe7e0f1);c.drawCircle(x,teamY+24,19,p);center(c,"+",x,teamY+30,22,0xff8c78ad,true);}}
         motionHit(new RectF(104,teamY-4,286,teamY+56),v19("choose_squad"),"squad_entry",()->openSquad());
-        float actionY=Math.min(sceneHeight-255,middle+radius*1.85f+15);modernAction(c,new RectF(27,actionY,363,actionY+62),t(board!=null&&!won&&!board.isSolved()?"resume":"play")+" · "+t("level_number",board!=null&&!won?levelIndex:current),0xffbde8d8,"journey_continue",()->continueGame(),true);
-        float cardsY=actionY+83;String[] labels={r("all_levels"),x("expedition"),r("events")};String[] marks={"↝","✦","◷"};
-        for(int i=0;i<3;i++){final int index=i;float x=18+i*122;round(c,x,cardsY,110,77,23,i==0?0xffede5f8:i==1?0xffe1eeee:0xfff8e7ee);center(c,marks[i],x+55,cardsY+28,24,0xff716086,true);fit(c,labels[i],x+55,cardsY+58,12,100,TEXT,true,true);
-            motionHit(new RectF(x,cardsY,x+110,cardsY+77),labels[i],i==0?"journey_entry":i==1?"expedition_entry":"events_entry",()->{if(index==0){journeyTab=0;go("journey");}else if(index==1)openExpedition();else go("events");});}
-        float giftsY=Math.min(sceneHeight-118,cardsY+100);fit(c,r("rewards")+"  →",195,giftsY,13,300,0xff77558c,true,true);motionHit(new RectF(50,giftsY-28,340,giftsY+18),r("rewards"),"rewards_entry",()->openRewards(3));
-        H=sceneHeight;drawFixedNavigation(c);
+        float actionY=adventureLayout.actionY;modernAction(c,new RectF(27,actionY,363,actionY+adventureLayout.continueHeight),t(board!=null&&!won&&!board.isSolved()?"resume":"play")+" · "+t("level_number",board!=null&&!won?levelIndex:current),0xffbde8d8,"journey_continue",()->continueGame(),true);
+        float cardsY=adventureLayout.cardsY;float cardsHeight=adventureLayout.cardsHeight;String[] labels={r("all_levels"),x("expedition"),r("events")};String[] marks={"↝","✦","◷"};
+        for(int i=0;i<3;i++){final int index=i;float x=18+i*122;round(c,x,cardsY,110,cardsHeight,23,i==0?0xffede5f8:i==1?0xffe1eeee:0xfff8e7ee);center(c,marks[i],x+55,cardsY+28,24,0xff716086,true);fit(c,labels[i],x+55,cardsY+58,12,100,TEXT,true,true);
+            motionHit(new RectF(x,cardsY,x+110,cardsY+cardsHeight),labels[i],i==0?"journey_entry":i==1?"expedition_entry":"events_entry",()->{if(index==0){journeyTab=0;go("journey");}else if(index==1)openExpedition();else go("events");});}
+        float giftsY=adventureLayout.rewardsBaseline;fit(c,r("rewards")+"  →",195,giftsY,13,300,0xff77558c,true,true);motionHit(new RectF(50,adventureLayout.rewardsTop,340,adventureLayout.rewardsTop+adventureLayout.rewardsHeight),r("rewards"),"rewards_entry",()->openRewards(3));
+        H=adventureLayout.contentHeight;drawFixedNavigation(c);
     }
     private void drawCollectionHub(Canvas c){
         drawScenery(c,"collection");sceneHeading(c,r("collection"),d("look_book"));

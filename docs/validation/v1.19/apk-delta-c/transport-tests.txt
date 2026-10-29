@@ -1,0 +1,23 @@
+test_bad_copy_hash_keeps_existing_output (__main__.ExactApkDeltaTest) ... ok
+test_bad_literal_hash_keeps_existing_output (__main__.ExactApkDeltaTest) ... ok
+test_build_is_deterministic (__main__.ExactApkDeltaTest) ... ok
+test_compressed_file_bound_is_enforced (__main__.ExactApkDeltaTest) ... ok
+test_copy_outside_base_refuses (__main__.ExactApkDeltaTest) ... ok
+test_corrupt_base64_refuses (__main__.ExactApkDeltaTest) ... ok
+test_duplicate_json_keys_refuse (__main__.ExactApkDeltaTest) ... ok
+test_existing_output_requires_explicit_replace (__main__.ExactApkDeltaTest) ... ok
+test_expanded_gzip_bound_is_enforced (__main__.ExactApkDeltaTest) ... ok
+test_false_statistics_refuse (__main__.ExactApkDeltaTest) ... ok
+test_full_target_hash_checked_after_individually_valid_operations (__main__.ExactApkDeltaTest) ... ok
+test_hash_equality_alone_cannot_authorize_copy (__main__.ExactApkDeltaTest) ... ok
+test_input_alias_and_symlink_outputs_refuse (__main__.ExactApkDeltaTest) ... ok
+test_report_cannot_clobber_an_artifact (__main__.ExactApkDeltaTest) ... ok
+test_round_trip_preserves_full_bytes_offsets_headers_and_tail (__main__.ExactApkDeltaTest) ... ok
+test_wrong_base_refuses_before_publication (__main__.ExactApkDeltaTest) ... ok
+test_wrong_external_target_hash_refuses (__main__.ExactApkDeltaTest) ... ok
+test_wrong_patch_hash_refuses (__main__.ExactApkDeltaTest) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.137s
+
+OK
