@@ -58,3 +58,7 @@ Final B input preparation passes with16unaltered native images. The offline audi
 [Actual browser observations](browser/local-browser.json) pass FR/EN at1280,768,375and320CSSpx, with17DOM/layout observations and14retained visual states. Keyboard disclosure and visible focus pass; two loaded reduced-motion CSS rules are inspected without changing OS preferences. The three provisional transition/cache frames are explicitly excluded from visual acceptance; the fresh-origin final collection frame shows the correct23-companion French banner and caption. [Browser source/image hashes](browser/local-integrity.json).
 
 Hosting deployment and public-origin bytes/rendering are recorded separately after publication.
+
+## Published result
+
+The existing [Hosting site](https://luma-drift-production.web.app/#screens) is **FINALIZED** at 2026-10-29T00:01:49.165Z, version `963fcf70004ea230`, from clean source `ea1980f7dbc3bfe65233065d4d902beba083301f`. The [management receipt](deployment/deployment.json) verifies its exact151payloads and129,437,422bytes. The separate [public HTTP audit](public-origin.json) verifies all151responses plus three aliases, with matching sizes and SHA-256, including the exact B production downloads. Live FR/EN browser evidence is stored in `browser/live-browser.json`; local responsive and keyboard checks remain their own scope. No Play/GitHub publication or provider activation is claimed.

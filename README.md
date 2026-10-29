@@ -4,13 +4,17 @@
 
 The home now fills its actual scene viewport, with a closer default camera, finger pan and an explicit whole-room view. Larger collection portraits, illustrated Atelier cards, accented pill actions and icon-medallion navigation give objects and characters more room.
 
-Choose a local nickname, a flag and three badges from six earned milestones. Two separate arrivals banners use earned LumaCoins:23 companions and five complete four-piece outfits. Exact odds and duplicate returns are shown before drawing; debit, outcome, ownership and the last result are saved together. Existing purchases, clothing capsules,12 free avatar styles, furniture positions and puzzle rules are retained.
+Choose a local nickname, a flag and three badges from six earned milestones. Two separate arrivals banners use earned LumaCoins: 23 companions and five complete four-piece outfits. Exact odds and duplicate returns are shown before drawing; debit, outcome, ownership and the last result are saved together. Existing purchases, clothing capsules, 12 free avatar styles, furniture positions and puzzle rules are retained.
 
-**[Signed1.16 production APK](releases/luma-drift-1.16.0-rc1.apk)** · [AAB](releases/luma-drift-1.16.0-rc1.aab) · [Manifest](releases/manifest-1.16.0-rc1.json) · [Separate Lab APK](releases/luma-drift-1.16.0-sandbox-rc1.apk).
+**[Signed 1.16 production APK](releases/luma-drift-1.16.0-rc1.apk)** · [AAB](releases/luma-drift-1.16.0-rc1.aab) · [Manifest](releases/manifest-1.16.0-rc1.json) · [Separate Lab APK](releases/luma-drift-1.16.0-sandbox-rc1.apk).
 
-Candidate B uses code18 and the existing signing certificate. Install production over the previous production app to preserve local data. Nickname, flag, badges, house and gameplay remain local; Google sign-in does not synchronize them. Test ads and disabled paid-provider gates are retained. The executed native, visual and publication scopes are recorded in the [current qualification register](docs/validation/v1.16/README.md); the1.15 full1,000-level route below remains historical evidence.
+Candidate B uses code 18 and the existing signing certificate. Install production over the previous production app to preserve local data. Nickname, flag, badges, house and gameplay remain local; Google sign-in does not synchronize them. Test ads and disabled paid-provider gates are retained. The executed native, visual and publication scopes are recorded in the [current qualification register](docs/validation/v1.16/README.md); the 1.15 full 1,000-level route below remains historical evidence.
 
-## Preserved1.15 delivery
+**[See the eight new screens](https://luma-drift-production.web.app/#screens)** · **[Download the exact tested Android APK](https://luma-drift-production.web.app/releases/luma-drift-1.16.0-rc1.apk)**. The FR/EN site serves sixteen unedited B captures and the signed production APK/AAB/manifest. All 151 public payloads and three directory aliases match the deployed source. [Hosting and browser evidence](docs/validation/site-v1.16/README.md).
+
+<p align="center"><img src="public/assets/screenshots/v1.16/home-fr.png" width="230" alt="Actual closer furnished home in French"><img src="public/assets/screenshots/v1.16/profile-fr.png" width="230" alt="Actual local player card with nickname flag and three earned badges"><img src="public/assets/screenshots/v1.16/summon-fr.png" width="230" alt="Actual companion arrivals banner and earned-coin cost"></p>
+
+## Preserved 1.15 delivery
 
 <p align="center"><strong>1.15.0-rc1 · separated screens, relay puzzles and a larger home</strong><br><a href="docs/RELEASE_1_15.md">Release & evidence</a> · <a href="docs/GAMEPLAY_1_15.md">Gameplay and compatibility</a> · <a href="docs/validation/v1.15/README.md">Qualification</a></p>
 <p align="center">1,000 versioned relay Journey boards · 30 staged opening boards · 6 languages<br>Four dedicated destinations · Three 10 × 10 rooms · 42 furniture designs</p>

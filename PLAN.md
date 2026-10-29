@@ -1,4 +1,4 @@
-# Luma Drift 1.16 — larger home, player identity and collectible arrivals
+# Luma Drift 1.16 — Android and website delivered
 
 Owner request29 October2026: enlarge scene/furniture, editable nickname/flag, earned badges, avatar/skin gacha and original game-like UI inspired by official genre hits.
 
@@ -8,7 +8,7 @@ Owner request29 October2026: enlarge scene/furniture, editable nickname/flag, ea
 4. Redraw action buttons, navigation, collection portraits and Atelier visual cards; preserve puzzle rules, existing ownership and free styles.
 5. Qualify host transactions/geometry, signed build and native retained1.15 upgrade, cold persistence, normal/compact six-language screens; deliver actual APK and original screenshots.
 
-In progress on `codex/luma-refonte-1-16`. Core implementation, host tests, exact signed candidate B and native/visual acceptance pass (997 qualification checks/263 original frames). The existing website is staged with16 exact B native images; final Hosting publication is in progress. [Official reference audit](docs/research/v1.16/reference-audit.md).
+In progress on `codex/luma-refonte-1-16`. Core implementation, host tests, exact signed candidate B and native/visual acceptance pass (997 qualification checks/263 original frames). The existing website is published with16 exact B native images and exact production downloads;151payloads and three aliases pass independent public-byte checks. QA5586 is stopped normally with its profile retained. [Official reference audit](docs/research/v1.16/reference-audit.md).
 
 # Luma Drift 1.15 — Android and website delivered
 

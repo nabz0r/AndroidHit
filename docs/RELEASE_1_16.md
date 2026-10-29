@@ -1,6 +1,6 @@
 # Luma Drift 1.16 — a closer home and a player identity
 
-29 October2026 · production **1.16.0-rc1**, Lab **1.16.0-sandbox-rc1**, Android version code **18**.
+29 October 2026 · production **1.16.0-rc1**, Lab **1.16.0-sandbox-rc1**, Android version code **18**.
 
 The home no longer shrinks twice. Its camera uses the actual scene area, starts at a closer framing, pans with a drag and offers an explicit whole-room view. The existing42 furnishings and three10×10 rooms are preserved. Collection and Atelier use larger original illustrations; accented pill actions and icon medallions replace the previous repeated rectangular treatment.
 
@@ -21,3 +21,7 @@ The independent four-binary signature, manifest, bundle and static16KiB alignmen
 Final B passes993 native assertions plus four pre-update baseline assertions, with263 original images across normal/320dp, six languages, cold persistence and complete23-avatar/five-outfit catalogues. [Exact aggregate](validation/v1.16/native-final-summary.json). Website publication has a separate receipt. Earlier A evidence remains distinct: a real1.15→A upgrade preserves the retained profile, then native draw/equip/cold tests pass; the final B adjusts clothing-title spacing discovered in visual review. No Play or GitHub release publication, real provider checkout or physical-phone performance is implied by the local binary checks.
 
 Install the signed production APK over the existing production app to retain the local save. The separately named Lab package does not replace production. Existing active puzzles retain their original rules.
+
+## Website delivered
+
+The existing [Firebase site](https://luma-drift-production.web.app/#screens) is finalized at 2026-10-29T00:01:49.165Z as version `963fcf70004ea230`, from clean source `ea1980f7dbc3bfe65233065d4d902beba083301f`. All151Hosting payloads and three aliases match the exact deployed bytes, including production APK/AAB/manifest and16unaltered B screenshots. Actual live FR/EN rendering is checked separately from local responsive/keyboard tests. [Website receipt and scope](validation/site-v1.16/README.md).
