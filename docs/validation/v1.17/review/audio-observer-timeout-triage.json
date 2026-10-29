@@ -1,0 +1,109 @@
+{
+  "status": "RESOLVED_OBSERVER_LAUNCH_TIMEOUT_FINAL_NATIVE_AUDIO_PASS",
+  "candidate_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "first_attempt": {
+    "host_report": "docs/validation/v1.17/audio/native/candidate-f-audio/host-report.json",
+    "host_report_sha256": "605f3077d2306d7e54d0fb25dd762ea7e8ef797a3bb0c1d741bd97b4f68cf846",
+    "observer_apk_sha256": "024adece9796d2105ec3fad121471ef66e030990cf150eeddae2200c30d05b8c",
+    "result": "240s instrumentation timeout, no final native report; not a passing audio run",
+    "partial_native_dir": "docs/validation/v1.17/audio/native/candidate-f-audio/partial-native",
+    "files": [
+      {
+        "name": "background-008.txt",
+        "sha256": "d8aae59f93f2bd6cdb2dadd672643beb93e57f510603578781c2f508d92c5482"
+      },
+      {
+        "name": "scene-0-audio-log.txt",
+        "sha256": "a07bb89932752426303a5dbac4ce9c43e28f21756fc84bbfa8cd479492848055"
+      },
+      {
+        "name": "scene-0-first-000.txt",
+        "sha256": "b786f714cf7020879231f4fc89396a2c85db57fa66bcbf9133e08ebfaff7f85f"
+      },
+      {
+        "name": "scene-0-second-001.txt",
+        "sha256": "a5689a77890c79365424115c92998d150f1b78122e239eb383caa15d63fa3534"
+      },
+      {
+        "name": "scene-1-audio-log.txt",
+        "sha256": "ac8b9b23041568a2d88fbac6d49d30faf2a885387a4d0d9416a8de38d7209957"
+      },
+      {
+        "name": "scene-1-first-002.txt",
+        "sha256": "0e1eab479164810019195cea79c298c1131d20b63faf518c96174fc0ac442a6e"
+      },
+      {
+        "name": "scene-1-second-003.txt",
+        "sha256": "3b48cbb2ea28d3e13768330387892d8747d72e9f6ce18d69592d87b555b58a46"
+      },
+      {
+        "name": "scene-2-audio-log.txt",
+        "sha256": "d50653427802ecd8e4007e366abbcba2700c2a69e181e00b4aed17ae0ab207e6"
+      },
+      {
+        "name": "scene-2-first-004.txt",
+        "sha256": "c6f3a29b5f9bc8f362499b58076918f9a9a446ad526fb9b31796a7ce691b4d6c"
+      },
+      {
+        "name": "scene-2-second-005.txt",
+        "sha256": "35babd6df9d54272c1aaaf266698e71ce18ea4424a29d0bafda984e26c9c877c"
+      },
+      {
+        "name": "scene-3-audio-log.txt",
+        "sha256": "88e295d889712365a2075e339e8b2a342bb6c32b5b562ab2ef3cc0a9bfcef2c8"
+      },
+      {
+        "name": "scene-3-first-006.txt",
+        "sha256": "a2dc51a7bafc6cf160394f4aae73dd24bb6e6f6ac4d871bbf3ab223c8f3bbabf"
+      },
+      {
+        "name": "scene-3-second-007.txt",
+        "sha256": "5b6d7667dff60d38ca379c30cf03f9666071ca9df3a0c9a514ff1a320f07275b"
+      },
+      {
+        "name": "scene-adventure-en.png",
+        "sha256": "b0d54c8e2af837ddda4eee33d2b0174a813911f89e449a95ab1fa397b250c6fb"
+      },
+      {
+        "name": "scene-atelier-en.png",
+        "sha256": "04c78219a9889ff422c54b0f154f41d2b8f6ddcc94094bc15efa8863588555cd"
+      },
+      {
+        "name": "scene-collection-en.png",
+        "sha256": "6f3591598c30e8b58e943687c574abc6a1764138a0c6ad63d513baf509833ab7"
+      },
+      {
+        "name": "scene-home-en.png",
+        "sha256": "079a19c3f7b209c03c94cecac022e80027ef375d80a881e20942287942ddd844"
+      },
+      {
+        "name": "settings-before-en.png",
+        "sha256": "e5d95a4b365fba269c3194cbd212d9286f8f9ae2716d6e0573ed0c7fd682fda3"
+      }
+    ],
+    "progress": "Four scene pairs/logs/screenshots and HOME background dump exist; no resumed-first dump was reached. Target tracks in background dump are inactive.",
+    "attribution": "Inference from exact source order and the bounded asynchronous-launch retry: Instrumentation.startActivitySync awaited a new Activity while HOME resumes an existing task. No app source was changed. No thread stack was captured before wrapper cleanup."
+  },
+  "correction": {
+    "scope": "Observer-only asynchronous Context.startActivity with bounded6.5s foreground observation; checkpoint before setting mutation; explicit visible UI recovery of documented FR/MusicOn/EffectsOn baseline.",
+    "final_observer_apk_sha256": "0d0fc3ff72a87e06eb11eac7a5e0f91ce63e0c9c8f7559ab51b88895787ea5cb",
+    "native_initial_state": {
+      "originalLanguage": "Fran\u00e7ais",
+      "originalMusic": true,
+      "originalEffects": true,
+      "processId": 4112,
+      "scope": "Visible UI observations before this run changes either audio setting"
+    }
+  },
+  "final_attempt": {
+    "host_report": "docs/validation/v1.17/audio/native/candidate-f-audio-retry/host-report.json",
+    "host_report_sha256": "fba5f732a3112e504d747b90d62c93d880c79b79875f0910476cf7b97d4ffe7c",
+    "passed": true,
+    "checks": 38,
+    "captures": 8,
+    "settings_restored": true,
+    "observer_removed": true,
+    "exact_candidate_retained": true,
+    "physical_listening_performed": false
+  }
+}

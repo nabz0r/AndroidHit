@@ -2,7 +2,7 @@
 
 29 October 2026 · production **1.17.0-rc4**, isolated Lab **1.17.0-sandbox-rc4**, Android code **22**.
 
-**Global qualification is in progress.** Candidate F passes four-package build/lint, independent binary verification and the shared responsive-root geometry tests. Exact-F native interface, fresh-player, audio, visual and 1,000-level replay results are required before canonical packaging, Git publication or Firebase delivery.
+**Final qualification is in progress on frozen F.** Build/lint, binary audit, retained-save upgrade, fresh-player flow, primary normal/compact six-language browsing, owned outfits, native art and installed digital audio pass on the exact APK below. Remaining secondary routes and the actual 1,000-level replay are running. Canonical packaging and Git/Firebase delivery follow those results.
 <!-- FINAL_117: RELEASE_STATUS — replace only after all final candidate gates pass. -->
 
 F reserves separate caption and navigation space on compact screens, without shrinking the companion or object art. Its cached `SceneRootLayout` is shared by live drawing and independent geometry tests. Independent review found two compact composition defects after E's scoped passes: the Collection sibling crossed its companion caption, and an Atelier plant crossed the furniture caption. The [grouped E review](validation/v1.17/review/grouped-e-layout-review.json) and original E evidence remain preserved. E's previous wardrobe-contrast and clipped-language corrections are retained.
@@ -57,68 +57,88 @@ LumaCoins, excluding free Nova. Five complete outfits cost 260 earned coins per
 arrival. Fixed odds, duplicate returns, recoverable receipts, existing direct
 purchases, individual clothing capsules and twelve free styles remain.
 
-## Evidence available now
+## Exact F evidence
 
-| Exact E scope | Observed result | Proof |
+| Scope | Observed result | Proof |
 | --- | --- | --- |
-| Retained-profile C→E upgrade and cold persistence | 619 checks / 20 PNGs; includes 6 baseline checks on C, then 613 checks on E | [Upgrade](validation/v1.17/native-interface/candidate-e-upgrade/host-report.json) |
-| Original offscreen language-target regression at 320 dp width | 19 checks / 2 PNGs | [Compact regression](validation/v1.17/native-interface/candidate-e-clipped-language/host-report.json) |
-| Actual owned Nova/Miko/Halo and five outfit previews | 78 checks / 27 PNGs | [Rig route](validation/v1.17/native-interface/candidate-e-owned-rigs/host-report.json) |
-| Normal six-language browsing | 276 checks / 177 PNGs | [Normal route](validation/v1.17/native-interface/candidate-e-sixlangs-normal/host-report.json) |
-| Genuine empty-device first launch, tutorial, eight first wins, two earned draws and cold persistence | 133 checks / 105 actual gestures / 49 original PNGs | [Fresh aggregate](validation/v1.17/fresh-e/summary-e.json), [scope and failed-observer exclusion](validation/v1.17/fresh-e/README.md) |
-| Separate pure-render gallery | 144 complete looks, 24 isolated garments, 24 style samples / 50 PNGs | [E execution](validation/v1.17/art/native/candidate-e-art/host-report.json); not app UI or ownership evidence |
-| Inspected visual scope | PASS with documented nonblocking limits; 14 actual UI frames directly reviewed | [E review](validation/v1.17/review/visual-candidate-e.json), [50/50 complete gallery PNG byte equality C→E](validation/v1.17/review/c-to-e-renderer-pixel-equality.json) |
+| Retained E→F upgrade and cold persistence | 619 checks / 20 PNGs: 6 baseline E + 613 F | [Upgrade](validation/v1.17/native-interface/candidate-f-upgrade/host-report.json) |
+| Four root scenes at actual 320 dp, EN/DE | 285 checks / 8 PNGs at each font scale 1.0 and 1.3 | [Standard font](validation/v1.17/native-interface/candidate-f-roots-compact/host-report.json), [large font](validation/v1.17/native-interface/candidate-f-roots-compact-largefont/host-report.json) |
+| Clipped German/Italian target regression | 19 checks / 2 PNGs | [Regression](validation/v1.17/native-interface/candidate-f-clipped-language/host-report.json) |
+| Primary scenes, companion/furniture catalogues and five outfit previews, all six languages | 276 checks / 177 PNGs normal, and 276 / 177 compact | [Normal](validation/v1.17/native-interface/candidate-f-sixlangs-normal/host-report.json), [compact](validation/v1.17/native-interface/candidate-f-sixlangs-compact/host-report.json) |
+| Owned Nova/Miko/Halo in wardrobe, profile and collection, with five outfit previews each | 78 checks / 27 PNGs | [Owned route](validation/v1.17/native-interface/candidate-f-owned-rigs/host-report.json) |
+| Secondary compact routes, EN/DE | 205 checks / 298 PNGs; remaining four compact languages and normal EN/FR running separately | [Completed EN/DE scope](validation/v1.17/native-interface/candidate-f-secondary-compact-preflight2/host-report.json) |
+| Genuine empty-device first launch, tutorial, eight first wins, two earned draws and cold persistence | 133 checks / 105 actual gestures / 49 original PNGs | [Fresh F aggregate](validation/v1.17/fresh-f/summary-f.json), [scope](validation/v1.17/fresh-f/README.md) |
+| Pure-render native gallery | 144 complete looks, 24 isolated garments, 24 style samples / 50 PNGs | [F execution](validation/v1.17/art/native/candidate-f-art/host-report.json); not application UI, ownership or acquisition evidence |
+| Inspected visual scope | 58 actual UI frames directly reviewed; 50/50 F gallery PNGs identical to the fully reviewed C sheets | [F review](validation/v1.17/review/visual-candidate-f.json), [gallery identity](validation/v1.17/review/c-to-f-renderer-pixel-equality.json) |
+| Installed digital audio | 38 checks / 8 PNGs / 130 AudioFlinger observations | [Final native review](validation/v1.17/review/audio-native-final-f.json) |
+| Native scene transitions | 23 checks and an original SDK screen recording of three routes | [Report](validation/v1.17/native-interface/candidate-f-transitions-v2/host-report.json) |
+| Cached enlarged-home rendering | 19 checks / 2 PNGs; cached sprite state stable while frames advance | [Observed scope](validation/v1.17/native-interface/candidate-f-steady-home/host-report.json) |
 
-The fresh route earns 440 coins from eight genuine first victories. Its observed
-180 starting balance and 100 tutorial gift bring the wallet to 720; actual Zig
-and Star parade draws spend 180 + 260 and leave 280. The equipped seven-slot
-portrait, wallet and saved reveal survive a distinct cold process without
-another debit. The separate E-only AVD is stopped normally with userdata
-preserved; it does not touch the retained main profile.
+All native rows identify production F's exact hash. Some execute on a physical
+copy of the retained task QA disk, made while its source was normally stopped.
+Seven copied disk hashes and the complete initial save/session match. The
+[immutable clone receipt](validation/v1.17/secondary-clone/creation.json) and
+[baseline comparison](validation/v1.17/native-interface/candidate-f-clone-identity/identity-comparison.json)
+separate those interactions from the single real E→F upgrade. No preferences,
+coins, unlocks, ownership or puzzle histories were seeded.
 
-The inspected E wardrobe sample closes C's P2 status-copy contrast finding from
-**1.93:1 to 5.45:1**. Nonblocking limits remain explicit: a thin sole-like edge
-under Jelli's front shoe, free styles that add accent ornaments rather than new
-painted costumes, and some high collars near the chin. This is inspected visual
-acceptance, not an assertion that every screen/pixel or accessibility criterion
-has passed. [Raw C reservation and compact failure](validation/v1.17/README.md#preserved-intermediate-findings)
-remain unchanged; D's onboarding alone does not certify E.
+The secondary route matrix is intentionally explicit: six compact languages
+are split across the original and its verified clone; normal secondary routes
+cover EN/FR. Primary browsing and outfit/catalogue coverage separately cover
+all six languages at both sizes. A full six-by-two secondary matrix is not claimed.
 
-The [current local E sparse CI rehearsal](validation/v1.17/ci-host-rehearsal-e/summary.json)
-passes **13 configured commands from exactly 132 files**, with source/log hashes.
-It includes **10,922** transition/gesture checks, **19,857** sprite geometry checks,
-**1,714** audio DSP/lifecycle-model checks, **18** old/current website-controller
-tests and retained exhaustive puzzle/home/profile/economy contracts. This is
-not a remote GitHub Actions result or installed gameplay evidence.
+The fresh route genuinely earns 440 coins from eight first victories. Its
+observed starting 180 and tutorial gift of 100 bring the wallet to 720; actual
+Tula and Moonlight draws spend 180 + 260 and leave 280. The equipped seven-slot
+portrait, balance and receipt survive a distinct cold process with no further
+debit. The separate fresh F AVD is normally stopped with userdata retained.
 
-The [audio report](validation/v1.17/audio/scenes/final-b/verification.json)
-records PCM exports and source hashes that match frozen E. Four 10-second
-previews use the exact app synthesizer, biome 0 and music gain 0.27; they are
-synthesizer renders, not phone recordings. Actual installed audio/lifecycle and
-listening evidence remain separate.
+E's two compact Collection/Atelier findings are closed in the inspected F
+frames. Earlier wardrobe status contrast is retained at **5.45:1**, up from
+C's sampled **1.93:1**. Documented art limits remain: a thin sole-like edge under
+Jelli's front shoe, free styles supplied as surrounding accents, and some high
+collars close to the chin. This is a bounded inspection, not every-pixel or
+universal accessibility acceptance. Failed and intermediate runs retain their
+own identities in the [qualification register](validation/v1.17/README.md).
 
-## Final evidence still required
+The [F sparse host rehearsal](validation/v1.17/ci-host-rehearsal-f/summary.json)
+passes **14 configured commands from exactly 135 files**. It includes
+**202,444** root-layout assertions over 420 configurations, **10,922** scene and
+gesture checks, **19,857** sprite geometry checks, **1,714** audio DSP/lifecycle
+checks and **18** website controller tests. The exhaustive relay model passes
+**13,312,469** checks over 1,000 boards, 191,954 states and 471,517 transitions.
+These host results are separate from native gameplay and remote Actions.
 
-| Final gate | Current status / replacement marker |
-| --- | --- |
-| Candidate and source freeze | E frozen/verified; global acceptance pending — `FINAL_117_CANDIDATE_IDENTITY` |
-| Four canonical APK/AAB files and manifests | Local outputs audited above; delivery links/manifests pending — `FINAL_117_ARTIFACTS` |
-| Build/lint, signatures, bundles and static 16 KiB ZIP/ELF | PASS on E — `FINAL_117_BINARY_AUDIT` |
-| Complete native normal/compact six-language routes, forms and gestures | Passed scoped routes above; full compact/secondary matrix pending — `FINAL_117_NATIVE_INTERFACE` |
-| Actual UI and complete rig/art inspection | Inspected E visual scope PASS with documented limits — `FINAL_117_VISUAL_ACCEPTANCE` |
-| Installed sound routing/lifecycle and audition scope | Pending — `FINAL_117_INSTALLED_AUDIO` |
-| Real installed U1–U1000 replay on exact E | Prepared, not launched — `FINAL_117_NATIVE_REPLAY` |
-| Sixteen original FR/EN website captures and responsive browser review | Pending — `FINAL_117_WEBSITE_ACCEPTANCE` |
-| Clean source commit, verified public downloads and Firebase byte receipt | Pending — `FINAL_117_PUBLICATION` |
+The [DSP report](validation/v1.17/audio/scenes/final-b/verification.json) retains
+its historical directory name; its Synth/AudioEngine source hashes equal F.
+It covers 50 loops and 14 effects, with preserved historical puzzle PCM. Four
+10-second previews use the actual app synthesizer, biome 0 and gain 0.27.
+Installed audio separately verifies all four place contexts, HOME/resume and
+independent music/effects toggles through AudioFlinger. The emulator has no
+host audio output: physical timbre/speaker listening and competition with an
+external focus owner were not tested.
 
-The replay uses the retained task QA profile that already earned three stars on
-all U boards. It must play every board through real Android touches, preserve
-profile/ownership/home/stock/settings and award **zero duplicate first-win coins**.
-It is replay evidence, separate from the eight genuine new-player first wins.
-Frozen certificates guide touches; no app/engine win hook or state seed is
-permitted. The [signed observer and detached launcher](../scripts/v117-relay-ui/README.md)
-are ready, with a [resume pointer](validation/v1.17/relay/active-handoff.json).
-Device handoff from interface to audio to replay is mandatory before launch.
+The native transition recording establishes observed destinations and fades.
+Its SDK capture cadence and timestamp gaps do not establish 60 fps phone
+performance. Reduced motion and lifecycle/input guards also have separate
+executable host and native checks.
+
+## Remaining final gates
+
+- Complete the remaining compact secondary languages and normal EN/FR routes.
+- Complete and independently aggregate the actual F U1–U1000 native replay.
+- Stage the four exact canonical delivery files and their manifests.
+- Prepare and accept the sixteen-image FR/EN site against that replay proof.
+- Publish immutable Git/Firebase commits, verify remote CI and compare every
+  public HTTPS payload against its deployment receipt.
+
+The replay uses a retained profile that already genuinely earned three stars
+on all U boards. It plays each board through actual Android touches, preserves
+profile/ownership/home/stock/settings and must award **zero duplicate first-win
+coins**. It is distinct from the eight new-player first victories. Frozen
+certificates guide input; no engine win hook or state seed is used.
+[Replay protocol](../scripts/v117-relay-ui/README.md) ·
+[Live handoff/progress pointer](validation/v1.17/relay/active-handoff.json).
 
 ## Installation and activation boundary
 

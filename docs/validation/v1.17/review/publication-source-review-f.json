@@ -1,0 +1,65 @@
+{
+  "status": "NO NEW P1/P2 FOUND IN READ-ONLY SOURCE REVIEW",
+  "reviewed_at_utc": "2026-10-29T04:24:16.471594+00:00",
+  "expected_candidate": {
+    "version": "1.17.0-rc4",
+    "code": 22,
+    "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8"
+  },
+  "reviewed_files_sha256": {
+    "scripts/prepare-site-v117.py": "156cc56ce04760ebb59b0e8ced5a45b13d1b57ab854069e52996cc9731574b1b",
+    "scripts/check-site-v117.py": "e1e54e60e38f37e17c58dacf3d5f107f235d8c09f92b6d07a858bb6fc347cd67",
+    "scripts/deploy-site-v117.py": "eed0b332daabceceb53642ad2d0fd3d91913f9e15c02eca3de6fed15a7b2bb3c",
+    "scripts/verify-site-v117-publication.py": "d9396f5b7c78580c672d6285a24a2984c11041571089cb030d1faf69366e2406",
+    "docs/validation/site-v1.17/index.template.html": "db11f70bbb39b187f02eec06180e50ac968824ec5f76d297c9dbbdcceda4ac11",
+    "docs/validation/site-v1.17/audio-provenance.json": "5c12107339b3913167c26da25112e2291e691e8c4c3995944f88242f1e825895",
+    "docs/validation/site-v1.17/capture-map.json": "c9d845cd0ca5aa9012486869f083f32c1a38add579480758ae6fc3a4310f15f9"
+  },
+  "cache_query_review": {
+    "site.css": {
+      "template_query": "81cc9dee208368c4",
+      "current_asset_sha256": "81cc9dee208368c477c2027c1069153c96dee55bc587fd64a0a2b4bda6a02ab1",
+      "query_matches_sha_prefix": true
+    },
+    "site.js": {
+      "template_query": "29c0fed2ad0430c9",
+      "current_asset_sha256": "29c0fed2ad0430c9d2b8506bdc31419dd47703a019a06fa451080b2bb227250e",
+      "query_matches_sha_prefix": true
+    }
+  },
+  "findings": [],
+  "confirmed_source_invariants": [
+    "All four current preparation/audit/deployment/public-verification scripts identify rc4. Release and native replay guards require code22. The parent-corrected visible code literal now also expects22.",
+    "Final APK SHA is a required independent argument and is tied to canonical release bytes, every accepted native screenshot report, retained native replay summary, source audit and later deployment receipt. No older candidate SHA is hardcoded in these four scripts/template.",
+    "Preparation re-summarizes the actual native1000 evidence and checks a zero repeated first-win reward total before replacing the level-proof placeholder. No completed replay/publication outcome is inferred from this source review.",
+    "Capture map identifies exact F and16 FR/EN actual application PNGs. Preparation and audit require complete original PNG bytes, matching native report filenames/hashes and exact final APK identity. No ANALYSIS or separate renderer sheet is selected in this map.",
+    "Audio provenance release is rc4 while its four source WAVs and DSP report intentionally retain the historical final-b directory; source hashes are compared against the final APK source freeze. Website copy explicitly says synthesizer renders, not phone recordings, and ending export fades are disclosed.",
+    "Template APK/AAB/manifest links and visible code/version agree with rc4/code22. Its unresolved placeholders are deliberate preparation inputs and are rejected after substitution.",
+    "Template scope describes object navigation inside the game scenes and has no 60fps, million-player, physical-listening, paid-checkout or Google-save-sync claim. Local saves, test ads and disabled real checkout are explicit.",
+    "Hosting-only deployment requires a clean exact commit, frozen audit/source/asset bytes, immutable artifact commit and fixed Firebase destination. Its management success is distinct from HTTPS byte verification and browser rendering.",
+    "Public HTTPS verification independently requires deployment/source identity, exact bytes for all payloads, and directory aliases; no Play or provider transaction is inferred."
+  ],
+  "scope_limits": [
+    "Source re-read only: no script, app, template or provenance edits by reviewer; no repeated test suite, deployment, network, browser or AVD access.",
+    "Final native replay, packaging, clean-commit audit, actual Hosting deployment, public-byte checks and final browser checks remain the parent owners separate release gates.",
+    "File hashes identify this read-only snapshot; later edits require current audit freezing before publication."
+  ],
+  "capture_map_summary": {
+    "production_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+    "images": 16,
+    "selected_reports": [
+      "docs/validation/v1.17/native-interface/candidate-f-sixlangs-normal/host-report.json"
+    ]
+  },
+  "audio_release": "1.17.0-rc4",
+  "related_document_readback": {
+    "scope": "Read-only material consistency check against this reviewer’s final F visual/audio/motion evidence; not a complete new audit or live-publication verification.",
+    "files_sha256": {
+      "docs/RELEASE_1_17.md": "945dea7db96cd9dcdf5a72c08aef1e23d59ee9b7ed9e38f6633d73c661c4d4fb",
+      "docs/validation/v1.17/README.md": "b531ef9584b777ce43d06b554e9eca254918ac671c91329bef1771a5b71650c4",
+      "docs/validation/site-v1.17/README.md": "b427688f5bea98ba9bc97e59a9bd725ba2a20a5f4d7d1414cc3ab7584c00cc7f"
+    },
+    "result": "No material scope contradiction found in58 actual UI captures,50/50 separate native gallery identity,38 audio checks/8 captures/130 dumps, pending replay/publication, or explicit primary/secondary language-size matrix.",
+    "advisory": "Specific synchronous-resume monitor attribution lacks a captured stack; parent notified and owns the documentation clarification. Timeout after HOME, next source call and successful observer-only async retry are observed separately."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "passed": false,
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "package": "com.androidhit.lumadrift",
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "observer_apk_sha256": "024adece9796d2105ec3fad121471ef66e030990cf150eeddae2200c30d05b8c",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "host_audio_output_available": false,
+  "physical_listening_performed": false,
+  "scope": "Actual UI input, four native scene outputs, music/effects settings and Android HOME pause/resume observed via AudioFlinger and public PID logs. No target hooks, preference reads/writes, state injection, purchases, puzzle moves, provider actions, app installation/replacement, display changes or other device. No physical speaker/headphone audition or external audio-focus contender.",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "screenshots": {},
+  "error": "Command '['/Users/n/Library/Android/sdk/platform-tools/adb', '-s', 'emulator-5586', 'shell', 'am', 'instrument', '-w', '-r', '-e', 'expectedVersion', '1.17.0-rc4', '-e', 'expectedCode', '22', 'com.androidhit.lumadrift.audio117test/com.androidhit.lumadrift.qa.v117audio.AudioInstrumentation']' timed out after 240 seconds",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v117-audio-test/run.py\", line 84, in main\n    result=call('shell','am','instrument','-w','-r','-e','expectedVersion',args.expected_version,'-e','expectedCode',str(args.expected_code),RUNNER,timeout=240)\n  File \"/Users/n/androidhit/scripts/v117-audio-test/run.py\", line 45, in call\n    return subprocess.check_output([adb,'-s',args.serial,*parts],stderr=subprocess.STDOUT,timeout=timeout)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 424, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 507, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 1134, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 1980, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 1178, in _check_timeout\n    raise TimeoutExpired(\nsubprocess.TimeoutExpired: Command '['/Users/n/Library/Android/sdk/platform-tools/adb', '-s', 'emulator-5586', 'shell', 'am', 'instrument', '-w', '-r', '-e', 'expectedVersion', '1.17.0-rc4', '-e', 'expectedCode', '22', 'com.androidhit.lumadrift.audio117test/com.androidhit.lumadrift.qa.v117audio.AudioInstrumentation']' timed out after 240 seconds\n",
+  "observer_removed": true,
+  "installed_candidate_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "exact_candidate_retained": true
+}

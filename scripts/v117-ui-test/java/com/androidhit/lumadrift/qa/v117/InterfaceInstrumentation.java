@@ -339,15 +339,18 @@ public final class InterfaceInstrumentation extends Instrumentation {
         uiCopy=new JSONObject(new String(bytes(getContext().getAssets().open("ui-copy.json")),StandardCharsets.UTF_8)).getJSONObject("rows");
         boolean original=motionSetting();english();settings();top();if(original)tapPrefix(copy("t","reduce_motion",0)+":");back();navigate(0,0);
         check(!motionSetting(),"Native transition video uses normal motion");
-        File video=new File(output,"transitions.mp4");if(video.exists()&&!video.delete())throw new IllegalStateException("Cannot replace observer-owned prior recording");
+        File video=new File(output,"transitions.mp4");
+        // SDK screenrecord owns its output as shell. Keep replacement and reading
+        // with that same SDK identity; the app must not bypass scoped storage.
+        if(video.exists()){sdkShell("rm -f "+video.getAbsolutePath());if(video.exists())throw new IllegalStateException("Cannot replace observer-owned prior recording");}
         final String[] recording={null};final Throwable[] failure={null};long start=SystemClock.uptimeMillis();
         Thread recorder=new Thread(()->{try{recording[0]=sdkShell("screenrecord --time-limit 8 --bit-rate 6000000 "+video.getAbsolutePath());}catch(Throwable error){failure[0]=error;}},"native-screenrecord-v117");
         recorder.start();SystemClock.sleep(500);JSONArray timeline=new JSONArray();
         for(int destination:new int[]{1,2,1}){long before=SystemClock.uptimeMillis();navigate(0,destination);timeline.put(new JSONObject().put("destination",NAV[0][destination]).put("actionStartMs",before-start).put("stableAfterMs",SystemClock.uptimeMillis()-start));SystemClock.sleep(1100);}
         recorder.join(12000);check(!recorder.isAlive()&&failure[0]==null,"Android SDK screenrecord completes its bounded8second recording");
         write("transitions-screenrecord.txt",recording[0]==null?"":recording[0]);check(video.isFile()&&video.length()>10000,"Native transition recording contains a real encoded video");
-        java.security.MessageDigest digest=java.security.MessageDigest.getInstance("SHA-256");try(InputStream input=new FileInputStream(video)){byte[] buffer=new byte[8192];int n;while((n=input.read(buffer))!=-1)digest.update(buffer,0,n);}StringBuilder hash=new StringBuilder();for(byte value:digest.digest())hash.append(String.format(java.util.Locale.ROOT,"%02x",value&255));
-        write("transitions.json",new JSONObject().put("passed",true).put("sdkCommand","screenrecord --time-limit 8 --bit-rate 6000000 <observer-owned external-files>/transitions.mp4").put("sha256",hash.toString()).put("bytes",video.length()).put("startUptimeMs",start).put("elapsedMs",SystemClock.uptimeMillis()-start).put("routes",timeline).put("scope","Unedited native Android SDK video of actual scene-object touchscreen navigation with normal motion; no synthetic frames, renderer calls or state injection.").toString(2));
+        String hash=sdkShell("sha256sum "+video.getAbsolutePath()).trim().split("\\s+")[0];check(hash.matches("[a-f0-9]{64}"),"SDK shell hashes its own native recording without bypassing Android file permissions");
+        write("transitions.json",new JSONObject().put("passed",true).put("sdkCommand","screenrecord --time-limit 8 --bit-rate 6000000 <observer-owned external-files>/transitions.mp4").put("sha256",hash).put("bytes",video.length()).put("startUptimeMs",start).put("elapsedMs",SystemClock.uptimeMillis()-start).put("routes",timeline).put("scope","Unedited native Android SDK video of actual scene-object touchscreen navigation with normal motion; no synthetic frames, renderer calls or state injection.").toString(2));
         settings();top();if(original)tapPrefix(copy("t","reduce_motion",0)+":");back();check(motionSetting()==original,"Transition video restores original motion preference");settings();top();tap("Français");back();navigate(1,1);capture("transitions-delivery-home-fr");
     }
     private void browseLanguages(boolean includeRoots)throws Exception{

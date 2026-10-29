@@ -4,7 +4,7 @@
   "candidate_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
   "version": "1.17.0-rc4",
   "version_code": 22,
-  "actual_application_ui_frames_reviewed": 46,
+  "actual_application_ui_frames_reviewed": 58,
   "root_composition_scope": {
     "normal_english": 4,
     "compact_320dp_english_and_german_font_1_0": 8,
@@ -245,6 +245,66 @@
       "path": "docs/screenshots/v1.17/native-interface/candidate-f-secondary-compact-preflight2/secondary/secondary-settings-en-p2.png",
       "sha256": "bed88d99c01b75e82d9fdb946a6965e34f633e8af67c0a6499f29d1821a3573c",
       "scope": "actual native compact secondary UI, directly visually reviewed"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-normal/browse/adventure-en.png",
+      "sha256": "b42799e31f976feb7f7923bbebd41df25404bb723b2d1ca1c18fa9068a17b50e",
+      "scope": "actual native final six-language normal UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-normal/browse/home-fr.png",
+      "sha256": "d97fe435c24f04816ffb308d60d3ee70d84f905ad25bbde7de25e39665470f9e",
+      "scope": "actual native final six-language normal UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-normal/browse/collection-de.png",
+      "sha256": "b3fe9a098381d4a94e96fde585621c7d3a4f1069896bfb66051fe5c8604a9f2f",
+      "scope": "actual native final six-language normal UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-normal/browse/profile-it.png",
+      "sha256": "3fd5649857cdfd0aaca4179a44630a383c63bb9cbe5cb233e5e1cb654d20eb42",
+      "scope": "actual native final six-language normal UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-normal/browse/avatar-pool-top-es.png",
+      "sha256": "a3faecf9d595cd176e35b2d3fce906bbbb113c6d232d42bc585c28679bea07aa",
+      "scope": "actual native final six-language normal UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-normal/browse/signature-banner-pt.png",
+      "sha256": "1c3c93d387986354aa948268082329a960d1e478dc453bbea4851e4687b27ca2",
+      "scope": "actual native final six-language normal UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-compact/browse/adventure-en.png",
+      "sha256": "ab5db9adf2e4d8ecd8c7ced1c0ac15cb052e954b99fe06a55f0487afeca87527",
+      "scope": "actual native final six-language compact UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-compact/browse/home-fr.png",
+      "sha256": "54af8629820cb56a2053245db1ed6f32cc44320f5e546a745c21443e2fdcd713",
+      "scope": "actual native final six-language compact UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-compact/browse/collection-de.png",
+      "sha256": "ea6be74494768a9d81c22e220c555e74f9a74aa784534501a0aa44f82c4ab8e9",
+      "scope": "actual native final six-language compact UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-compact/browse/profile-it.png",
+      "sha256": "8a06f0e85f3aee7470cde76a7503acd265bc2fc6f2bcb48be185150b2a44b14c",
+      "scope": "actual native final six-language compact UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-compact/browse/avatar-pool-top-es.png",
+      "sha256": "d465e1baf22f1ba2c53a7a361782c6c13f82334f8ab22d6ca2ed055a1b70db11",
+      "scope": "actual native final six-language compact UI, directly visually reviewed sample"
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-f-sixlangs-compact/browse/signature-banner-pt.png",
+      "sha256": "46e210435c1ef06ddb384974a5716defe5ba615fa05fa95170979d42b97562d9",
+      "scope": "actual native final six-language compact UI, directly visually reviewed sample"
     }
   ],
   "closed_findings": [
@@ -266,9 +326,10 @@
     "Minor Jelli sole-like edge and some high collar overlap from the unchanged renderer art remain documented in C/E reviews."
   ],
   "limits": [
-    "Full native gallery pixel-transfer to F awaits independently executed F renderer evidence.",
-    "Full six-language secondary coverage, digital Android audio, full1000 replay and remaining release checks are separate evidence.",
-    "No physical human listening test was performed."
+    "Gallery transfer is pure renderer evidence, separate from actual app UI, acquisition or ownership.",
+    "The58 directly viewed app frames are a defined sample, not every image from all native routes.",
+    "Native Android digital audio has its own38-check/8-capture report; no physical speaker/headphone audition.",
+    "Full1000 replay and final publication retain their own evidence."
   ],
   "compact_secondary_scope": {
     "frames_directly_reviewed": 24,
@@ -287,5 +348,14 @@
       "settings"
     ],
     "selection": "Read-only review of top, middle or bottom actual scroll captures. The native route produced298 frames; no claim that all298 were visually reviewed."
+  },
+  "renderer_gallery_scope": {
+    "complete_looks": 144,
+    "species": 24,
+    "isolated_garments": 24,
+    "free_treatment_previews": 24,
+    "comparison": "docs/validation/v1.17/review/c-to-f-renderer-pixel-equality.json",
+    "comparison_sha256": "be0eec940a37d7708818f382e44ed8f011a5ea195cb803fb21450deb04d8cbc0",
+    "direct_review": "Each of50 C PNGs was visually inspected; all50 independently executed F PNGs have the exact same whole-file hash. Separate renderer scope, not UI ownership evidence."
   }
 }

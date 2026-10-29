@@ -1,0 +1,3819 @@
+{
+  "passed": true,
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "package": "com.androidhit.lumadrift",
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "observer_apk_sha256": "0d0fc3ff72a87e06eb11eac7a5e0f91ce63e0c9c8f7559ab51b88895787ea5cb",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "host_audio_output_available": false,
+  "physical_listening_performed": false,
+  "prior_timeout_ui_recovery": {
+    "language": "Français",
+    "music": "on",
+    "effects": "on"
+  },
+  "scope": "Actual UI input, four native scene outputs, music/effects settings and Android HOME pause/resume observed via AudioFlinger and public PID logs. No target hooks, preference reads/writes, state injection, purchases, puzzle moves, provider actions, app installation/replacement, display changes or other device. No physical speaker/headphone audition or external audio-focus contender.",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "screenshots": {
+    "settings-before-en.png": "c3249b9f27a8c02beae8f8dc9e98d0bc4483d68a8988a893b4545aa8d4ecd716",
+    "scene-adventure-en.png": "b90970adc90823ec4eb315a3e8a8bd77f2497af570313f3294644d303b21fbd3",
+    "scene-atelier-en.png": "1f3b38165fe6644759d9aeb89886d4c3d23c7f140b2867d0f57086a79e06029f",
+    "settings-restored.png": "0869a26a0ff9555523464f60951028cc75e3e6227f51ddaac1e1f3a32f67125a",
+    "settings-independent-en.png": "6b2dd232f69fd9bf7baa22e5141ba5d50caf678c8954ea5b47f45742786793c5",
+    "prior-timeout-settings-recovered.png": "0869a26a0ff9555523464f60951028cc75e3e6227f51ddaac1e1f3a32f67125a",
+    "scene-collection-en.png": "88e19b09b8efa83aed82201de6139ca77b28916c6c2ceaedb227a3b7ed8dd853",
+    "scene-home-en.png": "be972fdd2dfe4dbd55cd3ff53b57ddae68fb99c279cab02365197e90648bfb0d"
+  },
+  "native": {
+    "passed": true,
+    "checkCount": 38,
+    "checks": [
+      {
+        "passed": true,
+        "name": "Exact production target package"
+      },
+      {
+        "passed": true,
+        "name": "Exact candidate version/code"
+      },
+      {
+        "passed": true,
+        "name": "Android media stream has a positive unmuted digital output setting (no host speaker output)"
+      },
+      {
+        "passed": true,
+        "name": "Visible Sound effects state is On"
+      },
+      {
+        "passed": true,
+        "name": "Visible Music state is On"
+      },
+      {
+        "passed": true,
+        "name": "Prior timed-out observer baseline recovered through actual UI"
+      },
+      {
+        "passed": true,
+        "name": "Original language observed from selected UI object"
+      },
+      {
+        "passed": true,
+        "name": "Visible Sound effects state is Off"
+      },
+      {
+        "passed": true,
+        "name": "Visible Music state is On"
+      },
+      {
+        "passed": true,
+        "name": "Same native music track frame counter advances: scene-0"
+      },
+      {
+        "passed": true,
+        "name": "Latest actual loaded scene announcement is ADVENTURE"
+      },
+      {
+        "passed": true,
+        "name": "Same native music track frame counter advances: scene-1"
+      },
+      {
+        "passed": true,
+        "name": "Latest actual loaded scene announcement is HOME"
+      },
+      {
+        "passed": true,
+        "name": "Same native music track frame counter advances: scene-2"
+      },
+      {
+        "passed": true,
+        "name": "Latest actual loaded scene announcement is COLLECTION"
+      },
+      {
+        "passed": true,
+        "name": "Same native music track frame counter advances: scene-3"
+      },
+      {
+        "passed": true,
+        "name": "Latest actual loaded scene announcement is ATELIER"
+      },
+      {
+        "passed": true,
+        "name": "All target audio tracks inactive after Android HOME"
+      },
+      {
+        "passed": true,
+        "name": "Same native music track frame counter advances: resumed"
+      },
+      {
+        "passed": true,
+        "name": "Visible Music state is Off"
+      },
+      {
+        "passed": true,
+        "name": "Visible Sound effects state is On"
+      },
+      {
+        "passed": true,
+        "name": "Music inactive independently while effects remain enabled"
+      },
+      {
+        "passed": true,
+        "name": "At least three real AudioFlinger snapshots for effects-on-music-off"
+      },
+      {
+        "passed": true,
+        "name": "Actual target short-track activity after visible taps with effects on and music off"
+      },
+      {
+        "passed": true,
+        "name": "Music stays inactive during effects-only taps"
+      },
+      {
+        "passed": true,
+        "name": "Visible Sound effects state is Off"
+      },
+      {
+        "passed": true,
+        "name": "At least three real AudioFlinger snapshots for effects-off-music-off"
+      },
+      {
+        "passed": true,
+        "name": "No active or advancing target tracks from the same visible taps with both settings off"
+      },
+      {
+        "passed": true,
+        "name": "Visible Music state is On"
+      },
+      {
+        "passed": true,
+        "name": "Same native music track frame counter advances: music-on-effects-off"
+      },
+      {
+        "passed": true,
+        "name": "Independent Music On and Sound effects Off remain visible"
+      },
+      {
+        "passed": true,
+        "name": "At least three real AudioFlinger snapshots for effects-off-music-on"
+      },
+      {
+        "passed": true,
+        "name": "Music advances during effects-disabled taps"
+      },
+      {
+        "passed": true,
+        "name": "No target short-track activity during effects-disabled taps"
+      },
+      {
+        "passed": true,
+        "name": "Visible Sound effects state is On"
+      },
+      {
+        "passed": true,
+        "name": "Visible Music state is On"
+      },
+      {
+        "passed": true,
+        "name": "Original two audio settings restored through actual UI"
+      },
+      {
+        "passed": true,
+        "name": "Original selected language restored through actual UI"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Settings",
+        "bounds": "[890,334][1042,533]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Sound effects: Off",
+        "bounds": "[66,554][1013,712]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Français",
+        "bounds": "[708,1362][1013,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Sound effects: On",
+        "bounds": "[66,554][1013,712]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "My home",
+        "bounds": "[876,2045][1050,2267]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Collection",
+        "bounds": "[876,2045][1050,2267]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Atelier",
+        "bounds": "[876,2045][1050,2267]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Collection",
+        "bounds": "[29,2045][203,2267]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "My home",
+        "bounds": "[29,2045][203,2267]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Adventure",
+        "bounds": "[29,2045][203,2267]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Settings",
+        "bounds": "[890,334][1042,533]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Music: On",
+        "bounds": "[66,720][1013,878]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Sound effects: Off",
+        "bounds": "[66,554][1013,712]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Sound effects: On",
+        "bounds": "[66,554][1013,712]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Music: Off",
+        "bounds": "[66,720][1013,878]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English (already selected; harmless repeated tap)",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Sound effects: Off",
+        "bounds": "[66,554][1013,712]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Français",
+        "bounds": "[708,1362][1013,1523]",
+        "kind": "actual touchscreen"
+      }
+    ],
+    "observations": [
+      {
+        "raw": "scene-0-first-000.txt",
+        "elapsedRealtime": 1011581,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "62",
+            "active": true,
+            "frames": 142942,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "scene-0-second-001.txt",
+        "elapsedRealtime": 1012642,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "62",
+            "active": true,
+            "frames": 166433,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "scene": "ADVENTURE",
+        "trackId": "62",
+        "frameAdvance": 23491
+      },
+      {
+        "raw": "scene-1-first-002.txt",
+        "elapsedRealtime": 1014134,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "64",
+            "active": true,
+            "frames": 3998,
+            "bufferFrames": 622588,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "scene-1-second-003.txt",
+        "elapsedRealtime": 1015195,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "64",
+            "active": true,
+            "frames": 26989,
+            "bufferFrames": 622588,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "scene": "HOME",
+        "trackId": "64",
+        "frameAdvance": 22991
+      },
+      {
+        "raw": "scene-2-first-004.txt",
+        "elapsedRealtime": 1016222,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "65",
+            "active": true,
+            "frames": 2998,
+            "bufferFrames": 557053,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "scene-2-second-005.txt",
+        "elapsedRealtime": 1017281,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "65",
+            "active": true,
+            "frames": 26489,
+            "bufferFrames": 557053,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "scene": "COLLECTION",
+        "trackId": "65",
+        "frameAdvance": 23491
+      },
+      {
+        "raw": "scene-3-first-006.txt",
+        "elapsedRealtime": 1018576,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "66",
+            "active": true,
+            "frames": 2998,
+            "bufferFrames": 492279,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "scene-3-second-007.txt",
+        "elapsedRealtime": 1019636,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "66",
+            "active": true,
+            "frames": 25989,
+            "bufferFrames": 492279,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "scene": "ATELIER",
+        "trackId": "66",
+        "frameAdvance": 22991
+      },
+      {
+        "raw": "background-008.txt",
+        "elapsedRealtime": 1021300,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "66",
+            "active": false,
+            "frames": 47980,
+            "bufferFrames": 492279,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "resumed-first-009.txt",
+        "elapsedRealtime": 1023231,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "66",
+            "active": true,
+            "frames": 85964,
+            "bufferFrames": 492279,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "resumed-second-010.txt",
+        "elapsedRealtime": 1024293,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "66",
+            "active": true,
+            "frames": 108955,
+            "bufferFrames": 492279,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "phase": "resume",
+        "trackId": "66",
+        "frameAdvance": 22991
+      },
+      {
+        "raw": "music-off-effects-on-011.txt",
+        "elapsedRealtime": 1028678,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-012.txt",
+        "elapsedRealtime": 1028695,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-013.txt",
+        "elapsedRealtime": 1028740,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-014.txt",
+        "elapsedRealtime": 1028788,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-015.txt",
+        "elapsedRealtime": 1028837,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-016.txt",
+        "elapsedRealtime": 1028896,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 0,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-017.txt",
+        "elapsedRealtime": 1028966,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 1499,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-018.txt",
+        "elapsedRealtime": 1029022,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 2998,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-019.txt",
+        "elapsedRealtime": 1029071,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 3998,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-020.txt",
+        "elapsedRealtime": 1029151,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 4997,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-021.txt",
+        "elapsedRealtime": 1029199,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 5512,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-022.txt",
+        "elapsedRealtime": 1029247,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 7012,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-023.txt",
+        "elapsedRealtime": 1029301,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 8012,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-024.txt",
+        "elapsedRealtime": 1029352,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 9511,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-025.txt",
+        "elapsedRealtime": 1029402,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 10511,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-026.txt",
+        "elapsedRealtime": 1029447,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 11024,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-027.txt",
+        "elapsedRealtime": 1029498,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 11525,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-028.txt",
+        "elapsedRealtime": 1029546,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 12524,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-029.txt",
+        "elapsedRealtime": 1029595,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 13524,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-030.txt",
+        "elapsedRealtime": 1029645,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 14524,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-031.txt",
+        "elapsedRealtime": 1029692,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 16023,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-032.txt",
+        "elapsedRealtime": 1029746,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 16536,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-033.txt",
+        "elapsedRealtime": 1029800,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 17036,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-034.txt",
+        "elapsedRealtime": 1029847,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 18036,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-035.txt",
+        "elapsedRealtime": 1029894,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 19535,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-036.txt",
+        "elapsedRealtime": 1029945,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 20535,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-037.txt",
+        "elapsedRealtime": 1029991,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 21535,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-038.txt",
+        "elapsedRealtime": 1030036,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-039.txt",
+        "elapsedRealtime": 1030081,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": true,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-040.txt",
+        "elapsedRealtime": 1030135,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-041.txt",
+        "elapsedRealtime": 1030181,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-042.txt",
+        "elapsedRealtime": 1030227,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-043.txt",
+        "elapsedRealtime": 1030276,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-044.txt",
+        "elapsedRealtime": 1030328,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-045.txt",
+        "elapsedRealtime": 1030373,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-046.txt",
+        "elapsedRealtime": 1030418,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-047.txt",
+        "elapsedRealtime": 1030462,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-048.txt",
+        "elapsedRealtime": 1030506,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-on-music-off-049.txt",
+        "elapsedRealtime": 1030551,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 22048,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "phase": "effects-on-music-off",
+        "snapshots": 38,
+        "shortTrackActivity": true,
+        "musicActivity": false
+      },
+      {
+        "raw": "effects-off-music-off-050.txt",
+        "elapsedRealtime": 1032078,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-051.txt",
+        "elapsedRealtime": 1032121,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-052.txt",
+        "elapsedRealtime": 1032168,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-053.txt",
+        "elapsedRealtime": 1032212,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-054.txt",
+        "elapsedRealtime": 1032261,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-055.txt",
+        "elapsedRealtime": 1032312,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-056.txt",
+        "elapsedRealtime": 1032361,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-057.txt",
+        "elapsedRealtime": 1032414,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-058.txt",
+        "elapsedRealtime": 1032477,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-059.txt",
+        "elapsedRealtime": 1032532,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-060.txt",
+        "elapsedRealtime": 1032582,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-061.txt",
+        "elapsedRealtime": 1032626,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-062.txt",
+        "elapsedRealtime": 1032671,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-063.txt",
+        "elapsedRealtime": 1032720,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-064.txt",
+        "elapsedRealtime": 1032767,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-065.txt",
+        "elapsedRealtime": 1032818,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-066.txt",
+        "elapsedRealtime": 1032875,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-067.txt",
+        "elapsedRealtime": 1032918,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-068.txt",
+        "elapsedRealtime": 1032963,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-069.txt",
+        "elapsedRealtime": 1033014,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-070.txt",
+        "elapsedRealtime": 1033061,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-071.txt",
+        "elapsedRealtime": 1033106,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-072.txt",
+        "elapsedRealtime": 1033151,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-073.txt",
+        "elapsedRealtime": 1033197,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-074.txt",
+        "elapsedRealtime": 1033251,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-075.txt",
+        "elapsedRealtime": 1033296,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-076.txt",
+        "elapsedRealtime": 1033341,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-077.txt",
+        "elapsedRealtime": 1033395,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-078.txt",
+        "elapsedRealtime": 1033441,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-079.txt",
+        "elapsedRealtime": 1033495,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-080.txt",
+        "elapsedRealtime": 1033545,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-081.txt",
+        "elapsedRealtime": 1033589,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-082.txt",
+        "elapsedRealtime": 1033637,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-083.txt",
+        "elapsedRealtime": 1033680,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-084.txt",
+        "elapsedRealtime": 1033727,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-085.txt",
+        "elapsedRealtime": 1033776,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-086.txt",
+        "elapsedRealtime": 1033822,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-087.txt",
+        "elapsedRealtime": 1033872,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-off-088.txt",
+        "elapsedRealtime": 1033955,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": false,
+            "frames": 17992,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "phase": "effects-off-music-off",
+        "snapshots": 39,
+        "shortTrackActivity": false,
+        "musicActivity": false
+      },
+      {
+        "raw": "music-on-effects-off-first-089.txt",
+        "elapsedRealtime": 1035612,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 49979,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "music-on-effects-off-second-090.txt",
+        "elapsedRealtime": 1036670,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 73469,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-091.txt",
+        "elapsedRealtime": 1036680,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 73969,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-092.txt",
+        "elapsedRealtime": 1036724,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 74469,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-093.txt",
+        "elapsedRealtime": 1036767,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 75468,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-094.txt",
+        "elapsedRealtime": 1036811,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 76468,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-095.txt",
+        "elapsedRealtime": 1036858,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 77468,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-096.txt",
+        "elapsedRealtime": 1036906,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 78467,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-097.txt",
+        "elapsedRealtime": 1036950,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 79467,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-098.txt",
+        "elapsedRealtime": 1036993,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 80466,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-099.txt",
+        "elapsedRealtime": 1037071,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 82466,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-100.txt",
+        "elapsedRealtime": 1037132,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 83465,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-101.txt",
+        "elapsedRealtime": 1037191,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 84965,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-102.txt",
+        "elapsedRealtime": 1037243,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 85964,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-103.txt",
+        "elapsedRealtime": 1037290,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 86964,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-104.txt",
+        "elapsedRealtime": 1037339,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 87963,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-105.txt",
+        "elapsedRealtime": 1037384,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 89463,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-106.txt",
+        "elapsedRealtime": 1037434,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 89963,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-107.txt",
+        "elapsedRealtime": 1037477,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 91462,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-108.txt",
+        "elapsedRealtime": 1037527,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 92462,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-109.txt",
+        "elapsedRealtime": 1037576,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 93461,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-110.txt",
+        "elapsedRealtime": 1037624,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 94461,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-111.txt",
+        "elapsedRealtime": 1037676,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 95960,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-112.txt",
+        "elapsedRealtime": 1037732,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 96960,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-113.txt",
+        "elapsedRealtime": 1037789,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 97959,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-114.txt",
+        "elapsedRealtime": 1037846,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 99459,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-115.txt",
+        "elapsedRealtime": 1037894,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 100458,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-116.txt",
+        "elapsedRealtime": 1037937,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 101458,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-117.txt",
+        "elapsedRealtime": 1037986,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 102458,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-118.txt",
+        "elapsedRealtime": 1038028,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 103457,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-119.txt",
+        "elapsedRealtime": 1038073,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 104457,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-120.txt",
+        "elapsedRealtime": 1038119,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 105456,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-121.txt",
+        "elapsedRealtime": 1038167,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 106456,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-122.txt",
+        "elapsedRealtime": 1038213,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 107456,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-123.txt",
+        "elapsedRealtime": 1038269,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 108955,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-124.txt",
+        "elapsedRealtime": 1038318,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 109955,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-125.txt",
+        "elapsedRealtime": 1038378,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 110954,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-126.txt",
+        "elapsedRealtime": 1038425,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 111954,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-127.txt",
+        "elapsedRealtime": 1038471,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 113453,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-128.txt",
+        "elapsedRealtime": 1038515,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 113953,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "raw": "effects-off-music-on-129.txt",
+        "elapsedRealtime": 1038562,
+        "tracks": [
+          {
+            "id": "63",
+            "active": false,
+            "frames": 13522,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "70",
+            "active": false,
+            "frames": 25046,
+            "bufferFrames": 5512,
+            "kind": "short_effect"
+          },
+          {
+            "id": "69",
+            "active": true,
+            "frames": 114953,
+            "bufferFrames": 529200,
+            "kind": "long_static_music"
+          }
+        ]
+      },
+      {
+        "phase": "effects-off-music-on",
+        "snapshots": 39,
+        "shortTrackActivity": false,
+        "musicActivity": true
+      },
+      {
+        "phase": "music-only",
+        "trackId": "69",
+        "frameAdvance": 23490
+      }
+    ],
+    "captures": [
+      "prior-timeout-settings-recovered",
+      "settings-before-en",
+      "scene-adventure-en",
+      "scene-home-en",
+      "scene-collection-en",
+      "scene-atelier-en",
+      "settings-independent-en",
+      "settings-restored"
+    ],
+    "processId": 4112,
+    "systemMusicVolume": 5,
+    "systemMusicMuted": false,
+    "settingsRestored": true,
+    "originalLanguage": "Français",
+    "originalMusic": true,
+    "originalEffects": true,
+    "failure": "",
+    "scope": "Actual framework touchscreen actions, AudioFlinger rows/frame counters and existing public audio logs for four places, music/effects independence and Android HOME pause/resume. No app imports, renderer/engine hooks, reflection, preference access, state injection, puzzle move, purchase or provider operation. Emulator has no host audio output: no physical listening, timbre or speaker-quality claim. No real external audio-focus contender was introduced. Historical puzzle audio is covered separately by PCM contracts, not this four-place UI route."
+  },
+  "observer_removed": true,
+  "installed_candidate_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "exact_candidate_retained": true
+}

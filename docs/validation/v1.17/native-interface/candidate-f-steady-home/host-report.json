@@ -1,0 +1,214 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "test_apk_sha256": "94d1a3f377d67872664338b1b4603ead31deae5d90191198c62fe92ab26c724b",
+  "wrapper_source_sha256": "6ea4bc64d1b469bd514700a121211d1b5fe36c07885ed9033818c0e7e1796c44",
+  "runner_source_sha256": "f47cece0d63577b782607d9cdcfb939888edaef50c8977bc828ac704b02f53df",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "performance",
+      "native": {
+        "passed": true,
+        "checkCount": 19,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Living room"
+          },
+          {
+            "passed": true,
+            "message": "Target PID recorded its actual original sprite decodes during warmup"
+          },
+          {
+            "passed": true,
+            "message": "Steady enlarged Home frames do not evict and repeatedly decode their sprites"
+          },
+          {
+            "passed": true,
+            "message": "Actual application frames continue during the cache stability observation"
+          },
+          {
+            "passed": true,
+            "message": "Observed native sprite allocations remain within the configured48MiB cache bound"
+          },
+          {
+            "passed": true,
+            "message": "Actual Home cache, frame and memory observation creates no purchase, draw, compensation or coin change"
+          },
+          {
+            "passed": true,
+            "message": "Actual Home cache, frame and memory observation preserves progression, stock and complete puzzle session"
+          },
+          {
+            "passed": true,
+            "message": "Actual Home cache, frame and memory observation preserves all furniture ownership and exact room layouts"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Ma maison"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Living room",
+            "bounds": "[47,365][312,615]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[708,1362][1013,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Ma maison",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "performance-home-en",
+          "performance-home-fr"
+        ],
+        "processId": 5392,
+        "phase": "performance",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Actual enlarged retained Home UI; read-only target-PID Android logs, gfxinfo and meminfo before/after a steady animated interval. No target renderer/cache/engine methods or preference writes.",
+        "ignored_stale_failure_file_sha256": "edb3a80861902028898bb3eb31a0c670cb3593b4b85842d850a7ad83893082d9"
+      },
+      "expected_version": "1.17.0-rc4",
+      "expected_code": 22
+    }
+  ],
+  "screenshots": {
+    "performance/performance-home-en.png": "9a20265f288128d77c76fcffc211abc2847ecec4d5be0788b0bf6917e9c2a582",
+    "performance/performance-home-fr.png": "b12f9e9f0d93dea4b133c7d737db7b82a10c7d69ef2c81fcbfc10e018dca0a8a"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-f-steady-home/interface-observer.apk",
+  "compact": false,
+  "route": "performance",
+  "device_provenance": {
+    "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification",
+    "receipt_path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/creation.json",
+    "receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9",
+    "source_serial": "emulator-5586",
+    "source_avd": "Luma-Refonte115-QA",
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "source_baseline_report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "source_baseline_snapshot_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "physical_copy_disks": 7
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 23.856
+}

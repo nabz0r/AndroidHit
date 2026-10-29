@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "source_serial": "emulator-5586",
+  "source_avd": "Luma-Refonte115-QA",
+  "clone_serial": "emulator-5592",
+  "clone_avd": "Luma117-Secondary-F-QA",
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "production_version": "1.17.0-rc4",
+  "production_code": 22,
+  "source_stopped_before_copy": true,
+  "source_qemu_pid_before": 11318,
+  "copied_at_utc": "2026-10-29T03:39:52.926800+00:00",
+  "copy_method": "APFS copy-on-write whole AVD directory via /bin/cp -cR after normal emulator shutdown; every mutable disk byte hash checked before and after. No guest preference edits.",
+  "source_directory": "/Users/n/.android/avd/Luma-Refonte115-QA.avd",
+  "clone_directory": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd",
+  "disks": [
+    {
+      "name": "cache.img",
+      "bytes": 69206016,
+      "source_sha256": "c39628d11159632d1d5b20a1bde5a0c96cc105ea2b4701dd80985fa6bc34d343",
+      "clone_sha256": "c39628d11159632d1d5b20a1bde5a0c96cc105ea2b4701dd80985fa6bc34d343"
+    },
+    {
+      "name": "cache.img.qcow2",
+      "bytes": 196616,
+      "source_sha256": "653a5ddde6cc210b3492dc4690c696b758892d81d6a9b2d073ee85480637248f",
+      "clone_sha256": "653a5ddde6cc210b3492dc4690c696b758892d81d6a9b2d073ee85480637248f"
+    },
+    {
+      "name": "encryptionkey.img",
+      "bytes": 18874368,
+      "source_sha256": "522bd0b6a2c92e37de465059bb9487bb9597a9aae032b469a8ebe0b38146d8c3",
+      "clone_sha256": "522bd0b6a2c92e37de465059bb9487bb9597a9aae032b469a8ebe0b38146d8c3"
+    },
+    {
+      "name": "encryptionkey.img.qcow2",
+      "bytes": 7405568,
+      "source_sha256": "4549beadf0ff67670cb48f29252fb273e2f9460b827e444dedd4cb576b72a98b",
+      "clone_sha256": "4549beadf0ff67670cb48f29252fb273e2f9460b827e444dedd4cb576b72a98b"
+    },
+    {
+      "name": "initrd",
+      "bytes": 2096204,
+      "source_sha256": "198e115d56f4b878c03950625a74dba4468550d04e8cf0c7f4614823e75c7afb",
+      "clone_sha256": "198e115d56f4b878c03950625a74dba4468550d04e8cf0c7f4614823e75c7afb"
+    },
+    {
+      "name": "userdata-qemu.img",
+      "bytes": 10158080,
+      "source_sha256": "80b4b149d34d6aa2a67c2111b44c34f50fe3d9c9c0aa8e2a0a52ead26088cd27",
+      "clone_sha256": "80b4b149d34d6aa2a67c2111b44c34f50fe3d9c9c0aa8e2a0a52ead26088cd27"
+    },
+    {
+      "name": "userdata-qemu.img.qcow2",
+      "bytes": 3473801216,
+      "source_sha256": "0149bb02e9db28f850daffb5ef2fc033957579e0d7cd16393b1161c925ad1a73",
+      "clone_sha256": "0149bb02e9db28f850daffb5ef2fc033957579e0d7cd16393b1161c925ad1a73"
+    }
+  ],
+  "baseline": {
+    "report": "docs/validation/v1.17/native-interface/candidate-f-clone-baseline/host-report.json",
+    "pathhash": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "data": "docs/validation/v1.17/native-interface/candidate-f-clone-baseline/baseline/baseline.json",
+    "data_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "completed_level": 1000,
+    "coins": 51510
+  },
+  "clone_config_before_sha256": "f439e8632cd21bef4e138c30c5bac69e34efe8aa43b5c5c3efd4faecd14afc82",
+  "clone_config_after_sha256": "23f7ddbae9aee60ef0b35a52f068233f195c006ea66e630bcdd42ccdb69e58ff",
+  "removed_clone_runtime_metadata": [
+    "hardware-qemu.ini",
+    "multiinstance.lock",
+    "emu-launch-params.txt"
+  ],
+  "qemu_images": {
+    "userdata-qemu.img.qcow2": {
+      "backing-filename-format": "qcow2",
+      "virtual-size": 10737418240,
+      "filename": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd/userdata-qemu.img.qcow2",
+      "cluster-size": 65536,
+      "format": "qcow2",
+      "actual-size": 3473801216,
+      "format-specific": {
+        "type": "qcow2",
+        "data": {
+          "compat": "1.1",
+          "lazy-refcounts": false,
+          "refcount-bits": 16,
+          "corrupt": false
+        }
+      },
+      "full-backing-filename": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd/userdata-qemu.img",
+      "backing-filename": "userdata-qemu.img",
+      "dirty-flag": false
+    },
+    "encryptionkey.img.qcow2": {
+      "backing-filename-format": "raw",
+      "virtual-size": 18874368,
+      "filename": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd/encryptionkey.img.qcow2",
+      "cluster-size": 65536,
+      "format": "qcow2",
+      "actual-size": 7405568,
+      "format-specific": {
+        "type": "qcow2",
+        "data": {
+          "compat": "1.1",
+          "lazy-refcounts": false,
+          "refcount-bits": 16,
+          "corrupt": false
+        }
+      },
+      "full-backing-filename": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd/encryptionkey.img",
+      "backing-filename": "encryptionkey.img",
+      "dirty-flag": false
+    },
+    "cache.img.qcow2": {
+      "backing-filename-format": "raw",
+      "virtual-size": 69206016,
+      "filename": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd/cache.img.qcow2",
+      "cluster-size": 65536,
+      "format": "qcow2",
+      "actual-size": 200704,
+      "format-specific": {
+        "type": "qcow2",
+        "data": {
+          "compat": "1.1",
+          "lazy-refcounts": false,
+          "refcount-bits": 16,
+          "corrupt": false
+        }
+      },
+      "full-backing-filename": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd/cache.img",
+      "backing-filename": "cache.img",
+      "dirty-flag": false
+    }
+  },
+  "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification. Final passed state additionally requires observed clone boot identity and exact installed APK metadata.",
+  "afterbootidentity": {
+    "passed": true,
+    "serial": "emulator-5592",
+    "avd": "Luma117-Secondary-F-QA",
+    "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+    "version": "1.17.0-rc4",
+    "code": 22,
+    "sdk": "36",
+    "page_size": "16384",
+    "display_size": "Physical size: 1080x2340",
+    "display_density": "Physical density: 440",
+    "font_scale": "1.0",
+    "checked_utc": "2026-10-29T03:41:45.757422+00:00"
+  },
+  "source_afterboot_identity": {
+    "passed": true,
+    "serial": "emulator-5586",
+    "avd": "Luma-Refonte115-QA",
+    "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+    "version": "1.17.0-rc4",
+    "code": 22,
+    "sdk": "36",
+    "page_size": "16384",
+    "display_size": "Physical size: 1080x2340",
+    "display_density": "Physical density: 440",
+    "font_scale": "1.0",
+    "checked_utc": "2026-10-29T03:41:44.265495+00:00"
+  }
+}

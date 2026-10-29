@@ -8,9 +8,9 @@
 - Add original bundled sprite art for all 24 companions, 24 garments and 42 furnishings, three illustrated places and new room materials. Align clothing through companion anatomy and shared portrait transforms; retain ownership, prices, saved layouts and free styles.
 - Add bounded 220 ms scene fades with lifecycle and reduced-motion handling and guarded touch/keyboard/accessibility input.
 - Add forty place-specific synthesized arrangements to the ten historical puzzle themes, plus scene/fabric/reveal earcons. Keep old PCM, separate music/effects switches and worker request coalescing.
-- Stage a new FR/EN Firebase page with exact app-DSP previews and future native captures. Require final byte, provenance, full 1,000 replay and clean-commit gates before publication.
+- Prepare a new FR/EN Firebase page with16exact native F captures and4app-DSP previews; the unpublished responsive browser preview passes. Final 1,000 replay, canonical package and clean-commit gates still precede delivery.
 
-Candidate F is frozen as rc4/code22 after independent E review found compact Collection/Atelier caption overlaps. The cached shared root geometry preserves art size and reserves separate captions/navigation. Four-package build/lint and binary verification pass. The exact sparse F rehearsal passes14 commands/135 files, including202,444 assertions over420 layouts. Native F UI/art/audio/fresh/full1,000 replay and publication remain pending. All earlier failures and scoped passes retain their actual candidate identity.
+Candidate F is frozen as rc4/code22 after independent E review found compact Collection/Atelier caption overlaps. The cached shared root geometry preserves art size and reserves separate captions/navigation. Four-package build/lint and binary verification pass. The exact sparse F rehearsal passes14 commands/135 files, including202,444 assertions over420 layouts. Retained upgrade/cold, fresh-player flow, primary six-language normal/compact browsing, owned rigs,144-look native gallery, installed digital audio38checks and scoped transition capture pass on F. Remaining secondary routes and actual full1,000 replay are running; publication remains pending. All earlier failures and scoped passes retain their actual candidate identity.
 
 ## Preserved 1.16.0-rc1 / code18 — closer home and local player card
 

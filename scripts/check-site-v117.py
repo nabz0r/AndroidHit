@@ -119,7 +119,7 @@ class Audit(BASE.Audit):
         self.check('/releases/'+AAB in links and '/releases/'+MANIFEST in links,'Exact hosted AAB and manifest are linked')
         for lang in ('fr','en'):
             notes=BASE.normalized(' '.join(n.visible_text(lang) for n in home.nodes if n.has_class('download-note')))
-            self.check(VERSION in notes and re.search(r'\b21\b',notes),'Current version and Android code visible in '+lang)
+            self.check(VERSION in notes and re.search(r'\b22\b',notes),'Current version and Android code visible in '+lang)
             sizes=re.findall(r'(\d+(?:[.,]\d+)?)\s*(Mo|MB|Mio|MiB)\b',notes)
             self.check(bool(sizes),'Actual APK size disclosed in '+lang)
             for value,unit in sizes:

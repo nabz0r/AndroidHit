@@ -1,0 +1,70 @@
+{
+  "status": "PASS_DIGITAL_NATIVE_AUDIO_SCOPE_ONLY",
+  "candidate_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "observer_apk_sha256": "0d0fc3ff72a87e06eb11eac7a5e0f91ce63e0c9c8f7559ab51b88895787ea5cb",
+  "checks": 38,
+  "captures": 8,
+  "actual_audioflinger_dumps": 130,
+  "host_report_sha256": "fba5f732a3112e504d747b90d62c93d880c79b79875f0910476cf7b97d4ffe7c",
+  "report": "docs/validation/v1.17/audio/native/candidate-f-audio-retry/host-report.json",
+  "scene_and_independence_results": [
+    {
+      "scene": "ADVENTURE",
+      "trackId": "62",
+      "frameAdvance": 23491
+    },
+    {
+      "scene": "HOME",
+      "trackId": "64",
+      "frameAdvance": 22991
+    },
+    {
+      "scene": "COLLECTION",
+      "trackId": "65",
+      "frameAdvance": 23491
+    },
+    {
+      "scene": "ATELIER",
+      "trackId": "66",
+      "frameAdvance": 22991
+    },
+    {
+      "phase": "resume",
+      "trackId": "66",
+      "frameAdvance": 22991
+    },
+    {
+      "phase": "effects-on-music-off",
+      "snapshots": 38,
+      "shortTrackActivity": true,
+      "musicActivity": false
+    },
+    {
+      "phase": "effects-off-music-off",
+      "snapshots": 39,
+      "shortTrackActivity": false,
+      "musicActivity": false
+    },
+    {
+      "phase": "effects-off-music-on",
+      "snapshots": 39,
+      "shortTrackActivity": false,
+      "musicActivity": true
+    },
+    {
+      "phase": "music-only",
+      "trackId": "69",
+      "frameAdvance": 23490
+    }
+  ],
+  "system_music_volume": 5,
+  "system_music_muted": false,
+  "restored_language": "Fran\u00e7ais",
+  "restored_music": true,
+  "restored_effects": true,
+  "observer_removed": true,
+  "exact_candidate_retained": true,
+  "physical_listening_performed": false,
+  "limits": "Emulator has no host audio output; no physical audition, timbre, speaker-quality, real external audio-focus contender or native puzzle-audio claim. Historical puzzle PCM separately verified.38checks include identity, recovery, UI states and restoration, not38 independent music recordings.",
+  "prior_observer_timeout": "docs/validation/v1.17/review/audio-observer-timeout-triage.json"
+}

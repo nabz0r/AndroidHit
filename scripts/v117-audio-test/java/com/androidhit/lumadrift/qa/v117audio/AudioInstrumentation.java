@@ -59,8 +59,15 @@ public final class AudioInstrumentation extends Instrumentation {
             AudioManager audio=(AudioManager)getTargetContext().getSystemService(android.content.Context.AUDIO_SERVICE);
             systemMusicVolume=audio.getStreamVolume(AudioManager.STREAM_MUSIC);systemMusicMuted=audio.isStreamMute(AudioManager.STREAM_MUSIC);
             check(systemMusicVolume>0&&!systemMusicMuted,"Android media stream has a positive unmuted digital output setting (no host speaker output)");
+            if(!arguments.getString("recoveryLanguage","").isEmpty()){
+                launch();settings();top();tap("English");
+                setState("Sound effects",Boolean.parseBoolean(arguments.getString("recoveryEffects")));setState("Music",Boolean.parseBoolean(arguments.getString("recoveryMusic")));
+                tap(arguments.getString("recoveryLanguage"));
+                check(selectedLanguage().equals(arguments.getString("recoveryLanguage")),"Prior timed-out observer baseline recovered through actual UI");capture("prior-timeout-settings-recovered");
+            }
             launch();settings();top();originalLanguage=selectedLanguage();check(!originalLanguage.isEmpty(),"Original language observed from selected UI object");
-            tap("English");originalEffects=state("Sound effects");originalMusic=state("Music");capture("settings-before-en");
+            tap("English");originalEffects=state("Sound effects");originalMusic=state("Music");
+            write("initial-state.json",new JSONObject().put("originalLanguage",originalLanguage).put("originalMusic",originalMusic).put("originalEffects",originalEffects).put("processId",pid).put("scope","Visible UI observations before this run changes either audio setting").toString(2));capture("settings-before-en");
             setState("Sound effects",false);setState("Music",true);SystemClock.sleep(1200);
             for(int index=0;index<4;index++){
                 String expected=new String[]{"ADVENTURE","HOME","COLLECTION","ATELIER"}[index];
@@ -142,7 +149,14 @@ public final class AudioInstrumentation extends Instrumentation {
         boolean musicActivity(){return activity(true);}boolean shortActivity(){return activity(false);}boolean anyActivity(){return musicActivity()||shortActivity();}
     }
     private String shell(String command)throws Exception{try(ParcelFileDescriptor pipe=ui.executeShellCommand(command);InputStream in=new ParcelFileDescriptor.AutoCloseInputStream(pipe);ByteArrayOutputStream bytes=new ByteArrayOutputStream()){byte[] buffer=new byte[8192];int n;while((n=in.read(buffer))!=-1)bytes.write(buffer,0,n);return bytes.toString("UTF-8");}}
-    private void launch(){startActivitySync(new Intent().setClassName(PACKAGE,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));SystemClock.sleep(800);}
+    private void launch(){
+        // startActivitySync can wait forever for a new Activity when HOME merely
+        // resumes the existing task. Launch asynchronously and observe foreground.
+        getTargetContext().startActivity(new Intent().setClassName(PACKAGE,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        long end=SystemClock.uptimeMillis()+6500;
+        do{AccessibilityNodeInfo root=ui.getRootInActiveWindow();boolean own=root!=null&&PACKAGE.contentEquals(root.getPackageName());if(root!=null)root.recycle();if(own){SystemClock.sleep(800);return;}SystemClock.sleep(100);}while(SystemClock.uptimeMillis()<end);
+        throw new AssertionError("Production Activity did not reach foreground within bounded launch wait");
+    }
     private String selectedLanguage(){String selected="";for(AccessibilityNodeInfo n:nodes()){if(n.isSelected()&&n.isClickable()&&n.isVisibleToUser())selected=name(n);n.recycle();}return selected;}
     private boolean state(String label){for(AccessibilityNodeInfo n:nodes()){String name=name(n);boolean match=n.isVisibleToUser()&&n.isClickable()&&name.startsWith(label+": ");n.recycle();if(match){if(name.equals(label+": On"))return true;if(name.equals(label+": Off"))return false;throw new AssertionError("Unexpected visible toggle state: "+name);}}throw new AssertionError("Missing visible toggle: "+label);}
     private void setState(String label,boolean enabled)throws Exception{top();if(state(label)!=enabled)tap(label+": "+(enabled?"Off":"On"));check(state(label)==enabled,"Visible "+label+" state is "+(enabled?"On":"Off"));}

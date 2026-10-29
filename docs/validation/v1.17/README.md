@@ -1,77 +1,90 @@
 # Luma Drift 1.17 qualification register
 
-**Status: F frozen and binary-verified; global native acceptance and publication pending.** Production is `1.17.0-rc4`, Lab `1.17.0-sandbox-rc4`, code **22**. The production APK is **71,827,197 bytes**, SHA-256 `fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8`. The [F freeze](candidate-f/source-freeze.json) identifies **161 inputs**. The [binary audit](candidate-f/binaries/binary-final-candidate.json) and [build/lint](candidate-f/build.log) pass.
+**Frozen F is under final qualification.** Production `1.17.0-rc4`, isolated Lab
+`1.17.0-sandbox-rc4`, code **22**. Exact production APK: **71,827,197 bytes**,
+SHA-256 `fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8`.
+The [source freeze](candidate-f/source-freeze.json) contains **161 inputs**;
+[four-package audit](candidate-f/binaries/binary-final-candidate.json) and
+[build/lint](candidate-f/build.log) pass. Remaining secondary routes and the
+actual 1,000-level replay are running; final Git/Firebase publication is pending.
 
-F adds cached responsive root geometry to close the two compact composition findings from the [grouped E review](review/grouped-e-layout-review.json). The [exact sparse F rehearsal](ci-host-rehearsal-f/summary.json) passes **14 commands / 135 files**, including **202,444 assertions over 420 root layouts**. This is host evidence; native F captures must independently close the visual findings. Earlier A–E results retain their own bytes and scopes and do not certify F.
+[Release and exact four-artifact table](../../RELEASE_1_17.md) ·
+[Architecture](../../DEVELOPMENT.md) · [Art/audio](../../ART_AUDIO.md) ·
+[Primary research](../../design/v1.17/reference-research.md) ·
+[Website register](../site-v1.17/README.md).
 
-[Release and four-artifact table](../../RELEASE_1_17.md) ·
-[Architecture](../../DEVELOPMENT.md) · [Art/audio scope](../../ART_AUDIO.md) ·
-[Research](../../design/v1.17/reference-research.md) ·
-[Website staging](../site-v1.17/README.md).
+## Current exact F native evidence
 
-## Preserved candidate E scopes before compact composition rejection
-
-Each row is a separate observed scope. Their totals must not be interpreted as
-all-screen, audio, full-level or publication acceptance.
-
-| Scope | Observed result | Evidence and boundary |
+| Scope | Result | Evidence |
 | --- | --- | --- |
-| Four production/Lab APK/AAB files | PASS: exact version/package/bytes, source freeze, signatures, bundles and static 16 KiB alignment | [Independent binary audit](candidate-e/binaries/binary-final-candidate.json), [verification log](candidate-e/binaries/binary-verification.txt), [four builds and both lint tasks](candidate-e/build.log) |
-| Retained-profile C→E update, packaged art, main objects/forms and cold persistence | 619 checks / 20 original PNGs PASS | [Upgrade report](native-interface/candidate-e-upgrade/host-report.json). The total includes **6 baseline checks on C**, then **613 on E**: 538 asset checks, 59 preparation checks and 16 cold checks. The 20 captures show E. |
-| Compact German/Italian target regression | 19 checks / 2 PNGs PASS | [Regression report](native-interface/candidate-e-clipped-language/host-report.json), actual 320 dp width: 880×1440 pixels at 440 dpi. Original display restored. This dedicated regression is separate from the full compact route. |
-| Owned Nova/Miko/Halo looks | 78 checks / 27 PNGs PASS | [Rig route](native-interface/candidate-e-owned-rigs/host-report.json), actual wardrobe/profile/collection and five outfit previews; no acquisition or ownership injection. |
-| Normal six-language browsing | 276 checks / 177 PNGs PASS | [Normal route](native-interface/candidate-e-sixlangs-normal/host-report.json), actual 1080×2340 native screen. Full compact and secondary-route qualification remain separate. |
-| Genuine empty-device first launch, tutorial, eight first wins, two funded draws and cold persistence | 133 public-UI checks / 105 real gestures / 49 original PNGs PASS | [Fresh aggregate](fresh-e/summary-e.json), [detailed scope](fresh-e/README.md). New E-only AVD, no seed; normally stopped with userdata retained. |
-| Separate native Canvas gallery | 144 complete looks, 24 isolated garments, 24 style samples / 50 PNGs PASS | [E gallery report](art/native/candidate-e-art/host-report.json). Public pure renderer only; not application UI, ownership, acquisition or achieved-outfit evidence. |
-| C→E gallery pixel preservation | 50 / 50 complete PNG files exactly equal | [Independent byte comparison](review/c-to-e-renderer-pixel-equality.json). All 50 C sheets were directly viewed; E was independently re-rendered. No crop, resize or substitution. |
-| Inspected actual UI and full-gallery visual scope | PASS with documented nonblocking limits | [E visual review](review/visual-candidate-e.json): 14 original app frames directly viewed plus the complete 50-sheet gallery equality proof. The wardrobe P2 is closed; sampled contrast improves from C's **1.93:1** to E's **5.45:1**. This is the inspected visual scope, not global release acceptance. |
+| Retained E→F upgrade, assets, forms, home gestures and cold persistence | 619 checks / 20 PNGs: 6 baseline E, 613 F | [Upgrade](native-interface/candidate-f-upgrade/host-report.json) |
+| EN/DE four roots at actual 320 dp, fonts 1.0 and 1.3 | 285 checks / 8 PNGs each | [Default](native-interface/candidate-f-roots-compact/host-report.json), [large](native-interface/candidate-f-roots-compact-largefont/host-report.json) |
+| Original clipped DE/IT language target | 19 checks / 2 PNGs | [Regression](native-interface/candidate-f-clipped-language/host-report.json) |
+| Six-language primary browsing, all companion/furniture catalogues and five outfit previews | 276 checks / 177 PNGs at each normal and compact size | [Normal](native-interface/candidate-f-sixlangs-normal/host-report.json), [compact](native-interface/candidate-f-sixlangs-compact/host-report.json) |
+| Owned Nova/Miko/Halo wardrobe/profile/collection and fifteen outfit previews | 78 checks / 27 PNGs | [Actual UI](native-interface/candidate-f-owned-rigs/host-report.json) |
+| Compact secondary EN/DE | 205 checks / 298 PNGs | [Completed scope](native-interface/candidate-f-secondary-compact-preflight2/host-report.json); four compact languages and normal EN/FR still running |
+| Empty-device first launch, tutorial, first U1–U8 wins, earned draws and distinct cold process | 133 checks / 105 actual gestures / 49 original PNGs | [Fresh F aggregate](fresh-f/summary-f.json), [scope](fresh-f/README.md) |
+| Isolated pure-render gallery | 144 complete looks, 24 garments, 24 styles / 50 PNGs | [F gallery](art/native/candidate-f-art/host-report.json); not app UI or ownership |
+| Direct visual inspection | 58 actual UI frames, plus all 50 gallery sheets through exact C→F byte equality | [F visual report](review/visual-candidate-f.json), [gallery equality](review/c-to-f-renderer-pixel-equality.json) |
+| Installed digital audio | 38 checks / 8 PNGs / 130 AudioFlinger dumps | [Native review](review/audio-native-final-f.json) |
+| Three native scene transitions | 23 checks and original SDK video | [Report](native-interface/candidate-f-transitions-v2/host-report.json) |
+| Cached enlarged-home rendering | 19 checks / 2 PNGs | [Steady render](native-interface/candidate-f-steady-home/host-report.json) |
 
-The visual record keeps three nonblocking limits explicit: a thin sole-like edge
-under Jelli's front shoe; twelve free styles are surrounding accent treatments,
-not twelve newly painted costumes; some high collars approach the lower chin.
-It does not claim bespoke cloth simulation, perfect tailoring or every-pixel
-accessibility acceptance.
+Every current native report identifies the same exact F hash. Normal/compact
+primary browsing covers EN, FR, DE, ES, PT and IT. Secondary coverage is six
+compact languages (two on the original, four on its identical physical clone)
+and normal EN/FR. The unfinished secondary scopes above are not counted as
+passes, and a complete six-by-two secondary matrix is not claimed.
 
-The fresh E route plays three First Light exits, the starter home, all seven
-practice lessons and eight genuine U first victories. The victories earn 440
-coins. With the observed 180 starting coins and 100 tutorial gift, the visible
-wallet reaches 720; actual Zig and Star parade draws spend 180 + 260 and leave
-280. The equipped portrait, seven slots, balance and saved reveal survive a
-distinct cold process with no additional debit. The failed first cold observer
-attempt and its missing-scroll correction remain separately recorded; it adds
-no win or draw to the accepted totals. The main retained 5586 profile is untouched
-by this separate fresh-device work.
+The clone was copied only after normal source shutdown: seven disk hashes
+match, then the full protected save/session matches after boot. Its
+[creation receipt](secondary-clone/creation.json), guarded wrapper and
+[baseline identity](native-interface/candidate-f-clone-identity/identity-comparison.json)
+keep separate interactions attributable. This is not a second migration test.
+No preferences, money, ownership, progression or histories are seeded. The
+actual fresh F installation is separate again and retains its own userdata.
 
-## Current host checks actually executed
+Fresh F genuinely earns 440 coins from eight victories; the observed starting
+180 plus tutorial 100 yield 720. Tula and Moonlight draws spend 180 + 260 and
+leave 280. Seven equipment slots, receipt and balance survive a new process
+without another debit. The retained profile's 1,000-board route is replay
+qualification and requires zero repeated first-win rewards.
 
-The [E sparse-only rehearsal](ci-host-rehearsal-e/summary.json) copies exactly
-the workflow's **132 permitted files** into an isolated directory, then passes
-all **13 configured host commands**, recording source and log hashes. It ran
-locally with JDK 17 and Node's built-in test runner. This is not a remote GitHub
-Actions execution, Android build or native gameplay run. The earlier
-[initial rehearsal](ci-host-rehearsal/summary.json) remains historical.
+The installed audio checks observe the four places, HOME/background silence,
+resume and independent music/effects settings. Music/effects and French are
+restored. These digital emulator observations do not include physical speaker
+listening, a real external audio-focus competitor or a native puzzle-audio run.
+The original SDK transition video shows routes/fades; its capture cadence and
+PTS gaps do not prove 60 fps phone performance.
 
-| Scope | Observed result | Evidence |
+## Current host checks
+
+The [F sparse rehearsal](ci-host-rehearsal-f/summary.json) copies exactly the
+workflow's **135 allowed files**, passes all **14 commands**, and records source
+and log hashes. This is local JDK 17/Node execution; remote Actions is a
+separate publication result.
+
+| Contract | Result | Evidence |
 | --- | --- | --- |
-| Scene timing, opacity, lifecycle completion, reduced motion and root gesture ownership | 10,922 checks PASS | [Log](ci-host-rehearsal-e/09-test-scene-transition-v117.txt) |
-| Sprite aspect fit, anchors, atlas seams and invalid geometry | 19,857 checks PASS | [Log](ci-host-rehearsal-e/10-test-art-v117-geometry.txt) |
-| Fifty actual PCM loops, preservation, earcons and controlled worker lifecycle | 1,714 checks PASS: 1,638 DSP + 76 lifecycle-model checks | [Current rehearsal](ci-host-rehearsal-e/11-test-audio-scenes-v117.txt), [exports/source hashes](audio/scenes/final-b/verification.json) |
-| Current/retained FR/EN controller, legal links and deliberate audio previews | 18 tests PASS | [Log](ci-host-rehearsal-e/12-website-controller.txt) |
-| All U boards and every reachable relay state/transition | 13,312,469 host checks PASS | [Log](ci-host-rehearsal-e/02-test-relay-v115.txt) |
-| Retained local profile, badges, both pools, recoverable receipts and equips | 60,713 checks PASS | [Log](ci-host-rehearsal-e/07-test-profile-summon-v116.txt) |
-| Retained N pacing, strict budgets, home migration/camera, guide and power/reward contracts | Every configured command PASS | [All commands and hashed logs](ci-host-rehearsal-e/summary.json) |
+| Shared live root geometry | 202,444 assertions / 420 layouts | [Log](ci-host-rehearsal-f/10-test-root-scenes-v117.txt) |
+| Scene timing, opacity, lifecycle, reduced motion and gesture ownership | 10,922 checks | [Log](ci-host-rehearsal-f/09-test-scene-transition-v117.txt) |
+| Sprite aspect, anchors, atlas seams and invalid geometry | 19,857 checks | [Log](ci-host-rehearsal-f/11-test-art-v117-geometry.txt) |
+| Fifty PCM loops, fourteen effects and worker lifecycle model | 1,714 checks: 1,638 DSP + 76 lifecycle | [Log](ci-host-rehearsal-f/12-test-audio-scenes-v117.txt), [PCM/source report](audio/scenes/final-b/verification.json) |
+| Current/previous web controller, legal links and deliberate audio | 18 tests | [Log](ci-host-rehearsal-f/13-website-controller.txt) |
+| All U boards and reachable relay state/transition graph | 13,312,469 checks / 1,000 boards | [Log](ci-host-rehearsal-f/02-test-relay-v115.txt) |
+| Profile, badges, both pools, receipts and equipment | 60,713 checks | [Log](ci-host-rehearsal-f/07-test-profile-summon-v116.txt) |
+| Retained N pacing, budgets, home, guide and reward contracts | All configured commands pass | [Full summary](ci-host-rehearsal-f/summary.json) |
 
-The audio report's source hashes match frozen E. Any subsequent audio source
-change requires a fresh run. Stubbed `AudioTrack` checks do not establish actual
-Android playback; generated PCM previews are not phone recordings. The initial
-new-loop seam failures remain in [their failed record](audio/scenes/initial-seam-failure.json).
-Website staging checks and actual Hosting/browser acceptance have their own
-[register](../site-v1.17/README.md); no staging pass is a publication receipt.
+The PCM report keeps its historical final-b directory name; its audio sources
+match frozen F. Four 10-second previews are exact app-synthesizer exports,
+biome 0 and gain 0.27, not phone recordings. Host AudioTrack doubles do not
+replace native playback. [Initial seam failures](audio/scenes/initial-seam-failure.json)
+remain preserved.
 
 ## Preserved intermediate findings
 
 Failed or superseded runs remain under their original bytes. Later success does
-not rewrite their status or count them as final E executions.
+not rewrite their status or count them as final F executions.
 
 | Candidate / scope | Retained result and boundary |
 | --- | --- |
@@ -79,7 +92,7 @@ not rewrite their status or count them as final E executions.
 | B gallery and visual review | [Mechanical gallery report](art/native/candidate-b-art/host-report.json); [visual rejection](review/visual-candidate-b.json) retains misplaced glove/boot remnants, silhouette holes, headwear/neckline and scenery/material findings. |
 | C wardrobe contrast P2 | [Original C review](review/visual-candidate-c.json): grey status text crosses wood; measured sample **1.93:1**. E's separate actual wardrobe frames close this finding at **5.45:1**. |
 | C compact language failure | [Failed host report](native-interface/candidate-c-sixlangs-compact/host-report.json), [raw native failure](native-interface/candidate-c-sixlangs-compact/browse/instrumentation.txt). 60 captures retained: touching visible Deutsch wrongly reached Italian because an offscreen Italian hit target shifted upward. Display restored and owned profile retained. E's dedicated regression passes separately. |
-| C genuine fresh route | [C aggregate](fresh/summary-c.json): 133 checks / 104 touches / 48 original PNGs; eight wins, Lune and Star parade acquired/equipped, cold persistence. Its own AVD is normally stopped with userdata retained; this does not certify E. |
+| C genuine fresh route | [C aggregate](fresh/summary-c.json): 133 checks / 104 touches / 48 original PNGs; eight wins, Lune and Star parade acquired/equipped, cold persistence. Its own AVD is normally stopped with userdata retained; this does not certify F. |
 | D genuine onboarding only | [D aggregate](fresh-d/summary-d.json): 30 checks / 37 touches / 21 original PNGs. Normally stopped with userdata retained when E superseded it; no D campaign, draw or cold run is claimed. |
 | Source/asset review | [Independent review](review/independent-review.md), [asset coverage audit](assets/final-art-audit.json). Coverage alone does not establish visual quality. |
 
@@ -88,46 +101,46 @@ Isolated sheets remain under `art/native/` with their QA RENDER captions; neithe
 they nor analysis crops substitute for actual native website captures. C, D and
 E source-freeze directories retain their own identities.
 
-## Remaining acceptance gates
+## F observer failures retained separately
 
-The owner replaces each marker only with actual final evidence. A passed scoped
-row above is not a passed global gate below.
+- The first compact secondary observer swiped inside Android's mandatory
+  gesture band and switched to an older Lab app. The wrapper stopped on the
+  foreign foreground package before further input. F data remained intact.
+  [Triage and actual-UI recovery](native-interface/candidate-f-motion-recovery/probe-triage.json)
+  and [successful guarded retry](native-interface/candidate-f-secondary-compact-preflight2/host-report.json)
+  retain separate statuses. The corrected probe uses observed free background
+  outside the system band and checks foreground package.
+- The first audio observer timed out after HOME; the next source call was
+  synchronous Activity resume, but no captured stack proves the blocking cause.
+  Four-scene/background samples remain in the failed attempt. The observer
+  changed to asynchronous start with a bounded foreground wait;
+  the APK did not change. [Triage](review/audio-observer-timeout-triage.json) ·
+  [successful digital scope](review/audio-native-final-f.json).
+- The first video observer could not read the SDK shell-owned recording.
+  The original MP4 remains. A shell hash/read witness corrected only the
+  observer; [retry](native-interface/candidate-f-transitions-v2/host-report.json)
+  passes on the unchanged APK.
 
-| Marker | Required evidence | Current status |
-| --- | --- | --- |
-| `FINAL_117_CANDIDATE_IDENTITY` | Exact candidate APK and source freeze | F frozen and independently verified; global acceptance pending |
-| `FINAL_117_ARTIFACTS` | Four canonical delivery files/manifests and matching audited bytes | Four build outputs audited PASS; canonical delivery/publication pending |
-| `FINAL_117_BINARY_AUDIT` | Four builds, both lint tasks, certificates, bundle validation, ZIP/ELF 16 KiB | PASS on F; [audit](candidate-f/binaries/binary-final-candidate.json) |
-| `FINAL_117_NATIVE_INTERFACE` | Normal/compact six-language routes, forms, home gestures, transitions/input guards and cold persistence | Earlier E scopes above remain separate; exact F matrix pending |
-| `FINAL_117_VISUAL_ACCEPTANCE` | Actual final UI plus complete rig/art inspection | E later rejected for compact root composition; exact F visual closure pending |
-| `FINAL_117_INSTALLED_AUDIO` | Exact installed context selection, focus/mute/background behavior and scoped listening evidence | DSP/model PASS; installed qualification pending |
-| `FINAL_117_NATIVE_REPLAY` | Verified `relay/summary.json`: U1–U1000 actual touch journals, three stars, zero duplicate rewards | Observer/fixtures prepared; F full replay not launched |
-| `FINAL_117_WEBSITE_ACCEPTANCE` | Sixteen exact original FR/EN captures, offline acceptance and 320/375/768/1280 browser review | Staged; final acceptance pending |
-| `FINAL_117_PUBLICATION` | Clean immutable commit, verified public downloads, Firebase receipt and public-byte comparison | Not performed for 1.17 |
+Raw failed logs retain their exact original output. Signed test-observer APKs
+are local validation intermediates and are ignored in the current delivery
+tree; their hashes, sources and reports remain attributable. The four canonical
+production/Lab release files are the intended distributed packages.
 
-The [relay preparation](relay/preparation-e.json) verifies the existing 1,000
-frozen fixtures and 10,974 certificate exits without device access. The
-[resume pointer](relay/active-handoff.json) records the separately signed observer
-and detached launcher; it is ready but is not a completion report. Launch requires
-explicit exclusive handoff of task-owned `Luma-Refonte115-QA` / `emulator-5586`
-after current interface and audio qualification.
+## Pending delivery work
 
-That retained profile already genuinely completed every U board with three
-stars. Replay must preserve earned progression, coins, ownership, appearance,
-profile, receipts, room layout, power stock and settings, and restore the original
-language. **Zero duplicate first-win coins** are required. Its saved puzzle
-session naturally becomes the replay session through normal UI. No target win
-hooks, progression seeding, preference writes or fake wins are permitted.
+Finish secondary compact FR/ES/PT/IT and normal EN/FR; finish and independently
+aggregate the real U1–U1000 F replay; stage exact canonical packages; run strict
+website preparation/offline acceptance; publish clean Git/Firebase commits;
+verify remote CI and all public HTTPS bytes. [Live replay pointer](relay/active-handoff.json)
+counts only actually completed native levels and is not a final pass report.
 
 ## Limits retained at delivery
 
-Native touch/capture evidence, isolated rendering, host state enumeration, PCM
-synthesis, installed playback and physical speaker evaluation are distinct
-scopes. Emulator execution time is not phone performance or human difficulty.
-No human comprehension, enjoyment, retention or audience size is measured.
-Test ads and closed checkout/premium gates remain; real Google/provider/payment/
-Play qualification is separate. Local game, profile and house data are not
-synchronized by Google identity.
-
-Keep 1.15/1.16 marathons, hashes, screenshots and Hosting receipts under their own
-release labels. They do not establish 1.17 delivery.
+Native touch/capture, isolated rendering, host graph enumeration, PCM exports,
+installed playback and physical listening are separate scopes. API36 arm64
+native devices report actual 16,384-byte pages; this qualifies the observed
+emulators, not all phones/provider paths. Execution time is not phone FPS or
+human difficulty. No comprehension, enjoyment, retention or audience size is
+measured. Test ads and closed checkout/premium gates remain. Local game,
+profile and house are not synchronized by Google identity. Historical 1.15/1.16
+marathons and Hosting receipts do not establish 1.17 delivery.

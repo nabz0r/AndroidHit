@@ -29,11 +29,16 @@ def main():
     parser.add_argument('--expected-version',default='1.17.0-rc4')
     parser.add_argument('--expected-code',type=int,default=22)
     parser.add_argument('--label',required=True)
+    parser.add_argument('--recover-language',help='Explicit visible language label for UI-only recovery after a documented prior observer timeout')
+    parser.add_argument('--recover-music',choices=['on','off'])
+    parser.add_argument('--recover-effects',choices=['on','off'])
     parser.add_argument('--device-handoff-confirmed',action='store_true',required=True,
                         help='Acknowledge the asset_pipeline117 owner has explicitly released this exact AVD; this flag does not supply authorization')
     parser.add_argument('--host-audio-unavailable',action='store_true',required=True,
                         help='Record known no-host-audio configuration; this run never claims physical listening')
     args=parser.parse_args()
+    recovery=[args.recover_language,args.recover_music,args.recover_effects]
+    if any(recovery) and not all(recovery):parser.error('Supply all three documented UI recovery values together')
     if not re.fullmatch('[a-f0-9]{64}',args.sha256):parser.error('Exact frozen production APK SHA-256 required')
     if not re.fullmatch('[A-Za-z0-9_-]{1,55}',args.label):parser.error('Safe new evidence label required')
     apk=Path(args.expected_apk).resolve();observer=Path(args.test_apk).resolve()
@@ -72,6 +77,7 @@ def main():
     report={'passed':False,'serial':args.serial,'avd':args.expected_avd,'package':PACKAGE,'apk_sha256':args.sha256,
             'observer_apk_sha256':sha(observer),'expected_version':args.expected_version,'expected_code':args.expected_code,
             'host_audio_output_available':False,'physical_listening_performed':False,
+            'prior_timeout_ui_recovery':({'language':args.recover_language,'music':args.recover_music,'effects':args.recover_effects} if all(recovery) else None),
             'scope':'Actual UI input, four native scene outputs, music/effects settings and Android HOME pause/resume observed via AudioFlinger and public PID logs. No target hooks, preference reads/writes, state injection, purchases, puzzle moves, provider actions, app installation/replacement, display changes or other device. No physical speaker/headphone audition or external audio-focus contender.',
             'device':{'sdk':shell('getprop','ro.build.version.sdk').strip(),'abi':shell('getprop','ro.product.cpu.abi').strip(),'size':shell('wm','size').strip(),'density':shell('wm','density').strip()},'screenshots':{}}
     installed_observer=False;error=None
@@ -81,7 +87,10 @@ def main():
         assert b'Success' in result;installed_observer=True
         assert shell('sha256sum',package_path(OBSERVER)).split()[0]==sha(observer),'Installed observer hash differs'
         shell('am','force-stop',PACKAGE)
-        result=call('shell','am','instrument','-w','-r','-e','expectedVersion',args.expected_version,'-e','expectedCode',str(args.expected_code),RUNNER,timeout=240)
+        instrument=['shell','am','instrument','-w','-r','-e','expectedVersion',args.expected_version,'-e','expectedCode',str(args.expected_code)]
+        if all(recovery):instrument+=['-e','recoveryLanguage',args.recover_language,'-e','recoveryMusic',str(args.recover_music=='on').lower(),'-e','recoveryEffects',str(args.recover_effects=='on').lower()]
+        instrument.append(RUNNER)
+        result=call(*instrument,timeout=240)
         (out/'instrumentation.txt').write_bytes(result)
         remote='/sdcard/Android/data/'+PACKAGE+'/files/v117-digital-audio'
         with tempfile.TemporaryDirectory(prefix='luma-digital-audio117-') as temporary:

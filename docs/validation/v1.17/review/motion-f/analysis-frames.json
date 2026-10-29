@@ -1,0 +1,176 @@
+{
+  "scope": "ANALYSIS ONLY: decoded full frames from original H264 native screenrecord; not UiAutomation PNG captures, marketing screenshots, or synthesized transitions. No crop, resize, retouch or image-content modification.",
+  "source_video": "docs/validation/v1.17/native-interface/candidate-f-transitions-v2/transitions/transitions.mp4",
+  "source_sha256": "1b0d6bb4ffb77ba2743cb78f76f5de26fef12e7ebceee4af13e9ea6a9ae71182",
+  "decode_command": "ffmpeg -i SOURCE -vf select=eq(n,...) -fps_mode vfr ANALYSIS-decoded-frame-%03d.png",
+  "frames": [
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-001.png",
+      "source_decoded_frame_index": 7,
+      "pts_seconds": 0.401444,
+      "sha256": "0d6f698a7875c7bc23a79f263671c1a1d9cd89fdef294f88bcc79afe7880cb8e"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-002.png",
+      "source_decoded_frame_index": 8,
+      "pts_seconds": 0.470956,
+      "sha256": "09c5215164de6b2c04efadf5cd2c9e237ce439a1e38409281ad713b6564c8425"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-003.png",
+      "source_decoded_frame_index": 9,
+      "pts_seconds": 0.558,
+      "sha256": "fe28a61e59d05d375e4664dcd7ffe7fab6a12bb83c70c8c7358e03c6b998fef0"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-004.png",
+      "source_decoded_frame_index": 10,
+      "pts_seconds": 0.609511,
+      "sha256": "a2f0dc748439c45c8aa0d4bbb78ebefdca6961c1116c5537ccf732b432ac6a78"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-005.png",
+      "source_decoded_frame_index": 11,
+      "pts_seconds": 0.739122,
+      "sha256": "c72f47325ca0d7a608380dd1a3a79995c1195d8ba4099b4d51a186aedce7e98a"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-006.png",
+      "source_decoded_frame_index": 12,
+      "pts_seconds": 1.429744,
+      "sha256": "5fc69d53ce662b620f32620f087d36e5fda3cb291e3515aa203cd55104de17a3"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-007.png",
+      "source_decoded_frame_index": 36,
+      "pts_seconds": 2.902667,
+      "sha256": "ad634a0bec2ae7f813f16cb51cbb7dd6c6a863612d76a5231775d11353f62e83"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-008.png",
+      "source_decoded_frame_index": 37,
+      "pts_seconds": 2.970733,
+      "sha256": "dd9b65ce3850698bfd21a1aed8be4d5debd7965d9eacb4953d2e2d5dec6e3ef2"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-009.png",
+      "source_decoded_frame_index": 38,
+      "pts_seconds": 3.0384,
+      "sha256": "3058d1da1eb774fac2fb1036aa988420a278ece54445734082bd4fd073bc56e1"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-010.png",
+      "source_decoded_frame_index": 39,
+      "pts_seconds": 3.107011,
+      "sha256": "913d8bc582e0820ff56208f9c65612ebc3519229341486874608b17b47f3f7f9"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-011.png",
+      "source_decoded_frame_index": 40,
+      "pts_seconds": 3.193244,
+      "sha256": "af2497f9c05dccd5a6270a335e2776594116398c85c797c505b351889e278953"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-012.png",
+      "source_decoded_frame_index": 41,
+      "pts_seconds": 3.210889,
+      "sha256": "c61c3ec983931ba878de31c75b760395e9ded66f5189a5f52b657c86693f5f72"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-013.png",
+      "source_decoded_frame_index": 42,
+      "pts_seconds": 3.596667,
+      "sha256": "6ce2be2b5520917a7b0517a4831173e1c193ad994c1e448fe91f0f4b520b0f38"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-014.png",
+      "source_decoded_frame_index": 64,
+      "pts_seconds": 4.9379,
+      "sha256": "ce82dcaba7990cc4bd3f5201d59bfa1933f5063e41c8c1e11e5af0fede228ad2"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-015.png",
+      "source_decoded_frame_index": 65,
+      "pts_seconds": 5.004467,
+      "sha256": "c29b226feb2e739f894b2cc5f2c3c7ccce7ed3af92d8ef88b87476510994a285"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-016.png",
+      "source_decoded_frame_index": 66,
+      "pts_seconds": 5.072611,
+      "sha256": "fd4355edb300fbd32bcfa5da010e437074a6b36b2e0068970a5385723579991f"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-017.png",
+      "source_decoded_frame_index": 67,
+      "pts_seconds": 5.136089,
+      "sha256": "8271fff7afb872b523f1b291e3efe36a7fbaba741d6f03b19fbeb304d3d2c0e0"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-018.png",
+      "source_decoded_frame_index": 68,
+      "pts_seconds": 5.216456,
+      "sha256": "5ab78c4e04fb73877b8e062d69025778cb4e05797a03e5850a574a43108efb24"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-019.png",
+      "source_decoded_frame_index": 69,
+      "pts_seconds": 5.271589,
+      "sha256": "31334d4e02b4b927936cf4d9111e4c7284b5566258a2829a4f6ee6a35e72e948"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-020.png",
+      "source_decoded_frame_index": 70,
+      "pts_seconds": 5.453211,
+      "sha256": "7bd53a0b2bdf2409479a659b73b54e26240ab98a40a8010062f8bed706d7622f"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-021.png",
+      "source_decoded_frame_index": 71,
+      "pts_seconds": 5.468989,
+      "sha256": "3009866acf38d48d47d5485526036423456341f76aeb012c0c4194af458a65af"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-022.png",
+      "source_decoded_frame_index": 72,
+      "pts_seconds": 5.580489,
+      "sha256": "2bf69aadda65de0872c652d5d246d000e98c8594571c599aa180be479fb23a96"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-023.png",
+      "source_decoded_frame_index": 13,
+      "pts_seconds": 1.447711,
+      "sha256": "900b9d88c3b8a870623d16a2f175939b3cf956e88898b77a3d38f5c407504277"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-024.png",
+      "source_decoded_frame_index": 14,
+      "pts_seconds": 1.540956,
+      "sha256": "52b4436771daccfc0c0f158684a619d2e00bc609d030dfc8843b23103e078ef6"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-025.png",
+      "source_decoded_frame_index": 16,
+      "pts_seconds": 1.614556,
+      "sha256": "33ab3cfb837207d2b414595c23a8f780f770f6517df9d873a01d630f84638c4e"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-026.png",
+      "source_decoded_frame_index": 44,
+      "pts_seconds": 3.707044,
+      "sha256": "9f6a731e052dcc2314ec5d76a1fab9e8766b30cc8f6f339b45129d9d6bf549fe"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-027.png",
+      "source_decoded_frame_index": 74,
+      "pts_seconds": 5.656011,
+      "sha256": "e5b89de0ffe3301de34bf2c49540a90c10b061c4ece37271cd3355d2f261d282"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-f/ANALYSIS-decoded-frame-028.png",
+      "source_decoded_frame_index": 105,
+      "pts_seconds": 7.701122,
+      "sha256": "0e398a6cdd0f0e37e10061719b3e9fa1ee4d932ecbd9e766fab3fd28b0ec36bd"
+    }
+  ]
+}

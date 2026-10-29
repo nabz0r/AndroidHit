@@ -1,0 +1,167 @@
+{
+  "status": "SCOPED VISUAL PASS; TEMPORAL FLUENCY NOT ESTABLISHED",
+  "candidate": {
+    "version": "1.17.0-rc4",
+    "code": 22,
+    "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8"
+  },
+  "source": {
+    "video": "docs/validation/v1.17/native-interface/candidate-f-transitions-v2/transitions/transitions.mp4",
+    "sha256": "1b0d6bb4ffb77ba2743cb78f76f5de26fef12e7ebceee4af13e9ea6a9ae71182",
+    "bytes": 4329699,
+    "host_report": "docs/validation/v1.17/native-interface/candidate-f-transitions-v2/host-report.json",
+    "host_report_sha256": "391600bc5ac1ae5c0a038464c7385876b91e08999fc67cc865f7bca043495345",
+    "timeline": "docs/validation/v1.17/native-interface/candidate-f-transitions-v2/transitions/transitions.json",
+    "timeline_sha256": "1a2f1df9afc440fb50d5bbc6fe6a745bfc1e28f5a6deda1ffdad4bd5ab0156de",
+    "native_check_count": 23,
+    "serial": "emulator-5592",
+    "avd": "Luma117-Secondary-F-QA",
+    "separate_clone_receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9"
+  },
+  "metadata": {
+    "codec": "H264 AVC Constrained Baseline",
+    "width": 1080,
+    "height": 2340,
+    "duration_seconds": 8.047722,
+    "encoded_video_frames": 110,
+    "avg_frame_rate_rational": "412500/30179",
+    "average_encoded_frames_per_second": 13.668444945160543,
+    "median_interframe_pts_ms": 65.9,
+    "audio_streams": 0,
+    "pixel_format": "yuv420p",
+    "other_streams": "Two Android data metadata streams"
+  },
+  "review": {
+    "analysis_frames_directly_viewed": 28,
+    "analysis_manifest": "docs/validation/v1.17/review/motion-f/analysis-frames.json",
+    "derivation": "Full-resolution H264-decoded frames, no crop, resize, retouch, synthesized content or replacement. These ANALYSIS images are not original UiAutomation PNG captures and are not marketing screenshot assets.",
+    "routes": [
+      {
+        "from": "Adventure",
+        "to": "Home",
+        "observer_action_window_ms": [
+          500,
+          1940
+        ],
+        "sample_source_indices": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          16
+        ],
+        "observed": "Adventure remains before the first encoded transition image. At PTS 1.429744 the house is visible with a faint outgoing heading/offset as the fade finishes; by PTS 1.447711 the house is fully readable. No blank frame or lingering outgoing scene is visible in the inspected samples.",
+        "capture_gap_ms": 690.622
+      },
+      {
+        "from": "Home",
+        "to": "Collection",
+        "observer_action_window_ms": [
+          3041,
+          4043
+        ],
+        "sample_source_indices": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          44
+        ],
+        "observed": "House remains before the destination. At PTS 3.596667 the large Collection portrait and objects appear in the light fade/slide; by PTS 3.707044 the stable Collection composition is clear. No missing prop, partial old-house rectangle or blank frame is visible in inspected samples.",
+        "capture_gap_ms": 385.778
+      },
+      {
+        "from": "Collection",
+        "to": "Home",
+        "observer_action_window_ms": [
+          5144,
+          6123
+        ],
+        "sample_source_indices": [
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          74,
+          105
+        ],
+        "observed": "The returning house at PTS 5.453211 has a faint outgoing Collection heading and small horizontal displacement. Opacity/position settle over the next captured images; by PTS 5.580489 the heading is clear, and the destination remains intact at PTS 7.701122. No old Collection layer persists after settling.",
+        "capture_gap_ms": 181.622
+      }
+    ],
+    "visual_findings": "No new P1/P2 visual composition defect was found in these 28 decoded samples. Three actual destinations and the crossfade/short horizontal movement are visible. This is not a blanket assertion over unsampled frames or every transition in the app.",
+    "temporal_limitation": "Encoded screenrecord cadence averages approximately 13.67 frames/s and has gaps around all three route changes. This file cannot establish smooth 220 ms animation, 60 fps rendering, physical-phone fluidity or input latency. No isolated trace identifies whether gaps arise from app loading/rendering, emulator scheduling or screenrecord/encoder capture. Observer actionStart/stableAfter windows include accessibility lookup, touch and waits; they are not animation duration measurements.",
+    "audio_limitation": "This MP4 contains no audio stream. It is not audio playback or listening evidence. Separate native AudioFlinger verification covers four place arrangements.",
+    "device_access": "Independent review reads original host files only; reviewer did not touch an AVD or browser."
+  },
+  "largest_encoded_pts_gaps": [
+    {
+      "from_frame": 11,
+      "to_frame": 12,
+      "from_pts_seconds": 0.739122,
+      "to_pts_seconds": 1.429744,
+      "gap_ms": 690.622
+    },
+    {
+      "from_frame": 41,
+      "to_frame": 42,
+      "from_pts_seconds": 3.210889,
+      "to_pts_seconds": 3.596667,
+      "gap_ms": 385.778
+    },
+    {
+      "from_frame": 69,
+      "to_frame": 70,
+      "from_pts_seconds": 5.271589,
+      "to_pts_seconds": 5.453211,
+      "gap_ms": 181.622
+    },
+    {
+      "from_frame": 10,
+      "to_frame": 11,
+      "from_pts_seconds": 0.609511,
+      "to_pts_seconds": 0.739122,
+      "gap_ms": 129.611
+    },
+    {
+      "from_frame": 71,
+      "to_frame": 72,
+      "from_pts_seconds": 5.468989,
+      "to_pts_seconds": 5.580489,
+      "gap_ms": 111.5
+    },
+    {
+      "from_frame": 13,
+      "to_frame": 14,
+      "from_pts_seconds": 1.447711,
+      "to_pts_seconds": 1.540956,
+      "gap_ms": 93.245
+    },
+    {
+      "from_frame": 43,
+      "to_frame": 44,
+      "from_pts_seconds": 3.614444,
+      "to_pts_seconds": 3.707044,
+      "gap_ms": 92.6
+    },
+    {
+      "from_frame": 45,
+      "to_frame": 46,
+      "from_pts_seconds": 3.7254,
+      "to_pts_seconds": 3.8135,
+      "gap_ms": 88.1
+    }
+  ]
+}
