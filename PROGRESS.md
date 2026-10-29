@@ -1,3 +1,12 @@
+# Luma Drift 1.16 — in progress
+
+- Implemented adaptive Home camera without outer scaling, detail/overview controls, protected floating toolbar and retained room camera.
+- Implemented local nickname/explicit flag,6earned badges/3equipped slots, separate avatar/outfit banners, fixed odds, atomic earned-coin draw/equip receipts and recovery of last arrival.
+- Replaced generic action rectangles with accented pill buttons and medal navigation; larger collection portraits and illustrated Atelier universes.
+- Host data60700new checks,2774legacy checks, camera149208checks and6494legacygeometry pass. Production/Lab initial builds and production lint pass; source-review findings corrected before native acceptance.
+- Final B native acceptance passes997 qualification checks (993onB +4pre-update baseline)/263 original PNGs: profile, house, actual180+260draws/duplicate+100/equip/replay/cold, normal/320dp six-language screens and all23avatar/five-outfit catalogues. Exact canonical packages equal frozen B;126inputs remain stable. Only retained task-owned QA5586 was used.
+- Website staged with16 exact B native images and production APK/AAB/manifest. Offline2,583checks pass; browser FR/EN desktop/mobile/compact checks and final Hosting delivery have separate records.
+
 # Luma Drift 1.15 — Android and website delivered
 
 - Owner approved the full redesign on28 October2026. Baseline1.14 RC2/code16 atadc51c8f; local branch `codex/luma-refonte-1-15`, implementation commit `84830c16`.

@@ -1,6 +1,14 @@
 # Luma Drift documentation
 
-## Current 1.15 — relay puzzles and dedicated destinations
+## Current1.16 — a closer home and a local player card
+
+[Release and exact bytes](RELEASE_1_16.md) · [Qualification register](validation/v1.16/README.md) · [Official-reference audit](research/v1.16/reference-audit.md).
+
+The home uses the actual scene viewport with default close-up, pan and an explicit whole-room control. Collection and Atelier have larger original illustrations, accented pill actions and icon-medallion navigation. The local profile adds a nickname, chosen flag and three slots for six earned badges. Two versioned earned-coin banners offer23 companions and five complete four-piece outfits with visible odds, duplicate returns and atomic recoverable receipts. Existing purchases, clothing ownership, free styles and the byte-identical1.15 puzzle engine remain.
+
+[Production APK](../releases/luma-drift-1.16.0-rc1.apk) · [AAB](../releases/luma-drift-1.16.0-rc1.aab) · [Manifest](../releases/manifest-1.16.0-rc1.json). Candidate B, code18; exact native acceptance and public website delivery are separately indexed in the qualification register.
+
+## Preserved1.15 — relay puzzles and dedicated destinations
 
 [Release and exact bytes](RELEASE_1_15.md) · [Gameplay and compatibility](GAMEPLAY_1_15.md) · [Qualification register](validation/v1.15/README.md) · [Design audit](AUDIT_REFONTE_UI_2026_10_28.md).
 

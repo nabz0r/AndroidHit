@@ -1,6 +1,24 @@
 # Development and architecture
 
-## Current 1.15 destinations, relay route and rooms
+## Current1.16 camera, player card and collectible arrivals
+
+Production **1.16.0-rc1**, Lab **1.16.0-sandbox-rc1**, code **18**. `HomeScene.setViewport` supplies one transform for painting, projection, inverse lookup, bounds and pan. The controller no longer wraps it in another size reduction. Default detail zoom is1.6; resetOverview is1.0. Clipped furniture targets stop before the floating toolbar, and both pointer picking and drag starts exclude its background. Viewport height is serialized before restoring a clamped camera.
+
+`PlayerProfile` validates a local Unicode nickname and explicit flag. `BadgeCatalog` defines six durable milestones and three distinct equipment slots. `SummonCatalog` fixes IDs, odds and duplicate returns under `v116_1`; its pools never inherit future catalogue changes. `SignatureOutfits` maps five looks to four original clothing IDs each. `GameStore` commits draw outcome/debit/ownership/last receipt together, retains provenance for already owned pieces and atomically equips complete looks. Reads of the last outcome never draw again. Provider payments, account names, older clothing receipts and free avatar styles remain separate.
+
+New Canvas routes: `profile`, `badges`, `summon`, `summon_pool`, `summon_reveal`; `V116Strings` owns their six-language copy. `PremiumUi` remains draw-only with accented action pills, rarity halos, badge/capsule art and icon-medallion navigation. The framework nickname editor dismisses itself before surfacing a failed-save retry, and displayed names are not substituted into Google identity.
+
+```sh
+bash scripts/test-profile-summon-v116.sh
+bash scripts/test-home-v116-geometry.sh
+./gradlew assembleProductionRelease assembleLabRelease bundleProductionRelease bundleLabRelease lintProductionRelease lintLabRelease
+```
+
+The two new host contracts are wired into the existing sparse offline workflow; a local rehearsal with only its102configured files passes both. No remote CI run is claimed.
+
+Native qualification uses `scripts/v116-ui-test`, with guarded read-only baseline, real UI input/draw/equip, cold persistence and six-language normal/320dp browse routes. [Release](RELEASE_1_16.md) · [Evidence](validation/v1.16/README.md).
+
+## Preserved1.15 destinations, relay route and rooms
 
 Production is **1.15.0-rc1**, Lab **1.15.0-sandbox-rc1**, version code **17**. The four release artifacts and both lint tasks pass using the locally verified JDK17. Release lint reports zero errors and13 warnings per flavor; the new portrait presentation accounts for two orientation advisories. Phone portrait is the qualified layout scope.
 

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "copied_sparse_files": 102,
+  "commands": [
+    {
+      "script": "scripts/test-home-v116-geometry.sh",
+      "passed": true,
+      "output": "PASS 149208 enlarged home viewport, inverse, picking, pan and render clip checks (native device review still required)"
+    },
+    {
+      "script": "scripts/test-profile-summon-v116.sh",
+      "passed": true,
+      "output": "PASS 60713 v1.16 profile, badge and summon store checks"
+    }
+  ],
+  "scope": "Local Java17 rehearsal of the two added checks using only the exact configured sparse paths; remote GitHub CI was not run."
+}

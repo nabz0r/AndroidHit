@@ -1,5 +1,17 @@
 <h1 align="center">Luma Drift</h1>
 <p align="center"><strong>Read the board. Make your move. Come home.</strong><br>A puzzle Journey with visible rules and a three-room home for your companion.</p>
+<p align="center"><strong>1.16.0-rc1 · a closer home, your player card and collectible arrivals</strong><br><a href="docs/RELEASE_1_16.md">Release & exact bytes</a> · <a href="docs/validation/v1.16/README.md">Qualification</a> · <a href="docs/research/v1.16/reference-audit.md">Design references</a></p>
+
+The home now fills its actual scene viewport, with a closer default camera, finger pan and an explicit whole-room view. Larger collection portraits, illustrated Atelier cards, accented pill actions and icon-medallion navigation give objects and characters more room.
+
+Choose a local nickname, a flag and three badges from six earned milestones. Two separate arrivals banners use earned LumaCoins:23 companions and five complete four-piece outfits. Exact odds and duplicate returns are shown before drawing; debit, outcome, ownership and the last result are saved together. Existing purchases, clothing capsules,12 free avatar styles, furniture positions and puzzle rules are retained.
+
+**[Signed1.16 production APK](releases/luma-drift-1.16.0-rc1.apk)** · [AAB](releases/luma-drift-1.16.0-rc1.aab) · [Manifest](releases/manifest-1.16.0-rc1.json) · [Separate Lab APK](releases/luma-drift-1.16.0-sandbox-rc1.apk).
+
+Candidate B uses code18 and the existing signing certificate. Install production over the previous production app to preserve local data. Nickname, flag, badges, house and gameplay remain local; Google sign-in does not synchronize them. Test ads and disabled paid-provider gates are retained. The executed native, visual and publication scopes are recorded in the [current qualification register](docs/validation/v1.16/README.md); the1.15 full1,000-level route below remains historical evidence.
+
+## Preserved1.15 delivery
+
 <p align="center"><strong>1.15.0-rc1 · separated screens, relay puzzles and a larger home</strong><br><a href="docs/RELEASE_1_15.md">Release & evidence</a> · <a href="docs/GAMEPLAY_1_15.md">Gameplay and compatibility</a> · <a href="docs/validation/v1.15/README.md">Qualification</a></p>
 <p align="center">1,000 versioned relay Journey boards · 30 staged opening boards · 6 languages<br>Four dedicated destinations · Three 10 × 10 rooms · 42 furniture designs</p>
 
@@ -60,7 +72,7 @@ node --test public/tests/site-language-v114.test.mjs public/tests/deletion-core.
 
 [Development](docs/DEVELOPMENT.md) · [Roadmap](docs/ROADMAP.md) · [Documentation](docs/README.md). Source and original repository assets: **AGPL-3.0**. [Third-party notices](docs/THIRD_PARTY_NOTICES.md).
 
-The sections below preserve dated releases and their original rules. Their test counts and deployment receipts do not certify the current 1.15 release, whose U recovery rules and evidence are recorded above.
+The sections below preserve dated releases and their original rules. Their test counts and deployment receipts do not certify the then-current 1.15 release, whose U recovery rules and evidence are recorded above.
 
 ## Preserved 1.13 — your little home
 

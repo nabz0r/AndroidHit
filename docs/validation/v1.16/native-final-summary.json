@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "apk_sha256": "516be7f14ff2b80683de658b6df767f4b19dbb44580d57be36a307d330ed5a66",
+  "qualification_checks": 997,
+  "checks_on_final_B": 993,
+  "baseline_checks_on_installed_A_before_B_upgrade": 4,
+  "original_screenshots_on_final_B": 263,
+  "reports": [
+    {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-upgrade-a/host-report.json",
+      "checks": 163,
+      "screenshots": 29,
+      "compact": false,
+      "report_sha256": "4462abba447ddcb8ed7d65c17c108db9501b9b489f89b7902c16d8e7f817d2f7"
+    },
+    {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-normal-a/host-report.json",
+      "checks": 272,
+      "screenshots": 81,
+      "compact": false,
+      "report_sha256": "0cc3a86e7b5a41712f401c2ad30a922ad33f8566bc5643625f57bd64841e953a"
+    },
+    {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-compact-a/host-report.json",
+      "checks": 272,
+      "screenshots": 81,
+      "compact": true,
+      "report_sha256": "7b5c06c1a0a6e39b32fc7967e27fc8d2e698477f126a84330847e766b5630d13"
+    },
+    {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-banners-normal-a/host-report.json",
+      "checks": 145,
+      "screenshots": 36,
+      "compact": false,
+      "report_sha256": "3f191f09e06683a812f94ff0afef2d0686af7dac362c44dd972f3253f7b843dd"
+    },
+    {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-banners-compact-a/host-report.json",
+      "checks": 145,
+      "screenshots": 36,
+      "compact": true,
+      "report_sha256": "eef0b6600c390f05a61e5ade5b82a16875521cf44950e1f7bc1c4acb9907b174"
+    }
+  ],
+  "scope": "Independent aggregation of passed final-B qualification routes. The4read-only baseline assertions observe installed A before the B replacement; all263PNG frames are from B. No1.15/A intermediate screenshots counted."
+}

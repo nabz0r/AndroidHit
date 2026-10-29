@@ -1,0 +1,120 @@
+{
+  "candidate": "b",
+  "package": "com.androidhit.lumadrift",
+  "version": "1.16.0-rc1",
+  "version_code": 18,
+  "apk_sha256": "516be7f14ff2b80683de658b6df767f4b19dbb44580d57be36a307d330ed5a66",
+  "source_files_verified": 126,
+  "frozen_binary_files_verified": 4,
+  "native_suite_passed": true,
+  "recorded_utc": "2026-10-28T23:58:37.790908+00:00",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "avd": "Luma-Refonte115-QA",
+  "serial": "emulator-5586",
+  "total_checks": 997,
+  "total_screenshots": 263,
+  "routes": {
+    "candidate-b-upgrade-a": {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-upgrade-a/host-report.json",
+      "passed": true,
+      "checks": 163,
+      "screenshots": 29,
+      "compact": false,
+      "exact_candidate_retained": true,
+      "observer_removed": true,
+      "display_restored": true
+    },
+    "candidate-b-normal-a": {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-normal-a/host-report.json",
+      "passed": true,
+      "checks": 272,
+      "screenshots": 81,
+      "compact": false,
+      "exact_candidate_retained": true,
+      "observer_removed": true,
+      "display_restored": true
+    },
+    "candidate-b-compact-a": {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-compact-a/host-report.json",
+      "passed": true,
+      "checks": 272,
+      "screenshots": 81,
+      "compact": true,
+      "exact_candidate_retained": true,
+      "observer_removed": true,
+      "display_restored": true
+    },
+    "candidate-b-banners-normal-a": {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-banners-normal-a/host-report.json",
+      "passed": true,
+      "checks": 145,
+      "screenshots": 36,
+      "compact": false,
+      "exact_candidate_retained": true,
+      "observer_removed": true,
+      "display_restored": true
+    },
+    "candidate-b-banners-compact-a": {
+      "report": "docs/validation/v1.16/native-interface/candidate-b-banners-compact-a/host-report.json",
+      "passed": true,
+      "checks": 145,
+      "screenshots": 36,
+      "compact": true,
+      "exact_candidate_retained": true,
+      "observer_removed": true,
+      "display_restored": true
+    }
+  },
+  "economic_flow": {
+    "initialCoins": 51850,
+    "grossSpentCoins": 440,
+    "duplicateReturns": 100,
+    "avatarReceipt": {
+      "key": "summon_v116_1_6bbf2328fa31fae7768f833aa1a71c1fbfcd4db4ac3f5b2e5dc234ee1fc7c7c6",
+      "record": "AVATARS:halo:0:0",
+      "item": "halo",
+      "banner": "AVATARS",
+      "charged": 180,
+      "compensation": 0
+    },
+    "outfitReceipt": {
+      "key": "summon_v116_1_439b72a824c3d2746daff29d47497edfc0ce95cd744915bc363055c35c70b6f6",
+      "record": "SIGNATURES:star:1:100",
+      "item": "star",
+      "banner": "SIGNATURES",
+      "charged": 260,
+      "compensation": 100
+    }
+  },
+  "legacy_upgrade_history": {
+    "report": "docs/validation/v1.16/native-interface/candidate-a-upgrade-a/host-report.json",
+    "note": "The actual known1.15/code17 to1.16/code18 install-r and exact legacy/session preservation checks passed before the original observer stopped at uppercase SAVE. Candidate B replaces the known candidate A bytes and keeps that historical proof separate."
+  },
+  "capture_limitations": {
+    "original_browse_banner_names": "Original normal/compact browse observers retained the signature tab after the first language. Their summon-companions and avatar-pool-bottom filenames do not certify the companion tab in every language. A single scroll was not actual list end. Definitive images and per-language complete coverage are in the later banners routes. Other original destination/profile/badge/reveal frames remain valid.",
+    "stale_failure_files": "Original passed baseline/prepare/cold/browse pulls could include failure.txt left by the first SAVE harness failure in its external output directory. Those ancillary files are stale, not new app failures; native report passed/checks/actions and original captures determine each phase result. The later wrapper records the ignored stale-file hash instead of copying it."
+  },
+  "banners_coverage_summary": "docs/validation/v1.16/candidate-b/coverage-banners.json",
+  "final_public_image_sources": {
+    "adventure": "candidate-b-normal-a/browse/adventure-{fr,en}.png",
+    "home": "candidate-b-normal-a/browse/home-{fr,en}.png",
+    "collection": "candidate-b-normal-a/browse/collection-{fr,en}.png",
+    "atelier": "candidate-b-normal-a/browse/atelier-{fr,en}.png",
+    "profile": "candidate-b-normal-a/browse/profile-{fr,en}.png",
+    "summon": "candidate-b-banners-normal-a/banners/companions-banner-{fr,en}.png",
+    "reveal": "candidate-b-normal-a/browse/reveal-{fr,en}.png",
+    "badges": "candidate-b-normal-a/browse/badges-{fr,en}.png"
+  },
+  "device_shutdown": "docs/validation/v1.16/device/shutdown.json",
+  "device_stopped": true,
+  "profile_files_retained": true,
+  "runtime_scope": "Production APK installed and exercised on one task-owned Android API 36 arm64 emulator with 16 KiB memory pages, normal and native 320 dp compact displays. No claim of all physical Android devices or native Lab 1.16 runtime qualification.",
+  "independent_visual_review": "docs/validation/v1.16/visual-review.md",
+  "independent_visual_review_scope": "83 original candidate B images inspected, including20 additive compact images; no new blocking P1/P2 defect reported."
+}

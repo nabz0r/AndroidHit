@@ -1,0 +1,43 @@
+{
+  "avd": "Luma-Refonte115-QA",
+  "serial": "emulator-5586",
+  "package": "com.androidhit.lumadrift",
+  "apk_sha256_before": "516be7f14ff2b80683de658b6df767f4b19dbb44580d57be36a307d330ed5a66",
+  "guarded_exact_avd": true,
+  "observer_absent_before": true,
+  "display_restored_before": true,
+  "display": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "profile_directory": "/Users/n/.android/avd/Luma-Refonte115-QA.avd",
+  "userdata_before": {
+    "userdata-qemu.img": {
+      "bytes": 10158080,
+      "mtime_ns": 1793219341136074201
+    },
+    "userdata-qemu.img.qcow2": {
+      "bytes": 2346647552,
+      "mtime_ns": 1793231875215835427
+    }
+  },
+  "operation": "normal adb emu kill; no wipe, reset, clear-data, install or profile injection",
+  "started_utc": "2026-10-28T23:58:12.989807+00:00",
+  "kill_response": "OK: killing emulator, bye bye\r\nOK",
+  "device_stopped": true,
+  "userdata_after": {
+    "userdata-qemu.img": {
+      "bytes": 10158080,
+      "mtime_ns": 1793219341136074201
+    },
+    "userdata-qemu.img.qcow2": {
+      "bytes": 2346647552,
+      "mtime_ns": 1793231875215835427
+    }
+  },
+  "profile_files_retained": true,
+  "cold_profile_persistence_previously_passed": true,
+  "completed_utc": "2026-10-28T23:58:15.066747+00:00",
+  "passed": true,
+  "exact_avd_process_absent": true
+}

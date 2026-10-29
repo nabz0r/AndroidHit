@@ -1,0 +1,30 @@
+// Separate native interface observer. This does not alter production source or dependencies.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig {
+                testApplicationId 'com.androidhit.lumadrift.qualification116test'
+                testInstrumentationRunner 'com.androidhit.lumadrift.qa.v116.InterfaceInstrumentation'
+            }
+            sourceSets {
+                androidTest {
+                    java.srcDirs = [new File(rootDir, 'scripts/v116-ui-test/java')]
+                    assets.srcDirs = []
+                    manifest.srcFile new File(rootDir, 'scripts/v116-ui-test/AndroidManifest.xml')
+                }
+            }
+        }
+        ['Lab','Production'].each { variant ->
+            project.tasks.matching { it.name == 'package' + variant + 'ReleaseAndroidTest' }.configureEach {
+                doLast {
+                    copy {
+                        from project.layout.buildDirectory.file('outputs/apk/androidTest/' + variant.toLowerCase() + '/release/app-' + variant.toLowerCase() + '-release-androidTest.apk')
+                        into project.layout.buildDirectory.dir('qualification-artifacts/v1.16')
+                        rename { 'interface-v116-' + variant.toLowerCase() + '-test.apk' }
+                    }
+                }
+            }
+        }
+    }
+}

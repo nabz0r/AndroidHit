@@ -46,6 +46,10 @@ jobs:
             /scripts/test-home-v115-geometry.sh
             /scripts/HomeV115Test.java
             /scripts/HomeV115GeometryTest.java
+            /scripts/test-home-v116-geometry.sh
+            /scripts/HomeV116GeometryTest.java
+            /scripts/test-profile-summon-v116.sh
+            /scripts/ProfileSummonV116Test.java
             /scripts/home-render-support/
             /scripts/test-learning-v114.sh
             /scripts/test-deliberate-play-v114.sh
@@ -84,6 +88,11 @@ jobs:
 
       - name: Check strict budgets, the saved Return and legacy continuations
         run: sh scripts/test-deliberate-play-v114.sh
+
+      - name: Check adaptive home camera and recoverable player collection
+        run: |
+          bash scripts/test-home-v116-geometry.sh
+          bash scripts/test-profile-summon-v116.sh "$RUNNER_TEMP/luma-puzzle-contracts/profile-summon.json"
 
       - name: Check contextual rules and six-language feedback
         run: sh scripts/test-learning-guide.sh

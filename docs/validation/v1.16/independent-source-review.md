@@ -25,12 +25,12 @@ Line numbers identify the reviewed source snapshot and may move with later edits
 - Nickname, flag and badge selection are durable local preferences. The chosen flag is validated against the supported list; it is independent of account identity or inferred location.
 - The camera transform is shared by room drawing, inverse floor projection, sprite bounds and painter-order targeting. This review found no remaining separate outer fit transform in the new room renderer.
 
-## Small remaining refinements
+## Additional findings addressed before candidate A
 
-- `acquisitionCaption` does not have a dedicated case for `EARNED_SUMMON_v116_1`. The clothing detail page can therefore describe the older unlock condition instead of the summon origin, although ownership and equipment are correct.
-- Nickname normalization removes controls/formats but allows a string consisting only of nonspacing marks such as U+034F, which may not render as a visible name. The interface advertises visible characters. This is a local display edge case, not an account or ownership change.
+- The initial `acquisitionCaption` review found no dedicated case for `EARNED_SUMMON_v116_1`. This was corrected before candidate A; acquired clothing now names the summon origin while retaining older provenance.
+- The initial nickname review found invisible-only nonspacing marks such as U+034F were accepted. This was corrected before candidate A with explicit invisible-character handling and model regressions; valid accents and basic emoji remain supported.
 
-Neither issue blocks the reviewed collection/camera transaction paths. Native screenshots, compact-screen interaction, cold relaunch and any fault-injection tests must be reported separately by the release qualification; this document does not substitute for them.
+Both refinements are complete in the frozen candidate. Native screenshots, compact-screen interaction, cold relaunch and any fault-injection tests must be reported separately by the release qualification; this document does not substitute for them.
 
 ## Reviewed source identities
 
@@ -42,3 +42,7 @@ V116Strings.java 00ccda9a79d0737cd021685b4173b69398cf852384033b371aeda76124164bc
 ```
 
 `git diff --check` was clean at the end of this source review. No unresolved P1/P2 finding remained in its scope.
+
+## Post-review refinements
+
+The small provenance/nickname refinements listed above were completed before candidate A: earned-summon clothing now names its actual source, and invisible-only Unicode nicknames are refused (60,712 model assertions). Candidate B changes only the spacing of summon catalogue/reveal artwork and captions after native visual review; its final source identities are recorded in `candidate-b/source-freeze.json`.
