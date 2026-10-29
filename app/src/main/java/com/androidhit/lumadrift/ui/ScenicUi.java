@@ -208,16 +208,11 @@ public final class ScenicUi {
         object(c,box,accent,false,kind);
     }
 
-    /** A shelf is scenery under actual independent objects, never a card around a row. */
+    /** Objects float above a quiet ground shadow; captions stay on clear background. */
     public void shelf(Canvas c,RectF box,int accent) {
         if(!valid(box))return;
-        float y=box.bottom,h=Math.min(12,Math.max(5,box.height()*.16f));
-        polygon(c,new float[]{box.left,y-h,box.right-4,y-h-4,box.right,y,box.left+5,y+3},0xffba8b73);
-        polygon(c,new float[]{box.left+5,y+3,box.right,y,box.right,y+h*.65f,box.left+5,y+h*.65f+2},0xff765662);
-        line(c,box.left+12,y-h+2,box.right-13,y-h-1,0xfff5d8ac,1.4f);
-        float leg=Math.min(18,box.width()*.12f);
-        polygon(c,new float[]{box.left+leg,y+4,box.left+leg+8,y+4,box.left+leg+2,y+20},mix(tone(accent),INK,.38f));
-        polygon(c,new float[]{box.right-leg,y+4,box.right-leg-8,y+4,box.right-leg-2,y+20},mix(tone(accent),INK,.38f));
+        fill(0x14746283);
+        c.drawOval(box.left+9,box.bottom+3,box.right-9,box.bottom+12,p);
     }
 
     public void dial(Canvas c,RectF box,int accent,float value,boolean pressed) {
