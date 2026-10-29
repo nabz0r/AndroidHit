@@ -524,14 +524,15 @@ public final class LumaView extends View {
         RectF r=new RectF(x,y-drawingScroll,x+w,y+h-drawingScroll);
         float clipTop=drawingMapNodes?SagaMap.header(viewportH):0;
         if(!r.intersect(0,clipTop,390,drawingClipBottom))return;
-        // Menu objects keep a real 48dp touch target at every display width.
+        // Fully visible menu objects keep a real 48dp touch target at every display width.
         // Puzzle pieces retain their exact geometric hit regions.
         if(action!=null&&!Arrays.asList("play","guardian","tutorial","firstlight").contains(screen)){
+            float cx=x+w/2,cy=y+h/2-drawingScroll;
+            // A clipped next row must never move onto the previous visible row.
+            if(cx<0||cx>=390||cy<clipTop||cy>=drawingClipBottom)return;
             float target=48*getResources().getDisplayMetrics().density/Math.max(.01f,scale);
-            float rw=Math.max(r.width(),target),rh=Math.max(r.height(),target),cx=r.centerX(),cy=r.centerY();
+            float rw=Math.max(w,target),rh=Math.max(h,target);
             r.set(cx-rw/2,cy-rh/2,cx+rw/2,cy+rh/2);
-            if(r.left<0)r.offset(-r.left,0);if(r.right>390)r.offset(390-r.right,0);
-            if(r.top<clipTop)r.offset(0,clipTop-r.top);if(r.bottom>drawingClipBottom)r.offset(0,drawingClipBottom-r.bottom);
             r.intersect(0,clipTop,390,drawingClipBottom);
         }
         hits.add(new Hit(r,name,action));
