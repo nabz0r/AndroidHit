@@ -1,6 +1,6 @@
-# Luma Drift 1.21 — signed B, final qualification pending
+# Luma Drift 1.21 — B accepted, website delivery pending
 
-Production `1.21.0-rc1` and isolated Lab `1.21.0-sandbox-rc1`, code 29, are frozen and collected locally. Final production/Lab native acceptance, hosted CI, source publication and Firebase delivery are pending in this draft. Eight original B site captures and the independent browser simulation are ready; neither is a substitute for the remaining gates.
+Production `1.21.0-rc1` and isolated Lab `1.21.0-sandbox-rc1`, code 29, are frozen and collected locally. The exact B production and Lab packages have passed their separately indexed native scopes. Application source, native evidence and artifact metadata are published at [C1 `35bb8222`](https://github.com/nabz0r/AndroidHit/commit/35bb82229d8175968919b5979264e5094a1cc8dc). Hosted CI, website source publication and Firebase delivery remain pending. Eight original B site captures and the independent browser simulation are ready.
 
 ## Exact candidate identity
 
@@ -11,13 +11,13 @@ Production `1.21.0-rc1` and isolated Lab `1.21.0-sandbox-rc1`, code 29, are froz
 | Production | `1.21.0-rc1` / 29 | 368,969,685 | `e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc` |
 | Isolated Lab | `1.21.0-sandbox-rc1` / 29 | 368,952,988 | `9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b` |
 
-The retained signer certificate is `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. Large APKs are ignored external artifacts; metadata and exact-byte checks belong in Git. Canonical collection verifies source-input hashes, package/version identity, signature, sizes and both APK hashes, and refuses to replace earlier canonical bytes.
+The retained signer certificate is `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. Large APKs are ignored external artifacts; metadata and exact-byte checks belong in Git. [Canonical collection](validation/v1.21/publication/package-collection.json) verifies source-input hashes, package/version identity, signature, sizes and both APK hashes, and refuses to replace earlier canonical bytes.
 
 Expected delivery paths are `/releases/luma-drift-1.21.0-rc1.apk` and `/releases/luma-drift-1.21.0-sandbox-rc1.apk` on the existing Firebase site. This draft does not assert that those public URLs serve these bytes yet. The manifest's `publicly_published:false` is its creation-time state, not a future delivery receipt.
 
 ## Resulting interaction
 
-The home gives the equipped avatar a large full-body stage, actual companion level/copies and a separate account-rank/XP bar. The avatar's style and the squad's puzzle effects have distinct routes. The evolution screen shows the actual authored forms at companion levels 1/3/6/10 and the real puzzle-skill explanation. Copies change companion level and forms; they do not silently increase a fixed puzzle-skill effect.
+The home gives the equipped avatar a large full-body stage, actual companion level/copies and a separate player-level/XP bar. The avatar's style and the squad's puzzle effects have distinct routes. The evolution screen shows the actual authored forms at companion levels 1/3/6/10 and the real puzzle-skill explanation. Copies change companion level and forms; they do not silently increase a fixed puzzle-skill effect.
 
 Play is followed by direct Home, Living room, Kitchen and Garden shortcuts. Kitchen is a real fourth independently saved ambient room. The optional catalogue item named `kitchen` remains a separate 440-Coin furnishing; opening the room does not grant that furniture or spend Coins. Original living/bedroom/garden save bytes and the existing house/atelier routes are preserved.
 
@@ -46,23 +46,27 @@ Scene fades last 300 ms with bounded travel. Coins, known Gold balances and XP a
 
 The new host scopes include all 1,000 certified elemental plans and actual companion exits, Focus anti-farming, kitchen save isolation, economy/Undo fault recovery, energy-cap upgrades and menu/map geometry. The independent summon analysis executes 800,000 fixed-seed draws against the actual source pools; modeled cohorts and probabilities are not measured retention or player spending.
 
-[Eight original B site captures](validation/v1.21/native/site-media-candidate-b-accepted/capture-map.json) bind full 1080×2400 FR/EN home/shop/map/puzzle PNGs to passed phase reports and the exact installed production SHA-256. The original phase PNGs are never edited or relabelled. Broader native acceptance, including remaining rooms/gacha/Undo/compact and isolated Lab scopes, is pending in this draft. Earlier A failures remain preserved.
+[Eight original B site captures](validation/v1.21/native/site-media-candidate-b-accepted/capture-map.json) bind full 1080×2400 FR/EN home/shop/map/puzzle PNGs to passed phase reports and the exact installed production SHA-256. The original phase PNGs are never edited or relabelled. [Production B native acceptance](validation/v1.21/native/candidate-b-final-index.json) passes 13 phases: 574 native assertions, 149 actual touch actions, 52 original PNGs and two videos, with 38 derived comparisons counted separately. Its scopes cover profile preservation, blocked accounting, FR/EN surfaces, living/kitchen/garden selectors, actual earned-Coin draw cancellation/confirmation and cold recovery, two-free/paid Undo with cold resume, elemental shells/Focus with cold resume, and compact reduced-motion navigation. Earlier A failures remain preserved.
+
+[Isolated Lab B acceptance](validation/v1.21/native-lab/candidate-b-final-index.json) passes three phases: 99 native assertions, 41 actual touches, nine original PNGs and one video, plus 24 separate derived comparisons. The paid test refill actually debits 450→400 test Gold at zero energy; energy then follows 0→10→9 and remains 9 across a distinct cold process. [All six production preference maps remain identical before/after Lab](validation/v1.21/native/production-profile-preserved-after-lab.json). This is isolated Lab test-currency evidence, not a real purchase. Both native indexes identify API 36 ARM64, 16 KiB pages and the exact candidate hash; these are emulator scopes.
 
 [The independent browser demo](validation/site-v1.21/staging/lab/ui-1-21/index.html) uses actual companion sheets and explicitly fictional in-memory balances, mini-puzzle state and teaching rewards. Its source-derived 23-entry draw pool, duplicate compensation, copy thresholds and interactive U-level curve have 12 model tests; the curve matches outputs generated by the native Java class with a bound source hash. Nine site-runtime checks cover language/metadata/links/audio controls. [Actual local browser QA](validation/site-v1.21/browser-local/simulation/report.json) covers four views × two languages × four requested widths (320/375/768/1280), zero horizontal overflow, all four form previews, one complete teaching loop and no observed console errors. It accesses no Android save or real payment. Operating-system reduced-motion preference was not changed; its code/CSS handling was inspected separately.
 
 ## Website and delivery gates
 
-The existing Firebase site is retained. The staged homepage uses only the exact eight B captures and preserves existing gallery/audio markup, assets, earlier APK archives, authentication, account and deletion pages. The intentional factual privacy amendment records previous/current hashes and its original source commit; it describes local 10→16 capacity and elemental/Focus/Undo state/receipts without announcing a new server service.
+The existing Firebase site is retained. The prepared homepage uses only the exact eight B captures and preserves existing gallery/audio markup, assets, earlier APK archives, authentication, account and deletion pages. The intentional factual privacy amendment records previous/current hashes and its original source commit; it describes local 10→16 capacity and elemental/Focus/Undo state/receipts without announcing a new server service.
 
 | Gate | Current draft state |
 | --- | --- |
 | B build/lint/signed-byte identity | PASS; exact manifest above |
 | Original B site-media provenance | PASS; eight source-bound native PNGs |
-| Complete B production/Lab native acceptance | Pending final root acceptance |
-| Local simulation/model/responsive checks | PASS within the scoped evidence above |
-| Complete staged homepage browser QA | Pending current preview review |
-| Immutable source/artifact commit and hosted CI | Pending |
-| Exact website source/payload manifest | Staged; public homepage application held |
+| Complete B production/Lab native acceptance | PASS within the 13 production and three Lab phases above; derived comparisons separate |
+| Local simulation/model/responsive checks | PASS within the scoped evidence above; [final complete hosted website command](validation/site-v1.21/source-qa-prepared.json) passes 78/78 tests against the prepared homepage |
+| Complete staged homepage browser QA | PASS: [8 responsive language/width states and 40 actually visible native image checks](validation/site-v1.21/browser-local/homepage/report.json), preserved gallery, deliberate audio switching, keyboard focus and corrected privacy title |
+| Immutable application/artifact source | Published C1 `35bb82229d8175968919b5979264e5094a1cc8dc`; exact manifest bound |
+| Hosted CI | Pending |
+| Exact website source/payload manifest | PASS locally: 525 payloads / 3,575,292,556 bytes; 507 earlier payloads preserved; eight native originals; one reviewed factual privacy amendment. [Prepared source manifest](validation/site-v1.21/release/source-manifest.json) binds C1. Homepage bytes match the reviewed preview exactly. [1,143 offline source checks](validation/site-v1.21/source-qa-prepared.json) pass. Website source publication pending. |
+| Prepared public-directory browser QA | PASS: [4 FR/EN × mobile/desktop states, 20 individually visible original image loads and working simulation navigation](validation/site-v1.21/browser-local/prepared/report.json), zero observed errors. Plain loopback serving of actual public files; no staging overlay. |
 | Firebase DEPLOY/FINALIZED receipt | Pending |
 | Public-origin byte/render verification | Unverified; no claim from local or management evidence |
 

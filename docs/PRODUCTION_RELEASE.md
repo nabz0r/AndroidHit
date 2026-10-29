@@ -1,8 +1,8 @@
 # Production candidate and activation boundary
 
-## Current 1.21 — frozen B, final delivery pending
+## Current 1.21 — B accepted, final delivery pending
 
-Production `1.21.0-rc1` and isolated `1.21.0-sandbox-rc1`, code29, have exact signed local bytes in the [artifact manifest](../releases/manifest-1.21.0-rc1.json). [Release register](RELEASE_1_21.md) separates package identity, scoped native/model/browser evidence and the still-pending final production/Lab acceptance, GitHub source publication and Hosting delivery. The eight current native site captures belong to B; earlier A failures remain historical evidence.
+Production `1.21.0-rc1` and isolated `1.21.0-sandbox-rc1`, code 29, have exact signed local bytes in the [artifact manifest](../releases/manifest-1.21.0-rc1.json). [Release register](RELEASE_1_21.md) separates package identity, scoped native/model/browser evidence and the pending website/Hosting delivery. Application source, artifact metadata and original evidence are published at [C1 `35bb8222`](https://github.com/nabz0r/AndroidHit/commit/35bb82229d8175968919b5979264e5094a1cc8dc); website source publication and hosted CI remain pending. [Production B](validation/v1.21/native/candidate-b-final-index.json) passes 13 exact-package phases / 574 native assertions / 149 touches; [Lab B](validation/v1.21/native-lab/candidate-b-final-index.json) passes three / 99 / 41. Derived comparisons remain separate. The Lab 450→400 test-Gold refill and 0→10→9/cold-9 energy route leave all six production preference maps unchanged. The eight current native site captures belong to B; earlier A failures remain historical evidence.
 
 The update makes the avatar, its copy-based evolution, actual player XP, puzzle skills, illustrated shop and house/living/kitchen/garden access explicit. Campaign rewards and base boost prices follow the versioned level-only curve. Eligible new attempts have two free Undos before confirmed earned-Coin fees; energy capacity grows 10→16 without filling the counter, while regeneration stays one unit per ten minutes. The Gold refill remains a separate zero-energy Lab test route; earned Coins do not pay that premium refill.
 

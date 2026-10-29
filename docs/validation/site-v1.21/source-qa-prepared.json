@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "recorded_at_utc": "2026-10-29T23:50:57.546494+00:00",
+  "scope": "Actual prepared public/index.html: complete hosted website Node command plus offline source/provenance/link contracts. Local browser source review is separately bound. No Android rerun, network, deployment or public-origin claim.",
+  "artifact_commit": "35bb82229d8175968919b5979264e5094a1cc8dc",
+  "node_command": "node --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs",
+  "node_tests": 78,
+  "node_failures": 0,
+  "source_contract_result": {
+    "passed": true,
+    "checks": 1143,
+    "edition": "1.21",
+    "payloads": 525,
+    "screenshots": 8,
+    "simulation": "independent fictional browser state",
+    "networkRequested": false,
+    "scope": "Source/provenance/link contracts only; browser and Hosting delivery remain separate."
+  },
+  "files": {
+    "scripts/test-site-v121-runtime.mjs": "3f01e0d1830ddff2cbeb5885119e0b97bb6162a4a77cfa68dcd62659741e96ad",
+    "scripts/test-simulation-v121.mjs": "e9ef76b120c88e4aaff0fd136a988c2936c63874c8030c570cdd0473f193a1b9",
+    "scripts/test-site-v120-runtime.mjs": "a74ef317c1c985d2933bab158fc09e60008891508211d541f2a99314a99dcd33",
+    "scripts/test-site-v119.mjs": "f3723bc62f62081d81d0e2913b7af6943edc78d7f94f4b5a100df9aebbdf2bac",
+    "scripts/test-site-v118.mjs": "6e851b12643c113f16e03d0fdf9c65ff877da2920f23ea9c60bea8dafcea05bd",
+    "scripts/test-site-v117.mjs": "09926ad7305cdfa88d782ac72daaef227a018f1116ee61cde95e48de2f19e039",
+    "scripts/test-site-v116.mjs": "edb666db6eee2bdb90922bc06105006e649f34e91fd3b5314dd023fec3d7c304",
+    "public/index.html": "edbaeec4bff7284a2efd9485d5297542adc16cb816a9ce0c3e6792d1dc9348af",
+    "docs/validation/site-v1.21/release/source-manifest.json": "4f49014a250954f825ebf3e15c60869988601e79b4deeee8bb410475002a7b4b",
+    "docs/validation/site-v1.21/source-qa-all-site-node.txt": "00b57b95ed9fd5ad6b9682e32bcb6ef629b4fb4b8f12703ecba5cabe9a6dddd1",
+    "docs/validation/site-v1.21/browser-local/prepared/report.json": "8086603d97569de929583c4a5eb11b4dccfeb2a122b54b91175666bc0a2361cb"
+  }
+}

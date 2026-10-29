@@ -7,6 +7,15 @@ pins all 493 application/build inputs and both signed APKs. The
 package identity, byte count, SHA-256 and the existing signing certificate.
 Package collection is not a publication or native acceptance receipt.
 
+**B passes the scoped native release gates.** The production
+[final index](native/candidate-b-final-index.json) contains 13 passed phases,
+574 native assertions, 149 actual touch actions, 52 original PNGs and two
+recordings. Its 38 derived comparisons remain separate. The isolated Lab
+[final index](native-lab/candidate-b-final-index.json) contains three passed
+phases, 99 assertions, 41 actions, nine PNGs and one recording, with 24 derived
+comparisons separate. The six production preference maps remain identical
+before and after Lab testing.
+
 | Scope | Evidence and interpretation |
 | --- | --- |
 | Model and simulation regression | [Host index](host/README.md), including every U1–U1000 reachable board, all companion identities, old puzzle families, elemental layers, kitchen, versioned economy, energy and transaction recovery. B's dependency comparison preserves the original tested source identities. |

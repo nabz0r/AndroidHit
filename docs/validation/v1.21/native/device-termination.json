@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "started_utc": "2026-10-29T23:46:14.774939+00:00",
+  "completed_utc": "2026-10-29T23:46:16.916246+00:00",
+  "authorization": "Release owner explicitly authorized guarded task AVD shutdown after final B native acceptance.",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "before_shutdown": {
+    "packages": [
+      "package:com.androidhit.lumadrift",
+      "package:com.androidhit.lumadrift.sandbox"
+    ],
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420",
+    "font_scale": "1.0"
+  },
+  "operation": [
+    "adb",
+    "-s",
+    "emulator-5602",
+    "emu",
+    "kill"
+  ],
+  "response": "OK: killing emulator, bye bye\nOK",
+  "serial_absent_after_shutdown": true,
+  "retained_avd_path": "/Users/n/.android/avd/Luma119-Battle-QA.avd",
+  "retained_userdata_bytes": 10158080,
+  "scope": "Only exact guarded task emulator stopped. Both earned game profiles remain in retained userdata; no app clear/uninstall, AVD deletion, snapshot restore or clock change. Final acceptance indexes and prior live-handoff receipt remain unchanged."
+}
