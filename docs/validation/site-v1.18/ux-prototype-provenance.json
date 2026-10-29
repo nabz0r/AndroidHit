@@ -1,16 +1,25 @@
 {
-  "schemaVersion": 1,
-  "scope": "Standalone local-only UI proposal copied byte-exact for direct owner review on the existing site. No homepage CTA, app change, Android preference access or runtime artwork mutation.",
+  "schemaVersion": 2,
+  "scope": "Standalone UI proposal copied byte-exact for direct owner review on the existing site. In-memory demo only; no homepage CTA, Android preference access or runtime artwork mutation.",
   "source": "docs/design/v1.19/collection-prototype.html",
   "public": "public/lab/ui-1-19/index.html",
-  "sourceSha256": "9c7869fc062de0e8381cac4d22eb5b486431dcf0918fcbcd680da69c536826f6",
-  "publicSha256": "9c7869fc062de0e8381cac4d22eb5b486431dcf0918fcbcd680da69c536826f6",
-  "bytes": 4015601,
+  "sourceSha256": "525e6efcbd9bb34e26103e0bab213f46b6ce3719725745f954412459d88d2975",
+  "publicSha256": "525e6efcbd9bb34e26103e0bab213f46b6ce3719725745f954412459d88d2975",
+  "bytes": 4018204,
   "embeddedIdentityCount": 37,
   "embeddedFormsPerIdentity": 4,
   "embeddedCosmeticCount": 24,
   "externalAssetDependencies": 0,
   "networkRequestsRequired": 0,
   "navigation": "All Maison/Retour/destination actions remain within in-memory demonstration.",
-  "artPreviewScope": "Reduced encoded previews derived from the existing H sourceClip domains for this design mockup; not Android screenshots or apparel-fit evidence."
+  "artPreviewScope": "Reduced encoded previews derived from the existing H sourceClip domains for this design mockup; not Android screenshots or apparel-fit evidence.",
+  "previousC2": {
+    "sourceCommit": "98917d050b626fe1693e6b1a3522b386353a8aa6",
+    "sha256": "9c7869fc062de0e8381cac4d22eb5b486431dcf0918fcbcd680da69c536826f6",
+    "bytes": 4015601,
+    "browserReport": "browser-public/observations.json",
+    "wardrobeResult": "FAIL: choice viewport height zero at1280x720"
+  },
+  "correction": "CSS reserves nonzero scrollable wardrobe choices with portrait/controls/action kept in the app frame. Neutral Aperçu label remains valid before and after application; JavaScript behavior and embedded art are unchanged.",
+  "localValidationDirectory": "prototype-layout-fix/local/"
 }

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "recordedUtc": "2026-10-29T17:54:48.640137+00:00",
+  "scope": "Unauthenticated public GitHub GET of C2 main/commit/root-tree and immutable audited Hosting source manifest. Public Hosting delivery is not claimed by this check.",
+  "sourceCommit": "98917d050b626fe1693e6b1a3522b386353a8aa6",
+  "tree": "b58687f1a179cedcf9edc3481a1334514f2a96f6",
+  "parent": "4972565151521c5910b2e5d90921491f00acb7eb",
+  "artifactSourceCommit": "4972565151521c5910b2e5d90921491f00acb7eb",
+  "payloads": 486,
+  "payloadBytes": 1351822598,
+  "productionApkSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+  "labApkSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+  "requests": {
+    "main": {
+      "url": "https://api.github.com/repos/nabz0r/AndroidHit/git/ref/heads/main",
+      "status": 200,
+      "sha256": "e99069987cda9d626d02cf3c66671b4d47b6959c783c6b3f9ee8b4b28a26525e",
+      "authenticated": false
+    },
+    "commit": {
+      "url": "https://api.github.com/repos/nabz0r/AndroidHit/git/commits/98917d050b626fe1693e6b1a3522b386353a8aa6",
+      "status": 200,
+      "sha256": "15226793f54e8f0c62adc3ce62686f67c1f282883ad6864125a5bd4ec118973c",
+      "authenticated": false
+    },
+    "tree": {
+      "url": "https://api.github.com/repos/nabz0r/AndroidHit/git/trees/b58687f1a179cedcf9edc3481a1334514f2a96f6",
+      "status": 200,
+      "sha256": "9c01b812b3723e19394becb5f4b9da94d5de909f3328a0d24b183f7c447a8365",
+      "authenticated": false
+    },
+    "sourceManifest": {
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/98917d050b626fe1693e6b1a3522b386353a8aa6/docs/validation/site-v1.18/release/source-manifest.json",
+      "status": 200,
+      "sha256": "2ec5daab1cbe90d1328524ea58939ffdfa936fbf16ab8a4ac7e69e86886183ca",
+      "authenticated": false
+    }
+  }
+}

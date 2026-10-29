@@ -1,15 +1,17 @@
-# Luma Drift1.18 — publication prepared
+# Luma Drift1.18 — prototype published; Android UX rework open
 
-The exact signed H prototype has been delivered locally for playtesting. The owner requested Git and the existing Firebase website updates on29 October 2026. Source, documentation, the FR/EN site and publication tools are prepared. **A public1.18 Git/Hosting release and public download bytes are not yet verified.** The1.17 delivery remains preserved as historical evidence.
+The exact signed H prototype is available for playtesting. Source, artwork and immutable H artifact metadata are published at Git [C1 `4972565151521c5910b2e5d90921491f00acb7eb`](https://github.com/nabz0r/AndroidHit/commit/4972565151521c5910b2e5d90921491f00acb7eb). The existing FR/EN [Firebase website](https://luma-drift-production.web.app/) is deployed from [C2 `98917d050b626fe1693e6b1a3522b386353a8aa6`](https://github.com/nabz0r/AndroidHit/commit/98917d050b626fe1693e6b1a3522b386353a8aa6). Management confirms `DEPLOY`/`FINALIZED`, version `1e51ed3275f5cb9c`, at **2026-10-29T18:13:48.028Z**. [Exact deployment receipt](validation/site-v1.18/hosting/attempt-serial/deployment.json). **Independent public HTTPS-byte verification passes489/489 responses, including both exact H APKs; main-site public browser checks pass, with a separate prototype wardrobe layout failure and local correction recorded in the website evidence.** The1.17 delivery remains preserved as historical evidence.
 
-## Prepared downloads
+**Owner UX acceptance failed on29 October2026:** selection clarity, interaction, navigation and perceived fluidity require a rethink. No Android UX refactor has been implemented in a new APK. The [interactive1.19 mockup](https://luma-drift-production.web.app/lab/ui-1-19/) and [menu/gacha design document](design/v1.19/UX_RETHINK_FR.md) are proposals for review, with fictitious browser state and no Android save changes. Passing functional automation does not overturn this human result.
 
-| Variant | Prepared public URL | Bytes | SHA-256 |
+## Exact H download targets
+
+| Variant | Public URL · independent HTTP bytes verified | Expected bytes | Expected SHA-256 |
 |---|---|---|---|
 | Production | [Android APK](https://luma-drift-production.web.app/releases/luma-drift-1.18.0-prototype1.apk) |368,887,773| `3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2` |
 | Separate Lab | [Sandbox APK](https://luma-drift-production.web.app/releases/luma-drift-1.18.0-sandbox-prototype1.apk) |368,887,460| `96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06` |
 
-Both are code25 and retain signer certificate SHA-256 `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. The approximately 369 MB APKs are external artifacts, excluded from Git as binary blobs. Their ignored physical Hosting copies must match the immutable [H manifest](../releases/manifest-1.18.0-prototype1.json); that manifest is not mutated to manufacture publication evidence. The prepared URLs above do not constitute public-byte verification.
+Both are code25 and retain signer certificate SHA-256 `dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287`. The approximately369MB APKs are external artifacts, excluded from Git as binary blobs. Their ignored physical Hosting copies matched the immutable [H manifest](../releases/manifest-1.18.0-prototype1.json) before deployment. That manifest records historical H creation and local qualification, including its original `publicly_published:false` state; it remains immutable. The current deployment receipt is a separate publication record. [Independent public HTTPS verification](validation/site-v1.18/public-origin.json) separately confirms those complete public APK bytes and the remaining payloads.
 
 ## Player and native scope
 
@@ -21,10 +23,10 @@ Original costumes are the default without a preceding explicit garment choice. T
 
 ## Website and publication boundary
 
-The prepared existing Firebase site retains account/privacy pages, configuration, four deliberate audio previews and1.17 archives. The FR/EN gallery exposes37 companions, four forms and20 poses using the exact sourceClip geometry and unmodified lossless WebP sheets. No atlas is requested before a gallery choice; image and metadata caches are each limited to four entries.
+The deployed existing Firebase site retains account/privacy pages, configuration, four deliberate audio previews and1.17 archives. The FR/EN gallery exposes37 companions, four forms and20 poses using the exact sourceClip geometry and unmodified lossless WebP sheets. No atlas is requested before a gallery choice; image and metadata caches are each limited to four entries. The separate [UI proposal](https://luma-drift-production.web.app/lab/ui-1-19/) is available by direct link without replacing the APK interface or adding a homepage CTA.
 
-Local preparation passes15 Node tests and65 provenance/static checks. Desktop and320 CSS-pixel FR/EN rendering, localized selectors and actual gallery choices were reviewed. Six screenshots are original H production Android captures. [Preparation and receipts](validation/site-v1.18/README.md).
+Local preparation passes **68 publication/provenance checks and15 Node tests**. Local desktop and320 CSS-pixel FR/EN rendering, localized selectors and actual gallery choices were reviewed; those observations are not final public-site browser acceptance. Six screenshots are original H production Android captures. [Preparation and receipts](validation/site-v1.18/README.md).
 
-Deployment requires an exact clean source commit plus manifest-verified external APK copies. Firebase management confirmation and independent HTTPS payload-byte verification produce separate receipts. Those publication steps remain pending.
+The deployment receipt verifies clean exact C2 source,486physical payloads, the source-manifest SHA-256 and both external H APK copies before upload. Firebase CLI15.33.0 and authenticated live-channel management confirm the deployed version and release time above. [Independent HTTPS payload-byte verification](validation/site-v1.18/public-origin.json) passes489/489 responses,1,351,893,314 bytes and zero failures. Main-site FR/EN/galerie/keyboard public checks pass; the C2 prototype wardrobe failure is preserved and a local CSS correction awaits public retest. No Play publication or provider transaction is inferred.
 
 The recognizable guests depict Riot Games intellectual property. There is no verified permission for this integration, and no Riot endorsement or sponsorship is claimed. [Official Riot policy](https://www.riotgames.com/en/legal) · [Third-party notices](THIRD_PARTY_NOTICES.md). The repository's code license does not grant rights in Riot intellectual property.
