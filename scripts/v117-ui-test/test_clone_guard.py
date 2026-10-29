@@ -41,5 +41,43 @@ def main():
         run(valid,False,'0'*64)
         for key,value in [('coins',50),('unlocked',1),('stars_1000',0)]:
             state={'coins':51510,'unlocked':1000,'stars_1000':3};state[key]=value;snapshot.write_text(json.dumps({'legacySave':state}));run(valid,False)
+        snapshot.write_text(json.dumps({'legacySave':{'coins':51510,'unlocked':1000,'stars_1000':3}}));receipt.write_text(json.dumps(valid))
+        authorization=receipt.parent/'candidate-g-authorization.json'
+        authorized={'schema_version':1,'passed':True,'clone_serial':guard.CLONE[0],'clone_avd':guard.CLONE[1],'creation_receipt_sha256':digest(receipt),'base_apk_sha256':guard.APK,'target_apk_sha256':'d'*64,'target_version':'1.17.0-rc5','target_code':23,'allow_retained_upgrade':True,'scope':guard.AUTH_SCOPE}
+        def candidate(data,expected=True,authorization_digest=None,actual_target='d'*64,version='1.17.0-rc5',code=23):
+            nonlocal checks
+            authorization.write_text(json.dumps(data));checks+=1
+            try:result=guard.validate_candidate_authorization(receipt,digest(receipt),authorization,authorization_digest or digest(authorization),*guard.CLONE,actual_target,version,code)
+            except AssertionError:
+                if expected:raise
+            else:
+                if not expected:raise AssertionError('Unauthorized candidate accepted')
+                assert result['receipt_sha256']==digest(receipt) and result['candidate_authorization']['sha256']==digest(authorization)
+        candidate(authorized)
+        for key,value in [('schema_version',0),('passed',False),('clone_serial','emulator-5586'),('clone_avd','unrelated'),('creation_receipt_sha256','0'*64),('base_apk_sha256','a'*64),('target_apk_sha256','e'*64),('target_version','1.17.0-rc4'),('target_code',22),('allow_retained_upgrade',False),('scope','another migration')]:
+            bad=copy.deepcopy(authorized);bad[key]=value;candidate(bad,False)
+        candidate(authorized,False,authorization_digest='0'*64)
+        candidate(authorized,False,actual_target=guard.APK)
+        candidate(authorized,False,actual_target='invalid')
+        candidate(authorized,False,version='1.17.0-rc6')
+        candidate(authorized,False,code=24)
+        altered=copy.deepcopy(valid);altered['disks'][0]['clone_sha256']='e'*64;receipt.write_text(json.dumps(altered));bad=copy.deepcopy(authorized);bad['creation_receipt_sha256']=digest(receipt);candidate(bad,False)
+        receipt.write_text(json.dumps(valid));authorization.write_text(json.dumps(authorized))
+        successor=receipt.parent/'candidate-h-authorization.json'
+        next_valid={'schema_version':1,'passed':True,'clone_serial':guard.CLONE[0],'clone_avd':guard.CLONE[1],'creation_receipt_sha256':digest(receipt),'prior_authorization_sha256':digest(authorization),'base_apk_sha256':'d'*64,'target_apk_sha256':'e'*64,'target_version':'1.17.0-rc6','target_code':24,'allow_retained_upgrade':True,'scope':guard.SUCCESSOR_SCOPE}
+        def next_candidate(data,expected=True,successor_digest=None):
+            nonlocal checks
+            successor.write_text(json.dumps(data));checks+=1
+            try:result=guard.validate_successor_authorization(receipt,digest(receipt),authorization,digest(authorization),successor,successor_digest or digest(successor),*guard.CLONE,'e'*64,'1.17.0-rc6',24)
+            except AssertionError:
+                if expected:raise
+            else:
+                if not expected:raise AssertionError('Unauthorized successor accepted')
+                assert result['successor_authorization']['base_apk_sha256']=='d'*64
+        next_candidate(next_valid)
+        for key,value in [('schema_version',0),('passed',False),('clone_serial','emulator-5586'),('clone_avd','unrelated'),('creation_receipt_sha256','0'*64),('prior_authorization_sha256','0'*64),('base_apk_sha256',guard.APK),('target_apk_sha256','d'*64),('target_version','1.17.0-rc5'),('target_code',23),('allow_retained_upgrade',False),('scope','new migration')]:
+            bad=copy.deepcopy(next_valid);bad[key]=value;next_candidate(bad,False)
+        next_candidate(next_valid,False,'0'*64)
+        invalid_prior=copy.deepcopy(authorized);invalid_prior['allow_retained_upgrade']=False;authorization.write_text(json.dumps(invalid_prior));bad=copy.deepcopy(next_valid);bad['prior_authorization_sha256']=digest(authorization);next_candidate(bad,False)
     print(f'PASS {checks} pure-host clone provenance checks; temporary fixtures only, no emulator or game access')
 if __name__=='__main__':main()

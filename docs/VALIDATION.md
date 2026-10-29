@@ -1,4 +1,6 @@
-> **Current 1.14 validation:** [exact RC2/code16 evidence](validation/v1.14/README.md), [release](RELEASE_1_14.md) and [puzzle rules](GAMEPLAY_1_14.md). The qualification register separates source contracts, signed packages, installed Android observations, public download bytes and website delivery. Historical totals below retain their original release scopes.
+> **Current 1.17 qualification:** [exact H/code24 evidence](validation/v1.17/README.md), [release](RELEASE_1_17.md), [art/audio](ART_AUDIO.md) and [website register](validation/site-v1.17/README.md). Host models, installed Android, pure-render gallery, generated audio, native digital playback and public delivery retain separate scopes. The actual1,000level replay is still running.
+
+> **Preserved 1.14 validation:** [exact RC2/code16 evidence](validation/v1.14/README.md), [release](RELEASE_1_14.md) and [puzzle rules](GAMEPLAY_1_14.md). The qualification register separates source contracts, signed packages, installed Android observations, public download bytes and website delivery. Historical totals below retain their original release scopes.
 
 > **Preserved 1.10 validation:** [exact RC3 evidence](validation/v1.10/README.md), [release](RELEASE_1_10.md) and [public artifact verification](validation/v1.10/publication.json). The installed100-level route passes 2,514 checks, a genuine fresh guest 91 and production startup/audio 7. Model, emulator and delivery scopes remain separate; [website Hosting 1.10 is confirmed](validation/site-v1.10/deployment.json).
 

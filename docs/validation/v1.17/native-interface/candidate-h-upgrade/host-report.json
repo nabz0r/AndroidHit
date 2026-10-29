@@ -1,0 +1,3026 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "expected_version": "1.17.0-rc6",
+  "expected_code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "test_apk_sha256": "b88d072c3f8829329fb63132f5055354a0b1ab7e48a0688cc61ebe2260e455e5",
+  "wrapper_source_sha256": "6a6d548efc8adc45bab7d9b903899077cf004eddc635be21702e33b533cee95a",
+  "runner_source_sha256": "3110a4afbb1167cdab95a875511a5c5dfc9dd51065c00fb84969665d801fb6cb",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "baseline",
+      "native": {
+        "passed": true,
+        "checkCount": 7,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Unique current host execution token"
+          },
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Exact retained earned balance51510 before any upgrade or input"
+          },
+          {
+            "passed": true,
+            "message": "Baseline is the genuinely completed U1000 task-owned profile"
+          },
+          {
+            "passed": true,
+            "message": "Baseline includes furnished home, custom profile and completed original summon receipt"
+          },
+          {
+            "passed": true,
+            "message": "Read-only baseline does not alter any observed save or puzzle value"
+          }
+        ],
+        "actions": [],
+        "captures": [],
+        "processId": 10752,
+        "phase": "baseline",
+        "runToken": "54fb5736-1b12-4824-a360-335e84be0b3d",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Read-only installed-base baseline including legacy save, profile, badges, receipts and complete session; seeds excluded; no Activity launch or input",
+        "ignored_stale_failure_file_sha256": "d6d641b31c47ea052368bf21381d01c4d359bf59dab4bbcda95c769d0369b2fe"
+      },
+      "host_run_token": "54fb5736-1b12-4824-a360-335e84be0b3d",
+      "native_arguments": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "phase",
+        "baseline",
+        "-e",
+        "expectedVersion",
+        "1.17.0-rc5",
+        "-e",
+        "expectedCode",
+        "23",
+        "-e",
+        "regionManifestSha256",
+        "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+        "-e",
+        "languages",
+        "en,fr,de,es,pt,it",
+        "-e",
+        "runToken",
+        "54fb5736-1b12-4824-a360-335e84be0b3d",
+        "com.androidhit.lumadrift.qualification117test/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation"
+      ],
+      "expected_version": "1.17.0-rc5",
+      "expected_code": 23
+    },
+    {
+      "phase": "assets",
+      "native": {
+        "passed": true,
+        "checkCount": 539,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Unique current host execution token"
+          },
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observer carries the exact frozen source-region manifest"
+          },
+          {
+            "passed": true,
+            "message": "Source-region manifest describes102 original sprites without PNG modification"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/portal"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/book"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/chest"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/capsule"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/house"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/badge"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/mannequin"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/blueprint"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/map"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: action/settings"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/nova"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/miko"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/orbit"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/pip"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/astra"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/zig"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/lune"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/fenn"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/hoot"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/buzz"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/tula"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/jelli"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/vela"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/nimbi"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/soli"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/mochi"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/nixi"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/prickly"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/quill"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/waddles"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/halo"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/emberling"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/bambu"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: character/inky"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/dress_dew"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/dress_moon"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/dress_star"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/dress_witch"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/dress_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/dress_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/bed"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/sofa"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/lamp"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/plant"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/rug"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/table"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/bookshelf"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/cushion"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/plush"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/gate_lamp"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/mobile"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/stool"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/piano"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/library"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/bay_window"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/telescope"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/fireplace"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/desk"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/easel"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/record_player"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/arcade"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/terrarium"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/bonsai"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/cactus"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/cherry_tree"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/fountain"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/pond"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/hammock"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/swing"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/bench"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/picnic"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/flowerbed"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/garden_path"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/lantern"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/canopy_bed"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/bath"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/kitchen"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: furniture/chess_table"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/gloves_dew"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/gloves_moon"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/gloves_star"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/gloves_witch"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/gloves_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/gloves_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/hat_dew"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/hat_moon"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/hat_star"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/hat_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/hat_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/hat_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/shoes_dew"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/shoes_moon"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/shoes_star"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/shoes_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/shoes_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Unique original source sprite: cosmetic/shoes_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/actions-0.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/portal"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/portal"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/portal"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/portal"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/book"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/book"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/book"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/book"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/chest"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/chest"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/chest"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/chest"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/capsule"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/capsule"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/capsule"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/capsule"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/house"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/house"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/house"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/house"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/actions-1.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/badge"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/badge"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/badge"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/badge"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/mannequin"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/mannequin"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/mannequin"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/mannequin"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/blueprint"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/blueprint"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/blueprint"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/blueprint"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/map"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/map"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/map"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/map"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for action/settings"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for action/settings"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: action/settings"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: action/settings"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/companions-0.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/nova"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/nova"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/nova"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/nova"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/miko"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/miko"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/miko"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/miko"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/orbit"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/orbit"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/orbit"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/orbit"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/pip"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/pip"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/pip"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/pip"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/astra"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/astra"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/astra"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/astra"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/zig"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/zig"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/zig"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/zig"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/companions-1.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/lune"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/lune"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/lune"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/lune"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/fenn"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/fenn"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/fenn"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/fenn"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/hoot"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/hoot"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/hoot"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/hoot"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/buzz"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/buzz"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/buzz"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/buzz"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/tula"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/tula"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/tula"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/tula"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/jelli"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/jelli"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/jelli"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/jelli"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/companions-2.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/vela"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/vela"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/vela"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/vela"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/nimbi"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/nimbi"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/nimbi"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/nimbi"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/soli"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/soli"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/soli"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/soli"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/mochi"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/mochi"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/mochi"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/mochi"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/nixi"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/nixi"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/nixi"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/nixi"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/prickly"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/prickly"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/prickly"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/prickly"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/companions-3.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/quill"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/quill"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/quill"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/quill"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/waddles"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/waddles"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/waddles"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/waddles"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/halo"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/halo"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/halo"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/halo"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/emberling"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/emberling"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/emberling"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/emberling"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/bambu"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/bambu"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/bambu"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/bambu"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for character/inky"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for character/inky"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: character/inky"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: character/inky"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/dresses.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/dress_dew"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/dress_dew"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/dress_dew"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/dress_dew"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/dress_moon"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/dress_moon"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/dress_moon"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/dress_moon"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/dress_star"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/dress_star"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/dress_star"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/dress_star"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/dress_witch"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/dress_witch"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/dress_witch"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/dress_witch"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/dress_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/dress_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/dress_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/dress_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/dress_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/dress_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/dress_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/dress_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/furniture-0.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/bed"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/bed"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/bed"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/bed"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/sofa"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/sofa"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/sofa"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/sofa"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/lamp"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/lamp"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/lamp"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/lamp"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/plant"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/plant"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/plant"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/plant"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/rug"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/rug"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/rug"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/rug"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/table"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/table"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/table"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/table"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/furniture-1.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/bookshelf"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/bookshelf"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/bookshelf"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/bookshelf"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/cushion"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/cushion"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/cushion"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/cushion"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/plush"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/plush"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/plush"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/plush"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/gate_lamp"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/gate_lamp"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/gate_lamp"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/gate_lamp"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/mobile"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/mobile"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/mobile"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/mobile"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/stool"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/stool"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/stool"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/stool"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/furniture-2.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/piano"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/piano"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/piano"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/piano"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/greenhouse"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/library"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/library"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/library"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/library"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/bay_window"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/bay_window"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/bay_window"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/bay_window"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/telescope"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/telescope"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/telescope"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/telescope"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/furniture-3.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/fireplace"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/fireplace"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/fireplace"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/fireplace"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/desk"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/desk"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/desk"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/desk"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/easel"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/easel"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/easel"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/easel"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/record_player"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/record_player"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/record_player"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/record_player"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/arcade"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/arcade"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/arcade"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/arcade"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/terrarium"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/terrarium"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/terrarium"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/terrarium"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/furniture-4.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/bonsai"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/bonsai"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/bonsai"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/bonsai"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/cactus"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/cactus"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/cactus"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/cactus"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/cherry_tree"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/cherry_tree"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/cherry_tree"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/cherry_tree"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/fountain"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/fountain"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/fountain"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/fountain"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/pond"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/pond"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/pond"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/pond"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/hammock"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/hammock"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/hammock"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/hammock"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/furniture-5.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/swing"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/swing"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/swing"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/swing"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/bench"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/bench"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/bench"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/bench"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/picnic"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/picnic"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/picnic"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/picnic"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/flowerbed"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/flowerbed"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/flowerbed"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/flowerbed"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/garden_path"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/garden_path"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/garden_path"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/garden_path"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/lantern"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/lantern"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/lantern"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/lantern"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/furniture-6.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/canopy_bed"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/canopy_bed"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/canopy_bed"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/canopy_bed"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/bath"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/bath"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/bath"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/bath"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/mirror"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/kitchen"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/kitchen"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/kitchen"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/kitchen"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for furniture/chess_table"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for furniture/chess_table"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: furniture/chess_table"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: furniture/chess_table"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/gloves.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/gloves_dew"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/gloves_dew"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/gloves_dew"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/gloves_dew"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/gloves_moon"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/gloves_moon"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/gloves_moon"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/gloves_moon"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/gloves_star"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/gloves_star"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/gloves_star"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/gloves_star"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/gloves_witch"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/gloves_witch"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/gloves_witch"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/gloves_witch"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/gloves_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/gloves_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/gloves_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/gloves_valentine"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/gloves_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/gloves_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/gloves_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/gloves_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/hats.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/hat_dew"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/hat_dew"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/hat_dew"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/hat_dew"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/hat_moon"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/hat_moon"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/hat_moon"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/hat_moon"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/hat_star"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/hat_star"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/hat_star"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/hat_star"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/hat_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/hat_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/hat_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/hat_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/hat_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/hat_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/hat_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/hat_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/hat_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/hat_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/hat_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/hat_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads original alpha sheet: art/v117/shoes.png"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/shoes_dew"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/shoes_dew"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/shoes_dew"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/shoes_dew"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/shoes_moon"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/shoes_moon"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/shoes_moon"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/shoes_moon"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/shoes_star"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/shoes_star"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/shoes_star"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/shoes_star"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/shoes_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/shoes_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/shoes_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/shoes_pumpkin"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/shoes_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/shoes_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/shoes_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/shoes_cupid"
+          },
+          {
+            "passed": true,
+            "message": "Installed PNG bytes and dimensions match the measured source for cosmetic/shoes_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Source rectangle is valid for cosmetic/shoes_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Actual selected source region contains detailed visible art and alpha separation: cosmetic/shoes_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Selected native region retains the manifest's primary opaque art count: cosmetic/shoes_aurora"
+          },
+          {
+            "passed": true,
+            "message": "Native SDK inspected actual regions for24 companions,24 garments,42 furnishings and12 navigation objects"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads the original world-adventure scene painting"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads the original world-collection scene painting"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads the original world-atelier scene painting"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads the original wall-living scene painting"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads the original wall-bedroom scene painting"
+          },
+          {
+            "passed": true,
+            "message": "Native decoder loads the original floor-parquet scene painting"
+          }
+        ],
+        "actions": [],
+        "captures": [],
+        "processId": 10831,
+        "phase": "assets",
+        "runToken": "6906e9e5-6b89-4783-ba54-fc106db8d068",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "SDK BitmapFactory inspection of102 packaged original sprites and6 scene/material paintings; separate from actual app UI evidence; no renderer calls or state writes",
+        "ignored_stale_failure_file_sha256": "d6d641b31c47ea052368bf21381d01c4d359bf59dab4bbcda95c769d0369b2fe"
+      },
+      "host_run_token": "6906e9e5-6b89-4783-ba54-fc106db8d068",
+      "native_arguments": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "phase",
+        "assets",
+        "-e",
+        "expectedVersion",
+        "1.17.0-rc6",
+        "-e",
+        "expectedCode",
+        "24",
+        "-e",
+        "regionManifestSha256",
+        "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+        "-e",
+        "languages",
+        "en,fr,de,es,pt,it",
+        "-e",
+        "runToken",
+        "6906e9e5-6b89-4783-ba54-fc106db8d068",
+        "com.androidhit.lumadrift.qualification117test/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation"
+      ],
+      "expected_version": "1.17.0-rc6",
+      "expected_code": 24
+    },
+    {
+      "phase": "prepare",
+      "native": {
+        "passed": true,
+        "checkCount": 62,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Unique current host execution token"
+          },
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Upgrade validation runs after the independent installed-base baseline process"
+          },
+          {
+            "passed": true,
+            "message": "Installing and launching1.17 preserves legacy ownership, coins, progression, rooms, profile, badges and every observed cosmetic/summon receipt"
+          },
+          {
+            "passed": true,
+            "message": "Upgrade preserves the complete original puzzle session"
+          },
+          {
+            "passed": true,
+            "message": "Retained earned balance and real U1000 progression survive upgrade"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual root gesture starts on observed free app background above Android's system task-switch strip"
+          },
+          {
+            "passed": true,
+            "message": "Actual rightward swipe returns from Atelier to Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual root gesture starts on observed free app background above Android's system task-switch strip"
+          },
+          {
+            "passed": true,
+            "message": "Actual leftward swipe advances from Collection to Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Living room"
+          },
+          {
+            "passed": true,
+            "message": "Actual enlarged home exposes its accessible scene"
+          },
+          {
+            "passed": true,
+            "message": "Retained aquarium exposes a native in-scene target"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Decorate"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Moon reef aquarium"
+          },
+          {
+            "passed": true,
+            "message": "Actual furniture object opens its retained placement preview"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Cancel"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Done"
+          },
+          {
+            "passed": true,
+            "message": "Pan uses actual accessible scene bounds"
+          },
+          {
+            "passed": true,
+            "message": "A real pan moves the visible aquarium target with the scene"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Profile"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Edit nickname"
+          },
+          {
+            "passed": true,
+            "message": "Framework ACTION_SET_TEXT edits only the visible native nickname field"
+          },
+          {
+            "passed": true,
+            "message": "Actual visible nickname field saves via IME Done without a dialog button"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Select flag"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for FR"
+          },
+          {
+            "passed": true,
+            "message": "An actual flag object updates local identity"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for LU"
+          },
+          {
+            "passed": true,
+            "message": "Original Luxembourg flag can be restored using the visible object"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Badge slot 1"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for First spark, 1 / 1 levels cleared"
+          },
+          {
+            "passed": true,
+            "message": "Already-earned first badge remains equipable through its medal object"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Star arrivals"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for See last arrival"
+          },
+          {
+            "passed": true,
+            "message": "Upgrade object, gesture, camera, profile, flag, badge and existing-reveal route creates no purchase, draw, compensation or coin change"
+          },
+          {
+            "passed": true,
+            "message": "Upgrade object, gesture, camera, profile, flag, badge and existing-reveal route preserves progression, stock and complete puzzle session"
+          },
+          {
+            "passed": true,
+            "message": "Upgrade object, gesture, camera, profile, flag, badge and existing-reveal route preserves all furniture ownership and exact room layouts"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Profil"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual touchscreen horizontal navigation gesture",
+            "direction": "right",
+            "appBounds": "[0,0][1080,2340]",
+            "fromX": 259.1999816894531,
+            "toX": 820.7999877929688,
+            "y": 2059.199951171875,
+            "systemBottomMarginPx": 280.800048828125,
+            "startOutsideObservedControls": true
+          },
+          {
+            "input": "Actual touchscreen horizontal navigation gesture",
+            "direction": "left",
+            "appBounds": "[0,0][1080,2340]",
+            "fromX": 820.7999877929688,
+            "toX": 259.1999816894531,
+            "y": 2059.199951171875,
+            "systemBottomMarginPx": 280.800048828125,
+            "startOutsideObservedControls": true
+          },
+          {
+            "label": "Collection",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Living room",
+            "bounds": "[47,365][312,615]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Decorate",
+            "bounds": "[767,1671][1005,1956]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Moon reef aquarium",
+            "bounds": "[837,995][1080,1253]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Cancel",
+            "bounds": "[373,2044][706,2177]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Done",
+            "bounds": "[617,1693][866,1989]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "UiAutomation touchscreen pan within observed home viewport",
+            "bounds": "[0,329][1080,2190]"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Profile",
+            "bounds": "[66,349][913,481]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Edit nickname",
+            "bounds": "[238,435][983,681]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "SDK accessibility IME enter"
+          },
+          {
+            "label": "Select flag",
+            "bounds": "[60,432][232,640]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "FR",
+            "bounds": "[257,1030][434,1210]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "LU",
+            "bounds": "[448,1030][625,1210]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Badge slot 1",
+            "bounds": "[268,1282][434,1479]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "First spark, 1 / 1 levels cleared",
+            "bounds": "[66,770][523,1301]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Star arrivals",
+            "bounds": "[735,1157][998,1467]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "See last arrival",
+            "bounds": "[661,1784][916,2086]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[708,1362][1013,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Ma maison",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Profil",
+            "bounds": "[66,349][913,481]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "root-adventure-en",
+          "root-home-en",
+          "root-collection-en",
+          "root-atelier-en",
+          "root-gesture-collection-en",
+          "root-gesture-atelier-en",
+          "home-detail-en",
+          "home-aquarium-selected-en",
+          "home-panned-en",
+          "collection-before-en",
+          "profile-before-en",
+          "badges-en",
+          "profile-custom-en",
+          "last-reveal-en",
+          "delivery-home-fr",
+          "delivery-collection-fr",
+          "delivery-profile-fr"
+        ],
+        "processId": 10903,
+        "phase": "prepare",
+        "runToken": "48af98e1-bdb6-4990-bb64-d4e18c0906f0",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained task-owned U1000 profile; actual SDK touchscreen/object/gesture/IME actions, read-only preference observations and real app screenshots; no spending, app/engine/private-field calls, seeding, provider action or user devices",
+        "ignored_stale_failure_file_sha256": "d6d641b31c47ea052368bf21381d01c4d359bf59dab4bbcda95c769d0369b2fe"
+      },
+      "host_run_token": "48af98e1-bdb6-4990-bb64-d4e18c0906f0",
+      "native_arguments": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "phase",
+        "prepare",
+        "-e",
+        "expectedVersion",
+        "1.17.0-rc6",
+        "-e",
+        "expectedCode",
+        "24",
+        "-e",
+        "regionManifestSha256",
+        "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+        "-e",
+        "languages",
+        "en,fr,de,es,pt,it",
+        "-e",
+        "runToken",
+        "48af98e1-bdb6-4990-bb64-d4e18c0906f0",
+        "com.androidhit.lumadrift.qualification117test/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation"
+      ],
+      "expected_version": "1.17.0-rc6",
+      "expected_code": 24
+    },
+    {
+      "phase": "cold",
+      "native": {
+        "passed": true,
+        "checkCount": 17,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Unique current host execution token"
+          },
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Cold qualification runs in a genuinely distinct process"
+          },
+          {
+            "passed": true,
+            "message": "Actual nickname, flag, badges, exact receipts, equipment, ownership and room selection survive cold start"
+          },
+          {
+            "passed": true,
+            "message": "Earned balance and all observed progression survive cold start"
+          },
+          {
+            "passed": true,
+            "message": "Unchanged stock and complete puzzle session survive cold start"
+          },
+          {
+            "passed": true,
+            "message": "All exact furnished layouts survive cold start"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Profil"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Rencontres stellaires"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Revoir la dernière rencontre"
+          },
+          {
+            "passed": true,
+            "message": "Cold existing-receipt preview performs no spend or reward"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Ma maison",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Profil",
+            "bounds": "[66,349][913,481]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Rencontres stellaires",
+            "bounds": "[735,1157][998,1467]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Revoir la dernière rencontre",
+            "bounds": "[661,1784][916,2086]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "cold-home-fr",
+          "cold-profile-fr",
+          "cold-last-reveal-fr"
+        ],
+        "processId": 11051,
+        "phase": "cold",
+        "runToken": "4066638c-026a-4cca-8d5b-e73d7a5df950",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained task-owned U1000 profile; actual SDK touchscreen/object/gesture/IME actions, read-only preference observations and real app screenshots; no spending, app/engine/private-field calls, seeding, provider action or user devices",
+        "ignored_stale_failure_file_sha256": "d6d641b31c47ea052368bf21381d01c4d359bf59dab4bbcda95c769d0369b2fe"
+      },
+      "host_run_token": "4066638c-026a-4cca-8d5b-e73d7a5df950",
+      "native_arguments": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "phase",
+        "cold",
+        "-e",
+        "expectedVersion",
+        "1.17.0-rc6",
+        "-e",
+        "expectedCode",
+        "24",
+        "-e",
+        "regionManifestSha256",
+        "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+        "-e",
+        "languages",
+        "en,fr,de,es,pt,it",
+        "-e",
+        "runToken",
+        "4066638c-026a-4cca-8d5b-e73d7a5df950",
+        "com.androidhit.lumadrift.qualification117test/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation"
+      ],
+      "expected_version": "1.17.0-rc6",
+      "expected_code": 24
+    }
+  ],
+  "screenshots": {
+    "prepare/delivery-home-fr.png": "7de328fca25de03fd5fca5316b6cca85ee8ab93fd90293751ae6baf3ffd21a2d",
+    "prepare/root-gesture-collection-en.png": "f174822ed2e44f1c4d3c852eb30aa4183db63531839e6044645131dc4cc0e993",
+    "prepare/profile-custom-en.png": "2a1f8323fe543a04d18cc6d5d6da393aab0662ad13ab32c3be7c82dc5f959e46",
+    "prepare/home-detail-en.png": "a0ea54b4331f694735f460cae2dab882ffa8a9a6ee1dec9f03a7a7e58c9e8284",
+    "prepare/delivery-collection-fr.png": "435cd4b7314bae85ec433d14cd71463ff5651365401d7ec701181e2fed9850f4",
+    "prepare/badges-en.png": "3a22293eb49c63ec8b654fc2cc25765835886579d9b0b8e109d4eaa34ef09de1",
+    "prepare/root-atelier-en.png": "39c1a88da73c7a447eacf5b4a3c944f4bab5620110f68b4e56ad0ae6d0cb74dc",
+    "prepare/root-adventure-en.png": "4b44e7047b5478c180eb518b70f1cc672066de423cf15b919b79b525018889fd",
+    "prepare/home-panned-en.png": "3bfe8598bdecbdf409844517f56ecf7e9dcfc9be7fc9d6815d4879299af0fd69",
+    "prepare/collection-before-en.png": "af0395823e5933ac8ab439101aa504bcde56d1271b998444673c997c5cb46d5f",
+    "prepare/last-reveal-en.png": "a998da30f64121c566361220afd175fd28cd43ed13653898cc0c242c0fd2126f",
+    "prepare/home-aquarium-selected-en.png": "2de26b6fe53cfabef4c0fd0c15a2e5420b02bc82e39472bea5d6e0e81eba35e4",
+    "prepare/root-home-en.png": "0ca784fcc0034a5c06438c062f2398a9b0ea51c3be2b22a81d1944b72b03f5fd",
+    "prepare/root-gesture-atelier-en.png": "39c1a88da73c7a447eacf5b4a3c944f4bab5620110f68b4e56ad0ae6d0cb74dc",
+    "prepare/root-collection-en.png": "8f3415af67c4d0bece905cf2287fe9ce839e9b75416581d0f1ebd4be9c7f25c5",
+    "prepare/delivery-profile-fr.png": "019746dcedb0976576ef28565b7c2d42fea3a13c495ce6ba2232bf3c032e8b64",
+    "prepare/profile-before-en.png": "b347f821d072606e8d72d658ad149b6d36671435634ba3ceb0cdfab5f3088758",
+    "cold/cold-home-fr.png": "5861e7c08d668bfd6f9c34209f1c7058de23ade8ee8020cb2fdf524acd395991",
+    "cold/cold-profile-fr.png": "cee848fe60ad4173f4e2d8679c39206528210cb5dade05c64ca304eb9a44bcc8",
+    "cold/cold-last-reveal-fr.png": "a1f2544899f5cd1a723bce6b39704f4e0293471146ddbeea1370fcafe47cee68"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-h-upgrade/interface-observer.apk",
+  "compact": false,
+  "route": "upgrade",
+  "device_provenance": {
+    "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification",
+    "receipt_path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/creation.json",
+    "receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9",
+    "source_serial": "emulator-5586",
+    "source_avd": "Luma-Refonte115-QA",
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "source_baseline_report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "source_baseline_snapshot_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "physical_copy_disks": 7,
+    "candidate_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-g-authorization.json",
+      "sha256": "a8d763b6c63eecc84db8ab855e4dad7c6d24c1a1fbd0b3e1d9388f87be6e48f8",
+      "base_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+      "target_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_version": "1.17.0-rc5",
+      "target_code": 23,
+      "allow_retained_upgrade": true,
+      "scope": "Retained F to G upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    },
+    "successor_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-h-authorization.json",
+      "sha256": "055cb978afa2c073700346afa336516c68694cc276492023d362d56c849035b5",
+      "base_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "target_version": "1.17.0-rc6",
+      "target_code": 24,
+      "allow_retained_upgrade": true,
+      "scope": "Retained G to H upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    }
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "baseline_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 99.977
+}

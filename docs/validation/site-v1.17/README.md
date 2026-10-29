@@ -1,10 +1,14 @@
 # Luma Drift 1.17 website delivery register
 
+**Current status: H (1.17.0-rc6 / code 24) is under native qualification after closing the reproduced Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
+
 **Status: F preview accepted locally; final publication pending.** The existing
 Firebase Hosting site is `luma-drift-production.web.app`. Its public entry page
-still serves 1.16 until the final F replay/canonical-package gates pass.
+still serves 1.16 until the final H native replay/canonical-package gates pass.
 This directory keeps preview, offline audit, deployment and public-browser
 results separate.
+
+The current [H capture map](capture-map.json) now contains16 actual FR/EN originals from the passed277check/177PNG normal6-language route. [Independent index/hash validation](capture-map-h-validation.json) and [native report](../v1.17/native-interface/candidate-h-sixlangs-normal/host-report.json) identify the exact H APK and fresh execution token. Public-copy preparation, final replay acceptance and deployment remain pending. F’s map is archived separately and does not supply H evidence.
 
 The FR/EN page presents the four illustrated places, 24 original companions,
 24 garments, 42 furnishings and 50 arrangements. It uses ordinary text links
@@ -13,7 +17,7 @@ contract does not remove accessible web audio controls.
 
 ## Completed exact F preview
 
-[Capture map](capture-map.json) indexes **sixteen unedited 1080×2340 native
+[Archived F capture map](capture-map-candidate-f.json) indexes **sixteen unedited 1080×2340 native
 F screenshots**, eight destinations in each FR/EN. They come from the passing
 normal six-language route on the physical task-QA clone, with the same retained
 profile and exact production hash
@@ -42,12 +46,12 @@ supply F acceptance.
 
 ## Final required inputs and procedure
 
-1. Accepted production **1.17.0-rc4 / code22**, four canonical production/Lab
-   APK/AAB files, manifests, independent hashes and the actual 161-input F freeze.
-2. The sixteen exact captures in the map, each indexed by a passing F native
+1. Accepted production **1.17.0-rc6 / code24**, four canonical production/Lab
+   APK/AAB files, manifests, independent hashes and the actual 162-input H freeze.
+2. The sixteen final H captures in the current map, each indexed by a passing H native
    report. The public-copy process preserves all original PNG bytes.
 3. A passing `docs/validation/v1.17/relay/summary.json` covering actual native
-   touches through all1,000 boards on the same F APK, with zero repeated
+   touches through all1,000 boards on the same H APK, with zero repeated
    first-win coins. Preparation reruns the independent summarizer and checks
    every native batch and hash. No placeholder can satisfy this gate.
 
@@ -57,7 +61,7 @@ images and audio, and writes the entry HTML last.
 
 Run `check-site-v117.py --apk-sha256 FINAL_SHA --source-commit ARTIFACT_COMMIT`.
 That audit freezes all public payloads, original inputs, native reports,
-release manifests and checker sources. It verifies code22 and the immutable
+release manifests and checker sources. It verifies code24 and the immutable
 artifact commit, independently from the browser preview.
 
 `deploy-site-v117.py` requires an explicit clean immutable commit, exact

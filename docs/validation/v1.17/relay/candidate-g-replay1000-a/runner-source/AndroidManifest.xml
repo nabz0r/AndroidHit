@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.androidhit.lumadrift.relaytest.v117">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="36" />
+    <application android:allowBackup="false" android:label="Luma 1.17 native U replay qualification" />
+    <instrumentation android:name="com.androidhit.lumadrift.qa.v117relay.RelayInstrumentation" android:targetPackage="com.androidhit.lumadrift" android:functionalTest="true" />
+</manifest>

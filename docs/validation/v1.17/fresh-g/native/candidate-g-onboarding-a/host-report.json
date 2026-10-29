@@ -1,0 +1,645 @@
+{
+  "passed": true,
+  "phase": "onboarding",
+  "apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "observer_sha256": "e3f2b6cbb914f9cabb08d03a98635f7831842b520a190728fd4b195607ede187",
+  "expected_version": "1.17.0-rc5",
+  "expected_code": 23,
+  "serial": "emulator-5590",
+  "avd": "Luma117-Fresh-G-QA",
+  "run_token": "c73ee224-ac81-4bd0-ba77-abf367466e35",
+  "scope": "New receipt-owned empty AVD only; real public SDK touch route, no target preferences/private app calls, state injection, seeding or existing AVD access",
+  "genuine_new_install": true,
+  "native": {
+    "passed": true,
+    "runToken": "c73ee224-ac81-4bd0-ba77-abf367466e35",
+    "phase": "onboarding",
+    "processId": 5346,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Installed explicit frozen candidate version/code"
+      },
+      {
+        "passed": true,
+        "message": "Current execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded evidence label"
+      },
+      {
+        "passed": true,
+        "message": "Genuine first-launch three-piece First Light"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row3 col1 leaves2"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col3 leaves1"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row4 col2 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "First Light proceeds to Adventure"
+      },
+      {
+        "passed": true,
+        "message": "Fresh wallet is visible"
+      },
+      {
+        "passed": true,
+        "message": "Starter home scene is accessible"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col2 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "Intentionally blocked tutorial tap preserves both pieces"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col3 leaves1"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col1 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "Key lesson blocked attempt keeps both pieces"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row1 col1 leaves1"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col1 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col2 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "Switch preview does not play its piece"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col2 leaves1"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row1 col1 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row1 col1 leaves1"
+      },
+      {
+        "passed": true,
+        "message": "Real tutorial Undo restores the piece"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row1 col1 leaves1"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row3 col3 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "Practice Spark reveals without playing"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col3 leaves1"
+      },
+      {
+        "passed": true,
+        "message": "Actual piece exit at row2 col1 leaves0"
+      },
+      {
+        "passed": true,
+        "message": "All seven lessons actually completed"
+      }
+    ],
+    "checkCount": 30,
+    "touchCount": 37,
+    "actions": [
+      {
+        "touch": 1,
+        "reason": "Observed piece 3,1",
+        "label": "Piece, row 3, column 1, arrow up",
+        "bounds": [
+          168,
+          1326,
+          346,
+          1504
+        ]
+      },
+      {
+        "touch": 2,
+        "reason": "Observed piece 2,3",
+        "label": "Piece, row 2, column 3, arrow right",
+        "bounds": [
+          545,
+          1138,
+          722,
+          1315
+        ]
+      },
+      {
+        "touch": 3,
+        "reason": "Observed piece 4,2",
+        "label": "Piece, row 4, column 2, arrow down",
+        "bounds": [
+          357,
+          1515,
+          534,
+          1692
+        ]
+      },
+      {
+        "touch": 4,
+        "reason": "First Light finish",
+        "label": "Discover your little home  \u2192",
+        "bounds": [
+          66,
+          1825,
+          1013,
+          1985
+        ]
+      },
+      {
+        "touch": 5,
+        "reason": "My home",
+        "label": "My home",
+        "bounds": [
+          876,
+          2108,
+          1050,
+          2330
+        ]
+      },
+      {
+        "touch": 6,
+        "reason": "Adventure",
+        "label": "Adventure",
+        "bounds": [
+          29,
+          2108,
+          203,
+          2330
+        ]
+      },
+      {
+        "touch": 7,
+        "reason": "Settings",
+        "label": "Settings",
+        "bounds": [
+          890,
+          334,
+          1042,
+          533
+        ]
+      },
+      {
+        "touch": 8,
+        "reason": "Little star school",
+        "label": "Little star school",
+        "bounds": [
+          556,
+          1936,
+          1013,
+          2068
+        ]
+      },
+      {
+        "touch": 9,
+        "reason": "Observed piece 2,2",
+        "label": "Piece, row 2, column 2, arrow right",
+        "bounds": [
+          423,
+          1138,
+          656,
+          1371
+        ]
+      },
+      {
+        "touch": 10,
+        "reason": "Advance genuinely completed tutorial lesson",
+        "label": "Next little lesson  \u2192",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 11,
+        "reason": "Observed piece 2,1",
+        "label": "Piece, row 2, column 1, arrow right",
+        "bounds": [
+          191,
+          1138,
+          423,
+          1371
+        ]
+      },
+      {
+        "touch": 12,
+        "reason": "Observed piece 2,3",
+        "label": "Piece, row 2, column 3, arrow up",
+        "bounds": [
+          656,
+          1138,
+          888,
+          1371
+        ]
+      },
+      {
+        "touch": 13,
+        "reason": "Observed piece 2,1",
+        "label": "Piece, row 2, column 1, arrow right",
+        "bounds": [
+          191,
+          1138,
+          423,
+          1371
+        ]
+      },
+      {
+        "touch": 14,
+        "reason": "Advance genuinely completed tutorial lesson",
+        "label": "Next little lesson  \u2192",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 15,
+        "reason": "Observed piece 2,1",
+        "label": "Piece, row 2, column 1, arrow right",
+        "bounds": [
+          191,
+          1138,
+          423,
+          1371
+        ]
+      },
+      {
+        "touch": 16,
+        "reason": "Observed piece 1,1",
+        "label": "Piece, row 1, column 1, arrow up",
+        "bounds": [
+          191,
+          905,
+          423,
+          1138
+        ]
+      },
+      {
+        "touch": 17,
+        "reason": "Observed piece 2,1",
+        "label": "Piece, row 2, column 1, arrow right",
+        "bounds": [
+          191,
+          1138,
+          423,
+          1371
+        ]
+      },
+      {
+        "touch": 18,
+        "reason": "Advance genuinely completed tutorial lesson",
+        "label": "Next little lesson  \u2192",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 19,
+        "reason": "Tutorial upper gate preview",
+        "label": "Gate closed \u00b7 up",
+        "bounds": [
+          470,
+          795,
+          609,
+          933
+        ]
+      },
+      {
+        "touch": 20,
+        "reason": "Tutorial confirmed gate open",
+        "label": "Gate closed \u00b7 up",
+        "bounds": [
+          470,
+          795,
+          609,
+          933
+        ]
+      },
+      {
+        "touch": 21,
+        "reason": "Observed piece 2,2",
+        "label": "Piece, row 2, column 2, arrow up",
+        "bounds": [
+          423,
+          1138,
+          656,
+          1371
+        ]
+      },
+      {
+        "touch": 22,
+        "reason": "Advance genuinely completed tutorial lesson",
+        "label": "Next little lesson  \u2192",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 23,
+        "reason": "Observed piece 2,2",
+        "label": "Piece, row 2, column 2, arrow down",
+        "bounds": [
+          423,
+          1138,
+          656,
+          1371
+        ]
+      },
+      {
+        "touch": 24,
+        "reason": "Observed piece 2,2",
+        "label": "Piece, row 2, column 2, arrow down",
+        "bounds": [
+          423,
+          1138,
+          656,
+          1371
+        ]
+      },
+      {
+        "touch": 25,
+        "reason": "Observed piece 1,1",
+        "label": "Piece, row 1, column 1, arrow up",
+        "bounds": [
+          191,
+          905,
+          423,
+          1138
+        ]
+      },
+      {
+        "touch": 26,
+        "reason": "Advance genuinely completed tutorial lesson",
+        "label": "Next little lesson  \u2192",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 27,
+        "reason": "Observed piece 1,1",
+        "label": "Piece, row 1, column 1, arrow up",
+        "bounds": [
+          191,
+          905,
+          423,
+          1138
+        ]
+      },
+      {
+        "touch": 28,
+        "reason": "Try undoing for free",
+        "label": "Try undoing for free",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 29,
+        "reason": "Observed piece 1,1",
+        "label": "Piece, row 1, column 1, arrow up",
+        "bounds": [
+          191,
+          905,
+          423,
+          1138
+        ]
+      },
+      {
+        "touch": 30,
+        "reason": "Observed piece 3,3",
+        "label": "Piece, row 3, column 3, arrow down",
+        "bounds": [
+          656,
+          1371,
+          888,
+          1603
+        ]
+      },
+      {
+        "touch": 31,
+        "reason": "Advance genuinely completed tutorial lesson",
+        "label": "Next little lesson  \u2192",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 32,
+        "reason": "Try a free Spark",
+        "label": "Try a free Spark",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 33,
+        "reason": "Observed piece 2,3",
+        "label": "Piece, row 2, column 3, arrow up",
+        "bounds": [
+          656,
+          1138,
+          888,
+          1371
+        ]
+      },
+      {
+        "touch": 34,
+        "reason": "Observed piece 2,1",
+        "label": "Piece, row 2, column 1, arrow right",
+        "bounds": [
+          191,
+          1138,
+          423,
+          1371
+        ]
+      },
+      {
+        "touch": 35,
+        "reason": "Advance genuinely completed tutorial lesson",
+        "label": "Next little lesson  \u2192",
+        "bounds": [
+          66,
+          1728,
+          1013,
+          1875
+        ]
+      },
+      {
+        "touch": 36,
+        "reason": "Collect my welcome gift",
+        "label": "Collect my welcome gift",
+        "bounds": [
+          121,
+          1490,
+          958,
+          1642
+        ]
+      },
+      {
+        "touch": 37,
+        "reason": "Start my adventure",
+        "label": "Start my adventure",
+        "bounds": [
+          121,
+          1700,
+          958,
+          1847
+        ]
+      }
+    ],
+    "captures": [
+      "fresh-first-light-start-en",
+      "fresh-first-light-switch-en",
+      "fresh-first-light-solved-en",
+      "fresh-adventure-en",
+      "fresh-starter-home-en",
+      "fresh-settings-en",
+      "tutorial-1-exits-en",
+      "tutorial-2-blocker-en",
+      "tutorial-2-blocked-feedback-en",
+      "tutorial-3-key-en",
+      "tutorial-4-gate-en",
+      "tutorial-4-preview-en",
+      "tutorial-5-switch-en",
+      "tutorial-5-preview-en",
+      "tutorial-6-undo-en",
+      "tutorial-6-refunded-en",
+      "tutorial-7-spark-en",
+      "tutorial-7-hint-en",
+      "tutorial-complete-gift-en",
+      "tutorial-gift-collected-en",
+      "fresh-first-level-briefing-en"
+    ],
+    "wins": [],
+    "elapsedMs": 29668,
+    "scope": "New empty task-owned AVD, actual public Android UI touch observations only; no target app/engine/model/renderer/private calls, preference access, state injection, seeding, ad/account/payment action or existing AVD access. Certificates are read-only guidance for actual piece touches."
+  },
+  "checkCount": 30,
+  "touchCount": 37,
+  "captures": 21,
+  "installed_apk_sha256_after": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "elapsed_seconds": 32.907,
+  "evidence_sha256": {
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "fresh-install.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "fresh-observer.apk": "e3f2b6cbb914f9cabb08d03a98635f7831842b520a190728fd4b195607ede187",
+    "instrumentation.txt": "fb5ed32161bcfac33b36cc38e60517359090782c72a6b3d37ff2e39d37e21cca",
+    "native/fresh-adventure-en.json": "40ed77bcf3632373f7b52cd5e82664006b0e9a2fd3c202253c8d77a8d2ed33f2",
+    "native/fresh-adventure-en.png": "0281f192850d4c0b0f73433032b42a7e56899d08e1fb6fb540c91f8e3d458d8c",
+    "native/fresh-first-level-briefing-en.json": "74579dfa25c787402129a7cedc7daa720ade46e7e56f973e703abde52ce4b8d1",
+    "native/fresh-first-level-briefing-en.png": "8cf0ba4684b94f8cd9a1302f7c2a86ea210e6fc1bc03cecee5f569674fb3bd8b",
+    "native/fresh-first-light-solved-en.json": "cb9d8a0365dd4538f72765b2af78097a9a2c1bc0bcbe63a0af1039f51f632bd6",
+    "native/fresh-first-light-solved-en.png": "c8a89877c0ec3aba3626ad94416e6bb5f901fd3ed092e0f2cdaf2e56cc6a95a4",
+    "native/fresh-first-light-start-en.json": "74c4347b87eb156387d36802cdaade829b259b602f7a44122311220dc711163d",
+    "native/fresh-first-light-start-en.png": "2c447647bb45aa0f298108a7cc1fa3d070a4cea2f0d1f65be002a7cae6f48a56",
+    "native/fresh-first-light-switch-en.json": "adba95cb25df55c0c323f7a00630e65163dd39d27dc8030d587e1af1682d45e0",
+    "native/fresh-first-light-switch-en.png": "338ecb89c4a5f726868c75fe6778ab9bbf9ee3265faffd482aa3ff81d486b5d3",
+    "native/fresh-settings-en.json": "0c7ecc90999512ec59dc2626943b76c9eaa17b60eb59746c282a7420f0ce09a8",
+    "native/fresh-settings-en.png": "7e7a8137a479eef18266b49cc1742895fba18d411ac3fb58a2313247672354d0",
+    "native/fresh-starter-home-en.json": "58f05995321ea48c56ee7eb882f2651b4fdafa5756b5019ed1e5d152ffe287aa",
+    "native/fresh-starter-home-en.png": "dd674d9243e9421956bbea18670485c0c84411fbb673a4f397a631992d7f26f6",
+    "native/initial-wallet.json": "100f44437b951f7ceadab04da9e89c91a809e26de47f47f2a541ccd998406267",
+    "native/report.json": "6b5f1fe7f1df51070be72fce60e8891c97687ce4b30e603d99f2629141132342",
+    "native/tutorial-1-exits-en.json": "1dbb8a4775e354145f439888acd54ae56eb033a1d97dbdc99cf70023a386bda1",
+    "native/tutorial-1-exits-en.png": "16110f93ab4f1e673361bc597bfa3a332b21fcb12b6175d25f063bfecaf5faee",
+    "native/tutorial-2-blocked-feedback-en.json": "1d3c85e2242057abf13039be996e66dc2294cb30cc9bc4bd14d85f2456c6af18",
+    "native/tutorial-2-blocked-feedback-en.png": "62af135d34bbc183fcd8414bfb764a43a9c9dce7bf0962bb7198898ba04a9a5f",
+    "native/tutorial-2-blocker-en.json": "614ff34c00ab6808643c7d49b7051837aeb70e4176f7dd7f165c95f15d711faf",
+    "native/tutorial-2-blocker-en.png": "127d62eadc332bf8fb1e31bb4d8468f1acf8221cda0e4fdd174115465f0db1df",
+    "native/tutorial-3-key-en.json": "1def5b2ecc3703990aa94324251b6a21a20e368c5b6027989141bfed29f7455d",
+    "native/tutorial-3-key-en.png": "66b7fedd36b73fdf671170d910c772b7e82a0a46d35f4bb5515f2054506cca80",
+    "native/tutorial-4-gate-en.json": "640b8b2927acd5a4e8450a34a04668db23c46bec7e8bca013bbad0b973c852bc",
+    "native/tutorial-4-gate-en.png": "f68ea3de69ea0343b2a689e3a9c385ac7b44d4fd01ed413c504e648487f0cd9e",
+    "native/tutorial-4-preview-en.json": "7ddd980d7add7324ab22bb7da0e8b109008958a71adfd6b88c087642fee4ee05",
+    "native/tutorial-4-preview-en.png": "f98b1d1ce8ca87848995e69672c50a08ef4427f1e46f4e0072a5133bebecbf7e",
+    "native/tutorial-5-preview-en.json": "948303576cddd0039b1a18bcbd8c8dcdf8d5f58c978fe4a6392b2def7daf8370",
+    "native/tutorial-5-preview-en.png": "2e5ff696d56e2be99f4c2b0c44657cc9a9b0a2ed255420a5aaaed896f66370e7",
+    "native/tutorial-5-switch-en.json": "1655852c70803634b72958b2de2c6635527a0c0e66807813572cbae02260692c",
+    "native/tutorial-5-switch-en.png": "8e9cd3e0af539438682f2d7650e73cca5b1c3e9a80ada4bafea59bc381caba78",
+    "native/tutorial-6-refunded-en.json": "c0efef5f66b9cab08a221aa500c47b7a0f56e904fdb2cf4eb2f358db24a0a749",
+    "native/tutorial-6-refunded-en.png": "63da9f0d64262b15f800463cd5fdfe3c3feef468c4ab32391e7dbdd159587179",
+    "native/tutorial-6-undo-en.json": "401ab75642ec926e5b7e6ae636c5632c5fa73b3ad918d843f6a54b327b1cd511",
+    "native/tutorial-6-undo-en.png": "5c3f554376ab90f8b22f1050742967e4e84afa042336dbd6a68f0344f9d6e767",
+    "native/tutorial-7-hint-en.json": "47e819c3727eecfd142062322539ec06ae1c86daa52c98b7c67f1b4d6485ea3f",
+    "native/tutorial-7-hint-en.png": "096043ec82ff92fcd5a0fbd71c7e877b69c8d6f3463e9b90eaf008da89cb3f04",
+    "native/tutorial-7-spark-en.json": "0189f59e66d4157ab54fabf1e8c8eda89b90171a5ce3d6fbc366b15761a396cb",
+    "native/tutorial-7-spark-en.png": "d85308f1cdd33293dc3b6ffdc60402c0df1259d302dbd78764c98a81bbe01274",
+    "native/tutorial-complete-gift-en.json": "b5940b0303d76810b20d9eef71a99231a5ebc9132f6073f84bb1f8ef236aefc9",
+    "native/tutorial-complete-gift-en.png": "f2aeb77ba8912143f5d11a96e46237f9c9f9545a231708e366fb1f01f8ecedb8",
+    "native/tutorial-gift-collected-en.json": "2f0c01e8e4621f4a6c0bd31cf6f8190b08731762a212a44c9b4ce3d75cc7ff86",
+    "native/tutorial-gift-collected-en.png": "9b27c99e4ccfb6e9354d55bbfa524e92b655a9fc26403dfff2a0e572106f373e",
+    "observer-install.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-source/AndroidManifest.xml": "1b0f935baa643bde095c62173d489f6e0e94db59727c9c1d8c9280f295c1baaf",
+    "observer-source/README.md": "d5c60113a5694ab7af7a9d7dd64c3f52f3c4080675b685905a21369ba3b3d730",
+    "observer-source/build.gradle": "b6631990e7025e6b905d20b34a0b4a2fed231ae3b98e35c86fe386a4e7fbbb2a",
+    "observer-source/create-device.py": "6dc3023243698b20e5eac19a3c2cd73cf04da870c988082b0215bc69bc7b6d0a",
+    "observer-source/java/com/androidhit/lumadrift/qa/v117fresh/FreshInstrumentation.java": "a8bdcbf8d901b3498b5afd591fd66fa31ef2454988dd48d0476000a17ec08a85",
+    "observer-source/qualify-all.py": "410f2875bd6620fa66942fb4eee0b1c1245543aecbb86f7c547aafe73f10502e",
+    "observer-source/run.py": "0e38dd6b43c77b2601f42277a6f44cc0b83cca4efbf28258389f90d5d9fe1203",
+    "pull.txt": "18cad8aedf0f1ebeaa07e4fdccd69d2c3e3a6725cab9e70156d61c1d5e5cd03f",
+    "unlock.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "wake.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

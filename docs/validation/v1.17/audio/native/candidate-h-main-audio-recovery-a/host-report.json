@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "package": "com.androidhit.lumadrift",
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "run_token": "b45a5182-e4cf-45ce-99c5-14faf832a1cc",
+  "observer_apk_sha256": "ac42d9e1fffe6f02703127f11f9dca8e648fcc2a94bc08fd7ed567116e93403b",
+  "expected_version": "1.17.0-rc6",
+  "expected_code": 24,
+  "host_audio_output_available": false,
+  "physical_listening_performed": false,
+  "prior_failed_observer_ui_recovery": {
+    "language": "Français",
+    "music": "on",
+    "effects": "on"
+  },
+  "protected_origin_sha256": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+  "recovery_only": true,
+  "scope": "Separate documented UI-only recovery to original language/music/effects and home, independently compared to the original pre-failure full protected snapshot. No five-context playback claim from this phase. No preference writes, state injection, spending or puzzle action.",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "screenshots": {
+    "prior-observer-home-recovered.png": "165d864b413e5c80a751ad588513b4bf6d529f46471d32fe97b136d95c74ef23",
+    "prior-observer-settings-recovered.png": "bd3c19a2e35cf51a11b87cd0546d3008c746b38ffd2a3afca9f01d79cfc2e1fe"
+  },
+  "native": {
+    "passed": true,
+    "recoveryOnly": true,
+    "runToken": "b45a5182-e4cf-45ce-99c5-14faf832a1cc",
+    "label": "candidate-h-main-audio-recovery-a",
+    "checkCount": 11,
+    "checks": [
+      {
+        "passed": true,
+        "name": "Exact production target package"
+      },
+      {
+        "passed": true,
+        "name": "Exact candidate version/code"
+      },
+      {
+        "passed": true,
+        "name": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "name": "Unique bounded evidence label"
+      },
+      {
+        "passed": true,
+        "name": "Android media stream has a positive unmuted digital output setting (no host speaker output)"
+      },
+      {
+        "passed": true,
+        "name": "Visible Sound effects state is On"
+      },
+      {
+        "passed": true,
+        "name": "Visible Music state is On"
+      },
+      {
+        "passed": true,
+        "name": "Preserved failed-observer settings recovered through actual UI"
+      },
+      {
+        "passed": true,
+        "name": "Recovery-only route requires documented original visible values"
+      },
+      {
+        "passed": true,
+        "name": "Documented settings recovery returns through visible UI to the home root"
+      },
+      {
+        "passed": true,
+        "name": "Complete game/meta and non-puzzle session preferences remain byte-identical after visible restoration"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Settings",
+        "bounds": "[890,334][1042,533]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "English",
+        "bounds": "[387,1362][692,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Sound effects: Off",
+        "bounds": "[66,554][1013,712]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "Français",
+        "bounds": "[708,1362][1013,1523]",
+        "kind": "actual touchscreen"
+      },
+      {
+        "label": "My home",
+        "bounds": "[876,2045][1050,2267]",
+        "kind": "actual touchscreen"
+      }
+    ],
+    "observations": [],
+    "captures": [
+      "prior-observer-settings-recovered",
+      "prior-observer-home-recovered"
+    ],
+    "processId": 22578,
+    "systemMusicVolume": 5,
+    "systemMusicMuted": false,
+    "settingsRestored": true,
+    "protectedStatePreserved": true,
+    "activePuzzleSessionChangesAllowed": [
+      "active",
+      "level",
+      "mode",
+      "event",
+      "event_id",
+      "history",
+      "challenge_code",
+      "elapsed_ms",
+      "hints",
+      "undos",
+      "content_version",
+      "budget_policy",
+      "run_id",
+      "budget_used",
+      "budget_extensions",
+      "budget_extra",
+      "pending_continuation",
+      "last_continuation",
+      "last_power_request",
+      "shield_charges",
+      "gear_grace",
+      "flow_remaining",
+      "hint_id",
+      "hint_ms",
+      "vision_ms",
+      "focus_ms",
+      "trail_ms",
+      "trail_ids",
+      "focus_ids"
+    ],
+    "originalLanguage": "Français",
+    "originalMusic": true,
+    "originalEffects": true,
+    "failure": "",
+    "scope": "Recovery only through actual UI from documented pre-failure original values, with independent comparison to the original protected checkpoint on the host. No five-context playback claim from this recovery phase."
+  },
+  "protected_state_byte_identical": true,
+  "protected_before_sha256": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+  "protected_after_sha256": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+  "original_pre_failure_protected_state_byte_identical": true,
+  "observer_removed": true,
+  "installed_candidate_sha256_after": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "exact_candidate_retained": true,
+  "wall_seconds": 6.502,
+  "evidence_sha256": {
+    "audio-observer.apk": "ac42d9e1fffe6f02703127f11f9dca8e648fcc2a94bc08fd7ed567116e93403b",
+    "crash-delta.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "instrumentation.txt": "8cead900bcd454a4c4114ae59f1a1af54c837b5c2038a78b5ba7d68b1fa1292f",
+    "observer-install.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "protected-after.json": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+    "protected-before.json": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+    "protected-origin.json": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+    "report.json": "cb050c0dc63def78b5be2f035d5419612b3530c7312bf83dc1ed855623ff18e4",
+    "runner-source/AndroidManifest.xml": "d576e7c0341a84d44663a96b2783d8bca12b745c61b886b2efd5f8566c2b59cc",
+    "runner-source/README.md": "fc32f544a2a8bd0c29ef08f8300305d1b90ced27108f1812b260212c0a0cfd8b",
+    "runner-source/init.gradle": "7f9c367818aaa97047fefaa49bd33a8b12ceb6de30d9f8d6d222686a68bb3bc9",
+    "runner-source/java/com/androidhit/lumadrift/qa/v117audio/AudioInstrumentation.java": "beeb00acf39e3a6637e31df7055bb4526d5a8bdff932a350d4eedb253474b66d",
+    "runner-source/run.py": "deef534bd1308553bd1a1c52ea4635ecaa68b798aca6b04432cbf25d95d4c86c",
+    "session-after.json": "92bd16fe427cc40ccbefc84c7a80e4be06493ed1152ca101d203896b3c32a169",
+    "session-before.json": "92bd16fe427cc40ccbefc84c7a80e4be06493ed1152ca101d203896b3c32a169",
+    "source-snapshot.json": "59cde49370be35f410386721b4a99a843caa6c88f20fdadc26baada318c71cd0"
+  }
+}

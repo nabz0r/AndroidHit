@@ -1,0 +1,351 @@
+{
+  "scope": "Retrospective independent audit of original saved native instrumentation output and actual native phase identity. Historical reports remain immutable; false-positive rig is explicitly rejected.",
+  "reports": [
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-clipped-language/host-report.json",
+      "report_sha256": "323260b4376d4e7f8d8a1326f9fff45842f346357bca494712c34d46a4808e9b",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "language-regression",
+          "native_phase": "language-regression",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 19
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-clone-baseline/host-report.json",
+      "report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "baseline",
+          "native_phase": "baseline",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 6
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-clone-identity/host-report.json",
+      "report_sha256": "a3ae64c75d0e27b988c8c299bb4b8eb80c58aba076de74eea48e125d9c73601d",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "baseline",
+          "native_phase": "baseline",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 6
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-owned-rigs/host-report.json",
+      "report_sha256": "3c4f9ca2eee67fd8c6b22478cd778faca2cedef4e8eb9163eb7a657dfee48393",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "rig",
+          "native_phase": "rig",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 78
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-roots-compact/host-report.json",
+      "report_sha256": "acce595485afa90a71ad62ca4066e119f121bb92c01843eab898c2af5d880a02",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "root-regression",
+          "native_phase": "root-regression",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 285
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-roots-compact-largefont/host-report.json",
+      "report_sha256": "7db02829eeeb50d19f01ff683e56c23f6a9fe0bc17785860cf252c16c0067db3",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "root-regression",
+          "native_phase": "root-regression",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 285
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-secondary-compact-preflight2/host-report.json",
+      "report_sha256": "223408856fa1bce80b9abc3b585ff2968c1e0a8abe8fe22749169233c98c60e0",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "secondary",
+          "native_phase": "secondary",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 205
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-secondary-compact-rest/host-report.json",
+      "report_sha256": "7a7643cca471902b0bf60132e1a9f4612eecaa229885f91be5a83e93d6f0504b",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "secondary",
+          "native_phase": "secondary",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 375
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-secondary-normal/host-report.json",
+      "report_sha256": "ff74ff9ce410c8815ce27db73086d7d0a48035882250260a0e18191d6a5d997b",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "secondary",
+          "native_phase": "secondary",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 205
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-sixlangs-compact/host-report.json",
+      "report_sha256": "43fb031e5e160d63436ea44d0271fd178f82729064940b00008304185db2bfa7",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "browse",
+          "native_phase": "browse",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 276
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-sixlangs-normal/host-report.json",
+      "report_sha256": "f6a377e004d51e1624e72abe0066df407d6c014f17d17d3ce46f473a25300895",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "browse",
+          "native_phase": "browse",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 276
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-steady-home/host-report.json",
+      "report_sha256": "53ec6fa6a7aca514ff3c13d51e5b2f937608409a499a7ecc3a31d00de6fc190d",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "performance",
+          "native_phase": "performance",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 19
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-transitions-v2/host-report.json",
+      "report_sha256": "391600bc5ac1ae5c0a038464c7385876b91e08999fc67cc865f7bca043495345",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "transitions",
+          "native_phase": "transitions",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 23
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-f-upgrade/host-report.json",
+      "report_sha256": "a3a5d0003137270294476738dab2ea7547dd92adf55db53986a6d84f59700def",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "baseline",
+          "native_phase": "baseline",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 6
+        },
+        {
+          "phase": "assets",
+          "native_phase": "assets",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 538
+        },
+        {
+          "phase": "prepare",
+          "native_phase": "prepare",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 59
+        },
+        {
+          "phase": "cold",
+          "native_phase": "cold",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 16
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-g-main-upgrade-a/host-report.json",
+      "report_sha256": "1cb6b32911ce117b8920ec593d7b5044c7ecaa660600e6be6fc4a0145a049676",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "baseline",
+          "native_phase": "baseline",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 6
+        },
+        {
+          "phase": "assets",
+          "native_phase": "assets",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 538
+        },
+        {
+          "phase": "prepare",
+          "native_phase": "prepare",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 61
+        },
+        {
+          "phase": "cold",
+          "native_phase": "cold",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 16
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-g-other-modes-v2/host-report.json",
+      "report_sha256": "fc9c790fa94fe71cc720e9fedd0bcfadd447a85d083d519e16381841b8cdb21d",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "modes",
+          "native_phase": "modes",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 123
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-g-owned-rigs/host-report.json",
+      "report_sha256": "15073385cf7315a66cd227d211f0982ae8d06aa7ee677149c6e5060f0403124b",
+      "accepted": false,
+      "phases": [
+        {
+          "phase": "rig",
+          "native_phase": "modes",
+          "success_code": false,
+          "no_instrumentation_failure": true,
+          "phase_matches": false,
+          "native_check_count": 123
+        }
+      ]
+    },
+    {
+      "report": "docs/validation/v1.17/native-interface/candidate-g-upgrade/host-report.json",
+      "report_sha256": "3222bc140ffb0a44f66164934756b11f74e1094052df2d1d7c879e4de9c1bc80",
+      "accepted": true,
+      "phases": [
+        {
+          "phase": "baseline",
+          "native_phase": "baseline",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 6
+        },
+        {
+          "phase": "assets",
+          "native_phase": "assets",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 538
+        },
+        {
+          "phase": "prepare",
+          "native_phase": "prepare",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 61
+        },
+        {
+          "phase": "cold",
+          "native_phase": "cold",
+          "success_code": true,
+          "no_instrumentation_failure": true,
+          "phase_matches": true,
+          "native_check_count": 16
+        }
+      ]
+    }
+  ],
+  "accepted_reports": 17,
+  "rejected_reports": [
+    "docs/validation/v1.17/native-interface/candidate-g-owned-rigs/host-report.json"
+  ]
+}

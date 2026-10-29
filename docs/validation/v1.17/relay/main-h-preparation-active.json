@@ -1,0 +1,54 @@
+{
+  "candidate": "H",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "pid": 35260,
+  "started_unix": 1793252638.555438,
+  "status": "FAILED; inspect raw fresh H evidence, no replay authorized",
+  "source_freeze_sha256": "b6af495fadab8c20cf6379b591297da38e10edb4b694aad0adcf521f75711b88",
+  "steps": [
+    {
+      "step": "upgrade_command",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-main-upgrade-a/host-report.json",
+      "sha256": "ea668e4c20327b48a513986c20db546f9f3a889e4a0637ec4281eb9981b689db",
+      "exit_code": 0,
+      "wall_seconds": 95.523,
+      "passed": true
+    },
+    {
+      "step": "audio_command",
+      "report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-a/host-report.json",
+      "sha256": "93a71421794c1dfe2af44c9c6710925077370c6440bb9a316fdf059a76b43f10",
+      "exit_code": 1,
+      "wall_seconds": 41.153,
+      "passed": false
+    }
+  ],
+  "active_command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "scripts/v117-audio-test/run.py",
+    "--serial",
+    "emulator-5586",
+    "--expected-avd",
+    "Luma-Refonte115-QA",
+    "--expected-apk",
+    "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-rc6.apk",
+    "--sha256",
+    "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+    "--test-apk",
+    "/tmp/luma-v117-candidate-h/audio-v117-production-test.apk",
+    "--expected-version",
+    "1.17.0-rc6",
+    "--expected-code",
+    "24",
+    "--label",
+    "candidate-h-main-audio-a",
+    "--device-handoff-confirmed",
+    "--host-audio-unavailable"
+  ],
+  "active_child_pid": null,
+  "error": "Native preparation phase failed: audio_command",
+  "traceback": "Traceback (most recent call last):\n  File \"/tmp/luma117-h-main-prep.py\", line 24, in <module>\n    assert code==0 and result['passed'],'Native preparation phase failed: '+name\nAssertionError: Native preparation phase failed: audio_command\n",
+  "finished_unix": 1793252775.4385228
+}

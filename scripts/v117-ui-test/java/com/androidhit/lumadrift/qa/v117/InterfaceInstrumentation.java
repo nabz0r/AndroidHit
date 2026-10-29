@@ -51,24 +51,25 @@ public final class InterfaceInstrumentation extends Instrumentation {
     private static final String[] SETTINGS={"Settings","Paramètres","Réglages","Einstellungen","Ajustes","Definições","Impostazioni"};
     private static final String[] INTRO_SKIP={"I know how to play","Je sais déjà jouer","Ich kenne das Spiel","Ya sé jugar","Já sei jogar","So già giocare","Play at my pace","Jouer à mon rythme","In meinem Tempo spielen","Jugar a mi ritmo","Jogar no meu ritmo","Gioca al tuo ritmo","Later","Plus tard","Später","Más tarde","Mais tarde","Più tardi"};
     private final JSONArray checks=new JSONArray(),actions=new JSONArray(),captures=new JSONArray();
-    private Bundle args;private UiAutomation ui;private File output;private String target;private int count;private JSONObject uiCopy;
+    private Bundle args;private UiAutomation ui;private File output;private String target;private int count;private JSONObject uiCopy;private Activity targetActivity;
     @Override public void onCreate(Bundle arguments){super.onCreate(arguments);args=arguments==null?new Bundle():arguments;start();}
     @Override public void onStart(){new Thread(()->{
         boolean passed=false;Bundle result=new Bundle();
         try{
+            check(args.getString("runToken","").matches("[a-f0-9-]{36}"),"Unique current host execution token");
             target=getTargetContext().getPackageName();check(target.equals("com.androidhit.lumadrift")||target.equals("com.androidhit.lumadrift.sandbox"),"Exact Luma target package");
             ui=getUiAutomation();AccessibilityServiceInfo service=ui.getServiceInfo();service.flags|=AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS|AccessibilityServiceInfo.FLAG_INCLUDE_NOT_IMPORTANT_VIEWS;ui.setServiceInfo(service);
             output=new File(getTargetContext().getExternalFilesDir(null),"v117-interface-ui");if(!output.exists()&&!output.mkdirs())throw new IllegalStateException("Cannot create SDK output");
-            PackageInfo info=getTargetContext().getPackageManager().getPackageInfo(target,0);check(args.getString("expectedVersion","").equals(info.versionName)&&info.versionCode==Integer.parseInt(args.getString("expectedCode","22")),"Exact installed candidate version and code");
+            PackageInfo info=getTargetContext().getPackageManager().getPackageInfo(target,0);check(args.getString("expectedVersion","").equals(info.versionName)&&info.versionCode==Integer.parseInt(args.getString("expectedCode","24")),"Exact installed candidate version and code");
             String phase=args.getString("phase","prepare");
             if("baseline".equals(phase))baseline();else if("assets".equals(phase))decodeAssets();else{
                 launch();
-                if("prepare".equals(phase))prepare();else if("cold".equals(phase))cold();else if("browse".equals(phase))browse();else if("banners".equals(phase))banners();else if("rig".equals(phase))rig();else if("performance".equals(phase))performance();else if("secondary".equals(phase))secondary();else if("transitions".equals(phase))transitions();else if("language-regression".equals(phase))languageRegression();else if("root-regression".equals(phase))rootRegression();else throw new IllegalArgumentException("Unknown phase "+phase);
+                if("prepare".equals(phase))prepare();else if("cold".equals(phase))cold();else if("browse".equals(phase))browse();else if("banners".equals(phase))banners();else if("rig".equals(phase))rig();else if("performance".equals(phase))performance();else if("secondary".equals(phase))secondary();else if("modes".equals(phase))modes();else if("transitions".equals(phase))transitions();else if("language-regression".equals(phase))languageRegression();else if("root-regression".equals(phase))rootRegression();else throw new IllegalArgumentException("Unknown phase "+phase);
             }
             passed=true;result.putString("summary","PASS "+count+" native interface checks");
         }catch(Throwable failure){result.putString("failure",failure.toString());try{if(output!=null){capture("failure");StringWriter stack=new StringWriter();failure.printStackTrace(new PrintWriter(stack));write("failure.txt",stack.toString());}}catch(Throwable ignored){}}
         finally{
-            try{if(output!=null)write("report.json",new JSONObject().put("passed",passed).put("checkCount",count).put("checks",checks).put("actions",actions).put("captures",captures).put("processId",android.os.Process.myPid()).put("phase",args.getString("phase","prepare")).put("package",target).put("sdk",Build.VERSION.SDK_INT).put("abi",Build.SUPPORTED_ABIS[0]).put("scope",nativeScope()).toString(2));}catch(Throwable ignored){}
+            try{if(output!=null)write("report.json",new JSONObject().put("passed",passed).put("checkCount",count).put("checks",checks).put("actions",actions).put("captures",captures).put("processId",android.os.Process.myPid()).put("phase",args.getString("phase","prepare")).put("runToken",args.getString("runToken","")).put("package",target).put("sdk",Build.VERSION.SDK_INT).put("abi",Build.SUPPORTED_ABIS[0]).put("scope",nativeScope()).toString(2));}catch(Throwable ignored){}
             finish(passed?Activity.RESULT_OK:Activity.RESULT_CANCELED,result);
         }
     },"luma-v117-native-interface").start();}
@@ -77,9 +78,10 @@ public final class InterfaceInstrumentation extends Instrumentation {
         if(args.getString("phase","").equals("baseline"))return "Read-only installed-base baseline including legacy save, profile, badges, receipts and complete session; seeds excluded; no Activity launch or input";
         if(args.getString("phase","").equals("assets"))return "SDK BitmapFactory inspection of102 packaged original sprites and6 scene/material paintings; separate from actual app UI evidence; no renderer calls or state writes";
         if(args.getString("phase","").equals("performance"))return "Actual enlarged retained Home UI; read-only target-PID Android logs, gfxinfo and meminfo before/after a steady animated interval. No target renderer/cache/engine methods or preference writes.";
+        if(args.getString("phase","").equals("modes"))return "Actual public Remix1, Guardian1, Daily1 and Weekly1 boards/HUD/help/exit; public Sealed P1 completed by four observed piece touches with zero reward. Puzzle/Guardian sessions naturally change and are recorded separately. All game preferences except seeds, all meta preferences, economy/stock/ownership/receipts/home/settings must remain unchanged after restoring French. No app/engine/private-field calls, preference writes or state injection.";
         return "Retained task-owned U1000 profile; actual SDK touchscreen/object/gesture/IME actions, read-only preference observations and real app screenshots; no spending, app/engine/private-field calls, seeding, provider action or user devices";
     }
-    private void launch(){Intent intent=new Intent().setClassName(target,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);startActivitySync(intent);SystemClock.sleep(1200);}
+    private void launch(){Intent intent=new Intent().setClassName(target,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);targetActivity=startActivitySync(intent);SystemClock.sleep(1200);}
 
     private static final String[] PROFILES={"Profile","Profil","Perfil","Profilo"};
     private static final String[] COMPANION_TABS={"Companions","Compagnons","Begleiter","Compañeros","Companheiros","Compagni"};
@@ -293,6 +295,130 @@ public final class InterfaceInstrumentation extends Instrumentation {
         settings();top();tap("Français");back();navigate(1,1);tap(copy("h","room_living",1));capture("secondary-delivery-home-fr");navigate(1,2);capture("secondary-delivery-collection-fr");
         check(motionSetting()==motionBefore,"Secondary routes retain the original motion preference");
         write("secondary-coverage.json",new JSONObject().put("passed",true).put("languages",exercisedLanguages).put("fullSixLanguageScope",exercisedLanguages.length()==6).put("motionBefore",motionBefore).put("motionAfter",motionSetting()).put("tutorialBefore",tutorialBefore).put("tutorialAfter",save().getString("tutorial_v18_state","")).put("scope","Actual secondary UI browsing only in the explicitly recorded language subset, plus reduced-motion toggle/restore. Full six-language coverage requires all six recorded languages. Tutorial replay/leave is an ordinary visible action and is recorded; no welcome claim, purchase, reward collection, sign-in, ad request, social send or state injection.").toString(2));
+    }
+    private void modes()throws Exception{
+        uiCopy=new JSONObject(new String(bytes(getContext().getAssets().open("ui-copy.json")),StandardCharsets.UTF_8)).getJSONObject("rows");
+        settings();top();tap("Français");back();
+        String originalRaw=read("modes-origin.json"),originalHash=args.getString("originalModesCheckpointSha256","");
+        check(originalHash.matches("[a-f0-9]{64}")&&sha256(originalRaw).equals(originalHash),"Retry binds the immutable ORIGINAL G checkpoint from before the first P1 victory; external observer record only");
+        JSONObject original=new JSONObject(originalRaw),originalProtected=original.getJSONObject("protected");
+        JSONObject protectedBefore=modeProtected(),sessionBefore=playState();JSONArray sessions=new JSONArray();
+        check(originalProtected.getJSONObject("game").toString().equals(protectedBefore.getJSONObject("game").toString())&&originalProtected.getJSONObject("meta").toString().equals(protectedBefore.getJSONObject("meta").toString()),"Original pre-first-P1 G game/meta state is STILL identical before retry: no first-clear coin, XP, progress, stock, receipt or ownership gain can be absorbed");
+        check(original.getJSONObject("session").optBoolean("reduce_motion",false)==motionSetting(),"Original pre-first-P1 motion setting remains unchanged");
+        write("modes-before.json",new JSONObject().put("protected",protectedBefore).put("session",sessionBefore).toString(2));
+        english();navigate(0,0);tap(copy("r","all_levels",0));tap(copy("t","remix",0));tap(copy("v","jump",0));
+        modeText("1");submitNickname();tapPrefix("Level 1,");capture("modes-remix-briefing-en");tap("Play");
+        modeBoard(3,"Remix 1","remix",sessions);
+        for(String exit:new String[]{"object","android","bottom-link"}){
+            navigate(0,0);tap(copy("r","all_levels",0));tap(copy("a","story_book",0));tap(copy("q","guardians",0));tapPrefix("Guardian 1,");
+            String guardianBefore=getTargetContext().getSharedPreferences("luma_session",0).getString("guardian_v19_session","");
+            check(!guardianBefore.isEmpty()&&hasPrefix("Piece 1 ·"),"Actual Guardian1 board exposes its untouched work HUD and public rules: "+exit);
+            capture("modes-guardian-hud-"+exit+"-en");tap(copy("q","guardian_hint",0));capture("modes-guardian-free-help-"+exit+"-en");
+            check(guardianBefore.equals(getTargetContext().getSharedPreferences("luma_session",0).getString("guardian_v19_session","")),"Public free Guardian help changes no durable piece, work or budget: "+exit);
+            modeGuardianExit(exit);
+            check(guardianBefore.equals(getTargetContext().getSharedPreferences("luma_session",0).getString("guardian_v19_session","")),"All actual Guardian return paths persist the same unplayed encounter: "+exit);
+            sessions.put(new JSONObject().put("mode","guardian").put("exit",exit).put("session",playState()));
+        }
+        for(int eventMode=1;eventMode<=2;eventMode++){
+            String kind=eventMode==1?"daily":"weekly";navigate(0,0);tap(copy("r","events",0));tap(copy("t",kind,0));tapPrefix("Stage 1,");
+            capture("modes-"+kind+"-briefing-en");tap("Play");modeBoard(eventMode,copy("t",kind,0),kind,sessions);
+        }
+        navigate(0,0);tap(copy("r","events",0));tap(copy("u","sealed",0));tap(copy("u","sealed",0)+" · Stage 1");
+        JSONObject opened=playState();check(opened.getInt("mode")==4&&opened.getString("challenge_code").startsWith("LD1-P-1-"),"Public Sealed Stage1 opens canonical P1 challenge mode");
+        check(has(new String[]{copy("t","moves_unlimited",0)},false),"P1 HUD explicitly offers an unlimited friend challenge");
+        capture("modes-p1-hud-en");tap(copy("t","how_to_play",0));capture("modes-p1-help-en");tap(copy("t","got_it",0));
+        modeShareAccess();
+        // Literal published P1 certificate: source is unchanged since the existing1.5
+        // sealed fixture. These are observed row/column labels, never engine actions.
+        int[][] cells={{2,5},{3,1},{5,2},{1,5}};JSONArray gestures=new JSONArray();
+        for(int id=0;id<cells.length;id++){
+            String label=modePiece(cells[id][0],cells[id][1]);tap(label);gestures.put(new JSONObject().put("id",id).put("row",cells[id][0]).put("column",cells[id][1]).put("observedLabel",label));
+            if(id<cells.length-1){check(playState().getString("history").equals(id==0?"0":id==1?"0,1":"0,1,2"),"P1 actual touch durably removes exactly the next certified piece "+id);capture("modes-p1-after-piece-"+id+"-en");}
+        }
+        check(waitHas(new String[]{copy("r","back_adventure",0)},true,5000),"Four actual observed piece touches reach native P1 victory");
+        capture("modes-p1-victory-en");
+        check(has(new String[]{"Lovely drift!, 3 Stars, +0 LumaCoins"},false),"Actual nonclickable P1 victory label exposes three stars and zero coin reward");
+        check(protectedBefore.getJSONObject("meta").toString().equals(modeProtected().getJSONObject("meta").toString()),"Actual P1 victory preserves the complete meta state including XP");
+        sessions.put(new JSONObject().put("mode","sealed-p1").put("session",playState()).put("realPieceTouches",gestures));tap(copy("r","back_adventure",0));
+        settings();top();tap("Français");back();navigate(1,1);tap(copy("h","room_living",1));capture("modes-delivery-home-fr");
+        JSONObject protectedAfter=modeProtected();
+        check(protectedBefore.toString().equals(protectedAfter.toString()),"Modes smoke preserves every game value except excluded seeds and every meta value: coins, XP, stock, progress, ownership, receipts, house and restored settings");
+        write("modes-coverage.json",new JSONObject().put("passed",true).put("openedBoards",new JSONArray(Arrays.asList("remix1","guardian1","daily1","weekly1","sealed-p1"))).put("completedBoards",new JSONArray(Arrays.asList("sealed-p1"))).put("originalPreP1CheckpointSha256",originalHash).put("originalPreP1Protected",originalProtected).put("guardianExits",new JSONArray(Arrays.asList("object","android","bottom-link"))).put("p1ActualPieceTouches",gestures).put("protectedBefore",protectedBefore).put("protectedAfter",protectedAfter).put("sessionBefore",sessionBefore).put("sessionsObserved",sessions).put("sessionAfter",playState()).put("scope","English native board/HUD/help/exit smoke plus one four-touch P1 victory. No completion claim for Remix/Guardian/Daily/Weekly. Puzzle and Guardian sessions change naturally through the public UI; no restoration/injection. All recorded game/meta values remain identical after French/Living room restoration.").toString(2));
+    }
+    private void modeBoard(int expectedMode,String title,String id,JSONArray sessions)throws Exception{
+        JSONObject opened=playState();check(opened.getInt("mode")==expectedMode&&opened.optString("history","").isEmpty()&&has(new String[]{copy("t","pause",0)},true)&&has(new String[]{copy("t","how_to_play",0)},true),"Actual "+id+" board opens its expected mode, empty history and interactive HUD; painted title is captured visually");
+        JSONObject stockBefore=inventory(),actionsBefore=actionState();
+        modeFooter(copy("r","powers",0),"modes-"+id+"-actions-fully-visible-en");
+        tap(copy("r","powers",0));capture("modes-"+id+"-powers-reachable-en");back();top();
+        check(stockBefore.toString().equals(inventory().toString())&&actionsBefore.toString().equals(actionState().toString()),"Actual "+id+" Powers tray is reachable and closes without activating stock or spending a move");
+        capture("modes-"+id+"-hud-en");tap(copy("t","how_to_play",0));capture("modes-"+id+"-help-en");tap(copy("t","got_it",0));
+        check(opened.toString().equals(playState().toString()),"Actual "+id+" help does not alter its durable session");
+        tap(copy("t","pause",0));capture("modes-"+id+"-pause-en");tap(copy("t","exit",0));
+        JSONObject after=playState();check(after.getInt("mode")==expectedMode&&after.optString("history","").isEmpty()&&after.optInt("budget_used",-1)==0,"Actual "+id+" exit preserves its zero-action board without completing or spending");
+        sessions.put(new JSONObject().put("mode",id).put("opened",opened).put("afterPublicExit",after));
+    }
+    private void modeShareAccess()throws Exception{
+        modeFooter(copy("t","share_challenge",0),"modes-p1-share-reachable-en");top();
+    }
+    private Rect modeViewport(){
+        Rect viewport=appBounds();final android.graphics.Insets[] safe={null};
+        runOnMainSync(()->{android.view.WindowInsets insets=targetActivity.getWindow().getDecorView().getRootWindowInsets();if(insets!=null)safe[0]=insets.getInsets(android.view.WindowInsets.Type.systemBars()|android.view.WindowInsets.Type.displayCutout());});
+        if(safe[0]==null)throw new AssertionError("No public framework WindowInsets for actual puzzle viewport");
+        viewport.left+=safe[0].left;viewport.top+=safe[0].top;viewport.right-=safe[0].right;viewport.bottom-=safe[0].bottom;return viewport;
+    }
+    private Rect[] modeFooterRects(String third){
+        Rect[] found=new Rect[3];for(AccessibilityNodeInfo node:nodes()){
+            if(node.isVisibleToUser()&&node.isEnabled()&&node.isClickable()){
+                String label=name(node);int index=label.startsWith("↶")?0:label.startsWith("↻")?1:matches(label,new String[]{third})?2:-1;
+                if(index>=0){if(found[index]!=null)throw new AssertionError("Ambiguous actual footer action "+label);Rect box=new Rect();node.getBoundsInScreen(box);found[index]=box;}
+            }node.recycle();
+        }return found;
+    }
+    private void modeFooter(String third,String captureId)throws Exception{
+        Rect[] initial=modeFooterRects(third);String previous=screenWitness();int stable=0,moved=0,calls=0;
+        for(;calls<24&&stable<2;calls++){
+            scroll(true);String after=screenWitness();if(after.equals(previous))stable++;else{stable=0;moved++;}previous=after;
+        }
+        check(stable==2,"Actual puzzle footer reaches two consecutive stable observations after real SDK scrolling: "+third);
+        Rect viewport=modeViewport();float density=getTargetContext().getResources().getDisplayMetrics().density,min=48*density,margin=8*density;Rect[] full=modeFooterRects(third);
+        JSONArray records=new JSONArray();
+        for(int index=0;index<3;index++){
+            Rect box=full[index];boolean whole=box!=null&&box.width()+1>=min&&box.height()+1>=min&&box.left>=viewport.left+margin&&box.top>=viewport.top+margin&&box.right<=viewport.right-margin&&box.bottom<=viewport.bottom-margin;
+            check(whole,"Entire actual footer action "+index+" is at least48dp and fully inside the inset viewport with8dp margins: "+third);
+            records.put(new JSONObject().put("index",index).put("initial",initial[index]==null?JSONObject.NULL:initial[index].toShortString()).put("fullNominalBounds",box.toShortString()).put("fullNominalHeightPx",box.height()));
+        }
+        if(initial[2]==null||initial[2].height()+1<min)check(moved>0,"A clipped/absent footer cannot qualify without actual observed scroll movement: "+third);
+        SystemClock.sleep(250);Rect[] refound=modeFooterRects(third);
+        check(Arrays.equals(full,refound),"All three complete footer rectangles remain identical when refound after layout settles: "+third);
+        actions.put(new JSONObject().put("input","Actual SDK scene scroll to complete footer, before any action click").put("thirdAction",third).put("scrollCalls",calls).put("movedObservations",moved).put("stableEndObservations",stable).put("viewport",viewport.toShortString()).put("physicalMinimumPx",min).put("physicalMarginPx",margin).put("actions",records));
+        capture(captureId);
+    }
+    private void modeGuardianExit(String exit)throws Exception{
+        if(exit.equals("android")){actions.put(new JSONObject().put("input","Actual Android Back from Guardian board").put("guardianExit",exit));back();}
+        else if(exit.equals("bottom-link"))tap(copy("q","guardians",0));else{top();tap("Back");}
+        check(has(new String[]{"Luma Drift · "+copy("q","guardians",0)},false)&&!has(new String[]{copy("q","guardian_hint",0)},true),"Actual Guardian "+exit+" returns to its public list");
+        capture("modes-guardian-list-"+exit+"-en");boolean reachedRoot=false;
+        for(int step=0;step<6;step++){
+            actions.put(new JSONObject().put("input","Actual Android Back from Guardian return history").put("guardianExit",exit).put("step",step));back();
+            check(!has(new String[]{copy("q","guardian_hint",0)},true),"Actual Android Back never reopens the dismissed Guardian board: "+exit+" step"+step);
+            capture("modes-guardian-parent-"+exit+"-"+step+"-en");
+            if(currentRoot()>=0){reachedRoot=true;break;}
+        }
+        check(reachedRoot,"Actual Android Back escapes the Guardian return history to a root: "+exit);
+    }
+    private JSONObject modeProtected()throws Exception{
+        TreeMap<String,Object> game=new TreeMap<>();for(Map.Entry<String,?> entry:save().getAll().entrySet())if(!entry.getKey().contains("seed"))game.put(entry.getKey(),entry.getValue());
+        TreeMap<String,Object> meta=new TreeMap<>();meta.putAll(getTargetContext().getSharedPreferences("luma_drift_meta_v1",0).getAll());
+        return new JSONObject().put("game",json(game)).put("meta",json(meta)).put("reduce_motion",motionSetting());
+    }
+    private void modeText(String value)throws Exception{
+        boolean changed=false;for(AccessibilityNodeInfo node:nodes()){if(!changed&&node.isVisibleToUser()&&node.isEditable()){Bundle text=new Bundle();text.putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,value);changed=node.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT,text);}node.recycle();}
+        check(changed,"Framework text input edits only the actually visible native map jump field");SystemClock.sleep(150);
+    }
+    private String modePiece(int row,int column)throws Exception{
+        String fragment="Piece, row "+row+", column "+column+", arrow ",found="";int matches=0;
+        for(AccessibilityNodeInfo node:nodes()){if(node.isVisibleToUser()&&node.isClickable()&&name(node).contains(fragment)){found=name(node);matches++;}node.recycle();}
+        check(matches==1,"P1 certificate resolves to one observed native piece at row "+row+", column "+column);return found;
     }
     private String copy(String prefix,String key,int language)throws Exception{return uiCopy.getJSONObject(prefix).getJSONArray(key).getString(language);}
     private void wholePage(String id)throws Exception{

@@ -1,4 +1,6 @@
-# Luma Drift · 1.5 brand kit
+# Luma Drift · preserved 1.5 brand kit
+
+This is the historical vector kit. Current1.17 sprite art, unedited native captures and copy are indexed in [ART_AUDIO](../ART_AUDIO.md), [the capture map](../validation/site-v1.17/capture-map.json) and [STORE_LISTING](../STORE_LISTING.md). These1.5 illustrations do not depict the new installed game.
 
 ![Luma Drift 1.5: Nova, directional pieces and the matching key and wall](luma-drift-repo-banner.png)
 

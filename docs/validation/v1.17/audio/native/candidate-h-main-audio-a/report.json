@@ -1,0 +1,633 @@
+{
+  "passed": false,
+  "runToken": "40368bf5-076f-4a7f-af08-3942d05ecdf9",
+  "label": "candidate-h-main-audio-a",
+  "checkCount": 27,
+  "checks": [
+    {
+      "passed": true,
+      "name": "Exact production target package"
+    },
+    {
+      "passed": true,
+      "name": "Exact candidate version\/code"
+    },
+    {
+      "passed": true,
+      "name": "Unique host execution token"
+    },
+    {
+      "passed": true,
+      "name": "Unique bounded evidence label"
+    },
+    {
+      "passed": true,
+      "name": "Android media stream has a positive unmuted digital output setting (no host speaker output)"
+    },
+    {
+      "passed": true,
+      "name": "Original language observed from selected UI object"
+    },
+    {
+      "passed": true,
+      "name": "Visible Sound effects state is Off"
+    },
+    {
+      "passed": true,
+      "name": "Visible Music state is On"
+    },
+    {
+      "passed": true,
+      "name": "Same native music track frame counter advances: scene-0"
+    },
+    {
+      "passed": true,
+      "name": "Latest actual loaded scene announcement is ADVENTURE"
+    },
+    {
+      "passed": true,
+      "name": "Same native music track frame counter advances: scene-1"
+    },
+    {
+      "passed": true,
+      "name": "Latest actual loaded scene announcement is HOME"
+    },
+    {
+      "passed": true,
+      "name": "Same native music track frame counter advances: scene-2"
+    },
+    {
+      "passed": true,
+      "name": "Latest actual loaded scene announcement is COLLECTION"
+    },
+    {
+      "passed": true,
+      "name": "Same native music track frame counter advances: scene-3"
+    },
+    {
+      "passed": true,
+      "name": "Latest actual loaded scene announcement is ATELIER"
+    },
+    {
+      "passed": true,
+      "name": "Audio puzzle entry uses an already earned three-star U1"
+    },
+    {
+      "passed": true,
+      "name": "Puzzle audio route exposes the real visible map jump EditText"
+    },
+    {
+      "passed": true,
+      "name": "Visible map jump field accepts U1 text"
+    },
+    {
+      "passed": true,
+      "name": "Requested U1 is a genuinely visible map target"
+    },
+    {
+      "passed": true,
+      "name": "Publicly opened U1 remains unplayed with zero action, hint or Undo cost: Initial actual U1 board"
+    },
+    {
+      "passed": true,
+      "name": "Actual puzzle HUD is visible and interactive before audio sampling"
+    },
+    {
+      "passed": true,
+      "name": "Same native music track frame counter advances: scene-puzzle"
+    },
+    {
+      "passed": true,
+      "name": "Latest actual loaded scene announcement is PUZZLE"
+    },
+    {
+      "passed": true,
+      "name": "All target audio tracks inactive after Android HOME"
+    },
+    {
+      "passed": true,
+      "name": "Same native music track frame counter advances: resumed-puzzle"
+    },
+    {
+      "passed": true,
+      "name": "Publicly opened U1 remains unplayed with zero action, hint or Undo cost: Android HOME and foreground resume"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Settings",
+      "bounds": "[890,334][1042,533]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "English",
+      "bounds": "[387,1362][692,1523]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Sound effects: On",
+      "bounds": "[66,554][1013,712]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "My home",
+      "bounds": "[876,2045][1050,2267]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Collection",
+      "bounds": "[876,2045][1050,2267]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Atelier",
+      "bounds": "[876,2045][1050,2267]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Collection",
+      "bounds": "[29,2045][203,2267]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "My home",
+      "bounds": "[29,2045][203,2267]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Adventure",
+      "bounds": "[29,2045][203,2267]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "All levels",
+      "bounds": "[66,1486][354,1821]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Explore a level",
+      "bounds": "[418,559][695,692]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "kind": "Accessibility ACTION_IME_ENTER",
+      "label": "Visible map jump U1"
+    },
+    {
+      "label": "Level 1, Normal, Directions",
+      "bounds": "[434,742][645,961]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Play",
+      "bounds": "[66,1778][1013,1933]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Pause",
+      "bounds": "[55,174][188,307]",
+      "kind": "actual touchscreen"
+    }
+  ],
+  "observations": [
+    {
+      "raw": "scene-0-first-000.txt",
+      "elapsedRealtime": 7464473,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3093",
+          "active": true,
+          "frames": 92462,
+          "bufferFrames": 529200,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "raw": "scene-0-second-001.txt",
+      "elapsedRealtime": 7465532,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3093",
+          "active": true,
+          "frames": 116953,
+          "bufferFrames": 529200,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "scene": "ADVENTURE",
+      "trackId": "3093",
+      "frameAdvance": 24491
+    },
+    {
+      "raw": "scene-1-first-002.txt",
+      "elapsedRealtime": 7466949,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3096",
+          "active": true,
+          "frames": 999,
+          "bufferFrames": 622588,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3093",
+          "active": true,
+          "frames": 146941,
+          "bufferFrames": 529200,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "raw": "scene-1-second-003.txt",
+      "elapsedRealtime": 7468009,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3096",
+          "active": true,
+          "frames": 24490,
+          "bufferFrames": 622588,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "scene": "HOME",
+      "trackId": "3096",
+      "frameAdvance": 23491
+    },
+    {
+      "raw": "scene-2-first-004.txt",
+      "elapsedRealtime": 7468996,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3097",
+          "active": true,
+          "frames": 2998,
+          "bufferFrames": 557053,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "raw": "scene-2-second-005.txt",
+      "elapsedRealtime": 7470055,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3097",
+          "active": true,
+          "frames": 26489,
+          "bufferFrames": 557053,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "scene": "COLLECTION",
+      "trackId": "3097",
+      "frameAdvance": 23491
+    },
+    {
+      "raw": "scene-3-first-006.txt",
+      "elapsedRealtime": 7471373,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3098",
+          "active": true,
+          "frames": 3998,
+          "bufferFrames": 492279,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "raw": "scene-3-second-007.txt",
+      "elapsedRealtime": 7472433,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3098",
+          "active": true,
+          "frames": 27488,
+          "bufferFrames": 492279,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "scene": "ATELIER",
+      "trackId": "3098",
+      "frameAdvance": 23490
+    },
+    {
+      "raw": "scene-puzzle-first-008.txt",
+      "elapsedRealtime": 7477717,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3103",
+          "active": true,
+          "frames": 1999,
+          "bufferFrames": 564480,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "raw": "scene-puzzle-second-009.txt",
+      "elapsedRealtime": 7478779,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3103",
+          "active": true,
+          "frames": 25489,
+          "bufferFrames": 564480,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "scene": "PUZZLE",
+      "trackId": "3103",
+      "frameAdvance": 23490
+    },
+    {
+      "raw": "background-010.txt",
+      "elapsedRealtime": 7479590,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3103",
+          "active": false,
+          "frames": 28488,
+          "bufferFrames": 564480,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "raw": "resumed-puzzle-first-011.txt",
+      "elapsedRealtime": 7481552,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3103",
+          "active": true,
+          "frames": 67472,
+          "bufferFrames": 564480,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "raw": "resumed-puzzle-second-012.txt",
+      "elapsedRealtime": 7482613,
+      "tracks": [
+        {
+          "id": "3094",
+          "active": false,
+          "frames": 13522,
+          "bufferFrames": 5512,
+          "kind": "short_effect"
+        },
+        {
+          "id": "3103",
+          "active": true,
+          "frames": 90962,
+          "bufferFrames": 564480,
+          "kind": "long_static_music"
+        },
+        {
+          "id": "3095",
+          "active": false,
+          "frames": 9261,
+          "bufferFrames": 9261,
+          "kind": "short_effect"
+        }
+      ]
+    },
+    {
+      "phase": "resume",
+      "trackId": "3103",
+      "frameAdvance": 23490
+    }
+  ],
+  "captures": [
+    "settings-before-en",
+    "scene-adventure-en",
+    "scene-home-en",
+    "scene-collection-en",
+    "scene-atelier-en",
+    "scene-puzzle-u1-en",
+    "scene-puzzle-resumed-en",
+    "failure"
+  ],
+  "processId": 22148,
+  "systemMusicVolume": 5,
+  "systemMusicMuted": false,
+  "settingsRestored": false,
+  "protectedStatePreserved": false,
+  "activePuzzleSessionChangesAllowed": [
+    "active",
+    "level",
+    "mode",
+    "event",
+    "event_id",
+    "history",
+    "challenge_code",
+    "elapsed_ms",
+    "hints",
+    "undos",
+    "content_version",
+    "budget_policy",
+    "run_id",
+    "budget_used",
+    "budget_extensions",
+    "budget_extra",
+    "pending_continuation",
+    "last_continuation",
+    "last_power_request",
+    "shield_charges",
+    "gear_grace",
+    "flow_remaining",
+    "hint_id",
+    "hint_ms",
+    "vision_ms",
+    "focus_ms",
+    "trail_ms",
+    "trail_ids",
+    "focus_ids"
+  ],
+  "originalLanguage": "Français",
+  "originalMusic": true,
+  "originalEffects": true,
+  "failure": "java.lang.AssertionError: Touch object unavailable [Exit]; restoration: java.lang.AssertionError: Cannot reach Settings through actual UI",
+  "scope": "Actual framework touchscreen actions, AudioFlinger rows\/frame counters and public audio logs for all five contexts including a publicly opened already-earned U1 with no piece touch. Android HOME\/resume is exercised from that puzzle, followed by independent music\/effects toggles and home\/original-language restoration. Complete game\/meta and every non-active-puzzle session key are observed read-only and compared; original\/current active sessions are preserved as evidence and never injected. No app imports, renderer\/engine hooks, reflection, preference writes, puzzle move, purchase or provider operation. Emulator has no host audio output: no physical listening, timbre or speaker-quality claim. No real external audio-focus contender was introduced."
+}

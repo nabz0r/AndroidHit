@@ -1,5 +1,17 @@
 # Avatar equipment — persistence and benefits
 
+## Current 1.17 portrait and retained equipment
+
+The shared sprite portrait composes four clothing slots (hat, outfit, shoes,
+gloves) and the three equipment slots described below. Clothing and free
+style accents are cosmetic; they do not change the equipment's fixed capped
+benefits. Five complete outfits preserve their four stable item IDs.
+[Current original sprites and native rig checks](ART_AUDIO.md) ·
+[Local profile, badges and earned arrivals](RELEASE_1_17.md).
+
+The following catalog and receipt rules retain their original 1.5/1.6 scope;
+the 1.17 art/navigation update does not alter their IDs, prices or effects.
+
 Version 1.6 retains these 18 items, prices, sources, three slots and capped effects. Its wider inventory presentation and filters are described in [UX 1.6](UX_1_6.md); historical 1.5 evidence below keeps its original scope.
 
 The 1.5 avatar combines one of the existing 24 cosmetic companions with **three equipment slots: Headwear, Aura and Charm**. Each slot has six fixed items, for **18 items in total**. Only the three equipped items contribute benefits; owning several items in a slot never adds their effects together. Companion identity and theme selection remain cosmetic.

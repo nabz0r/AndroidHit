@@ -1,0 +1,16 @@
+{
+  "pid": 32974,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "scripts/v117-relay-ui/watch.py",
+    "--launch-record",
+    "docs/validation/v1.17/relay/candidate-g-replay1000-a-launch.json",
+    "--source-freeze",
+    "docs/validation/v1.17/candidate-g/source-freeze.json",
+    "--expected-restored-language",
+    "fr",
+    "--stop-after-pass"
+  ],
+  "console": "docs/validation/v1.17/relay/candidate-g-replay1000-a-watcher-console.txt",
+  "scope": "Root-authorized G full1000 evidence monitor, independent strict aggregate and guarded normal stop5586 only after FR/protected/settings/source/install verification. No other AVD access."
+}

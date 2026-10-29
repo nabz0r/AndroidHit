@@ -16,7 +16,7 @@ import tempfile
 
 ROOT=Path(__file__).resolve().parents[1]
 FOLDER=ROOT/'docs/validation/site-v1.17'
-VERSION='1.17.0-rc4'
+VERSION='1.17.0-rc6'
 SCREEN_KEYS=('adventure','home','collection','atelier','profile','summon','reveal','badges')
 
 def sha(raw):return hashlib.sha256(raw).hexdigest()
@@ -38,7 +38,7 @@ def main():
     assert re.fullmatch(r'[a-f0-9]{64}',args.apk_sha256),'Independent final APK hash required'
     release_path=ROOT/'releases'/('manifest-'+VERSION+'.json')
     release=json.loads(release_path.read_text())
-    assert release['version']==VERSION and release['version_code']==22
+    assert release['version']==VERSION and release['version_code']==24
     assert release['application_id']=='com.androidhit.lumadrift' and release['channel']=='production'
     config=release['configuration']
     assert config.get('paid_cosmetic_draws_enabled') is False and config.get('force_test_ads') is True
@@ -46,7 +46,7 @@ def main():
     # Every public 1000-level claim must be revalidated from real passing native batches.
     level_path=args.level_proof.resolve();assert ROOT.resolve() in level_path.parents and 'v1.17' in level_path.parts
     level=json.loads(level_path.read_text());assert level.get('passed') is True and level.get('candidate_apk_sha256')==args.apk_sha256
-    assert level.get('levels')==1000 and level.get('code')==22 and level.get('new_first_win_coins')==0
+    assert level.get('levels')==1000 and level.get('code')==24 and level.get('new_first_win_coins')==0
     with tempfile.TemporaryDirectory(prefix='luma-site117-relay-audit-') as temp:
         audited=Path(temp)/'summary.json';command=[sys.executable,str(ROOT/'scripts/v117-relay-ui/summarize.py'),'--output',str(audited)]
         for entry in level['reports']:command+=['--report',entry['path']]

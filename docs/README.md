@@ -1,12 +1,14 @@
 # Luma Drift documentation
 
+**Current status: H (1.17.0-rc6 / code 24) is under native qualification after fixing the Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
+
 ## 1.17 — original art and object navigation, final qualification in progress
 
 [Release status](RELEASE_1_17.md) · [Qualification register](validation/v1.17/README.md) · [Primary-source research](design/v1.17/reference-research.md) · [Navigation contract](design/v1.17/navigation-spec.md) · [Website staging](validation/site-v1.17/README.md).
 
 Four separate illustrated places replace visible button rows and the old navigation bar with named scene objects and optional swipes. Original bundled raster art covers 24 companions, 24 garments and 42 furnishings; the existing three-room home, local player card, earned badges, outfits and purchase receipts remain. The synthesizer now supplies five contexts across ten biomes: ten retained puzzle arrangements and forty new place arrangements.
 
-Candidate F is production `1.17.0-rc4` / code22, frozen against161 inputs. Build/lint and independent four-binary verification pass. The [exact sparse F rehearsal](validation/v1.17/ci-host-rehearsal-f/summary.json) passes14 commands/135 files, including420 responsive-root layouts. Exact-F native, full1,000 replay, Git and Firebase/public-byte delivery remain pending. The [register](validation/v1.17/README.md) preserves E's scoped passes and subsequent compact composition findings without transferring them to F.
+Candidate H is production `1.17.0-rc6` / code24, frozen against162 inputs. [Release build and independent four-binary verification](validation/v1.17/candidate-h/README.md) pass. The [complete sparse H rehearsal](validation/v1.17/ci-host-rehearsal-h-complete/summary.json) passes24 commands/163 files, including3400 live puzzle layouts and420 root layouts. The current exact native, art, sound and public-delivery records are indexed in the [qualification register](validation/v1.17/README.md). Historical partial runs never certify the final APK.
 
 ## Preserved 1.16 — a closer home and a local player card
 

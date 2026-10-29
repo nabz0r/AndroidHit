@@ -1,0 +1,1354 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "expected_version": "1.17.0-rc6",
+  "expected_code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "test_apk_sha256": "e33fc6b0f40fd96bb67d0a7ab6a1ca0b3d579126a38d65d0bbf42c4b1f878403",
+  "wrapper_source_sha256": "6a6d548efc8adc45bab7d9b903899077cf004eddc635be21702e33b533cee95a",
+  "runner_source_sha256": "d9da1861171f312204d8ce67d7f48245d13444c7538c51469b3af540456490e3",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "modes",
+      "native": {
+        "passed": true,
+        "checkCount": 154,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Unique current host execution token"
+          },
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Retry binds the immutable ORIGINAL G checkpoint from before the first P1 victory; external observer record only"
+          },
+          {
+            "passed": true,
+            "message": "Original pre-first-P1 G game/meta state is STILL identical before retry: no first-clear coin, XP, progress, stock, receipt or ownership gain can be absorbed"
+          },
+          {
+            "passed": true,
+            "message": "Original pre-first-P1 motion setting remains unchanged"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Remix"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Explore a level"
+          },
+          {
+            "passed": true,
+            "message": "Framework text input edits only the actually visible native map jump field"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Level 1, Normal, Directions"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Play  →"
+          },
+          {
+            "passed": true,
+            "message": "Actual remix board opens its expected mode, empty history and interactive HUD; painted title is captured visually"
+          },
+          {
+            "passed": true,
+            "message": "Actual puzzle footer reaches two consecutive stable observations after real SDK scrolling: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 0 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 1 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 2 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "A clipped/absent footer cannot qualify without actual observed scroll movement: Powers"
+          },
+          {
+            "passed": true,
+            "message": "All three complete footer rectangles remain identical when refound after layout settles: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Powers"
+          },
+          {
+            "passed": true,
+            "message": "Actual remix Powers tray is reachable and closes without activating stock or spending a move"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Actual remix help does not alter its durable session"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Actual remix exit preserves its zero-action board without completing or spending"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism journal"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Guardian 1, Play"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian1 board exposes its untouched work HUD and public rules: object"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Show the next gesture · free"
+          },
+          {
+            "passed": true,
+            "message": "Public free Guardian help changes no durable piece, work or budget: object"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Back"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian object returns to its public list"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: object step0"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: object step1"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: object step2"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back escapes the Guardian return history to a root: object"
+          },
+          {
+            "passed": true,
+            "message": "All actual Guardian return paths persist the same unplayed encounter: object"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism journal"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Guardian 1, Play"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian1 board exposes its untouched work HUD and public rules: android"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Show the next gesture · free"
+          },
+          {
+            "passed": true,
+            "message": "Public free Guardian help changes no durable piece, work or budget: android"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian android returns to its public list"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: android step0"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: android step1"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: android step2"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back escapes the Guardian return history to a root: android"
+          },
+          {
+            "passed": true,
+            "message": "All actual Guardian return paths persist the same unplayed encounter: android"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism journal"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Guardian 1, Play"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian1 board exposes its untouched work HUD and public rules: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Show the next gesture · free"
+          },
+          {
+            "passed": true,
+            "message": "Public free Guardian help changes no durable piece, work or budget: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian bottom-link returns to its public list"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: bottom-link step0"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: bottom-link step1"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: bottom-link step2"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back escapes the Guardian return history to a root: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "All actual Guardian return paths persist the same unplayed encounter: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Daily Drift"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Stage 1, Play, 0 Stars"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Play  →"
+          },
+          {
+            "passed": true,
+            "message": "Actual daily board opens its expected mode, empty history and interactive HUD; painted title is captured visually"
+          },
+          {
+            "passed": true,
+            "message": "Actual puzzle footer reaches two consecutive stable observations after real SDK scrolling: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 0 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 1 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 2 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "A clipped/absent footer cannot qualify without actual observed scroll movement: Powers"
+          },
+          {
+            "passed": true,
+            "message": "All three complete footer rectangles remain identical when refound after layout settles: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Powers"
+          },
+          {
+            "passed": true,
+            "message": "Actual daily Powers tray is reachable and closes without activating stock or spending a move"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Actual daily help does not alter its durable session"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Actual daily exit preserves its zero-action board without completing or spending"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Weekly Voyage"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Stage 1, Play, 0 Stars"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Play  →"
+          },
+          {
+            "passed": true,
+            "message": "Actual weekly board opens its expected mode, empty history and interactive HUD; painted title is captured visually"
+          },
+          {
+            "passed": true,
+            "message": "Actual puzzle footer reaches two consecutive stable observations after real SDK scrolling: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 0 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 1 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 2 is at least48dp and fully inside the inset viewport with8dp margins: Powers"
+          },
+          {
+            "passed": true,
+            "message": "A clipped/absent footer cannot qualify without actual observed scroll movement: Powers"
+          },
+          {
+            "passed": true,
+            "message": "All three complete footer rectangles remain identical when refound after layout settles: Powers"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Powers"
+          },
+          {
+            "passed": true,
+            "message": "Actual weekly Powers tray is reachable and closes without activating stock or spending a move"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Actual weekly help does not alter its durable session"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Actual weekly exit preserves its zero-action board without completing or spending"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Sealed passages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Sealed passages · Stage 1"
+          },
+          {
+            "passed": true,
+            "message": "Public Sealed Stage1 opens canonical P1 challenge mode"
+          },
+          {
+            "passed": true,
+            "message": "P1 HUD explicitly offers an unlimited friend challenge"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Actual puzzle footer reaches two consecutive stable observations after real SDK scrolling: Challenge a friend"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 0 is at least48dp and fully inside the inset viewport with8dp margins: Challenge a friend"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 1 is at least48dp and fully inside the inset viewport with8dp margins: Challenge a friend"
+          },
+          {
+            "passed": true,
+            "message": "Entire actual footer action 2 is at least48dp and fully inside the inset viewport with8dp margins: Challenge a friend"
+          },
+          {
+            "passed": true,
+            "message": "A clipped/absent footer cannot qualify without actual observed scroll movement: Challenge a friend"
+          },
+          {
+            "passed": true,
+            "message": "All three complete footer rectangles remain identical when refound after layout settles: Challenge a friend"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 2, column 5"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Key 1, Piece, row 2, column 5, arrow right, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "P1 actual touch durably removes exactly the next certified piece 0"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 3, column 1"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Piece, row 3, column 1, arrow right, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "P1 actual touch durably removes exactly the next certified piece 1"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 5, column 2"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Piece, row 5, column 2, arrow up, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "P1 actual touch durably removes exactly the next certified piece 2"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 1, column 5"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Piece, row 1, column 5, arrow down, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "Four actual observed piece touches reach native P1 victory"
+          },
+          {
+            "passed": true,
+            "message": "Actual nonclickable P1 victory label exposes three stars and zero coin reward"
+          },
+          {
+            "passed": true,
+            "message": "Actual P1 victory preserves the complete meta state including XP"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Back to adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Salon"
+          },
+          {
+            "passed": true,
+            "message": "Modes smoke preserves every game value except excluded seeds and every meta value: coins, XP, stock, progress, ownership, receipts, house and restored settings"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[577,1083][825,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Réglages",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[315,1083][564,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "All levels",
+            "bounds": "[54,867][288,1140]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Remix",
+            "bounds": "[440,295][825,427]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Explore a level",
+            "bounds": "[340,417][566,549]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "SDK accessibility IME enter"
+          },
+          {
+            "label": "Level 1, Normal, Directions",
+            "bounds": "[354,578][525,756]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Play  →",
+            "bounds": "[54,1154][825,1286]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual SDK scene scroll to complete footer, before any action click",
+            "thirdAction": "Powers",
+            "scrollCalls": 3,
+            "movedObservations": 1,
+            "stableEndObservations": 2,
+            "viewport": "[0,84][880,1374]",
+            "physicalMinimumPx": 132,
+            "physicalMarginPx": 22,
+            "actions": [
+              {
+                "index": 0,
+                "initial": "[54,1356][293,1374]",
+                "fullNominalBounds": "[54,1104][293,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 1,
+                "initial": "[320,1356][559,1374]",
+                "fullNominalBounds": "[320,1104][559,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 2,
+                "initial": "[586,1356][825,1374]",
+                "fullNominalBounds": "[586,1104][825,1337]",
+                "fullNominalHeightPx": 233
+              }
+            ]
+          },
+          {
+            "label": "Powers",
+            "bounds": "[586,1104][825,1337]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[726,115][834,223]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[99,1128][780,1250]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[45,115][153,223]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[99,970][780,1078]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "All levels",
+            "bounds": "[54,867][288,1140]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism journal",
+            "bounds": "[600,417][825,549]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[54,1291][825,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Guardian 1, Play",
+            "bounds": "[54,535][426,700]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Show the next gesture · free",
+            "bounds": "[54,717][825,827]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Back",
+            "bounds": "[54,124][162,232]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "object",
+            "step": 0
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "object",
+            "step": 1
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "object",
+            "step": 2
+          },
+          {
+            "label": "All levels",
+            "bounds": "[54,867][288,1140]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism journal",
+            "bounds": "[600,417][825,549]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[54,1291][825,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Guardian 1, Play",
+            "bounds": "[54,535][426,700]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Show the next gesture · free",
+            "bounds": "[54,717][825,827]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual Android Back from Guardian board",
+            "guardianExit": "android"
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "android",
+            "step": 0
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "android",
+            "step": 1
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "android",
+            "step": 2
+          },
+          {
+            "label": "All levels",
+            "bounds": "[54,867][288,1140]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism journal",
+            "bounds": "[600,417][825,549]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[54,1291][825,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Guardian 1, Play",
+            "bounds": "[54,535][426,700]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Show the next gesture · free",
+            "bounds": "[54,717][825,827]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[54,1073][825,1182]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "bottom-link",
+            "step": 0
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "bottom-link",
+            "step": 1
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "bottom-link",
+            "step": 2
+          },
+          {
+            "label": "Events",
+            "bounds": "[568,867][803,1140]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Daily Drift",
+            "bounds": "[54,298][302,430]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Stage 1, Play, 0 Stars",
+            "bounds": "[54,1228][297,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Play  →",
+            "bounds": "[54,1154][825,1286]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual SDK scene scroll to complete footer, before any action click",
+            "thirdAction": "Powers",
+            "scrollCalls": 3,
+            "movedObservations": 1,
+            "stableEndObservations": 2,
+            "viewport": "[0,84][880,1374]",
+            "physicalMinimumPx": 132,
+            "physicalMarginPx": 22,
+            "actions": [
+              {
+                "index": 0,
+                "initial": "[54,1356][293,1374]",
+                "fullNominalBounds": "[54,1104][293,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 1,
+                "initial": "[320,1356][559,1374]",
+                "fullNominalBounds": "[320,1104][559,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 2,
+                "initial": "[586,1356][825,1374]",
+                "fullNominalBounds": "[586,1104][825,1337]",
+                "fullNominalHeightPx": 233
+              }
+            ]
+          },
+          {
+            "label": "Powers",
+            "bounds": "[586,1104][825,1337]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[726,115][834,223]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[99,1128][780,1250]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[45,115][153,223]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[99,970][780,1078]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Events",
+            "bounds": "[568,867][803,1140]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Weekly Voyage",
+            "bounds": "[315,298][564,430]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Stage 1, Play, 0 Stars",
+            "bounds": "[54,1228][230,1374]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Play  →",
+            "bounds": "[54,1154][825,1286]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual SDK scene scroll to complete footer, before any action click",
+            "thirdAction": "Powers",
+            "scrollCalls": 3,
+            "movedObservations": 1,
+            "stableEndObservations": 2,
+            "viewport": "[0,84][880,1374]",
+            "physicalMinimumPx": 132,
+            "physicalMarginPx": 22,
+            "actions": [
+              {
+                "index": 0,
+                "initial": "[54,1356][293,1374]",
+                "fullNominalBounds": "[54,1104][293,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 1,
+                "initial": "[320,1356][559,1374]",
+                "fullNominalBounds": "[320,1104][559,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 2,
+                "initial": "[586,1356][825,1374]",
+                "fullNominalBounds": "[586,1104][825,1337]",
+                "fullNominalHeightPx": 233
+              }
+            ]
+          },
+          {
+            "label": "Powers",
+            "bounds": "[586,1104][825,1337]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[726,115][834,223]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[99,1128][780,1250]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[45,115][153,223]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[99,970][780,1078]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Events",
+            "bounds": "[568,867][803,1140]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Sealed passages",
+            "bounds": "[577,298][825,430]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Sealed passages · Stage 1",
+            "bounds": "[54,833][424,1006]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[726,115][834,223]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[99,1128][780,1250]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual SDK scene scroll to complete footer, before any action click",
+            "thirdAction": "Challenge a friend",
+            "scrollCalls": 3,
+            "movedObservations": 1,
+            "stableEndObservations": 2,
+            "viewport": "[0,84][880,1374]",
+            "physicalMinimumPx": 132,
+            "physicalMarginPx": 22,
+            "actions": [
+              {
+                "index": 0,
+                "initial": "[54,1356][293,1374]",
+                "fullNominalBounds": "[54,1104][293,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 1,
+                "initial": "[320,1356][559,1374]",
+                "fullNominalBounds": "[320,1104][559,1337]",
+                "fullNominalHeightPx": 233
+              },
+              {
+                "index": 2,
+                "initial": "[586,1356][825,1374]",
+                "fullNominalBounds": "[586,1104][825,1337]",
+                "fullNominalHeightPx": 233
+              }
+            ]
+          },
+          {
+            "label": "Key 1, Piece, row 2, column 5, arrow right, Gate open",
+            "bounds": "[612,621][727,736]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Piece, row 3, column 1, arrow right, Gate open",
+            "bounds": "[152,736][267,851]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Piece, row 5, column 2, arrow up, Gate open",
+            "bounds": "[267,966][382,1081]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Piece, row 1, column 5, arrow down, Gate open",
+            "bounds": "[612,506][727,621]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Back to adventure",
+            "bounds": "[99,1135][780,1243]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[577,1083][825,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Ma maison",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Salon",
+            "bounds": "[38,271][254,474]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "modes-remix-briefing-en",
+          "modes-remix-actions-fully-visible-en",
+          "modes-remix-powers-reachable-en",
+          "modes-remix-hud-en",
+          "modes-remix-help-en",
+          "modes-remix-pause-en",
+          "modes-guardian-hud-object-en",
+          "modes-guardian-free-help-object-en",
+          "modes-guardian-list-object-en",
+          "modes-guardian-parent-object-0-en",
+          "modes-guardian-parent-object-1-en",
+          "modes-guardian-parent-object-2-en",
+          "modes-guardian-hud-android-en",
+          "modes-guardian-free-help-android-en",
+          "modes-guardian-list-android-en",
+          "modes-guardian-parent-android-0-en",
+          "modes-guardian-parent-android-1-en",
+          "modes-guardian-parent-android-2-en",
+          "modes-guardian-hud-bottom-link-en",
+          "modes-guardian-free-help-bottom-link-en",
+          "modes-guardian-list-bottom-link-en",
+          "modes-guardian-parent-bottom-link-0-en",
+          "modes-guardian-parent-bottom-link-1-en",
+          "modes-guardian-parent-bottom-link-2-en",
+          "modes-daily-briefing-en",
+          "modes-daily-actions-fully-visible-en",
+          "modes-daily-powers-reachable-en",
+          "modes-daily-hud-en",
+          "modes-daily-help-en",
+          "modes-daily-pause-en",
+          "modes-weekly-briefing-en",
+          "modes-weekly-actions-fully-visible-en",
+          "modes-weekly-powers-reachable-en",
+          "modes-weekly-hud-en",
+          "modes-weekly-help-en",
+          "modes-weekly-pause-en",
+          "modes-p1-hud-en",
+          "modes-p1-help-en",
+          "modes-p1-share-reachable-en",
+          "modes-p1-after-piece-0-en",
+          "modes-p1-after-piece-1-en",
+          "modes-p1-after-piece-2-en",
+          "modes-p1-victory-en",
+          "modes-delivery-home-fr"
+        ],
+        "processId": 12780,
+        "phase": "modes",
+        "runToken": "d2573675-93f5-4d8f-a655-66b11ce66fe7",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Actual public Remix1, Guardian1, Daily1 and Weekly1 boards/HUD/help/exit; public Sealed P1 completed by four observed piece touches with zero reward. Puzzle/Guardian sessions naturally change and are recorded separately. All game preferences except seeds, all meta preferences, economy/stock/ownership/receipts/home/settings must remain unchanged after restoring French. No app/engine/private-field calls, preference writes or state injection.",
+        "ignored_stale_failure_file_sha256": "d6d641b31c47ea052368bf21381d01c4d359bf59dab4bbcda95c769d0369b2fe"
+      },
+      "host_run_token": "d2573675-93f5-4d8f-a655-66b11ce66fe7",
+      "native_arguments": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "phase",
+        "modes",
+        "-e",
+        "expectedVersion",
+        "1.17.0-rc6",
+        "-e",
+        "expectedCode",
+        "24",
+        "-e",
+        "regionManifestSha256",
+        "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+        "-e",
+        "languages",
+        "en,fr,de,es,pt,it",
+        "-e",
+        "runToken",
+        "d2573675-93f5-4d8f-a655-66b11ce66fe7",
+        "-e",
+        "originalModesCheckpointSha256",
+        "2b7c88b321914493699b0369f0c1ce826f2022247a7a98b33b9cb4bdfd41aeb6",
+        "com.androidhit.lumadrift.qualification117test/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation"
+      ],
+      "expected_version": "1.17.0-rc6",
+      "expected_code": 24
+    }
+  ],
+  "screenshots": {
+    "modes/modes-remix-powers-reachable-en.png": "7477603b0acd85c31f781ca290b0aeb17354508d978be0b1e147ee6abda603d9",
+    "modes/modes-remix-help-en.png": "0bd6d041c202d5e6642d27206d315434af6af0ca0bc2063678a9646a02a0de99",
+    "modes/modes-p1-after-piece-2-en.png": "1d11c53285135138f14f8c3ef59eababde75cd010a833673613787f5a7b401b3",
+    "modes/modes-guardian-parent-bottom-link-1-en.png": "c51af192c7304e6c55f57a4f3b5a47b3762dad0a43559101f3b3f15a5bfcd647",
+    "modes/modes-guardian-list-object-en.png": "d983c97c2b4f7cb3f82d039183c80f96ed9b6b49fa7b6500a45529dea55a0cd4",
+    "modes/modes-guardian-list-bottom-link-en.png": "599892ef12dda1a0acccdcf6c0970c4868a47d197631adab9fedd53d0b28b9bc",
+    "modes/modes-weekly-pause-en.png": "5943dd1c31ab2db158d077879de8202db99b78991cbd0c7634e6722150afc794",
+    "modes/modes-p1-after-piece-0-en.png": "3ab3652ef14874f475b035a958379c8cb18131216b6e8da7988f187a5c062a85",
+    "modes/modes-guardian-free-help-android-en.png": "34f47b46f840ca852d53e6a6cbf308267a467bf319e55b8a08f942ef6bab78e2",
+    "modes/modes-guardian-hud-bottom-link-en.png": "870c5401bb0ff895a61f12918ca5faa4db07755e50c1dfc40a36b36cf9fdbb20",
+    "modes/modes-guardian-parent-object-2-en.png": "934376377e58ffe2cd1aa023b955aa6518b94c0287b4598db0d29265f9ef808c",
+    "modes/modes-p1-victory-en.png": "eda9ceee27af6f94dd07c86b2409558afe369b88e27735092e625eeb95da93c2",
+    "modes/modes-remix-actions-fully-visible-en.png": "0203e0cb6c23513fb6b9b6ef2f7e478b31c306c658b7b296db2bc8db7c05c7f6",
+    "modes/modes-guardian-parent-object-0-en.png": "fca33111bef7d2fdc9b684ca2a1ecde50fb6fe011d4f88df5c91003d791d1955",
+    "modes/modes-guardian-parent-android-1-en.png": "a6e3ace03d602b87103a536962dacdcc824ff7664f28d67b5d39f2a3e817c83c",
+    "modes/modes-remix-briefing-en.png": "6ef65c70998c300effbcfb11a25dddc1516a07b48b805866108c2c716a691d19",
+    "modes/modes-remix-pause-en.png": "c3121aff264b3ee129c6c8f53ec5e33e9cd5bfb75f2eb508e5bc55c37526db14",
+    "modes/modes-p1-share-reachable-en.png": "2c3d2deab1527feb5add7db1b3fae88b99ab982ae093168e5b3b36e1ea526f81",
+    "modes/modes-remix-hud-en.png": "0fb2f92850350cf1fbab5c783a7b37f1e822a5ff67cc10e3e5ec9dec1ad2385c",
+    "modes/modes-daily-powers-reachable-en.png": "84191e718fb390ae4ea2b8984aa4f54ccdc808547da2f431b671056c8c739bbf",
+    "modes/modes-guardian-free-help-object-en.png": "c344b7774894f1db34914044a603541a086510808d5b76dc675bf01d182f9fcb",
+    "modes/modes-guardian-parent-bottom-link-0-en.png": "f1903643989b6c98bbc04b04c09e0a6ac06a188df1d7d2f476ca9bcf1a87450b",
+    "modes/modes-weekly-briefing-en.png": "b14b685a1d3bb35a1200a92c4f19e9e4fcf7972bb1dede39634754066a47fc12",
+    "modes/modes-daily-help-en.png": "400bcc81dee709c219bfa53327f8cc93c1f613d2ec1df11084642a35e82f206c",
+    "modes/modes-p1-after-piece-1-en.png": "5f5e2c9c5fa73a41a2ef65d69ea744c69a4d193ab4d97862d8915a70be8ac661",
+    "modes/modes-weekly-powers-reachable-en.png": "2acfc95f3a29900d5a1a599faaf0218f1d38000238a64339e22a584487273251",
+    "modes/modes-daily-hud-en.png": "d41e430390cfe752c56a7f3b1c59fd528eb92231c355411da8f5ad4fac23f725",
+    "modes/modes-guardian-list-android-en.png": "296c668ac25864e7cf3414cc7d5831ec1493e2e17bd9c99bb393d9a81da1ded9",
+    "modes/modes-guardian-parent-bottom-link-2-en.png": "2afa3ef99916061cbd3887f0e92461e22fe28aef731f67ec595a16dd766981aa",
+    "modes/modes-guardian-free-help-bottom-link-en.png": "b4ed5e5b91787552caf6a646ed53f2a320d53e4998c61fcd24599827d0df15ec",
+    "modes/modes-guardian-parent-android-2-en.png": "934376377e58ffe2cd1aa023b955aa6518b94c0287b4598db0d29265f9ef808c",
+    "modes/modes-weekly-help-en.png": "e6e58c38bb412937a64c09d857d83947155ca350d56937352a35da94a24871fa",
+    "modes/modes-weekly-hud-en.png": "d7c318d7b45fe8f6667c8b0c5a179f7ebd614374b3d6d4f13295b0bea055a823",
+    "modes/modes-guardian-hud-android-en.png": "fbd56ffbed5f342d0c85d2ce9bd2bd16e2d0639c95924303852a548696141aa4",
+    "modes/modes-delivery-home-fr.png": "9c62e0d9af96a236cb97ab4cb4280523c49dbab1379b8a23f9fa631c661b2416",
+    "modes/modes-guardian-hud-object-en.png": "b6d110b327b6aef13e93257652020e187f0b187a071fa7c88970060edbf88e78",
+    "modes/modes-p1-hud-en.png": "f1083e6fcc398e6ef62228a36e825d87851207e204348a7aab978c34eda929db",
+    "modes/modes-daily-briefing-en.png": "9c0ffe2aaf83d42e2dcafde30c110ae4e5637239ab678e4d848e3c8ed10b5aa2",
+    "modes/modes-weekly-actions-fully-visible-en.png": "84b08d5b8500d9d32ba77bc3e1f121be0cb82646f395b49b7ac708f143f0742d",
+    "modes/modes-p1-help-en.png": "5af7dcadcee37f2aa36efb9c06a1a5906a1c50c4f42166bab81cae9bbd615308",
+    "modes/modes-daily-pause-en.png": "cd13dc57c3c7e5cccb34460e27418eec318b6938e32e687589094761c8a5a3fd",
+    "modes/modes-guardian-parent-android-0-en.png": "dffac3ef30177d3aff7d6b89eacfc8b3f562e434a060348ff3d88ec8ab18dd12",
+    "modes/modes-guardian-parent-object-1-en.png": "bf96ba63450217955f05b2c4bd382b95cf4f85f2a68442053726cae3d7ebb1ba",
+    "modes/modes-daily-actions-fully-visible-en.png": "2b7872f6c24276fea58b46f398d675eb31a63a8ef707c50de3e5367ee7198fbe"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-h-modes-compact-largefont-v2/interface-observer.apk",
+  "compact": true,
+  "route": "modes",
+  "original_g_pre_p1_checkpoint_sha256": "2b7c88b321914493699b0369f0c1ce826f2022247a7a98b33b9cb4bdfd41aeb6",
+  "device_provenance": {
+    "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification",
+    "receipt_path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/creation.json",
+    "receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9",
+    "source_serial": "emulator-5586",
+    "source_avd": "Luma-Refonte115-QA",
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "source_baseline_report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "source_baseline_snapshot_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "physical_copy_disks": 7,
+    "candidate_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-g-authorization.json",
+      "sha256": "a8d763b6c63eecc84db8ab855e4dad7c6d24c1a1fbd0b3e1d9388f87be6e48f8",
+      "base_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+      "target_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_version": "1.17.0-rc5",
+      "target_code": 23,
+      "allow_retained_upgrade": true,
+      "scope": "Retained F to G upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    },
+    "successor_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-h-authorization.json",
+      "sha256": "055cb978afa2c073700346afa336516c68694cc276492023d362d56c849035b5",
+      "base_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "target_version": "1.17.0-rc6",
+      "target_code": 24,
+      "allow_retained_upgrade": true,
+      "scope": "Retained G to H upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    }
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "compact_scope": "Actual native320dp-wide display,880x1440 pixels at440dpi; original display restored after both native processes",
+  "font_scale_during": 1.3,
+  "display_during": {
+    "size": "Physical size: 1080x2340\nOverride size: 880x1440",
+    "density": "Physical density: 440"
+  },
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 127.547
+}

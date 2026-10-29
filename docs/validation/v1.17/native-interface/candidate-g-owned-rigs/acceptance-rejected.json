@@ -1,0 +1,9 @@
+{
+  "accepted": false,
+  "report_pass_flag_invalid": true,
+  "reason": "adb collapsed an empty optional instrumentation argument. Actual output is Activity Manager help; no instrumentation succeeded. Host wrongly read prior modes native report.",
+  "native_phase": "modes",
+  "requested_phase": "rig",
+  "current_candidate_app_bug": false,
+  "action": "Keep raw false-positive report untouched, exclude from evidence counts, repeat real rig with strict instrumentation-code/phase/unique-token validation."
+}

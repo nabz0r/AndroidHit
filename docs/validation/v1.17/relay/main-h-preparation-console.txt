@@ -1,0 +1,24 @@
+{"starting": ["/Library/Developer/CommandLineTools/usr/bin/python3", "scripts/v117-ui-test/run.py", "--serial", "emulator-5586", "--expected-avd", "Luma-Refonte115-QA", "--expected-apk", "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-rc6.apk", "--sha256", "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47", "--test-apk", "/tmp/luma-v117-candidate-h/interface-v117-production-test.apk", "--expected-version", "1.17.0-rc6", "--expected-code", "24", "--route", "upgrade", "--expected-base-sha256", "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8", "--label", "candidate-h-main-upgrade-a"]}
+{"phase": "baseline", "passed": true, "checks": 7, "captures": 0}
+{"phase": "assets", "passed": true, "checks": 539, "captures": 0}
+{"phase": "prepare", "passed": true, "checks": 62, "captures": 17}
+{"phase": "cold", "passed": true, "checks": 17, "captures": 3}
+{
+  "passed": true,
+  "checks": 625,
+  "screenshots": 20,
+  "report": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-h-main-upgrade-a/host-report.json"
+}
+{"starting": ["/Library/Developer/CommandLineTools/usr/bin/python3", "scripts/v117-audio-test/run.py", "--serial", "emulator-5586", "--expected-avd", "Luma-Refonte115-QA", "--expected-apk", "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-rc6.apk", "--sha256", "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47", "--test-apk", "/tmp/luma-v117-candidate-h/audio-v117-production-test.apk", "--expected-version", "1.17.0-rc6", "--expected-code", "24", "--label", "candidate-h-main-audio-a", "--device-handoff-confirmed", "--host-audio-unavailable"]}
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/v117-audio-test/run.py", line 138, in <module>
+    if __name__=='__main__':main()
+  File "/Users/n/androidhit/scripts/v117-audio-test/run.py", line 134, in main
+    if error:raise error
+  File "/Users/n/androidhit/scripts/v117-audio-test/run.py", line 112, in main
+    assert instrumentation_ok,'Native instrumentation did not finish with RESULT_OK; fresh failure evidence retained'
+AssertionError: Native instrumentation did not finish with RESULT_OK; fresh failure evidence retained
+Traceback (most recent call last):
+  File "/tmp/luma117-h-main-prep.py", line 24, in <module>
+    assert code==0 and result['passed'],'Native preparation phase failed: '+name
+AssertionError: Native preparation phase failed: audio_command

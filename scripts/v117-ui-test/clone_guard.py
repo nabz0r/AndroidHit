@@ -15,6 +15,8 @@ VERSION='1.17.0-rc4'
 CODE=22
 APK='fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8'
 SCOPE='Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification'
+AUTH_SCOPE='Retained F to G upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification'
+SUCCESSOR_SCOPE='Retained G to H upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification'
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
@@ -49,3 +51,44 @@ def validate_receipt(path,digest,serial,avd,apk_sha256):
     accepted_scopes={SCOPE,SCOPE+'. Final passed state additionally requires observed clone boot identity and exact installed APK metadata.'}
     assert data.get('scope') in accepted_scopes,'Clone scope must explicitly exclude a second migration qualification'
     return {'scope':SCOPE,'receipt_path':str(receipt),'receipt_sha256':digest,'source_serial':SOURCE[0],'source_avd':SOURCE[1],'clone_serial':CLONE[0],'clone_avd':CLONE[1],'source_baseline_report_sha256':sha(report_path),'source_baseline_snapshot_sha256':sha(snapshot),'physical_copy_disks':len(disks)}
+
+def validate_candidate_authorization(path,digest,authorization,authorization_digest,serial,avd,apk_sha256,version,code):
+    """Verify immutable F disk provenance and the root's one explicit G upgrade.
+
+    This authorizes only the candidate identity, not any device operation. The UI
+    caller independently requires installed base F before its retained upgrade;
+    the render caller never installs the target at all.
+    """
+    provenance=validate_receipt(path,digest,serial,avd,APK)
+    candidate=Path(authorization).resolve()
+    assert candidate==ROOT/'docs/validation/v1.17/secondary-clone/candidate-g-authorization.json','Exact root-created G candidate authorization required'
+    assert re.fullmatch(r'[a-f0-9]{64}',authorization_digest or '') and sha(candidate)==authorization_digest,'Explicit immutable candidate authorization hash differs'
+    data=json.loads(candidate.read_text())
+    assert data.get('schema_version')==1 and data.get('passed') is True,'Root candidate authorization must be complete'
+    assert (data.get('clone_serial'),data.get('clone_avd'))==CLONE,'Candidate authorization clone identity differs'
+    assert data.get('creation_receipt_sha256')==digest,'Candidate authorization must bind the exact original physical-copy receipt'
+    assert data.get('base_apk_sha256')==APK,'Only the retained frozen F base is authorized'
+    assert re.fullmatch(r'[a-f0-9]{64}',apk_sha256 or '') and apk_sha256!=APK and data.get('target_apk_sha256')==apk_sha256,'Exact explicitly authorized G target bytes required'
+    assert data.get('target_version')==version=='1.17.0-rc5' and data.get('target_code')==code==23,'Exact G version/code required'
+    assert data.get('allow_retained_upgrade') is True,'Root must explicitly authorize this retained candidate upgrade'
+    assert data.get('scope')==AUTH_SCOPE,'Retained upgrade scope must exclude preference injection, another copy and another global migration'
+    provenance['candidate_authorization']={'path':str(candidate),'sha256':authorization_digest,'base_apk_sha256':APK,'target_apk_sha256':apk_sha256,'target_version':version,'target_code':code,'allow_retained_upgrade':True,'scope':AUTH_SCOPE}
+    return provenance
+
+def validate_successor_authorization(path,digest,authorization,authorization_digest,successor,successor_digest,serial,avd,apk_sha256,version,code):
+    """Preserve the original physical F copy and authorized G upgrade before H."""
+    prior=json.loads(Path(authorization).read_text())
+    provenance=validate_candidate_authorization(path,digest,authorization,authorization_digest,serial,avd,prior.get('target_apk_sha256'),'1.17.0-rc5',23)
+    receipt=Path(successor).resolve()
+    assert receipt==ROOT/'docs/validation/v1.17/secondary-clone/candidate-h-authorization.json','Exact root-created H candidate authorization required'
+    assert re.fullmatch(r'[a-f0-9]{64}',successor_digest or '') and sha(receipt)==successor_digest,'Explicit immutable H authorization hash differs'
+    data=json.loads(receipt.read_text());base=provenance['candidate_authorization']['target_apk_sha256']
+    assert data.get('schema_version')==1 and data.get('passed') is True,'Root H authorization must be complete'
+    assert (data.get('clone_serial'),data.get('clone_avd'))==CLONE,'H authorization clone identity differs'
+    assert data.get('creation_receipt_sha256')==digest and data.get('prior_authorization_sha256')==authorization_digest,'H must bind the exact original physical copy and G authorization'
+    assert data.get('base_apk_sha256')==base,'Only the already-authorized retained G base is permitted for H'
+    assert re.fullmatch(r'[a-f0-9]{64}',apk_sha256 or '') and apk_sha256 not in (APK,base) and data.get('target_apk_sha256')==apk_sha256,'Exact explicitly authorized H target bytes required'
+    assert data.get('target_version')==version=='1.17.0-rc6' and data.get('target_code')==code==24,'Exact H version/code required'
+    assert data.get('allow_retained_upgrade') is True and data.get('scope')==SUCCESSOR_SCOPE,'Explicit retained G to H authorization and bounded scope required'
+    provenance['successor_authorization']={'path':str(receipt),'sha256':successor_digest,'base_apk_sha256':base,'target_apk_sha256':apk_sha256,'target_version':version,'target_code':code,'allow_retained_upgrade':True,'scope':SUCCESSOR_SCOPE}
+    return provenance

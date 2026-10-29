@@ -1,0 +1,12 @@
+{
+  "passed": false,
+  "classification": "Observer used a clickable-only prefix matcher for the nonclickable victory label",
+  "native_checks": 112,
+  "actual_original_captures": 36,
+  "app_changed": false,
+  "successful_scope_before_observer_failure": ["All three actual Guardian return paths reach list and roots without reopening", "Remix1/Daily1/Weekly1 actual HUD/help/pause/exit without moves", "P1 completed through four observed piece touches, actual victory label shows three stars and zero coins"],
+  "original_pre_first_p1_checkpoint": "modes/modes-before.json",
+  "original_pre_first_p1_checkpoint_sha256": "2b7c88b321914493699b0369f0c1ce826f2022247a7a98b33b9cb4bdfd41aeb6",
+  "correction": "Observe victory label as nonclickable, assert complete meta independently, bind retry to the immutable ORIGINAL pre-P1 checkpoint before any new baseline or piece touch",
+  "next_attempt": "candidate-g-other-modes-v2"
+}

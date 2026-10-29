@@ -1,9 +1,8 @@
 <h1 align="center">Luma Drift</h1>
 <p align="center"><strong>A world at your fingertips.</strong><br>A tactile puzzle Journey and an illustrated home for your companion.</p>
-<p align="center"><strong>1.17.0-rc4 · original sprites, places to touch and a living soundscape</strong><br><a href="docs/RELEASE_1_17.md">Release status</a> · <a href="docs/validation/v1.17/README.md">Evidence & pending acceptance</a> · <a href="docs/design/v1.17/reference-research.md">Primary-source design research</a></p>
+<p align="center"><strong>1.17.0-rc6 · original sprites, places to touch and a living soundscape</strong><br><a href="docs/RELEASE_1_17.md">Release status</a> · <a href="docs/validation/v1.17/README.md">Evidence & pending acceptance</a> · <a href="docs/design/v1.17/reference-research.md">Primary-source design research</a></p>
 
-**1.17 is under final qualification.** Candidate F (production `1.17.0-rc4`, code22) passes the four-artifact audit, responsive-root geometry, retained-save upgrade, fresh-player flow, six-language primary browsing and installed digital audio checks. Remaining secondary routes and the actual all1,000 replay are running before Git/website delivery. E's scoped results remain preserved alongside two subsequently found compact composition defects; F corrects their layout. [Release register](docs/RELEASE_1_17.md).
-<!-- FINAL_117: README_STATUS — replace this paragraph only after the exact final APK, native replay and publication receipts are accepted. -->
+**Current status: H (1.17.0-rc6 / code 24) is under native qualification after fixing the Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
 
 Four separate places—Adventure, Home, Collection and Workshop—use illustrated scenery and touchable objects in place of visible button rows, pills and a navigation bar. Optional swipes connect the places; named object targets keep navigation discoverable. Short scene fades respect reduced motion. Deeper menus retain clear costs, ownership, confirmations and accessible actions.
 
@@ -13,10 +12,9 @@ Five sound contexts × ten biomes provide **50 synthesized arrangements**: the t
 
 The U1–U1000 puzzle rules, earned-coin economy and existing save identities are retained. Companion arrivals still contain 23 possible companions for 180 earned coins; the outfit pool contains five complete looks for 260. Odds and duplicate returns are shown before spending. Test ads, closed real checkout and disabled paid premium draws remain. Google sign-in does not synchronize the local house, profile or game save.
 
-The [release table](docs/RELEASE_1_17.md) records the exact audited F bytes; canonical downloads and final publication remain pending. The [F visual record](docs/validation/v1.17/review/visual-candidate-f.json) reviews 58 actual UI frames, closes E’s two compact composition findings and retains the wardrobe contrast correction at 5.45:1. The [website register](docs/validation/site-v1.17/README.md) separates the unpublished F browser preview from final Firebase delivery. [Build and host checks](docs/DEVELOPMENT.md) · [Installation and activation boundaries](docs/PRODUCTION_RELEASE.md).
+The [release table](docs/RELEASE_1_17.md) records the audited H bytes and source freeze. H fixes a reproduced Guardian return loop, legacy puzzle gates covering their budget/help, and misnamed event previews. Shared geometry gives gates and captions separate space, keeps the board useful on short screens and scrolls complete object actions into view. The [source review](docs/validation/v1.17/review/source-candidate-h-preflight.json), native route/visual reports and [website publication register](docs/validation/site-v1.17/README.md) keep their distinct scopes. [Build and contracts](docs/DEVELOPMENT.md) · [Installation and activation boundaries](docs/PRODUCTION_RELEASE.md).
 
 ## Preserved 1.16 delivery
-
 
 The home now fills its actual scene viewport, with a closer default camera, finger pan and an explicit whole-room view. Larger collection portraits, illustrated Atelier cards, accented pill actions and icon-medallion navigation give objects and characters more room.
 

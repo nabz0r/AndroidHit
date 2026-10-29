@@ -29,6 +29,15 @@ def main():
     assert re.fullmatch(r'1\.17\.0-rc[1-9][0-9]*',args.expected_version) and args.expected_code>0
     out=args.output_root.resolve();assert out.is_relative_to(ROOT/'docs/validation/v1.17')
     owned=json.loads(args.device_receipt.read_text());assert owned['created_for_task'] and owned['serial']=='emulator-5590'
+    # Each invocation owns a new identity. Do not carry F/G side paths into H.
+    if HANDOFF.exists():
+        previous=json.loads(HANDOFF.read_text())
+        archive=out/'previous-active-handoff.json'
+        if not archive.exists():archive.write_text(json.dumps(previous,indent=2)+'\n')
+    HANDOFF.write_text(json.dumps({'candidate':args.candidate,'version':args.expected_version,
+        'code':args.expected_code,'apk_sha256':args.sha256,'device_receipt':str(args.device_receipt.resolve()),
+        'expected_summary':str(out/('summary-'+args.candidate.lower()+'.json')),
+        'shutdown_receipt':str(out/'device/shutdown.json'),'failure':None},indent=2)+'\n')
     names={'onboarding':args.label_prefix+'-onboarding-a','campaign':args.label_prefix+'-fresh-eight-a','arrivals':args.label_prefix+'-fresh-arrivals-a','cold':args.cold_label or args.label_prefix+'-fresh-cold-a'}
     assert all(re.fullmatch(r'[A-Za-z0-9_-]{1,60}',name) for name in names.values())
     reports=[]

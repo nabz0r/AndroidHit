@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "runToken": "3e35e934-c764-424d-90bb-2628133956cc",
+  "phase": "cold",
+  "processId": 5905,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact production package"
+    },
+    {
+      "passed": true,
+      "message": "Installed explicit frozen candidate version\/code"
+    },
+    {
+      "passed": true,
+      "message": "Current execution token"
+    },
+    {
+      "passed": true,
+      "message": "Bounded evidence label"
+    },
+    {
+      "passed": true,
+      "message": "Genuinely distinct cold process"
+    },
+    {
+      "passed": true,
+      "message": "Actual wallet retains exact post-draw balance after cold process"
+    },
+    {
+      "passed": true,
+      "message": "Actual equipped companion and all seven slots persist after cold process"
+    },
+    {
+      "passed": true,
+      "message": "Reopening saved reveal spends no additional coins"
+    }
+  ],
+  "checkCount": 8,
+  "touchCount": 8,
+  "actions": [
+    {
+      "touch": 1,
+      "reason": "My home",
+      "label": "My home",
+      "bounds": [
+        876,
+        2108,
+        1050,
+        2330
+      ]
+    },
+    {
+      "touch": 2,
+      "reason": "Collection",
+      "label": "Collection",
+      "bounds": [
+        876,
+        2108,
+        1050,
+        2330
+      ]
+    },
+    {
+      "touch": 3,
+      "reason": "Profile",
+      "label": "Profile",
+      "bounds": [
+        66,
+        352,
+        913,
+        479
+      ]
+    },
+    {
+      "touch": 4,
+      "reason": "Star arrivals",
+      "label": "Star arrivals",
+      "bounds": [
+        735,
+        1191,
+        998,
+        1501
+      ]
+    },
+    {
+      "touch": 5,
+      "input": "Actual touchscreen vertical scroll",
+      "reason": "Bring lower arrivals objects into the visible viewport",
+      "appBounds": "[0,0][1080,2400]"
+    },
+    {
+      "touch": 6,
+      "reason": "See last arrival",
+      "label": "See last arrival",
+      "bounds": [
+        661,
+        1847,
+        916,
+        2149
+      ]
+    },
+    {
+      "touch": 7,
+      "reason": "Look book",
+      "label": "Look book",
+      "bounds": [
+        66,
+        2027,
+        1013,
+        2160
+      ]
+    },
+    {
+      "touch": 8,
+      "reason": "My home",
+      "label": "My home",
+      "bounds": [
+        29,
+        2108,
+        203,
+        2330
+      ]
+    }
+  ],
+  "captures": [
+    "cold-fresh-profile-en",
+    "cold-arrivals-scrolled-5",
+    "cold-fresh-last-reveal-en",
+    "cold-fresh-furnished-home-en"
+  ],
+  "wins": [],
+  "elapsedMs": 10831,
+  "scope": "New empty task-owned AVD, actual public Android UI touch observations only; no target app\/engine\/model\/renderer\/private calls, preference access, state injection, seeding, ad\/account\/payment action or existing AVD access. Certificates are read-only guidance for actual piece touches."
+}

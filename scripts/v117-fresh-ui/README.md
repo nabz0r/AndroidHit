@@ -18,11 +18,11 @@ JAVA_HOME=/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home \
 
 `create-device.py` requires an explicit never-existing task AVD name and evidence
 directory. It checks that 5590/5591 are free, then creates empty userdata; it
-never clones, resets or replaces an AVD. Current F preparation uses:
+never clones, resets or replaces an AVD. The final H preparation uses:
 
 ```sh
 python3 scripts/v117-fresh-ui/create-device.py \
-  --name Luma117-Fresh-F-QA --output docs/validation/v1.17/fresh-f/device
+  --name Luma117-Fresh-H-QA --output docs/validation/v1.17/fresh-h/device
 ```
 
 The wrapper requires explicit `--apk`, `--sha256`, `--expected-version`,
@@ -45,6 +45,6 @@ new evidence root's `candidate-bytes-before.json`. The coordinator independently
 rechecks them, removes only the verified observer and stops only its receipt-owned
 5590 AVD normally at the end, preserving userdata and creation/shutdown receipts.
 Its single current resume pointer is `docs/validation/v1.17/fresh/active-handoff.json`.
-Frozen C/D/E reports and source copies remain unchanged; F gets its own directory.
+Frozen C/D/E/F/G reports and source copies remain unchanged; H gets its own directory. Each invocation resets all current handoff identity paths from its actual arguments; an older handoff is archived rather than merged into the new identity.
 This route does not access providers, accounts, ads, payments or the retained main
 profile, and does not replace the full U1–U1000 replay.

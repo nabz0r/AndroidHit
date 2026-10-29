@@ -1,0 +1,74 @@
+{
+  "passed_scopes_only": true,
+  "candidate": "G",
+  "version": "1.17.0-rc5",
+  "code": 23,
+  "apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "full1000_started": false,
+  "main_upgrade": {
+    "path": "docs/validation/v1.17/native-interface/candidate-g-main-upgrade-a/host-report.json",
+    "sha256": "1cb6b32911ce117b8920ec593d7b5044c7ecaa660600e6be6fc4a0145a049676",
+    "checks": 621,
+    "original_pngs": 20,
+    "base_version": "1.17.0-rc4",
+    "base_code": 22,
+    "base_language": "en",
+    "base_coins": 51510,
+    "base_saved_session_level": 818,
+    "base_saved_session_history": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14",
+    "base_saved_session_active": false,
+    "F_last_certified_checkpoint": 817,
+    "upgrade_preserves_entire_original_legacy_save_and_session_before_UI": true,
+    "phases": [
+      {
+        "phase": "baseline",
+        "version": "1.17.0-rc4",
+        "code": 22,
+        "checks": 6,
+        "passed": true
+      },
+      {
+        "phase": "assets",
+        "version": "1.17.0-rc5",
+        "code": 23,
+        "checks": 538,
+        "passed": true
+      },
+      {
+        "phase": "prepare",
+        "version": "1.17.0-rc5",
+        "code": 23,
+        "checks": 61,
+        "passed": true
+      },
+      {
+        "phase": "cold",
+        "version": "1.17.0-rc5",
+        "code": 23,
+        "checks": 16,
+        "passed": true
+      }
+    ]
+  },
+  "audio": {
+    "path": "docs/validation/v1.17/audio/native/candidate-g-main-audio-a/host-report.json",
+    "sha256": "f335f2739b48a9bb044f4fd992661f18e92c29b59784a5aef5132b1410caf06e",
+    "checks": 35,
+    "original_pngs": 7,
+    "original_language": "Français",
+    "original_music": true,
+    "original_effects": true,
+    "settings_restored": true,
+    "observer_removed": true,
+    "app_force_stopped_at_end": true,
+    "digital_playback_only": true,
+    "physical_listening_performed": false,
+    "F_three_extra_checks_were_timeout_recovery": {
+      "Visible Sound effects state is On": 1,
+      "Visible Music state is On": 1,
+      "Prior timed-out observer baseline recovered through actual UI": 1
+    },
+    "F_one_extra_capture_was_timeout_recovery": "prior-timeout-settings-recovered"
+  },
+  "scope": "Exact G main5586 real F→G update and cold/data/FR UI validation, followed by clean digital-audio route. No G replay or clone-mode acceptance inferred. F817 partial replay preserved under its actual bytes; saved Fsession818 is naturally observed, not added as an accepted completion."
+}

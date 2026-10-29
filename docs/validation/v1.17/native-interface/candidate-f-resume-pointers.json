@@ -1,0 +1,184 @@
+{
+  "candidate": "1.17.0-rc4/code22",
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "status": "F superseded after genuine Guardian Back cycle found in additional native smoke; not final release acceptance",
+  "passed_observations": [
+    {
+      "label": "candidate-f-upgrade",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-upgrade/host-report.json",
+      "report_sha256": "a3a5d0003137270294476738dab2ea7547dd92adf55db53986a6d84f59700def",
+      "serial": "emulator-5586",
+      "route": "upgrade",
+      "checks": 619,
+      "original_app_pngs": 20
+    },
+    {
+      "label": "candidate-f-roots-compact",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-roots-compact/host-report.json",
+      "report_sha256": "acce595485afa90a71ad62ca4066e119f121bb92c01843eab898c2af5d880a02",
+      "serial": "emulator-5586",
+      "route": "root-regression",
+      "checks": 285,
+      "original_app_pngs": 8
+    },
+    {
+      "label": "candidate-f-roots-compact-largefont",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-roots-compact-largefont/host-report.json",
+      "report_sha256": "7db02829eeeb50d19f01ff683e56c23f6a9fe0bc17785860cf252c16c0067db3",
+      "serial": "emulator-5586",
+      "route": "root-regression",
+      "checks": 285,
+      "original_app_pngs": 8
+    },
+    {
+      "label": "candidate-f-clipped-language",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-clipped-language/host-report.json",
+      "report_sha256": "323260b4376d4e7f8d8a1326f9fff45842f346357bca494712c34d46a4808e9b",
+      "serial": "emulator-5586",
+      "route": "language-regression",
+      "checks": 19,
+      "original_app_pngs": 2
+    },
+    {
+      "label": "candidate-f-secondary-compact-preflight2",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-secondary-compact-preflight2/host-report.json",
+      "report_sha256": "223408856fa1bce80b9abc3b585ff2968c1e0a8abe8fe22749169233c98c60e0",
+      "serial": "emulator-5586",
+      "route": "secondary",
+      "checks": 205,
+      "original_app_pngs": 298
+    },
+    {
+      "label": "candidate-f-clone-baseline",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-clone-baseline/host-report.json",
+      "report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+      "serial": "emulator-5586",
+      "route": "baseline",
+      "checks": 6,
+      "original_app_pngs": 0
+    },
+    {
+      "label": "candidate-f-clone-identity",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-clone-identity/host-report.json",
+      "report_sha256": "a3ae64c75d0e27b988c8c299bb4b8eb80c58aba076de74eea48e125d9c73601d",
+      "serial": "emulator-5592",
+      "route": "baseline",
+      "checks": 6,
+      "original_app_pngs": 0
+    },
+    {
+      "label": "candidate-f-owned-rigs",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-owned-rigs/host-report.json",
+      "report_sha256": "3c4f9ca2eee67fd8c6b22478cd778faca2cedef4e8eb9163eb7a657dfee48393",
+      "serial": "emulator-5592",
+      "route": "rig",
+      "checks": 78,
+      "original_app_pngs": 27
+    },
+    {
+      "label": "candidate-f-sixlangs-normal",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-sixlangs-normal/host-report.json",
+      "report_sha256": "f6a377e004d51e1624e72abe0066df407d6c014f17d17d3ce46f473a25300895",
+      "serial": "emulator-5592",
+      "route": "browse",
+      "checks": 276,
+      "original_app_pngs": 177
+    },
+    {
+      "label": "candidate-f-sixlangs-compact",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-sixlangs-compact/host-report.json",
+      "report_sha256": "43fb031e5e160d63436ea44d0271fd178f82729064940b00008304185db2bfa7",
+      "serial": "emulator-5592",
+      "route": "browse",
+      "checks": 276,
+      "original_app_pngs": 177
+    },
+    {
+      "label": "candidate-f-steady-home",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-steady-home/host-report.json",
+      "report_sha256": "53ec6fa6a7aca514ff3c13d51e5b2f937608409a499a7ecc3a31d00de6fc190d",
+      "serial": "emulator-5592",
+      "route": "performance",
+      "checks": 19,
+      "original_app_pngs": 2
+    },
+    {
+      "label": "candidate-f-transitions-v2",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-transitions-v2/host-report.json",
+      "report_sha256": "391600bc5ac1ae5c0a038464c7385876b91e08999fc67cc865f7bca043495345",
+      "serial": "emulator-5592",
+      "route": "transitions",
+      "checks": 23,
+      "original_app_pngs": 1
+    },
+    {
+      "label": "candidate-f-secondary-compact-rest",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-secondary-compact-rest/host-report.json",
+      "report_sha256": "7a7643cca471902b0bf60132e1a9f4612eecaa229885f91be5a83e93d6f0504b",
+      "serial": "emulator-5592",
+      "route": "secondary",
+      "checks": 375,
+      "original_app_pngs": 593
+    },
+    {
+      "label": "candidate-f-secondary-normal",
+      "report": "docs/validation/v1.17/native-interface/candidate-f-secondary-normal/host-report.json",
+      "report_sha256": "ff74ff9ce410c8815ce27db73086d7d0a48035882250260a0e18191d6a5d997b",
+      "serial": "emulator-5592",
+      "route": "secondary",
+      "checks": 205,
+      "original_app_pngs": 221
+    }
+  ],
+  "total_passed_checks": 2677,
+  "total_original_app_pngs": 1534,
+  "separate_qa_render_report": "docs/validation/v1.17/art/native/candidate-f-art/host-report.json",
+  "secondary_scope": {
+    "compact_languages": [
+      "en",
+      "fr",
+      "de",
+      "es",
+      "pt",
+      "it"
+    ],
+    "compact_devices": [
+      "emulator-5586",
+      "emulator-5592"
+    ],
+    "compact_aggregate": "docs/validation/v1.17/native-interface/candidate-f-secondary-compact-aggregate.json",
+    "normal_languages": [
+      "en",
+      "fr"
+    ],
+    "normal_device": "emulator-5592"
+  },
+  "failed_additional_modes": [
+    {
+      "label": "candidate-f-other-modes",
+      "classification": "Probe assumed painted Canvas header was accessible; preserved failure12checks/2captures"
+    },
+    {
+      "label": "candidate-f-other-modes-v2",
+      "classification": "Real Guardian Back cycle;30checks/7captures, Remix and Guardian opened without piece moves/spend before stop"
+    }
+  ],
+  "resume": {
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "observer_removed": true,
+    "target_force_stopped": true,
+    "emulator_left_running_for_root": true,
+    "display": "1080x2340/440dpi/font1.0 restored",
+    "language": "en after failed route; restore via actualUI in G",
+    "naturally_changed_sessions": "Zero-action Remix1 and Guardian1 were opened; no attempt to restore prior run IDs",
+    "protected_progression": "U1000,51510 coins and inventory retained; final G phase will record and require exact protected before/after"
+  },
+  "next_candidate": "1.17.0-rc5/code23",
+  "next_candidate_scope": "New exact G observations required after root Guardian navigation correction; F raw pass/fail evidence remains immutable.",
+  "next_probe_host_contracts": {
+    "clone_authorization_checks": 50,
+    "scope": "Host temporary JSON security fixtures only; no device input",
+    "live_avd_access_since_F_failure": false
+  }
+}

@@ -1,0 +1,7 @@
+PASS 1714 checks: 1638 DSP and 76 lifecycle/concurrency checks.
+50 distinct original scene/biome PCM loops: 10 historical puzzle themes and 40 new place arrangements.
+Four 10-second scene previews use biome0 and actual default music gain 0.27, with the engine's 900ms smooth entrance and a preview-only 450ms ending.
+Three earcons use initial SFX gain0.72. All WAVs are mono PCM16 at 22050 Hz, rendered from the app synthesizer.
+Historical ten puzzle-theme hashes and all eleven historical effect hashes are checked against frozen v1.7 records.
+JVM model: late/obsolete PCM writes, 1000 combined biome/scene requests, return to current scene, pause/focus, music/SFX mute independence, resume, failed output and release; maximum live AudioTracks=2.
+No physical speaker recording, subjective listening result or Android native allocation/performance measurement is implied.

@@ -1,0 +1,28 @@
+// Separate framework-only digital audio observer. No production source changes.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig {
+                testApplicationId 'com.androidhit.lumadrift.audio117test'
+                testInstrumentationRunner 'com.androidhit.lumadrift.qa.v117audio.AudioInstrumentation'
+            }
+            sourceSets {
+                androidTest {
+                    java.srcDirs = [new File(rootDir, 'scripts/v117-audio-test/java')]
+                    assets.srcDirs = []
+                    manifest.srcFile new File(rootDir, 'scripts/v117-audio-test/AndroidManifest.xml')
+                }
+            }
+        }
+        project.tasks.matching { it.name == 'packageProductionReleaseAndroidTest' }.configureEach {
+            doLast {
+                copy {
+                    from project.layout.buildDirectory.file('outputs/apk/androidTest/production/release/app-production-release-androidTest.apk')
+                    into project.layout.buildDirectory.dir('qualification-artifacts/v1.17')
+                    rename { 'audio-v117-production-test.apk' }
+                }
+            }
+        }
+    }
+}

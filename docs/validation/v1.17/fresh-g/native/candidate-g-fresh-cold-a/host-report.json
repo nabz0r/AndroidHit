@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "phase": "cold",
+  "apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "observer_sha256": "e3f2b6cbb914f9cabb08d03a98635f7831842b520a190728fd4b195607ede187",
+  "expected_version": "1.17.0-rc5",
+  "expected_code": 23,
+  "serial": "emulator-5590",
+  "avd": "Luma117-Fresh-G-QA",
+  "run_token": "3e35e934-c764-424d-90bb-2628133956cc",
+  "scope": "New receipt-owned empty AVD only; real public SDK touch route, no target preferences/private app calls, state injection, seeding or existing AVD access",
+  "native": {
+    "passed": true,
+    "runToken": "3e35e934-c764-424d-90bb-2628133956cc",
+    "phase": "cold",
+    "processId": 5905,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Installed explicit frozen candidate version/code"
+      },
+      {
+        "passed": true,
+        "message": "Current execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded evidence label"
+      },
+      {
+        "passed": true,
+        "message": "Genuinely distinct cold process"
+      },
+      {
+        "passed": true,
+        "message": "Actual wallet retains exact post-draw balance after cold process"
+      },
+      {
+        "passed": true,
+        "message": "Actual equipped companion and all seven slots persist after cold process"
+      },
+      {
+        "passed": true,
+        "message": "Reopening saved reveal spends no additional coins"
+      }
+    ],
+    "checkCount": 8,
+    "touchCount": 8,
+    "actions": [
+      {
+        "touch": 1,
+        "reason": "My home",
+        "label": "My home",
+        "bounds": [
+          876,
+          2108,
+          1050,
+          2330
+        ]
+      },
+      {
+        "touch": 2,
+        "reason": "Collection",
+        "label": "Collection",
+        "bounds": [
+          876,
+          2108,
+          1050,
+          2330
+        ]
+      },
+      {
+        "touch": 3,
+        "reason": "Profile",
+        "label": "Profile",
+        "bounds": [
+          66,
+          352,
+          913,
+          479
+        ]
+      },
+      {
+        "touch": 4,
+        "reason": "Star arrivals",
+        "label": "Star arrivals",
+        "bounds": [
+          735,
+          1191,
+          998,
+          1501
+        ]
+      },
+      {
+        "touch": 5,
+        "input": "Actual touchscreen vertical scroll",
+        "reason": "Bring lower arrivals objects into the visible viewport",
+        "appBounds": "[0,0][1080,2400]"
+      },
+      {
+        "touch": 6,
+        "reason": "See last arrival",
+        "label": "See last arrival",
+        "bounds": [
+          661,
+          1847,
+          916,
+          2149
+        ]
+      },
+      {
+        "touch": 7,
+        "reason": "Look book",
+        "label": "Look book",
+        "bounds": [
+          66,
+          2027,
+          1013,
+          2160
+        ]
+      },
+      {
+        "touch": 8,
+        "reason": "My home",
+        "label": "My home",
+        "bounds": [
+          29,
+          2108,
+          203,
+          2330
+        ]
+      }
+    ],
+    "captures": [
+      "cold-fresh-profile-en",
+      "cold-arrivals-scrolled-5",
+      "cold-fresh-last-reveal-en",
+      "cold-fresh-furnished-home-en"
+    ],
+    "wins": [],
+    "elapsedMs": 10831,
+    "scope": "New empty task-owned AVD, actual public Android UI touch observations only; no target app/engine/model/renderer/private calls, preference access, state injection, seeding, ad/account/payment action or existing AVD access. Certificates are read-only guidance for actual piece touches."
+  },
+  "checkCount": 8,
+  "touchCount": 8,
+  "captures": 4,
+  "installed_apk_sha256_after": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "elapsed_seconds": 14.486,
+  "evidence_sha256": {
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "cold-force-stop.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected-ui-checkpoint.json": "4211a53e3d1413c8ecac85f052cd3bbf6510620b49ee8bfa15c96c4236e9c6a8",
+    "fresh-observer.apk": "e3f2b6cbb914f9cabb08d03a98635f7831842b520a190728fd4b195607ede187",
+    "instrumentation.txt": "3670513f4c1b2716a1d55d48c1e3f9b8311e078267ac71ef47723e1e7f377d80",
+    "native/cold-arrivals-scrolled-5.json": "9ef0a1337617de625433f7098d173972f914931c7b123985e63ba0ffdc0589f6",
+    "native/cold-arrivals-scrolled-5.png": "74025960c757f9d447e21fa466e5d5083f5cd300ad748236e850aa8d0a6df506",
+    "native/cold-fresh-furnished-home-en.json": "3002fa64d287d23f7752e024086a2ad433fa4eea432efb406ac5bf4415dfa63e",
+    "native/cold-fresh-furnished-home-en.png": "b2490db40b39237db72e6682d04abfd70904224c73ba4a37fcd07901ca423df0",
+    "native/cold-fresh-last-reveal-en.json": "78096e9a83026b898965310b4ebe0f684dd107538af5af077b37d021c1d60542",
+    "native/cold-fresh-last-reveal-en.png": "6d016a3362bf6a632afb050893b41b041a848d9a37aabe4a60c56707de0d976c",
+    "native/cold-fresh-profile-en.json": "c97ddede10b73a60bc5d0f19d0c54c56c66b5fdc21954c8518393e5b8efdb063",
+    "native/cold-fresh-profile-en.png": "4dca7c8cbfc5aaf12498fb4ebbe24ad72b33038ebf6747ca78175917961c0bef",
+    "native/report.json": "ffacff7f1e8abcc367e9c1df8b820251ff835d382b4e9c5c8465a159d1cd9ddc",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-source/AndroidManifest.xml": "1b0f935baa643bde095c62173d489f6e0e94db59727c9c1d8c9280f295c1baaf",
+    "observer-source/README.md": "d5c60113a5694ab7af7a9d7dd64c3f52f3c4080675b685905a21369ba3b3d730",
+    "observer-source/build.gradle": "b6631990e7025e6b905d20b34a0b4a2fed231ae3b98e35c86fe386a4e7fbbb2a",
+    "observer-source/create-device.py": "6dc3023243698b20e5eac19a3c2cd73cf04da870c988082b0215bc69bc7b6d0a",
+    "observer-source/java/com/androidhit/lumadrift/qa/v117fresh/FreshInstrumentation.java": "a8bdcbf8d901b3498b5afd591fd66fa31ef2454988dd48d0476000a17ec08a85",
+    "observer-source/qualify-all.py": "410f2875bd6620fa66942fb4eee0b1c1245543aecbb86f7c547aafe73f10502e",
+    "observer-source/run.py": "0e38dd6b43c77b2601f42277a6f44cc0b83cca4efbf28258389f90d5d9fe1203",
+    "pull.txt": "7b5238319cfe0355e2870569483d691d8d451ea77261c03db223a16ba33d62b3",
+    "unlock.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "wake.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

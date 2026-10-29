@@ -54,9 +54,13 @@ python3 scripts/v117-art-test/run.py \
   --label final-art-gallery
 ```
 
-The wrapper guards production version/code22, final APK/signing identity,
+The wrapper guards production version/code24, final APK/signing identity,
 packaged original art, renderer source freeze, observer witness, unique run
 token, fresh local/remote labels and every resulting PNG. It installs only its
 own separate observer package, removing it after its exact identity is checked.
 Failed attempts are retained rather than overwritten. Output lives under
 `docs/validation/v1.17/art/native/LABEL/`.
+
+G/code23 gallery runs on the existing F physical clone require the original hashed `--clone-receipt` plus the separate hashed `--clone-candidate-authorization` and `--clone-candidate-authorization-sha256` from root. The shared guard verifies the original stopped-copy provenance, F base, exact authorized G bytes/version/code and the explicit retained-upgrade scope. The renderer observer still never installs/upgrades the target; actual G UI upgrade qualification is separate.
+
+Current H/code24 clone runs additionally require `--clone-successor-authorization` plus `--clone-successor-authorization-sha256`. The shared guard validates the entire immutable F physical-copy → authorized G → authorized H chain; the render wrapper never changes the installed target or calls game state. All three root records are copied into the gallery evidence.

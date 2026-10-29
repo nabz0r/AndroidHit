@@ -1,0 +1,120 @@
+{
+  "status": "PASS_DIGITAL_NATIVE_FIVE_CONTEXT_SCOPE_ONLY",
+  "candidate": "H 1.17.0-rc6/code24",
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "observer_apk_sha256": "ac42d9e1fffe6f02703127f11f9dca8e648fcc2a94bc08fd7ed567116e93403b",
+  "host_report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/host-report.json",
+  "host_report_sha256": "1b956a19cd7ad6ba84108b364c81d5eb6d2113683c0d892894b71a87553113a2",
+  "native_checks": 50,
+  "native_captures": 10,
+  "actual_audioflinger_dumps": 135,
+  "independent_current_pid": 22816,
+  "independently_recomputed_contexts": [
+    {
+      "scene": "ADVENTURE",
+      "track_id": "3111",
+      "independently_recomputed_server_frame_advance": 22991,
+      "raw_first": "scene-0-first-000.txt",
+      "raw_second": "scene-0-second-001.txt",
+      "last_public_loaded_scene": "ADVENTURE"
+    },
+    {
+      "scene": "HOME",
+      "track_id": "3114",
+      "independently_recomputed_server_frame_advance": 23491,
+      "raw_first": "scene-1-first-002.txt",
+      "raw_second": "scene-1-second-003.txt",
+      "last_public_loaded_scene": "HOME"
+    },
+    {
+      "scene": "COLLECTION",
+      "track_id": "3115",
+      "independently_recomputed_server_frame_advance": 23491,
+      "raw_first": "scene-2-first-004.txt",
+      "raw_second": "scene-2-second-005.txt",
+      "last_public_loaded_scene": "COLLECTION"
+    },
+    {
+      "scene": "ATELIER",
+      "track_id": "3116",
+      "independently_recomputed_server_frame_advance": 22991,
+      "raw_first": "scene-3-first-006.txt",
+      "raw_second": "scene-3-second-007.txt",
+      "last_public_loaded_scene": "ATELIER"
+    },
+    {
+      "scene": "PUZZLE",
+      "track_id": "3121",
+      "independently_recomputed_server_frame_advance": 23490,
+      "raw_first": "scene-puzzle-first-008.txt",
+      "raw_second": "scene-puzzle-second-009.txt",
+      "last_public_loaded_scene": "PUZZLE"
+    }
+  ],
+  "background_all_current_pid_tracks_inactive": true,
+  "resume_same_puzzle_track": "3121",
+  "resume_independently_recomputed_advance": 23491,
+  "independence_results": [
+    {
+      "phase": "effects-on-music-off",
+      "snapshots": 38,
+      "shortTrackActivity": true,
+      "musicActivity": false
+    },
+    {
+      "phase": "effects-off-music-off",
+      "snapshots": 40,
+      "shortTrackActivity": false,
+      "musicActivity": false
+    },
+    {
+      "phase": "effects-off-music-on",
+      "snapshots": 41,
+      "shortTrackActivity": false,
+      "musicActivity": true
+    },
+    {
+      "phase": "music-only",
+      "trackId": "3123",
+      "frameAdvance": 23491
+    }
+  ],
+  "protected_snapshot_hashes": {
+    "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/protected-before.json": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+    "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/protected-after.json": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+    "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/protected-origin.json": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+    "docs/validation/v1.17/audio/native/candidate-h-main-audio-a/protected-before.json": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371"
+  },
+  "protected_snapshot_byte_identical_to_original_before_failed_attempt": true,
+  "active_puzzle_session": "Opening already-earned U1 naturally changes selected active-session fields; independent native assertions confirm zero move/hint/Undo cost. No injected state.",
+  "clean_recovery_only": false,
+  "clean_run_has_no_recovery_option": true,
+  "separate_recovery": "candidate-h-main-audio-recovery-a:11checks/2captures; excluded from50/10",
+  "preserved_failed_attempt": "candidate-h-main-audio-a:observer looked for Exit while public caption was Leave level; its failure/raw evidence remains intact. Corrected observer plus separate restoration, no app change.",
+  "observer_removed": true,
+  "exact_candidate_retained": true,
+  "original_language": "Français",
+  "original_music": true,
+  "original_effects": true,
+  "host_report_wall_seconds": 41.051,
+  "coordinator_step_wall_seconds": 41.58,
+  "physical_listening_performed": false,
+  "screenshots": {
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/settings-before-en.png": "c0f043788f1ca0e576fa5d8ee13fef85c554c55844e42bdf1b217b045dbe13d3",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/scene-puzzle-resumed-en.png": "c50af27c726f92a3e437d12cdd027fe0b26d225e73ae5ad195098182214de538",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/scene-adventure-en.png": "dd6dd7b605dd6be20358de5599bb7886f3c533ccee373eda3a1e83372bcf0734",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/scene-atelier-en.png": "cf4eca9ef45660cf64e743860f07a1f61f35b4252b19972b84ee7bb635d81557",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/home-restored.png": "82541d403ce887078dafe6c3bd2325faf68ac2bbde903a8048e75d8e2d9fadea",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/settings-restored.png": "00bbe670702888fbc5863229408a4e09525b826ba83e1e5bf97a1b2ebdc38571",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/settings-independent-en.png": "31794ea96266dfc3d42e3f295053f9838240234607311f10140483ca8f1796d9",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/scene-collection-en.png": "903d70739f616c63152a5cd1e477a77eccd182d433615e3fa326772a26766b75",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/scene-home-en.png": "15595a45164f88dbe686bbbeac1fcc2d715aef85157ea9af6e66eeece691de62",
+    "docs/screenshots/v1.17/audio/candidate-h-main-audio-b/scene-puzzle-u1-en.png": "6a2614e9f5794cfc320f0d36fa6a33909bf84f9ad0d3baf0dfae3d3f75fb0819"
+  },
+  "limits": [
+    "No AVD or browser access by this independent reviewer; raw AudioFlinger rows, current PID, frame differences, logs, files/hashes and two actual U1/resume PNGs inspected.",
+    "Emulator has no host audio output. No physical audition, timbre or speaker/headphone balance claim.",
+    "Only five sampled contexts; PUZZLE is U1/biome0 with no piece touch. No native all-ten-biome music, puzzle-move effect or real competing external audio-focus-app qualification.",
+    "50checks include identity, UI/restoration/protection, not50 recordings. The failed observer and recovery11/2 are not added to this count."
+  ]
+}

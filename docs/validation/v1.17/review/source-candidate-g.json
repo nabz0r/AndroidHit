@@ -1,0 +1,30 @@
+{
+  "status": "GUARDIAN BACK SOURCE AND ACTUAL NATIVE REGRESSION PASS; SEPARATE HUD P2 BLOCKS RELEASE",
+  "candidate": "G 1.17.0-rc5/code23",
+  "apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "source_commit": "44734f43646342ef62d045143992f7e4a4f8b597",
+  "source_sha256": "841e40dc756964e0199c8ecf34604befca65d8d4938dfb6c529bb18f3f7de384",
+  "fix_scope": [
+    "Android Back from guardian, illustrated Back, bottom Guardians object and null-guardian fallback all call leaveGuardian().",
+    "leaveGuardian first persists. A failed save returns before changing history or destination.",
+    "After successful persistence it removes stale guardian/guardians entries, sets backward presentation and calls go(guardians) while suppressing a new history push. The prior navigatingBack flag is restored in finally.",
+    "Non-Guardian ancestors remain. A normal list→board→list round trip can return to its previous ancestor; a board opened from the Journey map retains Journey as the list parent.",
+    "A null guardian persists as a no-op true, then uses the same history cleanup."
+  ],
+  "confirmed_F_bug": "F returned from board using go(guardians), which appended guardian. The next list Back popped and reopened guardian, creating a genuine two-screen loop.",
+  "native_acceptance_needed": "Guardian exit regression is closed on G. H must bind its own smoke to its new APK identity; the independent legacy HUD geometry P2 is documented in puzzle-hud-geometry-g.md.",
+  "identity_delta": "Only LumaView.java and app/build.gradle differ from F among 161 frozen APK inputs; 159 match, including 28 engine files, 2 audio files and 23 v117 art PNGs.",
+  "limitations": "No new implementation-mirroring test, APK hook, AVD or browser access by this reviewer. Exact G native artifacts from the QA owner were independently inspected; Guardian save-failure injection and non-zero partial cold replay are not newly claimed by this mode route.",
+  "native_regression": {
+    "report": "docs/validation/v1.17/native-interface/candidate-g-other-modes-v2/host-report.json",
+    "report_sha256": "fc9c790fa94fe71cc720e9fedd0bcfadd447a85d083d519e16381841b8cdb21d",
+    "checks": 123,
+    "captures": 37,
+    "observed_return_routes": [
+      "illustrated Back → list → Story → Map → Adventure",
+      "Android Back → list → Story → Map → Adventure",
+      "bottom Guardian object → list → Story → Map → Adventure"
+    ],
+    "persistence": "All three paths retain the same unplayed Guardian; free next-gesture hints do not change work/budget. No new native save-error injection was performed."
+  }
+}

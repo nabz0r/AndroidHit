@@ -1,3 +1,5 @@
+> **Current1.17 design sources:** [29October2026 primary-source review](design/v1.17/reference-research.md) links official CrashFever/King/Apple/Android/Material evidence, separates inference from facts and records original Luma decisions. [Generation provenance](design/v1.17/art-prompts.json) identifies bundled original art; no franchise character/art/audio is included. Earlier sources below retain their dated purpose.
+
 # Sources et méthode
 
 Consultation : **26 octobre 2026**. Les pages vivantes peuvent évoluer ; les rangs sélectionnés sont retranscrits dans le dépôt. Aucune base payante, donnée privée d’éditeur ou mesure interne d’acquisition n’a été obtenue.

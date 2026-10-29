@@ -13,7 +13,7 @@ import urllib.request
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://luma-drift-production.web.app'
 FOLDER=ROOT/'docs/validation/site-v1.17'
-RELEASE='1.17.0-rc4'
+RELEASE='1.17.0-rc6'
 APK_SHA=None
 
 def main():

@@ -23,7 +23,7 @@ function boot({url='https://luma.example/index.html',hero=true,preparation=true}
   const frButton=new Element({'data-set-lang':'fr'}),enButton=new Element({'data-set-lang':'en'});
   const image=new Element({'data-screenshot-fr':'assets/screenshots/v1.17/home-fr.png','data-screenshot-en':'assets/screenshots/v1.17/home-en.png','data-alt-fr':'Accueil réel','data-alt-en':'Actual home'});
   const meta=new Element({'data-content-fr':'Description française','data-content-en':'English description'});
-  const privacy=new Element({href:'privacy/index.html?view=full#main'}),external=new Element({href:'https://github.com/nabz0r/AndroidHit'}),apk=new Element({href:'/releases/luma-drift-1.17.0-rc4.apk'});
+  const privacy=new Element({href:'privacy/index.html?view=full#main'}),external=new Element({href:'https://github.com/nabz0r/AndroidHit'}),apk=new Element({href:'/releases/luma-drift-1.17.0-rc6.apk'});
   const notice=new Element(),publisher=new Element(),contact=new Element();
   const location={href:url};Object.defineProperty(location,'origin',{get(){return new URL(location.href).origin;}});
   const players=[new Element(),new Element(),new Element(),new Element()];players.forEach(player=>{player.paused=true;player.pause=()=>{player.paused=true;player.pauseCalls=(player.pauseCalls||0)+1;};});
@@ -57,7 +57,7 @@ test('Switching back keeps unrelated route state and removes only language param
 test('Same-origin APK download and GitHub addresses never acquire a language parameter',()=>{
   const s=boot({url:'https://luma.example/index.html?lang=en'});
   assert.equal(s.external.href,'https://github.com/nabz0r/AndroidHit');
-  assert.equal(s.apk.href,'/releases/luma-drift-1.17.0-rc4.apk');
+  assert.equal(s.apk.href,'/releases/luma-drift-1.17.0-rc6.apk');
 });
 test('Legal page does not inherit the product-page title',()=>{
   const s=boot({hero:false,url:'https://luma.example/privacy/index.html?lang=en'});assert.equal(s.document.title,'Privacy original');

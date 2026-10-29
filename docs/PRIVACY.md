@@ -1,5 +1,21 @@
 # Luma Drift data and privacy inventory
 
+## 1.17 local profile, collection and bundled art
+
+The chosen local nickname, explicit display flag, earned/equipped badges,
+companion/outfit ownership, draw receipts and last arrival are stored in the
+existing private game save. The flag is chosen by the player; it is not
+inferred from location. These fields are separate from Google account identity
+and are not synchronized or uploaded by this release. The optional local
+journal and explicit exports retain their existing limits.
+
+The new sprites, clothes, furniture and room materials are bundled files.
+No image-generation request, remote sprite fetch, analytics service or new
+permission is added during play. Music is synthesized on the device.
+The four website sound excerpts are static WAV exports. Existing SDK/account,
+backup, deletion and commercial-provider boundaries remain below.
+[Current qualification](validation/v1.17/README.md) · [Art/audio sources](ART_AUDIO.md).
+
 Updated **28 October 2026** for **production 1.13.0-rc2 / code 14**, package `com.androidhit.lumadrift`, and isolated **Lab 1.13.0-sandbox-rc2**. This document describes implemented data paths and qualification limits. It is not a completed privacy/store submission or an assessment of every publisher obligation. Public publisher label: **nabilux**; private support correspondence: **nabz0r+gaming@gmail.com**. [FR/EN public policy and deletion pages](PUBLIC_PAGES.md).
 
 ## 1.13 home, first encounter and journal

@@ -1,6 +1,20 @@
 # Public developer, privacy and account-deletion pages
 
-## Current 1.12 website refresh
+## Current 1.17 website qualification
+
+The FR/EN replacement is prepared with sixteen exact F native captures and
+four app-synthesizer WAV excerpts. The unpublished browser preview passes
+at widths320/375/768/1280 with gallery localization, deliberate audio,
+keyboard focus and no horizontal overflow. Final canonical bytes, full native
+1,000 replay, offline audit, clean-commit Hosting deployment and independent
+public-byte/browser results have separate gates in the [website register](validation/site-v1.17/README.md).
+No preview is presented as public delivery.
+
+The existing privacy/deletion HTML, account modules, public configuration,
+Firebase setup and provider gates retain their audited bytes. The local
+nickname/flag/badges/draw-receipt inventory is documented in [PRIVACY](PRIVACY.md).
+
+## Preserved 1.12 website refresh
 
 The homepage now presents the exact signed 1.12.0-rc2/code 13 APK, the atelier, illustrated powers, integrated item pages, visible equipped portrait and distinct earned/account currencies. Nine full native Lab RC2 PNG copies have exact source/hash records. Both languages retain explicit test-ad/closed-checkout state. Privacy metadata now identifies 28 October 2026/1.12; data terms and deletion behavior stay the same. [Current checks and source provenance](validation/site-v1.12/README.md). Hosting publication is confirmed at **28 October 2026,14:08:23.437 UTC**, source `91ffac7a`, all 98 payloads hash-checked before deploy, live version `180b7fc68c516c9b` FINALIZED/DEPLOY. [Receipt](validation/site-v1.12/deployment.json). Localhost review covers12 FR/EN desktop/mobile DOM states and full proportionally scaled viewport frames; no public-origin response/render check or provider action is inferred.
 

@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "classification": "Observer expected a painted Canvas title to be an accessibility node. Actual frozen F Remix1 had started normally.",
+  "failed_report": "docs/validation/v1.17/native-interface/candidate-f-other-modes/host-report.json",
+  "failed_report_sha256": "b1bd5786c31d4b0c2f2fde0749731022a13aa231176f8c375a26c632714c5264",
+  "original_failure_png": "docs/screenshots/v1.17/native-interface/candidate-f-other-modes/modes/failure.png",
+  "original_failure_png_sha256": "fc519d2db320342cbb2381d3237d4756771b92c31307ed68d55b1c4bf75bc5ce",
+  "visual_review": "Original PNG directly inspected: Remix1, First Light, Free10arrows,15/15moves and ten pieces are visibly painted. Accessibility snapshot exposes Pause/How to play/budget/pieces, not title glyphs.",
+  "app_changed": false,
+  "no_piece_touch_or_spend_before_stop": true,
+  "next_attempt": "candidate-f-other-modes-v2",
+  "correction": "Require exact read-only mode/session plus actual Pause/How to play controls; capture HUD for visual title. Guardian uses public board controls; zero XP uses complete meta comparison, because its painted text is not an accessibility node.",
+  "restoration": "Next attempt first selects French through actual visible language UI before recording the protected baseline; no preference writes or session restoration."
+}

@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.17.0-rc4 / code22 — illustrated places and object navigation (under qualification)
+## 1.17.0-rc6 / code24 — illustrated places and object navigation (under qualification)
 
 29 October 2026. [Release status](RELEASE_1_17.md) · [Current evidence and pending work](validation/v1.17/README.md).
 
@@ -8,9 +8,11 @@
 - Add original bundled sprite art for all 24 companions, 24 garments and 42 furnishings, three illustrated places and new room materials. Align clothing through companion anatomy and shared portrait transforms; retain ownership, prices, saved layouts and free styles.
 - Add bounded 220 ms scene fades with lifecycle and reduced-motion handling and guarded touch/keyboard/accessibility input.
 - Add forty place-specific synthesized arrangements to the ten historical puzzle themes, plus scene/fabric/reveal earcons. Keep old PCM, separate music/effects switches and worker request coalescing.
-- Prepare a new FR/EN Firebase page with16exact native F captures and4app-DSP previews; the unpublished responsive browser preview passes. Final 1,000 replay, canonical package and clean-commit gates still precede delivery.
+- Fix the reproduced Guardian Back/list history cycle while preserving refused-save blocking. Correct Daily/Weekly preview identities and keep puzzle budgets, gates, copy and action targets in independent reading/touch bands.
+- Share the real PlaySceneLayout between drawing and hit registration; measure font height before scroll clamping, keep a safe board width, provide three compact object/caption columns, and anchor puzzle overlays after scrolling.
+- Prepare FR/EN Firebase delivery from sixteen exact final native frames and four app-DSP previews. Canonical delivery requires exact1,000 replay, screen/art/audio/new-install acceptance, clean-commit publication and public-byte verification.
 
-Candidate F is frozen as rc4/code22 after independent E review found compact Collection/Atelier caption overlaps. The cached shared root geometry preserves art size and reserves separate captions/navigation. Four-package build/lint and binary verification pass. The exact sparse F rehearsal passes14 commands/135 files, including202,444 assertions over420 layouts. Retained upgrade/cold, fresh-player flow, primary six-language normal/compact browsing, owned rigs,144-look native gallery, installed digital audio38checks and scoped transition capture pass on F. Remaining secondary routes and actual full1,000 replay are running; publication remains pending. All earlier failures and scoped passes retain their actual candidate identity.
+H source is frozen across162 inputs; four-package build/lint and independent verification pass. The complete24-command sparse rehearsal passes from163 files, including379634 play-geometry assertions over3400 layouts and202444 root assertions over420 layouts. Earlier candidates keep original scoped outcomes: F's Guardian defect caused its replay to stop at817 certified levels; G's legacy HUD overlap caused its replay to stop at101. Neither is a completed1,000 run. H's exact installed and public records remain in the [qualification register](validation/v1.17/README.md).
 
 ## Preserved 1.16.0-rc1 / code18 — closer home and local player card
 

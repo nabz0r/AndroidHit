@@ -32,6 +32,9 @@ def main():
     log=folder/(args.label+'-console.txt')
     with log.open('xb') as output:process=subprocess.Popen(command,cwd=ROOT,stdout=output,stderr=subprocess.STDOUT,start_new_session=True)
     record={'status':'started; only real completed native levels count','pid':process.pid,'command':command,'candidate':args.candidate,'version':args.expected_version,'code':args.expected_code,'apk_sha256':args.sha256,'observer_sha256':sha(args.observer),'label':args.label,'console':str(log.relative_to(ROOT)),'expected_report':str((folder/args.label/'host-report.json').relative_to(ROOT)),'remote_progress':'/sdcard/Android/data/com.androidhit.lumadrift/files/v117-relay-native/'+args.label+'/progress.json','started_unix':time.time(),'scope':'Detached actual native U1-U1000 replay. Explicit exclusive5586 handoff is mandatory before this command. No claimed result until passing host/native reports and independent all1000 summarization.','remaining_on_success':['Run summarize.py against the passing host-report.json','Verify restored language and protected before/after equality','Report exact totals to root; do not publish or stop another owner without coordination']}
+    record['source_sha256']={str(path.relative_to(ROOT)):sha(path) for path in sorted(HERE.rglob('*')) if path.is_file() and '__pycache__' not in path.parts}
+    record['observer_apk']=str(args.observer.resolve())
+    record['candidate_apk']=str(args.apk.resolve())
     encoded=json.dumps(record,indent=2)+'\n';(folder/(args.label+'-launch.json')).write_text(encoded);(folder/'active-handoff.json').write_text(encoded)
     print(encoded)
 if __name__=='__main__':main()

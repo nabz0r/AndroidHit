@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "recoveryOnly": true,
+  "runToken": "b45a5182-e4cf-45ce-99c5-14faf832a1cc",
+  "label": "candidate-h-main-audio-recovery-a",
+  "checkCount": 11,
+  "checks": [
+    {
+      "passed": true,
+      "name": "Exact production target package"
+    },
+    {
+      "passed": true,
+      "name": "Exact candidate version\/code"
+    },
+    {
+      "passed": true,
+      "name": "Unique host execution token"
+    },
+    {
+      "passed": true,
+      "name": "Unique bounded evidence label"
+    },
+    {
+      "passed": true,
+      "name": "Android media stream has a positive unmuted digital output setting (no host speaker output)"
+    },
+    {
+      "passed": true,
+      "name": "Visible Sound effects state is On"
+    },
+    {
+      "passed": true,
+      "name": "Visible Music state is On"
+    },
+    {
+      "passed": true,
+      "name": "Preserved failed-observer settings recovered through actual UI"
+    },
+    {
+      "passed": true,
+      "name": "Recovery-only route requires documented original visible values"
+    },
+    {
+      "passed": true,
+      "name": "Documented settings recovery returns through visible UI to the home root"
+    },
+    {
+      "passed": true,
+      "name": "Complete game\/meta and non-puzzle session preferences remain byte-identical after visible restoration"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Settings",
+      "bounds": "[890,334][1042,533]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "English",
+      "bounds": "[387,1362][692,1523]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Sound effects: Off",
+      "bounds": "[66,554][1013,712]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "Français",
+      "bounds": "[708,1362][1013,1523]",
+      "kind": "actual touchscreen"
+    },
+    {
+      "label": "My home",
+      "bounds": "[876,2045][1050,2267]",
+      "kind": "actual touchscreen"
+    }
+  ],
+  "observations": [],
+  "captures": [
+    "prior-observer-settings-recovered",
+    "prior-observer-home-recovered"
+  ],
+  "processId": 22578,
+  "systemMusicVolume": 5,
+  "systemMusicMuted": false,
+  "settingsRestored": true,
+  "protectedStatePreserved": true,
+  "activePuzzleSessionChangesAllowed": [
+    "active",
+    "level",
+    "mode",
+    "event",
+    "event_id",
+    "history",
+    "challenge_code",
+    "elapsed_ms",
+    "hints",
+    "undos",
+    "content_version",
+    "budget_policy",
+    "run_id",
+    "budget_used",
+    "budget_extensions",
+    "budget_extra",
+    "pending_continuation",
+    "last_continuation",
+    "last_power_request",
+    "shield_charges",
+    "gear_grace",
+    "flow_remaining",
+    "hint_id",
+    "hint_ms",
+    "vision_ms",
+    "focus_ms",
+    "trail_ms",
+    "trail_ids",
+    "focus_ids"
+  ],
+  "originalLanguage": "Français",
+  "originalMusic": true,
+  "originalEffects": true,
+  "failure": "",
+  "scope": "Recovery only through actual UI from documented pre-failure original values, with independent comparison to the original protected checkpoint on the host. No five-context playback claim from this recovery phase."
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python3",
+    "scripts/verify-v117-binaries.py",
+    "--out",
+    "/Users/n/androidhit/docs/validation/v1.17/candidate-h/binaries",
+    "--source-freeze",
+    "/Users/n/androidhit/docs/validation/v1.17/candidate-h/source-freeze.json",
+    "--expected-version-code",
+    "24",
+    "--production-version",
+    "1.17.0-rc6",
+    "--lab-version",
+    "1.17.0-sandbox-rc6",
+    "--build-log",
+    "/Users/n/androidhit/docs/validation/v1.17/candidate-h/build.log",
+    "--bundletool",
+    "/tmp/bundletool-all-1.18.1.jar"
+  ],
+  "cwd": "/Users/n/androidhit",
+  "runner_sha256": "afe4f4f546bebb469ffccc64337c50bd1eb420607d7ff16c5b0d41835c9ac59b",
+  "scope": "Public binary metadata/signature/native16KB verification. No signing secrets, device or publication."
+}

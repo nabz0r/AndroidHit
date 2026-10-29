@@ -1,0 +1,62 @@
+{
+  "candidate": "H",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "pid": 35837,
+  "started_unix": 1793253005.531869,
+  "status": "PASS recovery separately + clean five-context audio; await explicit replay GO",
+  "origin_protected_sha256": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+  "observer_sha256": "ac42d9e1fffe6f02703127f11f9dca8e648fcc2a94bc08fd7ed567116e93403b",
+  "steps": [
+    {
+      "label": "candidate-h-main-audio-recovery-a",
+      "report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-recovery-a/host-report.json",
+      "sha256": "85ffb26c00da0a6bd7d3cca372052429ca38b130d11b11596c89781278331431",
+      "exit_code": 0,
+      "passed": true,
+      "wall_seconds": 6.807,
+      "checks": 11,
+      "captures": 2
+    },
+    {
+      "label": "candidate-h-main-audio-b",
+      "report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/host-report.json",
+      "sha256": "1b956a19cd7ad6ba84108b364c81d5eb6d2113683c0d892894b71a87553113a2",
+      "exit_code": 0,
+      "passed": true,
+      "wall_seconds": 41.58,
+      "checks": 50,
+      "captures": 10
+    }
+  ],
+  "active_command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "scripts/v117-audio-test/run.py",
+    "--serial",
+    "emulator-5586",
+    "--expected-avd",
+    "Luma-Refonte115-QA",
+    "--expected-apk",
+    "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-rc6.apk",
+    "--sha256",
+    "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+    "--test-apk",
+    "/tmp/luma-v117-candidate-h/audio-v117-production-retry-test.apk",
+    "--expected-version",
+    "1.17.0-rc6",
+    "--expected-code",
+    "24",
+    "--device-handoff-confirmed",
+    "--host-audio-unavailable",
+    "--protected-origin",
+    "/Users/n/androidhit/docs/validation/v1.17/audio/native/candidate-h-main-audio-a/protected-before.json",
+    "--protected-origin-sha256",
+    "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+    "--label",
+    "candidate-h-main-audio-b"
+  ],
+  "active_child_pid": null,
+  "summary": "docs/validation/v1.17/relay/main-h-preparation-summary.json",
+  "summary_sha256": "3dde4c4a28dc0d6eda78f432e669679a241c2d13be49cddb9129c047682c874d",
+  "finished_unix": 1793253054.3252711
+}

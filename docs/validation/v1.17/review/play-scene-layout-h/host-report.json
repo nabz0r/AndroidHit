@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "command": [
+    "bash",
+    "scripts/test-play-scene-v117-geometry.sh"
+  ],
+  "exit_code": 0,
+  "assertions": 379634,
+  "layouts": 3400,
+  "date_utc": "2026-10-29T05:36:41.367883+00:00",
+  "inputs": {
+    "app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java": "ec794189fe7a38d0632d52f9510b3d81e9dec2f03f4ccc185c6e4e04bf14cfb1",
+    "scripts/PlaySceneV117GeometryTest.java": "b8e2f68b2a6316422e3a3570e09190bae20edd82d07e2e82b6b09adfded359ca",
+    "scripts/test-play-scene-v117-geometry.sh": "96e956941cea7e85c0b38b73e614e8bd77cae4c9acd0c3bd08def83fcd126e9c",
+    ".github/workflows/puzzle-contracts.yml": "ed9a6398930677bef33b7965cb324f7fccc1555ff53218bd7463cd90910fa028"
+  },
+  "output": "Play scene 1.17 geometry PASS: 379634 checks across 3400 live-helper layouts; gate/cell separation, physical48dp gate/action targets, reading bands and reachable final controls. No native glyph/gameplay claim.",
+  "scope": "Actual shared live helper; independent nonintersection/containment, physical48dp gate/action targets, caption bounds and full scroll reachability. 240..480dp portrait widths,320..1200 logical heights, font1/1.3, measured copy14..120, both relay flags. No native glyph measurement or gameplay proof.",
+  "compact_actions": "Three106-unit object/caption columns on one row,12-unit gaps. This final proof does not cover the discarded three-full-width-row intermediate."
+}

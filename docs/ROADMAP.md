@@ -1,6 +1,14 @@
 # Luma Drift roadmap
 
-## Current 1.14 — make the puzzle understandable and consequential
+## Current 1.17 — an illustrated world to touch
+
+[Release](RELEASE_1_17.md) · [Object-navigation and original-art research](design/v1.17/reference-research.md) · [Design system](DESIGN_SYSTEM.md) · [Exact qualification](validation/v1.17/README.md). H is production1.17.0-rc6/code24. Four separate scenes, original companion/clothing/furniture sprites, visible object destinations, optional swipes, bounded transitions and five synthesized sound contexts replace the previous presentation. The three10×10 rooms, local nickname/flag/badges, earned-coin arrivals, save identities and U puzzle rules remain.
+
+Build/signature/static alignment and the complete24-command host workflow pass. Fresh install, actual five-context digital audio and strict normal/compact mode actions pass; the exact all1,000 replay and complete UI/art matrix are active. Git/Firebase/public acceptance follow final exact-byte native records. Earlier candidates retain their original rejected/partial results.
+
+Next product work after delivery should be driven by physical-phone play: discoverability of objects/swipes, reading actual clothing/room detail, comfort of short-window scrolling, music/effect balance through speakers/headphones, and first-player understanding of the relay rule. User comprehension, long-term return and a future million-player audience are not established by model/SDK checks. Provider/Play activation remains its own controlled work.
+
+## Preserved 1.14 — make the puzzle understandable and consequential
 
 [Release](RELEASE_1_14.md) · [Gameplay](GAMEPLAY_1_14.md) · [UX](UX_1_14.md) · [Qualification](validation/v1.14/README.md). Replace implicit gate controls with visible one-action openings, teach the core mechanics through thirty authored opening boards, and introduce the versioned N progression across 1,000 Journey boards. Keep a real action budget, free refusals and one persisted Return per attempt. Existing challenge identities and active geometry remain reconstructible.
 

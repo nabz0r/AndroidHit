@@ -1,3 +1,5 @@
+> **Current1.17:** [object navigation and original sprites](DESIGN_SYSTEM.md), [primary-source art/navigation research](design/v1.17/reference-research.md), [actual art/audio scope](ART_AUDIO.md). The1.17 no-visible-button presentation supersedes historical button/pill prescriptions below; semantic actions and explicit costs remain.
+
 # Luma Drift — illustrated tour
 
 ## Current 1.10: companion, objectives and journal

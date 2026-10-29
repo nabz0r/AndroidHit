@@ -1,3 +1,5 @@
+> **Current1.17:** [U gameplay and compatibility](GAMEPLAY_1_15.md), [1.17 presentation/release](RELEASE_1_17.md), [exact validation](validation/v1.17/README.md). U uses piece-controlled gates and repeatable free Undo; older active attempts/codes retain their own original rules. Dated mechanics below are historical.
+
 # Luma Drift gameplay and economy
 
 > Historical rules for the retained 1.8–1.9 releases. The current 1.15 U Journey uses piece-controlled gates, repeated refunded Undo and free blocked tries; see [1.15 gameplay](GAMEPLAY_1_15.md) and [1.15 qualification](validation/v1.15/README.md). Retained older attempts keep their original rules. Statements below about default routes, powers or policy3 describe those historical releases.

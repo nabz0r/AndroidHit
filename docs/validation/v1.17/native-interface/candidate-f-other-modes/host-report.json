@@ -1,0 +1,185 @@
+{
+  "passed": false,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "test_apk_sha256": "8b9c0cebf933209a594688d6ce880599c74214171609a6ba375eb661488ee063",
+  "wrapper_source_sha256": "090b08af540b7d8cc7e198e08060535aec87e9ea67e86bd6f76fa1109ec18aa8",
+  "runner_source_sha256": "e08d97964f3cbdb8bc52e7736fb9b5c63953c01121673874af494b0ddc68b0ba",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "modes",
+      "native": {
+        "passed": false,
+        "checkCount": 12,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Remix"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Explore a level"
+          },
+          {
+            "passed": true,
+            "message": "Framework text input edits only the actually visible native map jump field"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Level 1, Normal, Directions"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Play  →"
+          },
+          {
+            "passed": false,
+            "message": "Actual remix board opens its expected mode, empty history and HUD"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "All levels",
+            "bounds": "[66,1486][354,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Remix",
+            "bounds": "[540,407][1013,545]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Explore a level",
+            "bounds": "[418,559][695,692]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "SDK accessibility IME enter"
+          },
+          {
+            "label": "Level 1, Normal, Directions",
+            "bounds": "[434,742][645,961]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Play  →",
+            "bounds": "[66,1778][1013,1933]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "modes-remix-briefing-en",
+          "failure"
+        ],
+        "processId": 8267,
+        "phase": "modes",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Actual public Remix1, Guardian1, Daily1 and Weekly1 boards/HUD/help/exit; public Sealed P1 completed by four observed piece touches with zero reward. Puzzle/Guardian sessions naturally change and are recorded separately. All game preferences except seeds, all meta preferences, economy/stock/ownership/receipts/home/settings must remain unchanged after restoring French. No app/engine/private-field calls, preference writes or state injection."
+      },
+      "expected_version": "1.17.0-rc4",
+      "expected_code": 22
+    }
+  ],
+  "screenshots": {
+    "modes/modes-remix-briefing-en.png": "f106d76abcf62259a6ed7d9393febecf25fa2e142afda970700cc778d7b2d3b6",
+    "modes/failure.png": "fc519d2db320342cbb2381d3237d4756771b92c31307ed68d55b1c4bf75bc5ce"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-f-other-modes/interface-observer.apk",
+  "compact": false,
+  "route": "modes",
+  "device_provenance": {
+    "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification",
+    "receipt_path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/creation.json",
+    "receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9",
+    "source_serial": "emulator-5586",
+    "source_avd": "Luma-Refonte115-QA",
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "source_baseline_report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "source_baseline_snapshot_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "physical_copy_disks": 7
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "error": "Native interface modes failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v117-ui-test/run.py\", line 179, in main\n    elif a.route=='modes':native_phase('modes',a.expected_version,a.expected_code)\n  File \"/Users/n/androidhit/scripts/v117-ui-test/run.py\", line 130, in native_phase\n    assert native['passed'],'Native interface '+phase+' failed'\nAssertionError: Native interface modes failed\n",
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 22.91
+}

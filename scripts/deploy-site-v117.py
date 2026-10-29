@@ -14,7 +14,7 @@ import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 PROJECT='luma-drift-production'
-RELEASE='1.17.0-rc4'
+RELEASE='1.17.0-rc6'
 SOURCE='docs/validation/site-v1.17/release/source-manifest.json'
 APK_SHA=None
 

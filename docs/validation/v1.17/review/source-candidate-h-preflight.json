@@ -1,0 +1,50 @@
+{
+  "status": "SOURCE INTEGRATION AND SCOPED NATIVE HUD/FOOTER PASS; FULL H QUALIFICATION SEPARATE",
+  "candidate": "H 1.17.0-rc6/code24",
+  "source_commit": "bb622960f52e5ba41e75a6dfa8b30dbb4b98a291",
+  "inputs": {
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "e9afacd95ea5ab545d6e68e987403176974e8ffc508a91fafbc8597ccd81b8b2",
+    "app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java": "ec794189fe7a38d0632d52f9510b3d81e9dec2f03f4ccc185c6e4e04bf14cfb1",
+    "app/build.gradle": "94f83e4f79f60440d01b9374c856f4f9c24ffca24b2bdc3969e9df38715d3053"
+  },
+  "host_proof": "docs/validation/v1.17/review/play-scene-layout-h/host-report.json",
+  "host_assertions": 379634,
+  "host_layouts": 3400,
+  "reviewed_against": "G source commit44734f43646342ef62d045143992f7e4a4f8b597",
+  "findings": [
+    "Real Android StaticLayout two-line height feeds the live helper before H/scroll is clamped. All drawGates centres and targets use the same returned geometry.",
+    "Increased rail separates48dp gate targets from edge cells; constant safe board width replaces height-dependent180-unit compact boards. Budget is complete numeric remaining/total or infinity at the left, with full localized AX wording.",
+    "Feedback starts after the lower gate target. Compact actions use three object/caption columns with enough measured copy height; Undo remaining is visible. Full-grid layout is selected only when its final target fits.",
+    "Modal draw coordinates temporarily cancel contentScroll and use viewport height, then restore both; Help/Preview also retain visible-window anchoring. No hidden final action caused by the old550-unit play content clamp.",
+    "Daily/Weekly briefing now names the actual event and stage instead of Remix. Guardian Back fix is retained.",
+    "No engine, catalogue, art or audio source is changed by this H fix."
+  ],
+  "required_native_scope": [
+    "Actual manual UP/DOWN closures, side gate bounds, numeric budget and lower hint in normal/320dp/font1.3, including7x7 daily/weekly.",
+    "Reach final compact Powers/Share, Undo/Restart; open/close overlays after real scrolling. Verify raw native bounds and measured glyphs, not only helper rectangles.",
+    "Own new H exact-hash tests; G functional/audio/geometry evidence is historical and cannot be relabelled H."
+  ],
+  "limitations": "Source review and host geometry only; no H device, browser, pixels, audio audition or native gameplay acceptance by this reviewer.",
+  "candidate_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "source_freeze_sha256": "b6af495fadab8c20cf6379b591297da38e10edb4b694aad0adcf521f75711b88",
+  "complete_host_rehearsal": "docs/validation/v1.17/ci-host-rehearsal-h-complete/summary.json",
+  "native_preflight": {
+    "aggregate": "docs/validation/v1.17/native-interface/candidate-h-modes-v2-acceptance.json",
+    "reports": [
+      {
+        "report": "docs/validation/v1.17/native-interface/candidate-h-modes-normal-v2/host-report.json",
+        "report_sha256": "5840e2bf6b7aba97db51788a46a57a44f8d7d3491dd7b5d2ea5e079cb5ffc646",
+        "checks": 150,
+        "captures": 44
+      },
+      {
+        "report": "docs/validation/v1.17/native-interface/candidate-h-modes-compact-largefont-v2/host-report.json",
+        "report_sha256": "57b29964f83e73a15e950841b49a5fc1ce4d9aa7f074054cfe40fe311dd6444c",
+        "checks": 154,
+        "captures": 44
+      }
+    ],
+    "independent_visual_review": "docs/validation/v1.17/review/visual-candidate-h.json",
+    "result": "G gate/budget/feedback P2 and compact last-control reachability closed on exact immutable H."
+  }
+}

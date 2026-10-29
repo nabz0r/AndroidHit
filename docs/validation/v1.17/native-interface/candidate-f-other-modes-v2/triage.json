@@ -1,0 +1,26 @@
+{
+  "passed": false,
+  "classification": "Actual app Guardian back-history cycle after opening a guardian and returning to its list",
+  "app_changed": false,
+  "native_checks_before_failure": 30,
+  "native_original_captures": 7,
+  "failed_report_sha256": "40c504b8ec1fb587e9dccb5bf66c1f9b8c7d63092209185591ad78e2f6164fed",
+  "failure_png_sha256": "57534976231368b60514eb73b5b31a315f56311eaf99cdb8f1c9c0da5cbcb953",
+  "successful_scope_before_failure": [
+    "Remix1 actual board/HUD/help/pause/publicExit with empty history and budget_used0",
+    "Guardian1 actual HUD/freeHint, persistent Guardian state identical before/after help",
+    "Guardian board Back object returns to Guardian list"
+  ],
+  "failed_scope": "Repeated actual Android Back from Guardian list alternates with Guardian board and cannot reach a root within14attempts",
+  "source_path": "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+  "source_sha256": "0f7eb74ff41765d9b038bd7175d5823649654f77848482a76579ca9eb68fd519",
+  "source_mechanism": [
+    "go() pushes previous screen whenever changing outside a backMenu call, including guardian",
+    "Guardian board Back uses go(guardians), pushing guardian",
+    "Android Back on list uses backMenu, pops guardian and reopens it",
+    "Android Back on guardian uses go(guardians), pushing guardian again"
+  ],
+  "no_piece_move_or_spend": true,
+  "current_language": "en",
+  "next_action": "Await root triage. No app source change or hidden preference/session restoration is permitted."
+}

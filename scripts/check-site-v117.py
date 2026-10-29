@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC=ROOT/'public'
-VERSION='1.17.0-rc4'
+VERSION='1.17.0-rc6'
 APK='luma-drift-'+VERSION+'.apk'
 AAB='luma-drift-'+VERSION+'.aab'
 MANIFEST='manifest-'+VERSION+'.json'
@@ -96,7 +96,7 @@ class Audit(BASE.Audit):
         self.check(path.is_file(),'Frozen production release manifest exists')
         if not path.is_file():return
         manifest=json.loads(path.read_text());self.release_record=manifest
-        self.check(manifest.get('version')==VERSION and manifest.get('version_code')==22 and manifest.get('application_id')=='com.androidhit.lumadrift','Production release is exactly 1.17.0-rc4/code22')
+        self.check(manifest.get('version')==VERSION and manifest.get('version_code')==24 and manifest.get('application_id')=='com.androidhit.lumadrift','Production release is exactly 1.17.0-rc6/code24')
         self.check(self.args.apk_sha256==APK_SHA,'Independent final production APK hash supplied')
         commit=self.args.source_commit or ''
         self.check(bool(re.fullmatch(r'[a-f0-9]{40}',commit)),'Immutable local artifact commit supplied')
@@ -119,7 +119,7 @@ class Audit(BASE.Audit):
         self.check('/releases/'+AAB in links and '/releases/'+MANIFEST in links,'Exact hosted AAB and manifest are linked')
         for lang in ('fr','en'):
             notes=BASE.normalized(' '.join(n.visible_text(lang) for n in home.nodes if n.has_class('download-note')))
-            self.check(VERSION in notes and re.search(r'\b22\b',notes),'Current version and Android code visible in '+lang)
+            self.check(VERSION in notes and re.search(r'\b24\b',notes),'Current version and Android code visible in '+lang)
             sizes=re.findall(r'(\d+(?:[.,]\d+)?)\s*(Mo|MB|Mio|MiB)\b',notes)
             self.check(bool(sizes),'Actual APK size disclosed in '+lang)
             for value,unit in sizes:
@@ -143,7 +143,7 @@ class Audit(BASE.Audit):
         level_path=ROOT/provenance.get('level_proof','');source_freeze=ROOT/provenance.get('source_freeze','')
         self.check(level_path.is_file() and BASE.digest(level_path)==provenance.get('level_proof_sha256'),'Accepted full1000 proof is frozen')
         if level_path.is_file():
-            level=json.loads(level_path.read_text());self.check(level.get('passed') is True and level.get('levels')==1000 and level.get('candidate_apk_sha256')==APK_SHA and level.get('code')==22 and level.get('new_first_win_coins')==0,'Actual 1000-board replay passed on this exact APK')
+            level=json.loads(level_path.read_text());self.check(level.get('passed') is True and level.get('levels')==1000 and level.get('candidate_apk_sha256')==APK_SHA and level.get('code')==24 and level.get('new_first_win_coins')==0,'Actual 1000-board replay passed on this exact APK')
             self.native_inputs.add(str(level_path.relative_to(ROOT)))
             for entry in level.get('reports',[]):
                 report_path=ROOT/entry['path'];self.check(BASE.digest(report_path)==entry['sha256'],'Full1000 batch identity is frozen');self.native_inputs.add(entry['path'])

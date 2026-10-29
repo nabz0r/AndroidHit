@@ -1,0 +1,99 @@
+{
+  "status": "PASS_DIGITAL_NATIVE_AUDIO_SCOPE_ONLY",
+  "candidate": "G 1.17.0-rc5/code23",
+  "candidate_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "observer_apk_sha256": "0d0fc3ff72a87e06eb11eac7a5e0f91ce63e0c9c8f7559ab51b88895787ea5cb",
+  "checks": 35,
+  "captures": 7,
+  "actual_audioflinger_dumps": 136,
+  "host_report": "docs/validation/v1.17/audio/native/candidate-g-main-audio-a/host-report.json",
+  "host_report_sha256": "f335f2739b48a9bb044f4fd992661f18e92c29b59784a5aef5132b1410caf06e",
+  "results": [
+    {
+      "scene": "ADVENTURE",
+      "trackId": "2744",
+      "frameAdvance": 23491
+    },
+    {
+      "scene": "HOME",
+      "trackId": "2747",
+      "frameAdvance": 23491
+    },
+    {
+      "scene": "COLLECTION",
+      "trackId": "2748",
+      "frameAdvance": 23491
+    },
+    {
+      "scene": "ATELIER",
+      "trackId": "2749",
+      "frameAdvance": 22991
+    },
+    {
+      "phase": "resume",
+      "trackId": "2749",
+      "frameAdvance": 23491
+    },
+    {
+      "phase": "effects-on-music-off",
+      "snapshots": 40,
+      "shortTrackActivity": true,
+      "musicActivity": false
+    },
+    {
+      "phase": "effects-off-music-off",
+      "snapshots": 41,
+      "shortTrackActivity": false,
+      "musicActivity": false
+    },
+    {
+      "phase": "effects-off-music-on",
+      "snapshots": 41,
+      "shortTrackActivity": false,
+      "musicActivity": true
+    },
+    {
+      "phase": "music-only",
+      "trackId": "2752",
+      "frameAdvance": 23490
+    }
+  ],
+  "raw_sample_current_pid_track_rows": {
+    "scene-0-first-000.txt": [
+      "S   2746     no   19168/  10213   21585    2706 S  0x600 00000001 00000001  22050  3   e  4   -35  -2.9  -2.9     0          -33      false 0000242D   9261       0 f         0        0      false        false   89.31 k",
+      "S   2744    yes   19168/  10213   21569    2704 A  0x000 00000001 00000001  22050  3   e  2   -44   -11   -11     0          -33      false 00014BE5 529200  99999999 A         0        0      false        false   90.15 t",
+      "S   2745     no   19168/  10213   21577    2705 P  0x600 00000001 00000001  22050  3   e  4  -inf  -2.9  -2.9     0          -33      false 000034D2   5512    3014 A         0        0      false        false   88.92 k"
+    ],
+    "scene-0-second-001.txt": [
+      "S   2746     no   19168/  10213   21585    2706 S  0x600 00000001 00000001  22050  3   e  4   -35  -2.9  -2.9     0          -33      false 0000242D   9261       0 f         0        0      false        false   89.31 k",
+      "S   2744    yes   19168/  10213   21569    2704 A  0x000 00000001 00000001  22050  3   e  2   -44   -11   -11     0          -33      false 0001A7A8 529200  99999999 A         0        0      false        false   90.15 t",
+      "S   2745     no   19168/  10213   21577    2705 P  0x600 00000001 00000001  22050  3   e  4  -inf  -2.9  -2.9     0          -33      false 000034D2   5512    3014 A         0        0      false        false   88.92 k"
+    ],
+    "effects-on-music-off-012.txt": [
+      "S   2746     no   19168/  10213   21585    2706 S  0x600 00000001 00000001  22050  3   e  4   -35  -2.9  -2.9     0          -33      false 0000242D   9261       0 f         0        0      false        false   89.31 k",
+      "S   2752     no   19168/  10213   21633    2712 P  0x600 00000001 00000001  22050  3   e  2  -inf  -inf  -inf     0          -33      false 00004648 529200  99999999 A         0        0      false        false   74.25 k",
+      "S   2745     no   19168/  10213   21577    2705 P  0x600 00000001 00000001  22050  3   e  4  -inf  -2.9  -2.9     0          -33      false 000034D2   5512    3014 A         0        0      false        false   88.92 k"
+    ],
+    "effects-off-music-on-135.txt": [
+      "S   2753     no   19168/  10213   21641    2713 P  0x600 00000001 00000001  22050  3   e  4  -inf  -2.9  -2.9     0          -33      false 000061D6   5512    2514 A         0        0      false        false   75.74 k",
+      "S   2752    yes   19168/  10213   21633    2712 A  0x200 00000001 00000001  22050  3   e  2   -44   -11   -11     0          -33      false 0001C2FC 529200  99999999 A         0        0      false        false   89.68 t",
+      "S   2745     no   19168/  10213   21577    2705 P  0x600 00000001 00000001  22050  3   e  4  -inf  -2.9  -2.9     0          -33      false 000034D2   5512    3014 A         0        0      false        false   88.92 k"
+    ]
+  },
+  "process_id": 19168,
+  "system_music_volume": 5,
+  "system_music_muted": false,
+  "restored_language": "Français",
+  "restored_music": true,
+  "restored_effects": true,
+  "observer_removed": true,
+  "exact_candidate_retained": true,
+  "clean_run_no_timeout_recovery": true,
+  "physical_listening_performed": false,
+  "limits": [
+    "Actual UI and AudioFlinger digital rows only, on the designated emulator-5586; no device access by this reviewer.",
+    "Emulator has no host audio output. No physical listening, timbre, speaker-quality or real external audio-focus contender claim.",
+    "This35-check route covers four place scenes and independence/pause/resume/restoration. No native puzzle-audio or all40 scene-loop listening claim.",
+    "The G audio pass does not close the unrelated legacy HUD visual P2 and must not be relabelled H without a new identity-bound run."
+  ]
+}

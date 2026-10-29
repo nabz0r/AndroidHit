@@ -1,0 +1,1399 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "expected_version": "1.17.0-rc6",
+  "expected_code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "test_apk_sha256": "e33fc6b0f40fd96bb67d0a7ab6a1ca0b3d579126a38d65d0bbf42c4b1f878403",
+  "wrapper_source_sha256": "6a6d548efc8adc45bab7d9b903899077cf004eddc635be21702e33b533cee95a",
+  "runner_source_sha256": "d9da1861171f312204d8ce67d7f48245d13444c7538c51469b3af540456490e3",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "root-regression",
+      "native": {
+        "passed": true,
+        "checkCount": 286,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Unique current host execution token"
+          },
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Root regression selects en through its actual language object"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in en / 0"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Play"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Play / All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Play / Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Play / Rewards"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Play / Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Play / My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: All levels / Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: All levels / Rewards"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: All levels / Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: All levels / My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Events / Rewards"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Events / Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Events / My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Rewards"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Rewards / Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Rewards / My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Settings / My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: My home"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in en / 1"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Living room"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Living room / Bedroom"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Living room / Garden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Living room / Decorate"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Living room / Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Living room / Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Living room / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Bedroom"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Bedroom / Garden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Bedroom / Decorate"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Bedroom / Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Bedroom / Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Bedroom / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Garden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garden / Decorate"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garden / Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garden / Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garden / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Decorate"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Decorate / Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Decorate / Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Decorate / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Adventure / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in en / 2"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Profile"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / Star arrivals"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / My companions"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / Badges"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / Equipment"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profile / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Star arrivals"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / My companions"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Badges"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Equipment"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Wardrobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Star arrivals"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / My companions"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Badges"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Equipment"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wardrobe / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Star arrivals"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Star arrivals / My companions"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Star arrivals / Badges"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Star arrivals / Equipment"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Star arrivals / My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Star arrivals / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: My companions"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: My companions / Badges"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: My companions / Equipment"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: My companions / My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: My companions / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Badges"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Badges / Equipment"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Badges / My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Badges / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Equipment"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Equipment / My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Equipment / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: My home / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in en / 3"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Furniture"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Furniture / Stellar"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Furniture / Forest"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Furniture / Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Furniture / Walls"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Furniture / Floor"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Furniture / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Stellar"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Stellar / Forest"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Stellar / Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Stellar / Walls"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Stellar / Floor"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Stellar / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Forest"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Forest / Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Forest / Walls"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Forest / Floor"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Forest / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Neon / Walls"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Neon / Floor"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Neon / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Walls"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Walls / Floor"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Walls / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Floor"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Floor / Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Deutsch"
+          },
+          {
+            "passed": true,
+            "message": "Root regression selects de through its actual language object"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in de / 0"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Spielen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Spielen / Alle Level"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Spielen / Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Spielen / Belohnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Spielen / Einstellungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Spielen / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Alle Level"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Alle Level / Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Alle Level / Belohnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Alle Level / Einstellungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Alle Level / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Events / Belohnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Events / Einstellungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Events / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Belohnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Belohnungen / Einstellungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Belohnungen / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Einstellungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Einstellungen / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in de / 1"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Wohnzimmer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wohnzimmer / Schlafzimmer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wohnzimmer / Garten"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wohnzimmer / Einrichten"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wohnzimmer / Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wohnzimmer / Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wohnzimmer / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Schlafzimmer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Schlafzimmer / Garten"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Schlafzimmer / Einrichten"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Schlafzimmer / Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Schlafzimmer / Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Schlafzimmer / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Garten"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garten / Einrichten"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garten / Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garten / Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garten / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Einrichten"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Einrichten / Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Einrichten / Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Einrichten / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Abenteuer / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in de / 2"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Profil"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Sternenbegegnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Meine Begleiter"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Abzeichen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Ausrüstung"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Profil / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Sternenbegegnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Meine Begleiter"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Abzeichen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Ausrüstung"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Garderobe"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Sternenbegegnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Meine Begleiter"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Abzeichen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Ausrüstung"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Garderobe / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Sternenbegegnungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sternenbegegnungen / Meine Begleiter"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sternenbegegnungen / Abzeichen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sternenbegegnungen / Ausrüstung"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sternenbegegnungen / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sternenbegegnungen / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Meine Begleiter"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Meine Begleiter / Abzeichen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Meine Begleiter / Ausrüstung"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Meine Begleiter / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Meine Begleiter / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Abzeichen"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Abzeichen / Ausrüstung"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Abzeichen / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Abzeichen / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Ausrüstung"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Ausrüstung / Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Ausrüstung / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Mein Zuhause / Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Atelier"
+          },
+          {
+            "passed": true,
+            "message": "All actual root destination objects are visible in de / 3"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Möbel"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Möbel / Sterne"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Möbel / Wald"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Möbel / Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Möbel / Wände"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Möbel / Boden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Möbel / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Sterne"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sterne / Wald"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sterne / Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sterne / Wände"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sterne / Boden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Sterne / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Wald"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wald / Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wald / Wände"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wald / Boden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wald / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Neon"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Neon / Wände"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Neon / Boden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Neon / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Wände"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wände / Boden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Wände / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Boden"
+          },
+          {
+            "passed": true,
+            "message": "Observed route centres are independent: Boden / Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Actual48dp minimum target: Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Sammlung"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Mein Zuhause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Abenteuer"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Einstellungen"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Native root layout regression creates no purchase, draw, compensation or coin change"
+          },
+          {
+            "passed": true,
+            "message": "Native root layout regression preserves progression, stock and complete puzzle session"
+          },
+          {
+            "passed": true,
+            "message": "Native root layout regression preserves all furniture ownership and exact room layouts"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[315,1083][564,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Deutsch",
+            "bounds": "[54,1222][302,1354]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Mein Zuhause",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Sammlung",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Sammlung",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Mein Zuhause",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Abenteuer",
+            "bounds": "[23,1187][165,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Einstellungen",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[577,1083][825,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Ma maison",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "root-layout-0-en",
+          "root-layout-1-en",
+          "root-layout-2-en",
+          "root-layout-3-en",
+          "root-layout-0-de",
+          "root-layout-1-de",
+          "root-layout-2-de",
+          "root-layout-3-de"
+        ],
+        "processId": 14444,
+        "phase": "root-regression",
+        "runToken": "0e9d38b5-0bdf-4ddd-bdac-f889eac06311",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained task-owned U1000 profile; actual SDK touchscreen/object/gesture/IME actions, read-only preference observations and real app screenshots; no spending, app/engine/private-field calls, seeding, provider action or user devices",
+        "ignored_stale_failure_file_sha256": "d6d641b31c47ea052368bf21381d01c4d359bf59dab4bbcda95c769d0369b2fe"
+      },
+      "host_run_token": "0e9d38b5-0bdf-4ddd-bdac-f889eac06311",
+      "native_arguments": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "phase",
+        "root-regression",
+        "-e",
+        "expectedVersion",
+        "1.17.0-rc6",
+        "-e",
+        "expectedCode",
+        "24",
+        "-e",
+        "regionManifestSha256",
+        "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+        "-e",
+        "languages",
+        "en,fr,de,es,pt,it",
+        "-e",
+        "runToken",
+        "0e9d38b5-0bdf-4ddd-bdac-f889eac06311",
+        "com.androidhit.lumadrift.qualification117test/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation"
+      ],
+      "expected_version": "1.17.0-rc6",
+      "expected_code": 24
+    }
+  ],
+  "screenshots": {
+    "root-regression/root-layout-2-en.png": "d1f5720cb155e848673641081987623234f946c9fa5be369add8327a5593444a",
+    "root-regression/root-layout-0-en.png": "5ea598853c82d51f8da03331cc97aade844945fafd369505fb091ce493b8ce0b",
+    "root-regression/root-layout-1-de.png": "a2c0d576251abef40f72a15acd117bae6472fcb4d4b5221536ede4007c7979db",
+    "root-regression/root-layout-3-de.png": "27f268e0ae027a491e6e5703f054bfdb10c8886dd56e9c2dcc36cc940e3a63b4",
+    "root-regression/root-layout-3-en.png": "181039d750aeabcb7eb52ae13c950283d4b35bd73401b1c58b611679c951c802",
+    "root-regression/root-layout-1-en.png": "f59c53e2054bc73bbe1db6b910b20eb973c520cf1d96d07f25437c71ef3343a6",
+    "root-regression/root-layout-0-de.png": "f737b2054e33de6163cf997daf176f88e157bf0f6cacb14ae9c5696511a4bd5a",
+    "root-regression/root-layout-2-de.png": "82befed70e54458048ff225f28572747b0a22ac1006e1d612b709e5f2bd68735"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-h-root-compact-font13/interface-observer.apk",
+  "compact": true,
+  "route": "root-regression",
+  "device_provenance": {
+    "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification",
+    "receipt_path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/creation.json",
+    "receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9",
+    "source_serial": "emulator-5586",
+    "source_avd": "Luma-Refonte115-QA",
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "source_baseline_report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "source_baseline_snapshot_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "physical_copy_disks": 7,
+    "candidate_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-g-authorization.json",
+      "sha256": "a8d763b6c63eecc84db8ab855e4dad7c6d24c1a1fbd0b3e1d9388f87be6e48f8",
+      "base_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+      "target_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_version": "1.17.0-rc5",
+      "target_code": 23,
+      "allow_retained_upgrade": true,
+      "scope": "Retained F to G upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    },
+    "successor_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-h-authorization.json",
+      "sha256": "055cb978afa2c073700346afa336516c68694cc276492023d362d56c849035b5",
+      "base_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "target_version": "1.17.0-rc6",
+      "target_code": 24,
+      "allow_retained_upgrade": true,
+      "scope": "Retained G to H upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    }
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "compact_scope": "Actual native320dp-wide display,880x1440 pixels at440dpi; original display restored after both native processes",
+  "font_scale_during": 1.3,
+  "display_during": {
+    "size": "Physical size: 1080x2340\nOverride size: 880x1440",
+    "density": "Physical density: 440"
+  },
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 39.711
+}

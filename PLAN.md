@@ -1,5 +1,7 @@
 # Luma Drift 1.17 — original art and navigation without visible buttons
 
+**Current status: H (1.17.0-rc6 / code 24) is under native qualification after fixing the Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
+
 Owner request29 October2026: replace the entire avatar/clothing/home art direction, research current hit games, remove every visible conventional button, create discoverable scene/object navigation and coherent fades/transitions, qualify and deliver the actual Android release and updated existing site.
 
 1. Research official current sources and document decisions versus unmeasured audience assumptions.
@@ -9,7 +11,7 @@ Owner request29 October2026: replace the entire avatar/clothing/home art directi
 5. Qualify sprite integrity, all24×6 character/outfit renders, scene motion/input arbitration, retained-profile signed upgrade, every retained native route in six languages, compact display, cold persistence and actual playback lifecycle. Replay all1,000 levels on the exact accepted APK.
 6. Update source, docs, CI and release manifests; publish the existing FR/EN website with16 original native captures, four sound excerpts and exact verified downloads. Verify public bytes and actual responsive browser rendering.
 
-Current work branch: `codex/luma-art-direction-1-17`. E remains preserved with its scoped passes, but independent review found compact Collection/Atelier composition overlaps. F is frozen as rc4/code22. Shared responsive-root geometry passes202,444 assertions; actual compact frames close both composition findings. Primary browsing/catalogues/outfits cover all six languages at normal and compact sizes; full secondary routes cover six compact languages and normal EN/FR, with remaining scopes still running. Canonical packaging, Git and website publication follow the final native UI/audio/1,000-level results. See PROGRESS.md and the 1.17 evidence register.
+Current work branch: `codex/luma-art-direction-1-17`. H is frozen asrc6/code24 at `bb622960`, with four independently audited outputs. It fixes Guardian menu history, event-preview identity and the legacy puzzle reading bands. Live-helper contracts pass379634 assertions over3400 play layouts and202444 assertions over420 root layouts; the exact sparse rehearsal passes24 commands/163 files. Installed modes are reviewed in normal and actual320dp/font1.3, including full scrolled actions, then the exact H1,000 replay runs in parallel with all screen/art/audio/fresh scopes. Canonical packaging, Git main and the existing Firebase site follow accepted exact-byte evidence. See PROGRESS.md and the1.17 register.
 
 # Luma Drift 1.16 — Android and website delivered
 

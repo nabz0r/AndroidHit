@@ -1,0 +1,22 @@
+{
+  "status": "RESOLVED BY OBSERVER-ONLY V2; APK UNCHANGED",
+  "candidate_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "first_report": "docs/validation/v1.17/native-interface/candidate-h-modes-compact-largefont/host-report.json",
+  "first_report_sha256": "1f623d3a5eb131f22ebec8cf56b00890324feb23507d8ce9bdf6d832f72f9485",
+  "finding": "modes-p1-share-reachable-en.png captures the unscrolled upper HUD, without Share visible. The observer accepted the clipped accessibility target rather than requiring full physical bounds.",
+  "accepted_scope": "Four initial compact HUDs establish separated budget/gates/feedback only.",
+  "required_correction": "Observer-only strict full48dp target+safe-viewport margins, actual background swipe and new footer screenshot, then real Powers open and after-scroll overlays. Keep first evidence intact and do not change app absent a real failure.",
+  "requested_by": "Parent independent native view; confirmed by this reviewer original PNG.",
+  "resolution": {
+    "aggregate": "docs/validation/v1.17/native-interface/candidate-h-modes-v2-acceptance.json",
+    "normal_checks_captures": [
+      150,
+      44
+    ],
+    "compact_checks_captures": [
+      154,
+      44
+    ],
+    "scope": "Actual movement +two stable complete nominal targets,48dp minimum and8dp viewport margins; full native original footer+Powers+Share independently seen."
+  }
+}

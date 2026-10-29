@@ -1,6 +1,107 @@
-# Store presentation kit — Luma Drift 1.13
+# Store presentation kit — Luma Drift 1.17
 
-## Current candidate draft · 28 October 2026
+## Current copy draft · 29 October 2026
+
+Copy for production **1.17.0-rc6 / code24**, frozen candidate H. Android
+qualification, Git delivery and Firebase delivery retain their separate records
+in [the release](RELEASE_1_17.md) and [qualification](validation/v1.17/README.md).
+This copy is prepared for review; no Play submission or store publication is
+performed by this release.
+
+Use the exact build's unedited native captures and state their real locale and
+profile. The current [sixteen-image capture map](validation/site-v1.17/capture-map.json)
+uses an advanced local QA profile with genuinely earned furniture and wardrobe.
+The separate 144-look renderer gallery is a QA composition inventory, not
+marketing screenshots or evidence that a fresh player owns every item.
+The historical vector kit in `docs/store/` remains dated 1.5.
+
+### English short description draft
+
+Clever puzzles, collectible companions and a home of your own.
+
+### English description draft
+
+Step through a portal. Find the right order. Come home to your companion.
+
+In Luma Drift, every piece that leaves can change the doors for those still
+inside. Explore the 1,000-puzzle Journey, read the linked gates and keys, and
+try another order when a path closes. Undo is free and repeatable. A short
+first encounter and seven optional lessons introduce the rules.
+
+Adventure, Home, Collection and Workshop are four illustrated places to
+explore through their objects. Touch a portal, mirror, wardrobe or blueprint,
+or swipe between places. Short scene fades and separate music, effects,
+haptics and reduced-motion settings let you choose the atmosphere.
+
+Create a local player card with a nickname, a chosen flag and earned badges.
+Meet 24 companions with original detailed sprites, mix their clothing and
+arrange 42 furniture designs across three 10 × 10 rooms. Move closer, pan
+around the room or switch to a whole-room view.
+
+Use LumaCoins earned through play for companion arrivals and five complete
+four-piece outfits. Each pool shows its fixed odds, cost and duplicate return
+before you spend. Free starter Nova is excluded from the 23-companion pool.
+Receipts let you revisit the last arrival without drawing again.
+
+Play in English, French, German, Spanish, Portuguese or Italian. Five sound
+contexts across ten biomes provide 50 synthesized arrangements, with music
+and effects controlled independently.
+
+This candidate uses test advertisements and keeps real checkout and paid
+premium draws closed. Progress, house, profile and earned items are stored on
+your device. Optional Google sign-in does not synchronize that local save.
+
+### French short description draft
+
+Des puzzles malins, des compagnons à collectionner et une maison à toi.
+
+### French description draft
+
+Franchis un portail. Trouve le bon ordre. Retrouve ton compagnon à la maison.
+
+Dans Luma Drift, chaque pièce qui sort peut changer les portes pour celles
+qui restent. Explore les 1 000 puzzles du parcours Aventure, observe les
+portes liées et les clés, puis essaie un autre ordre quand le chemin se
+ferme. Tu peux annuler gratuitement autant de fois que nécessaire. Une
+première rencontre jouable et sept leçons facultatives présentent les règles.
+
+Aventure, Maison, Collection et Atelier forment quatre lieux illustrés à
+explorer en touchant leurs objets : portail, miroir, garde-robe ou plans de
+décoration. Tu peux aussi glisser entre les lieux. Les fondus et les réglages
+séparés de musique, d’effets, de vibrations et d’animations accompagnent
+l’ambiance de ton choix.
+
+Choisis ton pseudo, ton drapeau et tes badges gagnés dans le jeu. Retrouve
+24 compagnons dessinés en détail, compose leur tenue et dispose 42 meubles
+différents dans trois pièces de 10 × 10 cases. Rapproche la scène, déplace la
+vue ou regarde la pièce entière.
+
+Les LumaCoins gagnées en jouant permettent de rencontrer d’autres compagnons
+et de découvrir cinq tenues complètes de quatre pièces. Chaque collection
+montre ses probabilités fixes, son coût et le retour en cas de doublon avant
+de dépenser. Nova est offert et exclu de la collection des 23 compagnons.
+Le reçu permet de revoir la dernière rencontre sans nouveau tirage.
+
+Joue en français, anglais, allemand, espagnol, portugais ou italien. Cinq
+contextes sonores et dix biomes proposent 50 arrangements synthétisés ; la
+musique et les effets se règlent séparément.
+
+Cette version utilise des publicités de test et garde les achats réels ainsi
+que les tirages premium payants fermés. La progression, la maison, le profil
+et les objets gagnés restent sur ton appareil. La connexion Google facultative
+ne synchronise pas cette sauvegarde locale.
+
+### Copy and submission scope
+
+These drafts describe implemented behavior without promising audience size,
+cognitive benefit, retention or measured enjoyment. Native capture, all-level
+model tests, actual U replay, audio and physical listening have separate
+scopes. Review final phrasing, store fields and submission declarations in
+the owner's existing Play workflow before any store publication.
+
+# Preserved 1.13 presentation draft
+
+## Preserved candidate draft · 28 October 2026
 
 Draft copy for production **1.13.0-rc2 / code 14**. The owner has shown an existing Play draft application/internal-tester workflow; this document does not establish an upload, submitted listing, review or public release. Candidate identity and actual Android/publication evidence are separate in [the release](RELEASE_1_13.md) and [qualification](validation/v1.13/README.md).
 

@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "candidate": "H",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "source_input_count": 162,
+  "source_freeze_sha256": "b6af495fadab8c20cf6379b591297da38e10edb4b694aad0adcf521f75711b88",
+  "upgrade_report": "docs/validation/v1.17/native-interface/candidate-h-main-upgrade-a/host-report.json",
+  "upgrade_report_sha256": "ea668e4c20327b48a513986c20db546f9f3a889e4a0637ec4281eb9981b689db",
+  "upgrade_total_checks": 625,
+  "upgrade_G_baseline_checks": 7,
+  "upgrade_H_checks": 618,
+  "upgrade_original_captures": 20,
+  "upgrade_wall_seconds": 95.523,
+  "audio_steps": [
+    {
+      "label": "candidate-h-main-audio-recovery-a",
+      "report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-recovery-a/host-report.json",
+      "sha256": "85ffb26c00da0a6bd7d3cca372052429ca38b130d11b11596c89781278331431",
+      "exit_code": 0,
+      "passed": true,
+      "wall_seconds": 6.807,
+      "checks": 11,
+      "captures": 2
+    },
+    {
+      "label": "candidate-h-main-audio-b",
+      "report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/host-report.json",
+      "sha256": "1b956a19cd7ad6ba84108b364c81d5eb6d2113683c0d892894b71a87553113a2",
+      "exit_code": 0,
+      "passed": true,
+      "wall_seconds": 41.58,
+      "checks": 50,
+      "captures": 10
+    }
+  ],
+  "audio_clean_report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/host-report.json",
+  "audio_clean_native_checks": 50,
+  "audio_clean_original_captures": 10,
+  "audio_contexts": [
+    "ADVENTURE",
+    "HOME",
+    "COLLECTION",
+    "ATELIER",
+    "PUZZLE"
+  ],
+  "audio_protected_state_byte_identical": true,
+  "original_pre_failure_protected_state_byte_identical": true,
+  "original_protected_sha256": "4ed3e9a29fd343c4028943756e4768cdf003cf7bec7379de5cead3b080a34371",
+  "historical_failed_audio_report": "docs/validation/v1.17/audio/native/candidate-h-main-audio-a/host-report.json",
+  "source_and_four_binaries_stable": true,
+  "scope": "Retained G baseline then exact H upgrade/assets/UI/cold, separate UI-only documented recovery after an observer-label failure, and a fresh clean all-five-context digital audio route with zero piece move. Only clean H-b supports audio coverage; recovery/failed checks are not added. Complete game/meta/non-active session match the original pre-failure snapshot after visible French/home/audio restoration. No full1000 claim."
+}

@@ -11,7 +11,8 @@ import subprocess
 import tempfile
 import time
 import traceback
-from clone_guard import validate_receipt
+import uuid
+from clone_guard import validate_receipt, validate_candidate_authorization, validate_successor_authorization, APK as CLONE_BASE_APK
 
 ROOT=Path(__file__).resolve().parents[2]
 TEST_PACKAGE='com.androidhit.lumadrift.qualification117test'
@@ -19,41 +20,70 @@ RUNNER=TEST_PACKAGE+'/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation'
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
+def validate_native_execution(output,native,phase,run_token):
+    assert b'INSTRUMENTATION_CODE: -1' in output and b'INSTRUMENTATION_FAILED' not in output,'Current native instrumentation did not finish successfully; no stale report can qualify'
+    assert native.get('phase')==phase and native.get('runToken')==run_token,'Native report phase or unique execution token differs; no stale phase acceptance'
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--serial',required=True)
     p.add_argument('--expected-avd',default='Luma-Refonte115-QA')
     p.add_argument('--clone-receipt',type=Path,help='Exact root physical-clone creation receipt; only for authorized emulator5592')
     p.add_argument('--clone-receipt-sha256',help='Explicit immutable SHA256 of the root physical-clone receipt')
+    p.add_argument('--clone-candidate-authorization',type=Path,help='Separate root authorization for the one retained F to G candidate upgrade; original creation receipt remains immutable')
+    p.add_argument('--clone-candidate-authorization-sha256',help='Explicit immutable SHA256 of the separate root candidate authorization')
+    p.add_argument('--clone-successor-authorization',type=Path,help='Third immutable root receipt for retained G to H; both earlier receipts remain mandatory')
+    p.add_argument('--clone-successor-authorization-sha256')
     p.add_argument('--expected-apk',required=True)
     p.add_argument('--sha256',required=True)
     p.add_argument('--test-apk',required=True)
     p.add_argument('--variant',choices=['production','lab'],default='production')
-    p.add_argument('--expected-version',default='1.17.0-rc4')
-    p.add_argument('--expected-code',type=int,default=22)
+    p.add_argument('--expected-version',default='1.17.0-rc6')
+    p.add_argument('--expected-code',type=int,default=24)
     p.add_argument('--label',required=True)
     p.add_argument('--install-if-absent',action='store_true')
     p.add_argument('--compact',action='store_true',help='Owned QA display880x1440 at440dpi; original size/density restored explicitly')
     p.add_argument('--font-scale',type=float,choices=[1.0,1.3],help='Explicit task-owned QA system font scale; exact original setting restored on success or failure')
     p.add_argument('--languages',nargs='+',choices=['en','fr','de','es','pt','it'],help='Explicit secondary-route language subset for a short preflight; omitted means all six. Partial runs never claim full coverage')
-    p.add_argument('--route',choices=['baseline','upgrade','browse','banners','assets','rig','performance','secondary','transitions','language-regression','root-regression'],default='upgrade',help='Baseline reads installed state; upgrade validates retained identity,102sprites/6paintings and cold persistence; browse/banners capture six languages; rig previews owned actors; performance observes steady actualHome; secondary browses all six-language retained menus; transitions records8seconds of actual native routes; root-regression checks actual independent48dp root targets')
+    p.add_argument('--modes-origin-checkpoint',type=Path,help='Immutable original G checkpoint recorded before the first native P1 victory; validation fixture only, never preferences')
+    p.add_argument('--modes-origin-sha256',help='Exact original G pre-P1 checkpoint digest, required for the modes retry')
+    p.add_argument('--route',choices=['baseline','upgrade','browse','banners','assets','rig','performance','secondary','modes','transitions','language-regression','root-regression'],default='upgrade',help='Baseline reads installed state; upgrade validates retained identity,102sprites/6paintings and cold persistence; browse/banners capture six languages; rig previews owned actors; performance observes steady actualHome; secondary browses all six-language retained menus; transitions records8seconds of actual native routes; root-regression checks actual independent48dp root targets')
     p.add_argument('--expected-base-sha256',help='Explicitly permit replacing only these known task-owned installed APK bytes with the frozen candidate, preserving its data')
     a=p.parse_args()
     assert re.fullmatch(r'emulator-[0-9]+',a.serial),'Explicit emulator serial required'
     primary=a.expected_avd=='Luma-Refonte115-QA' and a.serial=='emulator-5586'
     clone=a.expected_avd=='Luma117-Secondary-F-QA' and a.serial=='emulator-5592'
     assert primary or clone,'Only the two explicitly authorized task-owned AVD/serial pairs are supported'
-    assert not primary or a.clone_receipt is None and a.clone_receipt_sha256 is None,'A clone receipt must not be attributed to the original retained AVD'
+    assert not primary or a.clone_receipt is None and a.clone_receipt_sha256 is None and a.clone_candidate_authorization is None and a.clone_candidate_authorization_sha256 is None,'Clone receipts must not be attributed to the original retained AVD'
+    assert not primary or a.clone_successor_authorization is None and a.clone_successor_authorization_sha256 is None,'Successor receipt cannot be attributed to the original retained AVD'
     assert not clone or a.clone_receipt is not None and a.clone_receipt_sha256,'Explicit hashed physical-clone provenance required'
     assert re.fullmatch(r'[A-Za-z0-9_-]{1,50}',a.label),'Safe unique evidence label required'
     assert not (a.route=='upgrade' and a.compact),'Run retained upgrade validation on the normal QA display; use browse for compact review'
     assert a.languages is None or a.route=='secondary','Language subsets are only valid for explicitly partial secondary routes'
     assert a.languages is None or len(a.languages)==len(set(a.languages)),'Secondary subset contains duplicate languages'
+    if a.route=='modes':
+        assert a.modes_origin_checkpoint is not None and a.modes_origin_checkpoint.resolve()==ROOT/'docs/validation/v1.17/native-interface/candidate-g-other-modes/modes/modes-before.json','Exact first G pre-P1 checkpoint required; a retry baseline cannot replace it'
+        assert re.fullmatch('[a-f0-9]{64}',a.modes_origin_sha256 or '') and sha(a.modes_origin_checkpoint)==a.modes_origin_sha256,'Explicit original G pre-P1 checkpoint hash differs'
+    else:assert a.modes_origin_checkpoint is None and a.modes_origin_sha256 is None,'Original modes checkpoint is only valid for its dedicated phase'
     apk=Path(a.expected_apk).resolve();test=Path(a.test_apk).resolve()
     assert apk.is_file() and re.fullmatch('[a-f0-9]{64}',a.sha256) and sha(apk)==a.sha256,'Explicit frozen candidate hash required'
     assert test.is_file(),'Separate signed interface observer APK required'
-    clone_provenance=validate_receipt(a.clone_receipt,a.clone_receipt_sha256,a.serial,a.expected_avd,a.sha256) if clone else None
-    assert not clone or a.route!='upgrade' and not a.install_if_absent and a.expected_base_sha256 is None,'Clone runs cannot claim another migration, install a target or replace its bytes'
+    clone_provenance=None;authorized_upgrade_base=CLONE_BASE_APK
+    if clone:
+        if a.sha256==CLONE_BASE_APK:
+            assert a.clone_candidate_authorization is None and a.clone_candidate_authorization_sha256 is None,'Original F observations must not claim a G authorization'
+            assert a.clone_successor_authorization is None and a.clone_successor_authorization_sha256 is None,'Original F observations must not claim an H authorization'
+            clone_provenance=validate_receipt(a.clone_receipt,a.clone_receipt_sha256,a.serial,a.expected_avd,a.sha256)
+            assert a.route!='upgrade' and a.expected_base_sha256 is None,'Original physical-clone F observations cannot replace a target'
+        else:
+            assert a.clone_candidate_authorization is not None and a.clone_candidate_authorization_sha256,'Separate explicit root G candidate authorization required'
+            if a.clone_successor_authorization is not None or a.clone_successor_authorization_sha256:
+                assert a.clone_successor_authorization is not None and a.clone_successor_authorization_sha256,'Both H receipt path and explicit digest required'
+                clone_provenance=validate_successor_authorization(a.clone_receipt,a.clone_receipt_sha256,a.clone_candidate_authorization,a.clone_candidate_authorization_sha256,a.clone_successor_authorization,a.clone_successor_authorization_sha256,a.serial,a.expected_avd,a.sha256,a.expected_version,a.expected_code)
+                authorized_upgrade_base=clone_provenance['successor_authorization']['base_apk_sha256']
+            else:clone_provenance=validate_candidate_authorization(a.clone_receipt,a.clone_receipt_sha256,a.clone_candidate_authorization,a.clone_candidate_authorization_sha256,a.serial,a.expected_avd,a.sha256,a.expected_version,a.expected_code)
+            assert a.expected_base_sha256==(authorized_upgrade_base if a.route=='upgrade' else None),'Only the explicit retained upgrade route may declare its exact authorized base'
+        assert not a.install_if_absent,'Clone target data must already exist; fresh installation is forbidden'
     region_manifest=ROOT/'scripts/v117-ui-test/assets/render-regions.json'
     regions=json.loads(region_manifest.read_text())
     assert regions['metadata_java_sha256']==sha(ROOT/'app/src/main/java/com/androidhit/lumadrift/ui/ArtRegions117.java'),'Frozen region fixture and renderer metadata source differ'
@@ -79,7 +109,10 @@ def main():
     original_display={'size':shell('wm','size').strip(),'density':shell('wm','density').strip()}
     out.mkdir(parents=True);shots.mkdir(parents=True)
     observer=out/'interface-observer.apk';shutil.copyfile(test,observer)
-    if clone:shutil.copyfile(a.clone_receipt,out/'clone-creation.json')
+    if clone:
+        shutil.copyfile(a.clone_receipt,out/'clone-creation.json')
+        if a.clone_candidate_authorization:shutil.copyfile(a.clone_candidate_authorization,out/'clone-candidate-authorization.json')
+        if a.clone_successor_authorization:shutil.copyfile(a.clone_successor_authorization,out/'clone-successor-authorization.json')
     assert sha(observer)==sha(test),'Observer freeze copy differs';test=observer
     source_snapshot={}
     source_root=ROOT/'scripts/v117-ui-test'
@@ -94,6 +127,9 @@ def main():
     report['frozen_observer_apk']=str(observer)
     report['compact']=a.compact
     report['route']=a.route
+    if a.route=='modes':
+        shutil.copyfile(a.modes_origin_checkpoint,out/'original-g-pre-p1.json')
+        report['original_g_pre_p1_checkpoint_sha256']=a.modes_origin_sha256
     report['device_provenance']=clone_provenance or {'scope':'Original retained task-owned AVD; original migration evidence is separately preserved'}
     report['secondary_languages']=a.languages if a.languages is not None else ['en','fr','de','es','pt','it']
     report['region_manifest_sha256']=region_sha
@@ -109,12 +145,20 @@ def main():
         absent=subprocess.run([adb,'-s',a.serial,'shell','pidof',package],capture_output=True,text=True,timeout=30)
         assert absent.returncode in [0,1] and not absent.stdout.strip(),'Target remains alive before native process boundary'
         phase_out=out/phase;phase_shots=shots/phase;phase_out.mkdir();phase_shots.mkdir()
-        run=call('shell','am','instrument','-w','-r','-e','phase',phase,'-e','expectedVersion',version,'-e','expectedCode',str(code),'-e','regionManifestSha256',region_sha,'-e','languages',','.join(report['secondary_languages']),RUNNER,timeout=2400 if phase=='secondary' else 900)
+        run_token=str(uuid.uuid4())
+        native_arguments=['shell','am','instrument','-w','-r','-e','phase',phase,'-e','expectedVersion',version,'-e','expectedCode',str(code),'-e','regionManifestSha256',region_sha,'-e','languages',','.join(report['secondary_languages']),'-e','runToken',run_token]
+        if phase=='modes':native_arguments+=['-e','originalModesCheckpointSha256',a.modes_origin_sha256]
+        native_arguments.append(RUNNER)
+        run=call(*native_arguments,timeout=2400 if phase=='secondary' else 900)
         (phase_out/'instrumentation.txt').write_bytes(run)
         with tempfile.TemporaryDirectory(prefix='luma-v117-interface-pull-') as tmp:
             call('pull',remote,tmp);pulled=Path(tmp)/'v117-interface-ui'
             assert (pulled/'report.json').exists(),'Native report absent; instrumentation output retained'
             native=json.loads((pulled/'report.json').read_text());captures=set(native.get('captures',[]))
+            if native.get('phase')!=phase or native.get('runToken')!=run_token:
+                shutil.copyfile(pulled/'report.json',phase_out/'rejected-native-report.json')
+                report.setdefault('rejected_native_executions',[]).append({'phase':phase,'expected_token':run_token,'observed_phase':native.get('phase'),'observed_token':native.get('runToken'),'scope':'Rejected diagnostic only; no captured frame or check is accepted for this execution'})
+                validate_native_execution(run,native,phase,run_token)
             assert len(captures)==len(native.get('captures',[])),'Native phase reused a screenshot identifier'
             for file in pulled.iterdir():
                 if not file.is_file():continue
@@ -124,10 +168,11 @@ def main():
                 elif file.name=='failure.txt':
                     if not native.get('passed',False):shutil.copyfile(file,phase_out/file.name)
                     else:native['ignored_stale_failure_file_sha256']=sha(file)
-                elif file.name in ['report.json','baseline.json','before.json','checkpoint.json','secondary-coverage.json'] or file.stem in captures or '-coverage-' in file.name or file.name=='assets.json' or file.name.startswith('performance') or file.name.startswith('transitions'):shutil.copyfile(file,phase_out/file.name)
-        report['phases'].append({'phase':phase,'native':native,'expected_version':version,'expected_code':code})
+                elif file.name in ['report.json','baseline.json','before.json','checkpoint.json','secondary-coverage.json'] or file.stem in captures or '-coverage-' in file.name or file.name=='assets.json' or file.name.startswith('performance') or file.name.startswith('transitions') or file.name.startswith('modes-'):shutil.copyfile(file,phase_out/file.name)
+        report['phases'].append({'phase':phase,'native':native,'host_run_token':run_token,'native_arguments':native_arguments,'expected_version':version,'expected_code':code})
         print(json.dumps({'phase':phase,'passed':native.get('passed',False),'checks':native.get('checkCount',0),'captures':len(native.get('captures',[]))}),flush=True)
         assert native['passed'],'Native interface '+phase+' failed'
+        validate_native_execution(run,native,phase,run_token)
         if previous_pid is not None:assert previous_pid!=native['processId'],'Independent phase reused its predecessor process'
     try:
         if not installed:
@@ -135,12 +180,16 @@ def main():
             installed=query(package)
         installed_before_hash=shell('sha256sum',installed).split()[0];report['installed_apk_sha256_before']=installed_before_hash
         needs_upgrade=installed_before_hash!=a.sha256
+        if clone and a.route=='upgrade':assert installed_before_hash==authorized_upgrade_base and needs_upgrade,'Authorized retained clone upgrade must actually begin from its exact frozen predecessor bytes'
         if needs_upgrade:
             assert a.route=='upgrade','Only the explicitly selected upgrade route can replace installed base bytes'
             assert a.expected_base_sha256 and re.fullmatch('[a-f0-9]{64}',a.expected_base_sha256) and installed_before_hash==a.expected_base_sha256,'Installed bytes are neither the frozen candidate nor an explicitly permitted upgrade base'
         before=shell('logcat','-d','-b','crash')
         result=call('install',str(test));(out/'test-install.txt').write_bytes(result);assert b'Success' in result;observer_installed=True
         assert shell('sha256sum',query(TEST_PACKAGE)).split()[0]==sha(test),'Installed observer differs from frozen test APK'
+        if a.route=='modes':
+            call('push',str(a.modes_origin_checkpoint),remote+'/modes-origin.json')
+            assert shell('sha256sum',remote+'/modes-origin.json').split()[0]==a.modes_origin_sha256,'External observer validation record differs from the immutable original checkpoint'
         if a.route in ['baseline','upgrade']:
             details=shell('dumpsys','package',package)
             base_version=re.search(r'versionName=([^\s]+)',details);base_code=re.search(r'versionCode=([0-9]+) ',details)
@@ -176,6 +225,7 @@ def main():
         elif a.route=='rig':native_phase('rig',a.expected_version,a.expected_code)
         elif a.route=='performance':native_phase('performance',a.expected_version,a.expected_code)
         elif a.route=='secondary':native_phase('secondary',a.expected_version,a.expected_code)
+        elif a.route=='modes':native_phase('modes',a.expected_version,a.expected_code)
         elif a.route=='transitions':native_phase('transitions',a.expected_version,a.expected_code)
         elif a.route=='language-regression':native_phase('language-regression',a.expected_version,a.expected_code)
         elif a.route=='root-regression':native_phase('root-regression',a.expected_version,a.expected_code)

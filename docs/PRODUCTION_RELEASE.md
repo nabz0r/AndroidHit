@@ -2,12 +2,9 @@
 
 ## 1.17 — final candidate qualification in progress
 
-Production is **1.17.0-rc4 / code22**, with isolated **1.17.0-sandbox-rc4**. Candidate F passes [four-package binary verification](validation/v1.17/candidate-f/binaries/binary-final-candidate.json) and host responsive-root tests. Exact-F upgrade/cold, fresh-player flow, primary six-language normal/compact browsing, owned rigs,144-look isolated gallery and installed digital audio38checks pass. Remaining secondary routes and the native full1,000replay are running; Git/Firebase delivery remains pending. E's earlier scopes and compact composition rejection remain separately recorded. [Release register](RELEASE_1_17.md) · [Evidence](validation/v1.17/README.md).
+Production is **1.17.0-rc6 / code24**, with isolated **1.17.0-sandbox-rc6**. H passes the [four-package binary audit](validation/v1.17/candidate-h/binaries/binary-final-candidate.json), release lint and the complete24-command sparse host workflow. Its installed/native and public-delivery results remain separate in the [release register](RELEASE_1_17.md) and [qualification index](validation/v1.17/README.md).
 
-The production package, existing signing identity and local save keys are retained. Earned LumaCoins, house, clothing, profile and badge changes remain device-local. The 23-companion and five-outfit pools spend earned LumaCoins, not paid LumaGold. The retained test-ad forcing, closed real checkout, unconfigured wallet origin and disabled paid premium draws must be checked against the final manifests; no source UI change activates them.
-
-The actual 1.17 game scope does not validate live advertisements, payments, Google sign-in, account deletion, cloud progression, Play publication, physical-phone performance or player retention. Existing website privacy/deletion/configuration and server gates are preserved; their provider qualifications below retain their original dates and limits. The [1.17 website template](validation/site-v1.17/README.md) is unpublished and must not be confused with a Hosting receipt.
-<!-- FINAL_117: PRODUCTION_STATUS — replace pending status only from accepted final binary/native/publication records; keep commercial boundaries explicit. -->
+Test ads remain forced; real checkout, paid premium draws and an unconfigured wallet API stay closed. The local player nickname/flag/badges, save, house and earned LumaCoins are not cloud synchronized. The new bundled artwork/synthesized audio adds no asset download or tracking service. No Play upload, provider activation or real payment is performed by this delivery.
 
 ## Preserved production and provider records
 

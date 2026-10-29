@@ -1,0 +1,104 @@
+{
+  "passed": false,
+  "checkCount": 12,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact Luma target package"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed candidate version and code"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Réglages"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for English"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Adventure"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for All levels"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Remix"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Explore a level"
+    },
+    {
+      "passed": true,
+      "message": "Framework text input edits only the actually visible native map jump field"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Level 1, Normal, Directions"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Play  →"
+    },
+    {
+      "passed": false,
+      "message": "Actual remix board opens its expected mode, empty history and HUD"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Réglages",
+      "bounds": "[890,334][1042,533]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "English",
+      "bounds": "[387,1362][692,1523]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "All levels",
+      "bounds": "[66,1486][354,1821]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Remix",
+      "bounds": "[540,407][1013,545]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Explore a level",
+      "bounds": "[418,559][695,692]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "input": "SDK accessibility IME enter"
+    },
+    {
+      "label": "Level 1, Normal, Directions",
+      "bounds": "[434,742][645,961]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Play  →",
+      "bounds": "[66,1778][1013,1933]",
+      "input": "UiAutomation touchscreen"
+    }
+  ],
+  "captures": [
+    "modes-remix-briefing-en",
+    "failure"
+  ],
+  "processId": 8267,
+  "phase": "modes",
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Actual public Remix1, Guardian1, Daily1 and Weekly1 boards\/HUD\/help\/exit; public Sealed P1 completed by four observed piece touches with zero reward. Puzzle\/Guardian sessions naturally change and are recorded separately. All game preferences except seeds, all meta preferences, economy\/stock\/ownership\/receipts\/home\/settings must remain unchanged after restoring French. No app\/engine\/private-field calls, preference writes or state injection."
+}

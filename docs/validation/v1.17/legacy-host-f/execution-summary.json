@@ -1,0 +1,131 @@
+{
+  "candidate": "F 1.17.0-rc4/code22",
+  "production_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "source_freeze": "docs/validation/v1.17/candidate-f/source-freeze.json",
+  "source_freeze_sha256": "e76c23760a2190620f4e1ee9af1aac4097f51b90d64764e4db7a16c4d416305e",
+  "all_frozen_inputs_verified_before": 161,
+  "execution_source": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+  "method": "Unmodified existing suites and byte-identical application sources in an isolated copy; historical progression-script side effects stay in that disposable copy.",
+  "java_version": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Homebrew (build 17.0.20.1+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.20.1+0, mixed mode, sharing)\n",
+  "started_at_utc": "2026-10-29T04:39:06.750557+00:00",
+  "scope": "Host models only. No APK build, Android/device/browser interaction, new tests or application source edit.",
+  "passed": true,
+  "suites": 9,
+  "results": [
+    {
+      "name": "strategy",
+      "command": [
+        "bash",
+        "scripts/test-strategy-v4.sh",
+        "/Users/n/androidhit/docs/validation/v1.17/legacy-host-f/strategy"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 56.608,
+      "log": "docs/validation/v1.17/legacy-host-f/strategy.log",
+      "log_sha256": "699f317b5d50cbee59197f1fc03f86d329667e1abafae7725d4d405ab963bef7"
+    },
+    {
+      "name": "guardians",
+      "command": [
+        "bash",
+        "scripts/test-guardian-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.17/legacy-host-f/guardians"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 80.969,
+      "log": "docs/validation/v1.17/legacy-host-f/guardians.log",
+      "log_sha256": "b4741f62b826e4adfbaa358d05b19ff46fe61bb1ffb80b653c36ba39efa1f72f"
+    },
+    {
+      "name": "engine",
+      "command": [
+        "bash",
+        "scripts/test-engine.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 6.359,
+      "log": "docs/validation/v1.17/legacy-host-f/engine.log",
+      "log_sha256": "bc319c7ea2e14bfb9be6fa4d31acd753403f77c317f1c524bef0aad5c96f10a0"
+    },
+    {
+      "name": "sealed",
+      "command": [
+        "bash",
+        "scripts/test-sealed.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 1.955,
+      "log": "docs/validation/v1.17/legacy-host-f/sealed.log",
+      "log_sha256": "b9cf2454761e0092329e049c6cf293ef7de99781ba418a8b129e60e2f4b5b44f"
+    },
+    {
+      "name": "progression-v3",
+      "command": [
+        "bash",
+        "scripts/test-progression-v3.sh",
+        "/Users/n/androidhit/docs/validation/v1.17/legacy-host-f/progression-v3"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 4.106,
+      "log": "docs/validation/v1.17/legacy-host-f/progression-v3.log",
+      "log_sha256": "d833e28acc037ff1a1553d484e44615eb3535549cbab8936cbc173ad67455654"
+    },
+    {
+      "name": "move-budget",
+      "command": [
+        "bash",
+        "scripts/test-move-budget.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 3.405,
+      "log": "docs/validation/v1.17/legacy-host-f/move-budget.log",
+      "log_sha256": "d4fd0c5f640b9cd635a05d6208dbd0a0c6a9dbd9eb23f48f09e091582b407e00"
+    },
+    {
+      "name": "guardian-store",
+      "command": [
+        "bash",
+        "scripts/test-guardian-store-v19.sh",
+        "/Users/n/androidhit/docs/validation/v1.17/legacy-host-f/guardian-store"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 1.647,
+      "log": "docs/validation/v1.17/legacy-host-f/guardian-store.log",
+      "log_sha256": "5187326dee0120a39693e5473ebafde3e3bebb9ec9174943ec2dfa2bc6b9fda6"
+    },
+    {
+      "name": "data",
+      "command": [
+        "bash",
+        "scripts/test-data.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 1.197,
+      "log": "docs/validation/v1.17/legacy-host-f/data.log",
+      "log_sha256": "312a0fbc3422aafd67fe361e933bad1823e5f7a58d891c0ba61ff9f8a32353df"
+    },
+    {
+      "name": "collection-events",
+      "command": [
+        "bash",
+        "scripts/test-collection-events.sh"
+      ],
+      "cwd": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-legacy-host-f-77ilo_cw/source",
+      "exit_code": 0,
+      "seconds": 0.752,
+      "log": "docs/validation/v1.17/legacy-host-f/collection-events.log",
+      "log_sha256": "bde98fac23dde63357f780eca22ef6555ae6826fa22120bdd774eb350d6a7329"
+    }
+  ],
+  "all_frozen_inputs_verified_after": 161,
+  "historical_files_unchanged": 14813,
+  "elapsed_seconds": 82.671
+}

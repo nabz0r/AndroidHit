@@ -1,0 +1,53 @@
+{
+  "status": "PREPARED ONLY; no reboot, install or UI action authorized. Wait root after strict H1000 PASS and its normal5586 shutdown. Never interfere with active replay.",
+  "candidate": "H",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "observer_sha256": "e33fc6b0f40fd96bb67d0a7ab6a1ca0b3d579126a38d65d0bbf42c4b1f878403",
+  "expected_device_before_future_phase": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "expected_original_display": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "expected_original_font_scale": "1.0",
+  "command": [
+    "python3",
+    "scripts/v117-ui-test/run.py",
+    "--serial",
+    "emulator-5586",
+    "--expected-avd",
+    "Luma-Refonte115-QA",
+    "--expected-apk",
+    "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-rc6.apk",
+    "--sha256",
+    "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+    "--test-apk",
+    "/tmp/luma-v117-candidate-h/interface-v117-footer-test.apk",
+    "--expected-version",
+    "1.17.0-rc6",
+    "--expected-code",
+    "24",
+    "--label",
+    "candidate-h-main-secondary-enfr",
+    "--route",
+    "secondary",
+    "--languages",
+    "en",
+    "fr"
+  ],
+  "preconditions": [
+    "Strict current replay summary and shutdown receipt pass; all evidence hashes preserved",
+    "Root explicit new handoff and normal retained AVD reboot, no reset/seed",
+    "Exact original AVD identity, installed H hash and normal display/font reverified",
+    "Observer still frozen at declared SHA or root supplies a newly audited exact probe; never assume shared build output",
+    "Use a fresh evidence label; do not duplicate a completed clone secondary phase"
+  ],
+  "scope": "Inert possible future EN/FR normal UI matrix on the original retained AVD, only after independent authorization. This plan itself has no device effect and no claimed result."
+}

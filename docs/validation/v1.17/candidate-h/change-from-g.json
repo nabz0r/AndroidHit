@@ -1,0 +1,80 @@
+{
+  "candidate": "H 1.17.0-rc6/code24",
+  "source_commit": "bb622960f52e5ba41e75a6dfa8b30dbb4b98a291",
+  "old_inputs": 161,
+  "new_inputs": 162,
+  "unchanged_inputs": 159,
+  "changed": [
+    "app/build.gradle",
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java"
+  ],
+  "added": [
+    "app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java"
+  ],
+  "protected_unchanged_counts": {
+    "engine": 28,
+    "audio": 2,
+    "art_v117_png": 23
+  },
+  "protected_inputs": {
+    "engine": {
+      "app/src/main/java/com/androidhit/lumadrift/engine/BalancedCatalog.java": "f75fbdfef8e121c488cfe336fb1c1a750365433d9b19bf8abed636d35971fe27",
+      "app/src/main/java/com/androidhit/lumadrift/engine/Barrier.java": "87999219c061bbd24e8a7332ea1f0c9916be19aab384f02148e657eae81d36ed",
+      "app/src/main/java/com/androidhit/lumadrift/engine/Board.java": "3adbb9c624166d25e860ed88ff94f3d04fc48a61cf24aa2179c5be3e04e5cc49",
+      "app/src/main/java/com/androidhit/lumadrift/engine/ChallengeCode.java": "f9b02bd56ccc3bff800439b4d1f6e435891af021eab85c2685e6cbb6ff653512",
+      "app/src/main/java/com/androidhit/lumadrift/engine/Direction.java": "7787796aa6543887f1ff2916420c3708cf9fa9095e5424f17ce89505beb45795",
+      "app/src/main/java/com/androidhit/lumadrift/engine/GuardianCatalog.java": "cd6ec026e71f4755bb4206ea809b9784a7fce676167c51318b9b7de732845a9d",
+      "app/src/main/java/com/androidhit/lumadrift/engine/GuardianEncounter.java": "dfb3c916f75d07f2cb36b99a34bb8691c0c017af45bc773390a39803f2f737d5",
+      "app/src/main/java/com/androidhit/lumadrift/engine/JourneyExperience.java": "13c0298a94184309a82b2c7c2897181ea7df27e178608e843235c91a38463a3a",
+      "app/src/main/java/com/androidhit/lumadrift/engine/LearningCatalog.java": "85691e77ff2d010a5c078138cd0e90b5c819d742064c3cc5aaca98c3d857b55f",
+      "app/src/main/java/com/androidhit/lumadrift/engine/LearningLayouts.java": "0a6de06054a377d37b5b8ab1e2374cdbe694c03983adeb1b5714f86aec54dafc",
+      "app/src/main/java/com/androidhit/lumadrift/engine/Level.java": "048f2f17db505f4e04b4e462426a980e334054ebf150397a5aefdde3ad464977",
+      "app/src/main/java/com/androidhit/lumadrift/engine/LevelCatalog.java": "8f74d1dc9b1bfab7488bdb7a53cb8ff8a0b0f90911daa2d7a0eb681710f82a0b",
+      "app/src/main/java/com/androidhit/lumadrift/engine/MoveBudget.java": "9369b3f515dd7a416d5760c68ade9e996dbca301e6a6551e8828e452d25aef63",
+      "app/src/main/java/com/androidhit/lumadrift/engine/PrismStory.java": "2f5fb52fe01c823fb81244fc268de8ac888780a4bed0772a34564b8eb8482a8c",
+      "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionInfo.java": "1629989a4ba3e3e3a42c1320ba8d8128ae39afc98fa21bbc31dab53aca3bd4c3",
+      "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionV2Layouts.java": "7e13d7d6951ccf739f002327c5bd153aaac0f334cd689763430ae349bc15b8cd",
+      "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionV3Catalog.java": "fd02bcd590baecc151ac8b84ebb2fcd9ff5a9b1e33fb88176a5bab008c466a62",
+      "app/src/main/java/com/androidhit/lumadrift/engine/ProgressionV3Layouts.java": "55aa4100e84365f12405b6633aaa928c37a5b5acb47afecfd877e8835d6b437b",
+      "app/src/main/java/com/androidhit/lumadrift/engine/RelayCatalog.java": "c859460ec65b75f0620cad2281deee10c368eb3c18db10d0fa55aaa73e4c745d",
+      "app/src/main/java/com/androidhit/lumadrift/engine/RelayLayouts.java": "9b7abb6209e6c06e61d4f58b132f9cd9969ffbb02db8a75f609bad74ff92066c",
+      "app/src/main/java/com/androidhit/lumadrift/engine/RelaySolver.java": "d1596b434f8a2b983902eeb712173b6e99dd048e47c4be6cb229f3e52f3710ef",
+      "app/src/main/java/com/androidhit/lumadrift/engine/RemixCatalog.java": "14b79977f22ea94e3381b32928e5768252cd06d81c5be0b262a15b1498e4abcc",
+      "app/src/main/java/com/androidhit/lumadrift/engine/SealedCatalog.java": "f1ed9eedfea2d3c2c311bc31a7a584b3b7a40e353e418aff1121ce126035788f",
+      "app/src/main/java/com/androidhit/lumadrift/engine/Solver.java": "d6acaecc6262472c59884d4c1f29da32ca7c738675594fcf2f3cd1c3d38cedb4",
+      "app/src/main/java/com/androidhit/lumadrift/engine/StrategyCatalog.java": "c64e8b0987bf52e2ab2eac4635d5b7fa7580307710e9ca27792fb3ae09a4d970",
+      "app/src/main/java/com/androidhit/lumadrift/engine/StrategySolver.java": "a5a763dabdcb87351aa8e5a0dcfd76d05f1f5fab3099b770298e6001e988c33e",
+      "app/src/main/java/com/androidhit/lumadrift/engine/StrategyV4Layouts.java": "5b8fbddc141892a3b7ead3c0051b14b64be4effcd0449a126a896c2a686699f2",
+      "app/src/main/java/com/androidhit/lumadrift/engine/Tile.java": "1c43d18aa122b2b37dfce18fb77e09f9a445c6920b9e6f0459c9f4594dc6d7bf"
+    },
+    "audio": {
+      "app/src/main/java/com/androidhit/lumadrift/audio/AudioEngine.java": "8defd3659adb924401f377bfb317582832e0f45d5852cf6d19454b18200f2a16",
+      "app/src/main/java/com/androidhit/lumadrift/audio/Synth.java": "70a0b9c661c63f5f48056f64d3c03d81cb61de7fbee2fbf9b6e582afa2beb62d"
+    },
+    "art_v117_png": {
+      "app/src/main/assets/art/v117/actions-0.png": "0f445029bc8c2c7bc27f41ad68a0467c4a1fda009aaf6e346013899bc81ee0c3",
+      "app/src/main/assets/art/v117/actions-1.png": "9e0b7e379267449481034a92bddc79980bc4d01869f2389d9be9ad039f49cfbd",
+      "app/src/main/assets/art/v117/companions-0.png": "fa91451022b58abb4e9878530552cf676a165c507cb64433ad87dedbe3294e43",
+      "app/src/main/assets/art/v117/companions-1.png": "e7ae9ce3338a9f6414e8e840bc0da6c910a8848d850dce48e7437de04ed1adaa",
+      "app/src/main/assets/art/v117/companions-2.png": "a07b53f0d281b4752c75474ee2ed4c0fffbee4955a852b70af843a78df351fe6",
+      "app/src/main/assets/art/v117/companions-3.png": "56e5d5085834441f97bb68b556d0b232bdeb81982422f0e3f8e7fbf1e3e71c97",
+      "app/src/main/assets/art/v117/dresses.png": "e3fdc2cef0c9a3c921c5b0ea5dbaaff34c9bd005a92f57c669140868f30ee439",
+      "app/src/main/assets/art/v117/floor-parquet.png": "529ae3d0c3eb5ecf8309737aea38d7fbc0b10e0e071b833f72c508b843357376",
+      "app/src/main/assets/art/v117/furniture-0.png": "ddcf0c3652b0a87ec6fa25c6b7166eec5b4875972ab79877847f5e5fc2dfa822",
+      "app/src/main/assets/art/v117/furniture-1.png": "40a346e2725156f9ac64f942bfbe3f1f88fccfd8b7f5b543cddcf95b987a3a6a",
+      "app/src/main/assets/art/v117/furniture-2.png": "2351b0e37420bba823f71968b3b41a5d78ae547df28756be4f3ba48236591cdd",
+      "app/src/main/assets/art/v117/furniture-3.png": "6cd3e0167239f13349bea8c2af6f3476be2de073f82108d915dd929cd9cbc37a",
+      "app/src/main/assets/art/v117/furniture-4.png": "401d596a51b5dfc6d921a899360a80a2db2a8fe7310ac44bba8d4a16a70a2a94",
+      "app/src/main/assets/art/v117/furniture-5.png": "ad92dffc113662536697ac071786eade73c72cc3b84c7effb604c0d2e0fee645",
+      "app/src/main/assets/art/v117/furniture-6.png": "18a966d30647e23afcb6be6a3f2c611abee862e30c3dc16a2705d1d87d016938",
+      "app/src/main/assets/art/v117/gloves.png": "1ac0ed35db84de49933ef93d92ea2b02ac777dd8ee0a8d44f331252204d79531",
+      "app/src/main/assets/art/v117/hats.png": "813fb0c848a1fbe99bb3261d667d92291d7fc2e0c93768d340d29faad509c448",
+      "app/src/main/assets/art/v117/shoes.png": "e4d7206411410d8d03892981cc9c65defbbe4dad396b1947e5648cd6d96fe34b",
+      "app/src/main/assets/art/v117/wall-bedroom.png": "1c127f9eff9ea5ad613dcbf17059617369e2e305d271cd399c7661ac9237d075",
+      "app/src/main/assets/art/v117/wall-living.png": "78b89412bca9bba16e6745bae37737b4716dd62a98c33dea6c1c84f4bdffafd0",
+      "app/src/main/assets/art/v117/world-adventure.png": "a2b19cf28101819743fae46bbef01732348bfa08a565d71ab0ab6a7a25164b95",
+      "app/src/main/assets/art/v117/world-atelier.png": "52b65153d94f12d42ac3e8e8e9e7e5eb11cd6c3282fbe842c803117f3fd4b6d6",
+      "app/src/main/assets/art/v117/world-collection.png": "45785b51066e6b28c668ab954da53972ad22b3260b2282cc61e5a9671697a552"
+    }
+  }
+}

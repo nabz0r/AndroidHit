@@ -1,0 +1,16 @@
+{
+  "command": [
+    "./gradlew",
+    ":app:assembleProductionRelease",
+    ":app:bundleProductionRelease",
+    ":app:assembleLabRelease",
+    ":app:bundleLabRelease",
+    ":app:lintProductionRelease",
+    ":app:lintLabRelease",
+    "--console=plain"
+  ],
+  "cwd": "/Users/n/androidhit",
+  "java_home": "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",
+  "started_at_utc": "2026-10-29T05:38:18.980534+00:00",
+  "source_commit": "bb622960f52e5ba41e75a6dfa8b30dbb4b98a291"
+}

@@ -1,0 +1,28 @@
+{
+  "ready": true,
+  "candidate": "H",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "source_input_count": 162,
+  "source_freeze_sha256": "b6af495fadab8c20cf6379b591297da38e10edb4b694aad0adcf521f75711b88",
+  "observer_apk": "/tmp/luma-v117-candidate-h/relay-v117-full-protection-test.apk",
+  "observer_sha256": "85c5d5b0e3f832d96265ba0d24eb9071183f6218bf7d420ab835a08458f64911",
+  "observer_source_sha256": {
+    "scripts/v117-relay-ui/AndroidManifest.xml": "318450a10bf31d07e561d53a5053365898dc5b381b1bcd6c6a6e1ea20de2a869",
+    "scripts/v117-relay-ui/README.md": "e659133a6237e02c309203d7d53dd45e21785333dbe079814af1fd6f4664c938",
+    "scripts/v117-relay-ui/build.gradle": "b735e588deb207f222d54a198058e46fcdef2c22e9bc709b8dcd7b5272e23598",
+    "scripts/v117-relay-ui/init.gradle": "8ddc9d9f48260d9b9998cb2a11cf495ce1c2d257eebf08509f1844ba2cff2f1c",
+    "scripts/v117-relay-ui/java/com/androidhit/lumadrift/qa/v117relay/RelayInstrumentation.java": "e6e19f2d69ad5f9f072962719b5040a5db10d1fbf51f38dfa108c96333785fc1",
+    "scripts/v117-relay-ui/launch.py": "46c9171c8d5bd4b5165eb1ac35af642a383445d33efffc0b5bd94871a24755b3",
+    "scripts/v117-relay-ui/run.py": "e766a19c28fb0ce7c7f6920301987614237972a43b122bfcca3c64bddeb37f5e",
+    "scripts/v117-relay-ui/summarize.py": "b7b4ef927c1088fae673a86dd10b4823d7d7c54b458b3ad5065847708a4dbe6e",
+    "scripts/v117-relay-ui/watch.py": "98972a10d52badff3dba9e368a0b9dbb9e3a2651678e811fc347d80b74811ff9"
+  },
+  "fixture_manifest_sha256": "1a7155deace55682adf85972bee71279c58d3643367306976a1ef9eac823eea8",
+  "fixture_levels": 1000,
+  "certificate_exits": 10974,
+  "protected_schema": "full-game-meta-session-v1",
+  "source_and_four_binaries_stable": true,
+  "scope": "Standalone framework observer packaged/signed and host frozen-fixture checks passed. Complete game/meta/non-active-session protection is included; no H replay/native completion result claimed. Separate root GO after compact-v2 reachability remains mandatory."
+}

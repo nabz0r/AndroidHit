@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.app.Instrumentation;
 import android.app.UiAutomation;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
 import android.os.SystemClock;
 import android.view.InputDevice;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import org.json.JSONArray;
@@ -27,23 +29,34 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/** Framework UI and AudioFlinger observation only. No application imports, hooks or save reads. */
+/** Framework UI/AudioFlinger and read-only preference observations. No target imports or hooks. */
 public final class AudioInstrumentation extends Instrumentation {
     private static final String PACKAGE="com.androidhit.lumadrift";
     private static final String[] SETTINGS={"Settings","Paramètres","Réglages","Einstellungen","Ajustes","Definições","Impostazioni"};
     private static final String[][] ROOTS={{"Adventure","Aventure","Abenteuer","Aventura","Avventura"},{"My home","Ma maison","Mein Zuhause","Mi hogar","A minha casa","La mia casa"},{"Collection","Sammlung","Colección","Coleção","Collezione"},{"Atelier","Taller"}};
     private static final String[] PROFILES={"Profile","Profil","Perfil","Profilo"};
+    private static final String[] LEVEL_EXITS={"Leave level","Quitter le niveau","Level verlassen","Salir del nivel","Sair do nível","Esci dal livello"};
     private static final int MUSIC_MIN_BUFFER=220500;
+    // Only the currently open puzzle may change naturally through public navigation.
+    // Guardian sessions, reduced motion and every other session key remain protected.
+    private static final List<String> ACTIVE_SESSION_KEYS=Arrays.asList("active","level","mode","event","event_id","history","challenge_code","elapsed_ms","hints","undos","content_version","budget_policy","run_id","budget_used","budget_extensions","budget_extra","pending_continuation","last_continuation","last_power_request","shield_charges","gear_grace","flow_remaining","hint_id","hint_ms","vision_ms","focus_ms","trail_ms","trail_ids","focus_ids");
     private UiAutomation ui;private Bundle arguments;private File output;private int pid,count,rawIndex;
     private final JSONArray checks=new JSONArray(),actions=new JSONArray(),observations=new JSONArray(),captures=new JSONArray();
     private Boolean originalMusic,originalEffects;private String originalLanguage="";
     private boolean restorationSucceeded;
+    private String initialProtected="";
+    private boolean protectedStatePreserved;
+    private boolean recoveryOnly;
     private int systemMusicVolume=-1;private boolean systemMusicMuted;
 
     @Override public void onCreate(Bundle args){super.onCreate(args);arguments=args==null?new Bundle():args;start();}
@@ -52,10 +65,13 @@ public final class AudioInstrumentation extends Instrumentation {
         try{
             check(PACKAGE.equals(getTargetContext().getPackageName()),"Exact production target package");
             PackageInfo info=getTargetContext().getPackageManager().getPackageInfo(PACKAGE,0);
-            check(arguments.getString("expectedVersion","1.17.0-rc4").equals(info.versionName)&&info.versionCode==Integer.parseInt(arguments.getString("expectedCode","22")),"Exact candidate version/code");
+            check(arguments.getString("expectedVersion","").equals(info.versionName)&&info.versionCode==Integer.parseInt(arguments.getString("expectedCode","")),"Exact candidate version/code");
+            check(arguments.getString("runToken","").matches("[a-f0-9-]{36}"),"Unique host execution token");
+            recoveryOnly=Boolean.parseBoolean(arguments.getString("recoveryOnly","false"));
+            String label=arguments.getString("label","");check(label.matches("[A-Za-z0-9_-]{1,55}"),"Unique bounded evidence label");
             pid=android.os.Process.myPid();ui=getUiAutomation();AccessibilityServiceInfo service=ui.getServiceInfo();
             service.flags|=AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS|AccessibilityServiceInfo.FLAG_INCLUDE_NOT_IMPORTANT_VIEWS;ui.setServiceInfo(service);
-            output=new File(getTargetContext().getExternalFilesDir(null),"v117-digital-audio");if(!output.exists()&&!output.mkdirs())throw new IllegalStateException("Cannot create observer evidence directory");
+            output=new File(getTargetContext().getExternalFilesDir(null),"v117-digital-audio/"+label);if(output.exists()||!output.mkdirs())throw new IllegalStateException("Audio evidence directory must be new");
             AudioManager audio=(AudioManager)getTargetContext().getSystemService(android.content.Context.AUDIO_SERVICE);
             systemMusicVolume=audio.getStreamVolume(AudioManager.STREAM_MUSIC);systemMusicMuted=audio.isStreamMute(AudioManager.STREAM_MUSIC);
             check(systemMusicVolume>0&&!systemMusicMuted,"Android media stream has a positive unmuted digital output setting (no host speaker output)");
@@ -63,8 +79,12 @@ public final class AudioInstrumentation extends Instrumentation {
                 launch();settings();top();tap("English");
                 setState("Sound effects",Boolean.parseBoolean(arguments.getString("recoveryEffects")));setState("Music",Boolean.parseBoolean(arguments.getString("recoveryMusic")));
                 tap(arguments.getString("recoveryLanguage"));
-                check(selectedLanguage().equals(arguments.getString("recoveryLanguage")),"Prior timed-out observer baseline recovered through actual UI");capture("prior-timeout-settings-recovered");
+                check(selectedLanguage().equals(arguments.getString("recoveryLanguage")),"Preserved failed-observer settings recovered through actual UI");capture("prior-observer-settings-recovered");
             }
+            if(recoveryOnly){
+                check(!arguments.getString("recoveryLanguage","").isEmpty(),"Recovery-only route requires documented original visible values");originalLanguage=arguments.getString("recoveryLanguage");originalMusic=Boolean.parseBoolean(arguments.getString("recoveryMusic"));originalEffects=Boolean.parseBoolean(arguments.getString("recoveryEffects"));back();navigate(1);check(currentRoot()==1,"Documented settings recovery returns through visible UI to the home root");capture("prior-observer-home-recovered");initialProtected=protectedState().toString();write("protected-before.json",initialProtected);write("session-before.json",preferences("luma_session").toString(2));restorationSucceeded=true;passed=true;
+            }else{
+            initialProtected=protectedState().toString();write("protected-before.json",initialProtected);write("session-before.json",preferences("luma_session").toString(2));
             launch();settings();top();originalLanguage=selectedLanguage();check(!originalLanguage.isEmpty(),"Original language observed from selected UI object");
             tap("English");originalEffects=state("Sound effects");originalMusic=state("Music");
             write("initial-state.json",new JSONObject().put("originalLanguage",originalLanguage).put("originalMusic",originalMusic).put("originalEffects",originalEffects).put("processId",pid).put("scope","Visible UI observations before this run changes either audio setting").toString(2));capture("settings-before-en");
@@ -75,10 +95,13 @@ public final class AudioInstrumentation extends Instrumentation {
                 check(true,"Latest actual loaded scene announcement is "+expected);
                 observations.put(new JSONObject().put("scene",expected).put("trackId",pair.id).put("frameAdvance",pair.advance));capture("scene-"+expected.toLowerCase(java.util.Locale.ROOT)+"-en");
             }
+            openRetainedPuzzle();String puzzleLog=awaitLoadedScene("PUZZLE");Pair puzzle=advancingMusic("scene-puzzle");write("scene-puzzle-audio-log.txt",puzzleLog);
+            check(true,"Latest actual loaded scene announcement is PUZZLE");observations.put(new JSONObject().put("scene","PUZZLE").put("trackId",puzzle.id).put("frameAdvance",puzzle.advance));capture("scene-puzzle-u1-en");
             ui.performGlobalAction(AccessibilityService.GLOBAL_ACTION_HOME);SystemClock.sleep(700);
             Snapshot background=snapshot("background");check(background.activeCount()==0,"All target audio tracks inactive after Android HOME");
-            launch();SystemClock.sleep(900);Pair resumed=advancingMusic("resumed");
+            launch();SystemClock.sleep(900);awaitLoadedScene("PUZZLE");Pair resumed=advancingMusic("resumed-puzzle");
             observations.put(new JSONObject().put("phase","resume").put("trackId",resumed.id).put("frameAdvance",resumed.advance));
+            checkUnplayedPuzzle("Android HOME and foreground resume");capture("scene-puzzle-resumed-en");tap("Pause");tap(LEVEL_EXITS);check(currentRoot()==1,"Visible puzzle Pause and Leave level return to the actual home root");
             settings();top();setState("Music",false);setState("Sound effects",true);SystemClock.sleep(1000);
             Snapshot musicOff=snapshot("music-off-effects-on");check(musicOff.activeMusic()==0,"Music inactive independently while effects remain enabled");
             Sampling effectsOn=sampleTaps("effects-on-music-off");check(effectsOn.shortActivity(),"Actual target short-track activity after visible taps with effects on and music off");check(!effectsOn.musicActivity(),"Music stays inactive during effects-only taps");
@@ -89,11 +112,12 @@ public final class AudioInstrumentation extends Instrumentation {
             Sampling musicOnly=sampleTaps("effects-off-music-on");check(musicOnly.musicActivity(),"Music advances during effects-disabled taps");check(!musicOnly.shortActivity(),"No target short-track activity during effects-disabled taps");
             observations.put(new JSONObject().put("phase","music-only").put("trackId",independent.id).put("frameAdvance",independent.advance));capture("settings-independent-en");
             passed=true;
+            }
         }catch(Throwable error){failure=error.toString();result.putString("failure",failure);try{StringWriter stack=new StringWriter();error.printStackTrace(new PrintWriter(stack));write("failure.txt",stack.toString());capture("failure");}catch(Throwable ignored){}}
         finally{
-            try{restore();}catch(Throwable error){passed=false;failure+="; restoration: "+error;}
-            try{if(output!=null)write("report.json",new JSONObject().put("passed",passed&&restorationSucceeded).put("checkCount",count).put("checks",checks).put("actions",actions).put("observations",observations).put("captures",captures).put("processId",pid).put("systemMusicVolume",systemMusicVolume).put("systemMusicMuted",systemMusicMuted).put("settingsRestored",restorationSucceeded).put("originalLanguage",originalLanguage).put("originalMusic",originalMusic).put("originalEffects",originalEffects).put("failure",failure).put("scope","Actual framework touchscreen actions, AudioFlinger rows/frame counters and existing public audio logs for four places, music/effects independence and Android HOME pause/resume. No app imports, renderer/engine hooks, reflection, preference access, state injection, puzzle move, purchase or provider operation. Emulator has no host audio output: no physical listening, timbre or speaker-quality claim. No real external audio-focus contender was introduced. Historical puzzle audio is covered separately by PCM contracts, not this four-place UI route.").toString(2));}catch(Throwable ignored){}
-            result.putString("summary",(passed&&restorationSucceeded?"PASS ":"FAIL ")+count+" digital audio checks");finish(passed&&restorationSucceeded?Activity.RESULT_OK:Activity.RESULT_CANCELED,result);
+            try{if(!recoveryOnly)restore();if(!initialProtected.isEmpty()){String after=protectedState().toString();write("protected-after.json",after);write("session-after.json",preferences("luma_session").toString(2));protectedStatePreserved=initialProtected.equals(after);check(protectedStatePreserved,"Complete game/meta and non-puzzle session preferences remain byte-identical after visible restoration");}}catch(Throwable error){passed=false;failure+="; restoration: "+error;}
+            try{if(output!=null)write("report.json",new JSONObject().put("passed",passed&&restorationSucceeded&&protectedStatePreserved).put("recoveryOnly",recoveryOnly).put("runToken",arguments.getString("runToken","")).put("label",arguments.getString("label","")).put("checkCount",count).put("checks",checks).put("actions",actions).put("observations",observations).put("captures",captures).put("processId",pid).put("systemMusicVolume",systemMusicVolume).put("systemMusicMuted",systemMusicMuted).put("settingsRestored",restorationSucceeded).put("protectedStatePreserved",protectedStatePreserved).put("activePuzzleSessionChangesAllowed",new JSONArray(ACTIVE_SESSION_KEYS)).put("originalLanguage",originalLanguage).put("originalMusic",originalMusic).put("originalEffects",originalEffects).put("failure",failure).put("scope",recoveryOnly?"Recovery only through actual UI from documented pre-failure original values, with independent comparison to the original protected checkpoint on the host. No five-context playback claim from this recovery phase.":"Actual framework touchscreen actions, AudioFlinger rows/frame counters and public audio logs for all five contexts including a publicly opened already-earned U1 with no piece touch. Android HOME/resume is exercised from that puzzle, followed by independent music/effects toggles and home/original-language restoration. Complete game/meta and every non-active-puzzle session key are observed read-only and compared; original/current active sessions are preserved as evidence and never injected. No app imports, renderer/engine hooks, reflection, preference writes, puzzle move, purchase or provider operation. Emulator has no host audio output: no physical listening, timbre or speaker-quality claim. No real external audio-focus contender was introduced.").toString(2));}catch(Throwable ignored){}
+            result.putString("summary",(passed&&restorationSucceeded&&protectedStatePreserved?"PASS ":"FAIL ")+count+" digital audio checks");finish(passed&&restorationSucceeded&&protectedStatePreserved?Activity.RESULT_OK:Activity.RESULT_CANCELED,result);
         }
     },"luma-v117-digital-audio-observer").start();}
 
@@ -102,7 +126,19 @@ public final class AudioInstrumentation extends Instrumentation {
         settings();top();setState("Sound effects",originalEffects);setState("Music",originalMusic);
         check(state("Sound effects")==originalEffects&&state("Music")==originalMusic,"Original two audio settings restored through actual UI");
         tap(originalLanguage);check(selectedLanguage().equals(originalLanguage),"Original selected language restored through actual UI");
-        restorationSucceeded=true;capture("settings-restored");back();
+        capture("settings-restored");back();navigate(1);check(currentRoot()==1,"Actual home root restored after original language and independent audio settings");checkUnplayedPuzzle("Final home restoration");restorationSucceeded=true;capture("home-restored");
+    }
+    private SharedPreferences session(){return getTargetContext().getSharedPreferences("luma_session",0);}
+    private JSONObject preferences(String name)throws Exception{return values(getTargetContext().getSharedPreferences(name,0).getAll());}
+    private JSONObject values(Map<String,?> source)throws Exception{JSONObject result=new JSONObject();for(Map.Entry<String,?> item:new TreeMap<>(source).entrySet()){Object value=item.getValue();if(value instanceof Set){List<String> list=new ArrayList<>();for(Object entry:(Set<?>)value)list.add(String.valueOf(entry));Collections.sort(list);value=new JSONArray(list);}result.put(item.getKey(),value);}return result;}
+    private JSONObject protectedState()throws Exception{Map<String,Object> stableSession=new TreeMap<>();for(Map.Entry<String,?> item:session().getAll().entrySet())if(!ACTIVE_SESSION_KEYS.contains(item.getKey()))stableSession.put(item.getKey(),item.getValue());return new JSONObject().put("game",preferences("luma_drift_save_v1")).put("meta",preferences("luma_drift_meta_v1")).put("non_active_puzzle_session",values(stableSession));}
+    private void checkUnplayedPuzzle(String phase)throws Exception{SharedPreferences s=session();check(s.getInt("level",-1)==1&&s.getInt("mode",-1)==0&&s.getString("history","missing").isEmpty()&&s.getInt("budget_used",-1)==0&&s.getInt("hints",-1)==0&&s.getInt("undos",-1)==0,"Publicly opened U1 remains unplayed with zero action, hint or Undo cost: "+phase);}
+    private void openRetainedPuzzle()throws Exception{
+        check(getTargetContext().getSharedPreferences("luma_drift_save_v1",0).getInt("stars_1",0)==3,"Audio puzzle entry uses an already earned three-star U1");navigate(0);tap("All levels");tap("Explore a level");
+        AccessibilityNodeInfo field=null;long end=SystemClock.uptimeMillis()+5000;while(field==null&&SystemClock.uptimeMillis()<end){for(AccessibilityNodeInfo node:nodes()){if(field==null&&node.isVisibleToUser()&&"android.widget.EditText".contentEquals(node.getClassName()))field=AccessibilityNodeInfo.obtain(node);node.recycle();}if(field==null)SystemClock.sleep(70);}
+        check(field!=null,"Puzzle audio route exposes the real visible map jump EditText");Bundle text=new Bundle();text.putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,"1");check(field.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT,text),"Visible map jump field accepts U1 text");
+        boolean submitted=Build.VERSION.SDK_INT>=30&&field.performAction(AccessibilityNodeInfo.AccessibilityAction.ACTION_IME_ENTER.getId());field.recycle();if(!submitted){long now=SystemClock.uptimeMillis();check(ui.injectInputEvent(new KeyEvent(now,now,KeyEvent.ACTION_DOWN,KeyEvent.KEYCODE_ENTER,0),true)&&ui.injectInputEvent(new KeyEvent(now,SystemClock.uptimeMillis(),KeyEvent.ACTION_UP,KeyEvent.KEYCODE_ENTER,0),true),"Actual keyboard Enter submits visible U1 map jump");}actions.put(new JSONObject().put("kind",submitted?"Accessibility ACTION_IME_ENTER":"UiAutomation keyboard Enter").put("label","Visible map jump U1"));SystemClock.sleep(350);
+        String level="";for(AccessibilityNodeInfo node:nodes()){if(level.isEmpty()&&node.isVisibleToUser()&&node.isClickable()&&name(node).matches("^Level 1(?:,.*)?$"))level=name(node);node.recycle();}check(!level.isEmpty(),"Requested U1 is a genuinely visible map target");tap(level);tap("Play");checkUnplayedPuzzle("Initial actual U1 board");check(has(new String[]{"Pause"},true),"Actual puzzle HUD is visible and interactive before audio sampling");write("session-puzzle-entry.json",preferences("luma_session").toString(2));
     }
     private Pair advancingMusic(String phase)throws Exception{
         Snapshot first=snapshot(phase+"-first");SystemClock.sleep(1050);Snapshot second=snapshot(phase+"-second");
@@ -160,7 +196,7 @@ public final class AudioInstrumentation extends Instrumentation {
     private String selectedLanguage(){String selected="";for(AccessibilityNodeInfo n:nodes()){if(n.isSelected()&&n.isClickable()&&n.isVisibleToUser())selected=name(n);n.recycle();}return selected;}
     private boolean state(String label){for(AccessibilityNodeInfo n:nodes()){String name=name(n);boolean match=n.isVisibleToUser()&&n.isClickable()&&name.startsWith(label+": ");n.recycle();if(match){if(name.equals(label+": On"))return true;if(name.equals(label+": Off"))return false;throw new AssertionError("Unexpected visible toggle state: "+name);}}throw new AssertionError("Missing visible toggle: "+label);}
     private void setState(String label,boolean enabled)throws Exception{top();if(state(label)!=enabled)tap(label+": "+(enabled?"Off":"On"));check(state(label)==enabled,"Visible "+label+" state is "+(enabled?"On":"Off"));}
-    private void settings()throws Exception{for(int i=0;i<16;i++){top();if(hasSettingState())return;if(has(SETTINGS,true)){tap(SETTINGS);return;}int root=currentRoot();if(root>0)tap(ROOTS[root-1]);else back();}throw new AssertionError("Cannot reach Settings through actual UI");}
+    private void settings()throws Exception{for(int i=0;i<16;i++){top();if(hasSettingState())return;if(has(SETTINGS,true)){tap(SETTINGS);return;}if(has(LEVEL_EXITS,true)){tap(LEVEL_EXITS);continue;}int root=currentRoot();if(root>0)tap(ROOTS[root-1]);else back();}throw new AssertionError("Cannot reach Settings through actual UI");}
     private boolean hasSettingState(){boolean found=false;for(AccessibilityNodeInfo n:nodes()){String value=name(n);if(n.isVisibleToUser()&&n.isClickable())for(String label:new String[]{"Sound effects","Effets sonores","Soundeffekte","Efectos de sonido","Efeitos sonoros","Effetti sonori"})if(value.startsWith(label+": "))found=true;n.recycle();}return found;}
     private int currentRoot(){if(has(SETTINGS,true))return 0;if(has(new String[]{"Home scene","Pièce de la maison","Zimmeransicht","Vista de la casa","Vista da casa","Vista della casa"}))return 1;if(has(PROFILES,true))return 2;if(has(new String[]{"Walls","Murs","Wände","Paredes","Pareti"},true)&&has(new String[]{"Floor","Sol","Boden","Suelo","Chão","Pavimento"},true))return 3;return -1;}
     private void navigate(int wanted)throws Exception{for(int i=0;i<15;i++){top();int current=currentRoot();if(current==wanted)return;if(current>=0)tap(ROOTS[current+(current<wanted?1:-1)]);else back();}throw new AssertionError("Cannot reach scene root "+wanted);}

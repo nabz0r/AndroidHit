@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify frozen Luma1.17 RC3 production/Lab APKs and AABs; never build, sign or use adb.
+"""Verify frozen Luma 1.17 production/Lab APKs and AABs; never build, sign or use adb.
 
 Requires JDK 17, Android build-tools 36.0.0 and the pinned official bundletool JAR.
 Download that public tool if absent:
@@ -145,7 +145,7 @@ def verify(args):
     if not out.is_absolute():
         out = ROOT / out
     out.mkdir(parents=True, exist_ok=True)
-    (out / "BINARY_AUDIT_PENDING.txt").write_text("RC1 binary verification has not completed. No PASS claim until this marker is removed.\n")
+    (out / "BINARY_AUDIT_PENDING.txt").write_text("Candidate binary verification has not completed. No PASS claim until this marker is removed.\n")
     java_dir = Path(args.java_bin)
     build_tools = Path(args.build_tools)
     bundletool = Path(args.bundletool)
@@ -288,9 +288,9 @@ def main():
     parser.add_argument("--build-tools", default=str(sdk / "build-tools/36.0.0"))
     parser.add_argument("--out", default="docs/validation/v1.17/binaries")
     parser.add_argument("--source-freeze", required=True, help="Exact source-path to SHA256 map frozen by the build owner")
-    parser.add_argument("--expected-version-code", type=int, default=22)
-    parser.add_argument("--production-version", default="1.17.0-rc4")
-    parser.add_argument("--lab-version", default="1.17.0-sandbox-rc4")
+    parser.add_argument("--expected-version-code", type=int, default=24)
+    parser.add_argument("--production-version", default="1.17.0-rc6")
+    parser.add_argument("--lab-version", default="1.17.0-sandbox-rc6")
     parser.add_argument("--build-log")
     args = parser.parse_args()
     try:

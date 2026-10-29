@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "scope": "Actual native G modes smoke and three Guardian return regressions. Four other modes opened only; P1 completed by four real touches. Original pre-FIRST-P1 game/meta equality is checked independently of victory label and retry baseline.",
+  "report": "docs/validation/v1.17/native-interface/candidate-g-other-modes-v2/host-report.json",
+  "report_sha256": "fc9c790fa94fe71cc720e9fedd0bcfadd447a85d083d519e16381841b8cdb21d",
+  "coverage_sha256": "6b05b23dfd8915dcf1d3b38957f97640cac63a5bd931303751f9fc07501e41f2",
+  "first_g_pre_first_p1_checkpoint_sha256": "2b7c88b321914493699b0369f0c1ce826f2022247a7a98b33b9cb4bdfd41aeb6",
+  "protected_game_fields": 2059,
+  "protected_meta_fields": 1010,
+  "original_game_meta_identical": true,
+  "reduce_motion_identical": true,
+  "coins": 51510,
+  "xp": 35000,
+  "guardian_exits": [
+    "object",
+    "android",
+    "bottom-link"
+  ],
+  "p1_native_piece_touches": [
+    {
+      "id": 0,
+      "row": 2,
+      "column": 5,
+      "observedLabel": "Key 1, Piece, row 2, column 5, arrow right, Gate open"
+    },
+    {
+      "id": 1,
+      "row": 3,
+      "column": 1,
+      "observedLabel": "Piece, row 3, column 1, arrow right, Gate open"
+    },
+    {
+      "id": 2,
+      "row": 5,
+      "column": 2,
+      "observedLabel": "Piece, row 5, column 2, arrow up, Gate open"
+    },
+    {
+      "id": 3,
+      "row": 1,
+      "column": 5,
+      "observedLabel": "Piece, row 1, column 5, arrow down, Gate open"
+    }
+  ],
+  "native_checks": 123,
+  "native_pngs": 37,
+  "direct_visual_observation": "Original actual P1 victory PNG directly inspected:3stars,+0LumaCoins,+0XP visibly painted. Canvas text accessibility is not assumed.",
+  "natural_session_changes": "New zero-action M/Daily/Weekly boards and Guardian1 plus completed P1 replace old active sessions only through real public UI. No session restore/injection.",
+  "restoration": "French/Livingroom,originalmotion and every recorded game/meta field unchanged;observerremoved,normaldisplayrestored,exact G bytes retained"
+}

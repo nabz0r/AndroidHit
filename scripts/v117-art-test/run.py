@@ -33,6 +33,10 @@ def main():
     parser.add_argument('--expected-avd',required=True)
     parser.add_argument('--clone-receipt',type=Path)
     parser.add_argument('--clone-receipt-sha256')
+    parser.add_argument('--clone-candidate-authorization',type=Path)
+    parser.add_argument('--clone-candidate-authorization-sha256')
+    parser.add_argument('--clone-successor-authorization',type=Path)
+    parser.add_argument('--clone-successor-authorization-sha256')
     parser.add_argument('--expected-apk',type=Path,required=True)
     parser.add_argument('--sha256',required=True)
     parser.add_argument('--source-freeze',type=Path,required=True)
@@ -43,11 +47,14 @@ def main():
     primary=(args.serial,args.expected_avd)==('emulator-5586','Luma-Refonte115-QA')
     clone=(args.serial,args.expected_avd)==('emulator-5592','Luma117-Secondary-F-QA')
     assert primary or clone,'Only the two explicitly authorized task-owned AVD/serial pairs are supported'
-    assert not primary or args.clone_receipt is None and args.clone_receipt_sha256 is None,'Do not attribute a clone receipt to the original AVD'
+    assert not primary or args.clone_receipt is None and args.clone_receipt_sha256 is None and args.clone_candidate_authorization is None and args.clone_candidate_authorization_sha256 is None,'Do not attribute clone receipts to the original AVD'
+    assert not primary or args.clone_successor_authorization is None and args.clone_successor_authorization_sha256 is None,'Do not attribute successor receipt to the original AVD'
     assert not clone or args.clone_receipt is not None and args.clone_receipt_sha256,'Explicit hashed physical-clone provenance required'
     assert re.fullmatch(r'[A-Za-z0-9_-]{1,50}',args.label),'Fresh bounded evidence label required'
     assert re.fullmatch(r'[a-f0-9]{64}',args.sha256) and sha(args.expected_apk)==args.sha256,'Exact accepted candidate hash required'
-    clone_provenance=guard.validate_receipt(args.clone_receipt,args.clone_receipt_sha256,args.serial,args.expected_avd,args.sha256) if clone else None
+    if clone:assert args.clone_candidate_authorization is not None and args.clone_candidate_authorization_sha256,'Separate explicit root G candidate authorization required'
+    if clone:assert args.clone_successor_authorization is not None and args.clone_successor_authorization_sha256,'Separate explicit root H successor authorization required'
+    clone_provenance=guard.validate_successor_authorization(args.clone_receipt,args.clone_receipt_sha256,args.clone_candidate_authorization,args.clone_candidate_authorization_sha256,args.clone_successor_authorization,args.clone_successor_authorization_sha256,args.serial,args.expected_avd,args.sha256,'1.17.0-rc6',24) if clone else None
     witness_path=HERE/'assets/source-manifest.json';witness=json.loads(witness_path.read_text());freeze=json.loads(args.source_freeze.read_text())
     assert witness and all(sha(ROOT/name)==digest and freeze.get(name)==digest for name,digest in witness.items()),'Actual final APK sources must match packaged render witnesses'
     with zipfile.ZipFile(args.test_apk) as observer:
@@ -83,7 +90,10 @@ def main():
     assert not output.exists(),'Fresh local evidence directory required'
     output.mkdir(parents=True)
     observer=output/'art-observer.apk';shutil.copyfile(args.test_apk,observer)
-    if clone:shutil.copyfile(args.clone_receipt,output/'clone-creation.json')
+    if clone:
+        shutil.copyfile(args.clone_receipt,output/'clone-creation.json')
+        shutil.copyfile(args.clone_candidate_authorization,output/'clone-candidate-authorization.json')
+        shutil.copyfile(args.clone_successor_authorization,output/'clone-successor-authorization.json')
     shutil.copyfile(CLONE_GUARD,output/'shared-clone-guard.py')
     assert sha(observer)==sha(args.test_apk)
     shutil.copyfile(args.source_freeze,output/'final-source-freeze.json')
@@ -92,7 +102,7 @@ def main():
         if file.is_file() and '__pycache__' not in file.parts:
             target=output/'observer-source'/file.relative_to(HERE);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,target)
     run_token=str(uuid.uuid4());owned_observer=False;started=time.monotonic()
-    report={'passed':False,'run_token':run_token,'apk_sha256':args.sha256,'version':'1.17.0-rc4','code':22,'observer_sha256':sha(observer),'source_witness_sha256':sha(witness_path),'final_source_freeze_sha256':sha(args.source_freeze),'serial':args.serial,'avd':args.expected_avd,'shared_clone_guard_sha256':sha(CLONE_GUARD),'device_provenance':clone_provenance or {'scope':'Original retained task-owned AVD'},'scope':'Isolated native Android Canvas QA render gallery through public pure renderer APIs. Not application UI, ownership, interaction, achieved outfits or gameplay evidence. No target installation, Activity launch, input injection, GameStore, engine, reflection or preferences.'}
+    report={'passed':False,'run_token':run_token,'apk_sha256':args.sha256,'version':'1.17.0-rc6','code':24,'observer_sha256':sha(observer),'source_witness_sha256':sha(witness_path),'final_source_freeze_sha256':sha(args.source_freeze),'serial':args.serial,'avd':args.expected_avd,'shared_clone_guard_sha256':sha(CLONE_GUARD),'device_provenance':clone_provenance or {'scope':'Original retained task-owned AVD'},'scope':'Isolated native Android Canvas QA render gallery through public pure renderer APIs. Not application UI, ownership, interaction, achieved outfits or gameplay evidence. No target installation, Activity launch, input injection, GameStore, engine, reflection or preferences.'}
     try:
         previous=installed_hash(TEST)
         assert previous is None or previous==sha(observer),'Different observer present; preserve its ownership'
@@ -109,7 +119,7 @@ def main():
         assert result.returncode==0 and b'INSTRUMENTATION_CODE: -1' in result.stdout and b'INSTRUMENTATION_FAILED' not in result.stdout,'Native observer did not complete successfully'
         assert pull.returncode==0,'Native evidence retrieval failed'
         proof=json.loads((native/'report.json').read_text())
-        assert proof['passed'] is True and proof['runToken']==run_token and proof['code']==22,'Current successful native execution identity required'
+        assert proof['passed'] is True and proof['runToken']==run_token and proof['code']==24,'Current successful native execution identity required'
         assert len(proof['composites'])==144 and len(proof['garments'])==24 and len(proof['styles'])==24,'Incomplete native art matrix'
         assert len(proof['images'])==50 and all(sha(native/name)==digest for name,digest in proof['images'].items()),'Every native gallery image must match its recorded hash'
         assert json.loads((native/'source-manifest.json').read_text())==witness,'Native observer used a different source witness'

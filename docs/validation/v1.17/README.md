@@ -1,90 +1,48 @@
 # Luma Drift 1.17 qualification register
 
-**Frozen F is under final qualification.** Production `1.17.0-rc4`, isolated Lab
-`1.17.0-sandbox-rc4`, code **22**. Exact production APK: **71,827,197 bytes**,
-SHA-256 `fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8`.
-The [source freeze](candidate-f/source-freeze.json) contains **161 inputs**;
-[four-package audit](candidate-f/binaries/binary-final-candidate.json) and
-[build/lint](candidate-f/build.log) pass. Remaining secondary routes and the
-actual 1,000-level replay are running; final Git/Firebase publication is pending.
+**Current candidate: H, production1.17.0-rc6 / isolated Lab1.17.0-sandbox-rc6, code24.** Native acceptance is in progress. Canonical H packages, Git main and Firebase delivery require their own completed exact-byte records.
 
-[Release and exact four-artifact table](../../RELEASE_1_17.md) ·
-[Architecture](../../DEVELOPMENT.md) · [Art/audio](../../ART_AUDIO.md) ·
-[Primary research](../../design/v1.17/reference-research.md) ·
-[Website register](../site-v1.17/README.md).
+Production APK: **71,827,197bytes**, SHA-256 `15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47`. [162-input freeze](candidate-h/source-freeze.json), source `bb622960f52e5ba41e75a6dfa8b30dbb4b98a291`. H preserves159 G inputs and adds one live geometry helper; engine/audio/art are unchanged. [Build, delta and four-package audit](candidate-h/README.md).
 
-## Current exact F native evidence
+[Release](../../RELEASE_1_17.md) · [Development](../../DEVELOPMENT.md) · [Art/audio](../../ART_AUDIO.md) · [Design research](../../design/v1.17/reference-research.md) · [Website/publication](../site-v1.17/README.md).
 
-| Scope | Result | Evidence |
+## Exact H evidence
+
+| Scope | Executed result | Record |
 | --- | --- | --- |
-| Retained E→F upgrade, assets, forms, home gestures and cold persistence | 619 checks / 20 PNGs: 6 baseline E, 613 F | [Upgrade](native-interface/candidate-f-upgrade/host-report.json) |
-| EN/DE four roots at actual 320 dp, fonts 1.0 and 1.3 | 285 checks / 8 PNGs each | [Default](native-interface/candidate-f-roots-compact/host-report.json), [large](native-interface/candidate-f-roots-compact-largefont/host-report.json) |
-| Original clipped DE/IT language target | 19 checks / 2 PNGs | [Regression](native-interface/candidate-f-clipped-language/host-report.json) |
-| Six-language primary browsing, all companion/furniture catalogues and five outfit previews | 276 checks / 177 PNGs at each normal and compact size | [Normal](native-interface/candidate-f-sixlangs-normal/host-report.json), [compact](native-interface/candidate-f-sixlangs-compact/host-report.json) |
-| Owned Nova/Miko/Halo wardrobe/profile/collection and fifteen outfit previews | 78 checks / 27 PNGs | [Actual UI](native-interface/candidate-f-owned-rigs/host-report.json) |
-| Compact secondary EN/DE | 205 checks / 298 PNGs | [Completed scope](native-interface/candidate-f-secondary-compact-preflight2/host-report.json); four compact languages and normal EN/FR still running |
-| Empty-device first launch, tutorial, first U1–U8 wins, earned draws and distinct cold process | 133 checks / 105 actual gestures / 49 original PNGs | [Fresh F aggregate](fresh-f/summary-f.json), [scope](fresh-f/README.md) |
-| Isolated pure-render gallery | 144 complete looks, 24 garments, 24 styles / 50 PNGs | [F gallery](art/native/candidate-f-art/host-report.json); not app UI or ownership |
-| Direct visual inspection | 58 actual UI frames, plus all 50 gallery sheets through exact C→F byte equality | [F visual report](review/visual-candidate-f.json), [gallery equality](review/c-to-f-renderer-pixel-equality.json) |
-| Installed digital audio | 38 checks / 8 PNGs / 130 AudioFlinger dumps | [Native review](review/audio-native-final-f.json) |
-| Three native scene transitions | 23 checks and original SDK video | [Report](native-interface/candidate-f-transitions-v2/host-report.json) |
-| Cached enlarged-home rendering | 19 checks / 2 PNGs | [Steady render](native-interface/candidate-f-steady-home/host-report.json) |
+| Four signed outputs, release build/lint, signatures/bundles/static16KiB alignment | PASS;49.014seconds;0fatal/error,13retained warnings/flavor | [Build/audit](candidate-h/README.md) |
+| Complete sparse host workflow | PASS24commands /163files /179.429seconds | [Source/log hashes](ci-host-rehearsal-h-complete/summary.json) |
+| Original retained G→H upgrade, real home/profile/equipment/UI and cold process | PASS625checks /20PNGs;7Gbaseline +618H | [Original5586](native-interface/candidate-h-main-upgrade-a/host-report.json) |
+| Same physical clone G→H update and cold process | PASS625checks /20PNGs;7Gbaseline +618H; not a second migration qualification | [Clone5592](native-interface/candidate-h-upgrade/host-report.json) |
+| Installed digital sound, all five contexts including an actual untouched U1 board | PASS50checks /10PNGs; independent switches, HOME/resume, complete protected-state restoration | [CleanH-b](audio/native/candidate-h-main-audio-b/host-report.json), [preparation summary](relay/main-h-preparation-summary.json) |
+| Mode HUD/help/pause, three Guardian returns, full actions after actual scroll and real P1 win | PASS normal150checks/44PNGs + actual320dp/font1.3 154checks/44PNGs;304/88 total | [Strictv2 acceptance](native-interface/candidate-h-modes-v2-acceptance.json) |
+| All1,000 U boards through actual Android touches | Pending final exact H completed report and independent aggregate | [Live handoff](relay/active-handoff.json) |
+| Fresh first install, genuine first wins/local draws/equipment/cold | PASS133checks/105touches/49PNGs; Buzz/Aurora, seven slots,440 earned victory coins;280 after real draws | [FreshH](fresh-h/summary-h.json), [scope/shutdown](fresh-h/README.md) |
+| Six-language primary browsing/catalogues/five outfit previews, normal | PASS277checks/177PNGs,16 full-size FR/EN website originals indexed | [Actual normal route](native-interface/candidate-h-sixlangs-normal/host-report.json), [site map](../site-v1.17/capture-map.json) |
+| Compact primary/secondary UI, owned looks, native render gallery, transitions, cached home | Remaining exact H reports and direct visual review running | [Controller/evidence folders](native-interface/) |
 
-Every current native report identifies the same exact F hash. Normal/compact
-primary browsing covers EN, FR, DE, ES, PT and IT. Secondary coverage is six
-compact languages (two on the original, four on its identical physical clone)
-and normal EN/FR. The unfinished secondary scopes above are not counted as
-passes, and a complete six-by-two secondary matrix is not claimed.
+H clean audio is distinct from an observer-label failure and a separate11check/2PNG recovery. The clean result matches both its own initial snapshot and the original pre-failure snapshot across complete game/meta/non-active-session state. Recovery counts are not added. Native track counters establish digital execution; they do not establish physical-speaker quality or real external audio-focus competition.
 
-The clone was copied only after normal source shutdown: seven disk hashes
-match, then the full protected save/session matches after boot. Its
-[creation receipt](secondary-clone/creation.json), guarded wrapper and
-[baseline identity](native-interface/candidate-f-clone-identity/identity-comparison.json)
-keep separate interactions attributable. This is not a second migration test.
-No preferences, money, ownership, progression or histories are seeded. The
-actual fresh F installation is separate again and retains its own userdata.
+## Host coverage and native boundaries
 
-Fresh F genuinely earns 440 coins from eight victories; the observed starting
-180 plus tutorial 100 yield 720. Tula and Moonlight draws spend 180 + 260 and
-leave 280. Seven equipment slots, receipt and balance survive a new process
-without another debit. The retained profile's 1,000-board route is replay
-qualification and requires zero repeated first-win rewards.
+U covers every one of1,000 boards and191954 reachable states/471517 transitions with13312469 assertions. The complete workflow also covers all1240 L/M strategy boards and all100 Guardians, retained codes/P challenges, budget/store/calendar/collection rules, learning, home/profile/summon, roots, sprites, transitions, DSP/lifecycle and website controllers. Historical E procedural seeds are sampled, not called an infinite exhaustive catalogue. [Expanded family coverage](legacy-host-f/README.md).
 
-The installed audio checks observe the four places, HOME/background silence,
-resume and independent music/effects settings. Music/effects and French are
-restored. These digital emulator observations do not include physical speaker
-listening, a real external audio-focus competitor or a native puzzle-audio run.
-The original SDK transition video shows routes/fades; its capture cadence and
-PTS gaps do not prove 60 fps phone performance.
+The new play geometry contract passes379634 assertions over3400 live-helper layouts; roots pass202444 assertions over420layouts. These are host geometry/model checks, separate from native glyphs/touch. All50context/biome arrangements and14earcons have synthesized-output checks; installed five-context playback has its own record.
 
-## Current host checks
+The clone was made only after normal source shutdown, with seven disk hashes and complete baseline equality. Creation remains immutable; [G authorization](secondary-clone/candidate-g-authorization.json) and [H authorization](secondary-clone/candidate-h-authorization.json) authorize only sequential retained upgrades of that same task clone. No second disk copy, target state injection or artificial ownership/progression is used. Fresh5590 and retained5586 are separate roles and retained saves remain intact.
 
-The [F sparse rehearsal](ci-host-rehearsal-f/summary.json) copies exactly the
-workflow's **135 allowed files**, passes all **14 commands**, and records source
-and log hashes. This is local JDK 17/Node execution; remote Actions is a
-separate publication result.
+## H observer reservations and superseded candidates
 
-| Contract | Result | Evidence |
-| --- | --- | --- |
-| Shared live root geometry | 202,444 assertions / 420 layouts | [Log](ci-host-rehearsal-f/10-test-root-scenes-v117.txt) |
-| Scene timing, opacity, lifecycle, reduced motion and gesture ownership | 10,922 checks | [Log](ci-host-rehearsal-f/09-test-scene-transition-v117.txt) |
-| Sprite aspect, anchors, atlas seams and invalid geometry | 19,857 checks | [Log](ci-host-rehearsal-f/11-test-art-v117-geometry.txt) |
-| Fifty PCM loops, fourteen effects and worker lifecycle model | 1,714 checks: 1,638 DSP + 76 lifecycle | [Log](ci-host-rehearsal-f/12-test-audio-scenes-v117.txt), [PCM/source report](audio/scenes/final-b/verification.json) |
-| Current/previous web controller, legal links and deliberate audio | 18 tests | [Log](ci-host-rehearsal-f/13-website-controller.txt) |
-| All U boards and reachable relay state/transition graph | 13,312,469 checks / 1,000 boards | [Log](ci-host-rehearsal-f/02-test-relay-v115.txt) |
-| Profile, badges, both pools, receipts and equipment | 60,713 checks | [Log](ci-host-rehearsal-f/07-test-profile-summon-v116.txt) |
-| Retained N pacing, budgets, home, guide and reward contracts | All configured commands pass | [Full summary](ci-host-rehearsal-f/summary.json) |
+The first compact H Share capture showed only the HUD top: an AX node had a clipped sliver at the lower boundary. Functional131-check passes did not prove full action visibility. Their images/reports are preserved; the stricterv2 observer then scrolls to the actual bottom and shows the three complete object/caption targets. Both v2 routes pass and direct inspection closes the reservation: compact nodes grow from an18px clipped sliver to233px full height after252px of actual scroll, with37px bottom margin. The original reports retain their reservation. Only observer code changed; the APK did not.
 
-The PCM report keeps its historical final-b directory name; its audio sources
-match frozen F. Four 10-second previews are exact app-synthesizer exports,
-biome 0 and gain 0.27, not phone recordings. Host AudioTrack doubles do not
-replace native playback. [Initial seam failures](audio/scenes/initial-seam-failure.json)
-remain preserved.
+F's genuine Guardian Back/list loop was fixed in G, preserving refusal to leave on save failure. F's replay was deliberately stopped at817certified levels. G's gate/counter/help overlap was fixed in H; G's replay stopped at101. Neither interruption is a passed1,000run. [F receipt](relay/candidate-f-replay1000-a-interruption.json), [G receipt](relay/candidate-g-replay1000-a-interruption.json), [G geometry diagnosis](review/puzzle-hud-geometry-g.md). G's accidental stale-report rig run remains explicitly invalidated rather than reused as H evidence.
+
+The [preserved F register draft](candidate-f/qualification-register-before-h-rewrite.md) retains full F matrix counts, including six compact secondary languages, normal EN/FR, fresh Tula/Moonlight results and its own gallery/video/audio scopes. Fresh G separately drew Emberling/Sweetheart; no F outcome is attributed to G/H. All original raw failures and intermediate signed binaries keep their identities.
 
 ## Preserved intermediate findings
 
 Failed or superseded runs remain under their original bytes. Later success does
-not rewrite their status or count them as final F executions.
+not rewrite their status or count them as final H executions.
 
 | Candidate / scope | Retained result and boundary |
 | --- | --- |
@@ -126,21 +84,8 @@ are local validation intermediates and are ignored in the current delivery
 tree; their hashes, sources and reports remain attributable. The four canonical
 production/Lab release files are the intended distributed packages.
 
-## Pending delivery work
+## Delivery and limits
 
-Finish secondary compact FR/ES/PT/IT and normal EN/FR; finish and independently
-aggregate the real U1–U1000 F replay; stage exact canonical packages; run strict
-website preparation/offline acceptance; publish clean Git/Firebase commits;
-verify remote CI and all public HTTPS bytes. [Live replay pointer](relay/active-handoff.json)
-counts only actually completed native levels and is not a final pass report.
+After exact H native completion, collect canonical APK/AAB/manifests without changing any audited bytes; require16 current FR/EN native images and the independently reaggregated full replay; run strict website checks; publish clean Git/Firebase commits; verify remote CI and public HTTPS payloads. Public1.16 remains until those stages pass.
 
-## Limits retained at delivery
-
-Native touch/capture, isolated rendering, host graph enumeration, PCM exports,
-installed playback and physical listening are separate scopes. API36 arm64
-native devices report actual 16,384-byte pages; this qualifies the observed
-emulators, not all phones/provider paths. Execution time is not phone FPS or
-human difficulty. No comprehension, enjoyment, retention or audience size is
-measured. Test ads and closed checkout/premium gates remain. Local game,
-profile and house are not synchronized by Google identity. Historical 1.15/1.16
-marathons and Hosting receipts do not establish 1.17 delivery.
+Native touch/capture, isolated pure-render sheets, graph enumeration, PCM exports and installed playback are distinct. API36arm64 task devices report actual16384-byte pages; this is emulator evidence, not all-phone/provider coverage. SDK video cadence does not certify60fps. Human comprehension, enjoyment, retention and audience size remain unmeasured. Test ads and closed checkout/premium gates remain. Google sign-in does not synchronize local game/profile/house. Older1.15/1.16 releases do not certify1.17.

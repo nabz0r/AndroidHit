@@ -1,0 +1,967 @@
+{
+  "passed": false,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "expected_version": "1.17.0-rc5",
+  "expected_code": 23,
+  "apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "test_apk_sha256": "12fa4e33d1e9cafe6edf24b8535b22394021564c697f36f260990402f017eb78",
+  "wrapper_source_sha256": "5f06a4a8903675abf37c191dc2d711ac6c47cdc80fef9647c4823a73a1fc6694",
+  "runner_source_sha256": "873754db0aa2b236348cf86e0aef8c0b756df1a4299e86229aa2b85358d5f13a",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "modes",
+      "native": {
+        "passed": false,
+        "checkCount": 112,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Remix"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Explore a level"
+          },
+          {
+            "passed": true,
+            "message": "Framework text input edits only the actually visible native map jump field"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Level 1, Normal, Directions"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Play  →"
+          },
+          {
+            "passed": true,
+            "message": "Actual remix board opens its expected mode, empty history and interactive HUD; painted title is captured visually"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Actual remix help does not alter its durable session"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Actual remix exit preserves its zero-action board without completing or spending"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism journal"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Guardian 1, Play"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian1 board exposes its untouched work HUD and public rules: object"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Show the next gesture · free"
+          },
+          {
+            "passed": true,
+            "message": "Public free Guardian help changes no durable piece, work or budget: object"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Back"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian object returns to its public list"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: object step0"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: object step1"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: object step2"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back escapes the Guardian return history to a root: object"
+          },
+          {
+            "passed": true,
+            "message": "All actual Guardian return paths persist the same unplayed encounter: object"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism journal"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Guardian 1, Play"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian1 board exposes its untouched work HUD and public rules: android"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Show the next gesture · free"
+          },
+          {
+            "passed": true,
+            "message": "Public free Guardian help changes no durable piece, work or budget: android"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian android returns to its public list"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: android step0"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: android step1"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: android step2"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back escapes the Guardian return history to a root: android"
+          },
+          {
+            "passed": true,
+            "message": "All actual Guardian return paths persist the same unplayed encounter: android"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for All levels"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism journal"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Guardian 1, Play"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian1 board exposes its untouched work HUD and public rules: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Show the next gesture · free"
+          },
+          {
+            "passed": true,
+            "message": "Public free Guardian help changes no durable piece, work or budget: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Prism guardians"
+          },
+          {
+            "passed": true,
+            "message": "Actual Guardian bottom-link returns to its public list"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: bottom-link step0"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: bottom-link step1"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back never reopens the dismissed Guardian board: bottom-link step2"
+          },
+          {
+            "passed": true,
+            "message": "Actual Android Back escapes the Guardian return history to a root: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "All actual Guardian return paths persist the same unplayed encounter: bottom-link"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Daily Drift"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Stage 1, Play, 0 Stars"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Play  →"
+          },
+          {
+            "passed": true,
+            "message": "Actual daily board opens its expected mode, empty history and interactive HUD; painted title is captured visually"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Actual daily help does not alter its durable session"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Actual daily exit preserves its zero-action board without completing or spending"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Weekly Voyage"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Stage 1, Play, 0 Stars"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Play  →"
+          },
+          {
+            "passed": true,
+            "message": "Actual weekly board opens its expected mode, empty history and interactive HUD; painted title is captured visually"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "Actual weekly help does not alter its durable session"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Pause"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Leave level"
+          },
+          {
+            "passed": true,
+            "message": "Actual weekly exit preserves its zero-action board without completing or spending"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Events"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Sealed passages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Sealed passages · Stage 1"
+          },
+          {
+            "passed": true,
+            "message": "Public Sealed Stage1 opens canonical P1 challenge mode"
+          },
+          {
+            "passed": true,
+            "message": "P1 HUD explicitly offers an unlimited friend challenge"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for How to play"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Let’s drift"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 2, column 5"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Key 1, Piece, row 2, column 5, arrow right, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "P1 actual touch durably removes exactly the next certified piece 0"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 3, column 1"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Piece, row 3, column 1, arrow right, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "P1 actual touch durably removes exactly the next certified piece 1"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 5, column 2"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Piece, row 5, column 2, arrow up, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "P1 actual touch durably removes exactly the next certified piece 2"
+          },
+          {
+            "passed": true,
+            "message": "P1 certificate resolves to one observed native piece at row 1, column 5"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Piece, row 1, column 5, arrow down, Gate open"
+          },
+          {
+            "passed": true,
+            "message": "Four actual observed piece touches reach native P1 victory"
+          },
+          {
+            "passed": false,
+            "message": "Actual P1 victory exposes zero XP"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[708,1362][1013,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Réglages",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "All levels",
+            "bounds": "[66,1486][354,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Remix",
+            "bounds": "[540,407][1013,545]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Explore a level",
+            "bounds": "[418,559][695,692]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "SDK accessibility IME enter"
+          },
+          {
+            "label": "Level 1, Normal, Directions",
+            "bounds": "[434,742][645,961]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Play  →",
+            "bounds": "[66,1778][1013,1933]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[891,174][1024,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[121,1695][958,1844]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[55,174][188,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[121,1501][958,1634]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "All levels",
+            "bounds": "[66,1486][354,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism journal",
+            "bounds": "[736,559][1013,692]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[66,1808][1013,1941]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Guardian 1, Play",
+            "bounds": "[66,689][523,892]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Show the next gesture · free",
+            "bounds": "[66,1822][1013,1958]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Back",
+            "bounds": "[66,185][199,318]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "object",
+            "step": 0
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "object",
+            "step": 1
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "object",
+            "step": 2
+          },
+          {
+            "label": "All levels",
+            "bounds": "[66,1486][354,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism journal",
+            "bounds": "[736,559][1013,692]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[66,1808][1013,1941]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Guardian 1, Play",
+            "bounds": "[66,689][523,892]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Show the next gesture · free",
+            "bounds": "[66,1822][1013,1958]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual Android Back from Guardian board",
+            "guardianExit": "android"
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "android",
+            "step": 0
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "android",
+            "step": 1
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "android",
+            "step": 2
+          },
+          {
+            "label": "All levels",
+            "bounds": "[66,1486][354,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism journal",
+            "bounds": "[736,559][1013,692]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[66,1808][1013,1941]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Guardian 1, Play",
+            "bounds": "[66,689][523,892]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Show the next gesture · free",
+            "bounds": "[66,1822][1013,1958]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Prism guardians",
+            "bounds": "[66,2260][1013,2274]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "bottom-link",
+            "step": 0
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "bottom-link",
+            "step": 1
+          },
+          {
+            "input": "Actual Android Back from Guardian return history",
+            "guardianExit": "bottom-link",
+            "step": 2
+          },
+          {
+            "label": "Events",
+            "bounds": "[697,1486][985,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Daily Drift",
+            "bounds": "[66,410][371,551]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Stage 1, Play, 0 Stars",
+            "bounds": "[66,1540][365,1844]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Play  →",
+            "bounds": "[66,1778][1013,1933]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[891,174][1024,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[121,1695][958,1844]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[55,174][188,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[121,1501][958,1634]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Events",
+            "bounds": "[697,1486][985,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Weekly Voyage",
+            "bounds": "[387,410][692,551]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Stage 1, Play, 0 Stars",
+            "bounds": "[66,1540][282,1728]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Play  →",
+            "bounds": "[66,1778][1013,1933]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[891,174][1024,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[121,1695][958,1844]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Pause",
+            "bounds": "[55,174][188,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Leave level",
+            "bounds": "[121,1501][958,1634]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Events",
+            "bounds": "[697,1486][985,1821]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Sealed passages",
+            "bounds": "[708,410][1013,551]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Sealed passages · Stage 1",
+            "bounds": "[66,1055][520,1268]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "How to play",
+            "bounds": "[891,174][1024,307]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Let’s drift",
+            "bounds": "[121,1695][958,1844]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Key 1, Piece, row 2, column 5, arrow right, Gate open",
+            "bounds": "[792,830][960,998]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Piece, row 3, column 1, arrow right, Gate open",
+            "bounds": "[119,998][287,1167]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Piece, row 5, column 2, arrow up, Gate open",
+            "bounds": "[287,1335][455,1504]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Piece, row 1, column 5, arrow down, Gate open",
+            "bounds": "[792,662][960,830]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "modes-remix-briefing-en",
+          "modes-remix-hud-en",
+          "modes-remix-help-en",
+          "modes-remix-pause-en",
+          "modes-guardian-hud-object-en",
+          "modes-guardian-free-help-object-en",
+          "modes-guardian-list-object-en",
+          "modes-guardian-parent-object-0-en",
+          "modes-guardian-parent-object-1-en",
+          "modes-guardian-parent-object-2-en",
+          "modes-guardian-hud-android-en",
+          "modes-guardian-free-help-android-en",
+          "modes-guardian-list-android-en",
+          "modes-guardian-parent-android-0-en",
+          "modes-guardian-parent-android-1-en",
+          "modes-guardian-parent-android-2-en",
+          "modes-guardian-hud-bottom-link-en",
+          "modes-guardian-free-help-bottom-link-en",
+          "modes-guardian-list-bottom-link-en",
+          "modes-guardian-parent-bottom-link-0-en",
+          "modes-guardian-parent-bottom-link-1-en",
+          "modes-guardian-parent-bottom-link-2-en",
+          "modes-daily-briefing-en",
+          "modes-daily-hud-en",
+          "modes-daily-help-en",
+          "modes-daily-pause-en",
+          "modes-weekly-briefing-en",
+          "modes-weekly-hud-en",
+          "modes-weekly-help-en",
+          "modes-weekly-pause-en",
+          "modes-p1-hud-en",
+          "modes-p1-help-en",
+          "modes-p1-after-piece-0-en",
+          "modes-p1-after-piece-1-en",
+          "modes-p1-after-piece-2-en",
+          "failure"
+        ],
+        "processId": 9745,
+        "phase": "modes",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Actual public Remix1, Guardian1, Daily1 and Weekly1 boards/HUD/help/exit; public Sealed P1 completed by four observed piece touches with zero reward. Puzzle/Guardian sessions naturally change and are recorded separately. All game preferences except seeds, all meta preferences, economy/stock/ownership/receipts/home/settings must remain unchanged after restoring French. No app/engine/private-field calls, preference writes or state injection."
+      },
+      "expected_version": "1.17.0-rc5",
+      "expected_code": 23
+    }
+  ],
+  "screenshots": {
+    "modes/modes-remix-help-en.png": "55f78b5eab5eda79692bc0ce7d13b6d276caf9b8c315a8aba319de7a99e79b69",
+    "modes/modes-p1-after-piece-2-en.png": "310f26384f0f8d4b57b7de001e1dd3caf8be72116be89bdfd718bbeaa041549d",
+    "modes/modes-guardian-parent-bottom-link-1-en.png": "d0fda7b3a03ee79b1d9544c4a1421a8ab5f590ea1fd109a9bbf178285783f312",
+    "modes/modes-guardian-list-object-en.png": "13050f635e9bf6b7721e7c2243eb31afce8b106cf76af973fc9a04b5a50a8d5a",
+    "modes/modes-guardian-list-bottom-link-en.png": "7e10aae55dedd4c9ef413abe0f19d4b4163f3a8b9e1c596f26c3cce90b1c75d4",
+    "modes/modes-weekly-pause-en.png": "36cf06f0a09691d162425dda3bc127142933cc777b41c2217bb1d75144383767",
+    "modes/modes-p1-after-piece-0-en.png": "e085d4b7ffacf9cc01fbacc72923c2a4620fef12ab6eabaac1b111b61cef3e0f",
+    "modes/modes-guardian-free-help-android-en.png": "36dfc325acec439f34cae22dab7ddc4bec3dc77753d162f888c6100163cd49d0",
+    "modes/modes-guardian-hud-bottom-link-en.png": "6247ca1f56c6fe5311c253518d562ec8dd6e0d7afe55bcf22bde652f1e11b220",
+    "modes/modes-guardian-parent-object-2-en.png": "92904eb40cd9fd57c47cd7d2a773e891d225d508e103dd49f7a825ef5f0c734e",
+    "modes/modes-guardian-parent-object-0-en.png": "9c8e410e5b356214e00c4aab2aa71dbe33d7fb2ce827c5a360324ea89be1d5e7",
+    "modes/modes-guardian-parent-android-1-en.png": "796c772b5abecb04ae62f260e2c364b7f9840f91d86f43cf4528ccc87fddb675",
+    "modes/modes-remix-briefing-en.png": "28d2eb2d21d45482bac64d93888d11891907db52211cbcdc74d7bee7be38678b",
+    "modes/modes-remix-pause-en.png": "7ee18b99485b4131255b6bb1c9f089c10ac0295f9db58c4b7f6a7d806e8a1a59",
+    "modes/modes-remix-hud-en.png": "136d91fed1749e1a3d1223d00214f775d2ed548cb5f8f6ecb519b105d1b67e0a",
+    "modes/modes-guardian-free-help-object-en.png": "6c49926d08feeb9c265711067b4987c94c3e33b14592aef9735071e34377669b",
+    "modes/modes-guardian-parent-bottom-link-0-en.png": "54b78a8c4cf1b38db8215c56b53a67bdc1e89b693fe20293c995091354fe260e",
+    "modes/modes-weekly-briefing-en.png": "1747e726a2d633b9be43bed7784db8fbab6b7c64bb55a69c5f1c3db56a4f1f66",
+    "modes/modes-daily-help-en.png": "b0e92567ab3d6ec17eff890b08807c284bbc0a16850529ee8205c634605045d4",
+    "modes/modes-p1-after-piece-1-en.png": "68034e999b97b8a9e6a5af91c5705e0be3e377820caf85b2ed5a1b1bf35a591f",
+    "modes/modes-daily-hud-en.png": "870252551315a74688ce2592ab2597efb4e38f5269324f929ad3a28c1e9b2015",
+    "modes/modes-guardian-list-android-en.png": "2f12c91bad12581fc9cd5cc7b9f8b54705832e835e1841310b7c341922156f0c",
+    "modes/modes-guardian-parent-bottom-link-2-en.png": "ea85ed5bb7ac7f86efe44ebb0dac434e45035174713f66ee96dbc8a7d9f439bf",
+    "modes/modes-guardian-free-help-bottom-link-en.png": "d77af006939b391ecf21d3eae2700653403922786c8b59b9e2d724e65eb5584a",
+    "modes/modes-guardian-parent-android-2-en.png": "53853cb043bd478ebe53d4b8bcb95a31e7f3045a81a2d0dc5684dcd9402102e8",
+    "modes/modes-weekly-help-en.png": "5ad0ca8ae5e71b0175075a5d0d8322774e78d66de4eb1155c7f783fbc61a27a7",
+    "modes/failure.png": "2766448b9da5931e1ff398be5f423e2b7c5e1c55ddb404c8251b252769614011",
+    "modes/modes-weekly-hud-en.png": "3e14b34c2dae89eb77139ed9f40d8f9bfa97bb7387f852f8a24f0fc161e1c245",
+    "modes/modes-guardian-hud-android-en.png": "d0d81fff836e8aa21e670318e611eff8a5619761505833e1012999a6eb52508d",
+    "modes/modes-guardian-hud-object-en.png": "960a40c3d169d12d6dfe8c9835fe5c010f922da83b761d16af2831283a447eb3",
+    "modes/modes-p1-hud-en.png": "41829b7651b9560c9209a205d0143070e4aa0f80d2bc0a847a109c018253d4a7",
+    "modes/modes-daily-briefing-en.png": "35bf3d05164c8bfab70ba00ddbd37a5a4844dd03fd29acfa362f14a2866942ed",
+    "modes/modes-p1-help-en.png": "b36b5636fc6df87eda80223e0b35c65c6cf764e2c3b7052ce7467f5ae6de8240",
+    "modes/modes-daily-pause-en.png": "f91d9bc185a8471cebf0612cf4b09fa64faa9a4d5d7196f6fa8895787bfc75c8",
+    "modes/modes-guardian-parent-android-0-en.png": "4469b4e82137454c9a14a75c2974ee2967af459ae6a508beb22f4b87a62864e1",
+    "modes/modes-guardian-parent-object-1-en.png": "25798f15d48fc2fbd6c711254bf0c14cea68d8ab5f4f5ccc2dd3f6bdc1c68713"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-g-other-modes/interface-observer.apk",
+  "compact": false,
+  "route": "modes",
+  "device_provenance": {
+    "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification",
+    "receipt_path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/creation.json",
+    "receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9",
+    "source_serial": "emulator-5586",
+    "source_avd": "Luma-Refonte115-QA",
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "source_baseline_report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "source_baseline_snapshot_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "physical_copy_disks": 7,
+    "candidate_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-g-authorization.json",
+      "sha256": "a8d763b6c63eecc84db8ab855e4dad7c6d24c1a1fbd0b3e1d9388f87be6e48f8",
+      "base_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+      "target_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_version": "1.17.0-rc5",
+      "target_code": 23,
+      "allow_retained_upgrade": true,
+      "scope": "Retained F to G upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    }
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "error": "Native interface modes failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v117-ui-test/run.py\", line 193, in main\n    elif a.route=='modes':native_phase('modes',a.expected_version,a.expected_code)\n  File \"/Users/n/androidhit/scripts/v117-ui-test/run.py\", line 143, in native_phase\n    assert native['passed'],'Native interface '+phase+' failed'\nAssertionError: Native interface modes failed\n",
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 108.249
+}

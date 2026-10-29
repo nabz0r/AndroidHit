@@ -1,0 +1,16 @@
+Challenge codes: campaign/remix exhaustive 1..240, 1007 event round trips including Long.MAX_VALUE; malformed/overflow/tamper + 10000 fuzz inputs rejected.
+Remix design: level,tiles,switches,paired,initial choices,unsafe choices,path blockers,closed gates,ray dependencies,ray depth
+1,10,1,1,2,0,7,5,10,4
+2,10,1,1,2,0,7,5,12,6
+3,10,1,1,2,0,7,5,12,4
+4,11,2,2,2,0,8,4,12,5
+5,11,2,2,2,0,9,4,13,6
+6,11,2,1,2,0,8,7,11,4
+7,12,3,3,3,1,8,5,14,4
+8,12,3,3,2,0,10,6,16,6
+9,12,3,2,2,1,10,1,15,8
+10,13,4,4,2,0,10,7,20,7
+11,13,4,4,2,0,10,6,19,7
+12,13,4,3,2,0,9,8,14,8
+240 remix averages: 15.30 tiles, 4.69 switches (3.73 paired), 2.55 legal / 0.14 unsafe starts, 10.88 blocked tiles, 8.01 closed-gate tiles, 19.87 ray dependencies, 6.21 ray depth
+PASS: 240 campaign + 240 remix + 1002 event + 1002 paired-switch seeds; 437039 assertions, 1543 alternate legal starts (53 correctly require undo), 5.32 s.
