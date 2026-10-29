@@ -54,6 +54,7 @@ public final class LumaView extends View {
     private final ScenicUi scenic=new ScenicUi();
     private final SceneTransition sceneTransition=new SceneTransition();
     private SceneRootLayout sceneRootLayout;
+    private PlaySceneLayout playSceneLayout;
     private final SceneTransition.RootSwipe rootSwipe=new SceneTransition.RootSwipe();
     private SceneTransition.Direction nextSceneDirection=SceneTransition.Direction.FORWARD;
     private final HashMap<String,Bitmap> scenery=new HashMap<>();
@@ -451,6 +452,14 @@ public final class LumaView extends View {
         if(screen.equals("home_item"))H=Math.max(layout.contentHeight,920);
         if(screen.equals("firstlight"))H=Math.max(layout.contentHeight,790);
         if(rootIndex()>=0)H=viewportH;
+        // Measure the real play content before clamping: short windows may scroll
+        // the actions without shrinking either the board or the physical targets.
+        if(screen.equals("play")&&board!=null){
+            playSceneLayout=new PlaySceneLayout(viewportH,board.level.progressionVersion==6,
+                    48*getResources().getDisplayMetrics().density/Math.max(.01f,scale),
+                    Math.max(42,twoLineLayout("Mg\nMg",338,12,PremiumUi.MUTED).getHeight()),minimumTextSize());
+            H=Math.max(viewportH,playSceneLayout.contentHeight);
+        }
         contentScroll=clampScroll(contentScroll);
         c.drawColor(skin.bg);c.save();c.translate(ox,top);c.scale(scale,scale);hits.clear();
         background(c);c.save();drawingScroll=contentScroll;drawingClipBottom=viewportH;
@@ -462,7 +471,10 @@ public final class LumaView extends View {
             case "wardrobe":drawWardrobe(c);break;case "rewards":drawRewards(c);break;case "events":drawEvents(c);break;case "settings":drawSettings(c);break;case "missions":drawMissions(c);break;case "journal":drawJournal(c);break;
             default:drawPremiumHome(c);
         }
-        if(help)drawHelp(c);c.restore();drawingScroll=0;drawingClipBottom=viewportH;
+        if(help){
+            if(screen.equals("play")){c.save();c.translate(0,contentScroll);float old=drawingScroll;drawingScroll=0;drawHelp(c);drawingScroll=old;c.restore();}
+            else drawHelp(c);
+        }c.restore();drawingScroll=0;drawingClipBottom=viewportH;
         if(sceneConfirmAction!=null)drawSceneConfirmation(c);
         if(frameTime<toastUntil&&!screen.equals("play")){float y=Math.max(8,viewportH-90);round(c,24,y,342,65,20,0xfff6e9ff);wrap(c,toast,195,y+25,302,14,TEXT,true,19);}
         if(focused>=0&&focused<hits.size()){p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(2);p.setColor(WHITE);c.drawRoundRect(hits.get(focused).r,15,15,p);p.setStyle(Paint.Style.FILL);}
@@ -516,10 +528,17 @@ public final class LumaView extends View {
     }
     /** Fixed-height copy preserves the physical font floor without spilling into the next control. */
     private void twoLines(Canvas c,String value,float x,float y,float width,float size,int color){
-        android.text.TextPaint copy=new android.text.TextPaint(p);copy.setTypeface(regular);copy.setTextSize(Math.max(minimumTextSize(),size));copy.setColor(readableText(color));copy.setShader(null);
-        android.text.StaticLayout lines=android.text.StaticLayout.Builder.obtain(value,0,value.length(),copy,(int)width)
-                .setIncludePad(false).setMaxLines(2).setEllipsize(android.text.TextUtils.TruncateAt.END).build();
+        android.text.StaticLayout lines=twoLineLayout(value,width,size,color);
         c.save();c.translate(x,y);lines.draw(c);c.restore();
+    }
+    private android.text.StaticLayout twoLineLayout(String value,float width,float size,int color){
+        return twoLineLayout(value,width,size,color,false);
+    }
+    private android.text.StaticLayout twoLineLayout(String value,float width,float size,int color,boolean centered){
+        android.text.TextPaint copy=new android.text.TextPaint(p);copy.setTypeface(regular);copy.setTextSize(Math.max(minimumTextSize(),size));copy.setColor(readableText(color));copy.setShader(null);
+        return android.text.StaticLayout.Builder.obtain(value,0,value.length(),copy,(int)width)
+                .setIncludePad(false).setAlignment(centered?android.text.Layout.Alignment.ALIGN_CENTER:android.text.Layout.Alignment.ALIGN_NORMAL)
+                .setMaxLines(2).setEllipsize(android.text.TextUtils.TruncateAt.END).build();
     }
     private void hit(float x,float y,float w,float h,String name,Runnable action){
         RectF r=new RectF(x,y-drawingScroll,x+w,y+h-drawingScroll);
@@ -1625,7 +1644,8 @@ public final class LumaView extends View {
     private void drawBriefing(Canvas c){
         if(briefingLevel==null){go("adventure");return;}
         sceneAction(c,"‹  "+t("back"),24,18,100,()->backMenu());
-        fit(c,briefingMode==0?t("level_number",briefingIndex):t("remix")+" "+briefingIndex,195,112,30,330,TEXT,true,true);
+        String briefingTitle=briefingMode==0?t("level_number",briefingIndex):briefingMode==3?t("remix")+" "+briefingIndex:t(briefingMode==1?"daily":"weekly")+" · "+t("stage_number",briefingEvent+1);
+        fit(c,briefingTitle,195,112,30,330,TEXT,true,true);
         float stageH=Math.min(300,Math.max(190,viewportH-425));sceneStage(c,new RectF(24,148,366,148+stageH),PremiumUi.LILAC);
         float size=Math.min(208,stageH-40),unit=size/briefingLevel.size,left=(390-size)/2,top=168+(stageH-40-size)/2;
         for(Tile tile:briefingLevel.tiles)drawTile(c,tile,left+(tile.col+.5f)*unit,top+(tile.row+.5f)*unit,unit-5,false);
@@ -2014,8 +2034,14 @@ public final class LumaView extends View {
         fit(c,r("puzzle_goal",board.remainingCount()),24,101,18,288,TEXT,true,false);dressedMascot(c,344,87,12);
         sweet.progress(c,new RectF(24,118,366,124),1f-board.remainingCount()/(float)board.level.tiles.size(),SweetUi.MINT);
         boolean low=!relay&&moveBudget!=null&&!moveBudget.isUnlimited()&&moveBudget.remaining()<=3;
-        if(!relay){String budgetLabel=moveBudget.isUnlimited()?t("moves_unlimited"):t("moves_left",moveBudget.remaining(),moveBudget.total());fit(c,budgetLabel,195,151,14,330,TEXT,true,true);label(24,131,342,25,budgetLabel);}
-        float boardW=Math.min(304,Math.max(180,viewportH-410));cell=boardW/board.level.size;bx=(390-boardW)/2;by=relay?174:190;
+        PlaySceneLayout scene=playSceneLayout;
+        if(!relay){
+            String budgetLabel=moveBudget.isUnlimited()?t("moves_unlimited"):t("moves_left",moveBudget.remaining(),moveBudget.total());
+            String count=moveBudget.isUnlimited()?"∞":moveBudget.remaining()+" / "+moveBudget.total();
+            fit(c,count,scene.budgetRect.centerX(),scene.budgetRect.bottom-6,18,scene.budgetRect.width(),TEXT,true,true);
+            label(scene.budgetRect.left,scene.budgetRect.top,scene.budgetRect.width(),scene.budgetRect.height(),budgetLabel);
+        }
+        float boardW=scene.boardWidth;cell=boardW/board.level.size;bx=scene.boardX;by=scene.boardY;
         sceneShelf(c,new RectF(bx-13,by-13,bx+boardW+13,by+boardW+13),PremiumUi.PAPER,true);
         for(int row=0;row<board.level.size;row++)for(int col=0;col<board.level.size;col++){
             round(c,bx+col*cell+3,by+row*cell+3,cell-6,cell-6,12,0x48e3d5ef);p.setColor(alpha(WHITE,16));c.drawCircle(bx+(col+.5f)*cell,by+(row+.5f)*cell,1.5f,p);
@@ -2042,26 +2068,48 @@ public final class LumaView extends View {
         }
         if(!reduceMotion&&frameTime<successUntil){float elapsed=1-(successUntil-frameTime)/600f;int a=(int)(160*(1-elapsed));p.setColor(alpha(skin.accent2,a));p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(2);c.drawCircle(successX,successY,8+elapsed*30,p);p.setStyle(Paint.Style.FILL);for(int k=0;k<6;k++){double angle=k*Math.PI/3;star(c,successX+(float)Math.cos(angle)*(10+elapsed*28),successY+(float)Math.sin(angle)*(10+elapsed*28),3*(1-elapsed),alpha(GOLD,a));}}
         if(guidance!=null&&guidance.status==Board.PositionStatus.DEAD_END&&!paused&&!won&&!outOfMoves()){sceneAura(c,new RectF(30,by+boardW-42,360,by+boardW-4),0xffd9a1ba,frameTime,true);fit(c,v("path_warning"),195,by+boardW-17,12,312,GOLD,true,true);hit(30,by+boardW-42,330,38,v("dead_end"),()->showDeadEnd());}
-        float controls=by+boardW+45;
         String feedback=frameTime<toastUntil?toast:guidance!=null&&guidance.status==Board.PositionStatus.DEAD_END?v("path_warning"):relay?l(coach.hudKey):low?l("last_moves",moveBudget.remaining()):l(coach.hudKey);
-        twoLines(c,feedback,26,controls-4,338,12,PremiumUi.MUTED);label(26,controls-4,338,42,feedback);
-        float yy=controls+43;sceneAction(c,"↶  "+returnLabel(),24,yy,165,()->undoMove());sceneAction(c,"↻  "+t("restart"),201,yy,165,()->{setPaused(true);restartConfirm=true;});
-        if(mode==4){sceneAction(c,t("share_challenge"),24,yy+64,342,()->shareBoard());}
-        else if(viewportH<680){objectAction(c,r("powers"),24,Math.max(yy+59,viewportH-57),342,48,PEACH,()->powerTrayOpen=true);}
-        else{
-            int i=0;for(Catalog.BoosterItem item:Catalog.BOOSTERS){final String id=item.id;if(!store.boosterUnlocked(id)||id.equals("shield")&&moveBudget.rejectsAreFree())continue;if(i>=3)break;float x=24+i++*118,y=yy+65;boolean active=powerActive(id);
-                sceneShelf(c,new RectF(x,y,x+106,y+66),active?PremiumUi.MINT:PremiumUi.PAPER,false);shopArt.power(c,id,x+24,y+26,19,frameTime,reduceMotion);fit(c,"×"+store.boosterStock(id),x+72,y+29,13,44,TEXT,true,true);fit(c,t(item.nameKey),x+53,y+55,12,96,TEXT,true,true);hit(x,y,106,66,t(item.nameKey),()->useItem(id));
+        twoLines(c,feedback,scene.feedbackRect.left,scene.feedbackTop,scene.feedbackRect.width(),12,PremiumUi.MUTED);
+        label(scene.feedbackRect.left,scene.feedbackTop,scene.feedbackRect.width(),scene.feedbackHeight,feedback);
+        if(scene.compactActions){
+            String undoCaption=t("undo")+(moveBudget.policyVersion()==MoveBudget.DELIBERATE_POLICY_VERSION?"\n×"+moveBudget.undoRemaining(undos):"");
+            compactPlayAction(c,scene.undoRect,undoCaption,"↶  "+returnLabel(),ScenicUi.Kind.UNDO,()->undoMove());
+            compactPlayAction(c,scene.restartRect,t("restart"),"↻  "+t("restart"),ScenicUi.Kind.RETRY,()->{setPaused(true);restartConfirm=true;});
+            compactPlayAction(c,scene.powersRect,mode==4?t("share_challenge"):r("powers"),mode==4?t("share_challenge"):r("powers"),mode==4?ScenicUi.Kind.MAIL:ScenicUi.Kind.SATCHEL,()->{if(mode==4)shareBoard();else powerTrayOpen=true;});
+        }else{
+            playAction(c,scene.undoRect,"↶  "+returnLabel(),()->undoMove());
+            playAction(c,scene.restartRect,"↻  "+t("restart"),()->{setPaused(true);restartConfirm=true;});
+            if(mode==4){playAction(c,scene.powersRect,t("share_challenge"),()->shareBoard());}
+            else{
+            int i=0;for(Catalog.BoosterItem item:Catalog.BOOSTERS){final String id=item.id;if(!store.boosterUnlocked(id)||id.equals("shield")&&moveBudget.rejectsAreFree())continue;if(i>=3)break;PlaySceneLayout.Rect slot=scene.powerGrid[i++];float x=slot.left,y=slot.top;boolean active=powerActive(id);
+                sceneShelf(c,new RectF(x,y,slot.right,slot.bottom),active?PremiumUi.MINT:PremiumUi.PAPER,false);shopArt.power(c,id,x+24,y+26,19,frameTime,reduceMotion);fit(c,"×"+store.boosterStock(id),x+72,y+29,13,44,TEXT,true,true);fit(c,t(item.nameKey),x+53,y+55,12,96,TEXT,true,true);hit(x,y,slot.width(),slot.height(),t(item.nameKey),()->useItem(id));
             }
-            if(i>0){fit(c,r("powers")+"  →",195,yy+161,12,330,PremiumUi.MUTED,false,true);hit(24,yy+139,342,32,r("powers")+"  →",()->{collectionTab=3;inventoryFilter=0;powerTrayOpen=true;});}
+            // The tray remains reachable even before the first power is unlocked.
+            playAction(c,scene.powersMoreRect,r("powers")+"  →",()->{collectionTab=3;inventoryFilter=0;powerTrayOpen=true;});
+            }
         }
         if(won)hits.clear();
-        if(outOfMoves()&&!paused&&!won){ensureGuidance();if(guidance!=null&&guidance.status==Board.PositionStatus.DEAD_END)drawDeadEnd(c);else drawOutOfMoves(c);}
         if(pendingAction>=0&&!paused&&!outOfMoves()&&!won)drawActionPreview(c);
+        // Overlays are anchored to the visible window, including after reaching
+        // the compact action row by scrolling the puzzle scene.
+        c.save();c.translate(0,contentScroll);float oldDrawingScroll=drawingScroll,oldHeight=H;drawingScroll=0;H=viewportH;
+        if(outOfMoves()&&!paused&&!won){ensureGuidance();if(guidance!=null&&guidance.status==Board.PositionStatus.DEAD_END)drawDeadEnd(c);else drawOutOfMoves(c);}
         if(paused)drawPause(c);
         if(deadEndOpen&&!paused&&!won)drawDeadEnd(c);
         if(powerTrayOpen&&!paused&&!won)drawPowerTray(c);
         if(!powerConfirmation.isEmpty()&&!paused&&!won)drawPowerConfirmation(c);
         if(won&&frameTime>=winAt)drawWin(c);else if(powerSaveBlocked)drawSaveRetry(c);
+        H=oldHeight;drawingScroll=oldDrawingScroll;c.restore();
+    }
+    private void playAction(Canvas c,PlaySceneLayout.Rect area,String caption,Runnable action){
+        objectAction(c,caption,area.left,area.top,area.width(),area.height(),PEACH,action);
+    }
+    private void compactPlayAction(Canvas c,PlaySceneLayout.Rect area,String caption,String description,ScenicUi.Kind kind,Runnable action){
+        float artSize=42,center=area.centerX();
+        scenic.object(c,new RectF(center-artSize/2,area.top,center+artSize/2,area.top+artSize),0xffaaa1cd,pressed!=null&&pressed.name.equals(description),kind);
+        android.text.StaticLayout words=twoLineLayout(caption,area.width()-6,12,TEXT,true);
+        c.save();c.translate(area.left+3,area.top+artSize+4);words.draw(c);c.restore();
+        hit(area.left,area.top,area.width(),area.height(),description,action);
     }
     private int directionColor(Direction d){switch(d){case UP:return 0xff91e5cc;case RIGHT:return 0xffffb398;case DOWN:return 0xffceb3f7;default:return 0xffa4cefa;}}
     private void arrow(Canvas c,float x,float y,Direction d,float size,int color){
@@ -2077,13 +2125,13 @@ public final class LumaView extends View {
     }
     private void drawGates(Canvas c,float width){
         for(Direction direction:Direction.values()){
-            boolean open=board.isGateOpen(direction);float x=bx+width/2+direction.dc*(width/2+26),y=by+width/2+direction.dr*(width/2+26);
+            boolean open=board.isGateOpen(direction);float x=playSceneLayout.gateX[direction.ordinal()],y=playSceneLayout.gateY[direction.ordinal()];
             boolean highlighted=actionPreview!=null&&((actionPreview.openedMask|actionPreview.closedMask)&direction.bit)!=0||hintId==Board.gateAction(direction)&&frameTime<hintUntil||frameTime<focusUntil&&safeHighlights.contains(Board.gateAction(direction))||frameTime<consequenceUntil&&(consequenceGateMask&direction.bit)!=0;
             if(!open&&board.supportsManualGates()){
                 round(c,x-23,y-23,46,46,14,0xffffecce);stroke(c,new RectF(x-23,y-23,x+23,y+23),14,0xffc58c36,1.4f);
                 icon(c,"lock",x,y-7,15,0xff77572d);center(c,"−1",x,y+16,11,0xff77572d,true);
             }else sweet.gate(c,x,y,13,direction,open,highlighted,frameTime,reduceMotion);
-            if(highlighted)stroke(c,new RectF(x-24,y-24,x+24,y+24),14,skin.accent2,2);
+            if(highlighted&&board.supportsManualGates())stroke(c,new RectF(x-24,y-24,x+24,y+24),14,skin.accent2,2);
             if(actionPreview!=null&&((actionPreview.openedMask|actionPreview.closedMask)&direction.bit)!=0){
                 int newColor=(actionPreview.openedMask&direction.bit)!=0?0xff327a69:0xffb44469;
                 icon(c,(actionPreview.openedMask&direction.bit)!=0?"check":"lock",x+direction.dc*15,y+direction.dr*15,16,newColor);
@@ -2094,7 +2142,9 @@ public final class LumaView extends View {
                 round(c,x+9,y-24,20,20,7,GOLD);center(c,""+(step+1),x+19,y-10,12,TEXT,true);desc+=", "+t("power_step",step+1);
             }
             if(hintId==Board.gateAction(direction)&&frameTime<hintUntil)desc+=", "+n("hint_gate");
-            final String label=desc;gateHit(x,y,direction,desc,()->{if(!open&&board.supportsManualGates())requestAction(Board.gateAction(direction));else notice(label);});
+            final String label=desc;PlaySceneLayout.Rect target=playSceneLayout.gateTargets[direction.ordinal()];
+            int before=hits.size();hit(target.left,target.top,target.width(),target.height(),desc,()->{if(!open&&board.supportsManualGates())requestAction(Board.gateAction(direction));else notice(label);});
+            if(hits.size()>before)hits.get(before).gate=direction.ordinal();
         }
     }
     private int sealedKeyNumber(int tileId){ArrayList<Integer> keys=new ArrayList<>();for(Barrier barrier:board.level.barriers)if(!keys.contains(barrier.keyTileId))keys.add(barrier.keyTileId);return keys.indexOf(tileId)+1;}

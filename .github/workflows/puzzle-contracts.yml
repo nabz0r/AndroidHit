@@ -37,17 +37,21 @@ jobs:
             /.github/workflows/puzzle-contracts.yml
             /app/src/main/java/com/androidhit/lumadrift/engine/*.java
             /app/src/main/java/com/androidhit/lumadrift/data/*.java
+            /app/src/main/java/com/androidhit/lumadrift/onboarding/*.java
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningGuide.java
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningStrings.java
             /app/src/main/java/com/androidhit/lumadrift/ui/HomeScene.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SpriteGeometry.java
             /app/src/main/java/com/androidhit/lumadrift/audio/*.java
             /scripts/test-scene-transition-v117.sh
             /scripts/SceneTransitionV117Test.java
             /scripts/test-root-scenes-v117.sh
             /scripts/RootSceneV117GeometryTest.java
+            /scripts/test-play-scene-v117-geometry.sh
+            /scripts/PlaySceneV117GeometryTest.java
             /scripts/test-art-v117-geometry.sh
             /scripts/SpriteV117GeometryTest.java
             /scripts/test-audio-scenes-v117.sh
@@ -61,6 +65,27 @@ jobs:
             /docs/validation/v1.7/audio/legacy-pcm.sha256
             /scripts/test-relay-v115.sh
             /scripts/RelayV115Test.java
+            /scripts/test-engine.sh
+            /scripts/EngineTest.java
+            /scripts/test-sealed.sh
+            /scripts/SealedTest.java
+            /scripts/test-progression-v3.sh
+            /scripts/ProgressionV3Test.java
+            /scripts/GenerateProgressionV3.java
+            /scripts/LegacyContentFingerprint.java
+            /scripts/test-move-budget.sh
+            /scripts/MoveBudgetTest.java
+            /scripts/test-strategy-v4.sh
+            /scripts/StrategyV4Audit.java
+            /scripts/StrategyV4ContractTest.java
+            /scripts/test-guardian-v19.sh
+            /scripts/GuardianV19Test.java
+            /scripts/test-guardian-store-v19.sh
+            /scripts/GuardianStoreV19Test.java
+            /scripts/test-data.sh
+            /scripts/DataTest.java
+            /scripts/test-collection-events.sh
+            /scripts/CollectionEventsTest.java
             /scripts/test-home-v115.sh
             /scripts/test-home-v115-geometry.sh
             /scripts/HomeV115Test.java
@@ -85,6 +110,7 @@ jobs:
             /scripts/test-support/android/content/*.java
             /scripts/test-support/android/graphics/*.java
             /docs/validation/v1.14/audit-learning-rc1/LearningLayouts.java
+            /docs/validation/v1.6/legacy-content-before.sha256
 
       - name: Set up Java 17
         uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
@@ -99,6 +125,26 @@ jobs:
 
       - name: Qualify all 1000 U boards and every reachable relay state
         run: sh scripts/test-relay-v115.sh "$RUNNER_TEMP/luma-puzzle-contracts/relay"
+
+      - name: Preserve historical codes, six sealed challenges and original budgets
+        run: |
+          sh scripts/test-engine.sh
+          bash scripts/test-sealed.sh
+          sh scripts/test-progression-v3.sh "$RUNNER_TEMP/luma-puzzle-contracts/progression-v3"
+          bash scripts/test-move-budget.sh
+
+      - name: Qualify every L and M state and the finite daily and weekly geometry pool
+        run: sh scripts/test-strategy-v4.sh "$RUNNER_TEMP/luma-puzzle-contracts/strategy"
+
+      - name: Qualify every Guardian state and once-only reward transactions
+        run: |
+          bash scripts/test-guardian-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardians"
+          bash scripts/test-guardian-store-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardian-store"
+
+      - name: Check daily, weekly and Remix transactions and calendar boundaries
+        run: |
+          bash scripts/test-data.sh
+          bash scripts/test-collection-events.sh
 
       - name: Check three-room ownership, migration and camera geometry
         run: |
@@ -124,6 +170,9 @@ jobs:
 
       - name: Check 50 synthesized arrangements, earcons and audio lifecycle model
         run: bash scripts/test-audio-scenes-v117.sh "$RUNNER_TEMP/luma-puzzle-contracts/audio-scenes-v117"
+
+      - name: Check puzzle gates, budgets, feedback and compact action reachability
+        run: bash scripts/test-play-scene-v117-geometry.sh
 
       - name: Check 1.17 and retained website language and deliberate audio controls
         # Uses the runner's Node test runtime; no package install, SDK, network,
