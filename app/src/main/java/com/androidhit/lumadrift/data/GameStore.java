@@ -1295,6 +1295,54 @@ public final class GameStore {
         }
     }
 
+    private static final String COMPANION_SQUAD_KEY="companion_squad_v119";
+
+    /**
+     * Ordered puzzle team, captain first. Legacy profiles begin with their equipped
+     * owned companion only. Reading never grants ownership or rewrites a damaged
+     * team; unavailable account ownership is filtered again on every read.
+     */
+    public synchronized List<String> companionSquad() {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            List<String> team=new ArrayList<>(3);
+            Set<String> seen=new HashSet<>();
+            Object saved=prefs.getAll().get(COMPANION_SQUAD_KEY);
+            if(saved instanceof String) {
+                for(String id:((String)saved).split(",",-1)) {
+                    if(team.size()==3)break;
+                    if(Catalog.character(id)!=null&&seen.add(id)&&ownsCharacter(id))team.add(id);
+                }
+            }
+            if(team.isEmpty())team.add(equippedCharacter());
+            return Collections.unmodifiableList(team);
+        }
+    }
+
+    /**
+     * Explicitly replace the team with one to three distinct owned companions.
+     * Only its ordered ID list is saved. Appearance, copies, stock and currencies
+     * are independent. A refused disk write throws LocalSaveException and retains
+     * the exact selection for the normal local-save retry path.
+     */
+    public synchronized boolean setCompanionSquad(List<String> companions) {
+        synchronized (GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            if(companions==null||companions.isEmpty()||companions.size()>3)return false;
+            List<String> team=new ArrayList<>(companions);
+            Set<String> seen=new HashSet<>();
+            for(String id:team) {
+                if(id==null||Catalog.character(id)==null||!seen.add(id)||!ownsCharacter(id))return false;
+            }
+            String encoded=String.join(",",team);
+            if(encoded.equals(prefs.getAll().get(COMPANION_SQUAD_KEY)))return true;
+            Map<String,Object> write=new HashMap<>();
+            write.put(COMPANION_SQUAD_KEY,encoded);
+            LocalSaveTransactions.write(prefs,write);
+            return true;
+        }
+    }
+
     private static final String EXPEDITION_KEY="expedition_v118_run";
     public static final int EXPEDITION_HOME_TARGET=12;
     public synchronized int companionCopies(String id){

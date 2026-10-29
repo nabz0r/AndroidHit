@@ -8,5 +8,6 @@ elif [[ -x /opt/homebrew/opt/openjdk@17/bin/javac ]]; then task_java_bin=/opt/ho
 else task_java_bin="$(dirname "$(command -v javac)")"; fi
 "$task_java_bin/javac" -d "$task_build" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java" \
+    "$task_root/app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleLayout.java" \
     "$task_root/scripts/PlaySceneV117GeometryTest.java"
 "$task_java_bin/java" -cp "$task_build" PlaySceneV117GeometryTest

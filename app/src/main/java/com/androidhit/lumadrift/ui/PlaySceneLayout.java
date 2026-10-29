@@ -17,6 +17,10 @@ public final class PlaySceneLayout {
     public final Rect[] gateTargets=new Rect[4], gateVisualBounds=new Rect[4], powerGrid=new Rect[3];
 
     public PlaySceneLayout(float viewportHeight,boolean relay,float minimumTouchLogical,float feedbackHeightMeasured,float minimumText){
+        this(viewportHeight,relay,minimumTouchLogical,feedbackHeightMeasured,minimumText,0);
+    }
+    public PlaySceneLayout(float viewportHeight,boolean relay,float minimumTouchLogical,float feedbackHeightMeasured,float minimumText,float companionInset){
+        float topInset=Math.max(0,Math.min(230,companionInset));
         this.viewportHeight=positive(viewportHeight,1);this.relay=relay;
         this.minimumTouch=positive(minimumTouchLogical,48);this.minimumText=positive(minimumText,12);
         gateTargetSize=Math.max(50,this.minimumTouch);
@@ -27,11 +31,11 @@ public final class PlaySceneLayout {
         boardWidth=Math.max(1,Math.min(304,WIDTH-2*(gateRail+horizontalExtent+8)));
         boardX=(WIDTH-boardWidth)/2;
         // Even the manual highlight's outer ink stays below the progress rail+8.
-        boardY=Math.max(182,132+gateRail+25);
+        boardY=Math.max(182,132+gateRail+25)+topInset;
         boardRect=new Rect(boardX,boardY,boardX+boardWidth,boardY+boardWidth);
         // Numeric remaining/total or infinity; the caller retains full localized AX copy.
         // Narrower unsupported windows can still avoid covering the central UP target.
-        budgetRect=new Rect(24,131,Math.min(156,195-halfTouch-8),160);
+        budgetRect=new Rect(24,131+topInset,Math.min(156,195-halfTouch-8),160+topInset);
         float midX=195,midY=boardY+boardWidth/2;
         gateX[0]=midX;gateY[0]=boardY-gateRail;
         gateX[1]=boardRect.right+gateRail;gateY[1]=midY;

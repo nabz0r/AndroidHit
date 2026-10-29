@@ -1,5 +1,6 @@
 import com.androidhit.lumadrift.ui.PlaySceneLayout;
 import com.androidhit.lumadrift.ui.PlaySceneLayout.Rect;
+import com.androidhit.lumadrift.ui.CompanionBattleLayout;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,14 +37,47 @@ public final class PlaySceneV117GeometryTest {
         PlaySceneLayout small=new PlaySceneLayout(571.27f,false,58.5f,42,19.0125f),large=new PlaySceneLayout(571.27f,false,58.5f,88,19.0125f);
         check(large.actionsY>=small.actionsY+46-.001f,"larger measured copy pushes controls after its actual bottom");
         check(large.contentHeight>=small.contentHeight+46-.001f,"larger copy remains scroll-reachable");
+        checkCompanionInsets();
         // Concrete G witness: it must fail independent non-intersection/containment rules.
         Rect oldBudget=new Rect(24,131,366,156),oldUpInk=new Rect(171.3f,140.3f,218.7f,187.7f);
         Rect oldHelp=new Rect(26,535,364,577),oldDownInk=new Rect(171.3f,496.3f,218.7f,543.7f);
         check(oldBudget.intersects(oldUpInk),"G witness really occluded its budget");
         check(oldHelp.intersects(oldDownInk),"G witness really occluded its instruction");
         check(new Rect(-8,317,42,367).left<0,"G witness really clipped a side target");
-        System.out.println("Play scene 1.17 geometry PASS: "+checks+" checks across "+layouts+" live-helper layouts; gate/cell separation, physical48dp gate/action targets, reading bands and reachable final controls. No native glyph/gameplay claim.");
+        System.out.println("Play scene 1.17/1.19 geometry PASS: "+checks+" checks across "+layouts+" live-helper layouts; gate/cell separation, physical48dp gate/action targets, companion dock separation without board shrinkage, reading bands and reachable final controls. No native glyph/gameplay claim.");
     }
+    private static void checkCompanionInsets(){
+        // Compose the actual two geometry helpers. This catches a dropped top inset, a dock-sized
+        // board reduction, a gate left in its previous location, and controls no longer scrollable.
+        for(int widthDp:new int[]{240,280,320,360,390,411,480})for(float fontScale:new float[]{1,1.3f})
+            for(float height:new float[]{320,433,571.27f,790.8333f,960,1200})for(boolean relay:new boolean[]{false,true}){
+                float touch=48f*390/widthDp,minimumText=12f*390/widthDp*fontScale;
+                float dockHeight=CompanionBattleLayout.heightFor(touch);
+                CompanionBattleLayout dock=new CompanionBattleLayout(16,80,374,80+dockHeight,touch);
+                context="companion dock widthDp="+widthDp+", H="+height+", font="+fontScale+", relay="+relay;
+                PlaySceneLayout base=new PlaySceneLayout(height,relay,touch,46,minimumText);
+                PlaySceneLayout scene=new PlaySceneLayout(height,relay,touch,46,minimumText,dockHeight);layouts++;
+                checkLayout(scene,widthDp,46);
+                check(scene.boardWidth==base.boardWidth&&scene.boardX==base.boardX,"team dock never reduces board/cell geometry");
+                close(scene.boardY-base.boardY,dockHeight,"board follows full actual dock height");
+                close(scene.budgetRect.top-base.budgetRect.top,dockHeight,"budget follows actual dock");
+                close(scene.feedbackTop-base.feedbackTop,dockHeight,"feedback follows actual dock");
+                Rect occupied=new Rect(dock.bounds.left,dock.bounds.top,dock.bounds.right,dock.bounds.bottom);
+                separate(occupied,scene.boardRect,"dock / board");separate(occupied,scene.budgetRect,"dock / budget");
+                separate(occupied,scene.feedbackRect,"dock / feedback");
+                for(int i=0;i<4;i++){
+                    close(scene.gateTargets[i].top-base.gateTargets[i].top,dockHeight,"each gate target follows dock");
+                    close(scene.gateVisualBounds[i].top-base.gateVisualBounds[i].top,dockHeight,"each gate's ink follows dock");
+                    separate(occupied,scene.gateTargets[i],"dock / gate target");separate(occupied,scene.gateVisualBounds[i],"dock / gate ink");
+                }
+                for(CompanionBattleLayout.Rect target:dock.actions){
+                    Rect r=new Rect(target.left,target.top,target.right,target.bottom);physical(r,widthDp,"companion skill");inside(r,scene,"companion skill");
+                }
+                Rect combo=new Rect(dock.combo.left,dock.combo.top,dock.combo.right,dock.combo.bottom);physical(combo,widthDp,"companion combo");inside(combo,scene,"companion combo");
+                for(Rect action:new Rect[]{scene.undoRect,scene.restartRect,scene.powersRect})separate(occupied,action,"dock / puzzle action");
+            }
+    }
+    private static void close(float actual,float expected,String label){check(Math.abs(actual-expected)<.001f,label);}
     private static void checkLayout(PlaySceneLayout l,int widthDp,float measured){
         valid(l.boardRect,"board");valid(l.budgetRect,"budget");valid(l.feedbackRect,"feedback");
         check(l.boardWidth>=180,"authored board stays useful across supported portrait widths");
