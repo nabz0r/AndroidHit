@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "recordedUtc": "2026-10-29T18:42:23.932420+00:00",
+  "scope": "Targeted C3 HTML bytes after confirmed deployment, with unchanged files supported by preserved C2 evidence; not489 new GETs or a new full-inventory HTTP test. Visual layout is checked separately.",
+  "sourceCommit": "a2a044047f9232b871bd2c035c27d3f24d8ad26c",
+  "previousSourceCommit": "98917d050b626fe1693e6b1a3522b386353a8aa6",
+  "freshHttpResponses": [
+    {
+      "path": "/lab/ui-1-19/",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-19/",
+      "httpStatus": 200,
+      "bytes": 4018204,
+      "sha256": "525e6efcbd9bb34e26103e0bab213f46b6ce3719725745f954412459d88d2975",
+      "matchesC3Html": true
+    },
+    {
+      "path": "/lab/ui-1-19/index.html",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-19/index.html",
+      "httpStatus": 200,
+      "bytes": 4018204,
+      "sha256": "525e6efcbd9bb34e26103e0bab213f46b6ce3719725745f954412459d88d2975",
+      "matchesC3Html": true
+    }
+  ],
+  "failures": [],
+  "manifestDelta": {
+    "oldSha256": "2ec5daab1cbe90d1328524ea58939ffdfa936fbf16ab8a4ac7e69e86886183ca",
+    "newSha256": "1b41554168d7aa80c2f458afed265d340de05d696124b5f04ca9b9e276e84116",
+    "filesBefore": 486,
+    "filesAfter": 486,
+    "added": [],
+    "removed": [],
+    "changed": [
+      "/lab/ui-1-19/index.html"
+    ],
+    "oldHtml": {
+      "bytes": 4015601,
+      "sha256": "9c7869fc062de0e8381cac4d22eb5b486431dcf0918fcbcd680da69c536826f6"
+    },
+    "newHtml": {
+      "bytes": 4018204,
+      "sha256": "525e6efcbd9bb34e26103e0bab213f46b6ce3719725745f954412459d88d2975"
+    }
+  },
+  "unchangedApplication": {
+    "appTree": "68c876ee22e5312c6f5f59edb782dca48b53d3fa",
+    "sourceDiff": [],
+    "artifactAndConfigurationIdentityEqual": true,
+    "productionApkSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+    "labApkSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+    "apkBytesNotRedownloadedInThisRun": true
+  },
+  "retainedC2Evidence": {
+    "path": "docs/validation/site-v1.18/public-origin.json",
+    "sha256": "92afb74df3f20263b15e56be506f9a166da69eca0623bebcc849fce5fb999a46",
+    "rowsRevalidatedAgainstImmutableManifest": 489,
+    "bytesHistoricallyVerified": 1351893314,
+    "unchangedPayloadFilesInherited": 485,
+    "unchangedDirectoryAliasesInherited": 3
+  },
+  "deploymentEvidence": {
+    "path": "docs/validation/site-v1.18/hosting/corrective-c3/deployment.json",
+    "sha256": "81c93b95169d19cfcd59eab13fa13ca9a3351c44a9020c323d2ce7cc1198f3ab",
+    "sourcePublicTree": "4d4922cc2f5e8c62f565cbdc26a03dcfaf38c9d4",
+    "version": "projects/luma-drift-production/sites/luma-drift-production/versions/381fee5ff7548191",
+    "releaseTime": "2026-10-29T18:40:32.706Z",
+    "status": "DEPLOY/FINALIZED"
+  },
+  "currentCoverage": {
+    "newDirectHttpGetsExpected": 2,
+    "newPayloadFilesFetched": 1,
+    "newDirectoryAliasesFetched": 1,
+    "unchangedPayloadFilesSupportedByC2": 485,
+    "wholeInventoryRetestedThisRun": false
+  },
+  "newHttpGetsVerified": 2,
+  "newBytesVerified": 8036408
+}
