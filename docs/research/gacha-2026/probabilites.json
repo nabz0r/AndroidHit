@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-29",
+  "status": "analysis_only",
+  "assumptions": [
+    "Independent draws",
+    "Constant base rate",
+    "No pity or alternative acquisition",
+    "Specific target rate unless explicitly stated"
+  ],
+  "user_model": {
+    "rarities": [
+      "N",
+      "R",
+      "SR",
+      "SSR"
+    ],
+    "level_axis": "cumulative copies of same character; no character XP",
+    "cumulative_threshold_interpretation": "assumption",
+    "user_given_values": [
+      1,
+      2,
+      8
+    ],
+    "proposed_level_thresholds": [
+      1,
+      2,
+      8,
+      14,
+      22,
+      32,
+      44,
+      58,
+      74,
+      92
+    ]
+  },
+  "base_probability": 0.00005,
+  "rate_percent": 0.005,
+  "one_in": 20000,
+  "first": [
+    {
+      "draws": 10,
+      "probability_at_least_one": 0.0004998875149986315
+    },
+    {
+      "draws": 100,
+      "probability_at_least_one": 0.0049876451880153105
+    },
+    {
+      "draws": 1000,
+      "probability_at_least_one": 0.048771764574954246
+    },
+    {
+      "draws": 10000,
+      "probability_at_least_one": 0.393476922125922
+    },
+    {
+      "draws": 20000,
+      "probability_at_least_one": 0.6321297560061552
+    },
+    {
+      "draws": 60000,
+      "probability_at_least_one": 0.9502166656466876
+    }
+  ],
+  "first_quantiles": {
+    "median": 13863,
+    "p95": 59914,
+    "p99": 92102
+  },
+  "mean_draws_to_level_from_zero": [
+    {
+      "level": 1,
+      "cumulative_copies": 1,
+      "mean_draws": 20000
+    },
+    {
+      "level": 2,
+      "cumulative_copies": 2,
+      "mean_draws": 40000
+    },
+    {
+      "level": 3,
+      "cumulative_copies": 8,
+      "mean_draws": 160000
+    },
+    {
+      "level": 4,
+      "cumulative_copies": 14,
+      "mean_draws": 280000
+    },
+    {
+      "level": 5,
+      "cumulative_copies": 22,
+      "mean_draws": 440000
+    },
+    {
+      "level": 6,
+      "cumulative_copies": 32,
+      "mean_draws": 640000
+    },
+    {
+      "level": 7,
+      "cumulative_copies": 44,
+      "mean_draws": 880000
+    },
+    {
+      "level": 8,
+      "cumulative_copies": 58,
+      "mean_draws": 1160000
+    },
+    {
+      "level": 9,
+      "cumulative_copies": 74,
+      "mean_draws": 1480000
+    },
+    {
+      "level": 10,
+      "cumulative_copies": 92,
+      "mean_draws": 1840000
+    }
+  ],
+  "pity100_example": {
+    "max": 100,
+    "mean_draws": 99.75290376030621,
+    "longrun_rate": 0.010024770831763207
+  }
+}

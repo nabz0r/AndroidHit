@@ -1,0 +1,19 @@
+{
+  "scope": "Only appended v1.18 exclusions; no deletion, staging, commit or publication.",
+  "beforeSha256": "9f3e3d1b6c52ed002c8d673a1ecd80758323c4f9f3d846c281272e18d30a6937",
+  "afterSha256": "f9437a8ea94f468d6c4cd1bd33d629814b19c709a6e4a7a59f273858fbe5c96b",
+  "requiredAuditPaths": 1194,
+  "curatedNativePngs": 20,
+  "allRequiredPathsRemainUnignored": true,
+  "blockFile": "docs/validation/v1.18/publication-preflight/proposed-v118.gitignore.txt",
+  "excludedReleaseApks": [
+    "releases/luma-drift-1.18.0-prototype1.apk",
+    "releases/luma-drift-1.18.0-sandbox-prototype1.apk"
+  ],
+  "publicApkPattern": "/public/**/*1.18*.apk",
+  "followupDocumentationWhitelists": [
+    "docs/art/v118/*.md",
+    "docs/art/v118/*.html",
+    "docs/validation/v1.18/README.md"
+  ]
+}

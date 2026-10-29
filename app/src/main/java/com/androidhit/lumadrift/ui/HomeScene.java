@@ -33,6 +33,14 @@ public final class HomeScene {
     private float viewportWidth=WIDTH,viewportHeight=HEIGHT;
     private float cameraZoom=DETAIL_ZOOM,cameraPanX,cameraPanY;
     private String room="living";
+    private int companionLevel=1;
+    private CompanionMotion.Stance companionStance=CompanionMotion.Stance.CALM;
+    private CompanionMotion.Facing companionFacing=CompanionMotion.Facing.FRONT;
+    public void setCompanionProfile(int level,CompanionMotion.Stance stance,CompanionMotion.Facing facing){
+        companionLevel=Math.max(1,Math.min(10,level));
+        companionStance=stance==null?CompanionMotion.Stance.CALM:stance;
+        companionFacing=facing==null?CompanionMotion.Facing.FRONT:facing;
+    }
     private static final float WORLD_WIDTH=640, WORLD_HEIGHT=480;
     public void setRoom(String value){room=HomeCatalog.validRoom(value)?value:HomeCatalog.DEFAULT_ROOM;}
     public String room(){return room;}
@@ -330,8 +338,8 @@ public final class HomeScene {
         oval(c,xx-23,yy-5,xx+23,yy+7,0x18775b7b);
         AvatarStage.Pose pose=hug||play||rest?AvatarStage.Pose.HAPPY:read?AvatarStage.Pose.THINK:lamp?AvatarStage.Pose.GATE:AvatarStage.Pose.IDLE;
         c.save();if(rest)c.rotate("bed".equals(interactionItem)?-17:-5,xx,yy-24);
-        if(walk&&!reduced)c.rotate((float)Math.sin((time%10000)*.023f)*3,xx,yy-4);
-        portrait.draw(c,character,xx,yy-38,24,style,pose,time,reduced||rest,loadout,clothes);c.restore();
+        CompanionMotion.Frame motion=CompanionMotion.sample(character==null?"nova":character.id,companionLevel,CompanionMotion.activityAction(activity),companionFacing,companionStance,time,reduced||rest);
+        portrait.draw(c,character,xx,yy-38,24,style,pose,time,reduced||rest,loadout,clothes,motion);c.restore();
         float phase=reduced?0:(time%1600L)/1600f;
         if(hug){
             // Open arms curl around the dressed companion; hearts also remain visible with motion reduced.

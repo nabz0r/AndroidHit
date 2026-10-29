@@ -1043,11 +1043,30 @@ public final class GameStore {
             write.put("cosmetic_owned_v17_"+id,"EARNED_COINS");LocalSaveTransactions.write(prefs,write);return true;
         }
     }
+    private static final String ORIGINAL_COMPANION_COSTUME_KEY="companion_original_costume_v118";
+    /** Implicit starter slots are not a wardrobe choice; old explicitly saved selections remain visible. */
+    public synchronized boolean usesOriginalCompanionCostume() {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            Object stored=prefs.getAll().get(ORIGINAL_COMPANION_COSTUME_KEY);
+            if(stored instanceof Boolean)return (Boolean)stored;
+            for(CosmeticCatalog.Slot slot:CosmeticCatalog.Slot.values())
+                if(prefs.contains("cosmetic_slot_v17_"+slot.name()))return false;
+            return true;
+        }
+    }
+    /** Changes presentation only. The four selected items, ownership, gear and progression stay intact. */
+    public synchronized boolean setUseOriginalCompanionCostume(boolean original) {
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);Map<String,Object> write=new HashMap<>();
+            write.put(ORIGINAL_COMPANION_COSTUME_KEY,original);LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
     public synchronized boolean equipCosmetic(String id) {
         synchronized(GOLD_GRANT_LOCK) {
             LocalSaveTransactions.flush(prefs);
             CosmeticCatalog.Item item=CosmeticCatalog.find(id);if(item==null||!ownsCosmetic(id))return false;
-            Map<String,Object> write=new HashMap<>();write.put("cosmetic_slot_v17_"+item.slot.name(),id);
+            Map<String,Object> write=new HashMap<>();write.put("cosmetic_slot_v17_"+item.slot.name(),id);write.put(ORIGINAL_COMPANION_COSTUME_KEY,false);
             LocalSaveTransactions.write(prefs,write);return true;
         }
     }
@@ -1201,6 +1220,7 @@ public final class GameStore {
             LocalSaveTransactions.flush(prefs);if(!ownsSignatureOutfit(id))return false;
             SignatureOutfits.Outfit outfit=SignatureOutfits.find(id);Map<String,Object> write=new HashMap<>();
             for(CosmeticCatalog.Slot slot:CosmeticCatalog.Slot.values())write.put("cosmetic_slot_v17_"+slot.name(),outfit.item(slot));
+            write.put(ORIGINAL_COMPANION_COSTUME_KEY,false);
             LocalSaveTransactions.write(prefs,write);return true;
         }
     }
@@ -1267,10 +1287,94 @@ public final class GameStore {
             }
             write.put(token,banner.name()+":"+item.id+":"+(duplicate?"1":"0")+":"+compensation);
             write.put("summon_last_request_"+SummonCatalog.VERSION,requestId);
+            // New avatar receipts also record a copy. Old receipts remain immutable and replay never backfills copies.
+            if(item.kind==SummonCatalog.Kind.AVATAR)appendCompanionCopyLocked(write,item.avatarId);
             appendBadgeAwardsLocked(write,null,null,!duplicate&&item.kind==SummonCatalog.Kind.AVATAR?1:0);
             LocalSaveTransactions.write(prefs,write);
             return new SummonResult(banner,item.id,requestId,duplicate,compensation,price,false);
         }
+    }
+
+    private static final String EXPEDITION_KEY="expedition_v118_run";
+    public static final int EXPEDITION_HOME_TARGET=12;
+    public synchronized int companionCopies(String id){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);if(CompanionProgression.find(id)==null)return 0;
+            return Math.min(CompanionProgression.MAX_COPIES,CompanionProgression.initialCopies(ownsCharacter(id),prefs.getInt("companion_copies_v118_"+id,0)));}
+    }
+    public synchronized CompanionProgression.Stats companionStats(String id){return CompanionProgression.stats(companionCopies(id));}
+    public synchronized String companionStance(String id){synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);String stance=prefs.getString("companion_stance_v118_"+id,"CALM");return validCompanionStance(stance)?stance:"CALM";}}
+    private static boolean validCompanionStance(String stance){return "CALM".equals(stance)||"READY".equals(stance)||"GUARD".equals(stance)||"PROUD".equals(stance);}
+    public synchronized boolean setCompanionStance(String id,String stance){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);if(!ownsCharacter(id)||!validCompanionStance(stance))return false;Map<String,Object> write=new HashMap<>();write.put("companion_stance_v118_"+id,stance);LocalSaveTransactions.write(prefs,write);return true;}
+    }
+    private int appendCompanionCopyLocked(Map<String,Object> write,String id){
+        String key="companion_copies_v118_"+id;
+        int before=write.containsKey(key)?(Integer)write.get(key):companionCopies(id);
+        int after=Math.min(CompanionProgression.MAX_COPIES,CompanionProgression.addCopies(before,1));
+        write.put(key,after);return before;
+    }
+    public synchronized ExpeditionRun expeditionRun(){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);return ExpeditionRun.decode(prefs.getString(EXPEDITION_KEY,""));}
+    }
+    public synchronized int expeditionHomeProgress(){synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);return Math.max(0,Math.min(EXPEDITION_HOME_TARGET,prefs.getInt("expedition_v118_home",0)));}}
+    public synchronized int expeditionsCompleted(){synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);return Math.max(0,prefs.getInt("expedition_v118_completed",0));}}
+    public synchronized ExpeditionRun beginExpedition(String companion,ExpeditionRun.Goal goal,String target,String requestId){
+        if(!validRewardId(requestId)||!CompanionProgression.expeditionAvailable(companion)||!ownsCharacter(companion)||goal==null)return null;
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);ExpeditionRun old=expeditionRun();
+            if(old!=null&&old.id.equals(requestId))return old;
+            if(expeditionReward(requestId)!=null)return null;
+            if(old!=null&&!old.claimed)return old.id.equals(requestId)?old:null;
+            if(goal==ExpeditionRun.Goal.COPIES&&!ownsCharacter(target)||goal==ExpeditionRun.Goal.HOME&&!ExpeditionCatalog.SOUVENIR_ID.equals(target))return null;
+            long seed=UUID.randomUUID().getMostSignificantBits()&Long.MAX_VALUE;
+            ExpeditionRun next=ExpeditionRun.start(requestId,seed,companion,companionStats(companion).level,goal,target);
+            if(next==null)return null;Map<String,Object> write=new HashMap<>();write.put(EXPEDITION_KEY,next.encode());LocalSaveTransactions.write(prefs,write);return next;}
+    }
+    public synchronized ExpeditionRun chooseExpedition(String id,String optionId){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);ExpeditionRun old=expeditionRun();if(old==null||!old.id.equals(id))return null;
+            ExpeditionRun next=old.choose(optionId);if(next==null)return null;Map<String,Object> write=new HashMap<>();write.put(EXPEDITION_KEY,next.encode());LocalSaveTransactions.write(prefs,write);return next;}
+    }
+    public synchronized ExpeditionRun useExpeditionSkill(String id,String optionId){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);ExpeditionRun old=expeditionRun();if(old==null||!old.id.equals(id))return null;
+            ExpeditionRun next=old.useSkill(optionId);if(next==null)return null;Map<String,Object> write=new HashMap<>();write.put(EXPEDITION_KEY,next.encode());LocalSaveTransactions.write(prefs,write);return next;}
+    }
+    /** UI calls only after solving the exact selected U board. Stage receipt and route advance persist together. */
+    public synchronized ExpeditionRun completeExpeditionStage(String id,String victoryId,int boardNumber,int stars){
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);ExpeditionRun old=expeditionRun();if(old==null||!old.id.equals(id))return null;
+            ExpeditionRun next=old.complete(victoryId,boardNumber,stars);if(next==null)return null;Map<String,Object> write=new HashMap<>();write.put(EXPEDITION_KEY,next.encode());LocalSaveTransactions.write(prefs,write);return next;}
+    }
+    public static final class ExpeditionReward{
+        public final String runId,targetId,discoveryId;
+        public final int targetBefore,targetAfter,discoveryBefore,discoveryAfter,homeBefore,homeAfter,coins;
+        public final boolean discoveryDuplicate;
+        private ExpeditionReward(String runId,String targetId,String discoveryId,int tb,int ta,int db,int da,int hb,int ha,int coins,boolean duplicate){
+            this.runId=runId;this.targetId=targetId;this.discoveryId=discoveryId;targetBefore=tb;targetAfter=ta;discoveryBefore=db;discoveryAfter=da;homeBefore=hb;homeAfter=ha;this.coins=coins;discoveryDuplicate=duplicate;}
+        private String encode(){return runId+"|"+targetId+"|"+discoveryId+"|"+targetBefore+"|"+targetAfter+"|"+discoveryBefore+"|"+discoveryAfter+"|"+homeBefore+"|"+homeAfter+"|"+coins+"|"+(discoveryDuplicate?1:0);}
+        private static ExpeditionReward decode(String text){try{String[] p=text.split("\\|",-1);if(p.length!=11||!validRewardId(p[0])||SummonCatalog.find(SummonCatalog.Banner.AVATARS,p[2])==null||!p[1].isEmpty()&&CompanionProgression.find(p[1])==null)return null;
+                int[] n=new int[8];for(int i=0;i<n.length;i++){n[i]=Integer.parseInt(p[i+3]);if(n[i]<0)return null;}if(n[7]>1)return null;
+                if(n[0]>92||n[1]>92||n[2]>92||n[3]>92||n[4]>12||n[5]>12||n[4]%4!=0||n[5]%4!=0||n[6]>165)return null;
+                if(n[3]!=Math.min(92,n[2]+1)||n[7]!=(n[2]>0?1:0))return null;
+                if(p[1].isEmpty()){if(n[0]!=0||n[1]!=0||n[5]!=Math.min(12,n[4]+4))return null;}
+                else if(n[0]<1||n[1]!=Math.min(92,n[0]+1)||n[4]!=n[5])return null;
+                int expected=(p[1].isEmpty()?n[4]==12:n[0]==92)?45:0;if(n[2]==92)expected+=SummonCatalog.find(SummonCatalog.Banner.AVATARS,p[2]).duplicateCoins;if(n[6]!=expected)return null;
+                return new ExpeditionReward(p[0],p[1],p[2],n[0],n[1],n[2],n[3],n[4],n[5],n[6],n[7]==1);
+            }catch(RuntimeException invalid){return null;}}
+    }
+    private static String expeditionRewardKey(String id){return "expedition_v118_reward_"+sha256(id);}
+    public synchronized ExpeditionReward expeditionReward(String id){if(!validRewardId(id))return null;synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);ExpeditionReward result=ExpeditionReward.decode(prefs.getString(expeditionRewardKey(id),""));return result!=null&&result.runId.equals(id)?result:null;}}
+    /** Free expedition discovery uses the published avatar odds. Copies replace refunds here; paid-coin arrivals retain their old refunds. */
+    public synchronized ExpeditionReward claimExpedition(String id){
+        if(!validRewardId(id))return null;
+        synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);ExpeditionReward previous=expeditionReward(id);if(previous!=null)return previous;
+            ExpeditionRun run=expeditionRun();if(run==null||!run.id.equals(id)||!run.finished()||run.claimed)return null;
+            Map<String,Object> write=new HashMap<>();int targetBefore=0,targetAfter=0,homeBefore=expeditionHomeProgress(),homeAfter=homeBefore,overflow=0;String target="";
+            if(run.goal==ExpeditionRun.Goal.COPIES){target=run.targetId;if(!ownsCharacter(target))return null;targetBefore=appendCompanionCopyLocked(write,target);targetAfter=Math.min(CompanionProgression.MAX_COPIES,targetBefore+1);if(targetBefore>=CompanionProgression.MAX_COPIES)overflow+=45;}
+            else{homeAfter=Math.min(EXPEDITION_HOME_TARGET,homeBefore+run.homeContributionReward());write.put("expedition_v118_home",homeAfter);if(homeBefore==EXPEDITION_HOME_TARGET)overflow+=45;}
+            SummonCatalog.Item item=SummonCatalog.draw("expedition:"+run.seed,SummonCatalog.Banner.AVATARS,id);
+            boolean duplicate=ownsCharacter(item.avatarId);int discoveryBefore=appendCompanionCopyLocked(write,item.avatarId),discoveryAfter=Math.min(CompanionProgression.MAX_COPIES,discoveryBefore+1);
+            write.put("owned_character_"+item.avatarId,true);if(discoveryBefore>=CompanionProgression.MAX_COPIES)overflow+=item.duplicateCoins;
+            write.put("coins",safeAdd(coins(),overflow));write.put("expedition_v118_completed",safeAdd(expeditionsCompleted(),1));write.put(EXPEDITION_KEY,run.claim().encode());
+            ExpeditionReward result=new ExpeditionReward(id,target,item.avatarId,targetBefore,targetAfter,discoveryBefore,discoveryAfter,homeBefore,homeAfter,overflow,duplicate);
+            write.put(expeditionRewardKey(id),result.encode());appendBadgeAwardsLocked(write,null,null,duplicate?0:1);LocalSaveTransactions.write(prefs,write);return result;}
     }
 
     /**

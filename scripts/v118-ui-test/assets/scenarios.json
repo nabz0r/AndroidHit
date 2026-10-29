@@ -1,0 +1,1366 @@
+{
+  "migration-launch": [],
+  "expedition-open": [
+    {
+      "op": "tap-scroll",
+      "regex": "Expeditions|Expéditions",
+      "reason": "open-expedition-journal"
+    },
+    {
+      "op": "capture",
+      "name": "expedition-starter"
+    }
+  ],
+  "expedition-start-pause": [
+    {
+      "op": "tap-id",
+      "id": "expedition_entry"
+    },
+    {
+      "op": "assert-label",
+      "regex": ".*Nova.*Rarity N.*Level 1 / 10.*1 / 2 copies.*"
+    },
+    {
+      "op": "capture",
+      "name": "starter-before-run"
+    },
+    {
+      "op": "snapshot",
+      "name": "pre-expedition"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_start"
+    },
+    {
+      "op": "assert-run",
+      "companion": "nova",
+      "level": 1,
+      "goal": "COPIES",
+      "wins": 0,
+      "skills": 0,
+      "choices": 0,
+      "claims": 0
+    },
+    {
+      "op": "capture",
+      "name": "route-before-signature"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_skill"
+    },
+    {
+      "op": "assert-run",
+      "wins": 0,
+      "skills": 1,
+      "choices": 0,
+      "claims": 0
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "route-after-reveal"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_left"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "recreate",
+      "name": "first-victory"
+    },
+    {
+      "op": "assert-run",
+      "wins": 1,
+      "skills": 1,
+      "choices": 1,
+      "claims": 0
+    },
+    {
+      "op": "victory-route"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "first-fork-checkpoint"
+    },
+    {
+      "op": "snapshot",
+      "name": "checkpoint"
+    }
+  ],
+  "expedition-finish": [
+    {
+      "op": "tap-id",
+      "id": "expedition_entry"
+    },
+    {
+      "op": "assert-run",
+      "companion": "nova",
+      "level": 1,
+      "goal": "COPIES",
+      "wins": 1,
+      "skills": 1,
+      "choices": 1,
+      "claims": 0
+    },
+    {
+      "op": "capture",
+      "name": "cold-restored-fork"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_right"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap",
+      "regex": "Next.*|Suivant.*",
+      "reason": "real-victory-next-back-to-expedition"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_left"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap",
+      "regex": "Next.*|Suivant.*",
+      "reason": "real-victory-next-back-to-expedition"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_left"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap",
+      "regex": "Next.*|Suivant.*",
+      "reason": "real-victory-next-back-to-expedition"
+    },
+    {
+      "op": "assert-run",
+      "wins": 4,
+      "skills": 1,
+      "choices": 4,
+      "claims": 0
+    },
+    {
+      "op": "capture",
+      "name": "unclaimed-return"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-run",
+      "wins": 4,
+      "skills": 1,
+      "choices": 4,
+      "claims": 1
+    },
+    {
+      "op": "assert-reward",
+      "completed": 1,
+      "coins": 235
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "claimed-return"
+    },
+    {
+      "op": "recreate",
+      "name": "claimed-receipt"
+    },
+    {
+      "op": "snapshot",
+      "name": "claimed"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-same-snapshot",
+      "name": "claimed"
+    },
+    {
+      "op": "capture",
+      "name": "home-with-souvenir"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_souvenir"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_nova",
+      "value": "2"
+    },
+    {
+      "op": "assert-label",
+      "regex": ".*Nova.*Rarity N.*Level 2 / 10.*2 / 8 copies.*"
+    },
+    {
+      "op": "capture",
+      "name": "evolved-nova-next-run"
+    }
+  ],
+  "expedition-finish-selected": [
+    {
+      "op": "tap-id",
+      "id": "expedition_entry"
+    },
+    {
+      "op": "assert-run",
+      "companion": "nova",
+      "level": 1,
+      "goal": "COPIES",
+      "wins": 1,
+      "skills": 1,
+      "choices": 2,
+      "claims": 0
+    },
+    {
+      "op": "capture",
+      "name": "cold-restored-fork"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_continue"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "recreate",
+      "name": "actual-stage-victory"
+    },
+    {
+      "op": "assert-run",
+      "wins": 2,
+      "skills": 1,
+      "choices": 2,
+      "claims": 0
+    },
+    {
+      "op": "victory-route"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_left"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap",
+      "regex": "Next.*|Suivant.*",
+      "reason": "real-victory-next-back-to-expedition"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_left"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap",
+      "regex": "Next.*|Suivant.*",
+      "reason": "real-victory-next-back-to-expedition"
+    },
+    {
+      "op": "assert-run",
+      "wins": 4,
+      "skills": 1,
+      "choices": 4,
+      "claims": 0
+    },
+    {
+      "op": "capture",
+      "name": "unclaimed-return"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-run",
+      "wins": 4,
+      "skills": 1,
+      "choices": 4,
+      "claims": 1
+    },
+    {
+      "op": "assert-reward",
+      "completed": 1,
+      "coins": 235
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "claimed-return"
+    },
+    {
+      "op": "recreate",
+      "name": "claimed-receipt"
+    },
+    {
+      "op": "snapshot",
+      "name": "claimed"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-same-snapshot",
+      "name": "claimed"
+    },
+    {
+      "op": "capture",
+      "name": "home-with-souvenir"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_souvenir"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_nova",
+      "value": "2"
+    },
+    {
+      "op": "assert-label",
+      "regex": ".*Nova.*Rarity N.*Level 2 / 10.*2 / 8 copies.*"
+    },
+    {
+      "op": "capture",
+      "name": "evolved-nova-next-run"
+    }
+  ],
+  "settled-home": [
+    {
+      "op": "tap-scroll",
+      "regex": "My home|Ma maison|Home|Maison",
+      "reason": "open-original-home-object"
+    },
+    {
+      "op": "capture",
+      "name": "settled-home-souvenir"
+    },
+    {
+      "op": "snapshot",
+      "name": "settled-home-state"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_souvenir"
+    },
+    {
+      "op": "capture",
+      "name": "settled-evolved-nova"
+    }
+  ],
+  "motion-gallery": [
+    {
+      "op": "open-companion",
+      "id": "nova",
+      "name": "Nova"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Companion studio|Studio des compagnons"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_nova",
+      "value": "2"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Nova\\..*\\. Level 2 / 10.*"
+    },
+    {
+      "op": "capture",
+      "name": "studio-initial"
+    },
+    {
+      "op": "motion-cycle",
+      "character": "Nova"
+    },
+    {
+      "op": "motion-forms",
+      "character": "Nova"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Nova\\..*\\. Level 2 / 10.*"
+    },
+    {
+      "op": "capture",
+      "name": "studio-real-level2-after-previews"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_calm"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "CALM"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "studio-stance-calm"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_ready"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "READY"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "studio-stance-ready"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_guard"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "GUARD"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "studio-stance-guard"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_proud"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "PROUD"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "studio-stance-proud"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_guard"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "GUARD"
+    },
+    {
+      "op": "recreate",
+      "name": "guard-stance-activity"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "GUARD"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Nova\\. Guard\\. Level 2 / 10.*"
+    },
+    {
+      "op": "assert-pref",
+      "key": "coins",
+      "value": "235"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_nova",
+      "value": "2"
+    },
+    {
+      "op": "snapshot",
+      "name": "nova-guard-before-cold"
+    }
+  ],
+  "motion-stance-cold": [
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "GUARD"
+    },
+    {
+      "op": "assert-pref",
+      "key": "coins",
+      "value": "235"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_nova",
+      "value": "2"
+    },
+    {
+      "op": "open-companion",
+      "id": "nova",
+      "name": "Nova"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Companion studio|Studio des compagnons"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Nova\\. Guard\\. Level 2 / 10.*"
+    },
+    {
+      "op": "capture",
+      "name": "nova-guard-after-process-cold"
+    },
+    {
+      "op": "snapshot",
+      "name": "nova-guard-after-cold"
+    }
+  ],
+  "guest-ashe-unlock": [
+    {
+      "op": "assert-pref",
+      "key": "character",
+      "value": "nova"
+    },
+    {
+      "op": "assert-pref",
+      "key": "expedition_v118_completed",
+      "value": "1"
+    },
+    {
+      "op": "earn-campaign",
+      "from": 2,
+      "through": 8,
+      "baseCoins": 235
+    },
+    {
+      "op": "assert-pref",
+      "key": "coins",
+      "value": "620"
+    },
+    {
+      "op": "open-companion",
+      "id": "lol_ashe",
+      "name": "Ashe"
+    },
+    {
+      "op": "back"
+    },
+    {
+      "op": "guest-pages"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Ashe, .*"
+    },
+    {
+      "op": "capture",
+      "name": "ashe-locked-earned-wallet"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "520 LumaCoins"
+    },
+    {
+      "op": "assert-pref",
+      "key": "owned_character_lol_ashe",
+      "value": "true"
+    },
+    {
+      "op": "assert-pref",
+      "key": "coins",
+      "value": "100"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Equip|Équiper"
+    },
+    {
+      "op": "assert-pref",
+      "key": "character",
+      "value": "lol_ashe"
+    },
+    {
+      "op": "capture",
+      "name": "ashe-equipped-first-copy"
+    },
+    {
+      "op": "snapshot",
+      "name": "ashe-owned-before-expedition"
+    }
+  ],
+  "guest-ashe-expedition": [
+    {
+      "op": "assert-pref",
+      "key": "character",
+      "value": "lol_ashe"
+    },
+    {
+      "op": "assert-pref",
+      "key": "owned_character_lol_ashe",
+      "value": "true"
+    },
+    {
+      "op": "assert-pref",
+      "key": "coins",
+      "value": "100"
+    },
+    {
+      "op": "open-companion",
+      "id": "lol_ashe",
+      "name": "Ashe"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Expeditions|Expéditions"
+    },
+    {
+      "op": "assert-label",
+      "regex": ".*Ashe.*"
+    },
+    {
+      "op": "capture",
+      "name": "ashe-copy-project-nova-actor"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_start"
+    },
+    {
+      "op": "assert-run",
+      "companion": "nova",
+      "level": 2,
+      "goal": "COPIES",
+      "target": "lol_ashe",
+      "wins": 0,
+      "skills": 0,
+      "choices": 0,
+      "claims": 0
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": ".*2 uses left this expedition.*"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_skill"
+    },
+    {
+      "op": "assert-run",
+      "skills": 1
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": ".*1 uses left this expedition.*"
+    },
+    {
+      "op": "finish-expedition"
+    },
+    {
+      "op": "assert-run",
+      "companion": "nova",
+      "level": 2,
+      "target": "lol_ashe",
+      "wins": 4,
+      "skills": 1,
+      "choices": 4,
+      "claims": 0
+    },
+    {
+      "op": "capture",
+      "name": "ashe-project-unclaimed"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-reward",
+      "completed": 2,
+      "coins": 100
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_lol_ashe",
+      "value": "2"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "ashe-second-copy-receipt"
+    },
+    {
+      "op": "recreate",
+      "name": "ashe-claim-activity"
+    },
+    {
+      "op": "assert-run",
+      "wins": 4,
+      "claims": 1
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_lol_ashe",
+      "value": "2"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-pref",
+      "key": "coins",
+      "value": "100"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_lol_ashe",
+      "value": "2"
+    },
+    {
+      "op": "assert-pref",
+      "key": "character",
+      "value": "lol_ashe"
+    },
+    {
+      "op": "capture",
+      "name": "home-ashe-level2"
+    },
+    {
+      "op": "open-companion",
+      "id": "lol_ashe",
+      "name": "Ashe"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Companion studio|Studio des compagnons"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_guard"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_lol_ashe",
+      "value": "GUARD"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Ashe\\. Guard\\. Level 2 / 10.*"
+    },
+    {
+      "op": "capture",
+      "name": "ashe-level2-guard"
+    },
+    {
+      "op": "recreate",
+      "name": "ashe-guard-activity"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_lol_ashe",
+      "value": "GUARD"
+    },
+    {
+      "op": "snapshot",
+      "name": "ashe-evolved-before-cold"
+    }
+  ],
+  "guest-ashe-cold": [
+    {
+      "op": "assert-pref",
+      "key": "character",
+      "value": "lol_ashe"
+    },
+    {
+      "op": "assert-pref",
+      "key": "coins",
+      "value": "100"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_copies_v118_lol_ashe",
+      "value": "2"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_lol_ashe",
+      "value": "GUARD"
+    },
+    {
+      "op": "assert-pref",
+      "key": "expedition_v118_completed",
+      "value": "2"
+    },
+    {
+      "op": "adventure"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "My home|Ma maison|Home|Maison"
+    },
+    {
+      "op": "capture",
+      "name": "home-ashe-evolved-after-process-cold"
+    },
+    {
+      "op": "open-companion",
+      "id": "lol_ashe",
+      "name": "Ashe"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Companion studio|Studio des compagnons"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Ashe\\. Guard\\. Level 2 / 10.*"
+    },
+    {
+      "op": "capture",
+      "name": "ashe-guard-after-process-cold"
+    },
+    {
+      "op": "snapshot",
+      "name": "ashe-evolved-after-cold"
+    }
+  ],
+  "signatures-earned-unlock": [
+    {
+      "op": "earn-campaign",
+      "from": 9,
+      "through": 15,
+      "baseCoins": 100
+    },
+    {
+      "op": "unlock-companion",
+      "id": "miko",
+      "name": "Miko",
+      "price": 160
+    },
+    {
+      "op": "unlock-companion",
+      "id": "orbit",
+      "name": "Orbit",
+      "price": 220
+    },
+    {
+      "op": "assert-pref",
+      "key": "owned_character_miko",
+      "value": "true"
+    },
+    {
+      "op": "assert-pref",
+      "key": "owned_character_orbit",
+      "value": "true"
+    },
+    {
+      "op": "capture",
+      "name": "signature-companions-earned"
+    },
+    {
+      "op": "snapshot",
+      "name": "miko-orbit-earned"
+    }
+  ],
+  "miko-native-signature": [
+    {
+      "op": "open-companion",
+      "id": "miko",
+      "name": "Miko"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Expeditions|Expéditions"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_start"
+    },
+    {
+      "op": "assert-run",
+      "companion": "miko",
+      "goal": "COPIES",
+      "target": "miko",
+      "wins": 0,
+      "skills": 0,
+      "claims": 0
+    },
+    {
+      "op": "remember-branch",
+      "id": "expedition_left",
+      "name": "miko-reroute"
+    },
+    {
+      "op": "capture",
+      "name": "miko-before-reroute"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_skill"
+    },
+    {
+      "op": "assert-branch-changed",
+      "id": "expedition_left",
+      "name": "miko-reroute"
+    },
+    {
+      "op": "assert-run",
+      "skills": 1
+    },
+    {
+      "op": "capture",
+      "name": "miko-after-reroute"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_left"
+    },
+    {
+      "op": "assert-selected-branch",
+      "name": "miko-reroute"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Next.*|Suivant.*"
+    },
+    {
+      "op": "finish-expedition"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-reward",
+      "completed": 3
+    },
+    {
+      "op": "capture",
+      "name": "miko-completed-real-signature"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    }
+  ],
+  "orbit-native-signature": [
+    {
+      "op": "open-companion",
+      "id": "orbit",
+      "name": "Orbit"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Expeditions|Expéditions"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_start"
+    },
+    {
+      "op": "assert-run",
+      "companion": "orbit",
+      "goal": "COPIES",
+      "target": "orbit",
+      "wins": 0,
+      "skills": 0,
+      "claims": 0
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_left"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Next.*|Suivant.*"
+    },
+    {
+      "op": "capture",
+      "name": "orbit-fork-before-project"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_skill"
+    },
+    {
+      "op": "assert-run",
+      "wins": 1,
+      "skills": 1
+    },
+    {
+      "op": "assert-id",
+      "id": "expedition_third"
+    },
+    {
+      "op": "assert-three-routes"
+    },
+    {
+      "op": "remember-branch",
+      "id": "expedition_third",
+      "name": "orbit-project"
+    },
+    {
+      "op": "capture",
+      "name": "orbit-real-third-project-option"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_third"
+    },
+    {
+      "op": "assert-selected-branch",
+      "name": "orbit-project"
+    },
+    {
+      "op": "solve-current"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Next.*|Suivant.*"
+    },
+    {
+      "op": "finish-expedition"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    },
+    {
+      "op": "assert-reward",
+      "completed": 4
+    },
+    {
+      "op": "capture",
+      "name": "orbit-completed-real-project"
+    },
+    {
+      "op": "tap-id",
+      "id": "expedition_claim"
+    }
+  ],
+  "motion-outfit-preview": [
+    {
+      "op": "open-companion",
+      "id": "nova",
+      "name": "Nova"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Companion studio|Studio des compagnons"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Nova\\..*\\. Level 2 / 10.*"
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": "Original costume · change"
+    },
+    {
+      "op": "snapshot",
+      "name": "original-real-profile-before-preview"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_calm"
+    },
+    {
+      "op": "snapshot",
+      "name": "preview-prepared-profile"
+    },
+    {
+      "op": "motion-cycle",
+      "character": "Nova",
+      "capturePrefix": "original-costume"
+    },
+    {
+      "op": "motion-forms",
+      "character": "Nova"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_outfit_toggle"
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": "My outfit · change"
+    },
+    {
+      "op": "motion-cycle",
+      "character": "Nova",
+      "capturePrefix": "my-outfit"
+    },
+    {
+      "op": "recreate",
+      "name": "my-outfit-activity"
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": "My outfit · change"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "my-outfit-after-actual-recreate"
+    },
+    {
+      "op": "assert-same-snapshot",
+      "name": "preview-prepared-profile"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_outfit_toggle"
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": "Original costume · change"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "original-costume-after-toggle-back"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_outfit_toggle"
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": "My outfit · change"
+    },
+    {
+      "op": "back"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Companion studio|Studio des compagnons"
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": "Original costume · change"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "capture",
+      "name": "new-studio-opening-original-costume"
+    },
+    {
+      "op": "assert-same-snapshot",
+      "name": "preview-prepared-profile"
+    },
+    {
+      "op": "tap-id",
+      "id": "motion_stance_guard"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "GUARD"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Nova\\. Guard\\. Level 2 / 10.*"
+    },
+    {
+      "op": "capture",
+      "name": "original-costume-guard-real-level"
+    },
+    {
+      "op": "assert-same-snapshot",
+      "name": "original-real-profile-before-preview"
+    }
+  ],
+  "motion-outfit-cold": [
+    {
+      "op": "snapshot",
+      "name": "cold-real-profile-before-ui"
+    },
+    {
+      "op": "assert-pref",
+      "key": "companion_stance_v118_nova",
+      "value": "GUARD"
+    },
+    {
+      "op": "open-companion",
+      "id": "nova",
+      "name": "Nova"
+    },
+    {
+      "op": "tap-scroll",
+      "regex": "Companion studio|Studio des compagnons"
+    },
+    {
+      "op": "assert-label-scroll",
+      "regex": "Original costume · change"
+    },
+    {
+      "op": "top"
+    },
+    {
+      "op": "assert-label",
+      "regex": "Nova\\. Guard\\. Level 2 / 10.*"
+    },
+    {
+      "op": "capture",
+      "name": "original-costume-real-guard-after-process-cold"
+    },
+    {
+      "op": "assert-same-snapshot",
+      "name": "cold-real-profile-before-ui"
+    },
+    {
+      "op": "snapshot",
+      "name": "cold-real-profile-after-ui"
+    }
+  ],
+  "wardrobe-costume-choice": [
+    {"op": "adventure"},
+    {"op": "tap-scroll", "regex": "My home|Ma maison|Home|Maison", "reason": "open-real-home-for-wardrobe"},
+    {"op": "tap-scroll", "regex": "Wardrobe|Garde-robe|Garderobe|Vestuario|Guarda-roupa|Guardaroba", "reason": "open-real-wardrobe"},
+    {"op": "assert-label-scroll", "regex": "Original costume · change|Costume du compagnon · changer|Originalkostüm · wechseln|Traje original · cambiar|Traje original · mudar|Costume originale · cambia"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-original-default"},
+    {"op": "snapshot", "name": "wardrobe-costume-entry"},
+    {"op": "tap-id", "id": "wardrobe_costume_toggle", "reason": "choose-my-existing-outfit-without-equipping-or-buying"},
+    {"op": "assert-label-scroll", "regex": "My outfit · change|Ma tenue · changer|Mein Outfit · wechseln|Mi conjunto · cambiar|A minha roupa · mudar|Il mio completo · cambia"},
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "false"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-my-outfit-selected"},
+    {"op": "snapshot", "name": "wardrobe-outfit-selected"},
+    {"op": "recreate", "name": "wardrobe-my-outfit-activity"},
+    {"op": "assert-label-scroll", "regex": "My outfit · change|Ma tenue · changer|Mein Outfit · wechseln|Mi conjunto · cambiar|A minha roupa · mudar|Il mio completo · cambia"},
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "false"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-my-outfit-after-recreate"},
+    {"op": "snapshot", "name": "wardrobe-outfit-recreated"},
+    {"op": "assert-same-snapshot", "name": "wardrobe-outfit-selected"},
+    {"op": "tap-id", "id": "wardrobe_costume_toggle", "reason": "return-to-original-costume-without-clearing-items"},
+    {"op": "assert-label-scroll", "regex": "Original costume · change|Costume du compagnon · changer|Originalkostüm · wechseln|Traje original · cambiar|Traje original · mudar|Costume originale · cambia"},
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "true"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-returned-original-costume"},
+    {"op": "snapshot", "name": "wardrobe-costume-returned"},
+    {"op": "tap-id", "id": "wardrobe_costume_toggle", "reason": "retain-my-outfit-for-next-real-process"},
+    {"op": "assert-label-scroll", "regex": "My outfit · change|Ma tenue · changer|Mein Outfit · wechseln|Mi conjunto · cambiar|A minha roupa · mudar|Il mio completo · cambia"},
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "false"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-my-outfit-ready-for-cold"},
+    {"op": "snapshot", "name": "wardrobe-outfit-ready-for-cold"}
+  ],
+  "wardrobe-costume-cold": [
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "false"},
+    {"op": "adventure"},
+    {"op": "tap-scroll", "regex": "My home|Ma maison|Home|Maison", "reason": "open-real-home-after-outfit-cold-process"},
+    {"op": "tap-scroll", "regex": "Wardrobe|Garde-robe|Garderobe|Vestuario|Guarda-roupa|Guardaroba", "reason": "open-real-wardrobe-after-outfit-cold-process"},
+    {"op": "assert-label-scroll", "regex": "My outfit · change|Ma tenue · changer|Mein Outfit · wechseln|Mi conjunto · cambiar|A minha roupa · mudar|Il mio completo · cambia"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-my-outfit-after-process-cold"},
+    {"op": "snapshot", "name": "wardrobe-outfit-cold-restored"},
+    {"op": "assert-same-snapshot", "name": "before"},
+    {"op": "tap-id", "id": "wardrobe_costume_toggle", "reason": "persist-original-costume-after-outfit-cold-proof"},
+    {"op": "assert-label-scroll", "regex": "Original costume · change|Costume du compagnon · changer|Originalkostüm · wechseln|Traje original · cambiar|Traje original · mudar|Costume originale · cambia"},
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "true"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-original-after-cold-toggle"},
+    {"op": "snapshot", "name": "wardrobe-original-selected"},
+    {"op": "recreate", "name": "wardrobe-original-activity"},
+    {"op": "assert-label-scroll", "regex": "Original costume · change|Costume du compagnon · changer|Originalkostüm · wechseln|Traje original · cambiar|Traje original · mudar|Costume originale · cambia"},
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "true"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-original-after-recreate"},
+    {"op": "snapshot", "name": "wardrobe-original-recreated"},
+    {"op": "assert-same-snapshot", "name": "wardrobe-original-selected"}
+  ],
+  "wardrobe-costume-original-cold": [
+    {"op": "assert-pref", "key": "companion_original_costume_v118", "value": "true"},
+    {"op": "adventure"},
+    {"op": "tap-scroll", "regex": "My home|Ma maison|Home|Maison", "reason": "open-real-home-after-original-cold-process"},
+    {"op": "tap-scroll", "regex": "Wardrobe|Garde-robe|Garderobe|Vestuario|Guarda-roupa|Guardaroba", "reason": "open-real-wardrobe-after-original-cold-process"},
+    {"op": "assert-label-scroll", "regex": "Original costume · change|Costume du compagnon · changer|Originalkostüm · wechseln|Traje original · cambiar|Traje original · mudar|Costume originale · cambia"},
+    {"op": "top"},
+    {"op": "capture", "name": "wardrobe-original-after-process-cold"},
+    {"op": "snapshot", "name": "wardrobe-original-cold-restored"},
+    {"op": "assert-same-snapshot", "name": "before"}
+  ]
+}

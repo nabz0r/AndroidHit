@@ -1,0 +1,104 @@
+{
+  "functionalQualificationPassed": true,
+  "scope": "Exact frozen H production APK on new emulator-5600. Actual SDK touches at observed accessibility bounds, with read-only preference comparisons. No profile reset, seed, unlock or grant; no universal apparel-fit claim.",
+  "generatedUtc": "2026-10-29T16:52:50.418112+00:00",
+  "productionSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+  "labSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+  "creationReceiptSha256": "a17296f11091474f6ebdf8520a47edaf51ca471e0ee563908dd77e8b12bf31d7",
+  "packagePolicyPassed": true,
+  "freshness": {
+    "fourPreferencesBeforeFirstActivity": {
+      "luma_drift_save_v1": {},
+      "luma_drift_meta_v1": {},
+      "luma_session": {},
+      "luma_expedition_session_v118": {}
+    },
+    "firstLightExitHistoryObservedBeforeCompletion": "0,1,2",
+    "actualFirstLightCompleted": true,
+    "freshPresentationChoiceAbsentAfterPureStudioTour": true,
+    "reset": false
+  },
+  "passingPhases": {
+    "final-art-h-fresh-firstlight": {
+      "checks": 94,
+      "touches": 21,
+      "screenshots": 17,
+      "processId": 5303,
+      "observerSha256": "81ead52027286b7d66e5d1ba4be6f9f0c81666ab071db6cf813f007604447e4d"
+    },
+    "final-art-h-six-languages": {
+      "checks": 381,
+      "touches": 128,
+      "screenshots": 103,
+      "processId": 5585,
+      "observerSha256": "81ead52027286b7d66e5d1ba4be6f9f0c81666ab071db6cf813f007604447e4d"
+    },
+    "final-art-h-compact-english": {
+      "checks": 86,
+      "touches": 21,
+      "screenshots": 17,
+      "processId": 6083,
+      "observerSha256": "81ead52027286b7d66e5d1ba4be6f9f0c81666ab071db6cf813f007604447e4d"
+    },
+    "final-art-h-cold": {
+      "checks": 27,
+      "touches": 0,
+      "screenshots": 1,
+      "processId": 6414,
+      "observerSha256": "81ead52027286b7d66e5d1ba4be6f9f0c81666ab071db6cf813f007604447e4d"
+    }
+  },
+  "checkTotal": 588,
+  "touchTotal": 170,
+  "screenshotTotal": 138,
+  "nativeStudioFullPreferenceMapEqualityChecks": 8,
+  "nativeWardrobeOnlyBooleanDifferenceChecks": 7,
+  "capturedPreferenceDifferencesVersusFirstTour": {
+    "final-art-h-fresh-firstlight": [],
+    "final-art-h-six-languages": [
+      {
+        "file": "luma_drift_save_v1",
+        "key": "companion_original_costume_v118",
+        "before": null,
+        "after": true
+      }
+    ],
+    "final-art-h-compact-english": [
+      {
+        "file": "luma_drift_save_v1",
+        "key": "companion_original_costume_v118",
+        "before": null,
+        "after": true
+      }
+    ],
+    "final-art-h-cold": [
+      {
+        "file": "luma_drift_save_v1",
+        "key": "companion_original_costume_v118",
+        "before": null,
+        "after": true
+      }
+    ]
+  },
+  "allOtherCapturedPreferenceKeysStrictlyUnchanged": true,
+  "capturedPreferencesExactlyEqualCompactToCold": true,
+  "snapshotNote": "Evidence snapshots omit seed-valued fields by design; native studio/wardrobe equality checks compare complete in-memory maps of all four preference files.",
+  "finalWallet": 180,
+  "ownedCompanions": [
+    "nova"
+  ],
+  "finalOriginalCostumeFlag": true,
+  "compactDefaultsRestored": true,
+  "visualVerdict": {
+    "firstLightAndHomeOriginalCostume": "PASS: authored Nova intact, no floating legacy glove or duplicate green boots.",
+    "studioAndWardrobeControls": "PASS: visible/actionable after real scrolling, including compact720x1280.",
+    "receipt": "docs/validation/v1.18/native-fresh-h/final-art-h-fresh-firstlight/visual-review/receipt.json"
+  },
+  "apparelQualified": false,
+  "limits": [
+    "Explicit worn legacy outfit overlays remain approximate; this evidence does not qualify every outfit/pose.",
+    "Compact coverage is English; all six languages were exercised at the normal portrait size.",
+    "SDK emulator proof is not a physical-phone performance or comfort claim.",
+    "E/G evidence remains historical and is not substituted for H."
+  ]
+}

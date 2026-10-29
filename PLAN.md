@@ -1,3 +1,23 @@
+# Luma Drift 1.18 — prototype qualified; publication prepared
+
+**Publication preparation —29 October 2026:** the owner requested Git and existing Firebase updates while testing H. The FR/EN site now has the37 identity gallery, four form choices, twenty poses/four stances, six unedited H captures and exact prepared1.18 download URLs. Fifteen site unit tests and65 local provenance/static checks pass; desktop and320 CSS-pixel FR/EN gallery states were reviewed. Gallery requests start only with a user choice, with a four-entry atlas cache. Existing privacy/account/configuration/audio and1.17 archives remain unchanged. Signed H APKs are external manifest-verified artifacts above100 MiB, with ignored physical copies for Hosting. Clean-commit deployment and independent public-byte verification tools are prepared; Git push, Hosting management and public download receipts remain pending. No public1.18 delivery is claimed yet.
+
+
+29 October owner steering: before APK delivery finish all 24 original avatars, then add13 miniature LoL guests (Ashe, Ezreal, Soraka, Ahri, Jinx, Lux, Teemo, Yasuo, Annie, Lulu, Sona, Miss Fortune, Vi) in the detailed kawaii mascot style. Scope is37 identities,4 authored forms,20 poses each =2,960 drawings. Artwork, directional/stance review and worn rendering precede final package qualification. Historical summon odds remain unchanged; guest-series acquisition is direct earned-coin prototype content.
+
+Owner approved implementation on 29 October 2026 after the [economy and collection study](docs/research/gacha-2026/CONCEPT_ET_ECONOMIE_FR.md).
+
+1. Add four-stage Observatory expeditions with real U boards, two route forks and three distinct companion signatures.
+2. Keep fixed N/R/SR/SSR identities separate from copies-only levels 1–10. Initialize existing possessions to one copy; preserve historical odds, refunds and receipts.
+3. Persist route choices, skill charges and exact stage wins; isolate the expedition puzzle session from the retained campaign attempt.
+4. Atomically deliver a chosen companion copy or home-project progress plus one free random discovery; preserve retry and maximum-level compensation.
+5. Integrate object-based navigation, six languages, companion details and a permanent Observatory souvenir in the home.
+6. Run model/store regressions, signed builds, installed fresh/upgrade play, cold restoration and compact/large-font review; deliver exact tested prototype APKs and limits.
+
+Current status: H local prototype delivered as exact signed production/Lab APKs, with37 identities/148 atlases/2,960 drawings. H native Canvas, retained-profile UI and genuinely fresh production routes pass; see [validation](docs/validation/v1.18/README.md). Explicit legacy wardrobe fitting and repeated-run economy remain provisional. Values after levels1/2/3, physical-phone comfort and player retention still need playtesting. Existing payments and provider gates remain unchanged.
+
+Owner added full visual evolution and animation scope: authored companion forms at levels 1/3/6/10, directional idle/walk, jump/landing, hug/crouch, happy/sad/surprised/thoughtful expressions, and persistent calm/ready/guard/proud stances. All37 identities now have their authored forms and poses. Source polygons, common scale and native rendering are qualified separately from provisional attachment estimates. Original costumes are the default when no explicit garment choice exists; wardrobe items remain selectable and saved choices are preserved. Retain all original 1.17 artwork and source identities. Pokémon, Crash Fever and Dragon Ball inform progression, expressiveness and readable silhouettes; new assets remain original.
+
 # Luma Drift 1.17 — original art and navigation without visible buttons
 
 **Delivered: H (1.17.0-rc6 / code 24), four exact signed packages, documentation and source on Git main, and the existing Firebase website. Native acceptance, public download hashes, responsive FR/EN browser states and deliberate audio playback pass within their recorded scopes. Earlier candidates retain their original historical results.**

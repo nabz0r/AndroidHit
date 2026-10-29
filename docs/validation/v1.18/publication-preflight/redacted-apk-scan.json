@@ -1,0 +1,44 @@
+{
+  "scope": "Read-only APK ZIP metadata/config/classes scan for named high-confidence private credential patterns. No credential values printed/stored. Presence of intentionally public identity client configuration is not itself a private credential finding. Not an exhaustive security certification.",
+  "results": [
+    {
+      "variant": "production",
+      "apkSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+      "suspiciousCredentialEntryNames": [],
+      "highConfidenceSecretMatches": [],
+      "identityAssetKeys": [
+        {
+          "name": "apiKey",
+          "type": "str",
+          "characters": 39
+        },
+        {
+          "name": "appId",
+          "type": "str",
+          "characters": 45
+        },
+        {
+          "name": "projectId",
+          "type": "str",
+          "characters": 21
+        },
+        {
+          "name": "webClientId",
+          "type": "str",
+          "characters": 72
+        }
+      ],
+      "inspectedEntries": 340,
+      "noHighConfidenceEmbeddedSecretFound": true
+    },
+    {
+      "variant": "lab",
+      "apkSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+      "suspiciousCredentialEntryNames": [],
+      "highConfidenceSecretMatches": [],
+      "identityAssetKeys": [],
+      "inspectedEntries": 339,
+      "noHighConfidenceEmbeddedSecretFound": true
+    }
+  ]
+}

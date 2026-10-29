@@ -26,6 +26,9 @@ public final class CompanionPortrait {
     private final AvatarStage avatar = new AvatarStage();
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path path = new Path();
+    private String motionFallback="",motionFrameKey="";
+    public String lastMotionFallback(){return motionFallback;}
+    public String lastMotionFrameKey(){return motionFrameKey;}
 
     /**
      * Last valid item per cosmetic slot wins, allowing a non-persisted preview override.
@@ -64,6 +67,44 @@ public final class CompanionPortrait {
             line(canvas, 1.02f, .47f, 1.02f, .84f, withAlpha(selected.secondary,105), .015f);
             drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.CHARM), 1.02f, .96f, .21f);
         }
+        canvas.restore();
+    }
+
+    /** Requested v1.18 form/pose snapshot. The old overload stays byte-for-byte on its original drawing path. */
+    public void draw(Canvas canvas,Catalog.CharacterItem character,float x,float y,float r,
+                     AvatarStyles.Style style,AvatarStage.Pose pose,long time,boolean reduceMotion,
+                     AvatarLoadout loadout,List<CosmeticCatalog.Item> cosmetics,CompanionMotion.Frame frame){
+        CompanionArt118 art=CharacterSprites.motionArt();motionFrameKey=frame==null?"":frame.frameKey();
+        Catalog.CharacterItem who=character==null?Catalog.CHARACTERS[0]:character;
+        if(canvas==null||!finite(x)||!finite(y)||!finite(r)||r<=0)return;
+        CompanionArt118.Entry entry=art==null?null:art.frame(frame);
+        if(frame==null||!who.id.equals(frame.characterId)||entry==null||!art.preload(frame)){
+            motionFallback=frame==null?"No motion snapshot supplied":entry==null?"Exact authored form/pose unavailable: "+frame.frameKey():!who.id.equals(frame.characterId)?"Character and motion identity differ":"Exact authored frame could not decode";
+            draw(canvas,who,x,y,r,style,pose,time,reduceMotion,loadout,cosmetics);return;
+        }
+        motionFallback="";AvatarStyles.Style selected=style==null?AvatarStyles.find(null):style;
+        CosmeticCatalog.Item gloves=lastInSlot(cosmetics,CosmeticCatalog.Slot.GLOVES),shoes=lastInSlot(cosmetics,CosmeticCatalog.Slot.SHOES);
+        canvas.save();canvas.translate(x,y);canvas.scale(r,r);canvas.translate(frame.bodyDX,frame.bodyDY);canvas.rotate(frame.rotation);
+        avatar.drawStyleBackdrop(canvas,selected);
+        List<CompanionRig118.Anchor> order=entry.rig.drawOrder();
+        for(CompanionRig118.Layer layer:CompanionRig118.Layer.values()){
+            if(layer==CompanionRig118.Layer.BODY)art.drawBody(canvas,frame,gloves!=null,shoes!=null);
+            for(CompanionRig118.Anchor anchor:order){
+                if(anchor.layer!=layer||!anchor.visible)continue;
+                switch(anchor.attachment){
+                    case HAT:art.drawGarment(canvas,lastInSlot(cosmetics,CosmeticCatalog.Slot.HAT),anchor);break;
+                    case DRESS:art.drawGarment(canvas,lastInSlot(cosmetics,CosmeticCatalog.Slot.DRESS),anchor,entry.rig.garmentNeckY);break;
+                    case LEFT_GLOVE:case RIGHT_GLOVE:art.drawGarment(canvas,gloves,anchor);break;
+                    case LEFT_SHOE:case RIGHT_SHOE:art.drawGarment(canvas,shoes,anchor);break;
+                    case AURA:if(loadout!=null){canvas.save();canvas.translate(anchor.x,anchor.y);canvas.rotate(anchor.rotation);canvas.scale(anchor.width/2.4f,anchor.height/2.4f);aura(canvas,loadout.item(AvatarGearCatalog.Slot.AURA),selected);canvas.restore();}break;
+                    case HEAD_GEAR:if(loadout!=null){canvas.save();canvas.translate(anchor.x,anchor.y);canvas.rotate(anchor.rotation);drawGearGlyph(canvas,loadout.item(AvatarGearCatalog.Slot.HEAD),0,0,Math.min(anchor.width,anchor.height)*.5f);canvas.restore();}break;
+                    case CHARM:if(loadout!=null){canvas.save();canvas.translate(anchor.x,anchor.y);canvas.rotate(anchor.rotation);drawGearGlyph(canvas,loadout.item(AvatarGearCatalog.Slot.CHARM),0,0,Math.min(anchor.width,anchor.height)*.5f);canvas.restore();}break;
+                    default:break;
+                }
+            }
+        }
+        avatar.drawStyleAccent(canvas,selected,pose==null?AvatarStage.Pose.IDLE:pose);
+        for(int detail=0;detail<frame.detailCount;detail++)star(canvas,(detail-(frame.detailCount-1)*.5f)*.22f,1.78f,.075f,selected.secondary);
         canvas.restore();
     }
 

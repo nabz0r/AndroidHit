@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "tool": "built-in image_gen",
+  "scope": "Only Buzz level3 and level6 faithful layout repair; no global bounds pass, no build or native run.",
+  "records": [
+    {
+      "id": "buzz",
+      "level": 3,
+      "poses": 20,
+      "original": "docs/art/v118/originals/buzz-evo03-poses.png",
+      "originalSha256": "196b1629b4fa4a67f00715ccbd7c97a8b492cdd5571c8cdbb42d58cb184746d4",
+      "webpSha256": "126a588578ea342629c20ae5ca99753dbc269816a5c73f3d380bc02a3c2f7135",
+      "metadataSha256AtIndividualMeasurement": "0acda391b6622a4d7989fa5c3f58bbe13c9cf4767fc6708cca1c4c2f7248076e",
+      "pixelEquivalent": true,
+      "componentPixelsOutsideCorridors": 0,
+      "visualReview": "All20 actual measured sourceRect crops visually inspected. Both full curved antenna arches and round tips intact, specifically jump9 and hug11. Four wings, glove edges, boot soles retained; no neighbouring body fragments seen.",
+      "contact": "docs/validation/v1.18/remaining-frame-review/buzz-evo03-after-all20.png",
+      "prompt": "docs/art/v118/buzz-evo03-poses-antenna-layout-fix.prompt.txt",
+      "rejectedOriginal": "docs/art/v118/rejected/buzz-evo03-poses-antenna-cut-tight-layout.png",
+      "anchorsMeasured": false,
+      "apparelQualified": false
+    },
+    {
+      "id": "buzz",
+      "level": 6,
+      "poses": 20,
+      "original": "docs/art/v118/originals/buzz-evo06-poses.png",
+      "originalSha256": "a33e6e67e2dec634e577bbc754101cf8f28842c01477fb11d039a83636b0f1a0",
+      "webpSha256": "e5ee85e15f4c11d58cd8019a77a4d9aae09268f6b47e696dbba5fb5b726fa0ff",
+      "metadataSha256AtIndividualMeasurement": "0273a696274d48354a80a613a53b028e8fed0428bc6253d409037c91d2e6ea64",
+      "pixelEquivalent": true,
+      "componentPixelsOutsideCorridors": 0,
+      "visualReview": "All20 actual measured sourceRect crops visually inspected. Both full curved antenna arches and round tips intact, specifically jump9 and hug11. Four wings, glove edges, boot soles retained; no neighbouring body fragments seen.",
+      "contact": "docs/validation/v1.18/remaining-frame-review/buzz-evo06-after-all20.png",
+      "prompt": "docs/art/v118/buzz-evo06-poses-antenna-layout-fix.prompt.txt",
+      "rejectedOriginal": "docs/art/v118/rejected/buzz-evo06-poses-antenna-cut-tight-layout.png",
+      "anchorsMeasured": false,
+      "apparelQualified": false
+    }
+  ]
+}

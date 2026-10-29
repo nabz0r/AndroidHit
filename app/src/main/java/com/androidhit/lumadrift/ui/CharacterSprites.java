@@ -24,6 +24,7 @@ public final class CharacterSprites {
     private static final String[] GARMENT_SHEETS = {"hats", "dresses", "shoes", "gloves"};
     private static final ThreadLocal<Path> CLIP_PATH = ThreadLocal.withInitial(Path::new);
     private static volatile ArtLibrary installed;
+    private static volatile CompanionArt118 motionArt;
 
     private CharacterSprites() { }
 
@@ -32,16 +33,19 @@ public final class CharacterSprites {
         ArtLibrary library = new ArtLibrary(assets);
         register(library);
         installed = library;
+        motionArt=CompanionArt118.load(assets,library);
         return library;
     }
 
     public static void install(ArtLibrary library) {
         if (library == null) throw new IllegalArgumentException("ArtLibrary required");
+        if(installed!=library||motionArt==null)motionArt=CompanionArt118.load(library.assetManager(),library);
         installed = library;
     }
 
     /** Allows HomeScene to register additional furniture sheets in the same bounded cache. */
     public static ArtLibrary library() { return installed; }
+    public static CompanionArt118 motionArt(){return motionArt;}
 
     public static void register(ArtLibrary library) {
         if (library == null) throw new IllegalArgumentException("ArtLibrary required");

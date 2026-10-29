@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "scope": "Pre-publication exact H release copies, release-manifest references and their hashes. No publication claim; manifest still states local prototype.",
+  "releaseManifest": "/Users/n/androidhit/releases/manifest-1.18.0-prototype1.json",
+  "releaseManifestSha256": "5ba9aaec2c2f7d1368b1bec7a68aeba2f9bf30daa85d5653b2b7aee1e60a641f",
+  "checks": [
+    {
+      "kind": "source_manifest",
+      "path": "docs/validation/v1.18/candidates/final-art-h/source-inputs-sha256.json",
+      "matches": true
+    },
+    {
+      "kind": "third_party_notices",
+      "path": "docs/THIRD_PARTY_NOTICES.md",
+      "matches": true
+    },
+    {
+      "kind": "native_evidence",
+      "path": "docs/validation/v1.18/native-motion-render/final-art-h/report.json",
+      "matches": true
+    },
+    {
+      "kind": "native_evidence",
+      "path": "docs/validation/v1.18/native-final-h-summary.json",
+      "matches": true
+    },
+    {
+      "kind": "native_evidence",
+      "path": "docs/validation/v1.18/native-fresh-h/final-art-h-summary.json",
+      "matches": true
+    },
+    {
+      "kind": "native_evidence",
+      "path": "docs/validation/v1.18/native-fresh-h/final-art-h-package-proof/report.json",
+      "matches": true
+    },
+    {
+      "kind": "device_shutdown_evidence",
+      "path": "docs/validation/v1.18/native-expedition/device-creation/final-art-h-stopped.json",
+      "matches": true
+    },
+    {
+      "kind": "device_shutdown_evidence",
+      "path": "docs/validation/v1.18/native-fresh-h/device-creation/final-art-h-stopped.json",
+      "matches": true
+    },
+    {
+      "kind": "production",
+      "path": "releases/luma-drift-1.18.0-prototype1.apk",
+      "matches": true
+    },
+    {
+      "kind": "lab",
+      "path": "releases/luma-drift-1.18.0-sandbox-prototype1.apk",
+      "matches": true
+    }
+  ],
+  "artTreeSha256": "4a58e25f7db6949fedd2f81b6fd86566687fbf35431cf7a0cf488436ff0860d0",
+  "manifestPubliclyPublishedAtAudit": false
+}

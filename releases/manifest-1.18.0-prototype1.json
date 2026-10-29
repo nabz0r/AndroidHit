@@ -1,0 +1,75 @@
+{
+  "release_type": "local-prototype",
+  "publicly_published": false,
+  "candidate": "final-art-h",
+  "art_tree_sha256": "4a58e25f7db6949fedd2f81b6fd86566687fbf35431cf7a0cf488436ff0860d0",
+  "source_manifest": "docs/validation/v1.18/candidates/final-art-h/source-inputs-sha256.json",
+  "source_manifest_sha256": "47c8a2612989e8d3c72cf832ba81646325abbc130ee8f275c758503b2b37a5dd",
+  "source_inputs_verified_after_native": true,
+  "artwork": {
+    "identities": 37,
+    "originals": 24,
+    "mini_lol_guests": 13,
+    "forms_per_identity": 4,
+    "poses_per_form": 20,
+    "stance_poses_included": 4,
+    "authored_drawings": 2960
+  },
+  "apks": {
+    "production": {
+      "path": "releases/luma-drift-1.18.0-prototype1.apk",
+      "sha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+      "bytes": 368887773,
+      "version": "1.18.0-prototype1",
+      "code": 25,
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    },
+    "lab": {
+      "path": "releases/luma-drift-1.18.0-sandbox-prototype1.apk",
+      "sha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+      "bytes": 368887460,
+      "version": "1.18.0-sandbox-prototype1",
+      "code": 25,
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    }
+  },
+  "native_evidence": [
+    {
+      "path": "docs/validation/v1.18/native-motion-render/final-art-h/report.json",
+      "sha256": "69249bbb6b016fb97b4377e1bc40a8dea548b706a0cf01c645a908213feab331"
+    },
+    {
+      "path": "docs/validation/v1.18/native-final-h-summary.json",
+      "sha256": "d9de395875d3cedbaebbdd7eecacdd20e2ffc7cdd72e9712a374a04a04224159"
+    },
+    {
+      "path": "docs/validation/v1.18/native-fresh-h/final-art-h-summary.json",
+      "sha256": "79156e674fdb48a8210413bf104ba764eb8d67cb69a4ed40fae9e085c69d016c"
+    },
+    {
+      "path": "docs/validation/v1.18/native-fresh-h/final-art-h-package-proof/report.json",
+      "sha256": "ec16325936235111f8e18f928f2186f18a7d08bf9b924e829f2ec8ba7a6951d9"
+    }
+  ],
+  "limits": [
+    "Local prototype; no new public website/repository release.",
+    "Explicit legacy wardrobe overlays remain approximate; apparelQualified is false on every frame.",
+    "Some tiny silhouette contacts/fringe residues remain documented.",
+    "Android emulator evidence, not physical-phone or player-retention qualification.",
+    "Four authored bodies at1/3/6/10; intermediate copy levels add details."
+  ],
+  "third_party_notices": {
+    "path": "docs/THIRD_PARTY_NOTICES.md",
+    "sha256": "3b2ab04934d5c81b4e34c0dff4c74fa09d2859816da9fffdefdc40fe04816840"
+  },
+  "device_shutdown_evidence": [
+    {
+      "path": "docs/validation/v1.18/native-expedition/device-creation/final-art-h-stopped.json",
+      "sha256": "8013db7bdf6e9df421c6d30865d59ed97011b9ceed28132a37db10cf266e0f6a"
+    },
+    {
+      "path": "docs/validation/v1.18/native-fresh-h/device-creation/final-art-h-stopped.json",
+      "sha256": "bf7f638e8fc03b74ea89059bebc220e7ffc7fefe85098d0bdf104eee5a68c140"
+    }
+  ]
+}

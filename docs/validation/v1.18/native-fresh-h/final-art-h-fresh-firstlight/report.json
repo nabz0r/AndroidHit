@@ -1,0 +1,716 @@
+{
+  "passed": true,
+  "serial": "emulator-5600",
+  "avd": "Luma118-Final-H-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "fresh-firstlight",
+  "expected_version": "1.18.0-prototype1",
+  "expected_code": 25,
+  "apk_sha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+  "observer_sha256": "81ead52027286b7d66e5d1ba4be6f9f0c81666ab071db6cf813f007604447e4d",
+  "creation_receipt_sha256": "a17296f11091474f6ebdf8520a47edaf51ca471e0ee563908dd77e8b12bf31d7",
+  "costume_controls": true,
+  "run_token": "f4010318-5f5d-4e08-94c3-c2304171d95d",
+  "scope": "Actual native UI and read-only preference observations on a newly task-owned QA emulator. No target install/erase, direct preference edits, target methods, solver calls, provider, account, ad, purchase, unlock or synthetic grant. H costume checks change presentation only through visible UI. Original existing profiles remain untouched.",
+  "installed_sha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "fresh-firstlight",
+    "runToken": "f4010318-5f5d-4e08-94c3-c2304171d95d",
+    "processId": 5303,
+    "checkCount": 94,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production target package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded fresh qualification phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh native evidence directory"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Production save did not exist before its first Activity launch"
+      },
+      {
+        "passed": true,
+        "message": "Genuinely empty production game preferences before first Activity launch"
+      },
+      {
+        "passed": true,
+        "message": "Fresh original costume is calculated without a synthetic presentation choice"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: avatar_owned_v1_pebble_heart"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: booster_hint"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: coins"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: avatar_owned_v1_moonbud"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: booster_vision"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: skin"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: booster_flow"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: tutorial_v18_fresh_profile"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: character"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: initialized"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: owned_skin_lumina"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: owned_character_nova"
+      },
+      {
+        "passed": true,
+        "message": "Fresh launch has no explicit historical wardrobe slot: avatar_owned_v1_firefly_ring"
+      },
+      {
+        "passed": true,
+        "message": "Fresh wallet remains its documented 180 starter coins"
+      },
+      {
+        "passed": true,
+        "message": "Starter Nova remains equipped"
+      },
+      {
+        "passed": true,
+        "message": "Only campaign U1 is unlocked"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_pebble_heart"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_hint"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: coins"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_moonbud"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_vision"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: skin"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_flow"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: tutorial_v18_fresh_profile"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: character"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: initialized"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: owned_skin_lumina"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: owned_character_nova"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_firefly_ring"
+      },
+      {
+        "passed": true,
+        "message": "Exactly the real starter Nova is owned; all guests remain locked"
+      },
+      {
+        "passed": true,
+        "message": "No synthetic expedition clear"
+      },
+      {
+        "passed": true,
+        "message": "Real first light has not been completed or skipped"
+      },
+      {
+        "passed": true,
+        "message": "Empty first-light action history"
+      },
+      {
+        "passed": true,
+        "message": "Three actual piece exits persisted in order"
+      },
+      {
+        "passed": true,
+        "message": "Real first-light completion persisted"
+      },
+      {
+        "passed": true,
+        "message": "Actual UI persists chosen language en"
+      },
+      {
+        "passed": true,
+        "message": "Actual reachable Mini LoL names on page 1: [Ahri, Ashe, Ezreal, Soraka]"
+      },
+      {
+        "passed": true,
+        "message": "Actual reachable Mini LoL names on page 2: [Jinx, Lux, Teemo, Yasuo]"
+      },
+      {
+        "passed": true,
+        "message": "Actual reachable Mini LoL names on page 3: [Annie, Lulu, Miss Fortune, Sona]"
+      },
+      {
+        "passed": true,
+        "message": "Actual reachable Mini LoL names on page 4: [Vi]"
+      },
+      {
+        "passed": true,
+        "message": "Localized form10 guard preview announces saved level is unchanged"
+      },
+      {
+        "passed": true,
+        "message": "Reachable localized costume control motion_outfit_toggle: My outfit \u00b7 change"
+      },
+      {
+        "passed": true,
+        "message": "Reachable localized costume control motion_outfit_toggle: Original costume \u00b7 change"
+      },
+      {
+        "passed": true,
+        "message": "Studio costume preview leaves all four preference files exactly unchanged"
+      },
+      {
+        "passed": true,
+        "message": "Fresh wallet remains its documented 180 starter coins"
+      },
+      {
+        "passed": true,
+        "message": "Starter Nova remains equipped"
+      },
+      {
+        "passed": true,
+        "message": "Only campaign U1 is unlocked"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: first_light_history_v113"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_pebble_heart"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_hint"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: coins"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_moonbud"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_vision"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: skin"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: language"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_flow"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: tutorial_v18_fresh_profile"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: character"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: initialized"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: owned_skin_lumina"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: first_light_seen_v113"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: owned_character_nova"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_firefly_ring"
+      },
+      {
+        "passed": true,
+        "message": "Exactly the real starter Nova is owned; all guests remain locked"
+      },
+      {
+        "passed": true,
+        "message": "No synthetic expedition clear"
+      },
+      {
+        "passed": true,
+        "message": "Fresh wallet remains its documented 180 starter coins"
+      },
+      {
+        "passed": true,
+        "message": "Starter Nova remains equipped"
+      },
+      {
+        "passed": true,
+        "message": "Only campaign U1 is unlocked"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: first_light_history_v113"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_pebble_heart"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_hint"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: coins"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_moonbud"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_vision"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: skin"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: language"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: booster_flow"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: tutorial_v18_fresh_profile"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: character"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: initialized"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: owned_skin_lumina"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: first_light_seen_v113"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: owned_character_nova"
+      },
+      {
+        "passed": true,
+        "message": "No summon or expedition result injection: avatar_owned_v1_firefly_ring"
+      },
+      {
+        "passed": true,
+        "message": "Exactly the real starter Nova is owned; all guests remain locked"
+      },
+      {
+        "passed": true,
+        "message": "No synthetic expedition clear"
+      }
+    ],
+    "touchCount": 21,
+    "actions": [
+      {
+        "input": "SDK touchscreen",
+        "reason": "firstlight-real-piece-2-0",
+        "label": "Piece, row 3, column 1, arrow up",
+        "bounds": [
+          168,
+          1318,
+          346,
+          1496
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "firstlight-real-piece-1-2",
+        "label": "Piece, row 2, column 3, arrow right",
+        "bounds": [
+          545,
+          1130,
+          722,
+          1307
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "firstlight-real-piece-3-1",
+        "label": "Piece, row 4, column 2, arrow down",
+        "bounds": [
+          357,
+          1507,
+          534,
+          1684
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "finish-real-first-light",
+        "label": "Discover your little home  \u2192",
+        "bounds": [
+          66,
+          1817,
+          1013,
+          1977
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "open-actual-settings",
+        "label": "Settings",
+        "bounds": [
+          890,
+          326,
+          1042,
+          525
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "choose-language-en",
+        "label": "English",
+        "bounds": [
+          387,
+          1354,
+          692,
+          1515
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "open-actual-home-en",
+        "label": "My home",
+        "bounds": [
+          876,
+          2108,
+          1050,
+          2330
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "open-collection-root-en",
+        "label": "Collection",
+        "bounds": [
+          876,
+          2108,
+          1050,
+          2330
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "open-real-companion-book-en",
+        "label": "My companions",
+        "bounds": [
+          83,
+          1668,
+          409,
+          1984
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "choose-actual-Mini-LoL-filter",
+        "label": "Mini LoL",
+        "bounds": [
+          780,
+          618,
+          1008,
+          795
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "actual-next-guest-page",
+        "label": "\u203a",
+        "bounds": [
+          841,
+          1918,
+          1013,
+          2051
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "actual-next-guest-page",
+        "label": "\u203a",
+        "bounds": [
+          841,
+          1918,
+          1013,
+          2051
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "actual-next-guest-page",
+        "label": "\u203a",
+        "bounds": [
+          841,
+          1918,
+          1013,
+          2051
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "return-to-Teemo-page",
+        "label": "\u2039",
+        "bounds": [
+          66,
+          1918,
+          238,
+          2051
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "return-to-Teemo-page",
+        "label": "\u2039",
+        "bounds": [
+          66,
+          1918,
+          238,
+          2051
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "open-locked-Teemo-detail",
+        "label": "Teemo, To unlock",
+        "bounds": [
+          66,
+          1209,
+          523,
+          1852
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "open-real-companion-studio",
+        "label": "Companion studio",
+        "bounds": [
+          66,
+          2268,
+          1013,
+          2337
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "preview-authored-form-10",
+        "label": "Form 4 / 4 \u00b7 Level 10 / 10",
+        "resourceId": "com.androidhit.lumadrift:id/motion_form_3",
+        "bounds": [
+          819,
+          1822,
+          1019,
+          2077
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "preview-guard-for-locked-guest",
+        "label": "Guard",
+        "resourceId": "com.androidhit.lumadrift:id/motion_stance_guard",
+        "bounds": [
+          548,
+          2177,
+          786,
+          2337
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "preview-worn-costume-through-reachable-control",
+        "label": "Original costume \u00b7 change",
+        "resourceId": "com.androidhit.lumadrift:id/motion_outfit_toggle",
+        "bounds": [
+          66,
+          1982,
+          1013,
+          2115
+        ]
+      },
+      {
+        "input": "SDK touchscreen",
+        "reason": "restore-original-preview-through-reachable-control",
+        "label": "My outfit \u00b7 change",
+        "resourceId": "com.androidhit.lumadrift:id/motion_outfit_toggle",
+        "bounds": [
+          66,
+          1982,
+          1013,
+          2115
+        ]
+      }
+    ],
+    "captures": [
+      "firstlight-new",
+      "firstlight-three-real-exits",
+      "en-settings-2",
+      "en-first-adventure",
+      "en-first-home",
+      "en-mini-lol-page-1-body-0",
+      "en-mini-lol-page-1-body-1",
+      "en-mini-lol-page-2-body-0",
+      "en-mini-lol-page-2-body-1",
+      "en-mini-lol-page-3-body-0",
+      "en-mini-lol-page-3-body-1",
+      "en-mini-lol-page-4-body-0",
+      "en-mini-lol-page-4-body-1",
+      "en-teemo-form10-guard",
+      "en-studio-worn-costume-control",
+      "en-teemo-form10-guard-worn",
+      "en-studio-original-costume-control"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual SDK touchscreen input at observed accessibility bounds and read-only preferences on the new empty task-owned AVD. No target imports, reflection, solver, save edits, grants, unlocks, ads, provider, purchase, identity or publication. Original player profiles untouched."
+  },
+  "elapsed_seconds": 63.096,
+  "evidence_sha256": {
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "a17296f11091474f6ebdf8520a47edaf51ca471e0ee563908dd77e8b12bf31d7",
+    "fresh-observer.apk": "81ead52027286b7d66e5d1ba4be6f9f0c81666ab071db6cf813f007604447e4d",
+    "instrumentation.txt": "20f8252755280bdfb26960710499bce45440bdb186bbb19bbaf4382c1b95fe4d",
+    "native/after.json": "3f11538181f772eec64d0984f329b4978f8b5e6ac313e9b54781ce0c58814e7e",
+    "native/before.json": "feee53f7f78574ae6801a342c556509905f6838df3f42174831baebf0218ba29",
+    "native/en-first-adventure-accessibility.json": "b3252bc8302d8c940a0510836583f7304643edd40bdb6930e6aacd991b758d24",
+    "native/en-first-adventure.png": "e109417d92f707015114bacae1e21964ccb7f166411e7a16199c593ddc392630",
+    "native/en-first-home-accessibility.json": "0d2b33a61d98ba76f8ecca36229067b22f989a4e3b6fe0291c19c5481b9606b0",
+    "native/en-first-home.png": "bef9b7a815951de56c4256a4510daa93c61ea737afd8fccf265edafbb11a1df0",
+    "native/en-guest-pages-observed.json": "824cc5dd38b18dc1eea0861f25c194067d3227f59bd78681e64ed4fc6dc8ac36",
+    "native/en-mini-lol-page-1-body-0-accessibility.json": "3a7dd3071db5a9124e18e7e62ec5659d6225b4c1a3bd5120cd208b8284201d21",
+    "native/en-mini-lol-page-1-body-0.png": "d2f5a93d7fdcaaf374b3a977aefb4e94d40af067821fdce49d8c59bbcefa07a5",
+    "native/en-mini-lol-page-1-body-1-accessibility.json": "7d3243b4be19dc7a38e5fd4af24bd33b819e96085acb10ca3708d2dd36687a8e",
+    "native/en-mini-lol-page-1-body-1.png": "cecad0ecf245dc50f839db8f0127b481d8d69aa123c1d3cc2d79df2b5d51abf1",
+    "native/en-mini-lol-page-2-body-0-accessibility.json": "864c4e4abdc5308b3c2daecc1d5b28e61ff30f3478dafdc58eb5463eb53c922e",
+    "native/en-mini-lol-page-2-body-0.png": "a4553e57d328ab35a4570e48c2acf9dabb9b14b9db4939c7079bba9bbb48f88c",
+    "native/en-mini-lol-page-2-body-1-accessibility.json": "10b3462ce9eafb0d5c1bfef849f1171d42078ec29e04c6af372e2b91a13ed1e2",
+    "native/en-mini-lol-page-2-body-1.png": "53494c748be760a936114ed06b7351c18b12b51ae05ee296836155ee46367de4",
+    "native/en-mini-lol-page-3-body-0-accessibility.json": "fd7b61e47f74aeca9ef6a11af52c2a7b6db3fb84885cebc1d42e2bf5bc385e67",
+    "native/en-mini-lol-page-3-body-0.png": "8241113aa0bcd1a91a472cdc21b9a14d24d7afe371c04639ead7f8dedc1f4e4f",
+    "native/en-mini-lol-page-3-body-1-accessibility.json": "ebad355cf48fb9bb6336065bc30c18cafc177ee2434b175827b64de822d03d4f",
+    "native/en-mini-lol-page-3-body-1.png": "1955448d67c6a85488dc608cd2758f4bffecb0fe65e314a322d6c6d098af20a6",
+    "native/en-mini-lol-page-4-body-0-accessibility.json": "7e1917d08d989ae2e929e15a5ee9ebd53131caa1cd53d89f119be2fd094ab7a7",
+    "native/en-mini-lol-page-4-body-0.png": "e51643512a8133ca957f219a0f193e54e8e76561b31f962d07afbd7669626059",
+    "native/en-mini-lol-page-4-body-1-accessibility.json": "6959b1bab101ae9826f0e811c4c7bb130c5e0b28643533202df382c736c811db",
+    "native/en-mini-lol-page-4-body-1.png": "a1c3306e7ed6c3eb051bdd5efcb3f55d9f3731949b988acfd1f0bc5b3c4f8251",
+    "native/en-settings-2-accessibility.json": "bca4618152e4d1d9fd8a66052e55e7333c51bd9f4485a0efd5a4e7d84cdca807",
+    "native/en-settings-2.png": "b9956631167a8ad48c6425fdd0a27c3fd4545a9c74e802bcdf1df34c140b4b71",
+    "native/en-studio-original-costume-control-accessibility.json": "d4e7c1e95a783108db41b3cc2dde9beebba8cadb9dc982ddf2a21531a916711f",
+    "native/en-studio-original-costume-control.png": "6c4b9700f8790218465750c47b7336234e0fa00eb8042d11eaa8c9053c530cca",
+    "native/en-studio-worn-costume-control-accessibility.json": "2e64dc74e14c122a120be12ca610b96ebddc98b4c22f4e3815be1d1a94adf23e",
+    "native/en-studio-worn-costume-control.png": "b3066fe65962de4f4cb6dab1cce3b8c50c5560bfe0e86d9a291d3770de515dba",
+    "native/en-teemo-form10-guard-accessibility.json": "5271eb9d5a5223cb3d3754904243442b2b5371d03d622881e6e12d02cf3a4e66",
+    "native/en-teemo-form10-guard-worn-accessibility.json": "c7e61f14e09442171c2262e14ddd9ccbbac5ff7de9edac39070420b8c2eeecc9",
+    "native/en-teemo-form10-guard-worn.png": "91c0d842d468e155777f21b8738fd3148c2f9f820009e341a6b37167002a9360",
+    "native/en-teemo-form10-guard.png": "73f7b9d67fa42e82033d4a3001d84cc6175379b9adbb2804a78a741c099366a0",
+    "native/firstlight-new-accessibility.json": "ffa7db541b616687bfc9c3be6a5a3faaede6f6ec450e8aaa1904da35ab591f6a",
+    "native/firstlight-new.png": "f772ca786251f99031e485a2cae3a18dedcb103523f8fff4a4ca578c18adcdbc",
+    "native/firstlight-three-real-exits-accessibility.json": "72c0d0c379714d2d0bc2bee3b490ecf61411ab9d5bc5bfa25f9586f2965a4de2",
+    "native/firstlight-three-real-exits.png": "d69b8fe025a7674adcc0b9adee58ed1ba22491c6f77d60222144d6d731d48f4d",
+    "native/report.json": "6e871eba06eb79f91f60e109df2f19729b36dc4ebb0a4070d281cae152f07241",
+    "observer-install.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "source-snapshot.json": "3b99f092bbdb9fb0fcd2a6a9f24f94a0f6d770d566ce769ef815da2dfccab3b0"
+  }
+}

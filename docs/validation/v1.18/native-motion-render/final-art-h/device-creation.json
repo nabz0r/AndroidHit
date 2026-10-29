@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-29T11:54:04.405998+00:00",
+  "avd": "Luma118-Expedition-QA",
+  "serial": "emulator-5594",
+  "port": 5594,
+  "scope": "New task-owned fresh AVD only; no copy or mutation of any existing profile",
+  "command": [
+    "/Users/n/Library/Android/sdk/cmdline-tools/omni-15859902/bin/avdmanager",
+    "create",
+    "avd",
+    "--name",
+    "Luma118-Expedition-QA",
+    "--package",
+    "system-images;android-36;google_apis_ps16k;arm64-v8a",
+    "--device",
+    "pixel_6"
+  ],
+  "config_sha256": "75c69d9b6b205199f4cbe268537fec9500a96464bee780bcabd828e4837655c7",
+  "image": "system-images;android-36;google_apis_ps16k;arm64-v8a",
+  "owner": "v118 expedition qualification",
+  "fresh": true,
+  "base_apk": "releases/luma-drift-1.17.0-sandbox-rc6.apk",
+  "base_apk_sha256": "0cc905def9679c6c4e3b63b90f454137abf6ad9bc431f86e9a7d175891cbde4b"
+}

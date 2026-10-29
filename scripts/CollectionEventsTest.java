@@ -56,20 +56,24 @@ public final class CollectionEventsTest {
         System.out.println("Event clocks: "+zones+" time zones, "+points+" boundary scenarios; DST 23/25-hour days verified.");
     }
     private static void testCatalog() {
-        String[] legacy={"nova","miko","orbit","pip","astra","zig"};int[] prices={0,160,220,300,420,600};
-        check(Catalog.CHARACTERS.length==24,"24 companions");Set<String> ids=new HashSet<>();Set<Integer> shapes=new HashSet<>();int total=0;
+        String[] legacy={"nova","miko","orbit","pip","astra","zig","lune","fenn","hoot","buzz","tula","jelli","vela","nimbi","soli","mochi","nixi","prickly","quill","waddles","halo","emberling","bambu","inky"};
+        int[] prices={0,160,220,300,420,600,180,240,280,320,360,400,440,480,520,560,620,680,740,800,860,920,1000,1100};
+        String[] guests={"lol_ashe","lol_ezreal","lol_soraka","lol_ahri","lol_jinx","lol_lux","lol_teemo","lol_yasuo","lol_annie","lol_lulu","lol_sona","lol_miss_fortune","lol_vi"};
+        check(Catalog.CHARACTERS.length==37,"24 preserved companions and 13 local guests");Set<String> ids=new HashSet<>();Set<Integer> shapes=new HashSet<>();int total=0,legacyTotal=0;
         for(int i=0;i<Catalog.CHARACTERS.length;i++){
             Catalog.CharacterItem item=Catalog.CHARACTERS[i];
             check(ids.add(item.id),"Unique companion ID");check(shapes.add(item.shape),"Unique silhouette index");
             check(Catalog.character(item.id)==item,"Catalog lookup round trip");check(item.price>=0&&item.price<=1100,"Earnable bounded cosmetic price");
             check(item.nameKey.equals("character_"+item.id),"Stable localized name key");
-            if(i<legacy.length){check(item.id.equals(legacy[i]),"Preserve original companion ID and order");check(item.price==prices[i],"Preserve original companion price");check(item.shape==i,"Preserve original shape");}
+            if(i<legacy.length){check(item.id.equals(legacy[i]),"Preserve original companion ID and order");check(item.price==prices[i],"Preserve original companion price");check(item.shape==i,"Preserve original shape");legacyTotal+=item.price;}
+            else{check(item.id.equals(guests[i-legacy.length]),"Stable local guest ID and order");check(item.price==520&&item.shape==i,"Earned guest price and distinct appended shape");}
             total+=item.price;
         }
-        check(shapes.size()==24,"Every companion has a distinct shape index");
-        check(total<=240*55+180,"Entire companion catalog fits first-clear three-star campaign income");
+        check(shapes.size()==37,"Every companion has a distinct shape index");
+        check(legacyTotal==12200&&legacyTotal<=240*55+180,"Original 24 companion prices retain their historical first-240-clear income bound");
+        check(total==18960&&total<=Catalog.LEVEL_COUNT*55+180,"Expanded direct-purchase collection fits the current campaign income bound");
         check(Catalog.SKINS.length==6,"Existing six themes preserved");
-        System.out.println("Companions: 24 unique IDs and silhouettes; total cosmetic cost "+total+" coins; legacy six preserved.");
+        System.out.println("Companions: 37 unique IDs and silhouettes; original 24 cost "+legacyTotal+" coins unchanged; 13 local guests cost "+(total-legacyTotal)+" coins.");
     }
     public static void main(String[] args){testCatalog();testClock();System.out.println("Collection/event checks: "+checks+" passed.");}
 }

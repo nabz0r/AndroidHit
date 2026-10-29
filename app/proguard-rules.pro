@@ -12,3 +12,11 @@
 -keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.data.SignatureOutfits$Outfit { public *; }
 -keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.data.AvatarStyles { public *; }
 -keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.data.AvatarStyles$* { public *; }
+# v1.18 pure motion/render snapshots remain inspectable on the signed prototype.
+-keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.ui.CompanionMotion { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.ui.CompanionMotion$* { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.ui.CompanionArt118 { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.ui.CompanionArt118$Entry { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.data.AvatarLoadout { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.data.AvatarGearCatalog { public *; }
+-keep,allowoptimization,includedescriptorclasses class com.androidhit.lumadrift.data.AvatarGearCatalog$* { public *; }

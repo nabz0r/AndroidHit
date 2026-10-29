@@ -41,6 +41,9 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningGuide.java
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningStrings.java
             /app/src/main/java/com/androidhit/lumadrift/ui/HomeScene.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/CompanionMotion.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig118.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
@@ -59,7 +62,14 @@ jobs:
             /scripts/test-support/audio/
             /scripts/test-site-v117.mjs
             /scripts/test-site-v116.mjs
+            /scripts/test-site-v118.mjs
             /public/assets/site.js
+            /public/index.html
+            /public/assets/site-v118.js
+            /public/assets/site-v118.css
+            /public/assets/companion-gallery-v118.mjs
+            /public/assets/gallery-core-v118.mjs
+            /public/assets/companions-v118/*.json
             /docs/validation/site-v1.17/index.template.html
             /docs/validation/v1.7/audio/audio-biome-metrics.csv
             /docs/validation/v1.7/audio/legacy-pcm.sha256
@@ -104,6 +114,12 @@ jobs:
             /scripts/LearningGuideTest.java
             /scripts/PowerOffersV114Test.java
             /scripts/RewardsCosmeticsV17Test.java
+            /scripts/test-expedition-v118-model.sh
+            /scripts/test-expedition-v118-store.sh
+            /scripts/test-companion-motion-v118.sh
+            /scripts/ExpeditionV118ModelTest.java
+            /scripts/ExpeditionV118StoreTest.java
+            /scripts/CompanionMotionV118Test.java
             /scripts/AuditJourneyV114.java
             /scripts/ProgressionAnalysis.java
             /scripts/test-support/android/annotation/*.java
@@ -174,10 +190,62 @@ jobs:
       - name: Check puzzle gates, budgets, feedback and compact action reachability
         run: bash scripts/test-play-scene-v117-geometry.sh
 
-      - name: Check 1.17 and retained website language and deliberate audio controls
+      - name: Check 1.18 and retained website language and deliberate audio controls
         # Uses the runner's Node test runtime; no package install, SDK, network,
         # browser, Firebase deployment or native gameplay claim is involved.
-        run: node --test scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+        run: node --test scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+
+      - name: Check 1.18 expeditions, copies, durable costume choice and motion contracts
+        # Pure Java only. Native H APKs/captures remain separate frozen release evidence.
+        run: |
+          bash scripts/test-expedition-v118-model.sh "$RUNNER_TEMP/luma-puzzle-contracts/expedition-model.json"
+          bash scripts/test-expedition-v118-store.sh "$RUNNER_TEMP/luma-puzzle-contracts/expedition-store.json"
+          bash scripts/test-companion-motion-v118.sh "$RUNNER_TEMP/luma-puzzle-contracts/companion-motion.json"
 
       - name: Check power offers and preserved reward decisions
         run: sh scripts/test-power-offers-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json"
+
+  packaged-companion-art:
+    name: Packaged 1.18 art and frozen rig revision
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: sh
+    steps:
+      - name: Check out only shipped art and its recorded rig baseline
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /.github/workflows/puzzle-contracts.yml
+            /app/src/main/java/com/androidhit/lumadrift/data/Catalog.java
+            /app/src/main/assets/art/v118/*.json
+            /app/src/main/assets/art/v118/*.webp
+            /scripts/v118-art/audit-assets.py
+            /scripts/v118-art/test-source-clip.py
+            /scripts/v118-art/test-packaged-audit.py
+            /scripts/v118-art/requirements-ci.txt
+            /docs/art/v118/assets-manifest.json
+            /docs/validation/v1.18/rig-g-all-proposals/applied.json
+            /docs/validation/v1.18/rig-g-all-proposals/before/*.json
+
+      - name: Prepare the pinned image inspection runtime
+        run: |
+          python3 -m venv "$RUNNER_TEMP/luma-v118-art-venv"
+          "$RUNNER_TEMP/luma-v118-art-venv/bin/python" -m pip install --disable-pip-version-check --only-binary=:all: -r scripts/v118-art/requirements-ci.txt
+
+      - name: Check polygon boundaries and refused asset revisions
+        run: |
+          "$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/test-source-clip.py
+          "$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/test-packaged-audit.py
+
+      - name: Inspect all 148 shipped sheets and verify their committed asset tree
+        # Requires neither original generation PNGs nor temporary proposals, APKs,
+        # Android tools, native screenshots or signing keys. Does not repeat the
+        # historical PNG/WebP equivalence proof or claim anatomical clothing fit.
+        run: |
+          "$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/audit-assets.py --packaged-only --rig-revision-receipt docs/validation/v1.18/rig-g-all-proposals/applied.json --output "$RUNNER_TEMP/luma-v118-art/art-integrity.json" --asset-manifest "$RUNNER_TEMP/luma-v118-art/assets-manifest.json" --workers 2
+          cmp docs/art/v118/assets-manifest.json "$RUNNER_TEMP/luma-v118-art/assets-manifest.json"

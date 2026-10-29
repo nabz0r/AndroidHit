@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.androidhit.lumadrift.expeditiontest.v118">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="36" />
+    <application android:allowBackup="false" android:label="Luma expedition native qualification" />
+    <instrumentation android:name="com.androidhit.lumadrift.qa.v118.ExpeditionInstrumentation" android:targetPackage="TARGET_PACKAGE" android:functionalTest="true" />
+</manifest>

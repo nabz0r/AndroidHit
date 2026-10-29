@@ -1,0 +1,2332 @@
+{
+  "schema": 1,
+  "id": "vela",
+  "form": 3,
+  "levelMilestone": 10,
+  "image": "art/v118/vela-evo10-poses.webp",
+  "width": 1122,
+  "height": 1402,
+  "columns": 4,
+  "rows": 5,
+  "standingHeightPixels": 306.0,
+  "pixelsPerUnit": 97.142857,
+  "coordinateSystem": "Absolute atlas pixels. originY is ground. localY=(pixelY-originY)/pixelsPerUnit+1.65.",
+  "sourceRectsMeasured": true,
+  "componentAlphaThreshold": 128,
+  "anchorsMeasured": false,
+  "apparelQualified": false,
+  "original": "docs/art/v118/originals/vela-evo10-poses.png",
+  "originalSha256": "492d12eebff5d694cb1b045c16b1afc08da60a92ed9074366c7ce296b79c74e7",
+  "webpSha256": "14adec60ac5defd30386ea931975434822c02e18bb0fa32d93fc48c7e5db104d",
+  "pixelEquivalent": true,
+  "pngBytes": 4035510,
+  "webpBytes": 2906512,
+  "alpha": {
+    "zero": 203428,
+    "low1to15": 317126,
+    "main128to255": 991255
+  },
+  "unassignedLargeComponents": [],
+  "frames": [
+    {
+      "poseIndex": 0,
+      "pose": "front",
+      "sourceRect": [
+        2,
+        0,
+        292,
+        311
+      ],
+      "bodyBounds": [
+        10,
+        7,
+        287,
+        309
+      ],
+      "bodyArea": 58322,
+      "originX": 150.7676,
+      "originY": 317.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 150.7676,
+          "y": 76.46,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 150.7676,
+          "y": 216.1,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 89.5676,
+          "y": 227.46,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 218.0876,
+          "y": 227.46,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 117.1076,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 193.6076,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 245.9676,
+          "y": 112.7,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 238.1962,
+          "y": 228.34,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 150.7676,
+          "y": 157.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 1,
+      "pose": "back",
+      "sourceRect": [
+        292,
+        0,
+        597,
+        309
+      ],
+      "bodyBounds": [
+        298,
+        6,
+        589,
+        308
+      ],
+      "bodyArea": 58686,
+      "originX": 440.1487,
+      "originY": 317.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 440.1487,
+          "y": 75.46,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 440.1487,
+          "y": 215.1,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 378.9487,
+          "y": 226.46,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 507.4687,
+          "y": 226.46,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 406.4887,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 482.9887,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 535.3487,
+          "y": 111.7,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 527.5773,
+          "y": 227.34,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 440.1487,
+          "y": 157.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 2,
+      "pose": "left",
+      "sourceRect": [
+        613,
+        0,
+        851,
+        325
+      ],
+      "bodyBounds": [
+        621,
+        6,
+        844,
+        317
+      ],
+      "bodyArea": 47564,
+      "originX": 727.7976,
+      "originY": 317.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 727.7976,
+          "y": 77.53,
+          "width": 200.7,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 727.7976,
+          "y": 219.69,
+          "width": 167.25,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 712.4976,
+          "y": 233.03,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 795.1176,
+          "y": 233.03,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 694.1376,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 770.6376,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 822.9976,
+          "y": 114.85,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 815.2261,
+          "y": 231.93,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 727.7976,
+          "y": 157.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 3,
+      "pose": "right",
+      "sourceRect": [
+        854,
+        0,
+        1054,
+        325
+      ],
+      "bodyBounds": [
+        858,
+        7,
+        1046,
+        317
+      ],
+      "bodyArea": 40068,
+      "originX": 956.446,
+      "originY": 317.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 956.446,
+          "y": 78.3,
+          "width": 169.2,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 956.446,
+          "y": 220.18,
+          "width": 141.0,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 895.246,
+          "y": 233.3,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 950.326,
+          "y": 233.3,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 922.786,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 999.286,
+          "y": 280.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1051.646,
+          "y": 115.5,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1043.8745,
+          "y": 232.42,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 956.446,
+          "y": 157.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 4,
+      "pose": "walk_front",
+      "sourceRect": [
+        4,
+        311,
+        292,
+        610
+      ],
+      "bodyBounds": [
+        12,
+        314,
+        286,
+        604
+      ],
+      "bodyArea": 54094,
+      "originX": 147.3222,
+      "originY": 614.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 147.3222,
+          "y": 380.7,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 147.3222,
+          "y": 516.98,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 86.1222,
+          "y": 495.1,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 214.6422,
+          "y": 513.46,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 113.6622,
+          "y": 561.98,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 190.1622,
+          "y": 571.16,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 242.5222,
+          "y": 415.5,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 234.7508,
+          "y": 529.22,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 147.3222,
+          "y": 454.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 5,
+      "pose": "walk_back",
+      "sourceRect": [
+        292,
+        309,
+        576,
+        615
+      ],
+      "bodyBounds": [
+        299,
+        310,
+        568,
+        614
+      ],
+      "bodyArea": 51823,
+      "originX": 433.7398,
+      "originY": 614.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 433.7398,
+          "y": 379.92,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 433.7398,
+          "y": 520.12,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 372.5398,
+          "y": 501.32,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 501.0598,
+          "y": 519.68,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 400.0798,
+          "y": 561.98,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 476.5798,
+          "y": 571.16,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 528.9398,
+          "y": 416.4,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 521.1684,
+          "y": 532.36,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 433.7398,
+          "y": 454.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 6,
+      "pose": "walk_left",
+      "sourceRect": [
+        591,
+        304,
+        854,
+        612
+      ],
+      "bodyBounds": [
+        599,
+        312,
+        851,
+        604
+      ],
+      "bodyArea": 49636,
+      "originX": 723.8998,
+      "originY": 614.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 723.8998,
+          "y": 379.16,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 723.8998,
+          "y": 516.0,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 708.5998,
+          "y": 494.56,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 791.2198,
+          "y": 512.92,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 690.2398,
+          "y": 561.98,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 766.7398,
+          "y": 571.16,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 819.0998,
+          "y": 414.2,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 811.3283,
+          "y": 528.24,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 723.8998,
+          "y": 454.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 7,
+      "pose": "walk_right",
+      "sourceRect": [
+        860,
+        305,
+        1115,
+        613
+      ],
+      "bodyBounds": [
+        868,
+        313,
+        1107,
+        610
+      ],
+      "bodyArea": 44523,
+      "originX": 980.208,
+      "originY": 614.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 980.208,
+          "y": 381.31,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 980.208,
+          "y": 519.55,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 919.008,
+          "y": 499.21,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 974.088,
+          "y": 517.57,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 946.548,
+          "y": 561.98,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1023.048,
+          "y": 571.16,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1075.408,
+          "y": 416.95,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1067.6365,
+          "y": 531.79,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 980.208,
+          "y": 454.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 8,
+      "pose": "jump_up",
+      "sourceRect": [
+        7,
+        588,
+        289,
+        876
+      ],
+      "bodyBounds": [
+        15,
+        596,
+        281,
+        868
+      ],
+      "bodyArea": 49787,
+      "originX": 146.7489,
+      "originY": 876.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 146.7489,
+          "y": 658.56,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 146.7489,
+          "y": 789.8,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 58.0089,
+          "y": 693.92,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 25,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 241.6089,
+          "y": 664.0,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -25,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 110.0289,
+          "y": 815.98,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 186.5289,
+          "y": 831.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 241.9489,
+          "y": 691.2,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 234.1775,
+          "y": 802.04,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 146.7489,
+          "y": 716.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 9,
+      "pose": "land",
+      "sourceRect": [
+        279,
+        615,
+        558,
+        878
+      ],
+      "bodyBounds": [
+        280,
+        617,
+        550,
+        870
+      ],
+      "bodyArea": 46830,
+      "originX": 415.2344,
+      "originY": 876.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 415.2344,
+          "y": 675.19,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 415.2344,
+          "y": 781.45,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 378.5144,
+          "y": 857.76,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 467.2544,
+          "y": 857.76,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 338.7344,
+          "y": 833.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 494.7944,
+          "y": 833.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 510.4344,
+          "y": 705.55,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 502.663,
+          "y": 813.35,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 415.2344,
+          "y": 716.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 10,
+      "pose": "hug",
+      "sourceRect": [
+        559,
+        592,
+        846,
+        884
+      ],
+      "bodyBounds": [
+        567,
+        600,
+        841,
+        876
+      ],
+      "bodyArea": 53714,
+      "originX": 704.0294,
+      "originY": 876.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 704.0294,
+          "y": 663.48,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 704.0294,
+          "y": 795.84,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 618.3494,
+          "y": 754.56,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 65,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 795.8294,
+          "y": 754.56,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -65,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 670.3694,
+          "y": 839.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 746.8694,
+          "y": 839.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 799.2294,
+          "y": 696.6,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 791.458,
+          "y": 808.08,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 704.0294,
+          "y": 716.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 11,
+      "pose": "crouch",
+      "sourceRect": [
+        846,
+        613,
+        1122,
+        880
+      ],
+      "bodyBounds": [
+        852,
+        616,
+        1115,
+        872
+      ],
+      "bodyArea": 47165,
+      "originX": 982.7788,
+      "originY": 876.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 982.7788,
+          "y": 674.88,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 982.7788,
+          "y": 782.4,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 946.0588,
+          "y": 859.76,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 1034.7988,
+          "y": 859.76,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 906.2788,
+          "y": 835.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1062.3388,
+          "y": 835.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1077.9788,
+          "y": 705.6,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1070.2074,
+          "y": 813.88,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 982.7788,
+          "y": 716.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 12,
+      "pose": "happy",
+      "sourceRect": [
+        9,
+        857,
+        279,
+        1138
+      ],
+      "bodyBounds": [
+        17,
+        865,
+        278,
+        1130
+      ],
+      "bodyArea": 48266,
+      "originX": 148.6291,
+      "originY": 1135.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 148.6291,
+          "y": 925.95,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 148.6291,
+          "y": 1055.23,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 75.1891,
+          "y": 1016.05,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 40,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 231.2491,
+          "y": 1002.8,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -40,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 114.9691,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 191.4691,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 243.8291,
+          "y": 957.75,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 236.0577,
+          "y": 1067.47,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 148.6291,
+          "y": 975.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 13,
+      "pose": "sad",
+      "sourceRect": [
+        293,
+        857,
+        555,
+        1130
+      ],
+      "bodyBounds": [
+        300,
+        865,
+        547,
+        1130
+      ],
+      "bodyArea": 44654,
+      "originX": 424.9494,
+      "originY": 1135.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 424.9494,
+          "y": 925.95,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 424.9494,
+          "y": 1055.23,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 409.6494,
+          "y": 1066.4,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 440.2494,
+          "y": 1066.4,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 391.2894,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 467.7894,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 520.1494,
+          "y": 957.75,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 512.3779,
+          "y": 1067.47,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 424.9494,
+          "y": 975.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 14,
+      "pose": "surprise",
+      "sourceRect": [
+        568,
+        860,
+        838,
+        1143
+      ],
+      "bodyBounds": [
+        576,
+        868,
+        830,
+        1135
+      ],
+      "bodyArea": 47746,
+      "originX": 700.4286,
+      "originY": 1135.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 700.4286,
+          "y": 929.41,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 700.4286,
+          "y": 1059.25,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 657.5886,
+          "y": 1020.19,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 749.3886,
+          "y": 1020.19,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 666.7686,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 743.2686,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 795.6286,
+          "y": 961.45,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 787.8572,
+          "y": 1071.49,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 700.4286,
+          "y": 975.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 15,
+      "pose": "think",
+      "sourceRect": [
+        850,
+        857,
+        1113,
+        1141
+      ],
+      "bodyBounds": [
+        855,
+        865,
+        1105,
+        1133
+      ],
+      "bodyArea": 46019,
+      "originX": 975.9237,
+      "originY": 1135.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 975.9237,
+          "y": 926.64,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 975.9237,
+          "y": 1056.76,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 914.7237,
+          "y": 1060.64,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 969.8037,
+          "y": 1009.72,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 15,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 942.2637,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1018.7637,
+          "y": 1098.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1071.1237,
+          "y": 958.8,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1063.3522,
+          "y": 1069.0,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 975.9237,
+          "y": 975.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 16,
+      "pose": "calm",
+      "sourceRect": [
+        1,
+        1119,
+        291,
+        1402
+      ],
+      "bodyBounds": [
+        9,
+        1127,
+        287,
+        1398
+      ],
+      "bodyArea": 53430,
+      "originX": 147.826,
+      "originY": 1399.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 147.826,
+          "y": 1189.33,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 147.826,
+          "y": 1320.29,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 86.626,
+          "y": 1324.83,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 215.146,
+          "y": 1324.83,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 114.166,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 190.666,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 243.026,
+          "y": 1221.85,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 235.2545,
+          "y": 1332.53,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 147.826,
+          "y": 1239.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 17,
+      "pose": "ready",
+      "sourceRect": [
+        291,
+        1130,
+        563,
+        1402
+      ],
+      "bodyBounds": [
+        296,
+        1131,
+        555,
+        1397
+      ],
+      "bodyArea": 48127,
+      "originX": 428.5161,
+      "originY": 1399.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 428.5161,
+          "y": 1192.18,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 428.5161,
+          "y": 1321.74,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 376.4961,
+          "y": 1279.96,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 489.7161,
+          "y": 1303.9,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 394.8561,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 471.3561,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 523.7161,
+          "y": 1224.1,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 515.9447,
+          "y": 1333.98,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 428.5161,
+          "y": 1239.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 18,
+      "pose": "guard",
+      "sourceRect": [
+        566,
+        1120,
+        850,
+        1402
+      ],
+      "bodyBounds": [
+        574,
+        1128,
+        845,
+        1399
+      ],
+      "bodyArea": 50762,
+      "originX": 708.1481,
+      "originY": 1399.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 708.1481,
+          "y": 1190.33,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 708.1481,
+          "y": 1321.29,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 686.7281,
+          "y": 1274.34,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 30,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 741.8081,
+          "y": 1296.02,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -30,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 674.4881,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 750.9881,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 803.3481,
+          "y": 1222.85,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 795.5766,
+          "y": 1333.53,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 708.1481,
+          "y": 1239.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    },
+    {
+      "poseIndex": 19,
+      "pose": "proud",
+      "sourceRect": [
+        851,
+        1118,
+        1122,
+        1402
+      ],
+      "bodyBounds": [
+        857,
+        1126,
+        1117,
+        1398
+      ],
+      "bodyArea": 50038,
+      "originX": 986.3221,
+      "originY": 1399.0,
+      "pixelsPerUnit": 97.142857,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 986.3221,
+          "y": 1188.56,
+          "width": 209.304,
+          "height": 131.58,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 986.3221,
+          "y": 1319.8,
+          "width": 174.42,
+          "height": 122.4,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 931.2421,
+          "y": 1319.12,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": 20,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 1053.6421,
+          "y": 1319.12,
+          "width": 45.9,
+          "height": 52.02,
+          "rotation": -20,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 952.6621,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1029.1621,
+          "y": 1362.28,
+          "width": 67.32,
+          "height": 79.56,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1081.5221,
+          "y": 1221.2,
+          "width": 50.5143,
+          "height": 50.5143,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1073.7507,
+          "y": 1332.04,
+          "width": 40.8,
+          "height": 40.8,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 986.3221,
+          "y": 1239.88,
+          "width": 275.4,
+          "height": 275.4,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA"
+    }
+  ]
+}

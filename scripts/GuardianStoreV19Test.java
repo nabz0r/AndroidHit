@@ -62,17 +62,18 @@ public final class GuardianStoreV19Test {
         GuardianEncounter restored=GuardianEncounter.restore(encounter.encode());check(restored!=null&&restored.remainingActions()==1&&restored.remainingWork()==encounter.remainingWork(),"zero-budget recovery save retains failed charges");
     }
     static void styles(){RewardsCosmeticsV17Test.Ctx c=new RewardsCosmeticsV17Test.Ctx();GameStore s=unlocked(c,20);
-        check(s.avatarStyle().equals("plush_classic")&&AvatarStyles.variantCount()==288&&AvatarStyles.all().size()==12,"twelve free treatments, stable default and 288 combinations");
+        check(s.avatarStyle().equals("plush_classic")&&AvatarStyles.variantCount()==444&&AvatarStyles.all().size()==12,"twelve free treatments, stable default and 444 combinations including thirteen guests");
         Map<String,Object> before=new HashMap<>(c.save().values);AvatarLoadout loadout=s.avatarLoadout();int coins=s.coins(),price=s.boosterPrice(Catalog.HINT);
-        Set<String> ids=new HashSet<>(),variants=new HashSet<>();
+        Set<String> ids=new HashSet<>(),variants=new HashSet<>(),legacyVariants=new HashSet<>(),guestVariants=new HashSet<>();
         for(AvatarStyles.Style style:AvatarStyles.all()){
             check(ids.add(style.id)&&s.equipAvatarStyle(style.id)&&s.avatarStyle().equals(style.id),"known style saved "+style.id);
             check(store(c).avatarStyle().equals(style.id)&&store(c.reboot()).avatarStyle().equals(style.id),"style survives cross handle and cold recreation");
-            for(Catalog.CharacterItem character:Catalog.CHARACTERS)check(variants.add(AvatarStyles.variantId(character,style.id)),"unique composite visual ID");
+            for(Catalog.CharacterItem character:Catalog.CHARACTERS){String variant=AvatarStyles.variantId(character,style.id);check(variants.add(variant),"unique composite visual ID");(character.id.startsWith("lol_")?guestVariants:legacyVariants).add(variant);}
             check(s.coins()==coins&&s.boosterPrice(Catalog.HINT)==price&&s.avatarLoadout().winBonusCoins()==loadout.winBonusCoins()&&s.avatarLoadout().packDiscountCoins()==loadout.packDiscountCoins()&&s.avatarLoadout().blockedGracePerRun()==loadout.blockedGracePerRun(),"style has zero currency/gameplay effect");
             Map<String,Object> current=new HashMap<>(c.save().values);current.remove("avatar_style_v19");check(current.equals(before),"style does not grant companion ownership, stock, wallet or progression");
             for(String language:new String[]{"en","fr","de","es","pt","it"})check(!style.name(language).isBlank(),"explicit localized style name");
         }
+        check(legacyVariants.size()==288&&guestVariants.size()==156&&variants.size()==AvatarStyles.variantCount(),"all 288 original combinations remain available alongside 156 guest combinations");
         String active=s.avatarStyle();for(String bad:new String[]{null,"","admin","plush_classic ","../../../key","nova:ice"})check(!s.equipAvatarStyle(bad)&&s.avatarStyle().equals(active),"invalid style is not equip permission");
         c.save().values.put("avatar_style_v19","invalid-saved-id");check(s.avatarStyle().equals("plush_classic"),"corrupt saved style falls back safely");
         for(boolean memoryFirst:new boolean[]{false,true}){
@@ -91,7 +92,7 @@ public final class GuardianStoreV19Test {
     }
     public static void main(String[] args)throws Exception{Path out=Path.of(args[0]);Files.createDirectories(out);long start=System.nanoTime();
         gatesAndRewards();capAndFailures();concurrent();zeroBudgetUndo();styles();strings();
-        String result="{\n  \"passed\":true,\n  \"assertions\":"+checks+",\n  \"encounters_actually_solved_before_reward_requests\":"+solved+",\n  \"concurrent_two_handle_trials\":24,\n  \"localized_languages\":6,\n  \"visual_variants\":288,\n  \"elapsed_host_seconds\":"+((System.nanoTime()-start)/1e9)+",\n  \"scope\":\"Real GameStore, GuardianEncounter, AvatarStyles and V19Strings with established Android preference doubles. completeGuardian is a local caller contract after a solved board, not server purchase/anti-cheat verification. No Google or social service validation.\"\n}\n";
+        String result="{\n  \"passed\":true,\n  \"assertions\":"+checks+",\n  \"encounters_actually_solved_before_reward_requests\":"+solved+",\n  \"concurrent_two_handle_trials\":24,\n  \"localized_languages\":6,\n  \"visual_variants\":444,\n  \"legacy_visual_variants\":288,\n  \"elapsed_host_seconds\":"+((System.nanoTime()-start)/1e9)+",\n  \"scope\":\"Real GameStore, GuardianEncounter, AvatarStyles and V19Strings with established Android preference doubles. completeGuardian is a local caller contract after a solved board, not server purchase/anti-cheat verification. No Google or social service validation.\"\n}\n";
         Files.writeString(out.resolve("summary.json"),result);System.out.println(result);
     }
 }

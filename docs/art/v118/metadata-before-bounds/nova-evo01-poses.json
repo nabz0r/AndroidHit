@@ -1,0 +1,2512 @@
+{
+  "schema": 1,
+  "id": "nova",
+  "form": 0,
+  "levelMilestone": 1,
+  "image": "art/v118/nova-evo01-poses.webp",
+  "width": 1122,
+  "height": 1402,
+  "columns": 4,
+  "rows": 5,
+  "standingHeightPixels": 266.0,
+  "pixelsPerUnit": 84.444444,
+  "coordinateSystem": "Absolute atlas pixels. originY is ground. localY=(pixelY-originY)/pixelsPerUnit+1.65.",
+  "sourceRectsMeasured": true,
+  "anchorsMeasured": true,
+  "apparelQualified": false,
+  "original": "docs/art/v118/originals/nova-evo01-poses.png",
+  "originalSha256": "a90ede93e7a90edc6109197fb38f7fbce5e45bd40bf6b350cefd980ec102154c",
+  "webpSha256": "1fb96f595218c741cc0d474598427ac44a975119c8d4548036e46301da935c2d",
+  "pixelEquivalent": true,
+  "pngBytes": 2273760,
+  "webpBytes": 1674260,
+  "alpha": {
+    "zero": 756556,
+    "low1to15": 197546,
+    "main128to255": 594550
+  },
+  "unassignedLargeComponents": [],
+  "frames": [
+    {
+      "poseIndex": 0,
+      "pose": "front",
+      "sourceRect": [
+        41,
+        0,
+        247,
+        277
+      ],
+      "bodyBounds": [
+        49,
+        8,
+        239,
+        274
+      ],
+      "bodyArea": 29220,
+      "originX": 156.4078,
+      "originY": 274.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 145.5,
+          "y": 73.5,
+          "width": 155,
+          "height": 131,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 153.0,
+          "y": 189.0,
+          "width": 102,
+          "height": 86,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 94,
+          "y": 205,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 211,
+          "y": 201,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 121,
+          "y": 243,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 183,
+          "y": 243,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 231,
+          "y": 73.5,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 214,
+          "y": 208.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 145.5,
+          "y": 141.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 1,
+      "pose": "back",
+      "sourceRect": [
+        333,
+        0,
+        549,
+        276
+      ],
+      "bodyBounds": [
+        341,
+        8,
+        541,
+        273
+      ],
+      "bodyArea": 27448,
+      "originX": 421.9887,
+      "originY": 274.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 429.0,
+          "y": 70.0,
+          "width": 156,
+          "height": 124,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 433.0,
+          "y": 188.5,
+          "width": 96,
+          "height": 87,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 370,
+          "y": 207,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 472,
+          "y": 206,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 394,
+          "y": 242,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 447,
+          "y": 242,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 515,
+          "y": 70.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 491,
+          "y": 207.5,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 429.0,
+          "y": 140.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 2,
+      "pose": "left",
+      "sourceRect": [
+        593,
+        0,
+        776,
+        277
+      ],
+      "bodyBounds": [
+        601,
+        8,
+        768,
+        274
+      ],
+      "bodyArea": 23825,
+      "originX": 666.9103,
+      "originY": 274.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 683.5,
+          "y": 73.0,
+          "width": 141,
+          "height": 130,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 656.5,
+          "y": 189.5,
+          "width": 67,
+          "height": 87,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 655,
+          "y": 204,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 638,
+          "y": 192,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": false,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 638,
+          "y": 243,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 679,
+          "y": 242,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 762,
+          "y": 73.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 700,
+          "y": 208.5,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 683.5,
+          "y": 141.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 3,
+      "pose": "right",
+      "sourceRect": [
+        843,
+        0,
+        1018,
+        277
+      ],
+      "bodyBounds": [
+        851,
+        8,
+        1010,
+        274
+      ],
+      "bodyArea": 23907,
+      "originX": 941.9792,
+      "originY": 274.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 936.0,
+          "y": 72.5,
+          "width": 144,
+          "height": 129,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 956.5,
+          "y": 189.0,
+          "width": 67,
+          "height": 84,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 982,
+          "y": 186,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": false,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 944,
+          "y": 202,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 940,
+          "y": 243,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 980,
+          "y": 243,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1016,
+          "y": 72.5,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 1000,
+          "y": 208.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 936.0,
+          "y": 141.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 4,
+      "pose": "walk_front",
+      "sourceRect": [
+        44,
+        277,
+        240,
+        558
+      ],
+      "bodyBounds": [
+        52,
+        281,
+        232,
+        552
+      ],
+      "bodyArea": 28011,
+      "originX": 147.7806,
+      "originY": 552.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 147.0,
+          "y": 347.5,
+          "width": 156,
+          "height": 133,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 155.0,
+          "y": 459.0,
+          "width": 102,
+          "height": 86,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 103,
+          "y": 431,
+          "width": 37,
+          "height": 43,
+          "rotation": 15,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 208,
+          "y": 450,
+          "width": 37,
+          "height": 43,
+          "rotation": -20,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 153,
+          "y": 521,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 198,
+          "y": 491,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 233,
+          "y": 347.5,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 216,
+          "y": 478.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 147.0,
+          "y": 416.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 5,
+      "pose": "walk_back",
+      "sourceRect": [
+        335,
+        276,
+        541,
+        560
+      ],
+      "bodyBounds": [
+        343,
+        280,
+        533,
+        552
+      ],
+      "bodyArea": 27769,
+      "originX": 425.1644,
+      "originY": 552.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 428.0,
+          "y": 346.0,
+          "width": 162,
+          "height": 132,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 434.0,
+          "y": 457.0,
+          "width": 98,
+          "height": 88,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 365,
+          "y": 467,
+          "width": 37,
+          "height": 43,
+          "rotation": 15,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 473,
+          "y": 453,
+          "width": 37,
+          "height": 43,
+          "rotation": -20,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 423,
+          "y": 521,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 466,
+          "y": 487,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 517,
+          "y": 346.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 493,
+          "y": 476.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 428.0,
+          "y": 416.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 6,
+      "pose": "walk_left",
+      "sourceRect": [
+        573,
+        277,
+        805,
+        554
+      ],
+      "bodyBounds": [
+        581,
+        281,
+        797,
+        551
+      ],
+      "bodyArea": 29139,
+      "originX": 672.5002,
+      "originY": 552.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 679.0,
+          "y": 347.0,
+          "width": 158,
+          "height": 132,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 677.5,
+          "y": 454.0,
+          "width": 103,
+          "height": 76,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 603,
+          "y": 433,
+          "width": 37,
+          "height": 43,
+          "rotation": 80,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 730,
+          "y": 453,
+          "width": 37,
+          "height": 43,
+          "rotation": -35,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 614,
+          "y": 520,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 727,
+          "y": 517,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 766,
+          "y": 347.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 739,
+          "y": 473.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 679.0,
+          "y": 416.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 7,
+      "pose": "walk_right",
+      "sourceRect": [
+        854,
+        277,
+        1077,
+        559
+      ],
+      "bodyBounds": [
+        862,
+        281,
+        1069,
+        551
+      ],
+      "bodyArea": 28340,
+      "originX": 978.6301,
+      "originY": 552.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 946.5,
+          "y": 347.5,
+          "width": 147,
+          "height": 133,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 972.0,
+          "y": 454.0,
+          "width": 96,
+          "height": 80,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 927,
+          "y": 463,
+          "width": 37,
+          "height": 43,
+          "rotation": 35,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 1042,
+          "y": 439,
+          "width": 37,
+          "height": 43,
+          "rotation": -80,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 944,
+          "y": 520,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1033,
+          "y": 516,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1028,
+          "y": 347.5,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 1030,
+          "y": 473.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 946.5,
+          "y": 416.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 8,
+      "pose": "jump_up",
+      "sourceRect": [
+        32,
+        558,
+        264,
+        814
+      ],
+      "bodyBounds": [
+        40,
+        565,
+        256,
+        812
+      ],
+      "bodyArea": 31143,
+      "originX": 146.1406,
+      "originY": 819.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 143.0,
+          "y": 626.5,
+          "width": 158,
+          "height": 123,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 149.0,
+          "y": 714.0,
+          "width": 118,
+          "height": 76,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 65,
+          "y": 666,
+          "width": 48,
+          "height": 53,
+          "rotation": 110,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 233,
+          "y": 633,
+          "width": 48,
+          "height": 53,
+          "rotation": -125,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 110,
+          "y": 756,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 154,
+          "y": 781,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 230,
+          "y": 626.5,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 218,
+          "y": 733.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 143.0,
+          "y": 688.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 9,
+      "pose": "land",
+      "sourceRect": [
+        306,
+        567,
+        520,
+        819
+      ],
+      "bodyBounds": [
+        314,
+        575,
+        512,
+        814
+      ],
+      "bodyArea": 29644,
+      "originX": 424.6707,
+      "originY": 819.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 420.5,
+          "y": 640.5,
+          "width": 171,
+          "height": 131,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 425.5,
+          "y": 743.5,
+          "width": 105,
+          "height": 75,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 414,
+          "y": 798,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 495,
+          "y": 709,
+          "width": 37,
+          "height": 43,
+          "rotation": -75,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 367,
+          "y": 773,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 481,
+          "y": 773,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 514,
+          "y": 640.5,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 488,
+          "y": 762.5,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 420.5,
+          "y": 689.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 10,
+      "pose": "hug",
+      "sourceRect": [
+        575,
+        554,
+        798,
+        820
+      ],
+      "bodyBounds": [
+        583,
+        558,
+        790,
+        819
+      ],
+      "bodyArea": 32886,
+      "originX": 686.0131,
+      "originY": 819.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 687.0,
+          "y": 625.0,
+          "width": 164,
+          "height": 134,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 688.5,
+          "y": 738.5,
+          "width": 105,
+          "height": 83,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 608,
+          "y": 701,
+          "width": 53,
+          "height": 58,
+          "rotation": 65,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 764,
+          "y": 700,
+          "width": 53,
+          "height": 58,
+          "rotation": -65,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 644,
+          "y": 788,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 724,
+          "y": 788,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 777,
+          "y": 625.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 751,
+          "y": 757.5,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 687.0,
+          "y": 688.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 11,
+      "pose": "crouch",
+      "sourceRect": [
+        853,
+        568,
+        1089,
+        816
+      ],
+      "bodyBounds": [
+        861,
+        576,
+        1081,
+        811
+      ],
+      "bodyArea": 31010,
+      "originX": 989.3154,
+      "originY": 819.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 969.0,
+          "y": 643.0,
+          "width": 164,
+          "height": 134,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 977.0,
+          "y": 745.5,
+          "width": 106,
+          "height": 71,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 971,
+          "y": 798,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 1002,
+          "y": 798,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 916,
+          "y": 774,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1047,
+          "y": 774,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1059,
+          "y": 643.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 1040,
+          "y": 764.5,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 969.0,
+          "y": 690.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 12,
+      "pose": "happy",
+      "sourceRect": [
+        40,
+        814,
+        247,
+        1094
+      ],
+      "bodyBounds": [
+        48,
+        817,
+        239,
+        1092
+      ],
+      "bodyArea": 32336,
+      "originX": 146.2529,
+      "originY": 1092.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 145.0,
+          "y": 882.0,
+          "width": 162,
+          "height": 130,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 150.5,
+          "y": 992.0,
+          "width": 105,
+          "height": 88,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 83,
+          "y": 956,
+          "width": 43,
+          "height": 48,
+          "rotation": 80,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 216,
+          "y": 941,
+          "width": 43,
+          "height": 48,
+          "rotation": -80,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 119,
+          "y": 1061,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 185,
+          "y": 1029,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 234,
+          "y": 882.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 213,
+          "y": 1011.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 145.0,
+          "y": 954.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 13,
+      "pose": "sad",
+      "sourceRect": [
+        324,
+        819,
+        525,
+        1092
+      ],
+      "bodyBounds": [
+        332,
+        824,
+        517,
+        1088
+      ],
+      "bodyArea": 30713,
+      "originX": 425.528,
+      "originY": 1092.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 429.0,
+          "y": 891.0,
+          "width": 160,
+          "height": 134,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 431.5,
+          "y": 1001.5,
+          "width": 99,
+          "height": 87,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 415,
+          "y": 1036,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 438,
+          "y": 1036,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 398,
+          "y": 1057,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 466,
+          "y": 1057,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 517,
+          "y": 891.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 491,
+          "y": 1020.5,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 429.0,
+          "y": 956.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 14,
+      "pose": "surprise",
+      "sourceRect": [
+        579,
+        820,
+        789,
+        1094
+      ],
+      "bodyBounds": [
+        587,
+        822,
+        781,
+        1090
+      ],
+      "bodyArea": 30622,
+      "originX": 691.3811,
+      "originY": 1092.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 687.0,
+          "y": 887.0,
+          "width": 160,
+          "height": 130,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 686.0,
+          "y": 1004.0,
+          "width": 106,
+          "height": 86,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 645,
+          "y": 970,
+          "width": 37,
+          "height": 43,
+          "rotation": 160,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 719,
+          "y": 971,
+          "width": 37,
+          "height": 43,
+          "rotation": -160,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 643,
+          "y": 1059,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 720,
+          "y": 1059,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 775,
+          "y": 887.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 749,
+          "y": 1023.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 687.0,
+          "y": 956.0,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 15,
+      "pose": "think",
+      "sourceRect": [
+        868,
+        816,
+        1075,
+        1094
+      ],
+      "bodyBounds": [
+        876,
+        822,
+        1067,
+        1091
+      ],
+      "bodyArea": 30099,
+      "originX": 975.1508,
+      "originY": 1092.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 974.5,
+          "y": 888.0,
+          "width": 157,
+          "height": 132,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 978.0,
+          "y": 1004.0,
+          "width": 110,
+          "height": 88,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 942,
+          "y": 1024,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 990,
+          "y": 969,
+          "width": 37,
+          "height": 43,
+          "rotation": -145,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 944,
+          "y": 1060,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1020,
+          "y": 1060,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1061,
+          "y": 888.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 1043,
+          "y": 1023.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 974.5,
+          "y": 956.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 16,
+      "pose": "calm",
+      "sourceRect": [
+        52,
+        1094,
+        244,
+        1388
+      ],
+      "bodyBounds": [
+        60,
+        1097,
+        236,
+        1380
+      ],
+      "bodyArea": 30847,
+      "originX": 147.5107,
+      "originY": 1380.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 150.0,
+          "y": 1164.0,
+          "width": 156,
+          "height": 134,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 152.5,
+          "y": 1282.0,
+          "width": 103,
+          "height": 88,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 94,
+          "y": 1309,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 212,
+          "y": 1308,
+          "width": 37,
+          "height": 43,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 123,
+          "y": 1349,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 185,
+          "y": 1349,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 236,
+          "y": 1164.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 214,
+          "y": 1301.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 150.0,
+          "y": 1238.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 17,
+      "pose": "ready",
+      "sourceRect": [
+        322,
+        1092,
+        544,
+        1386
+      ],
+      "bodyBounds": [
+        330,
+        1097,
+        536,
+        1378
+      ],
+      "bodyArea": 32566,
+      "originX": 448.6063,
+      "originY": 1380.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 432.5,
+          "y": 1163.5,
+          "width": 163,
+          "height": 133,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 440.5,
+          "y": 1288.5,
+          "width": 101,
+          "height": 91,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 395,
+          "y": 1267,
+          "width": 37,
+          "height": 43,
+          "rotation": 75,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 497,
+          "y": 1282,
+          "width": 37,
+          "height": 43,
+          "rotation": -40,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 368,
+          "y": 1347,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 498,
+          "y": 1337,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 522,
+          "y": 1163.5,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 501,
+          "y": 1307.5,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 432.5,
+          "y": 1237.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 18,
+      "pose": "guard",
+      "sourceRect": [
+        581,
+        1094,
+        798,
+        1388
+      ],
+      "bodyBounds": [
+        589,
+        1099,
+        790,
+        1380
+      ],
+      "bodyArea": 31983,
+      "originX": 692.6225,
+      "originY": 1380.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 691.0,
+          "y": 1165.0,
+          "width": 166,
+          "height": 132,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 693.5,
+          "y": 1288.0,
+          "width": 105,
+          "height": 94,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 688,
+          "y": 1265,
+          "width": 37,
+          "height": 43,
+          "rotation": 60,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 743,
+          "y": 1292,
+          "width": 37,
+          "height": 43,
+          "rotation": -45,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 622,
+          "y": 1349,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 751,
+          "y": 1343,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 782,
+          "y": 1165.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 756,
+          "y": 1307.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 691.0,
+          "y": 1239.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    },
+    {
+      "poseIndex": 19,
+      "pose": "proud",
+      "sourceRect": [
+        868,
+        1094,
+        1073,
+        1388
+      ],
+      "bodyBounds": [
+        876,
+        1097,
+        1065,
+        1380
+      ],
+      "bodyArea": 33042,
+      "originX": 976.7395,
+      "originY": 1380.0,
+      "pixelsPerUnit": 84.444444,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 973.0,
+          "y": 1165.0,
+          "width": 158,
+          "height": 136,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "DRESS",
+          "x": 973.0,
+          "y": 1288.0,
+          "width": 102,
+          "height": 96,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 940,
+          "y": 1293,
+          "width": 37,
+          "height": 43,
+          "rotation": 25,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 1024,
+          "y": 1293,
+          "width": 37,
+          "height": 43,
+          "rotation": -25,
+          "layer": "NEAR_HAND",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 941,
+          "y": 1349,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1009,
+          "y": 1349,
+          "width": 57,
+          "height": 66,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true,
+          "measurement": "manual visual source joint/box"
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1060,
+          "y": 1165.0,
+          "width": 43,
+          "height": 43,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "CHARM",
+          "x": 1034,
+          "y": 1307.0,
+          "width": 35,
+          "height": 35,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        },
+        {
+          "name": "AURA",
+          "x": 973.0,
+          "y": 1238.5,
+          "width": 246,
+          "height": 246,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true,
+          "measurement": "authored placement around manually measured head and torso"
+        }
+      ],
+      "anchorsMeasured": true,
+      "apparelQualified": false,
+      "anchorProvenance": "Nova original20-pose visual measurement; gear placements authored around head/torso; wardrobe fit pending native render QA"
+    }
+  ],
+  "anchorReview": "Manual visual annotations for Nova level1 only. Source rects and encoded pixels unchanged. Native wardrobe rendering still required."
+}

@@ -27,6 +27,7 @@ import java.util.BitSet;
  */
 public final class ArtLibrary {
     public static final String ROOT="art/v117/";
+    public static final String ROOT118="art/v118/";
     public static final int DEFAULT_CACHE_BYTES=48*1024*1024;
     private static final long MAX_SPRITE_BYTES=4L*1024*1024;
     private static final int ALPHA_THRESHOLD=8;
@@ -40,6 +41,7 @@ public final class ArtLibrary {
     private final Map<String,DecodeInfo> decodeInfo=new LinkedHashMap<>();
     private final Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG|Paint.FILTER_BITMAP_FLAG|Paint.DITHER_FLAG);
     private final RectF destination=new RectF();
+    private final Rect entireSource=new Rect();
     private final float[] fitted=new float[4];
     private int decodeCount,evictionCount;
 
@@ -60,7 +62,7 @@ public final class ArtLibrary {
 
     /** Equal row-major cells; null/empty keys deliberately leave a cell unused. */
     public synchronized void registerSheet(String path,int columns,int rows,String... keys){
-        if(path==null||!path.startsWith(ROOT)||path.contains("..")||path.contains("\\")
+        if(path==null||!(path.startsWith(ROOT)||path.startsWith(ROOT118))||path.contains("..")||path.contains("\\")
                 ||columns<=0||rows<=0||keys==null||(long)columns*rows!=keys.length)
             throw new IllegalArgumentException("Invalid packaged art sheet");
         if(sheets.containsKey(path))throw new IllegalArgumentException("Sheet already registered: "+path);
@@ -82,7 +84,7 @@ public final class ArtLibrary {
 
     /** Optional source-coordinate exclusions isolate interleaved bounding boxes without editing PNGs. */
     public synchronized void registerRegions(String path,String[] keys,int[][] regions,int[][][] exclusions){
-        if(path==null||!path.startsWith(ROOT)||path.contains("..")||path.contains("\\")||keys==null||regions==null||keys.length!=regions.length||keys.length==0)
+        if(path==null||!(path.startsWith(ROOT)||path.startsWith(ROOT118))||path.contains("..")||path.contains("\\")||keys==null||regions==null||keys.length!=regions.length||keys.length==0)
             throw new IllegalArgumentException("Invalid packaged art regions");
         if(sheets.containsKey(path))throw new IllegalArgumentException("Sheet already registered: "+path);
         Map<String,Boolean> incoming=new LinkedHashMap<>();
@@ -105,6 +107,8 @@ public final class ArtLibrary {
         Sheet sheet=new Sheet(path,0,0,keys.clone());sheets.put(path,sheet);
         for(int i=0;i<keys.length;i++)definitions.put(keys[i],new Definition(sheet,i,keys[i],new Rect(regions[i][0],regions[i][1],regions[i][2],regions[i][3]),copy[i]));
     }
+
+    AssetManager assetManager(){return assets;}
 
     public synchronized boolean contains(String key){return definitions.containsKey(key);}
 
@@ -167,6 +171,15 @@ public final class ArtLibrary {
         destination.set(fitted[0],fitted[1],fitted[2],fitted[3]);
         paint.setAlpha(Math.max(0,Math.min(255,alpha)));paint.setColorFilter(null);
         render(canvas,sprite,source,destination);paint.setAlpha(255);return true;
+    }
+
+    /** Draw the complete decoded source region into its measured ground-relative bounds, without alpha trimming or refitting. */
+    public synchronized boolean drawFrameUntrimmed(Canvas canvas,String key,float left,float top,float right,float bottom,int alpha){
+        if(canvas==null||!finite(left)||!finite(top)||!finite(right)||!finite(bottom)||right<=left||bottom<=top)return false;
+        if(canvas.quickReject(left,top,right,bottom,Canvas.EdgeType.AA))return false;
+        Definition definition=definitions.get(key);if(definition==null)return false;Sprite decoded=sprite(definition);if(decoded==null)return false;
+        entireSource.set(0,0,decoded.bitmap.getWidth(),decoded.bitmap.getHeight());destination.set(left,top,right,bottom);
+        paint.setAlpha(Math.max(0,Math.min(255,alpha)));paint.setColorFilter(null);render(canvas,decoded,entireSource,destination);paint.setAlpha(255);return true;
     }
 
     public synchronized boolean fittedBounds(String key,RectF target,float alignX,float alignY,RectF out){

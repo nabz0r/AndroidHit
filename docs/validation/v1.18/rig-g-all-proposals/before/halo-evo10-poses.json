@@ -1,0 +1,5713 @@
+{
+  "schema": 1,
+  "id": "halo",
+  "form": 3,
+  "levelMilestone": 10,
+  "image": "art/v118/halo-evo10-poses.webp",
+  "width": 1122,
+  "height": 1402,
+  "columns": 4,
+  "rows": 5,
+  "standingHeightPixels": 267.0,
+  "pixelsPerUnit": 84.761905,
+  "coordinateSystem": "Absolute atlas pixels. originY is ground. localY=(pixelY-originY)/pixelsPerUnit+1.65.",
+  "sourceRectsMeasured": true,
+  "componentAlphaThreshold": 128,
+  "anchorsMeasured": false,
+  "apparelQualified": false,
+  "original": "docs/art/v118/originals/halo-evo10-poses.png",
+  "originalSha256": "b26ce502b147feed38c13c85bba4409f9ce73f8644c6fe1848b1f03c17b052dd",
+  "webpSha256": "fad00eba02782443d8b4b8d9578f82e7aef400f5294c211a1821acf85829178c",
+  "pixelEquivalent": true,
+  "pngBytes": 2974351,
+  "webpBytes": 2230170,
+  "alpha": {
+    "zero": 489005,
+    "low1to15": 144975,
+    "main128to255": 906072
+  },
+  "unassignedLargeComponents": [],
+  "frames": [
+    {
+      "poseIndex": 0,
+      "pose": "front",
+      "sourceRect": [
+        0,
+        0,
+        282,
+        285
+      ],
+      "bodyBounds": [
+        28,
+        10,
+        272,
+        277
+      ],
+      "bodyArea": 45453,
+      "originX": 152.4798,
+      "originY": 278.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 152.4798,
+          "y": 71.41,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 152.4798,
+          "y": 194.23,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 99.0798,
+          "y": 204.91,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 211.2198,
+          "y": 204.91,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 123.1098,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 189.8598,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 235.5465,
+          "y": 103.45,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 228.7655,
+          "y": 204.91,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 152.4798,
+          "y": 139.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        20,
+        2,
+        280,
+        280
+      ],
+      "initialBodyBounds": [
+        28,
+        10,
+        272,
+        277
+      ],
+      "initialBodyArea": 45450,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          0,
+          0
+        ],
+        [
+          282,
+          0
+        ],
+        [
+          282,
+          281
+        ],
+        [
+          180,
+          281
+        ],
+        [
+          180,
+          282
+        ],
+        [
+          161,
+          282
+        ],
+        [
+          161,
+          283
+        ],
+        [
+          160,
+          283
+        ],
+        [
+          160,
+          285
+        ],
+        [
+          156,
+          285
+        ],
+        [
+          156,
+          283
+        ],
+        [
+          155,
+          283
+        ],
+        [
+          155,
+          279
+        ],
+        [
+          153,
+          279
+        ],
+        [
+          153,
+          281
+        ],
+        [
+          149,
+          281
+        ],
+        [
+          149,
+          285
+        ],
+        [
+          145,
+          285
+        ],
+        [
+          145,
+          281
+        ],
+        [
+          0,
+          281
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 1,
+      "pose": "back",
+      "sourceRect": [
+        282,
+        0,
+        561,
+        283
+      ],
+      "bodyBounds": [
+        308,
+        12,
+        547,
+        277
+      ],
+      "bodyArea": 45080,
+      "originX": 423.5752,
+      "originY": 278.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 423.5752,
+          "y": 72.95,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 423.5752,
+          "y": 195.21,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 370.1752,
+          "y": 205.45,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 482.3152,
+          "y": 205.45,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 394.2052,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 460.9552,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 506.6419,
+          "y": 104.75,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 499.8609,
+          "y": 205.89,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 423.5752,
+          "y": 139.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        300,
+        4,
+        555,
+        281
+      ],
+      "initialBodyBounds": [
+        308,
+        12,
+        547,
+        277
+      ],
+      "initialBodyArea": 45080,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          282,
+          0
+        ],
+        [
+          559,
+          0
+        ],
+        [
+          559,
+          162
+        ],
+        [
+          561,
+          162
+        ],
+        [
+          561,
+          180
+        ],
+        [
+          559,
+          180
+        ],
+        [
+          559,
+          281
+        ],
+        [
+          451,
+          281
+        ],
+        [
+          451,
+          280
+        ],
+        [
+          442,
+          280
+        ],
+        [
+          442,
+          279
+        ],
+        [
+          430,
+          279
+        ],
+        [
+          430,
+          278
+        ],
+        [
+          429,
+          278
+        ],
+        [
+          429,
+          283
+        ],
+        [
+          428,
+          283
+        ],
+        [
+          428,
+          279
+        ],
+        [
+          427,
+          279
+        ],
+        [
+          427,
+          281
+        ],
+        [
+          416,
+          281
+        ],
+        [
+          416,
+          282
+        ],
+        [
+          410,
+          282
+        ],
+        [
+          410,
+          281
+        ],
+        [
+          282,
+          281
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 2,
+      "pose": "left",
+      "sourceRect": [
+        559,
+        0,
+        840,
+        286
+      ],
+      "bodyBounds": [
+        602,
+        11,
+        819,
+        278
+      ],
+      "bodyArea": 38203,
+      "originX": 696.7457,
+      "originY": 278.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 696.7457,
+          "y": 72.41,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 696.7457,
+          "y": 195.23,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 683.3957,
+          "y": 205.91,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 755.4857,
+          "y": 205.91,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 667.3757,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 734.1257,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 779.8124,
+          "y": 104.45,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 773.0314,
+          "y": 205.91,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 696.7457,
+          "y": 139.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        594,
+        3,
+        827,
+        281
+      ],
+      "initialBodyBounds": [
+        602,
+        11,
+        819,
+        278
+      ],
+      "initialBodyArea": 38164,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          559,
+          0
+        ],
+        [
+          840,
+          0
+        ],
+        [
+          840,
+          281
+        ],
+        [
+          683,
+          281
+        ],
+        [
+          683,
+          282
+        ],
+        [
+          681,
+          281
+        ],
+        [
+          681,
+          282
+        ],
+        [
+          680,
+          282
+        ],
+        [
+          680,
+          280
+        ],
+        [
+          679,
+          280
+        ],
+        [
+          679,
+          282
+        ],
+        [
+          674,
+          282
+        ],
+        [
+          674,
+          286
+        ],
+        [
+          669,
+          286
+        ],
+        [
+          669,
+          280
+        ],
+        [
+          667,
+          280
+        ],
+        [
+          667,
+          284
+        ],
+        [
+          666,
+          284
+        ],
+        [
+          666,
+          280
+        ],
+        [
+          663,
+          280
+        ],
+        [
+          663,
+          284
+        ],
+        [
+          662,
+          284
+        ],
+        [
+          662,
+          282
+        ],
+        [
+          661,
+          282
+        ],
+        [
+          661,
+          283
+        ],
+        [
+          660,
+          283
+        ],
+        [
+          660,
+          282
+        ],
+        [
+          658,
+          282
+        ],
+        [
+          658,
+          284
+        ],
+        [
+          650,
+          284
+        ],
+        [
+          650,
+          282
+        ],
+        [
+          648,
+          282
+        ],
+        [
+          648,
+          281
+        ],
+        [
+          559,
+          281
+        ],
+        [
+          559,
+          180
+        ],
+        [
+          561,
+          180
+        ],
+        [
+          561,
+          162
+        ],
+        [
+          559,
+          162
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 3,
+      "pose": "right",
+      "sourceRect": [
+        840,
+        0,
+        1122,
+        282
+      ],
+      "bodyBounds": [
+        855,
+        10,
+        1070,
+        278
+      ],
+      "bodyArea": 37875,
+      "originX": 976.6532,
+      "originY": 278.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 976.6532,
+          "y": 71.64,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 976.6532,
+          "y": 194.74,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 923.2532,
+          "y": 205.64,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 971.3132,
+          "y": 205.64,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 947.2832,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1014.0332,
+          "y": 245.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1059.7198,
+          "y": 103.8,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1052.9389,
+          "y": 205.42,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 976.6532,
+          "y": 139.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        847,
+        2,
+        1078,
+        281
+      ],
+      "initialBodyBounds": [
+        855,
+        10,
+        1070,
+        278
+      ],
+      "initialBodyArea": 37873,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          840,
+          0
+        ],
+        [
+          1122,
+          0
+        ],
+        [
+          1122,
+          281
+        ],
+        [
+          1022,
+          281
+        ],
+        [
+          1021,
+          277
+        ],
+        [
+          1020,
+          277
+        ],
+        [
+          1020,
+          280
+        ],
+        [
+          1019,
+          280
+        ],
+        [
+          1019,
+          278
+        ],
+        [
+          1016,
+          278
+        ],
+        [
+          1016,
+          281
+        ],
+        [
+          1005,
+          281
+        ],
+        [
+          1005,
+          282
+        ],
+        [
+          1004,
+          282
+        ],
+        [
+          1004,
+          281
+        ],
+        [
+          840,
+          281
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 4,
+      "pose": "walk_front",
+      "sourceRect": [
+        0,
+        279,
+        282,
+        565
+      ],
+      "bodyBounds": [
+        22,
+        283,
+        272,
+        550
+      ],
+      "bodyArea": 45843,
+      "originX": 149.4383,
+      "originY": 560.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 149.4383,
+          "y": 344.41,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 149.4383,
+          "y": 467.23,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 96.0383,
+          "y": 451.21,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 208.1783,
+          "y": 467.23,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 120.0683,
+          "y": 514.61,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 186.8183,
+          "y": 522.62,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 232.505,
+          "y": 376.45,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 225.724,
+          "y": 477.91,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 149.4383,
+          "y": 421.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        14,
+        280,
+        280,
+        553
+      ],
+      "initialBodyBounds": [
+        22,
+        283,
+        272,
+        550
+      ],
+      "initialBodyArea": 45841,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          153,
+          279
+        ],
+        [
+          155,
+          279
+        ],
+        [
+          155,
+          283
+        ],
+        [
+          156,
+          283
+        ],
+        [
+          156,
+          285
+        ],
+        [
+          160,
+          285
+        ],
+        [
+          160,
+          283
+        ],
+        [
+          161,
+          283
+        ],
+        [
+          161,
+          282
+        ],
+        [
+          180,
+          282
+        ],
+        [
+          180,
+          281
+        ],
+        [
+          282,
+          281
+        ],
+        [
+          282,
+          565
+        ],
+        [
+          196,
+          565
+        ],
+        [
+          196,
+          564
+        ],
+        [
+          192,
+          564
+        ],
+        [
+          192,
+          563
+        ],
+        [
+          181,
+          563
+        ],
+        [
+          181,
+          562
+        ],
+        [
+          177,
+          561
+        ],
+        [
+          177,
+          560
+        ],
+        [
+          176,
+          560
+        ],
+        [
+          176,
+          553
+        ],
+        [
+          169,
+          553
+        ],
+        [
+          169,
+          551
+        ],
+        [
+          161,
+          551
+        ],
+        [
+          161,
+          550
+        ],
+        [
+          160,
+          550
+        ],
+        [
+          160,
+          552
+        ],
+        [
+          159,
+          552
+        ],
+        [
+          159,
+          551
+        ],
+        [
+          157,
+          551
+        ],
+        [
+          157,
+          555
+        ],
+        [
+          155,
+          555
+        ],
+        [
+          155,
+          556
+        ],
+        [
+          146,
+          556
+        ],
+        [
+          146,
+          551
+        ],
+        [
+          141,
+          551
+        ],
+        [
+          141,
+          548
+        ],
+        [
+          140,
+          548
+        ],
+        [
+          140,
+          547
+        ],
+        [
+          139,
+          547
+        ],
+        [
+          139,
+          548
+        ],
+        [
+          138,
+          548
+        ],
+        [
+          138,
+          547
+        ],
+        [
+          123,
+          547
+        ],
+        [
+          123,
+          548
+        ],
+        [
+          121,
+          548
+        ],
+        [
+          121,
+          549
+        ],
+        [
+          117,
+          549
+        ],
+        [
+          117,
+          551
+        ],
+        [
+          115,
+          551
+        ],
+        [
+          115,
+          552
+        ],
+        [
+          114,
+          552
+        ],
+        [
+          113,
+          554
+        ],
+        [
+          109,
+          555
+        ],
+        [
+          109,
+          561
+        ],
+        [
+          0,
+          561
+        ],
+        [
+          0,
+          281
+        ],
+        [
+          145,
+          281
+        ],
+        [
+          145,
+          285
+        ],
+        [
+          149,
+          285
+        ],
+        [
+          149,
+          281
+        ],
+        [
+          153,
+          281
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 5,
+      "pose": "walk_back",
+      "sourceRect": [
+        282,
+        278,
+        564,
+        565
+      ],
+      "bodyBounds": [
+        304,
+        285,
+        553,
+        560
+      ],
+      "bodyArea": 45936,
+      "originX": 430.4022,
+      "originY": 560.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 430.4022,
+          "y": 348.25,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 430.4022,
+          "y": 473.31,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 377.0022,
+          "y": 459.05,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 489.1422,
+          "y": 475.07,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 401.0322,
+          "y": 514.61,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 467.7822,
+          "y": 522.62,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 513.4688,
+          "y": 381.25,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 506.6879,
+          "y": 483.99,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 430.4022,
+          "y": 421.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        296,
+        281,
+        561,
+        568
+      ],
+      "initialBodyBounds": [
+        304,
+        285,
+        553,
+        560
+      ],
+      "initialBodyArea": 45936,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          429,
+          278
+        ],
+        [
+          430,
+          278
+        ],
+        [
+          430,
+          279
+        ],
+        [
+          442,
+          279
+        ],
+        [
+          442,
+          280
+        ],
+        [
+          451,
+          280
+        ],
+        [
+          451,
+          281
+        ],
+        [
+          559,
+          281
+        ],
+        [
+          559,
+          428
+        ],
+        [
+          560,
+          428
+        ],
+        [
+          560,
+          432
+        ],
+        [
+          561,
+          432
+        ],
+        [
+          561,
+          434
+        ],
+        [
+          562,
+          434
+        ],
+        [
+          562,
+          436
+        ],
+        [
+          563,
+          436
+        ],
+        [
+          563,
+          439
+        ],
+        [
+          564,
+          439
+        ],
+        [
+          564,
+          450
+        ],
+        [
+          563,
+          450
+        ],
+        [
+          563,
+          451
+        ],
+        [
+          561,
+          451
+        ],
+        [
+          561,
+          503
+        ],
+        [
+          560,
+          503
+        ],
+        [
+          560,
+          510
+        ],
+        [
+          559,
+          510
+        ],
+        [
+          559,
+          565
+        ],
+        [
+          282,
+          565
+        ],
+        [
+          282,
+          281
+        ],
+        [
+          410,
+          281
+        ],
+        [
+          410,
+          282
+        ],
+        [
+          416,
+          282
+        ],
+        [
+          416,
+          281
+        ],
+        [
+          427,
+          281
+        ],
+        [
+          427,
+          279
+        ],
+        [
+          428,
+          279
+        ],
+        [
+          428,
+          283
+        ],
+        [
+          429,
+          283
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 6,
+      "pose": "walk_left",
+      "sourceRect": [
+        559,
+        280,
+        840,
+        565
+      ],
+      "bodyBounds": [
+        592,
+        284,
+        830,
+        557
+      ],
+      "bodyArea": 41733,
+      "originX": 693.8731,
+      "originY": 560.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 693.8731,
+          "y": 346.79,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 693.8731,
+          "y": 471.29,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 680.5231,
+          "y": 456.59,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 752.6131,
+          "y": 472.61,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 664.5031,
+          "y": 514.61,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 731.2531,
+          "y": 522.62,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 776.9398,
+          "y": 379.55,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 770.1588,
+          "y": 481.97,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 693.8731,
+          "y": 421.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        584,
+        281,
+        838,
+        558
+      ],
+      "initialBodyBounds": [
+        592,
+        284,
+        830,
+        557
+      ],
+      "initialBodyArea": 41731,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          663,
+          280
+        ],
+        [
+          666,
+          280
+        ],
+        [
+          666,
+          284
+        ],
+        [
+          667,
+          284
+        ],
+        [
+          667,
+          280
+        ],
+        [
+          669,
+          280
+        ],
+        [
+          669,
+          286
+        ],
+        [
+          674,
+          286
+        ],
+        [
+          674,
+          282
+        ],
+        [
+          679,
+          282
+        ],
+        [
+          679,
+          280
+        ],
+        [
+          680,
+          280
+        ],
+        [
+          680,
+          282
+        ],
+        [
+          681,
+          282
+        ],
+        [
+          681,
+          281
+        ],
+        [
+          682,
+          281
+        ],
+        [
+          682,
+          282
+        ],
+        [
+          683,
+          282
+        ],
+        [
+          683,
+          281
+        ],
+        [
+          840,
+          281
+        ],
+        [
+          840,
+          565
+        ],
+        [
+          746,
+          565
+        ],
+        [
+          746,
+          564
+        ],
+        [
+          743,
+          564
+        ],
+        [
+          743,
+          563
+        ],
+        [
+          732,
+          563
+        ],
+        [
+          732,
+          562
+        ],
+        [
+          728,
+          562
+        ],
+        [
+          728,
+          561
+        ],
+        [
+          726,
+          561
+        ],
+        [
+          726,
+          558
+        ],
+        [
+          724,
+          558
+        ],
+        [
+          724,
+          557
+        ],
+        [
+          721,
+          557
+        ],
+        [
+          721,
+          556
+        ],
+        [
+          717,
+          556
+        ],
+        [
+          717,
+          555
+        ],
+        [
+          714,
+          555
+        ],
+        [
+          714,
+          558
+        ],
+        [
+          712,
+          558
+        ],
+        [
+          712,
+          561
+        ],
+        [
+          710,
+          561
+        ],
+        [
+          710,
+          562
+        ],
+        [
+          706,
+          562
+        ],
+        [
+          706,
+          561
+        ],
+        [
+          699,
+          561
+        ],
+        [
+          699,
+          557
+        ],
+        [
+          698,
+          557
+        ],
+        [
+          698,
+          555
+        ],
+        [
+          696,
+          555
+        ],
+        [
+          696,
+          556
+        ],
+        [
+          691,
+          556
+        ],
+        [
+          691,
+          557
+        ],
+        [
+          689,
+          557
+        ],
+        [
+          689,
+          558
+        ],
+        [
+          654,
+          558
+        ],
+        [
+          654,
+          565
+        ],
+        [
+          559,
+          565
+        ],
+        [
+          559,
+          510
+        ],
+        [
+          560,
+          510
+        ],
+        [
+          560,
+          503
+        ],
+        [
+          561,
+          503
+        ],
+        [
+          561,
+          451
+        ],
+        [
+          563,
+          451
+        ],
+        [
+          563,
+          450
+        ],
+        [
+          564,
+          450
+        ],
+        [
+          564,
+          439
+        ],
+        [
+          563,
+          439
+        ],
+        [
+          563,
+          436
+        ],
+        [
+          562,
+          436
+        ],
+        [
+          562,
+          434
+        ],
+        [
+          561,
+          434
+        ],
+        [
+          561,
+          432
+        ],
+        [
+          560,
+          432
+        ],
+        [
+          560,
+          428
+        ],
+        [
+          559,
+          428
+        ],
+        [
+          559,
+          281
+        ],
+        [
+          648,
+          281
+        ],
+        [
+          648,
+          282
+        ],
+        [
+          650,
+          282
+        ],
+        [
+          650,
+          284
+        ],
+        [
+          658,
+          284
+        ],
+        [
+          658,
+          282
+        ],
+        [
+          660,
+          282
+        ],
+        [
+          660,
+          283
+        ],
+        [
+          662,
+          282
+        ],
+        [
+          662,
+          284
+        ],
+        [
+          663,
+          284
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 7,
+      "pose": "walk_right",
+      "sourceRect": [
+        840,
+        277,
+        1122,
+        565
+      ],
+      "bodyBounds": [
+        850,
+        285,
+        1089,
+        557
+      ],
+      "bodyArea": 41882,
+      "originX": 985.9917,
+      "originY": 560.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 985.9917,
+          "y": 347.56,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 985.9917,
+          "y": 471.78,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 932.5917,
+          "y": 456.86,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "FAR_LIMB",
+          "visible": false
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 980.6517,
+          "y": 472.88,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 956.6217,
+          "y": 514.61,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "FAR_LIMB",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1023.3717,
+          "y": 522.62,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1069.0583,
+          "y": 380.2,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1062.2774,
+          "y": 482.46,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 985.9917,
+          "y": 421.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        842,
+        281,
+        1097,
+        565
+      ],
+      "initialBodyBounds": [
+        850,
+        285,
+        1089,
+        557
+      ],
+      "initialBodyArea": 41882,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          1020,
+          277
+        ],
+        [
+          1021,
+          277
+        ],
+        [
+          1022,
+          281
+        ],
+        [
+          1122,
+          281
+        ],
+        [
+          1122,
+          565
+        ],
+        [
+          840,
+          565
+        ],
+        [
+          840,
+          281
+        ],
+        [
+          1004,
+          281
+        ],
+        [
+          1004,
+          282
+        ],
+        [
+          1005,
+          282
+        ],
+        [
+          1005,
+          281
+        ],
+        [
+          1016,
+          281
+        ],
+        [
+          1016,
+          278
+        ],
+        [
+          1019,
+          278
+        ],
+        [
+          1019,
+          280
+        ],
+        [
+          1020,
+          280
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 8,
+      "pose": "jump_up",
+      "sourceRect": [
+        0,
+        547,
+        282,
+        814
+      ],
+      "bodyBounds": [
+        11,
+        556,
+        255,
+        804
+      ],
+      "bodyArea": 41675,
+      "originX": 134.3533,
+      "originY": 811.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 134.3533,
+          "y": 613.04,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 134.3533,
+          "y": 730.54,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 56.9233,
+          "y": 645.28,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 25,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 217.1233,
+          "y": 618.0,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -25,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 102.3133,
+          "y": 758.61,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 169.0633,
+          "y": 771.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 217.4199,
+          "y": 642.8,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 210.639,
+          "y": 741.22,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 134.3533,
+          "y": 672.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        3,
+        553,
+        263,
+        809
+      ],
+      "initialBodyBounds": [
+        11,
+        556,
+        255,
+        804
+      ],
+      "initialBodyArea": 41675,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          123,
+          547
+        ],
+        [
+          138,
+          547
+        ],
+        [
+          138,
+          548
+        ],
+        [
+          140,
+          547
+        ],
+        [
+          140,
+          548
+        ],
+        [
+          141,
+          548
+        ],
+        [
+          141,
+          551
+        ],
+        [
+          146,
+          551
+        ],
+        [
+          146,
+          556
+        ],
+        [
+          155,
+          556
+        ],
+        [
+          155,
+          555
+        ],
+        [
+          157,
+          555
+        ],
+        [
+          157,
+          551
+        ],
+        [
+          159,
+          551
+        ],
+        [
+          159,
+          552
+        ],
+        [
+          160,
+          552
+        ],
+        [
+          160,
+          550
+        ],
+        [
+          161,
+          550
+        ],
+        [
+          161,
+          551
+        ],
+        [
+          169,
+          551
+        ],
+        [
+          169,
+          553
+        ],
+        [
+          176,
+          553
+        ],
+        [
+          176,
+          560
+        ],
+        [
+          177,
+          560
+        ],
+        [
+          177,
+          561
+        ],
+        [
+          179,
+          561
+        ],
+        [
+          179,
+          562
+        ],
+        [
+          181,
+          562
+        ],
+        [
+          181,
+          563
+        ],
+        [
+          192,
+          563
+        ],
+        [
+          192,
+          564
+        ],
+        [
+          196,
+          564
+        ],
+        [
+          196,
+          565
+        ],
+        [
+          282,
+          565
+        ],
+        [
+          282,
+          811
+        ],
+        [
+          174,
+          811
+        ],
+        [
+          174,
+          813
+        ],
+        [
+          161,
+          813
+        ],
+        [
+          161,
+          814
+        ],
+        [
+          146,
+          814
+        ],
+        [
+          146,
+          811
+        ],
+        [
+          0,
+          811
+        ],
+        [
+          0,
+          561
+        ],
+        [
+          109,
+          561
+        ],
+        [
+          109,
+          555
+        ],
+        [
+          113,
+          554
+        ],
+        [
+          113,
+          553
+        ],
+        [
+          114,
+          553
+        ],
+        [
+          115,
+          551
+        ],
+        [
+          117,
+          551
+        ],
+        [
+          117,
+          549
+        ],
+        [
+          121,
+          549
+        ],
+        [
+          121,
+          548
+        ],
+        [
+          123,
+          548
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 9,
+      "pose": "land",
+      "sourceRect": [
+        282,
+        565,
+        559,
+        812
+      ],
+      "bodyBounds": [
+        296,
+        585,
+        535,
+        804
+      ],
+      "bodyArea": 38976,
+      "originX": 421.5606,
+      "originY": 811.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 421.5606,
+          "y": 635.37,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 421.5606,
+          "y": 727.35,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 389.5206,
+          "y": 793.32,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 466.9506,
+          "y": 793.32,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 354.8106,
+          "y": 771.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 490.9806,
+          "y": 771.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 504.6273,
+          "y": 661.65,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 497.8463,
+          "y": 755.43,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 421.5606,
+          "y": 672.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        288,
+        577,
+        543,
+        811
+      ],
+      "initialBodyBounds": [
+        296,
+        585,
+        535,
+        804
+      ],
+      "initialBodyArea": 38710,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          282,
+          565
+        ],
+        [
+          559,
+          565
+        ],
+        [
+          559,
+          699
+        ],
+        [
+          558,
+          699
+        ],
+        [
+          558,
+          700
+        ],
+        [
+          556,
+          700
+        ],
+        [
+          556,
+          703
+        ],
+        [
+          554,
+          703
+        ],
+        [
+          554,
+          716
+        ],
+        [
+          556,
+          716
+        ],
+        [
+          556,
+          758
+        ],
+        [
+          557,
+          758
+        ],
+        [
+          557,
+          760
+        ],
+        [
+          558,
+          760
+        ],
+        [
+          558,
+          763
+        ],
+        [
+          559,
+          763
+        ],
+        [
+          559,
+          811
+        ],
+        [
+          440,
+          811
+        ],
+        [
+          440,
+          812
+        ],
+        [
+          396,
+          812
+        ],
+        [
+          396,
+          811
+        ],
+        [
+          282,
+          811
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 10,
+      "pose": "hug",
+      "sourceRect": [
+        554,
+        555,
+        840,
+        814
+      ],
+      "bodyBounds": [
+        566,
+        560,
+        830,
+        811
+      ],
+      "bodyArea": 47694,
+      "originX": 693.8122,
+      "originY": 811.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 693.8122,
+          "y": 617.73,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 693.8122,
+          "y": 736.07,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 619.0522,
+          "y": 700.56,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 65,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 773.9122,
+          "y": 700.56,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -65,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 664.4422,
+          "y": 778.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 731.1922,
+          "y": 778.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 776.8789,
+          "y": 647.85,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 770.0979,
+          "y": 746.75,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 693.8122,
+          "y": 672.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        558,
+        558,
+        838,
+        813
+      ],
+      "initialBodyBounds": [
+        566,
+        560,
+        830,
+        811
+      ],
+      "initialBodyArea": 47694,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          696,
+          555
+        ],
+        [
+          698,
+          555
+        ],
+        [
+          698,
+          557
+        ],
+        [
+          699,
+          557
+        ],
+        [
+          699,
+          561
+        ],
+        [
+          706,
+          561
+        ],
+        [
+          706,
+          562
+        ],
+        [
+          710,
+          562
+        ],
+        [
+          710,
+          561
+        ],
+        [
+          712,
+          561
+        ],
+        [
+          712,
+          558
+        ],
+        [
+          714,
+          558
+        ],
+        [
+          714,
+          555
+        ],
+        [
+          717,
+          555
+        ],
+        [
+          717,
+          556
+        ],
+        [
+          721,
+          556
+        ],
+        [
+          721,
+          557
+        ],
+        [
+          724,
+          557
+        ],
+        [
+          724,
+          558
+        ],
+        [
+          726,
+          558
+        ],
+        [
+          726,
+          561
+        ],
+        [
+          728,
+          561
+        ],
+        [
+          728,
+          562
+        ],
+        [
+          732,
+          562
+        ],
+        [
+          732,
+          563
+        ],
+        [
+          743,
+          563
+        ],
+        [
+          743,
+          564
+        ],
+        [
+          746,
+          564
+        ],
+        [
+          746,
+          565
+        ],
+        [
+          840,
+          565
+        ],
+        [
+          840,
+          811
+        ],
+        [
+          718,
+          811
+        ],
+        [
+          718,
+          810
+        ],
+        [
+          716,
+          810
+        ],
+        [
+          716,
+          811
+        ],
+        [
+          709,
+          811
+        ],
+        [
+          709,
+          812
+        ],
+        [
+          707,
+          812
+        ],
+        [
+          707,
+          813
+        ],
+        [
+          705,
+          813
+        ],
+        [
+          705,
+          814
+        ],
+        [
+          704,
+          814
+        ],
+        [
+          704,
+          811
+        ],
+        [
+          702,
+          811
+        ],
+        [
+          702,
+          805
+        ],
+        [
+          700,
+          805
+        ],
+        [
+          699,
+          807
+        ],
+        [
+          694,
+          807
+        ],
+        [
+          694,
+          808
+        ],
+        [
+          692,
+          808
+        ],
+        [
+          692,
+          810
+        ],
+        [
+          677,
+          810
+        ],
+        [
+          677,
+          811
+        ],
+        [
+          653,
+          811
+        ],
+        [
+          653,
+          813
+        ],
+        [
+          650,
+          813
+        ],
+        [
+          650,
+          812
+        ],
+        [
+          644,
+          812
+        ],
+        [
+          644,
+          811
+        ],
+        [
+          559,
+          811
+        ],
+        [
+          559,
+          763
+        ],
+        [
+          558,
+          763
+        ],
+        [
+          558,
+          760
+        ],
+        [
+          557,
+          760
+        ],
+        [
+          557,
+          758
+        ],
+        [
+          556,
+          758
+        ],
+        [
+          556,
+          716
+        ],
+        [
+          554,
+          716
+        ],
+        [
+          554,
+          703
+        ],
+        [
+          556,
+          703
+        ],
+        [
+          556,
+          700
+        ],
+        [
+          558,
+          700
+        ],
+        [
+          558,
+          699
+        ],
+        [
+          559,
+          699
+        ],
+        [
+          559,
+          565
+        ],
+        [
+          654,
+          565
+        ],
+        [
+          654,
+          558
+        ],
+        [
+          689,
+          558
+        ],
+        [
+          689,
+          557
+        ],
+        [
+          691,
+          557
+        ],
+        [
+          691,
+          556
+        ],
+        [
+          696,
+          556
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 11,
+      "pose": "crouch",
+      "sourceRect": [
+        840,
+        565,
+        1122,
+        817
+      ],
+      "bodyBounds": [
+        861,
+        597,
+        1108,
+        806
+      ],
+      "bodyArea": 37281,
+      "originX": 988.2623,
+      "originY": 811.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 988.2623,
+          "y": 645.07,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 988.2623,
+          "y": 732.85,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 956.2223,
+          "y": 795.32,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 1033.6523,
+          "y": 795.32,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 921.5123,
+          "y": 773.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1057.6823,
+          "y": 773.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1071.329,
+          "y": 670.15,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1064.5481,
+          "y": 762.33,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 988.2623,
+          "y": 672.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        853,
+        589,
+        1116,
+        810
+      ],
+      "initialBodyBounds": [
+        861,
+        597,
+        1108,
+        806
+      ],
+      "initialBodyArea": 37039,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          840,
+          565
+        ],
+        [
+          1122,
+          565
+        ],
+        [
+          1122,
+          811
+        ],
+        [
+          1002,
+          811
+        ],
+        [
+          1002,
+          813
+        ],
+        [
+          1001,
+          813
+        ],
+        [
+          1001,
+          814
+        ],
+        [
+          999,
+          814
+        ],
+        [
+          999,
+          817
+        ],
+        [
+          995,
+          817
+        ],
+        [
+          995,
+          814
+        ],
+        [
+          988,
+          814
+        ],
+        [
+          988,
+          810
+        ],
+        [
+          971,
+          810
+        ],
+        [
+          971,
+          811
+        ],
+        [
+          840,
+          811
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 12,
+      "pose": "happy",
+      "sourceRect": [
+        0,
+        811,
+        282,
+        1089
+      ],
+      "bodyBounds": [
+        11,
+        815,
+        270,
+        1078
+      ],
+      "bodyArea": 48507,
+      "originX": 141.0678,
+      "originY": 1085.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 141.0678,
+          "y": 875.49,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 141.0678,
+          "y": 997.19,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 76.9878,
+          "y": 964.91,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 40,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 213.1578,
+          "y": 951.76,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -40,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 111.6978,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 178.4478,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 224.1344,
+          "y": 907.05,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 217.3535,
+          "y": 1007.87,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 141.0678,
+          "y": 946.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        3,
+        809,
+        278,
+        1086
+      ],
+      "initialBodyBounds": [
+        11,
+        815,
+        270,
+        1078
+      ],
+      "initialBodyArea": 48507,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          0,
+          811
+        ],
+        [
+          146,
+          811
+        ],
+        [
+          146,
+          814
+        ],
+        [
+          161,
+          814
+        ],
+        [
+          161,
+          813
+        ],
+        [
+          174,
+          813
+        ],
+        [
+          174,
+          811
+        ],
+        [
+          282,
+          811
+        ],
+        [
+          282,
+          1089
+        ],
+        [
+          0,
+          1089
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 13,
+      "pose": "sad",
+      "sourceRect": [
+        282,
+        811,
+        559,
+        1089
+      ],
+      "bodyBounds": [
+        294,
+        819,
+        546,
+        1083
+      ],
+      "bodyArea": 47248,
+      "originX": 420.8653,
+      "originY": 1085.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 420.8653,
+          "y": 879.72,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 420.8653,
+          "y": 1001.7,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 407.5153,
+          "y": 1019.64,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 434.2153,
+          "y": 1019.64,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 391.4953,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 458.2453,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 503.932,
+          "y": 911.4,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 497.151,
+          "y": 1012.38,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 420.8653,
+          "y": 946.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        286,
+        811,
+        554,
+        1090
+      ],
+      "initialBodyBounds": [
+        294,
+        819,
+        546,
+        1083
+      ],
+      "initialBodyArea": 47247,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          282,
+          811
+        ],
+        [
+          396,
+          811
+        ],
+        [
+          396,
+          812
+        ],
+        [
+          440,
+          812
+        ],
+        [
+          440,
+          811
+        ],
+        [
+          559,
+          811
+        ],
+        [
+          559,
+          1089
+        ],
+        [
+          443,
+          1089
+        ],
+        [
+          443,
+          1087
+        ],
+        [
+          438,
+          1087
+        ],
+        [
+          438,
+          1084
+        ],
+        [
+          434,
+          1084
+        ],
+        [
+          434,
+          1086
+        ],
+        [
+          410,
+          1086
+        ],
+        [
+          410,
+          1085
+        ],
+        [
+          403,
+          1085
+        ],
+        [
+          403,
+          1087
+        ],
+        [
+          401,
+          1087
+        ],
+        [
+          401,
+          1089
+        ],
+        [
+          282,
+          1089
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 14,
+      "pose": "surprise",
+      "sourceRect": [
+        559,
+        805,
+        840,
+        1089
+      ],
+      "bodyBounds": [
+        569,
+        816,
+        833,
+        1085
+      ],
+      "bodyArea": 50233,
+      "originX": 699.3325,
+      "originY": 1085.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 699.3325,
+          "y": 877.87,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 699.3325,
+          "y": 1001.25,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 661.9525,
+          "y": 969.33,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 742.0525,
+          "y": 969.33,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 0,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 669.9625,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 736.7125,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 782.3992,
+          "y": 910.15,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 775.6182,
+          "y": 1011.93,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 699.3325,
+          "y": 946.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        561,
+        813,
+        841,
+        1093
+      ],
+      "initialBodyBounds": [
+        569,
+        816,
+        833,
+        1085
+      ],
+      "initialBodyArea": 50233,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          700,
+          805
+        ],
+        [
+          702,
+          805
+        ],
+        [
+          702,
+          811
+        ],
+        [
+          704,
+          811
+        ],
+        [
+          704,
+          814
+        ],
+        [
+          705,
+          814
+        ],
+        [
+          705,
+          813
+        ],
+        [
+          707,
+          813
+        ],
+        [
+          707,
+          812
+        ],
+        [
+          709,
+          812
+        ],
+        [
+          709,
+          811
+        ],
+        [
+          716,
+          811
+        ],
+        [
+          716,
+          810
+        ],
+        [
+          718,
+          810
+        ],
+        [
+          718,
+          811
+        ],
+        [
+          840,
+          811
+        ],
+        [
+          840,
+          1089
+        ],
+        [
+          729,
+          1089
+        ],
+        [
+          729,
+          1087
+        ],
+        [
+          712,
+          1087
+        ],
+        [
+          712,
+          1088
+        ],
+        [
+          708,
+          1088
+        ],
+        [
+          708,
+          1086
+        ],
+        [
+          705,
+          1086
+        ],
+        [
+          705,
+          1087
+        ],
+        [
+          696,
+          1087
+        ],
+        [
+          696,
+          1086
+        ],
+        [
+          692,
+          1086
+        ],
+        [
+          692,
+          1088
+        ],
+        [
+          690,
+          1088
+        ],
+        [
+          690,
+          1087
+        ],
+        [
+          671,
+          1087
+        ],
+        [
+          671,
+          1086
+        ],
+        [
+          667,
+          1086
+        ],
+        [
+          667,
+          1088
+        ],
+        [
+          666,
+          1088
+        ],
+        [
+          666,
+          1089
+        ],
+        [
+          559,
+          1089
+        ],
+        [
+          559,
+          811
+        ],
+        [
+          644,
+          811
+        ],
+        [
+          644,
+          812
+        ],
+        [
+          650,
+          812
+        ],
+        [
+          650,
+          813
+        ],
+        [
+          653,
+          813
+        ],
+        [
+          653,
+          811
+        ],
+        [
+          677,
+          811
+        ],
+        [
+          677,
+          810
+        ],
+        [
+          692,
+          810
+        ],
+        [
+          692,
+          808
+        ],
+        [
+          694,
+          808
+        ],
+        [
+          694,
+          807
+        ],
+        [
+          699,
+          807
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 15,
+      "pose": "think",
+      "sourceRect": [
+        840,
+        810,
+        1122,
+        1094
+      ],
+      "bodyBounds": [
+        859,
+        815,
+        1116,
+        1085
+      ],
+      "bodyArea": 48908,
+      "originX": 986.5758,
+      "originY": 1085.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 986.5758,
+          "y": 877.1,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 986.5758,
+          "y": 1000.76,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 933.1758,
+          "y": 1012.1,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 981.2358,
+          "y": 960.8,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 15,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 957.2058,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1023.9558,
+          "y": 1052.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1069.6424,
+          "y": 909.5,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1062.8615,
+          "y": 1011.44,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 986.5758,
+          "y": 946.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        851,
+        810,
+        1122,
+        1088
+      ],
+      "initialBodyBounds": [
+        859,
+        815,
+        1116,
+        1085
+      ],
+      "initialBodyArea": 48908,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          971,
+          810
+        ],
+        [
+          988,
+          810
+        ],
+        [
+          988,
+          814
+        ],
+        [
+          995,
+          814
+        ],
+        [
+          995,
+          817
+        ],
+        [
+          999,
+          817
+        ],
+        [
+          999,
+          814
+        ],
+        [
+          1001,
+          814
+        ],
+        [
+          1001,
+          813
+        ],
+        [
+          1002,
+          813
+        ],
+        [
+          1002,
+          811
+        ],
+        [
+          1122,
+          811
+        ],
+        [
+          1122,
+          1089
+        ],
+        [
+          1006,
+          1089
+        ],
+        [
+          1006,
+          1090
+        ],
+        [
+          1002,
+          1090
+        ],
+        [
+          1002,
+          1091
+        ],
+        [
+          999,
+          1091
+        ],
+        [
+          999,
+          1093
+        ],
+        [
+          994,
+          1093
+        ],
+        [
+          994,
+          1092
+        ],
+        [
+          985,
+          1092
+        ],
+        [
+          985,
+          1091
+        ],
+        [
+          984,
+          1091
+        ],
+        [
+          984,
+          1084
+        ],
+        [
+          983,
+          1084
+        ],
+        [
+          983,
+          1085
+        ],
+        [
+          980,
+          1085
+        ],
+        [
+          980,
+          1086
+        ],
+        [
+          974,
+          1086
+        ],
+        [
+          974,
+          1093
+        ],
+        [
+          969,
+          1093
+        ],
+        [
+          969,
+          1094
+        ],
+        [
+          967,
+          1094
+        ],
+        [
+          967,
+          1090
+        ],
+        [
+          965,
+          1090
+        ],
+        [
+          965,
+          1089
+        ],
+        [
+          964,
+          1089
+        ],
+        [
+          964,
+          1086
+        ],
+        [
+          958,
+          1086
+        ],
+        [
+          958,
+          1087
+        ],
+        [
+          950,
+          1087
+        ],
+        [
+          950,
+          1089
+        ],
+        [
+          840,
+          1089
+        ],
+        [
+          840,
+          811
+        ],
+        [
+          971,
+          811
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 16,
+      "pose": "calm",
+      "sourceRect": [
+        0,
+        1089,
+        286,
+        1402
+      ],
+      "bodyBounds": [
+        24,
+        1094,
+        271,
+        1376
+      ],
+      "bodyArea": 49506,
+      "originX": 146.6542,
+      "originY": 1379.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 146.6542,
+          "y": 1158.86,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 146.6542,
+          "y": 1285.88,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 93.2542,
+          "y": 1299.86,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 205.3942,
+          "y": 1299.86,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 117.2842,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 184.0342,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 229.7208,
+          "y": 1192.7,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 222.9399,
+          "y": 1296.56,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 146.6542,
+          "y": 1240.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        16,
+        1086,
+        277,
+        1384
+      ],
+      "initialBodyBounds": [
+        24,
+        1094,
+        271,
+        1376
+      ],
+      "initialBodyArea": 49506,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          0,
+          1089
+        ],
+        [
+          282,
+          1089
+        ],
+        [
+          282,
+          1226
+        ],
+        [
+          283,
+          1226
+        ],
+        [
+          283,
+          1246
+        ],
+        [
+          286,
+          1246
+        ],
+        [
+          286,
+          1247
+        ],
+        [
+          285,
+          1247
+        ],
+        [
+          285,
+          1249
+        ],
+        [
+          284,
+          1249
+        ],
+        [
+          284,
+          1251
+        ],
+        [
+          283,
+          1251
+        ],
+        [
+          283,
+          1254
+        ],
+        [
+          282,
+          1254
+        ],
+        [
+          282,
+          1270
+        ],
+        [
+          283,
+          1270
+        ],
+        [
+          283,
+          1272
+        ],
+        [
+          282,
+          1272
+        ],
+        [
+          282,
+          1402
+        ],
+        [
+          0,
+          1402
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 17,
+      "pose": "ready",
+      "sourceRect": [
+        282,
+        1084,
+        564,
+        1402
+      ],
+      "bodyBounds": [
+        283,
+        1098,
+        553,
+        1376
+      ],
+      "bodyArea": 51776,
+      "originX": 423.2265,
+      "originY": 1379.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 423.2265,
+          "y": 1161.94,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 423.2265,
+          "y": 1287.84,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 377.8365,
+          "y": 1253.68,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 476.6265,
+          "y": 1278.7,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -35,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 393.8565,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 460.6065,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 506.2932,
+          "y": 1195.3,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 499.5122,
+          "y": 1298.52,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 423.2265,
+          "y": 1240.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        277,
+        1090,
+        559,
+        1384
+      ],
+      "initialBodyBounds": [
+        283,
+        1098,
+        553,
+        1376
+      ],
+      "initialBodyArea": 51775,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          434,
+          1084
+        ],
+        [
+          438,
+          1084
+        ],
+        [
+          438,
+          1087
+        ],
+        [
+          443,
+          1087
+        ],
+        [
+          443,
+          1089
+        ],
+        [
+          559,
+          1089
+        ],
+        [
+          559,
+          1256
+        ],
+        [
+          558,
+          1256
+        ],
+        [
+          558,
+          1272
+        ],
+        [
+          559,
+          1272
+        ],
+        [
+          559,
+          1306
+        ],
+        [
+          564,
+          1306
+        ],
+        [
+          564,
+          1318
+        ],
+        [
+          563,
+          1318
+        ],
+        [
+          563,
+          1402
+        ],
+        [
+          282,
+          1402
+        ],
+        [
+          282,
+          1272
+        ],
+        [
+          283,
+          1272
+        ],
+        [
+          283,
+          1270
+        ],
+        [
+          282,
+          1270
+        ],
+        [
+          282,
+          1254
+        ],
+        [
+          283,
+          1254
+        ],
+        [
+          283,
+          1251
+        ],
+        [
+          284,
+          1251
+        ],
+        [
+          285,
+          1247
+        ],
+        [
+          286,
+          1247
+        ],
+        [
+          286,
+          1246
+        ],
+        [
+          283,
+          1246
+        ],
+        [
+          283,
+          1226
+        ],
+        [
+          282,
+          1226
+        ],
+        [
+          282,
+          1089
+        ],
+        [
+          401,
+          1089
+        ],
+        [
+          401,
+          1087
+        ],
+        [
+          403,
+          1087
+        ],
+        [
+          403,
+          1085
+        ],
+        [
+          410,
+          1085
+        ],
+        [
+          410,
+          1086
+        ],
+        [
+          434,
+          1086
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 18,
+      "pose": "guard",
+      "sourceRect": [
+        558,
+        1086,
+        840,
+        1402
+      ],
+      "bodyBounds": [
+        565,
+        1103,
+        824,
+        1377
+      ],
+      "bodyArea": 49828,
+      "originX": 692.2941,
+      "originY": 1379.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 692.2941,
+          "y": 1166.02,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 692.2941,
+          "y": 1290.8,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 673.6041,
+          "y": 1250.96,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 30,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 721.6641,
+          "y": 1272.88,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -30,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 662.9241,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 729.6741,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 775.3608,
+          "y": 1198.9,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 768.5798,
+          "y": 1301.48,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 692.2941,
+          "y": 1240.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        559,
+        1095,
+        832,
+        1385
+      ],
+      "initialBodyBounds": [
+        565,
+        1103,
+        824,
+        1377
+      ],
+      "initialBodyArea": 49824,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          667,
+          1086
+        ],
+        [
+          671,
+          1086
+        ],
+        [
+          671,
+          1087
+        ],
+        [
+          690,
+          1087
+        ],
+        [
+          690,
+          1088
+        ],
+        [
+          692,
+          1088
+        ],
+        [
+          692,
+          1086
+        ],
+        [
+          696,
+          1086
+        ],
+        [
+          696,
+          1087
+        ],
+        [
+          705,
+          1087
+        ],
+        [
+          705,
+          1086
+        ],
+        [
+          708,
+          1086
+        ],
+        [
+          708,
+          1088
+        ],
+        [
+          712,
+          1088
+        ],
+        [
+          712,
+          1087
+        ],
+        [
+          729,
+          1087
+        ],
+        [
+          729,
+          1089
+        ],
+        [
+          840,
+          1089
+        ],
+        [
+          840,
+          1246
+        ],
+        [
+          839,
+          1246
+        ],
+        [
+          839,
+          1283
+        ],
+        [
+          840,
+          1283
+        ],
+        [
+          840,
+          1402
+        ],
+        [
+          563,
+          1402
+        ],
+        [
+          563,
+          1318
+        ],
+        [
+          564,
+          1318
+        ],
+        [
+          564,
+          1306
+        ],
+        [
+          559,
+          1306
+        ],
+        [
+          559,
+          1272
+        ],
+        [
+          558,
+          1272
+        ],
+        [
+          558,
+          1256
+        ],
+        [
+          559,
+          1256
+        ],
+        [
+          559,
+          1089
+        ],
+        [
+          666,
+          1089
+        ],
+        [
+          666,
+          1088
+        ],
+        [
+          667,
+          1088
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    },
+    {
+      "poseIndex": 19,
+      "pose": "proud",
+      "sourceRect": [
+        839,
+        1084,
+        1122,
+        1402
+      ],
+      "bodyBounds": [
+        846,
+        1091,
+        1111,
+        1379
+      ],
+      "bodyArea": 52435,
+      "originX": 982.9555,
+      "originY": 1379.0,
+      "pixelsPerUnit": 84.761905,
+      "attachments": [
+        {
+          "name": "HAT",
+          "x": 982.9555,
+          "y": 1157.24,
+          "width": 182.628,
+          "height": 114.81,
+          "rotation": 0,
+          "layer": "HAT",
+          "visible": true
+        },
+        {
+          "name": "DRESS",
+          "x": 982.9555,
+          "y": 1285.94,
+          "width": 152.19,
+          "height": 106.8,
+          "rotation": 0,
+          "layer": "DRESS",
+          "visible": true
+        },
+        {
+          "name": "LEFT_GLOVE",
+          "x": 934.8955,
+          "y": 1295.48,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": 20,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_GLOVE",
+          "x": 1041.6955,
+          "y": 1295.48,
+          "width": 40.05,
+          "height": 45.39,
+          "rotation": -20,
+          "layer": "NEAR_HAND",
+          "visible": true
+        },
+        {
+          "name": "LEFT_SHOE",
+          "x": 953.5855,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "RIGHT_SHOE",
+          "x": 1020.3355,
+          "y": 1346.96,
+          "width": 58.74,
+          "height": 69.42,
+          "rotation": 0,
+          "layer": "SHOE",
+          "visible": true
+        },
+        {
+          "name": "HEAD_GEAR",
+          "x": 1066.0222,
+          "y": 1191.8,
+          "width": 44.0762,
+          "height": 44.0762,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "CHARM",
+          "x": 1059.2412,
+          "y": 1296.62,
+          "width": 35.6,
+          "height": 35.6,
+          "rotation": 0,
+          "layer": "FRONT_GEAR",
+          "visible": true
+        },
+        {
+          "name": "AURA",
+          "x": 982.9555,
+          "y": 1240.16,
+          "width": 240.3,
+          "height": 240.3,
+          "rotation": 0,
+          "layer": "BACK_EFFECT",
+          "visible": true
+        }
+      ],
+      "anchorsMeasured": false,
+      "apparelQualified": false,
+      "anchorProvenance": "Automatic pose-aware estimates; require visual inspection and apparel render QA",
+      "initialSourceRect": [
+        838,
+        1088,
+        1119,
+        1387
+      ],
+      "initialBodyBounds": [
+        846,
+        1091,
+        1111,
+        1379
+      ],
+      "initialBodyArea": 52435,
+      "bodyAlphaThreshold": 128,
+      "sourceRectProvenance": "Bounding box of the curved gutter extraction polygon; source pixels unchanged; fixed origin and pixelsPerUnit preserved",
+      "sourceClip": [
+        [
+          983,
+          1084
+        ],
+        [
+          984,
+          1084
+        ],
+        [
+          984,
+          1091
+        ],
+        [
+          985,
+          1091
+        ],
+        [
+          985,
+          1092
+        ],
+        [
+          994,
+          1092
+        ],
+        [
+          994,
+          1093
+        ],
+        [
+          999,
+          1093
+        ],
+        [
+          999,
+          1091
+        ],
+        [
+          1002,
+          1091
+        ],
+        [
+          1002,
+          1090
+        ],
+        [
+          1006,
+          1090
+        ],
+        [
+          1006,
+          1089
+        ],
+        [
+          1122,
+          1089
+        ],
+        [
+          1122,
+          1402
+        ],
+        [
+          840,
+          1402
+        ],
+        [
+          840,
+          1283
+        ],
+        [
+          839,
+          1283
+        ],
+        [
+          839,
+          1246
+        ],
+        [
+          840,
+          1246
+        ],
+        [
+          840,
+          1089
+        ],
+        [
+          950,
+          1089
+        ],
+        [
+          950,
+          1087
+        ],
+        [
+          958,
+          1087
+        ],
+        [
+          958,
+          1086
+        ],
+        [
+          964,
+          1086
+        ],
+        [
+          964,
+          1089
+        ],
+        [
+          965,
+          1089
+        ],
+        [
+          965,
+          1090
+        ],
+        [
+          967,
+          1090
+        ],
+        [
+          967,
+          1094
+        ],
+        [
+          969,
+          1094
+        ],
+        [
+          969,
+          1093
+        ],
+        [
+          974,
+          1093
+        ],
+        [
+          974,
+          1086
+        ],
+        [
+          980,
+          1086
+        ],
+        [
+          980,
+          1085
+        ],
+        [
+          983,
+          1085
+        ]
+      ],
+      "sourceClipProvenance": "whole-component-no-opaque-crossing; browser counterexamples reviewed; native verification required"
+    }
+  ],
+  "frameBoundsMethod": "curved-alpha-gutters-selected-v1",
+  "frameBoundsPartition": {
+    "orientation": "columns-first",
+    "columns": [
+      0,
+      280,
+      558,
+      842,
+      1122
+    ],
+    "rowsByColumn": [
+      [
+        0,
+        280,
+        553,
+        809,
+        1086,
+        1402
+      ],
+      [
+        0,
+        281,
+        572,
+        811,
+        1090,
+        1402
+      ],
+      [
+        0,
+        281,
+        559,
+        813,
+        1094,
+        1402
+      ],
+      [
+        0,
+        281,
+        577,
+        810,
+        1088,
+        1402
+      ]
+    ],
+    "analysisAlphaThreshold": 128,
+    "weightAlpha248": 3,
+    "candidateWeightedSeamMass": {
+      "rowsFirst": 39.0,
+      "columnsFirst": 0.0
+    }
+  },
+  "frameBoundsDiagnostics": {
+    "referenceRectangleDiagnostics": {
+      "matchedInitialConnectedComponents": 20,
+      "initialConnectedComponentPixelsOutsideAssignedCorridors": 0,
+      "note": "Connected components can include neighbouring crowns through generated fringe. Visual review remains required."
+    },
+    "matchedInitialConnectedComponents": 20,
+    "initialConnectedComponentPixelsOutsideCandidateDomains": 0,
+    "note": "Initial components may include neighbouring fringe; this diagnostic is not semantic/anatomical proof"
+  },
+  "sourceClipsDerived": true,
+  "sourceClipSelection": {
+    "policy": "whole-component-no-opaque-crossing",
+    "proposal": "docs/validation/v1.18/source-clip-selected/halo-evo10-poses.json",
+    "maximumPolygonVertices": 88,
+    "qualifiedApparel": false,
+    "nativeVerificationPending": true
+  }
+}

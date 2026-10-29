@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "scope": "Frozen APK bytes, signing identity, manifest identity and decoded packaged asset bytes. Native presentation qualification is separate.",
+  "production": {
+    "path": "/Users/n/androidhit/docs/validation/v1.18/candidates/final-art-h/luma-drift-1.18-prototype1.apk",
+    "sha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+    "package": "com.androidhit.lumadrift",
+    "assetCount": 325,
+    "v118ArtFiles": 296
+  },
+  "lab": {
+    "path": "/Users/n/androidhit/docs/validation/v1.18/candidates/final-art-h/luma-drift-lab-1.18-prototype1.apk",
+    "sha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+    "package": "com.androidhit.lumadrift.sandbox",
+    "assetCount": 324,
+    "v118ArtFiles": 296
+  },
+  "all_packaged_assets_equal": false,
+  "variant_asset_policy_passed": true,
+  "v118_art_assets_equal": true,
+  "variant_asset_differences": {
+    "productionOnly": [
+      "assets/identity-config.json"
+    ],
+    "labOnly": [],
+    "commonDifferent": [
+      "assets/dexopt/baseline.prof",
+      "assets/dexopt/baseline.profm"
+    ],
+    "commonEqualCount": 322,
+    "v118ArtFiles": 296,
+    "v118ArtEqual": true,
+    "allowedCommonDifferencePaths": [
+      "assets/dexopt/baseline.prof",
+      "assets/dexopt/baseline.profm"
+    ]
+  },
+  "signer_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+}

@@ -1,0 +1,120 @@
+{
+  "passed": true,
+  "recorded_utc": "2026-10-29T16:55:28.077850+00:00",
+  "scope": "Five real native SDK UI phases on the preserved task-owned5594 profile. Twenty semantic pose selections in each of two looks, four authored form previews, studio Activity recreation/process restart, durable wardrobe choice in three additional processes, and strict observed four-preference-file comparisons. Walking previews remain animated; exact authored frame rendering is separately qualified by Canvas H. No purchases, currency grants, puzzle solving, target-method calls or fixture writes in these five phases.",
+  "candidate": {
+    "path": "docs/validation/v1.18/candidates/final-art-h/luma-drift-lab-1.18-prototype1.apk",
+    "sha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+    "version": "1.18.0-sandbox-prototype1",
+    "code": 25
+  },
+  "observer_sha256": "877b30b68647b020cd36fba7a630f02e972ec5c2a0ff5cac12f0ad65fae0bdaa",
+  "serial": "emulator-5594",
+  "avd": "Luma118-Expedition-QA",
+  "phases": [
+    {
+      "phase": "motion-outfit-preview",
+      "path": "docs/validation/v1.18/native-expedition/final-h-motion-outfit-preview",
+      "report_sha256": "dd88034f7dd2ee9dd5bb52c025c5cb3c611aac726e84fa99a69b47eeda9a33b2",
+      "native_report_sha256": "6828294afd88662a2554b67130f6e5e100ebfa221e1b0b287e106a533b68a22e",
+      "run_token": "87d25b74-087c-4d99-9062-fe4bb097477c",
+      "process_id": 8574,
+      "checks": 68,
+      "actual_touches": 58,
+      "native_captures": 49,
+      "elapsed_seconds": 160.233
+    },
+    {
+      "phase": "motion-outfit-cold",
+      "path": "docs/validation/v1.18/native-expedition/final-h-motion-outfit-cold",
+      "report_sha256": "596f0b3cd33f332f8bcc94bed2fc9a28fbf8f7d5790618ef01c2e8e5c1b098e7",
+      "native_report_sha256": "8d050f62b2ca2f5b978ad44b889eb42019505f879108f3e9dd9c658f079dff9c",
+      "run_token": "ac6eaabb-1fe5-4895-968b-d6623829131c",
+      "process_id": 8863,
+      "checks": 10,
+      "actual_touches": 5,
+      "native_captures": 1,
+      "elapsed_seconds": 16.502
+    },
+    {
+      "phase": "wardrobe-costume-choice",
+      "path": "docs/validation/v1.18/native-expedition/final-h-wardrobe-costume-choice",
+      "report_sha256": "96dbac813fdd9e56c4812287e9393d0c7a7e198779cb8b5302ea0a6b0b0ad7ac",
+      "native_report_sha256": "e37d23336806781202832afcfe48df5af22729a724190fb24b29487ad3dad9ee",
+      "run_token": "89b9d743-8ec0-479a-90e9-5ebcdc9446d1",
+      "process_id": 9114,
+      "checks": 17,
+      "actual_touches": 5,
+      "native_captures": 6,
+      "elapsed_seconds": 29.989
+    },
+    {
+      "phase": "wardrobe-costume-cold",
+      "path": "docs/validation/v1.18/native-expedition/final-h-wardrobe-costume-cold",
+      "report_sha256": "7c9a614f3f06f3f68f650ce4b40402842a1eba6b7dec39fcc49b45af13663916",
+      "native_report_sha256": "ed3c6cd09fedae2f365df9df45f9e29fec18f9ab030843435c8f96bf9d9355f4",
+      "run_token": "03616a0a-9f64-4889-81b8-07748d65007c",
+      "process_id": 9389,
+      "checks": 15,
+      "actual_touches": 3,
+      "native_captures": 4,
+      "elapsed_seconds": 23.042
+    },
+    {
+      "phase": "wardrobe-costume-original-cold",
+      "path": "docs/validation/v1.18/native-expedition/final-h-wardrobe-costume-original-cold",
+      "report_sha256": "7f4d0e7260f4d81184c250bceeadfe0d9d3a356efaf959dfd3b390e7f1068e28",
+      "native_report_sha256": "4bfff4a15675f0dfc13834eb13a1af06416daedf1d5fadda29597d74f4959ef4",
+      "run_token": "005c11fc-91b7-46ec-8fc1-a9b9ccbf2de1",
+      "process_id": 9666,
+      "checks": 8,
+      "actual_touches": 2,
+      "native_captures": 1,
+      "elapsed_seconds": 12.257
+    }
+  ],
+  "totals": {
+    "checks": 118,
+    "actual_touches": 73,
+    "native_captures": 61,
+    "distinct_processes": 5,
+    "activity_recreations": 3,
+    "verified_evidence_files": 197
+  },
+  "state_contracts": {
+    "studio_four_observed_preference_files_exactly_equal": true,
+    "all_four_cold_boundaries_exactly_equal_before_activity": true,
+    "wardrobe_comparison": "docs/validation/v1.18/wardrobe-costume-native-h.json",
+    "wardrobe_comparison_sha256": "28f514de547a11ee67c289519602aa584b13a1666f790e62594b3486a655432c",
+    "wardrobe_observed_checkpoints": 15,
+    "only_final_preference_delta": [
+      {
+        "pref": "luma_drift_save_v1",
+        "key": "companion_original_costume_v118",
+        "before_present": false,
+        "before": null,
+        "after": true
+      }
+    ],
+    "snapshot_limit": "The SDK excludes seed-named keys from its existing read-only snapshot scope; no claim is made that those excluded fields were compared."
+  },
+  "final_profile": {
+    "coins": 105,
+    "equipped_character": "lol_ashe",
+    "costume_original": true,
+    "nova_copies": 2,
+    "nova_stance": "GUARD",
+    "ashe_copies": 2,
+    "ashe_stance": "GUARD",
+    "miko_copies": 2,
+    "orbit_copies": 2,
+    "completed_expeditions": 4
+  },
+  "cleanup": {
+    "observer_removed_after_each_phase": true,
+    "observer_absent_now": true,
+    "device_running": true,
+    "device_not_stopped": true
+  },
+  "visual_scope": "The authored-costume studio portrait and four form previews were visually reviewed. Wearable overlays remain visible and retain the source body; anatomical fit is not globally qualified for all outfits/characters/poses. Candidate G failure evidence remains immutable; H resolves the pre-clamp studio height defect."
+}

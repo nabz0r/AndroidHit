@@ -92,7 +92,20 @@ public final class Catalog {
             new CharacterItem("halo", 860, "#A8D9E8", 20),
             new CharacterItem("emberling", 920, "#D0B1F7", 21),
             new CharacterItem("bambu", 1000, "#D4ECE2", 22),
-            new CharacterItem("inky", 1100, "#F1ABBC", 23)
+            new CharacterItem("inky", 1100, "#F1ABBC", 23),
+            new CharacterItem("lol_ashe", 520, "#9FD8FF", 24),
+            new CharacterItem("lol_ezreal", 520, "#F5D388", 25),
+            new CharacterItem("lol_soraka", 520, "#CAA3EB", 26),
+            new CharacterItem("lol_ahri", 520, "#F5ADB8", 27),
+            new CharacterItem("lol_jinx", 520, "#8DCFEB", 28),
+            new CharacterItem("lol_lux", 520, "#FFE6A5", 29),
+            new CharacterItem("lol_teemo", 520, "#ADD49A", 30),
+            new CharacterItem("lol_yasuo", 520, "#99BBCF", 31),
+            new CharacterItem("lol_annie", 520, "#E9A4CA", 32),
+            new CharacterItem("lol_lulu", 520, "#D6B3F0", 33),
+            new CharacterItem("lol_sona", 520, "#93E0DC", 34),
+            new CharacterItem("lol_miss_fortune", 520, "#E7A1A1", 35),
+            new CharacterItem("lol_vi", 520, "#EF9FC5", 36)
     };
 
     public static final SkinItem[] SKINS = {
