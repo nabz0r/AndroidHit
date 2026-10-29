@@ -1,6 +1,19 @@
 # Production candidate and activation boundary
 
-## Current 1.13 — home candidate and preserved activation gates
+## 1.17 — final candidate qualification in progress
+
+Production is **1.17.0-rc4 / code22**, with isolated **1.17.0-sandbox-rc4**. Candidate F passes [four-package binary verification](validation/v1.17/candidate-f/binaries/binary-final-candidate.json) and host responsive-root tests. Exact-F native interface/audio/fresh/full1,000 qualification, Git publication and Firebase delivery remain pending. E's earlier scopes and compact composition rejection remain separately recorded. [Release register](RELEASE_1_17.md) · [Evidence](validation/v1.17/README.md).
+
+The production package, existing signing identity and local save keys are retained. Earned LumaCoins, house, clothing, profile and badge changes remain device-local. The 23-companion and five-outfit pools spend earned LumaCoins, not paid LumaGold. The retained test-ad forcing, closed real checkout, unconfigured wallet origin and disabled paid premium draws must be checked against the final manifests; no source UI change activates them.
+
+The actual 1.17 game scope does not validate live advertisements, payments, Google sign-in, account deletion, cloud progression, Play publication, physical-phone performance or player retention. Existing website privacy/deletion/configuration and server gates are preserved; their provider qualifications below retain their original dates and limits. The [1.17 website template](validation/site-v1.17/README.md) is unpublished and must not be confused with a Hosting receipt.
+<!-- FINAL_117: PRODUCTION_STATUS — replace pending status only from accepted final binary/native/publication records; keep commercial boundaries explicit. -->
+
+## Preserved production and provider records
+
+The dated records below identify their own APKs and provider observations. They are not1.17 execution evidence.
+
+## Preserved 1.13 — home candidate and preserved activation gates
 
 Production **1.13.0-rc2 / code 14**, isolated Lab **1.13.0-sandbox-rc2**. [Release/artifacts](RELEASE_1_13.md) · [Home contract](HOME_1_13.md) · [Qualification](validation/v1.13/README.md). The exact RC2 production APK is `c68be62fd940e753fc06c4b5677a48cafaf077a4710755b3bdf96467d571e31b` and Lab APK is `85cd018d5d7ee17f7343921d5367859e261acb7bdc1443bcd02d6bd7618953fa`. Its [build](validation/v1.13/build-rc2.txt), [source freeze](validation/v1.13/source-freeze-rc2.json) and [binary verification](validation/v1.13/binaries-rc2/binary-verification.txt) pass. RC1 hashes and native observations stay historical after the reproduced tutorial Later→Resume crash.
 

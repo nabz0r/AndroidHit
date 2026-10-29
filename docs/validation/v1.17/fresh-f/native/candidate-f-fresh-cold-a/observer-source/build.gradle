@@ -1,0 +1,47 @@
+// Standalone framework observer task: no target compile/package/bundle task dependency.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.tasks.register('packageV117FreshObserver') {
+            doLast {
+                def sdk = project.android.sdkDirectory
+                def tools = new File(sdk, 'build-tools/36.0.0')
+                def androidJar = new File(sdk, 'platforms/android-36/android.jar')
+                def source = new File(rootDir, 'scripts/v117-fresh-ui')
+                def build = new File(project.layout.buildDirectory.get().asFile, 'qualification-artifacts/v1.17/fresh-build')
+                build.mkdirs()
+                def classes = new File(build, 'classes'); classes.mkdirs()
+                def dex = new File(build, 'dex'); dex.mkdirs()
+                def javaFiles = project.fileTree(new File(source, 'java')).matching { include '**/*.java' }.files
+                project.exec { commandLine([new File(System.getProperty('java.home'), 'bin/javac').absolutePath, '-source', '17', '-target', '17', '-classpath', androidJar.absolutePath, '-d', classes.absolutePath] + javaFiles.collect { it.absolutePath }) }
+                def classFiles = project.fileTree(classes).matching { include '**/*.class' }.files
+                project.exec { commandLine([new File(tools, 'd8').absolutePath, '--release', '--min-api', '26', '--lib', androidJar.absolutePath, '--output', dex.absolutePath] + classFiles.collect { it.absolutePath }) }
+                def linked = new File(build, 'linked.apk')
+                project.exec { commandLine new File(tools, 'aapt2').absolutePath, 'link', '-I', androidJar.absolutePath, '--manifest', new File(source, 'AndroidManifest.xml').absolutePath, '-o', linked.absolutePath, '--version-code', '1', '--version-name', '1.17-fresh-qa' }
+                def unsigned = new File(build, 'unsigned.apk')
+                new java.util.zip.ZipOutputStream(new FileOutputStream(unsigned)).withCloseable { output ->
+                    new java.util.zip.ZipFile(linked).withCloseable { input ->
+                        input.entries().each { entry ->
+                            def copied = new java.util.zip.ZipEntry(entry.name)
+                            if (entry.name == 'resources.arsc') { copied.method = java.util.zip.ZipEntry.STORED; copied.size = entry.size; copied.crc = entry.crc }
+                            output.putNextEntry(copied); input.getInputStream(entry).withCloseable { stream -> output << stream }; output.closeEntry()
+                        }
+                    }
+                    def items = project.fileTree(dex).matching { include '*.dex' }.files.collect { [it.name,it] }
+                    (1..10).each { number -> items.add(['assets/fixtures/u'+number+'.json',new File(rootDir, 'scripts/v115-relay-ui/assets/fixtures/u'+number+'.json')]) }
+                    items.each { item -> output.putNextEntry(new java.util.zip.ZipEntry(item[0])); item[1].withInputStream { stream -> output << stream }; output.closeEntry() }
+                }
+                def aligned = new File(build, 'aligned.apk')
+                project.exec { commandLine new File(tools, 'zipalign').absolutePath, '-f', '4', unsigned.absolutePath, aligned.absolutePath }
+                def signing = project.android.signingConfigs.release
+                def result = new File(project.layout.buildDirectory.get().asFile, 'qualification-artifacts/v1.17/fresh-production-test.apk')
+                project.exec {
+                    environment 'TASK_FRESH_STORE_PASS', signing.storePassword
+                    environment 'TASK_FRESH_KEY_PASS', signing.keyPassword
+                    commandLine new File(tools, 'apksigner').absolutePath, 'sign', '--ks', signing.storeFile.absolutePath, '--ks-key-alias', signing.keyAlias, '--ks-pass', 'env:TASK_FRESH_STORE_PASS', '--key-pass', 'env:TASK_FRESH_KEY_PASS', '--out', result.absolutePath, aligned.absolutePath
+                }
+                project.exec { commandLine new File(tools, 'apksigner').absolutePath, 'verify', '--verbose', result.absolutePath }
+                println 'Standalone fresh observer packaged; no target tasks were dependencies.'
+            }
+        }
+    }
+}

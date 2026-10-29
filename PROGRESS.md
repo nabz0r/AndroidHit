@@ -1,3 +1,14 @@
+# Luma Drift 1.17 — final qualification in progress
+
+- Official Crash Fever/King/Apple/Android/Material research is recorded in docs/design/v1.17/reference-research.md. The zero-visible-button decision is an owner constraint; audience/retention effects remain unmeasured.
+- 23 original PNG assets are integrated: 24 distinct companions, 24 modular garments, 42 furniture designs, 12 navigation objects, three scene paintings and three house materials. Exact prompts, original pixels, measured regions and stable inventory IDs are retained.
+- Scene/object navigation and 220 ms lifecycle-safe transitions are integrated. The house uses a 2.0× detail camera with pan/pinch and painted wall/parquet materials. No visible conventional game buttons remain; accessible action semantics remain.
+- Candidate E (rc3/code21, 160 frozen inputs) passes four-package build/lint and independent binary verification; retained upgrade/cold 619 checks (6 baseline C + 613 E), owned rigs 78/27 PNGs, normal/compact six-language routes 276/177 PNGs each, 19-check clipped-language regression, steady-home cache observations, separate 144-look/24-garment/24-style native gallery and genuine fresh onboarding/earned arrivals 133 checks/105 gestures/49 PNGs. These exact E reports remain immutable.
+- Independent composition review then found real compact-root overlaps: Collection sibling art crosses its companion caption, and Atelier plant art crosses the furniture caption. E is therefore not globally accepted or published. Candidate F is reserved as 1.17.0-rc4 / Lab 1.17.0-sandbox-rc4, code22, with a shared responsive-root geometry correction and independent geometry tests in progress. Art, economy, engine, saves and sound remain unchanged.
+- Earlier C caption contrast and offscreen German/Italian target failures remain preserved. E corrected those issues, with wardrobe caption contrast measured at 5.45:1, but its new compact composition findings still block final acceptance.
+- The full host relay model passes 13,312,469 checks over all 1,000 boards. Audio passes 1,714 DSP/lifecycle checks: 50 arrangements, 14 effects and byte-identical historic puzzle PCM. These host checks are separate from native playback, the final exact-APK 1,000-level replay and physical listening.
+- Documentation and sparse CI are updated. The staged FR/EN site passes eight localhost responsive language/size layouts and deliberate preview playback; it is not yet published. Final F build, native UI/audio/1,000-level qualification, canonical packages, Git publication and Firebase verification remain required. No 1.17 public delivery is claimed.
+
 # Luma Drift 1.16 — Android and website delivered
 
 - Implemented adaptive Home camera without outer scaling, detail/overview controls, protected floating toolbar and retained room camera.

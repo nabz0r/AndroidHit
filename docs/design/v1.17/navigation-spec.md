@@ -1,0 +1,65 @@
+# Luma Drift 1.17 — scene navigation without visible buttons
+
+Implementation contract for the explicit user request of 29 October 2026. This document is an integration specification, not a claim that the native interface has already been redesigned or reviewed.
+
+## Visual and cognitive contract
+
+There are no visible button bars, pill actions, tab capsules, boxed text actions, generic arrow chips or rectangular catalog action rows. Drawing no outline around the old text actions is insufficient: each action belongs to an illustrated object or to a direct manipulation of the thing being edited. An interactive object has a purposeful silhouette, readable separation from its surroundings and a short contextual caption. Captions describe the object; they do not replace the object with another text menu.
+
+Four places form a stable spatial sequence: **Adventure → Home → Collection → Atelier**. The currently visible place owns the screen. Small adjacent pieces of scenery can announce the next place, but they must be part of the world rather than a fixed row of four navigation icons. Tapping a recognizable destination in the scene is the primary way to move. A horizontal swipe on unclaimed root-scene scenery is an optional shortcut. Both paths open the same routes and update the same history.
+
+Do not make remembering a gesture the only way to discover a feature. The primary object is also reachable through keyboard focus and TalkBack activation, with the existing action name and state. Accessibility nodes may retain the semantic `android.widget.Button` role for an actionable object; this does not draw a visible button. Reducing semantic information would make the design less usable.
+
+## Retained routes and scene objects
+
+| Place / route | Main illustrated interaction | Existing destinations retained |
+| --- | --- | --- |
+| `adventure` | The active level is a large luminous portal on the journey. The full path, seasonal entrance and reward chest are separate objects in that scenery. | `continueGame()`, `journey`, `events`, `rewards`; a small settings artifact opens `settings`. |
+| `home` | Touch the companion to cuddle; the wardrobe to dress; a furnished object to use it. A visible architect's sketchbook enters decorating. Real room entrances select living room, bedroom and garden. | Existing `homeUse`, `homeCuddle`, `wardrobe`, `switchHomeRoom`, `startHomeDecorating`, walking and placement. |
+| `collection_hub` | The large dressed companion owns the composition. A mirror opens its wardrobe. The player's crest/name opens profile. A separate capsule machine opens summons. Shelves display companions, badges and equipment. | `wardrobe`, `profile`, `summon`, `collection` with the existing avatar/equipment filters, `badges`. |
+| `atelier` | Large original furnishing displays and themed room dioramas lead to the full catalog. A wallpaper roll and floor sample are manipulable objects. | `home_catalog`, existing theme groups, furniture/wallpaper/floor modes. |
+| `profile` | Touch the actual nickname inscription to edit; the actual flag to choose a flag; each badge setting to edit that slot. | `editPlayerNickname`, `PlayerProfile.FLAGS`, three `profileBadgeSlot` routes into `badges`. |
+| `badges` | A medal display and three wearable settings. Select a setting then a medal; a worn medal can be lifted off its setting. | Same earned/unearned rules, `equipBadge`, removal, progress and locked explanations. |
+| `summon` | The machine/orb is the draw affordance, with cost written next to its coin receptacle. Two distinct collectible displays select avatars or outfits. A readable book shows the precise pool; the last capsule reopens its receipt. | Both fixed `SummonCatalog` pools, exact odds, coin debit, duplicate compensation, durable receipt/replay. |
+| `summon_pool` / `summon_reveal` | A collectible gallery, then a large isolated character/outfit. Touch the actual owned outfit/companion to equip it. Inspection copy remains available without resembling a spreadsheet row. | All 23 summon avatars and 5 outfits, preview without spending, equip, back to exact parent. |
+| `wardrobe`, `styles`, `collection` | Illustrated clothes on a rail, footwear on shelves, accessories on stands and a large paper-doll preview. Swipe the rail to page; select the actual garment or object. | Appearance/equipment modes, all slots, pagination, owned filters, all 24 avatar identities, 24 clothing identities, 12 free styles and gear rules. |
+| `home_catalog` / `home_item` | A scrollable furnished showroom with large separated objects; tap an object to inspect, then activate that displayed object at its clearly shown price to acquire/use it. | Prices, ownership, preview, buy, equip/use, exact return route. No speculative purchases on swipe. |
+| `journey`, `events`, `briefing` | Level portals, event structures and an illustrated level diorama. Current-location landmark and storybook are world objects; a map inscription can summon a numeric keyboard for jump. | Journey/remix, all levels, guardians, story, daily/weekly challenges, rules and explicit start/resume. |
+| `play`, `guardian`, `tutorial`, `firstlight` | The existing board remains the direct-manipulation surface. Powers are distinct illustrated artifacts rather than rectangles. The companion or a scene object opens the pause/help presentation. | No root swipes over a puzzle, gate, tutorial or guardian. Preserve preview, manual gates, undo, assistance, power confirmation, retry and all current progression rules. |
+| `rewards`, `missions`, `story`, `journal`, `rules`, `settings`, `shop`, `item` | Claims belong to chests/rewards; story navigation belongs to book pages; settings belong to readable named dials/switches; shop products are the action surface. | Every existing route/action, clear prices and disabled-provider states, safe persistence failures. Long copy is scrollable. |
+
+Native nickname/jump dialogs also need this pass: replace application-provided SAVE/CANCEL button rows with keyboard Done to validate/commit, system Back to cancel, a readable field error on invalid input, and a scene-styled focusable sheet. Never save an unfinished nickname merely because the sheet lost focus. System keyboard controls and external Android consent interfaces belong to the operating system.
+
+## Exact controller integration points
+
+1. Add `private final SceneTransition sceneTransition = new SceneTransition();` and, if root swipe navigation is implemented, `new SceneTransition.RootSwipe()`. They contain no Android state, route mutations, delayed callbacks or persistence.
+2. `go(String)` is the authoritative route mutation point. Start one transition only when the destination differs, with `BACK` when `navigatingBack`, the root swipe direction for an actual sibling move, otherwise `FORWARD`/`DISSOLVE`. Keep every existing synchronous history, store, timer, `actionGeneration`, focus, hit and `syncStyle` operation. Starting a fade must never re-run an acquisition/equip action. `goRoot`, `backMenu` and `returnToMenu` continue using it.
+3. Preserve the last completed visible frame in a bitmap owned by this view, at physical view size. It must not contain active hit targets and must not recursively include a prior transition. Recycle it on view-size change, pause/release and memory cleanup. Copying/snapshot ownership must be bounded; do not allocate a new full-screen bitmap every normal draw.
+4. `onDraw(Canvas)` composites outgoing and destination scenes using the **same** `sceneTransition.frame(SystemClock.uptimeMillis())`. The frame exposes complementary `incomingAlpha`/`outgoingAlpha`, 8-bit alpha helpers and small horizontal offsets as fractions of viewport width. `DISSOLVE` has no translation. Use the normal background under both layers. Paint only the destination's hit geometry; input is blocked until the frame completes. Retain the existing Canvas save/restore and `LocalSaveException` handling.
+5. While `frame.active`, schedule redraws around 16 ms; the existing menu redraw interval of 50 ms produces only about four samples during the 220 ms transition. Outside transitions retain the existing scheduling. Under reduced motion, `begin(..., true, ...)` immediately returns a complete frame: no translation, delayed input or fade.
+6. Remove `nav(c)` and the **entire associated space reservation** in `drawFrame`: `drawingClipBottom=viewportH`, no `navigation ? 95 : 0`, no 95/169-pixel toast offset. Home touch admission currently also checks `y < viewportH - 95`; replace that with the real scene bounds. Recalculate home scene height and `homeToolbarTop` after the old toolbar is removed. Keep final `H` correct before `clampScroll`, including all long catalogs.
+7. Root gestures cannot be added as a catch-all before existing gesture ownership. On `ACTION_DOWN`, the topmost object hit, puzzle tile/gate, home pan, placement, modal, active scroll or blocked save owns the pointer. Only an unclaimed area of one of the four root places is eligible for `RootSwipe.begin(x,y,true)`. Convert physical coordinates with the same `ox/top/scale` as hits. `move` returns true after horizontal ownership; clear pending object taps. `end` commits only a horizontally dominant 64-logical-unit displacement. A vertical excursion locks this helper out, preserving scrolling. Never claim Android's back edge specially.
+8. Cancel root swipe ownership on `ACTION_CANCEL`, multi-touch, route change and lifecycle change. Home pan remains the owner of drags inside its zoomed world. Touching a furniture item does not start a root swipe. A root scene's destination objects remain an alternative when no unclaimed area is available.
+9. Block **all action channels** while a transition is active: touch, DPAD/Enter and accessibility `ACTION_CLICK`. Consume a touch sequence that began during the fade through its matching UP/CANCEL, even if the fade finishes in between. Do not replay or queue that input. Cancel pressed/selected/gesture state on the transition start, just as the current `go` already does. System Back may complete the current presentation then run its normal route behavior; it must not strand a blocking overlay.
+10. Accessibility: clear outgoing focus/hovers immediately; keep pane title aligned with the destination; emit one route content-change announcement when that destination is ready. Use `sceneTransition.generation()` if an announcement is deferred so a superseded scene cannot announce later. Do not expose the outgoing bitmap as interactive children. Once complete, the normal destination hit collection becomes focusable/actionable. Add root-sibling accessibility scroll actions if a sibling swipe has no distinct object target.
+11. Call `finish()` and recycle the outgoing layer on `pauseApp`, `release`, state restoration, configuration/view-size change, local-save blocking and the moment reduced motion is enabled. The destination is already authoritative; resuming displays it immediately. Transient presentation state does not belong in saved preferences or the instance-state Bundle.
+
+## Pure helper API
+
+```java
+sceneTransition.begin(now, reduceMotion, SceneTransition.Direction.FORWARD);
+SceneTransition.Frame f = sceneTransition.frame(now);
+// Draw outgoing snapshot with f.outgoingAlpha255() and f.outgoingOffsetX * physicalWidth.
+// Draw incoming route with f.incomingAlpha255() and f.incomingOffsetX * physicalWidth.
+// Do not invoke route/store actions from either drawing branch.
+if (f.active) postInvalidateDelayed(16);
+sceneTransition.finish(); // lifecycle, reduced-motion change or interrupted presentation
+```
+
+`begin` replaces an in-progress presentation and increments its generation. `frame` clamps backwards timestamps so opacity and input ownership cannot regress; an idle/completed frame is fully visible, unshifted and actionable. The helper intentionally does not retain bitmaps, know route names, run callbacks or enable commerce.
+
+## Verification boundaries
+
+`bash scripts/test-scene-transition-v117.sh` exercises timing, every direction, opacity and offset limits, cadence independence, reduced motion, replacement, lifecycle completion, backwards/overflow timestamps and gesture ownership/cancellation. It is a pure host contract test; it does not prove native compositing quality or that all old buttons were removed.
+
+Native acceptance must include an actual intermediate fade frame as well as stable endpoints; repeated taps/DPAD/TalkBack activation during a fade cannot double-spend or open the wrong route. Complete the four-place loop by both visible scenery targets and optional swipes; return from nested routes to their precise parent; verify home pan/placement and board gestures still win their pointer arbitration. Inspect every retained screen at normal and compact size in six languages for old pill/rectangle actions and clipping. A source search for old draw helpers is a migration inventory, not visual proof. Under reduced motion, switch routes and return from background with no intermediate movement or blocked interaction.

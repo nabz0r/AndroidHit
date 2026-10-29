@@ -1,0 +1,167 @@
+{
+  "passed": true,
+  "phase": "cold",
+  "apk_sha256": "eb67c6214d2868b21d02a0367d743bd2fed45b408b4d544523b8876ef3b78fff",
+  "observer_sha256": "89d321117a1161e23dfa9b47dea8c290e53e2f94d80446a3ca4f04930adab30b",
+  "serial": "emulator-5590",
+  "avd": "Luma117-Fresh-QA",
+  "run_token": "6b9e79a4-0a17-4f52-a12a-7721fc362a83",
+  "scope": "New receipt-owned empty AVD only; real public SDK touch route, no target preferences/private app calls, state injection, seeding or existing AVD access",
+  "native": {
+    "passed": true,
+    "runToken": "6b9e79a4-0a17-4f52-a12a-7721fc362a83",
+    "phase": "cold",
+    "processId": 5827,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Installed C version/code19"
+      },
+      {
+        "passed": true,
+        "message": "Current execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded evidence label"
+      },
+      {
+        "passed": true,
+        "message": "Genuinely distinct cold process"
+      },
+      {
+        "passed": true,
+        "message": "Actual wallet retains exact post-draw balance after cold process"
+      },
+      {
+        "passed": true,
+        "message": "Actual equipped companion and all seven slots persist after cold process"
+      },
+      {
+        "passed": true,
+        "message": "Reopening saved reveal spends no additional coins"
+      }
+    ],
+    "checkCount": 8,
+    "touchCount": 7,
+    "actions": [
+      {
+        "touch": 1,
+        "reason": "My home",
+        "label": "My home",
+        "bounds": [
+          876,
+          2033,
+          1050,
+          2255
+        ]
+      },
+      {
+        "touch": 2,
+        "reason": "Collection",
+        "label": "Collection",
+        "bounds": [
+          876,
+          2033,
+          1050,
+          2255
+        ]
+      },
+      {
+        "touch": 3,
+        "reason": "Profile",
+        "label": "Profile",
+        "bounds": [
+          66,
+          352,
+          913,
+          479
+        ]
+      },
+      {
+        "touch": 4,
+        "reason": "Star arrivals",
+        "label": "Star arrivals",
+        "bounds": [
+          735,
+          1191,
+          998,
+          1501
+        ]
+      },
+      {
+        "touch": 5,
+        "reason": "See last arrival",
+        "label": "See last arrival",
+        "bounds": [
+          661,
+          2211,
+          916,
+          2337
+        ]
+      },
+      {
+        "touch": 6,
+        "reason": "Look book",
+        "label": "Look book",
+        "bounds": [
+          66,
+          2027,
+          1013,
+          2160
+        ]
+      },
+      {
+        "touch": 7,
+        "reason": "My home",
+        "label": "My home",
+        "bounds": [
+          29,
+          2033,
+          203,
+          2255
+        ]
+      }
+    ],
+    "captures": [
+      "cold-fresh-profile-en",
+      "cold-fresh-last-reveal-en",
+      "cold-fresh-furnished-home-en"
+    ],
+    "wins": [],
+    "elapsedMs": 9008,
+    "scope": "New empty task-owned AVD, actual public Android UI touch observations only; no target app/engine/model/renderer/private calls, preference access, state injection, seeding, ad/account/payment action or existing AVD access. Certificates are read-only guidance for actual piece touches."
+  },
+  "checkCount": 8,
+  "touchCount": 7,
+  "captures": 3,
+  "installed_apk_sha256_after": "eb67c6214d2868b21d02a0367d743bd2fed45b408b4d544523b8876ef3b78fff",
+  "elapsed_seconds": 11.56,
+  "evidence_sha256": {
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "cold-force-stop.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "expected-ui-checkpoint.json": "b4fee263b895b9b66632a6ee238f93689a790fd2dd45c66959cb1e617eb7645c",
+    "fresh-observer.apk": "89d321117a1161e23dfa9b47dea8c290e53e2f94d80446a3ca4f04930adab30b",
+    "instrumentation.txt": "3ec756e012eba5f4d3e1deb9d20a387b78b2e782baf086c63065dfc1c991b517",
+    "native/cold-fresh-furnished-home-en.json": "13d783df364dfc6dea7a1dde8adf0d2ffde6be49ffc4c6249265c32f95c625ee",
+    "native/cold-fresh-furnished-home-en.png": "b5e44d135df7739c77cc0bfe30467d25764f7e09132724844f5b050c7c2d84fc",
+    "native/cold-fresh-last-reveal-en.json": "1ab2c51ffef65f898351b1b99b46d04ac36f7c061557c358ef83b0f357d3feb9",
+    "native/cold-fresh-last-reveal-en.png": "9762c7889d831aac3f0d8f03161966ec882d5b898cdb8e7dace7967f801bf3b4",
+    "native/cold-fresh-profile-en.json": "7720eab52d5c066d84f4e50b2ff835a394d12e12214ce6bcc9e774ea79b5de26",
+    "native/cold-fresh-profile-en.png": "728506dc871e242ee0b13d12462a397996d5e4afcb1db9ce652df76ffb98fbc7",
+    "native/report.json": "459a264764beb1668e78491168421376e4bba41279557370b5db3e28164336de",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-source/AndroidManifest.xml": "1b0f935baa643bde095c62173d489f6e0e94db59727c9c1d8c9280f295c1baaf",
+    "observer-source/README.md": "6cc82b462c4e122bc747a589fd6fb511d7c43487a55e8186c7856806228cc217",
+    "observer-source/build.gradle": "b6631990e7025e6b905d20b34a0b4a2fed231ae3b98e35c86fe386a4e7fbbb2a",
+    "observer-source/java/com/androidhit/lumadrift/qa/v117fresh/FreshInstrumentation.java": "1f7da4de608ca1f960826943cca153ad536b32aeb8cea7b73de50586f63eb47d",
+    "observer-source/run.py": "d4065a231d9987769b30f5b4157b776553a4af320f41dc89b9237abd6d99ed3b",
+    "pull.txt": "9a8eb8eb04f95dd181261bfa7652e1d338ba5e9d94657224195533bbbf5522af",
+    "unlock.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "wake.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,29 @@
+// A framework-only observer. The game and certificates are imported as no code dependency.
+allprojects { project ->
+    project.plugins.withId('com.android.application') {
+        project.android {
+            testBuildType = 'release'
+            defaultConfig {
+                testApplicationId 'com.androidhit.lumadrift.relaytest.v117'
+                testInstrumentationRunner 'com.androidhit.lumadrift.qa.v117relay.RelayInstrumentation'
+            }
+            sourceSets {
+                androidTest {
+                    java.srcDirs = [new File(rootDir, 'scripts/v117-relay-ui/java')]
+                    // Reuse byte-for-byte frozen U1-U1000 JSONs; never rewrite released 1.15 evidence.
+                    assets.srcDirs = [new File(rootDir, 'scripts/v115-relay-ui/assets')]
+                    manifest.srcFile new File(rootDir, 'scripts/v117-relay-ui/AndroidManifest.xml')
+                }
+            }
+        }
+        project.tasks.matching { it.name == 'packageProductionReleaseAndroidTest' }.configureEach {
+            doLast {
+                copy {
+                    from project.layout.buildDirectory.file('outputs/apk/androidTest/production/release/app-production-release-androidTest.apk')
+                    into project.layout.buildDirectory.dir('qualification-artifacts/v1.17')
+                    rename { 'relay-production-test.apk' }
+                }
+            }
+        }
+    }
+}

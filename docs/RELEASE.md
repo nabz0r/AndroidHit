@@ -1,6 +1,15 @@
 # Installation and release artifacts
 
-## Current 1.15 installation
+## 1.17 installation status — awaiting final qualification
+
+Production is `1.17.0-rc4`, code22, package `com.androidhit.lumadrift`; Lab uses `com.androidhit.lumadrift.sandbox`. Frozen candidate F corrects compact scene composition through shared responsive geometry. Its four outputs pass the [independent binary audit](validation/v1.17/candidate-f/binaries/binary-final-candidate.json); exact native qualification remains pending before canonical delivery. [Current release register](RELEASE_1_17.md) · [Evidence](validation/v1.17/README.md).
+
+When the exact signed final APK is accepted, install production as an update with the existing signing identity and retain application data to preserve local progress, house, wardrobe and player card. Lab has its own profile. Android 8/API26+ remains the configured minimum. An existing saved puzzle retains its original rules; appearance changes do not migrate its action ledger.
+
+The release register already records all four audited output sizes and SHA-256 values, binary evidence, and the passed inspected E visual scope. Canonical delivery manifests, complete interface/audio qualification and the full installed U1–U1000 replay remain required before final acceptance. Git publication and Firebase Hosting have separate receipts. Test ads remain forced, real checkout and paid premium draws remain closed, and Google identity does not synchronize the local save.
+<!-- FINAL_117: INSTALL_DOWNLOADS — add links only after final canonical APK/AAB/manifests and independent integrity checks pass. -->
+
+## Preserved 1.15 installation
 
 Install the signed [production 1.15.0-rc1 APK](../releases/luma-drift-1.15.0-rc1.apk), code17, over the existing app to retain local saves. The [Lab APK](../releases/luma-drift-1.15.0-sandbox-rc1.apk) has a separate profile. Android8/API26+, existing signing identity. An older active puzzle retains its rules; tap the current numbered level in Adventure to start the new U board.
 

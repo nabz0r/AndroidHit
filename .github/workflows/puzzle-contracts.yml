@@ -40,6 +40,25 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningGuide.java
             /app/src/main/java/com/androidhit/lumadrift/progression/LearningStrings.java
             /app/src/main/java/com/androidhit/lumadrift/ui/HomeScene.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/SpriteGeometry.java
+            /app/src/main/java/com/androidhit/lumadrift/audio/*.java
+            /scripts/test-scene-transition-v117.sh
+            /scripts/SceneTransitionV117Test.java
+            /scripts/test-root-scenes-v117.sh
+            /scripts/RootSceneV117GeometryTest.java
+            /scripts/test-art-v117-geometry.sh
+            /scripts/SpriteV117GeometryTest.java
+            /scripts/test-audio-scenes-v117.sh
+            /scripts/AudioSceneV117Test.java
+            /scripts/test-support/audio/
+            /scripts/test-site-v117.mjs
+            /scripts/test-site-v116.mjs
+            /public/assets/site.js
+            /docs/validation/site-v1.17/index.template.html
+            /docs/validation/v1.7/audio/audio-biome-metrics.csv
+            /docs/validation/v1.7/audio/legacy-pcm.sha256
             /scripts/test-relay-v115.sh
             /scripts/RelayV115Test.java
             /scripts/test-home-v115.sh
@@ -96,6 +115,20 @@ jobs:
 
       - name: Check contextual rules and six-language feedback
         run: sh scripts/test-learning-guide.sh
+
+      - name: Check 1.17 scene transitions and original sprite geometry
+        run: |
+          bash scripts/test-scene-transition-v117.sh
+          bash scripts/test-root-scenes-v117.sh
+          bash scripts/test-art-v117-geometry.sh
+
+      - name: Check 50 synthesized arrangements, earcons and audio lifecycle model
+        run: bash scripts/test-audio-scenes-v117.sh "$RUNNER_TEMP/luma-puzzle-contracts/audio-scenes-v117"
+
+      - name: Check 1.17 and retained website language and deliberate audio controls
+        # Uses the runner's Node test runtime; no package install, SDK, network,
+        # browser, Firebase deployment or native gameplay claim is involved.
+        run: node --test scripts/test-site-v117.mjs scripts/test-site-v116.mjs
 
       - name: Check power offers and preserved reward decisions
         run: sh scripts/test-power-offers-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json"

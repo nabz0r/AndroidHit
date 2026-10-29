@@ -1,0 +1,234 @@
+{
+  "passed": true,
+  "phase": "arrivals",
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "observer_sha256": "34d259abb95c4242afa43ead1abaf764296dd199ab0e9c67ff161e769b78f366",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "serial": "emulator-5590",
+  "avd": "Luma117-Fresh-F-QA",
+  "run_token": "c33d7d46-4541-4dff-a06b-fbca797cb409",
+  "scope": "New receipt-owned empty AVD only; real public SDK touch route, no target preferences/private app calls, state injection, seeding or existing AVD access",
+  "native": {
+    "passed": true,
+    "runToken": "c33d7d46-4541-4dff-a06b-fbca797cb409",
+    "phase": "arrivals",
+    "processId": 4869,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Installed explicit frozen candidate version/code"
+      },
+      {
+        "passed": true,
+        "message": "Current execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded evidence label"
+      },
+      {
+        "passed": true,
+        "message": "Visible genuine wallet covers both fixed local costs"
+      },
+      {
+        "passed": true,
+        "message": "Actual newly drawn companion reveal"
+      },
+      {
+        "passed": true,
+        "message": "Exactly180 earned coins debited by real avatar draw"
+      },
+      {
+        "passed": true,
+        "message": "Actual newly drawn four-piece outfit reveal"
+      },
+      {
+        "passed": true,
+        "message": "Both actual draws debit exactly440 earned coins"
+      },
+      {
+        "passed": true,
+        "message": "Actual equipped identity and all worn slots are exposed"
+      }
+    ],
+    "checkCount": 10,
+    "touchCount": 11,
+    "actions": [
+      {
+        "touch": 1,
+        "reason": "My home",
+        "label": "My home",
+        "bounds": [
+          876,
+          2108,
+          1050,
+          2330
+        ]
+      },
+      {
+        "touch": 2,
+        "reason": "Collection",
+        "label": "Collection",
+        "bounds": [
+          876,
+          2108,
+          1050,
+          2330
+        ]
+      },
+      {
+        "touch": 3,
+        "reason": "Star arrivals",
+        "label": "Star arrivals",
+        "bounds": [
+          735,
+          1191,
+          998,
+          1501
+        ]
+      },
+      {
+        "touch": 4,
+        "reason": "Draw once \u00b7 180 LumaCoins",
+        "label": "Draw once \u00b7 180 LumaCoins",
+        "bounds": [
+          276,
+          1672,
+          803,
+          2121
+        ]
+      },
+      {
+        "touch": 5,
+        "reason": "Equip this look",
+        "label": "Equip this look",
+        "bounds": [
+          66,
+          1639,
+          1013,
+          1794
+        ]
+      },
+      {
+        "touch": 6,
+        "reason": "Back to arrivals",
+        "label": "Back to arrivals",
+        "bounds": [
+          66,
+          1850,
+          1013,
+          1983
+        ]
+      },
+      {
+        "touch": 7,
+        "reason": "Signature outfits",
+        "label": "Signature outfits",
+        "bounds": [
+          556,
+          415,
+          1013,
+          570
+        ]
+      },
+      {
+        "touch": 8,
+        "reason": "Draw once \u00b7 260 LumaCoins",
+        "label": "Draw once \u00b7 260 LumaCoins",
+        "bounds": [
+          276,
+          1672,
+          803,
+          2121
+        ]
+      },
+      {
+        "touch": 9,
+        "reason": "Equip this look",
+        "label": "Equip this look",
+        "bounds": [
+          66,
+          1639,
+          1013,
+          1794
+        ]
+      },
+      {
+        "touch": 10,
+        "reason": "Look book",
+        "label": "Look book",
+        "bounds": [
+          66,
+          2027,
+          1013,
+          2160
+        ]
+      },
+      {
+        "touch": 11,
+        "reason": "Profile",
+        "label": "Profile",
+        "bounds": [
+          66,
+          352,
+          913,
+          479
+        ]
+      }
+    ],
+    "captures": [
+      "fresh-avatar-arrivals-price-en",
+      "fresh-avatar-reveal-en",
+      "fresh-avatar-equipped-en",
+      "fresh-outfit-arrivals-price-en",
+      "fresh-outfit-reveal-en",
+      "fresh-outfit-equipped-en",
+      "fresh-drawn-profile-en"
+    ],
+    "wins": [],
+    "elapsedMs": 10779,
+    "scope": "New empty task-owned AVD, actual public Android UI touch observations only; no target app/engine/model/renderer/private calls, preference access, state injection, seeding, ad/account/payment action or existing AVD access. Certificates are read-only guidance for actual piece touches."
+  },
+  "checkCount": 10,
+  "touchCount": 11,
+  "captures": 7,
+  "installed_apk_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "elapsed_seconds": 14.01,
+  "evidence_sha256": {
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "fresh-observer.apk": "34d259abb95c4242afa43ead1abaf764296dd199ab0e9c67ff161e769b78f366",
+    "instrumentation.txt": "dccdaad6ba562ba65d52251cbd6821eab24af7bac663a55c90795ce2455c0b54",
+    "native/checkpoint.json": "d29a12ff2b388c471adeb7fd864534a9acbead9e917503300a6f88c40bec7a13",
+    "native/fresh-avatar-arrivals-price-en.json": "bf3538b856e97cae4421430806528219d6795d407944731f433f634775002b52",
+    "native/fresh-avatar-arrivals-price-en.png": "e56eb3b82b052cd9d518986e1d60f772587a3037c32363a2e2c644fae1d23e15",
+    "native/fresh-avatar-equipped-en.json": "c03f41250e2c4467f3e6dcf376be106d101bc038ef3aac445fcdf03994ab6f9f",
+    "native/fresh-avatar-equipped-en.png": "7dd2bea01224f5194d5abac6fc4719e72270bf7c5919c4f70dc86a87d6f9b9da",
+    "native/fresh-avatar-reveal-en.json": "835fee0f56b3fa43fc928b1ee69ed68c105e6c45b67dd9ad53c70544642cf2aa",
+    "native/fresh-avatar-reveal-en.png": "cb5ecc4ba93a5ee0da02a54201da9b4a110205f4e90a11226c5a566dbd2804be",
+    "native/fresh-drawn-profile-en.json": "a59cf1a6d1ccb2ca81d662fe861c557c1d8d329c8c7589e3927dac84e717f339",
+    "native/fresh-drawn-profile-en.png": "1568367770ae3ae5def350eeddf4572045558f3d040bce3363673903ff774eab",
+    "native/fresh-outfit-arrivals-price-en.json": "02470cc3ec34c8014824af614ce8b2f65c70c8cf0a16c7042e6fc5faf2b576c8",
+    "native/fresh-outfit-arrivals-price-en.png": "22c22db919f6a1198291ef850a5ecde340a4f61cfdd98d6e27784116cdfe28a6",
+    "native/fresh-outfit-equipped-en.json": "b5a80684e3a6262459250eed0e7b549e6dc19fbb848eedbeed0ff5ca09ce5728",
+    "native/fresh-outfit-equipped-en.png": "b99d1a3638233bfd2c4fb86f51428dbf4383cc13ac302453e2bf1191495ef82b",
+    "native/fresh-outfit-reveal-en.json": "54b664348893f07ba997f02c583939f0e4979c83f6a781d824a444ee92035fde",
+    "native/fresh-outfit-reveal-en.png": "dbe4e04becc734276cc8f67808214a4d69011c5fd0a445126af3b87eabf31c9a",
+    "native/report.json": "40f894804caafda5af4dd34730fea0903e483e7b1ecd7fb328828fc1597fc42c",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-source/AndroidManifest.xml": "1b0f935baa643bde095c62173d489f6e0e94db59727c9c1d8c9280f295c1baaf",
+    "observer-source/README.md": "d5c60113a5694ab7af7a9d7dd64c3f52f3c4080675b685905a21369ba3b3d730",
+    "observer-source/build.gradle": "b6631990e7025e6b905d20b34a0b4a2fed231ae3b98e35c86fe386a4e7fbbb2a",
+    "observer-source/create-device.py": "6dc3023243698b20e5eac19a3c2cd73cf04da870c988082b0215bc69bc7b6d0a",
+    "observer-source/java/com/androidhit/lumadrift/qa/v117fresh/FreshInstrumentation.java": "a8bdcbf8d901b3498b5afd591fd66fa31ef2454988dd48d0476000a17ec08a85",
+    "observer-source/qualify-all.py": "410f2875bd6620fa66942fb4eee0b1c1245543aecbb86f7c547aafe73f10502e",
+    "observer-source/run.py": "0e38dd6b43c77b2601f42277a6f44cc0b83cca4efbf28258389f90d5d9fe1203",
+    "pull.txt": "116306e5f0b7a29823d8ca80a4ea6b7293b38d3105898df9f30480a28a8a6918",
+    "unlock.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "wake.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

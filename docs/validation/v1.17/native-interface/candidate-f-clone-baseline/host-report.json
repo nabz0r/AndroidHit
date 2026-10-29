@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "test_apk_sha256": "94d1a3f377d67872664338b1b4603ead31deae5d90191198c62fe92ab26c724b",
+  "wrapper_source_sha256": "6ea4bc64d1b469bd514700a121211d1b5fe36c07885ed9033818c0e7e1796c44",
+  "runner_source_sha256": "f47cece0d63577b782607d9cdcfb939888edaef50c8977bc828ac704b02f53df",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "baseline",
+      "native": {
+        "passed": true,
+        "checkCount": 6,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Exact retained earned balance51510 before any upgrade or input"
+          },
+          {
+            "passed": true,
+            "message": "Baseline is the genuinely completed U1000 task-owned profile"
+          },
+          {
+            "passed": true,
+            "message": "Baseline includes furnished home, custom profile and completed original summon receipt"
+          },
+          {
+            "passed": true,
+            "message": "Read-only baseline does not alter any observed save or puzzle value"
+          }
+        ],
+        "actions": [],
+        "captures": [],
+        "processId": 14286,
+        "phase": "baseline",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Read-only installed-base baseline including legacy save, profile, badges, receipts and complete session; seeds excluded; no Activity launch or input",
+        "ignored_stale_failure_file_sha256": "edb3a80861902028898bb3eb31a0c670cb3593b4b85842d850a7ad83893082d9"
+      },
+      "expected_version": "1.17.0-rc4",
+      "expected_code": 22
+    }
+  ],
+  "screenshots": {},
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-f-clone-baseline/interface-observer.apk",
+  "compact": false,
+  "route": "baseline",
+  "device_provenance": {
+    "scope": "Original retained task-owned AVD; original migration evidence is separately preserved"
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "baseline_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 4.689
+}

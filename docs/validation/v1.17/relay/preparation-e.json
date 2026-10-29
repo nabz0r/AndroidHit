@@ -1,0 +1,34 @@
+{
+  "status": "prepared_not_native_run",
+  "prepared_utc": "2026-10-29T02:23:01.444315+00:00",
+  "candidate": "E",
+  "version": "1.17.0-rc3",
+  "code": 21,
+  "candidate_apk_sha256": "48134c248b88a277d93d6745be6efd7a825f13629ea591e6b41e11cbefabf1eb",
+  "host_fixture_verification": {
+    "passed": true,
+    "scope": "Read-only frozen host certificates; no Android run",
+    "levels": 1000,
+    "certificate_exits": 10974,
+    "manifest_sha256": "1a7155deace55682adf85972bee71279c58d3643367306976a1ef9eac823eea8"
+  },
+  "harness_sha256": {
+    "AndroidManifest.xml": "318450a10bf31d07e561d53a5053365898dc5b381b1bcd6c6a6e1ea20de2a869",
+    "README.md": "630c2219e06c5326e0f7bb1f5cd3b839d82719ff855a913133635dc6597f7ace",
+    "build.gradle": "b735e588deb207f222d54a198058e46fcdef2c22e9bc709b8dcd7b5272e23598",
+    "init.gradle": "8ddc9d9f48260d9b9998cb2a11cf495ce1c2d257eebf08509f1844ba2cff2f1c",
+    "java/com/androidhit/lumadrift/qa/v117relay/RelayInstrumentation.java": "744e7b255f7f7ac71425bdc12b453d4086c5e5e647547f862302925c45583651",
+    "launch.py": "01985fae82dd408ac03b6eab81535585b16a8664652d9bd1625718d6400154da",
+    "run.py": "a4ab3978a5d66d61850ac99c9cb5e07b5162c06b2920a51ce3a6e03c2fe49af7",
+    "summarize.py": "9b506110a7a2c25e3157bcc55534ab596c1887cd53f807ad5ed2c69aac69412c"
+  },
+  "native_status": "not_started",
+  "requirements_before_run": [
+    "Exact E observer compiled and signed without target package tasks",
+    "Asset pipeline and audio explicitly release task-owned5586",
+    "Installed E bytes equal exact candidate hash before and after all1000 real touch replays"
+  ],
+  "scope": "Host fixture/harness preparation only; no5586 access or native level counted",
+  "observer_apk_sha256": "7a24bc267decd3f3756f1eb5ebf9662a85ce5185dce583f159c8a8e7ccd3b8ee",
+  "observer_build": "Standalone packageV117RelayObserver; no app compile/package/bundle dependency"
+}

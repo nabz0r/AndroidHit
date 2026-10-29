@@ -1,0 +1,40 @@
+
+> Configure project :app
+WARNING: The option setting 'android.experimental.lint.version=9.4.0' is experimental.
+
+> Task :app:packageV117FreshObserver
+Note: /Users/n/androidhit/scripts/v117-fresh-ui/java/com/androidhit/lumadrift/qa/v117fresh/FreshInstrumentation.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Standalone fresh observer packaged; no target tasks were dependencies.
+
+> Task :app:packageV117RelayObserver
+Note: /Users/n/androidhit/scripts/v117-relay-ui/java/com/androidhit/lumadrift/qa/v117relay/RelayInstrumentation.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Standalone relay observer packaged; no target tasks were dependencies.
+
+[Incubating] Problems report is available at: file:///Users/n/androidhit/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 4s
+2 actionable tasks: 2 executed

@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "test_apk_sha256": "90541dafb425e5d2ebc205724691de87866b92e4bec5d8d9ba423dcf204212af",
+  "wrapper_source_sha256": "50e7ce3c6c74d689571e2f860be3ff513cbd5c469d19256a53867441c8c6d40f",
+  "runner_source_sha256": "72304cb4c6cb7daad98a83244d4e8b57422b636e3f56e2c1c0cc0bd470c316b9",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "language-regression",
+      "native": {
+        "passed": true,
+        "checkCount": 19,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Clipped-target language regression runs at actual320dp width"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Visible French object selects French before the clipped-row regression"
+          },
+          {
+            "passed": true,
+            "message": "German language has an observed native visible target near the lower viewport"
+          },
+          {
+            "passed": true,
+            "message": "Partly offscreen Italian target is not relocated over the visible German object"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Deutsch"
+          },
+          {
+            "passed": true,
+            "message": "Actual German centre touch selects German, preserving the neighboring Italian action"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Italiano"
+          },
+          {
+            "passed": true,
+            "message": "Italian remains reachable by actual scrolling and selects only Italian"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Regression restores French with a real language object"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "German/Italian clipped-target regression creates no purchase, draw, compensation or coin change"
+          },
+          {
+            "passed": true,
+            "message": "German/Italian clipped-target regression preserves progression, stock and complete puzzle session"
+          },
+          {
+            "passed": true,
+            "message": "German/Italian clipped-target regression preserves all furniture ownership and exact room layouts"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[577,1083][825,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Deutsch",
+            "bounds": "[54,1222][302,1354]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Italiano",
+            "bounds": "[54,524][302,656]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[577,1083][825,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Ma maison",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "clipped-language-german-320dp",
+          "clipped-language-italian-320dp"
+        ],
+        "processId": 12731,
+        "phase": "language-regression",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained task-owned U1000 profile; actual SDK touchscreen/object/gesture/IME actions, read-only preference observations and real app screenshots; no spending, app/engine/private-field calls, seeding, provider action or user devices",
+        "ignored_stale_failure_file_sha256": "62d74ac4f067a4f853dcc7471a2da8e0a80696610ec926508d08ef15e1075a5d"
+      },
+      "expected_version": "1.17.0-rc4",
+      "expected_code": 22
+    }
+  ],
+  "screenshots": {
+    "language-regression/clipped-language-german-320dp.png": "8414f0cd99ef92e459f8f655b4944013a6e5770da52854cde5d081ddc6653a3a",
+    "language-regression/clipped-language-italian-320dp.png": "0b8487ae437f750d2c76d6dce4143a9717aaff7f313e669bf00d0e040852f410"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-f-clipped-language/interface-observer.apk",
+  "compact": true,
+  "route": "language-regression",
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "compact_scope": "Actual native320dp-wide display,880x1440 pixels at440dpi; original display restored after both native processes",
+  "display_during": {
+    "size": "Physical size: 1080x2340\nOverride size: 880x1440",
+    "density": "Physical density: 440"
+  },
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 18.163
+}

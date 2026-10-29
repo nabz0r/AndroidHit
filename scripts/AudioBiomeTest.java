@@ -17,7 +17,7 @@ public final class AudioBiomeTest {
         Path directory = Paths.get(args.length == 0 ? "docs/validation/v1.7/audio" : args[0]);
         Files.createDirectories(directory);
         StringBuilder historical = new StringBuilder("AMBIENT ").append(hash(Synth.ambientLoop())).append('\n');
-        for (AudioEngine.Sound sound : AudioEngine.Sound.values()) historical.append(sound.name()).append(' ')
+        for (AudioEngine.Sound sound : java.util.EnumSet.range(AudioEngine.Sound.TAP, AudioEngine.Sound.LOSE)) historical.append(sound.name()).append(' ')
                 .append(hash(Synth.effect(sound.name()))).append('\n');
         String baseline = Files.readString(Paths.get("docs/validation/v1.7/audio/legacy-pcm.sha256"));
         check(historical.toString().equals(baseline), "Original no-argument theme and all eleven effects retain historical PCM identity");

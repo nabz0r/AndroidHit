@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "recorded_utc": "2026-10-29T00:58:30.989345+00:00",
+  "command": "bash scripts/test-audio-scenes-v117.sh docs/validation/v1.17/audio/scenes/final-b",
+  "exit_code": 0,
+  "checks": 1714,
+  "dsp_checks": 1638,
+  "lifecycle_model_checks": 76,
+  "scene_biome_loops": 50,
+  "new_place_arrangements": 40,
+  "historical_puzzle_arrangements_preserved": 10,
+  "historical_effects_preserved": 11,
+  "new_earcons": 3,
+  "maximum_live_audio_tracks_in_model": 2,
+  "maximum_loop_boundary_step": 192,
+  "maximum_new_scene_loop_boundary_step": 0,
+  "music_default_gain": 0.27,
+  "earcon_default_gain": 0.72,
+  "scene_previews_seconds": 10,
+  "source_sha256": {
+    "app/src/main/java/com/androidhit/lumadrift/audio/Synth.java": "70a0b9c661c63f5f48056f64d3c03d81cb61de7fbee2fbf9b6e582afa2beb62d",
+    "app/src/main/java/com/androidhit/lumadrift/audio/AudioEngine.java": "8defd3659adb924401f377bfb317582832e0f45d5852cf6d19454b18200f2a16",
+    "scripts/AudioSceneV117Test.java": "83fd19043a2e7136bc8f939459b1f0787473e257c5b8fe11506d4a7e716e3149",
+    "scripts/test-audio-scenes-v117.sh": "e2bd7c356ff9e749fbd00acf13553253341dcccb7ed31e1dec41fa829f68daf5"
+  },
+  "outputs_sha256": {
+    "audio-earcon-metrics.csv": "f2315fe049d43d4de7d09f259e42400b074b717494090a5d1a15c757c36e32c1",
+    "audio-scene-metrics.csv": "b07d34f35a63d7cc0144eba37a5a423af504d777f1632108f90d5619cad3a3cd",
+    "earcon-fabric.wav": "463ba4ed95d2e012cbe7ced89281eb5d043fc99577e06533be497918d4563cdb",
+    "earcon-reveal.wav": "095af39d1798f29ca614aa8b064967dc3dc2e3dba758628caf0c8b8bec636dd9",
+    "earcon-scene.wav": "a1f5ba78a40efbc2829a970cf41d0f8ab29ee04b75f38c70384602025d848793",
+    "memory-scope.txt": "0a0bdf5a5db30a6791f46aa552425a93280347671ba14cd25ef603bd8b7eeb2f",
+    "scene-adventure-preview.wav": "c4556e3b25e58f904bade96c34855778665e8b77971be412c9b000822938dbc8",
+    "scene-atelier-preview.wav": "fbca4c9ccfc15424d37ab32bdc12d5d9f1d1d77c71b0c5697308d36d01802c67",
+    "scene-collection-preview.wav": "e97164cda30b0429952fcc2b6b3aad342ba5c5d1beadd4212538b9466ab7fba5",
+    "scene-home-preview.wav": "305508c3018c3d92285690ef28447f79f6d19efba45bccebb693c414a43e0e46",
+    "scope.txt": "4ad27b875065b4e58f0b378e67b140638a02afc11b4afc68b68f26696b4a4f82"
+  },
+  "scope": "Host-rendered actual app PCM and controlled JVM Android lifecycle/concurrency model. No Android device run, physical speaker playback, subjective listening result or native performance claim. Initial strict-seam failure is retained separately under the parent directory."
+}

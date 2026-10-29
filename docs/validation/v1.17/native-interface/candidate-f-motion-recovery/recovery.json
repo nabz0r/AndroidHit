@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "scope": "Manual native SDK UI recovery of the original motion preference after a probe swipe in Android system gesture strip. No target or Lab preference APIs, seeding, APK/data replacement, or input to Lab.",
+  "target": "com.androidhit.lumadrift",
+  "target_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "observed_before": "Reduce motion: On",
+  "observed_after": "Reduce motion: Off",
+  "actions": [
+    {
+      "input": "am start explicit production MainActivity"
+    },
+    {
+      "input": "SDK touchscreen Settings",
+      "observed_bounds": [
+        890,
+        334,
+        1042,
+        533
+      ],
+      "point": [
+        966,
+        433
+      ]
+    },
+    {
+      "input": "SDK touchscreen Reduce motion: On",
+      "observed_bounds": [
+        66,
+        1052,
+        1013,
+        1210
+      ],
+      "point": [
+        539,
+        1131
+      ]
+    }
+  ],
+  "evidence_sha256": {
+    "restored.xml": "0c06e2cc5f78d3e3ae17794176a3f1be34f1492135b33b8dec9b4d4609ea0b76",
+    "settings.xml": "6a880b65e500d1fc0e2fbfe8b8d955e24bb40b3fefa6cf80437c87bc8d923f69",
+    "window.xml": "feb83531dbf35870f18a14c4c4d4f33e06bf0b3cb5ac5859a0cb4f5a80485af1"
+  }
+}

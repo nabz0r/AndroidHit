@@ -19,7 +19,7 @@ public final class HomeV116GeometryTest {
         HomeLayout.Placement aquarium=new HomeLayout.Placement("aquarium",4,4,0);
         RectF detail=new RectF(),overview=new RectF(),world=new RectF();
         scene.projectedBoundsFor(aquarium,detail);scene.resetOverview();scene.projectedBoundsFor(aquarium,overview);
-        near(detail.width()/overview.width(),HomeScene.DETAIL_ZOOM,"furniture detail scale is 60 percent larger than overview");
+        near(detail.width()/overview.width(),HomeScene.DETAIL_ZOOM,"furniture detail scale follows the declared close-up camera");
         HomeScene.boundsFor(aquarium,world);
         near(overview.width(),world.width()*fit(width,height),"only one viewport fit applies to furniture");
         for(float[] corner:new float[][]{{-.5f,-.5f},{9.5f,-.5f},{9.5f,9.5f},{-.5f,9.5f}}){

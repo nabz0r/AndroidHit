@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/v117-fresh-ui/run.py", line 63, in main
+    (output/'observer-install.txt').write_bytes(call('install','-r','-t',str(args.observer),timeout=180))
+  File "/Users/n/androidhit/scripts/v117-fresh-ui/run.py", line 27, in call
+    def call(*parts,timeout=90):return subprocess.check_output([adb,'-s','emulator-5590',*parts],stderr=subprocess.STDOUT,timeout=timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/n/Library/Android/sdk/platform-tools/adb', '-s', 'emulator-5590', 'install', '-r', '-t', '/Users/n/androidhit/app/build/qualification-artifacts/v1.17/fresh-production-test.apk']' returned non-zero exit status 1.

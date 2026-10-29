@@ -1,0 +1,28 @@
+{
+  "status": "prepared_not_native_run",
+  "prepared_utc": "2026-10-29T00:46:21.670854+00:00",
+  "host_fixture_verification": {
+    "passed": true,
+    "levels": 1000,
+    "certificate_exits": 10974,
+    "source_checks": 29,
+    "fixture_checks": 1000,
+    "manifest_sha256": "1a7155deace55682adf85972bee71279c58d3643367306976a1ef9eac823eea8"
+  },
+  "harness_sha256": {
+    "AndroidManifest.xml": "81a5bd849620e5fb28896dd1e73a2aef9032e0877a37c68179a83994d9fa9482",
+    "README.md": "bfa6552cdc360bc8475735de1e38325060347edd1c82e6c2e25958c2e40b3db4",
+    "init.gradle": "8ddc9d9f48260d9b9998cb2a11cf495ce1c2d257eebf08509f1844ba2cff2f1c",
+    "java/com/androidhit/lumadrift/qa/v117relay/RelayInstrumentation.java": "29e219e90ba408e39a6f45e63c131d7a2b7687d8de0b09746d2183fde592d615",
+    "run.py": "6a89567c8ae74e68b6c233ccfdc1294f3b3eda1a4a4aa1ce432f7d2bd98de8c7",
+    "summarize.py": "98ac5362a338b79d81c1fa6db3b1fd727f4ccd71c44982d4d0fc0ed96064a40d"
+  },
+  "native_status": "not_started",
+  "candidate_sha256": null,
+  "requirements_before_run": [
+    "Release owner supplies final 1.17 code19 candidate SHA-256 after visual and audio fixes freeze.",
+    "General interface observer explicitly releases task-owned Luma-Refonte115-QA / emulator-5586.",
+    "Build and sign separate SDK observer; verify candidate/observer identities and all packaged certificate bytes."
+  ],
+  "scope": "Read-only host fixture and harness preparation only; no emulator launch, device access, Android build, game state mutation or native completion evidence."
+}

@@ -1,0 +1,25 @@
+{
+  "passed": false,
+  "phase": "onboarding",
+  "apk_sha256": "eb67c6214d2868b21d02a0367d743bd2fed45b408b4d544523b8876ef3b78fff",
+  "observer_sha256": "6dbc0378550781f783c40ffc65660e5fecd1f761003e736e6bfbd6a88bea9580",
+  "serial": "emulator-5590",
+  "avd": "Luma117-Fresh-QA",
+  "run_token": "6b00beff-cd67-4174-9dc2-c03dc945abad",
+  "scope": "New receipt-owned empty AVD only; real public SDK touch route, no target preferences/private app calls, state injection, seeding or existing AVD access",
+  "genuine_new_install": true,
+  "failure": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v117-fresh-ui/run.py\", line 63, in main\n    (output/'observer-install.txt').write_bytes(call('install','-r','-t',str(args.observer),timeout=180))\n  File \"/Users/n/androidhit/scripts/v117-fresh-ui/run.py\", line 27, in call\n    def call(*parts,timeout=90):return subprocess.check_output([adb,'-s','emulator-5590',*parts],stderr=subprocess.STDOUT,timeout=timeout)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 424, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 528, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/Users/n/Library/Android/sdk/platform-tools/adb', '-s', 'emulator-5590', 'install', '-r', '-t', '/Users/n/androidhit/app/build/qualification-artifacts/v1.17/fresh-production-test.apk']' returned non-zero exit status 1.\n",
+  "elapsed_seconds": 1.686,
+  "evidence_sha256": {
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "fresh-install.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "fresh-observer.apk": "6dbc0378550781f783c40ffc65660e5fecd1f761003e736e6bfbd6a88bea9580",
+    "host-failure.txt": "69613b317799745862b412a96fea0250b015ac2aea8cf6702a3810d18cd2c94d",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-source/AndroidManifest.xml": "1b0f935baa643bde095c62173d489f6e0e94db59727c9c1d8c9280f295c1baaf",
+    "observer-source/README.md": "6cc82b462c4e122bc747a589fd6fb511d7c43487a55e8186c7856806228cc217",
+    "observer-source/build.gradle": "5a485a7addb121bb1ee7fc6953ab8eb17a37f1fb95a8ba6a501eb9a1641896c4",
+    "observer-source/java/com/androidhit/lumadrift/qa/v117fresh/FreshInstrumentation.java": "1f7da4de608ca1f960826943cca153ad536b32aeb8cea7b73de50586f63eb47d",
+    "observer-source/run.py": "5c30f96996407e60d2e6e252a218fa311930ff58ecbadbb6e5be34d100bd665c"
+  }
+}

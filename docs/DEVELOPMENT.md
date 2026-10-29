@@ -1,6 +1,35 @@
 # Development and architecture
 
-## Current1.16 camera, player card and collectible arrivals
+## 1.17 source architecture and executable host contracts
+
+Production is `1.17.0-rc4`, Lab `1.17.0-sandbox-rc4`, code22. Candidate F is frozen across161 inputs; the [four-artifact audit](validation/v1.17/candidate-f/binaries/binary-final-candidate.json) supplies its actual hashes/signatures/alignment. Global qualification is in progress. The U engine, inventory IDs, local transactions and commercial gates remain unchanged.
+
+`LumaApplication` installs the original sprite registry before normal Activity drawing. `ArtLibrary` uses lazy region decoding and a shared 48 MiB cache; `ArtRegions117` and `CompanionRig` keep atlas geometry separate from catalogue/save identities. `CharacterSprites` supplies original body, garment and furniture pixels. `CompanionPortrait` remains a pure renderer, composing one visual snapshot without ownership or store writes. `RoomMaterials` and the full-screen scene backgrounds supply the new scenery.
+
+`SceneRootLayout` supplies the immutable geometry actually consumed by the four root scenes. It reserves caption/navigation bands and unique action centres while preserving sprite size. A cached instance changes only with viewport, minimum text or minimum target metrics. `RootSceneV117GeometryTest` checks the real helper over420 layouts, not a separate reimplementation.
+
+`LumaView` owns scene routes, observed hit targets, pointer arbitration and actual actions. `ScenicUi` draws scenery objects/captions without owning navigation or economy. `SceneActionView` carries the same object treatment into standalone native activities and confirmations. `SceneTransition` is a clock-driven pure coordinator; the view owns its outgoing snapshot, input guards, focus changes and lifecycle cleanup. Rendering a snapshot cannot repeat a purchase, draw or route mutation. Reduced motion bypasses animation. [Navigation spec](design/v1.17/navigation-spec.md).
+
+`AudioEngine.Scene` selects five contexts; `Synth.sceneLoop` combines one context with a biome. The existing worker coalesces updates and suppresses stale generations. Music and effects keep independent switches. Host lifecycle doubles check concurrency and failure behavior separately from installed Android playback.
+
+```sh
+bash scripts/test-scene-transition-v117.sh
+bash scripts/test-root-scenes-v117.sh
+bash scripts/test-art-v117-geometry.sh
+bash scripts/test-audio-scenes-v117.sh /tmp/luma117-audio-check
+node --test scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+python3 scripts/v117-relay-ui/run.py --verify-fixtures-only
+```
+
+These commands require JDK 17, Python 3 and a Node runtime with its built-in test runner. They need no Android SDK, emulator, provider account or npm install. The audio test exports actual DSP previews to the supplied new directory and reads two historical PCM baseline records. The offline sparse workflow includes their exact sources and baselines, alongside the retained U/N, budget, home, profile/summon and reward contracts. The current [F sparse-only rehearsal](validation/v1.17/ci-host-rehearsal-f/summary.json) passes all14 configured commands from exactly135 files, with source/log hashes. A local pass is not a remote GitHub Actions result.
+
+The [fresh E route](validation/v1.17/fresh-e/README.md) has passed 133 checks, 105 actual gestures and 49 original captures, with eight genuine first wins, two funded draws and cold persistence on a new empty AVD. Its normal shutdown preserves userdata. The [full replay launcher](../scripts/v117-relay-ui/launch.py) is ready to run independently of the agent process; [its handoff pointer](validation/v1.17/relay/active-handoff.json) records no run yet. Main device ownership must pass interface → audio → replay before launch.
+
+Native work stays separate: `scripts/v117-ui-test` exercises real application navigation, profile forms, home and retained outfits; `scripts/v117-relay-ui` replays all 1,000 completed U boards through real touches without progression seeding. `scripts/v117-art-test` is explicitly an isolated pure-render gallery, not UI or ownership evidence. Their wrappers require the exact signed installed candidate and the task-owned AVD; use only after an exclusive device handoff. No observer should install/upgrade the game without its owner's explicit route authorization. Preserve failed attempts, source witnesses and original PNGs.
+
+The website remains the existing Firebase project. `prepare-site-v117.py` requires final source freeze, exact release bytes, 16 genuine FR/EN captures and a rerun-verified full 1,000 native replay summary before writing public entry HTML. `check-site-v117.py`, clean-commit deployment and public-byte verification are separate stages. [Website staging register](validation/site-v1.17/README.md).
+
+## Preserved 1.16 camera, player card and collectible arrivals
 
 Production **1.16.0-rc1**, Lab **1.16.0-sandbox-rc1**, code **18**. `HomeScene.setViewport` supplies one transform for painting, projection, inverse lookup, bounds and pan. The controller no longer wraps it in another size reduction. Default detail zoom is1.6; resetOverview is1.0. Clipped furniture targets stop before the floating toolbar, and both pointer picking and drag starts exclude its background. Viewport height is serialized before restoring a clamped camera.
 

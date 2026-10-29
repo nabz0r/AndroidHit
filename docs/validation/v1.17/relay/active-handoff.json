@@ -1,0 +1,31 @@
+{
+  "status": "ready_not_started; awaiting explicit interface+audio handoff of retained5586 and root GO",
+  "candidate": "F",
+  "version": "1.17.0-rc4",
+  "code": 22,
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "observer_apk": "/tmp/luma-v117-candidate-f/relay-v117-production-test.apk",
+  "observer_sha256": "34f8ab4a095684ef38b62da097e95f37970f26be7f2533e15caa282db90c0073",
+  "active_process_id": null,
+  "native_levels_completed": 0,
+  "next_command_after_handoff": [
+    "python3",
+    "scripts/v117-relay-ui/launch.py",
+    "--candidate",
+    "F",
+    "--label",
+    "candidate-f-replay1000-a",
+    "--apk",
+    "/tmp/luma-v117-candidate-f/luma-drift-1.17.0-rc4.apk",
+    "--sha256",
+    "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+    "--expected-version",
+    "1.17.0-rc4",
+    "--expected-code",
+    "22",
+    "--observer",
+    "/tmp/luma-v117-candidate-f/relay-v117-production-test.apk"
+  ],
+  "expected_report": "docs/validation/v1.17/relay/candidate-f-replay1000-a/host-report.json",
+  "scope": "Prepared observer and fixtures only. No5586 access or native replay launch. Earlier E readiness is superseded; no E native1000 run occurred."
+}

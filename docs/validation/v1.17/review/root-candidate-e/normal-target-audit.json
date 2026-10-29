@@ -1,0 +1,174 @@
+{
+  "status": "OBSERVED_TARGET_GEOMETRY_REQUIRES_VISUAL_TRIAGE",
+  "apk_sha256": "48134c248b88a277d93d6745be6efd7a825f13629ea591e6b41e11cbefabf1eb",
+  "version": "1.17.0-rc3",
+  "code": 21,
+  "scope": "Read-only analysis of previously captured actual native accessibility target rectangles. No device, app mutation, inferred acquisition, new screen execution or automatic painted-pixel acceptance. Extended-target overlap is not automatically a defect. Home furniture/companion targets intentionally use painter-order picking.",
+  "roots": [
+    {
+      "root": "adventure-en",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-normal/browse/adventure-en.json",
+      "sha256": "56db3e7680adf756b71703469c3573dbf321dfc3225e90838effc9f363237c44",
+      "actions": 7,
+      "overlaps": [],
+      "centres_inside_another_action": [],
+      "home_world_painter_order_requires_separate_triage": false
+    },
+    {
+      "root": "collection-de",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-normal/browse/collection-de.json",
+      "sha256": "066f238e1c4c581415ef5eb7e3fc8dd5408de3e39738711ca13facfd843946c2",
+      "actions": 10,
+      "overlaps": [
+        {
+          "a": "Garderobe",
+          "b": "Sternenbegegnungen",
+          "intersection_pixels": [
+            735,
+            1157,
+            844,
+            1450
+          ],
+          "width": 109,
+          "height": 293
+        }
+      ],
+      "centres_inside_another_action": [],
+      "home_world_painter_order_requires_separate_triage": false
+    },
+    {
+      "root": "atelier-en",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-normal/browse/atelier-en.json",
+      "sha256": "7914278447393aca38222d6f162f11664677377efa8061d6361f3d5925eff9f9",
+      "actions": 8,
+      "overlaps": [],
+      "centres_inside_another_action": [],
+      "home_world_painter_order_requires_separate_triage": false
+    },
+    {
+      "root": "home-fr",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-normal/browse/home-fr.json",
+      "sha256": "25dc4c4f39f7692c69fef97f148a0cceec0d1d05dcc1d017870f5111fdf4d594",
+      "actions": 18,
+      "overlaps": [
+        {
+          "a": "Plante Petite feuille",
+          "b": "Piano à queue Minuit",
+          "intersection_pixels": [
+            84,
+            1007,
+            149,
+            1227
+          ],
+          "width": 65,
+          "height": 220
+        },
+        {
+          "a": "Tapis Orbite douce",
+          "b": "Piano à queue Minuit",
+          "intersection_pixels": [
+            357,
+            1118,
+            523,
+            1227
+          ],
+          "width": 166,
+          "height": 109
+        },
+        {
+          "a": "Tapis Orbite douce",
+          "b": "Un petit câlin",
+          "intersection_pixels": [
+            421,
+            1118,
+            658,
+            1253
+          ],
+          "width": 237,
+          "height": 135
+        },
+        {
+          "a": "Mur de livres",
+          "b": "Piano à queue Minuit",
+          "intersection_pixels": [
+            459,
+            865,
+            523,
+            1044
+          ],
+          "width": 64,
+          "height": 179
+        },
+        {
+          "a": "Mur de livres",
+          "b": "Un petit câlin",
+          "intersection_pixels": [
+            459,
+            995,
+            658,
+            1044
+          ],
+          "width": 199,
+          "height": 49
+        },
+        {
+          "a": "Piano à queue Minuit",
+          "b": "Un petit câlin",
+          "intersection_pixels": [
+            421,
+            995,
+            523,
+            1227
+          ],
+          "width": 102,
+          "height": 232
+        },
+        {
+          "a": "Canapé Coin de nuage",
+          "b": "Tourne-disque Vinyle",
+          "intersection_pixels": [
+            637,
+            1629,
+            820,
+            1645
+          ],
+          "width": 183,
+          "height": 16
+        },
+        {
+          "a": "Tourne-disque Vinyle",
+          "b": "Décorer",
+          "intersection_pixels": [
+            767,
+            1671,
+            820,
+            1829
+          ],
+          "width": 53,
+          "height": 158
+        }
+      ],
+      "centres_inside_another_action": [
+        {
+          "target": "Tapis Orbite douce",
+          "centre": [
+            539.5,
+            1185.5
+          ],
+          "also_inside": "Un petit câlin",
+          "later_target_wins": true
+        },
+        {
+          "target": "Un petit câlin",
+          "centre": [
+            539.5,
+            1150.0
+          ],
+          "also_inside": "Tapis Orbite douce",
+          "later_target_wins": false
+        }
+      ],
+      "home_world_painter_order_requires_separate_triage": true
+    }
+  ]
+}

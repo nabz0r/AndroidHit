@@ -1,0 +1,179 @@
+{
+  "status": "REJECTED_RESPONSIVE_ROOT_SCOPE",
+  "reviewed_utc": "2026-10-29T03:02:37.107619+00:00",
+  "candidate": "E",
+  "version": "1.17.0-rc3",
+  "code": 21,
+  "apk_sha256": "48134c248b88a277d93d6745be6efd7a825f13629ea591e6b41e11cbefabf1eb",
+  "source_witness": {
+    "path": "docs/validation/v1.17/review/root-candidate-e/LumaView-E-source.java",
+    "sha256": "a53cb4651bc634265da2702b7d107fafbfade2261f8e94f6caa81e37650d89ea",
+    "matches_E_source_freeze": true
+  },
+  "scope": "Independent read-only root geometry/visual audit of saved E normal+320dp native captures. No device commands or new app execution. Mechanical route passes remain valid within their scope; these actual visual findings reject compact-root acceptance and require a new candidate.",
+  "findings": [
+    {
+      "priority": "P2",
+      "id": "E-collection-compact-caption-occlusion",
+      "status": "CONFIRMED_VISUALLY",
+      "image": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/collection-de.png",
+      "observation": "The later painted Home navigation house covers the first glyphs of Meine Begleiter. The following Atelier neighbor also intrudes into the Equipment caption region.",
+      "source_calculation": {
+        "lower_caption_baseline": ".76*H+49",
+        "sibling_art_top": "H-78-.52*51",
+        "gap_top_minus_caption_baseline": ".24*H-153.52",
+        "negative_when_H_less_than": 639.6666666666667,
+        "illustrative_H": 571.7045454545455,
+        "illustrative_gap": -16.310909090909092
+      },
+      "native_targets": {
+        "companions": [
+          67,
+          951,
+          333,
+          1208
+        ],
+        "home": [
+          23,
+          1126,
+          165,
+          1307
+        ],
+        "intersection": [
+          67,
+          1126,
+          165,
+          1208
+        ]
+      }
+    },
+    {
+      "priority": "P2",
+      "id": "E-atelier-compact-caption-occlusion",
+      "status": "CONFIRMED_VISUALLY",
+      "image": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/atelier-en.png",
+      "observation": "Forest plant artwork covers the central Furniture ·42 caption beneath the sofa. The caption is drawn before the plant.",
+      "source_calculation": {
+        "sofa_caption_baseline": ".31*H+120",
+        "group_art_top": ".61*H-65",
+        "gap_top_minus_caption_baseline": ".30*H-185",
+        "negative_when_H_less_than": 616.6666666666667,
+        "illustrative_H": 571.7045454545455,
+        "illustrative_gap": -13.488636363636346
+      },
+      "note": "The exact internal viewport was not logged by the observer. H=571.70 is an illustrative reconstruction from 880x1440, scale880/390 and observed84px/66px system bands; the inequality and visual occlusion do not depend on claiming exact logged H."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/adventure-en.png",
+      "sha256": "74ff4297ba170367bcf5bfbfdfb567cce0f7fb7003f75641d4502cb2ed7c63bf",
+      "size": "compact",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/collection-de.png",
+      "sha256": "b9979cab456f71eb60b5ee6df278ef8ca5a0571d391af3be6cd9c23c1e675fb1",
+      "size": "compact",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/atelier-en.png",
+      "sha256": "39d394581e6b823da636aa4b5d5b841166a8dfc9f7370b1c38648461d8f93bdb",
+      "size": "compact",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/home-fr.png",
+      "sha256": "ff1215080a4b75eeb6f6d1656bbea0c6266d16efed8beea32e9fdb829120b486",
+      "size": "compact",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/adventure-en.png",
+      "sha256": "647e332db399ee1e10c5310fd7c6bdf04760f2e9f6d576d03c3e272778a73faa",
+      "size": "normal",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/collection-de.png",
+      "sha256": "5ad149f40d128da00f374b8da51e2e0a0f79a7ca74ea22592ff0e8510f6e3f46",
+      "size": "normal",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/atelier-en.png",
+      "sha256": "1ed61bbbb9b10efc116b8139d1d1271802512d201d8a620396f9304143327373",
+      "size": "normal",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/home-fr.png",
+      "sha256": "2f4335a879229d4a100e06ef7c8a33e530f8c0159750774dc118b647a916e2c8",
+      "size": "normal",
+      "scope": "Original actual application screenshot directly viewed by this independent reviewer. Display tool may resize its preview; recorded hash is the full original file."
+    }
+  ],
+  "target_audits": [
+    {
+      "path": "docs/validation/v1.17/review/root-candidate-e/compact-target-audit.json",
+      "sha256": "c41a9fecdc9f410f767928c5f66aa63f66aa4297a9afb86172e63b761abee222"
+    },
+    {
+      "path": "docs/validation/v1.17/review/root-candidate-e/normal-target-audit.json",
+      "sha256": "d61048474d0e194fa6009be215baa9faacf0c794649d0558562437b057ab816b"
+    }
+  ],
+  "invariants_for_fix": [
+    "Reserved readable caption bands never intersect later foreign object art",
+    "Every scene action centre lies only inside its own semantic action after physical48dp expansion",
+    "Visible action targets remain inside the viewport and have48dp dimensions except explicit boundary clipping",
+    "An originally offscreen action centre is omitted rather than translated onto a visible neighbor",
+    "Home 3D furniture uses explicit painter-order hit resolution; route controls remain identifiable and take intended priority",
+    "Check dense and normal root layouts plus boundaries and fontScale1/1.3 using the same pure geometry consumed by app drawing"
+  ],
+  "limits": [
+    "Object rectangle intersection is conservative and is not automatically painted-pixel occlusion",
+    "A small overlap of expanded touch margins may be harmless when no distinct-action centre is ambiguous",
+    "This does not replace all-screen, sound, level replay, physical-device, human-comprehension or release acceptance"
+  ],
+  "normal_visual_scope": "All four normal root frames directly viewed; neither of the compact caption occlusions reproduces in these normal frames. Conservative target overlaps retain separate triage.",
+  "native_provenance": [
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-normal/host-report.json",
+      "sha256": "c01cb2a7754bbfa958aaa5b89e75a9c6f05b819d1f2f9a9118c92eeb2d1205d0",
+      "exact_candidate_matches": true,
+      "original_PNGs_verified_against_host_screenshot_hashes": [
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/adventure-en.png",
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/collection-de.png",
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/atelier-en.png",
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-normal/browse/home-fr.png"
+      ],
+      "adjacent_native_node_JSONs_newly_hashed_by_this_audit": {
+        "browse/adventure-en.json": "56db3e7680adf756b71703469c3573dbf321dfc3225e90838effc9f363237c44",
+        "browse/collection-de.json": "066f238e1c4c581415ef5eb7e3fc8dd5408de3e39738711ca13facfd843946c2",
+        "browse/atelier-en.json": "7914278447393aca38222d6f162f11664677377efa8061d6361f3d5925eff9f9",
+        "browse/home-fr.json": "25dc4c4f39f7692c69fef97f148a0cceec0d1d05dcc1d017870f5111fdf4d594"
+      },
+      "mechanical_pass_does_not_override_visual_rejection": true
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-compact/host-report.json",
+      "sha256": "c03327a4ed4a3ed2f753bb1327112a08d2ce49010aad00c8406cd53fa6c7a4f2",
+      "exact_candidate_matches": true,
+      "original_PNGs_verified_against_host_screenshot_hashes": [
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/adventure-en.png",
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/collection-de.png",
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/atelier-en.png",
+        "docs/screenshots/v1.17/native-interface/candidate-e-sixlangs-compact/browse/home-fr.png"
+      ],
+      "adjacent_native_node_JSONs_newly_hashed_by_this_audit": {
+        "browse/adventure-en.json": "0214bed8f28e40944df52baed770801233bfe1426c9859ac03d2e0771143af50",
+        "browse/collection-de.json": "0db6455ebcbeb13f9465e5738fb91671a10365e7e693c2023b8c68d1fd1aa359",
+        "browse/atelier-en.json": "1a39c7ea3a0ccbeeff65eb3787caa3d8bf8e2e082338b4fd070c47ecf8033b50",
+        "browse/home-fr.json": "d628f36ecdc80562783e1bc25bd32a4f6f38b482a7637f38eaf9db5cc1f4ad21"
+      },
+      "mechanical_pass_does_not_override_visual_rejection": true
+    }
+  ]
+}

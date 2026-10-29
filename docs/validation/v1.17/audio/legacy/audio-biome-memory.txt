@@ -1,0 +1,1 @@
+Largest PCM16 static buffer: 1282910 bytes. The synthesizer allocates one double[] mix (4x PCM bytes) plus its resulting short[]; the engine retains no array cache for all ten themes. At most the current native track and one replacement native track coexist during handoff. Actual Android/native allocation measurements require runtime profiling.

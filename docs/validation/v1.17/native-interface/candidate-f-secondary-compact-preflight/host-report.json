@@ -1,0 +1,194 @@
+{
+  "passed": false,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5586",
+  "avd": "Luma-Refonte115-QA",
+  "expected_version": "1.17.0-rc4",
+  "expected_code": 22,
+  "apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "test_apk_sha256": "90541dafb425e5d2ebc205724691de87866b92e4bec5d8d9ba423dcf204212af",
+  "wrapper_source_sha256": "50e7ce3c6c74d689571e2f860be3ff513cbd5c469d19256a53867441c8c6d40f",
+  "runner_source_sha256": "72304cb4c6cb7daad98a83244d4e8b57422b636e3f56e2c1c0cc0bd470c316b9",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "secondary",
+      "native": {
+        "passed": false,
+        "checkCount": 16,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Explicit bounded secondary-language scope: en,de"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Reduce motion: Off"
+          },
+          {
+            "passed": true,
+            "message": "Reduced motion is enabled through its actual visible dial"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Atelier"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Atelier"
+          },
+          {
+            "passed": false,
+            "message": "Reduced-motion horizontal route remains interactive"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[315,1083][564,1215]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[721,245][853,408]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Reduce motion: Off",
+            "bounds": "[54,829][825,961]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Atelier",
+            "bounds": "[714,1187][856,1368]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "input": "Actual touchscreen horizontal navigation gesture",
+            "direction": "right",
+            "appBounds": "[0,0][880,1440]"
+          }
+        ],
+        "captures": [
+          "reduced-root-0-en",
+          "reduced-root-1-en",
+          "reduced-root-2-en",
+          "reduced-root-3-en",
+          "failure"
+        ],
+        "processId": 13076,
+        "phase": "secondary",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained task-owned U1000 profile; actual SDK touchscreen/object/gesture/IME actions, read-only preference observations and real app screenshots; no spending, app/engine/private-field calls, seeding, provider action or user devices"
+      },
+      "expected_version": "1.17.0-rc4",
+      "expected_code": 22
+    }
+  ],
+  "screenshots": {
+    "secondary/reduced-root-1-en.png": "59d3c3d7a83af8fedbd967163251aca33bb1ad13a58937e23c66726444de8907",
+    "secondary/reduced-root-3-en.png": "06601839775b7efc335371272f1d7d2b20361f16f59717dc86ed03bd6f9d4378",
+    "secondary/reduced-root-0-en.png": "a28373cd3e3eca02ffed615c43f6ab215f23b7ceca6a476e4850fa591fd0394a",
+    "secondary/reduced-root-2-en.png": "2c476a991f9f998d1b6bd15093ac7ecc9cff606ce52e720c510d7dab3866f49a",
+    "secondary/failure.png": "6b994cf300f31a137ec1249ed1ad282fac38d17f73d8c7eee81b53bf97c7ed6f"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-f-secondary-compact-preflight/interface-observer.apk",
+  "compact": true,
+  "route": "secondary",
+  "secondary_languages": [
+    "en",
+    "de"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "compact_scope": "Actual native320dp-wide display,880x1440 pixels at440dpi; original display restored after both native processes",
+  "display_during": {
+    "size": "Physical size: 1080x2340\nOverride size: 880x1440",
+    "density": "Physical density: 440"
+  },
+  "error": "Native interface secondary failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v117-ui-test/run.py\", line 167, in main\n    elif a.route=='secondary':native_phase('secondary',a.expected_version,a.expected_code)\n  File \"/Users/n/androidhit/scripts/v117-ui-test/run.py\", line 119, in native_phase\n    assert native['passed'],'Native interface '+phase+' failed'\nAssertionError: Native interface secondary failed\n",
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 18.911
+}

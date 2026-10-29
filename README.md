@@ -1,6 +1,22 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>Read the board. Make your move. Come home.</strong><br>A puzzle Journey with visible rules and a three-room home for your companion.</p>
-<p align="center"><strong>1.16.0-rc1 · a closer home, your player card and collectible arrivals</strong><br><a href="docs/RELEASE_1_16.md">Release & exact bytes</a> · <a href="docs/validation/v1.16/README.md">Qualification</a> · <a href="docs/research/v1.16/reference-audit.md">Design references</a></p>
+<p align="center"><strong>A world at your fingertips.</strong><br>A tactile puzzle Journey and an illustrated home for your companion.</p>
+<p align="center"><strong>1.17.0-rc4 · original sprites, places to touch and a living soundscape</strong><br><a href="docs/RELEASE_1_17.md">Release status</a> · <a href="docs/validation/v1.17/README.md">Evidence & pending acceptance</a> · <a href="docs/design/v1.17/reference-research.md">Primary-source design research</a></p>
+
+**1.17 is under final qualification.** Candidate F (production `1.17.0-rc4`, code22) passes the four-artifact audit and shared responsive-root geometry. Exact-F native screens, audio, fresh-player flow and all1,000 levels must pass before Git/website delivery. E's scoped results remain preserved alongside two subsequently found compact composition defects; F corrects their layout. [Release register](docs/RELEASE_1_17.md).
+<!-- FINAL_117: README_STATUS — replace this paragraph only after the exact final APK, native replay and publication receipts are accepted. -->
+
+Four separate places—Adventure, Home, Collection and Workshop—use illustrated scenery and touchable objects in place of visible button rows, pills and a navigation bar. Optional swipes connect the places; named object targets keep navigation discoverable. Short scene fades respect reduced motion. Deeper menus retain clear costs, ownership, confirmations and accessible actions.
+
+The bundled original art covers **24 companions, 24 garments and 42 furnishings**, with three scene illustrations and new room materials. Portraits compose the actual four clothing slots over each companion's anatomy. The three 10 × 10 rooms retain close-up, pan, pinch and whole-room views. A chosen nickname, flag and earned badges belong to the local player card.
+
+Five sound contexts × ten biomes provide **50 synthesized arrangements**: the ten historical puzzle themes plus forty new place arrangements. Music and effects remain separate. [Actual synthesizer previews and measured host scope](docs/ART_AUDIO.md) distinguish generated PCM from recorded Android or physical-speaker output.
+
+The U1–U1000 puzzle rules, earned-coin economy and existing save identities are retained. Companion arrivals still contain 23 possible companions for 180 earned coins; the outfit pool contains five complete looks for 260. Odds and duplicate returns are shown before spending. Test ads, closed real checkout and disabled paid premium draws remain. Google sign-in does not synchronize the local house, profile or game save.
+
+The [release table](docs/RELEASE_1_17.md) records the exact audited E bytes; canonical downloads and final publication remain pending. The [E visual record](docs/validation/v1.17/review/visual-candidate-e.json) passes its inspected scope and closes the wardrobe contrast finding at a measured 5.45:1. The [website staging register](docs/validation/site-v1.17/README.md) remains separate from deployed Firebase evidence. [Build and host checks](docs/DEVELOPMENT.md) · [Installation and activation boundaries](docs/PRODUCTION_RELEASE.md).
+
+## Preserved 1.16 delivery
+
 
 The home now fills its actual scene viewport, with a closer default camera, finger pan and an explicit whole-room view. Larger collection portraits, illustrated Atelier cards, accented pill actions and icon-medallion navigation give objects and characters more room.
 

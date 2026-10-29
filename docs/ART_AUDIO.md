@@ -1,5 +1,25 @@
 # Art direction and original audio
 
+## 1.17 bundled sprite art and scene music
+
+The new art library supplies original illustrated bodies for all 24 existing companion identities, all 24 garments and all 42 furnishings. Three full-screen place illustrations and three room-material atlases extend the same plum, gold and soft candy palette. The generated assets are bundled with the app; no image-generation service or sprite download runs during play. [Generation prompts](design/v1.17/art-prompts.json) and [asset/identity audit](validation/v1.17/assets/final-art-audit.json) identify the sources. These audits establish packaged coverage, not anatomical quality or final native visual acceptance.
+
+`ArtLibrary` decodes authored sprite regions lazily into a shared 48 MiB cache. `ArtRegions117` records source rectangles and exclusions when a drawing crosses an atlas seam. `CompanionRig`, `CharacterSprites` and the shared `CompanionPortrait` align body, dress, paired gloves, paired shoes and hat in one transform. Item IDs, prices, ownership and save records remain independent of render metadata. The 12 free styles are visual treatments over the original sprites; 24 × 12 combinations do not mean 288 individually authored images.
+
+Actual application screenshots and isolated renderer sheets have different roles. The separate native gallery renders 144 companion/outfit compositions, 24 isolated garments and 24 representative style samples through public pure draw APIs. It does not acquire, equip or prove ownership of those objects in a game. [B gallery execution](validation/v1.17/art/native/candidate-b-art/host-report.json) passed mechanically but its [visual review](validation/v1.17/review/visual-candidate-b.json) rejected fit and contrast. The exact [E gallery](validation/v1.17/art/native/candidate-e-art/host-report.json) passes 144 complete looks, 24 garments and 24 style samples across 50 PNGs. All [50 complete C/E sheets are byte-identical](validation/v1.17/review/c-to-e-renderer-pixel-equality.json), transferring the direct inspection of every C sheet to independently re-rendered E pixels. The [E visual scope](validation/v1.17/review/visual-candidate-e.json) passes with 14 actual application frames reviewed; the C wardrobe P2 closes at a sampled 5.45:1 contrast versus 1.93:1. Nonblocking limits remain: Jelli has a thin sole-like edge, free styles are accent ornaments rather than new painted costumes, and some high collars approach the chin. This is scoped visual acceptance, not a final release or all-screen claim. No renderer sheet is a marketing application screenshot.
+
+`Synth.sceneLoop(biome, scene)` provides 50 arrangements: `PUZZLE`, `ADVENTURE`, `HOME`, `COLLECTION` and `ATELIER` across ten biomes. The ten puzzle PCM buffers and eleven historical effects are preserved exactly. Forty new place arrangements share the biome's harmonic identity with different orchestration. Three short new earcons identify scene changes, fabric and reveals. The audio worker coalesces scene/biome requests, rejects obsolete generations and retains the existing music/effects, focus, background and release boundaries.
+
+The [executed DSP and controlled lifecycle report](validation/v1.17/audio/scenes/final-b/verification.json) passes 1,714 host checks: 1,638 DSP checks and 76 lifecycle-model checks. It covers uniqueness, RMS, headroom, DC, non-silent windows, loop seams, preservation and bounded concurrent tracks. The historical puzzle PCM remains untouched; new loops have a symmetric 256-frame boundary correction. This is host DSP and a stubbed `AudioTrack` lifecycle model, not proof of installed playback or a physical speaker/headphone audition. E must retain the recorded source hashes or rerun the suite.
+
+Four optional 10-second previews use the app's exact synthesizer, biome 0 and default music gain 0.27. The entrance follows the engine's 900 ms fade; only the preview ending adds a 450 ms export fade. These files are **synthesizer renders, not phone recordings**: [Adventure](validation/v1.17/audio/scenes/final-b/scene-adventure-preview.wav), [Home](validation/v1.17/audio/scenes/final-b/scene-home-preview.wav), [Collection](validation/v1.17/audio/scenes/final-b/scene-collection-preview.wav), [Workshop](validation/v1.17/audio/scenes/final-b/scene-atelier-preview.wav). The staged website copies them byte for byte and never autoplays them.
+
+[Research](design/v1.17/reference-research.md) records the cognitive/artistic observations from official Crash Fever, King, Apple and Android sources. No franchise artwork, characters, sprites, recordings or code is included, and those references do not establish future retention or audience size. [Current acceptance register](validation/v1.17/README.md).
+
+## Preserved art and audio records
+
+The sections below describe their identified historical renderer and release. Statements about vector-only companions or ten music arrangements do not describe1.17.
+
 ## 1.12 original shop illustrations
 
 Six friendly power silhouettes, an amber coin, a faceted violet/cyan LumaGold gem and a capsule use code-native original art. The same powers appear in gameplay, inventory and the shop. Rounded accents and flatter pill surfaces reduce the stacked-box treatment. Draw helpers reuse Paint/Path/RectF objects, never change economy/state, and freeze temporal art in reduced motion. [Independent final raster scope](validation/v1.12/art-rc2/README.md). The existing original music and its separate controls are retained.
@@ -8,7 +28,7 @@ Six friendly power silhouettes, an amber coin, a faceted violet/cyan LumaGold ge
 
 The shared portrait now leaves more character silhouette visible under clothing and separates/enlarges Head, Aura and Charm. Existing original code art, styles, identities, equipment effects and music are retained. The selected scene theme now tints both the garden and animated gameplay. [Measured composition and limits](validation/v1.11/avatar-bugs/README.md) · [Release](RELEASE_1_11.md).
 
-## Current 1.9 companions and moving stages
+## Preserved 1.9 companions and moving stages
 
 The original code renderer adds **24 companion silhouettes × 12 visual treatments**, five poses and actual-progress parallax with a quiet central reading area. Cyberpunk, arcade, modern pixel, sakura, ocean, space, steampunk, candy, Halloween, Valentine, ice and plush treatments change geometry/accessories as well as colour. These are 288 combinations, not 288 hand-painted assets. Styles are free and do not grant unowned companions or gameplay benefits. Reduced motion freezes the temporal and travelling effects. [Renderer and native atlas evidence](validation/v1.9/avatar/README.md) · [UX](UX_1_9.md).
 

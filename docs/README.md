@@ -1,6 +1,14 @@
 # Luma Drift documentation
 
-## Current1.16 — a closer home and a local player card
+## 1.17 — original art and object navigation, final qualification in progress
+
+[Release status](RELEASE_1_17.md) · [Qualification register](validation/v1.17/README.md) · [Primary-source research](design/v1.17/reference-research.md) · [Navigation contract](design/v1.17/navigation-spec.md) · [Website staging](validation/site-v1.17/README.md).
+
+Four separate illustrated places replace visible button rows and the old navigation bar with named scene objects and optional swipes. Original bundled raster art covers 24 companions, 24 garments and 42 furnishings; the existing three-room home, local player card, earned badges, outfits and purchase receipts remain. The synthesizer now supplies five contexts across ten biomes: ten retained puzzle arrangements and forty new place arrangements.
+
+Candidate F is production `1.17.0-rc4` / code22, frozen against161 inputs. Build/lint and independent four-binary verification pass. The [exact sparse F rehearsal](validation/v1.17/ci-host-rehearsal-f/summary.json) passes14 commands/135 files, including420 responsive-root layouts. Exact-F native, full1,000 replay, Git and Firebase/public-byte delivery remain pending. The [register](validation/v1.17/README.md) preserves E's scoped passes and subsequent compact composition findings without transferring them to F.
+
+## Preserved 1.16 — a closer home and a local player card
 
 [Release and exact bytes](RELEASE_1_16.md) · [Qualification register](validation/v1.16/README.md) · [Official-reference audit](research/v1.16/reference-audit.md).
 

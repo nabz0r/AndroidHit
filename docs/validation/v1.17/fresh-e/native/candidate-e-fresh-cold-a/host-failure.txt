@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/v117-fresh-ui/run.py", line 82, in main
+    assert proc.returncode==0 and re.search(rb'INSTRUMENTATION_CODE:\s*-1\s*$',proc.stdout) and native['passed'] is True,'Native route failed; preserve attempted observations'
+AssertionError: Native route failed; preserve attempted observations

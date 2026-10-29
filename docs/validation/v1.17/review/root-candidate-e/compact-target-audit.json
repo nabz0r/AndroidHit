@@ -1,0 +1,440 @@
+{
+  "status": "OBSERVED_TARGET_GEOMETRY_REQUIRES_VISUAL_TRIAGE",
+  "apk_sha256": "48134c248b88a277d93d6745be6efd7a825f13629ea591e6b41e11cbefabf1eb",
+  "version": "1.17.0-rc3",
+  "code": 21,
+  "scope": "Read-only analysis of previously captured actual native accessibility target rectangles. No device, app mutation, inferred acquisition, new screen execution or automatic painted-pixel acceptance. Extended-target overlap is not automatically a defect. Home furniture/companion targets intentionally use painter-order picking.",
+  "roots": [
+    {
+      "root": "adventure-en",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-compact/browse/adventure-en.json",
+      "sha256": "0214bed8f28e40944df52baed770801233bfe1426c9859ac03d2e0771143af50",
+      "actions": 7,
+      "overlaps": [
+        {
+          "a": "Play",
+          "b": "All levels",
+          "intersection_pixels": [
+            225,
+            867,
+            288,
+            911
+          ],
+          "width": 63,
+          "height": 44
+        },
+        {
+          "a": "Play",
+          "b": "Events",
+          "intersection_pixels": [
+            568,
+            867,
+            654,
+            911
+          ],
+          "width": 86,
+          "height": 44
+        },
+        {
+          "a": "Events",
+          "b": "My home",
+          "intersection_pixels": [
+            714,
+            1126,
+            803,
+            1140
+          ],
+          "width": 89,
+          "height": 14
+        }
+      ],
+      "centres_inside_another_action": [],
+      "home_world_painter_order_requires_separate_triage": false
+    },
+    {
+      "root": "collection-de",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-compact/browse/collection-de.json",
+      "sha256": "0db6455ebcbeb13f9465e5738fb91671a10365e7e693c2023b8c68d1fd1aa359",
+      "actions": 10,
+      "overlaps": [
+        {
+          "a": "Profil",
+          "b": "Garderobe",
+          "intersection_pixels": [
+            191,
+            348,
+            688,
+            377
+          ],
+          "width": 497,
+          "height": 29
+        },
+        {
+          "a": "Garderobe",
+          "b": "Sternenbegegnungen",
+          "intersection_pixels": [
+            599,
+            671,
+            688,
+            877
+          ],
+          "width": 89,
+          "height": 206
+        },
+        {
+          "a": "Meine Begleiter",
+          "b": "Mein Zuhause",
+          "intersection_pixels": [
+            67,
+            1126,
+            165,
+            1208
+          ],
+          "width": 98,
+          "height": 82
+        },
+        {
+          "a": "Ausrüstung",
+          "b": "Atelier",
+          "intersection_pixels": [
+            714,
+            1126,
+            790,
+            1208
+          ],
+          "width": 76,
+          "height": 82
+        }
+      ],
+      "centres_inside_another_action": [],
+      "home_world_painter_order_requires_separate_triage": false
+    },
+    {
+      "root": "atelier-en",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-compact/browse/atelier-en.json",
+      "sha256": "1a39c7ea3a0ccbeeff65eb3787caa3d8bf8e2e082338b4fd070c47ecf8033b50",
+      "actions": 8,
+      "overlaps": [
+        {
+          "a": "Furniture",
+          "b": "Stellar",
+          "intersection_pixels": [
+            108,
+            706,
+            279,
+            820
+          ],
+          "width": 171,
+          "height": 114
+        },
+        {
+          "a": "Furniture",
+          "b": "Forest",
+          "intersection_pixels": [
+            313,
+            706,
+            566,
+            820
+          ],
+          "width": 253,
+          "height": 114
+        },
+        {
+          "a": "Furniture",
+          "b": "Neon",
+          "intersection_pixels": [
+            600,
+            706,
+            771,
+            820
+          ],
+          "width": 171,
+          "height": 114
+        },
+        {
+          "a": "Stellar",
+          "b": "Walls",
+          "intersection_pixels": [
+            175,
+            1013,
+            279,
+            1060
+          ],
+          "width": 104,
+          "height": 47
+        },
+        {
+          "a": "Forest",
+          "b": "Walls",
+          "intersection_pixels": [
+            313,
+            1013,
+            379,
+            1060
+          ],
+          "width": 66,
+          "height": 47
+        },
+        {
+          "a": "Forest",
+          "b": "Floor",
+          "intersection_pixels": [
+            503,
+            1013,
+            566,
+            1060
+          ],
+          "width": 63,
+          "height": 47
+        },
+        {
+          "a": "Neon",
+          "b": "Floor",
+          "intersection_pixels": [
+            600,
+            1013,
+            706,
+            1060
+          ],
+          "width": 106,
+          "height": 47
+        }
+      ],
+      "centres_inside_another_action": [],
+      "home_world_painter_order_requires_separate_triage": false
+    },
+    {
+      "root": "home-fr",
+      "source": "docs/validation/v1.17/native-interface/candidate-e-sixlangs-compact/browse/home-fr.json",
+      "sha256": "d628f36ecdc80562783e1bc25bd32a4f6f38b482a7637f38eaf9db5cc1f4ad21",
+      "actions": 18,
+      "overlaps": [
+        {
+          "a": "Plante Petite feuille",
+          "b": "Piano à queue Minuit",
+          "intersection_pixels": [
+            68,
+            567,
+            126,
+            747
+          ],
+          "width": 58,
+          "height": 180
+        },
+        {
+          "a": "Tapis Orbite douce",
+          "b": "Piano à queue Minuit",
+          "intersection_pixels": [
+            291,
+            647,
+            426,
+            747
+          ],
+          "width": 135,
+          "height": 100
+        },
+        {
+          "a": "Tapis Orbite douce",
+          "b": "Un petit câlin",
+          "intersection_pixels": [
+            343,
+            647,
+            536,
+            779
+          ],
+          "width": 193,
+          "height": 132
+        },
+        {
+          "a": "Mur de livres",
+          "b": "Piano à queue Minuit",
+          "intersection_pixels": [
+            374,
+            452,
+            426,
+            598
+          ],
+          "width": 52,
+          "height": 146
+        },
+        {
+          "a": "Mur de livres",
+          "b": "Un petit câlin",
+          "intersection_pixels": [
+            374,
+            558,
+            536,
+            598
+          ],
+          "width": 162,
+          "height": 40
+        },
+        {
+          "a": "Mur de livres",
+          "b": "Chambre",
+          "intersection_pixels": [
+            374,
+            362,
+            548,
+            474
+          ],
+          "width": 174,
+          "height": 112
+        },
+        {
+          "a": "Mur de livres",
+          "b": "Jardin",
+          "intersection_pixels": [
+            625,
+            362,
+            660,
+            474
+          ],
+          "width": 35,
+          "height": 112
+        },
+        {
+          "a": "Piano à queue Minuit",
+          "b": "Un petit câlin",
+          "intersection_pixels": [
+            343,
+            558,
+            426,
+            747
+          ],
+          "width": 83,
+          "height": 189
+        },
+        {
+          "a": "Piano à queue Minuit",
+          "b": "Salon",
+          "intersection_pixels": [
+            68,
+            452,
+            254,
+            474
+          ],
+          "width": 186,
+          "height": 22
+        },
+        {
+          "a": "Piano à queue Minuit",
+          "b": "Chambre",
+          "intersection_pixels": [
+            331,
+            452,
+            426,
+            474
+          ],
+          "width": 95,
+          "height": 22
+        },
+        {
+          "a": "Canapé Coin de nuage",
+          "b": "Tourne-disque Vinyle",
+          "intersection_pixels": [
+            519,
+            1021,
+            668,
+            1088
+          ],
+          "width": 149,
+          "height": 67
+        },
+        {
+          "a": "Canapé Coin de nuage",
+          "b": "Décorer",
+          "intersection_pixels": [
+            625,
+            912,
+            760,
+            1088
+          ],
+          "width": 135,
+          "height": 176
+        },
+        {
+          "a": "Chevalet Rêverie",
+          "b": "Décorer",
+          "intersection_pixels": [
+            780,
+            892,
+            819,
+            1067
+          ],
+          "width": 39,
+          "height": 175
+        },
+        {
+          "a": "Tourne-disque Vinyle",
+          "b": "Décorer",
+          "intersection_pixels": [
+            625,
+            1021,
+            668,
+            1115
+          ],
+          "width": 43,
+          "height": 94
+        }
+      ],
+      "centres_inside_another_action": [
+        {
+          "target": "Tapis Orbite douce",
+          "centre": [
+            439.5,
+            713.0
+          ],
+          "also_inside": "Un petit câlin",
+          "later_target_wins": true
+        },
+        {
+          "target": "Canapé Coin de nuage",
+          "centre": [
+            632.0,
+            1000.0
+          ],
+          "also_inside": "Décorer",
+          "later_target_wins": true
+        },
+        {
+          "target": "Tourne-disque Vinyle",
+          "centre": [
+            593.5,
+            1087.0
+          ],
+          "also_inside": "Canapé Coin de nuage",
+          "later_target_wins": false
+        },
+        {
+          "target": "Un petit câlin",
+          "centre": [
+            439.5,
+            684.5
+          ],
+          "also_inside": "Tapis Orbite douce",
+          "later_target_wins": false
+        },
+        {
+          "target": "Chambre",
+          "centre": [
+            439.5,
+            372.5
+          ],
+          "also_inside": "Mur de livres",
+          "later_target_wins": false
+        },
+        {
+          "target": "Décorer",
+          "centre": [
+            722.0,
+            999.0
+          ],
+          "also_inside": "Canapé Coin de nuage",
+          "later_target_wins": false
+        }
+      ],
+      "home_world_painter_order_requires_separate_triage": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "passed": false,
+  "phase": "onboarding",
+  "apk_sha256": "eb67c6214d2868b21d02a0367d743bd2fed45b408b4d544523b8876ef3b78fff",
+  "observer_sha256": "89d321117a1161e23dfa9b47dea8c290e53e2f94d80446a3ca4f04930adab30b",
+  "serial": "emulator-5590",
+  "avd": "Luma117-Fresh-QA",
+  "run_token": "1b0892c5-863b-4a9e-8b77-53f89a06a655",
+  "scope": "New receipt-owned empty AVD only; real public SDK touch route, no target preferences/private app calls, state injection, seeding or existing AVD access",
+  "genuine_new_install": true,
+  "failure": "Traceback (most recent call last):\n  File \"/Users/n/androidhit/scripts/v117-fresh-ui/run.py\", line 60, in main\n    report['genuine_new_install']=True;report['new_install_receipt']=str(args.fresh_install_receipt.relative_to(ROOT))\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py\", line 929, in relative_to\n    raise ValueError(\"{!r} is not in the subpath of {!r}\"\nValueError: 'docs/validation/v1.17/fresh/native/candidate-c-onboarding-b/host-report.json' is not in the subpath of '/Users/n/androidhit' OR one path is relative and the other is absolute.\n",
+  "elapsed_seconds": 0.928,
+  "evidence_sha256": {
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "fresh-observer.apk": "89d321117a1161e23dfa9b47dea8c290e53e2f94d80446a3ca4f04930adab30b",
+    "host-failure.txt": "1f019dfc34a323a089083c36be6694b673accd28158b27bf969882a09de71600",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-source/AndroidManifest.xml": "1b0f935baa643bde095c62173d489f6e0e94db59727c9c1d8c9280f295c1baaf",
+    "observer-source/README.md": "6cc82b462c4e122bc747a589fd6fb511d7c43487a55e8186c7856806228cc217",
+    "observer-source/build.gradle": "b6631990e7025e6b905d20b34a0b4a2fed231ae3b98e35c86fe386a4e7fbbb2a",
+    "observer-source/java/com/androidhit/lumadrift/qa/v117fresh/FreshInstrumentation.java": "1f7da4de608ca1f960826943cca153ad536b32aeb8cea7b73de50586f63eb47d",
+    "observer-source/run.py": "e1186161397db39016870021fff87b7557925cc26ed28c26de94eb15a23bab6c"
+  }
+}

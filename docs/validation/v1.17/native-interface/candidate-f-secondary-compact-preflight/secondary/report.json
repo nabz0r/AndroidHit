@@ -1,0 +1,125 @@
+{
+  "passed": false,
+  "checkCount": 16,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact Luma target package"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed candidate version and code"
+    },
+    {
+      "passed": true,
+      "message": "Explicit bounded secondary-language scope: en,de"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Réglages"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for English"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Settings"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Reduce motion: Off"
+    },
+    {
+      "passed": true,
+      "message": "Reduced motion is enabled through its actual visible dial"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Adventure"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for My home"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: My home"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Collection"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Collection"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Atelier"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Atelier"
+    },
+    {
+      "passed": false,
+      "message": "Reduced-motion horizontal route remains interactive"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Réglages",
+      "bounds": "[721,245][853,408]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "English",
+      "bounds": "[315,1083][564,1215]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Settings",
+      "bounds": "[721,245][853,408]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Reduce motion: Off",
+      "bounds": "[54,829][825,961]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "My home",
+      "bounds": "[714,1187][856,1368]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Collection",
+      "bounds": "[714,1187][856,1368]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Atelier",
+      "bounds": "[714,1187][856,1368]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "input": "Actual touchscreen horizontal navigation gesture",
+      "direction": "right",
+      "appBounds": "[0,0][880,1440]"
+    }
+  ],
+  "captures": [
+    "reduced-root-0-en",
+    "reduced-root-1-en",
+    "reduced-root-2-en",
+    "reduced-root-3-en",
+    "failure"
+  ],
+  "processId": 13076,
+  "phase": "secondary",
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Retained task-owned U1000 profile; actual SDK touchscreen\/object\/gesture\/IME actions, read-only preference observations and real app screenshots; no spending, app\/engine\/private-field calls, seeding, provider action or user devices"
+}

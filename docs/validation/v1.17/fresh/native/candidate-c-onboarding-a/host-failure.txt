@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/n/androidhit/scripts/v117-fresh-ui/run.py", line 50, in main
+    proof=subprocess.check_output([signer,'verify','--verbose','--print-certs',str(file)],stderr=subprocess.STDOUT).decode();assert re.findall(r'Signer #1 certificate SHA-256 digest: ([a-f0-9]+)',proof)==[SIGNER];(output/(name+'-signature.txt')).write_text(proof)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/n/Library/Android/sdk/build-tools/36.0.0/apksigner', 'verify', '--verbose', '--print-certs', '/tmp/luma-v117-candidate-c/luma-drift-1.17.0-rc1.apk']' returned non-zero exit status 1.

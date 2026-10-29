@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.17.0-rc4 / code22 — illustrated places and object navigation (under qualification)
+
+29 October 2026. [Release status](RELEASE_1_17.md) · [Current evidence and pending work](validation/v1.17/README.md).
+
+- Replace visible game button rows, pills and navigation bar with four full-scene destinations, original interactive props, free captions, dials and optional root swipes. Preserve semantic/keyboard access and explicit confirmation meanings.
+- Add original bundled sprite art for all 24 companions, 24 garments and 42 furnishings, three illustrated places and new room materials. Align clothing through companion anatomy and shared portrait transforms; retain ownership, prices, saved layouts and free styles.
+- Add bounded 220 ms scene fades with lifecycle and reduced-motion handling and guarded touch/keyboard/accessibility input.
+- Add forty place-specific synthesized arrangements to the ten historical puzzle themes, plus scene/fabric/reveal earcons. Keep old PCM, separate music/effects switches and worker request coalescing.
+- Stage a new FR/EN Firebase page with exact app-DSP previews and future native captures. Require final byte, provenance, full 1,000 replay and clean-commit gates before publication.
+
+Candidate F is frozen as rc4/code22 after independent E review found compact Collection/Atelier caption overlaps. The cached shared root geometry preserves art size and reserves separate captions/navigation. Four-package build/lint and binary verification pass. The exact sparse F rehearsal passes14 commands/135 files, including202,444 assertions over420 layouts. Native F UI/art/audio/fresh/full1,000 replay and publication remain pending. All earlier failures and scoped passes retain their actual candidate identity.
+
+## Preserved 1.16.0-rc1 / code18 — closer home and local player card
+
+The camera uses the real scene viewport; a local nickname, chosen flag, six earned badges and two versioned earned-coin arrival pools add personalization. Five signature outfits equip all four slots atomically. Exact native acceptance and Firebase delivery remain in [the 1.16 release](RELEASE_1_16.md).
+
+## Preserved 1.15.0-rc1 / code17 — relay route and separate destinations
+
+Add the versioned U1–U1000 route with piece-controlled doors and repeated free Undo, four dedicated destinations, three 10×10 rooms and 42 furnishings. Preserve older attempts and challenge identities. The actual 1.15 first-clear marathon remains historical evidence in [its release](RELEASE_1_15.md); it does not certify 1.17.
+
 ## 1.14.0-rc2 / code 16 — clear rules, deliberate actions
 
 28 October 2026. [Release](RELEASE_1_14.md) · [Rules](GAMEPLAY_1_14.md) · [UX](UX_1_14.md) · [Qualification](validation/v1.14/README.md).

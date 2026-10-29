@@ -1,3 +1,16 @@
+# Luma Drift 1.17 — original art and navigation without visible buttons
+
+Owner request29 October2026: replace the entire avatar/clothing/home art direction, research current hit games, remove every visible conventional button, create discoverable scene/object navigation and coherent fades/transitions, qualify and deliver the actual Android release and updated existing site.
+
+1. Research official current sources and document decisions versus unmeasured audience assumptions.
+2. Produce original detailed raster art:24companions,24garments,42independent editable furniture designs and three scene backgrounds.
+3. Integrate all assets against stable inventory IDs; preserve ownership, prices, receipts, puzzle rules, room footprints and camera/picking.
+4. Replace navigation bars, pills, generic action rows and application dialog buttons with scene objects/direct manipulation; retain named accessible targets and keyboard Done/Back.
+5. Qualify sprite integrity, all24×6 character/outfit renders, scene motion/input arbitration, retained-profile signed upgrade, every retained native route in six languages, compact display, cold persistence and actual playback lifecycle. Replay all1,000 levels on the exact accepted APK.
+6. Update source, docs, CI and release manifests; publish the existing FR/EN website with16 original native captures, four sound excerpts and exact verified downloads. Verify public bytes and actual responsive browser rendering.
+
+Current work branch: `codex/luma-art-direction-1-17`. E remains preserved with its scoped passes, but independent review found compact Collection/Atelier composition overlaps. F is reserved as rc4/code22; a shared responsive-root layout and independent geometry test must close those findings before freezing and repeating exact-byte acceptance. Canonical packaging, Git and website publication follow the final native UI/audio/1,000-level results. See PROGRESS.md and the 1.17 evidence register.
+
 # Luma Drift 1.16 — Android and website delivered
 
 Owner request29 October2026: enlarge scene/furniture, editable nickname/flag, earned badges, avatar/skin gacha and original game-like UI inspired by official genre hits.

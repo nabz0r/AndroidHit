@@ -1,0 +1,25 @@
+{
+  "passed": false,
+  "scope": "Initial host DSP attempt; no native/audio playback claim. All50 loops measured separately after first strict-test failure.",
+  "time_recorded_utc": "2026-10-29T00:52:29.613701+00:00",
+  "failure": "Wrapped loop seam is bounded:8/COLLECTION",
+  "strict_absolute_limit_samples": 393.204,
+  "violations": [
+    {
+      "biome": 8,
+      "scene": "COLLECTION",
+      "seam_step": 401,
+      "largest_adjacent_step": 1732,
+      "rms": 0.12999999165792417
+    },
+    {
+      "biome": 9,
+      "scene": "ADVENTURE",
+      "seam_step": 402,
+      "largest_adjacent_step": 2232,
+      "rms": 0.11625606432441901
+    }
+  ],
+  "note": "Both seams are smaller than their own largest adjacent sample step. Only the strict absolute ceiling was exceeded; no subjective audible-click claim. Original synthesizer source remains owned by root for correction.",
+  "source_sha256_at_recording": "5c749ba9a3543fc2d0ada43bdbdbeb72865aa58e36a7dde6dd122ed2203156a5"
+}

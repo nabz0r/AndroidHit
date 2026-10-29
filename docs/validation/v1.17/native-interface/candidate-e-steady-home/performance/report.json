@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "checkCount": 19,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact Luma target package"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed candidate version and code"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Réglages"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for English"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for My home"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: My home"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Living room"
+    },
+    {
+      "passed": true,
+      "message": "Target PID recorded its actual original sprite decodes during warmup"
+    },
+    {
+      "passed": true,
+      "message": "Steady enlarged Home frames do not evict and repeatedly decode their sprites"
+    },
+    {
+      "passed": true,
+      "message": "Actual application frames continue during the cache stability observation"
+    },
+    {
+      "passed": true,
+      "message": "Observed native sprite allocations remain within the configured48MiB cache bound"
+    },
+    {
+      "passed": true,
+      "message": "Actual Home cache, frame and memory observation creates no purchase, draw, compensation or coin change"
+    },
+    {
+      "passed": true,
+      "message": "Actual Home cache, frame and memory observation preserves progression, stock and complete puzzle session"
+    },
+    {
+      "passed": true,
+      "message": "Actual Home cache, frame and memory observation preserves all furniture ownership and exact room layouts"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Adventure"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Settings"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Français"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Ma maison"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Ma maison"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Réglages",
+      "bounds": "[890,334][1042,533]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "English",
+      "bounds": "[387,1362][692,1523]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "My home",
+      "bounds": "[876,1970][1050,2192]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Living room",
+      "bounds": "[47,365][312,615]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Adventure",
+      "bounds": "[29,1970][203,2192]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Settings",
+      "bounds": "[890,334][1042,533]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Français",
+      "bounds": "[708,1362][1013,1523]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Ma maison",
+      "bounds": "[876,1970][1050,2192]",
+      "input": "UiAutomation touchscreen"
+    }
+  ],
+  "captures": [
+    "performance-home-en",
+    "performance-home-fr"
+  ],
+  "processId": 10607,
+  "phase": "performance",
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Actual enlarged retained Home UI; read-only target-PID Android logs, gfxinfo and meminfo before\/after a steady animated interval. No target renderer\/cache\/engine methods or preference writes."
+}

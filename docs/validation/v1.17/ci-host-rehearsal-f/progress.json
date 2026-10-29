@@ -1,0 +1,103 @@
+{
+  "completed_steps": 14,
+  "steps": [
+    {
+      "command": "sh scripts/test-learning-v114.sh \"$RUNNER_TEMP/luma-puzzle-contracts/learning\"",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/01-test-learning-v114.txt",
+      "sha256": "e88257fd1bebcb5b2f446c7167eed1e4c114508744bba19a2e5dac1fd59d1d38",
+      "seconds": 5.795
+    },
+    {
+      "command": "sh scripts/test-relay-v115.sh \"$RUNNER_TEMP/luma-puzzle-contracts/relay\"",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/02-test-relay-v115.txt",
+      "sha256": "617cdfe6481ef7850047bbdbf554fca39ba9c765dbb68785df37e52adcbfc313",
+      "seconds": 2.021
+    },
+    {
+      "command": "bash scripts/test-home-v115.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/03-test-home-v115.txt",
+      "sha256": "e5fc67741f0424659cd226ddd4950d65308e93bd74bb347a5c26021a2596e260",
+      "seconds": 0.881
+    },
+    {
+      "command": "bash scripts/test-home-v115-geometry.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/04-test-home-v115-geometry.txt",
+      "sha256": "9c0acf450165a27e9083500d4a1fddec092082bd5e5aaaee46eed79e33233c68",
+      "seconds": 0.883
+    },
+    {
+      "command": "sh scripts/test-deliberate-play-v114.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/05-test-deliberate-play-v114.txt",
+      "sha256": "ec6ef87ec2689a5a83d0eadc443cb19d5733dc89d712abe4d02cbfdc25691280",
+      "seconds": 0.77
+    },
+    {
+      "command": "bash scripts/test-home-v116-geometry.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/06-test-home-v116-geometry.txt",
+      "sha256": "d2fb2c14f261cea6bfb0b5733fe019f86559a28ab5e055179103116ecac66956",
+      "seconds": 1.469
+    },
+    {
+      "command": "bash scripts/test-profile-summon-v116.sh \"$RUNNER_TEMP/luma-puzzle-contracts/profile-summon.json\"",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/07-test-profile-summon-v116.txt",
+      "sha256": "318b99d3a9c5be2ac414194b3699a17abffc76a2545b11d92ed66d39f5583051",
+      "seconds": 1.038
+    },
+    {
+      "command": "sh scripts/test-learning-guide.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/08-test-learning-guide.txt",
+      "sha256": "33421d9148b13e648d14c2cc1e5a57b95b11ae84c361b59d601eae8049fa9e89",
+      "seconds": 0.749
+    },
+    {
+      "command": "bash scripts/test-scene-transition-v117.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/09-test-scene-transition-v117.txt",
+      "sha256": "0e7083d9313bbc617b8d16011a965dabfe745bfa95d09d870bcfdcbc3bcb6f9b",
+      "seconds": 0.368
+    },
+    {
+      "command": "bash scripts/test-root-scenes-v117.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/10-test-root-scenes-v117.txt",
+      "sha256": "4b3bf75248e30d3d94d1c964351747173a72b4528b4bbf198c436f2e85b204e3",
+      "seconds": 0.472
+    },
+    {
+      "command": "bash scripts/test-art-v117-geometry.sh",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/11-test-art-v117-geometry.txt",
+      "sha256": "bdc83808c9352089260cca140aa823cf89ab6427bba10442e1fcfda09d523028",
+      "seconds": 0.332
+    },
+    {
+      "command": "bash scripts/test-audio-scenes-v117.sh \"$RUNNER_TEMP/luma-puzzle-contracts/audio-scenes-v117\"",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/12-test-audio-scenes-v117.txt",
+      "sha256": "025f7f5fafb47c2b6864e2af17a69e75dfb6caed8fe385dde13e6474ce0e8348",
+      "seconds": 18.499
+    },
+    {
+      "command": "node --test scripts/test-site-v117.mjs scripts/test-site-v116.mjs",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/13-website-controller.txt",
+      "sha256": "eee58e2c8c2304ca05ca846e2aea3c90f7db6ad0dacd211ba80b1b31191b999b",
+      "seconds": 0.087
+    },
+    {
+      "command": "sh scripts/test-power-offers-v114.sh \"$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json\"",
+      "exit_code": 0,
+      "log": "docs/validation/v1.17/ci-host-rehearsal-f/14-test-power-offers-v114.txt",
+      "sha256": "827aa1c3db58dfa9bfe64f579a7d2176df7f4dc3dd442ee7c895fa4442547fc5",
+      "seconds": 0.945
+    }
+  ]
+}

@@ -1,5 +1,23 @@
 # Luma Drift design system
 
+## 1.17 — an illustrated world with named touch targets
+
+Four root places—Adventure, Home, Collection and Workshop—fill the scene. Their primary navigation is an illustrated object: portal, book, house entrance, mirror, capsule machine, wardrobe rail or blueprint. Object art and a short free caption replace visible button faces, pills, chips, tabs and a bottom navigation bar. Do not reintroduce a rectangle or pill around a caption and call it an object. Ordinary web links, language controls and native audio players on the website remain standard accessible web controls.
+
+The companion and room are the composition's subjects. Keep central portraits large enough to read eyes, silhouette and equipped fabric; use decoration to frame them rather than create empty margins. Home preserves its close-up, whole-room, pan and pinch views. Clothing, furniture and room entrances retain distinct silhouettes. Physical targets remain large and labelled; removing visible buttons does not remove semantic actions, keyboard activation or accessibility names.
+
+`ScenicUi` supplies original object art and captioned actions without generic button faces. Deeper choices use objects, rails and dials. Acquisition, equipment, inventory state, costs, odds and affirmative/cancel meanings remain explicit. A preview grants nothing, repeatable receipt reads do not spend, and drawing cannot mutate the store. Forms use a visible native text field and keyboard Done/Enter. Destructive or financial actions still require their explicit confirmation meaning even when rendered as scene objects.
+
+Scene motion uses a bounded 220 ms crossfade driven by `SceneTransition`. Touch, keyboard and accessibility actions are guarded during the presentation; a touch begun during a transition is consumed through its ending. Reduced motion and lifecycle changes finish immediately. Optional root swipes have visible destination-object alternatives. Home pan, furniture editing, puzzle pieces, dialogs and vertical scrolling own their existing gestures before a background root swipe can begin. [Exact routing and input contract](design/v1.17/navigation-spec.md).
+
+Use cream, plum and warm gold with clear silhouette separation. Scene text and costs require a quiet local reading area; do not place pale captions over equally bright scenery. Original raster sprites provide the character's authored colour, with code-native style accents and motion layered coherently. Ten biomes and five audio contexts supply atmosphere without encoding essential rules only in sound or hue.
+
+[Primary-source research](design/v1.17/reference-research.md) records the observed methods and the limits of inference. The [inspected E visual scope](validation/v1.17/review/visual-candidate-e.json) passes with documented limits and closes C's wardrobe status contrast finding from a sampled 1.93:1 to 5.45:1. The compact German/Italian hit regression, normal six-language browsing and real owned-look routes pass separately. Full compact/secondary navigation, remaining gesture/lifecycle routes and installed sound keep their own pending gates. [B rejection](validation/v1.17/review/visual-candidate-b.json), [C contrast reservation](validation/v1.17/review/visual-candidate-c.json) and [raw C compact failure](validation/v1.17/native-interface/candidate-c-sixlangs-compact/browse/instrumentation.txt) remain preserved. [Qualification](validation/v1.17/README.md).
+
+## Preserved design history
+
+Earlier button, pill and vector-renderer prescriptions below describe their dated editions. The1.17 object-navigation contract takes precedence for current game work.
+
 ## 1.12 atelier direction
 
 Use open illustrated compositions instead of nesting panels around every group. Surfaces have one soft fill, buttons use pill outlines and decorative swashes have curved ends. Amber round tokens identify LumaCoins; violet/cyan diamonds identify LumaGold, with complete names and honest balance state. `ShopIllustrations` supplies six original friendly power identities shared by shop, HUD, rewards and inventory; `KawaiiArt` retains the clothing system.

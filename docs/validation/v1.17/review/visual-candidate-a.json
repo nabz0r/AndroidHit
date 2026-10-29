@@ -1,0 +1,80 @@
+{
+  "status": "VISUAL_REJECTED_PENDING_CORRECTIONS",
+  "candidate": "A",
+  "scope": "Independent inspection of five original native PNGs, plus all20 originalsource PNGs; functional206checks are separate evidence.",
+  "images": [
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-a-firstlook/prepare/root-collection-en.png",
+      "sha256": "f5a518d4dbdb6ce340fd73f5f8c8d9ce747c407b92e211249808d408af9d2a37",
+      "language": "en",
+      "format": "1080x2340 normal",
+      "viewed": true
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-a-firstlook/prepare/profile-custom-en.png",
+      "sha256": "12dfaa0af74587a99fcdfd0817afc7f85754256c952124ab7021253ca61fc7c2",
+      "language": "en",
+      "format": "1080x2340 normal",
+      "viewed": true
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-a-firstlook/prepare/root-home-en.png",
+      "sha256": "b9d6d31f561a77bd2aa2ccdb938f1f99d5f01b94cebd1ebb4d089596f8c098fd",
+      "language": "en",
+      "format": "1080x2340 normal",
+      "viewed": true
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-a-firstlook/prepare/root-atelier-en.png",
+      "sha256": "4862aee6db5ce2f7830fdf2619cb8ba04b3ed200cfc678167a69c3099695a17f",
+      "language": "en",
+      "format": "1080x2340 normal",
+      "viewed": true
+    },
+    {
+      "path": "docs/screenshots/v1.17/native-interface/candidate-a-firstlook/prepare/last-reveal-en.png",
+      "sha256": "fbe011b7673f61002542a7e4eaca5002de903858ac7f1c6a72944b6e528f28b3",
+      "language": "en",
+      "format": "1080x2340 normal",
+      "viewed": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "P1-rig",
+      "severity": "P1",
+      "evidence": [
+        "profile-custom-en.png",
+        "root-collection-en.png",
+        "last-reveal-en.png"
+      ],
+      "finding": "Hat floats above the character, whole glove pair covers chest while original bare hands remain at sides, and extra shoes sit in front of original boots.",
+      "required": "Body aspect normalization, per-character hand/foot anchors, replace original hand/boot ink and render isolated garment halves; inspect new native frames."
+    },
+    {
+      "id": "P1-source-regions",
+      "severity": "P1",
+      "evidence": [
+        "root-home-en.png",
+        "root-atelier-en.png",
+        "last-reveal-en.png"
+      ],
+      "finding": "Equal-grid source windows clip sofa and include neighboring gold fragments beside table, mirror, blueprint and other props.",
+      "required": "Measured source rectangles and selective rendering clips, preserving original PNG pixels and accessory silhouettes; inspect all native objects after correction."
+    },
+    {
+      "id": "P2-home-coherence",
+      "severity": "P2",
+      "evidence": [
+        "root-home-en.png"
+      ],
+      "finding": "The house shell remains flat and large floor gaps remain around small furniture; three room destinations repeat exactly the same house illustration.",
+      "required": "A room composition and architecture consistent with the new painted furniture, enlarged focal furniture/character detail, distinct room affordances."
+    }
+  ],
+  "positive_observations": [
+    "No conventional action pills or tab bar in these five native frames.",
+    "New character and prop artwork is actually rendered on device, with visible detail and recognizable silhouettes."
+  ],
+  "acceptance_limit": "No native candidate B inspected yet. A user-facing image or a functional test pass must not substitute for visual acceptance."
+}

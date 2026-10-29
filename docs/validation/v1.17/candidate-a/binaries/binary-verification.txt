@@ -1,0 +1,8 @@
+PASS exact production/Lab package names, RC1 version names, code18, minSdk26 and targetSdk36 in all four artifacts.
+PASS production + Lab APK signatures against the pinned public RSA certificate.
+PASS both AAB signatures, every non-META-INF payload checked by JarFile.
+PASS both APK ZIP alignments with -P 16.
+PASS 8 64-bit native ELF payloads / 20 LOAD segments.
+PASS official pinned bundletool 1.18.1 validation for both AABs.
+PASS exact source freeze matched before/after; game/build source and four artifact hashes remained stable.
+No emulator accessed; no claim of Play acceptance, real checkout or OS 16KB-page execution.

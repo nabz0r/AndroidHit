@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "checkCount": 16,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact Luma target package"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed candidate version and code"
+    },
+    {
+      "passed": true,
+      "message": "Cold qualification runs in a genuinely distinct process"
+    },
+    {
+      "passed": true,
+      "message": "Actual nickname, flag, badges, exact receipts, equipment, ownership and room selection survive cold start"
+    },
+    {
+      "passed": true,
+      "message": "Earned balance and all observed progression survive cold start"
+    },
+    {
+      "passed": true,
+      "message": "Unchanged stock and complete puzzle session survive cold start"
+    },
+    {
+      "passed": true,
+      "message": "All exact furnished layouts survive cold start"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Ma maison"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Ma maison"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Collection"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Collection"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Profil"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Collection"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Rencontres stellaires"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Revoir la dernière rencontre"
+    },
+    {
+      "passed": true,
+      "message": "Cold existing-receipt preview performs no spend or reward"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Ma maison",
+      "bounds": "[876,2045][1050,2267]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Collection",
+      "bounds": "[876,2045][1050,2267]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Profil",
+      "bounds": "[66,349][913,481]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Rencontres stellaires",
+      "bounds": "[735,1157][998,1467]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Revoir la dernière rencontre",
+      "bounds": "[661,1784][916,2086]",
+      "input": "UiAutomation touchscreen"
+    }
+  ],
+  "captures": [
+    "cold-home-fr",
+    "cold-profile-fr",
+    "cold-last-reveal-fr"
+  ],
+  "processId": 11595,
+  "phase": "cold",
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Retained task-owned U1000 profile; actual SDK touchscreen\/object\/gesture\/IME actions, read-only preference observations and real app screenshots; no spending, app\/engine\/private-field calls, seeding, provider action or user devices"
+}

@@ -1,0 +1,66 @@
+Applications Memory Usage (in Kilobytes):
+Uptime: 6152960 Realtime: 6152960
+
+** MEMINFO in pid 7513 [com.androidhit.lumadrift] **
+                   Pss  Private  Private  SwapPss      Rss     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty    Total     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------   ------
+  Native Heap    71290    71216       64       33    72048   254672    59650   189829
+  Dalvik Heap     8293     2896     5328       18     9248     7349     3675     3674
+ Dalvik Other     1647     1392       16        0     2752                           
+        Stack     1392     1392        0        0     1392                           
+       Ashmem     2007     1584        0        0     3504                           
+    Other dev      186      128       32        0      656                           
+     .so mmap    12503     1120     5872       11    46352                           
+    .jar mmap     3262        0     1168        0    36736                           
+    .apk mmap      492       32      272        0     1728                           
+    .ttf mmap      644        0      576        0      752                           
+    .dex mmap     5159        0     4848        0     6464                           
+    .oat mmap      708        0      224        0    11488                           
+    .art mmap     4154     1584     1952      103    25824                           
+   Other mmap      687       48      448        0     1984                           
+      Unknown     1681     1376      304        2     2160                           
+        TOTAL   114272    82768    21104      167   223088   262021    63325   193503
+ 
+ App Summary
+                       Pss(KB)                        Rss(KB)
+                        ------                         ------
+           Java Heap:     6432                          35072
+         Native Heap:    71216                          72048
+                Code:    14112                         103952
+               Stack:     1392                           1392
+            Graphics:        0                              0
+       Private Other:    10720
+              System:    10400
+             Unknown:                                   10624
+ 
+           TOTAL PSS:   114272            TOTAL RSS:   223088       TOTAL SWAP PSS:      167
+ 
+ Objects
+               Views:        5         ViewRootImpl:        1
+         AppContexts:        6           Activities:        1
+              Assets:       21        AssetManagers:        0
+       Local Binders:       27        Proxy Binders:       64
+       Parcel memory:       10         Parcel count:       39
+    Death Recipients:        0             WebViews:        0
+ 
+ Native Allocations
+                         Count                       Total(kB)
+                        ------                         ------
+   Bitmap (malloced):       31                          39676
+    Other (malloced):      365                             33
+ Other (nonmalloced):       93                             65
+ 
+ SQL
+         MEMORY_USED:      258
+  PAGECACHE_OVERFLOW:       71          MALLOC_SIZE:       46
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b) cache hits cache misses cache size  Dbname
+PER CONNECTION STATS
+         4       96            123     7    42     9  /data/user/0/com.androidhit.lumadrift/no_backup/androidx.work.workdb
+         4        8                    0     0     0    (attached) temp
+         4       96             32     2    18     3  /data/user/0/com.androidhit.lumadrift/no_backup/androidx.work.workdb (2)
+POOL STATS
+     cache hits  cache misses    cache size  Dbname
+             11            81            92  /data/user/0/com.androidhit.lumadrift/no_backup/androidx.work.workdb
