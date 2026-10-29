@@ -24,7 +24,6 @@ public final class CompanionPortrait {
         CosmeticCatalog.Slot.GLOVES, CosmeticCatalog.Slot.HAT
     };
     private final AvatarStage avatar = new AvatarStage();
-    private final KawaiiArt clothes = new KawaiiArt();
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path path = new Path();
 
@@ -48,24 +47,22 @@ public final class CompanionPortrait {
         canvas.save(); canvas.translate(x, y); canvas.scale(r, r);
         canvas.translate(0, bob); canvas.rotate(tilt);
         if (loadout != null) aura(canvas, loadout.item(AvatarGearCatalog.Slot.AURA), selected);
-        // Apply motion once to every layer: clothes never lag behind an independently moving body.
-        avatar.draw(canvas, who, 0, 0, 1, selected.id, expression, 0, true);
+        // Original raster layers share this one motion transform and keep their authored colours.
+        avatar.drawStyleBackdrop(canvas, selected);
+        CharacterSprites.drawBody(canvas,who,0,0,1,
+                lastInSlot(cosmetics,CosmeticCatalog.Slot.GLOVES)!=null,
+                lastInSlot(cosmetics,CosmeticCatalog.Slot.SHOES)!=null);
         for (int slot = 0; slot < CLOTHES.length; slot++) {
             CosmeticCatalog.Item item = lastInSlot(cosmetics, CLOTHES[slot]);
             if (item == null) continue;
-            int variant = CosmeticCatalog.ITEMS.indexOf(item) % 6;
-            int color = cosmeticColor(item);
-            // Keep each character's ears, face and upper silhouette readable when fully dressed.
-            if (item.slot == CosmeticCatalog.Slot.HAT) clothes.cosmetic(canvas, item.slot.name(), variant, 0, -1.10f, .60f, color);
-            else if (item.slot == CosmeticCatalog.Slot.DRESS) clothes.cosmetic(canvas, item.slot.name(), variant, 0, 1.10f, .64f, color);
-            else if (item.slot == CosmeticCatalog.Slot.SHOES) clothes.cosmetic(canvas, item.slot.name(), variant, 0, 1.67f, .60f, color);
-            else clothes.cosmetic(canvas, item.slot.name(), variant, 0, 1.02f, .86f, color);
+            CharacterSprites.drawGarment(canvas,who,item,0,0,1);
         }
+        avatar.drawStyleAccent(canvas, selected, expression);
         if (loadout != null) {
             // Equipment occupies its own side of the portrait instead of competing with the hat/glove.
-            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.HEAD), .98f, -.80f, .42f);
-            line(canvas, 1.02f, .49f, 1.02f, 1.02f, selected.secondary, .035f);
-            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.CHARM), 1.02f, 1.15f, .37f);
+            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.HEAD), 1.05f, -.75f, .26f);
+            line(canvas, 1.02f, .47f, 1.02f, .84f, withAlpha(selected.secondary,105), .015f);
+            drawGearGlyph(canvas, loadout.item(AvatarGearCatalog.Slot.CHARM), 1.02f, .96f, .21f);
         }
         canvas.restore();
     }
@@ -118,7 +115,10 @@ public final class CompanionPortrait {
             auraGlyph(canvas, variant, color, light);
         } else {
             if (variant == 0) {
-                heart(canvas, 0, .05f, .8f, color); heart(canvas, -.03f, -.04f, .48f, light);
+                heart(canvas, 0, .09f, .8f, blend(color,INK,.28f));
+                heart(canvas, 0, -.01f, .76f, color);heart(canvas, -.04f, -.08f, .51f, light);
+                oval(canvas,-.34f,-.34f,-.12f,-.19f,0xcfffffff);
+                line(canvas,.28f,.23f,.40f,.11f,withAlpha(WHITE,140),.045f);
             } else if (variant == 1) {
                 diamond(canvas, 0, 0, .86f, .95f, color); diamond(canvas, 0, 0, .55f, .64f, light);
                 triangle(canvas, 0, -.61f, .22f, .24f, -.2f, .15f, INK);
@@ -147,30 +147,31 @@ public final class CompanionPortrait {
     private void aura(Canvas canvas, AvatarGearCatalog.Item item, AvatarStyles.Style style) {
         if (item == null) return;
         int variant = AvatarGearCatalog.ITEMS.indexOf(item) % 6;
-        canvas.save(); canvas.scale(1.50f, 1.38f);
+        canvas.save(); canvas.scale(1.38f, 1.32f);
         auraGlyph(canvas, variant, blend(gearColor(item), style.accent, .2f), blend(style.secondary, WHITE, .45f));
         canvas.restore();
     }
 
     private void auraGlyph(Canvas canvas, int variant, int color, int light) {
+        int mist=withAlpha(color,72),glint=withAlpha(light,145);
         if (variant == 0) {
-            ring(canvas, 0, 0, .86f, color, .045f);
-            for (int i = 0; i < 3; i++) { double angle = i * Math.PI * 2 / 3; circle(canvas, (float)Math.cos(angle) * .9f, (float)Math.sin(angle) * .9f, .1f, light); }
+            ring(canvas,0,0,.91f,mist,.012f);
+            for(int i=0;i<3;i++){double angle=i*Math.PI*2/3;float xx=(float)Math.cos(angle)*.91f,yy=(float)Math.sin(angle)*.91f;diamond(canvas,xx,yy,.032f,.045f,glint);circle(canvas,xx-.007f,yy-.012f,.009f,0xbdffffff);}
         } else if (variant == 1) {
-            arc(canvas, -.99f, -.62f, .99f, .62f, 0, 360, color, .065f);
-            oval(canvas, -.93f, -.74f, -.51f, -.34f, light); oval(canvas, .51f, .34f, .93f, .74f, light);
+            arc(canvas,-1.02f,-.65f,1.02f,.65f,0,360,mist,.015f);
+            diamond(canvas,-.76f,-.43f,.035f,.052f,glint);diamond(canvas,.76f,.43f,.035f,.052f,glint);
         } else if (variant == 2) {
-            for (int i = 0; i < 3; i++) ring(canvas, 0, 0, .59f + i * .17f, i == 1 ? light : color, .045f);
+            for(int i=0;i<3;i++)ring(canvas,0,0,.65f+i*.14f,withAlpha(i==1?light:color,i==1?58:42),.010f);
+            diamond(canvas,.83f,-.37f,.036f,.05f,glint);
         } else if (variant == 3) {
-            path.reset(); path.moveTo(0, 0); path.cubicTo(-1.4f, -1.23f, -1.4f, 1.23f, 0, 0);
-            path.cubicTo(1.4f, -1.23f, 1.4f, 1.23f, 0, 0); fill(color); paint.setStyle(Paint.Style.STROKE); paint.setStrokeWidth(.09f); canvas.drawPath(path, paint);
-            line(canvas, -.1f, .12f, -.48f, .94f, light, .08f); line(canvas, .1f, .12f, .48f, .94f, light, .08f);
+            path.reset();path.moveTo(0,0);path.cubicTo(-1.35f,-1.12f,-1.35f,1.12f,0,0);path.cubicTo(1.35f,-1.12f,1.35f,1.12f,0,0);fill(mist);paint.setStyle(Paint.Style.STROKE);paint.setStrokeWidth(.016f);canvas.drawPath(path,paint);
+            diamond(canvas,-.84f,-.35f,.034f,.048f,glint);diamond(canvas,.84f,.35f,.034f,.048f,glint);
         } else if (variant == 4) {
-            arc(canvas, -.99f, -.65f, .99f, .65f, 25, 300, color, .08f);
-            star(canvas, .77f, -.46f, .24f, light); line(canvas, -.9f, .45f, -.53f, .79f, color, .08f);
+            arc(canvas,-.99f,-.65f,.99f,.65f,25,300,mist,.015f);
+            star(canvas,.77f,-.46f,.055f,glint);line(canvas,-.87f,.39f,-.63f,.67f,mist,.012f);
         } else {
-            for (int i = 0; i < 6; i++) { double angle = i * Math.PI / 3; oval(canvas, (float)Math.cos(angle) * .76f - .16f, (float)Math.sin(angle) * .76f - .16f, (float)Math.cos(angle) * .76f + .16f, (float)Math.sin(angle) * .76f + .16f, i % 2 == 0 ? color : light); }
-            ring(canvas, 0, 0, .9f, color, .045f);
+            for(int i=0;i<6;i++){double angle=i*Math.PI/3;float xx=(float)Math.cos(angle)*.91f,yy=(float)Math.sin(angle)*.91f;diamond(canvas,xx,yy,.03f,.045f,i%2==0?mist:glint);}
+            ring(canvas,0,0,.91f,withAlpha(color,45),.010f);
         }
     }
 
@@ -211,5 +212,6 @@ public final class CompanionPortrait {
     private void heart(Canvas c,float x,float y,float r,int color) { path.reset();path.moveTo(x,y+r*.68f);path.cubicTo(x-r*1.3f,y,x-r*.7f,y-r*1.15f,x,y-r*.4f);path.cubicTo(x+r*.7f,y-r*1.15f,x+r*1.3f,y,x,y+r*.68f);path.close();shape(c,color); }
     private void crescent(Canvas c,float x,float y,float r,int color) { path.reset();path.moveTo(x+r*.49f,y-r*.86f);path.cubicTo(x-r*.55f,y-r*1.12f,x-r*1.12f,y+r*.08f,x-r*.63f,y+r*.7f);path.cubicTo(x-r*.06f,y+r*1.22f,x+r*.64f,y+r*.8f,x+r*.82f,y+r*.38f);path.cubicTo(x-r*.04f,y+r*.68f,x-r*.09f,y-r*.31f,x+r*.49f,y-r*.86f);path.close();shape(c,color); }
     private static int blend(int a,int b,float k) { return 0xff000000|Math.round(((a>>16)&255)*(1-k)+((b>>16)&255)*k)<<16|Math.round(((a>>8)&255)*(1-k)+((b>>8)&255)*k)<<8|Math.round((a&255)*(1-k)+(b&255)*k); }
+    private static int withAlpha(int color,int alpha){return (color&0xffffff)|(alpha<<24);}
     private static boolean finite(float value) { return !Float.isNaN(value) && !Float.isInfinite(value); }
 }

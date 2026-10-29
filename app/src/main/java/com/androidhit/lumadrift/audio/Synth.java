@@ -45,6 +45,9 @@ final class Synth {
             case "LOSE": length = 0.60; break;
             case "GATE": length = 0.46; break;
             case "UNDO": length = 0.36; break;
+            case "SCENE": length = 0.42; break;
+            case "FABRIC": length = 0.33; break;
+            case "REVEAL": length = 1.65; break;
             case "COIN": length = 0.34; break;
             case "BLOCKED": length = 0.20; break;
             default: length = 0.25;
@@ -94,6 +97,28 @@ final class Synth {
                 break;
             case "LOSE":
                 notes(output, new int[] { 67, 64, 60 }, 0.13, 0.32, 0.18);
+                break;
+            case "SCENE":
+                // A low, soft glass breath carries the movement between places.
+                sweep(output, 0, .28, 196, 293.665, .10);
+                bell(output, .05, .35, 587.33, .085);
+                break;
+            case "FABRIC":
+                // Deterministic filtered rustle, with a tiny wooden closure rather than a UI beep.
+                double filtered = 0; long seed = 117;
+                for (int i = 0; i < output.length; i++) {
+                    seed = (seed * 1664525L + 1013904223L) & 0xffffffffL;
+                    double noise = seed / 2147483648.0 - 1;
+                    filtered += .13 * (noise - filtered);
+                    double env = Math.pow(Math.sin(Math.PI * i / (output.length - 1)), 2);
+                    output[i] += filtered * env * .22;
+                }
+                bell(output, .04, .12, 261.626, .055);
+                break;
+            case "REVEAL":
+                notes(output, new int[] { 64, 71, 76, 78, 83, 88 }, .105, .92, .12);
+                bell(output, .64, .98, 659.255, .07);
+                bell(output, .64, .98, 987.767, .05);
                 break;
             default: break;
         }
@@ -166,6 +191,52 @@ final class Synth {
     }
 
     static int biomeTempo(int biome) { requireBiome(biome); return BIOME_BPM[biome]; }
+
+    /** Shared harmonic identity with four place-specific orchestrations; scene0 keeps all historical puzzle PCM. */
+    static short[] sceneLoop(int biome, int scene) {
+        requireBiome(biome);
+        if (scene < 0 || scene > 4) throw new IllegalArgumentException("Scene must be0..4");
+        if (scene == 0) return ambientLoop(biome);
+        int[] tempos = {75, 80, 68, 76, 86};
+        double beat = 60.0 / (tempos[scene] + (biome % 3) * 2);
+        double[] output = new double[(int)Math.round(32 * beat * RATE)];
+        int[] scale = MODES[biome];
+        int tonic = TONICS[biome];
+        for (int bar = 0; bar < 8; bar++) {
+            if (Thread.currentThread().isInterrupted()) throw new java.util.concurrent.CancellationException("Scene music cancelled");
+            int degree = PROGRESSIONS[biome][bar];
+            double start = bar * beat * 4;
+            for (int voice = 0; voice < 4; voice++) {
+                double pitch = hz(scaleNote(tonic, scale, degree + voice * 2));
+                cloud(output, start + voice * beat * .035, beat * 5.1, pitch, .032 - voice * .003, biome + scene);
+            }
+            cloud(output, start, beat * 4.6, hz(scaleNote(tonic - 12, scale, degree)), .027, scene);
+            // Home breathes on a felt-keyboard answer; the atelier plucks a light working pulse.
+            double[] positions = scene == 2 ? new double[]{.2, 2.2} : scene == 4 ? new double[]{0, .75, 2, 2.75} : new double[]{.15, 1.5, 2.8};
+            int voice = scene == 2 ? 0 : scene == 3 ? 2 : scene == 4 ? 3 : 1;
+            for (int note = 0; note < positions.length; note++) {
+                int motif = MOTIFS[biome][(bar + note * 2 + scene) % 8];
+                double pitch = hz(scaleNote(tonic, scale, motif + (scene == 2 ? -7 : 0)));
+                double onset = start + positions[note] * beat;
+                double duration = beat * (scene == 2 ? 2.6 : scene == 4 ? 1.4 : 2.1);
+                chime(output, onset, duration, pitch, note == 0 ? .058 : .040, voice);
+                chime(output, onset + beat * .75, duration * .75, pitch, .010, voice);
+            }
+            if (scene == 1 || scene == 4) {
+                chime(output, start + beat * 3.35, beat * 1.1, hz(scaleNote(tonic, scale, degree + 4)), .020, 3);
+            }
+        }
+        // Match the final and first sample with a short symmetric correction. This retains
+        // the phrase and energy instead of fading every loop to silence at its boundary.
+        double correction = (output[output.length - 1] - output[0]) * .5;
+        int edge = Math.min(256, output.length / 4);
+        for (int i = 0; i < edge; i++) {
+            double weight = .5 + .5 * Math.cos(Math.PI * i / (edge - 1));
+            output[i] += correction * weight;
+            output[output.length - 1 - i] -= correction * weight;
+        }
+        return levelMusic(output, .13, .58);
+    }
 
     private static void requireBiome(int biome) {
         if (biome < 0 || biome >= BIOME_COUNT) throw new IllegalArgumentException("Biome must be 0..9");

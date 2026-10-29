@@ -28,7 +28,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * No media files, network connection, or Android permissions are required.
  */
 public final class AudioEngine {
-    public enum Sound { TAP, SELECT, MOVE, BLOCKED, GATE, UNDO, HINT, COIN, PURCHASE, WIN, LOSE }
+    public enum Sound { TAP, SELECT, MOVE, BLOCKED, GATE, UNDO, HINT, COIN, PURCHASE, WIN, LOSE, SCENE, FABRIC, REVEAL }
+    public enum Scene { PUZZLE, ADVENTURE, HOME, COLLECTION, ATELIER }
     public static final int BIOME_COUNT = 10;
     private static final String TAG = "LumaAudio";
     static final float DEFAULT_MUSIC_VOLUME = 0.27f;
@@ -52,6 +53,8 @@ public final class AudioEngine {
     private AudioTrack music;
     private int requestedBiome;
     private int loadedBiome = -1;
+    private Scene requestedScene = Scene.PUZZLE;
+    private Scene loadedScene;
     private long biomeGeneration;
     /** One coalescing worker, including the constructor's initial preparation. */
     private boolean musicWorkerQueued = true;
@@ -136,18 +139,20 @@ public final class AudioEngine {
     private void prepareRequestedMusic() {
         while (true) {
             final int target;
+            final Scene targetScene;
             final long generation;
             synchronized (lock) {
-                if (released.get() || Thread.currentThread().isInterrupted() || loadedBiome == requestedBiome) {
+                if (released.get() || Thread.currentThread().isInterrupted() || (loadedBiome == requestedBiome && loadedScene == requestedScene)) {
                     musicWorkerQueued = false;
                     return;
                 }
                 target = requestedBiome;
+                targetScene = requestedScene;
                 generation = biomeGeneration;
             }
             AudioTrack candidate = null;
             try {
-                short[] pcm = Synth.ambientLoop(target);
+                short[] pcm = Synth.sceneLoop(target, targetScene.ordinal());
                 synchronized (lock) {
                     if (released.get() || Thread.currentThread().isInterrupted()) return;
                     if (generation != biomeGeneration) continue;
@@ -181,8 +186,9 @@ public final class AudioEngine {
                     music = candidate;
                     candidate = null;
                     loadedBiome = target;
+                    loadedScene = targetScene;
                     Log.i(TAG, "Original ambient ready: biome=" + target + ", " + pcm.length
-                            + " mono frames at " + Synth.RATE + " Hz");
+                            + " mono frames at " + Synth.RATE + " Hz; scene=" + targetScene);
                     updateMusicLocked();
                 }
             } catch (RuntimeException failed) {
@@ -220,6 +226,23 @@ public final class AudioEngine {
     }
 
     public int getBiome() { synchronized (lock) { return requestedBiome; } }
+
+    /** Each place has its own original arrangement; rapid navigation coalesces into one worker. */
+    public void setScene(Scene scene) {
+        if (scene == null) throw new IllegalArgumentException("Scene required");
+        synchronized (lock) {
+            if (released.get() || requestedScene == scene) return;
+            requestedScene = scene;
+            biomeGeneration++;
+            updateMusicLocked();
+            if (!musicWorkerQueued) {
+                musicWorkerQueued = true;
+                worker.execute(this::prepareRequestedMusic);
+            }
+        }
+    }
+
+    public Scene getScene() { synchronized (lock) { return requestedScene; } }
 
     /** Wait only on the background worker; the UI remains free to fade or cancel. */
     private boolean awaitPreviousFade(long generation) {
@@ -359,7 +382,7 @@ public final class AudioEngine {
                 stopMusicLocked();
                 return;
             }
-            if (loadedBiome != requestedBiome) {
+            if (loadedBiome != requestedBiome || loadedScene != requestedScene) {
                 if (music.getPlayState() == AudioTrack.PLAYSTATE_PLAYING && !pauseAfterFade)
                     fadeMusicLocked(0f, 180, true);
                 return;

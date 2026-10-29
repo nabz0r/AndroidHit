@@ -4,6 +4,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import com.androidhit.lumadrift.data.CosmeticCatalog;
 
 /** Original plush inventory illustrations. Reuses its drawing objects and does not allocate bitmaps or shaders per frame. */
 public final class KawaiiArt {
@@ -69,70 +70,15 @@ public final class KawaiiArt {
         c.restore();
     }
 
-    /** Twenty-four recognizable silhouettes: six per slot, aligned with the public cosmetic catalog order. */
+    /** Native catalogue order stays stable while every preview uses its authored raster garment. */
     public void cosmetic(Canvas c,String slot,int variant,float x,float y,float r,int color){
-        c.save();c.translate(x,y);c.scale(r,r);int v=Math.floorMod(variant,6),edge=mix(color,INK,.25f),light=mix(color,WHITE,.5f);
-        if(slot.equals("HAT")){
-            if(v==0){ // Dew beret and leaf.
-                oval(c,-.91f,.10f,.91f,.42f,edge);oval(c,-.78f,-.57f,.72f,.29f,color);oval(c,-.55f,-.48f,.32f,-.26f,light);
-                line(c,.12f,-.57f,.23f,-.83f,edge,.08f);oval(c,.15f,-.84f,.57f,-.56f,0xff78bf9d);
-            }else if(v==1){ // Moon sleeping cap.
-                path.reset();path.moveTo(-.66f,.19f);path.quadTo(-.57f,-1.04f,.22f,-.87f);path.quadTo(.67f,-.8f,.72f,-.30f);path.quadTo(.30f,-.55f,.24f,.17f);path.close();paint(color);c.drawPath(path,p);circle(c,.72f,-.30f,.22f,WHITE);rounded(c,-.72f,.09f,1.38f,.30f,.12f,light);star(c,-.21f,-.40f,.19f,WHITE);
-            }else if(v==2){ // Star wizard hat.
-                path.reset();path.moveTo(-.59f,.17f);path.quadTo(-.32f,-.65f,.02f,-1.03f);path.quadTo(.22f,-.55f,.62f,.17f);path.close();paint(color);c.drawPath(path,p);
-                oval(c,-.94f,.03f,.94f,.44f,edge);oval(c,-.92f,-.01f,.92f,.35f,color);star(c,0,-.42f,.26f,0xffffe7a5);star(c,.35f,-.14f,.08f,WHITE);
-            }else if(v==3){ // Pumpkin cap with a green stem.
-                oval(c,-.78f,-.57f,.78f,.30f,edge);oval(c,-.71f,-.62f,.71f,.22f,color);oval(c,-.30f,-.63f,.3f,.22f,light);
-                line(c,0,-.61f,.07f,-.89f,0xff5f977b,.15f);oval(c,.04f,-.89f,.43f,-.67f,0xff91cda2);oval(c,-.88f,.13f,.88f,.36f,color);
-            }else if(v==4){ // Cupid halo and heart.
-                paint(edge);p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(.15f);c.drawOval(-.72f,-.55f,.72f,-.04f,p);p.setStyle(Paint.Style.FILL);
-                paint(color);p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(.12f);c.drawOval(-.72f,-.60f,.72f,-.09f,p);p.setStyle(Paint.Style.FILL);
-                heart(c,0,-.60f,.39f,color);heart(c,0,-.65f,.22f,WHITE);
-            }else{ // Aurora tiara: tall central gem and two rounded side gems.
-                rounded(c,-.75f,.03f,1.5f,.24f,.10f,edge);rounded(c,-.75f,-.02f,1.5f,.24f,.10f,color);
-                for(int s:SIDES){path.reset();path.moveTo(s*.18f,.1f);path.lineTo(s*.63f,-.58f);path.quadTo(s*.88f,-.14f,s*.70f,.13f);path.close();paint(light);c.drawPath(path,p);}
-                path.reset();path.moveTo(0,-.99f);path.lineTo(.29f,-.42f);path.lineTo(0,.09f);path.lineTo(-.29f,-.42f);path.close();paint(color);c.drawPath(path,p);line(c,-.06f,-.65f,-.13f,-.42f,WHITE,.065f);
-            }
-        }else if(slot.equals("DRESS")){
-            float hem=v==1||v==5?.86f:.71f;
-            path.reset();path.moveTo(-.4f,-.70f);path.quadTo(0,-.49f,.40f,-.70f);path.lineTo(.78f,hem*.75f);
-            if(v==4){for(int i=0;i<5;i++)path.lineTo(.78f-i*.39f,hem+(i%2==0?0:.16f));}
-            else path.quadTo(0,hem+.23f,-.78f,hem*.75f);
-            path.lineTo(-.4f,-.70f);path.close();c.save();c.translate(0,.035f);paint(edge);c.drawPath(path,p);c.restore();paint(color);c.drawPath(path,p);
-            line(c,-.47f,-.24f,.47f,-.24f,light,.12f);line(c,-.22f,.0f,-.32f,hem*.57f,light,.045f);line(c,.22f,.0f,.32f,hem*.57f,light,.045f);
-            if(v==0){oval(c,-.20f,-.36f,.20f,-.09f,WHITE);circle(c,0,-.23f,.06f,0xffffda92);}
-            else if(v==1){oval(c,-.17f,-.45f,.17f,-.07f,WHITE);oval(c,-.02f,-.49f,.22f,-.17f,color);for(int i=-1;i<=1;i++)star(c,i*.42f,.40f,.075f,WHITE);}
-            else if(v==2){star(c,0,-.23f,.23f,0xffffe4a1);for(int i=-1;i<=1;i++)star(c,i*.40f,.42f,.12f,WHITE);}
-            else if(v==3){heart(c,0,-.24f,.22f,WHITE);for(int s:SIDES)heart(c,s*.38f,.35f,.12f,light);}
-            else if(v==4){rounded(c,-.17f,-.36f,.34f,.24f,.04f,0xffffe4a1);rounded(c,-.08f,-.31f,.16f,.14f,.02f,edge);star(c,.41f,.42f,.15f,WHITE);}
-            else{for(int i=-1;i<=1;i++)star(c,i*.37f,.35f+Math.abs(i)*.15f,.12f,WHITE);line(c,-.44f,.69f,.44f,.69f,light,.1f);}
-        }else if(slot.equals("SHOES")){
-            for(int s:SIDES){
-                c.save();c.translate(s*.48f,0);float tall=v==1||v==3||v==5?.34f:0;
-                rounded(c,-.28f,-.28f-tall,.56f,.60f+tall,.20f,edge);rounded(c,-.30f,-.34f-tall,.60f,.60f+tall,.20f,color);
-                oval(c,-.34f,-.05f,.38f,.38f,color);rounded(c,-.37f,.20f,.77f,.19f,.085f,WHITE);oval(c,-.18f,-.24f-tall,.08f,-.10f-tall,light);
-                if(v==0)line(c,-.1f,.02f,.16f,.02f,WHITE,.07f);
-                else if(v==1){rounded(c,-.30f,-.40f-tall,.60f,.19f,.075f,WHITE);star(c,.03f,-.17f,.10f,WHITE);}
-                else if(v==2)star(c,.03f,-.05f,.16f,0xffffecac);
-                else if(v==3){line(c,-.08f,-.25f,.08f,-.25f,edge,.07f);line(c,-.08f,-.1f,.08f,-.1f,edge,.07f);circle(c,.25f,.02f,.12f,0xff7ab997);}
-                else if(v==4)heart(c,0,-.09f,.16f,WHITE);
-                else{star(c,0,-.27f,.13f,WHITE);line(c,-.28f,.10f,.3f,.10f,light,.06f);}
-                c.restore();
-            }
-        }else{
-            for(int s:SIDES){
-                c.save();c.translate(s*.66f,0);float tall=v>=4?.25f:0;
-                oval(c,-.31f,-.47f,.31f,.29f,color);oval(c,-.25f,-.42f,.15f,-.24f,light);circle(c,-s*.25f,-.04f,.18f,edge);circle(c,-s*.26f,-.08f,.17f,color);
-                rounded(c,-.25f,.13f,.50f,.20f+tall,.075f,edge);rounded(c,-.25f,.10f,.50f,.17f+tall,.075f,v==1?WHITE:light);
-                if(v==0)circle(c,0,-.1f,.06f,WHITE);
-                else if(v==1){circle(c,0,-.15f,.13f,WHITE);circle(c,.07f,-.19f,.11f,color);}
-                else if(v==2)star(c,0,-.10f,.16f,0xffffe4a1);
-                else if(v==3)heart(c,0,-.10f,.16f,WHITE);
-                else if(v==4){star(c,0,-.12f,.13f,WHITE);line(c,-.13f,.22f,.13f,.22f,color,.06f);}
-                else{star(c,0,-.12f,.14f,WHITE);circle(c,0,.24f,.06f,WHITE);}
-                c.restore();
-            }
+        if(c==null||slot==null||!Float.isFinite(x)||!Float.isFinite(y)||!Float.isFinite(r)||r<=0)return;
+        CosmeticCatalog.Slot selected;
+        try{selected=CosmeticCatalog.Slot.valueOf(slot);}catch(IllegalArgumentException unknown){return;}
+        int v=Math.floorMod(variant,6),index=0;
+        for(CosmeticCatalog.Item item:CosmeticCatalog.ITEMS){
+            if(item.slot!=selected)continue;
+            if(index++==v){CharacterSprites.drawGarmentPreview(c,item,x-r*1.03f,y-r*1.04f,x+r*1.03f,y+r*1.04f);return;}
         }
-        c.restore();
     }
 }
