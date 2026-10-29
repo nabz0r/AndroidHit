@@ -250,7 +250,7 @@ public final class LumaView extends View {
     }
     public void back(){finishScenePresentation();actionGeneration++;if(sceneConfirmAction!=null){sceneConfirmAction=null;invalidate();return;}
         if(localSaveBlocked){retryLocalSave();return;}
-        if(screen.equals("guardian")){if(persistGuardian())go("guardians");return;}
+        if(screen.equals("guardian")){leaveGuardian();return;}
         if(screen.equals("tutorial")){leaveTutorial();return;}
         if(pendingAction>=0){pendingAction=-1;actionPreview=null;invalidate();return;}
         if(powerTrayOpen){powerTrayOpen=false;invalidate();return;}if(!powerConfirmation.isEmpty()){powerConfirmation="";invalidate();return;}if(deadEndOpen){deadEndOpen=false;invalidate();return;}if(help){setHelp(false);invalidate();return;}
@@ -998,6 +998,13 @@ public final class LumaView extends View {
         boolean saved=prefs.edit().putString("guardian_v19_session",guardian.encode()).commit();
         guardianSaveBlocked=!saved;if(!saved)notice(t("save_error"));return saved;
     }
+    private void leaveGuardian(){
+        if(!persistGuardian())return;
+        menuHistory.removeIf(item->item.equals("guardian")||item.equals("guardians"));
+        nextSceneDirection=SceneTransition.Direction.BACK;
+        boolean wasNavigatingBack=navigatingBack;navigatingBack=true;
+        try{go("guardians");}finally{navigatingBack=wasNavigatingBack;}
+    }
     private void guardianMove(int id){
         if(guardian==null||guardianSaveBlocked)return;
         GuardianEncounter.MoveResult result=guardian.move(id);guardianHint=-1;
@@ -1007,9 +1014,9 @@ public final class LumaView extends View {
         invalidate();sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED);
     }
     private void drawGuardian(Canvas c){
-        if(guardian==null){go("guardians");return;}
+        if(guardian==null){leaveGuardian();return;}
         GuardianEncounter.Snapshot snap=guardian.snapshot();
-        scenic.object(c,new RectF(24,18,72,66),0xffb5a7ca,false,ScenicUi.Kind.RETURN);hit(24,18,48,48,t("back"),()->{if(persistGuardian())go("guardians");});
+        scenic.object(c,new RectF(24,18,72,66),0xffb5a7ca,false,ScenicUi.Kind.RETURN);hit(24,18,48,48,t("back"),this::leaveGuardian);
         fit(c,q("guardian",snap.number),210,51,25,244,TEXT,true,true);
         AvatarStyles.Style scene=AvatarStyles.all().get((snap.number-1)%AvatarStyles.all().size());
         fit(c,scene.name(store.resolvedLanguage()),25,105,18,242,TEXT,true,false);
@@ -1038,7 +1045,7 @@ public final class LumaView extends View {
             sceneAction(c,t("undo_free"),24,690,165,()->{if(guardian.undo()){guardianHint=-1;persistGuardian();sfx(AudioEngine.Sound.UNDO);}});
             sceneAction(c,t("restart_free"),201,690,165,()->{guardian.restart();guardianHint=-1;persistGuardian();});
         }
-        sceneAction(c,q("guardians"),24,767,342,()->{if(persistGuardian())go("guardians");});
+        sceneAction(c,q("guardians"),24,767,342,this::leaveGuardian);
         fit(c,q("guardian_unlock"),195,850,12,335,skin.muted,false,true);
     }
 
