@@ -50,7 +50,7 @@ def flag(name):
         raise SystemExit(f'Missing compiled flag: {name}')
     return match.group(1) == 'true'
 
-inputs = [*(root/'app/src/main').rglob('*'), *(root/f'app/src/{variant}').rglob('*'),
+inputs = [*(root/'app/src').rglob('*'),
           root/'app/build.gradle', root/'app/proguard-rules.pro', root/'build.gradle', root/'settings.gradle', root/'gradle.properties',
           *(root/'gradle').rglob('*'), root/'gradlew']
 paths = sorted({p for p in inputs if p.is_file()}, key=str)
