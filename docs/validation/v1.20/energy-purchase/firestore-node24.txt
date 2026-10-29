@@ -1,0 +1,25 @@
+i  emulators: Starting emulators: firestore
+i  emulators: Detected demo project ID "demo-luma-wallet", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator was started in standard edition.
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: /Users/n/.npm/_npx/ef8b185be06dfeb4/node_modules/node/bin/node --test test/firestore.integration.js
+(node:98413) MetadataLookupWarning: received unexpected error = All promises were rejected code = ETIMEDOUT, ENOTFOUND
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Firestore adapter survives real transaction contention, restores entitlements, refunds and deletes (14552.984208ms)
+✔ Firestore rules deny unauthenticated direct reads and writes, including private purchase ledger (148.802459ms)
+✔ Firestore social transactions enforce mutual acceptance and atomic per-day gifts across service instances (10601.908792ms)
+✔ Firestore paid energy has one debit and one account-bound redemption across independent service instances (6917.326333ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32428.467333
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

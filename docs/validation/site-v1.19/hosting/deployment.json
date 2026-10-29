@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-29T20:20:55.932458+00:00",
+  "edition": "1.19",
+  "android_release": "1.19.0-prototype2",
+  "source_commit": "ccc3e025a088034d3b1f65d294e1e9cf68eb6e20",
+  "artifact_source_commit": "e267ac192f3aea268efe4e1a3a92a41d5b5f1518",
+  "production_apk_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+  "lab_apk_sha256": "448d359abb6d4943c6eadf9f03c221fd35d5fa18c21441817bb4c7a31bb87d11",
+  "source_public_tree": "07b6f76c70d8f2a9d30314c279e81d0f6e61a826",
+  "source_checkout_clean": true,
+  "hosting_payloads": 497,
+  "payload_bytes": 2092675586,
+  "source_manifest": "docs/validation/site-v1.19/release/source-manifest.json",
+  "source_manifest_sha256": "3a8d7db1817beed259f932e58f8dbee77ceb89db6e18aa634abdf877bbc77b2c",
+  "all_source_payloads_hash_verified_on_deployment_checkout": true,
+  "apk_git_blobs_required": false,
+  "external_apk_metadata_and_physical_copies_verified": true,
+  "public_origin_requested": false,
+  "github_publication_required": false,
+  "firebase_cli_version": "15.33.0",
+  "site": "luma-drift-production",
+  "hosting_url": "https://luma-drift-production.web.app",
+  "cli_deploy_complete": true,
+  "live_management": {
+    "channel": "projects/luma-drift-production/sites/luma-drift-production/channels/live",
+    "url": "https://luma-drift-production.web.app",
+    "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793305753810000",
+    "release_type": "DEPLOY",
+    "release_time": "2026-10-29T20:29:13.810Z",
+    "release_message": "Website1.19 from ccc3e025a088034d3b1f65d294e1e9cf68eb6e20",
+    "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/a64a7ef1faadf791",
+    "version_status": "FINALIZED",
+    "management_provider": "authenticated firebase hosting:channel:list --json",
+    "headers": [
+      {
+        "headers": {
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY"
+        },
+        "glob": "**"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-store"
+        },
+        "glob": "/site-config.js"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-cache"
+        },
+        "glob": "/"
+      },
+      {
+        "headers": {
+          "Cache-Control": "no-cache"
+        },
+        "glob": "**/*.html"
+      }
+    ]
+  },
+  "public_origin_byte_or_render_verified": false,
+  "scope": "Clean exact source commit and every physical Hosting file, including external 1.19 APK copies, verified before Hosting-only deployment. Management confirms DEPLOY/FINALIZED. Public HTTP bytes and rendering are separate; no Play/provider transaction is inferred."
+}

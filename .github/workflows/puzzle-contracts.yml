@@ -49,6 +49,26 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/Adventure119Layout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/PuzzleReaction.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/Menu120Layout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/VictoryLayout.java
+            /scripts/test-menu-v120.sh
+            /scripts/MenuV120Test.java
+            /scripts/test-focused-journey-v120.sh
+            /scripts/FocusedJourneyV120Test.java
+            /app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java
+            /scripts/test-wallet-energy-transport-v120.sh
+            /scripts/WalletEnergyTransportV120Test.java
+            /scripts/test-support/vault/
+            /app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseController.java
+            /app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseJournal.java
+            /app/src/main/java/com/androidhit/lumadrift/commerce/BillingPolicy.java
+            /scripts/test-energy-purchase-v120.sh
+            /scripts/EnergyPurchaseV120Test.java
+            /scripts/test-support/energy/
+            /scripts/test-session-energy-v120.sh
+            /scripts/SessionEnergyV120Test.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SpriteGeometry.java
             /app/src/main/java/com/androidhit/lumadrift/audio/*.java
             /scripts/test-scene-transition-v117.sh
@@ -234,6 +254,19 @@ jobs:
           bash scripts/test-squad-store-v119.sh
           bash scripts/test-companion-battle-v119-geometry.sh
           bash scripts/test-adventure-v119-geometry.sh
+
+      - name: Check 1.20 session pacing and genuine avatar reactions
+        run: |
+          bash scripts/test-focused-journey-v120.sh "$RUNNER_TEMP/luma-puzzle-contracts/focused-journey-v120.json"
+          bash scripts/test-session-energy-v120.sh
+          bash scripts/test-menu-v120.sh
+
+      - name: Check transactional premium refill outbox with a pinned JSON parser
+        run: |
+          curl --fail --location --retry 2 https://repo.maven.apache.org/maven2/org/json/json/20240303/json-20240303.jar --output "$RUNNER_TEMP/json-20240303.jar"
+          printf '3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed  %s\n' "$RUNNER_TEMP/json-20240303.jar" | sha256sum --check
+          LUMA_JSON_JAR="$RUNNER_TEMP/json-20240303.jar" bash scripts/test-energy-purchase-v120.sh
+          LUMA_JSON_JAR="$RUNNER_TEMP/json-20240303.jar" bash scripts/test-wallet-energy-transport-v120.sh
 
       - name: Check power offers and preserved reward decisions
         run: sh scripts/test-power-offers-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json"

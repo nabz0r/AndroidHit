@@ -42,7 +42,7 @@ public final class CompanionBattleAction {
         if(board==null||budget==null||state==null||undos<0||(mode!=0&&mode!=5)
                 ||board.level.progressionVersion!=6||board.isSolved())return null;
         MoveBudget.Snapshot oldBudget=budget.snapshot();
-        if(oldBudget.mode!=0||oldBudget.policyVersion!=MoveBudget.RELAY_POLICY_VERSION)return null;
+        if(oldBudget.mode!=0||!budget.isRelayPolicy())return null;
         Board.Snapshot original=board.snapshot();int[] history=board.history();
         Board candidate=new Board(board.level);
         if(!candidate.restoreHistory(history)||candidate.remainingMask()!=original.remainingMask

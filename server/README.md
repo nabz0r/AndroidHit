@@ -42,6 +42,16 @@ Spending adds `entitlement: { "id": "persisted UUID", "sku": "character:miko", "
 
 Errors are `{ "error": { "code": "INSUFFICIENT_GOLD" } }`, with no raw upstream message. Common codes are `401 UNAUTHENTICATED`/`RECENT_LOGIN_REQUIRED`, `403 GOOGLE_LOGIN_REQUIRED`/`PURCHASE_OWNER_MISMATCH`/`PURCHASE_ALREADY_CLAIMED`, `409 INSUFFICIENT_GOLD`/`ALREADY_OWNED`/`REQUEST_CONFLICT`, `410 ACCOUNT_DELETED`/`PURCHASE_REVOKED`, `429 RATE_LIMITED`, and `503 PLAY_UNAVAILABLE`/`SERVICE_UNAVAILABLE`. `DELETION_RETRY_PENDING` means a durable, frozen-account deletion job remains for automatic recovery. Show a localized explanation, rather than exposing these internal code names to players.
 
+### Prepared1.20 session-energy packs — production sales closed
+
+`energy_refill10` costs **50 server LumaGold for one durable pack of10 session-energy units**. This is a working price, not a measured monetization optimum. New sales require `ENERGY_REFILLS_ENABLED=true`; the default and example remain false, and Android's independent production gate remains false. This change has not been deployed to the real wallet service.
+
+An explicitly confirmed spend uses the existing `/v1/wallet/spend` exact schema with this SKU. It decreases Gold once and increments `inventory.energyRefills` by **one pack**. The optional inventory property is absent on older untouched wallets. The stable entitlement has `kind: "energy"`, `amount: 10`, and `owner: SHA256(exactFirebaseUID)`. A subsequent, separately persisted request to `/v1/inventory/use` consumes one pack and returns an equally account-bound `use` receipt, amount10. Neither route accepts a price, currency, energy count or arbitrary grant from the client.
+
+Retries reuse the original request IDs. Existing spend receipts and purchased stock remain recoverable when new energy sales are disabled. The Android outbox applies the ten units only at zero energy, retaining late receipts if natural regeneration has occurred; a full pack is never truncated by the local cap. Definitive `INSUFFICIENT_ITEM` means this use request has no stored receipt, because the transaction checks an old receipt first. Android may then clear that unused request and refresh its cached stock.
+
+The paid pack inventory is server authoritative; session energy, its regeneration and credited receipt markers remain local to the installation. Unconsumed packs restore on another signed-in device. Consumed local energy is not a cross-device cloud save or an anti-cheat system. [Protocol, crash boundaries, gates and test evidence](../docs/ENERGY_PURCHASE_1_20.md).
+
 ## Value and payment guarantees
 
 The server allowlists exactly `luma_gold_500 → 500`, `luma_gold_1400 → 1400`, and `luma_gold_3600 → 3600`. It ignores client gold amounts/prices and rejects extra request fields. The production Play catalog must disable multi-quantity purchases; this implementation validates quantity **exactly one**. The actual localized money price comes from Google Play, not this server.

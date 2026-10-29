@@ -55,11 +55,11 @@ function snapshotPurchase(raw, productId, uidHash) {
 
 /** All value mutations use one store transaction; provider calls never run in it. */
 export class WalletService {
-  constructor({ store, play, identity, packageName, now = Date.now, retentionDays = 365, allowTestPurchases = true, batchSize = 100, consumablesEnabled = false, paidCosmeticDrawsEnabled = false }) {
+  constructor({ store, play, identity, packageName, now = Date.now, retentionDays = 365, allowTestPurchases = true, batchSize = 100, consumablesEnabled = false, paidCosmeticDrawsEnabled = false, energyRefillsEnabled = false }) {
     if (!/^[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*){2,}$/u.test(packageName || '')) throw new Error('Valid production packageName required');
     if (!Number.isInteger(retentionDays) || retentionDays < 30 || retentionDays > 3650) throw new Error('retentionDays must be 30..3650');
     this.social=new SocialService({store,now});this.cosmetic=new CosmeticService({store,now,enabled:paidCosmeticDrawsEnabled});
-    this.store=store; this.play=play; this.identity=identity; this.packageName=packageName; this.now=now; this.retentionMs=retentionDays*86400000; this.allowTestPurchases=allowTestPurchases; this.batchSize=batchSize;this.consumablesEnabled=consumablesEnabled;
+    this.store=store; this.play=play; this.identity=identity; this.packageName=packageName; this.now=now; this.retentionMs=retentionDays*86400000; this.allowTestPurchases=allowTestPurchases; this.batchSize=batchSize;this.consumablesEnabled=consumablesEnabled;this.energyRefillsEnabled=energyRefillsEnabled===true;
   }
   async getWallet(uid) {
     validateUid(uid);
@@ -148,6 +148,8 @@ export class WalletService {
         if (previous.action!=='spend' || previous.sku!==sku) throw new AppError(409,'REQUEST_CONFLICT');
         return { ...publicWallet(wallet), entitlement:previous.entitlement };
       }
+      // A disabled offer stops new debits while existing request IDs can recover.
+      if(item.kind==='energy'&&!this.energyRefillsEnabled)throw new AppError(400,'SKU_NOT_AVAILABLE');
       if (wallet.balance<item.price) throw new AppError(409,'INSUFFICIENT_GOLD');
       if ((item.kind==='character' && wallet.characters.includes(item.itemId)) || (item.kind==='skin' && wallet.skins.includes(item.itemId))) throw new AppError(409,'ALREADY_OWNED');
       if (item.kind==='character') wallet.characters.push(item.itemId);
@@ -161,16 +163,22 @@ export class WalletService {
         if (wallet.inventory.continuations>=MAX_INVENTORY) throw new AppError(409,'INVENTORY_LIMIT');
         wallet.inventory.continuations++;
       }
+      if (item.kind==='energy') {
+        const count=wallet.inventory.energyRefills??0;
+        if(!Number.isInteger(count)||count<0||count>=MAX_INVENTORY)throw new AppError(409,'INVENTORY_LIMIT');
+        wallet.inventory.energyRefills=count+1;
+      }
       wallet.balance-=item.price; wallet.version++;
       const entitlement={ id:requestId,sku,kind:item.kind,itemId:item.itemId,amount:item.amount };
+      if(item.kind==='energy')entitlement.owner=ownerOf(uid);
       tx.set(wk,wallet); tx.set(rk,{ owner:ownerOf(uid), action:'spend',sku,entitlement,createdAtMs:this.now() });
       return { ...publicWallet(wallet),entitlement };
     });
   }
   async use(uid, requestId, sku) {
     validateUid(uid); validateRequest(requestId); const item=validateSku(sku);
-    if(!this.consumablesEnabled)throw new AppError(400,'SKU_NOT_AVAILABLE');
-    if (!['booster','continuation'].includes(item.kind)) throw new AppError(400,'NOT_CONSUMABLE');
+    if(item.kind!=='energy'&&!this.consumablesEnabled)throw new AppError(400,'SKU_NOT_AVAILABLE');
+    if (!['booster','continuation','energy'].includes(item.kind)) throw new AppError(400,'NOT_CONSUMABLE');
     const wk=walletKey(uid),rk=requestKey(uid,requestId);
     return this.store.transact([wk,rk],tx=>{
       const wallet=requireActive(tx.get(wk)||blankWallet()),previous=tx.get(rk);
@@ -181,12 +189,18 @@ export class WalletService {
       if (item.kind==='booster') {
         if (!(wallet.inventory.boosters[item.itemId]>0)) throw new AppError(409,'INSUFFICIENT_ITEM');
         wallet.inventory.boosters[item.itemId]--;
-      } else {
+      } else if(item.kind==='continuation') {
         if (!(wallet.inventory.continuations>0)) throw new AppError(409,'INSUFFICIENT_ITEM');
         wallet.inventory.continuations--;
+      } else {
+        // Already purchased packs remain redeemable if new energy sales are paused.
+        const count=wallet.inventory.energyRefills??0;
+        if(!Number.isInteger(count)||count<1)throw new AppError(409,'INSUFFICIENT_ITEM');
+        wallet.inventory.energyRefills=count-1;
       }
       wallet.version++;
       const use={ id:requestId,sku,kind:item.kind,itemId:item.itemId,amount:1 };
+      if(item.kind==='energy'){use.amount=item.amount;use.owner=ownerOf(uid);}
       tx.set(wk,wallet);tx.set(rk,{ owner:ownerOf(uid),action:'use',sku,use,createdAtMs:this.now() });
       return { ...publicWallet(wallet),use };
     });

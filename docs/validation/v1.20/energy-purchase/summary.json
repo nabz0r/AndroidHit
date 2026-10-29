@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-29T20:53:51.715981+00:00",
+  "scope": "Local energy purchase protocol tests; no app-native, production payment, Firebase sign-in or production deployment claim.",
+  "checks": {
+    "controller_journal_assertions": 84,
+    "actual_wallet_client_transport_assertions": 36,
+    "server_tests_node24": 69,
+    "firestore_local_integration_tests": 4,
+    "shared_vault_regression_assertions": 1552
+  },
+  "runtimes": {
+    "node": "24.22.1",
+    "java_jvm": "17",
+    "java_firestore": "21.0.13",
+    "firebase_cli": "15.34.1",
+    "firestore_emulator": "1.22.0",
+    "firestore_project": "demo-luma-wallet",
+    "firestore_host": "127.0.0.1:8787",
+    "json_jar": "json-20240303.jar",
+    "json_jar_sha256": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed"
+  },
+  "production_energy_enabled": false,
+  "server_energy_enabled_by_default": false,
+  "real_checkout_tested": false,
+  "backend_deployed": false,
+  "installation_local_energy": true,
+  "source_sha256": {
+    "app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseController.java": "306d3b57dbfa0ebeaff5d02b593402a06c652c82046a121f1e92890ee174bb1b",
+    "app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseJournal.java": "c0dcbf53e3b146fa3f3c3e431a2a2d313919b5d685d4f7a9e556abfcf3b1b0cb",
+    "app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java": "c086d2f28a0359547a00faae80897325d5213d8c4db30edede3bf2fc75bafd72",
+    "app/src/main/java/com/androidhit/lumadrift/data/SessionEnergyStore.java": "3e71da8271281bb6d02aae69481b18b1e638c3faa151abbb6f27fa63d4541d3b",
+    "scripts/EnergyPurchaseV120Test.java": "661bd2f9db3480bd728b4f3fce6d0faf36363a8f239d77c283fb1b224e19f63a",
+    "scripts/WalletEnergyTransportV120Test.java": "635df8821e5221ef683596dce77e09a727088fbd16c8a55590846917b5e53992",
+    "scripts/test-energy-purchase-v120.sh": "fb0c4ad9abab482680f934aadb658b40f3e5561058efe437faed95448b60ea3d",
+    "scripts/test-wallet-energy-transport-v120.sh": "8c571b09e8de644869a14213303cfcb8eb0d6e1ffa4e1ce158c44a0d1fd3d175",
+    "server/src/catalog.js": "39b30d8738b7490d4c8d5a0563d07ed91152fc968a5283faed4db822a8d47c5c",
+    "server/src/core.js": "fd7ac3f34485b93c9c76ba81d4ca8b2af64dc190234a64ac8feaf7be6c38c58b",
+    "server/src/config.js": "68da54ec341702d21db77601a72981f224e9c101b3270afeccc5219229d4ecf5",
+    "server/src/http.js": "d18db9d5712cc76096a0e89179d4422adfd4ec89e9bc7798d12cc8c5aa419a06",
+    "server/test/energy.test.js": "9f84352c9056608071ce87474802472bc8993cb4f6bb659706f29e5ae697b9cd",
+    "server/test/firestore.integration.js": "362e04b6fe3ebf612702c8318a4a48ea9a0edbaf273cc52cae111cbe6237f78b"
+  },
+  "evidence_sha256": {
+    "client-jvm.txt": "e4eba6a11a223d02a8d1022c7b1a556493c7b791343aa7d36bb3c8f636c5c36d",
+    "client-transport-before-exact-integer-fix.txt": "ede46550245d760a65bda022db176cc2b5e8cebbb383e3d1c475d0e2fdb93d1b",
+    "client-transport-jvm.txt": "0a3f1f7b1aefd3d413cc16e5e963b973f98a681b42363da2f08e2338a0a73559",
+    "firestore-node24.txt": "4581aad1f8de1e6d87afd8a75ea7322d88122a49a65a19bcdb85943cb0686848",
+    "server-node24.txt": "ab915f7e16c2300317505dc82e76d33a41f1eb4b4864c9170c17ddc5d2180586",
+    "server-syntax.txt": "c597b80e89936c2067ca2ab06d09faf0ee26665e3f91dfd2b03d8e7e97a81852",
+    "shared-vault-regression.txt": "04e69778dafab6f182b43c87d598db4e9057585e42e079f839e5cc101c992972"
+  },
+  "preserved_failure": "client-transport-before-exact-integer-fix.txt"
+}

@@ -38,3 +38,16 @@ test('Firestore social transactions enforce mutual acceptance and atomic per-day
  const claimed=await Promise.all(Array.from({length:8},(_,i)=>(i%2?s:t).claim(b,sent[0].giftId,`firestore-claim-${i}`)));assert.ok(claimed.every(x=>x.grant.id===sent[0].giftId));
  await f.service.deleteAccount(a,f.now()/1000);assert.equal((await t.snapshot(b)).friends.length,0);assert.equal((await t.snapshot(b)).gifts.length,0);assert.equal(await store.read(`socialCodes/${ac}`),undefined);
 });
+test('Firestore paid energy has one debit and one account-bound redemption across independent service instances',async()=>{
+ const store=new FirestoreStore(db),a='firestore-energy-account',b='firestore-energy-other';
+ const f=fixture({store,energyRefillsEnabled:true}),other=fixture({store:new FirestoreStore(db),energyRefillsEnabled:true,play:f.play});
+ f.play.add('firestore-energy-fund',purchase(a));await f.service.verifyPurchase(a,'luma_gold_500','firestore-energy-fund');
+ const purchases=await Promise.all(Array.from({length:12},(_,i)=>(i%2?f:other).service.spend(a,'firestore-energy-buy','energy_refill10')));
+ assert.ok(purchases.every(x=>x.balance===450&&x.inventory.energyRefills===1));
+ await assert.rejects(()=>other.service.use(b,'firestore-energy-use','energy_refill10'),{code:'INSUFFICIENT_ITEM'});
+ const uses=await Promise.all(Array.from({length:12},(_,i)=>(i%2?f:other).service.use(a,'firestore-energy-use','energy_refill10')));
+ assert.ok(uses.every(x=>x.balance===450&&x.inventory.energyRefills===0&&x.version===3));
+ assert.ok(uses.every(x=>x.use.amount===10&&x.use.owner===hash(a)&&x.use.id==='firestore-energy-use'));
+ assert.equal((await other.service.getWallet(a)).inventory.energyRefills,0);
+ const request=await store.read(`requests/${hash(`${a}\nfirestore-energy-use`)}`);assert.equal(request.owner,hash(a));assert.equal(request.use.amount,10);
+});

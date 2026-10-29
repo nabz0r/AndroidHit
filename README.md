@@ -1,7 +1,16 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>Small companions. Bigger adventures.</strong><br>1.19 · puzzle squads and companion talents · native C scopes pass, publication pending</p>
+<p align="center"><strong>Small companions. Bigger adventures.</strong><br>1.20 · softer home, real gifts and an illustrated boutique · integration candidate</p>
 
-## Current 1.19 — companions join the puzzle
+## Current 1.20 — one clear next tap
+
+The next Android source presents a lighter home, the equipped companion and owned squad, a clear **Play** button, actual ready-gift badge and a visible **Boutique**. Five persistent destinations replace the main menu's scattered routes; the room and workshop remain accessible. Menu LumaCoins, account LumaGold and session energy stay visible while content scrolls. Unknown Gold remains unknown.
+
+Daily and weekly objectives now appear as gifts. A successful durable claim opens a reveal that waits for a tap; collected gifts have no claim action. The illustrated shop shows one featured item at a time, with real prices, ownership and previews. [Menu scope](docs/UX_1_20_MENUS.md) · [72,282 host assertions / 504 configurations](docs/validation/v1.20/menu/README.md) · [1.20 release gates](docs/RELEASE_1_20.md).
+
+**1.20 is not published yet.** Final signed packages, native interaction/captures and site qualification remain required. The home/shop/victory website tooling is staged outside `public/`; it cannot reuse1.19 images as1.20 evidence. Live commercial qualification remains separate. [Website staging and permission boundary](docs/validation/site-v1.20/README.md).
+
+
+## Preserved 1.19 — companions join the puzzle
 
 The Android source now implements **one-to-three companion squads**, **six puzzle-skill families across 37 parameterized identity definitions**, and **reactions tied to actual play**. This is more than an avatar preview: GUIDE, VISION and TRAIL explain the board; PULSE and FLOW execute certified exits; REWIND restores real move history. Two used talents from different families charge one explicit **Resonance** action. Costumes remain presentation choices, separate from skill identity.
 

@@ -84,7 +84,7 @@ public final class CompanionBattleScene {
         boolean empty=slot==null||slot.empty();
         int color=empty?0xffa7a7bd:opaque(slot.color);
         boolean largeText=textFloor>13f,veryLargeText=textFloor>18f;
-        float cx=r.centerX(),radius=veryLargeText?12f:largeText?18f:20f,cy=r.top+radius+5;
+        float cx=r.centerX(),radius=veryLargeText?18f:largeText?25f:30f,cy=r.top+31;
         boolean ready=!empty&&slot.ready&&!slot.used;
         float breath=reduced||!ready?0f:(float)Math.sin(Math.floorMod(elapsed,2400L)*Math.PI/1200f)*.8f;
         fill(b,mix(color,0xffffffff,empty?.88f:.84f));
@@ -114,10 +114,9 @@ public final class CompanionBattleScene {
         }
         // Large accessibility fonts keep the signature and state; the host semantic label retains
         // the complete name instead of squeezing three small lines into the same dock.
-        if(!largeText)label(c,b,slot.name,cx,r.top+57,Math.max(12.5f,textFloor),INK,true,r.width()-2);
-        label(c,b,slot.signature,cx,r.top+(veryLargeText?53:largeText?58:72),textFloor,INK,false,r.width()-2);
+        label(c,b,largeText?slot.signature:slot.name,cx,r.top+73,textFloor,INK,true,r.width()-2);
         // The status is real supplied state, never inferred from a decorative pulse.
-        label(c,b,slot.statusLabel,cx,r.top+(veryLargeText?82:largeText?82:86),textFloor,ready?0xff4b4092:MUTED,ready,r.width()-2);
+        label(c,b,slot.statusLabel,cx,r.top+90,textFloor,ready?0xff4b4092:MUTED,ready,r.width()-2);
         if(ready){fill(b,color);c.drawRoundRect(cx-13,r.top+92,cx+13,r.top+94,1,1,b.paint);}
     }
 

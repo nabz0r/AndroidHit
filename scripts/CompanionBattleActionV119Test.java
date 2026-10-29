@@ -27,8 +27,11 @@ public final class CompanionBattleActionV119Test {
     private static void everyBoardAndIdentity(){
         for(int number=1;number<=1000;number++){
             Level level=RelayCatalog.get(number);boards++;
-            for(CompanionBattle.Definition definition:CompanionBattle.all()){
-                Board board=new Board(level);MoveBudget budget=MoveBudget.start(0,level);CompanionBattle.State run=state(definition.id);int undos=number%3;
+            for(int policy:new int[]{MoveBudget.RELAY_POLICY_VERSION,MoveBudget.FOCUSED_RELAY_POLICY_VERSION})for(CompanionBattle.Definition definition:CompanionBattle.all()){
+                Board board=new Board(level);MoveBudget budget=policy==MoveBudget.RELAY_POLICY_VERSION?MoveBudget.restoreVersion(policy,0,level,0,0,0,0,0):MoveBudget.start(0,level);CompanionBattle.State run=state(definition.id);int undos=0;
+                int laterReturns=definition.effect==CompanionBattle.Effect.REWIND?Math.min(definition.amount,level.tiles.size()-1):0;
+                int priorReturns=policy==MoveBudget.FOCUSED_RELAY_POLICY_VERSION?Math.min(number%3,Math.max(0,budget.mistakeAllowance()-laterReturns)):number%3;
+                for(int n=0;n<priorReturns;n++){int id=level.solution[0];check(budget.attempt(board,id).success,"coherent prior correction exit");run=run.creditExit(id);check(budget.undo(board,undos++),"coherent actual correction history");}
                 if(definition.effect==CompanionBattle.Effect.REWIND){
                     int count=Math.min(definition.amount,level.tiles.size()-1);
                     for(int index=0;index<count;index++){int id=level.solution[index];check(budget.attempt(board,id).success,"rewind fixture actual exit");run=run.creditExit(id);}
@@ -64,7 +67,7 @@ public final class CompanionBattleActionV119Test {
                     case REWIND:
                         int amount=Math.min(definition.amount,beforeMoves);int[] expected=new int[amount];for(int n=0;n<amount;n++)expected[n]=board.history()[beforeMoves-1-n];
                         check(Arrays.equals(out.rewound,expected),"rewind reports restored IDs newest first");
-                        check(out.board.moves()==beforeMoves-amount&&out.budget.used()==budget.used()-amount&&out.undos==undos+amount,"rewind refunds actual ledger action and updates historical undo count");
+                        check(out.board.moves()==beforeMoves-amount&&out.budget.used()==budget.used()-(budget.refundsUndo()?amount:0)&&out.undos==undos+amount,"rewind preserves the selected historical/current accounting and real correction count");
                         for(int id:expected)check(out.board.isPresent(id)&&out.state.creditedExit(id),"rewound piece restored while energy receipt remains spent");break;
                     default:throw new AssertionError("unknown family");
                 }

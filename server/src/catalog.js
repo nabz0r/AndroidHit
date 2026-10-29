@@ -7,5 +7,7 @@ export const SKUS = Object.freeze(Object.fromEntries([
   ...Object.entries(characters).map(([itemId,price]) => [`character:${itemId}`, { kind:'character', itemId, amount:1, price }]),
   ...Object.entries(skins).map(([itemId,price]) => [`skin:${itemId}`, { kind:'skin', itemId, amount:1, price }]),
   ...Object.entries(boosters).map(([itemId,[price,amount]]) => [`booster:${itemId}`, { kind:'booster', itemId, amount, price }]),
-  ['continue_5', { kind:'continuation', itemId:'continue_5', amount:1, price:100 }]
+  ['continue_5', { kind:'continuation', itemId:'continue_5', amount:1, price:100 }],
+  // One durable refill pack, redeemable for ten session units. No Coins price.
+  ['energy_refill10', { kind:'energy', itemId:'energy_refill10', amount:10, price:50 }]
 ]));

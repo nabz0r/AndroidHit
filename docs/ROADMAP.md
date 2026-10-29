@@ -1,6 +1,14 @@
 # Luma Drift roadmap
 
-## Current 1.19 — companions that act in the puzzle
+## Current 1.20 — clearer home, earned gifts and a visible shop
+
+The menu source now implements a light home with one Play action, the equipped companion and owned team, actual ready-gift counts and a five-place navigation. Persistent Coins/Gold/session-energy stays outside the scrolling menu viewport. Daily/weekly gifts use the existing durable claims, remain visible until an explicit close and become non-interactive after collection. The shop is an illustrated single-product carousel with actual price/stock/ownership and preview routes. [Menu contract](UX_1_20_MENUS.md) · [72,282 host assertions over504 configurations](validation/v1.20/menu/README.md).
+
+Next gates are the integrated signed1.20 candidate, actual native menu/gameplay/energy/result acceptance, six original home/shop/victory images in FR/EN, then source/local-browser qualification and a clean exact Hosting deployment. The staged website tools leave the current1.19 public source intact until that evidence exists. Public-origin browser access was refused: use local browser and authenticated Hosting management scopes without a workaround, and leave public rendering unverified. [Release scope](RELEASE_1_20.md) · [Website staging](validation/site-v1.20/README.md).
+
+Physical-phone comfort, audio, first-player comprehension and voluntary return remain unmeasured. A premium-energy adapter or wallet balance is not a provider purchase/refund acceptance result. Keep real checkout/ads qualification separate from this UI release.
+
+## Preserved 1.19 — companions that act in the puzzle
 
 [Release state](RELEASE_1_19.md) · [Gameplay](GAMEPLAY_1_19.md) · [UX](UX_1_19.md). All three owner-approved axes are implemented in Android source: owned teams of one to three; six role families across 37 identity definitions; and a portrait-led dock with reactions and bounded skill feedback. Team composition affects available commands, while outfits retain their separate visual role. Two different used role families enable one explicit Resonance action; three members are optional.
 

@@ -15,6 +15,7 @@ export function readConfig(env=process.env){
   if(!Number.isInteger(retentionDays)||retentionDays<30||retentionDays>3650)throw new Error('AUDIT_RETENTION_DAYS must be30..3650');
   if(env.ALLOW_TEST_PURCHASES&&!['true','false'].includes(env.ALLOW_TEST_PURCHASES))throw new Error('ALLOW_TEST_PURCHASES must be true or false');
   if(env.PAID_COSMETIC_DRAWS_ENABLED&&!['true','false'].includes(env.PAID_COSMETIC_DRAWS_ENABLED))throw new Error('PAID_COSMETIC_DRAWS_ENABLED must be true or false');
+  if(env.ENERGY_REFILLS_ENABLED&&!['true','false'].includes(env.ENERGY_REFILLS_ENABLED))throw new Error('ENERGY_REFILLS_ENABLED must be true or false');
   const port=Number(env.PORT||8080);if(!Number.isInteger(port)||port<1||port>65535)throw new Error('Invalid PORT');
-  return {projectId,serviceUrl,packageName:env.PLAY_PACKAGE_NAME||'com.androidhit.lumadrift',pubsubEmail:email('PUBSUB_PUSH_SERVICE_ACCOUNT'),schedulerEmail:email('SCHEDULER_SERVICE_ACCOUNT'),subscription,allowedOrigins,retentionDays,allowTestPurchases:env.ALLOW_TEST_PURCHASES!=='false',paidCosmeticDrawsEnabled:env.PAID_COSMETIC_DRAWS_ENABLED==='true',port};
+  return {projectId,serviceUrl,packageName:env.PLAY_PACKAGE_NAME||'com.androidhit.lumadrift',pubsubEmail:email('PUBSUB_PUSH_SERVICE_ACCOUNT'),schedulerEmail:email('SCHEDULER_SERVICE_ACCOUNT'),subscription,allowedOrigins,retentionDays,allowTestPurchases:env.ALLOW_TEST_PURCHASES!=='false',paidCosmeticDrawsEnabled:env.PAID_COSMETIC_DRAWS_ENABLED==='true',energyRefillsEnabled:env.ENERGY_REFILLS_ENABLED==='true',port};
 }

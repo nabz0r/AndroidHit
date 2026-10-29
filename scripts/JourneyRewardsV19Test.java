@@ -112,7 +112,7 @@ public final class JourneyRewardsV19Test {
     }
 
     private static void grades(){
-        check(JourneyExperience.SCORE_VERSION==1,"explicit action grading policy version");
+        check(JourneyExperience.SCORE_VERSION==2,"explicit current scoring version preserves older budget formulas");
         for(boolean remix:new boolean[]{false,true})for(int number=1;number<=(remix?240:1000);number++){
             Level level=remix?StrategyCatalog.remix(number):StrategyCatalog.get(number);MoveBudget budget=MoveBudget.start(remix?3:0,level);
             int threshold=level.minimumActions+(budget.base()-level.minimumActions)/2;

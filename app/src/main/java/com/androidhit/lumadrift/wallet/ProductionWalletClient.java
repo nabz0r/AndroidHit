@@ -30,6 +30,8 @@ public final class ProductionWalletClient {
         public final org.json.JSONArray characters, skins;
         /** Server issued entitlement; absent for balance and receipt verification requests. */
         public final JSONObject entitlement;
+        /** Server inventory-use receipt, account-bound for session energy packs. */
+        public final JSONObject use;
         public final String purchaseStatus;
         public final boolean consumptionPending;
         private Wallet(String uid, JSONObject response) throws Exception {
@@ -40,13 +42,15 @@ public final class ProductionWalletClient {
             inventory = response.optJSONObject("inventory");
             if (inventory == null) throw new IllegalArgumentException("Missing inventory");
             entitlement = response.optJSONObject("entitlement");
+            use = response.optJSONObject("use");
             JSONObject purchase = response.optJSONObject("purchase");
             purchaseStatus = purchase == null ? "" : purchase.optString("status", "");
             consumptionPending = purchase != null && purchase.optBoolean("consumptionPending", false);
         }
         private static long exactLong(JSONObject json, String key) throws Exception {
             Object value = json.get(key);
-            if (!(value instanceof Number) || value instanceof Float || value instanceof Double) throw new IllegalArgumentException("Invalid integer");
+            // org.json can represent decimal input as BigDecimal, not only Double.
+            if (!(value instanceof Integer || value instanceof Long)) throw new IllegalArgumentException("Invalid integer");
             return ((Number)value).longValue();
         }
     }
@@ -132,6 +136,11 @@ public final class ProductionWalletClient {
         try { request("POST", "/v1/wallet/spend", new JSONObject().put("requestId", requestId).put("sku", sku), callback); }
         catch (Exception invalid) { fail(callback, "wallet_invalid_response"); }
     }
+    public void useInventory(String sku, String requestId, Callback callback) {
+        if (!BillingPolicy.validRequestId(requestId) || !"energy_refill10".equals(sku)) { fail(callback, "wallet_invalid_response"); return; }
+        try { request("POST", "/v1/inventory/use", new JSONObject().put("requestId", requestId).put("sku", sku), callback); }
+        catch (Exception invalid) { fail(callback, "wallet_invalid_response"); }
+    }
     public void deleteAccount(Callback callback) {
         final String uid = uid();
         request("DELETE", "/v1/account", null, new Callback() {
@@ -189,6 +198,7 @@ public final class ProductionWalletClient {
                             JSONObject detail = new JSONObject(bytes.toString(StandardCharsets.UTF_8.name())).optJSONObject("error");
                             String code = detail == null ? "" : detail.optString("code");
                             if ("INSUFFICIENT_GOLD".equals(code)) error = "wallet_insufficient";
+                            if ("INSUFFICIENT_ITEM".equals(code)) error = "wallet_item_insufficient";
                             if ("RECENT_LOGIN_REQUIRED".equals(code)) error = "account_recent_login";
                         }
                     } catch (Exception ignored) { /* Keep a safe localized status. */ }
