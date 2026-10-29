@@ -1,0 +1,120 @@
+{
+  "status": "PASS_WITH_EXPECTED_DOCUMENT_EVOLUTION",
+  "recordedUtc": "2026-10-29T17:52:41.856146+00:00",
+  "scope": "Historical H metadata remains immutable. Current APK/source/native references are rechecked; the publication notice is a later documented revision. This is not a ten-of-ten current-path hash pass and is not Riot permission or a public Hosting claim.",
+  "canonicalHistoricalManifest": {
+    "path": "releases/manifest-1.18.0-prototype1.json",
+    "sha256": "5ba9aaec2c2f7d1368b1bec7a68aeba2f9bf30daa85d5653b2b7aee1e60a641f",
+    "releaseType": "local-prototype",
+    "publiclyPublishedField": false,
+    "stateInterpretation": "Frozen local qualification metadata at creation; current public state belongs in portal manifest and publication receipts."
+  },
+  "previousPrepublicationVerification": {
+    "path": "docs/validation/v1.18/publication-preflight/release-manifest-h-verification.json",
+    "sha256": "73bf8d6583b3c31184d07c18e17adcf97db99f8484a9e69d1b065c2f3389a272",
+    "interpretation": "Historical pre-enrichment check retained unchanged."
+  },
+  "currentPathReferences": {
+    "total": 10,
+    "matching": 9,
+    "expectedNoticeRevisionOnly": true,
+    "checks": [
+      {
+        "kind": "source_manifest",
+        "path": "docs/validation/v1.18/candidates/final-art-h/source-inputs-sha256.json",
+        "expectedHistoricalSha256": "47c8a2612989e8d3c72cf832ba81646325abbc130ee8f275c758503b2b37a5dd",
+        "currentSha256": "47c8a2612989e8d3c72cf832ba81646325abbc130ee8f275c758503b2b37a5dd",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "third_party_notices",
+        "path": "docs/THIRD_PARTY_NOTICES.md",
+        "expectedHistoricalSha256": "3b2ab04934d5c81b4e34c0dff4c74fa09d2859816da9fffdefdc40fe04816840",
+        "currentSha256": "79c6fdf608f4dbcee5cd1439cb8e594a5228aef8cf89437b85db6a7be1b72f38",
+        "matchesCurrent": false
+      },
+      {
+        "kind": "native_evidence",
+        "path": "docs/validation/v1.18/native-motion-render/final-art-h/report.json",
+        "expectedHistoricalSha256": "69249bbb6b016fb97b4377e1bc40a8dea548b706a0cf01c645a908213feab331",
+        "currentSha256": "69249bbb6b016fb97b4377e1bc40a8dea548b706a0cf01c645a908213feab331",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "native_evidence",
+        "path": "docs/validation/v1.18/native-final-h-summary.json",
+        "expectedHistoricalSha256": "d9de395875d3cedbaebbdd7eecacdd20e2ffc7cdd72e9712a374a04a04224159",
+        "currentSha256": "d9de395875d3cedbaebbdd7eecacdd20e2ffc7cdd72e9712a374a04a04224159",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "native_evidence",
+        "path": "docs/validation/v1.18/native-fresh-h/final-art-h-summary.json",
+        "expectedHistoricalSha256": "79156e674fdb48a8210413bf104ba764eb8d67cb69a4ed40fae9e085c69d016c",
+        "currentSha256": "79156e674fdb48a8210413bf104ba764eb8d67cb69a4ed40fae9e085c69d016c",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "native_evidence",
+        "path": "docs/validation/v1.18/native-fresh-h/final-art-h-package-proof/report.json",
+        "expectedHistoricalSha256": "ec16325936235111f8e18f928f2186f18a7d08bf9b924e829f2ec8ba7a6951d9",
+        "currentSha256": "ec16325936235111f8e18f928f2186f18a7d08bf9b924e829f2ec8ba7a6951d9",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "device_shutdown_evidence",
+        "path": "docs/validation/v1.18/native-expedition/device-creation/final-art-h-stopped.json",
+        "expectedHistoricalSha256": "8013db7bdf6e9df421c6d30865d59ed97011b9ceed28132a37db10cf266e0f6a",
+        "currentSha256": "8013db7bdf6e9df421c6d30865d59ed97011b9ceed28132a37db10cf266e0f6a",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "device_shutdown_evidence",
+        "path": "docs/validation/v1.18/native-fresh-h/device-creation/final-art-h-stopped.json",
+        "expectedHistoricalSha256": "bf7f638e8fc03b74ea89059bebc220e7ffc7fefe85098d0bdf104eee5a68c140",
+        "currentSha256": "bf7f638e8fc03b74ea89059bebc220e7ffc7fefe85098d0bdf104eee5a68c140",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "production",
+        "path": "releases/luma-drift-1.18.0-prototype1.apk",
+        "expectedHistoricalSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+        "currentSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+        "matchesCurrent": true
+      },
+      {
+        "kind": "lab",
+        "path": "releases/luma-drift-1.18.0-sandbox-prototype1.apk",
+        "expectedHistoricalSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+        "currentSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+        "matchesCurrent": true
+      }
+    ]
+  },
+  "historicalNoticeRecovered": {
+    "path": "docs/validation/v1.18/publication-preflight/frozen-h-third-party-notices.md",
+    "sha256": "3b2ab04934d5c81b4e34c0dff4c74fa09d2859816da9fffdefdc40fe04816840",
+    "bytes": 6615,
+    "recoveredFromAvailableLocalGitBlob": "1a1d4ad9daa26b5ef944ec091d48d78c43deeffc",
+    "recoveryMethod": "Read available local Git blobs of2500..14000bytes; exact SHA256 match to frozen H manifest; no app/source overwrite."
+  },
+  "currentPublicationNotice": {
+    "path": "docs/THIRD_PARTY_NOTICES.md",
+    "sha256": "79c6fdf608f4dbcee5cd1439cb8e594a5228aef8cf89437b85db6a7be1b72f38",
+    "gitSha": "9ea01c61f3b85f8da97851267dfd241b36523c7d",
+    "bytes": 7151,
+    "publicationSourceCommit": "4972565151521c5910b2e5d90921491f00acb7eb",
+    "interpretation": "Publication-enriched attribution and franchise/license separation; permission remains unverified.",
+    "immutablePublicGet": {
+      "url": "https://raw.githubusercontent.com/nabz0r/AndroidHit/4972565151521c5910b2e5d90921491f00acb7eb/docs/THIRD_PARTY_NOTICES.md",
+      "status": 200,
+      "sha256": "79c6fdf608f4dbcee5cd1439cb8e594a5228aef8cf89437b85db6a7be1b72f38",
+      "authenticated": false
+    }
+  },
+  "textDiff": {
+    "path": "docs/validation/v1.18/publication-preflight/third-party-notices-publication.diff",
+    "sha256": "5d56d87e0a02c5ab4aafba1c6280dacaddce5f773d18463f93b1731421b69aa5"
+  },
+  "applicationOrArtifactMutation": false
+}

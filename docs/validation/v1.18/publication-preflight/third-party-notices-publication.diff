@@ -1,0 +1,31 @@
+--- frozen H notice
++++ publication-enriched notice
+@@ -4,7 +4,7 @@
+ 
+ # Third-party facilities and notices
+ 
+-The original game source, companion drawings, interface illustrations and synthesized audio remain under the repository's [AGPL-3.0 license](../LICENSE). This does not relicense external SDKs, platform fonts or Google branding under AGPL.
++The original Luma game source, original Luma companion drawings, interface illustrations and synthesized audio remain under the repository's [AGPL-3.0 license](../LICENSE). This does not relicense external SDKs, platform fonts, Google branding or Riot Games character intellectual property under AGPL.
+ 
+ Stable 1.1 uses Android platform facilities and no third-party runtime library. The dependencies retained by the 1.17 production and Lab source include the following independently licensed components. Their licenses and transitive notices remain applicable; this table is provenance information and not a legal compatibility opinion.
+ 
+@@ -22,7 +22,7 @@
+ 
+ The dependency graph also contains AndroidX, Kotlin, Google Play services and other transitive facilities. Inspect the Gradle dependency report and distributed artifact notices before production redistribution. No claim is made that Google's SDKs, trademark or account services belong to this project.
+ 
+-The Google G image is bundled unchanged for its prescribed sign-in control. No other game's characters, art or recordings were imported. Comparisons in research and UI inspiration documents are references, not licensed franchises or endorsements.
++The Google G image is bundled unchanged for its prescribed sign-in control. Through1.17, no other game's characters, art or recordings were imported. The1.18 prototype guest identities are identified below. Comparisons in research and UI inspiration documents are references, not licensed franchises or endorsements.
+ 
+ ## Server and public website
+ 
+@@ -41,8 +41,8 @@
+ Original built-in image generation output, no franchise/reference image inputs. [Prompt, copies and hash](art/dream-glade-v18.json). Native plush guide, fingertip, soft-volume puzzle pieces, power and clothing silhouettes are repository-native drawings; no Candy Crush or Crash Fever artwork, audio, characters or code is included.
+ 
+ 
+-## Mini LoL guest artwork — local1.18 prototype
++## Mini LoL guest artwork —1.18 prototype
+ 
+ The owner-requested guest series depicts Ashe, Ezreal, Soraka, Ahri, Jinx, Lux, Teemo, Yasuo, Annie, Lulu, Sona, Miss Fortune and Vi as kawaii fan-art. League of Legends and these champion identities belong to Riot Games. The fan-art is not represented as original Luma Drift character intellectual property or as endorsed by Riot Games. The source-code license does not grant rights in Riot Games intellectual property.
+ 
+-Official base-skin splash images from Riot Data Dragon were used as visual references, with URLs and SHA-256 recorded in `docs/art/v118/references/lol/sources.json`; those splash references are outside packaged app assets. Generated artwork and prompts have separate provenance under `docs/art/v118/`. See [Riot Data Dragon documentation](https://developer.riotgames.com/docs/lol#data-dragon_champion-splash-assets). This local prototype has not been published as a new commercial release.
++Official base-skin splash images from Riot Data Dragon were used as visual references, with URLs and SHA-256 recorded in `docs/art/v118/references/lol/sources.json`; those splash references are outside packaged app assets. Generated artwork and prompts have separate provenance under `docs/art/v118/`. See [Riot Data Dragon documentation](https://developer.riotgames.com/docs/lol#data-dragon_champion-splash-assets). Publication of this prototype is being prepared at the owner’s request; public delivery is recorded separately. No permission from Riot Games for this integration has been verified. [Riot’s official policy](https://www.riotgames.com/en/legal), including its section3 on games and apps, must not be treated as a verified license for this project. This notice does not establish compliance or grant rights. The source-code license does not license external intellectual property.

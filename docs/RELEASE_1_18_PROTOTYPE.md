@@ -1,5 +1,10 @@
 # Luma Drift 1.18 — prototype; publication prepared
 
+## Retour du propriétaire —2026-10-29
+
+L’essai humain de l’APK1.18H signale un échec de clarté de sélection, d’interaction, de navigation et de sensation de fluidité. La refonte UX est ouverte : les acceptances automatisées restent des validations fonctionnelles dans leur périmètre et n’impliquent pas une UX validée. Aucun FPS ni diagnostic causal de performance n’est inventé. Les APK, manifestes et témoins H restent immuables. La [proposition1.19](design/v1.19/UX_RETHINK_FR.md) et sa maquette locale sont des éléments de revue, pas une nouvelle implémentation Android ni une évolution de l’économie.
+
+
 This H prototype delivers four-puzzle Observatory expeditions, copy progression, animated companion forms and the owner-requested Mini LoL guest series. [Prepared production APK URL](https://luma-drift-production.web.app/releases/luma-drift-1.18.0-prototype1.apk) · [Prepared Lab APK URL](https://luma-drift-production.web.app/releases/luma-drift-1.18.0-sandbox-prototype1.apk) · [Exact hashes and limits](../releases/manifest-1.18.0-prototype1.json). Git and the existing Firebase publication are prepared at the owner’s request. Public release and download-byte verification remain pending; see the [publication status](RELEASE_1_18.md). APK files are external artifacts rather than large Git blobs. The published1.17 packages and their evidence remain historical and unchanged.
 
 ## Player behavior

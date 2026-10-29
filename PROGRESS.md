@@ -1,5 +1,10 @@
 # Luma Drift 1.18 — publication prepared, not yet publicly verified
 
+## Retour du propriétaire —2026-10-29
+
+L’essai humain de l’APK1.18H signale un échec de clarté de sélection, d’interaction, de navigation et de sensation de fluidité. La refonte UX est ouverte : les acceptances automatisées restent des validations fonctionnelles dans leur périmètre et n’impliquent pas une UX validée. Aucun FPS ni diagnostic causal de performance n’est inventé. Les APK, manifestes et témoins H restent immuables. La [proposition1.19](docs/design/v1.19/UX_RETHINK_FR.md) et sa maquette locale sont des éléments de revue, pas une nouvelle implémentation Android ni une évolution de l’économie.
+
+
 **Publication preparation —29 October 2026:** the owner requested Git and existing Firebase updates while testing H. The FR/EN site now has the37 identity gallery, four form choices, twenty poses/four stances, six unedited H captures and exact prepared1.18 download URLs. Fifteen site unit tests and65 local provenance/static checks pass; desktop and320 CSS-pixel FR/EN gallery states were reviewed. Gallery requests start only with a user choice, with a four-entry atlas cache. Existing privacy/account/configuration/audio and1.17 archives remain unchanged. Signed H APKs are external manifest-verified artifacts above100 MiB, with ignored physical copies for Hosting. Clean-commit deployment and independent public-byte verification tools are prepared; Git push, Hosting management and public download receipts remain pending. No public1.18 delivery is claimed yet.
 
 

@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "scope": "Unauthenticated public HTTPS GET proves main/commit/tree identity and all487 frozen binary path SHA/size values. CI status is a timestamped observation, not completion.",
+  "recordedUtc": "2026-10-29T17:49:13.266909+00:00",
+  "commit": "4972565151521c5910b2e5d90921491f00acb7eb",
+  "tree": "9c7d0a3f5d3b11ecd2824be2022950d6e217f191",
+  "parent": "962fc2d69423a5e09c411a2594a8325fe6c20e04",
+  "binaryPathsMatched": 487,
+  "binaryUniqueMatched": 333,
+  "mismatch": [],
+  "recursiveTreeTruncated": false,
+  "requests": {
+    "main": {
+      "url": "https://api.github.com/repos/nabz0r/AndroidHit/git/ref/heads/main",
+      "status": 200,
+      "bytes": 332,
+      "sha256": "e692c76fcfdfe2079e93792a361ca043a39bd7c5205b073fc71dfb7ff7ae6231",
+      "authenticated": false
+    },
+    "commit": {
+      "url": "https://api.github.com/repos/nabz0r/AndroidHit/git/commits/4972565151521c5910b2e5d90921491f00acb7eb",
+      "status": 200,
+      "bytes": 1623,
+      "sha256": "b3d8315d2b02b9d70f84018f6eef1d0e9d5fa2fe1b2ae2323b4445249b2e66d1",
+      "authenticated": false
+    },
+    "tree": {
+      "url": "https://api.github.com/repos/nabz0r/AndroidHit/git/trees/9c7d0a3f5d3b11ecd2824be2022950d6e217f191?recursive=1",
+      "status": 200,
+      "bytes": 13735648,
+      "sha256": "893547f4813c2d619e8930f4e453b8d3fbdc7f8abd718e19db0f5ea5d8e78395",
+      "authenticated": false
+    },
+    "ci": {
+      "url": "https://api.github.com/repos/nabz0r/AndroidHit/actions/runs?head_sha=4972565151521c5910b2e5d90921491f00acb7eb&per_page=100",
+      "status": 200,
+      "bytes": 12285,
+      "sha256": "c9daf9b6cdb089d63c8cde62d0a5e4ec85ea033fd1559ac6a7c244b020cb82c1",
+      "authenticated": false
+    }
+  },
+  "workflowRuns": [
+    {
+      "id": 40924710486,
+      "name": "Puzzle contracts",
+      "head_sha": "4972565151521c5910b2e5d90921491f00acb7eb",
+      "status": "in_progress",
+      "conclusion": null,
+      "html_url": "https://github.com/nabz0r/AndroidHit/actions/runs/40924710486",
+      "event": "push"
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 # Luma Drift 1.18 — local prototype H
 
+## Retour du propriétaire —2026-10-29
+
+L’essai humain de l’APK1.18H signale un échec de clarté de sélection, d’interaction, de navigation et de sensation de fluidité. La refonte UX est ouverte : les acceptances automatisées restent des validations fonctionnelles dans leur périmètre et n’impliquent pas une UX validée. Aucun FPS ni diagnostic causal de performance n’est inventé. Les APK, manifestes et témoins H restent immuables. La [proposition1.19](../../design/v1.19/UX_RETHINK_FR.md) et sa maquette locale sont des éléments de revue, pas une nouvelle implémentation Android ni une évolution de l’économie.
+
+
 H is the delivered local prototype, code25. The published website and public1.17 release have not been replaced. This register distinguishes the tested H bytes from the earlier E/F/G candidates.
 
 ## Exact artifacts

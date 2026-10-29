@@ -1,7 +1,7 @@
 {
   "passed": true,
   "scope": "Prepared local Firebase content, exact H image/metadata provenance and static accessibility/loading contracts. No deployment, HTTP verification, native run or apparel qualification is performed.",
-  "publicationReadyInputsChecked": false,
+  "publicationReadyInputsChecked": true,
   "release": {
     "schemaVersion": 1,
     "version": "1.18.0-prototype1",
@@ -14,7 +14,7 @@
     "labDownloadUrl": "/releases/luma-drift-1.18.0-sandbox-prototype1.apk",
     "labSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
     "labBytes": 368887460,
-    "artifactCommit": null,
+    "artifactCommit": "4972565151521c5910b2e5d90921491f00acb7eb",
     "publicationState": "prepared",
     "configuration": {
       "testAds": true,
@@ -287,6 +287,18 @@
     {
       "passed": true,
       "message": "Local page resolves: delete-account/index.html"
+    },
+    {
+      "passed": true,
+      "message": "Publication has immutable artifact commit"
+    },
+    {
+      "passed": true,
+      "message": "Hosted APK exactly matches frozen artifact: luma-drift-1.18.0-prototype1.apk"
+    },
+    {
+      "passed": true,
+      "message": "Hosted APK exactly matches frozen artifact: luma-drift-1.18.0-sandbox-prototype1.apk"
     }
   ],
   "counts": {
@@ -294,7 +306,7 @@
     "sheets": 148,
     "poses": 2960,
     "nativeScreenshots": 6,
-    "checks": 65
+    "checks": 68
   },
   "weights": {
     "atlasBytes": 293692016,
@@ -308,6 +320,6 @@
     "public/index.html": "a256963ec96ecf79d6e7c19ec3f4a6914df992c342808bd01bfc63c6209d9d3e",
     "public/assets/site-v118.js": "3625e49f1d2126b0e7d870087ccc419693f52db9bd28332a25e660ac39edfcbf",
     "public/assets/companion-gallery-v118.mjs": "02320ced57c4d9473a429d9b9251734a0b4ca7c7a59e28835477e8add3ecda33",
-    "preparation": "f479129e4811dddc53cdd6575632f3f7e6aaab8246e0bf9e6f6d484204ac6a51"
+    "preparation": "67e72226bd7c2df7488a3b3ad591b211619d43af4e8883e935a8582fce339427"
   }
 }

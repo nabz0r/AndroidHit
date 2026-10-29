@@ -1,0 +1,264 @@
+{
+  "schema": 1,
+  "qualification": "v1.18-publication-ci-sparse-rehearsal",
+  "passed": true,
+  "generatedAtUtc": "2026-10-29T17:37:12.092358+00:00",
+  "scope": "Local execution of the exact workflow run steps from isolated copies containing only each job sparse-checkout inputs. This is not a hosted GitHub Actions run or new Android qualification.",
+  "frozenLabApkSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+  "appSourcesModified": false,
+  "androidBuiltOrRun": false,
+  "host": {
+    "platform": "darwin",
+    "javaMajor": 17,
+    "python": "3.12.14",
+    "Pillow": "11.3.0",
+    "numpy": "2.2.6"
+  },
+  "inputs": [
+    {
+      "path": ".github/workflows/puzzle-contracts.yml",
+      "sha256": "040f60828d2fdaeda98ec0528f5e5136177e63ebe8a3851bf49ac0b81a07f541"
+    },
+    {
+      "path": "scripts/CollectionEventsTest.java",
+      "sha256": "7fcaf9dbe63c5f1b1f120724819c3f8aaf36abc80e557e16e54af8f0a6bf98fe"
+    },
+    {
+      "path": "scripts/GuardianStoreV19Test.java",
+      "sha256": "5af17cfb3a784703a742da460807ff08c79444b12cc4dadfb315d1e42b335390"
+    },
+    {
+      "path": "scripts/test-home-v115-geometry.sh",
+      "sha256": "6055b44c32c8d446f2fc3d3207c6241a5d9ce8a54bbd364d787196d182277f6a"
+    },
+    {
+      "path": "scripts/test-home-v116-geometry.sh",
+      "sha256": "041d9cd1da762051cabb9c1ba09368098bb9ff6d6c6f755e89b4dc6bbe4f8c52"
+    },
+    {
+      "path": "scripts/home-render-support/com/androidhit/lumadrift/ui/CompanionPortrait.java",
+      "sha256": "877fc08b16fbb9ad446205e05a4085f3722b7ce72d6ae75763c592427611bb54"
+    },
+    {
+      "path": "scripts/test-expedition-v118-model.sh",
+      "sha256": "52d78e8e2adc64b26394481e3f899869ce6f2288d59877bf8b67be06b125d611"
+    },
+    {
+      "path": "scripts/test-expedition-v118-store.sh",
+      "sha256": "63adeeeddbcfdd79ffc45402a8903bbec13edeade07976acaf34f3ba68aadebf"
+    },
+    {
+      "path": "scripts/test-companion-motion-v118.sh",
+      "sha256": "b351fc6ddfac02258ee43f8e2db21ab0a0ed03ef7060bc4bc4b46bdf6d7523a0"
+    },
+    {
+      "path": "scripts/ExpeditionV118ModelTest.java",
+      "sha256": "33e9dd3674795aed23bdbab0fc731141264d437d94261da1cd77d51fb8738b56"
+    },
+    {
+      "path": "scripts/ExpeditionV118StoreTest.java",
+      "sha256": "a4708d1e16dd21757049b6d61256a099c03d4f70b9928e1622569d9f7a0a0168"
+    },
+    {
+      "path": "scripts/CompanionMotionV118Test.java",
+      "sha256": "54495a570aff3c511041a70317758c7224d7191e276df91abb55a73fd1ecc06c"
+    },
+    {
+      "path": "scripts/v118-art/audit-assets.py",
+      "sha256": "c18ca34ad4e4a98e0d80842faa29b0ca8111a803d6edaece5dca7d5daffd17cc"
+    },
+    {
+      "path": "scripts/v118-art/test-source-clip.py",
+      "sha256": "7b26cf2c1489b0cb50825cee0af14276dddd143c5c990762c6eefc7619829d3b"
+    },
+    {
+      "path": "scripts/v118-art/test-packaged-audit.py",
+      "sha256": "422c742bf427287293d1d902bb6232d6eda9527eca88b81e8bd4b40798367015"
+    },
+    {
+      "path": "scripts/v118-art/requirements-ci.txt",
+      "sha256": "fafe914c098a10c0204b78a06537b4ba95b175c3875fec81c50b1a627a649251"
+    }
+  ],
+  "offline": {
+    "passed": true,
+    "sparseInputFiles": 331,
+    "seconds": 179.261,
+    "steps": [
+      {
+        "name": "Qualify all 1000 N boards and their pacing",
+        "exitCode": 0,
+        "seconds": 5.913,
+        "logSha256": "e88257fd1bebcb5b2f446c7167eed1e4c114508744bba19a2e5dac1fd59d1d38"
+      },
+      {
+        "name": "Qualify all 1000 U boards and every reachable relay state",
+        "exitCode": 0,
+        "seconds": 2.003,
+        "logSha256": "d812800d450085e3c67603b4f3e69ab92a0715e34e52919620b34f54d6b4f6ba"
+      },
+      {
+        "name": "Preserve historical codes, six sealed challenges and original budgets",
+        "exitCode": 0,
+        "seconds": 13.715,
+        "logSha256": "06c73730b105876f985035c1dfe80ce3e170ffe20a34fd41bb08bfe647948d85"
+      },
+      {
+        "name": "Qualify every L and M state and the finite daily and weekly geometry pool",
+        "exitCode": 0,
+        "seconds": 50.711,
+        "logSha256": "a6ec6dfec20513ab920eb6a1518f4ddb961f54df14cb539909f7193e697519e0"
+      },
+      {
+        "name": "Qualify every Guardian state and once-only reward transactions",
+        "exitCode": 0,
+        "seconds": 74.84,
+        "logSha256": "ba402a99f90c01b635394b2d93c4000822b499ac01b86597c6c5db19a427fc5b"
+      },
+      {
+        "name": "Check daily, weekly and Remix transactions and calendar boundaries",
+        "exitCode": 0,
+        "seconds": 1.463,
+        "logSha256": "c89c941ec2d9cc33ef6e7c3e8dc86da4e0d34755001b38e2162e83d4219c277d"
+      },
+      {
+        "name": "Check three-room ownership, migration and camera geometry",
+        "exitCode": 0,
+        "seconds": 1.788,
+        "logSha256": "a23fbc298d645eb476e25e56566bed760056477c3e6de1f07179c00b55abc105"
+      },
+      {
+        "name": "Check strict budgets, the saved Return and legacy continuations",
+        "exitCode": 0,
+        "seconds": 0.718,
+        "logSha256": "ec6ef87ec2689a5a83d0eadc443cb19d5733dc89d712abe4d02cbfdc25691280"
+      },
+      {
+        "name": "Check adaptive home camera and recoverable player collection",
+        "exitCode": 0,
+        "seconds": 2.563,
+        "logSha256": "caceaff21521932950a62593180a5d11d95cbb2eb2769ef2a934c5b6f39da4a2"
+      },
+      {
+        "name": "Check contextual rules and six-language feedback",
+        "exitCode": 0,
+        "seconds": 0.691,
+        "logSha256": "33421d9148b13e648d14c2cc1e5a57b95b11ae84c361b59d601eae8049fa9e89"
+      },
+      {
+        "name": "Check 1.17 scene transitions and original sprite geometry",
+        "exitCode": 0,
+        "seconds": 1.118,
+        "logSha256": "41b8d9132f9a977791db6ba134b202bb712575e2a8f5917e72787c5fbb8c7de6"
+      },
+      {
+        "name": "Check 50 synthesized arrangements, earcons and audio lifecycle model",
+        "exitCode": 0,
+        "seconds": 18.649,
+        "logSha256": "025f7f5fafb47c2b6864e2af17a69e75dfb6caed8fe385dde13e6474ce0e8348"
+      },
+      {
+        "name": "Check puzzle gates, budgets, feedback and compact action reachability",
+        "exitCode": 0,
+        "seconds": 0.516,
+        "logSha256": "86bddb673ec91e2ee6f98a2df7156634a46ec2ee5081ad2c7e165f540f751972"
+      },
+      {
+        "name": "Check 1.18 and retained website language and deliberate audio controls",
+        "exitCode": 0,
+        "seconds": 0.123,
+        "logSha256": "b288b7b39eb4c80356fe85e3dce236bcfc2e4792658f3e753bbd0f3730ea6a89"
+      },
+      {
+        "name": "Check 1.18 expeditions, copies, durable costume choice and motion contracts",
+        "exitCode": 0,
+        "seconds": 3.396,
+        "logSha256": "14be49dae15eef9b5a248134a5bce5904db0e326cce60ef042bff871937e8fd9"
+      },
+      {
+        "name": "Check power offers and preserved reward decisions",
+        "exitCode": 0,
+        "seconds": 1.054,
+        "logSha256": "827aa1c3db58dfa9bfe64f579a7d2176df7f4dc3dd442ee7c895fa4442547fc5"
+      }
+    ],
+    "v118": {
+      "modelChecks": 17559,
+      "storeChecks": 1004,
+      "storeFixedChecks": 677,
+      "storeCertificateActions": 327,
+      "storeActualCertificates": 52,
+      "storeWardrobeChecks": 118,
+      "storeSourceFiles": 75,
+      "storeSourceManifestSha256": "b8c86c6172ce4909e7307c89b48375e44cbb308fea8b3bc1bf7a51f01010ba44",
+      "motionChecks": 1093910,
+      "websiteTestsAcross116117118": 33
+    },
+    "retainedContracts": "The original 24 companion IDs, order, prices and 288 style combinations stay asserted separately from the 13 guests and 156 added combinations. Camera test doubles accept the new Frame overload; avatar art remains outside camera geometry scope.",
+    "firstAttempt": "Failed on the historical hard-coded 288 full-catalog style count. Both old catalog-count tests were corrected without changing app sources; failed logs retained locally."
+  },
+  "packagedArt": {
+    "passed": true,
+    "sparseInputFiles": 452,
+    "sparseInputBytes": 343612512,
+    "mode": "packaged-only",
+    "sourceClipTests": 7,
+    "refusedRevisionTests": 9,
+    "summary": {
+      "expectedCharacters": 37,
+      "catalogCharacters": 37,
+      "expectedSheets": 148,
+      "presentSheets": 148,
+      "passedSheets": 148,
+      "failedSheets": 0,
+      "expectedFrames": 2960,
+      "auditedFrames": 2960,
+      "expectedAttachments": 26640,
+      "auditedAttachments": 26640,
+      "actualPixelEquivalentSheets": 0,
+      "verifiedOriginalPngSheets": 0,
+      "layoutRegeneratedSheets": 0,
+      "preservedFixedRigSheets": 0,
+      "rigRevisionProtectedSheets": 148,
+      "anchorsMeasuredFrames": 0,
+      "apparelQualifiedFrames": 0,
+      "sourceClipFrames": 2960,
+      "originalPngBytes": 399564168,
+      "packagedWebpBytes": 293692016,
+      "visiblePixelsOutsideAllSourceRects": 0,
+      "visiblePixelsSharedBySourceRects": 0,
+      "visiblePixelsOutsideAllSourceDomains": 0,
+      "visiblePixelsSharedBySourceDomains": 0,
+      "componentThresholdCounts": {
+        "128": 112,
+        "160": 1,
+        "192": 3,
+        "208": 2,
+        "224": 4,
+        "240": 6,
+        "248": 10,
+        "250": 2,
+        "251": 4,
+        "252": 4
+      },
+      "warningSheets": 3
+    },
+    "assetTreeSha256": "4a58e25f7db6949fedd2f81b6fd86566687fbf35431cf7a0cf488436ff0860d0",
+    "assetManifestPath": "docs/art/v118/assets-manifest.json",
+    "assetManifestSha256": "0de77f47ba3676b3da641b7a735e8c999c789dd19f6c7cad3530cb518e033b84",
+    "rigRevisionReceipt": "docs/validation/v1.18/rig-g-all-proposals/applied.json",
+    "rigRevisionReceiptSha256": "e3bb3fe752bb7e8fc45ef8b594da6412037d893ef2871b742cdad539293699ca",
+    "requiredArchivedBeforeMetadataFiles": 148,
+    "originalPngFilesRead": 0,
+    "apkFilesRead": 0,
+    "nativeCaptureFilesRead": 0,
+    "limits": "Actual shipped WebP bytes, pixels, alpha, extraction polygons, anchors and frozen revision baseline were checked. Historical PNG/WebP equivalence, anatomical clothing fit, Android rendering and human enjoyment are not established by this CI mode.",
+    "generatedManifestMatchesCanonicalInput": true
+  },
+  "additionalChecks": {
+    "workflowYamlParsed": true,
+    "gitDiffWhitespaceCheck": true,
+    "pythonScriptsCompile": true
+  },
+  "hostedGitHubActionsResult": "Pending publication; not inferred from this local rehearsal."
+}

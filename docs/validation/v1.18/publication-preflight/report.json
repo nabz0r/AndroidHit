@@ -1,0 +1,33 @@
+{
+  "scope": "Independent publication preflight; user explicitly requested fan-prototype publication. No external publication, commit or ref update by this audit.",
+  "technicalFindings": [
+    {
+      "finding": "Two H APKs exceed ordinary Git100MiB file limit",
+      "resolution": "Ignored from Git; retain exact signed bytes for separate owner-controlled distribution"
+    }
+  ],
+  "policyReference": {
+    "path": "docs/validation/v1.18/publication-preflight/riot-policy.md",
+    "source": "https://www.riotgames.com/en/legal",
+    "authorizationVerified": false,
+    "automaticPublicationBlock": false
+  },
+  "sourceInventory": "untracked-inventory.json",
+  "mechanicalGitSelection": "proposed-git-selection.json",
+  "localRetainedIndex": {
+    "path": "docs/validation/v1.18/publication-preflight/local-retained-sha256.json",
+    "sha256": "8aabb7b3b678c9599060a29b3b67cfc7d66b1835d84742d197933f25dc793f55",
+    "files": 5375,
+    "bytes": 6641167465,
+    "externalArchiveUploaded": false
+  },
+  "packageProof": "package-proof-h/report.json",
+  "releaseManifestProof": "release-manifest-h-verification.json",
+  "credentialPatternScan": "redacted-text-scan.json",
+  "apkPatternScan": "redacted-apk-scan.json",
+  "limits": [
+    "Pattern scans found no high-confidence private credential and are not exhaustive security/PII certification.",
+    "Git inventory and manifest checks are time-specific; root controls later staging and transport.",
+    "Current local Git object-store size does not establish the size of the next remote push."
+  ]
+}
