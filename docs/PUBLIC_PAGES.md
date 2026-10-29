@@ -1,6 +1,18 @@
 # Public developer, privacy and account-deletion pages
 
-## Current 1.17 website delivery
+## Current 1.20 — C3 Hosting confirmed
+
+Application/artifact/native/Lab source is published at [C2 `7ea28bc6`](https://github.com/nabz0r/AndroidHit/commit/7ea28bc6125e73d0543b264081266aeff510b071). The website, six original exact-F FR/EN home/shop/victory frames and local QA are published at [C3 `eaae0fba`](https://github.com/nabz0r/AndroidHit/commit/eaae0fbad15b074409f608e5a2afe7913c3bee3b). [Current site register](validation/site-v1.20/README.md) separates preparation, 1,092 source checks/508 payloads, local browser review and deployment.
+
+The privacy policy intentionally adds installation-local session energy, timing/attempt/receipt data, test-Gold refill and recovery limits, and the closed undeployed production energy path. It corrects the old universal-free-restart sentence and document title/date. [Final old/new policy record](validation/site-v1.20/staging/legal-update-final.json) · [Accepted local application](validation/site-v1.20/legal-application-final.json). Authentication, social, journal, deletion, site-provider and contact sections remain byte-identical; no account-deletion or identity operation is performed by this update.
+
+[Hosting](validation/site-v1.20/hosting/deployment.json) confirms the exact C3 deployment as DEPLOY/FINALIZED, version `94f0979d7a02c3b2`, at `2026-10-29T22:29:43.998Z`; [delivery record](validation/v1.20/publication/release-delivery.json). The local Hosting record is a derived transcription of UI-observed management fields, with original remote receipts inventoried separately. Public-origin byte/render observation remains unverified under the saved permission boundary, without an alternate tool/host workaround. Management-confirmed delivery is not provider activation or a completed privacy/store submission.
+
+## Preserved1.19 published site
+
+The [1.19 register](validation/site-v1.19/README.md) records C3 `ccc3e025`, Hosting version `a64a7ef1faadf791` at2026-10-29T20:29:13.810Z and its earlier500-response byte-verification pass. Its later refused public-browser observation remains separate. The [1.18 register](validation/site-v1.18/README.md) retains its own published H/gallery scope.
+
+## Preserved 1.17 website delivery
 
 The existing [FR/EN website](https://luma-drift-production.web.app/) is deployed from clean `fb341930fc7820dcb19326ee4c0c354f3101f610`: Hosting `a8f7c1e30f14cd29`, finalized **2026-10-29T07:19:42.453Z**. It serves sixteen unedited H native captures, four app-synthesizer WAV excerpts and exact signed H production APK/AAB/manifest. All174 payloads and three directory aliases independently match the source hashes. Eight public responsive FR/EN states at320/375/768/1280, localized gallery, visible keyboard focus and four deliberate audio playbacks pass. Media stop afterward and the viewport override is reset. [Complete website register](validation/site-v1.17/README.md).
 

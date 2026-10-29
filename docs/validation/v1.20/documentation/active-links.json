@@ -20,7 +20,8 @@
     "docs/CHANGELOG.md",
     "docs/VALIDATION.md",
     "docs/README.md",
-    "docs/PRIVACY.md"
+    "docs/PRIVACY.md",
+    "docs/PUBLIC_PAGES.md"
   ],
   "excerpt_boundaries": {
     "README.md": "## Preserved 1.18 H delivery",
@@ -28,12 +29,25 @@
     "docs/CHANGELOG.md": "## 1.17.0-rc6",
     "docs/VALIDATION.md": "> **Preserved 1.17 qualification",
     "docs/README.md": "**Preserved1.17 delivery:**",
-    "docs/PRIVACY.md": "## Preserved1.17 local"
+    "docs/PRIVACY.md": "## Preserved1.17 local",
+    "docs/PUBLIC_PAGES.md": "## Preserved 1.17 website delivery"
   },
-  "local_references_checked": 199,
-  "external_references_not_requested": 6,
+  "local_references_checked": 256,
+  "external_references_not_requested": 32,
   "missing": [],
   "references": [
+    {
+      "source": "README.md",
+      "reference": "releases/manifest-1.20.0-rc1.json",
+      "target": "releases/manifest-1.20.0-rc1.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
     {
       "source": "README.md",
       "reference": "docs/UX_1_20_MENUS.md",
@@ -74,6 +88,36 @@
       "source": "README.md",
       "reference": "docs/validation/v1.20/native-lab/README.md",
       "target": "docs/validation/v1.20/native-lab/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/validation/site-v1.20/preparation.json",
+      "target": "docs/validation/site-v1.20/preparation.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/validation/site-v1.20/browser-local/report.json",
+      "target": "docs/validation/site-v1.20/browser-local/report.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/validation/site-v1.20/native-capture-map.json",
+      "target": "docs/validation/site-v1.20/native-capture-map.json",
       "exists": true
     },
     {
@@ -173,6 +217,42 @@
       "exists": true
     },
     {
+      "source": "README.md",
+      "reference": "public/assets/screenshots/v1.20/home-fr.png",
+      "target": "public/assets/screenshots/v1.20/home-fr.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "public/assets/screenshots/v1.20/shop-fr.png",
+      "target": "public/assets/screenshots/v1.20/shop-fr.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "public/assets/screenshots/v1.20/victory-fr.png",
+      "target": "public/assets/screenshots/v1.20/victory-fr.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "public/assets/screenshots/v1.19/home-fr.png",
+      "target": "public/assets/screenshots/v1.19/home-fr.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "public/assets/screenshots/v1.19/squad-fr.png",
+      "target": "public/assets/screenshots/v1.19/squad-fr.png",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "reference": "public/assets/screenshots/v1.19/puzzle-fr.png",
+      "target": "public/assets/screenshots/v1.19/puzzle-fr.png",
+      "exists": true
+    },
+    {
       "source": "docs/ROADMAP.md",
       "reference": "UX_1_20_MENUS.md",
       "target": "docs/UX_1_20_MENUS.md",
@@ -200,6 +280,18 @@
       "source": "docs/ROADMAP.md",
       "reference": "../releases/manifest-1.20.0-rc1.json",
       "target": "releases/manifest-1.20.0-rc1.json",
+      "exists": true
+    },
+    {
+      "source": "docs/ROADMAP.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/ROADMAP.md",
+      "reference": "validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
       "exists": true
     },
     {
@@ -348,6 +440,48 @@
     },
     {
       "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/v1.20/publication/c2-source.json",
+      "target": "docs/validation/v1.20/publication/c2-source.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/v1.20/publication/c3-site-source.json",
+      "target": "docs/validation/v1.20/publication/c3-site-source.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/site-v1.20/source-contracts.json",
+      "target": "docs/validation/site-v1.20/source-contracts.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/site-v1.20/browser-local/report.json",
+      "target": "docs/validation/site-v1.20/browser-local/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/v1.20/publication/c3-ci.json",
+      "target": "docs/validation/v1.20/publication/c3-ci.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
       "reference": "UX_1_20.md",
       "target": "docs/UX_1_20.md",
       "exists": true
@@ -392,6 +526,12 @@
       "source": "docs/RELEASE_1_20.md",
       "reference": "validation/v1.20/host/relay-current/relay-host.json",
       "target": "docs/validation/v1.20/host/relay-current/relay-host.json",
+      "exists": true
+    },
+    {
+      "source": "docs/RELEASE_1_20.md",
+      "reference": "validation/v1.20/publication/c3-ci.json",
+      "target": "docs/validation/v1.20/publication/c3-ci.json",
       "exists": true
     },
     {
@@ -510,6 +650,12 @@
     },
     {
       "source": "docs/UX_1_20_MENUS.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/UX_1_20_MENUS.md",
       "reference": "validation/v1.20/native-lab/README.md",
       "target": "docs/validation/v1.20/native-lab/README.md",
       "exists": true
@@ -576,6 +722,42 @@
     },
     {
       "source": "docs/validation/v1.20/README.md",
+      "reference": "publication/c2-source.json",
+      "target": "docs/validation/v1.20/publication/c2-source.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "publication/c3-site-source.json",
+      "target": "docs/validation/v1.20/publication/c3-site-source.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "../site-v1.20/source-contracts.json",
+      "target": "docs/validation/site-v1.20/source-contracts.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "../site-v1.20/browser-local/report.json",
+      "target": "docs/validation/site-v1.20/browser-local/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "../site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
       "reference": "native-lab/README.md",
       "target": "docs/validation/v1.20/native-lab/README.md",
       "exists": true
@@ -620,6 +802,12 @@
       "source": "docs/validation/v1.20/README.md",
       "reference": "native/candidate-d-compact-fr-en-reduced-retry/report.json",
       "target": "docs/validation/v1.20/native/candidate-d-compact-fr-en-reduced-retry/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "publication/c3-ci.json",
+      "target": "docs/validation/v1.20/publication/c3-ci.json",
       "exists": true
     },
     {
@@ -686,6 +874,18 @@
       "source": "docs/validation/v1.20/README.md",
       "reference": "energy-purchase/README.md",
       "target": "docs/validation/v1.20/energy-purchase/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "../site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/v1.20/README.md",
+      "reference": "publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
       "exists": true
     },
     {
@@ -804,20 +1004,50 @@
     },
     {
       "source": "docs/validation/site-v1.20/README.md",
-      "reference": "../v1.20/native/README.md",
-      "target": "docs/validation/v1.20/native/README.md",
+      "reference": "../v1.20/publication/c2-source.json",
+      "target": "docs/validation/v1.20/publication/c2-source.json",
       "exists": true
     },
     {
       "source": "docs/validation/site-v1.20/README.md",
-      "reference": "native-capture-map.json",
-      "target": "docs/validation/site-v1.20/native-capture-map.json",
+      "reference": "../v1.20/publication/c3-site-source.json",
+      "target": "docs/validation/v1.20/publication/c3-site-source.json",
       "exists": true
     },
     {
       "source": "docs/validation/site-v1.20/README.md",
-      "reference": "../v1.20/publication/package-collection.json",
-      "target": "docs/validation/v1.20/publication/package-collection.json",
+      "reference": "preparation.json",
+      "target": "docs/validation/site-v1.20/preparation.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/site-v1.20/README.md",
+      "reference": "source-contracts.json",
+      "target": "docs/validation/site-v1.20/source-contracts.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/site-v1.20/README.md",
+      "reference": "browser-local/report.json",
+      "target": "docs/validation/site-v1.20/browser-local/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/site-v1.20/README.md",
+      "reference": "hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/site-v1.20/README.md",
+      "reference": "../v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/site-v1.20/README.md",
+      "reference": "../v1.20/publication/c3-ci.json",
+      "target": "docs/validation/v1.20/publication/c3-ci.json",
       "exists": true
     },
     {
@@ -942,6 +1172,18 @@
     },
     {
       "source": "docs/CHANGELOG.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/CHANGELOG.md",
+      "reference": "validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
+    {
+      "source": "docs/CHANGELOG.md",
       "reference": "validation/v1.20/native-lab/README.md",
       "target": "docs/validation/v1.20/native-lab/README.md",
       "exists": true
@@ -1028,6 +1270,42 @@
       "source": "docs/VALIDATION.md",
       "reference": "validation/v1.20/native-lab/README.md",
       "target": "docs/validation/v1.20/native-lab/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION.md",
+      "reference": "validation/v1.20/publication/c2-source.json",
+      "target": "docs/validation/v1.20/publication/c2-source.json",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION.md",
+      "reference": "validation/v1.20/publication/c3-site-source.json",
+      "target": "docs/validation/v1.20/publication/c3-site-source.json",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION.md",
+      "reference": "validation/site-v1.20/browser-local/report.json",
+      "target": "docs/validation/site-v1.20/browser-local/report.json",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION.md",
+      "reference": "validation/v1.20/publication/c3-ci.json",
+      "target": "docs/validation/v1.20/publication/c3-ci.json",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION.md",
+      "reference": "validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
       "exists": true
     },
     {
@@ -1140,6 +1418,18 @@
     },
     {
       "source": "docs/README.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/README.md",
+      "reference": "validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
+    {
+      "source": "docs/README.md",
       "reference": "RELEASE_1_19.md",
       "target": "docs/RELEASE_1_19.md",
       "exists": true
@@ -1224,8 +1514,62 @@
     },
     {
       "source": "docs/PRIVACY.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/PRIVACY.md",
       "reference": "validation/site-v1.20/staging/legal-update-final.json",
       "target": "docs/validation/site-v1.20/staging/legal-update-final.json",
+      "exists": true
+    },
+    {
+      "source": "docs/PRIVACY.md",
+      "reference": "validation/site-v1.20/legal-application-final.json",
+      "target": "docs/validation/site-v1.20/legal-application-final.json",
+      "exists": true
+    },
+    {
+      "source": "docs/PUBLIC_PAGES.md",
+      "reference": "validation/site-v1.20/README.md",
+      "target": "docs/validation/site-v1.20/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/PUBLIC_PAGES.md",
+      "reference": "validation/site-v1.20/staging/legal-update-final.json",
+      "target": "docs/validation/site-v1.20/staging/legal-update-final.json",
+      "exists": true
+    },
+    {
+      "source": "docs/PUBLIC_PAGES.md",
+      "reference": "validation/site-v1.20/legal-application-final.json",
+      "target": "docs/validation/site-v1.20/legal-application-final.json",
+      "exists": true
+    },
+    {
+      "source": "docs/PUBLIC_PAGES.md",
+      "reference": "validation/site-v1.20/hosting/deployment.json",
+      "target": "docs/validation/site-v1.20/hosting/deployment.json",
+      "exists": true
+    },
+    {
+      "source": "docs/PUBLIC_PAGES.md",
+      "reference": "validation/v1.20/publication/release-delivery.json",
+      "target": "docs/validation/v1.20/publication/release-delivery.json",
+      "exists": true
+    },
+    {
+      "source": "docs/PUBLIC_PAGES.md",
+      "reference": "validation/site-v1.19/README.md",
+      "target": "docs/validation/site-v1.19/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/PUBLIC_PAGES.md",
+      "reference": "validation/site-v1.18/README.md",
+      "target": "docs/validation/site-v1.18/README.md",
       "exists": true
     }
   ]

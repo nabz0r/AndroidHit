@@ -1,0 +1,110 @@
+{
+  "status": "DELIVERED_FOR_PLAYTEST",
+  "recorded_utc": "2026-10-29T22:40:09.110443+00:00",
+  "edition": "1.20",
+  "release": "1.20.0-rc1",
+  "version_code": 28,
+  "source": {
+    "application_commit": "7ea28bc6125e73d0543b264081266aeff510b071",
+    "site_commit": "eaae0fbad15b074409f608e5a2afe7913c3bee3b",
+    "site_public_tree": "8194e39a276bd7652e3f5c58e68a4f0ad986b416",
+    "delivery_docs_commit": "Commit containing this receipt; no self-referential SHA is claimed."
+  },
+  "artifact_manifest": {
+    "path": "releases/manifest-1.20.0-rc1.json",
+    "sha256": "849a84c0530f9e70251c0b0f1cf48b64c0767cf8afbef568a340ac4541ebc92e"
+  },
+  "artifact_manifest_creation_state_preserved": true,
+  "final_read_only_identity_checks": {
+    "frozen_app_inputs": 481,
+    "frozen_site_inputs": 20,
+    "all_match": true
+  },
+  "apks": {
+    "production": {
+      "path": "releases/luma-drift-1.20.0-rc1.apk",
+      "sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+      "bytes": 368936921,
+      "version": "1.20.0-rc1",
+      "code": 28,
+      "application_id": "com.androidhit.lumadrift",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "download_url": "https://luma-drift-production.web.app/releases/luma-drift-1.20.0-rc1.apk",
+      "download_response_bytes_verified": false,
+      "native_acceptance": {
+        "path": "docs/validation/v1.20/native/candidate-f-final-index.json",
+        "sha256": "78f1316a2774e00d6cd9ff33d3987ed78a4f81d0bdb9197d9a8ef5b929027556"
+      },
+      "native_totals": {
+        "reports": 11,
+        "native_assertions": 457,
+        "touchscreen_actions": 180,
+        "original_pngs": 76,
+        "unedited_native_videos": 1,
+        "derived_assertions": 38
+      }
+    },
+    "lab": {
+      "path": "releases/luma-drift-1.20.0-sandbox-rc1.apk",
+      "sha256": "7c8ccfde3a0050b35b0312a61e2cb07973c594629bbf97493ec8bbe2829410cf",
+      "bytes": 368920220,
+      "version": "1.20.0-sandbox-rc1",
+      "code": 28,
+      "application_id": "com.androidhit.lumadrift.sandbox",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "download_url": "https://luma-drift-production.web.app/releases/luma-drift-1.20.0-sandbox-rc1.apk",
+      "download_response_bytes_verified": false,
+      "native_acceptance": {
+        "path": "docs/validation/v1.20/native-lab/candidate-f-final-index.json",
+        "sha256": "1281221c7753fec0f7d53d81b9d6bfda0715bd94a487c00a3e1b6a53faed431b"
+      },
+      "native_totals": {
+        "reports": 2,
+        "native_assertions": 48,
+        "touchscreen_actions": 13,
+        "original_pngs": 6,
+        "derived_assertions": 12
+      }
+    }
+  },
+  "hosting_deployment": {
+    "path": "docs/validation/site-v1.20/hosting/deployment.json",
+    "sha256": "0250e3086a5032612ab80dd28131d7a9adfcdea2bbf2ae91c7f54025d8359e49"
+  },
+  "hosting_evidence_method": "DERIVED_UI_OBSERVATION",
+  "hosting_management": {
+    "management_provider": "authenticated firebase hosting:channel:list --json",
+    "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793312983998000",
+    "release_type": "DEPLOY",
+    "release_time": "2026-10-29T22:29:43.998Z",
+    "release_message": "Website1.20 from eaae0fbad15b074409f608e5a2afe7913c3bee3b",
+    "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/94f0979d7a02c3b2",
+    "version_status": "FINALIZED"
+  },
+  "code_and_site_ci": {
+    "path": "docs/validation/v1.20/publication/c3-ci.json",
+    "sha256": "d24de0d088bf38146065c4febd6a1e9f800f3ad3de365187a8cfaee37d8a82ef"
+  },
+  "site_source_manifest": {
+    "path": "docs/validation/site-v1.20/release/source-manifest.json",
+    "sha256": "dce28e69d6f0ab2629c79548259d22666b91011d2b8dad225a5e0750f447ea7b"
+  },
+  "site_local_browser_qa": {
+    "path": "docs/validation/site-v1.20/browser-local/report.json",
+    "sha256": "452ed3214ad9f81ef04f2920816d4192cc7bfd2aa6ca023fe19487190db237f3"
+  },
+  "accepted_scope": [
+    "Final F APKs signed with retained certificate; actual installation, first frame and gameplay accepted on Android36 ARM64 emulator.",
+    "Production grades1/2/3, durable win/gift receipts, no duplicate reward, moves and elapsed timer, cold resume, zero energy, compact FR/EN and six menu languages exercised.",
+    "Separate Lab test balance:50 Gold spent once, energy0→10, next run9; no real purchase.",
+    "Frozen site files and every physical Hosting payload checked in authenticated deployment checkout, Hosting-only CLI and live management DEPLOY/FINALIZED confirmed."
+  ],
+  "limits": [
+    "The local Hosting record states its collection method; a UI transcription does not claim octet-exact import of the original remote receipts.",
+    "Hosting management confirmation is not a check of public HTTP response bytes or public browser rendering; saved browser permission blocked that origin.",
+    "No physical-phone acceptance, human enjoyment or retention validation is inferred.",
+    "No Play Console release uploaded or approved by this delivery.",
+    "Real ads remain test-only, real checkout and production premium energy refill remain closed; no production backend rollout.",
+    "Host/model contract coverage and accepted native scenarios do not imply1000 full native playthroughs."
+  ]
+}

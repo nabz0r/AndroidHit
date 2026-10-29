@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "status": "ORIGINAL_BYTES_NOT_IMPORTED",
+  "safe_bundle": {
+    "compressed_bytes": 5540,
+    "compressed_sha256": "fc34942d7a6b7948e82490b3f397ee5556351b7b20eb2421230e92cfb6f9a02c",
+    "base64_chars": 7388,
+    "persistent_cloud_shell_path": "/home/nabz0r/luma-v120-c3-safe-export.b64",
+    "scope": "gzip JSON bundle of seven safe receipt/verification files, including the four original requested receipts; no debug journal or account response."
+  },
+  "attempts": [
+    {
+      "method": "Manual UI base64 chunk transcription",
+      "result": "Local length assertion failed before any proof file was written; no truncated/corrupt file was imported."
+    },
+    {
+      "method": "Cloud Shell Download File/Folder",
+      "result": "Text entry did not select the model path; two wrong-target transfers were cancelled at Transferred 0 items. Then the exact safe bundle was explicitly selected in the file tree; Cloud Shell displayed Success for luma-v120-c3-safe-export.b64. No home-folder contents were downloaded or read."
+    },
+    {
+      "method": "Browser download event/path capture",
+      "result": "No local path returned; exact error below. No matching file found in /Users/n/Downloads.",
+      "error_exact": "Timed out after 15000ms waiting for download."
+    }
+  ],
+  "fallback_authorization": "Parent authorized an explicitly derived UI observation instead of delaying closure for original-byte import.",
+  "new_hosting_action_for_export": false,
+  "security_warning_bypassed": false,
+  "authentication_material_read_or_exported": false,
+  "public_origin_requested": false
+}
