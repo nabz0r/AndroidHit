@@ -36,6 +36,11 @@ public final class MenuV120Test {
                 for(int j=i+1;j<5;j++)check(!nav.intersects(Menu120Layout.navigation(j,viewport,touch)),"fixed navigation touch targets never overlap");
             }
             check(Menu120Layout.rewardHeight(17,touch)>17*Menu120Layout.rewardRowHeight(touch)+hud,"all ready rows scrollable");
+            Menu120Layout.Rect primary=Menu120Layout.shopPrimary();float shopHeight=Math.max(viewport,Menu120Layout.SHOP_CONTENT_HEIGHT);
+            check(primary.top==514&&primary.bottom==576,"shop primary product lifted144 units");
+            float shopScroll=Math.max(0,Math.min(shopHeight-viewport,primary.bottom-(viewport-Menu120Layout.NAV_RESERVE)));
+            check(primary.top-shopScroll>=0&&primary.bottom-shopScroll<=viewport-84,"whole shop primary reachable above fixed navigation");
+            near(Menu120Layout.viewY(658,shopScroll+Menu120Layout.SHOP_PRODUCT_LIFT,hud),Menu120Layout.viewY(primary.top,shopScroll,hud),"shop canvas and hit translation agree");
             Menu120Layout.Reveal reveal=new Menu120Layout.Reveal(viewport);
             check(reveal.titleY>0&&reveal.giftY>reveal.titleY+40&&reveal.detailY>=reveal.giftY+28&&reveal.continueY>=reveal.detailY+28,"reveal labels have independent reading rows even in landscape");
             check(reveal.continueY<viewport&&reveal.detailY<viewport,"reveal confirmation and reward remain visible");
@@ -49,9 +54,13 @@ public final class MenuV120Test {
         near(Menu120Layout.revealAlpha(0,-1,true),1,"reduced motion stable");check(Menu120Layout.revealFinished(0,true)&&!Menu120Layout.revealFinished(-1,true),"reduced motion closes instantly only on request");
     }
     private static void copy(){
-        String[] keys={"home","hello","guest","signed_in","team_hint","gifts","gift_ready","gift_soon","shop","shop_hint","quests","open_gift","collected","in_progress","gift_for_you","tap_continue","earned","gold","energy","wallet_unknown","shop_powers","shop_looks","shop_feature","shop_free","view","next","previous"};
+        String[] keys={"home","hello","guest","signed_in","team_hint","gifts","gift_ready","gift_soon","shop","shop_hint","quests","open_gift","collected","in_progress","gift_for_you","tap_continue","earned","gold","energy","wallet_unknown","shop_powers","shop_looks","shop_feature","shop_free","view","next","previous","shop_tab_powers","shop_tab_looks","shop_tab_gold","shop_arrivals"};
         for(String lang:new String[]{"en","fr","de","es","pt","it"})for(String key:keys){Object[] args=key.equals("hello")?new Object[]{"Nova"}:key.equals("gift_ready")?new Object[]{7}:new Object[0];String text=V120MenuStrings.get(lang,key,args);check(!text.isEmpty()&&!text.contains("%")&&!text.contains("null"),"formatted six-language copy "+lang+"/"+key);}
         check(V120MenuStrings.get("ja","gifts").equals(V120MenuStrings.get("en","gifts")),"unknown language uses English");
+        for(String lang:new String[]{"en","fr","de","es","pt","it"})for(String key:new String[]{"shop_tab_powers","shop_tab_looks","shop_tab_gold"})check(V120MenuStrings.get(lang,key).length()<=7,"short readable shop tab "+lang+"/"+key);
+        check(!V120MenuStrings.get("fr","shop_arrivals").equals("Mes compagnons"),"random arrival pool is not labelled owned collection");
+        ExperienceLayout normal=new ExperienceLayout(1080,2400,72,96,2.625f,1);float normalViewport=normal.viewportHeight-Menu120Layout.hudHeight(48*2.625f/normal.scale);
+        check(Menu120Layout.shopPrimary().bottom<=normalViewport-84,"shop primary above normal1080x2400 fold without scrolling");
         boolean refused=false;try{V120MenuStrings.get("en","missing");}catch(IllegalArgumentException good){refused=true;}check(refused,"unknown label fails visibly in test");
     }
     private static void claims(){

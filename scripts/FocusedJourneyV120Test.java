@@ -85,6 +85,8 @@ public final class FocusedJourneyV120Test {
             check(a.map.bottom<=height&&a.next.top>0&&a.map.height()>=touch&&a.next.height()>=touch,"visible qualified compact controls retain targetsize");
             if(gifts)check(a.gifts.bottom<a.next.top&&a.rewardY<a.gifts.top,"real gifts row has separate space");
             check(a.starsY<a.metricsY&&a.metricsY<a.rewardY,"title stars counters rewards ordered");
+            if(a.avatarRadius>=24)check(a.avatarY-2*a.avatarRadius>=a.starsY+25&&a.avatarY+2*a.avatarRadius<=a.metricsY-30,"full authored art extent clears stars and counters");
+            check(4*a.avatarRadius<=340,"full victory art fits horizontal safe width");
         }
         check(VictoryLayout.displayedStars(3,179,false)==0&&VictoryLayout.displayedStars(3,180,false)==1&&VictoryLayout.displayedStars(3,430,false)==2&&VictoryLayout.displayedStars(3,680,false)==3,"earned stars sequence boundaries");
         check(VictoryLayout.displayedStars(2,0,true)==2&&VictoryLayout.rewardProgress(0,true)==1,"reducedmotion immediately presents exact result");

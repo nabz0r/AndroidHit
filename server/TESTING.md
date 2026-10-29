@@ -65,3 +65,9 @@ Follow [the production acceptance gate](DEPLOYMENT.md#6-internal-track-acceptanc
 ## 1.7 social and closed premium-draw follow-up
 
 The expanded suite passes **62 tests under Node 24.22.1**, and the real local Firestore emulator passes **3 integration/rules tests**. [Current records and scope](validation/social-v1.7/README.md) include raw output, finite gift replay/concurrency, opt-in map privacy, mutual deletion cleanup, closed premium draws and actual conditional odds. These local results do not qualify production Google login, provider accounts, live gift delivery or real-money products. Earlier 42/43-case records above remain historical evidence.
+
+## 1.20 prepared energy-purchase follow-up
+
+The complete server suite now passes **69 tests under Node24.22.1**, and local Firestore passes **4 integration/rules tests**. The added energy case verifies12 concurrent retries of a50-Gold purchase and12 uses across two independent Firestore adapters: one pack, one debit, one ten-unit UID-bound receipt. Memory/HTTP cases additionally cover distinct-request stock/balance races and lost replies after committed spend/use.
+
+[Pinned source hashes and raw records](../docs/validation/v1.20/energy-purchase/README.md) also include84 Android-controller/journal assertions,36 checks of the actual wallet client with transport doubles, and1,552 shared vault regression assertions. New energy sales remain disabled on both client and server, with no backend deployment or real payment. [Protocol and installation-local limits](../docs/ENERGY_PURCHASE_1_20.md).

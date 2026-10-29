@@ -2,8 +2,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { createHash } from 'node:crypto';
 
-// Current 1.19 language/runtime contract. Historical gallery and 1.19 HTML contracts run separately.
+// Retained 1.19 language/runtime and immutable delivered C3 homepage contracts.
 // A narrow local DOM double is used. No browser or network is started.
 const source=fs.readFileSync(new URL('../public/assets/site-v119.js',import.meta.url),'utf8');
 class Element {
@@ -79,16 +80,20 @@ test('A deliberate preview stops another preview without autoplaying anything',(
  const s=boot();assert.equal(s.players.every(player=>player.paused),true);s.players[0].paused=false;s.players[2].paused=false;s.players[2].listeners.play();assert.equal(s.players[0].paused,true);assert.equal(s.players[0].pauseCalls,1);assert.equal(s.players[2].paused,false);
 });
 
-const currentHtml=()=>fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8');
-test('Current homepage selects the 1.19 runtime and every advertised navigation destination exists',()=>{
- const html=currentHtml();assert.match(html,/data-edition="1\.19"/);assert.match(html,/assets\/site-v119\.js\?v=[a-f0-9]+/);assert.match(html,/assets\/site-v119\.css\?v=[a-f0-9]+/);
+const historicalHtml=()=>{
+ const html=fs.readFileSync(new URL('../docs/validation/site-v1.19/index.template.html',import.meta.url));
+ assert.equal(createHash('sha256').update(html).digest('hex'),'626d0247cf194cf6e075b78514f5b8a68c818d53a80a76ef33d630ba3a94d5ea','exact delivered 1.19 C3 HTML bytes');
+ return html.toString('utf8');
+};
+test('Historical 1.19 homepage selects the 1.19 runtime and every advertised navigation destination exists',()=>{
+ const html=historicalHtml();assert.match(html,/data-edition="1\.19"/);assert.match(html,/assets\/site-v119\.js\?v=[a-f0-9]+/);assert.match(html,/assets\/site-v119\.css\?v=[a-f0-9]+/);
  assert.doesNotMatch(html,/<script[^>]+assets\/site-v118\.js/);
  for(const id of ['main','squad','screens','companions','sound','download'])assert.match(html,new RegExp('\\bid="'+id+'"'));
  assert.match(html,/href="privacy\/index\.html"/);assert.match(html,/href="delete-account\/index\.html"/);
 });
 
-test('Current native screenshots switch as exactly three paired 1.19 FR/EN views',()=>{
- const pairs=[...currentHtml().matchAll(/<img\b[^>]*data-screenshot-fr="([^"]+)"[^>]*data-screenshot-en="([^"]+)"[^>]*>/g)];
+test('Historical 1.19 native screenshots switch as exactly three paired 1.19 FR/EN views',()=>{
+ const pairs=[...historicalHtml().matchAll(/<img\b[^>]*data-screenshot-fr="([^"]+)"[^>]*data-screenshot-en="([^"]+)"[^>]*>/g)];
  const fr=new Set(),en=new Set();assert.ok(pairs.length>=3);
  for(const [tag,french,english] of pairs){
   assert.match(french,/^assets\/screenshots\/v1\.19\/(home|squad|puzzle)-fr\.png$/);
@@ -99,14 +104,14 @@ test('Current native screenshots switch as exactly three paired 1.19 FR/EN views
  assert.equal(fr.size,3);assert.equal(en.size,3);
 });
 
-test('Squad copy explains once-only energy, two-role combo and local save limits in both languages',()=>{
- const html=currentHtml();assert.equal([...html.matchAll(/class="role-card"/g)].length,6);
+test('Historical 1.19 squad copy explains once-only energy, two-role combo and local save limits in both languages',()=>{
+ const html=historicalHtml();assert.equal([...html.matchAll(/class="role-card"/g)].length,6);
  for(const text of ['3 points d’énergie au départ','Start with 3 energy','Un talent par compagnon','One skill per companion','À deux, Résonance','Two roles, Resonance','compagnons à rencontrer','companions to meet','La connexion Google ne synchronise pas cette sauvegarde.','Google sign-in does not synchronize this save.'])assert.ok(html.includes(text),text);
  assert.match(html,/prochain plateau/);assert.match(html,/next board/);
 });
 
-test('Only the signed current APK is primary and provider availability remains explicit',()=>{
- const html=currentHtml();const primary=[...html.matchAll(/<a class="button primary" href="([^"]+)"/g)];
+test('Historical 1.19 signed APK is primary and provider availability remains explicit',()=>{
+ const html=historicalHtml();const primary=[...html.matchAll(/<a class="button primary" href="([^"]+)"/g)];
  const manifestLink=html.match(/href="(\/releases\/manifest-1\.19\.0-prototype2\.json)"/);assert.ok(manifestLink,'exact accepted prototype2 metadata link');
  // Read only the small public record: no APK download, signature execution or native claim here.
  const manifest=JSON.parse(fs.readFileSync(new URL('../public'+manifestLink[1],import.meta.url),'utf8'));
@@ -122,8 +127,8 @@ test('Only the signed current APK is primary and provider availability remains e
  assert.match(html,/Annonces de test/);assert.match(html,/Test ads/);assert.match(html,/achats réels et tirages premium payants désactivés/i);assert.match(html,/real checkout and paid premium draws disabled/i);
 });
 
-test('Current homepage retains four manually started audio previews and a deliberate gallery load',()=>{
- const html=currentHtml(),players=[...html.matchAll(/<audio\b([^>]+)>/g)];assert.equal(players.length,4);
+test('Historical 1.19 homepage retains four manually started audio previews and a deliberate gallery load',()=>{
+ const html=historicalHtml(),players=[...html.matchAll(/<audio\b([^>]+)>/g)];assert.equal(players.length,4);
  for(const [,attrs] of players){assert.match(attrs,/\bcontrols\b/);assert.match(attrs,/preload="none"/);assert.match(attrs,/aria-labelledby="audio-[a-z]+-title"/);assert.doesNotMatch(attrs,/autoplay/);}
  assert.equal([...html.matchAll(/<source src="assets\/audio\/v1\.17\/scene-[a-z]+-preview\.wav"/g)].length,4);
  assert.match(html,/data-gallery-load/);assert.match(html,/data-gallery-status role="status" aria-live="polite"/);

@@ -1,0 +1,99 @@
+[
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_seeded",
+    "value": "true"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "level",
+    "value": "11"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "active",
+    "value": "true"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-cold-launch-no-recredit-or-second-debit"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": ""
+  },
+  {
+    "op": "capture",
+    "name": "lab-cold-no-second-credit-energy-nine"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "capture",
+    "name": "lab-cold-en-wallet-test-gold-450"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-cold-final"
+  }
+]

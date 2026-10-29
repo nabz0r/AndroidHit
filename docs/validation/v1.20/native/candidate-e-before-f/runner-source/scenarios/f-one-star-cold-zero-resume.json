@@ -1,0 +1,212 @@
+[
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "snapshot",
+    "name": "u41-zero-energy-cold-before-action"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "2"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "zero-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "zero-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "zero-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "zero-battle_v119"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session_energy_v120",
+    "key": "session_energy_v120",
+    "name": "zero-energy"
+  },
+  {
+    "op": "tap",
+    "regex": "Recommencer"
+  },
+  {
+    "op": "tap",
+    "regex": "Recommencer · 1 .*"
+  },
+  {
+    "op": "assert-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "capture",
+    "name": "zero-energy-gate-keeps-current-corrected-run"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "zero-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "zero-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "zero-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "zero-battle_v119"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session_energy_v120",
+    "key": "session_energy_v120",
+    "name": "zero-energy"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "zero-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "zero-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "zero-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "zero-battle_v119"
+  },
+  {
+    "op": "capture",
+    "name": "same-u41-run-resumes-at-zero-free"
+  },
+  {
+    "op": "snapshot",
+    "name": "u41-cold-resumed-free"
+  },
+  {
+    "op": "solve",
+    "level": 41
+  },
+  {
+    "op": "assert-victory",
+    "stars": 1
+  },
+  {
+    "op": "capture",
+    "name": "fr-one-star-first-clear-at-zero-energy"
+  },
+  {
+    "op": "snapshot",
+    "name": "u41-real-one-star-receipt"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "coins": 0,
+    "xp": 0
+  },
+  {
+    "op": "capture",
+    "name": "first-ten-free-at-zero-energy"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "adventure"
+  }
+]

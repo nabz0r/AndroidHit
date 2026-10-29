@@ -1,6 +1,22 @@
 # Luma Drift data and privacy inventory
 
-## 1.17 local profile, collection and bundled art
+## Current1.20 candidate — local session energy and test refill receipts
+
+29 October2026. This addition describes signed candidate F/code28 with accepted production native scope; it does not claim release delivery or a new deployed service. [Current release gates](RELEASE_1_20.md) · [Energy protocol and tested limits](ENERGY_PURCHASE_1_20.md). The dated inventories below retain their original version boundaries.
+
+Session energy is stored in private installation-local preferences, separately from Coins, account Gold and companion Charge. Its record contains the0–10 counter, a device-time regeneration anchor, and pending/last-confirmed attempt UUIDs. These UUIDs reconcile a debit with the saved board after process recreation. Regeneration uses the local clock; it is not a cloud energy account, location signal or anti-cheat guarantee. The attempt's move history, budget policy/counters, active-play clock and displayed victory receipt also stay in private local preferences. Google sign-in does not synchronize them.
+
+The prepared refill controller keeps a private local outbox, scoped by a SHA256 account-identifier hash. It records spend/use request UUIDs, delivery phase, cached pack stock/balance and an applied-credit marker derived from SKU, account identity and use UUID. These records prevent duplicate debit/use/credit during retries; an identifier hash is not an anonymous identifier. The controller does not persist raw Google bearer tokens, import contacts, add an analytics service or upload local move history.
+
+Production energy purchasing remains disabled in the app and server configuration, and the new energy endpoint has **not** been deployed or externally qualified. A guest or closed unused production offer starts no energy-wallet HTTP client. If separately activated in a future release, the authenticated wallet service would receive the selected energy SKU and request UUIDs with the current Firebase identity, and store account-bound spend/use receipts. This is a prepared data path, not a claim that those new server records are currently being collected. The already deployed wallet/account service retains its separate historical scope below.
+
+Lab uses a separate package/private save, fixed test UID and isolated500-unit test-Gold ledger. Its50-test-Gold debit and10-energy credit run locally without the production wallet, Google sign-in, advertising, Play checkout or real funds. Lab funds and receipts do not become production account funds. The exact F Lab purchase/cold path now passes [its separate native scope](validation/v1.20/native-lab/README.md):48 native assertions/13 touches/6 PNGs plus12 derived comparisons, without changing the production profile. Controller/client/server doubles and local Firestore evidence retain their own scopes.
+
+Energy and applied-credit markers remain installation-local after use. Clearing app storage or uninstalling removes this local state; deleting the online Luma Drift account does not erase that device save or exported files. An already-consumed local refill is not automatically recreated after data clearing. Future unconsumed server packs and installation-local credited energy have different recovery limits. [Exact protocol/recovery limits](ENERGY_PURCHASE_1_20.md).
+
+The delivered policy remains its historical1.13 source until a new Hosting receipt exists. The release owner has explicitly copied the [prepared FR/EN1.20 policy](validation/site-v1.20/staging/privacy-v120-final.html) into local public source: energy/time/receipt data, removal limits, test-only Lab Gold, the closed/non-deployed production energy path, and ad-refusal wording independent of eligible-attempt costs. [Old/new hashes and intended changes](validation/site-v1.20/staging/legal-update-final.json) preserve the original staging scope. Local source replacement is not deployment or privacy/store approval; authentication, deletion and contact sections are unchanged.
+
+## Preserved1.17 local profile, collection and bundled art
 
 The chosen local nickname, explicit display flag, earned/equipped badges,
 companion/outfit ownership, draw receipts and last arrival are stored in the
@@ -16,7 +32,7 @@ The four website sound excerpts are static WAV exports. Existing SDK/account,
 backup, deletion and commercial-provider boundaries remain below.
 [Current qualification](validation/v1.17/README.md) · [Art/audio sources](ART_AUDIO.md).
 
-Updated **28 October 2026** for **production 1.13.0-rc2 / code 14**, package `com.androidhit.lumadrift`, and isolated **Lab 1.13.0-sandbox-rc2**. This document describes implemented data paths and qualification limits. It is not a completed privacy/store submission or an assessment of every publisher obligation. Public publisher label: **nabilux**; private support correspondence: **nabz0r+gaming@gmail.com**. [FR/EN public policy and deletion pages](PUBLIC_PAGES.md).
+Preserved inventory dated **28 October 2026** for **production1.13.0-rc2 / code14**, package `com.androidhit.lumadrift`, and isolated **Lab1.13.0-sandbox-rc2**. Its following configuration statements describe that version's data paths and qualification limits. This is not a completed privacy/store submission or an assessment of every publisher obligation. Public publisher label: **nabilux**; private support correspondence: **nabz0r+gaming@gmail.com**. [FR/EN public policy and deletion pages](PUBLIC_PAGES.md).
 
 ## 1.13 home, first encounter and journal
 

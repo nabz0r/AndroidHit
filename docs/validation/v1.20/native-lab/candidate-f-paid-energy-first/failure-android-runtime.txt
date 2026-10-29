@@ -1,0 +1,160 @@
+--------- beginning of crash
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: FATAL EXCEPTION: main
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: Process: com.androidhit.lumadrift, PID: 4133
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.androidhit.lumadrift/com.androidhit.lumadrift.MainActivity}: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4280)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4467)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:222)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2823)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9067)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:932)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at J0.Z.R3(Unknown Source:8)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at J0.Z.Q3(Unknown Source:0)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at J0.Z.<init>(Unknown Source:1033)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at com.androidhit.lumadrift.MainActivity.onCreate(Unknown Source:46)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9155)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9133)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1521)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4262)
+10-29 21:56:56.299  4133  4133 E AndroidRuntime: 	... 13 more
+--------- beginning of main
+10-29 22:10:29.828  9237  9237 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:10:42.908  9616  9616 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:10:42.919  9616  9616 I AndroidRuntime: Using default boot image
+10-29 22:10:42.919  9616  9616 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:10:43.010  9616  9616 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:11:00.248  9616  9616 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:12:21.052  9847  9847 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:12:21.071  9847  9847 I AndroidRuntime: Using default boot image
+10-29 22:12:21.071  9847  9847 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:12:21.204  9847  9847 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:13:41.174  9847  9847 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:17:40.352 10217 10217 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:17:40.354 10217 10217 I AndroidRuntime: Using default boot image
+10-29 22:17:40.354 10217 10217 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:17:40.448 10217 10217 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:17:40.573 10217 10217 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:18:12.016 10402 10402 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:18:12.023 10402 10402 I AndroidRuntime: Using default boot image
+10-29 22:18:12.023 10402 10402 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:18:12.122 10402 10402 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:18:12.240 10402 10402 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:18:52.600 10514 10514 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:18:52.612 10514 10514 I AndroidRuntime: Using default boot image
+10-29 22:18:52.612 10514 10514 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:18:52.680 10514 10514 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:19:28.638 10514 10514 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:20:09.255 14505 14505 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:20:09.262 14505 14505 I AndroidRuntime: Using default boot image
+10-29 22:20:09.262 14505 14505 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:20:09.340 14505 14505 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:20:20.486 14505 14505 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:20:47.257 14718 14718 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:20:47.266 14718 14718 I AndroidRuntime: Using default boot image
+10-29 22:20:47.266 14718 14718 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:20:47.349 14718 14718 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:21:15.975 14718 14718 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:21:52.815 14977 14977 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:21:52.823 14977 14977 I AndroidRuntime: Using default boot image
+10-29 22:21:52.823 14977 14977 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:21:52.908 14977 14977 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:22:24.091 14977 14977 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:23:03.433 15263 15263 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:23:03.439 15263 15263 I AndroidRuntime: Using default boot image
+10-29 22:23:03.439 15263 15263 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:23:03.531 15263 15263 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:23:58.152 15263 15263 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:24:40.934 19337 19337 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:24:40.940 19337 19337 I AndroidRuntime: Using default boot image
+10-29 22:24:40.940 19337 19337 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:24:41.006 19337 19337 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:26:09.850 19337 19337 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:27:57.030 19725 19725 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:27:57.042 19725 19725 I AndroidRuntime: Using default boot image
+10-29 22:27:57.042 19725 19725 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:27:57.131 19725 19725 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:29:02.539 19725 19725 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:32:57.331 20075 20075 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:32:57.333 20075 20075 I AndroidRuntime: Using default boot image
+10-29 22:32:57.333 20075 20075 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:32:57.420 20075 20075 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:32:57.511 20075 20075 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:33:17.927 20255 20255 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:33:17.930 20255 20255 I AndroidRuntime: Using default boot image
+10-29 22:33:17.930 20255 20255 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:33:18.014 20255 20255 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:33:18.142 20255 20255 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:33:53.779 20468 20468 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:33:53.787 20468 20468 I AndroidRuntime: Using default boot image
+10-29 22:33:53.787 20468 20468 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:33:53.875 20468 20468 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:34:53.223 20468 20468 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:35:20.881 20770 20770 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:35:20.887 20770 20770 I AndroidRuntime: Using default boot image
+10-29 22:35:20.887 20770 20770 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:35:21.008 20770 20770 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:35:57.451 20770 20770 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:36:32.038 24327 24327 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:36:32.051 24327 24327 I AndroidRuntime: Using default boot image
+10-29 22:36:32.052 24327 24327 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:36:32.145 24327 24327 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:36:42.155 24327 24327 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:37:07.885 24560 24560 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:37:07.894 24560 24560 I AndroidRuntime: Using default boot image
+10-29 22:37:07.894 24560 24560 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:37:07.975 24560 24560 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:37:39.967 24560 24560 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:37:59.886 24772 24772 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:37:59.888 24772 24772 I AndroidRuntime: Using default boot image
+10-29 22:37:59.888 24772 24772 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:37:59.959 24772 24772 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:38:32.990 24772 24772 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:39:22.599 24993 24993 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:39:22.602 24993 24993 I AndroidRuntime: Using default boot image
+10-29 22:39:22.602 24993 24993 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:39:22.647 24993 24993 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:39:38.622 24993 24993 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:39:54.156 25237 25237 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:39:54.162 25237 25237 I AndroidRuntime: Using default boot image
+10-29 22:39:54.162 25237 25237 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:39:54.225 25237 25237 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:40:14.542 25237 25237 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:41:56.712 25476 25476 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:41:56.714 25476 25476 I AndroidRuntime: Using default boot image
+10-29 22:41:56.714 25476 25476 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:41:56.759 25476 25476 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:42:07.466 25476 25476 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:42:49.864 25679 25679 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:42:49.868 25679 25679 I AndroidRuntime: Using default boot image
+10-29 22:42:49.868 25679 25679 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:42:49.924 25679 25679 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:43:16.031 25679 25679 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:44:07.169 26039 26039 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:44:07.175 26039 26039 I AndroidRuntime: Using default boot image
+10-29 22:44:07.175 26039 26039 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:44:07.256 26039 26039 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:46:29.372 26039 26039 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:47:16.116 26371 26371 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:47:16.124 26371 26371 I AndroidRuntime: Using default boot image
+10-29 22:47:16.124 26371 26371 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:47:16.208 26371 26371 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:48:40.847 26371 26371 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:50:35.097 26601 26601 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:50:35.104 26601 26601 I AndroidRuntime: Using default boot image
+10-29 22:50:35.104 26601 26601 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:50:35.170 26601 26601 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:50:35.268 26601 26601 I AndroidRuntime: VM exiting with result code 0.
+10-29 22:50:50.577 26758 26758 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-29 22:50:50.581 26758 26758 I AndroidRuntime: Using default boot image
+10-29 22:50:50.581 26758 26758 I AndroidRuntime: Leaving lock profiling enabled
+10-29 22:50:50.651 26758 26758 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-29 22:52:45.672 26758 26758 I AndroidRuntime: VM exiting with result code 0.

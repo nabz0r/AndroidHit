@@ -1,0 +1,251 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "compact-fr-home"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "compact-fr-home-scrolled-fixed-wallet"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_entry"
+  },
+  {
+    "op": "capture",
+    "name": "compact-fr-centre-map"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "rewards_entry"
+  },
+  {
+    "op": "capture",
+    "name": "compact-fr-centre-gifts"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_shop"
+  },
+  {
+    "op": "capture",
+    "name": "compact-fr-shop"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_squad"
+  },
+  {
+    "op": "capture",
+    "name": "compact-fr-team"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_collection_hub"
+  },
+  {
+    "op": "capture",
+    "name": "compact-fr-collection"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_adventure"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "compact-en-home"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "compact-en-home-scrolled-fixed-wallet"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_entry"
+  },
+  {
+    "op": "capture",
+    "name": "compact-en-centre-map"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "rewards_entry"
+  },
+  {
+    "op": "capture",
+    "name": "compact-en-centre-gifts"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_shop"
+  },
+  {
+    "op": "capture",
+    "name": "compact-en-shop"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_squad"
+  },
+  {
+    "op": "capture",
+    "name": "compact-en-team"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_collection_hub"
+  },
+  {
+    "op": "capture",
+    "name": "compact-en-collection"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "true"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-enabled-real-ui"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_policy",
+    "value": "6"
+  },
+  {
+    "op": "capture",
+    "name": "compact-play-moves-and-clock"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-guide-description"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-guide-static-highlight"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "compact-scrolled-play-wallet-fixed"
+  },
+  {
+    "op": "tap",
+    "regex": "Pause"
+  },
+  {
+    "op": "capture",
+    "name": "compact-pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Resume"
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "coins": 0,
+    "xp": 0
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-victory-full-art"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "false"
+  },
+  {
+    "op": "capture",
+    "name": "compact-reduced-restored-real-ui"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "compact-complete"
+  }
+]

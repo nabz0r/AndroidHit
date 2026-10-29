@@ -1,0 +1,29 @@
+{
+  "base": {
+    "bytes": 368904157,
+    "name": "luma-drift-1.19.0-prototype2.apk",
+    "sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526"
+  },
+  "operation": "apply",
+  "passed": true,
+  "patch": {
+    "bytes": 3872028,
+    "name": "delta-1.19-prototype2-to-1.20-rc1-production.json.gz",
+    "sha256": "9ca03378990d64f447d8ae8f51e67a936417681dfac95c2c3c8631ddf2b9a338"
+  },
+  "schema": "luma-apk-byte-delta-v1",
+  "scope": "Exact byte reconstruction and SHA-256 before atomic publication. Does not substitute for apksigner or native qualification.",
+  "statistics": {
+    "copied_bytes": 365045208,
+    "copy_operations": 832,
+    "literal_bytes": 3891713,
+    "operations": 1668
+  },
+  "target": {
+    "bytes": 368936921,
+    "name": "luma-drift-1.20.0-rc1.apk",
+    "sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26"
+  },
+  "verified_output_bytes": 368936921,
+  "verified_output_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26"
+}

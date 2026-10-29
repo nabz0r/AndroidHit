@@ -1,0 +1,155 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "open-level",
+    "level": 8
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_policy",
+    "value": "6"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,miko,orbit",
+    "energy": 3,
+    "used": 0
+  },
+  {
+    "op": "capture",
+    "name": "en-real-three-members-in-new-hud"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture-fast",
+    "name": "guide-real-pose"
+  },
+  {
+    "op": "certificate-step",
+    "level": 8,
+    "index": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture-fast",
+    "name": "trail-real-pose"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 0,
+    "used": 3,
+    "credited": "1",
+    "comboReady": true
+  },
+  {
+    "op": "remember-battle",
+    "name": "used-trail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "capture",
+    "name": "once-used-refusal"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "used-trail"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_combo"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 3,
+    "credited": "3",
+    "comboSpent": true
+  },
+  {
+    "op": "certificate-step",
+    "level": 8,
+    "index": 2
+  },
+  {
+    "op": "certificate-step",
+    "level": 8,
+    "index": 3
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_2"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture-fast",
+    "name": "flow-real-pose-exits"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 2,
+    "used": 7,
+    "credited": "3f",
+    "comboSpent": true
+  },
+  {
+    "op": "solve",
+    "level": 8
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "coins": 0,
+    "xp": 0
+  },
+  {
+    "op": "capture",
+    "name": "three-family-replay-honest-zero-reward"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  }
+]

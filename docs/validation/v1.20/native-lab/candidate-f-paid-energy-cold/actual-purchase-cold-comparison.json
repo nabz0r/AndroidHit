@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "assertions": 11,
+  "exact_maps": [
+    "luma_drift_save_v1",
+    "luma_energy_purchases_v120",
+    "luma_session_energy_v120"
+  ],
+  "run_fields": [
+    "run_id",
+    "level",
+    "mode",
+    "history",
+    "budget_policy",
+    "budget_used",
+    "undos",
+    "battle_v119"
+  ],
+  "balance_test_gold": 450,
+  "energy": 9,
+  "coins": 730,
+  "scope": "Read-only actual Lab purchase+eligible attempt versus next-process initial snapshot. The existing grant, spend/use keys, energy receipt, outbox and board run are unchanged; no regrant at cold."
+}

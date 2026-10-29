@@ -1,0 +1,61 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 41
+  },
+  {
+    "op": "drain-energy"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "certificate-step",
+    "level": 41,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "↶.*Annuler|Annuler"
+  },
+  {
+    "op": "certificate-step",
+    "level": 41,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "↶.*Annuler|Annuler"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "capture",
+    "name": "zero-energy-u41-two-corrections-before-cold"
+  },
+  {
+    "op": "snapshot",
+    "name": "u41-zero-energy-before-cold"
+  }
+]

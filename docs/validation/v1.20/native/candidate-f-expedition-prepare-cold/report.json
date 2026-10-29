@@ -1,0 +1,405 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T21:37:55.479044+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "final-f-expedition-prepare-cold",
+  "expected_version": "1.20.0-rc1",
+  "expected_code": 28,
+  "apk_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+  "observer_sha256": "9583aab3ec545fa514256747c49dd110aa0ee112f8f0b3d728cbbbb3586ef520",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "7ca6068e-ec93-4d8c-afb9-7b80e5725ead",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "final-f-expedition-prepare-cold",
+    "runToken": "7ca6068e-ec93-4d8c-afb9-7b80e5725ead",
+    "processId": 24804,
+    "checkCount": 29,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Requested UI team contains only distinct genuinely owned members"
+      },
+      {
+        "passed": true,
+        "message": "Actual UI durably saves the requested owned team"
+      },
+      {
+        "passed": true,
+        "message": "Saved team has 1–3 distinct identities"
+      },
+      {
+        "passed": true,
+        "message": "Every saved team member is genuinely owned"
+      },
+      {
+        "passed": true,
+        "message": "Saved team exact size 3"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference mode = 5"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference budget_policy = 6"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy remains bounded"
+      },
+      {
+        "passed": true,
+        "message": "Actual board team = nova,miko,orbit"
+      },
+      {
+        "passed": true,
+        "message": "Actual board energy = 3"
+      },
+      {
+        "passed": true,
+        "message": "Actual once-per-avatar usage mask = 0"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Battle remains exactly unchanged: expedition-before-transient"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference mode = 5"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy remains bounded"
+      },
+      {
+        "passed": true,
+        "message": "Actual board energy = 1"
+      },
+      {
+        "passed": true,
+        "message": "Actual once-per-avatar usage mask = 1"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 17,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2832689,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          537
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2833269,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-team-editor",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2834605,
+        "label": "Choose squad",
+        "resourceId": "com.androidhit.lumadrift:id/squad_entry",
+        "bounds": [
+          83,
+          604,
+          996,
+          1164
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2835302,
+        "label": "Choose for slot 1: Nova",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_0",
+        "bounds": [
+          52,
+          773,
+          362,
+          1191
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-nova",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2839209,
+        "label": "Nova. Guiding star. Owned",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_nova",
+        "bounds": [
+          52,
+          1302,
+          362,
+          1712
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2839932,
+        "label": "Choose for slot 2: Tula",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_1",
+        "bounds": [
+          384,
+          773,
+          695,
+          1191
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-miko",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2843711,
+        "label": "Miko. Starlight trail. Owned",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_miko",
+        "bounds": [
+          384,
+          1302,
+          695,
+          1712
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2844485,
+        "label": "Choose for slot 3: Orbit",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_2",
+        "bounds": [
+          717,
+          773,
+          1027,
+          1191
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-orbit",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2848982,
+        "label": "Orbit. Moonlit flow. Owned",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_orbit",
+        "bounds": [
+          717,
+          1302,
+          1027,
+          1712
+        ]
+      },
+      {
+        "reason": "save-real-team",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2851147,
+        "label": "Save squad",
+        "resourceId": "com.androidhit.lumadrift:id/squad_save",
+        "bounds": [
+          66,
+          1434,
+          1013,
+          1597
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2853396,
+        "label": "Home",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "expedition_entry",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2854119,
+        "label": "Expeditions",
+        "resourceId": "com.androidhit.lumadrift:id/expedition_entry",
+        "bounds": [
+          393,
+          1784,
+          686,
+          1983
+        ]
+      },
+      {
+        "reason": "expedition_left",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2856146,
+        "label": "Star observatory. Puzzle 20 · Coordinate the pieces and their exit order. A later encounter is hidden. Your route is saved after each puzzle.",
+        "resourceId": "com.androidhit.lumadrift:id/expedition_left",
+        "bounds": [
+          60,
+          2091,
+          1019,
+          2337
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2856823,
+        "label": "Nova. Guiding star. Ready. 2 Charge",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          44,
+          465,
+          360,
+          715
+        ]
+      },
+      {
+        "reason": "battle_skill_close",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2858848,
+        "label": "‹ Back",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_close",
+        "bounds": [
+          49,
+          377,
+          299,
+          515
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2859993,
+        "label": "Nova. Guiding star. Ready. 2 Charge",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          44,
+          465,
+          360,
+          715
+        ]
+      },
+      {
+        "reason": "battle_skill_activate",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2860555,
+        "label": "Activate",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_activate",
+        "bounds": [
+          66,
+          2127,
+          1013,
+          2288
+        ]
+      }
+    ],
+    "captures": [
+      "expedition-genuine-existing-route",
+      "expedition-skill-transient-retains-mode",
+      "expedition-real-guide"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 37.755,
+  "evidence_sha256": {
+    "battle-observer.apk": "9583aab3ec545fa514256747c49dd110aa0ee112f8f0b3d728cbbbb3586ef520",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "bcb33fa4f13dc60e16d03a0043f938d576a4bfa8461260ac9b7327cdd3150c06",
+    "native/after.json": "6b0e91e556ceaa3f0c0401a046c140a7af1edd179e5f4931ecee44d472622530",
+    "native/before.json": "431eb7fc690c5624fc32140f3ff04382564f5b972d473f1cd915c004a53a68f6",
+    "native/expedition-before-cold.json": "6b0e91e556ceaa3f0c0401a046c140a7af1edd179e5f4931ecee44d472622530",
+    "native/expedition-genuine-existing-route-accessibility.json": "ee94fdce9d4f854a1e34a5f5cd440b077bb571fb94f73b6c65880d2d2bc1da97",
+    "native/expedition-genuine-existing-route.png": "50e69db1e1054785f69272742ebd2185af538f22f5089aecbbf3b235ab5fadaf",
+    "native/expedition-real-guide-accessibility.json": "fa2691ecb54ced5a3071a977a7d5d7227e34b5d02bd5251940b2fd0547f9c7c8",
+    "native/expedition-real-guide.png": "eeec3f129e33944d8cd64c5d37ee40e3704a0d65d717a8e568504a330a37b9ae",
+    "native/expedition-skill-transient-retains-mode-accessibility.json": "07a0ccdbc46c68e2640eedc8265d24f03738ade4bcbe8ce87ffd3b7e714204ec",
+    "native/expedition-skill-transient-retains-mode.png": "bedc875e1a01734ccd46142d61204d2d8a1a13d748d2da15a114e0d644358f5c",
+    "native/report.json": "f64a293a0ba20fda66e0d4d1252428805a41519324eaa13f7dab610906ec60f6",
+    "native/requested-steps.json": "8c9cfea6b1560d5b9ea125f4be43d68edfd63921a892ca7427e2e86ba51f5b3b",
+    "observer-install.txt": "4e8c9fe57c81d1bd0dab85d5e31dde35fcef1ec83a47a013bdd97bec594c6b1b",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "bf62f94a71d6af7102defa02ed55b668d33834aa53af926e1f076019d43d317b",
+    "source-snapshot.json": "42ad9971fc94049f947e985abb51424d26fd5759666e6c349a25ee431fffa4ac"
+  }
+}

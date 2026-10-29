@@ -32,6 +32,9 @@ def main():
         path=PUBLIC/name.lstrip('/');assert path.is_file() and path.stat().st_size==value['bytes'] and sha(path)==value['sha256'],'Prepared payload changed: '+name;checks+=1
     for name,digest in proof['preserved_files'].items():assert sha(PUBLIC/name)==digest,'Preserved gallery/legal/account/archive input changed: '+name;checks+=1
     for name,digest in proof['frozen_inputs'].items():assert sha(ROOT/name)==digest,'Frozen provenance input changed: '+name;checks+=1
+    for update in proof.get('intentional_legal_updates',[]):
+        assert update['public_path']=='public/privacy/index.html' and sha(ROOT/update['public_path'])==update['current_sha256']
+        assert update['previous_sha256']!=update['current_sha256'] and update['review_record'] in proof['frozen_inputs'];checks+=3
     text=(PUBLIC/'index.html').read_text();page=Page();page.feed(text)
     assert page.edition=='1.20' and page.languages=={'fr','en'};checks+=2
     for anchor in ('main','hero-title','little-world','screens','companions','sound','download'):assert anchor in page.ids;checks+=1

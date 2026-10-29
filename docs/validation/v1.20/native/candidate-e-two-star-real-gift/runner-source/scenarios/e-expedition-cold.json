@@ -1,0 +1,40 @@
+[
+  {
+    "op": "snapshot",
+    "name": "expedition-after-cold-before-action"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "expedition_entry"
+  },
+  {
+    "op": "tap-id",
+    "id": "expedition_continue"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_expedition_session_v118",
+    "key": "mode",
+    "value": "5"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,miko,orbit",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "capture",
+    "name": "expedition-cold-resume-same-attempt"
+  },
+  {
+    "op": "snapshot",
+    "name": "expedition-after-cold-resume"
+  },
+  {
+    "op": "adventure"
+  }
+]

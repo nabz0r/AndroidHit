@@ -1,0 +1,225 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T21:41:52.542288+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "final-f-u41-zero-before-cold",
+  "expected_version": "1.20.0-rc1",
+  "expected_code": 28,
+  "apk_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+  "observer_sha256": "d303345bfdacf2d986bf26aecfb1700660a2cb34e96cb0d8cc1dff5ccb39757b",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "94bcadd0-d50b-420f-b82f-b0ceeb124fd2",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "final-f-u41-zero-before-cold",
+    "runToken": "94bcadd0-d50b-420f-b82f-b0ceeb124fd2",
+    "processId": 25488,
+    "checkCount": 19,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference level = 41"
+      },
+      {
+        "passed": true,
+        "message": "Energy drain uses only a real active eligible campaign attempt"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Real bounded eligible restarts exhaust current session energy"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 0"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference budget_used = 2"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference undos = 2"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = "
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 7,
+    "actions": [
+      {
+        "reason": "journey_continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 3070873,
+        "label": "Reprendre  ·  Niveau 41",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1197,
+          1013,
+          1374
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 3071574,
+        "label": "↻  Recommencer",
+        "bounds": [
+          393,
+          2182,
+          686,
+          2337
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 3072287,
+        "label": "Recommencer · 1 Énergie",
+        "bounds": [
+          121,
+          1321,
+          958,
+          1456
+        ]
+      },
+      {
+        "reason": "real-piece-1-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 3072953,
+        "label": "Pièce, ligne 2, colonne 1, flèche : gauche, Porte ouverte",
+        "bounds": [
+          174,
+          1296,
+          320,
+          1442
+        ]
+      },
+      {
+        "reason": "↶.*Annuler|Annuler",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 3073665,
+        "label": "↶  Annuler",
+        "bounds": [
+          66,
+          2182,
+          360,
+          2337
+        ]
+      },
+      {
+        "reason": "real-piece-1-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 3074323,
+        "label": "Pièce, ligne 2, colonne 1, flèche : gauche, Porte ouverte",
+        "bounds": [
+          174,
+          1296,
+          320,
+          1442
+        ]
+      },
+      {
+        "reason": "↶.*Annuler|Annuler",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 3075048,
+        "label": "↶  Annuler",
+        "bounds": [
+          66,
+          2182,
+          360,
+          2337
+        ]
+      }
+    ],
+    "captures": [
+      "zero-energy-u41-two-corrections-before-cold"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 14.856,
+  "evidence_sha256": {
+    "battle-observer.apk": "d303345bfdacf2d986bf26aecfb1700660a2cb34e96cb0d8cc1dff5ccb39757b",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "9657ea55fdd2eee66869cd59840f0092dc256ebf060c1ea39b8356488c67030a",
+    "native/after.json": "9910a441ea8c4a57d96cb642f421c8e6371e235a886fbc70d5a8af4f05b1294e",
+    "native/before.json": "3f3a54f068dfd2395ba36bed1b0ae1d05f71442925576f997f4eb5beea62d406",
+    "native/genuine-energy-restarts.json": "11d5921ef8dbda011f9c026cd1a658ccc6b0439d11c3d5ba02e5839c190b9db8",
+    "native/report.json": "28f09a79eaa09faa57edbad8c560de21a197645b40c2628d3645cbc272ba50d2",
+    "native/requested-steps.json": "25ec7b99d7f240a2125222ebc972741d69cb081d80fc22bbb295d6938819ed41",
+    "native/u41-zero-energy-before-cold.json": "9910a441ea8c4a57d96cb642f421c8e6371e235a886fbc70d5a8af4f05b1294e",
+    "native/zero-energy-u41-two-corrections-before-cold-accessibility.json": "cd3ff24f108b7305832fdc291f5cd17b0bb6cde6e339b13e1cf30a8d829d6066",
+    "native/zero-energy-u41-two-corrections-before-cold.png": "a9236dd5958656a02afec0e0547e3300585612f0719f860a24a7acbd8b2a59bf",
+    "observer-install.txt": "1899f60a6e6ca46ef60dcee4b0ecc9e8db39da6506ac32ca9f591b79f5b2638d",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "d4d76c861a50730dc944f9e9ad2d320356e432595b14982e32b81f05c8dd284d",
+    "source-snapshot.json": "59da062e6952e527e3dfe227dcdf828dda59f9781b7244d750f5b40517fdcf67"
+  }
+}

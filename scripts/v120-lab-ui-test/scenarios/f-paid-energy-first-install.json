@@ -1,0 +1,197 @@
+[
+  {
+    "op": "firstlight"
+  },
+  {
+    "op": "assert-starter"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "lab-fr-home-before-any-purchase"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "lab-en-home-before-any-purchase"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "earn-through",
+    "level": 10
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_seeded",
+    "value": "true"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "500"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "open-level",
+    "level": 11
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "drain-energy"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-real-zero-energy-before-buy"
+  },
+  {
+    "op": "tap",
+    "regex": "Pause",
+    "reason": "pause-real-active-lab-attempt-before-leaving"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter.*",
+    "reason": "leave-real-active-lab-level-through-visible-full-label"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "assert-label",
+    "regex": "(?s).*50 LumaGold.*"
+  },
+  {
+    "op": "capture",
+    "name": "lab-explicit-ten-energy-price-fifty-test-gold"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "capture",
+    "name": "lab-explicit-purchase-confirmation"
+  },
+  {
+    "op": "tap",
+    "regex": "Oui"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "capture",
+    "name": "lab-refill-ten-energy-test-gold-450"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-after-one-real-test-purchase"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "open-level",
+    "level": 11
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_stock",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": ""
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "snapshot",
+    "name": "lab-one-eligible-attempt-after-credit-before-cold"
+  },
+  {
+    "op": "capture",
+    "name": "lab-credited-energy-spent-on-one-real-attempt"
+  }
+]

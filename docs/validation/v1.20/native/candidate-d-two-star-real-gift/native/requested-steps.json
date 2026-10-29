@@ -1,0 +1,117 @@
+[
+  {
+    "op": "assert-pref",
+    "pref": "luma_victory_v120",
+    "key": "receipt",
+    "absent": true
+  },
+  {
+    "op": "assert-id",
+    "id": "journey_entry"
+  },
+  {
+    "op": "open-level",
+    "level": 32
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_policy",
+    "value": "6"
+  },
+  {
+    "op": "certificate-step",
+    "level": 32,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "↶.*Annuler|Annuler"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "1"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "1"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "capture",
+    "name": "fr-return-spends-no-new-move-no-refund"
+  },
+  {
+    "op": "solve",
+    "level": 32
+  },
+  {
+    "op": "assert-victory",
+    "stars": 2
+  },
+  {
+    "op": "capture",
+    "name": "fr-real-two-star-victory"
+  },
+  {
+    "op": "snapshot",
+    "name": "two-star-exact-earned-receipt"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_gifts"
+  },
+  {
+    "op": "capture",
+    "name": "fr-real-ready-gifts"
+  },
+  {
+    "op": "snapshot",
+    "name": "before-real-gift-claim"
+  },
+  {
+    "op": "tap",
+    "regex": "Ouvrir le cadeau"
+  },
+  {
+    "op": "capture",
+    "name": "fr-real-earned-gift-reveal"
+  },
+  {
+    "op": "wait",
+    "ms": 5000
+  },
+  {
+    "op": "assert-id",
+    "id": "gift_reveal_continue"
+  },
+  {
+    "op": "snapshot",
+    "name": "after-real-gift-claim"
+  },
+  {
+    "op": "tap-id",
+    "id": "gift_reveal_continue"
+  },
+  {
+    "op": "wait",
+    "ms": 400
+  },
+  {
+    "op": "capture",
+    "name": "fr-gift-closed-only-on-real-command"
+  },
+  {
+    "op": "snapshot",
+    "name": "after-real-gift-close"
+  }
+]

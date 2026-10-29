@@ -1,0 +1,47 @@
+[
+  {
+    "op": "capture",
+    "name": "cold-victory-retained"
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3
+  },
+  {
+    "op": "assert-id",
+    "id": "victory_next"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "cold-coins"
+  },
+  {
+    "op": "wait",
+    "ms": 3000
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "cold-coins"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_victory_v120",
+    "key": "receipt",
+    "absent": true
+  },
+  {
+    "op": "capture",
+    "name": "back-dismisses-real-victory"
+  },
+  {
+    "op": "snapshot",
+    "name": "after-explicit-back-dismissal"
+  }
+]

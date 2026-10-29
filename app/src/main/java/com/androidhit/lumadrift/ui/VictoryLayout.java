@@ -19,7 +19,8 @@ public final class VictoryLayout {
         metricsY=rewardY-62;
         titleY=62+Math.max(24,font*1.45f);starsY=titleY+39;
         float available=metricsY-30-(starsY+25);
-        avatarRadius=Math.max(0,Math.min(83,available*.43f));
+        // CompanionPortrait reserves ART_EXTENT=2 radii on each side, plus motion room.
+        avatarRadius=Math.max(0,Math.min(83,available/4.4f));
         avatarY=(starsY+25+metricsY-30)/2;
     }
     public static int displayedStars(int earned,long elapsed,boolean reduced){

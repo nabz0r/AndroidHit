@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T21:20:04.811921+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "final-e-cold-victory",
+  "expected_version": "1.20.0-rc1",
+  "expected_code": 28,
+  "apk_sha256": "43db86e350d5247692d0b72d35cefecd304fb5b2f72f59a0d95788f95ea8be8f",
+  "observer_sha256": "207a30ea0272861ef7cdf520353b3860677b7aa93ae18fd36efba3f710ebbb15",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "1971bf9e-e7ef-47dc-988f-bc79c5e91429",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "43db86e350d5247692d0b72d35cefecd304fb5b2f72f59a0d95788f95ea8be8f",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "final-e-cold-victory",
+    "runToken": "1971bf9e-e7ef-47dc-988f-bc79c5e91429",
+    "processId": 14529,
+    "checkCount": 15,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual ready durable victory receipt"
+      },
+      {
+        "passed": true,
+        "message": "Actual receipt stars = 3"
+      },
+      {
+        "passed": true,
+        "message": "Won session inactive only after real result"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible semantic target victory_next"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged cold-coins"
+      },
+      {
+        "passed": true,
+        "message": "Preference remains absent: receipt"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 0,
+    "actions": [],
+    "captures": [
+      "cold-victory-retained",
+      "back-dismisses-real-victory"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 15.673,
+  "evidence_sha256": {
+    "battle-observer.apk": "207a30ea0272861ef7cdf520353b3860677b7aa93ae18fd36efba3f710ebbb15",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "18775a1b3de00eaf8d4d4c3bd821510333cd434304c188fe57d3b99e45d39bc7",
+    "native/after-explicit-back-dismissal.json": "174fe0af1607defac4ba3e1befb0f56dd12258c26129a0f80d2619383967cf1b",
+    "native/after.json": "174fe0af1607defac4ba3e1befb0f56dd12258c26129a0f80d2619383967cf1b",
+    "native/back-dismisses-real-victory-accessibility.json": "e43520479f149fc8d043c3c0110b3642a830519bdcc861f658643b472dc38932",
+    "native/back-dismisses-real-victory.png": "0fafbeeb63a6813e3644f349496b2bc721f1b044b2e13236e79ab3ea8bcbdfb0",
+    "native/before.json": "8531a4a0dbe90e8e6a7a9ab4a26dd6af338aa99b2dc33b6eb4732e13649374d3",
+    "native/cold-victory-retained-accessibility.json": "f525843deaec2aa03feac9b284a74c71730829d1a34c376eb4f2047817b9cf24",
+    "native/cold-victory-retained.png": "967731797f39946e7ac39d43dd6e37324af8f1beb25f763cd239689001158f80",
+    "native/report.json": "11ac39fda2f9a1cec863cacd1258bee5f715f2d8c0c6daec64a56573568dc9de",
+    "native/requested-steps.json": "098896c92db256cef327cc57a63ea51434f003fbd6f24aae4c1a5fa6757e9ea1",
+    "observer-install.txt": "8cdbc4edc0c6dd6fbc7fb098f0c059b65ae0bf19e202c24ed0339dc41625b81a",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "f068ecd3ab0870239472c88b69ffa3fe0d88e154273b4950613bbb0c6b5f54d7",
+    "source-snapshot.json": "df4f5c0baa8d2754f92851276af180139c45c9518cdcb6a4ed54cf020edf64b5"
+  }
+}

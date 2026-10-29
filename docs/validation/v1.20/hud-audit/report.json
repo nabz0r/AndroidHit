@@ -1,0 +1,74 @@
+{
+  "status": "GEOMETRY_AND_SOURCE_WITNESS_NOT_NATIVE_REPRODUCTION",
+  "created_utc": "2026-10-29T21:29:20.320569+00:00",
+  "candidate_observed": "E",
+  "production_sha256": "43db86e350d5247692d0b72d35cefecd304fb5b2f72f59a0d95788f95ea8be8f",
+  "lab_sha256": "2c3dcc327c8b46b9a613fc368adf2164fba1b2a3c9a11fdbbbff31a5547b010b",
+  "scope": "Exact pure helper classes compiled in a temporary directory, plus read-only source review. No APK rebuild, installation, target input, native reproduction or source mutation.",
+  "helper_inputs": [
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java",
+      "sha256": "601d1a9074b6241d848baab9f1b8697045a122f1cc629eed81e78aea618fb67d",
+      "matches_candidate_e": true
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java",
+      "sha256": "8017c262a02739d7cee5863d102e8e9f34c4758321212457ed2ac6cc751faf00",
+      "matches_candidate_e": true
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleLayout.java",
+      "sha256": "6b6e9d8bc79b2d0380fd1d9823f5565f30865ac0af420263c122d8e27600e86f",
+      "matches_candidate_e": true
+    }
+  ],
+  "frozen_e_lumaview_sha256": "9707328c8cfc626ff9e2dd1b1ac24dfaa94955f163c770de83fd8b16d56ed411",
+  "current_lumaview_sha256": "99b379d785a456505aee39d979e1e0c4c4c5ca13876aab04020c181e66c014c7",
+  "current_f_guard_present": true,
+  "witness": {
+    "width_pixels": 320,
+    "height_pixels": 480,
+    "density": 1.0,
+    "safe_top": 24,
+    "safe_bottom": 24,
+    "font_scale": 1.3,
+    "feedback_height": 42,
+    "feedback_reason": "Guaranteed lower bound in the actual caller; higher measured text does not invalidate this conservative witness.",
+    "viewport": 526.5,
+    "board_y": 383.75,
+    "content_height": 875.6825,
+    "maximum_scroll": 349.1825,
+    "board_top_at_maximum_scroll": 34.5675,
+    "wallet_bottom": 42,
+    "campaign": "U11",
+    "tile_action": 2,
+    "tile_row": 0,
+    "tile_column": 1,
+    "direction": "UP",
+    "example_gesture_logical_coordinates": {
+      "down": [
+        144,
+        38
+      ],
+      "up": [
+        144,
+        10
+      ]
+    },
+    "geometric_overlap": true
+  },
+  "correction_candidate": "F",
+  "native_correction_acceptance": "PASS_EXACT_F_SEPARATE_NATIVE_SCOPE",
+  "files": {
+    "HudAudit.java": "d99a6156adfcd8b6671f299351dbc54c0b28918b93c2317fd8ad12a3fcd59898",
+    "geometry-output.txt": "ae3300345671ce105ef5b7721dae30ce1243197488c6144d46e5508326d587e2"
+  },
+  "accepted_native_correction": {
+    "candidate": "F",
+    "apk_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+    "report": "docs/validation/v1.20/native/candidate-f-tiny-wallet-swipes/report.json",
+    "sha256": "083b9d05538406e3b1b0ee32694ac9548ddefd1e9183dc8b1e9ffa48cd2ae3e4",
+    "wallet_direction_swipes": 16,
+    "scope": "Separate native report; does not relabel the original E geometry/source witness as an observed E gesture."
+  }
+}

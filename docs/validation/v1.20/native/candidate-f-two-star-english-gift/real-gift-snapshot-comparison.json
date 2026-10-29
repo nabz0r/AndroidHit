@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "assertions": 4,
+  "changes": {
+    "luma_drift_save_v1": {
+      "booster_flow": {
+        "before": 2,
+        "after": 3
+      },
+      "power_loot_v19_15": {
+        "before": null,
+        "after": "flow"
+      }
+    }
+  },
+  "after_close_equal": true,
+  "scope": "Read-only actual earned gift snapshots. Exact +1 matching stock and claim receipt; no other mutation; explicit dismissal grants nothing again."
+}

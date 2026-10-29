@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T21:57:35.167405+00:00",
+  "candidate": "F",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "version": "1.20.0-sandbox-rc1",
+  "code": 28,
+  "apk_sha256": "7c8ccfde3a0050b35b0312a61e2cb07973c594629bbf97493ec8bbe2829410cf",
+  "observer_sha256": "6f547e85e4992a641f6c99e53903b90175640b8217bf98fe091801ae56c3eb56",
+  "accepted_reports": [
+    {
+      "report": "docs/validation/v1.20/native-lab/candidate-f-paid-energy-resumed-retry/report.json",
+      "sha256": "c9bb3e15811dd7d97af70a1a9e0a22104c6412b9ef1aa6ca4626d8579915c352",
+      "assertions": 26,
+      "touchscreen_actions": 10,
+      "original_pngs": 4
+    },
+    {
+      "report": "docs/validation/v1.20/native-lab/candidate-f-paid-energy-cold/report.json",
+      "sha256": "1135b559e997be59e8410fe917e3291d9ae96751cd82d74cc152bf4d7c9f768e",
+      "assertions": 22,
+      "touchscreen_actions": 3,
+      "original_pngs": 2
+    }
+  ],
+  "totals": {
+    "reports": 2,
+    "native_assertions": 48,
+    "touchscreen_actions": 13,
+    "original_pngs": 6,
+    "derived_assertions": 12
+  },
+  "derived_checks": [
+    {
+      "report": "docs/validation/v1.20/native-lab/candidate-f-paid-energy-cold/actual-purchase-cold-comparison.json",
+      "sha256": "fd1695b611120a08047128118b4f25707265afb4de1e4827a45d68d010c4f148",
+      "assertions": 11
+    },
+    {
+      "report": "docs/validation/v1.20/native-lab/production-profile-preserved.json",
+      "sha256": "2dd1873fcae1efd30225a2247f9095539ecbb24ff58a91bce4cf6be506a935a7",
+      "assertions": 1
+    }
+  ],
+  "purchase_observed": {
+    "test_gold_before": 500,
+    "test_gold_after": 450,
+    "energy_before": 0,
+    "energy_after_purchase": 10,
+    "energy_after_real_new_attempt_and_cold": 9,
+    "coins_unchanged": 730,
+    "stock": 0,
+    "outbox": "",
+    "one_spend_one_use_one_credit_receipt": true
+  },
+  "partial_prerequisite": {
+    "report": "docs/validation/v1.20/native-lab/candidate-f-paid-energy-first/report.json",
+    "sha256": "a2bfab4047e31905544e4c14b114e301b789858318040eeeeefe753131c6bad9",
+    "passed": false,
+    "assertions_before_harness_stop": 182,
+    "touchscreen_actions": 110,
+    "scope": "Genuine fresh FirstLight, U1-U10 earned first clears,730Coins and9confirmed U11 restarts to0. Observer then alternated Back pause/resume while looking for home. No purchase attempted; retained profile resumed explicitly with real Pause and Quit level."
+  },
+  "excluded_retry": {
+    "report": "docs/validation/v1.20/native-lab/candidate-f-paid-energy-resumed/report.json",
+    "passed": false,
+    "assertions": 9,
+    "touchscreen_actions": 2,
+    "reason": "Observer exact Quitter matcher missed actual Quitter le niveau. No purchase attempted. Fixed regex retry preserves same account/progress."
+  },
+  "scope": "One task-owned emulator; separate built-in Lab wallet with app-provided500testGold, real native UI and read-only observations. No external identity, ads, billing, real funds, clock edits, balance grants or injected progression by observer. Does not activate or qualify production payments."
+}

@@ -3,6 +3,7 @@ package com.androidhit.lumadrift.ui;
 /** Logical 390-wide menu geometry. The fixed wallet is outside the scrolling content. */
 public final class Menu120Layout {
     public static final float WIDTH=390f, NAV_RESERVE=96f, GUTTER=24f;
+    public static final float SHOP_PRODUCT_LIFT=144f,SHOP_CONTENT_HEIGHT=841f;
     public final float viewportHeight, minimumTouch, heroTop, heroHeight, contentHeight;
     public final Rect profile, settings, team, play, gifts, shop, map, expedition, events, room, atelier;
     public Menu120Layout(float viewportHeight,float minimumTouch){
@@ -30,6 +31,7 @@ public final class Menu120Layout {
         float height=Math.max(61,minimumTouch),middle=viewportHeight-42.5f;
         return new Rect(index*78f,middle-height/2,(index+1)*78f,middle+height/2);
     }
+    public static Rect shopPrimary(){return new Rect(24,658-SHOP_PRODUCT_LIFT,366,720-SHOP_PRODUCT_LIFT);}
     public static float rewardHeight(int rows,float minimumTouch){return 170f+Math.max(0,rows)*rewardRowHeight(minimumTouch)+NAV_RESERVE;}
     public static float rewardRowHeight(float minimumTouch){return Math.max(154f,positive(minimumTouch,48f)+94f);}
     public static boolean canClaim(boolean ready,boolean claimed){return ready&&!claimed;}

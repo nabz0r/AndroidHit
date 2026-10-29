@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "scope": "Derived read-only comparison of actual snapshots surrounding one earned gift claim and explicit reveal dismissal. No app or preference mutation by this comparison.",
+  "before": "native/before-real-gift-claim.json",
+  "after": "native/after-real-gift-claim.json",
+  "after_close": "native/after-real-gift-close.json",
+  "changes": {
+    "luma_drift_save_v1": {
+      "power_loot_v19_5": {
+        "before": null,
+        "after": "hint"
+      },
+      "booster_hint": {
+        "before": 3,
+        "after": 4
+      }
+    }
+  },
+  "after_close_equal": true,
+  "assertions": 2
+}

@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T20:56:13.447534+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "upgrade-preservation",
+  "expected_version": "1.20.0-rc1",
+  "expected_code": 28,
+  "apk_sha256": "6557c8294ff000881a124431e638e876dd00fd3ba044d6b6169a30dbfa0b199e",
+  "observer_sha256": "ac37a3950093cbf455990c1eef866b2f1ab61bef07a51091e22dc13fc474b814",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": true,
+  "upgrade_from_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+  "run_token": "2a9fc335-9945-43ee-b933-b01941af763b",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "before_update_installed_sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+  "installed_sha256": "6557c8294ff000881a124431e638e876dd00fd3ba044d6b6169a30dbfa0b199e",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "upgrade-preservation",
+    "runToken": "2a9fc335-9945-43ee-b933-b01941af763b",
+    "processId": 3972,
+    "checkCount": 6,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Snapshot-only phase never launches an Activity or sends UI input"
+      }
+    ],
+    "touchCount": 0,
+    "actions": [],
+    "captures": [],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 8.419,
+  "evidence_sha256": {
+    "authorized-update.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "battle-observer.apk": "ac37a3950093cbf455990c1eef866b2f1ab61bef07a51091e22dc13fc474b814",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "7aff9809145651b8135b207132d9738e00fc811c1f62d0bb3997851700b0f587",
+    "native/after.json": "b59220e799437a0b3990dcb85c50e52d3360116f6701cb7e700884678f647753",
+    "native/before.json": "b59220e799437a0b3990dcb85c50e52d3360116f6701cb7e700884678f647753",
+    "native/report.json": "9fe68b996daea00d92bcebb01b523ff36852ce7f5fa9f40e36863933cfa5ec26",
+    "observer-install.txt": "5cf33a58520800aa684f3fe05320a8b0effd5c67026045fb284bc783a9edf696",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "1aab72a76700a4016415f32d582cc13f69034292a55263358a5f27225bd618fb",
+    "source-snapshot.json": "367a813b99edf24f287908db26af7c29ac68c81b1c214e5fb9ed66583bbba000"
+  }
+}

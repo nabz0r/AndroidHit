@@ -1,0 +1,142 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "open-level",
+    "level": 11
+  },
+  {
+    "op": "snapshot",
+    "name": "before-real-zero-energy-drain"
+  },
+  {
+    "op": "drain-energy"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "snapshot",
+    "name": "real-zero-energy-current-run"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "zero-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "zero-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "zero-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session_energy_v120",
+    "key": "session_energy_v120",
+    "name": "zero-energy"
+  },
+  {
+    "op": "tap",
+    "regex": "Restart"
+  },
+  {
+    "op": "tap",
+    "regex": "Restart \u00b7 1 .*"
+  },
+  {
+    "op": "assert-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "capture",
+    "name": "zero-energy-blocks-new-attempt-honestly"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "zero-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "zero-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "zero-budget_used"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session_energy_v120",
+    "key": "session_energy_v120",
+    "name": "zero-energy"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "zero-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "zero-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "zero-budget_used"
+  },
+  {
+    "op": "capture",
+    "name": "same-attempt-resumed-at-zero-free"
+  },
+  {
+    "op": "snapshot",
+    "name": "zero-energy-before-cold"
+  }
+]

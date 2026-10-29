@@ -86,6 +86,7 @@ jobs:
             /scripts/test-site-v116.mjs
             /scripts/test-site-v118.mjs
             /scripts/test-site-v119.mjs
+            /scripts/test-site-v120-runtime.mjs
             /scripts/apk-byte-delta.py
             /scripts/test-apk-byte-delta.py
             /public/assets/site.js
@@ -100,6 +101,8 @@ jobs:
             /public/assets/companions-v118/*.json
             /docs/validation/site-v1.17/index.template.html
             /docs/validation/site-v1.18/index.template.html
+            /docs/validation/site-v1.19/index.template.html
+            /docs/validation/site-v1.20/staging/site-v120.js
             /docs/validation/v1.7/audio/audio-biome-metrics.csv
             /docs/validation/v1.7/audio/legacy-pcm.sha256
             /scripts/test-relay-v115.sh
@@ -229,10 +232,10 @@ jobs:
       - name: Check puzzle gates, budgets, feedback and compact action reachability
         run: bash scripts/test-play-scene-v117-geometry.sh
 
-      - name: Check 1.19 and retained website language, squad copy and deliberate media controls
+      - name: Check 1.20 interactions and retained website language and media controls
         # Uses the runner's Node test runtime; no package install, SDK, network,
         # browser, Firebase deployment or native gameplay claim is involved.
-        run: node --test scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+        run: node --test scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
 
       - name: Check exact APK delta transport and refused artifact replacement
         # Small generated ZIP fixtures only; no APK download or SDK is needed.

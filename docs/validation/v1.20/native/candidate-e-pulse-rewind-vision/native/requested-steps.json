@@ -1,0 +1,166 @@
+[
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "lune",
+      "hoot"
+    ]
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_2"
+  },
+  {
+    "op": "capture",
+    "name": "rewind-refuses-empty-history"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "assert-battle",
+    "used": 0,
+    "energy": 3
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "used": 2,
+    "energy": 2,
+    "credited": "1"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_2"
+  },
+  {
+    "op": "capture",
+    "name": "rewind-explicit-no-action-refund-copy"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "used": 6,
+    "energy": 0,
+    "credited": "1",
+    "comboReady": true
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "1"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "1"
+  },
+  {
+    "op": "certificate-step",
+    "level": 1,
+    "index": 0
+  },
+  {
+    "op": "assert-battle",
+    "energy": 0,
+    "credited": "1"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "2"
+  },
+  {
+    "op": "capture",
+    "name": "same-piece-reexit-no-charge-farm-spends-move"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_combo"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-victory",
+    "stars": 2,
+    "coins": 0,
+    "xp": 0
+  },
+  {
+    "op": "capture",
+    "name": "rewind-real-two-star-replay"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "tula",
+      "orbit"
+    ]
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "capture-fast",
+    "name": "vision-real-legal-highlights"
+  },
+  {
+    "op": "assert-battle",
+    "used": 2,
+    "energy": 1,
+    "credited": "0"
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "coins": 0,
+    "xp": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  }
+]

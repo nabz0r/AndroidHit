@@ -1,0 +1,179 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-29T21:39:49.653785+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "final-f-u41-zero-before-cold",
+  "expected_version": "1.20.0-rc1",
+  "expected_code": 28,
+  "apk_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+  "observer_sha256": "9583aab3ec545fa514256747c49dd110aa0ee112f8f0b3d728cbbbb3586ef520",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "b3183d0f-7ff8-4919-8084-bbcacd43d44a",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": false,
+    "phase": "final-f-u41-zero-before-cold",
+    "runToken": "b3183d0f-7ff8-4919-8084-bbcacd43d44a",
+    "processId": 25260,
+    "checkCount": 13,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U41 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Energy drain uses only a real active eligible campaign attempt"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 5,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2947806,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          537
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2948357,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-level-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2949722,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          66,
+          1784,
+          360,
+          1983
+        ]
+      },
+      {
+        "reason": "open-real-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2950289,
+        "label": "Niveau 41, Normal, Clés et murs",
+        "bounds": [
+          215,
+          1388,
+          426,
+          1607
+        ]
+      },
+      {
+        "reason": "start-real-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2950917,
+        "label": "Jouer  →",
+        "resourceId": "com.androidhit.lumadrift:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      }
+    ],
+    "captures": [
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "error": "Current instrumentation execution failed",
+  "elapsed_seconds": 25.139,
+  "evidence_sha256": {
+    "battle-observer.apk": "9583aab3ec545fa514256747c49dd110aa0ee112f8f0b3d728cbbbb3586ef520",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "failure-android-runtime.txt": "22b6afd8bd561dcd71e8c00e253b144f36b69a161f3c627157c89a2af7846e0e",
+    "instrumentation.txt": "ad06ac488c997ecc118bfb27c1109babae691cc86cf1d0bc919c652ea385ff7c",
+    "native/before.json": "f22e93ddf86b6661fbb665087bbc9d125b47e858b1396f14bde7da8ead589ded",
+    "native/failure-accessibility.json": "da7065a1495790458cd5e7399989392d477e6e587ab5ce6c96496b332a58f9dc",
+    "native/failure.png": "14e26f2339ee0e3e725fb3ece65ae6fb070d410e5dbcdd8bf190d5aee2508112",
+    "native/failure.txt": "600cdea8cb14e5e27366f32f3c338293cee901353b537369549598e44e1b7be3",
+    "native/report.json": "e4c61e9114610ba8950e2e8ac1734b4e5d5b291793eba339f42cdd6e81c3e387",
+    "native/requested-steps.json": "22c0455a19910c69e6bd89584ab2502cb0211bae2eff23ad6622c880f67ceca1",
+    "observer-install.txt": "4e8c9fe57c81d1bd0dab85d5e31dde35fcef1ec83a47a013bdd97bec594c6b1b",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "24fb62ffccb5c5506078245080edf3a2a590b5ac3ae40a31b1d8af25cab6b07e",
+    "source-snapshot.json": "42ad9971fc94049f947e985abb51424d26fd5759666e6c349a25ee431fffa4ac"
+  }
+}

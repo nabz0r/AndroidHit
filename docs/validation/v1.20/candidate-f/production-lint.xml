@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 9.4.0">
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="            public void onSuccess(ProductionWalletClient.Wallet result){requests.edit().remove(key).commit();spendBusy=false;acceptWallet(result);walletStatus.setText(t(&quot;wallet_unlocked&quot;));}"
+        errorLine2="                                                                                                    ~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java"
+            line="286"
+            column="101"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        synchronized(CACHE_LOCK){context.getSharedPreferences(PREFS,0).edit().remove(&quot;owned:&quot;+BillingPolicy.accountHash(uid)).commit();}"
+        errorLine2="                                                                                                                              ~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/social/CosmeticVaultClient.java"
+            line="45"
+            column="127"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="            edit.commit();"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/social/CosmeticVaultClient.java"
+            line="89"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="        synchronized (CACHE_LOCK) { context.getSharedPreferences(CACHE_PREFS, 0).edit().remove(BillingPolicy.accountHash(uid)).commit(); }"
+        errorLine2="                                                                                                                               ~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java"
+            line="106"
+            column="128"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="                prefs.edit().putString(key, value.toString()).commit();"
+        errorLine2="                                                              ~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java"
+            line="115"
+            column="63"/>
+    </issue>
+
+    <issue
+        id="CredentialManagerMisuse"
+        severity="Warning"
+        message="Call to `CredentialManager.getCredential` without use of `NoCredentialException`"
+        category="Correctness"
+        priority="5"
+        summary="Misuse of Credential Manager API"
+        explanation="When calling `CredentialManager.getCredential` or `CredentialManager.getCredentialAsync`, you should handle `NoCredentialException` somewhere in your project."
+        url="https://developer.android.com/identity/sign-in/credential-manager#handle-exceptions"
+        urls="https://developer.android.com/identity/sign-in/credential-manager#handle-exceptions"
+        errorLine1="            manager.getCredentialAsync(activity, wanted, cancellation, main, new CredentialManagerCallback&lt;GetCredentialResponse, GetCredentialException>() {"
+        errorLine2="            ^">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/identity/GoogleAccountController.java"
+            line="181"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        severity="Warning"
+        message="A newer version of Gradle than 8.14.3 is available: 8.14.6"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Android Gradle Plugin Version"
+        explanation="This detector looks for usage of the Android Gradle Plugin where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="distributionUrl=https\://services.gradle.org/distributions/gradle-8.14.3-bin.zip"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/gradle/wrapper/gradle-wrapper.properties"
+            line="3"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="Newer version of lint available: 9.6.0-alpha02"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="android.experimental.lint.version=9.4.0"
+        errorLine2="                                  ~~~~~">
+        <location
+            file="/Users/n/androidhit/gradle.properties"
+            line="8"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="LockedOrientationActivity"
+        severity="Warning"
+        message="Expecting `android:screenOrientation=&quot;unspecified&quot;` or `&quot;fullSensor&quot;` for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices"
+        category="Correctness"
+        priority="4"
+        summary="Incompatible screenOrientation value"
+        explanation="The `&lt;activity>` element should not be locked to any orientation so that users can take advantage of the multi-window environments and larger screens available on Android. To fix the issue, consider declaring the corresponding activity element with `screenOrientation=&quot;unspecified&quot;`or `fullSensor` attribute."
+        url="https://developer.android.com/topic/arc/window-management"
+        urls="https://developer.android.com/topic/arc/window-management"
+        errorLine1="        &lt;activity android:name=&quot;.MainActivity&quot; android:screenOrientation=&quot;sensorPortrait&quot; android:exported=&quot;true&quot; android:launchMode=&quot;singleTop&quot;>"
+        errorLine2="                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/AndroidManifest.xml"
+            line="10"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        severity="Warning"
+        message="Fixed screen orientations will be ignored in most cases, starting from Android 16. Android is moving toward a model where apps are expected to adapt to various orientations, display sizes, and aspect ratios."
+        category="Correctness"
+        priority="2"
+        summary="Using discouraged APIs"
+        explanation="Discouraged APIs are allowed and are not deprecated, but they may be unfit for common use (e.g. due to slow performance or subtle behavior)."
+        errorLine1="        &lt;activity android:name=&quot;.MainActivity&quot; android:screenOrientation=&quot;sensorPortrait&quot; android:exported=&quot;true&quot; android:launchMode=&quot;singleTop&quot;>"
+        errorLine2="                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/AndroidManifest.xml"
+            line="10"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="DrawAllocation"
+        severity="Warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)"
+        category="Performance"
+        priority="9"
+        summary="Memory allocations within drawing code"
+        explanation="You should avoid allocating objects during a drawing or layout operation. These are called frequently, so a smooth UI can be interrupted by garbage collection pauses caused by the object allocations.&#xA;&#xA;The way this is generally handled is to allocate the needed objects up front and to reuse them for each drawing operation.&#xA;&#xA;Some methods allocate memory on your behalf (such as `Bitmap.create`), and these should be handled in the same way."
+        errorLine1="        @Override protected void onDraw(Canvas canvas){super.onDraw(canvas);float x=getWidth()/2f,y=dp(62),spread=Math.min(dp(88),getWidth()*.30f),r=Math.min(dp(38),getWidth()*.14f);art.object(canvas,new android.graphics.RectF(x-r,y-r,x+r,y+r),ScenicUi.VIOLET,false,ScenicUi.Kind.CAPSULE);CharacterSprites.drawGarmentPreview(canvas,CosmeticCatalog.ITEMS.get(1),x-spread-r,y-r,x-spread+r,y+r);CharacterSprites.drawGarmentPreview(canvas,CosmeticCatalog.ITEMS.get(9),x+spread-r,y-r,x+spread+r,y+r);}"
+        errorLine2="                                                                                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/social/CosmeticVaultActivity.java"
+            line="155"
+            column="201"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.aurora_atlas_v1` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property `lint.unused-resources.include-tests=true`, and to exclude them (usually for performance reasons), use `lint.unused-resources.exclude-tests=true`.&#xA;">
+        <location
+            file="/Users/n/androidhit/app/src/main/res/drawable-nodpi/aurora_atlas_v1.png"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `CommerceArt` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:&#xA;* `View(Context context)`&#xA;* `View(Context context, AttributeSet attrs)`&#xA;* `View(Context context, AttributeSet attrs, int defStyle)`&#xA;&#xA;If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="final class CommerceArt extends View {"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/commerce/CommerceArt.java"
+            line="15"
+            column="13"/>
+    </issue>
+
+</issues>

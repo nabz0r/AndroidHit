@@ -1,0 +1,155 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "fr-home-final"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_entry"
+  },
+  {
+    "op": "capture",
+    "name": "fr-shop-final"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "before-actual-new-attempt"
+  },
+  {
+    "op": "open-level",
+    "level": 39
+  },
+  {
+    "op": "snapshot",
+    "name": "after-actual-new-attempt"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_policy",
+    "value": "6"
+  },
+  {
+    "op": "capture",
+    "name": "fr-new-u39-hud-clock"
+  },
+  {
+    "op": "wait",
+    "ms": 1500
+  },
+  {
+    "op": "remember-clock",
+    "name": "before-real-pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Pause"
+  },
+  {
+    "op": "capture",
+    "name": "fr-real-pause"
+  },
+  {
+    "op": "wait",
+    "ms": 3000
+  },
+  {
+    "op": "tap",
+    "regex": "Reprendre"
+  },
+  {
+    "op": "assert-clock-advance",
+    "name": "before-real-pause",
+    "min": 0,
+    "max": 2
+  },
+  {
+    "op": "capture",
+    "name": "fr-real-resume-clock"
+  },
+  {
+    "op": "certificate-step",
+    "level": 39,
+    "index": 0
+  },
+  {
+    "op": "certificate-step",
+    "level": 39,
+    "index": 1
+  },
+  {
+    "op": "certificate-step",
+    "level": 39,
+    "index": 2
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-real-cheer-three"
+  },
+  {
+    "op": "certificate-step",
+    "level": 39,
+    "index": 3
+  },
+  {
+    "op": "certificate-step",
+    "level": 39,
+    "index": 4
+  },
+  {
+    "op": "certificate-step-fast",
+    "level": 39,
+    "index": 5
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-real-dance-six"
+  },
+  {
+    "op": "solve",
+    "level": 39
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3
+  },
+  {
+    "op": "wait",
+    "ms": 1700
+  },
+  {
+    "op": "capture",
+    "name": "fr-victory-final"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-after-win"
+  },
+  {
+    "op": "wait",
+    "ms": 3000
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-after-win"
+  },
+  {
+    "op": "assert-id",
+    "id": "victory_next"
+  },
+  {
+    "op": "snapshot",
+    "name": "won-u39-before-cold"
+  }
+]

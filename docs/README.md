@@ -1,6 +1,26 @@
 # Luma Drift documentation
 
-**Delivered: H (1.17.0-rc6 / code 24), four exact signed packages, documentation and source on Git main, and the existing Firebase website. Native acceptance, public download hashes, responsive FR/EN browser states and deliberate audio playback pass within their recorded scopes. Earlier candidates retain their original historical results.**
+## Current1.20 — production F accepted, delivery pending
+
+**Production accepted; delivery pending.** Production `1.20.0-rc1` and separate Lab `1.20.0-sandbox-rc1`, code28, are signed against481 frozen inputs. The new home, fixed wallets, durable gifts and illustrated boutique accompany policy6 action grading and separate installation-local session energy. The10-energy/50-LumaGold refill is prepared with production gates closed and isolated Lab test Gold; no new production energy endpoint is deployed.
+
+[Release/byte identity](RELEASE_1_20.md) · [Gameplay/UX](UX_1_20.md) · [Menus and gifts](UX_1_20_MENUS.md) · [Premium protocol/data limits](ENERGY_PURCHASE_1_20.md) · [Privacy inventory](PRIVACY.md) · [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md).
+
+[Production native acceptance](validation/v1.20/native/README.md) passes11 exact-F reports:457 assertions/180 touchscreen actions/76 original PNGs/one60-second recording, with38 derived comparisons separate. Actual grades, gifts, cold/zero-energy/expedition paths, wallet swipes, compact FR/EN and six-language menus are covered. Six [exact-F site frames](validation/site-v1.20/native-capture-map.json) and [local canonical packages](../releases/manifest-1.20.0-rc1.json) are recorded. The separate [Lab refill/cold scope](validation/v1.20/native-lab/README.md) passes48 native assertions/13 touches/6 PNGs, with12 derived comparisons separate:500→450 test Gold, energy0→10→9/cold9, unchanged production profile. E skill reports remain E, with unchanged model hashes; no provider or physical-phone acceptance is inferred. [Website preparation/publication workflow](validation/site-v1.20/README.md), immutable source publication and Hosting remain pending. Saved permission blocks public-origin observation; no workaround is authorized.
+
+## Preserved1.19 — puzzle companions, published C
+
+[Release](RELEASE_1_19.md) · [Gameplay](GAMEPLAY_1_19.md) · [UX](UX_1_19.md) · [Native reports](validation/v1.19/native/README.md) · [Website delivery](validation/site-v1.19/README.md).
+
+Teams of one to three owned companions, six skill families across37 parameterized identities, one explicit two-family Resonance and actual-play reactions are implemented. C/code27 passes ten native scopes with419 assertions/209 gestures/58 PNGs. Its published C3 website has separate Hosting, earlier full-byte verification and local-browser receipts; later public-browser observation was refused. Physical-phone comfort, human return and provider qualification remain open.
+
+## Preserved1.18 — forms and Observatory, published H
+
+[Release and immutable H bytes](RELEASE_1_18.md) · [Prototype rules](RELEASE_1_18_PROTOTYPE.md) · [Native evidence](validation/v1.18/README.md) · [Website/gallery delivery](validation/site-v1.18/README.md).
+
+The37-identity catalogue, four forms,20 poses and separate four-board Observatory prototype were published as H/code25. The owner's failed UX acceptance remains historical evidence alongside the functional results. Earlier releases below retain their actual dated scopes.
+
+**Preserved1.17 delivery:** H (1.17.0-rc6 / code24), four signed packages, source and website. Its native, public-byte, responsive-browser and deliberate-audio results remain1.17 evidence.
 
 ## 1.17 — original art and object navigation, delivered H
 

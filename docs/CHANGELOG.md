@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.20.0-rc1 / code28 — production F accepted, delivery pending
+
+29 October 2026. **Not delivered.** [Release and exact F bytes](RELEASE_1_20.md) · [Executed evidence and pending gates](validation/v1.20/README.md).
+
+- Add a lighter home with the equipped companion, actual owned squad, one Play action, ready-gift count and visible boutique. Keep earned LumaCoins, account LumaGold and session energy distinct in fixed menu/puzzle headers.
+- Present daily/weekly objectives as durable gifts: a successful claim reveals the actual reward until an explicit close; collected rows have no claim action. Show one illustrated shop product at a time with stock, price, ownership and preview routes.
+- Give new U attempts policy6: blocked taps and Undo are free, but Undo does not refund the earlier exit. Stars use productive/corrective actions; the active-play clock does not grade stars. Preserve saved attempts' own policy.
+- Add installation-local session energy:10 maximum, one energy unit every10 minutes, one unit per new eligible attempt. Tutorial/U1–U10/friend practice and same-attempt resume remain free. Prepare10 energy for50 LumaGold with account-bound spend/use and idempotent local credit; production gates stay closed, the energy backend is not deployed, and Lab uses isolated test Gold.
+- Preserve C's guest-startup failure, D's shop review and E's passing scoped reports. F guards the wallet band against board selection during directional gestures on very short windows. The [E source/geometry witness](validation/v1.20/hud-audit/README.md) remains separate from F's actual16 neutral wallet swipes. Six original exact-F FR/EN site frames are [recorded](validation/site-v1.20/native-capture-map.json).
+
+Build/lint, signatures, the481-input F freeze and [production native acceptance](validation/v1.20/native/README.md) pass:11 reports/457 assertions/180 touchscreen actions/76 PNGs/one60-second video, with38 derived comparisons separate. Canonical packages are collected locally; source publication and Hosting1.20 remain pending. The independent [Lab test-Gold purchase/cold run](validation/v1.20/native-lab/README.md) passes48 assertions/13 touches/6 PNGs plus12 separate derived comparisons; its two observer-stopped attempts remain excluded. Host/emulator checks do not establish physical-phone comfort, human enjoyment or retention. Live ads, real checkout and Play publication are separate work.
+
+## 1.19.0-prototype2 / code27 — puzzle companions, published C
+
+29 October 2026. [Release](RELEASE_1_19.md) · [Native scope](validation/v1.19/native/README.md) · [Website delivery](validation/site-v1.19/README.md).
+
+- Add owned teams of one to three, six puzzle-skill families across37 parameterized companion identities, one explicit Resonance after two different used families, and reactions/equipped portraits during play. Current-attempt teams stay fixed; outfits remain presentation choices.
+- Bound shared talent charge to3–6, one use per companion, and one credit per distinct exited piece; Undo/re-exit cannot farm charge. Keep the board/budget/state changes together before visible success feedback.
+- Publish exact C bytes with ten native reports:419 assertions,209 gestures,58 original PNGs and a45-second recording. The C3 website has a Hosting receipt and a separate earlier500-response byte-verification pass. Later public-browser observation was blocked by a saved permission; no workaround or public-render pass is claimed.
+
+## 1.18.0-prototype1 / code25 — companion forms and Observatory, published H
+
+29 October 2026. [Release and exact H identity](RELEASE_1_18.md) · [Native scope](validation/v1.18/README.md) · [Website delivery](validation/site-v1.18/README.md).
+
+- Expand the catalogue to37 identities, four authored forms and20 poses, with a native companion studio and explicit original-costume/garment presentation state.
+- Add four-board Observatory expeditions, route choices, three pilot signatures and separate durable expedition/campaign sessions. Keep earned ownership, room state and earlier puzzle identities.
+- Publish the signed H prototype and the FR/EN gallery/site. The owner's failed UX acceptance remains preserved; passing functional checks did not establish satisfaction or retention. Fan-art guest rights remain unverified in the [third-party notices](THIRD_PARTY_NOTICES.md).
+
 ## 1.17.0-rc6 / code24 — illustrated places and object navigation (delivered)
 
 29 October 2026. [Release status](RELEASE_1_17.md) · [Executed evidence](validation/v1.17/README.md).

@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-29T21:17:17.803543+00:00",
+  "passed": true,
+  "command": [
+    "node",
+    "--test",
+    "scripts/test-site-v120-runtime.mjs",
+    "scripts/test-site-v119.mjs",
+    "scripts/test-site-v118.mjs",
+    "scripts/test-site-v117.mjs",
+    "scripts/test-site-v116.mjs"
+  ],
+  "tests": 57,
+  "new_staged_v120_runtime_tests": 9,
+  "scope": "Local JavaScript DOM doubles plus retained historical HTML/media contracts; no actual 1.20 homepage, native, browser, network, deployment or remote CI claim.",
+  "historical_v119_source_commit": "ccc3e025a088034d3b1f65d294e1e9cf68eb6e20",
+  "files": {
+    "scripts/test-site-v120-runtime.mjs": {
+      "bytes": 7417,
+      "sha256": "a74ef317c1c985d2933bab158fc09e60008891508211d541f2a99314a99dcd33"
+    },
+    "scripts/test-site-v119.mjs": {
+      "bytes": 12131,
+      "sha256": "f3723bc62f62081d81d0e2913b7af6943edc78d7f94f4b5a100df9aebbdf2bac"
+    },
+    "scripts/test-site-v118.mjs": {
+      "bytes": 12164,
+      "sha256": "6e851b12643c113f16e03d0fdf9c65ff877da2920f23ea9c60bea8dafcea05bd"
+    },
+    "scripts/test-site-v117.mjs": {
+      "bytes": 7897,
+      "sha256": "09926ad7305cdfa88d782ac72daaef227a018f1116ee61cde95e48de2f19e039"
+    },
+    "scripts/test-site-v116.mjs": {
+      "bytes": 6638,
+      "sha256": "edb666db6eee2bdb90922bc06105006e649f34e91fd3b5314dd023fec3d7c304"
+    },
+    "docs/validation/site-v1.19/index.template.html": {
+      "bytes": 30668,
+      "sha256": "626d0247cf194cf6e075b78514f5b8a68c818d53a80a76ef33d630ba3a94d5ea"
+    },
+    "docs/validation/site-v1.20/staging/site-v120.js": {
+      "bytes": 4212,
+      "sha256": "389e2735c854ada4c96e93fc98e0c8a1cac368d9f6eeef440f6a162c82b814aa"
+    },
+    "public/assets/site-v119.js": {
+      "bytes": 4222,
+      "sha256": "b7171957f94531bf6d6e859dd6b097ddfc4ebebe29055f3c99797ebbe04d3c4b"
+    },
+    "public/releases/manifest-1.19.0-prototype2.json": {
+      "bytes": 1246,
+      "sha256": "3d7aaa0d344ec4376f4fe7d4529075ae5e0363e3fdd46967118171799c9eec59"
+    }
+  },
+  "log": {
+    "path": "node-tests.txt",
+    "bytes": 5033,
+    "sha256": "13579041596aaae8692d79bddf52dd20f83c8cdcd9e66a9f81905e385c00ed06"
+  }
+}

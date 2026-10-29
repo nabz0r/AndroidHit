@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "candidate": "F",
+  "created_utc": "2026-10-29T21:30:37.306638+00:00",
+  "status": "CANONICAL_TRANSPORT_PROMOTED_AFTER_ROOT_PRODUCTION_ACCEPTANCE",
+  "passed": true,
+  "promoted": true,
+  "publication_allowed": false,
+  "scope": "Exact APK byte transport and retained signature only; native acceptance and publication are separate.",
+  "candidate_record": {
+    "path": "docs/validation/v1.20/candidate-f/candidate.json",
+    "sha256": "086f623bec66dec3eca943db2f9aec552be62cd039c1fcabef41b0e5eaed77f2",
+    "canonical_enrichment_preserves_exact_signed_packages": true
+  },
+  "script": {
+    "path": "scripts/apk-byte-delta.py",
+    "sha256": "6c685e63761d0e61028c0ee217200f16ff780a5871cf1975b0e87a7fc425c004"
+  },
+  "channels": {
+    "production": {
+      "base": {
+        "bytes": 368904157,
+        "name": "luma-drift-1.19.0-prototype2.apk",
+        "sha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526"
+      },
+      "target": {
+        "bytes": 368936921,
+        "name": "luma-drift-1.20.0-rc1.apk",
+        "sha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26"
+      },
+      "patch": {
+        "bytes": 3872028,
+        "name": "delta-1.19-prototype2-to-1.20-rc1-production.json.gz",
+        "sha256": "9ca03378990d64f447d8ae8f51e67a936417681dfac95c2c3c8631ddf2b9a338"
+      },
+      "compressed_entries_verified_byte_for_byte": 832,
+      "statistics": {
+        "copied_bytes": 365045208,
+        "copy_operations": 832,
+        "literal_bytes": 3891713,
+        "operations": 1668
+      },
+      "byte_comparison_against_original": true,
+      "deterministic_second_patch": true,
+      "signature_v2": true,
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "evidence": {
+        "production-build.json": {
+          "bytes": 938,
+          "sha256": "efe58d3729a5288bfb289c59c93d62d41693800af83e2988a6f2dd8f10adde1c"
+        },
+        "production-apply.json": {
+          "bytes": 1014,
+          "sha256": "435fd3948a392c13fecbb30765a9b3130718f7f95d6413d88480f309124c6e6e"
+        },
+        "production-rebuild.json": {
+          "bytes": 912,
+          "sha256": "46f28dbe0fbb12d894c5cabc5458b83eeddc24305a54dc4063662a7f4fd11683"
+        },
+        "production-apksigner.txt": {
+          "bytes": 955,
+          "sha256": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f"
+        },
+        "production-cmp.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "production-determinism-cmp.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    "lab": {
+      "base": {
+        "bytes": 368903840,
+        "name": "luma-drift-1.19.0-sandbox-prototype2.apk",
+        "sha256": "448d359abb6d4943c6eadf9f03c221fd35d5fa18c21441817bb4c7a31bb87d11"
+      },
+      "target": {
+        "bytes": 368920220,
+        "name": "luma-drift-1.20.0-sandbox-rc1.apk",
+        "sha256": "7c8ccfde3a0050b35b0312a61e2cb07973c594629bbf97493ec8bbe2829410cf"
+      },
+      "patch": {
+        "bytes": 3868528,
+        "name": "delta-1.19-prototype2-to-1.20-rc1-lab.json.gz",
+        "sha256": "72d8b410e0fcfb4bf8858209f9696e3f2fee80eae53a00d36a6a6e912bf6cde5"
+      },
+      "compressed_entries_verified_byte_for_byte": 831,
+      "statistics": {
+        "copied_bytes": 365045002,
+        "copy_operations": 831,
+        "literal_bytes": 3875218,
+        "operations": 1666
+      },
+      "byte_comparison_against_original": true,
+      "deterministic_second_patch": true,
+      "signature_v2": true,
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "evidence": {
+        "lab-build.json": {
+          "bytes": 947,
+          "sha256": "5f7be4bd7cc796a1cbc8e2883d95b4a43e167c10af001ae3f507fd38a1319dd2"
+        },
+        "lab-apply.json": {
+          "bytes": 1023,
+          "sha256": "b593b43a3efb582f8fcdad09039d3881d59e127f5e6f4d7e97b15a922145fccb"
+        },
+        "lab-rebuild.json": {
+          "bytes": 921,
+          "sha256": "545baa51b703c04213bd36350027f597987d1bf3baf5bae41da8f0f34adbbc1b"
+        },
+        "lab-apksigner.txt": {
+          "bytes": 955,
+          "sha256": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f"
+        },
+        "lab-cmp.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "lab-determinism-cmp.txt": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  },
+  "total_patch_bytes": 7740556,
+  "total_target_bytes": 737857141,
+  "hosting_deployment_allowed": false,
+  "promoted_utc": "2026-10-29T21:51:21.991669+00:00",
+  "signed_build_record": {
+    "path": "candidate-build-record.json",
+    "sha256": "6a4fb34a008a2bd78e64fd4a11b2bec6d1da66f0ff09a41b38f9b70b4611e76d"
+  },
+  "canonical_patch_directory": "releases",
+  "canonical_evidence_directory": "docs/validation/v1.20/apk-delta-f",
+  "staging_proof": {
+    "path": "staging-reconstruction-proof.json",
+    "sha256": "ebda44adf85d776a6d789e739d852a28eca1628f1023f810bb2814ab811078e2"
+  },
+  "production_native_acceptance": {
+    "parent_authorized": true,
+    "snapshot_path": "production-native-acceptance-index.json",
+    "source_path": "docs/validation/v1.20/native/candidate-f-final-index.json",
+    "source_sha256": "78f1316a2774e00d6cd9ff33d3987ed78a4f81d0bdb9197d9a8ef5b929027556",
+    "scope": "Parent accepted production F. This transport proof adds no Lab runtime, real-device, provider, retention or deployment claim."
+  },
+  "transport_tests": {
+    "cases": 18,
+    "path": "transport-tests.txt",
+    "sha256": "8572d37cd26a9236547ad48b31f96dea7e46033981c19859b90b649115b86292"
+  }
+}

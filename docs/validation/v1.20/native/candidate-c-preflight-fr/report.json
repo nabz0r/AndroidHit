@@ -1,0 +1,50 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-29T20:56:50.137227+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "preflight-fr-new-u31",
+  "expected_version": "1.20.0-rc1",
+  "expected_code": 28,
+  "apk_sha256": "6557c8294ff000881a124431e638e876dd00fd3ba044d6b6169a30dbfa0b199e",
+  "observer_sha256": "ac37a3950093cbf455990c1eef866b2f1ab61bef07a51091e22dc13fc474b814",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "35950a78-13ae-4981-8f0f-63bb1a30c5d7",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "6557c8294ff000881a124431e638e876dd00fd3ba044d6b6169a30dbfa0b199e",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 60,
+    "path": "native-ui-recording.mp4",
+    "sha256": "66bacb4bfaf6a537b136b58022a0abf594d43de0130326198cd8bbeee43af6a0",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "error": "[Errno 2] No such file or directory: '/Users/n/androidhit/docs/validation/v1.20/native/candidate-c-preflight-fr/native/report.json'",
+  "elapsed_seconds": 65.173,
+  "evidence_sha256": {
+    "battle-observer.apk": "ac37a3950093cbf455990c1eef866b2f1ab61bef07a51091e22dc13fc474b814",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "failure-android-runtime.txt": "2d19cc41a55839406a90b471d8944e5cd57100f9a0014e08546e3bb960c91f25",
+    "instrumentation.txt": "cc376fcd260b55a01f82c04af5e0a9ead88516f600131a38bdea1a3e05b10a8d",
+    "native/before.json": "b59220e799437a0b3990dcb85c50e52d3360116f6701cb7e700884678f647753",
+    "native-ui-recording.mp4": "66bacb4bfaf6a537b136b58022a0abf594d43de0130326198cd8bbeee43af6a0",
+    "observer-install.txt": "4a136ef2a1595e13aa01155c25860db119ad86ac35cd4f5b9317e7c7fd511d30",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "3f34efe3825bfcbfe6300f3fe31ec316f978f507c319469cdf1bf8fb8d141ac2",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "367a813b99edf24f287908db26af7c29ac68c81b1c214e5fb9ed66583bbba000"
+  }
+}

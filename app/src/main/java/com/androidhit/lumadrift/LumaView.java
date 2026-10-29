@@ -105,6 +105,7 @@ public final class LumaView extends View {
     private Board firstLight;
     private static final float HOME_TOP=104;
     private Long displayedGold;
+    private float shopContentHeight120=Menu120Layout.SHOP_CONTENT_HEIGHT;
     private int summonTab=0,profileBadgeSlot=0;
     private String summonRequest="",summonPreview="";
     private String detailKind="",detailId="",detailMessage="",capsuleRequest="",detailParent="shop";
@@ -238,7 +239,10 @@ public final class LumaView extends View {
         try{syncStyleUnsafe();}catch(GameStore.LocalSaveException failure){blockLocalSave();}
     }
     private void syncStyleUnsafe(){
-        displayedGold=BuildConfig.MODE_SANDBOX&&energyPurchases!=null?(long)energyPurchases.testGoldBalance():com.androidhit.lumadrift.wallet.ProductionWalletClient.cachedBalance(getContext());
+        // Keep unknown production Gold nullable; a primitive/boxed ternary
+        // would unbox the guest's null cache before the first frame.
+        if(BuildConfig.MODE_SANDBOX&&energyPurchases!=null)displayedGold=Long.valueOf(energyPurchases.testGoldBalance());
+        else displayedGold=com.androidhit.lumadrift.wallet.ProductionWalletClient.cachedBalance(getContext());
         skin=Catalog.skin(store.equippedSkin()); if(skin==null)skin=Catalog.SKINS[0];
         ExpeditionRun activeExpedition=mode==5?store.expeditionRun():null;
         character=Catalog.character(activeExpedition!=null?activeExpedition.companionId:store.equippedCharacter());if(character==null)character=Catalog.CHARACTERS[0];
@@ -550,7 +554,7 @@ public final class LumaView extends View {
     private void drawFrame(Canvas c){
         frameTime=SystemClock.uptimeMillis();
         layout=new ExperienceLayout(getWidth(),getHeight(),safeTop,safeBottom,getResources().getDisplayMetrics().density,getResources().getConfiguration().fontScale);
-        premium.setMinimumTextSize(layout.minimumTextSize);scenic.setMinimumTextSize(layout.minimumTextSize);scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;H=screen.equals("journey")&&!(journeyTab==1&&!store.remixAvailable())?SagaMap.height(journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):Math.max(layout.contentHeight,screen.equals("guardians")?4570:screen.equals("guardian")?900:screen.equals("styles")?1140:screen.equals("rewards")?rewardContentHeight():screen.equals("wardrobe")?1020:screen.equals("item")?detailHeight:screen.equals("shop")?1250:screen.equals("story")?1080:screen.equals("home")?(homeDecorating&&!homeSelection.isEmpty()?1433:1253):screen.equals("briefing")?950:screen.equals("tutorial")?viewportH<480&&!tutorial.complete()?433:820:840);
+        premium.setMinimumTextSize(layout.minimumTextSize);scenic.setMinimumTextSize(layout.minimumTextSize);scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;H=screen.equals("journey")&&!(journeyTab==1&&!store.remixAvailable())?SagaMap.height(journeyTab==1?BalancedCatalog.REMIX_COUNT:BalancedCatalog.LEVEL_COUNT):Math.max(layout.contentHeight,screen.equals("guardians")?4570:screen.equals("guardian")?900:screen.equals("styles")?1140:screen.equals("rewards")?rewardContentHeight():screen.equals("wardrobe")?1020:screen.equals("item")?detailHeight:screen.equals("shop")?shopContentHeight120:screen.equals("story")?1080:screen.equals("home")?(homeDecorating&&!homeSelection.isEmpty()?1433:1253):screen.equals("briefing")?950:screen.equals("tutorial")?viewportH<480&&!tutorial.complete()?433:820:840);
         menuHudInset=menuHudVisible()?Menu120Layout.hudHeight(battleMinimumTouch()):0;
         viewportH=Math.max(180,layout.viewportHeight-menuHudInset);
         if(screen.equals("tutorial")&&viewportH<480&&!tutorial.complete())H=Math.max(viewportH,433);
@@ -603,7 +607,10 @@ public final class LumaView extends View {
         if(frameTime<toastUntil&&!screen.equals("play")&&menuGiftAt==0){float y=menuHudInset+Math.max(8,viewportH-90);round(c,24,y,342,65,20,0xfff6e9ff);wrap(c,toast,195,y+25,302,14,TEXT,true,19);}
         if(focused>=0&&focused<hits.size()){p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(2);p.setColor(WHITE);c.drawRoundRect(hits.get(focused).r,15,15,p);p.setStyle(Paint.Style.FILL);}
         if(maximumScroll()>0){float track=viewportH-24,thumb=Math.max(25,track*viewportH/H),yy=menuHudInset+12+(track-thumb)*contentScroll/maximumScroll();round(c,384,yy,3,thumb,2,0x556f598d);}
-        c.restore();if(running)postInvalidateDelayed(sceneTransition.blocksInput(frameTime)?16:reduceMotion?250:screen.equals("play")?20:50);
+        c.restore();if(running){
+            if(!reduceMotion&&(screen.equals("play")||rootIndex()>=0||menuGiftAt>0||sceneTransition.blocksInput(frameTime)))postInvalidateOnAnimation();
+            else postInvalidateDelayed(reduceMotion?250:32);
+        }
     }
     private float maximumScroll(){return localSaveBlocked?0:Math.max(0,H-viewportH);}
     private float clampScroll(float amount){return Math.max(0,Math.min(maximumScroll(),amount));}
@@ -2334,15 +2341,15 @@ public final class LumaView extends View {
 
     private void selectShopCategory(int category){shopCategory=category;contentScroll=0;actionGeneration++;hits.clear();invalidate();}
     private void drawShop(Canvas c){
-        round(c,0,0,390,1100,0,0xfffcf8ff);fit(c,m20("shop"),24,47,29,342,TEXT,true,false);fit(c,m20("shop_hint"),24,76,13,342,PremiumUi.MUTED,false,false);
-        String[] tabs={m20("shop_powers"),m20("shop_looks"),"LumaGold"};
+        round(c,0,0,390,1100,0,0xfffcf8ff);fit(c,m20("shop"),24,47,29,342,TEXT,true,false);
+        String[] tabs={m20("shop_tab_powers"),m20("shop_tab_looks"),m20("shop_tab_gold")};
         for(int i=0;i<3;i++){final int category=i;float xx=24+i*116;boolean on=shopCategory==i;RectF area=new RectF(xx,101,xx+110,160);
             round(c,area.left,area.top,area.width(),area.height(),24,on?0xffe7d8f5:0xfff0eaf6);fit(c,tabs[i],area.centerX(),136,12,100,TEXT,on,true);int before=hits.size();motionHit(area,tabs[i],"shop_category_"+i,()->selectShopCategory(category));if(hits.size()>before)hits.get(hits.size()-1).selected=on;
         }
-        drawStorefront(c,195,227,110);fit(c,m20("shop_feature"),195,307,19,342,TEXT,true,true);
+        float previousDrawingScroll=drawingScroll;int productLayer=c.save();c.translate(0,-Menu120Layout.SHOP_PRODUCT_LIFT);drawingScroll+=Menu120Layout.SHOP_PRODUCT_LIFT;
         if(shopCategory==0){
             ArrayList<Catalog.BoosterItem> offered=new ArrayList<>();for(Catalog.BoosterItem power:Catalog.BOOSTERS)if(Catalog.isPowerOffered(power.id))offered.add(power);
-            if(offered.isEmpty()){H=Math.max(viewportH,500);drawFixedNavigation(c);return;}
+            if(offered.isEmpty()){H=shopContentHeight120=Math.max(viewportH,400);drawingScroll=previousDrawingScroll;c.restoreToCount(productLayer);drawFixedNavigation(c);return;}
             shopPage=Math.max(0,Math.min(offered.size()-1,shopPage));Catalog.BoosterItem item=offered.get(shopPage);String id=item.id;boolean unlocked=store.boosterUnlocked(id);
             fit(c,t(item.nameKey),195,353,25,342,TEXT,true,true);p.setColor(0xffeee5f9);c.drawCircle(195,457,86,p);shopArt.power(c,id,195,452,64,frameTime,reduceMotion);
             drawShopCarouselControls(c,shopPage,offered.size(),()->{shopPage=(shopPage+offered.size()-1)%offered.size();invalidate();},()->{shopPage=(shopPage+1)%offered.size();invalidate();});
@@ -2350,14 +2357,14 @@ public final class LumaView extends View {
             twoLines(c,z("power_"+id),33,596,324,15,TEXT);
             modernAction(c,new RectF(24,658,366,720),unlocked?"×"+item.amount+"  ·  "+store.boosterPrice(id)+" LumaCoins":t("power_unlock",item.unlockLevel),unlocked?0xfff5d594:0xffece4f5,"shop_power_preview",()->powerOffer(id),true);
             modernAction(c,new RectF(24,740,366,800),a("open_inventory")+" →",0xffe8def5,"shop_inventory",()->{collectionTab=3;collectionPage=0;go("collection");},true);
-            modernAction(c,new RectF(24,818,366,878),m20("shop_free")+" →",0xffe1eee7,"shop_free_gifts",()->openRewards(2),true);H=Math.max(viewportH,985);
+            modernAction(c,new RectF(24,818,366,878),m20("shop_free")+" →",0xffe1eee7,"shop_free_gifts",()->openRewards(2),true);H=Math.max(viewportH,Menu120Layout.SHOP_CONTENT_HEIGHT);
         }else if(shopCategory==1){
             ArrayList<CosmeticCatalog.Item> items=new ArrayList<>();for(CosmeticCatalog.Item item:CosmeticCatalog.ITEMS)if(item.priceCoins>0)items.add(item);
             int total=items.size()+2;shopLookPage=Math.max(0,Math.min(total-1,shopLookPage));
             String name,price,status;Runnable inspect;
             p.setColor(0xfff0e5f7);c.drawCircle(195,457,89,p);
             if(shopLookPage<2){
-                boolean friends=shopLookPage==0;name=friends?d("my_companions"):a("appearance");price=SummonCatalog.priceCoins(friends?SummonCatalog.Banner.AVATARS:SummonCatalog.Banner.SIGNATURES)+" LumaCoins";status=d("odds_note");
+                boolean friends=shopLookPage==0;name=friends?m20("shop_arrivals"):a("appearance");price=SummonCatalog.priceCoins(friends?SummonCatalog.Banner.AVATARS:SummonCatalog.Banner.SIGNATURES)+" LumaCoins";status=d("odds_note");
                 shopArt.capsule(c,195,453,61,frameTime,reduceMotion);
                 if(friends){drawBattleActor(c,"miko",new RectF(51,404,129,510),CompanionMotion.Action.HAPPY,CompanionMotion.Facing.RIGHT,frameTime,reduceMotion);drawBattleActor(c,"orbit",new RectF(261,404,339,510),CompanionMotion.Action.HAPPY,CompanionMotion.Facing.LEFT,frameTime,reduceMotion);}
                 inspect=()->{summonTab=friends?0:1;go("summon");};
@@ -2371,16 +2378,16 @@ public final class LumaView extends View {
             fit(c,price,195,576,20,342,TEXT,true,true);twoLines(c,status,33,602,324,14,PremiumUi.MUTED);
             modernAction(c,new RectF(24,658,366,720),m20("view")+" →",0xfff5d594,"shop_look_preview",inspect,true);
             modernAction(c,new RectF(24,740,366,800),a("avatar")+" →",0xffe8def5,"shop_wardrobe",()->go("wardrobe"),true);
-            modernAction(c,new RectF(24,818,366,878),m20("shop_free")+" →",0xffe1eee7,"shop_free_gifts",()->openRewards(0),true);H=Math.max(viewportH,985);
+            modernAction(c,new RectF(24,818,366,878),m20("shop_free")+" →",0xffe1eee7,"shop_free_gifts",()->openRewards(0),true);H=Math.max(viewportH,Menu120Layout.SHOP_CONTENT_HEIGHT);
         }else{
             fit(c,"LumaGold",195,354,28,342,TEXT,true,true);p.setColor(0xffeee0fc);c.drawCircle(195,457,90,p);shopArt.gold(c,195,450,66,frameTime,reduceMotion);
             fit(c,displayedGold==null?m20("wallet_unknown"):z("gold_last")+": "+displayedGold,195,580,18,342,TEXT,true,true);
             float y=prose(c,z("gold_note"),617,TEXT);y=prose(c,a("gold_closed"),y,PremiumUi.MUTED);
             modernAction(c,new RectF(24,y,366,y+60),a("view_wallet")+" →",0xffe5d5f6,"shop_gold_wallet",()->openCommerce(),true);y+=78;
             modernAction(c,new RectF(24,y,366,y+60),m20("energy")+" →",0xffffe1eb,"shop_energy",()->openSessionEnergy(),true);y+=78;
-            modernAction(c,new RectF(24,y,366,y+60),v("wardrobe")+" · LumaGold →",0xffe1eee7,"shop_gold_cosmetics",()->getContext().startActivity(new android.content.Intent(getContext(),com.androidhit.lumadrift.social.CosmeticVaultActivity.class)),true);H=Math.max(viewportH,y+180);
+            modernAction(c,new RectF(24,y,366,y+60),v("wardrobe")+" · LumaGold →",0xffe1eee7,"shop_gold_cosmetics",()->getContext().startActivity(new android.content.Intent(getContext(),com.androidhit.lumadrift.social.CosmeticVaultActivity.class)),true);H=Math.max(viewportH,y+180-Menu120Layout.SHOP_PRODUCT_LIFT);
         }
-        drawFixedNavigation(c);
+        shopContentHeight120=H;drawingScroll=previousDrawingScroll;c.restoreToCount(productLayer);drawFixedNavigation(c);
     }
     private void drawShopCarouselControls(Canvas c,int page,int total,Runnable previous,Runnable next){
         modernAction(c,new RectF(24,420,84,482),"‹",0xffebe1f5,"shop_previous",previous,true);modernAction(c,new RectF(306,420,366,482),"›",0xffebe1f5,"shop_next",next,true);
@@ -2448,9 +2455,8 @@ public final class LumaView extends View {
         objectAction(c,t(complete?"event_replay":"event_play_next",nextStage+1),24,347,342,50,PEACH,()->{if(!period.equals(daily?store.dailyId():store.weeklyId())){syncStyle();notice(a("period_changed"));return;}openEventStage(daily,nextStage);});
         float rewardY=414;scenePaper(c,new RectF(24,rewardY,366,rewardY+77),SweetUi.CREAM,true);
         fit(c,t("bonus"),42,rewardY+27,13,158,TEXT,true,false);coin(c,51,rewardY+54,9);text(c,"+"+bonus,70,rewardY+61,24,skin.accent2,true);label(24,rewardY,177,77,t("bonus")+": "+bonus+" LumaCoins");
-        objectAction(c,t(claimed?"claimed":complete?"claim":"locked"),208,rewardY+15,142,48,complete&&!claimed?GOLD:SweetUi.LILAC,()->{
-            if(complete&&!claimed)claimEventBonus(daily,period);else notice(claimed?t("claimed"):t("event_bonus_locked",Math.max(0,count-(daily?store.dailyCompletedCount():store.weeklyCompletedCount()))));
-        });
+        if(claimed){fit(c,"✓ "+m20("collected"),279,rewardY+46,14,142,PremiumUi.MUTED,true,true);label(208,rewardY+15,142,48,m20("collected"));}
+        else modernAction(c,new RectF(208,rewardY+15,350,rewardY+63),t(complete?"claim":"locked"),complete?0xffffdf99:0xffeee7f7,"event_bonus_claim",()->claimEventBonus(daily,period),complete);
     }
     private void openEventStage(boolean daily,int index){
         // Recheck the current calendar period at activation, even if midnight passed after drawing.
@@ -2474,7 +2480,8 @@ public final class LumaView extends View {
         for(int i=0;i<3;i++){final int idx=i;float y=214+i*119;sceneShelf(c,new RectF(24,y,366,y+105),0xffbdadc5,false);icon(c,icons[i],51,y+28,21,skin.accent2);wrap(c,t(keys[i]),77,y+25,260,14,TEXT,false,18);text(c,t("mission_progress",meta.missionProgress(i),meta.missionTarget(i)),44,y+83,14,skin.muted,true);
             label(40,y+10,305,85,t(keys[i])+", "+t("mission_progress",meta.missionProgress(i),meta.missionTarget(i)));
             boolean claimed=meta.missionClaimed(i),ready=meta.missionComplete(i);String title=claimed?t("claimed"):ready?t("claim")+" +"+meta.missionCoins(i)+" ◈":"+"+meta.missionCoins(i)+" ◈";
-            sceneAction(c,title,198,y+60,150,()->{if(meta.missionComplete(idx)){try{int got=meta.claimMission(idx,store);if(got>0){sfx(AudioEngine.Sound.COIN);notice("+"+got+" "+t("coins"));}else notice(t("claimed"));}catch(IllegalStateException failed){notice(t("save_error"));}}else notice(t("mission_note"));});
+            if(claimed){fit(c,"✓ "+m20("collected"),273,y+91,14,150,PremiumUi.MUTED,true,true);label(198,y+60,150,48,m20("collected"));}
+            else modernAction(c,new RectF(198,y+60,348,y+108),title,0xffffdf99,"legacy_quest_"+idx,()->{try{int got=meta.claimMission(idx,store);if(got>0){syncStyle();showMenuGift(t(keys[idx]),"+"+got+" LumaCoins","");}}catch(IllegalStateException failed){notice(t("save_error"));}},ready);
         }
         float yy=579;sceneShelf(c,new RectF(24,yy,366,yy+70),0xffbdadc5,false);star(c,51,yy+32,15,meta.badgeUnlocked()?GOLD:skin.muted);fit(c,t("badge"),78,yy+27,15,260,TEXT,true,false);fit(c,t(meta.badgeUnlocked()?meta.badgeEquipped()?"equipped":"equip":"badge_desc"),78,yy+48,11,260,skin.muted,false,false);hit(24,yy,342,70,t("badge"),()->{if(meta.badgeUnlocked()){meta.setBadgeEquipped(!meta.badgeEquipped());sfx(AudioEngine.Sound.SELECT);}else notice(t("badge_desc"));});
         if(H>790)fit(c,t("days_note"),195,H-110,11,340,skin.muted,false,true);
@@ -2989,6 +2996,7 @@ public final class LumaView extends View {
             sceneAction(c,t("exit"),44,y+299,302,()->{saveSession();goRoot("adventure");});
         }
     }
+    private void victoryButton120(Canvas c,PlaySceneLayout.Rect area,String caption,int color,String id,Runnable action){modernAction(c,new RectF(area.left,area.top,area.right,area.bottom),caption,color,id,action,true);}
     private void drawWin(Canvas c){
         hits.clear();int gifts=readyGiftCount120();VictoryLayout area=new VictoryLayout(viewportH,minimumTextSize(),battleMinimumTouch(),gifts>0);
         p.setShader(new LinearGradient(0,0,390,area.height,new int[]{0xfffff2da,0xfff4edff,0xffe6f7ef},null,Shader.TileMode.CLAMP));c.drawRect(0,0,390,area.height,p);p.setShader(null);
@@ -3013,8 +3021,8 @@ public final class LumaView extends View {
         else{coin(c,56,area.rewardY-15,11);fit(c,"+"+shownCoins+" LumaCoins",165,area.rewardY-7,22,218,TEXT,true,true);fit(c,"+"+shownXp+" XP",312,area.rewardY-7,16,92,TEXT,true,true);}
         fit(c,reward==0&&xpReward==0&&mode!=5?vr("replay"):vr("saved"),195,area.rewardY+14,12,340,PremiumUi.MUTED,false,true);
         label(24,area.metricsY-24,342,area.rewardY-area.metricsY+60,t("victory")+", "+resultStars+" "+t("stars")+", "+vr("moves")+" "+moves+", "+VictoryLayout.clock(activeElapsed)+", +"+reward+" LumaCoins, +"+xpReward+" XP");
-        if(area.gifts!=null){objectAction(c,"✦ "+vr("gifts",gifts)+"  →",area.gifts.left,area.gifts.top,area.gifts.width(),area.gifts.height(),SweetUi.LILAC,()->leaveVictory(()->openRewards(3)));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_gifts";}
-        objectAction(c,(mode==4?t("retry"):t("next"))+"  →",area.next.left,area.next.top,area.next.width(),area.next.height(),PEACH,()->leaveVictory(()->{
+        if(area.gifts!=null){victoryButton120(c,area.gifts,"✦ "+vr("gifts",gifts)+"  →",0xffffe1ac,"victory_gifts",()->leaveVictory(()->openRewards(3)));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_gifts";}
+        victoryButton120(c,area.next,(mode==4?t("retry"):t("next"))+"  →",0xffbde8d8,"victory_next",()->leaveVictory(()->{
             if(mode==5)goRoot("expedition");
             else if(mode==0&&levelIndex<BalancedCatalog.LEVEL_COUNT)start(levelIndex+1,0,0);
             else if(mode==3&&levelIndex<BalancedCatalog.REMIX_COUNT)start(levelIndex+1,3,0);
@@ -3022,8 +3030,8 @@ public final class LumaView extends View {
             else if(mode==2&&eventIndex<6&&eventPeriod.equals(store.weeklyId()))start(1,2,eventIndex+1);
             else if(mode==4)openChallenge(friendCode);else goRoot("adventure");
         }));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_next";
-        objectAction(c,"↶ "+(mode==5?x("route"):vr("map")),area.map.left,area.map.top,area.map.width(),area.map.height(),SweetUi.MINT,()->leaveVictory(()->goRoot(mode==5?"expedition":"adventure")));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_map";
-        objectAction(c,vr("shop")+"  →",area.shop.left,area.shop.top,area.shop.width(),area.shop.height(),SweetUi.LILAC,()->leaveVictory(()->goRoot("shop")));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_shop";
+        victoryButton120(c,area.map,(mode==5?x("route"):vr("map")),0xffeee7f7,"victory_map",()->leaveVictory(()->goRoot(mode==5?"expedition":"adventure")));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_map";
+        victoryButton120(c,area.shop,vr("shop")+"  →",0xffe7d6f7,"victory_shop",()->leaveVictory(()->goRoot("shop")));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_shop";
     }
     private void drawHelp(Canvas c){
         if(board!=null&&moveBudget!=null&&moveBudget.policyVersion()==MoveBudget.FOCUSED_RELAY_POLICY_VERSION){
@@ -3065,6 +3073,9 @@ public final class LumaView extends View {
             Board target=null;float left=bx,up=by,width=board==null?300:cell*board.level.size;
             if(sceneConfirmAction==null&&!localSaveBlocked&&screen.equals("play")&&!paused&&!help&&!won&&powerConfirmation.isEmpty()&&!deadEndOpen&&!powerTrayOpen&&!outOfMoves()&&pendingAction<0)target=board;
             else if(sceneConfirmAction==null&&!localSaveBlocked&&screen.equals("tutorial")&&!tutorial.complete()){target=tutorial.board();left=tutorialBoardLeft;up=tutorialBoardTop;width=tutorialBoardWidth;}
+            // The fixed wallet owns this visible band even if a short window
+            // scrolls a board cell behind it. Never begin a hidden-piece swipe.
+            if(screen.equals("play")&&y<42)target=null;
             if(target!=null){float yy=y+contentScroll,unit=width/target.level.size;
                 if(x>=left&&x<left+width&&yy>=up&&yy<up+width)for(Tile tile:target.remainingTiles())if(tile.row==(int)((yy-up)/unit)&&tile.col==(int)((x-left)/unit)){gesturePiece=tile.id;selected=tile.id;if(target.level.progressionVersion==6)actionPreview=target.previewAction(tile.id);break;}
             }

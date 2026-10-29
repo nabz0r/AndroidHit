@@ -32,6 +32,10 @@ public final class V120MenuStrings {
             case "wallet_unknown":row=new String[]{"Balance unavailable","Solde indisponible","Guthaben nicht verfügbar","Saldo no disponible","Saldo indisponível","Saldo non disponibile"};break;
             case "shop_powers":row=new String[]{"Little boosts","Petits coups de pouce","Kleine Helfer","Pequeñas ayudas","Pequenas ajudas","Piccoli aiuti"};break;
             case "shop_looks":row=new String[]{"Looks & friends","Looks et amis","Looks und Freunde","Estilos y amigos","Visuais e amigos","Look e amici"};break;
+            case "shop_tab_powers":row=new String[]{"Boosts","Bonus","Bonus","Bonus","Bónus","Bonus"};break;
+            case "shop_tab_looks":row=new String[]{"Looks","Looks","Looks","Looks","Visuais","Look"};break;
+            case "shop_tab_gold":row=new String[]{"Gold","Gold","Gold","Gold","Gold","Gold"};break;
+            case "shop_arrivals":row=new String[]{"Companion arrivals","Arrivées compagnons","Begleiter entdecken","Llegan compañeros","Chegam companheiros","Arrivi compagni"};break;
             case "shop_feature":row=new String[]{"Find your next favourite","Trouve ton prochain coup de cœur","Finde deinen nächsten Liebling","Encuentra tu próximo favorito","Encontra o teu próximo favorito","Trova il tuo prossimo preferito"};break;
             case "shop_free":row=new String[]{"Earn gifts by playing","Des cadeaux en jouant","Geschenke durchs Spielen","Regalos por jugar","Presentes a jogar","Regali giocando"};break;
             case "view":row=new String[]{"Take a look","Découvrir","Ansehen","Descubrir","Descobrir","Scopri"};break;

@@ -1,0 +1,17 @@
+# Separate Lab native observer
+
+Derived from the production1.20 observer. Targets only com.androidhit.lumadrift.sandbox, with its own observer ID and evidence namespace. The production package and its earned profile are never written or replaced. No device command is authorized until the native owner hands over the task AVD. The built-in Lab500 test Gold and local refill are deliberately test-only; no external login, ads, billing, real funds, preference writes, clock edits or injected progress. Same immutable device receipt, exact APK/signature/version checks and read-only preference observations.
+
+## Prepared candidate F purchase scenario
+
+Status: prepared; native execution belongs to the device owner. The two JSON programs use existing SDK observer operations only. The separate F-restart observer normalizes the decorative ↻ glyph before matching the exact Restart/Recommencer action and its explicit one-energy confirmation. This corrects an observer label assumption; it does not change the game or erase the original failed production-observer report.
+
+- Lab app: `1.20.0-sandbox-rc1`, code28, SHA256 `7c8ccfde3a0050b35b0312a61e2cb07973c594629bbf97493ec8bbe2829410cf`.
+- Observer: `/tmp/luma-v120/lab-observer-f-restart/battle-observer.apk`, SHA256 `6f547e85e4992a641f6c99e53903b90175640b8217bf98fe091801ae56c3eb56`.
+- First phase: `scenarios/f-paid-energy-first-install.json` (42 explicit operations). Requires the separate Lab app to be absent and uses `--first-install --fresh` on the task-owned AVD. Completes the introduction through real exits, checks French and English, earns ten first clears, and verifies 730 earned Coins. Starts U11, drains energy by actual confirmed restarts, opens the energy HUD control, reads the disclosed price, then confirms **Oui** for 10 energy costing 50 **test** Gold. The actual purchase journal must show balance450, stock0, an empty outbox, and unchanged Coins730.
+- The first phase then starts one new eligible U11 attempt through the map and checks energy9. This deliberate spend makes a cold-start credit duplication detectable instead of hiding it at the10-point cap.
+- Second phase: `scenarios/f-paid-energy-cold.json` (20 operations). Invoke a separate runner execution without first-install or update flags, preserving the Lab profile. Checks energy9, balance450, stock0, empty outbox and Coins730 after process recreation, then reads the French energy page and English menu. Compare the first phase's `lab-one-eligible-attempt-after-credit-before-cold.json` with the second phase's initial snapshot for the exact saved run identity and receipt/journal maps. No second purchase is requested.
+
+The account prefix is `account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_`, derived from SHA256 of the explicit Lab UID `luma-energy-premium-test-v120`. Assertions read preferences only. Snapshots include `luma_energy_purchases_v120` and `luma_session_energy_v120` so the native owner can also compare actual spend, use and energy receipt keys.
+
+Run the cold phase promptly: its exact energy9 expectation assumes less than ten real minutes since the paid refill. If a real refill interval elapses, preserve the failed expectation and explain the elapsed-time boundary; do not alter the clock or stored energy. Each invocation needs a distinct evidence label. The runner preserves both accepted and failed evidence and never clears the target app. The native owner alone schedules these runs after completing the production profile qualification.

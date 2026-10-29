@@ -1,0 +1,417 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-29T21:04:07.448041+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "preflight-fr-new-u31",
+  "expected_version": "1.20.0-rc1",
+  "expected_code": 28,
+  "apk_sha256": "e3da44fd2f6f60aa1c2a60fc5f3c1a7e9457e5d35833f04c95a7ea5c80561350",
+  "observer_sha256": "ac37a3950093cbf455990c1eef866b2f1ab61bef07a51091e22dc13fc474b814",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "43b11a38-865d-4aaa-87ab-cfc3f8b58843",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "e3da44fd2f6f60aa1c2a60fc5f3c1a7e9457e5d35833f04c95a7ea5c80561350",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 60,
+    "path": "native-ui-recording.mp4",
+    "sha256": "115422bb2e3109359797a84f938501d72dc5cd84f7a32c5331b3585f087f72c8",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": true,
+    "phase": "preflight-fr-new-u31",
+    "runToken": "43b11a38-865d-4aaa-87ab-cfc3f8b58843",
+    "processId": 5267,
+    "checkCount": 35,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U40 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference budget_policy = 6"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 9"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible informational clock label"
+      },
+      {
+        "passed": true,
+        "message": "Clock has visible minutes and seconds"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible informational clock label"
+      },
+      {
+        "passed": true,
+        "message": "Clock has visible minutes and seconds"
+      },
+      {
+        "passed": true,
+        "message": "Real visible clock advance 1 seconds excludes paused wait"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Fast reaction gesture target is actually visible"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual ready durable victory receipt"
+      },
+      {
+        "passed": true,
+        "message": "Actual receipt stars = 3"
+      },
+      {
+        "passed": true,
+        "message": "Won session inactive only after real result"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged coins-after-win"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible semantic target victory_next"
+      }
+    ],
+    "touchCount": 15,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 805501,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          537
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 806075,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "shop_entry",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 808800,
+        "label": "Boutique",
+        "resourceId": "com.androidhit.lumadrift:id/shop_entry",
+        "bounds": [
+          559,
+          1430,
+          1013,
+          1729
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 811102,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "open-real-level-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 812022,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          66,
+          1784,
+          360,
+          1983
+        ]
+      },
+      {
+        "reason": "open-real-U31",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 812588,
+        "label": "Niveau 31, Normal, Portes",
+        "bounds": [
+          609,
+          1388,
+          819,
+          1607
+        ]
+      },
+      {
+        "reason": "start-real-U31",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 813189,
+        "label": "Jouer  →",
+        "resourceId": "com.androidhit.lumadrift:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "Pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 817130,
+        "label": "Pause",
+        "bounds": [
+          55,
+          283,
+          188,
+          416
+        ]
+      },
+      {
+        "reason": "Reprendre",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 822481,
+        "label": "Reprendre",
+        "bounds": [
+          121,
+          1182,
+          958,
+          1318
+        ]
+      },
+      {
+        "reason": "real-piece-2-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 825767,
+        "label": "Pièce, ligne 3, colonne 2, flèche : bas, Porte ouverte",
+        "bounds": [
+          320,
+          1442,
+          466,
+          1588
+        ]
+      },
+      {
+        "reason": "real-piece-1-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 826883,
+        "label": "Pièce, ligne 2, colonne 4, flèche : haut, Porte ouverte, Interrupteur: haut",
+        "bounds": [
+          613,
+          1296,
+          759,
+          1442
+        ]
+      },
+      {
+        "reason": "real-piece-2-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 827556,
+        "label": "Pièce, ligne 3, colonne 3, flèche : gauche, Porte ouverte",
+        "bounds": [
+          466,
+          1442,
+          613,
+          1588
+        ]
+      },
+      {
+        "reason": "real-piece-0-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 828547,
+        "label": "Pièce, ligne 1, colonne 1, flèche : gauche, Porte ouverte",
+        "bounds": [
+          174,
+          1149,
+          320,
+          1296
+        ]
+      },
+      {
+        "reason": "real-piece-4-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 829257,
+        "label": "Pièce, ligne 5, colonne 5, flèche : droite, Porte ouverte, Interrupteur: haut",
+        "bounds": [
+          759,
+          1734,
+          905,
+          1880
+        ]
+      },
+      {
+        "reason": "fast-real-piece-0-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 830005,
+        "label": "Pièce, ligne 1, colonne 3, flèche : haut, Porte ouverte",
+        "bounds": [
+          466,
+          1149,
+          613,
+          1296
+        ]
+      }
+    ],
+    "captures": [
+      "fr-home-final",
+      "fr-shop-final",
+      "fr-new-u31-hud-clock",
+      "fr-real-pause",
+      "fr-real-resume-clock",
+      "fr-real-cheer-three",
+      "fr-real-dance-six",
+      "fr-victory-final"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 64.604,
+  "evidence_sha256": {
+    "battle-observer.apk": "ac37a3950093cbf455990c1eef866b2f1ab61bef07a51091e22dc13fc474b814",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "c133c2eebc40250cee437862a3ecb9ec846a758bde83ddb6ad061169d1869a86",
+    "native/after.json": "3fdf9ef8d5a809b8a0836a808e324dedd5db0b2454e77dd278acd039e868b48d",
+    "native/before.json": "050007a71cc3a95207d3fb681324b96d7b8a71518c3533d396f82b17213184c3",
+    "native/fr-home-final-accessibility.json": "372424499cb4f42bb32464fa06c10eb689bbbee56396c0705fc92c707fe44a82",
+    "native/fr-home-final.png": "e67494fdb8268b028d4369016a42faa7128d0d3c7e291570b02d1b034e2800a7",
+    "native/fr-new-u31-hud-clock-accessibility.json": "9b741a37c1ea85755902a8b88954de5e37968ee0ea9df5a0138929e6d44bf7b5",
+    "native/fr-new-u31-hud-clock.png": "066e582f5d5021f4557d1978ab4796fdc1f9bdf8360b79cb751cda6b87e71911",
+    "native/fr-real-cheer-three-accessibility.json": "b30071e6f6ed4d9f184f340ce05a3c4498717dab723eba0de519a324bb34514a",
+    "native/fr-real-cheer-three.png": "63e00454d1f8a76b0abdb90dabe20fdde40cd3af374af232f5a17193ffca5fb8",
+    "native/fr-real-dance-six-accessibility.json": "37701cb3d7ded0769b27db3303e3014dbad6977c5755e15b73d4ccda5077e19c",
+    "native/fr-real-dance-six.png": "cc27818b8f20377423270717ac43ccd7bf4277d4eb1c3b6dcf4c8d2d631754df",
+    "native/fr-real-pause-accessibility.json": "2a2663e2f7d2be8e120ca32d98f542bf7467325b252b4c66a290eba3468bc3c3",
+    "native/fr-real-pause.png": "ddd9bae226a4866fb02cff9e140c2a9c20b015a12a4954b27f253be983a649ac",
+    "native/fr-real-resume-clock-accessibility.json": "6bbf4f4380a088a49fa115a27f412fe3f24c1336802c2f8b1e5867cf29729bbe",
+    "native/fr-real-resume-clock.png": "f96791e5873f157bbd345f24cf495b3349acd740d3d3d89e365256397f302aa2",
+    "native/fr-shop-final-accessibility.json": "343a8110e3f04ffb840bdd39e563271e0ef048e3d27f3fb44293d2da13cf0c08",
+    "native/fr-shop-final.png": "2217bd223dd0d4497e73daa71e87b560bb3ccaf3168d1b6dc262aee363ac74fd",
+    "native/fr-victory-final-accessibility.json": "37701cb3d7ded0769b27db3303e3014dbad6977c5755e15b73d4ccda5077e19c",
+    "native/fr-victory-final.png": "faa9475c9dedaefad80843bea1a1db41f025beeae0a1a724a4edda28913ae373",
+    "native/report.json": "3605e2b5dc856960e9e3aae0192e10f19734b34a0dc10a7605d487274374ce3a",
+    "native/requested-steps.json": "360088e688ee23a801aefe16ec3b6a9be9e87592e862b939e8ac02912f61bb15",
+    "native/won-u31-before-cold.json": "3fdf9ef8d5a809b8a0836a808e324dedd5db0b2454e77dd278acd039e868b48d",
+    "native-ui-recording.mp4": "115422bb2e3109359797a84f938501d72dc5cd84f7a32c5331b3585f087f72c8",
+    "observer-install.txt": "919954321aa7fbeccaff68ad9c94d385c90eda5e8246908c6622806e09a3aa6b",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "3f34efe3825bfcbfe6300f3fe31ec316f978f507c319469cdf1bf8fb8d141ac2",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "9a598e05206dd932931141c77dee979db21d47fb9c41386a61f221dfb3b18156"
+  }
+}

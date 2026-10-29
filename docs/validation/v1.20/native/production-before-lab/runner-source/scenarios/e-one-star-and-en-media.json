@@ -1,0 +1,98 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 37
+  },
+  {
+    "op": "certificate-step",
+    "level": 37,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "↶.*Annuler|Annuler"
+  },
+  {
+    "op": "certificate-step",
+    "level": 37,
+    "index": 0
+  },
+  {
+    "op": "tap",
+    "regex": "↶.*Annuler|Annuler"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "value": "2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "undos",
+    "value": "2"
+  },
+  {
+    "op": "solve",
+    "level": 37
+  },
+  {
+    "op": "assert-victory",
+    "stars": 1
+  },
+  {
+    "op": "capture",
+    "name": "fr-real-one-star-victory"
+  },
+  {
+    "op": "snapshot",
+    "name": "one-star-real-receipt"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "en-home-final"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_entry"
+  },
+  {
+    "op": "capture",
+    "name": "en-shop-final"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 38
+  },
+  {
+    "op": "solve",
+    "level": 38
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3
+  },
+  {
+    "op": "capture",
+    "name": "en-victory-final"
+  },
+  {
+    "op": "snapshot",
+    "name": "english-new-earned-victory"
+  }
+]
