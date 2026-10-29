@@ -1,6 +1,6 @@
 # Luma Drift 1.17 qualification register
 
-**Current candidate: H, production1.17.0-rc6 / isolated Lab1.17.0-sandbox-rc6, code24.** Native acceptance is in progress. Canonical H packages, Git main and Firebase delivery require their own completed exact-byte records.
+**Current candidate: H, production1.17.0-rc6 / isolated Lab1.17.0-sandbox-rc6, code24.** Exact native acceptance and canonical integrity pass. [Independent final token/hash index](acceptance-h.json). Git main and Firebase delivery have their own exact-byte records.
 
 Production APK: **71,827,197bytes**, SHA-256 `15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47`. [162-input freeze](candidate-h/source-freeze.json), source `bb622960f52e5ba41e75a6dfa8b30dbb4b98a291`. H preserves159 G inputs and adds one live geometry helper; engine/audio/art are unchanged. [Build, delta and four-package audit](candidate-h/README.md).
 
@@ -16,10 +16,20 @@ Production APK: **71,827,197bytes**, SHA-256 `15546854a856ecc5052aa79acdd4972443
 | Same physical clone G→H update and cold process | PASS625checks /20PNGs;7Gbaseline +618H; not a second migration qualification | [Clone5592](native-interface/candidate-h-upgrade/host-report.json) |
 | Installed digital sound, all five contexts including an actual untouched U1 board | PASS50checks /10PNGs; independent switches, HOME/resume, complete protected-state restoration | [CleanH-b](audio/native/candidate-h-main-audio-b/host-report.json), [preparation summary](relay/main-h-preparation-summary.json) |
 | Mode HUD/help/pause, three Guardian returns, full actions after actual scroll and real P1 win | PASS normal150checks/44PNGs + actual320dp/font1.3 154checks/44PNGs;304/88 total | [Strictv2 acceptance](native-interface/candidate-h-modes-v2-acceptance.json) |
-| All1,000 U boards through actual Android touches | Pending final exact H completed report and independent aggregate | [Live handoff](relay/active-handoff.json) |
+| All1,000 U boards through actual Android touches | PASS 49688checks /12017actual gestures /114original PNGs; zero repeated coins/XP and complete protected-state equality | [Independent full relay](relay/summary.json) |
 | Fresh first install, genuine first wins/local draws/equipment/cold | PASS133checks/105touches/49PNGs; Buzz/Aurora, seven slots,440 earned victory coins;280 after real draws | [FreshH](fresh-h/summary-h.json), [scope/shutdown](fresh-h/README.md) |
 | Six-language primary browsing/catalogues/five outfit previews, normal | PASS277checks/177PNGs,16 full-size FR/EN website originals indexed | [Actual normal route](native-interface/candidate-h-sixlangs-normal/host-report.json), [site map](../site-v1.17/capture-map.json) |
-| Compact primary/secondary UI, owned looks, native render gallery, transitions, cached home | Remaining exact H reports and direct visual review running | [Controller/evidence folders](native-interface/) |
+| sixlangs-compact | PASS 277checks /177original PNGs | [Report](native-interface/candidate-h-sixlangs-compact/host-report.json) |
+| root-compact | PASS 286checks /8original PNGs | [Report](native-interface/candidate-h-root-compact/host-report.json) |
+| root-compact-font13 | PASS 286checks /8original PNGs | [Report](native-interface/candidate-h-root-compact-font13/host-report.json) |
+| language-compact | PASS 20checks /2original PNGs | [Report](native-interface/candidate-h-language-compact/host-report.json) |
+| owned-rigs | PASS 79checks /27original PNGs | [Report](native-interface/candidate-h-owned-rigs/host-report.json) |
+| art-gallery | PASS 144composites /24garments /24styles /50isolated render sheets | [Report](art/native/candidate-h-art-gallery/host-report.json) |
+| transitions | PASS 24checks /1original PNGs | [Report](native-interface/candidate-h-transitions/host-report.json) |
+| performance | PASS 20checks /2original PNGs | [Report](native-interface/candidate-h-performance/host-report.json) |
+| secondary-compact | PASS 546checks /885original PNGs | [Report](native-interface/candidate-h-secondary-compact/host-report.json) |
+| secondary-normal | PASS 206checks /220original PNGs | [Report](native-interface/candidate-h-secondary-normal/host-report.json) |
+| final-baseline | PASS 7checks /0original PNGs | [Report](native-interface/candidate-h-final-baseline/host-report.json) |
 
 H clean audio is distinct from an observer-label failure and a separate11check/2PNG recovery. The clean result matches both its own initial snapshot and the original pre-failure snapshot across complete game/meta/non-active-session state. Recovery counts are not added. Native track counters establish digital execution; they do not establish physical-speaker quality or real external audio-focus competition.
 

@@ -74,7 +74,8 @@ def finish_device(args,launch,result,report,summary,frozen,folder,update):
     installed=call('shell','pm','path','com.androidhit.lumadrift').decode().splitlines();assert len(installed)==1 and installed[0].startswith('package:/data/app/')
     with tempfile.TemporaryDirectory(prefix='luma117-final-before-stop-') as temp:
         apk=Path(temp)/'installed.apk';call('pull',installed[0][8:],str(apk));assert sha(apk)==launch['apk_sha256']
-    assert not call('shell','pm','path','com.androidhit.lumadrift.relaytest.v117').strip(),'Do not remove an unexpected observer'
+    observer_query=subprocess.run([adb,'-s','emulator-5586','shell','pm','path','com.androidhit.lumadrift.relaytest.v117'],capture_output=True,timeout=30)
+    assert observer_query.returncode in (0,1) and not observer_query.stdout.strip(),'Do not remove an unexpected observer; Android returns1 for an absent package'
     ini=Path.home()/'.android/avd/Luma-Refonte115-QA.ini';settings=dict(row.split('=',1) for row in ini.read_text().splitlines() if '=' in row);userdata=Path(settings['path']);assert userdata.is_dir()
     (folder/(launch['label']+'-normal-stop.txt')).write_bytes(call('emu','kill'))
     deadline=time.monotonic()+60

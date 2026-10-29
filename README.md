@@ -1,8 +1,8 @@
 <h1 align="center">Luma Drift</h1>
 <p align="center"><strong>A world at your fingertips.</strong><br>A tactile puzzle Journey and an illustrated home for your companion.</p>
-<p align="center"><strong>1.17.0-rc6 · original sprites, places to touch and a living soundscape</strong><br><a href="docs/RELEASE_1_17.md">Release status</a> · <a href="docs/validation/v1.17/README.md">Evidence & pending acceptance</a> · <a href="docs/design/v1.17/reference-research.md">Primary-source design research</a></p>
+<p align="center"><strong>1.17.0-rc6 · original sprites, places to touch and a living soundscape</strong><br><a href="docs/RELEASE_1_17.md">Release status</a> · <a href="docs/validation/v1.17/README.md">Executed evidence</a> · <a href="docs/design/v1.17/reference-research.md">Primary-source design research</a></p>
 
-**Current status: H (1.17.0-rc6 / code 24) is under native qualification after fixing the Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
+**Current status: H (1.17.0-rc6 / code 24) passes exact native acceptance. The four canonical signed packages match the frozen audited bytes. Git main and Firebase publication are being verified separately. Earlier candidates retain their original historical results.**
 
 Four separate places—Adventure, Home, Collection and Workshop—use illustrated scenery and touchable objects in place of visible button rows, pills and a navigation bar. Optional swipes connect the places; named object targets keep navigation discoverable. Short scene fades respect reduced motion. Deeper menus retain clear costs, ownership, confirmations and accessible actions.
 
@@ -13,6 +13,12 @@ Five sound contexts × ten biomes provide **50 synthesized arrangements**: the t
 The U1–U1000 puzzle rules, earned-coin economy and existing save identities are retained. Companion arrivals still contain 23 possible companions for 180 earned coins; the outfit pool contains five complete looks for 260. Odds and duplicate returns are shown before spending. Test ads, closed real checkout and disabled paid premium draws remain. Google sign-in does not synchronize the local house, profile or game save.
 
 The [release table](docs/RELEASE_1_17.md) records the audited H bytes and source freeze. H fixes a reproduced Guardian return loop, legacy puzzle gates covering their budget/help, and misnamed event previews. Shared geometry gives gates and captions separate space, keeps the board useful on short screens and scrolls complete object actions into view. The [source review](docs/validation/v1.17/review/source-candidate-h-preflight.json), native route/visual reports and [website publication register](docs/validation/site-v1.17/README.md) keep their distinct scopes. [Build and contracts](docs/DEVELOPMENT.md) · [Installation and activation boundaries](docs/PRODUCTION_RELEASE.md).
+
+**U1–U1000 pass on this exact production APK: 49,688 native checks, 12,017 actual touch gestures and 10,974 certified piece exits.** This retained profile already owned all stars; replay adds zero coins, XP or mission credit. Complete game/meta and non-active-session state remain byte-identical. A separate genuine new install covers U1–U8 first wins, onboarding, actual Buzz/Aurora acquisition and cold persistence.
+
+**[Signed 1.17 production APK](releases/luma-drift-1.17.0-rc6.apk)** · [AAB](releases/luma-drift-1.17.0-rc6.aab) · [Manifest](releases/manifest-1.17.0-rc6.json) · [Separate Lab APK](releases/luma-drift-1.17.0-sandbox-rc6.apk). Install production over the existing same-signed application and retain its data.
+
+<p align="center"><img src="docs/screenshots/v1.17/native-interface/candidate-h-sixlangs-normal/browse/home-fr.png" width="230" alt="Actual H furnished home with original detailed furniture"><img src="docs/screenshots/v1.17/native-interface/candidate-h-sixlangs-normal/browse/collection-fr.png" width="230" alt="Actual H equipped companion in the illustrated Collection"><img src="docs/screenshots/v1.17/native-interface/candidate-h-sixlangs-normal/browse/atelier-fr.png" width="230" alt="Actual H workshop navigated through illustrated objects"></p>
 
 ## Preserved 1.16 delivery
 

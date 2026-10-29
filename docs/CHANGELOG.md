@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.17.0-rc6 / code24 — illustrated places and object navigation (under qualification)
+## 1.17.0-rc6 / code24 — illustrated places and object navigation (native accepted)
 
-29 October 2026. [Release status](RELEASE_1_17.md) · [Current evidence and pending work](validation/v1.17/README.md).
+29 October 2026. [Release status](RELEASE_1_17.md) · [Executed evidence](validation/v1.17/README.md).
 
 - Replace visible game button rows, pills and navigation bar with four full-scene destinations, original interactive props, free captions, dials and optional root swipes. Preserve semantic/keyboard access and explicit confirmation meanings.
 - Add original bundled sprite art for all 24 companions, 24 garments and 42 furnishings, three illustrated places and new room materials. Align clothing through companion anatomy and shared portrait transforms; retain ownership, prices, saved layouts and free styles.
@@ -10,7 +10,7 @@
 - Add forty place-specific synthesized arrangements to the ten historical puzzle themes, plus scene/fabric/reveal earcons. Keep old PCM, separate music/effects switches and worker request coalescing.
 - Fix the reproduced Guardian Back/list history cycle while preserving refused-save blocking. Correct Daily/Weekly preview identities and keep puzzle budgets, gates, copy and action targets in independent reading/touch bands.
 - Share the real PlaySceneLayout between drawing and hit registration; measure font height before scroll clamping, keep a safe board width, provide three compact object/caption columns, and anchor puzzle overlays after scrolling.
-- Prepare FR/EN Firebase delivery from sixteen exact final native frames and four app-DSP previews. Canonical delivery requires exact1,000 replay, screen/art/audio/new-install acceptance, clean-commit publication and public-byte verification.
+- Qualify the exact production APK through U1–U1000 retained Android replay, screen/owned-outfit/art/audio routes and genuine new-install U1–U8 acquisition/cold persistence. Preserve all four audited packages unchanged. Prepare sixteen exact H native FR/EN frames and four app-DSP previews for separately verified publication.
 
 H source is frozen across162 inputs; four-package build/lint and independent verification pass. The complete24-command sparse rehearsal passes from163 files, including379634 play-geometry assertions over3400 layouts and202444 root assertions over420 layouts. Earlier candidates keep original scoped outcomes: F's Guardian defect caused its replay to stop at817 certified levels; G's legacy HUD overlap caused its replay to stop at101. Neither is a completed1,000 run. H's exact installed and public records remain in the [qualification register](validation/v1.17/README.md).
 

@@ -1,8 +1,8 @@
 # Production candidate and activation boundary
 
-## 1.17 — final candidate qualification in progress
+## 1.17 — native accepted, exact-byte publication
 
-Production is **1.17.0-rc6 / code24**, with isolated **1.17.0-sandbox-rc6**. H passes the [four-package binary audit](validation/v1.17/candidate-h/binaries/binary-final-candidate.json), release lint and the complete24-command sparse host workflow. Its installed/native and public-delivery results remain separate in the [release register](RELEASE_1_17.md) and [qualification index](validation/v1.17/README.md).
+Production is **1.17.0-rc6 / code24**, with isolated **1.17.0-sandbox-rc6**. H passes the [four-package binary audit](validation/v1.17/candidate-h/binaries/binary-final-candidate.json), release lint and the complete24-command sparse host workflow. Its installed native acceptance passes; public-delivery results remain separate in the [release register](RELEASE_1_17.md) and [qualification index](validation/v1.17/README.md).
 
 Test ads remain forced; real checkout, paid premium draws and an unconfigured wallet API stay closed. The local player nickname/flag/badges, save, house and earned LumaCoins are not cloud synchronized. The new bundled artwork/synthesized audio adds no asset download or tracking service. No Play upload, provider activation or real payment is performed by this delivery.
 

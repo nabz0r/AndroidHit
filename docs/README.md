@@ -1,10 +1,10 @@
 # Luma Drift documentation
 
-**Current status: H (1.17.0-rc6 / code 24) is under native qualification after fixing the Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
+**Current status: H (1.17.0-rc6 / code 24) passes exact native acceptance. The four canonical signed packages match the frozen audited bytes. Git main and Firebase publication are being verified separately. Earlier candidates retain their original historical results.**
 
-## 1.17 — original art and object navigation, final qualification in progress
+## 1.17 — original art and object navigation, accepted H
 
-[Release status](RELEASE_1_17.md) · [Qualification register](validation/v1.17/README.md) · [Primary-source research](design/v1.17/reference-research.md) · [Navigation contract](design/v1.17/navigation-spec.md) · [Website staging](validation/site-v1.17/README.md).
+[Release status](RELEASE_1_17.md) · [Qualification register](validation/v1.17/README.md) · [Primary-source research](design/v1.17/reference-research.md) · [Navigation contract](design/v1.17/navigation-spec.md) · [Website delivery register](validation/site-v1.17/README.md).
 
 Four separate illustrated places replace visible button rows and the old navigation bar with named scene objects and optional swipes. Original bundled raster art covers 24 companions, 24 garments and 42 furnishings; the existing three-room home, local player card, earned badges, outfits and purchase receipts remain. The synthesizer now supplies five contexts across ten biomes: ten retained puzzle arrangements and forty new place arrangements.
 

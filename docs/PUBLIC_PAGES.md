@@ -2,13 +2,12 @@
 
 ## Current 1.17 website qualification
 
-The FR/EN replacement indexes sixteen exact H native captures and
-four app-synthesizer WAV excerpts. The preserved unpublished F browser preview passes
-at widths320/375/768/1280 with gallery localization, deliberate audio,
-keyboard focus and no horizontal overflow. Final canonical bytes, full native
-1,000 replay, offline audit, clean-commit Hosting deployment and independent
-public-byte/browser results have separate gates in the [website register](validation/site-v1.17/README.md).
-No preview is presented as public delivery.
+The FR/EN replacement indexes sixteen exact H native captures and four
+app-synthesizer WAV excerpts. H native acceptance and all four canonical
+signed packages pass, including the complete retained U1–U1000 replay.
+Offline audit, clean-commit Hosting deployment and independent public-byte/browser
+results have separate receipts in the [website register](validation/site-v1.17/README.md).
+The preserved F localhost review remains historical preview evidence.
 
 The existing privacy/deletion HTML, account modules, public configuration,
 Firebase setup and provider gates retain their audited bytes. The local

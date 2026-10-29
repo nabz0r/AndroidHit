@@ -1,15 +1,16 @@
 # Installation and release artifacts
 
-**Current status: H (1.17.0-rc6 / code 24) is under native qualification after fixing the Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
+**Current status: H (1.17.0-rc6 / code 24) passes exact native acceptance. The four canonical signed packages match the frozen audited bytes. Git main and Firebase publication are being verified separately. Earlier candidates retain their original historical results.**
 
-## 1.17 installation status — awaiting final qualification
+## 1.17 installation — accepted H / code24
 
-Production is `1.17.0-rc4`, code22, package `com.androidhit.lumadrift`; Lab uses `com.androidhit.lumadrift.sandbox`. Frozen candidate F corrects compact scene composition through shared responsive geometry. Its four outputs pass the [independent binary audit](validation/v1.17/candidate-f/binaries/binary-final-candidate.json); retained upgrade/cold, fresh-player flow, primary six-language normal/compact browsing, owned outfits and installed digital audio pass. Remaining secondary routes and actual1,000replay precede canonical delivery. [Current release register](RELEASE_1_17.md) · [Evidence](validation/v1.17/README.md).
+Install the signed [production APK](../releases/luma-drift-1.17.0-rc6.apk), package `com.androidhit.lumadrift`, over the existing same-signed application and retain its data. The [Lab APK](../releases/luma-drift-1.17.0-sandbox-rc6.apk) uses a separate package/profile. Android8/API26+ remains configured. Existing active puzzles retain their original rules and action ledger.
 
-When the exact signed final APK is accepted, install production as an update with the existing signing identity and retain application data to preserve local progress, house, wardrobe and player card. Lab has its own profile. Android 8/API26+ remains the configured minimum. An existing saved puzzle retains its original rules; appearance changes do not migrate its action ledger.
+[Production AAB](../releases/luma-drift-1.17.0-rc6.aab) · [Production manifest](../releases/manifest-1.17.0-rc6.json) · [Lab AAB](../releases/luma-drift-1.17.0-sandbox-rc6.aab) · [Lab manifest](../releases/manifest-1.17.0-sandbox-rc6.json) · [Four exact sizes/hashes and measured limits](RELEASE_1_17.md).
 
-The release register already records all four audited output sizes and SHA-256 values, binary evidence, and the inspected F visual scope with58actual UI frames and a separate50-sheet native gallery. Canonical manifests, remaining secondary routes and full installed U1–U1000replay remain required before final acceptance. Git publication and Firebase Hosting have separate receipts. Test ads remain forced, real checkout and paid premium draws remain closed, and Google identity does not synchronize the local save.
-<!-- FINAL_117: INSTALL_DOWNLOADS — add links only after final canonical APK/AAB/manifests and independent integrity checks pass. -->
+The exact APK passes retained U1–U1000 Android replay, strict normal/320dp-font1.3 play actions, six-language primary screens, six-language compact secondary screens and normal EN/FR, owned equipment, fresh U1–U8/real draws/cold persistence and five-context digital audio. The isolated144-composite gallery is separate from application ownership. [Independent evidence index](validation/v1.17/acceptance-h.json).
+
+Git/public download and Hosting results have separate receipts. Test ads remain forced; real checkout and paid premium draws remain closed. Google identity does not synchronize local progress, wardrobe, house or player card.
 
 ## Preserved 1.15 installation
 

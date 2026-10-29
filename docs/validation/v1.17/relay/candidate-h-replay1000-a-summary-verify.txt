@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "candidate_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "fixture_manifest_sha256": "1a7155deace55682adf85972bee71279c58d3643367306976a1ef9eac823eea8",
+  "levels": 1000,
+  "actual_certificate_exits": 10974,
+  "extra_probe_exits": 2,
+  "native_checks": 49688,
+  "actual_touch_gestures": 12017,
+  "native_original_pngs": 114,
+  "new_first_win_coins": 0,
+  "protected_schema": "full-game-meta-session-v1",
+  "meta_xp_retained": 35000,
+  "new_meta_xp": 0,
+  "reports": [
+    {
+      "path": "docs/validation/v1.17/relay/candidate-h-replay1000-a/host-report.json",
+      "sha256": "13e6da18f726a67f32e5839bb96530996bde3c8c6038df2c504dffcd1c527976",
+      "observer_apk_sha256": "85c5d5b0e3f832d96265ba0d24eb9071183f6218bf7d420ab835a08458f64911",
+      "runner_sha256": "e6e19f2d69ad5f9f072962719b5040a5db10d1fbf51f38dfa108c96333785fc1",
+      "completed": 1000,
+      "wall_seconds": 4045.149,
+      "timing": {
+        "observed_levels": 1000,
+        "observed_loop_ms": 3471007,
+        "observed_certificate_exits": 10974,
+        "note": "Observed Android emulator replay duration with checks/captures. No unplayed level is counted; not a human difficulty, audio quality or physical-phone performance measurement."
+      }
+    }
+  ],
+  "scope": "Every U1-U1000 replayed through actual Android SDK touchscreen input and real Next objects on the exact explicitly identified signed production 1.17 APK. The existing task QA profile had already earned all stars. Zero duplicate first-win coins and XP, byte-identical complete game/meta and non-active-puzzle session records, and restored language are required. Certificates are host-frozen guidance; native action histories and gate states are observed. No app/engine hooks or state injection. Representative original screenshots supplement all-board target observations. This does not measure human enjoyment, audio quality or real-phone performance."
+}

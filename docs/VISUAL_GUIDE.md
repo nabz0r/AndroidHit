@@ -2,7 +2,7 @@
 
 # Luma Drift — illustrated tour
 
-## Current 1.10: companion, objectives and journal
+## Preserved 1.10: companion, objectives and journal
 
 The signed candidate is production 1.10.0-rc3 / Lab 1.10.0-sandbox-rc3, code 11. [Illustrated UX contract](UX_1_10.md) · [Release](RELEASE_1_10.md) · [Original capture provenance](validation/site-v1.10/captures.json).
 

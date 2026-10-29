@@ -1,14 +1,14 @@
 # Luma Drift 1.17 website delivery register
 
-**Current status: H (1.17.0-rc6 / code 24) is under native qualification after closing the reproduced Guardian Back loop and legacy puzzle HUD overlap. Earlier candidate evidence remains historical. Final native H acceptance, canonical packages, Git main and Firebase publication are pending.**
+**Current status: H (1.17.0-rc6 / code 24) passes exact native acceptance. The four canonical signed packages match the frozen audited bytes. Git main and Firebase publication are being verified separately. Earlier candidates retain their original historical results.**
 
-**Status: F preview accepted locally; final publication pending.** The existing
+**Status: exact H native acceptance and canonical packages pass; publication is being verified.** The existing
 Firebase Hosting site is `luma-drift-production.web.app`. Its public entry page
-still serves 1.16 until the final H native replay/canonical-package gates pass.
+still serves 1.16 until the separately recorded H deployment completes.
 This directory keeps preview, offline audit, deployment and public-browser
 results separate.
 
-The current [H capture map](capture-map.json) now contains16 actual FR/EN originals from the passed277check/177PNG normal6-language route. [Independent index/hash validation](capture-map-h-validation.json) and [native report](../v1.17/native-interface/candidate-h-sixlangs-normal/host-report.json) identify the exact H APK and fresh execution token. Public-copy preparation, final replay acceptance and deployment remain pending. F’s map is archived separately and does not supply H evidence.
+The current [H capture map](capture-map.json) now contains16 actual FR/EN originals from the passed277check/177PNG normal6-language route. [Independent index/hash validation](capture-map-h-validation.json) and [native report](../v1.17/native-interface/candidate-h-sixlangs-normal/host-report.json) identify the exact H APK and fresh execution token. Final native replay and canonical integrity now pass. Public preparation/deployment has separate receipts. F’s map is archived separately and does not supply H evidence.
 
 The FR/EN page presents the four illustrated places, 24 original companions,
 24 garments, 42 furnishings and 50 arrangements. It uses ordinary text links

@@ -2,7 +2,7 @@
 
 29 October 2026 · production **1.17.0-rc6**, isolated Lab **1.17.0-sandbox-rc6**, Android code **24**.
 
-**Frozen H is undergoing native acceptance.** The four signed packages and release lint pass. Final retained/new-install, screen, art, sound and all-level results must identify these exact bytes before canonical delivery, Git main and Firebase publication.
+**H passes exact native acceptance and canonical package integrity.** The signed [production APK](../releases/luma-drift-1.17.0-rc6.apk), [AAB](../releases/luma-drift-1.17.0-rc6.aab), [Lab APK](../releases/luma-drift-1.17.0-sandbox-rc6.apk) and [Lab AAB](../releases/luma-drift-1.17.0-sandbox-rc6.aab) match all four audited hashes below. Git main, public downloads and Firebase delivery have separate publication receipts.
 
 H closes two reproduced defects: Guardian exits no longer push the encounter back onto menu history; legacy puzzle gates no longer cover the move budget or instructions. Daily/Weekly previews now show their actual mode and stage. `PlaySceneLayout` supplies the live board, gates, reading bands and action targets. The board keeps its safe width in short windows, nominal gate/action targets retain48dp, real scrolling reveals the complete footer, and measured copy is followed by three compact object/caption columns or a fitting full power grid. Real scrolling reaches the last action; Help, Pause, powers and victory stay anchored to the visible window.
 
@@ -52,7 +52,9 @@ purchases, individual clothing capsules and twelve free styles remain.
 
 ## Acceptance and delivery
 
-Final native H qualification is running. The [qualification register](validation/v1.17/README.md) distinguishes every earlier candidate, rejected result and completed scope. F was deliberately stopped at817 certified replay levels and G at101; neither is a passed1,000-level run. Their original receipts remain immutable. H must complete its own actual U1–U1000 replay, with saved certificate histories, three stars and zero repeated first-win rewards.
+**U1–U1000 pass on this exact production APK: 49,688 native checks, 12,017 actual touch gestures and 10,974 certified piece exits.** This retained profile already owned all stars; replay adds zero coins, XP or mission credit. Complete game/meta and non-active-session state remain byte-identical. A separate genuine new install covers U1–U8 first wins, onboarding, actual Buzz/Aurora acquisition and cold persistence.
+
+The [independent final index](validation/v1.17/acceptance-h.json) verifies every accepted report token and original indexed image hash against H. Primary browsing covers six languages in both sizes; secondary browsing covers six compact languages and normal EN/FR. The [qualification register](validation/v1.17/README.md) keeps each count and scope separate. F stopped at817 certified levels and G at101; their failures and original receipts remain immutable.
 
 The source/clone/fresh test roles stay distinct. Retained5586 owns sound/replay; the same physical task clone5592 owns UI/art, authorized through creation→G→H receipts; a never-existing H AVD5590 owns first install and real first wins/draws. No progression, coins, possessions or histories are seeded. The clone is not a second migration qualification. Main/compact primary browsing covers six languages; secondary browsing has explicit six-compact and normal EN/FR scopes.
 
@@ -60,7 +62,7 @@ The pure-render gallery covers144 companion/look compositions,24 garments and24 
 
 ## Installation and measured limits
 
-After acceptance, install production over the existing same-signed production app and retain application data. Lab has a separate package/profile. Android8/API26+ remains configured; older active puzzles retain their actual original rules and action ledger.
+Install production over the existing same-signed production app and retain application data. Lab has a separate package/profile. Android8/API26+ remains configured; older active puzzles retain their actual original rules and action ledger.
 
 Music and effects are independent. Five contexts across ten biomes are tested as synthesized output; native lifecycle/track observations have their own records. Physical speaker listening, real external audio-focus competition, human comprehension/retention and real-phone performance are not established by emulator or host checks. SDK video capture does not certify60fps.
 

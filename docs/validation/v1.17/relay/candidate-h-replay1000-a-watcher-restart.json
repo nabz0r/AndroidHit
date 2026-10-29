@@ -1,0 +1,27 @@
+{
+  "reason": "Read-only Android absent pm path query returned exit1/empty; old check_output would incorrectly fail observer-absence check after full PASS. Correct only host watcher, do not interrupt native observer.",
+  "old_watcher_pid": 37014,
+  "native_pid_untouched": 36962,
+  "old_watcher_source_sha256": "98972a10d52badff3dba9e368a0b9dbb9e3a2651678e811fc347d80b74811ff9",
+  "old_watcher_source": "docs/validation/v1.17/relay/candidate-h-replay1000-a-watch-initial.py",
+  "old_console": "docs/validation/v1.17/relay/candidate-h-replay1000-a-watch-console.txt",
+  "stopped_unix": 1793255574.829222,
+  "native_report_not_yet_exists": true,
+  "summary_not_yet_exists": true,
+  "new_watcher_pid": 39704,
+  "new_watcher_source_sha256": "b7e4891128de9e9c76d207da5510e4975d2317c4953ab8b5a5dd4efaa491826a",
+  "new_console": "docs/validation/v1.17/relay/candidate-h-replay1000-a-watch-v2-console.txt",
+  "new_command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "scripts/v117-relay-ui/watch.py",
+    "--launch-record",
+    "docs/validation/v1.17/relay/candidate-h-replay1000-a-launch.json",
+    "--source-freeze",
+    "docs/validation/v1.17/candidate-h/source-freeze.json",
+    "--expected-restored-language",
+    "fr",
+    "--stop-after-pass"
+  ],
+  "restarted_unix": 1793255575.009322,
+  "native_execution_uninterrupted": true
+}

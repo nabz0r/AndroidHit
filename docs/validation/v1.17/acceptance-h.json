@@ -1,0 +1,500 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "recorded_at_utc": "2026-10-29T07:14:52.491200+00:00",
+  "audit_source_sha256": "cc1efc83e6a6dd2759927f96f1a2939d5e0689658509e31dcb8fe1feed40700b",
+  "candidate": "H",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "app_source_commit": "bb622960f52e5ba41e75a6dfa8b30dbb4b98a291",
+  "source_freeze_sha256": "b6af495fadab8c20cf6379b591297da38e10edb4b694aad0adcf521f75711b88",
+  "frozen_app_config_inputs": 162,
+  "four_packages": [
+    {
+      "bytes": 71827197,
+      "sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "package": "com.androidhit.lumadrift",
+      "name": "luma-drift-1.17.0-rc6.apk"
+    },
+    {
+      "bytes": 74724470,
+      "sha256": "cfad9ff262e843ef0a2c7982964ff7ca41abf0e6df57cefa2c7c6b3d7d4e799b",
+      "package": "com.androidhit.lumadrift",
+      "name": "luma-drift-1.17.0-rc6.aab"
+    },
+    {
+      "bytes": 71826884,
+      "sha256": "0cc905def9679c6c4e3b63b90f454137abf6ad9bc431f86e9a7d175891cbde4b",
+      "package": "com.androidhit.lumadrift.sandbox",
+      "name": "luma-drift-1.17.0-sandbox-rc6.apk"
+    },
+    {
+      "bytes": 74716146,
+      "sha256": "034317b1af295cfc9f2acb9c621f446218bc9e5967182bddf2af1be0b40e8e75",
+      "package": "com.androidhit.lumadrift.sandbox",
+      "name": "luma-drift-1.17.0-sandbox-rc6.aab"
+    }
+  ],
+  "interface_reports": [
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-main-upgrade-a/host-report.json",
+      "sha256": "ea668e4c20327b48a513986c20db546f9f3a889e4a0637ec4281eb9981b689db",
+      "phases": [
+        {
+          "phase": "baseline",
+          "token": "e4195a7d-efa3-49f2-87c5-55c7c195945a",
+          "code": 23,
+          "checks": 7
+        },
+        {
+          "phase": "assets",
+          "token": "7db8d159-d70f-4164-8535-9d00e1e300c2",
+          "code": 24,
+          "checks": 539
+        },
+        {
+          "phase": "prepare",
+          "token": "e1505281-db3d-48c2-ba00-a6145abf9f5e",
+          "code": 24,
+          "checks": 62
+        },
+        {
+          "phase": "cold",
+          "token": "35b5efb8-dece-4bac-aa18-e2272a8fe112",
+          "code": 24,
+          "checks": 17
+        }
+      ],
+      "indexed_original_pngs": 20,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-upgrade/host-report.json",
+      "sha256": "e928d04dc5f376b10e5da499524daacd358827b9b8820448d40dfcc409afbef3",
+      "phases": [
+        {
+          "phase": "baseline",
+          "token": "54fb5736-1b12-4824-a360-335e84be0b3d",
+          "code": 23,
+          "checks": 7
+        },
+        {
+          "phase": "assets",
+          "token": "6906e9e5-6b89-4783-ba54-fc106db8d068",
+          "code": 24,
+          "checks": 539
+        },
+        {
+          "phase": "prepare",
+          "token": "48af98e1-bdb6-4990-bb64-d4e18c0906f0",
+          "code": 24,
+          "checks": 62
+        },
+        {
+          "phase": "cold",
+          "token": "4066638c-026a-4cca-8d5b-e73d7a5df950",
+          "code": 24,
+          "checks": 17
+        }
+      ],
+      "indexed_original_pngs": 20,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-modes-normal-v2/host-report.json",
+      "sha256": "5840e2bf6b7aba97db51788a46a57a44f8d7d3491dd7b5d2ea5e079cb5ffc646",
+      "phases": [
+        {
+          "phase": "modes",
+          "token": "ad3a8a59-c4a4-4d1f-b66f-f9823789a78b",
+          "code": 24,
+          "checks": 150
+        }
+      ],
+      "indexed_original_pngs": 44,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-modes-compact-largefont-v2/host-report.json",
+      "sha256": "57b29964f83e73a15e950841b49a5fc1ce4d9aa7f074054cfe40fe311dd6444c",
+      "phases": [
+        {
+          "phase": "modes",
+          "token": "d2573675-93f5-4d8f-a655-66b11ce66fe7",
+          "code": 24,
+          "checks": 154
+        }
+      ],
+      "indexed_original_pngs": 44,
+      "compact": true,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.3,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-sixlangs-normal/host-report.json",
+      "sha256": "c70a0eda0501ed8ac4e9f4c251671c9fab2fd459698a8c37f785044379565d73",
+      "phases": [
+        {
+          "phase": "browse",
+          "token": "66c89597-1018-4905-a2e6-3d092ecae691",
+          "code": 24,
+          "checks": 277
+        }
+      ],
+      "indexed_original_pngs": 177,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-sixlangs-compact/host-report.json",
+      "sha256": "680595da29d4cfbb44d362203e2551993958e49d563ec3e72d665e9af41b215c",
+      "phases": [
+        {
+          "phase": "browse",
+          "token": "dde16ba6-d652-405c-88ab-439291a87570",
+          "code": 24,
+          "checks": 277
+        }
+      ],
+      "indexed_original_pngs": 177,
+      "compact": true,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-root-compact/host-report.json",
+      "sha256": "f257a44d956adf69d7b5a482305ca0c6290dfe01a02dbe4fe251ddeebf3e15b6",
+      "phases": [
+        {
+          "phase": "root-regression",
+          "token": "89c9ddd2-c93d-43cc-9b9a-2902f126aa9d",
+          "code": 24,
+          "checks": 286
+        }
+      ],
+      "indexed_original_pngs": 8,
+      "compact": true,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-root-compact-font13/host-report.json",
+      "sha256": "b7c4b91338755c2d2811048bf25a29c1a8f3eed345ac4c4b0d0f16e176fa0de3",
+      "phases": [
+        {
+          "phase": "root-regression",
+          "token": "0e9d38b5-0bdf-4ddd-bdac-f889eac06311",
+          "code": 24,
+          "checks": 286
+        }
+      ],
+      "indexed_original_pngs": 8,
+      "compact": true,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.3,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-language-compact/host-report.json",
+      "sha256": "e79e385796b300d94d009e70f36f1c5523db8437eff3e577cb261376478aa529",
+      "phases": [
+        {
+          "phase": "language-regression",
+          "token": "cecd945d-2e56-4633-8ecd-cae086e67387",
+          "code": 24,
+          "checks": 20
+        }
+      ],
+      "indexed_original_pngs": 2,
+      "compact": true,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-owned-rigs/host-report.json",
+      "sha256": "b9d4c3cca52865b18a1e84c8dd8f4453b97bc7909d35db886f4c7ec7e0bcff08",
+      "phases": [
+        {
+          "phase": "rig",
+          "token": "2a5b4c0c-d322-42cd-a79a-f951ec1da858",
+          "code": 24,
+          "checks": 79
+        }
+      ],
+      "indexed_original_pngs": 27,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-transitions/host-report.json",
+      "sha256": "21e73f5121684aee629639dceb6a76ddd7d92b82c4355aad4d8e956246167284",
+      "phases": [
+        {
+          "phase": "transitions",
+          "token": "620f445d-21d1-40ac-9fff-73871669ec69",
+          "code": 24,
+          "checks": 24
+        }
+      ],
+      "indexed_original_pngs": 1,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-performance/host-report.json",
+      "sha256": "95a05cbc180e8cfbdd3673cdf5bb34a17db163d576def6684280245a6b185190",
+      "phases": [
+        {
+          "phase": "performance",
+          "token": "406b961c-1433-4995-b755-14d367911e64",
+          "code": 24,
+          "checks": 20
+        }
+      ],
+      "indexed_original_pngs": 2,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-secondary-compact/host-report.json",
+      "sha256": "a12c3aac2fdcfbfb0c2c660dcd800a947885b70f0b2aeef00d4c7244acb6e0f9",
+      "phases": [
+        {
+          "phase": "secondary",
+          "token": "fc87a675-08ec-40fe-a132-a1604061414e",
+          "code": 24,
+          "checks": 546
+        }
+      ],
+      "indexed_original_pngs": 885,
+      "compact": true,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-secondary-normal/host-report.json",
+      "sha256": "5d7dc9a899e992429bac3b765c635e13d4b569756540d4394e71335c62a4a980",
+      "phases": [
+        {
+          "phase": "secondary",
+          "token": "f6673185-fb22-48d9-aca9-1a4d2634c0b8",
+          "code": 24,
+          "checks": 206
+        }
+      ],
+      "indexed_original_pngs": 220,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    },
+    {
+      "path": "docs/validation/v1.17/native-interface/candidate-h-final-baseline/host-report.json",
+      "sha256": "70232a396ad60c49fd869fb868cff76d8557a2719cf120f51156cc40f2338c38",
+      "phases": [
+        {
+          "phase": "baseline",
+          "token": "b2f6952e-0a53-4ec2-88eb-e47af3c3b6b0",
+          "code": 24,
+          "checks": 7
+        }
+      ],
+      "indexed_original_pngs": 0,
+      "compact": false,
+      "font_scale_before": "1.0",
+      "font_scale_during": 1.0,
+      "font_scale_after": "1.0",
+      "configured_secondary_languages": [
+        "en",
+        "fr",
+        "de",
+        "es",
+        "pt",
+        "it"
+      ],
+      "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access."
+    }
+  ],
+  "indexed_interface_original_pngs_hash_verified": 1635,
+  "other_evidence": {
+    "docs/validation/v1.17/candidate-h/candidate.json": "b09e93a2b38a6111d41ad5d58f5981b8876b0cc5aca7c998947accd4ab6065f5",
+    "docs/validation/v1.17/candidate-h/binaries/binary-final-candidate.json": "d742dfd6fe41642672dbd39e8cb2b510bbc6df11b445e21079a97a891b473c70",
+    "docs/validation/v1.17/ci-host-rehearsal-h-complete/summary.json": "457a7200d59bf6f08dee4e3539627ad3f13f7e679ca99a94ddd2dee512a97985",
+    "docs/validation/v1.17/native-interface/candidate-h-controller/status.json": "c8afc6ed60699c20e2885a12f6d1d8f0e5a76522fc47b9072b01776ffce797d0",
+    "docs/validation/v1.17/native-interface/candidate-h-modes-v2-acceptance.json": "3cd0d320abad75ce04935640814f39408f9fc1128693dd62eeefb924c56526d7",
+    "docs/validation/v1.17/native-interface/candidate-h-clone-acceptance.json": "b42b268ed926ae38f59c1b730cf07e71dd9fea6956fff52cbc77c7c466c0e3e9",
+    "docs/validation/v1.17/fresh-h/summary-h.json": "083ef2e1024b895306743b3e06c28eb9c66fdd3e51422a3452b76f8309c0e7a2",
+    "docs/validation/v1.17/audio/native/candidate-h-main-audio-b/host-report.json": "1b956a19cd7ad6ba84108b364c81d5eb6d2113683c0d892894b71a87553113a2",
+    "docs/validation/v1.17/art/native/candidate-h-art-gallery/host-report.json": "6ebcab13a41688d8d0a96948547d55e1be3e217854a151ea233c07d64b45111d",
+    "docs/validation/v1.17/relay/summary.json": "332bd4147d769cb2c5e2dd7b7a9eb112e0bba0770f5a28465adfcf0cde82a637",
+    "docs/validation/v1.17/relay/candidate-h-replay1000-a-shutdown.json": "131b7387d4bb31ad066f94d27e1a03b4a1e0bafe62810b513aa0e360b09ed581",
+    "docs/validation/v1.17/secondary-clone/final-h-shutdown.json": "36ad390d1d9e4c23121b2b938364c4cb3949ba1626ddc5389df1ee26910b1284",
+    "docs/validation/v1.17/fresh-h/device/shutdown.json": "3642d74a3cb1c582f117ae5c4ddabd0ae32ed7ba3cafa12fc39d12d81d53b9c3",
+    "docs/validation/v1.17/review/visual-candidate-h.json": "93c6fc023742d41708e07a9758f1c868c5737efe689b0942d956fc88e4e23704",
+    "docs/validation/v1.17/review/motion-h/review.json": "9123cee9ee4ef50cfe55afae4d8c8ff87e8d8f824fd52d13d8ebdbfc4ca1e80b",
+    "docs/validation/v1.17/review/audio-native-final-h.json": "65b3fdbde06139a5c8745092856b940ca83e2550d307d25d83acbba85d93a89b"
+  },
+  "fresh_install": {
+    "real_first_wins": "U1-U8",
+    "checks": 133,
+    "coins": 440,
+    "draws": "Buzz + Aurora dream"
+  },
+  "retained_replay": {
+    "levels": 1000,
+    "duplicate_first_win_coins": 0
+  },
+  "scope": "Independent local read-only hash/token/index audit of finalized H evidence. No native input, new builds, screenshot editing, preference writes or public publication inferred. Check counts are kept per scope; a G pre-upgrade baseline is explicitly code23.",
+  "limits": [
+    "Retained replay is not 1000 first wins on a fresh install.",
+    "Primary6languages in2sizes; secondary6compact and normalEN/FR.",
+    "Gallery144composites/24garments/24styles is isolated rendering, separate from ownership.",
+    "Digital audio and emulator capture do not establish physical listening, external focus competition or phone60fps.",
+    "Human retention and commercial live services are not validated."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "reason": "Preserve all frozen global relay bytes. Corrected host watcher runs only from a separate /tmp candidate copy with explicit ROOT/HERE.",
+  "native_pid_untouched": 36962,
+  "previous_corrected_global_watcher_stopped": 39704,
+  "new_watcher_pid": 39768,
+  "global_watch_restored_sha256": "98972a10d52badff3dba9e368a0b9dbb9e3a2651678e811fc347d80b74811ff9",
+  "all_global_relay_launch_source_hashes_restored": true,
+  "external_watcher": "/tmp/luma-v117-candidate-h/watch-h-retry.py",
+  "external_watcher_sha256": "f261abb6a99eab9caedf96e9f4ea84a78ae7e119fc6480350373ada4893e3c19",
+  "external_console": "docs/validation/v1.17/relay/candidate-h-replay1000-a-watch-external-console.txt",
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "/tmp/luma-v117-candidate-h/watch-h-retry.py",
+    "--launch-record",
+    "/Users/n/androidhit/docs/validation/v1.17/relay/candidate-h-replay1000-a-launch.json",
+    "--source-freeze",
+    "/Users/n/androidhit/docs/validation/v1.17/candidate-h/source-freeze.json",
+    "--expected-restored-language",
+    "fr",
+    "--stop-after-pass"
+  ],
+  "native_execution_uninterrupted": true,
+  "restart_unix": 1793255631.106189,
+  "archived_executed_watcher": "docs/validation/v1.17/relay/candidate-h-replay1000-a-watch-external.py",
+  "archived_executed_watcher_sha256": "f261abb6a99eab9caedf96e9f4ea84a78ae7e119fc6480350373ada4893e3c19"
+}
