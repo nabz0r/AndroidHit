@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "checkCount": 20,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Unique current host execution token"
+    },
+    {
+      "passed": true,
+      "message": "Exact Luma target package"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed candidate version and code"
+    },
+    {
+      "passed": true,
+      "message": "Clipped-target language regression runs at actual320dp width"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Réglages"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Français"
+    },
+    {
+      "passed": true,
+      "message": "Visible French object selects French before the clipped-row regression"
+    },
+    {
+      "passed": true,
+      "message": "German language has an observed native visible target near the lower viewport"
+    },
+    {
+      "passed": true,
+      "message": "Partly offscreen Italian target is not relocated over the visible German object"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Deutsch"
+    },
+    {
+      "passed": true,
+      "message": "Actual German centre touch selects German, preserving the neighboring Italian action"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Italiano"
+    },
+    {
+      "passed": true,
+      "message": "Italian remains reachable by actual scrolling and selects only Italian"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Français"
+    },
+    {
+      "passed": true,
+      "message": "Regression restores French with a real language object"
+    },
+    {
+      "passed": true,
+      "message": "Observed visible touch bounds for Ma maison"
+    },
+    {
+      "passed": true,
+      "message": "Actual native object destination: Ma maison"
+    },
+    {
+      "passed": true,
+      "message": "German\/Italian clipped-target regression creates no purchase, draw, compensation or coin change"
+    },
+    {
+      "passed": true,
+      "message": "German\/Italian clipped-target regression preserves progression, stock and complete puzzle session"
+    },
+    {
+      "passed": true,
+      "message": "German\/Italian clipped-target regression preserves all furniture ownership and exact room layouts"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Réglages",
+      "bounds": "[721,245][853,408]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Français",
+      "bounds": "[577,1083][825,1215]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Deutsch",
+      "bounds": "[54,1222][302,1354]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Italiano",
+      "bounds": "[54,524][302,656]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Français",
+      "bounds": "[577,1083][825,1215]",
+      "input": "UiAutomation touchscreen"
+    },
+    {
+      "label": "Ma maison",
+      "bounds": "[714,1187][856,1368]",
+      "input": "UiAutomation touchscreen"
+    }
+  ],
+  "captures": [
+    "clipped-language-german-320dp",
+    "clipped-language-italian-320dp"
+  ],
+  "processId": 14798,
+  "phase": "language-regression",
+  "runToken": "cecd945d-2e56-4633-8ecd-cae086e67387",
+  "package": "com.androidhit.lumadrift",
+  "sdk": 36,
+  "abi": "arm64-v8a",
+  "scope": "Retained task-owned U1000 profile; actual SDK touchscreen\/object\/gesture\/IME actions, read-only preference observations and real app screenshots; no spending, app\/engine\/private-field calls, seeding, provider action or user devices"
+}

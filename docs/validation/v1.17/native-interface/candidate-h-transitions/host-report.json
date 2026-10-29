@@ -1,0 +1,295 @@
+{
+  "passed": true,
+  "package": "com.androidhit.lumadrift",
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "expected_version": "1.17.0-rc6",
+  "expected_code": 24,
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "test_apk_sha256": "e33fc6b0f40fd96bb67d0a7ab6a1ca0b3d579126a38d65d0bbf42c4b1f878403",
+  "wrapper_source_sha256": "6a6d548efc8adc45bab7d9b903899077cf004eddc635be21702e33b533cee95a",
+  "runner_source_sha256": "d9da1861171f312204d8ce67d7f48245d13444c7538c51469b3af540456490e3",
+  "candidate_present_before_test": true,
+  "scope": "Retained task-owned U1000 profile; exact1.17 candidate; original art, object/gesture navigation, home camera, nickname IME, badges, catalog and existing reveal with cold persistence; no spending, state injection, provider action or user device access.",
+  "phases": [
+    {
+      "phase": "transitions",
+      "native": {
+        "passed": true,
+        "checkCount": 24,
+        "checks": [
+          {
+            "passed": true,
+            "message": "Unique current host execution token"
+          },
+          {
+            "passed": true,
+            "message": "Exact Luma target package"
+          },
+          {
+            "passed": true,
+            "message": "Exact installed candidate version and code"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Réglages"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for English"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Native transition video uses normal motion"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: My home"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Collection"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Collection"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for My home"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: My home"
+          },
+          {
+            "passed": true,
+            "message": "Android SDK screenrecord completes its bounded8second recording"
+          },
+          {
+            "passed": true,
+            "message": "Native transition recording contains a real encoded video"
+          },
+          {
+            "passed": true,
+            "message": "SDK shell hashes its own native recording without bypassing Android file permissions"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Adventure"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Transition video restores original motion preference"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Settings"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Français"
+          },
+          {
+            "passed": true,
+            "message": "Observed visible touch bounds for Ma maison"
+          },
+          {
+            "passed": true,
+            "message": "Actual native object destination: Ma maison"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Réglages",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "English",
+            "bounds": "[387,1362][692,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Collection",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "My home",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Adventure",
+            "bounds": "[29,2045][203,2267]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Settings",
+            "bounds": "[890,334][1042,533]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Français",
+            "bounds": "[708,1362][1013,1523]",
+            "input": "UiAutomation touchscreen"
+          },
+          {
+            "label": "Ma maison",
+            "bounds": "[876,2045][1050,2267]",
+            "input": "UiAutomation touchscreen"
+          }
+        ],
+        "captures": [
+          "transitions-delivery-home-fr"
+        ],
+        "processId": 15535,
+        "phase": "transitions",
+        "runToken": "620f445d-21d1-40ac-9fff-73871669ec69",
+        "package": "com.androidhit.lumadrift",
+        "sdk": 36,
+        "abi": "arm64-v8a",
+        "scope": "Retained task-owned U1000 profile; actual SDK touchscreen/object/gesture/IME actions, read-only preference observations and real app screenshots; no spending, app/engine/private-field calls, seeding, provider action or user devices",
+        "ignored_stale_failure_file_sha256": "d6d641b31c47ea052368bf21381d01c4d359bf59dab4bbcda95c769d0369b2fe"
+      },
+      "host_run_token": "620f445d-21d1-40ac-9fff-73871669ec69",
+      "native_arguments": [
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "phase",
+        "transitions",
+        "-e",
+        "expectedVersion",
+        "1.17.0-rc6",
+        "-e",
+        "expectedCode",
+        "24",
+        "-e",
+        "regionManifestSha256",
+        "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+        "-e",
+        "languages",
+        "en,fr,de,es,pt,it",
+        "-e",
+        "runToken",
+        "620f445d-21d1-40ac-9fff-73871669ec69",
+        "com.androidhit.lumadrift.qualification117test/com.androidhit.lumadrift.qa.v117.InterfaceInstrumentation"
+      ],
+      "expected_version": "1.17.0-rc6",
+      "expected_code": 24
+    }
+  ],
+  "screenshots": {
+    "transitions/transitions-delivery-home-fr.png": "d08ead2469dce725b8b1d4d6150a6326047059adecc401a807c1d7a22f391759"
+  },
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "density": "Physical density: 440",
+    "size": "Physical size: 1080x2340"
+  },
+  "display_before": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "frozen_observer_apk": "/Users/n/androidhit/docs/validation/v1.17/native-interface/candidate-h-transitions/interface-observer.apk",
+  "compact": false,
+  "route": "transitions",
+  "device_provenance": {
+    "scope": "Physical clone of task-owned retained QA disk; no preference injection; separate native interaction evidence, not a second migration qualification",
+    "receipt_path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/creation.json",
+    "receipt_sha256": "6316b6a5b5561f515b8b46a4cd14559f91c65be241770ba6a37ef3e9d56ebaa9",
+    "source_serial": "emulator-5586",
+    "source_avd": "Luma-Refonte115-QA",
+    "clone_serial": "emulator-5592",
+    "clone_avd": "Luma117-Secondary-F-QA",
+    "source_baseline_report_sha256": "14ffa60539c9c4adcbc3251d13a9a3ecac43847a88e9a3c241314c92be41bcd6",
+    "source_baseline_snapshot_sha256": "dd0076a3420398ee474e291416e55d6ef020c4a015ad67150fa799259bf6b6dc",
+    "physical_copy_disks": 7,
+    "candidate_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-g-authorization.json",
+      "sha256": "a8d763b6c63eecc84db8ab855e4dad7c6d24c1a1fbd0b3e1d9388f87be6e48f8",
+      "base_apk_sha256": "fe556ae6f0420f41afb7e5db044ef925fe79d0695f0ac6190d6870daf2e8d5a8",
+      "target_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_version": "1.17.0-rc5",
+      "target_code": 23,
+      "allow_retained_upgrade": true,
+      "scope": "Retained F to G upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    },
+    "successor_authorization": {
+      "path": "/Users/n/androidhit/docs/validation/v1.17/secondary-clone/candidate-h-authorization.json",
+      "sha256": "055cb978afa2c073700346afa336516c68694cc276492023d362d56c849035b5",
+      "base_apk_sha256": "f85c258341082462b51c6e6ddd466edc07b17b97044d72cfa27c39d20d2cd8a8",
+      "target_apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "target_version": "1.17.0-rc6",
+      "target_code": 24,
+      "allow_retained_upgrade": true,
+      "scope": "Retained G to H upgrade on the existing task-owned physical QA clone; no preference injection, no second disk copy and no second migration qualification"
+    }
+  },
+  "secondary_languages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "pt",
+    "it"
+  ],
+  "region_manifest_sha256": "48ffd52bec0ad2222cfae41c512d8f8893a97988f54df1d2ee5aa00d77d342a6",
+  "region_metadata_source_sha256": "ab2f77b997c31bfbcdb3143cac32272d458d40867c8fb2a22a25019a4e2b3644",
+  "font_scale": "1.0",
+  "installed_apk_sha256_before": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "display_during": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "font_scale_after": "1.0",
+  "font_scale_restored": true,
+  "display_after": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440"
+  },
+  "display_restored": true,
+  "isolated_test_package_absent": true,
+  "candidate_sha256_after": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "exact_candidate_retained": true,
+  "owned_qa_profile_retained": true,
+  "elapsed_seconds": 31.956
+}

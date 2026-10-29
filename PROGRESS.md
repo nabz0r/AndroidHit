@@ -1,6 +1,6 @@
 # Luma Drift 1.17 — H qualification in progress
 
-H production1.17.0-rc6 / Lab1.17.0-sandbox-rc6, code24, source `bb622960f52e5ba41e75a6dfa8b30dbb4b98a291`. Four-package build/lint and independent audit pass; complete host rehearsal24/163 passes. Its162-input freeze retains all28 engine files, both audio files and all23 original art PNGs. [Exact H outputs and current status](docs/RELEASE_1_17.md).
+H production1.17.0-rc6 / Lab1.17.0-sandbox-rc6, code24, source `bb622960f52e5ba41e75a6dfa8b30dbb4b98a291`. Four-package build/lint and independent audit pass; complete host rehearsal24/163 passes. Its162-input freeze retains all28 engine files, both audio files and all23 original art PNGs. [Exact H outputs and current status](docs/RELEASE_1_17.md). Completed source/evidence is backed up on `codex/luma-art-direction-1-17` at `10c584ad622369fe1ec741850ff3f1238f4f7490`, independently re-read from GitHub; active native runs were excluded. Main/public release remains separate.
 
 The reproduced F Guardian Back loop is fixed. G's legacy gate/counter/help overlap is fixed through the live PlaySceneLayout; Daily/Weekly previews have their actual titles. Three compact object/caption actions remain reachable by scrolling. Normal and320/font1.3 mode probes exercise real UI; direct review reserves acceptance until full footer visibility is actually shown. Retained original and clone upgrades each pass625checks/20PNGs (7baselineG+618H), including exact session/save preservation and cold persistence.
 

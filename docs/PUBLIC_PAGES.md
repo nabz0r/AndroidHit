@@ -2,8 +2,8 @@
 
 ## Current 1.17 website qualification
 
-The FR/EN replacement is prepared with sixteen exact F native captures and
-four app-synthesizer WAV excerpts. The unpublished browser preview passes
+The FR/EN replacement indexes sixteen exact H native captures and
+four app-synthesizer WAV excerpts. The preserved unpublished F browser preview passes
 at widths320/375/768/1280 with gallery localization, deliberate audio,
 keyboard focus and no horizontal overflow. Final canonical bytes, full native
 1,000 replay, offline audit, clean-commit Hosting deployment and independent

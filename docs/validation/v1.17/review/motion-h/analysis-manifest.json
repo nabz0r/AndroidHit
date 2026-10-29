@@ -1,0 +1,171 @@
+{
+  "source_video": "docs/validation/v1.17/native-interface/candidate-h-transitions/transitions/transitions.mp4",
+  "source_sha256": "063ec1cfba57ee348e4e83f66e295dac4612bc9d8c65dca8ee2c033239dbd263",
+  "decode_command": [
+    "/Users/n/.local/bin/ffmpeg",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "docs/validation/v1.17/native-interface/candidate-h-transitions/transitions/transitions.mp4",
+    "-vf",
+    "select=eq(n\\,7)+eq(n\\,8)+eq(n\\,9)+eq(n\\,10)+eq(n\\,15)+eq(n\\,29)+eq(n\\,30)+eq(n\\,31)+eq(n\\,32)+eq(n\\,33)+eq(n\\,34)+eq(n\\,42)+eq(n\\,57)+eq(n\\,58)+eq(n\\,59)+eq(n\\,60)+eq(n\\,61)+eq(n\\,62)+eq(n\\,65)+eq(n\\,73)+eq(n\\,100)",
+    "-fps_mode",
+    "vfr",
+    "docs/validation/v1.17/review/motion-h/analysis-frame-%03d.png"
+  ],
+  "source_size": [
+    1080,
+    2340
+  ],
+  "source_transform": "H264 frame decode only; no crop, retouch, compositing or frame interpolation",
+  "frames": [
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-001.png",
+      "sha256": "4fceb8a4337670266bcfe5c71f4d2d85ca9f47bb0cdd7f83aac3c556bc292fd6",
+      "source_frame_index_zero_based": 7,
+      "source_pts_seconds": 0.411222,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-002.png",
+      "sha256": "8d8305a9e17d446148f7c25ab052c80c6faabfcf234ed165b6ca5d7e55de13cc",
+      "source_frame_index_zero_based": 8,
+      "source_pts_seconds": 0.474767,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-003.png",
+      "sha256": "4891f74a3c477a36ce6922652c8e490d634ec6310a01c9119df976b4cdf7150a",
+      "source_frame_index_zero_based": 9,
+      "source_pts_seconds": 0.547778,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-004.png",
+      "sha256": "803c94b57e2caeb51b5d37416a21c74f8e6cad4288c474e1119cd3cf318f06be",
+      "source_frame_index_zero_based": 10,
+      "source_pts_seconds": 1.419844,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-005.png",
+      "sha256": "08a34f6690dbc9e831f3ead48e47ba642552f23142610015f6fd7886bed53404",
+      "source_frame_index_zero_based": 15,
+      "source_pts_seconds": 1.805678,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-006.png",
+      "sha256": "724b21604107c539f51290cef767ac6feec966af668c43b25c486b02476380a1",
+      "source_frame_index_zero_based": 29,
+      "source_pts_seconds": 2.841578,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-007.png",
+      "sha256": "4f8c47983c518ee8e8db05999e00797adf4dc5765cf231f9b5df7decd6d999cd",
+      "source_frame_index_zero_based": 30,
+      "source_pts_seconds": 2.912422,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-008.png",
+      "sha256": "50e815bca1839b3c5366b6076d071a0d758532fde129812138684cb9cd8ac835",
+      "source_frame_index_zero_based": 31,
+      "source_pts_seconds": 2.978022,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-009.png",
+      "sha256": "d4a60356029a3c3f8170e8c2a6f8b7ef8a83f8025b2d1476c092be1cea983ac1",
+      "source_frame_index_zero_based": 32,
+      "source_pts_seconds": 3.074989,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-010.png",
+      "sha256": "4a05e8289e2e7990a87b243fa4e18d6f45932ea3ff54ae7b8c4d851b33452442",
+      "source_frame_index_zero_based": 33,
+      "source_pts_seconds": 3.091022,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-011.png",
+      "sha256": "1537dba441e7a7fdb9220cf6a92db0b9f161ed17a1de6a8621d38add15659cff",
+      "source_frame_index_zero_based": 34,
+      "source_pts_seconds": 3.486722,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-012.png",
+      "sha256": "d419039d9adb8f9c0254e5132baa0324e7d729d970ba71cd6c4a749a303749e6",
+      "source_frame_index_zero_based": 42,
+      "source_pts_seconds": 3.943878,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-013.png",
+      "sha256": "464029a9f9f9884da8daced3403778c8a5584f27b51751d5c253eee489084546",
+      "source_frame_index_zero_based": 57,
+      "source_pts_seconds": 4.958267,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-014.png",
+      "sha256": "c5365765c12e64f0a6d6e17c3db85b0b5b8d96ab41784704823caab5d747dcbf",
+      "source_frame_index_zero_based": 58,
+      "source_pts_seconds": 5.021911,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-015.png",
+      "sha256": "b86d5d899ba4a1c8c5de12ab2a4534dabe9a9a8be1750025af9740a3fbd25f4a",
+      "source_frame_index_zero_based": 59,
+      "source_pts_seconds": 5.107133,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-016.png",
+      "sha256": "7e550832a219b80730fdb6c431433ef0e64edbfbc7618c71aba7e0dad3eb73f2",
+      "source_frame_index_zero_based": 60,
+      "source_pts_seconds": 5.160489,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-017.png",
+      "sha256": "78731c6143ee61bdfc3266153a8a5a8067c03214b9d6cc8c63487c04ea993703",
+      "source_frame_index_zero_based": 61,
+      "source_pts_seconds": 5.337667,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-018.png",
+      "sha256": "5d378c085b8e04dcc0ba91096be4253b067dbcfd6f66455af4d1fb8f597e0ebf",
+      "source_frame_index_zero_based": 62,
+      "source_pts_seconds": 5.449311,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-019.png",
+      "sha256": "b1b9c86ccc7568b981107a0d4013348ced3955505d30d22397b2dc627f664372",
+      "source_frame_index_zero_based": 65,
+      "source_pts_seconds": 5.646767,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-020.png",
+      "sha256": "7f29136dc3aadd6a42be850282427b1fa1be0e056269f2f6dae9a10a0bf8d903",
+      "source_frame_index_zero_based": 73,
+      "source_pts_seconds": 6.119578,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    },
+    {
+      "path": "docs/validation/v1.17/review/motion-h/analysis-frame-021.png",
+      "sha256": "dc7e84f8f05146894dd50b25c19bd426b8da5139798515e7a42915f1794b341e",
+      "source_frame_index_zero_based": 100,
+      "source_pts_seconds": 7.923589,
+      "kind": "ANALYSIS full-size H264 decode; not a native PNG capture or marketing image"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "status": "SCOPED VISUAL PASS WITH CAPTURE-CADENCE LIMITATION",
+  "candidate": "H rc6/code24",
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "host_report": "docs/validation/v1.17/native-interface/candidate-h-transitions/host-report.json",
+  "host_report_sha256": "21e73f5121684aee629639dceb6a76ddd7d92b82c4355aad4d8e956246167284",
+  "native_assertions": 24,
+  "native_PNG_count": 1,
+  "run_token": "620f445d-21d1-40ac-9fff-73871669ec69",
+  "source_video": "docs/validation/v1.17/native-interface/candidate-h-transitions/transitions/transitions.mp4",
+  "source_sha256": "063ec1cfba57ee348e4e83f66e295dac4612bc9d8c65dca8ee2c033239dbd263",
+  "source_bytes": 3875207,
+  "codec": "H264",
+  "dimensions": [
+    1080,
+    2340
+  ],
+  "encoded_duration_seconds": 7.9857,
+  "native_control_elapsed_ms": 8283,
+  "encoded_video_frames": 101,
+  "encoded_average_fps": 12.647607598582466,
+  "audio_streams": 0,
+  "maximum_pts_gap": {
+    "from": 0.547778,
+    "to": 1.419844,
+    "duration_seconds": 0.8720660000000001
+  },
+  "all_pts_gaps_over_150ms": [
+    {
+      "from": 0.547778,
+      "to": 1.419844,
+      "duration_seconds": 0.8720660000000001
+    },
+    {
+      "from": 2.1089,
+      "to": 2.372967,
+      "duration_seconds": 0.26406699999999983
+    },
+    {
+      "from": 3.091022,
+      "to": 3.486722,
+      "duration_seconds": 0.3956999999999997
+    },
+    {
+      "from": 5.160489,
+      "to": 5.337667,
+      "duration_seconds": 0.1771779999999996
+    }
+  ],
+  "native_routes_timing_ms_from_sdk_command_start": [
+    {
+      "destination": "My home",
+      "actionStartMs": 501,
+      "stableAfterMs": 1840
+    },
+    {
+      "destination": "Collection",
+      "actionStartMs": 2940,
+      "stableAfterMs": 3954
+    },
+    {
+      "destination": "My home",
+      "actionStartMs": 5054,
+      "stableAfterMs": 6121
+    }
+  ],
+  "directly_viewed_full_decode_frames": 21,
+  "analysis_manifest": "analysis-manifest.json",
+  "analysis_manifest_sha256": "6505a47f1626d30686dfd30ad26b1f2cb17ed596cc2c0d3dc912e0833c080a2d",
+  "ffprobe_metadata": "ffprobe.json",
+  "ffprobe_sha256": "57a6d18fa5d2e38bca79bb815443e750fd74aae85e99f7bd83f0cf8eb1c86a03",
+  "findings": [
+    "Three real object taps route Adventure\u2192Home\u2192Collection\u2192Home with normal motion. Starting and settled destinations have their complete scene, furnishings/companion and caption layout.",
+    "A translucent outgoing Adventure title remains during the first sampled Home fade at1.419844s, then is absent in settled Home at1.805678s. Collection appears slightly shifted/faded at3.486722s and fully settled at3.943878s. Home appears faded/shifted at5.337667s then settled at6.119578s. This transient overlap belongs to the intended fade, not a persistent outgoing snapshot.",
+    "No blank or black content frame, wrong settled destination, stranded snapshot or missing major sprite was seen in the21 sampled decoded frames.",
+    "All21 derivatives retain full1080\u00d72340 framing. They are clearly labelled ANALYSIS H264 frame decodes and are not native PNG screenshots or website assets."
+  ],
+  "limits": [
+    "101 encoded frames across7.985700s average12.647608fps; the longest adjacent PTS gap is872.066ms around the first transition. Other transition-adjacent gaps reach395.700ms and177.178ms. This recording cannot establish60fps, smooth frame pacing or physical-phone fluidity.",
+    "The SDK control interval is8283ms whereas encoded MP4 duration is7985.700ms. SDK action timestamps and encoded PTS are approximately associated sequence landmarks, not a calibrated latency measurement.",
+    "No capture separates app, emulator and encoder contributions to sparse frames; no root cause of a frame gap is inferred.",
+    "No audio stream and no host speaker output: this video provides no listening evidence.",
+    "Only21 sampled full-size video decodes were directly visually reviewed, not all101 encoded frames; native UI matrices and audio reports are separate."
+  ]
+}
