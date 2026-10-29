@@ -138,12 +138,15 @@ def main():
     assert clone_shutdown['ui_and_art_observers_absent'] and clone_shutdown['normal_emulator_disconnected'] and clone_shutdown['userdata_retained']
     review_path=BASE/'review/visual-candidate-h.json';review=read(review_path)
     assert review['apk_sha256']==APK
+    assert review['review_scope_complete'] is True and review['release_or_all_mode_acceptance'] is False
     for row in review['images']:assert sha(ROOT/row['path'])==row['sha256']
+    motion=read(BASE/'review/motion-h/review.json')
+    assert motion['apk_sha256']==APK and sha(ROOT/motion['source_video'])==motion['source_sha256']
     proof_paths=[BASE/'candidate-h/candidate.json',BASE/'candidate-h/binaries/binary-final-candidate.json',
                  BASE/'ci-host-rehearsal-h-complete/summary.json',controller_path,
                  BASE/'native-interface/candidate-h-modes-v2-acceptance.json',BASE/'native-interface/candidate-h-clone-acceptance.json',fresh_path,audio_path,
                  gallery_path,relay_path,shutdown_path,clone_shutdown_path,BASE/'fresh-h/device/shutdown.json',review_path,BASE/'review/motion-h/review.json',
-                 BASE/'review/audio-native-final-h.json']
+                 BASE/'review/audio-native-final-h.json',ROOT/motion['source_video']]
     result={'schema_version':1,'passed':True,'recorded_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
             'audit_source_sha256':sha(Path(__file__)),
             'candidate':'H','version':VERSION,'code':24,'apk_sha256':APK,
