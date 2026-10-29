@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "serial": "emulator-5592",
+  "avd": "Luma117-Secondary-F-QA",
+  "apk_sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+  "version": "1.17.0-rc6",
+  "code": 24,
+  "baseline": "docs/validation/v1.17/native-interface/candidate-h-final-baseline/baseline/baseline.json",
+  "baseline_sha256": "c2e579466697b36a908247d488b95f4ce59979e4f246c9b1cde4172ac98dbb45",
+  "baseline_report_sha256": "70232a396ad60c49fd869fb868cff76d8557a2719cf120f51156cc40f2338c38",
+  "all_legacy_values_identical_to_pre_h_g_baseline": true,
+  "legacy_fields_compared": 2054,
+  "coins": 51510,
+  "u1000_stars": 3,
+  "language": "fr",
+  "room": "living",
+  "character": "halo",
+  "normal_display": {
+    "size": "Physical size: 1080x2340",
+    "density": "Physical density: 440",
+    "font_scale": "1.0"
+  },
+  "target_stopped_before_shutdown": true,
+  "ui_and_art_observers_absent": true,
+  "source_freeze_sha256": "b6af495fadab8c20cf6379b591297da38e10edb4b694aad0adcf521f75711b88",
+  "source_inputs_verified": 162,
+  "four_frozen_binary_hashes_verified": true,
+  "frozen_binaries": [
+    {
+      "path": "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-rc6.apk",
+      "bytes": 71827197,
+      "sha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "package": "com.androidhit.lumadrift"
+    },
+    {
+      "path": "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-rc6.aab",
+      "bytes": 74724470,
+      "sha256": "cfad9ff262e843ef0a2c7982964ff7ca41abf0e6df57cefa2c7c6b3d7d4e799b",
+      "package": "com.androidhit.lumadrift"
+    },
+    {
+      "path": "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-sandbox-rc6.apk",
+      "bytes": 71826884,
+      "sha256": "0cc905def9679c6c4e3b63b90f454137abf6ad9bc431f86e9a7d175891cbde4b",
+      "package": "com.androidhit.lumadrift.sandbox"
+    },
+    {
+      "path": "/tmp/luma-v117-candidate-h/luma-drift-1.17.0-sandbox-rc6.aab",
+      "bytes": 74716146,
+      "sha256": "034317b1af295cfc9f2acb9c621f446218bc9e5967182bddf2af1be0b40e8e75",
+      "package": "com.androidhit.lumadrift.sandbox"
+    }
+  ],
+  "settings_restored": true,
+  "restored_settings": [
+    "French",
+    "Living room",
+    "Original reduced-motion preference",
+    "Original display size/density",
+    "Original system font scale"
+  ],
+  "reduce_motion": false,
+  "retained_userdata_directory": "/Users/n/.android/avd/Luma117-Secondary-F-QA.avd",
+  "userdata_files_before_shutdown": [
+    {
+      "name": "userdata-qemu.img",
+      "bytes": 10158080
+    },
+    {
+      "name": "userdata-qemu.img.qcow2",
+      "bytes": 4384292864
+    }
+  ],
+  "scope": "Normal shutdown of task-owned physical QA clone after exact H native qualification. Userdata kept; no data reset, deletion, preference restoration/injection, additional disk copy or second migration. Puzzle/Guardian sessions naturally changed during public modes smoke and are recorded separately. Original main5586 is untouched.",
+  "normal_emulator_stop_response": "OK: killing emulator, bye bye\r\nOK\r\n",
+  "normal_emulator_disconnected": true,
+  "userdata_retained": true,
+  "completed_at_utc": "2026-10-29T07:07:23.001192+00:00"
+}

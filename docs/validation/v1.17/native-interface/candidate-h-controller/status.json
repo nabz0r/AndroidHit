@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "pid": 37042,
+  "plan": [
+    [
+      "candidate-h-sixlangs-normal",
+      "browse",
+      []
+    ],
+    [
+      "candidate-h-sixlangs-compact",
+      "browse",
+      [
+        "--compact"
+      ]
+    ],
+    [
+      "candidate-h-root-compact",
+      "root-regression",
+      [
+        "--compact",
+        "--font-scale",
+        "1.0"
+      ]
+    ],
+    [
+      "candidate-h-root-compact-font13",
+      "root-regression",
+      [
+        "--compact",
+        "--font-scale",
+        "1.3"
+      ]
+    ],
+    [
+      "candidate-h-language-compact",
+      "language-regression",
+      [
+        "--compact"
+      ]
+    ],
+    [
+      "candidate-h-owned-rigs",
+      "rig",
+      []
+    ],
+    [
+      "candidate-h-art-gallery",
+      "art",
+      []
+    ],
+    [
+      "candidate-h-transitions",
+      "transitions",
+      []
+    ],
+    [
+      "candidate-h-performance",
+      "performance",
+      []
+    ],
+    [
+      "candidate-h-secondary-compact",
+      "secondary",
+      [
+        "--compact"
+      ]
+    ],
+    [
+      "candidate-h-secondary-normal",
+      "secondary",
+      [
+        "--languages",
+        "en",
+        "fr"
+      ]
+    ],
+    [
+      "candidate-h-final-baseline",
+      "baseline",
+      []
+    ]
+  ],
+  "source_freeze_sha256": "b6af495fadab8c20cf6379b591297da38e10edb4b694aad0adcf521f75711b88",
+  "observer_sha256": "e33fc6b0f40fd96bb67d0a7ab6a1ca0b3d579126a38d65d0bbf42c4b1f878403",
+  "serial": "emulator-5592",
+  "scope": "Exact H retained physical-clone native UI matrix; not another migration. Secondary compact six languages, secondary normal EN/FR; primary six languages both dimensions. Artwork gallery is separate pure-render evidence.",
+  "completed": [
+    {
+      "label": "candidate-h-sixlangs-normal",
+      "route": "browse",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-sixlangs-normal/host-report.json",
+      "sha256": "c70a0eda0501ed8ac4e9f4c251671c9fab2fd459698a8c37f785044379565d73",
+      "elapsed_seconds": 491.057,
+      "images": 177,
+      "checks": 277
+    },
+    {
+      "label": "candidate-h-sixlangs-compact",
+      "route": "browse",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-sixlangs-compact/host-report.json",
+      "sha256": "680595da29d4cfbb44d362203e2551993958e49d563ec3e72d665e9af41b215c",
+      "elapsed_seconds": 445.825,
+      "images": 177,
+      "checks": 277
+    },
+    {
+      "label": "candidate-h-root-compact",
+      "route": "root-regression",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-root-compact/host-report.json",
+      "sha256": "f257a44d956adf69d7b5a482305ca0c6290dfe01a02dbe4fe251ddeebf3e15b6",
+      "elapsed_seconds": 40.443,
+      "images": 8,
+      "checks": 286
+    },
+    {
+      "label": "candidate-h-root-compact-font13",
+      "route": "root-regression",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-root-compact-font13/host-report.json",
+      "sha256": "b7c4b91338755c2d2811048bf25a29c1a8f3eed345ac4c4b0d0f16e176fa0de3",
+      "elapsed_seconds": 40.15,
+      "images": 8,
+      "checks": 286
+    },
+    {
+      "label": "candidate-h-language-compact",
+      "route": "language-regression",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-language-compact/host-report.json",
+      "sha256": "e79e385796b300d94d009e70f36f1c5523db8437eff3e577cb261376478aa529",
+      "elapsed_seconds": 26.054,
+      "images": 2,
+      "checks": 20
+    },
+    {
+      "label": "candidate-h-owned-rigs",
+      "route": "rig",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-owned-rigs/host-report.json",
+      "sha256": "b9d4c3cca52865b18a1e84c8dd8f4453b97bc7909d35db886f4c7ec7e0bcff08",
+      "elapsed_seconds": 148.645,
+      "images": 27,
+      "checks": 79
+    },
+    {
+      "label": "candidate-h-art-gallery",
+      "route": "art",
+      "report": "docs/validation/v1.17/art/native/candidate-h-art-gallery/host-report.json",
+      "sha256": "6ebcab13a41688d8d0a96948547d55e1be3e217854a151ea233c07d64b45111d",
+      "elapsed_seconds": 18.556,
+      "images": 50,
+      "checks": null
+    },
+    {
+      "label": "candidate-h-transitions",
+      "route": "transitions",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-transitions/host-report.json",
+      "sha256": "21e73f5121684aee629639dceb6a76ddd7d92b82c4355aad4d8e956246167284",
+      "elapsed_seconds": 32.581,
+      "images": 1,
+      "checks": 24
+    },
+    {
+      "label": "candidate-h-performance",
+      "route": "performance",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-performance/host-report.json",
+      "sha256": "95a05cbc180e8cfbdd3673cdf5bb34a17db163d576def6684280245a6b185190",
+      "elapsed_seconds": 29.37,
+      "images": 2,
+      "checks": 20
+    },
+    {
+      "label": "candidate-h-secondary-compact",
+      "route": "secondary",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-secondary-compact/host-report.json",
+      "sha256": "a12c3aac2fdcfbfb0c2c660dcd800a947885b70f0b2aeef00d4c7244acb6e0f9",
+      "elapsed_seconds": 1780.045,
+      "images": 885,
+      "checks": 546
+    },
+    {
+      "label": "candidate-h-secondary-normal",
+      "route": "secondary",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-secondary-normal/host-report.json",
+      "sha256": "5d7dc9a899e992429bac3b765c635e13d4b569756540d4394e71335c62a4a980",
+      "elapsed_seconds": 533.587,
+      "images": 220,
+      "checks": 206
+    },
+    {
+      "label": "candidate-h-final-baseline",
+      "route": "baseline",
+      "report": "docs/validation/v1.17/native-interface/candidate-h-final-baseline/host-report.json",
+      "sha256": "70232a396ad60c49fd869fb868cff76d8557a2719cf120f51156cc40f2338c38",
+      "elapsed_seconds": 10.972,
+      "images": 0,
+      "checks": 7
+    }
+  ],
+  "running": null,
+  "final_immutable_app_sources": 162,
+  "final_four_binary_hashes_verified": true
+}
