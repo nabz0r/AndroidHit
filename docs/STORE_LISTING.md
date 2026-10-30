@@ -2,7 +2,7 @@
 
 ## Current copy draft · 30 October 2026
 
-For candidate `1.22.0-rc1` / code 30. Exact C production and Lab packages have passed their scoped Android acceptance and are collected in the [canonical artifact manifest](../releases/manifest-1.22.0-rc1.json); public distribution remains pending. This is proposed store copy, not a Play submission or a publication receipt. Use only the [eight accepted unedited C captures](validation/v1.22/native/candidate-c-canonical-media.json), with their actual locale and profile. The browser explanation is schematic and must not be presented as an Android screenshot.
+For candidate `1.22.0-rc1` / code 30. Exact C production and Lab packages have passed their scoped Android acceptance and are collected in the [canonical artifact manifest](../releases/manifest-1.22.0-rc1.json). Website source is [prepared](validation/site-v1.22/release/source-manifest.json); Hosting distribution remains pending. This is proposed store copy, not a Play submission or a publication receipt. Use only the [eight accepted unedited C captures](validation/v1.22/native/candidate-c-canonical-media.json), with their actual locale and profile. The browser explanation is schematic and must not be presented as an Android screenshot.
 
 ### English short description draft
 

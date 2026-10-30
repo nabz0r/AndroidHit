@@ -1,5 +1,5 @@
 <h1 align="center">Luma Drift</h1>
-<p align="center"><strong>Small companions. Bigger adventures.</strong><br>1.22 candidate · a companion on the path, readable key links and a shared tactical reserve · Android acceptance passed; website delivery pending</p>
+<p align="center"><strong>Small companions. Bigger adventures.</strong><br>1.22 candidate · a companion on the path, readable key links and a shared tactical reserve · Android accepted; website prepared, Hosting delivery pending</p>
 
 ## Cognitive Lab — local synthetic player research
 
@@ -7,9 +7,9 @@
 
 [Workspace cleanup, 30 October 2026](docs/validation/cleanup-2026-10-30/README.md) removes 4.97 GB of ignored reproducible files and saves another 6.10 GB of allocated Git storage. Source, published releases, historical evidence and all Git objects remain. The reusable cleanup script defaults to a dry run.
 
-## Current 1.22 — Android candidate accepted, website delivery pending
+## Current 1.22 — Android accepted, website prepared
 
-The exact **production `1.22.0-rc1` and separate Lab `1.22.0-sandbox-rc1`, code 30**, candidate C has passed its scoped Android acceptance. [Frozen C package metadata](docs/validation/v1.22/candidate-c/candidate.json) and the [canonical signed-artifact manifest](releases/manifest-1.22.0-rc1.json) bind the two collected APKs. [Production qualification](docs/validation/v1.22/README.md), [Lab upgrade preservation](docs/validation/v1.22/native-lab/candidate-c-upgrade-preservation/report.json) and [Lab FR/EN launch](docs/validation/v1.22/native-lab/candidate-c-launch-fr-en/report.json) retain separate receipts; all seven recorded production preference maps remain unchanged across Lab checks. Public delivery is still pending. The homepage retains the identified 1.21 APKs and native images until the new lab assets, exact C source and eight [accepted native frames](docs/validation/v1.22/native/candidate-c-canonical-media.json) are prepared and published together.
+The exact **production `1.22.0-rc1` and separate Lab `1.22.0-sandbox-rc1`, code 30**, candidate C has passed its scoped Android acceptance. [Frozen C package metadata](docs/validation/v1.22/candidate-c/candidate.json) and the [canonical signed-artifact manifest](releases/manifest-1.22.0-rc1.json) bind the two collected APKs. Application source, artifact metadata and evidence are published at [C1 `716bf730`](https://github.com/nabz0r/AndroidHit/commit/716bf73066892d034510db80630cd1f227738372). [Production qualification](docs/validation/v1.22/README.md), [Lab upgrade preservation](docs/validation/v1.22/native-lab/candidate-c-upgrade-preservation/report.json) and [Lab FR/EN launch](docs/validation/v1.22/native-lab/candidate-c-launch-fr-en/report.json) retain separate receipts; all seven recorded production preference maps remain unchanged across Lab checks. The [prepared website manifest](docs/validation/site-v1.22/release/source-manifest.json) binds C1, the final lab assets and eight [accepted native frames](docs/validation/v1.22/native/candidate-c-canonical-media.json). Hosting delivery remains pending; preparing source does not establish public response bytes or rendering.
 
 The journey now separates the companion's world position, the chosen destination and the camera. Accessible destinations animate along the route; dragging and minimap navigation move only the camera, and recentering finds the companion. Exploration does not clear puzzles. [Map contract](docs/JOURNEY_WORLD_1_22.md).
 
@@ -20,6 +20,8 @@ The **Echo Observatory** adds twelve new manually solvable layouts in two episod
 The chapter has an isolated save, no elemental shells, no session-energy debit and no item powers. Its manual Undo costs no Coins and keeps the original productive action spent. **Ordinary eligible campaign attempts retain two free Undos, followed by an explicitly confirmed Coin price capped at 40**; the chapter's different rule must not be advertised for the campaign. The existing collection, evolution, rooms, gallery, audio, account routes and archived APKs remain preserved.
 
 Host checks pass 8,020 assertions for content, actual effects and strict run restore, plus 1,874 for the real isolated session/GameStore on durable preference doubles, including failed writes and concurrent handles. The separate Android receipts establish their emulator scopes; physical-phone comfort, first-player comprehension and voluntary return remain unmeasured. The prepared [browser explanation source](public/lab/ui-1-22/index.html) is a schematic demo with fictional state, not a native gameplay capture or account session.
+
+Prepared website source passes [1,248 offline source/provenance checks](docs/validation/site-v1.22/source-qa-prepared.json) and [87 interaction tests](docs/validation/site-v1.22/runtime-tests-prepared.json). Its 570 physical payloads preserve 535 historical files unchanged, intentionally update four public files, add 31 files and remove none; gallery and audio markup remain exact. [Source comparison](docs/validation/site-v1.22/prepared-source-diff.json). Local browser review, authenticated Hosting publication and public response/render verification keep separate receipts.
 
 ## Previous 1.21 — delivered for playtesting
 

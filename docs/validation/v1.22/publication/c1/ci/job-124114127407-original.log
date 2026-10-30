@@ -1,0 +1,332 @@
+﻿2026-10-30T14:19:16.7382844Z Current runner version: '2.338.0'
+2026-10-30T14:19:16.7403838Z ##[group]Runner Image Provisioner
+2026-10-30T14:19:16.7404544Z Hosted Compute Agent
+2026-10-30T14:19:16.7405123Z Version: 20261021.618
+2026-10-30T14:19:16.7405689Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T14:19:16.7406286Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T14:19:16.7406926Z Worker ID: {049577b2-e4e9-403e-a3c7-6634e0af6cd5}
+2026-10-30T14:19:16.7407668Z Region: westus3
+2026-10-30T14:19:16.7408161Z Cloud: Azure
+2026-10-30T14:19:16.7408719Z ##[endgroup]
+2026-10-30T14:19:16.7409794Z ##[group]Operating System
+2026-10-30T14:19:16.7410396Z Ubuntu
+2026-10-30T14:19:16.7410855Z 24.04.5
+2026-10-30T14:19:16.7411326Z LTS
+2026-10-30T14:19:16.7411822Z ##[endgroup]
+2026-10-30T14:19:16.7412301Z ##[group]Runner Image
+2026-10-30T14:19:16.7412852Z Image: ubuntu-24.04
+2026-10-30T14:19:16.7413342Z Version: 20261025.353.1
+2026-10-30T14:19:16.7414432Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T14:19:16.7415716Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T14:19:16.7416584Z ##[endgroup]
+2026-10-30T14:19:16.7417796Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T14:19:16.7419774Z Contents: read
+2026-10-30T14:19:16.7420356Z Metadata: read
+2026-10-30T14:19:16.7420898Z ##[endgroup]
+2026-10-30T14:19:16.7422886Z Secret source: Actions
+2026-10-30T14:19:16.7423640Z Cache mode: write
+2026-10-30T14:19:16.7424448Z Prepare workflow directory
+2026-10-30T14:19:16.7743440Z Prepare all required actions
+2026-10-30T14:19:16.7783028Z Getting action download info
+2026-10-30T14:19:17.0532691Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-30T14:19:17.2238414Z Complete job name: Packaged 1.18 art and frozen rig revision
+2026-10-30T14:19:17.2981816Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-30T14:19:17.2982637Z with:
+2026-10-30T14:19:17.2982996Z   persist-credentials: false
+2026-10-30T14:19:17.2983399Z   fetch-depth: 1
+2026-10-30T14:19:17.2983778Z   sparse-checkout-cone-mode: false
+2026-10-30T14:19:17.2986239Z   sparse-checkout: /.github/workflows/puzzle-contracts.yml
+/app/src/main/java/com/androidhit/lumadrift/data/Catalog.java
+/app/src/main/assets/art/v118/*.json
+/app/src/main/assets/art/v118/*.webp
+/scripts/v118-art/audit-assets.py
+/scripts/v118-art/test-source-clip.py
+/scripts/v118-art/test-packaged-audit.py
+/scripts/v118-art/requirements-ci.txt
+/docs/art/v118/assets-manifest.json
+/docs/validation/v1.18/rig-g-all-proposals/applied.json
+/docs/validation/v1.18/rig-g-all-proposals/before/*.json
+
+2026-10-30T14:19:17.2988913Z   repository: nabz0r/AndroidHit
+2026-10-30T14:19:17.2991953Z   token: ***
+2026-10-30T14:19:17.2992301Z   ssh-strict: true
+2026-10-30T14:19:17.2992658Z   ssh-user: git
+2026-10-30T14:19:17.2993032Z   clean: true
+2026-10-30T14:19:17.2993366Z   fetch-tags: false
+2026-10-30T14:19:17.2993728Z   show-progress: true
+2026-10-30T14:19:17.2994085Z   lfs: false
+2026-10-30T14:19:17.2994417Z   submodules: false
+2026-10-30T14:19:17.2994774Z   set-safe-directory: true
+2026-10-30T14:19:17.2995174Z   allow-unsafe-pr-checkout: false
+2026-10-30T14:19:17.2995746Z ##[endgroup]
+2026-10-30T14:19:17.5492688Z Syncing repository: nabz0r/AndroidHit
+2026-10-30T14:19:17.5494112Z ##[group]Getting Git version info
+2026-10-30T14:19:17.5494679Z Working directory is '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-30T14:19:17.5495500Z [command]/usr/bin/git version
+2026-10-30T14:19:17.5626284Z git version 2.56.0
+2026-10-30T14:19:17.5644372Z ##[endgroup]
+2026-10-30T14:19:17.5650889Z Temporarily overriding HOME='/home/runner/work/_temp/f0a2825c-a3f8-4c42-886c-8523d560f87f' before making global git config changes
+2026-10-30T14:19:17.5652989Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T14:19:17.5656731Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T14:19:17.5708608Z Deleting the contents of '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-30T14:19:17.5711600Z ##[group]Determining repository object format
+2026-10-30T14:19:17.5713267Z ##[endgroup]
+2026-10-30T14:19:17.5714139Z ##[group]Initializing the repository
+2026-10-30T14:19:17.5717992Z [command]/usr/bin/git init /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T14:19:17.5828216Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T14:19:17.5829428Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T14:19:17.5830194Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T14:19:17.5830787Z hint: call:
+2026-10-30T14:19:17.5831117Z hint:
+2026-10-30T14:19:17.5831543Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T14:19:17.5832250Z hint:
+2026-10-30T14:19:17.5832965Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T14:19:17.5833874Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T14:19:17.5834464Z hint:
+2026-10-30T14:19:17.5834803Z hint: 	git branch -m <name>
+2026-10-30T14:19:17.5835188Z hint:
+2026-10-30T14:19:17.5835676Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T14:19:17.5843277Z Initialized empty Git repository in /home/runner/work/AndroidHit/AndroidHit/.git/
+2026-10-30T14:19:17.5852920Z [command]/usr/bin/git remote add origin https://github.com/nabz0r/AndroidHit
+2026-10-30T14:19:17.5899197Z ##[endgroup]
+2026-10-30T14:19:17.5900254Z ##[group]Disabling automatic garbage collection
+2026-10-30T14:19:17.5902121Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T14:19:17.5940422Z ##[endgroup]
+2026-10-30T14:19:17.5941660Z ##[group]Setting up auth
+2026-10-30T14:19:17.5942635Z Removing SSH command configuration
+2026-10-30T14:19:17.5948967Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T14:19:17.5983353Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T14:19:17.6315329Z Removing HTTP extra header
+2026-10-30T14:19:17.6321637Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T14:19:17.6359156Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T14:19:17.6560421Z Removing includeIf entries pointing to credentials config files
+2026-10-30T14:19:17.6565391Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T14:19:17.6609055Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T14:19:17.6812000Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T14:19:17.6851116Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path /home/runner/work/_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:19:17.6888170Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:19:17.6924934Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:19:17.6962035Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:19:17.6996965Z ##[endgroup]
+2026-10-30T14:19:17.6998087Z ##[group]Fetching the repository
+2026-10-30T14:19:17.7069527Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +716bf73066892d034510db80630cd1f227738372:refs/remotes/origin/main
+2026-10-30T14:19:18.5102103Z From https://github.com/nabz0r/AndroidHit
+2026-10-30T14:19:18.5103771Z  * [new ref]         716bf73066892d034510db80630cd1f227738372 -> origin/main
+2026-10-30T14:19:18.5109519Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-30T14:19:18.5142240Z   origin/main
+2026-10-30T14:19:18.5148781Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-30T14:19:18.5177953Z 716bf73066892d034510db80630cd1f227738372
+2026-10-30T14:19:18.5182247Z ##[endgroup]
+2026-10-30T14:19:18.5183762Z ##[group]Determining the checkout info
+2026-10-30T14:19:18.5185284Z ##[endgroup]
+2026-10-30T14:19:18.5186875Z ##[group]Setting up sparse checkout
+2026-10-30T14:19:18.5188354Z [command]/usr/bin/git config core.sparseCheckout true
+2026-10-30T14:19:18.5224870Z [command]/usr/bin/git rev-parse --git-path info/sparse-checkout
+2026-10-30T14:19:18.5253519Z .git/info/sparse-checkout
+2026-10-30T14:19:18.5260301Z ##[endgroup]
+2026-10-30T14:19:18.5261793Z ##[group]Checking out the ref
+2026-10-30T14:19:18.5264069Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-30T14:20:11.1926654Z Updating files:   0% (1/452)
+2026-10-30T14:20:11.1998721Z Updating files:   1% (5/452)
+2026-10-30T14:20:11.2041157Z Updating files:   2% (10/452)
+2026-10-30T14:20:11.2095389Z Updating files:   3% (14/452)
+2026-10-30T14:20:11.2129087Z Updating files:   4% (19/452)
+2026-10-30T14:20:11.2190804Z Updating files:   5% (23/452)
+2026-10-30T14:20:11.2269223Z Updating files:   6% (28/452)
+2026-10-30T14:20:11.2326522Z Updating files:   7% (32/452)
+2026-10-30T14:20:11.2361097Z Updating files:   8% (37/452)
+2026-10-30T14:20:11.2415277Z Updating files:   9% (41/452)
+2026-10-30T14:20:11.2472191Z Updating files:  10% (46/452)
+2026-10-30T14:20:11.2539388Z Updating files:  11% (50/452)
+2026-10-30T14:20:11.2590872Z Updating files:  12% (55/452)
+2026-10-30T14:20:11.2640156Z Updating files:  13% (59/452)
+2026-10-30T14:20:11.2693363Z Updating files:  14% (64/452)
+2026-10-30T14:20:11.2760714Z Updating files:  15% (68/452)
+2026-10-30T14:20:11.2800603Z Updating files:  16% (73/452)
+2026-10-30T14:20:11.2860154Z Updating files:  17% (77/452)
+2026-10-30T14:20:11.2898343Z Updating files:  18% (82/452)
+2026-10-30T14:20:11.2952135Z Updating files:  19% (86/452)
+2026-10-30T14:20:11.2999254Z Updating files:  20% (91/452)
+2026-10-30T14:20:11.3047037Z Updating files:  21% (95/452)
+2026-10-30T14:20:11.3089282Z Updating files:  22% (100/452)
+2026-10-30T14:20:11.3148635Z Updating files:  23% (104/452)
+2026-10-30T14:20:11.3189354Z Updating files:  24% (109/452)
+2026-10-30T14:20:11.3230098Z Updating files:  25% (113/452)
+2026-10-30T14:20:11.3283684Z Updating files:  26% (118/452)
+2026-10-30T14:20:11.3325249Z Updating files:  27% (123/452)
+2026-10-30T14:20:11.3375221Z Updating files:  28% (127/452)
+2026-10-30T14:20:11.3420582Z Updating files:  29% (132/452)
+2026-10-30T14:20:11.3500963Z Updating files:  30% (136/452)
+2026-10-30T14:20:11.3552869Z Updating files:  31% (141/452)
+2026-10-30T14:20:11.3599479Z Updating files:  32% (145/452)
+2026-10-30T14:20:11.3638793Z Updating files:  33% (150/452)
+2026-10-30T14:20:11.3707453Z Updating files:  34% (154/452)
+2026-10-30T14:20:11.3753354Z Updating files:  35% (159/452)
+2026-10-30T14:20:11.3799077Z Updating files:  36% (163/452)
+2026-10-30T14:20:11.3836864Z Updating files:  37% (168/452)
+2026-10-30T14:20:11.3894884Z Updating files:  38% (172/452)
+2026-10-30T14:20:11.3933355Z Updating files:  39% (177/452)
+2026-10-30T14:20:11.3989039Z Updating files:  40% (181/452)
+2026-10-30T14:20:11.4025019Z Updating files:  41% (186/452)
+2026-10-30T14:20:11.4081011Z Updating files:  42% (190/452)
+2026-10-30T14:20:11.4124313Z Updating files:  43% (195/452)
+2026-10-30T14:20:11.4180871Z Updating files:  44% (199/452)
+2026-10-30T14:20:11.4230034Z Updating files:  45% (204/452)
+2026-10-30T14:20:11.4297840Z Updating files:  46% (208/452)
+2026-10-30T14:20:11.4340326Z Updating files:  47% (213/452)
+2026-10-30T14:20:11.4378965Z Updating files:  48% (217/452)
+2026-10-30T14:20:11.4417537Z Updating files:  49% (222/452)
+2026-10-30T14:20:11.4461735Z Updating files:  50% (226/452)
+2026-10-30T14:20:11.4495795Z Updating files:  51% (231/452)
+2026-10-30T14:20:11.4541041Z Updating files:  52% (236/452)
+2026-10-30T14:20:11.4595315Z Updating files:  53% (240/452)
+2026-10-30T14:20:11.4637072Z Updating files:  54% (245/452)
+2026-10-30T14:20:11.4679339Z Updating files:  55% (249/452)
+2026-10-30T14:20:11.4718863Z Updating files:  56% (254/452)
+2026-10-30T14:20:11.4791366Z Updating files:  57% (258/452)
+2026-10-30T14:20:11.4839135Z Updating files:  58% (263/452)
+2026-10-30T14:20:11.4888915Z Updating files:  59% (267/452)
+2026-10-30T14:20:11.4945459Z Updating files:  60% (272/452)
+2026-10-30T14:20:11.5034947Z Updating files:  61% (276/452)
+2026-10-30T14:20:11.5078741Z Updating files:  62% (281/452)
+2026-10-30T14:20:11.5138368Z Updating files:  63% (285/452)
+2026-10-30T14:20:11.5174713Z Updating files:  64% (290/452)
+2026-10-30T14:20:11.5219297Z Updating files:  65% (294/452)
+2026-10-30T14:20:11.5233940Z Updating files:  66% (299/452)
+2026-10-30T14:20:11.5247239Z Updating files:  67% (303/452)
+2026-10-30T14:20:11.5253551Z Updating files:  68% (308/452)
+2026-10-30T14:20:11.5265528Z Updating files:  69% (312/452)
+2026-10-30T14:20:11.5274340Z Updating files:  70% (317/452)
+2026-10-30T14:20:11.5287965Z Updating files:  71% (321/452)
+2026-10-30T14:20:11.5298311Z Updating files:  72% (326/452)
+2026-10-30T14:20:11.5306510Z Updating files:  73% (330/452)
+2026-10-30T14:20:11.5313795Z Updating files:  74% (335/452)
+2026-10-30T14:20:11.5326769Z Updating files:  75% (339/452)
+2026-10-30T14:20:11.5335966Z Updating files:  76% (344/452)
+2026-10-30T14:20:11.5346952Z Updating files:  77% (349/452)
+2026-10-30T14:20:11.5355926Z Updating files:  78% (353/452)
+2026-10-30T14:20:11.5366051Z Updating files:  79% (358/452)
+2026-10-30T14:20:11.5375988Z Updating files:  80% (362/452)
+2026-10-30T14:20:11.5385703Z Updating files:  81% (367/452)
+2026-10-30T14:20:11.5399202Z Updating files:  82% (371/452)
+2026-10-30T14:20:11.5410100Z Updating files:  83% (376/452)
+2026-10-30T14:20:11.5430503Z Updating files:  84% (380/452)
+2026-10-30T14:20:11.5445040Z Updating files:  85% (385/452)
+2026-10-30T14:20:11.5463764Z Updating files:  86% (389/452)
+2026-10-30T14:20:11.5472731Z Updating files:  87% (394/452)
+2026-10-30T14:20:11.5486113Z Updating files:  88% (398/452)
+2026-10-30T14:20:11.5498129Z Updating files:  89% (403/452)
+2026-10-30T14:20:11.5511727Z Updating files:  90% (407/452)
+2026-10-30T14:20:11.5518885Z Updating files:  91% (412/452)
+2026-10-30T14:20:11.5531037Z Updating files:  92% (416/452)
+2026-10-30T14:20:11.5541342Z Updating files:  93% (421/452)
+2026-10-30T14:20:11.5553170Z Updating files:  94% (425/452)
+2026-10-30T14:20:11.5565936Z Updating files:  95% (430/452)
+2026-10-30T14:20:11.5574682Z Updating files:  96% (434/452)
+2026-10-30T14:20:11.5579749Z Updating files:  97% (439/452)
+2026-10-30T14:20:11.5586621Z Updating files:  98% (443/452)
+2026-10-30T14:20:11.5591894Z Updating files:  99% (448/452)
+2026-10-30T14:20:11.5594165Z Updating files: 100% (452/452)
+2026-10-30T14:20:11.5594846Z Updating files: 100% (452/452), done.
+2026-10-30T14:20:11.6009218Z Switched to a new branch 'main'
+2026-10-30T14:20:11.6012925Z branch 'main' set up to track 'origin/main'.
+2026-10-30T14:20:11.6075119Z ##[endgroup]
+2026-10-30T14:20:11.6127676Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T14:20:11.6160565Z 716bf73066892d034510db80630cd1f227738372
+2026-10-30T14:20:11.6168657Z ##[group]Removing auth
+2026-10-30T14:20:11.6168979Z Removing SSH command configuration
+2026-10-30T14:20:11.6172418Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T14:20:11.6210115Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T14:20:11.6500302Z Removing HTTP extra header
+2026-10-30T14:20:11.6503527Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T14:20:11.6546189Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T14:20:11.6839713Z Removing includeIf entries pointing to credentials config files
+2026-10-30T14:20:11.6849406Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T14:20:11.6887433Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-30T14:20:11.6888095Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-30T14:20:11.6888442Z includeif.gitdir:/github/workspace/.git.path
+2026-10-30T14:20:11.6888748Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T14:20:11.6896280Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-30T14:20:11.6928254Z /home/runner/work/_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:20:11.6936475Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-c219a342\-8e39\-4db2\-a2c1\-b5b314586031\.config
+2026-10-30T14:20:11.6982724Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-30T14:20:11.7016549Z /home/runner/work/_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:20:11.7024983Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-c219a342\-8e39\-4db2\-a2c1\-b5b314586031\.config
+2026-10-30T14:20:11.7071242Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-30T14:20:11.7103107Z /github/runner_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:20:11.7109192Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-c219a342\-8e39\-4db2\-a2c1\-b5b314586031\.config
+2026-10-30T14:20:11.7150049Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T14:20:11.7180202Z /github/runner_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config
+2026-10-30T14:20:11.7186397Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-c219a342\-8e39\-4db2\-a2c1\-b5b314586031\.config
+2026-10-30T14:20:11.7227469Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T14:20:11.7522252Z Removing credentials config '/home/runner/work/_temp/git-credentials-c219a342-8e39-4db2-a2c1-b5b314586031.config'
+2026-10-30T14:20:11.7523205Z ##[endgroup]
+2026-10-30T14:20:11.7707629Z ##[group]Run python3 -m venv "$RUNNER_TEMP/luma-v118-art-venv"
+2026-10-30T14:20:11.7708088Z [36;1mpython3 -m venv "$RUNNER_TEMP/luma-v118-art-venv"[0m
+2026-10-30T14:20:11.7708689Z [36;1m"$RUNNER_TEMP/luma-v118-art-venv/bin/python" -m pip install --disable-pip-version-check --only-binary=:all: -r scripts/v118-art/requirements-ci.txt[0m
+2026-10-30T14:20:11.7828389Z shell: /usr/bin/sh -e {0}
+2026-10-30T14:20:11.7828645Z ##[endgroup]
+2026-10-30T14:20:14.7539218Z Collecting Pillow==11.3.0 (from -r scripts/v118-art/requirements-ci.txt (line 2))
+2026-10-30T14:20:14.8005083Z   Downloading pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+2026-10-30T14:20:15.0079353Z Collecting numpy==2.2.6 (from -r scripts/v118-art/requirements-ci.txt (line 3))
+2026-10-30T14:20:15.0190439Z   Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+2026-10-30T14:20:15.0318459Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 4.9 MB/s eta 0:00:00
+2026-10-30T14:20:15.0623871Z Downloading pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+2026-10-30T14:20:15.1499308Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 77.4 MB/s eta 0:00:00
+2026-10-30T14:20:15.1603792Z Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+2026-10-30T14:20:15.3120528Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 81.2 MB/s eta 0:00:00
+2026-10-30T14:20:15.3575978Z Installing collected packages: Pillow, numpy
+2026-10-30T14:20:17.0590878Z Successfully installed Pillow-11.3.0 numpy-2.2.6
+2026-10-30T14:20:17.2340520Z ##[group]Run "$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/test-source-clip.py
+2026-10-30T14:20:17.2341080Z [36;1m"$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/test-source-clip.py[0m
+2026-10-30T14:20:17.2341539Z [36;1m"$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/test-packaged-audit.py[0m
+2026-10-30T14:20:17.2381106Z shell: /usr/bin/sh -e {0}
+2026-10-30T14:20:17.2381323Z ##[endgroup]
+2026-10-30T14:20:17.3558347Z test_absent_clip_uses_the_exact_rectangle (__main__.SourceClipTests.test_absent_clip_uses_the_exact_rectangle) ... ok
+2026-10-30T14:20:17.3587964Z test_both_windings_and_collinear_forward_edges_are_valid (__main__.SourceClipTests.test_both_windings_and_collinear_forward_edges_are_valid) ... ok
+2026-10-30T14:20:17.3618148Z test_domain_not_rectangle_detects_an_opaque_overlap_or_omission (__main__.SourceClipTests.test_domain_not_rectangle_detects_an_opaque_overlap_or_omission) ... ok
+2026-10-30T14:20:17.3748227Z test_fractional_boundary_preserves_last_pixel_centre (__main__.SourceClipTests.test_fractional_boundary_preserves_last_pixel_centre) ... ok
+2026-10-30T14:20:17.3778065Z test_invalid_coordinate_or_polygon_structures_are_rejected (__main__.SourceClipTests.test_invalid_coordinate_or_polygon_structures_are_rejected) ... ok
+2026-10-30T14:20:17.3808014Z test_overlapping_bounding_rectangles_can_partition_pixels (__main__.SourceClipTests.test_overlapping_bounding_rectangles_can_partition_pixels) ... ok
+2026-10-30T14:20:17.3917029Z test_vertex_limit_is_exact (__main__.SourceClipTests.test_vertex_limit_is_exact) ... ok
+2026-10-30T14:20:17.3917828Z 
+2026-10-30T14:20:17.3917999Z ----------------------------------------------------------------------
+2026-10-30T14:20:17.3918379Z Ran 7 tests in 0.037s
+2026-10-30T14:20:17.3918522Z 
+2026-10-30T14:20:17.3918622Z OK
+2026-10-30T14:20:17.7352776Z test_allowed_attachment_revision_must_still_fit_runtime_bounds (__main__.PackagedAuditTests.test_allowed_attachment_revision_must_still_fit_runtime_bounds) ... ok
+2026-10-30T14:20:17.8899142Z test_archived_baseline_hash_is_required (__main__.PackagedAuditTests.test_archived_baseline_hash_is_required) ... ok
+2026-10-30T14:20:17.8922156Z test_default_original_audit_still_refuses_a_missing_png (__main__.PackagedAuditTests.test_default_original_audit_still_refuses_a_missing_png) ... ok
+2026-10-30T14:20:18.0070762Z test_packaged_cli_requires_an_explicit_revision_receipt (__main__.PackagedAuditTests.test_packaged_cli_requires_an_explicit_revision_receipt) ... ok
+2026-10-30T14:20:18.1519126Z test_packaged_pixels_validate_without_originals_and_make_no_equivalence_claim (__main__.PackagedAuditTests.test_packaged_pixels_validate_without_originals_and_make_no_equivalence_claim) ... ok
+2026-10-30T14:20:18.2994640Z test_protected_geometry_cannot_be_changed_by_a_new_after_hash (__main__.PackagedAuditTests.test_protected_geometry_cannot_be_changed_by_a_new_after_hash) ... ok
+2026-10-30T14:20:18.4479880Z test_read_limit_matches_runtime_512_kib (__main__.PackagedAuditTests.test_read_limit_matches_runtime_512_kib) ... ok
+2026-10-30T14:20:18.5941975Z test_recorded_webp_hash_must_match_the_actual_packaged_bytes (__main__.PackagedAuditTests.test_recorded_webp_hash_must_match_the_actual_packaged_bytes) ... ok
+2026-10-30T14:20:18.7405425Z test_stale_after_hash_is_rejected (__main__.PackagedAuditTests.test_stale_after_hash_is_rejected) ... ok
+2026-10-30T14:20:18.7406025Z 
+2026-10-30T14:20:18.7406217Z ----------------------------------------------------------------------
+2026-10-30T14:20:18.7406602Z Ran 9 tests in 1.208s
+2026-10-30T14:20:18.7406754Z 
+2026-10-30T14:20:18.7406835Z OK
+2026-10-30T14:20:18.7636960Z ##[group]Run "$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/audit-assets.py --packaged-only --rig-revision-receipt docs/validation/v1.18/rig-g-all-proposals/applied.json --output "$RUNNER_TEMP/luma-v118-art/art-integrity.json" --asset-manifest "$RUNNER_TEMP/luma-v118-art/assets-manifest.json" --workers 2
+2026-10-30T14:20:18.7638796Z [36;1m"$RUNNER_TEMP/luma-v118-art-venv/bin/python" scripts/v118-art/audit-assets.py --packaged-only --rig-revision-receipt docs/validation/v1.18/rig-g-all-proposals/applied.json --output "$RUNNER_TEMP/luma-v118-art/art-integrity.json" --asset-manifest "$RUNNER_TEMP/luma-v118-art/assets-manifest.json" --workers 2[0m
+2026-10-30T14:20:18.7639849Z [36;1mcmp docs/art/v118/assets-manifest.json "$RUNNER_TEMP/luma-v118-art/assets-manifest.json"[0m
+2026-10-30T14:20:18.7677192Z shell: /usr/bin/sh -e {0}
+2026-10-30T14:20:18.7677562Z ##[endgroup]
+2026-10-30T14:20:40.1297463Z {"passed": true, "report": "/home/runner/work/_temp/luma-v118-art/art-integrity.json", "summary": {"expectedCharacters": 37, "catalogCharacters": 37, "expectedSheets": 148, "presentSheets": 148, "passedSheets": 148, "failedSheets": 0, "expectedFrames": 2960, "auditedFrames": 2960, "expectedAttachments": 26640, "auditedAttachments": 26640, "actualPixelEquivalentSheets": 0, "verifiedOriginalPngSheets": 0, "layoutRegeneratedSheets": 0, "preservedFixedRigSheets": 0, "rigRevisionProtectedSheets": 148, "anchorsMeasuredFrames": 0, "apparelQualifiedFrames": 0, "sourceClipFrames": 2960, "originalPngBytes": 399564168, "packagedWebpBytes": 293692016, "visiblePixelsOutsideAllSourceRects": 0, "visiblePixelsSharedBySourceRects": 0, "visiblePixelsOutsideAllSourceDomains": 0, "visiblePixelsSharedBySourceDomains": 0, "componentThresholdCounts": {"128": 112, "160": 1, "192": 3, "208": 2, "224": 4, "240": 6, "248": 10, "250": 2, "251": 4, "252": 4}, "warningSheets": 3}, "assetTreeSha256": "4a58e25f7db6949fedd2f81b6fd86566687fbf35431cf7a0cf488436ff0860d0", "assetManifestSha256": "0de77f47ba3676b3da641b7a735e8c999c789dd19f6c7cad3530cb518e033b84", "errors": [], "failedSheetErrors": []}
+2026-10-30T14:20:40.1593346Z Post job cleanup.
+2026-10-30T14:20:40.2280491Z [command]/usr/bin/git version
+2026-10-30T14:20:40.2353501Z git version 2.56.0
+2026-10-30T14:20:40.2381786Z Temporarily overriding HOME='/home/runner/work/_temp/a073d4e0-583d-4e18-892c-e29feddcd8a8' before making global git config changes
+2026-10-30T14:20:40.2382750Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T14:20:40.2385548Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T14:20:40.2438721Z Removing SSH command configuration
+2026-10-30T14:20:40.2439303Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T14:20:40.2452452Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T14:20:40.2787863Z Removing HTTP extra header
+2026-10-30T14:20:40.2799556Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T14:20:40.2842342Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T14:20:40.3153785Z Removing includeIf entries pointing to credentials config files
+2026-10-30T14:20:40.3160582Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T14:20:40.3200505Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T14:20:40.3651988Z Cleaning up orphan processes

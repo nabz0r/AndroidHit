@@ -53,12 +53,23 @@ published. The native key inspection and visual map are outside the simulation.
 [Current host and Android evidence](validation/v1.22/README.md) distinguish engine
 contracts, durable preference doubles, installed package identity, real emulator
 gestures and original screenshots. The [lab source binding](validation/cognitive-lab-v122/candidate-c-source-binding.json)
-retains the exact generation sources and identifies later uncompiled UI changes.
+binds all 51 recorded source hashes to the current candidate C sources. Fifty
+files supply executable/model inputs; `LumaView.java` is retained as UI context
+and is not compiled as a lab driver.
 
-The website preparation is restricted to the exact tested Android bytes and original FR/EN captures,
+The [prepared website manifest](validation/site-v1.22/release/source-manifest.json)
+binds artifact commit `716bf73066892d034510db80630cd1f227738372` to the exact tested Android bytes and eight original FR/EN captures,
 with the archive, gallery, account/privacy routes and deliberate audio controls
 preserved. Its schematic browser demo has fictional levels and locks; it is not
-the Android game or player progress.
+the Android game or player progress. Hosting publication is pending; local source
+checks and browser review do not establish public response bytes or rendering.
+
+Prepared source passes [1,248 offline checks](validation/site-v1.22/source-qa-prepared.json)
+and [87 JavaScript interaction tests](validation/site-v1.22/runtime-tests-prepared.json).
+The [source comparison](validation/site-v1.22/prepared-source-diff.json) records
+570 physical payloads: 535 historical files unchanged, four intentional updates,
+31 additions and no removal. Local browser, Hosting management and public-origin
+response/render acceptance remain separate scopes.
 
 No human participation, retention lift, millions-of-players forecast, physical
 phone frame-rate measurement or Play approval follows from these checks. Real

@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "scope": "Actual local schematic demo only, fictional levels and key state. Movement/destination, minimap arrow, follow, key A test, key B selection, 8 responsive states.",
+  "checks": [
+    {
+      "action": "destination-8",
+      "text": "Destination\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7\nLevel 8\nLevel 9\nLevel 10\nLevel 11 · locked\nLevel 12 · locked\nMy companion\nCurrent level: 8 · Destination: 8 · camera follows companion\n6\n7\n8\n9\nGlow garden\nDrag to move the view\nMinimap · arrow keys"
+    },
+    {
+      "action": "minimap-arrow",
+      "text": "Destination\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7\nLevel 8\nLevel 9\nLevel 10\nLevel 11 · locked\nLevel 12 · locked\nMy companion\nCurrent level: 8 · Destination: 8 · free view\n6\n7\n8\n9\nGlow garden\nDrag to move the view\nMinimap · arrow keys"
+    },
+    {
+      "action": "follow",
+      "text": "Destination\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7\nLevel 8\nLevel 9\nLevel 10\nLevel 11 · locked\nLevel 12 · locked\nMy companion\nCurrent level: 8 · Destination: 8 · camera follows companion\n6\n7\n8\n9\nGlow garden\nDrag to move the view\nMinimap · arrow keys"
+    },
+    {
+      "action": "test-key-a",
+      "locks": [
+        "Lock A1 · closed · key A",
+        "Lock A2 · closed · key A",
+        "Lock B1 · closed · key B"
+      ],
+      "text": "Key A\nKey B\nMoving…\nKey A → lock A1\n🔑\nA\n🔑\nB\n🔒\nA1\n🔒\nA2\n🔒\nB1\nPath A\nPath B\n🔑"
+    },
+    {
+      "action": "select-key-b",
+      "locks": [
+        "Lock A1 · open · key A",
+        "Lock A2 · open · key A",
+        "Lock B1 · closed · key B"
+      ],
+      "text": "Key A\nKey B\nTest the key\nKey B selected · B1 linked\n🔑\nA\n🔑\nB\n🔓\nA1\n🔓\nA2\n🔒\nB1\nPath A clear\nPath B"
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Clé A\n      Clé B\n      Tester la clé\n    \n    \n    \n      \n        Clés et serrures associées\n        Clé A : serrures A1 et A2. Clé B : serrure B1. La sélection ne joue aucun coup.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "fr",
+      "scrollWidth": 305,
+      "title": "Un compagnon. Une caméra. Des liens.",
+      "width": 320
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Clé A\n      Clé B\n      Tester la clé\n    \n    \n    \n      \n        Clés et serrures associées\n        Clé A : serrures A1 et A2. Clé B : serrure B1. La sélection ne joue aucun coup.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "fr",
+      "scrollWidth": 360,
+      "title": "Un compagnon. Une caméra. Des liens.",
+      "width": 375
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Clé A\n      Clé B\n      Tester la clé\n    \n    \n    \n      \n        Clés et serrures associées\n        Clé A : serrures A1 et A2. Clé B : serrure B1. La sélection ne joue aucun coup.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "fr",
+      "scrollWidth": 753,
+      "title": "Un compagnon. Une caméra. Des liens.",
+      "width": 768
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Clé A\n      Clé B\n      Tester la clé\n    \n    \n    \n      \n        Clés et serrures associées\n        Clé A : serrures A1 et A2. Clé B : serrure B1. La sélection ne joue aucun coup.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "fr",
+      "scrollWidth": 1265,
+      "title": "Un compagnon. Une caméra. Des liens.",
+      "width": 1280
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Key A\n      Key B\n      Test the key\n    \n    \n    \n      \n        Keys and associated locks\n        Key A: locks A1 and A2. Key B: lock B1. Selection does not play a move.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "en",
+      "scrollWidth": 305,
+      "title": "A companion. A camera. Connections.",
+      "width": 320
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Key A\n      Key B\n      Test the key\n    \n    \n    \n      \n        Keys and associated locks\n        Key A: locks A1 and A2. Key B: lock B1. Selection does not play a move.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "en",
+      "scrollWidth": 360,
+      "title": "A companion. A camera. Connections.",
+      "width": 375
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Key A\n      Key B\n      Test the key\n    \n    \n    \n      \n        Keys and associated locks\n        Key A: locks A1 and A2. Key B: lock B1. Selection does not play a move.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "en",
+      "scrollWidth": 753,
+      "title": "A companion. A camera. Connections.",
+      "width": 768
+    },
+    {
+      "action": "responsive",
+      "keyText": "\n    \n      Key A\n      Key B\n      Test the key\n    \n    \n    \n      \n        Keys and associated locks\n        Key A: locks A1 and A2. Key B: lock B1. Selection does not play a move.\n        \n        \n      \n      🔑A\n      🔑B\n      🔒🔓A1\n      🔒🔓A2\n      🔒🔓B1\n      Passage A\n      Passage B\n      🔑\n    \n  ",
+      "lang": "en",
+      "scrollWidth": 1265,
+      "title": "A companion. A camera. Connections.",
+      "width": 1280
+    }
+  ],
+  "consoleWarningsAndErrors": [],
+  "sourceInputsSha256": {
+    "public/index.html": "0e1d00b81aa1716f910c1244731bb04efa40079d5777e660f453ae151a82b5ca",
+    "public/assets/site-v122.css": "5b538f1017e568b53c1939376a670528b80468ee923baea32f1778d01cbcee5c",
+    "public/assets/site-v122.js": "5b664cfd7615c887cf63e46b2453e742d8fa70596ccceffbe7f65b594d3af0f9",
+    "public/lab/ui-1-22/index.html": "95b73f8b08e4877fc6e5ee64bead5d284b438dddce94d3c58fec451ec35bd992",
+    "public/lab/ui-1-22/simulation.css": "202e202e22ef890078b55776776e37b3fd6c086e83857aa829dbed3085a44593",
+    "public/lab/ui-1-22/simulation.mjs": "6e5ecad90ff4fa822192934b76e0170f7ad9333f86594d82e55d521dc3ddbba3",
+    "public/lab/cognitive/index.html": "aac695275ac0c966330405797d1a56940d8e70fe8455b7b61b54bb0589a204c4",
+    "public/lab/cognitive/lab.js": "296a2ecb9194066f73fe57f17b1826e6538c19855c1230cc57bc68d2b9a99015",
+    "public/lab/cognitive/lab.css": "eab112a8cf1766730c1320af220398b66dd41f690b1bc4e43924038904b554f0",
+    "public/lab/cognitive/snapshot-v122.js": "bfbe07094caa530f4603827f2a2f2e89c719ea3e0a0228a449ef25f0414dc4c5",
+    "docs/validation/site-v1.22/release/source-manifest.json": "414444c62f2ce925d9e53974ca44d72866e4f81ee36047421f11158a77ae5ff5"
+  },
+  "artifactCommit": "716bf73066892d034510db80630cd1f227738372"
+}
