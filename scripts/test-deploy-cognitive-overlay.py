@@ -69,6 +69,10 @@ class FakeClient:
         self.serving = {'headers': [{'glob': '**', 'headers': {'X-Frame-Options': 'DENY'}}]}
         self.maps = {self.old: {path: (hashlib.sha256(path.encode()).hexdigest(), 'ACTIVE')
                                for path in source['baselineFiles']}}
+        self.maps[self.old].update({path: (hashlib.sha256(path.encode()).hexdigest(), 'ACTIVE')
+                                   for path in MODULE.FIREBASE_RESERVED})
+        if fault == 'unknown_reserved_extra':
+            self.maps[self.old]['/__/firebase/unexpected.json'] = ('c' * 64, 'ACTIVE')
         self.states, self.live, self.live_reads = {self.old: 'FINALIZED'}, self.old, 0
         self.message = 'Previous release'
         self.release_name = 'sites/' + MODULE.SITE + '/releases/old-fixture'
@@ -184,7 +188,14 @@ class OverlayTests(unittest.TestCase):
         client = FakeClient(self.source)
         result = execute(self.source, client, client.old, self.receipts, True)
         self.assertEqual(result['status'], 'DEPLOY/FINALIZED')
-        self.assertEqual(result['verifiedProviderFiles'], 528)
+        self.assertEqual(result['verifiedProviderFiles'], 530)
+        self.assertEqual(result['historicalPhysicalSourcePaths'], 525)
+        self.assertEqual(result['retainedHistoricalPhysicalSourcePaths'], 524)
+        self.assertEqual(result['historicalProviderFiles'], 527)
+        self.assertEqual(result['retainedHistoricalProviderPaths'], 526)
+        self.assertEqual(result['expectedFinalPhysicalSourcePaths'], 528)
+        self.assertEqual(result['expectedFinalProviderPaths'], 530)
+        self.assertEqual(result['firebaseManagedReservedPathCount'], 2)
         self.assertEqual(result['uploadedOverlayBlobs'], 3)
         self.assertFalse(result['historicalApksUploaded'])
         for path, row in client.maps[client.old].items():
@@ -192,6 +203,18 @@ class OverlayTests(unittest.TestCase):
                 self.assertEqual(client.maps[client.new][path], row)
         self.assertEqual(len([c for c in client.calls if c[1].endswith('/releases')]), 1)
         self.assertEqual(client.live_reads, 4)
+
+    def test_exact_reserved_extras_only(self):
+        client = FakeClient(self.source, 'unknown_reserved_extra')
+        with self.assertRaises(MODULE.DeploymentError):
+            execute(self.source, client, client.old, self.receipts, True)
+        self.assertTrue(all(call[0] == 'GET' for call in client.calls))
+        self.assertFalse(client.uploads)
+        del client.maps[client.old]['/__/firebase/unexpected.json']
+        del client.maps[client.old]['/__/firebase/init.js']
+        with self.assertRaises(MODULE.DeploymentError):
+            execute(self.source, client, client.old, self.receipts, True)
+        self.assertTrue(all(call[0] == 'GET' for call in client.calls))
 
     def test_faults_never_release(self):
         for fault in ('clone_file_changed', 'clone_config_changed', 'unexpected_hash',

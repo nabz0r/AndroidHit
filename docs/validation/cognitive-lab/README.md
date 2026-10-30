@@ -59,10 +59,12 @@ zero. No model is selected on held-out results.
 - The unchanged native model's separate exhaustive U-board contract passes
   **13,312,469 checks over 191,954 reachable states and 471,517 transitions**.
   This is host execution, not a new Android acceptance run.
-- Dashboard tests cover real-data import, finite/range/identity validation,
+- **11 dashboard tests** cover real-data import, finite/range/identity validation,
   safe text rendering, inert CSV formulas, chart geometry and retry attribution.
   Actual local browser checks cover FR/EN at 320/375/768/1280 pixels, scenario
   changes, profile selection, optional IQ labels and full local report import.
+- **Six offline deployment tests** cover exact source identity, sparse checkouts,
+  preserved provider hashes/config, forbidden paths/hosts and concurrent changes.
 
 The historical v1.9 solver-driven simulations are preserved. Their outputs are
 not relabeled as this study. IQ labels are independently assigned, uncalibrated
@@ -91,6 +93,14 @@ additive change to the existing Firebase site: the new dashboard and a homepage
 research link. **524 earlier payloads retain identical raw SHA-256 hashes**;
 only the homepage changes, and no earlier file is removed. APKs, account/legal
 pages, original art/audio and historical receipts remain preserved.
+
+An authenticated read-only preflight on the original source commit stopped
+before mutation because Firebase additionally stores `/__/firebase/init.js` and
+`/__/firebase/init.json`. The deployer now requires those exact two reserved
+paths and preserves their provider hashes too; arbitrary additions remain
+rejected. Thus the source manifest has **539 physical payloads**, while the
+expected cloned provider version has **541 paths**, including **526 retained
+historical provider paths**. These counts must not be conflated.
 
 Source publication, remote CI, authenticated Firebase management and
 public-origin observation are recorded separately after release. A finalized

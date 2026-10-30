@@ -31,6 +31,7 @@ SITE = 'luma-drift-production'
 API = 'https://firebasehosting.googleapis.com/v1beta1/'
 UPLOAD_HOST = 'upload-firebasehosting.googleapis.com'
 EXPECTED_LIVE = 'sites/luma-drift-production/versions/d08a2aa131c05c4f'
+FIREBASE_RESERVED = frozenset(('/__/firebase/init.js', '/__/firebase/init.json'))
 MANIFEST = 'docs/validation/cognitive-lab/site-manifest.json'
 BASELINE = 'docs/validation/site-v1.21/release/source-manifest.json'
 CONFIG = 'firebase.json'
@@ -287,7 +288,11 @@ def execute(source, client, expected_live, output, deploy):
     live = live_channel(client, expected_live)
     old = version(client, expected_live, 'FINALIZED')
     old_files = files(client, expected_live)
-    require(set(old_files) == set(source['baselineFiles']), 'Live historical provider path set differs from 525-path baseline')
+    physical_baseline = set(source['baselineFiles'])
+    require(not physical_baseline.intersection(FIREBASE_RESERVED),
+            'Firebase-managed reserved paths must not be declared as physical source payloads')
+    require(set(old_files) == physical_baseline.union(FIREBASE_RESERVED),
+            'Live provider paths differ from the 525-path baseline plus the exact two Firebase-managed reserved paths')
     overlay = source['overlay']
     expected_files = dict(old_files)
     expected_files.update({name: item['gzipSha256'] for name, item in overlay.items()})
@@ -298,7 +303,14 @@ def execute(source, client, expected_live, output, deploy):
                  'firebaseConfigSha256': source['firebaseConfigSha256'],
                  'expectedLiveVersion': expected_live, 'live': live,
                  'historicalProviderFiles': len(old_files), 'retainedHistoricalPaths': len(old_files) - 1,
+                 'historicalPhysicalSourcePaths': len(physical_baseline),
+                 'retainedHistoricalPhysicalSourcePaths': len(physical_baseline) - 1,
+                 'retainedHistoricalProviderPaths': len(old_files) - 1,
+                 'firebaseManagedReservedPaths': sorted(FIREBASE_RESERVED),
+                 'firebaseManagedReservedPathCount': len(FIREBASE_RESERVED),
                  'overlayPaths': len(overlay), 'finalExpectedPaths': len(expected_files),
+                 'expectedFinalPhysicalSourcePaths': len(source['allSourceFiles']),
+                 'expectedFinalProviderPaths': len(expected_files),
                  'overlayRawSourceHashesMatchTrackedManifest': True,
                  'oldProviderFileMapSha256': canonical_hash(old_files),
                  'expectedProviderFileMapSha256': canonical_hash(expected_files),
@@ -307,13 +319,17 @@ def execute(source, client, expected_live, output, deploy):
                  'historicalRawFilesPresentOrRehashedRequired': False,
                  'publicOriginRequested': False, 'publicOriginBytesVerified': False,
                  'publicOriginRenderingVerified': False,
-                 'identityScope': 'Overlay raw bytes equal exact Git/source-manifest hashes. Historical paths are preserved by cloning authenticated provider compressed hashes/config. Historical raw source bytes are not reverified on this sparse checkout. Public HTTP and rendering remain separate evidence.'}
+                 'identityScope': 'Overlay raw bytes equal exact Git/source-manifest hashes. Historical physical paths and exactly /__/firebase/init.js plus /__/firebase/init.json are preserved by cloning authenticated provider compressed hashes/config. These two Firebase-managed reserved paths are provider-only entries, not physical source files. Historical raw source bytes are not reverified on this sparse checkout. Public HTTP and rendering remain separate evidence.'}
     save(output, 'preflight.json', preflight)
     save(output, 'overlay-source-and-gzip-hashes.json', overlay)
     save(output, 'baseline-provider-files.json', old_files)
     save(output, 'baseline-provider-config.json', old.get('config', {}))
     print(json.dumps({'preflight': 'PASS', 'commit': source['commit'], 'overlayPaths': len(overlay),
-                      'preservedProviderPaths': len(old_files) - 1, 'deployRequested': deploy}), flush=True)
+                      'preservedPhysicalSourcePaths': len(physical_baseline) - 1,
+                      'preservedProviderPaths': len(old_files) - 1,
+                      'firebaseManagedReservedPaths': len(FIREBASE_RESERVED),
+                      'finalPhysicalSourcePaths': len(source['allSourceFiles']),
+                      'finalProviderPaths': len(expected_files), 'deployRequested': deploy}), flush=True)
     if not deploy:
         return preflight
 
