@@ -37,8 +37,17 @@ Older saved attempts retain their declared policy. Element clearing is free;
 blocked policy-6 moves remain free. Talent Charge, session energy, earned Coins
 and account Gold have separate purposes and persistence.
 
-Publication and Firebase management receipts will state their own exact source
-commit and live version. The saved public-origin refusal remains in force:
+The [delivery register](publication/release-delivery.json) records source C1
+`35bb82229d8175968919b5979264e5094a1cc8dc` and website C2
+`71bba893a5fbfeb808e5c44840b6701862255453`. The exact C2
+[hosted contracts pass](publication/c2/actions-40976045727/summary.json), and
+[Firebase management](../site-v1.21/hosting/deployment.json) confirms
+DEPLOY/FINALIZED version `d08a2aa131c05c4f`, released
+`2026-10-30T00:08:28.331Z`. [Original receipt collection and hashes](../site-v1.21/hosting/receipt-collection.json)
+and [unchanged tested/deployed source](publication/c3-source-equivalence.json)
+keep delivery evidence separate from application qualification.
+
+The saved public-origin refusal remains in force:
 neither public response bytes nor public rendering are inferred from local QA or
 Firebase management. Physical-phone experience, owner acceptance, enjoyment,
 retention and real payment/provider approval remain unmeasured by these checks.

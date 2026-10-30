@@ -1,0 +1,320 @@
+{
+  "schema": "luma-hosted-ci-evidence-v1",
+  "recorded_utc": "2026-10-29T23:54:45.346Z",
+  "run_id": 40975495640,
+  "head_sha": "35bb82229d8175968919b5979264e5094a1cc8dc",
+  "event": "push",
+  "workflow": "Puzzle contracts",
+  "url": "https://github.com/nabz0r/AndroidHit/actions/runs/40975495640",
+  "status": "completed",
+  "conclusion": "cancelled",
+  "accepted": false,
+  "superseding_sha": "71bba893a5fbfeb808e5c44840b6701862255453",
+  "scope": "Exact provider terminal run, jobs and step statuses; cancelled run is not passing evidence.",
+  "jobs": [
+    {
+      "id": 123802380683,
+      "name": "Packaged 1.18 art and frozen rig revision",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:34Z",
+          "completed_at": "2026-10-29T23:47:34Z"
+        },
+        {
+          "number": 2,
+          "name": "Check out only shipped art and its recorded rig baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:34Z",
+          "completed_at": "2026-10-29T23:48:35Z"
+        },
+        {
+          "number": 3,
+          "name": "Prepare the pinned image inspection runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:48:35Z",
+          "completed_at": "2026-10-29T23:48:42Z"
+        },
+        {
+          "number": 4,
+          "name": "Check polygon boundaries and refused asset revisions",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:48:42Z",
+          "completed_at": "2026-10-29T23:48:44Z"
+        },
+        {
+          "number": 5,
+          "name": "Inspect all 148 shipped sheets and verify their committed asset tree",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:48:44Z",
+          "completed_at": "2026-10-29T23:49:12Z"
+        },
+        {
+          "number": 10,
+          "name": "Post Check out only shipped art and its recorded rig baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:49:12Z",
+          "completed_at": "2026-10-29T23:49:12Z"
+        },
+        {
+          "number": 11,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:49:12Z",
+          "completed_at": "2026-10-29T23:49:12Z"
+        }
+      ]
+    },
+    {
+      "id": 123802380900,
+      "name": "Offline puzzle contracts (Java 17)",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:34Z",
+          "completed_at": "2026-10-29T23:47:35Z"
+        },
+        {
+          "number": 2,
+          "name": "Check out the tested revision",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:35Z",
+          "completed_at": "2026-10-29T23:47:37Z"
+        },
+        {
+          "number": 3,
+          "name": "Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:37Z",
+          "completed_at": "2026-10-29T23:47:38Z"
+        },
+        {
+          "number": 4,
+          "name": "Qualify all 1000 N boards and their pacing",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:38Z",
+          "completed_at": "2026-10-29T23:47:48Z"
+        },
+        {
+          "number": 5,
+          "name": "Qualify all 1000 U boards and every reachable relay state",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:48Z",
+          "completed_at": "2026-10-29T23:47:53Z"
+        },
+        {
+          "number": 6,
+          "name": "Preserve historical codes, six sealed challenges and original budgets",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:47:53Z",
+          "completed_at": "2026-10-29T23:48:16Z"
+        },
+        {
+          "number": 7,
+          "name": "Qualify every L and M state and the finite daily and weekly geometry pool",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:48:16Z",
+          "completed_at": "2026-10-29T23:49:27Z"
+        },
+        {
+          "number": 8,
+          "name": "Qualify every Guardian state and once-only reward transactions",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:49:27Z",
+          "completed_at": "2026-10-29T23:51:04Z"
+        },
+        {
+          "number": 9,
+          "name": "Check daily, weekly and Remix transactions and calendar boundaries",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:51:04Z",
+          "completed_at": "2026-10-29T23:51:15Z"
+        },
+        {
+          "number": 10,
+          "name": "Check three-room ownership, migration and camera geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:51:15Z",
+          "completed_at": "2026-10-29T23:51:21Z"
+        },
+        {
+          "number": 11,
+          "name": "Check strict budgets, the saved Return and legacy continuations",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:51:21Z",
+          "completed_at": "2026-10-29T23:51:23Z"
+        },
+        {
+          "number": 12,
+          "name": "Check adaptive home camera and recoverable player collection",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:51:23Z",
+          "completed_at": "2026-10-29T23:51:30Z"
+        },
+        {
+          "number": 13,
+          "name": "Check contextual rules and six-language feedback",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:51:30Z",
+          "completed_at": "2026-10-29T23:51:32Z"
+        },
+        {
+          "number": 14,
+          "name": "Check 1.17 scene transitions and original sprite geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:51:32Z",
+          "completed_at": "2026-10-29T23:51:34Z"
+        },
+        {
+          "number": 15,
+          "name": "Check 50 synthesized arrangements, earcons and audio lifecycle model",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:51:34Z",
+          "completed_at": "2026-10-29T23:52:09Z"
+        },
+        {
+          "number": 16,
+          "name": "Check puzzle gates, budgets, feedback and compact action reachability",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:09Z",
+          "completed_at": "2026-10-29T23:52:10Z"
+        },
+        {
+          "number": 17,
+          "name": "Check 1.20 interactions and retained website language and media controls",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:10Z",
+          "completed_at": "2026-10-29T23:52:10Z"
+        },
+        {
+          "number": 18,
+          "name": "Check exact APK delta transport and refused artifact replacement",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:10Z",
+          "completed_at": "2026-10-29T23:52:11Z"
+        },
+        {
+          "number": 19,
+          "name": "Check 1.18 expeditions, copies, durable costume choice and motion contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:11Z",
+          "completed_at": "2026-10-29T23:52:20Z"
+        },
+        {
+          "number": 20,
+          "name": "Check 1.19 team ownership, durable skills, U-board effects and adventure/dock geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:20Z",
+          "completed_at": "2026-10-29T23:52:30Z"
+        },
+        {
+          "number": 21,
+          "name": "Check 1.20 session pacing and genuine avatar reactions",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:30Z",
+          "completed_at": "2026-10-29T23:52:40Z"
+        },
+        {
+          "number": 22,
+          "name": "Check 1.21 elemental preparation, direct-exit Focus and confirmed-balance animation",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:40Z",
+          "completed_at": "2026-10-29T23:52:46Z"
+        },
+        {
+          "number": 23,
+          "name": "Check 1.21 menus, four independent rooms and chapter map",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:46Z",
+          "completed_at": "2026-10-29T23:52:50Z"
+        },
+        {
+          "number": 24,
+          "name": "Check 1.21 logarithmic entitlements, earned-Coin Undo receipts and energy capacity",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:52:50Z",
+          "completed_at": "2026-10-29T23:53:00Z"
+        },
+        {
+          "number": 25,
+          "name": "Check transactional premium refill outbox with a pinned JSON parser",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:53:00Z",
+          "completed_at": "2026-10-29T23:53:03Z"
+        },
+        {
+          "number": 26,
+          "name": "Check power offers and preserved reward decisions",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:53:03Z",
+          "completed_at": "2026-10-29T23:53:06Z"
+        },
+        {
+          "number": 51,
+          "name": "Post Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:53:06Z",
+          "completed_at": "2026-10-29T23:53:06Z"
+        },
+        {
+          "number": 52,
+          "name": "Post Check out the tested revision",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:53:06Z",
+          "completed_at": "2026-10-29T23:53:06Z"
+        },
+        {
+          "number": 53,
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-29T23:53:06Z",
+          "completed_at": "2026-10-29T23:53:06Z"
+        }
+      ]
+    }
+  ]
+}

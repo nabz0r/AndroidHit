@@ -1,0 +1,70 @@
+{
+  "schema": "luma-hosted-ci-evidence-v1",
+  "recorded_utc": "2026-10-30T00:00:11.798Z",
+  "run_id": 40976045727,
+  "head_sha": "71bba893a5fbfeb808e5c44840b6701862255453",
+  "event": "push",
+  "workflow": "Puzzle contracts",
+  "url": "https://github.com/nabz0r/AndroidHit/actions/runs/40976045727",
+  "status": "completed",
+  "conclusion": "success",
+  "accepted": true,
+  "run_attempt": 1,
+  "run_started_at": "2026-10-29T23:52:39Z",
+  "updated_at": "2026-10-29T23:58:41Z",
+  "scope": "Hosted Linux Java 17 and art/source/site contract checks. Exact provider run/jobs/step statuses plus complete decoded job logs. This is not native gameplay or human acceptance.",
+  "jobs": [
+    {
+      "id": 123804382537,
+      "name": "Packaged 1.18 art and frozen rig revision",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-29T23:53:11Z",
+      "completed_at": "2026-10-29T23:54:42Z",
+      "steps": 7,
+      "non_success_steps": []
+    },
+    {
+      "id": 123804382833,
+      "name": "Offline puzzle contracts (Java 17)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-29T23:53:11Z",
+      "completed_at": "2026-10-29T23:58:40Z",
+      "steps": 29,
+      "non_success_steps": []
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/job-123804382537-steps.json",
+      "bytes": 1087,
+      "sha256": "1e1c7537b7526f05aa1817394cad3f44d631cde322bdb1ee8fc13eace7816a90"
+    },
+    {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/job-123804382537.log",
+      "bytes": 29358,
+      "sha256": "6f428a59c18ee59c0228d0a40bee5308b55ba2811d3089570caa8895eeee774a"
+    },
+    {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/job-123804382833-steps.json",
+      "bytes": 4798,
+      "sha256": "ac91a214930af8499c1130d762a93c4cf3fdf3377f0facbe36560ee64d4ab3d7"
+    },
+    {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/job-123804382833.log",
+      "bytes": 99074,
+      "sha256": "bd2dae65477368cee9580fe56b3f07766e13c431186519f3df98a03e50730e9e"
+    },
+    {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/jobs.json",
+      "bytes": 12531,
+      "sha256": "b35a8ef69db386388455127c95579800821706ce8addda22fa0dfaa0617573a4"
+    },
+    {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/run.json",
+      "bytes": 13114,
+      "sha256": "12909f71a8e81b881e56a4f6e2f55177edd975d4d4fd4d0ada1b740ae0cbdfa5"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "status": "DELIVERED_FOR_PLAYTESTING",
+  "recorded_utc": "2026-10-30T00:10:35.075319+00:00",
+  "edition": "1.21",
+  "release": "1.21.0-rc1",
+  "version_code": 29,
+  "source": {
+    "application_commit": "35bb82229d8175968919b5979264e5094a1cc8dc",
+    "site_commit": "71bba893a5fbfeb808e5c44840b6701862255453",
+    "site_commit_tree": "db2d1ae3b39b19c9783987c4ea42a236d41cfca4",
+    "site_public_tree": "76b55bd32b91acb47caad2819e1bdd8d04672edc",
+    "delivery_docs_commit": "Commit containing this record; no self-referential SHA is claimed."
+  },
+  "artifact_manifest": {
+    "path": "releases/manifest-1.21.0-rc1.json",
+    "sha256": "d2ef622b961b1b1b88e45239b9a3ad09a8f0440fb449c76c9505a8adcd30ad8e"
+  },
+  "artifact_manifest_creation_state_preserved": true,
+  "candidate_freeze": {
+    "path": "docs/validation/v1.21/candidate-b/candidate.json",
+    "sha256": "f6214cc1394c7fa48a90adbb0a01454bec39fec0eeae0ef510517871d686d70e"
+  },
+  "apks": {
+    "production": {
+      "path": "releases/luma-drift-1.21.0-rc1.apk",
+      "sha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+      "bytes": 368969685,
+      "version": "1.21.0-rc1",
+      "code": 29,
+      "application_id": "com.androidhit.lumadrift",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "download_url": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-rc1.apk",
+      "download_response_bytes_verified": false,
+      "native_acceptance": {
+        "path": "docs/validation/v1.21/native/candidate-b-final-index.json",
+        "sha256": "75fe00cd396f3bbe4ac522fd21fb1ae2d3cd8e195d7c82989f84db65476fcaea"
+      },
+      "native_totals": {
+        "accepted_phase_count": 13,
+        "native_assertions": 574,
+        "actual_touch_actions": 149,
+        "original_pngs": 52,
+        "original_videos": 2,
+        "derived_comparisons": 38,
+        "verified_evidence_hash_entries": 295
+      }
+    },
+    "lab": {
+      "path": "releases/luma-drift-1.21.0-sandbox-rc1.apk",
+      "sha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+      "bytes": 368952988,
+      "version": "1.21.0-sandbox-rc1",
+      "code": 29,
+      "application_id": "com.androidhit.lumadrift.sandbox",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "download_url": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-sandbox-rc1.apk",
+      "download_response_bytes_verified": false,
+      "native_acceptance": {
+        "path": "docs/validation/v1.21/native-lab/candidate-b-final-index.json",
+        "sha256": "b578931f506caed9b8ed09ff6bb15e0abee7b987a206ffb38d4929c0289bbc9f"
+      },
+      "native_totals": {
+        "accepted_phase_count": 3,
+        "native_assertions": 99,
+        "actual_touch_actions": 41,
+        "original_pngs": 9,
+        "original_videos": 1,
+        "derived_comparisons": 24,
+        "verified_evidence_hash_entries": 66
+      }
+    }
+  },
+  "site_source_manifest": {
+    "path": "docs/validation/site-v1.21/release/source-manifest.json",
+    "sha256": "4f49014a250954f825ebf3e15c60869988601e79b4deeee8bb410475002a7b4b"
+  },
+  "site_preparation": {
+    "path": "docs/validation/site-v1.21/preparation.json",
+    "sha256": "b5aafbaea1db6445c132cf6d09affccc7eb153bf2625c8253143a4696af8f465"
+  },
+  "site_source_qa": {
+    "path": "docs/validation/site-v1.21/source-qa-prepared.json",
+    "sha256": "0aca0251b9ae9a5ed272efec3c241f1f7ae8739874ee5e46fa735954be709fcd"
+  },
+  "site_prepared_scope": {
+    "source_provenance_link_checks": 1143,
+    "local_complete_hosted_website_command_tests": 78,
+    "physical_hosting_payloads": 525,
+    "payload_bytes": 3575292556,
+    "frozen_site_inputs": 30,
+    "original_native_site_captures": 8,
+    "intentional_reviewed_privacy_amendments": 1,
+    "preparation_checkpoint_pinned_files": 507,
+    "preparation_checkpoint_scope": "Pinned after the reviewed privacy amendment; not a claim that all 507 files are byte-identical from 1.20.",
+    "previous_site_payloads": 508,
+    "unchanged_from_original_v120": 506,
+    "changed_existing_payloads": [
+      "/index.html",
+      "/privacy/index.html"
+    ],
+    "new_payloads": 17,
+    "removed_payloads": 0
+  },
+  "site_browser_qa": {
+    "independent_simulation": {
+      "path": "docs/validation/site-v1.21/browser-local/simulation/report.json",
+      "sha256": "156a0cff41d59a43515cb339a2509da56b1d7d91338a41829897004f7f851676",
+      "responsive_view_language_width_states": 32
+    },
+    "exact_candidate_preview": {
+      "path": "docs/validation/site-v1.21/browser-local/homepage/report.json",
+      "sha256": "edaa0291cad4f5de922e6888a4ae830a1281dd4dd0122065778c894f9438d889",
+      "responsive_language_width_states": 8,
+      "individually_visible_native_image_observations": 40
+    },
+    "prepared_public_directory": {
+      "path": "docs/validation/site-v1.21/browser-local/prepared/report.json",
+      "sha256": "8086603d97569de929583c4a5eb11b4dccfeb2a122b54b91175666bc0a2361cb",
+      "responsive_language_width_states": 4,
+      "individually_visible_native_image_observations": 20,
+      "homepage_identical_to_reviewed_preview": true,
+      "console_errors_observed": 0
+    },
+    "counting_scope": "Separate local scopes on the same implementation. Counts are not added into unique user, retention or device totals."
+  },
+  "code_and_site_ci": {
+    "status": "SUCCESS",
+    "run_id": 40976045727,
+    "run_url": "https://github.com/nabz0r/AndroidHit/actions/runs/40976045727",
+    "head_sha": "71bba893a5fbfeb808e5c44840b6701862255453",
+    "receipt": {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/summary.json",
+      "sha256": "c98415a7331f1ffc9e0281209a2853ce097f235cffe71d9073e896bd2933ee7f"
+    },
+    "provider_run": {
+      "path": "docs/validation/v1.21/publication/c2/actions-40976045727/run.json",
+      "sha256": "12909f71a8e81b881e56a4f6e2f55177edd975d4d4fd4d0ada1b740ae0cbdfa5"
+    },
+    "successful_jobs": 2,
+    "successful_steps": 36,
+    "failed_or_skipped_steps": 0,
+    "scope": "Hosted Linux Java 17 and art/source/site contract checks. Exact provider run/jobs/step statuses plus complete decoded job logs. This is not native gameplay or human acceptance."
+  },
+  "hosting_deployment": {
+    "status": "DEPLOY_FINALIZED",
+    "source_commit": "71bba893a5fbfeb808e5c44840b6701862255453",
+    "receipt": {
+      "path": "docs/validation/site-v1.21/hosting/deployment.json",
+      "sha256": "91488eaedeb814194e68ad069553293103a2eee0ebc3f62c7a24d46308d50a0f"
+    },
+    "preflight": {
+      "path": "docs/validation/site-v1.21/hosting/preflight.json",
+      "sha256": "dc8e9da43e81966b9a377e2a56f358e8d5b861125932caaf35ec8668ba812740"
+    },
+    "preflight_scope": "Exact clean C2 authenticated deployment checkout: all 525 physical payload hashes verified. This preflight is not a deployment completion or public-origin receipt."
+  },
+  "public_origin": {
+    "response_bytes_verified": false,
+    "browser_render_verified": false,
+    "scope": "Public response bytes and public browser rendering remain unverified under the saved permission refusal. Original Hosting receipts, source checkout and local browser QA retain their separate scopes."
+  },
+  "production_profile_isolation": {
+    "path": "docs/validation/v1.21/native/production-profile-preserved-after-lab.json",
+    "sha256": "301e2005a4bbe1f6ad33e1f736cb499cc8c7bb7c6a03ddfda6a96a3715132457"
+  },
+  "accepted_scope": [
+    "Exact B production/Lab signed APK identities and retained signer, separately scoped native installation and execution on API 36 ARM64 with 16 KiB pages.",
+    "Production: elemental shells and once-per-attempt Focus, paid Undo after two free uses, cold restoration, earned-Coin draw confirmation/cancellation, living/kitchen/garden selectors, FR/EN surfaces and compact reduced-motion navigation.",
+    "Isolated Lab: actual 450→400 test-Gold debit at zero energy, energy 0→10→9/cold 9; six production preference maps unchanged.",
+    "Prepared website: 1143 offline source/provenance/link checks, 78 full-command Node tests, original B native media and separately scoped local browser checks.",
+    "Hosted CI 40976045727 passes both jobs and all 36 steps at exact C2, with archived original run/jobs/steps and complete job logs.",
+    "Every physical Hosting payload hash passes in the exact clean C2 checkout, including external APK copies. Hosting-only deployment and live management confirm DEPLOY/FINALIZED version d08a2aa131c05c4f at 2026-10-30T00:08:28.331Z."
+  ],
+  "limits": [
+    "The original Hosting receipt bytes and authenticated DEPLOY/FINALIZED management state are verified; public HTTP response bytes and public browser rendering remain unverified under the saved permission refusal.",
+    "No public response-byte verification or public browser-rendering acceptance is claimed.",
+    "No physical-phone comfort, human enjoyment, retention or store approval is inferred.",
+    "No Play Console release, real purchase/refund acceptance, live advertisement acceptance or production backend rollout occurs.",
+    "All 1000 elemental plans/model checks are host coverage; accepted native scenarios do not imply 1000 full native playthroughs."
+  ],
+  "source_publication_receipts": {
+    "application": {
+      "path": "docs/validation/v1.21/publication/c1/publication.json",
+      "sha256": "cacb61e660486004412e242d268798e76f70e39932091232692aee917f9112e8"
+    },
+    "website": {
+      "path": "docs/validation/v1.21/publication/c2/publication.json",
+      "sha256": "4751408f62f02fe1cae4ab5921c359281e5f1fbfba0bdb23245657f6272d4b06"
+    }
+  },
+  "site_previous_source_diff": {
+    "path": "docs/validation/site-v1.21/hosting/previous-source-diff.json",
+    "sha256": "4ecf46cf3573058efb88a5a2e9a47c7d5463d33a1ef7b19847658f1771dabd8e"
+  },
+  "hosting_evidence_method": "ORIGINAL_REMOTE_RECEIPT_BYTES",
+  "hosting_receipt_collection": {
+    "method": "Original remote JSON bytes exported as gzip/base64 through authenticated UI, decoded locally and verified against the remote SHA-256. This is not a derived-only transcription.",
+    "deployment_json_bytes": 2758,
+    "deployment_json_sha256": "91488eaedeb814194e68ad069553293103a2eee0ebc3f62c7a24d46308d50a0f"
+  },
+  "hosting_management": {
+    "management_provider": "authenticated firebase hosting:channel:list --json",
+    "release_name": "projects/luma-drift-production/sites/luma-drift-production/channels/live/releases/1793318908331000",
+    "release_type": "DEPLOY",
+    "release_time": "2026-10-30T00:08:28.331Z",
+    "release_message": "Website1.21 from 71bba893a5fbfeb808e5c44840b6701862255453",
+    "version_name": "projects/luma-drift-production/sites/luma-drift-production/versions/d08a2aa131c05c4f",
+    "version_status": "FINALIZED"
+  },
+  "delivery_links": {
+    "site": "https://luma-drift-production.web.app/",
+    "simulation": "https://luma-drift-production.web.app/lab/ui-1-21/index.html",
+    "production_apk": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-rc1.apk",
+    "lab_apk": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-sandbox-rc1.apk"
+  }
+}

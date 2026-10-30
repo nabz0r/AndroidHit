@@ -1,0 +1,58 @@
+{
+  "schema": "luma-site-prior-source-comparison-v1",
+  "recorded_at_utc": "2026-10-29T23:58:45.720347+00:00",
+  "passed": true,
+  "previous_manifest": "docs/validation/site-v1.20/release/source-manifest.json",
+  "previous_manifest_sha256": "dce28e69d6f0ab2629c79548259d22666b91011d2b8dad225a5e0750f447ea7b",
+  "current_manifest": "docs/validation/site-v1.21/release/source-manifest.json",
+  "current_manifest_sha256": "4f49014a250954f825ebf3e15c60869988601e79b4deeee8bb410475002a7b4b",
+  "comparison_scope": "Exact prepared source manifests; not independent public-origin response bytes. The 507-entry preservation checkpoint was captured after the intentional privacy amendment.",
+  "previous_payloads": 508,
+  "current_payloads": 525,
+  "unchanged_previous_payloads": 506,
+  "new_payloads": [
+    "/assets/screenshots/v1.21/home-en.png",
+    "/assets/screenshots/v1.21/home-fr.png",
+    "/assets/screenshots/v1.21/map-en.png",
+    "/assets/screenshots/v1.21/map-fr.png",
+    "/assets/screenshots/v1.21/puzzle-en.png",
+    "/assets/screenshots/v1.21/puzzle-fr.png",
+    "/assets/screenshots/v1.21/shop-en.png",
+    "/assets/screenshots/v1.21/shop-fr.png",
+    "/assets/site-v121.css",
+    "/assets/site-v121.js",
+    "/lab/ui-1-21/index.html",
+    "/lab/ui-1-21/simulation-core.mjs",
+    "/lab/ui-1-21/simulation.css",
+    "/lab/ui-1-21/simulation.mjs",
+    "/releases/luma-drift-1.21.0-rc1.apk",
+    "/releases/luma-drift-1.21.0-sandbox-rc1.apk",
+    "/releases/manifest-1.21.0-rc1.json"
+  ],
+  "removed_payloads": [],
+  "changed_previous_payloads": [
+    {
+      "path": "/index.html",
+      "before": {
+        "bytes": 29397,
+        "sha256": "1183318c36dc9ef022d4ba1ebe893df0abad6d348b4154c398fc2376d1ea53ce"
+      },
+      "after": {
+        "bytes": 36882,
+        "sha256": "edbaeec4bff7284a2efd9485d5297542adc16cb816a9ce0c3e6792d1dc9348af"
+      }
+    },
+    {
+      "path": "/privacy/index.html",
+      "before": {
+        "bytes": 28786,
+        "sha256": "37329ca9dda90469cb3d71d3e157ef58d0b057df49ca915706e4f1b929134bf7"
+      },
+      "after": {
+        "bytes": 29793,
+        "sha256": "859ea48b4611d6e4c91f0fb7779146ec1b8e1157018cde9c8c826269d68cc4e2"
+      }
+    }
+  ],
+  "preservation_checkpoint_payloads": 507
+}
