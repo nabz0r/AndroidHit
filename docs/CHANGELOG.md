@@ -1,5 +1,13 @@
 # Changelog
 
+## Cognitive Lab 1 — local research and report
+
+30 October 2026. Add a separate reproducible headless simulation and bilingual report for 100 heterogeneous synthetic profiles, bounded decisions, repeated paired scenarios, cognition/persistence measures and actual decision traces. [Method and commands](COGNITIVE_LAB.md) · [Executed results and delivery](validation/cognitive-lab/README.md). The current Android release remains 1.21.0-rc1 / code 29. No human retention, calibrated IQ or clinical addiction result is implied.
+
+## 1.21.0-rc1 / code 29 — B delivered for playtesting
+
+30 October 2026. The avatar-led home, fourth independent room, ten illustrated zones, elemental shells, free direct-exit Focus and versioned reward/Undo/energy curve are delivered for playtesting. The existing [release register](RELEASE_1_21.md) preserves exact packages, source, native scopes, local browser checks and Firebase receipts. Human and physical-phone acceptance remain separate.
+
 ## 1.20.0-rc1 / code 28 — F delivered for playtesting
 
 29 October 2026. **Packages, source and Hosting delivered for playtesting.** [Release and exact F bytes](RELEASE_1_20.md) · [Executed evidence and pending gates](validation/v1.20/README.md).

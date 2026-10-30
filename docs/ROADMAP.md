@@ -1,5 +1,9 @@
 # Luma Drift roadmap
 
+## Cognitive Lab — synthetic evidence track
+
+The next authorized research track is a fully local, reproducible cognitive-agent lab: 100 explicit profiles, repeated paired scenarios, current puzzle-engine execution, bounded visible-state decisions and traceable outcomes. [Method and commands](COGNITIVE_LAB.md) · [Recorded run and delivery](validation/cognitive-lab/README.md). This supports comparisons of model robustness, difficulty and resource friction. IQ labels are hypothetical; return and stopping are modeled. It does not close the human, physical-phone, provider or Play acceptance gates recorded below.
+
 ## Current 1.21 — delivered for playtesting
 
 The signed B / code 29 packages are frozen in the [artifact manifest](../releases/manifest-1.21.0-rc1.json). The full-body avatar, real player XP, companion-copy evolution, illustrated offers and direct house/living/kitchen/garden routes are implemented. Appearance, puzzle-team skills, player XP, copies, earned Coins and account Gold have distinct explanations. The kitchen is a separate free ambient room; its purchasable furnishing stays a separate 440-Coin object.

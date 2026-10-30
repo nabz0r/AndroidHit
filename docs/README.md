@@ -1,6 +1,14 @@
 # Luma Drift documentation
 
-## Current 1.20 — F delivered for playtesting
+## Cognitive Lab — local synthetic player research
+
+[Interactive FR/EN report](https://luma-drift-production.web.app/lab/cognitive/index.html) · [Method and local reproduction](COGNITIVE_LAB.md) · [Recorded run and delivery](validation/cognitive-lab/README.md). Compare bounded cognitive agents on the current engine. Profile parameters and IQ labels are uncalibrated hypotheses; modeled continuation is not observed human retention.
+
+## Current 1.21 — B delivered for playtesting
+
+[Release and exact bytes](RELEASE_1_21.md) · [Website delivery](validation/site-v1.21/README.md) · [Roadmap](ROADMAP.md). Production code 29 and isolated Lab retain their separately scoped evidence. The research lab does not change these packages or their acceptance limits.
+
+## Preserved 1.20 — F delivered for playtesting
 
 **Production/Lab packages, source and Firebase website are delivered for playtesting; native scopes remain separately recorded.** Production `1.20.0-rc1` and separate Lab `1.20.0-sandbox-rc1`, code 28, are signed against 481 frozen inputs. The new home, fixed wallets, durable gifts and illustrated boutique accompany policy 6 action grading and separate installation-local session energy. The 10-energy/50-LumaGold refill is prepared with production gates closed and isolated Lab test Gold; no new production energy endpoint is deployed.
 

@@ -1,6 +1,10 @@
 <h1 align="center">Luma Drift</h1>
 <p align="center"><strong>Small companions. Bigger adventures.</strong><br>1.21 · an avatar in the spotlight, a living journey and progress you can understand · delivered for playtesting</p>
 
+## Cognitive Lab — local synthetic player research
+
+**[Open the FR/EN report](https://luma-drift-production.web.app/lab/cognitive/index.html)** · [Method, local commands and limits](docs/COGNITIVE_LAB.md) · [Recorded run and delivery](docs/validation/cognitive-lab/README.md). A separate headless lab compares 100 heterogeneous cognitive agents with repeated, paired scenarios on the current puzzle engine. Cognitive parameters, IQ labels and continuation measures are synthetic hypotheses. This adds no Android release and establishes no human retention or clinical outcome.
+
 ## Current 1.21 — delivered for playtesting
 
 **[Production APK](https://luma-drift-production.web.app/releases/luma-drift-1.21.0-rc1.apk)** · **[Separate Lab APK](https://luma-drift-production.web.app/releases/luma-drift-1.21.0-sandbox-rc1.apk)** · **[Playable simulation](https://luma-drift-production.web.app/lab/ui-1-21/index.html)** · [Website](https://luma-drift-production.web.app/)
