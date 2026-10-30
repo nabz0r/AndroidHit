@@ -63,7 +63,7 @@ zero. No model is selected on held-out results.
   safe text rendering, inert CSV formulas, chart geometry and retry attribution.
   Actual local browser checks cover FR/EN at 320/375/768/1280 pixels, scenario
   changes, profile selection, optional IQ labels and full local report import.
-- **Six offline deployment tests** cover exact source identity, sparse checkouts,
+- **Eight offline deployment tests** cover exact source identity, sparse checkouts,
   preserved provider hashes/config, forbidden paths/hosts and concurrent changes.
 
 The historical v1.9 solver-driven simulations are preserved. Their outputs are
@@ -101,6 +101,23 @@ paths and preserves their provider hashes too; arbitrary additions remain
 rejected. Thus the source manifest has **539 physical payloads**, while the
 expected cloned provider version has **541 paths**, including **526 retained
 historical provider paths**. These counts must not be conflated.
+
+The site was released from source
+[`8f3653d0`](https://github.com/nabz0r/AndroidHit/commit/8f3653d0a1a538f67c3136a8fff900a2beb652a9)
+as Firebase version `92e40c3a51003cb2` on **2026-10-30T01:34:11.791Z**.
+The post-release checker initially treated the default-site and live-channel
+release-name aliases as different releases. Both refer to release ID
+`1793324051791000`; the version and message matched. A later read-only recovery
+verifies the existing release and preserves the initial failure receipt. It
+does not deploy a second version.
+
+[Independent public-byte verification](public-origin-overlay.json) passes all
+**15 changed/new HTTPS responses / 14,353,082 bytes**, including the local ZIP
+and both raw gzip CSV files. [Actual public browser checks](browser-public/report.json)
+pass FR/EN at 320/375/768/1280 pixels with no observed console errors or
+horizontal overflow. Earlier saved origin-access refusals remain historical;
+the current authorized browser observation succeeded. Older APK responses were
+not redownloaded in this check.
 
 Source publication, remote CI, authenticated Firebase management and
 public-origin observation are recorded separately after release. A finalized

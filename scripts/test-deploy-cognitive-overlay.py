@@ -85,8 +85,12 @@ class FakeClient:
                 self.live = 'sites/' + MODULE.SITE + '/versions/concurrent-version'
             if self.fault == 'race_before_release' and self.live_reads == 3:
                 self.live = 'sites/' + MODULE.SITE + '/versions/concurrent-version'
+            alias = self.release_name
+            if self.live == self.new and self.fault in ('release_live_alias', 'release_other_id'):
+                alias = 'sites/' + MODULE.SITE + '/channels/live/releases/' + (
+                    self.release_name.rsplit('/', 1)[-1] if self.fault == 'release_live_alias' else 'other-release')
             return {'name': 'sites/' + MODULE.SITE + '/channels/live', 'url': 'https://example.invalid',
-                    'release': {'name': self.release_name, 'message': self.message, 'type': 'DEPLOY',
+                    'release': {'name': alias, 'message': self.message, 'type': 'DEPLOY',
                                 'version': {'name': self.live, 'status': 'FINALIZED'}}}
         if resource.endswith('/versions:clone'):
             assert body == {'sourceVersion': self.old, 'finalize': False}
@@ -216,6 +220,53 @@ class OverlayTests(unittest.TestCase):
             execute(self.source, client, client.old, self.receipts, True)
         self.assertTrue(all(call[0] == 'GET' for call in client.calls))
 
+    def test_default_and_live_release_aliases(self):
+        default = 'sites/' + MODULE.SITE + '/releases/1793324051791000'
+        live = 'sites/' + MODULE.SITE + '/channels/live/releases/1793324051791000'
+        self.assertTrue(MODULE.same_release(default, live))
+        self.assertTrue(MODULE.same_release(live, default))
+        self.assertFalse(MODULE.same_release(default, live + '1'))
+        self.assertFalse(MODULE.same_release(default, live.replace('/live/', '/preview/')))
+        self.assertFalse(MODULE.same_release(default, default.replace(MODULE.SITE, 'other-site')))
+        client = FakeClient(self.source, 'release_live_alias')
+        result = execute(self.source, client, client.old, self.receipts, True)
+        self.assertEqual(result['status'], 'DEPLOY/FINALIZED')
+        self.assertIn('/channels/live/releases/', result['live']['releaseName'])
+        other = FakeClient(self.source, 'release_other_id')
+        other_directory = self.receipts / 'other-release-id'
+        other_directory.mkdir()
+        with self.assertRaises(MODULE.DeploymentError):
+            execute(self.source, other, other.old, other_directory, True)
+
+    def test_recovery_uses_only_get_and_preserves_failure_and_deployed_commit(self):
+        client = FakeClient(self.source, 'release_live_alias')
+        execute(self.source, client, client.old, self.receipts, True)
+        (self.receipts / 'deployment.json').unlink()
+        failure = b'{"status":"FAILED","reason":"original alias postcheck"}\n'
+        (self.receipts / 'failure.json').write_bytes(failure)
+        deployed_commit = self.source['commit']
+        (self.root / 'validator-change.txt').write_text('Later validator change; public bytes unchanged')
+        git(self.root, 'add', 'validator-change.txt')
+        git(self.root, 'commit', '-qm', 'validator only')
+        current = MODULE.validate_source(self.root, git(self.root, 'rev-parse', 'HEAD'))
+        self.assertNotEqual(deployed_commit, current['commit'])
+        client.calls.clear()
+        with contextlib.redirect_stdout(io.StringIO()):
+            result = MODULE.recover(current, client, self.receipts)
+        self.assertTrue(all(call[0] == 'GET' for call in client.calls))
+        self.assertTrue(result['recoveredReadOnly'])
+        self.assertEqual(result['recoveryProviderWrites'], 0)
+        self.assertEqual(result['sourceCommit'], deployed_commit)
+        self.assertEqual(result['deploymentSourceCommit'], deployed_commit)
+        self.assertEqual(result['validatorSourceCommit'], current['commit'])
+        self.assertEqual((self.receipts / 'failure.json').read_bytes(), failure)
+        self.assertTrue((self.receipts / 'recovery.json').is_file())
+        self.assertTrue((self.receipts / 'deployment.json').is_file())
+        client.maps[client.new]['/__/firebase/init.js'] = ('f' * 64, 'ACTIVE')
+        with self.assertRaises(MODULE.DeploymentError):
+            with contextlib.redirect_stdout(io.StringIO()):
+                MODULE.recover(current, client, self.receipts)
+        self.assertEqual((self.receipts / 'failure.json').read_bytes(), failure)
     def test_faults_never_release(self):
         for fault in ('clone_file_changed', 'clone_config_changed', 'unexpected_hash',
                       'untrusted_upload', 'race_before_clone', 'race_before_release'):

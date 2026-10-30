@@ -38,6 +38,7 @@ CONFIG = 'firebase.json'
 HEX = re.compile(r'[a-f0-9]{64}\Z')
 VERSION = re.compile(r'sites/' + SITE + r'/versions/[A-Za-z0-9_-]+\Z')
 OPERATION = re.compile(r'projects/[A-Za-z0-9_-]+/operations/[A-Za-z0-9_-]+\Z')
+RELEASE_NAME = re.compile(r'sites/' + SITE + r'/(?:channels/live/)?releases/([A-Za-z0-9_-]+)\Z')
 
 
 class DeploymentError(RuntimeError):
@@ -141,7 +142,7 @@ def validate_source(root, commit):
         blobs[digest] = encoded
     require(overlay['/lab/cognitive/data/provenance.json']['rawSha256'] ==
             source['simulationProvenanceSha256'], 'Simulation provenance metadata differs')
-    return {'commit': commit, 'manifestSha256': sha(metadata),
+    return {'commit': commit, 'root': root.resolve(), 'manifestSha256': sha(metadata),
             'baselineManifestSha256': sha(baseline_bytes), 'baselineFiles': previous,
             'allSourceFiles': current, 'overlay': overlay, 'blobs': blobs,
             'publicTree': git(root, 'rev-parse', commit + ':public'),
@@ -229,6 +230,14 @@ def live_channel(client, expected):
             'releaseName': release.get('name'), 'releaseTime': release.get('releaseTime'),
             'releaseMessage': release.get('message'), 'releaseType': release['type'],
             'versionName': version['name'], 'versionStatus': version['status']}
+
+
+def same_release(first, second):
+    """The default-site and channels/live names alias the same release ID."""
+    if not isinstance(first, str) or not isinstance(second, str):
+        return False
+    left, right = RELEASE_NAME.fullmatch(first), RELEASE_NAME.fullmatch(second)
+    return bool(left and right and left.group(1) == right.group(1))
 
 
 def version(client, name, expected_status):
@@ -386,7 +395,7 @@ def execute(source, client, expected_live, output, deploy):
     require(release.get('version', {}).get('name') == name and release.get('message') == message and
             release.get('type') == 'DEPLOY', 'Release response identity differs; inspect management state')
     after = live_channel(client, name)
-    require(after['releaseMessage'] == message and after['releaseName'] == release.get('name'),
+    require(after['releaseMessage'] == message and same_release(after['releaseName'], release.get('name')),
             'Live channel does not reference the exact new release')
     result = dict(preflight, status='DEPLOY/FINALIZED',
                   recordedAtUtc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -401,27 +410,125 @@ def execute(source, client, expected_live, output, deploy):
     return result
 
 
+def recover(source, client, output):
+    """Read-only verification of a release already made by an earlier run.
+
+    A later validator commit is allowed only when its exact public tree and
+    manifest are unchanged. No mutation endpoint is called on this path.
+    """
+    def receipt(name):
+        path = output / name
+        require(path.is_file() and not path.is_symlink(), 'Missing bounded recovery receipt: ' + name)
+        return json.loads(path.read_text())
+
+    previous = receipt('preflight.json')
+    operation = receipt('clone-operation.json')
+    verified = receipt('verified-provider-files.json')
+    finalized = receipt('finalized-version.json')
+    uploads = receipt('uploads.json')
+    baseline_files = receipt('baseline-provider-files.json')
+    baseline_config = receipt('baseline-provider-config.json')
+    overlay = receipt('overlay-source-and-gzip-hashes.json')
+    deployment_commit = previous.get('sourceCommit', '')
+    require(re.fullmatch(r'[a-f0-9]{40}', deployment_commit) is not None and
+            previous.get('status') == 'PASS' and previous.get('mode') == 'deploy',
+            'Recovery requires an earlier exact deployment preflight')
+    require(previous.get('sourcePublicTree') == source['publicTree'] and
+            previous.get('manifestSha256') == source['manifestSha256'] and
+            previous.get('baselineManifestSha256') == source['baselineManifestSha256'] and
+            previous.get('firebaseConfigSha256') == source['firebaseConfigSha256'],
+            'Validator source public tree or immutable deployment metadata differs')
+    require(git(source['root'], 'rev-parse', deployment_commit + ':public') == source['publicTree'] and
+            sha(git(source['root'], 'show', deployment_commit + ':' + MANIFEST, binary=True)) == source['manifestSha256'] and
+            sha(git(source['root'], 'show', deployment_commit + ':' + CONFIG, binary=True)) == source['firebaseConfigSha256'],
+            'Original deployment commit does not prove the same public tree and source metadata')
+    require(overlay == source['overlay'], 'Recovery overlay bytes or gzip identities differ')
+    require(operation.get('done') is True and operation.get('versionStatus') == 'CREATED',
+            'Recovery clone did not finish as a mutable version')
+    name = operation.get('versionName', '')
+    require(isinstance(name, str) and VERSION.fullmatch(name) is not None and
+            finalized.get('name') == name and finalized.get('status') == 'FINALIZED' and
+            uploads.get('version') == name, 'Recovery version receipts disagree')
+    physical_baseline = set(source['baselineFiles'])
+    require(set(baseline_files) == physical_baseline.union(FIREBASE_RESERVED) and
+            all(isinstance(value, str) and HEX.fullmatch(value) for value in baseline_files.values()) and
+            canonical_hash(baseline_files) == previous.get('oldProviderFileMapSha256'),
+            'Recovery historical provider file identities differ')
+    expected_files = dict(baseline_files)
+    expected_files.update({path: row['gzipSha256'] for path, row in source['overlay'].items()})
+    require(verified == expected_files and canonical_hash(expected_files) == previous.get('expectedProviderFileMapSha256') and
+            set(expected_files) == set(source['allSourceFiles']).union(FIREBASE_RESERVED),
+            'Recovery final provider identities differ from the exact source overlay')
+    config_hash = canonical_hash(baseline_config)
+    require(config_hash == previous.get('providerServingConfigSha256') and
+            config_hash == finalized.get('providerConfigSha256'), 'Recovery provider config receipts disagree')
+    required, uploaded = uploads.get('requiredHashes'), uploads.get('uploadedHashes')
+    require(isinstance(required, list) and isinstance(uploaded, list) and
+            len(required) == len(set(required)) and set(required) == set(uploaded) and
+            set(required).issubset(source['blobs']) and uploads.get('historicalBlobsUploaded') == 0,
+            'Recovery uploads are incomplete or include historical blobs')
+    message = 'Cognitive Lab 1 from ' + deployment_commit
+    live = live_channel(client, name)
+    require(live.get('releaseMessage') == message and
+            isinstance(live.get('releaseName'), str) and RELEASE_NAME.fullmatch(live['releaseName']) is not None,
+            'Recovery live release message or resource alias differs')
+    actual_version = version(client, name, 'FINALIZED')
+    require(actual_version.get('config', {}) == baseline_config and
+            files(client, name) == expected_files and not files(client, name, 'EXPECTED'),
+            'Recovery live provider files or serving config differ')
+    if 'fileCount' in actual_version:
+        require(int(actual_version['fileCount']) == len(expected_files), 'Recovery provider file count differs')
+    failure_path = output / 'failure.json'
+    failure_hash = sha(failure_path.read_bytes()) if failure_path.is_file() else None
+    record = dict(previous, status='DEPLOY/FINALIZED', sourceCommit=deployment_commit,
+                  deploymentSourceCommit=deployment_commit, validatorSourceCommit=source['commit'],
+                  recoveredReadOnly=True, recoveryProviderWrites=0,
+                  recordedAtUtc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  version=name, live=live, uploadedOverlayBlobs=len(uploaded),
+                  historicalProviderHashesPreserved=True, providerServingConfigUnchanged=True,
+                  verifiedProviderFiles=len(expected_files),
+                  originalFailurePreserved=failure_hash is not None, originalFailureSha256=failure_hash,
+                  releaseIdentityScope='Current live exact version, deployed-source message and allowed default/live release resource verified; original POST response was not stored by the earlier failed postcheck',
+                  publicOriginRequested=False, publicOriginBytesVerified=False,
+                  publicOriginRenderingVerified=False)
+    save(output, 'recovery.json', record)
+    save(output, 'deployment.json', record)
+    require(not failure_path.is_file() or sha(failure_path.read_bytes()) == failure_hash,
+            'Original failure receipt changed during recovery')
+    print('COGNITIVE_LAB_OVERLAY_RECOVERY_RECEIPT ' + json.dumps(record, sort_keys=True), flush=True)
+    return record
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--commit', required=True, help='Exact clean Git HEAD (40 hex characters)')
     parser.add_argument('--output', '--receipts', required=True, type=Path, help='New external receipt directory')
     parser.add_argument('--expected-live-version', default=EXPECTED_LIVE)
     parser.add_argument('--deploy', action='store_true', help='Explicitly clone, upload overlay, finalize and release')
+    parser.add_argument('--recover', action='store_true',
+                        help='Read-only verification of an already released version using existing --output receipts')
     args = parser.parse_args()
+    require(not (args.deploy and args.recover), '--recover cannot be combined with --deploy')
     require(VERSION.fullmatch(args.expected_live_version) is not None, 'Expected live version must belong to the fixed site')
     output = args.output.resolve()
-    require(output != ROOT and ROOT not in output.parents and not output.exists(),
-            'Use a new receipt directory outside the source checkout')
+    require(output != ROOT and ROOT not in output.parents, 'Receipts must be outside the source checkout')
+    require(output.is_dir() if args.recover else not output.exists(),
+            'Recovery requires an existing receipt directory; preflight/deploy requires a new directory')
     source = validate_source(ROOT, args.commit)
     client = Client(access_token())
-    output.mkdir(parents=True, exist_ok=False)
+    if not args.recover:
+        output.mkdir(parents=True, exist_ok=False)
     try:
-        execute(source, client, args.expected_live_version, output, args.deploy)
+        if args.recover:
+            recover(source, client, output)
+        else:
+            execute(source, client, args.expected_live_version, output, args.deploy)
     except Exception as error:
         # Only controlled error text is safe; an arbitrary library exception can
         # include a request object. Keep unknown failures deliberately generic.
         detail = str(error) if isinstance(error, DeploymentError) else 'Unexpected local/provider response; no public verification claimed'
-        save(output, 'failure.json', {'status': 'FAILED', 'reason': detail,
+        failure_name = ('recovery-failure-' + datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S%fZ') + '.json') if args.recover else 'failure.json'
+        save(output, failure_name, {'status': 'FAILED', 'reason': detail,
                                       'deployRequested': args.deploy, 'sourceCommit': args.commit,
                                       'publicOriginRequested': False})
         raise DeploymentError(detail) from None
