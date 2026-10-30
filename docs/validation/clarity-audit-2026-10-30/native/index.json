@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T17:27:30.814150+00:00",
+  "scope": "A scripted native inspection of existing exact production C. Not human comprehension, enjoyment, retention, physical-phone or new-release acceptance. Failed observer program is preserved separately. No private target API, fixture, solve operation, grant, target install/update or clear is used by the new programs.",
+  "productionVersion": "1.22.0-rc1",
+  "productionCode": 30,
+  "productionApkSha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "observerSha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "mainExecution": {
+    "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/report.json",
+    "sha256": "ee46200ed602fe78ad4ddec7abb2c6cea66bf59c11dda2535b23a985ca22f74b",
+    "passed": true,
+    "assertions": 39,
+    "touches": 20,
+    "captures": [
+      "fr-01-plateau-u42-retained",
+      "fr-02-talent-nova",
+      "fr-03-pause-save-exit",
+      "fr-04-equipe",
+      "fr-05-hub-collection",
+      "fr-06-mes-compagnons",
+      "fr-07-fiche-nova",
+      "fr-08-garde-robe",
+      "fr-09-equipement-dressing",
+      "fr-10-fiche-equipement",
+      "fr-11-plateau-u42-retour"
+    ]
+  },
+  "ancillaryExecutions": [
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-discovery/report.json",
+      "sha256": "013a36d41f4f1fdd3d05a4d12a7cb92847598bb0f82cd6b7d3847e0bcbcde032",
+      "passed": true,
+      "assertions": 7,
+      "touches": 0,
+      "captures": [
+        "clarity-initial-adventure"
+      ]
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-a/report.json",
+      "sha256": "b841cec89952ac30b6ccaa6c0cb79d9ed7b32e35850a045856d0563f0145dc2e",
+      "passed": false,
+      "assertions": 12,
+      "touches": 3,
+      "captures": [
+        "failure"
+      ]
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-a-retry/report.json",
+      "sha256": "87fd7c12a3fea96e6609a13fc054515624d3c72aea5356149d8268b2a2f475a7",
+      "passed": true,
+      "assertions": 29,
+      "touches": 11,
+      "captures": [
+        "fr-01-plateau-u42-retained",
+        "fr-02-talent-nova",
+        "fr-03-pause-save-exit",
+        "fr-04-equipe",
+        "fr-05-hub-collection",
+        "fr-06-mes-compagnons",
+        "fr-07-fiche-nova"
+      ]
+    }
+  ],
+  "programs": {
+    "docs/validation/clarity-audit-2026-10-30/native/programs/discovery.json": "3a62c8d92b6e77b02337614f50d430d2e4bf37c1d30d0a7bc478a7a2be46e131",
+    "docs/validation/clarity-audit-2026-10-30/native/programs/navigation-a-retry.json": "2d3d7c287cdc255ed914dfc8cf02af52feb556e1f6192799cc4c8b8779529172",
+    "docs/validation/clarity-audit-2026-10-30/native/programs/navigation-a.json": "44a0977a8d956f4119686b351192a269800e4d1248b6bd552e2f88289318d17b",
+    "docs/validation/clarity-audit-2026-10-30/native/programs/navigation-complete.json": "70a710be941fcc2300a6fd78255f7814666078ea58ef44d47185b2068027b576"
+  },
+  "baselineLevel": 42,
+  "baselineHistory": "0,1,2",
+  "essentialFieldsUnchanged": [
+    "run_id",
+    "history",
+    "budget_used",
+    "undos",
+    "elements_v121",
+    "battle_v119"
+  ],
+  "allObservedPreferenceDifferences": {
+    "luma_drift_save_v1": {},
+    "luma_drift_meta_v1": {},
+    "luma_session": {
+      "elapsed_ms": {
+        "before": 14930,
+        "after": 19335
+      }
+    },
+    "luma_expedition_session_v118": {},
+    "luma_victory_v120": {},
+    "luma_session_energy_v120": {},
+    "luma_tactical122": {}
+  },
+  "snapshotScope": "Seven preference maps read by the existing observer, seed-named keys omitted by that observer. Only elapsed_ms differs between main menu baseline and final saved state.",
+  "selectedOriginalScreenshots": [
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-01-plateau-u42-retained.png",
+      "sha256": "336ef85978ec912a46aa2bd427265a0f0132ffd54815cdabb55fda61ae06c14d",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Repeated budget, dense upper HUD, water/ice markings overlap arrow space; board and retained state visible."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-02-talent-nova.png",
+      "sha256": "7a43df08d3087af5431b0e06e6595ffd75bae383ff1f326870d950941165cb6b",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Puzzle skill detail with explicit top return and activation control; not activated."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-03-pause-save-exit.png",
+      "sha256": "c6f0f8b5acce6c3d90e3884d1baf08586a9a35054e7073f1378cd683f36dde64",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Pause overlay shows native resume/help/leave controls."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-04-equipe.png",
+      "sha256": "445afc303ce56fc8bcb610b361067bcd9fbc0c272aea2dac058b30a2c5b2cff9",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Fixed-at-start team notice and roster visible; no member changed."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-05-hub-collection.png",
+      "sha256": "ad91cefa24301d79fa0b3fcf0c40610702b95883eaf6e22d2e251e96b9a13aa5",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Detailed background competes with destinations; several wardrobe/companion/equipment routes."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-06-mes-compagnons.png",
+      "sha256": "8f7c1fa1aa2140dda182e13d2c669eb103f759b01579e228a828aac9e947b612",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Collection filters and four portraits visible; no active-level return shown."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-07-fiche-nova.png",
+      "sha256": "433cac6cab96f1a9da745115bb4b328458f3b07fe9b287875a60629695e8dbb0",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Generic Preview title, duplicated wallet and expedition ability text; no direct wardrobe or active-level control in this frame."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-08-garde-robe.png",
+      "sha256": "f1b7a5386892806f24c95bb686e91158d5f95f7f8426b99eab293cb8918cf02d",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Wardrobe appearance category with character and clothing; no application made."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-09-equipement-dressing.png",
+      "sha256": "7c971435881e8cfbaddf0a708343ac8dfb0388bb554715409a15ac2bb881a0f5",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Equipment tab within wardrobe, head/aura/charm and selected starter coiffe."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-10-fiche-equipement.png",
+      "sha256": "0db339cc56a9dbc67d9e1525402e059ba8e3894101be7b6d3db2728499917486",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Generic Preview title, duplicate wallet, equipped starter and appearance-only description."
+    },
+    {
+      "path": "docs/validation/v1.22/native/clarity-retained-navigation-complete/native/fr-11-plateau-u42-retour.png",
+      "sha256": "c53b00e007dc38ec5dc5fed4d767db72dda7b9cdc2ae00ddc7d506f3561b44b1",
+      "originalUnedited": true,
+      "visuallyInspectedWith": "view_image",
+      "review": "Same three remaining pieces, ice/water layers and budget; elapsed clock advanced while active."
+    }
+  ],
+  "selectedOriginalScreenshotCount": 11,
+  "allOriginalScreenshotCountAcrossPreservedRuns": 20,
+  "cleanup": {
+    "path": "docs/validation/clarity-audit-2026-10-30/native/cleanup.json",
+    "sha256": "bf23bfed04231ed15faee1ee7dd5435818ae743fc71d58ab4ea6b3f69a27c6f0",
+    "status": "PASS"
+  }
+}

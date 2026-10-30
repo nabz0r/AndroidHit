@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "kind": "isolated_new_run_and_descriptive_audit",
+  "status": "RECONCILED_WITH_DOCUMENTED_PROTOCOL_LIMITATION",
+  "createdAtUtc": "2026-10-30T17:25:21.659728+00:00",
+  "seed": 2026103001,
+  "sourceCommitBeforeRun": "557724f56e45aa8df1cfab629f20848e0f3c4fd0",
+  "actualCommand": "bash scripts/run-cognitive-lab-v122.sh --profiles 100 --repetitions 30 --seed 2026103001 --output docs/validation/clarity-audit-2026-10-30/simulation/run-2026103001",
+  "counts": {
+    "campaignTrajectories": 21000,
+    "attemptRows": 766177,
+    "blockedEvents": 383611,
+    "configuredDays": 168000,
+    "cueFreeProbes": 84000,
+    "chapterRuns": 54000,
+    "chapterStages": 205225,
+    "humanParticipants": 0
+  },
+  "all51CurrentSourceHashesMatch": true,
+  "all43ProtectedPreexistingArtifactsUnchanged": true,
+  "sourcePublicOrAppEdits": false,
+  "androidBuildOrDeployOrPushPerformed": false,
+  "csvAndSummaryConservationVerified": true,
+  "chapterResourceContinuityVerified": true,
+  "readmeLocalLinksVerified": 12,
+  "visualFigureInspected": true,
+  "protocolIssue": {
+    "kind": "horizon_label_on_already_exhausted_attempt",
+    "rows": 52,
+    "byScenario": {
+      "control_v121": 10,
+      "cause_immediate": 11,
+      "cause_repeat": 10,
+      "cause_fading": 9,
+      "team_information": 2,
+      "team_execution": 4,
+      "v122_combined": 6
+    },
+    "rawOutputsModified": false,
+    "sourceModified": false,
+    "treatment": "Preserve original labels and report separate exhaustion sensitivity."
+  },
+  "files": {
+    "README.md": {
+      "sha256": "aee15cf4880e07a35e456d9f537f288771eeaece3f2dce989b825633a0809534",
+      "bytes": 13703
+    },
+    "analysis-boundary-audited-original.log": {
+      "sha256": "380a3093f55845a5f3b2135ecf70aa81a9adda49381ed997db147a94d8235e7a",
+      "bytes": 1218
+    },
+    "analysis-final-original.log": {
+      "sha256": "a320bdb8d3ba0145257eec638857ba6cbfde6004ad74e9be060d35585b28dac4",
+      "bytes": 738
+    },
+    "analysis-original.log": {
+      "sha256": "9710b83e5fce39c921c7eed50d21fbb31a004072d90734f052c6f70e96d713b4",
+      "bytes": 328
+    },
+    "analysis-validation.json": {
+      "sha256": "380a3093f55845a5f3b2135ecf70aa81a9adda49381ed997db147a94d8235e7a",
+      "bytes": 1218
+    },
+    "analysis.json": {
+      "sha256": "fdcd4409fa9dfa7c8a53203fbd2e56c4f98512b3eaf2413ada22430365728fad",
+      "bytes": 1798426
+    },
+    "analyze.py": {
+      "sha256": "cd86ecf08bd11eb895f2d0d6c5b43e533117ddd6c7ff8c7e77c309713e302ab5",
+      "bytes": 14817
+    },
+    "difficulty-and-shell-burden.png": {
+      "sha256": "8eec8acfcc611c09475102d27664e6a3b7383a7b15c5604bae3b254f55dd9fb2",
+      "bytes": 134855
+    },
+    "difficulty-and-shell-burden.svg": {
+      "sha256": "b0dc665c62c1a753785eb6287c0d0e6b4260f34ae6e78f3e01d1bd67da5090cb",
+      "bytes": 9077
+    },
+    "plot.py": {
+      "sha256": "fbd9a9ada2a12ad0d1cb5bbe98c2207820936f3ebab226e5fac2be46181de92a",
+      "bytes": 3407
+    },
+    "run-2026103001/blocked-events.csv.gz": {
+      "sha256": "c71f44d323e8551d041a6284132f6958e22ad1b22e25e7e58ec810564c94303e",
+      "bytes": 2436790
+    },
+    "run-2026103001/chapter-results.csv.gz": {
+      "sha256": "a5589afbd15abdb7de5ddfe2725595fb9a16b9cc54cc38fe71339eccb3667d92",
+      "bytes": 1108385
+    },
+    "run-2026103001/chapter-stage-results.csv.gz": {
+      "sha256": "4c334ea43ace4e01c7e5ac23767f113b9b347f86be93cfc61f8cc5eac0fc71aa",
+      "bytes": 1285389
+    },
+    "run-2026103001/day-results.csv.gz": {
+      "sha256": "152802d6b02c62525a1afe2fc59049e63c3d95024c70f630863163fd8a80556f",
+      "bytes": 2125767
+    },
+    "run-2026103001/level-results.csv.gz": {
+      "sha256": "aa1f739b80503c60314993b812e4d5be2f785f3237f6fe11bdbf1eb34304b451",
+      "bytes": 16528550
+    },
+    "run-2026103001/paired-comparisons.json": {
+      "sha256": "fc4ded89bd0b89f3ec8a796d9afd28d015c1214e2ee782044c609f5050ec9636",
+      "bytes": 19612
+    },
+    "run-2026103001/profiles.json": {
+      "sha256": "8164e4608dd10b1b19afcde7d0b911f54e2eb2d04d8823a9869762798c8c903a",
+      "bytes": 68515
+    },
+    "run-2026103001/provenance.json": {
+      "sha256": "1fb11b1b6902c0f8647f30eca5c671ac3c7fafaab7e145a466a74503882efc40",
+      "bytes": 8250
+    },
+    "run-2026103001/report.json": {
+      "sha256": "00960fa4dbc3d64c92ed6ce8ea01d7256d7562a26ade666ff9877f67f281752c",
+      "bytes": 1366646
+    },
+    "run-2026103001/summary.json": {
+      "sha256": "82cddd8236f2ea70c15e1bb6332b0f1d25ac9203026b236ae9bada23d8dd8390",
+      "bytes": 933235
+    },
+    "run-2026103001/tactical-chapter.json": {
+      "sha256": "e442936cbeaa6c063af73b5ffe72ef97cc43b18eaf128128cfc75357857b332c",
+      "bytes": 9047
+    },
+    "run-2026103001/traces.json": {
+      "sha256": "ab5de768af17ef5681683beedc169bd51651ef46527b7d2a4ff0ff3218cf3784",
+      "bytes": 345214
+    },
+    "run-2026103001/trajectories.csv.gz": {
+      "sha256": "7a2483f5b6ca4916b20658308fc70425b5fa7ec030482145b09f72a8cdbe1381",
+      "bytes": 1564355
+    },
+    "run-original.log": {
+      "sha256": "7dc2ae6880748c54e3755990ab003c7950e43ce6b62d8e857abdd802a2d5b4b2",
+      "bytes": 505
+    },
+    "source-state-before.json": {
+      "sha256": "dd3d29dd1fcc4a7686fc280baa8fb9ee3f03e60c190836504a42e89c5fb1fe7d",
+      "bytes": 7651
+    }
+  }
+}

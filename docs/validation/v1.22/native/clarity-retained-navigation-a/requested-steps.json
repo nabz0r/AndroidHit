@@ -1,0 +1,207 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue",
+    "reason": "reprendre-la-vraie-tentative-U42"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "level",
+    "value": "42"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0,1,2"
+  },
+  {
+    "op": "capture",
+    "name": "01-plateau-u42-retained"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "menus-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "menus-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "menus-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "menus-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "elements_v121",
+    "name": "menus-elements_v121"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "menus-battle_v119"
+  },
+  {
+    "op": "snapshot",
+    "name": "menu-baseline"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0",
+    "reason": "inspecter-talent-de-Nova-sans-activer"
+  },
+  {
+    "op": "capture",
+    "name": "02-talent-nova"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close",
+    "reason": "retour-explicite-au-plateau"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "menus-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "menus-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "menus-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "menus-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "elements_v121",
+    "name": "menus-elements_v121"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "menus-battle_v119"
+  },
+  {
+    "op": "tap",
+    "regex": "Pause",
+    "reason": "pause-native"
+  },
+  {
+    "op": "capture",
+    "name": "03-pause-save-exit"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level",
+    "reason": "quitter-par-action-native-et-conserver-tentative"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_squad",
+    "reason": "ouvrir-equipe-depuis-navigation"
+  },
+  {
+    "op": "capture",
+    "name": "04-equipe"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_collection_hub",
+    "reason": "ouvrir-hub-collection"
+  },
+  {
+    "op": "capture",
+    "name": "05-hub-collection"
+  },
+  {
+    "op": "tap",
+    "regex": "Mes compagnons|My companions",
+    "reason": "ouvrir-mes-compagnons"
+  },
+  {
+    "op": "capture",
+    "name": "06-mes-compagnons"
+  },
+  {
+    "op": "tap",
+    "regex": "Nova, .*",
+    "reason": "ouvrir-la-fiche-du-compagnon-porte"
+  },
+  {
+    "op": "capture",
+    "name": "07-fiche-nova"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "menus-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "menus-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "menus-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "menus-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "elements_v121",
+    "name": "menus-elements_v121"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "menus-battle_v119"
+  },
+  {
+    "op": "snapshot",
+    "name": "after-menu-phase-a"
+  }
+]

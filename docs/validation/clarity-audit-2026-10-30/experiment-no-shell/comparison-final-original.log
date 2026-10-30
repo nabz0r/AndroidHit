@@ -1,0 +1,35 @@
+{
+  "comparisonSha256": "3a57cad77a9c39742bc2a5ef95e9333f1d5bef15cc94182ce3c5a99bea4c4b42",
+  "counts": {
+    "control-disabled": {
+      "trajectories.csv.gz": 21000,
+      "level-results.csv.gz": 766177,
+      "blocked-events.csv.gz": 383611,
+      "day-results.csv.gz": 168000,
+      "chapter-results.csv.gz": 54000,
+      "chapter-stage-results.csv.gz": 205225
+    },
+    "no-shell-enabled": {
+      "trajectories.csv.gz": 21000,
+      "level-results.csv.gz": 936862,
+      "blocked-events.csv.gz": 412003,
+      "day-results.csv.gz": 168000,
+      "chapter-results.csv.gz": 54000,
+      "chapter-stage-results.csv.gz": 205225
+    }
+  },
+  "zeroBudgetAtHorizon": {
+    "control-disabled": 52,
+    "no-shell-enabled": 7
+  },
+  "verification": {
+    "profilesByteIdentical": true,
+    "sixCsvDisabledReplayByteIdentical": true,
+    "earlyU1U10RowsIdentical": true,
+    "bothChapterCsvByteIdentical": true,
+    "all52OriginalInputsUnchanged": true,
+    "all43ProtectedArtifactsUnchanged": true,
+    "noShellTapsInEnabled": true,
+    "completeCsvCountsConservation": true
+  }
+}

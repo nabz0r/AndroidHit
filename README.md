@@ -9,6 +9,8 @@
 
 ## Current 1.22 — delivered for playtesting
 
+[Clarity, learning-curve and navigation audit — 30 October](docs/validation/clarity-audit-2026-10-30/README.md) adds a new 21,000-trajectory study, a separately controlled no-shell experiment, exact native menu evidence and an interactive navigation proposal. It identifies repeated preparation, legal-trap teaching and companion/equipment context as priorities. These are research/proposal artifacts; the qualified Android packages and hosted payloads remain unchanged.
+
 **[Production APK](https://luma-drift-production.web.app/releases/luma-drift-1.22.0-rc1.apk)** · **[Separate Lab APK](https://luma-drift-production.web.app/releases/luma-drift-1.22.0-sandbox-rc1.apk)** · [Website](https://luma-drift-production.web.app/) · [Schematic browser demo](https://luma-drift-production.web.app/lab/ui-1-22/index.html)
 
 The exact **production `1.22.0-rc1` and Lab `1.22.0-sandbox-rc1`, code 30**, candidate C passes scoped Android acceptance. [Frozen C metadata](docs/validation/v1.22/candidate-c/candidate.json) and the [canonical artifact manifest](releases/manifest-1.22.0-rc1.json) bind both signed APKs. Application/artifact evidence is published at [C1 `716bf730`](https://github.com/nabz0r/AndroidHit/commit/716bf73066892d034510db80630cd1f227738372). [Native qualification](docs/validation/v1.22/README.md), [Lab upgrade](docs/validation/v1.22/native-lab/candidate-c-upgrade-preservation/report.json) and [Lab FR/EN launch](docs/validation/v1.22/native-lab/candidate-c-launch-fr-en/report.json) retain their own receipts; all seven recorded production preference maps remain unchanged across Lab checks.

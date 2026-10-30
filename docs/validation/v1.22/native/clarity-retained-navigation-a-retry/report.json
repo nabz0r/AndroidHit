@@ -1,0 +1,336 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T17:22:41.664346+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "clarity-navigation-a-retry",
+  "expected_version": "1.22.0-rc1",
+  "expected_code": 30,
+  "apk_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "observer_sha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "b1db8117-26ee-4967-990a-71ef697e0c0d",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "clarity-navigation-a-retry",
+    "runToken": "b1db8117-26ee-4967-990a-71ef697e0c0d",
+    "processId": 4163,
+    "checkCount": 29,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference level = 42"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = 0,1,2"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-run_id"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-history"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-undos"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-elements_v121"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-run_id"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-history"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-undos"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-elements_v121"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-battle_v119"
+      }
+    ],
+    "touchCount": 11,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 487178,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 487713,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "reprendre-la-vraie-tentative-U42",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 488729,
+        "label": "Reprendre  ·  Niveau 42",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "inspecter-talent-de-Nova-sans-activer",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 490695,
+        "label": "Nova. Étoile guide. Prêt. 2 Charge",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          44,
+          465,
+          360,
+          715
+        ]
+      },
+      {
+        "reason": "retour-explicite-au-plateau",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 492696,
+        "label": "‹ Retour",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_close",
+        "bounds": [
+          49,
+          377,
+          299,
+          515
+        ]
+      },
+      {
+        "reason": "pause-native",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 493229,
+        "label": "Pause",
+        "bounds": [
+          55,
+          283,
+          188,
+          416
+        ]
+      },
+      {
+        "reason": "quitter-par-action-native-et-conserver-tentative",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 495312,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      },
+      {
+        "reason": "ouvrir-equipe-depuis-navigation",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 495878,
+        "label": "Équipe",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_squad",
+        "bounds": [
+          216,
+          2134,
+          432,
+          2303
+        ]
+      },
+      {
+        "reason": "ouvrir-hub-collection",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 497895,
+        "label": "Collection",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_collection_hub",
+        "bounds": [
+          432,
+          2134,
+          648,
+          2303
+        ]
+      },
+      {
+        "reason": "ouvrir-mes-compagnons",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 500328,
+        "label": "Mes compagnons",
+        "bounds": [
+          83,
+          1718,
+          409,
+          2034
+        ]
+      },
+      {
+        "reason": "ouvrir-la-fiche-du-compagnon-porte",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 502362,
+        "label": "Nova, Sélectionné",
+        "bounds": [
+          66,
+          1030,
+          523,
+          1673
+        ]
+      }
+    ],
+    "captures": [
+      "fr-01-plateau-u42-retained",
+      "fr-02-talent-nova",
+      "fr-03-pause-save-exit",
+      "fr-04-equipe",
+      "fr-05-hub-collection",
+      "fr-06-mes-compagnons",
+      "fr-07-fiche-nova"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 25.084,
+  "evidence_sha256": {
+    "battle-observer.apk": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "55af08a89c049af36db7e4c6ecee0cdfa7cf807b4492d22b76bbcec4739a7cfe",
+    "native/after-menu-phase-a.json": "4f2aad8093c50217a69db6363f79e0417e70ca151346ce555dacc131487ff51b",
+    "native/after.json": "4f2aad8093c50217a69db6363f79e0417e70ca151346ce555dacc131487ff51b",
+    "native/before.json": "82fd24ff92a2c2fe8b19367a8075fd125feab9c598cdf196e413ccc18aa00588",
+    "native/fr-01-plateau-u42-retained-accessibility.json": "21952029c2e6cec0b141b8a5c901ed53da243f371ae1e84c153868d11ab58bb8",
+    "native/fr-01-plateau-u42-retained.png": "8cbc95bc4a1b0a69894da50a3985a7abfa1bd0875351ba00baa5e3e4fb844e90",
+    "native/fr-02-talent-nova-accessibility.json": "7fa5f379c19345eb0a39ed993427f141fc3d4bb0d765182cc91553522f20a44b",
+    "native/fr-02-talent-nova.png": "39b5ac0f9ed64b7bdc53e1004230e71bf0fa467be4078295bd83319082063077",
+    "native/fr-03-pause-save-exit-accessibility.json": "2a2663e2f7d2be8e120ca32d98f542bf7467325b252b4c66a290eba3468bc3c3",
+    "native/fr-03-pause-save-exit.png": "356edff74fbab8a419165349714466f66c828c63489492684a30e517eb0525a3",
+    "native/fr-04-equipe-accessibility.json": "fc980884b53f19e24295739cd1feb5f27b8f9bf3d25c5955ddde2280768e4b5e",
+    "native/fr-04-equipe.png": "e9ee5f4ea6954f0586bc161005321b89cb18d09993e62722e7d63df5400720d6",
+    "native/fr-05-hub-collection-accessibility.json": "c567b456baa685bd3bf14eb8b3d2c902ead2ef74a1a347dde6dc1efb9fa36b81",
+    "native/fr-05-hub-collection.png": "929139b5a0579c4bdaf4066edf2e2f140abf7d72389b3b71db3fd836954a9a0f",
+    "native/fr-06-mes-compagnons-accessibility.json": "d493e6f284106d4b825869e2f8e1ce36697663d0e5aa0fc92b5b3a15dfde6e56",
+    "native/fr-06-mes-compagnons.png": "096e05f17d1691f37c1a4bda959415f92fbfe99760bbab0c5d1b20e278c8b21a",
+    "native/fr-07-fiche-nova-accessibility.json": "0e8869500722bd7a66d3420596769314c56b987b21b39a66bd78d2feb7f3e8de",
+    "native/fr-07-fiche-nova.png": "b76a712a7dfa97b247326a730997a44d3a876c084fec9cef7b973b5db3eef572",
+    "native/menu-baseline.json": "82fd24ff92a2c2fe8b19367a8075fd125feab9c598cdf196e413ccc18aa00588",
+    "native/report.json": "141ca76fb4c699c564781b8fcd62671b338290029f4c96abc50bda5788ece993",
+    "native/requested-steps.json": "0bb8da93866fb20a2b9e75df1055b1036fccd5e936a06ccf103b10ccf558a0ad",
+    "observer-install.txt": "8cdbc4edc0c6dd6fbc7fb098f0c059b65ae0bf19e202c24ed0339dc41625b81a",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "2d3d7c287cdc255ed914dfc8cf02af52feb556e1f6192799cc4c8b8779529172",
+    "source-snapshot.json": "dc10f85a49612c46744f2aba8a7ce798830c1a39fc0d954ad3e121f7c1190b3f"
+  }
+}

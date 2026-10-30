@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/opt/homebrew/opt/openjdk@17/bin/java",
+    "-Xmx768m",
+    "-Dcognitive.lab.experimentalNoShells=false",
+    "-cp",
+    "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-clarity-shell-ablation-togaxmis",
+    "cognitive_lab.CognitiveLab122",
+    "--root",
+    "/Users/n/androidhit/docs/validation/clarity-audit-2026-10-30/experiment-no-shell/model",
+    "--profiles",
+    "100",
+    "--repetitions",
+    "30",
+    "--seed",
+    "2026103001",
+    "--output",
+    "/Users/n/androidhit/docs/validation/clarity-audit-2026-10-30/experiment-no-shell/control-disabled"
+  ],
+  "startedAtUtc": "2026-10-30T17:30:09.317491+00:00",
+  "finishedAtUtc": "2026-10-30T17:31:00.893805+00:00",
+  "exitCode": 0,
+  "noShells": false,
+  "provenanceSha256": "961ca44c097b2cca337f556df03692bf9f5e1573a949d1e7b679bd7fa436c72d"
+}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/n/androidhit/docs/validation/clarity-audit-2026-10-30/simulation/analyze.py", line 108, in <module>
+    catalog.append({'level': n, 'size': int(f[0]), 'pieces': len(tiles), 'closedInitialGates': 4-int(f[1]).bit_count(),
+AttributeError: 'int' object has no attribute 'bit_count'

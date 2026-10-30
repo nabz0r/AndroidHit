@@ -1,0 +1,501 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T17:24:18.603401+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "clarity-navigation-complete",
+  "expected_version": "1.22.0-rc1",
+  "expected_code": 30,
+  "apk_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "observer_sha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "2de668ec-d998-4f8c-b2d1-4a309643e850",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "clarity-navigation-complete",
+    "runToken": "2de668ec-d998-4f8c-b2d1-4a309643e850",
+    "processId": 4417,
+    "checkCount": 39,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference level = 42"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = 0,1,2"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-run_id"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-history"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-undos"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-elements_v121"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-run_id"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-history"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-undos"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-elements_v121"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-run_id"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-history"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-undos"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-elements_v121"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged menus-battle_v119"
+      }
+    ],
+    "touchCount": 20,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 584328,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 584879,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "reprendre-la-vraie-tentative-U42",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 585895,
+        "label": "Reprendre  ·  Niveau 42",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "inspecter-talent-de-Nova-sans-activer",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 587862,
+        "label": "Nova. Étoile guide. Prêt. 2 Charge",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          44,
+          465,
+          360,
+          715
+        ]
+      },
+      {
+        "reason": "retour-explicite-au-plateau",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 589845,
+        "label": "‹ Retour",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_close",
+        "bounds": [
+          49,
+          377,
+          299,
+          515
+        ]
+      },
+      {
+        "reason": "pause-native",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 590378,
+        "label": "Pause",
+        "bounds": [
+          55,
+          283,
+          188,
+          416
+        ]
+      },
+      {
+        "reason": "quitter-par-action-native-et-conserver-tentative",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 592345,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      },
+      {
+        "reason": "ouvrir-equipe-depuis-navigation",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 592928,
+        "label": "Équipe",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_squad",
+        "bounds": [
+          216,
+          2134,
+          432,
+          2303
+        ]
+      },
+      {
+        "reason": "ouvrir-hub-collection",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 594911,
+        "label": "Collection",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_collection_hub",
+        "bounds": [
+          432,
+          2134,
+          648,
+          2303
+        ]
+      },
+      {
+        "reason": "ouvrir-mes-compagnons",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 597344,
+        "label": "Mes compagnons",
+        "bounds": [
+          83,
+          1718,
+          409,
+          2034
+        ]
+      },
+      {
+        "reason": "ouvrir-la-fiche-du-compagnon-porte",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 599345,
+        "label": "Nova, Sélectionné",
+        "bounds": [
+          66,
+          1030,
+          523,
+          1673
+        ]
+      },
+      {
+        "reason": "detour-reel-par-accueil-pour-rejoindre-garde-robe",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 602263,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "ouvrir-style-et-tenues",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 602828,
+        "label": "Look et tenues",
+        "resourceId": "com.androidhit.lumadrift:id/home_wardrobe",
+        "bounds": [
+          553,
+          1457,
+          985,
+          1590
+        ]
+      },
+      {
+        "reason": "onglet-equipement-du-dressing",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 604779,
+        "label": "Équipement",
+        "bounds": [
+          540,
+          1365,
+          1013,
+          1504
+        ]
+      },
+      {
+        "reason": "inspecter-categorie-aura-sans-equiper",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 606762,
+        "label": "Aura",
+        "bounds": [
+          382,
+          1529,
+          697,
+          1770
+        ]
+      },
+      {
+        "reason": "retour-categorie-coiffe-sans-equiper",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 607330,
+        "label": "Coiffe",
+        "bounds": [
+          66,
+          1529,
+          382,
+          1770
+        ]
+      },
+      {
+        "reason": "inspecter-equipement-starter-sans-appliquer",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 607912,
+        "label": "Bourgeon lunaire",
+        "bounds": [
+          66,
+          1825,
+          365,
+          2240
+        ]
+      },
+      {
+        "reason": "continuer-meme-U42-apres-menus",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 610846,
+        "label": "Reprendre  ·  Niveau 42",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "pause-finale-pour-conserver-la-tentative",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 612762,
+        "label": "Pause",
+        "bounds": [
+          55,
+          283,
+          188,
+          416
+        ]
+      },
+      {
+        "reason": "sortie-native-sauvegardee-avant-arret-AVD",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 613329,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      }
+    ],
+    "captures": [
+      "fr-01-plateau-u42-retained",
+      "fr-02-talent-nova",
+      "fr-03-pause-save-exit",
+      "fr-04-equipe",
+      "fr-05-hub-collection",
+      "fr-06-mes-compagnons",
+      "fr-07-fiche-nova",
+      "fr-08-garde-robe",
+      "fr-09-equipement-dressing",
+      "fr-10-fiche-equipement",
+      "fr-11-plateau-u42-retour"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 37.711,
+  "evidence_sha256": {
+    "battle-observer.apk": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "43025677fdbaef6a8dd0433dc468ad5ed851a039172df225c2763a0e66a28692",
+    "native/after-menu-phase-a.json": "7a977823c0da035661caec1dee142f279e0fd0187abc129fe59c3ec66f9c4931",
+    "native/after.json": "bd000fc0abba8744062846da3c4d93571317c6c38e0caccaae1ec78cce736c3e",
+    "native/before.json": "4f2aad8093c50217a69db6363f79e0417e70ca151346ce555dacc131487ff51b",
+    "native/context-preserved-after-navigation.json": "7a977823c0da035661caec1dee142f279e0fd0187abc129fe59c3ec66f9c4931",
+    "native/final-saved-state.json": "bd000fc0abba8744062846da3c4d93571317c6c38e0caccaae1ec78cce736c3e",
+    "native/fr-01-plateau-u42-retained-accessibility.json": "e0636865ceaec5143ef698d06a2c33e292b05947863867c0c0da3c7579a33dd0",
+    "native/fr-01-plateau-u42-retained.png": "336ef85978ec912a46aa2bd427265a0f0132ffd54815cdabb55fda61ae06c14d",
+    "native/fr-02-talent-nova-accessibility.json": "7fa5f379c19345eb0a39ed993427f141fc3d4bb0d765182cc91553522f20a44b",
+    "native/fr-02-talent-nova.png": "7a43df08d3087af5431b0e06e6595ffd75bae383ff1f326870d950941165cb6b",
+    "native/fr-03-pause-save-exit-accessibility.json": "2a2663e2f7d2be8e120ca32d98f542bf7467325b252b4c66a290eba3468bc3c3",
+    "native/fr-03-pause-save-exit.png": "c6f0f8b5acce6c3d90e3884d1baf08586a9a35054e7073f1378cd683f36dde64",
+    "native/fr-04-equipe-accessibility.json": "fc980884b53f19e24295739cd1feb5f27b8f9bf3d25c5955ddde2280768e4b5e",
+    "native/fr-04-equipe.png": "445afc303ce56fc8bcb610b361067bcd9fbc0c272aea2dac058b30a2c5b2cff9",
+    "native/fr-05-hub-collection-accessibility.json": "c567b456baa685bd3bf14eb8b3d2c902ead2ef74a1a347dde6dc1efb9fa36b81",
+    "native/fr-05-hub-collection.png": "ad91cefa24301d79fa0b3fcf0c40610702b95883eaf6e22d2e251e96b9a13aa5",
+    "native/fr-06-mes-compagnons-accessibility.json": "d493e6f284106d4b825869e2f8e1ce36697663d0e5aa0fc92b5b3a15dfde6e56",
+    "native/fr-06-mes-compagnons.png": "8f7c1fa1aa2140dda182e13d2c669eb103f759b01579e228a828aac9e947b612",
+    "native/fr-07-fiche-nova-accessibility.json": "0e8869500722bd7a66d3420596769314c56b987b21b39a66bd78d2feb7f3e8de",
+    "native/fr-07-fiche-nova.png": "433cac6cab96f1a9da745115bb4b328458f3b07fe9b287875a60629695e8dbb0",
+    "native/fr-08-garde-robe-accessibility.json": "14485f1af6bcfb877c15cf04005a75bc5a279e50c048797f516aa53ad3d45a49",
+    "native/fr-08-garde-robe.png": "f1b7a5386892806f24c95bb686e91158d5f95f7f8426b99eab293cb8918cf02d",
+    "native/fr-09-equipement-dressing-accessibility.json": "099eaf105b674f8949cad9b60fa27a83170a7f2cad1bdaa4041e118f1b857242",
+    "native/fr-09-equipement-dressing.png": "7c971435881e8cfbaddf0a708343ac8dfb0388bb554715409a15ac2bb881a0f5",
+    "native/fr-10-fiche-equipement-accessibility.json": "01dfb138ed3eeed693a83fbda75eb5012c9a76e1075ac517f5577d5825fe823b",
+    "native/fr-10-fiche-equipement.png": "0db339cc56a9dbc67d9e1525402e059ba8e3894101be7b6d3db2728499917486",
+    "native/fr-11-plateau-u42-retour-accessibility.json": "2278d76a4339642635a9570441faab4deaab17fa465ca6f680d22611f8094fea",
+    "native/fr-11-plateau-u42-retour.png": "c53b00e007dc38ec5dc5fed4d767db72dda7b9cdc2ae00ddc7d506f3561b44b1",
+    "native/menu-baseline.json": "4f2aad8093c50217a69db6363f79e0417e70ca151346ce555dacc131487ff51b",
+    "native/report.json": "23411f8c07b22a2960999d7c0cf3635f215a9d27b036deee3de04cfdacf89c94",
+    "native/requested-steps.json": "cf7861adfcee174bbb234bbc010be7582d335c24542dfa00026dfeb64fe9b10b",
+    "observer-install.txt": "30275158e491854dfd5519d4752fd7d79e36dd885049c2a525b0bda9d4b8cc84",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "70a710be941fcc2300a6fd78255f7814666078ea58ef44d47185b2068027b576",
+    "source-snapshot.json": "dc10f85a49612c46744f2aba8a7ce798830c1a39fc0d954ad3e121f7c1190b3f"
+  }
+}

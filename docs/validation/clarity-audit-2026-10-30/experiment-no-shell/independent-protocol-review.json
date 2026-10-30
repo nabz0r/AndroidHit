@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent_agent_read_only_protocol_review",
+  "reviewer": "/root/cognition_research",
+  "receivedAtUtc": "2026-10-30T17:40:14.487475+00:00",
+  "checkedFiles": {
+    "protocol.json": "083a5086358a40dd33c021b35a512111d60594f8a5a4b79362e77a17e377162a",
+    "minimal-model.patch": "a1aacabee76cfd0b89e5ed61dce1b11462da65a8150ca85c56569a2d42f9ee38"
+  },
+  "concreteDeviationFound": false,
+  "scope": "Read-only review of protocol and minimal diff only; no recompilation or independent CSV recount by this reviewer.",
+  "findings": [
+    "One functional change initializes shells=empty under a private JVM property; other differences are experimental ID/config metadata and shipped=false.",
+    "The flag also affects held-out probes, so changed probe completion is not isolated acquired learning.",
+    "Removing shell taps also removes learn(shell)/frustration feedback and changes time/exposure/actionIndex and subsequent keyed random inputs. This is a total policy/environment effect at fixed parameters.",
+    "No graphical rendering occurs; this cannot assess small flames, sprite readability or human emotion.",
+    "Disabled six-CSV replay and unchanged U1-U10/chapter negative controls are appropriate; their bytes were not independently recounted in this review."
+  ]
+}
