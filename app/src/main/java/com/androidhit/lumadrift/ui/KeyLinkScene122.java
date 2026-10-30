@@ -14,6 +14,7 @@ import java.util.Map;
 public final class KeyLinkScene122 {
     private final Paint paint=new Paint(3);
     private final Path path=new Path();
+    private final ArrowScene123 pieces123=new ArrowScene123();
     private final Map<Integer,Boolean> active=new HashMap<>();
     private final Map<Integer,Long> changed=new HashMap<>();
     private String level;
@@ -45,14 +46,8 @@ public final class KeyLinkScene122 {
         int n=number(board,wall.keyTileId),ink=color(n);boolean closed=board.isBarrierActive(wall);
         Long at=changed.get(wall.keyTileId);float progress=reduced||at==null?1:Math.min(1,Math.max(0,(now-at)/700f));
         if(!closed&&(at==null||progress>=1))return;
-        float fade=closed?1:1-progress;paint.setStyle(Paint.Style.FILL);paint.setColor(0xfff0e8fa);paint.setAlpha((int)(255*fade));
-        c.drawRoundRect(x-cell*.43f,y-cell*.43f,x+cell*.43f,y+cell*.43f,12,12,paint);
-        paint.setColor(ink);paint.setAlpha((int)(255*fade));paint.setStyle(Paint.Style.STROKE);paint.setStrokeWidth(highlighted(wall.keyTileId,now)?3.5f:2);
-        c.drawRoundRect(x-cell*.43f,y-cell*.43f,x+cell*.43f,y+cell*.43f,12,12,paint);
-        float lift=closed||reduced?0:progress*cell*.3f;
-        c.drawArc(x-cell*.15f,y-cell*.29f-lift,x+cell*.15f,y+cell*.07f-lift,180,closed?180:145,false,paint);
-        paint.setStyle(Paint.Style.FILL);c.drawRoundRect(x-cell*.23f,y-cell*.05f,x+cell*.23f,y+cell*.25f,5,5,paint);paint.setAlpha(255);
-        mark(c,x+cell*.28f,y-cell*.29f,Math.max(10,cell*.17f),n,ink);
+        float fade=closed?1:1-progress;
+        pieces123.lock(c,x,y,cell*.91f,n,closed?0:progress,fade,highlighted(wall.keyTileId,now));
     }
     public void links(Canvas c,Board board,float left,float top,float cell,long now,boolean reduced){
         for(Barrier wall:board.level.barriers){if(!highlighted(wall.keyTileId,now))continue;Tile key=board.level.tile(wall.keyTileId);if(key==null)continue;

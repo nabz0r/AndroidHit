@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "release": "1.23.0-rc2",
+  "labRelease": "1.23.0-sandbox-rc2",
+  "versionCode": 31,
+  "recordedAtUtc": "2026-10-30T19:12:32.555259+00:00",
+  "pythonVersion": "Python 3.9.6",
+  "tests": [
+    {
+      "test": "scripts/test-deploy-site-v123.py",
+      "exitCode": 0,
+      "wallSeconds": 2.011,
+      "log": "docs/validation/v1.23/site-transport/rc2/deploy-tests.txt",
+      "logSha256": "635759fcaf85b2cc92948f50cfcef1d2814e218fe120b5d801955ddf9068352c"
+    },
+    {
+      "test": "scripts/test-stage-site-v123-rest.py",
+      "exitCode": 0,
+      "wallSeconds": 8.354,
+      "log": "docs/validation/v1.23/site-transport/rc2/stage-tests.txt",
+      "logSha256": "7a233d8df478221c161ea0bb3b0a13c5449230a50dbaee115d76495955ca1def"
+    },
+    {
+      "test": "scripts/test-collect-site-v123-public-bytes.py",
+      "exitCode": 0,
+      "wallSeconds": 0.313,
+      "log": "docs/validation/v1.23/site-transport/rc2/collect-tests.txt",
+      "logSha256": "e09602f41bae662f0e3525a5ca6a07413dfe382970b81594d08d02d25b3db3b4"
+    }
+  ],
+  "sourceInputs": {
+    "scripts/test-deploy-site-v123.py": "2d508b04a2eb7f41b99d210d8f1b4f65e083affa5a99ba645d9619221cd211e3",
+    "scripts/test-stage-site-v123-rest.py": "6266bb1ccb18c80ef6eb439ecb40aeccae7c344a5ac69a3273ced2fcc48ff442",
+    "scripts/test-collect-site-v123-public-bytes.py": "9804d9176feb62a4dc1b07599b68baf592544381755c1d3f5959ef8c88f1d272",
+    "scripts/deploy-site-v123.py": "9351f97c5cb438221c5fc3ef37d5058964c5be6aa73b467d4bf4a286b6a7e67d",
+    "scripts/stage-site-v123-rest.py": "adbfc3c60042694d92b295a167c8f82f64ed8a85106d956d2ec69d11a5101467",
+    "scripts/collect-site-v123-public-bytes.py": "2f319cf91dfa9e69c737e766581a9f63e461654c49a8c8e9f7452a10ef382452",
+    "scripts/deploy-cognitive-overlay.py": "62e25d22e0e00a5d9b7ccbfc44d1b29218113b8cd86f5fa13838ab3802466af5",
+    "scripts/test-deploy-cognitive-overlay.py": "1844fcaae8d956120cdded2f2abc86daa059be127be2e6167466700b24e5ede0",
+    "scripts/apk-byte-delta.py": "6c685e63761d0e61028c0ee217200f16ff780a5871cf1975b0e87a7fc425c004"
+  },
+  "historicalBaselineUnchanged": {
+    "release": "1.22.0-rc1",
+    "sourceCommit": "b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+    "hostingVersion": "sites/luma-drift-production/versions/24e34cf6e6af1ed8",
+    "retiredPaths": 14
+  },
+  "rc1EvidencePreserved": {
+    "receipt": "docs/validation/v1.23/site-transport/receipt.json",
+    "receiptSha256": "9c51b3e80bcd939a1455fc05f40eb434c7f3af9727f169c3beb8cc8554a89af9",
+    "sixSourceArchive": "docs/validation/v1.23/site-transport/rc1-source-snapshot.zip",
+    "archiveSha256": "125715ce4629f16ce4ab77fa30af7573e69e57ab45c0752c34bc0de134dce2a7",
+    "archiveSourceHashesMatchOriginalReceipt": true
+  },
+  "productionScriptDelta": "Only the 1.23 release/version/manifest/APK/delta path literals change from rc1 to rc2; baseline 1.22 and retirement code untouched. Tests additionally reject rc1 metadata.",
+  "scope": "37 offline test methods with fictional payloads, Git and provider fixtures only. No network, authentication, Android build/signature/native acceptance, Hosting deployment or public response collection."
+}

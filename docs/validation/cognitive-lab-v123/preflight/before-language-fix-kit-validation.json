@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Archive extraction, exact entry hashes, deterministic packaging and bounded real execution; no complete campaign rerun",
+  "archive": "public/lab/clarity-123/cognitive-lab-1.23-source.zip",
+  "archiveSha256": "88d569284e101fbe734757fd555b1e3b761645c2c139299628dd0f3d10f6aed9",
+  "archiveBytes": 12486872,
+  "kitEntries": 95,
+  "runtimeSources": 58,
+  "uiContext": {
+    "notCompiledByDriver": true,
+    "path": "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+    "sha256": "d11da9e7c9169b588a88c2cfcd467299c3160146b339aaef45c67e687825ca2e"
+  },
+  "allKitEntryHashesVerified": true,
+  "deterministicPackaging": true,
+  "checks": [
+    {
+      "name": "kit-contracts",
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v123.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.2010384170000004,
+      "log": "docs/validation/cognitive-lab-v123/kit-contracts-original.log",
+      "logSha256": "8780aa21a1ccf55321a08580835198160785e717d8798a14d7baee713c98e140"
+    },
+    {
+      "name": "kit-data",
+      "command": [
+        "python3",
+        "scripts/verify-cognitive-lab-v123.py",
+        "--require-current-source"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 3.970823750000001,
+      "log": "docs/validation/cognitive-lab-v123/kit-data-original.log",
+      "logSha256": "2ab6f98cd77827486edd2ea8ab1e1b7a92dc0b1e137505b84cd196a57bd39429"
+    },
+    {
+      "name": "kit-report",
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-cognitive-report-v123.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.23424466699999869,
+      "log": "docs/validation/cognitive-lab-v123/kit-report-original.log",
+      "logSha256": "e82029def6bc11886c1e8d81b6ccae0b3d52fed09d152a22c90f4512d5217643"
+    }
+  ],
+  "temporaryExtractionRemovedOnExit": true
+}

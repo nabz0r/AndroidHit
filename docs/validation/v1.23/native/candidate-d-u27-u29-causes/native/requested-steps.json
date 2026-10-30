@@ -1,0 +1,193 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 27
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "u27-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "u27-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "u27-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "u27-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "u27-battle_v119"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "level",
+    "name": "u27-level"
+  },
+  {
+    "op": "long-press-piece",
+    "row": 4,
+    "col": 2
+  },
+  {
+    "op": "capture",
+    "name": "fr-u27-preview-down-closes"
+  },
+  {
+    "op": "tap",
+    "regex": "Continuer à réfléchir|Keep planning"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "u27-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "u27-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "u27-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "u27-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "u27-battle_v119"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "level",
+    "name": "u27-level"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "open-level",
+    "level": 29
+  },
+  {
+    "op": "assert-shells",
+    "count": 0,
+    "layers": 0
+  },
+  {
+    "op": "assert-label",
+    "regex": "Wall · release key 1"
+  },
+  {
+    "op": "capture",
+    "name": "en-u29-key-and-relay-before"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 29,
+    "index": 0
+  },
+  {
+    "op": "certificate-exit",
+    "level": 29,
+    "index": 1
+  },
+  {
+    "op": "certificate-exit",
+    "level": 29,
+    "index": 2
+  },
+  {
+    "op": "certificate-exit",
+    "level": 29,
+    "index": 3
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "u29-before-key"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 29,
+    "index": 4
+  },
+  {
+    "op": "capture",
+    "name": "en-u29-actual-key-exit-unlocks"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "Wall · release key 1"
+  },
+  {
+    "op": "tap",
+    "regex": "Undo.*"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "u29-before-key"
+  },
+  {
+    "op": "assert-label",
+    "regex": "Wall · release key 1"
+  },
+  {
+    "op": "capture",
+    "name": "en-u29-real-undo-restores-key-lock"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "snapshot",
+    "name": "d-u27-u29-causes-final"
+  }
+]

@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "createdAtUtc": "2026-10-30T19:28:35.186649+00:00",
+  "scope": "Actual local browser observations produced by the root operator, plus independent read-only inspection of four captured JPEGs and source/data/hash reconciliation. This is neither a remote-production verification nor a human/Android acceptance claim.",
+  "observations": {
+    "home": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/observations.json",
+      "sha256": "e9a9de276779c4626762b1e8a142683c3c8f44fc4de89ba6cca11f5b4f3e2fdb",
+      "bytes": 8908
+    },
+    "lab": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/observations.json",
+      "sha256": "04896d53bc002914429a4f14a184d65976003b68e9dbe5507b332ea18363ed26",
+      "bytes": 5384
+    }
+  },
+  "sourceManifest": {
+    "path": "docs/validation/site-v1.23/release/source-manifest.json",
+    "sha256": "8af38690faa94ee4b1fb0e8d5c475c47d0de9789927fd975414e7de367bbe671",
+    "bytes": 172077
+  },
+  "sourceFiles": {
+    "public/index.html": {
+      "path": "public/index.html",
+      "sha256": "34854680e870e5e4f431e7c72479664e948ff8419a34fb2512253656cb36fb12",
+      "bytes": 37392
+    },
+    "public/assets/site-v123.css": {
+      "path": "public/assets/site-v123.css",
+      "sha256": "2ce30b892a0b8b652f082009d30863466d7043e1e1ac7544e49cfe7b023e4e50",
+      "bytes": 5562
+    },
+    "public/assets/site-v123.js": {
+      "path": "public/assets/site-v123.js",
+      "sha256": "575e914980a8362b5e788299c969af33bf05102f95d5caf9500758ef9a890361",
+      "bytes": 4291
+    },
+    "public/lab/clarity-123/cognitive-lab-1.23-source.zip": {
+      "path": "public/lab/clarity-123/cognitive-lab-1.23-source.zip",
+      "sha256": "07d35901a7f8ddf6b25f92e5bf8c41f7ecb3dadaaf55984720ac40cc909ba01e",
+      "bytes": 12487546
+    },
+    "public/lab/clarity-123/data/provenance.json": {
+      "path": "public/lab/clarity-123/data/provenance.json",
+      "sha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57",
+      "bytes": 9286
+    },
+    "public/lab/clarity-123/data/snapshot.js": {
+      "path": "public/lab/clarity-123/data/snapshot.js",
+      "sha256": "1118190c514d43006280eb7aaee2b1d1d25c5b635f9dbb8fb6cd815205374f6e",
+      "bytes": 3809
+    },
+    "public/lab/clarity-123/data/view.json": {
+      "path": "public/lab/clarity-123/data/view.json",
+      "sha256": "774cd926970f6bbd30fbfd494c92f2b95bafc9edac463c1f75eecb3a384d9553",
+      "bytes": 5946
+    },
+    "public/lab/clarity-123/index.html": {
+      "path": "public/lab/clarity-123/index.html",
+      "sha256": "83f5d5ae3839319a853121b634b2e2a86d93c8fbc96cbb4414e18e1623d63991",
+      "bytes": 7360
+    },
+    "public/lab/clarity-123/report.css": {
+      "path": "public/lab/clarity-123/report.css",
+      "sha256": "2439ee9458cdfb69c96e032167153178e4c8c4512f1c051c23e6ecb4b7756231",
+      "bytes": 4170
+    },
+    "public/lab/clarity-123/report.js": {
+      "path": "public/lab/clarity-123/report.js",
+      "sha256": "60bc8a85c2eb5122274fa7f6b6a15065b408f7de507aa266666af19c3f119e24",
+      "bytes": 17001
+    }
+  },
+  "home": {
+    "states": 8,
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "viewportWidths": [
+      320,
+      375,
+      736,
+      1280
+    ],
+    "allObservedScrollWidthsWithinViewport": true,
+    "nativeImageObservations": 40,
+    "uniqueNativeAssetUrls": 8,
+    "imageOccurrencesPerState": 5,
+    "heroDuplicatesPuzzleCapture": true,
+    "allNativeImageObservationsCompleteVisibleAnd1080x2400": true,
+    "visibilityMeaning": "The DOM visibility flag supplied by the original observations; does not mean every image was simultaneously inside the viewport.",
+    "statesObserved": [
+      {
+        "lang": "fr",
+        "scrollWidth": 305,
+        "title": "Luma Drift 1.23 — Suis la flèche. Trouve ton chemin.",
+        "width": 320,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-fr.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      },
+      {
+        "lang": "fr",
+        "scrollWidth": 360,
+        "title": "Luma Drift 1.23 — Suis la flèche. Trouve ton chemin.",
+        "width": 375,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-fr.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      },
+      {
+        "lang": "fr",
+        "scrollWidth": 721,
+        "title": "Luma Drift 1.23 — Suis la flèche. Trouve ton chemin.",
+        "width": 736,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-fr.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      },
+      {
+        "lang": "fr",
+        "scrollWidth": 1265,
+        "title": "Luma Drift 1.23 — Suis la flèche. Trouve ton chemin.",
+        "width": 1280,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-fr.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-fr.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      },
+      {
+        "lang": "en",
+        "scrollWidth": 305,
+        "title": "Luma Drift 1.23 — Follow the arrow. Find your way.",
+        "width": 320,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-en.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      },
+      {
+        "lang": "en",
+        "scrollWidth": 360,
+        "title": "Luma Drift 1.23 — Follow the arrow. Find your way.",
+        "width": 375,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-en.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      },
+      {
+        "lang": "en",
+        "scrollWidth": 721,
+        "title": "Luma Drift 1.23 — Follow the arrow. Find your way.",
+        "width": 736,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-en.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      },
+      {
+        "lang": "en",
+        "scrollWidth": 1265,
+        "title": "Luma Drift 1.23 — Follow the arrow. Find your way.",
+        "width": 1280,
+        "images": [
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/puzzle-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/skills-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/wardrobe-en.png",
+            "visible": true,
+            "width": 1080
+          },
+          {
+            "complete": true,
+            "height": 2400,
+            "src": "assets/screenshots/v1.23/map-en.png",
+            "visible": true,
+            "width": 1080
+          }
+        ]
+      }
+    ]
+  },
+  "lab": {
+    "states": 8,
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "viewportWidths": [
+      320,
+      375,
+      736,
+      1280
+    ],
+    "directEnglishEntryObserved": true,
+    "fourConditionsObserved": [
+      {
+        "metrics": "45.337\nlevels / trajectory\n7.06 %\nblocked / exits + rejected taps\n43,527 / 616,744\n0.3 %\nexhausted budgets / starts\n274 / 91,713\n765\nhorizon-censored attempts",
+        "resources": "Energy spent\t71,764\nEnergy-empty stops / days\t3,671 / 16,000\nAdministrative caps / days\t30 / 16,000\nCoins paid for Undo\t18,891\nUndos executed\t12,357\nRepeated errors in the same state\t1,768",
+        "value": "manual_native_123"
+      },
+      {
+        "metrics": "45.337\nlevels / trajectory\n7.23 %\nblocked / exits + rejected taps\n44,631 / 617,643\n0.28 %\nexhausted budgets / starts\n255 / 91,701\n773\nhorizon-censored attempts",
+        "resources": "Energy spent\t71,750\nEnergy-empty stops / days\t3,677 / 16,000\nAdministrative caps / days\t31 / 16,000\nCoins paid for Undo\t18,146\nUndos executed\t12,263\nRepeated errors in the same state\t1,827",
+        "value": "cause_hidden_123"
+      },
+      {
+        "metrics": "44.354\nlevels / trajectory\n5.22 %\nblocked / exits + rejected taps\n31,496 / 603,720\n0.18 %\nexhausted budgets / starts\n165 / 89,676\n803\nhorizon-censored attempts",
+        "resources": "Energy spent\t69,707\nEnergy-empty stops / days\t3,381 / 16,000\nAdministrative caps / days\t99 / 16,000\nCoins paid for Undo\t12,545\nUndos executed\t24,489\nRepeated errors in the same state\t453",
+        "value": "loaned_mixed_123"
+      },
+      {
+        "metrics": "52.729\nlevels / trajectory\n7.03 %\nblocked / exits + rejected taps\n50,777 / 721,787\n0.32 %\nexhausted budgets / starts\n342 / 107,047\n1,248\nhorizon-censored attempts",
+        "resources": "Energy spent\t0\nEnergy-empty stops / days\t0 / 16,000\nAdministrative caps / days\t2,001 / 16,000\nCoins paid for Undo\t23,045\nUndos executed\t15,050\nRepeated errors in the same state\t2,151",
+        "value": "energy_unlimited_123"
+      }
+    ],
+    "allRecordedMetricsAndResourcesReconciledWithFinalViewJson": true,
+    "responsiveStatesObserved": [
+      {
+        "width": 320,
+        "counts": "8 000\ntrajectoires\n380 137\ntentatives commencées\n40 000\nsondes exécutées\n0\nparticipants humains",
+        "language": "fr",
+        "overflow": false,
+        "status": "Rapport 1.23 chargé · sources moteur/runner vérifiées · zéro humain"
+      },
+      {
+        "width": 320,
+        "counts": "8,000\ntrajectories\n380,137\nstarted attempts\n40,000\nexecuted probes\n0\nhuman participants",
+        "language": "en",
+        "overflow": false,
+        "status": "1.23 report loaded · engine/runner sources verified · zero humans"
+      },
+      {
+        "width": 375,
+        "counts": "8 000\ntrajectoires\n380 137\ntentatives commencées\n40 000\nsondes exécutées\n0\nparticipants humains",
+        "language": "fr",
+        "overflow": false,
+        "status": "Rapport 1.23 chargé · sources moteur/runner vérifiées · zéro humain"
+      },
+      {
+        "width": 375,
+        "counts": "8,000\ntrajectories\n380,137\nstarted attempts\n40,000\nexecuted probes\n0\nhuman participants",
+        "language": "en",
+        "overflow": false,
+        "status": "1.23 report loaded · engine/runner sources verified · zero humans"
+      },
+      {
+        "width": 736,
+        "counts": "8 000\ntrajectoires\n380 137\ntentatives commencées\n40 000\nsondes exécutées\n0\nparticipants humains",
+        "language": "fr",
+        "overflow": false,
+        "status": "Rapport 1.23 chargé · sources moteur/runner vérifiées · zéro humain"
+      },
+      {
+        "width": 736,
+        "counts": "8,000\ntrajectories\n380,137\nstarted attempts\n40,000\nexecuted probes\n0\nhuman participants",
+        "language": "en",
+        "overflow": false,
+        "status": "1.23 report loaded · engine/runner sources verified · zero humans"
+      },
+      {
+        "width": 1280,
+        "counts": "8 000\ntrajectoires\n380 137\ntentatives commencées\n40 000\nsondes exécutées\n0\nparticipants humains",
+        "language": "fr",
+        "overflow": false,
+        "status": "Rapport 1.23 chargé · sources moteur/runner vérifiées · zéro humain"
+      },
+      {
+        "width": 1280,
+        "counts": "8,000\ntrajectories\n380,137\nstarted attempts\n40,000\nexecuted probes\n0\nhuman participants",
+        "language": "en",
+        "overflow": false,
+        "status": "1.23 report loaded · engine/runner sources verified · zero humans"
+      }
+    ],
+    "allObservedStatesWithoutHorizontalOverflow": true,
+    "languageChangesObserved": [
+      {
+        "condition": "energy_unlimited_123",
+        "language": "fr",
+        "status": "Rapport 1.23 chargé · sources moteur/runner vérifiées · zéro humain"
+      },
+      {
+        "condition": "energy_unlimited_123",
+        "language": "en",
+        "status": "1.23 report loaded · engine/runner sources verified · zero humans"
+      },
+      {
+        "condition": "energy_unlimited_123",
+        "language": "fr",
+        "status": "Rapport 1.23 chargé · sources moteur/runner vérifiées · zéro humain"
+      },
+      {
+        "condition": "energy_unlimited_123",
+        "language": "en",
+        "status": "1.23 report loaded · engine/runner sources verified · zero humans"
+      },
+      {
+        "condition": "energy_unlimited_123",
+        "language": "fr",
+        "status": "Rapport 1.23 chargé · sources moteur/runner vérifiées · zéro humain"
+      },
+      {
+        "condition": "energy_unlimited_123",
+        "language": "en",
+        "status": "1.23 report loaded · engine/runner sources verified · zero humans"
+      }
+    ],
+    "languageChangeCount": 6,
+    "note": "The two first mean values both display45.337 after rounding to3decimals; their raw means remain45.337 and45.3365. This is expected rounding, not a stale-state observation."
+  },
+  "visualInspection": {
+    "actor": "lab_analysis_deep independent read-only reviewer",
+    "method": "Opened original local JPEG files with the image viewer; no image modification",
+    "images": [
+      {
+        "path": "docs/validation/site-v1.23/browser-local/home-final/fr-375-hero.jpg",
+        "sha256": "82a50aa56eb5baf9224324fe9ad360f60d0282e5002110211c1a9e7a9b285b19",
+        "bytes": 32911,
+        "finding": "Accueil FR, viewport375 : titre et texte lisibles, actions Android/simulation distinctes, pas de chevauchement visible."
+      },
+      {
+        "path": "docs/validation/site-v1.23/browser-local/home-final/en-1280-screens.jpg",
+        "sha256": "3ed912afa3a7a2cbe5a26dd2cd3e46fdd2723ef4f8d7d50506be5f81e0466766",
+        "bytes": 60064,
+        "finding": "Accueil EN, viewport1280 : capture de carte et légendes lisibles ; quatrième carte au début de la ligne suivante, sans collision visible."
+      },
+      {
+        "path": "docs/validation/site-v1.23/browser-local/lab-final/fr-375.jpg",
+        "sha256": "4dd3a57ce4ca68f26653cba76b426162cecdbd517b324b319c877d86e008cf95",
+        "bytes": 43381,
+        "finding": "Labo FR, viewport375 : titre replié, boutons et quatre compteurs visibles en deux colonnes ; aucun texte coupé observé."
+      },
+      {
+        "path": "docs/validation/site-v1.23/browser-local/lab-final/en-1280.jpg",
+        "sha256": "58fbae277b48f5198b703381d52510b4249f42464bc396291b31a65e53673d9d",
+        "bytes": 85003,
+        "finding": "Labo EN, viewport1280 : titre, compteurs, sélecteur et métriques en colonnes ; aucune collision visible observée."
+      }
+    ],
+    "finding": "No material overlap or truncation observed in these four sampled scroll positions. This does not inspect every pixel of every page state."
+  },
+  "additionalRootBrowserObservations": {
+    "source": "Root operator handoff for this report; these extra interactions are not contained in the two observations.json files.",
+    "gallery": {
+      "companion": "Hoot",
+      "form": 4,
+      "action": "Jump",
+      "canvasPixels": 720,
+      "renderObserved": true,
+      "screenshot": {
+        "path": "docs/validation/site-v1.23/browser-local/home-final/gallery-hoot-form4.jpg",
+        "sha256": "14d38541b11dfb0a7e05b56e7b3e3ae4d4dcdbaa0df3daaa1e8ddd944814fab4",
+        "bytes": 83293
+      }
+    },
+    "audio": {
+      "elementsObserved": 4,
+      "paused": true,
+      "autoplay": false,
+      "preload": "none",
+      "playbackTested": false
+    },
+    "toolSelectorAttempts": {
+      "description": "Some browser-control selector attempts were inoperative. They are tooling observations, not a demonstrated product defect. Only the four conditions actually observed above count as successful condition coverage."
+    }
+  },
+  "jpegIndex": {
+    "home-final/en-1280-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-1280-hero.jpg",
+      "sha256": "fa6ee5b620376fece63ce3b4ef2fc6483f9a81a777bff08eb01f02736904af1a",
+      "bytes": 68265
+    },
+    "home-final/en-1280-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-1280-screens.jpg",
+      "sha256": "3ed912afa3a7a2cbe5a26dd2cd3e46fdd2723ef4f8d7d50506be5f81e0466766",
+      "bytes": 60064
+    },
+    "home-final/en-320-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-320-hero.jpg",
+      "sha256": "8f12aebcc3ba48c7b5b9150198acae23b400e0703091cec51eb5d011233ec937",
+      "bytes": 29774
+    },
+    "home-final/en-320-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-320-screens.jpg",
+      "sha256": "8c6eb7bb3d399cf2cfc428da965e5e7a619b712d91cb7f0ce360955095fae5d9",
+      "bytes": 34535
+    },
+    "home-final/en-375-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-375-hero.jpg",
+      "sha256": "855b8ae552b6081ca73d4261a72821d1a31435e9210c9b6abc7b6bd944b9e70d",
+      "bytes": 33653
+    },
+    "home-final/en-375-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-375-screens.jpg",
+      "sha256": "7f8f13d6bae8adf0e004fd8646a13bffc729fd12af7a1f70ba9f7e4e45512c70",
+      "bytes": 37511
+    },
+    "home-final/en-736-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-736-hero.jpg",
+      "sha256": "f01ec2c536c69b7757a0409db75f007f974d864cc2a74815f7bcdbe9626978ee",
+      "bytes": 50349
+    },
+    "home-final/en-736-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/en-736-screens.jpg",
+      "sha256": "f74c3b041132fd8a5912e60243e6bf034f4a14cc064c5d77eed59efe88bded21",
+      "bytes": 53320
+    },
+    "home-final/fr-1280-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-1280-hero.jpg",
+      "sha256": "7d3e8c05d8a9eae8fe922094e67b9120a8c78589b3dba0c8eb0bf0020b10a641",
+      "bytes": 71160
+    },
+    "home-final/fr-1280-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-1280-screens.jpg",
+      "sha256": "8605651e3720a6a55b12ef27df9bea9645cf03b6ee1b2bfaac5d1f3715c48d23",
+      "bytes": 61727
+    },
+    "home-final/fr-320-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-320-hero.jpg",
+      "sha256": "8b5b131a3109a4ea7c90bb0832f5eb5de0173ffab3907c30c3ce6ab0dca86a6a",
+      "bytes": 31216
+    },
+    "home-final/fr-320-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-320-screens.jpg",
+      "sha256": "cb705f2ef96f0da772295a024e3f6e57eb49eb05ac7aa05f946b2f822f7f8eff",
+      "bytes": 35250
+    },
+    "home-final/fr-375-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-375-hero.jpg",
+      "sha256": "82a50aa56eb5baf9224324fe9ad360f60d0282e5002110211c1a9e7a9b285b19",
+      "bytes": 32911
+    },
+    "home-final/fr-375-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-375-screens.jpg",
+      "sha256": "26d8ec9d2de0caff67295cf25ed7147b5a0b263389d6ea920a4762e483cd14cc",
+      "bytes": 38704
+    },
+    "home-final/fr-736-hero.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-736-hero.jpg",
+      "sha256": "07c27d24c33b2288bf31091164e576c6ada95200b8a7fc31cd5734c8f428c724",
+      "bytes": 53206
+    },
+    "home-final/fr-736-screens.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/fr-736-screens.jpg",
+      "sha256": "0595dafc489a2cbba169bdf30ffa442735b47b330a318e4f49162757b488afa8",
+      "bytes": 54141
+    },
+    "home-final/gallery-hoot-form4.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/home-final/gallery-hoot-form4.jpg",
+      "sha256": "14d38541b11dfb0a7e05b56e7b3e3ae4d4dcdbaa0df3daaa1e8ddd944814fab4",
+      "bytes": 83293
+    },
+    "lab-final/en-1280.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/en-1280.jpg",
+      "sha256": "58fbae277b48f5198b703381d52510b4249f42464bc396291b31a65e53673d9d",
+      "bytes": 85003
+    },
+    "lab-final/en-320.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/en-320.jpg",
+      "sha256": "ef5fbb7774632f327186ef31495ff8cc2fc97bb9baa8a69d465ddaea15c94e2a",
+      "bytes": 37281
+    },
+    "lab-final/en-375.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/en-375.jpg",
+      "sha256": "e08c5d8cfe9649eb39dafadfae8b281263352b389edb0d0cbc09d60eb76144cb",
+      "bytes": 47224
+    },
+    "lab-final/en-736.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/en-736.jpg",
+      "sha256": "bf01ee33f54a94fe64a14482e555a9838457df00fd86129626576e5226df66e7",
+      "bytes": 66289
+    },
+    "lab-final/fr-1280.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/fr-1280.jpg",
+      "sha256": "666d3c5d9e0c658e294060bc17df050d7c658c8eac5c9881ed8dd80c435a41b3",
+      "bytes": 92009
+    },
+    "lab-final/fr-320.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/fr-320.jpg",
+      "sha256": "75a9a881fc4fe8f87d906f717f62355da5c33562137499bd0854cdad966416d3",
+      "bytes": 39058
+    },
+    "lab-final/fr-375.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/fr-375.jpg",
+      "sha256": "4dd3a57ce4ca68f26653cba76b426162cecdbd517b324b319c877d86e008cf95",
+      "bytes": 43381
+    },
+    "lab-final/fr-736.jpg": {
+      "path": "docs/validation/site-v1.23/browser-local/lab-final/fr-736.jpg",
+      "sha256": "07492048b52df3e898945b9e1cda63fc7c29ea1ab77d77416a2eb13f51f9524f",
+      "bytes": 70159
+    }
+  },
+  "limits": [
+    "Local browser only; no remote Hosting/public-origin assertion.",
+    "No audio playback was evaluated.",
+    "No APK download, installation or Android scenario is established by this report.",
+    "No player enjoyment, understanding, emotion or retention was measured.",
+    "The root operator performed the browser interactions; the independent reviewer inspected four captured images and reconciled evidence without replaying browser input."
+  ],
+  "publicOrAppFilesModifiedByReviewer": false
+}

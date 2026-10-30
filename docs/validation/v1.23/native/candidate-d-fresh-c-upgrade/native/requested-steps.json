@@ -1,0 +1,91 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "run_id",
+    "value": "6d7c1fea-ca4e-482d-9799-b72a96fc925a"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "level",
+    "value": "2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova",
+    "energy": 3,
+    "used": 0
+  },
+  {
+    "op": "capture",
+    "name": "en-c-to-d-u2-retained"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 1800
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "capture",
+    "name": "en-nova-guide-actual-activation"
+  },
+  {
+    "op": "board-timer-advance-check",
+    "ms": 1800
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*Used.*"
+  },
+  {
+    "op": "capture",
+    "name": "en-nova-once-per-attempt-used"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close_bottom"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Leave level|Quitter le niveau"
+  },
+  {
+    "op": "snapshot",
+    "name": "c-to-d-fresh-upgrade-final"
+  }
+]

@@ -1,0 +1,13 @@
+--- D/LumaView.java
++++ E/LumaView.java
+@@ -1593,8 +1593,9 @@
+     private String battleFamily(String id){CompanionBattle.Definition def=CompanionBattle.find(id);return def==null?"":v19("skill_"+def.effect.name().toLowerCase(Locale.ROOT));}
+     private String battleDetail(String id){CompanionBattle.Definition def=CompanionBattle.find(id);return def==null?"":v19("skill_"+def.effect.name().toLowerCase(Locale.ROOT)+"_detail",def.amount,def.durationMs/1000,def.cost);}
+     private void modernAction(Canvas c,RectF area,String caption,int color,String id,Runnable action,boolean enabled){
++        int faceColor=color>=SweetUi.PEACH&&color<=SweetUi.CREAM?SweetUi.fill(color):color;
+         boolean down=pressed!=null&&id.equals(pressed.semanticId);c.save();if(down&&!reduceMotion)c.scale(.98f,.98f,area.centerX(),area.centerY());
+-        round(c,area.left,area.top+3,area.width(),area.height(),22,alpha(color,35));round(c,area.left,area.top,area.width(),area.height()-3,22,enabled?color:0xffe8e5f0);
++        round(c,area.left,area.top+3,area.width(),area.height(),22,alpha(faceColor,35));round(c,area.left,area.top,area.width(),area.height()-3,22,enabled?faceColor:0xffe8e5f0);
+         fit(c,caption,area.centerX(),area.centerY()+5,15,area.width()-24,enabled?0xff30203f:0xff797184,true,true);c.restore();
+         if(enabled)motionHit(area,caption,id,action);else label(area.left,area.top,area.width(),area.height(),caption);
+     }

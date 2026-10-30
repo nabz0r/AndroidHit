@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "observed_utc": "2026-10-30T19:13:50.034770+00:00",
+  "scope": "Comparison of actual original AX bounds before contextual sheet/wardrobe and after return; no private scroll field read. Exact six core preferences checked by native program.",
+  "checks": [
+    {
+      "locale": "fr",
+      "id": "battle_skill_0",
+      "before": [
+        39,
+        770,
+        164,
+        887
+      ],
+      "after": [
+        39,
+        770,
+        164,
+        887
+      ],
+      "passed": true
+    },
+    {
+      "locale": "en",
+      "id": "battle_skill_0",
+      "before": [
+        39,
+        770,
+        164,
+        887
+      ],
+      "after": [
+        39,
+        770,
+        164,
+        887
+      ],
+      "passed": true
+    }
+  ],
+  "display_restore": "../display-retained-candidate-d-restore.json",
+  "visual_review": "FR/EN sheet all actions visible at640x960/font1.3. Wardrobe fixed Cancel/Apply/Return reachable and actual owned-item trial succeeds after scrolling. Some item/tab labels ellipsize at this extreme width; full native AX labels are preserved."
+}

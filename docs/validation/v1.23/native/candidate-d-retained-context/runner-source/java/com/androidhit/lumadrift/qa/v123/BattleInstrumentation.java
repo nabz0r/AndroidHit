@@ -1,0 +1,582 @@
+package com.androidhit.lumadrift.qa.v123;
+
+import android.accessibilityservice.AccessibilityService;
+import android.accessibilityservice.AccessibilityServiceInfo;
+import android.app.Activity;
+import android.app.Instrumentation;
+import android.app.UiAutomation;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.graphics.Bitmap;
+import android.graphics.Rect;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.SystemClock;
+import android.util.Base64;
+import android.view.InputDevice;
+import android.view.MotionEvent;
+import android.view.accessibility.AccessibilityNodeInfo;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.function.Predicate;
+
+/** Framework-only observer: real UI touches and read-only preferences, never target methods or writes. */
+public final class BattleInstrumentation extends Instrumentation {
+    private Bundle args;private UiAutomation ui;private File output;private String target;
+    private final JSONArray checks=new JSONArray(),actions=new JSONArray(),captures=new JSONArray();
+    private final Map<String,String> remembered=new TreeMap<>();private int touches;
+    private static final String[] CODES={"en","fr","de","es","pt","it"};
+    private static final String[] LANGUAGES={"English","Français","Deutsch","Español","Português","Italiano"};
+    private static final String[] SETTINGS={"Settings","Réglages","Einstellungen","Ajustes","Definições","Impostazioni"};
+    @Override public void onCreate(Bundle arguments){super.onCreate(arguments);args=arguments==null?new Bundle():arguments;start();}
+    @Override public void onStart(){new Thread(()->{
+        boolean passed=false;Bundle result=new Bundle();
+        try{
+            target=getTargetContext().getPackageName();check(target.equals("com.androidhit.lumadrift"),"Exact production package");
+            String token=args.getString("runToken","");check(token.matches("[a-f0-9-]{36}"),"Unique host execution token");
+            String phase=args.getString("phase","");check(phase.matches("[a-z][a-z0-9_-]{1,50}"),"Bounded explicit phase");
+            output=new File(getTargetContext().getExternalFilesDir(null),"v123-native/"+token+"/"+phase);check(!output.exists()&&output.mkdirs(),"Fresh evidence output");
+            PackageInfo info=getTargetContext().getPackageManager().getPackageInfo(target,0);
+            check(info.versionName.equals(args.getString("expectedVersion"))&&info.versionCode==Integer.parseInt(args.getString("expectedCode")),"Exact installed version and code");
+            ui=getUiAutomation();AccessibilityServiceInfo service=ui.getServiceInfo();service.flags|=AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS|AccessibilityServiceInfo.FLAG_INCLUDE_NOT_IMPORTANT_VIEWS|AccessibilityServiceInfo.FLAG_REPORT_VIEW_IDS;ui.setServiceInfo(service);
+            snapshot("before");
+            if(args.getString("fresh","false").equals("true"))check(save().getAll().isEmpty()&&session().getAll().isEmpty(),"Genuine first launch has no game or board preferences");
+            if(!args.getString("snapshotOnly","false").equals("true")){
+                launch();
+                String program=new String(Base64.decode(args.getString("stepsBase64",""),Base64.NO_WRAP),StandardCharsets.UTF_8);
+                JSONArray steps=new JSONArray(program);check(steps.length()>0&&steps.length()<=250,"Explicit bounded gesture program");write("requested-steps.json",steps.toString(2));
+                for(int n=0;n<steps.length();n++)step(steps.getJSONObject(n));
+            }else check(true,"Snapshot-only phase never launches an Activity or sends UI input");
+            snapshot("after");passed=true;result.putString("summary","PASS "+checks.length()+" native assertions and "+touches+" genuine touches");
+        }catch(Throwable failure){result.putString("failure",failure.toString());try{if(output!=null){StringWriter stack=new StringWriter();failure.printStackTrace(new PrintWriter(stack));write("failure.txt",stack.toString());if(ui!=null)capture("failure");}}catch(Throwable ignored){}}
+        finally{
+            try{if(ui!=null)ui.setRotation(UiAutomation.ROTATION_UNFREEZE);}catch(Throwable ignored){}
+            try{if(output!=null)write("report.json",new JSONObject().put("passed",passed).put("phase",args.getString("phase")).put("runToken",args.getString("runToken")).put("processId",android.os.Process.myPid()).put("checkCount",checks.length()).put("checks",checks).put("touchCount",touches).put("actions",actions).put("captures",captures).put("package",target).put("scope","Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed.").toString(2));}catch(Throwable ignored){}
+            finish(passed?Activity.RESULT_OK:Activity.RESULT_CANCELED,result);
+        }
+    },"luma-v123-native-observer").start();}
+    private SharedPreferences save(){return getTargetContext().getSharedPreferences("luma_drift_save_v1",0);}
+    private SharedPreferences session(){return getTargetContext().getSharedPreferences("luma_session",0);}
+    private SharedPreferences boardSession(){SharedPreferences expedition=getTargetContext().getSharedPreferences("luma_expedition_session_v118",0);return expedition.getBoolean("active",false)&&expedition.getInt("mode",-1)==5?expedition:session();}
+    private void launch(){startActivitySync(new Intent().setClassName(target,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK));SystemClock.sleep(1800);}
+    private void step(JSONObject step)throws Exception{
+        String op=step.getString("op");
+        if(op.equals("capture"))capture(step.getString("name"));
+        else if(op.equals("capture-fast"))capture(step.getString("name"),0);
+        else if(op.equals("snapshot"))snapshot(step.getString("name"));
+        else if(op.equals("seek-id")){AccessibilityNodeInfo node=acrossScroll(step.getString("id"));check(node!=null,"Actual semantic control reachable by real UI scrolling: "+step.getString("id"));if(node!=null)node.recycle();}
+        else if(op.equals("tap-id"))seekId(step.getString("id"),step.optString("reason",step.getString("id")));
+        else if(op.equals("tap-id-at"))pointerAtId(step);
+        else if(op.equals("drag-id"))dragId(step);
+        else if(op.equals("pinch-id"))pinchId(step);
+        else if(op.equals("open-map"))openMap();
+        else if(op.equals("map-select"))mapSelect(step.getInt("level"),step.optInt("settleMs",1700));
+        else if(op.equals("map-begin-travel")){
+            int level=step.getInt("level");check(level<=save().getInt("unlocked",1),"Short travel uses genuinely unlocked destination");mapFrameAt(level);AccessibilityNodeInfo node=findId("world_node_"+level,true);check(node!=null,"Real destination node visible before short-travel pointer gesture");touchNode(node,"begin-real-world-travel-to-U"+level,25);
+        }
+        else if(op.equals("map-locked-select"))mapLockedSelect(step);
+        else if(op.equals("remember-map-neutral"))rememberMapNeutral(step.getString("name"));
+        else if(op.equals("assert-map-neutral"))assertMapNeutral(step.getString("name"));
+        else if(op.equals("remember-node-bounds"))rememberNodeBounds(step);
+        else if(op.equals("assert-node-moved"))assertNodeMoved(step);
+        else if(op.equals("assert-tactical"))assertTactical(step);
+        else if(op.equals("tactical-step"))tacticalStep(step.getInt("index"));
+        else if(op.equals("tactical-solve-active"))solveTactical();
+        else if(op.equals("remember-tactical"))remembered.put("tactical:"+step.getString("name"),getTargetContext().getSharedPreferences("luma_tactical122",0).getString("state",""));
+        else if(op.equals("assert-tactical-unchanged"))check(remembered.containsKey("tactical:"+step.getString("name"))&&remembered.get("tactical:"+step.getString("name")).equals(getTargetContext().getSharedPreferences("luma_tactical122",0).getString("state","")),"Actual tactical state remains byte-exact: "+step.getString("name"));
+        else if(op.equals("remember-energy"))remembered.put("energy:"+step.getString("name"),String.valueOf(energyCount()));
+        else if(op.equals("assert-no-energy-debit")){int before=Integer.parseInt(remembered.get("energy:"+step.getString("name"))),after=energyCount();check(before<0?after<0:after>=before,"Actual free tactical play cannot debit session energy; elapsed regeneration allowed");}
+        else if(op.equals("tap")){String regex=step.getString("regex");seekTap(x->x.matches(regex),step.optString("reason",regex));}
+        else if(op.equals("back"))back();
+        else if(op.equals("top"))top();
+        else if(op.equals("scroll"))scroll(step.optBoolean("forward",true));
+        else if(op.equals("adventure"))adventure();
+        else if(op.equals("language"))setLanguage(step.getString("code"));
+        else if(op.equals("firstlight"))firstLight();
+        else if(op.equals("open-level"))openLevel(step.getInt("level"));
+        else if(op.equals("solve"))solve(step.getInt("level"));
+        else if(op.equals("solve-active"))solve(boardSession().getInt("level",-1));
+        else if(op.equals("piece"))piece(step.getInt("row"),step.getInt("col"));
+        else if(op.equals("earn-through"))earnThrough(step.getInt("level"));
+        else if(op.equals("assert-label")){String regex=step.getString("regex");AccessibilityNodeInfo node=find(x->x.matches(regex),false);boolean found=node!=null;if(node!=null)node.recycle();check(found,"Actual visible label matches "+regex);}
+        else if(op.equals("assert-no-label")){String regex=step.getString("regex");AccessibilityNodeInfo node=find(x->x.matches(regex),false);boolean found=node!=null;if(node!=null)node.recycle();check(!found,"Actual visible labels exclude "+regex);}
+        else if(op.equals("assert-id")){AccessibilityNodeInfo node=findId(step.getString("id"),false);boolean found=node!=null;if(node!=null)node.recycle();check(found,"Actual visible semantic target "+step.getString("id"));}
+        else if(op.equals("assert-pref")){
+            SharedPreferences prefs=getTargetContext().getSharedPreferences(step.optString("pref","luma_drift_save_v1"),0);
+            String key=step.getString("key");Object value=prefs.getAll().get(key);
+            if(step.optBoolean("absent",false))check(!prefs.contains(key),"Preference remains absent: "+key);
+            else check(String.valueOf(value).equals(step.getString("value")),"Read-only preference "+key+" = "+step.getString("value"));
+        }
+        else if(op.equals("wait")){int ms=step.getInt("ms");check(ms>=0&&ms<=15000,"Bounded real-time wait");SystemClock.sleep(ms);}
+        else if(op.equals("assert-victory")){
+            String[] fields=getTargetContext().getSharedPreferences("luma_victory_v120",0).getString("receipt","").split("\\|",-1);
+            check(fields.length==17&&fields[0].equals("v120_1")&&fields[1].equals("R"),"Actual ready durable victory receipt");
+            for(String key:new String[]{"stars","coins","xp"})if(step.has(key)){int index=key.equals("stars")?7:key.equals("coins")?10:11;check(Integer.parseInt(fields[index])==step.getInt(key),"Actual receipt "+key+" = "+step.getInt(key));}
+            check(!boardSession().getBoolean("active",true),"Won session inactive only after real result");
+        }
+        else if(op.equals("remember-value")){SharedPreferences prefs=getTargetContext().getSharedPreferences(step.getString("pref"),0);remembered.put(step.getString("name"),String.valueOf(prefs.getAll().get(step.getString("key"))));}
+        else if(op.equals("assert-value-unchanged")){SharedPreferences prefs=getTargetContext().getSharedPreferences(step.getString("pref"),0);check(remembered.get(step.getString("name")).equals(String.valueOf(prefs.getAll().get(step.getString("key")))),"Actual value unchanged "+step.getString("name"));}
+        else if(op.equals("assert-int-delta")){
+            SharedPreferences prefs=getTargetContext().getSharedPreferences(step.getString("pref"),0);check(remembered.containsKey(step.getString("name")),"Actual numeric baseline was observed");
+            int before=Integer.parseInt(remembered.get(step.getString("name"))),after=prefs.getInt(step.getString("key"),Integer.MIN_VALUE);
+            check(after-before==step.getInt("delta"),"Actual "+step.getString("key")+" delta = "+step.getInt("delta"));
+        }
+        else if(op.equals("assert-paid-undo")){
+            String request=boardSession().getString("last_paid_undo_v121","");check(request.matches("[a-f0-9-]{36}")&&boardSession().getString("run_id","").matches("[a-f0-9-]{36}"),"The actual committed run stores its paid Undo request identity");
+            check(save().getString("undo121_receipt_"+request,"").equals("used:"+step.getInt("cost")),"Exact paid Undo receipt is complete with disclosed Coin price");
+            check(save().getString("undo121_pending","").isEmpty(),"No pending paid Undo debit remains");
+        }
+        else if(op.equals("drain-energy"))drainEnergy();
+        else if(op.equals("wallet-swipe-neutral"))walletSwipeNeutral();
+        else if(op.equals("assert-energy")){String[] fields=getTargetContext().getSharedPreferences("luma_session_energy_v120",0).getString("session_energy_v120","").split("\\|",-1);check(fields.length==5&&fields[0].equals("1")&&Integer.parseInt(fields[1])==step.getInt("count"),"Actual durable session energy = "+step.getInt("count"));}
+        else if(op.equals("assert-shells")){
+            String encoded=boardSession().getString("elements_v121","");String[] fields=encoded.split("\\|",-1);
+            check(fields.length==4&&fields[0].equals("ES121"),"Actual durable elemental-shell identity");
+            int count=0,total=0;Set<String> kinds=new HashSet<>();if(!fields[3].isEmpty())for(String row:fields[3].split(";")){
+                String[] parts=row.split(":",-1);check(parts.length==3&&Arrays.asList("ICE","FIRE","WATER").contains(parts[1]),"Actual shell kind is spoken and supported");
+                int layers=Integer.parseInt(parts[2]);check(layers>=1&&layers<=2,"Actual remaining shell layer is bounded");count++;total+=layers;kinds.add(parts[1]);
+            }
+            if(step.has("count"))check(count==step.getInt("count"),"Actual shelled piece count = "+count);
+            if(step.has("layers"))check(total==step.getInt("layers"),"Actual remaining shell layers = "+total);
+            if(step.optBoolean("allKinds",false))check(kinds.size()==3,"Fresh actual U board contains Ice, Fire and Water");
+        }
+        else if(op.equals("assert-chain")){
+            String[] fields=boardSession().getString("exit_chain_v121","").split(":",-1);check(fields.length==5&&fields[0].equals("1"),"Actual durable manual-exit Focus codec");
+            if(step.has("progress"))check(Integer.parseInt(fields[1])==step.getInt("progress"),"Actual manual-exit Focus progress = "+step.getInt("progress"));
+            if(step.has("earned"))check(fields[2].equals(step.getBoolean("earned")?"1":"0"),"Actual manual-exit Focus earned state");
+            if(step.has("spent"))check(fields[3].equals(step.getBoolean("spent")?"1":"0"),"Actual one-use free Focus spent state");
+        }
+        else if(op.equals("unseal-step")){JSONObject point=new JSONObject(asset("fixtures/u"+step.getInt("level")+".json")).getJSONArray("steps").getJSONObject(step.getInt("index"));unseal(point);}
+        else if(op.equals("certificate-exit")){
+            JSONObject point=new JSONObject(asset("fixtures/u"+step.getInt("level")+".json")).getJSONArray("steps").getJSONObject(step.getInt("index"));unseal(point);
+            String before=boardSession().getString("history","");piece(point.getInt("row"),point.getInt("col"));String expected=before+(before.isEmpty()?"":",")+point.getInt("action");
+            check(boardSession().getString("history","").equals(expected),"Exactly one authored real exit after free shell clearing");
+        }
+        else if(op.equals("certificate-step")){JSONObject point=new JSONObject(asset("fixtures/u"+step.getInt("level")+".json")).getJSONArray("steps").getJSONObject(step.getInt("index"));piece(point.getInt("row"),point.getInt("col"));}
+        else if(op.equals("certificate-step-fast")){
+            JSONObject point=new JSONObject(asset("fixtures/u"+step.getInt("level")+".json")).getJSONArray("steps").getJSONObject(step.getInt("index"));int row=point.getInt("row"),col=point.getInt("col");
+            AccessibilityNodeInfo node=find(x->x.contains("Piece, row "+(row+1)+", column "+(col+1)+",")||x.contains("Pièce, ligne "+(row+1)+", colonne "+(col+1)+","),true);
+            check(node!=null,"Fast reaction gesture target is actually visible");touchNode(node,"fast-real-piece-"+row+"-"+col,50);
+        }
+        else if(op.equals("background-sheet-timer-check"))backgroundSheetTimer(step);
+        else if(op.equals("board-timer-advance-check"))boardTimerAdvance(step);
+        else if(op.equals("long-press-piece"))longPressPiece(step);
+        else if(op.equals("assert-long-delta")){
+            SharedPreferences prefs=getTargetContext().getSharedPreferences(step.getString("pref"),0);
+            check(remembered.containsKey(step.getString("name")),"Read-only long baseline actually observed");
+            Object observed=prefs.getAll().get(step.getString("key"));check(observed instanceof Number,"Read-only long preference is numeric");
+            long delta=((Number)observed).longValue()-Long.parseLong(remembered.get(step.getString("name")));
+            check(delta>=step.getLong("min")&&delta<=step.getLong("max"),"Actual persisted duration delta "+delta+" ms within explicit bounds");
+        }
+        else if(op.equals("remember-clock"))remembered.put(step.getString("name"),String.valueOf(clockSeconds()));
+        else if(op.equals("assert-clock-advance")){int delta=clockSeconds()-Integer.parseInt(remembered.get(step.getString("name")));check(delta>=step.getInt("min")&&delta<=step.getInt("max"),"Real visible clock advance "+delta+" seconds excludes paused wait");}
+        else if(op.equals("assert-battle"))assertBattle(step);
+        else if(op.equals("remember-battle"))remembered.put(step.getString("name"),boardSession().getString("battle_v119",""));
+        else if(op.equals("assert-battle-unchanged"))check(remembered.containsKey(step.getString("name"))&&remembered.get(step.getString("name")).equals(boardSession().getString("battle_v119","")),"Battle remains exactly unchanged: "+step.getString("name"));
+        else if(op.equals("assert-owned-team"))assertOwnedTeam(step.optInt("count",-1));
+        else if(op.equals("assert-expedition-wins")){
+            String[] fields=save().getString("expedition_v118_run","").split("\\|",-1);check(fields.length==8,"Actual durable expedition event record");
+            int wins=0;for(String event:fields[7].split(";"))if(event.startsWith("W,"))wins++;
+            check(wins==step.getInt("count"),"Exactly "+step.getInt("count")+" genuine expedition stages persisted");
+        }
+        else if(op.equals("assert-starter")){
+            check(owned().equals(Collections.singleton("nova")),"Only genuine starter Nova is owned");
+            check(save().getInt("coins",-1)==180&&save().getInt("unlocked",1)==1,"Genuine starter balance and campaign unlock");
+        }
+        else if(op.equals("record-owned"))write(step.getString("name")+".json",new JSONObject().put("owned",new JSONArray(owned())).put("coins",save().getInt("coins",-1)).put("squad",save().getString("companion_squad_v119","")).toString(2));
+        else if(op.equals("draw-avatars"))drawAvatars(step.getInt("count"),step.optBoolean("verifyCancel",false));
+        else if(op.equals("buy-earned-avatar"))buyEarnedAvatar(step.getString("id"),step.getInt("price"));
+        else if(op.equals("choose-owned-team"))chooseOwnedTeam(step.getJSONArray("ids"));
+        else throw new IllegalArgumentException("Unknown explicit UI operation "+op);
+    }
+    private Set<String> owned(){Set<String> owned=new TreeSet<>();for(Map.Entry<String,?> entry:save().getAll().entrySet())if(entry.getKey().startsWith("owned_character_")&&Boolean.TRUE.equals(entry.getValue()))owned.add(entry.getKey().substring("owned_character_".length()));return owned;}
+    private void assertOwnedTeam(int count)throws Exception{
+        String encoded=save().getString("companion_squad_v119",save().getString("character","nova"));List<String> team=Arrays.asList(encoded.split(",",-1));
+        check(team.size()>=1&&team.size()<=3&&new HashSet<>(team).size()==team.size(),"Saved team has 1–3 distinct identities");
+        check(owned().containsAll(team),"Every saved team member is genuinely owned");if(count>=0)check(team.size()==count,"Saved team exact size "+count);
+    }
+    private void assertBattle(JSONObject expected)throws Exception{
+        String encoded=boardSession().getString("battle_v119","");String[] fields=encoded.split("\\|",-1);
+        check(fields.length==9&&fields[0].equals("v119_1"),"Actual durable battle codec identity");
+        int energy=Integer.parseInt(fields[2]),used=Integer.parseInt(fields[3]);check(energy>=0&&energy<=6,"Actual energy remains bounded");
+        if(expected.has("team"))check(fields[1].equals(expected.getString("team")),"Actual board team = "+expected.getString("team"));
+        if(expected.has("energy"))check(energy==expected.getInt("energy"),"Actual board energy = "+expected.getInt("energy"));
+        if(expected.has("used"))check(used==expected.getInt("used"),"Actual once-per-avatar usage mask = "+expected.getInt("used"));
+        if(expected.has("credited"))check(fields[4].equals(expected.getString("credited")),"Actual once-per-piece receipt mask");
+        if(expected.has("comboReady"))check(fields[6].equals(expected.getBoolean("comboReady")?"1":"0"),"Actual combo readiness");
+        if(expected.has("comboSpent"))check(fields[7].equals(expected.getBoolean("comboSpent")?"1":"0"),"Actual once-per-board combo consumption");
+    }
+    private void firstLight()throws Exception{
+        check(!save().getBoolean("first_light_seen_v113",false)&&save().getString("first_light_history_v113","").isEmpty(),"Untouched real first-light introduction");capture("firstlight-new");
+        piece(2,0);piece(1,2);piece(3,1);check(save().getString("first_light_history_v113","").equals("0,1,2"),"Three real introduction exits persisted");capture("firstlight-solved");
+        seekTap(x->x.startsWith("Discover your little home")||x.startsWith("Découvre ton petit chez-toi"),"complete-genuine-firstlight");check(save().getBoolean("first_light_seen_v113",false),"First light completed through UI");
+    }
+    private void adventure()throws Exception{
+        for(int i=0;i<18;i++){AccessibilityNodeInfo node=findId("home_profile",true);if(node==null)node=findId("journey_continue",true);if(node==null)node=findId("journey_entry",true);if(node==null)node=find(x->x.equals("All levels")||x.equals("Tous les niveaux"),true);if(node!=null){node.recycle();return;}AccessibilityNodeInfo nav=findId("root_nav_adventure",true);if(nav!=null){touchNode(nav,"return-actual-adventure-tab");continue;}back();}
+        throw new AssertionError("Cannot reach actual adventure: "+labels());
+    }
+    private void setLanguage(String code)throws Exception{
+        int chosen=Arrays.asList(CODES).indexOf(code);check(chosen>=0,"Supported language selected");adventure();seekTap(x->Arrays.asList(SETTINGS).contains(x),"open-real-settings");seekTap(x->x.equals(LANGUAGES[chosen]),"select-real-language-"+code);check(save().getString("language","").equals(code),"Language saved by actual UI");back();adventure();
+    }
+    private void openLevel(int level)throws Exception{
+        check(level>=1&&level<=60,"Only existing frozen U1–U60 certificates");openMap();mapSelect(level,1700);seekId("world_play","open-selected-real-U"+level);
+        AccessibilityNodeInfo play=findId("briefing_play",true);if(play!=null)touchNode(play,"start-real-U"+level);else seekTap(x->x.startsWith("Play")||x.startsWith("Jouer"),"start-real-U"+level);
+        check(session().getInt("mode",-1)==0&&session().getInt("level",-1)==level,"Actual campaign board selected");
+    }
+    private void solve(int level)throws Exception{
+        JSONObject fixture=new JSONObject(asset("fixtures/u"+level+".json"));JSONArray steps=fixture.getJSONArray("steps");
+        SharedPreferences actual=boardSession();int mode=actual.getInt("mode",-1);
+        check(actual.getInt("level",-1)==level&&actual.getInt("content_version",-1)==fixture.getInt("contentVersion")&&(actual.getInt("budget_policy",-1)==5||actual.getInt("budget_policy",-1)==6),"Actual board preserves existing U certificate and budget identities");
+        String history=actual.getString("history","");List<String> prefix=history.isEmpty()?Collections.emptyList():Arrays.asList(history.split(","));
+        check(prefix.size()<=steps.length(),"Existing genuine board history is a bounded certificate prefix");
+        for(int n=0;n<prefix.size();n++)check(prefix.get(n).equals(String.valueOf(steps.getJSONObject(n).getInt("action"))),"Already performed real exit agrees with public certificate");
+        for(int n=prefix.size();n<steps.length();n++){
+            JSONObject step=steps.getJSONObject(n);unseal(step);piece(step.getInt("row"),step.getInt("col"));
+            history+=(history.isEmpty()?"":",")+step.getInt("action");check(actual.getString("history","").equals(history),"Exactly one certificate exit persisted for U"+level+" step "+(n+1));
+        }
+        if(mode==5)check(save().getString("expedition_v118_run","").contains("W,"),"Real expedition victory stored after all actual exits");
+        else {long until=SystemClock.uptimeMillis()+5000;while(save().getInt("stars_"+level,0)==0&&SystemClock.uptimeMillis()<until)SystemClock.sleep(100);check(save().getInt("stars_"+level,0)>0,"Real native U"+level+" victory awarded");}
+    }
+    private void earnThrough(int through)throws Exception{
+        check(through>=1&&through<=30,"Genuine funding stays within public certificates");
+        for(int level=1;level<=through;level++){
+            if(save().getInt("stars_"+level,0)>0)continue;
+            openLevel(level);int before=save().getInt("coins",-1);solve(level);
+            check(save().getInt("coins",-1)==before+55,"Real first-clear campaign reward is exactly 55 earned coins for U"+level);
+        }
+        capture("genuine-campaign-through-u"+through);adventure();
+    }
+    private void drawAvatars(int count,boolean verifyCancel)throws Exception{
+        check(count>=1&&count<=12,"Bounded explicitly requested earned draws");adventure();
+        AccessibilityNodeInfo collection=findId("root_nav_collection_hub",true);
+        if(collection!=null)touchNode(collection,"open-real-collection-tab");
+        else {
+            collection=find(x->x.equals("Collection"),true);
+            if(collection!=null)touchNode(collection,"open-real-collection");
+            else {seekTap(x->x.equals("My home")||x.equals("Ma maison"),"open-real-home-tab");seekTap(x->x.equals("Collection"),"open-real-collection-tab");}
+        }
+        seekTap(x->x.equals("Star arrivals")||x.equals("Rencontres stellaires"),"open-real-earned-companion-draw");
+        seekTap(x->x.equals("Pool & exact odds")||x.equals("Contenu et probabilités"),"open-real-disclosed-odds-before-draw");capture("gacha-actual-fixed-odds");back();
+        for(int n=0;n<count;n++){
+            int before=save().getInt("coins",-1);check(before>=180,"Draw funded only by real earned balance");Set<String> beforeOwned=owned();Map<String,?> beforeValues=save().getAll();
+            String last=save().getString("summon_last_request_v116_1","");seekId("summon_draw","request-real-earned-avatar-draw-"+(n+1));
+            check(save().getInt("coins",-1)==before&&save().getString("summon_last_request_v116_1","").equals(last),"Confirmation alone never debits or creates an arrival");
+            capture("gacha-confirm-"+(n+1));
+            if(verifyCancel&&n==0){back();check(save().getInt("coins",-1)==before&&save().getString("summon_last_request_v116_1","").equals(last),"Actual cancellation preserves Coins and last draw identity");capture("gacha-cancelled-no-debit");seekId("summon_draw","request-real-earned-avatar-after-cancel");}
+            seekTap(x->x.equals("Yes")||x.equals("Oui"),"confirm-exact-real-earned-180-coin-draw-"+(n+1));
+            String request=save().getString("summon_last_request_v116_1","");check(!request.isEmpty(),"Actual draw request durably recorded");
+            byte[] digest=java.security.MessageDigest.getInstance("SHA-256").digest(request.getBytes(StandardCharsets.UTF_8));StringBuilder hex=new StringBuilder();for(byte value:digest)hex.append(String.format(Locale.ROOT,"%02x",value&255));
+            String receipt=save().getString("summon_v116_1_"+hex,"");String[] fields=receipt.split(":",-1);
+            check(fields.length==4&&fields[0].equals("AVATARS"),"Actual avatar draw has a committed receipt");
+            String[] ids={"miko","orbit","pip","astra","zig","lune","fenn","hoot","buzz","tula","jelli","vela","nimbi","soli","mochi","nixi","prickly","quill","waddles","halo","emberling","bambu","inky"};int itemIndex=Arrays.asList(ids).indexOf(fields[1]);check(itemIndex>=0,"Actual arrival belongs to the disclosed fixed avatar pool");
+            int expectedCompensation=beforeOwned.contains(fields[1])?(itemIndex<10?45:itemIndex<18?75:120):0;int compensation=Integer.parseInt(fields[3]);
+            check(fields[2].equals(beforeOwned.contains(fields[1])?"1":"0")&&compensation==expectedCompensation,"Exact disclosed rarity compensation and duplicate state match prior ownership");
+            check(save().getInt("coins",-1)==before-180+compensation,"Exact earned draw debit and disclosed duplicate compensation");
+            check(owned().containsAll(beforeOwned),"Draw never loses already owned characters");
+            String copyKey="companion_copies_v118_"+fields[1];Object savedCopies=beforeValues.get(copyKey);int copies=savedCopies instanceof Integer?(Integer)savedCopies:0;if(beforeOwned.contains(fields[1]))copies=Math.max(1,copies);
+            check(save().getInt(copyKey,-1)==Math.min(92,copies+1),"Exactly one genuine companion copy recorded atomically with the arrival");
+            write("genuine-draw-"+(n+1)+".json",new JSONObject().put("requestId",request).put("receipt",receipt).put("coinsBefore",before).put("coinsAfter",save().getInt("coins",-1)).put("owned",new JSONArray(owned())).toString(2));capture("genuine-draw-"+(n+1));
+            seekId("summon_done","close-actual-committed-reveal");
+        }
+        adventure();
+    }
+    private void chooseOwnedTeam(JSONArray requested)throws Exception{
+        List<String> ids=new ArrayList<>();for(int n=0;n<requested.length();n++)ids.add(requested.getString(n));
+        check(ids.size()>=1&&ids.size()<=3&&new HashSet<>(ids).size()==ids.size()&&owned().containsAll(ids),"Requested UI team contains only distinct genuinely owned members");
+        adventure();seekId("squad_entry","open-real-team-editor");
+        for(int slot=0;slot<ids.size();slot++){seekId("squad_slot_"+slot,"select-real-team-slot-"+slot);squadMember(ids.get(slot));}
+        if(!save().getString("companion_squad_v119","").equals(String.join(",",ids)))seekId("squad_save","save-real-team");
+        check(save().getString("companion_squad_v119","").equals(String.join(",",ids)),"Actual UI durably saves the requested owned team");assertOwnedTeam(ids.size());top();
+    }
+    private void buyEarnedAvatar(String id,int price)throws Exception{
+        check(id.matches("[a-z][a-z0-9_]{0,40}")&&price>0&&price<=1200,"Explicit bounded earned-currency companion offer");
+        int before=save().getInt("coins",-1);String appearance=save().getString("character","");
+        if(owned().contains(id)){check(save().getInt("coins",-1)==before,"Already owned companion needs no duplicate purchase");return;}
+        check(before>=price,"Genuine earned wallet covers explicit companion offer");adventure();seekId("squad_entry","open-real-team-to-view-locked-companion");squadMember(id);
+        capture("before-earned-purchase-"+id);seekTap(x->x.equals(price+" LumaCoins"),"buy-real-earned-companion-"+id);
+        check(save().getBoolean("owned_character_"+id,false)&&save().getInt("coins",-1)==before-price,"Exact real earned-currency debit and ownership for "+id);
+        check(save().getString("character","").equals(appearance),"Purchase never silently equips the appearance");capture("after-earned-purchase-"+id);adventure();
+    }
+    private AccessibilityNodeInfo acrossScroll(String id){
+        top();int unchanged=0;for(int scan=0;scan<35;scan++){AccessibilityNodeInfo found=findId(id,true);if(found!=null)return found;String before=scrollSignature();scroll(true);unchanged=scrollSignature().equals(before)?unchanged+1:0;if(unchanged>=3)break;}return null;
+    }
+    private void squadMember(String id)throws Exception{
+        for(int page=0;page<7;page++){AccessibilityNodeInfo previous=acrossScroll("squad_page_back");if(previous==null)break;touchNode(previous,"return-real-team-catalogue-page");}
+        for(int page=0;page<7;page++){
+            AccessibilityNodeInfo member=acrossScroll("squad_member_"+id);
+            if(member!=null){touchNode(member,"select-real-owned-member-"+id);return;}
+            AccessibilityNodeInfo next=findId("squad_page_next",true);if(next==null)next=acrossScroll("squad_page_next");
+            if(next==null)break;touchNode(next,"advance-real-team-catalogue-page");
+        }
+        throw new AssertionError("Owned member is not reachable through actual team catalogue pages: "+id+"; "+labels());
+    }
+    private int shellLayers(int id)throws Exception{
+        String encoded=boardSession().getString("elements_v121","");if(encoded.isEmpty())return 0;
+        String[] fields=encoded.split("\\|",-1);check(fields.length==4&&fields[0].equals("ES121"),"Read actual encoded shell state only");
+        if(!fields[3].isEmpty())for(String row:fields[3].split(";")){String[] parts=row.split(":",-1);if(Integer.parseInt(parts[0])==id)return Integer.parseInt(parts[2]);}return 0;
+    }
+    private void unseal(JSONObject point)throws Exception{
+        int id=point.getInt("action"),remaining=shellLayers(id);check(remaining>=0&&remaining<=2,"At most two real free taps for an observed shell");
+        String[] keys={"run_id","history","budget_used","undos","battle_v119","exit_chain_v121"};Map<String,String> before=new TreeMap<>();for(String key:keys)before.put(key,String.valueOf(boardSession().getAll().get(key)));int coins=save().getInt("coins",-1);
+        for(int tap=0;tap<remaining;tap++){
+            int layers=shellLayers(id);piece(point.getInt("row"),point.getInt("col"));check(shellLayers(id)==layers-1,"One real piece tap removes exactly one shell layer");
+            for(String key:keys)check(before.get(key).equals(String.valueOf(boardSession().getAll().get(key))),"Free shell tap preserves actual "+key);
+            check(coins==save().getInt("coins",-1),"Free shell tap preserves earned Coins");
+        }
+    }
+    private void piece(int row,int col)throws Exception{String en="Piece, row "+(row+1)+", column "+(col+1)+",";String fr="Pièce, ligne "+(row+1)+", colonne "+(col+1)+",";seekTap(x->x.contains(en)||x.contains(fr),"real-piece-"+row+"-"+col);}
+    private void snapshot(String name)throws Exception{
+        JSONObject result=new JSONObject();for(String file:new String[]{"luma_drift_save_v1","luma_drift_meta_v1","luma_session","luma_expedition_session_v118","luma_victory_v120","luma_session_energy_v120","luma_tactical122"}){
+            JSONObject values=new JSONObject();for(Map.Entry<String,?> entry:new TreeMap<>(getTargetContext().getSharedPreferences(file,0).getAll()).entrySet()){
+                if(entry.getKey().toLowerCase(Locale.ROOT).contains("seed"))continue;Object value=entry.getValue();
+                if(value instanceof Set){List<String> sorted=new ArrayList<>();for(Object member:(Set<?>)value)sorted.add(String.valueOf(member));Collections.sort(sorted);value=new JSONArray(sorted);}values.put(entry.getKey(),value);
+            }result.put(file,values);
+        }write(name+".json",result.toString(2));
+    }
+    private static String name(AccessibilityNodeInfo node){CharSequence value=node.getContentDescription();if(value==null||value.length()==0)value=node.getText();return value==null?"":value.toString();}
+    private List<AccessibilityNodeInfo> nodes(){if(Build.VERSION.SDK_INT>=33)ui.clearCache();List<AccessibilityNodeInfo> result=new ArrayList<>();AccessibilityNodeInfo root=ui.getRootInActiveWindow();if(root==null)return result;ArrayDeque<AccessibilityNodeInfo> pending=new ArrayDeque<>();pending.add(root);while(!pending.isEmpty()&&result.size()<800){AccessibilityNodeInfo node=pending.removeFirst();result.add(node);for(int n=0;n<node.getChildCount();n++){AccessibilityNodeInfo child=node.getChild(n);if(child!=null)pending.addLast(child);}}return result;}
+    private AccessibilityNodeInfo find(Predicate<String> match,boolean clickable){AccessibilityNodeInfo found=null;for(AccessibilityNodeInfo node:nodes()){Rect bounds=new Rect();node.getBoundsInScreen(bounds);if(found==null&&node.isVisibleToUser()&&node.isEnabled()&&(!clickable||node.isClickable())&&!bounds.isEmpty()&&match.test(name(node)))found=AccessibilityNodeInfo.obtain(node);node.recycle();}return found;}
+    private AccessibilityNodeInfo findId(String id,boolean enabled){AccessibilityNodeInfo found=null;for(AccessibilityNodeInfo node:nodes()){Rect bounds=new Rect();node.getBoundsInScreen(bounds);if(found==null&&node.isVisibleToUser()&&(!enabled||node.isEnabled()&&node.isClickable())&&!bounds.isEmpty()&&(target+":id/"+id).equals(node.getViewIdResourceName()))found=AccessibilityNodeInfo.obtain(node);node.recycle();}return found;}
+    private String labels(){List<String> labels=new ArrayList<>();for(AccessibilityNodeInfo node:nodes()){if(!name(node).isEmpty())labels.add(name(node));node.recycle();}return labels.toString();}
+    private void foreground(){AccessibilityNodeInfo root=ui.getRootInActiveWindow();String packageName=root==null?"":String.valueOf(root.getPackageName());if(root!=null)root.recycle();if(!target.equals(packageName))throw new AssertionError("Refuse input outside the target: "+packageName);}
+    private void touchNode(AccessibilityNodeInfo node,String reason)throws Exception{
+        touchNode(node,reason,480);
+    }
+    private void touchNode(AccessibilityNodeInfo node,String reason,int settleMs)throws Exception{
+        foreground();Rect box=new Rect();node.getBoundsInScreen(box);String label=name(node),id=node.getViewIdResourceName();node.recycle();
+        long down=SystemClock.uptimeMillis();inject(down,MotionEvent.ACTION_DOWN,box.exactCenterX(),box.exactCenterY());SystemClock.sleep(25);inject(down,MotionEvent.ACTION_UP,box.exactCenterX(),box.exactCenterY());touches++;
+        actions.put(new JSONObject().put("reason",reason).put("input","actual SDK touchscreen").put("uptimeMs",SystemClock.uptimeMillis()).put("label",label).put("resourceId",id).put("bounds",new JSONArray(new int[]{box.left,box.top,box.right,box.bottom})));SystemClock.sleep(settleMs);
+    }
+    private void walletSwipeNeutral()throws Exception{
+        AccessibilityNodeInfo wallet=findId("play_wallet",true);check(wallet!=null,"Actual fixed play wallet hit is visible");Rect band=new Rect();wallet.getBoundsInScreen(band);wallet.recycle();
+        List<float[]> starts=new ArrayList<>();for(int lane=1;lane<=3;lane++)starts.add(new float[]{band.left+band.width()*lane/4f,band.exactCenterY()});JSONArray overlaps=new JSONArray();for(AccessibilityNodeInfo node:nodes()){String label=name(node);Rect bounds=new Rect();node.getBoundsInScreen(bounds);if((label.startsWith("Piece, row ")||label.startsWith("Pièce, ligne "))&&Rect.intersects(band,bounds)){overlaps.put(new JSONObject().put("label",label).put("bounds",new JSONArray(new int[]{bounds.left,bounds.top,bounds.right,bounds.bottom})));starts.add(new float[]{bounds.exactCenterX(),(Math.max(band.top,bounds.top)+Math.min(band.bottom,bounds.bottom))/2f});}node.recycle();}
+        String[] keys={"run_id","history","budget_used","undos","battle_v119"};Map<String,String> before=new TreeMap<>();for(String key:keys)before.put(key,String.valueOf(session().getAll().get(key)));int coins=save().getInt("coins",-1);
+        write("wallet-swipe-initial-overlap.json",new JSONObject().put("walletBounds",new JSONArray(new int[]{band.left,band.top,band.right,band.bottom})).put("observedPieceIntersections",overlaps).toString(2));
+        for(int lane=0;lane<starts.size();lane++)for(int direction=0;direction<4;direction++){
+            for(int reset=0;reset<3;reset++)scroll(true);foreground();float x=starts.get(lane)[0],y=starts.get(lane)[1],distance=80f;float dx=direction==1?distance:direction==3?-distance:0,dy=direction==0?-distance:direction==2?distance:0;
+            long down=SystemClock.uptimeMillis();inject(down,MotionEvent.ACTION_DOWN,x,y);for(int part=1;part<=5;part++){SystemClock.sleep(25);inject(down,MotionEvent.ACTION_MOVE,x+dx*part/5f,y+dy*part/5f);}inject(down,MotionEvent.ACTION_UP,x+dx,y+dy);touches++;
+            actions.put(new JSONObject().put("reason","actual-fixed-wallet-swipe-lane-"+lane+"-direction-"+direction).put("input","actual SDK touchscreen swipe").put("uptimeMs",SystemClock.uptimeMillis()).put("from",new JSONArray(new float[]{x,y})).put("to",new JSONArray(new float[]{x+dx,y+dy})));SystemClock.sleep(300);
+            for(String key:keys)check(before.get(key).equals(String.valueOf(session().getAll().get(key))),"Wallet swipe leaves actual "+key+" unchanged");check(save().getInt("coins",-1)==coins,"Wallet swipe does not change actual Coins");
+        }
+        write("wallet-swipe-overlap.json",new JSONObject().put("walletBounds",new JSONArray(new int[]{band.left,band.top,band.right,band.bottom})).put("observedPieceIntersections",overlaps).put("swipes",starts.size()*4).put("scope","Before each real swipe the actual UI is scrolled back to its maximum. Starts use observed fixed HUD positions including every intersecting piece bounds centre. Recorded AX intersections are observations, not hidden-board injection.").toString(2));
+    }
+    private void drainEnergy()throws Exception{
+        check(session().getInt("mode",-1)==0&&session().getInt("level",-1)>10&&session().getBoolean("active",false),"Energy drain uses only a real active eligible campaign attempt");
+        int attempts=0;
+        for(;attempts<12;attempts++){
+            String[] before=getTargetContext().getSharedPreferences("luma_session_energy_v120",0).getString("session_energy_v120","").split("\\|",-1);
+            check(before.length==5&&before[0].equals("1"),"Read actual durable energy before bounded real restart");
+            if(Integer.parseInt(before[1])==0)break;
+            String previous=session().getString("run_id","");
+            seekTap(x->x.endsWith("Restart")||x.endsWith("Recommencer"),"request-real-paid-attempt-restart-"+(attempts+1));
+            seekTap(x->x.startsWith("Restart · 1 ")||x.startsWith("Recommencer · 1 "),"confirm-real-one-energy-restart-"+(attempts+1));
+            String current=session().getString("run_id","");String[] after=getTargetContext().getSharedPreferences("luma_session_energy_v120",0).getString("session_energy_v120","").split("\\|",-1);
+            check(!previous.equals(current)&&current.matches("[a-f0-9-]{36}"),"Actual explicit restart creates exactly one new run identity");
+            check(after.length==5&&after[3].isEmpty()&&after[4].equals(current),"Actual energy debit confirmed against committed board run");
+            int ticks=(int)Math.max(0,(Long.parseLong(after[2])-Long.parseLong(before[2]))/600000L);
+            check(Integer.parseInt(after[1])==Math.min(10,Integer.parseInt(before[1])+ticks)-1,"Exactly one energy debited, accounting only for actual elapsed refill ticks");
+        }
+        String[] finalRecord=getTargetContext().getSharedPreferences("luma_session_energy_v120",0).getString("session_energy_v120","").split("\\|",-1);
+        check(Integer.parseInt(finalRecord[1])==0,"Real bounded eligible restarts exhaust current session energy");
+        write("genuine-energy-restarts.json",new JSONObject().put("restarts",attempts).put("record",String.join("|",finalRecord)).put("scope","Only observed native restart controls. No preference or clock writes, refills, ads or purchases.").toString(2));
+    }
+    private int clockSeconds()throws Exception{
+        AccessibilityNodeInfo node=find(x->x.startsWith("Your time ")||x.startsWith("Ton temps "),false);check(node!=null,"Actual visible informational clock label");String label=name(node);node.recycle();
+        java.util.regex.Matcher match=java.util.regex.Pattern.compile("(\\d+):(\\d{2})").matcher(label);check(match.find(),"Clock has visible minutes and seconds");return Integer.parseInt(match.group(1))*60+Integer.parseInt(match.group(2));
+    }
+    private void seekTap(Predicate<String> match,String reason)throws Exception{
+        for(int attempt=0;attempt<20;attempt++){AccessibilityNodeInfo node=find(match,true);if(node!=null){touchNode(node,reason);return;}if(attempt<3)SystemClock.sleep(200);else scroll(false);}
+        int unchanged=0;for(int attempt=0;attempt<45;attempt++){AccessibilityNodeInfo node=find(match,true);if(node!=null){touchNode(node,reason);return;}String before=scrollSignature();scroll(true);unchanged=scrollSignature().equals(before)?unchanged+1:0;if(unchanged>=3)break;}
+        throw new AssertionError("Missing actual native target "+reason+": "+labels());
+    }
+    private void seekId(String id,String reason)throws Exception{
+        AccessibilityNodeInfo node=findId(id,true);if(node!=null){touchNode(node,reason);return;}top();
+        int unchanged=0;for(int n=0;n<45;n++){node=findId(id,true);if(node!=null){touchNode(node,reason);return;}String before=scrollSignature();scroll(true);unchanged=scrollSignature().equals(before)?unchanged+1:0;if(unchanged>=3)break;}
+        throw new AssertionError("Missing actual semantic target "+id+": "+labels());
+    }
+    private void backgroundSheetTimer(JSONObject step)throws Exception{
+        int waitMs=step.optInt("ms",3000);check(waitMs>=1000&&waitMs<=6000,"Bounded real background wait");
+        foreground();check(findAndRecycle("battle_skill_close"),"Actual contextual sheet visible before lifecycle check");
+        check(ui.performGlobalAction(AccessibilityService.GLOBAL_ACTION_HOME),"Real Home action accepted");SystemClock.sleep(400);
+        long before=session().getLong("elapsed_ms",-1);check(before>=0,"Actual onPause persisted duration observed");SystemClock.sleep(waitMs);
+        getTargetContext().startActivity(new Intent().setClassName(target,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));SystemClock.sleep(850);foreground();
+        check(findAndRecycle("battle_skill_close"),"Actual sheet remains visible after app foreground return");
+        check(ui.performGlobalAction(AccessibilityService.GLOBAL_ACTION_HOME),"Second real Home commits the resumed paused duration");SystemClock.sleep(400);
+        long after=session().getLong("elapsed_ms",-1);check(after>=before&&after-before<=150,"Paused sheet excludes real background and resumed-sheet time: "+(after-before)+" ms");
+        getTargetContext().startActivity(new Intent().setClassName(target,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));SystemClock.sleep(650);foreground();
+        actions.put(new JSONObject().put("reason","real-Home-foreground-paused-sheet-clock").put("input","two real Home actions and two explicit Activity foreground intents").put("backgroundWaitMs",waitMs).put("persistedDeltaMs",after-before));
+    }
+    private void boardTimerAdvance(JSONObject step)throws Exception{
+        int waitMs=step.optInt("ms",1800);check(waitMs>=1200&&waitMs<=4000,"Bounded actual board timer observation");
+        foreground();check(!findAndRecycle("battle_skill_close")&&findAndRecycle("play_pause"),"Actual puzzle is visible after leaving the contextual sheet");
+        check(ui.performGlobalAction(AccessibilityService.GLOBAL_ACTION_HOME),"Real Home persists actual puzzle duration");SystemClock.sleep(400);
+        long before=session().getLong("elapsed_ms",-1);check(before>=0,"Actual board duration baseline exists");
+        getTargetContext().startActivity(new Intent().setClassName(target,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));SystemClock.sleep(500);foreground();
+        check(findAndRecycle("play_pause")&&!findAndRecycle("battle_skill_close"),"Real foreground return remains on the puzzle");SystemClock.sleep(waitMs);
+        check(ui.performGlobalAction(AccessibilityService.GLOBAL_ACTION_HOME),"Second real Home commits actual resumed puzzle duration");SystemClock.sleep(400);
+        long after=session().getLong("elapsed_ms",-1),delta=after-before;
+        check(delta>=waitMs-100&&delta<=waitMs+2000,"Actual puzzle clock advances after sheet return: "+delta+" ms");
+        getTargetContext().startActivity(new Intent().setClassName(target,"com.androidhit.lumadrift.MainActivity").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));SystemClock.sleep(500);foreground();
+        actions.put(new JSONObject().put("reason","real-Home-foreground-resumed-puzzle-clock").put("input","two real Home actions and two explicit Activity foreground intents").put("puzzleWaitMs",waitMs).put("persistedDeltaMs",delta));
+    }
+    private void longPressPiece(JSONObject step)throws Exception{
+        int row=step.getInt("row"),col=step.getInt("col"),hold=step.optInt("holdMs",620);
+        check(row>=0&&row<9&&col>=0&&col<9&&hold>=500&&hold<=1200,"Bounded authored piece inspection");
+        String en="Piece, row "+(row+1)+", column "+(col+1)+",";String fr="Pièce, ligne "+(row+1)+", colonne "+(col+1)+",";
+        AccessibilityNodeInfo node=find(x->x.contains(en)||x.contains(fr),true);check(node!=null,"Inspection target is actually visible");
+        foreground();Rect box=new Rect();node.getBoundsInScreen(box);String label=name(node);node.recycle();
+        long down=SystemClock.uptimeMillis();inject(down,MotionEvent.ACTION_DOWN,box.exactCenterX(),box.exactCenterY());SystemClock.sleep(hold);inject(down,MotionEvent.ACTION_UP,box.exactCenterX(),box.exactCenterY());touches++;
+        actions.put(new JSONObject().put("reason","inspect-observed-piece-with-long-press").put("input","actual SDK touchscreen hold").put("holdMs",hold).put("label",label).put("bounds",new JSONArray(new int[]{box.left,box.top,box.right,box.bottom})));SystemClock.sleep(500);
+    }
+    private void inject(long down,int action,float x,float y){MotionEvent event=MotionEvent.obtain(down,SystemClock.uptimeMillis(),action,x,y,0);event.setSource(InputDevice.SOURCE_TOUCHSCREEN);try{if(!ui.injectInputEvent(event,true))throw new AssertionError("Native touchscreen refused");}finally{event.recycle();}}
+    private Rect observedBounds(String id)throws Exception{
+        AccessibilityNodeInfo node=findId(id,true);check(node!=null,"Actual visible pointer target "+id);Rect box=new Rect();node.getBoundsInScreen(box);node.recycle();check(!box.isEmpty(),"Nonempty actual target bounds "+id);return box;
+    }
+    private Rect windowBounds()throws Exception{foreground();AccessibilityNodeInfo root=ui.getRootInActiveWindow();check(root!=null,"Actual target window exists");Rect box=new Rect();root.getBoundsInScreen(box);root.recycle();return box;}
+    private void pointerAtId(JSONObject step)throws Exception{
+        String id=step.getString("id");Rect box=observedBounds(id);float fx=(float)step.optDouble("x",.5),fy=(float)step.optDouble("y",.5);check(fx>=0&&fx<=1&&fy>=0&&fy<=1,"Pointer fraction inside observed control");
+        pointer(box.left+box.width()*fx,box.top+box.height()*fy,step.optString("reason","actual-target-point-"+id),step.optInt("settleMs",480));
+    }
+    private void pointer(float x,float y,String reason,int settle)throws Exception{
+        foreground();check(settle>=0&&settle<=15000,"Bounded pointer settle");Rect window=windowBounds();check(window.contains((int)x,(int)y),"Pointer remains in actual target window");
+        long down=SystemClock.uptimeMillis();inject(down,MotionEvent.ACTION_DOWN,x,y);SystemClock.sleep(25);inject(down,MotionEvent.ACTION_UP,x,y);touches++;
+        actions.put(new JSONObject().put("reason",reason).put("input","actual SDK touchscreen").put("uptimeMs",SystemClock.uptimeMillis()).put("point",new JSONArray(new float[]{x,y})));SystemClock.sleep(settle);
+    }
+    private void dragId(JSONObject step)throws Exception{
+        String id=step.getString("id");Rect box=observedBounds(id),window=windowBounds();float x=box.left+box.width()*(float)step.optDouble("x",.5),y=box.top+box.height()*(float)step.optDouble("y",.5);
+        float toX=x+window.width()*(float)step.getDouble("dx"),toY=y+window.height()*(float)step.getDouble("dy");int duration=step.optInt("durationMs",420),settle=step.optInt("settleMs",450);
+        check(duration>=100&&duration<=2000&&settle>=0&&settle<=15000,"Bounded actual drag timing");check(window.contains((int)x,(int)y)&&window.contains((int)toX,(int)toY),"Real drag stays inside target window");
+        long down=SystemClock.uptimeMillis();inject(down,MotionEvent.ACTION_DOWN,x,y);int parts=12;
+        for(int part=1;part<=parts;part++){SystemClock.sleep(duration/parts);inject(down,MotionEvent.ACTION_MOVE,x+(toX-x)*part/parts,y+(toY-y)*part/parts);}inject(down,MotionEvent.ACTION_UP,toX,toY);touches++;
+        actions.put(new JSONObject().put("reason",step.optString("reason","actual-drag-"+id)).put("input","actual SDK touchscreen drag").put("uptimeMs",SystemClock.uptimeMillis()).put("from",new JSONArray(new float[]{x,y})).put("to",new JSONArray(new float[]{toX,toY})));SystemClock.sleep(settle);
+    }
+    private void injectTwo(long down,int action,float x0,float y0,float x1,float y1){
+        MotionEvent.PointerProperties[] properties={new MotionEvent.PointerProperties(),new MotionEvent.PointerProperties()};MotionEvent.PointerCoords[] coords={new MotionEvent.PointerCoords(),new MotionEvent.PointerCoords()};
+        for(int n=0;n<2;n++){properties[n].id=n;properties[n].toolType=MotionEvent.TOOL_TYPE_FINGER;coords[n].pressure=1;coords[n].size=1;}coords[0].x=x0;coords[0].y=y0;coords[1].x=x1;coords[1].y=y1;
+        MotionEvent event=MotionEvent.obtain(down,SystemClock.uptimeMillis(),action,2,properties,coords,0,0,1,1,0,0,InputDevice.SOURCE_TOUCHSCREEN,0);try{if(!ui.injectInputEvent(event,true))throw new AssertionError("Native two-pointer input refused");}finally{event.recycle();}
+    }
+    private void pinchId(JSONObject step)throws Exception{
+        String id=step.getString("id");Rect box=observedBounds(id),window=windowBounds();float x=box.exactCenterX(),y=box.exactCenterY(),start=Math.min(box.width()*.42f,window.width()*.06f),factor=(float)step.optDouble("factor",1.35);
+        check(factor>=.65f&&factor<=1.7f&&start>=8,"Bounded two-finger pinch");check(window.contains((int)(x-start*factor),(int)y)&&window.contains((int)(x+start*factor),(int)y),"Both pointers remain inside target window");
+        long down=SystemClock.uptimeMillis();inject(down,MotionEvent.ACTION_DOWN,x-start,y);injectTwo(down,MotionEvent.ACTION_POINTER_DOWN|(1<<MotionEvent.ACTION_POINTER_INDEX_SHIFT),x-start,y,x+start,y);
+        for(int part=1;part<=12;part++){SystemClock.sleep(30);float distance=start*(1+(factor-1)*part/12f);injectTwo(down,MotionEvent.ACTION_MOVE,x-distance,y,x+distance,y);}
+        injectTwo(down,MotionEvent.ACTION_POINTER_UP|(1<<MotionEvent.ACTION_POINTER_INDEX_SHIFT),x-start*factor,y,x+start*factor,y);inject(down,MotionEvent.ACTION_UP,x-start*factor,y);touches++;
+        actions.put(new JSONObject().put("reason","actual-two-pointer-pinch-"+id).put("input","actual SDK two-pointer touchscreen pinch").put("center",new JSONArray(new float[]{x,y})).put("factor",factor).put("uptimeMs",SystemClock.uptimeMillis()));SystemClock.sleep(500);
+    }
+    private void openMap()throws Exception{
+        AccessibilityNodeInfo present=findId("world_minimap",true);if(present!=null){present.recycle();return;}adventure();
+        AccessibilityNodeInfo entry=findId("journey_entry",true);if(entry!=null)touchNode(entry,"open-real-world-map");else seekTap(x->x.equals("All levels")||x.equals("Tous les niveaux"),"open-real-world-map");
+        check(findAndRecycle("world_minimap"),"Actual native world minimap is visible");check(findAndRecycle("world_play"),"Actual native world Play is visible");
+    }
+    private boolean findAndRecycle(String id){AccessibilityNodeInfo node=findId(id,true);if(node==null)return false;node.recycle();return true;}
+    private void mapFrameAt(int level)throws Exception{
+        check(level>=1&&level<=100,"Native gesture fixture currently selects the actual first sector only");Rect mini=observedBounds("world_minimap");int local=level-1,row=local/10,pos=local%10,col=(row&1)==0?pos:9-pos;
+        // Public presentation coordinates only: this touches the visible minimap, then observes the actual node AX bounds.
+        float wx=111+82*col,wy=164+148*row+(float)Math.sin(col*.72+row*.61)*15;
+        pointer(mini.left+mini.width()*wx/960f,mini.top+mini.height()*wy/1680f,"actual-minimap-frame-U"+level,500);
+    }
+    private void mapSelect(int level,int settle)throws Exception{
+        check(level<=save().getInt("unlocked",1),"World selection uses genuinely unlocked campaign node");mapFrameAt(level);AccessibilityNodeInfo node=findId("world_node_"+level,true);check(node!=null,"Actual world node visible after real minimap framing");touchNode(node,"actual-world-walk-to-U"+level,settle);
+        check(findAndRecycle("world_play"),"Selecting destination remains on the real map");check(session().getInt("map_avatar_journey122",save().getInt("unlocked",1))==level,"Actual visual companion destination agrees with confirmed arrival or its genuine initial default");
+    }
+    private void mapLockedSelect(JSONObject step)throws Exception{
+        int level=save().getInt("unlocked",1)+1;check(level<=100,"Observed locked-node scenario remains in first real sector");String before=String.valueOf(session().getAll().get("map_avatar_journey122"));mapFrameAt(level);
+        AccessibilityNodeInfo node=findId("world_node_"+level,true);check(node!=null,"Next genuinely locked node is visible");touchNode(node,"actual-locked-world-node-inspection",500);
+        check(before.equals(String.valueOf(session().getAll().get("map_avatar_journey122"))),"Locked node cannot move confirmed companion destination");check(findAndRecycle("world_play"),"Locked node cannot open a puzzle");
+    }
+    private int energyCount()throws Exception{String record=getTargetContext().getSharedPreferences("luma_session_energy_v120",0).getString("session_energy_v120","");if(record.isEmpty())return -1;String[] fields=record.split("\\|",-1);check(fields.length==5&&fields[0].equals("1"),"Observe actual energy codec without writing it");return Integer.parseInt(fields[1]);}
+    private void rememberMapNeutral(String name)throws Exception{
+        remembered.put("map:"+name+":profile",new TreeMap<>(save().getAll()).toString());remembered.put("map:"+name+":energy",String.valueOf(energyCount()));
+        for(String key:new String[]{"run_id","mode","level","history","budget_used","undos","battle_v119"})remembered.put("map:"+name+":"+key,String.valueOf(session().getAll().get(key)));
+    }
+    private void assertMapNeutral(String name)throws Exception{
+        check(remembered.containsKey("map:"+name+":profile"),"Native map baseline was actually observed");check(remembered.get("map:"+name+":profile").equals(new TreeMap<>(save().getAll()).toString()),"Map exploration preserves complete actual progression, owned items and earned Coins");
+        int before=Integer.parseInt(remembered.get("map:"+name+":energy")),after=energyCount();check(before<0?after<0:after>=before,"Pan, minimap, walking and pinch cannot debit session energy; natural regeneration allowed");
+        for(String key:new String[]{"run_id","mode","level","history","budget_used","undos","battle_v119"})check(remembered.get("map:"+name+":"+key).equals(String.valueOf(session().getAll().get(key))),"World exploration preserves actual board "+key);
+    }
+    private void rememberNodeBounds(JSONObject step)throws Exception{Rect box=observedBounds(step.getString("id"));remembered.put("bounds:"+step.getString("name"),box.flattenToString());}
+    private void assertNodeMoved(JSONObject step)throws Exception{
+        AccessibilityNodeInfo node=findId(step.getString("id"),true);if(node==null){check(step.optBoolean("allowAbsent",false),"Panned real node moved outside viewport");return;}Rect now=new Rect();node.getBoundsInScreen(now);node.recycle();Rect before=Rect.unflattenFromString(remembered.get("bounds:"+step.getString("name")));check(before!=null,"Actual earlier node bounds observed");check(Math.abs(now.exactCenterX()-before.exactCenterX())+Math.abs(now.exactCenterY()-before.exactCenterY())>=step.optInt("minPixels",12),"Real AX node position changed after camera gesture");
+    }
+    private static final class TacticalObserved {
+        String raw,episode,layout,history;int capacity,charge,used,wins,undos;boolean claimed,combo;
+    }
+    private TacticalObserved tactical()throws Exception{
+        TacticalObserved value=new TacticalObserved();value.raw=getTargetContext().getSharedPreferences("luma_tactical122",0).getString("state","");
+        String[] lines=value.raw.split("\n",-1);check(lines.length==5&&lines[0].equals("tactical_session122_1"),"Actual durable separate tactical session codec");
+        String[] run=lines[1].split("\\|",-1);check(run.length==6&&run[0].equals("t122_1"),"Actual durable chapter ledger codec");value.episode=run[3];value.capacity=Integer.parseInt(run[4]);value.history=lines[2];value.layout="";
+        if(!run[5].isEmpty())for(String event:run[5].split(";",-1)){
+            String[] fields=event.split(",",-1);
+            if(fields[0].equals("C"))value.layout=fields[1];
+            else if(fields[0].equals("T")){int slot=Integer.parseInt(fields[1]);check(slot>=0&&slot<3,"Actual tactical talent receipt slot");value.used|=1<<slot;}
+            else if(fields[0].equals("R"))value.combo=true;
+            else if(fields[0].equals("W")){value.wins++;value.layout="";}
+            else if(fields[0].equals("Q"))value.claimed=true;
+            else throw new AssertionError("Unrecognized actual tactical event "+fields[0]);
+        }
+        value.charge=value.capacity-((value.used&1)!=0?2:0)-((value.used&2)!=0?2:0)-((value.used&4)!=0?3:0);
+        check(value.charge>=0&&value.charge<=value.capacity&&value.wins>=0&&value.wins<=4,"Actual observed reserve and completed stages remain bounded");
+        if(!lines[3].equals("-")){String[] budget=lines[3].split(",",-1);check(budget.length==6,"Actual tactical action ledger");value.undos=Integer.parseInt(budget[5]);}
+        return value;
+    }
+    private void assertTactical(JSONObject expected)throws Exception{
+        TacticalObserved observed=tactical();
+        for(String key:new String[]{"episode","layout","history"})if(expected.has(key))check(expected.getString(key).equals(key.equals("episode")?observed.episode:key.equals("layout")?observed.layout:observed.history),"Actual tactical "+key+" = "+expected.getString(key));
+        for(String key:new String[]{"charge","used","wins","undos"})if(expected.has(key))check(expected.getInt(key)==(key.equals("charge")?observed.charge:key.equals("used")?observed.used:key.equals("wins")?observed.wins:observed.undos),"Actual tactical "+key+" = "+expected.getInt(key));
+        if(expected.has("claimed"))check(expected.getBoolean("claimed")==observed.claimed,"Actual tactical reward claimed marker");
+        if(expected.has("comboSpent"))check(expected.getBoolean("comboSpent")==observed.combo,"Actual tactical once-per-run Resonance marker");
+        if(expected.has("souvenir"))check(getTargetContext().getSharedPreferences("luma_tactical122",0).getBoolean("souvenir_"+expected.getString("souvenir"),false),"Actual chapter souvenir durable receipt");
+    }
+    private JSONObject tacticalFixture(String id)throws Exception{
+        JSONObject fixtures=new JSONObject(asset("fixtures/tactical122.json"));check(fixtures.getString("family").equals("T122"),"Public T122 gesture certificate family");JSONArray layouts=fixtures.getJSONArray("layouts");
+        for(int n=0;n<layouts.length();n++)if(layouts.getJSONObject(n).getString("id").equals(id))return layouts.getJSONObject(n);
+        throw new AssertionError("No frozen public gesture certificate for actual tactical layout "+id);
+    }
+    private void tacticalStep(int index)throws Exception{
+        TacticalObserved before=tactical();check(!before.layout.isEmpty(),"An actual tactical layout is selected");JSONArray certificate=tacticalFixture(before.layout).getJSONArray("certificate");check(index>=0&&index<certificate.length(),"Bounded public tactical gesture index");JSONObject point=certificate.getJSONObject(index);
+        String expected=before.history+(before.history.isEmpty()?"":",")+point.getInt("id");int wins=before.wins;
+        piece(point.getInt("row")-1,point.getInt("col")-1);TacticalObserved after=tactical();
+        if(index==certificate.length()-1&&expected.split(",").length==certificate.length())check(after.wins==wins+1&&after.layout.isEmpty()&&after.history.equals("-"),"Final actual tactical exit records exactly one genuine stage victory");
+        else check(after.layout.equals(before.layout)&&after.history.equals(expected),"Exactly one public-certificate tactical exit persisted");
+    }
+    private void solveTactical()throws Exception{
+        TacticalObserved observed=tactical();check(!observed.layout.isEmpty(),"Actual tactical board available for genuine touches");JSONArray certificate=tacticalFixture(observed.layout).getJSONArray("certificate");String[] previous=observed.history.isEmpty()?new String[0]:observed.history.split(",",-1);
+        check(previous.length<=certificate.length(),"Actual tactical history is bounded");for(int i=0;i<previous.length;i++)check(previous[i].equals(String.valueOf(certificate.getJSONObject(i).getInt("id"))),"Actual history agrees with frozen public gesture prefix");
+        for(int i=previous.length;i<certificate.length();i++)tacticalStep(i);
+    }
+    private void back(){foreground();ui.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);SystemClock.sleep(450);}
+    private void scroll(boolean forward){foreground();AccessibilityNodeInfo root=ui.getRootInActiveWindow();boolean sent=false;if(root!=null){sent=root.performAction(forward?AccessibilityNodeInfo.ACTION_SCROLL_FORWARD:AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD);root.recycle();}if(!sent)for(AccessibilityNodeInfo node:nodes()){if(!sent&&node.isScrollable())sent=node.performAction(forward?AccessibilityNodeInfo.ACTION_SCROLL_FORWARD:AccessibilityNodeInfo.ACTION_SCROLL_BACKWARD);node.recycle();}SystemClock.sleep(250);}
+    private String scrollSignature(){StringBuilder out=new StringBuilder();for(AccessibilityNodeInfo node:nodes()){Rect box=new Rect();node.getBoundsInScreen(box);if(node.isVisibleToUser())out.append(name(node)).append('|').append(node.getViewIdResourceName()).append('|').append(box.toShortString()).append(';');node.recycle();}return out.toString();}
+    private void top(){int unchanged=0;for(int n=0;n<25;n++){String before=scrollSignature();scroll(false);unchanged=scrollSignature().equals(before)?unchanged+1:0;if(unchanged>=3)break;}}
+    private void capture(String title)throws Exception{capture(title,1300);}
+    private void capture(String title,int delayMs)throws Exception{
+        check(title.matches("[a-z][a-z0-9_-]{0,75}")&&!new File(output,title+".png").exists(),"Distinct bounded native capture label");
+        SystemClock.sleep(delayMs);foreground();Bitmap bitmap=ui.takeScreenshot();if(bitmap==null)throw new IOException("Native screenshot unavailable");
+        try(OutputStream file=new FileOutputStream(new File(output,title+".png"))){if(!bitmap.compress(Bitmap.CompressFormat.PNG,100,file))throw new IOException("PNG encoding failed");}finally{bitmap.recycle();}
+        JSONArray observed=new JSONArray();for(AccessibilityNodeInfo node:nodes()){Rect box=new Rect();node.getBoundsInScreen(box);observed.put(new JSONObject().put("label",name(node)).put("resourceId",node.getViewIdResourceName()).put("bounds",new JSONArray(new int[]{box.left,box.top,box.right,box.bottom})).put("clickable",node.isClickable()).put("enabled",node.isEnabled()).put("visible",node.isVisibleToUser()));node.recycle();}write(title+"-accessibility.json",observed.toString(2));captures.put(title);
+    }
+    private void check(boolean condition,String message)throws Exception{checks.put(new JSONObject().put("passed",condition).put("message",message));if(!condition)throw new AssertionError(message);}
+    private String asset(String name)throws Exception{try(InputStream input=getContext().getAssets().open(name);ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] buffer=new byte[8192];int count;while((count=input.read(buffer))!=-1)out.write(buffer,0,count);return out.toString("UTF-8");}}
+    private void write(String name,String text)throws Exception{if(!name.matches("[a-z][a-z0-9_-]{0,100}\\.(json|txt)"))throw new IllegalArgumentException("Unsafe evidence filename");try(OutputStream file=new FileOutputStream(new File(output,name))){file.write(text.getBytes(StandardCharsets.UTF_8));}}
+}

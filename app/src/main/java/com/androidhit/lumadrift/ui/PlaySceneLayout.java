@@ -20,6 +20,9 @@ public final class PlaySceneLayout {
         this(viewportHeight,relay,minimumTouchLogical,feedbackHeightMeasured,minimumText,0);
     }
     public PlaySceneLayout(float viewportHeight,boolean relay,float minimumTouchLogical,float feedbackHeightMeasured,float minimumText,float companionInset){
+        this(viewportHeight,relay,minimumTouchLogical,feedbackHeightMeasured,minimumText,companionInset,false);
+    }
+    public PlaySceneLayout(float viewportHeight,boolean relay,float minimumTouchLogical,float feedbackHeightMeasured,float minimumText,float companionInset,boolean focusOnBoard){
         float topInset=Math.max(0,Math.min(400,companionInset));
         this.viewportHeight=positive(viewportHeight,1);this.relay=relay;
         this.minimumTouch=positive(minimumTouchLogical,48);this.minimumText=positive(minimumText,12);
@@ -31,7 +34,7 @@ public final class PlaySceneLayout {
         boardWidth=Math.max(1,Math.min(304,WIDTH-2*(gateRail+horizontalExtent+8)));
         boardX=(WIDTH-boardWidth)/2;
         // Even the manual highlight's outer ink stays below the progress rail+8.
-        boardY=Math.max(182,132+gateRail+25)+topInset;
+        boardY=(focusOnBoard?152+gateRail+Math.max(25,halfTouch):Math.max(182,132+gateRail+25))+topInset;
         boardRect=new Rect(boardX,boardY,boardX+boardWidth,boardY+boardWidth);
         // Numeric remaining/total or infinity; the caller retains full localized AX copy.
         // Narrower unsupported windows can still avoid covering the central UP target.
@@ -55,7 +58,7 @@ public final class PlaySceneLayout {
         powerGridHeight=Math.max(Math.max(66,this.minimumTouch),this.minimumText*1.25f+42);
         float fullGridY=actionsY+normalActionHeight+16;
         float fullMoreY=fullGridY+powerGridHeight+16;
-        compactActions=fullMoreY+normalActionHeight+16>this.viewportHeight;
+        compactActions=focusOnBoard||fullMoreY+normalActionHeight+16>this.viewportHeight;
         if(compactActions){
             // Compact actions draw a42-unit object, then a4-unit gap and up to
             // two real lines. Keep both that measured copy and a font-growth

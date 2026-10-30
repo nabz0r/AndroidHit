@@ -1,0 +1,450 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "hoot",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 29
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-owned-team",
+    "count": 3
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "refusal-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "refusal-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "refusal-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "refusal-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "refusal-battle_v119"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "fr-rewind-no-history-before"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "capture",
+    "name": "fr-rewind-no-history-refused"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "refusal-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "refusal-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "refusal-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "refusal-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "refusal-battle_v119"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 2200
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close_bottom"
+  },
+  {
+    "op": "board-timer-advance-check",
+    "ms": 1800
+  },
+  {
+    "op": "capture",
+    "name": "fr-after-refusal-return-running"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "e-rewind-refusal-final"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 29
+  },
+  {
+    "op": "assert-shells",
+    "count": 0,
+    "layers": 0
+  },
+  {
+    "op": "capture",
+    "name": "puzzle-fr"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "inspect-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "inspect-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "inspect-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "inspect-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "inspect-battle_v119"
+  },
+  {
+    "op": "long-press-piece",
+    "row": 1,
+    "col": 4
+  },
+  {
+    "op": "capture",
+    "name": "key-relay-inspection-fr"
+  },
+  {
+    "op": "tap",
+    "regex": "Continuer à réfléchir|Keep planning"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "inspect-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "inspect-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "inspect-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "inspect-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "inspect-battle_v119"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "skills-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "capture",
+    "name": "wardrobe-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "map-select",
+    "level": 29
+  },
+  {
+    "op": "wait",
+    "ms": 1800
+  },
+  {
+    "op": "capture",
+    "name": "map-fr"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "open-level",
+    "level": 29
+  },
+  {
+    "op": "assert-shells",
+    "count": 0,
+    "layers": 0
+  },
+  {
+    "op": "capture",
+    "name": "puzzle-en"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "skills-en"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "capture",
+    "name": "wardrobe-en"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Leave level|Quitter le niveau"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "map-select",
+    "level": 29
+  },
+  {
+    "op": "wait",
+    "ms": 1800
+  },
+  {
+    "op": "capture",
+    "name": "map-en"
+  },
+  {
+    "op": "snapshot",
+    "name": "media-e-fr-en-final"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,miko,orbit",
+    "energy": 3,
+    "used": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 1800
+  },
+  {
+    "op": "capture",
+    "name": "fr-guide-paused-before-recreation"
+  },
+  {
+    "op": "recreate-context-check"
+  },
+  {
+    "op": "capture",
+    "name": "fr-guide-sheet-restored-from-bundle"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 1800
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_item_hat_moon"
+  },
+  {
+    "op": "capture",
+    "name": "fr-outfit-draft-before-recreation"
+  },
+  {
+    "op": "recreate-context-check",
+    "visibleId": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*En essai.*"
+  },
+  {
+    "op": "capture",
+    "name": "fr-outfit-draft-restored-from-bundle"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "board-timer-advance-check",
+    "ms": 1800
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "snapshot",
+    "name": "e-context-recreation-final"
+  }
+]

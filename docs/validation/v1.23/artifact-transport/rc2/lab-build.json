@@ -1,0 +1,28 @@
+{
+  "base": {
+    "bytes": 368985756,
+    "name": "luma-drift-1.22.0-sandbox-rc1.apk",
+    "sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8"
+  },
+  "compressed_entries_verified_byte_for_byte": 831,
+  "operation": "build",
+  "passed": true,
+  "patch": {
+    "bytes": 3932930,
+    "name": "lab.json.gz",
+    "sha256": "cdf33cb2fe076d99df5ebf43e73aa5566081890bfd706d2535f0b92d75383b1d"
+  },
+  "schema": "luma-apk-byte-delta-v1",
+  "scope": "Exact compressed ZIP data reuse; headers, signing block, changed bytes and ZIP tail remain literals. No APK rewriting or signing.",
+  "statistics": {
+    "copied_bytes": 365045002,
+    "copy_operations": 831,
+    "literal_bytes": 3940754,
+    "operations": 1666
+  },
+  "target": {
+    "bytes": 368985756,
+    "name": "luma-drift-1.23.0-sandbox-rc2.apk",
+    "sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c"
+  }
+}

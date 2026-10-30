@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Local rehearsal of all six workflow commands in a private copy containing only exact sparse patterns; no GitHub runner/publication claim",
+  "workflowSha256": "93fd54b0d7c35a0444399b3214783b7fc0c81c4d2231cbb947b1560ac380beb7",
+  "patterns": [
+    ".gitignore",
+    "scripts/cognitive_lab",
+    "scripts/run-cognitive-lab.sh",
+    "scripts/test-cognitive-lab.sh",
+    "scripts/run-cognitive-lab-v122.sh",
+    "scripts/test-cognitive-lab-v122.sh",
+    "scripts/verify-cognitive-lab-v122.py",
+    "scripts/run-cognitive-lab-v123.sh",
+    "scripts/test-cognitive-lab-v123.sh",
+    "scripts/verify-cognitive-lab-v123.py",
+    "scripts/test-cognitive-report-v123.mjs",
+    "scripts/deploy-cognitive-overlay.py",
+    "scripts/test-deploy-cognitive-overlay.py",
+    "scripts/test-support/android",
+    "app/src/main/java/com/androidhit/lumadrift/engine",
+    "app/src/main/java/com/androidhit/lumadrift/data",
+    "app/src/main/java/com/androidhit/lumadrift/onboarding",
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+    "public/lab/cognitive",
+    "public/lab/clarity-123",
+    "docs/validation/cognitive-lab/latest",
+    "docs/validation/cognitive-lab-v122/latest",
+    "docs/validation/cognitive-lab-v123/latest"
+  ],
+  "steps": [
+    {
+      "step": "historical-contracts",
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v122.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 5.682168417000001,
+      "log": "docs/validation/cognitive-lab-v123/ci-sparse-historical-contracts-original.log",
+      "logSha256": "cb00a86a7238e4a6faab2ed5a111c4871dfb50e021da039abc4ef970116457b0"
+    },
+    {
+      "step": "historical-data",
+      "command": [
+        "python3",
+        "scripts/verify-cognitive-lab-v122.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 7.3838406249999995,
+      "log": "docs/validation/cognitive-lab-v123/ci-sparse-historical-data-original.log",
+      "logSha256": "f9f3faec997ce3f5cd3e7d78a6772d31a51e6723259378aa4d80521fd74229af"
+    },
+    {
+      "step": "current-contracts",
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v123.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.2296358329999997,
+      "log": "docs/validation/cognitive-lab-v123/ci-sparse-current-contracts-original.log",
+      "logSha256": "26d0c6e9a3c1105f97115e86232dda68b005922a80e49d4c50da8023897cc345"
+    },
+    {
+      "step": "current-data",
+      "command": [
+        "python3",
+        "scripts/verify-cognitive-lab-v123.py",
+        "--require-current-source"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 3.9342763340000015,
+      "log": "docs/validation/cognitive-lab-v123/ci-sparse-current-data-original.log",
+      "logSha256": "2ab6f98cd77827486edd2ea8ab1e1b7a92dc0b1e137505b84cd196a57bd39429"
+    },
+    {
+      "step": "current-report",
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-cognitive-report-v123.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.23201575000000219,
+      "log": "docs/validation/cognitive-lab-v123/ci-sparse-current-report-original.log",
+      "logSha256": "fc2ff7b1eecc4068d2974598ec2455a3094c84eed5bedd821e81c2ea76853d47"
+    },
+    {
+      "step": "deployment-refusals",
+      "command": [
+        "python3",
+        "scripts/test-deploy-cognitive-overlay.py"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 4.304786790999998,
+      "log": "docs/validation/cognitive-lab-v123/ci-sparse-deployment-refusals-original.log",
+      "logSha256": "308008476a7bc6538e55beab3c27933a5bc2b2207d004af12233b61c4f5623dc"
+    }
+  ],
+  "temporaryCopyRemoved": true
+}

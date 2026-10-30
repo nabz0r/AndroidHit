@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-30T19:01:43.841500+00:00",
+  "avd": "Luma123-FinalFresh-QA",
+  "serial": "emulator-5632",
+  "port": 5632,
+  "fresh": true,
+  "owner": "Luma1.23 final D first-install acceptance",
+  "scope": "New empty task-owned AVD. Ports5632/5633 free before create. No userdata copied or existing profile reset. Receipt written before boot/install. Earlier create attempt failed before AVD creation because system Java was unset; original output preserved.",
+  "command": [
+    "/Users/n/Library/Android/sdk/cmdline-tools/omni-15859902/bin/avdmanager",
+    "create",
+    "avd",
+    "--name",
+    "Luma123-FinalFresh-QA",
+    "--package",
+    "system-images;android-36;google_apis_ps16k;arm64-v8a",
+    "--device",
+    "pixel_6"
+  ],
+  "image": "system-images;android-36;google_apis_ps16k;arm64-v8a",
+  "source_properties_sha256": "d0cef9f5e105802cebc169f650580acb0c7164bdf439d9dd9c96842dc3564772",
+  "config_sha256": "4ac645c803a29dc6ec0b699dd14c88060e1a4bb106c7c22e1e1379deb018098c"
+}

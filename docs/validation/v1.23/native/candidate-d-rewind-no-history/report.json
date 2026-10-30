@@ -1,0 +1,727 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T19:02:14.618891+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "rewind-no-history",
+  "expected_version": "1.23.0-rc1",
+  "expected_code": 31,
+  "apk_sha256": "6b0ab2145db60e1efbe7a58fa1992f7b97b7ee24e8dbaf0bfd2456e458bf6755",
+  "observer_sha256": "37c53ebfc11a400e6e96ccc633619c1826e6ce0d5b9c2afe2d3eda30563cbaa2",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "5f2c33c9-60fd-4c9e-affd-29f0386f9aff",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "6b0ab2145db60e1efbe7a58fa1992f7b97b7ee24e8dbaf0bfd2456e458bf6755",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "rewind-no-history",
+    "runToken": "5f2c33c9-60fd-4c9e-affd-29f0386f9aff",
+    "processId": 5200,
+    "checkCount": 59,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Requested UI team contains only distinct genuinely owned members"
+      },
+      {
+        "passed": true,
+        "message": "Actual UI durably saves the requested owned team"
+      },
+      {
+        "passed": true,
+        "message": "Saved team has 1–3 distinct identities"
+      },
+      {
+        "passed": true,
+        "message": "Every saved team member is genuinely owned"
+      },
+      {
+        "passed": true,
+        "message": "Saved team exact size 3"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = "
+      },
+      {
+        "passed": true,
+        "message": "Saved team has 1–3 distinct identities"
+      },
+      {
+        "passed": true,
+        "message": "Every saved team member is genuinely owned"
+      },
+      {
+        "passed": true,
+        "message": "Saved team exact size 3"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible semantic target battle_skill_close"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged refusal-run_id"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged refusal-history"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged refusal-budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged refusal-undos"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged refusal-battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real background wait"
+      },
+      {
+        "passed": true,
+        "message": "Actual contextual sheet visible before lifecycle check"
+      },
+      {
+        "passed": true,
+        "message": "Real Home action accepted"
+      },
+      {
+        "passed": true,
+        "message": "Actual onPause persisted duration observed"
+      },
+      {
+        "passed": true,
+        "message": "Actual sheet remains visible after app foreground return"
+      },
+      {
+        "passed": true,
+        "message": "Second real Home commits the resumed paused duration"
+      },
+      {
+        "passed": true,
+        "message": "Paused sheet excludes real background and resumed-sheet time: 0 ms"
+      },
+      {
+        "passed": true,
+        "message": "Bounded actual board timer observation"
+      },
+      {
+        "passed": true,
+        "message": "Actual puzzle is visible after leaving the contextual sheet"
+      },
+      {
+        "passed": true,
+        "message": "Real Home persists actual puzzle duration"
+      },
+      {
+        "passed": true,
+        "message": "Actual board duration baseline exists"
+      },
+      {
+        "passed": true,
+        "message": "Real foreground return remains on the puzzle"
+      },
+      {
+        "passed": true,
+        "message": "Second real Home commits actual resumed puzzle duration"
+      },
+      {
+        "passed": true,
+        "message": "Actual puzzle clock advances after sheet return: 2311 ms"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Requested UI team contains only distinct genuinely owned members"
+      },
+      {
+        "passed": true,
+        "message": "Actual UI durably saves the requested owned team"
+      },
+      {
+        "passed": true,
+        "message": "Saved team has 1–3 distinct identities"
+      },
+      {
+        "passed": true,
+        "message": "Every saved team member is genuinely owned"
+      },
+      {
+        "passed": true,
+        "message": "Saved team exact size 3"
+      }
+    ],
+    "touchCount": 32,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1457929,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1458497,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-team-editor",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1460546,
+        "label": "Touche l’équipe pour choisir ses talents de puzzle.. Leurs talents t’aident à résoudre.",
+        "resourceId": "com.androidhit.lumadrift:id/squad_entry",
+        "bounds": [
+          66,
+          880,
+          1013,
+          1201
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1461129,
+        "label": "Choisir pour la place 1: Nova",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_0",
+        "bounds": [
+          52,
+          1005,
+          362,
+          1424
+        ]
+      },
+      {
+        "reason": "advance-real-team-catalogue-page",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1469229,
+        "label": "›",
+        "resourceId": "com.androidhit.lumadrift:id/squad_page_next",
+        "bounds": [
+          789,
+          1065,
+          1024,
+          1209
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-hoot",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1471047,
+        "label": "Hoot. Petit retour. Acquis",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_hoot",
+        "bounds": [
+          717,
+          1534,
+          1027,
+          1944
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1471579,
+        "label": "Choisir pour la place 2: Miko",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_1",
+        "bounds": [
+          384,
+          1005,
+          695,
+          1424
+        ]
+      },
+      {
+        "reason": "return-real-team-catalogue-page",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1473129,
+        "label": "‹",
+        "resourceId": "com.androidhit.lumadrift:id/squad_page_back",
+        "bounds": [
+          55,
+          1146,
+          290,
+          1290
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-miko",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1477246,
+        "label": "Miko. Chemin d’étoiles. Acquis",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_miko",
+        "bounds": [
+          384,
+          1534,
+          695,
+          1944
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1477780,
+        "label": "Choisir pour la place 3: Orbit",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_2",
+        "bounds": [
+          717,
+          1005,
+          1027,
+          1424
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-orbit",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1481646,
+        "label": "Orbit. Vague lunaire. Acquis",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_orbit",
+        "bounds": [
+          717,
+          1534,
+          1027,
+          1944
+        ]
+      },
+      {
+        "reason": "save-real-team",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1483213,
+        "label": "Enregistrer pour le prochain plateau",
+        "resourceId": "com.androidhit.lumadrift:id/squad_save",
+        "bounds": [
+          66,
+          1515,
+          1013,
+          1678
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1484796,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1490629,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U29",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1491163,
+        "point": [
+          1006.9406,
+          814.69775
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U29",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1491713,
+        "label": "Niveau 29",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_29",
+        "bounds": [
+          521,
+          1168,
+          676,
+          1323
+        ]
+      },
+      {
+        "reason": "open-selected-real-U29",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1493497,
+        "label": "Jouer",
+        "resourceId": "com.androidhit.lumadrift:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U29",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1494112,
+        "label": "Jouer  →",
+        "resourceId": "com.androidhit.lumadrift:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1494646,
+        "label": "Hoot. Petit retour. 2 ✦",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          66,
+          2077,
+          276,
+          2274
+        ]
+      },
+      {
+        "reason": "battle_skill_activate",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1496562,
+        "label": "Activer",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_activate",
+        "bounds": [
+          66,
+          1655,
+          1013,
+          1799
+        ]
+      },
+      {
+        "reason": "real-Home-foreground-paused-sheet-clock",
+        "input": "two real Home actions and two explicit Activity foreground intents",
+        "backgroundWaitMs": 2200,
+        "persistedDeltaMs": 0
+      },
+      {
+        "reason": "battle_skill_close_bottom",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1502997,
+        "label": "Revenir au puzzle",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_close_bottom",
+        "bounds": [
+          66,
+          1999,
+          1013,
+          2143
+        ]
+      },
+      {
+        "reason": "real-Home-foreground-resumed-puzzle-clock",
+        "input": "two real Home actions and two explicit Activity foreground intents",
+        "puzzleWaitMs": 1800,
+        "persistedDeltaMs": 2311
+      },
+      {
+        "reason": "play_pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1508574,
+        "label": "Pause",
+        "resourceId": "com.androidhit.lumadrift:id/play_pause",
+        "bounds": [
+          55,
+          177,
+          188,
+          310
+        ]
+      },
+      {
+        "reason": "Quitter le niveau|Leave level",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1509155,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      },
+      {
+        "reason": "open-real-team-editor",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1510732,
+        "label": "Touche l’équipe pour choisir ses talents de puzzle.. Leurs talents t’aident à résoudre.",
+        "resourceId": "com.androidhit.lumadrift:id/squad_entry",
+        "bounds": [
+          66,
+          880,
+          1013,
+          1201
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1511262,
+        "label": "Choisir pour la place 1: Hoot",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_0",
+        "bounds": [
+          52,
+          1005,
+          362,
+          1424
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-nova",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1515146,
+        "label": "Nova. Étoile guide. Acquis",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_nova",
+        "bounds": [
+          52,
+          1534,
+          362,
+          1944
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1515679,
+        "label": "Choisir pour la place 2: Miko",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_1",
+        "bounds": [
+          384,
+          1005,
+          695,
+          1424
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-miko",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1519546,
+        "label": "Miko. Chemin d’étoiles. Acquis",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_miko",
+        "bounds": [
+          384,
+          1534,
+          695,
+          1944
+        ]
+      },
+      {
+        "reason": "select-real-team-slot-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1520080,
+        "label": "Choisir pour la place 3: Orbit",
+        "resourceId": "com.androidhit.lumadrift:id/squad_slot_2",
+        "bounds": [
+          717,
+          1005,
+          1027,
+          1424
+        ]
+      },
+      {
+        "reason": "select-real-owned-member-orbit",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1523946,
+        "label": "Orbit. Vague lunaire. Acquis",
+        "resourceId": "com.androidhit.lumadrift:id/squad_member_orbit",
+        "bounds": [
+          717,
+          1534,
+          1027,
+          1944
+        ]
+      },
+      {
+        "reason": "save-real-team",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1525513,
+        "label": "Enregistrer pour le prochain plateau",
+        "resourceId": "com.androidhit.lumadrift:id/squad_save",
+        "bounds": [
+          66,
+          1515,
+          1013,
+          1678
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1527098,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      }
+    ],
+    "captures": [
+      "fr-rewind-no-history-before",
+      "fr-rewind-no-history-refused",
+      "fr-after-refusal-return-running"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 93.807,
+  "evidence_sha256": {
+    "battle-observer.apk": "37c53ebfc11a400e6e96ccc633619c1826e6ce0d5b9c2afe2d3eda30563cbaa2",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "8f060c8a8ff65f651fb2483e2def14dfcc0c00f3b240f3bf53bc71e9bfa74c83",
+    "native/after.json": "38f3488abcc378e75f01a7fd4ff57d5688855a9c3b8ff91a6791eef6120ccf84",
+    "native/before.json": "7a087accab3d4c59ebb5c36b143a6884e3ccd95883247216fc5fcceab603ec5b",
+    "native/d-rewind-refusal-final.json": "38f3488abcc378e75f01a7fd4ff57d5688855a9c3b8ff91a6791eef6120ccf84",
+    "native/fr-after-refusal-return-running-accessibility.json": "35c87769128f2cf288711e7a0366e66e882d96108402575354e58123d1e3c8fa",
+    "native/fr-after-refusal-return-running.png": "33e011dd42595618af7aa689147bcc75b2146ab36460188cc67c0e72711e3780",
+    "native/fr-rewind-no-history-before-accessibility.json": "95b32de7a126df9656bc1a35e84aa5bef01eae2c676d1bcbcfa33ed81d988ea8",
+    "native/fr-rewind-no-history-before.png": "29903f810afe5a4e1ce7842001400178ae344ce86be3d34c9bb01d5809f759a0",
+    "native/fr-rewind-no-history-refused-accessibility.json": "95b32de7a126df9656bc1a35e84aa5bef01eae2c676d1bcbcfa33ed81d988ea8",
+    "native/fr-rewind-no-history-refused.png": "30552a06ee83afa3e3ad2fc17b13f4b31b11ba62d3b772621a4aad256622e5e9",
+    "native/report.json": "9778afb5d0ab92dae0bfe83d5c38eb5c3dffc910f37a3af5fa06f1170b0543d7",
+    "native/requested-steps.json": "44c5f30a93cb253b56cb0f71d4406cb82e06d02be2184eef8ae4aa1b465a88d6",
+    "observer-install.txt": "ba833aa59271922187193cac1b280d4836a08957bf05b459de18cd3d949e1e07",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "2ba28fceeff3e56be1c09508c257c5d8b15c573416eda34021fb26083f5ece21",
+    "source-snapshot.json": "37d8ad9e4d88a1424415980c0911d96c27cb44a1b39da5f11e2169cff051ea32"
+  }
+}

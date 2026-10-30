@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "checks": [
+    {
+      "kind": "frozen-descriptive-audit",
+      "directory": "docs/validation/clarity-audit-2026-10-30/simulation",
+      "manifestSha256": "9820fbead76278bd2992468aed11f3bd11d7a35f228f6e9c5dff6b15f5567820",
+      "filesVerified": 25
+    },
+    {
+      "kind": "frozen-descriptive-audit",
+      "directory": "docs/validation/clarity-audit-2026-10-30/experiment-no-shell",
+      "manifestSha256": "c463380fed213bcc73bf511e79456a8acc797d6941af8aa1abde0d585bbaef0f",
+      "filesVerified": 102
+    },
+    {
+      "kind": "published-historical-cognitive",
+      "filesVerifiedAgainstCurrentAndGitHead": 30
+    },
+    {
+      "kind": "runtime-source",
+      "currentFilesVerified": 58,
+      "runProvenanceSha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57"
+    }
+  ],
+  "scope": "Exact bytes and hashes only; no current-source compatibility requirement imposed on historical data"
+}

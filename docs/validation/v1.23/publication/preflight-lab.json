@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Independent prepublication read-only byte/source/capture identity audit. No public/app mutations, Android input, network, deploy or full simulation rerun. Does not assert public-origin delivery or human validation.",
+  "createdAtUtc": "2026-10-30T19:25:51.092361+00:00",
+  "checks": {
+    "site": {
+      "manifest": {
+        "path": "docs/validation/site-v1.23/release/source-manifest.json",
+        "sha256": "8af38690faa94ee4b1fb0e8d5c475c47d0de9789927fd975414e7de367bbe671",
+        "bytes": 172077
+      },
+      "release": "1.23.0-rc2",
+      "artifactCommit": null,
+      "nullCommitIsExpectedForPrepublicationC1": true,
+      "physicalPayloadsVerified": 576,
+      "frozenInputsVerified": 29,
+      "historicalPayloadsVerified": 555,
+      "networkOrDeploymentClaimed": false
+    },
+    "lab": {
+      "provenance": {
+        "path": "docs/validation/cognitive-lab-v123/latest/provenance.json",
+        "sha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57",
+        "bytes": 9286
+      },
+      "runtimeInputsVerified": 58,
+      "runPayloadsVerified": 13,
+      "publicFilesVerified": 7,
+      "historicalCognitivePayloadsVerified": 30,
+      "sourceArchive": {
+        "path": "public/lab/clarity-123/cognitive-lab-1.23-source.zip",
+        "sha256": "07d35901a7f8ddf6b25f92e5bf8c41f7ecb3dadaaf55984720ac40cc909ba01e",
+        "bytes": 12487546
+      },
+      "archiveEntriesVerified": 95,
+      "uiContextUncompiledSha256": "cce41eb9a605a62e1d474d88fe5d75e375ae940a731786d8e73b2557b87633b8"
+    },
+    "candidateE": {
+      "sourceManifest": {
+        "path": "docs/validation/v1.23/candidate-e/source-inputs.json",
+        "sha256": "b62788cd6c3c33f728a9b19678b076385354f54d5c3b8eee9a6fe268a5ee6eaf",
+        "bytes": 91841
+      },
+      "all501InputsVerified": true,
+      "releaseManifest": {
+        "path": "releases/manifest-1.23.0-rc2.json",
+        "sha256": "e59871e370a77e4903df0721ccfe3dfc3560d80303befa7ecff1ae7551bdf972",
+        "bytes": 1211
+      },
+      "productionApkSha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+      "labApkSha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+      "version": "1.23.0-rc2",
+      "code": 31
+    },
+    "captures": {
+      "map": {
+        "path": "docs/validation/v1.23/native/capture-map.json",
+        "sha256": "ceb7d6492d7acedcd08093415630a7dc31f7562b3257a7630d45a9860424fc45",
+        "bytes": 1823
+      },
+      "count": 8,
+      "nativeDimensions": [
+        1080,
+        2400
+      ],
+      "exactEProductionApkBound": true,
+      "items": [
+        {
+          "key": "puzzle",
+          "locale": "fr",
+          "sha256": "45b4df84378dad3be4be9885902a146245911840cec4e91396f999cf0897413f",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        },
+        {
+          "key": "skills",
+          "locale": "fr",
+          "sha256": "51c014c65361c246bf7e11121aab83926b4c84ea7445af9c1b288e6f8faec649",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        },
+        {
+          "key": "wardrobe",
+          "locale": "fr",
+          "sha256": "7abbfa86d3af6a254df96945c48b16c211ac0ce12599fef6cb1982d3465b402d",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        },
+        {
+          "key": "map",
+          "locale": "fr",
+          "sha256": "71bde4225408c67e3e86d0135dfe76622a61ac6d64014df7aa2e48fb011664cf",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        },
+        {
+          "key": "puzzle",
+          "locale": "en",
+          "sha256": "51576d383d226c11f694d1b1b4517a0c54fc3a97e820e4f624c02865164c7845",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        },
+        {
+          "key": "skills",
+          "locale": "en",
+          "sha256": "21ad01d5d79ee0d3115f9405b84575df0ee5f0ba8017e419d8b84e4b3e40455f",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        },
+        {
+          "key": "wardrobe",
+          "locale": "en",
+          "sha256": "261757e939a291f938d23afd5e436a44a70d580ab00ed8bf94262cbe0332f9a5",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        },
+        {
+          "key": "map",
+          "locale": "en",
+          "sha256": "928a6bd3f71089854c0c90b7f192016705426d24f8d1dd95a00d7e5945b67c37",
+          "reportSha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+          "exactNativePublicCopy": true
+        }
+      ]
+    },
+    "lab-dataCommand": {
+      "command": [
+        "python3",
+        "scripts/verify-cognitive-lab-v123.py",
+        "--require-current-source"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"schemaVersion\": 1,\n  \"status\": \"PASS\",\n  \"modelVersion\": \"1.23-native-journey-no-preparation-1\",\n  \"seed\": 2026103002,\n  \"trajectories\": 8000,\n  \"attemptRows\": 380137,\n  \"blockedEvents\": 170431,\n  \"dayRows\": 64000,\n  \"learnedStateRows\": 8000,\n  \"directCueFollowedManualExits\": 53830,\n  \"coldProbeRows\": 8000,\n  \"trainedProbeRows\": 32000,\n  \"oracleBoardsSeparate\": 104,\n  \"zeroBudgetHorizonRows\": 0,\n  \"allBudgetExhaustionsOnActualEndingDay\": true,\n  \"allOutputHashesMatch\": true,\n  \"currentSourceRequiredAndMatched\": true,\n  \"provenanceSha256\": \"b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57\",\n  \"humanParticipants\": 0\n}\n"
+    },
+    "reportCommand": {
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-cognitive-report-v123.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "✔ bundled snapshot is exactly the displayed JSON and matches run provenance (30.688708ms)\n✔ actual HTML initializes four French conditions and exact scope, with no human claim (2.065ms)\n✔ English updates text, scope labels, links and condition labels (3.461792ms)\n✔ English homepage link opens English directly and both home links retain chosen language (4.288459ms)\n✔ every condition switch refreshes U27/U43/U48, resources, manual and automated counters (7.7905ms)\n✔ rapid language and condition changes stay synchronous and retain all four conditions (81.578417ms)\n✔ the single cold reference and four trained probe rows keep actual denominators (3.916042ms)\n✔ invalid or absent snapshot fails closed and remains bilingual (2.370959ms)\n✔ partial numeric data or missing probe rows fail closed instead of showing mixed results (1.621375ms)\n✔ invalid condition events cannot change the selected condition or counters (2.662167ms)\n✔ report has no async data fetch, import, oracle execution or archived dataset switch (0.278167ms)\nℹ tests 11\nℹ suites 0\nℹ pass 11\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 203.755958\n"
+    },
+    "siteCommand": {
+      "command": [
+        "python3",
+        "scripts/check-site-v123.py"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"passed\": true, \"checks\": 1260, \"edition\": \"1.23\", \"structureOnly\": false, \"nativeEvidenceRequired\": true, \"networkRequested\": false, \"scope\": \"Source/link/provenance scope only. Browser and Hosting/public delivery are separate.\"}\n"
+    }
+  },
+  "blockers": []
+}

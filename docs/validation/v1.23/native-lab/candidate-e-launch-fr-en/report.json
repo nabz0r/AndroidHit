@@ -1,0 +1,238 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T19:21:55.791406+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "phase": "launch-fr-en",
+  "expected_version": "1.23.0-sandbox-rc2",
+  "expected_code": 31,
+  "apk_sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+  "observer_sha256": "7b485c0ac38ccf04a4da009a756b3df32ad3175650e71ddf077843f2278fc6e1",
+  "observer_build_receipt_sha256": "6f43533eb47e2aa5a44d7b5ad2588d67e23b097e3399d28b9ec8d3fbb58c2fda",
+  "production_apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "previous_lab_apk_sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "snapshot_only": false,
+  "upgrade_from_sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8",
+  "run_token": "55298fb3-4426-49bc-b467-9fd3ffbf1734",
+  "scope": "Pinned task emulator only. Snapshot persistent production preferences before and after Lab and refuse any change. Preserve old sandbox preferences byte-for-byte before first1.23 Activity. Actual UI language/capture smoke only; no grants, clears, preference writes, injected fixtures, progression or purchases.",
+  "upgrade_preferences_exactly_preserved": true,
+  "installed_sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "launch-fr-en",
+    "runToken": "55298fb3-4426-49bc-b467-9fd3ffbf1734",
+    "processId": 8116,
+    "checkCount": 27,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact separate Lab package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged earned-coins"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged campaign-unlocked"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged test-gold"
+      },
+      {
+        "passed": true,
+        "message": "Launch/capture-only observer refuses progression, purchases, certificate actions and direct writes"
+      }
+    ],
+    "touchCount": 4,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2641229,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2641797,
+        "label": "Fran\u00e7ais",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2644296,
+        "label": "R\u00e9glages",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 2644847,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      }
+    ],
+    "captures": [
+      "lab123-native-home-fr",
+      "lab123-native-home-en"
+    ],
+    "package": "com.androidhit.lumadrift.sandbox",
+    "scope": "Actual native launch/settings touchscreen input at observed accessibility bounds and read-only preferences. Host and observer both enforce a launch/capture/read-only allowlist. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, certificate execution, purchases, external identity, ads or publication."
+  },
+  "production_preferences_exactly_preserved": true,
+  "production_preference_file_count": 7,
+  "elapsed_seconds": 32.54,
+  "evidence_sha256": {
+    "authorized-update.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "battle-observer.apk": "7b485c0ac38ccf04a4da009a756b3df32ad3175650e71ddf077843f2278fc6e1",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "4d98ee6d6bdcbf5beffa42b55a6c15c68b7d90f695438ecc344ff25ba127006a",
+    "native/after.json": "503b153df00e2c8bcfacee136cc35154f0f0a88e8e2a42fa2c55e10b65a03dde",
+    "native/before.json": "503b153df00e2c8bcfacee136cc35154f0f0a88e8e2a42fa2c55e10b65a03dde",
+    "native/lab-after-fr-en.json": "503b153df00e2c8bcfacee136cc35154f0f0a88e8e2a42fa2c55e10b65a03dde",
+    "native/lab-before-fr-en.json": "503b153df00e2c8bcfacee136cc35154f0f0a88e8e2a42fa2c55e10b65a03dde",
+    "native/lab123-native-home-en-accessibility.json": "58e23d3044a6db2ecabb673e864e09947e4b45f38fe2d228a79dae94397ca4fc",
+    "native/lab123-native-home-en.png": "e354a92f5d021dd6d106d4fe522edde10c7143f03a8bfb36a253f2ec35c05057",
+    "native/lab123-native-home-fr-accessibility.json": "4945e04e5437e57c46dcb0f4fb1a7a9dc884e26515163f0df792b219a9cc845e",
+    "native/lab123-native-home-fr.png": "426fc83dd428e46052ce9af657df7174b30214b35ac9c631c93e87324573791d",
+    "native/report.json": "9e1262605349905310663e32e6aa504cc4e5728e4f88969b9c564ebfa38fd794",
+    "native/requested-steps.json": "0d02cac9a112629a0875ca635e3ee95a9eebd8ced7a6fc77329dc3336b7e19c8",
+    "observer-build-receipt.json": "6f43533eb47e2aa5a44d7b5ad2588d67e23b097e3399d28b9ec8d3fbb58c2fda",
+    "observer-install.txt": "45921ae862af83ef0adb8f1b0b2bb9241baa6ccac18d89fd29f847f5d10b7151",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "production-after/report.json": "dd3c90c7cb937bd16c6574131c81da671b4f9fe878eda82ca88f7a100a8e8456",
+    "production-after-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "production-before/report.json": "097a6ac104162cbeae2da2530bda6c77f80025eab28c80b032b51bcbc08f84fd",
+    "production-before-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "requested-steps.json": "021f6fa4198b99ddda9859b5fa4c5f6568ce1c11271bae044cf3d6268677d2d3",
+    "sandbox-after-upgrade-before-activity/report.json": "5040e489c40cc93c44e2884911b8fe7a2bd490c61d719ebcfd6023110eff0466",
+    "sandbox-after-upgrade-before-activity-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "sandbox-before-upgrade/report.json": "504352166ccb0c6ed8dfe9f983b796b6b54f0bc3e7841f4fc76e4cf4a6c2245e",
+    "sandbox-before-upgrade-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "source-snapshot.json": "59021939585a82d07253b06dae12de99843fa3fdcd827a82cc3b06c0a5442733"
+  }
+}

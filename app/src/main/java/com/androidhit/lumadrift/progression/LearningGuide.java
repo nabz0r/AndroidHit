@@ -15,7 +15,8 @@ import java.util.List;
 public final class LearningGuide {
     private static final List<String> LESSONS = Arrays.asList(
             "exits", "blockers", "key", "gate", "switch", "switch_order",
-            "key_switch", "combination", "practice", "relay", "relay_order", "relay_key", "relay_mastery");
+            "key_switch", "combination", "practice", "relay", "relay_order", "relay_key", "relay_mastery",
+            "relay_inspection", "relay_anticipation", "relay_double");
 
     public static final class Context {
         public final String lessonKey, titleKey, descriptionKey, hudKey;
@@ -71,6 +72,30 @@ public final class LearningGuide {
 
     /** Historical boards retain their own mechanics; their displayed level number does not identify a lesson. */
     public static Context context(Board board) { return context(board, null); }
+
+    /**
+     * Presentation-only 1.23 teaching sequence. Frozen levels, certificates and
+     * historical lesson lookup remain unchanged, including for saved attempts.
+     * Inspection explains immediate consequences, never hidden solution safety.
+     */
+    public static Context contextJourney123(Board board, String authoredLesson) {
+        Context current = context(board, authoredLesson);
+        if (board.level.progressionVersion != 6 || board.isSolved()) return current;
+        int number = board.level.number;
+        String lesson = current.lessonKey;
+        if (number >= 13 && number <= 16) lesson = "relay_inspection";
+        else if (number >= 17 && number <= 28) lesson = "relay_anticipation";
+        else if (number >= 61 && number <= 64) lesson = "relay_double";
+        return lesson.equals(current.lessonKey) ? current
+                : new Context(lesson, current.closedGateMask, board.supportsManualGates());
+    }
+
+    /** Visible affordance based only on remaining relay marks, with no solver call. */
+    public static boolean inspectionRecommended(Board board) {
+        if (board == null || board.level.progressionVersion != 6 || board.isSolved()) return false;
+        for (Tile tile : board.remainingTiles()) if (tile.isSwitch()) return true;
+        return false;
+    }
 
     private static String inferLesson(Board board) {
         boolean key = false;

@@ -1,0 +1,250 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T18:53:03.927447+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "retained-context-restore",
+  "expected_version": "1.23.0-rc1",
+  "expected_code": 31,
+  "apk_sha256": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd",
+  "observer_sha256": "5cdff180fbee1ad114878a9d09e405cb4f1302b74703bba2c162251218adb4c5",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "8222fe6b-44aa-4453-a38d-6799137df4e3",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "retained-context-restore",
+    "runToken": "8222fe6b-44aa-4453-a38d-6799137df4e3",
+    "processId": 4328,
+    "checkCount": 17,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = 0,1,2"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference cosmetic_slot_v17_HAT = hat_dew"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference companion_original_costume_v118 = true"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged context-run_id"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged context-history"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged context-budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged context-undos"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged context-battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged coins-before-restore"
+      }
+    ],
+    "touchCount": 9,
+    "actions": [
+      {
+        "reason": "journey_continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 899262,
+        "label": "Reprendre  ·  Niveau 42",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 899846,
+        "label": "Nova. Étoile guide. 2 ✦",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          66,
+          2077,
+          276,
+          2274
+        ]
+      },
+      {
+        "reason": "battle_outfit",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 900462,
+        "label": "Tenue",
+        "resourceId": "com.androidhit.lumadrift:id/battle_outfit",
+        "bounds": [
+          66,
+          1827,
+          523,
+          1971
+        ]
+      },
+      {
+        "reason": "wardrobe_item_hat_dew",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 901012,
+        "label": "Chapeau · Rosée, Possédé",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_item_hat_dew",
+        "bounds": [
+          66,
+          1507,
+          365,
+          1880
+        ]
+      },
+      {
+        "reason": "wardrobe_costume_toggle",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 903613,
+        "label": "Ma tenue · changer",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_costume_toggle",
+        "bounds": [
+          66,
+          1749,
+          1013,
+          1882
+        ]
+      },
+      {
+        "reason": "wardrobe_apply",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 904513,
+        "label": "Appliquer",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_apply",
+        "bounds": [
+          556,
+          1971,
+          1013,
+          2115
+        ]
+      },
+      {
+        "reason": "wardrobe_return_puzzle",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 906479,
+        "label": "Revenir au puzzle",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_return_puzzle",
+        "bounds": [
+          66,
+          2143,
+          1013,
+          2287
+        ]
+      },
+      {
+        "reason": "play_pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 908395,
+        "label": "Pause",
+        "resourceId": "com.androidhit.lumadrift:id/play_pause",
+        "bounds": [
+          55,
+          177,
+          188,
+          310
+        ]
+      },
+      {
+        "reason": "Quitter le niveau|Leave level",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 908963,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      }
+    ],
+    "captures": [
+      "fr-initial-costume-restored",
+      "fr-u42-exact-context-return"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 26.32,
+  "evidence_sha256": {
+    "battle-observer.apk": "5cdff180fbee1ad114878a9d09e405cb4f1302b74703bba2c162251218adb4c5",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "7f381ec9525979f433e2b554517e675a2f462af4580e655de5f68f66980120ac",
+    "native/after.json": "626e8de1aac5937da083e2325e4d55059f548f51b864a45a1cf873c3bf6747c7",
+    "native/before.json": "ba85bbec39e923748e766c1230bf53b5eecf3a6ac385aa1fe365174082424b50",
+    "native/c-context-restored-final.json": "626e8de1aac5937da083e2325e4d55059f548f51b864a45a1cf873c3bf6747c7",
+    "native/fr-initial-costume-restored-accessibility.json": "762ff3f72cc158fc17434032bc7823e52272c52c06a5f74565afd25f370e907d",
+    "native/fr-initial-costume-restored.png": "f3d882cc64e3905b51af62d95c4cc3bbc82311d1e4876ce3f2ea91ed94d30fb9",
+    "native/fr-u42-exact-context-return-accessibility.json": "22e471f9d7347fb4687c93f4dad68de1521b7536f45b8aca441f439090de52db",
+    "native/fr-u42-exact-context-return.png": "d8dd1f8786e210aed06b070b54483ec573efb49986d891ad03a43872b9510b91",
+    "native/report.json": "e8ded58430315e05470ca7d749c8f38f92453bba930c73f6dc06c09ae387a8f4",
+    "native/requested-steps.json": "2016bcc282a1cf6c2f2c3b4e77e34db0a457d2d6cbd7ef52f110bc7239b70b3d",
+    "observer-install.txt": "e20002049481eaa494bc829a979c71db1fb42d682f620b353fc2540195304635",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "75c297e6a5fa2bbd77ceb274394ea44bfcae5e7e6eed087878f2c9a3a23c2675",
+    "source-snapshot.json": "dd5aaacf429ca1188b9d3955668653f069e920799a8db44aab414486bfa15306"
+  }
+}

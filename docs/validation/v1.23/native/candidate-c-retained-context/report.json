@@ -1,0 +1,343 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-30T18:50:19.604587+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "retained-context",
+  "expected_version": "1.23.0-rc1",
+  "expected_code": 31,
+  "apk_sha256": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd",
+  "observer_sha256": "5cdff180fbee1ad114878a9d09e405cb4f1302b74703bba2c162251218adb4c5",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": "64a3982737163831adf7b55449a72fae69d9b28f8e8ea9cac8c1628e5de11679",
+  "run_token": "4327454e-9e4a-40d0-ac03-c299338748b3",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "before_update_installed_sha256": "64a3982737163831adf7b55449a72fae69d9b28f8e8ea9cac8c1628e5de11679",
+  "installed_sha256": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": false,
+    "phase": "retained-context",
+    "runToken": "4327454e-9e4a-40d0-ac03-c299338748b3",
+    "processId": 4058,
+    "checkCount": 34,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference level = 42"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = 0,1,2"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible labels exclude .*Pièce, ligne.*"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real background wait"
+      },
+      {
+        "passed": true,
+        "message": "Actual contextual sheet visible before lifecycle check"
+      },
+      {
+        "passed": true,
+        "message": "Real Home action accepted"
+      },
+      {
+        "passed": true,
+        "message": "Actual onPause persisted duration observed"
+      },
+      {
+        "passed": true,
+        "message": "Actual sheet remains visible after app foreground return"
+      },
+      {
+        "passed": true,
+        "message": "Second real Home commits the resumed paused duration"
+      },
+      {
+        "passed": true,
+        "message": "Paused sheet excludes real background and resumed-sheet time: 0 ms"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged initial-coins"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged initial-character"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged initial-companion_squad_v119"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged initial-cosmetic_slot_v17_HAT"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged initial-companion_original_costume_v118"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged initial-cosmetic_slot_v17_HAT"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged initial-companion_original_costume_v118"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference cosmetic_slot_v17_HAT = hat_moon"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference companion_original_costume_v118 = false"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 9,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 745462,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 745997,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "journey_continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 747012,
+        "label": "Reprendre  ·  Niveau 42",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 748946,
+        "label": "Nova. Étoile guide. 2 ✦",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          66,
+          2077,
+          276,
+          2274
+        ]
+      },
+      {
+        "reason": "real-Home-foreground-paused-sheet-clock",
+        "input": "two real Home actions and two explicit Activity foreground intents",
+        "backgroundWaitMs": 3200,
+        "persistedDeltaMs": 0
+      },
+      {
+        "reason": "battle_outfit",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 757812,
+        "label": "Tenue",
+        "resourceId": "com.androidhit.lumadrift:id/battle_outfit",
+        "bounds": [
+          66,
+          1827,
+          523,
+          1971
+        ]
+      },
+      {
+        "reason": "wardrobe_item_hat_moon",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 759796,
+        "label": "Chapeau · Lune, Possédé",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_item_hat_moon",
+        "bounds": [
+          390,
+          1507,
+          689,
+          1880
+        ]
+      },
+      {
+        "reason": "wardrobe_cancel",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 761763,
+        "label": "Annuler l’essai",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_cancel",
+        "bounds": [
+          66,
+          1971,
+          523,
+          2115
+        ]
+      },
+      {
+        "reason": "wardrobe_item_hat_moon",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 762313,
+        "label": "Chapeau · Lune, Possédé",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_item_hat_moon",
+        "bounds": [
+          390,
+          1507,
+          689,
+          1880
+        ]
+      },
+      {
+        "reason": "wardrobe_apply",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 762880,
+        "label": "Appliquer",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_apply",
+        "bounds": [
+          556,
+          1971,
+          1013,
+          2115
+        ]
+      }
+    ],
+    "captures": [
+      "fr-upgraded-u42-retained",
+      "fr-context-talent-sheet",
+      "fr-sheet-after-real-background",
+      "fr-context-wardrobe-worn",
+      "fr-context-wardrobe-trial",
+      "fr-context-wardrobe-applied",
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "error": "Current instrumentation execution failed",
+  "elapsed_seconds": 51.2,
+  "evidence_sha256": {
+    "authorized-update.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "battle-observer.apk": "5cdff180fbee1ad114878a9d09e405cb4f1302b74703bba2c162251218adb4c5",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "failure-android-runtime.txt": "fd0e40c75b026f36c50ed27f4d20345d306df32196b367ed03bbb9ca39d10310",
+    "instrumentation.txt": "71589f58c69ea96058bd58e3d5fdc9be9a1fb1ecf1197332e8c673e11114d300",
+    "native/before.json": "bd000fc0abba8744062846da3c4d93571317c6c38e0caccaae1ec78cce736c3e",
+    "native/c-upgrade-resumed.json": "bd000fc0abba8744062846da3c4d93571317c6c38e0caccaae1ec78cce736c3e",
+    "native/failure-accessibility.json": "d565eba617950acd14d0a587e8ffa35433944efd25d28989a827ff5c8a259948",
+    "native/failure.png": "6c80ba3b3f31e8a150fc598990376e06e264547ae011ce91df67fe59165c9c55",
+    "native/failure.txt": "7887f9a14d37ef5e04946a83ed5115394453fa85622b17b198178a8b68816256",
+    "native/fr-context-talent-sheet-accessibility.json": "748726522845c34adc807904355f3fe32857aa576269955fa7f882dd595ef98b",
+    "native/fr-context-talent-sheet.png": "0bc9342b7bb942451ee3449deee642fd46685693e80c70c319135681205a7d07",
+    "native/fr-context-wardrobe-applied-accessibility.json": "560ad38f3937cdc870ecb33284efcace68bf793dd1a5e0c319e468d8c09283cf",
+    "native/fr-context-wardrobe-applied.png": "98ba66af2a29a2d2144bcea4b85aae7eba32dce74b3bd1bc1a375a9ac7f0f433",
+    "native/fr-context-wardrobe-trial-accessibility.json": "bc2ea0f4513ad6a765dc82cb057eb1f71e47fa42b493cd6fe7420a4e43002580",
+    "native/fr-context-wardrobe-trial.png": "d8b6c252dee7d8186f8576bf578940d6763118b5b70514b9ba4b399d39b48848",
+    "native/fr-context-wardrobe-worn-accessibility.json": "2f66bb9abd509f91381e48e221130a0f372d316ea025f4a06a9c68cb079e5134",
+    "native/fr-context-wardrobe-worn.png": "a36811bd853468678b77e8712313383f3a2039c6bf6b7ef6b69c8041eda98ae4",
+    "native/fr-sheet-after-real-background-accessibility.json": "748726522845c34adc807904355f3fe32857aa576269955fa7f882dd595ef98b",
+    "native/fr-sheet-after-real-background.png": "1b4360485d56c9a18b97c4f5ce541612fa19769b98bb1740a6d7f33da9305e53",
+    "native/fr-upgraded-u42-retained-accessibility.json": "22e471f9d7347fb4687c93f4dad68de1521b7536f45b8aca441f439090de52db",
+    "native/fr-upgraded-u42-retained.png": "c27fc6d70a35e962fe786b0a4753c212901125e564369c88cdbead6dfd05bd1a",
+    "native/report.json": "e679afb9dc1a89928ae1de9a2ea7b8887b9cff5fa0007810fb8e0e583d161159",
+    "native/requested-steps.json": "5d309c7cbe81414a820606c569f1934db7be6567b74e02bae5ec30e24520fe9f",
+    "observer-install.txt": "0f46735cc355f4de4dee385a86ccae8464eca5f64efa27cff4defa1aefcd7cbd",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "e4a325feea69cad64f5e960f2f1bf7acacc249c8b6b10a1c09c79e3aae60db7e",
+    "source-snapshot.json": "8b46123c530be996f1e90b5fd84ff2dd3a4b306ade9e5b10fbbb2a17dc6cbecf"
+  }
+}

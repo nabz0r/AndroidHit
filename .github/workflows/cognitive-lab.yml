@@ -34,6 +34,10 @@ jobs:
             /scripts/run-cognitive-lab-v122.sh
             /scripts/test-cognitive-lab-v122.sh
             /scripts/verify-cognitive-lab-v122.py
+            /scripts/run-cognitive-lab-v123.sh
+            /scripts/test-cognitive-lab-v123.sh
+            /scripts/verify-cognitive-lab-v123.py
+            /scripts/test-cognitive-report-v123.mjs
             /scripts/deploy-cognitive-overlay.py
             /scripts/test-deploy-cognitive-overlay.py
             /scripts/test-support/android/
@@ -42,8 +46,10 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/onboarding/
             /app/src/main/java/com/androidhit/lumadrift/LumaView.java
             /public/lab/cognitive/
+            /public/lab/clarity-123/
             /docs/validation/cognitive-lab/latest/
             /docs/validation/cognitive-lab-v122/latest/
+            /docs/validation/cognitive-lab-v123/latest/
       - name: Set up Java 17
         uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
         with:
@@ -51,9 +57,15 @@ jobs:
           java-version: '17'
           cache-jdk: false
           overwrite-settings: false
-      - name: Validate frozen control, causal cues, native skills, shared charge and bilingual report
+      - name: Validate preserved 1.21 and 1.22 factories, historical contracts and report archives
         run: bash scripts/test-cognitive-lab-v122.sh
-      - name: Verify complete versioned data and exact denominators without a massive rerun
+      - name: Verify historical 1.22 data and exact denominators without requiring current 1.22 sources
         run: python3 scripts/verify-cognitive-lab-v122.py
+      - name: Validate 1.23 factory, final-action exhaustion regression and deterministic common-environment probes
+        run: bash scripts/test-cognitive-lab-v123.sh
+      - name: Verify complete 1.23 data, exact source hashes and no zero-budget horizon censoring
+        run: python3 scripts/verify-cognitive-lab-v123.py --require-current-source
+      - name: Exercise exact 1.23 report snapshot, French and English conditions and common probe denominators
+        run: node --test scripts/test-cognitive-report-v123.mjs
       - name: Validate additive deployment and refusal boundaries without network
         run: python3 scripts/test-deploy-cognitive-overlay.py

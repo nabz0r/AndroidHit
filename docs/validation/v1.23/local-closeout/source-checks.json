@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T19:28:46.265778+00:00",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/check-site-v123.py"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 1.54,
+      "log": "docs/validation/v1.23/local-closeout/site-source.txt",
+      "sha256": "46946fd4ba9a26992bdd62e76216a1a6f8005f781e45d2587dda1f376ce4553d"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-site-v123-runtime.mjs",
+        "scripts/test-cognitive-report-v123.mjs"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 0.414,
+      "log": "docs/validation/v1.23/local-closeout/site-and-report-runtime.txt",
+      "sha256": "d9f2427a7802e62ad53b90656cc341a12d6e8de8aabb2bb146d1afe8e308d94a"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/verify-cognitive-lab-v123.py",
+        "--require-current-source"
+      ],
+      "exitCode": 0,
+      "wallSeconds": 3.938,
+      "log": "docs/validation/v1.23/local-closeout/model-export.txt",
+      "sha256": "2ab6f98cd77827486edd2ea8ab1e1b7a92dc0b1e137505b84cd196a57bd39429"
+    }
+  ],
+  "scope": "Local complete website source checks, actual JS runtime with DOM double, and exhaustive precomputed model export/source verification. No browser, network, new simulation, Android or publication claim."
+}

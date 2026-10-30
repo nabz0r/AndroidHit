@@ -16,7 +16,8 @@ class Environment {
     final CognitiveAgent.Piece[] pieces;final CognitiveAgent.Wall[] walls;final int level,ordinal,startDay;
     int undos,actions,blocked,shellTaps,focusUses,focusRequests,exits,hintsUsed,paidUndoCoins,coachCueObservations,deadEndWarningObservations,focusCueObservations;double seconds;int visibleFocus=-1;double focusExpires;
     Environment(int level,int ordinal,int day){this(RelayCatalog.get(level),ordinal,day);}
-    Environment(Level source,int ordinal,int day){this.level=source.number;this.ordinal=ordinal;startDay=day;board=new Board(source);budget=MoveBudget.start(0,source);shells=ElementalShell121.create(source,0,level);
+    Environment(Level source,int ordinal,int day){this(source,ordinal,day,ElementalShell121.create(source,0,source.number));}
+    Environment(Level source,int ordinal,int day,ElementalShell121 shellState){this.level=source.number;this.ordinal=ordinal;startDay=day;board=new Board(source);budget=MoveBudget.start(0,source);shells=Objects.requireNonNull(shellState);
         pieces=new CognitiveAgent.Piece[source.tiles.size()];for(Tile p:source.tiles)pieces[p.id]=new CognitiveAgent.Piece(p.id,p.row,p.col,p.direction.ordinal(),p.switchMask);
         walls=new CognitiveAgent.Wall[source.barriers.size()];for(int i=0;i<walls.length;i++){Barrier w=source.barriers.get(i);walls[i]=new CognitiveAgent.Wall(w.row,w.col,w.keyTileId);}}
     CognitiveAgent.Observation observation(double modelClock,int coins){

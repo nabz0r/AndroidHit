@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-30T19:21:47.364549+00:00",
+  "scope": "Each accepted D/E native source archive is checked against its actual SDK observer build receipt for manifest, all Java and fixture inputs, plus exact observer APK bytes. Host programs/runner changes are separately snapshotted; they are not claimed as DEX inputs. No game source/fixture/ownership mutation.",
+  "reports": [
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-retained-context/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-build-receipt.json",
+      "observer_sha256": "37c53ebfc11a400e6e96ccc633619c1826e6ce0d5b9c2afe2d3eda30563cbaa2",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-rewind-no-history/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-build-receipt.json",
+      "observer_sha256": "37c53ebfc11a400e6e96ccc633619c1826e6ce0d5b9c2afe2d3eda30563cbaa2",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-fresh-c-upgrade/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-build-receipt.json",
+      "observer_sha256": "37c53ebfc11a400e6e96ccc633619c1826e6ce0d5b9c2afe2d3eda30563cbaa2",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-genuine-fresh-fr-en/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-media-fr-en/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-bundle-context/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-u27-u29-causes-retry/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-short-font13-reduced/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-retained-context/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-genuine-fresh-fr-en/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-critical-fr-en/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-world-navigation-fr/report.json",
+      "observer_build_receipt": "docs/validation/v1.23/native/observer-d-lifecycle-build-receipt.json",
+      "observer_sha256": "3cc09b612d73c4707925d19a6e8e740cdc731987b9650595dfdf9a485a3fd9af",
+      "compiled_inputs_matched": 64
+    }
+  ]
+}

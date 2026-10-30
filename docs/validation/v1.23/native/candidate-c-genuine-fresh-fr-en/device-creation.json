@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-30T18:45:59.285629+00:00",
+  "avd": "Luma123-Fresh-QA",
+  "serial": "emulator-5630",
+  "port": 5630,
+  "fresh": true,
+  "owner": "Luma1.23 release native first-install acceptance",
+  "scope": "New empty task-owned AVD. Port5630/5631 checked free. No userdata copied; existing5602/5626 retained without reset. Receipt written before boot or installation.",
+  "command": [
+    "/Users/n/Library/Android/sdk/cmdline-tools/omni-15859902/bin/avdmanager",
+    "create",
+    "avd",
+    "--name",
+    "Luma123-Fresh-QA",
+    "--package",
+    "system-images;android-36;google_apis_ps16k;arm64-v8a",
+    "--device",
+    "pixel_6"
+  ],
+  "image": "system-images;android-36;google_apis_ps16k;arm64-v8a",
+  "source_properties_sha256": "d0cef9f5e105802cebc169f650580acb0c7164bdf439d9dd9c96842dc3564772",
+  "config_sha256": "4ac645c803a29dc6ec0b699dd14c88060e1a4bb106c7c22e1e1379deb018098c"
+}

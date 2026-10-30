@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "candidate": "E",
+  "version": "1.23.0-rc2",
+  "code": 31,
+  "created_utc": "2026-10-30T19:23:14.619644+00:00",
+  "production_apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "production_checks": 495,
+  "production_touches": 142,
+  "source_inputs_checked": 501,
+  "same_inputs_from_D": 499,
+  "D_to_E_changed_inputs": [
+    "app/build.gradle",
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java"
+  ],
+  "D_to_E_ui_patch": "docs/validation/v1.23/candidate-e/source-delta-from-d.diff",
+  "scope": "Scripted SDK emulator qualification. E actual upgrade, true first-install, real touchscreen modal swipes, Hoot no-effect refusal, Guide costs/once, Android Activity Bundle recreation, paused effects/timer, contextual wardrobe and map/minimap. D private compact/font/reduced and U27/U29 key/Undo evidence is bridged only by checked paint/version-only delta. Zero human comprehension/enjoyment/retention, physical phone, Play or commerce acceptance claim.",
+  "production_reports": [
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-retained-context/report.json",
+      "sha256": "16a264b678820245336ee175161fbae5590a781d9b4e8ff628c99c192f272f53",
+      "checks": 64,
+      "touches": 17,
+      "first_install": false,
+      "upgrade_from": "6b0ab2145db60e1efbe7a58fa1992f7b97b7ee24e8dbaf0bfd2456e458bf6755"
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-genuine-fresh-fr-en/report.json",
+      "sha256": "a15f62beafbe96839c65282e70e7e3f31661a75c7cfd443a3f7435d4fd19b054",
+      "checks": 72,
+      "touches": 29,
+      "first_install": true,
+      "upgrade_from": null
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-critical-fr-en/report.json",
+      "sha256": "13b64b8f0f9a70da827946a37fed454127bd6cbb31330c52ab7731edd4992c42",
+      "checks": 214,
+      "touches": 78,
+      "first_install": false,
+      "upgrade_from": null
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-e-world-navigation-fr/report.json",
+      "sha256": "cb8c88dc307844c7a52b1b28832af6b4dcc4c50e8085815102f6d9a82d44b365",
+      "checks": 145,
+      "touches": 18,
+      "first_install": false,
+      "upgrade_from": null
+    }
+  ],
+  "lab": {
+    "report": "docs/validation/v1.23/native-lab/candidate-e-launch-fr-en/report.json",
+    "sha256": "6b6675014644811fa42dfd9825ade89dbf33b9fac60ae8d1823ffedf0db41f9f",
+    "checks": 27,
+    "touches": 4,
+    "production_preference_files_unchanged": 7,
+    "previous_lab_sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8"
+  },
+  "bridged_D_evidence": "docs/validation/v1.23/native/candidate-d-private-qualification.json",
+  "canonical_media": "docs/validation/v1.23/native/candidate-e-canonical-media.json",
+  "capture_map": "docs/validation/v1.23/native/capture-map.json",
+  "compiled_observer_binding": "docs/validation/v1.23/native/compiled-observer-source-binding.json",
+  "visual_limits": [
+    "At640x960/font1.3 some cosmetic/tab labels ellipsize; original AX names and sticky actions remain available.",
+    "E first-install Android system status clock is partially clipped on initial fresh captures; game content/actions remain inside safe view and canonical retained8screens have a normal status bar."
+  ]
+}

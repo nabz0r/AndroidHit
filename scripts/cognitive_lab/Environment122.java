@@ -14,6 +14,7 @@ class Environment122 extends Environment {
     final Map<String,Integer> errorCounts=new HashMap<>();
     Environment122(int level,int ordinal,int day,String scenario){super(level,ordinal,day);this.scenario=scenario;initTeam();}
     Environment122(Level level,int ordinal,int day,String scenario){super(level,ordinal,day);this.scenario=scenario;initTeam();}
+    Environment122(Level level,int ordinal,int day,String scenario,ElementalShell121 shells){super(level,ordinal,day,shells);this.scenario=scenario;initTeam();}
     void initTeam(){
         if(scenario.equals("team_information"))companion=CompanionBattle.State.start(team(0,1,2));
         else if(scenario.equals("team_execution"))companion=CompanionBattle.State.start(team(3,4,5));

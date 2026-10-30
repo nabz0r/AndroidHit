@@ -1,0 +1,74 @@
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:3: error: package android.content does not exist
+import android.content.Context;
+                      ^
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:4: error: package android.content does not exist
+import android.content.SharedPreferences;
+                      ^
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:14: error: cannot find symbol
+    static final class Prefs implements SharedPreferences {
+                                        ^
+  symbol:   class SharedPreferences
+  location: class CognitiveLabTest
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:18: error: cannot find symbol
+        public Editor edit(){return new Editor(){final Map<String,Object> writes=new HashMap<>();public Editor putInt(String k,int v){writes.put(k,v);return this;}public Editor putString(String k,String v){writes.put(k,v);return this;}public Editor putBoolean(String k,boolean v){writes.put(k,v);return this;}public boolean commit(){data.putAll(writes);return true;}};}
+               ^
+  symbol:   class Editor
+  location: class Prefs
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:20: error: cannot find symbol
+    static final class Ctx extends Context {final Prefs prefs=new Prefs();public SharedPreferences getSharedPreferences(String name,int mode){return prefs;}}
+                                   ^
+  symbol:   class Context
+  location: class CognitiveLabTest
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:20: error: cannot find symbol
+    static final class Ctx extends Context {final Prefs prefs=new Prefs();public SharedPreferences getSharedPreferences(String name,int mode){return prefs;}}
+                                                                                 ^
+  symbol:   class SharedPreferences
+  location: class Ctx
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:18: error: cannot find symbol
+        public Editor edit(){return new Editor(){final Map<String,Object> writes=new HashMap<>();public Editor putInt(String k,int v){writes.put(k,v);return this;}public Editor putString(String k,String v){writes.put(k,v);return this;}public Editor putBoolean(String k,boolean v){writes.put(k,v);return this;}public boolean commit(){data.putAll(writes);return true;}};}
+                                        ^
+  symbol:   class Editor
+  location: class Prefs
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:18: error: cannot find symbol
+        public Editor edit(){return new Editor(){final Map<String,Object> writes=new HashMap<>();public Editor putInt(String k,int v){writes.put(k,v);return this;}public Editor putString(String k,String v){writes.put(k,v);return this;}public Editor putBoolean(String k,boolean v){writes.put(k,v);return this;}public boolean commit(){data.putAll(writes);return true;}};}
+                                                                                                        ^
+  symbol: class Editor
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:18: error: cannot find symbol
+        public Editor edit(){return new Editor(){final Map<String,Object> writes=new HashMap<>();public Editor putInt(String k,int v){writes.put(k,v);return this;}public Editor putString(String k,String v){writes.put(k,v);return this;}public Editor putBoolean(String k,boolean v){writes.put(k,v);return this;}public boolean commit(){data.putAll(writes);return true;}};}
+                                                                                                                                                                          ^
+  symbol: class Editor
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:18: error: cannot find symbol
+        public Editor edit(){return new Editor(){final Map<String,Object> writes=new HashMap<>();public Editor putInt(String k,int v){writes.put(k,v);return this;}public Editor putString(String k,String v){writes.put(k,v);return this;}public Editor putBoolean(String k,boolean v){writes.put(k,v);return this;}public boolean commit(){data.putAll(writes);return true;}};}
+                                                                                                                                                                                                                                                  ^
+  symbol: class Editor
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:23: error: cannot find symbol
+        Environment.Energy ledger=new Environment.Energy();SessionEnergyStore nativeStore=new SessionEnergyStore(new Prefs());Random rng=new Random(114);long seconds=10000;int number=0;
+                                                           ^
+  symbol:   class SessionEnergyStore
+  location: class CognitiveLabTest
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:23: error: cannot find symbol
+        Environment.Energy ledger=new Environment.Energy();SessionEnergyStore nativeStore=new SessionEnergyStore(new Prefs());Random rng=new Random(114);long seconds=10000;int number=0;
+                                                                                              ^
+  symbol:   class SessionEnergyStore
+  location: class CognitiveLabTest
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:25: error: cannot find symbol
+            boolean expected=!SessionEnergyStore.costsEnergy(0,level);if(!expected){String id=String.format("00000000-0000-0000-0000-%012d",++number);expected=nativeStore.reserve(id,seconds*1000);if(expected)nativeStore.confirm(id,seconds*1000);}
+                              ^
+  symbol:   variable SessionEnergyStore
+  location: class CognitiveLabTest
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:27: error: cannot find symbol
+        for(int level=1;level<=1000;level++)check((level>10)==SessionEnergyStore.costsEnergy(0,level),"all campaign energy eligibility");
+                                                              ^
+  symbol:   variable SessionEnergyStore
+  location: class CognitiveLabTest
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:30: error: cannot find symbol
+    static void economyParity(){Ctx context=new Ctx();GameStore store=new GameStore(context);check(store.coins()==180,"actual GameStore fresh seed");int balance=180;for(int level=1;level<=1000;level++){int stars=1+level%3;int expected=EconomyCurve121.campaignReward(level,stars);check(store.completeLevel(level,stars,true)==expected,"actual GameStore first-clear entitlement parity");balance+=expected;check(store.coins()==balance,"actual GameStore award conservation");
+                                                      ^
+  symbol:   class GameStore
+  location: class CognitiveLabTest
+/Users/n/androidhit/scripts/cognitive_lab/tests/CognitiveLabTest.java:30: error: cannot find symbol
+    static void economyParity(){Ctx context=new Ctx();GameStore store=new GameStore(context);check(store.coins()==180,"actual GameStore fresh seed");int balance=180;for(int level=1;level<=1000;level++){int stars=1+level%3;int expected=EconomyCurve121.campaignReward(level,stars);check(store.completeLevel(level,stars,true)==expected,"actual GameStore first-clear entitlement parity");balance+=expected;check(store.coins()==balance,"actual GameStore award conservation");
+                                                                          ^
+  symbol:   class GameStore
+  location: class CognitiveLabTest
+16 errors

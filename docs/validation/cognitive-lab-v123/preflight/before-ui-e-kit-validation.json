@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Final archive after English-entry correction: extraction, exact entry hashes, deterministic packaging and bounded real execution; no complete campaign rerun",
+  "archive": "public/lab/clarity-123/cognitive-lab-1.23-source.zip",
+  "archiveSha256": "28133e9e0073b5a78f92eb32d64de16a77976328074217065d05e62504e1a2f1",
+  "archiveBytes": 12487169,
+  "kitEntries": 95,
+  "runtimeSources": 58,
+  "uiContext": {
+    "notCompiledByDriver": true,
+    "path": "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+    "sha256": "d11da9e7c9169b588a88c2cfcd467299c3160146b339aaef45c67e687825ca2e"
+  },
+  "allKitEntryHashesVerified": true,
+  "deterministicPackaging": true,
+  "checks": [
+    {
+      "name": "kit-contracts-final",
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v123.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.1433530409999992,
+      "log": "docs/validation/cognitive-lab-v123/kit-contracts-final-original.log",
+      "logSha256": "6730251e8642b52f094a97207a94c3fbc8c87f407a69da3fbe62c8f3655f8281"
+    },
+    {
+      "name": "kit-data-final",
+      "command": [
+        "python3",
+        "scripts/verify-cognitive-lab-v123.py",
+        "--require-current-source"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 3.8430673750000004,
+      "log": "docs/validation/cognitive-lab-v123/kit-data-final-original.log",
+      "logSha256": "2ab6f98cd77827486edd2ea8ab1e1b7a92dc0b1e137505b84cd196a57bd39429"
+    },
+    {
+      "name": "kit-report-final",
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-cognitive-report-v123.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.22491899999999987,
+      "log": "docs/validation/cognitive-lab-v123/kit-report-final-original.log",
+      "logSha256": "b72493c0bd7e0e0fb254800424dc632f4e9ff4c425418dd19c900721386788dd"
+    }
+  ],
+  "temporaryExtractionRemovedOnExit": true,
+  "priorLocalKitReceipt": "preflight/before-language-fix-kit-validation.json"
+}

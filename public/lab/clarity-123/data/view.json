@@ -1,0 +1,247 @@
+{
+  "counts": {
+    "attemptRows": 380137,
+    "blockedEvents": 170431,
+    "coldProbes": 8000,
+    "configuredDays": 64000,
+    "oracleBoardsSeparate": 104,
+    "trainedProbes": 32000,
+    "trajectories": 8000
+  },
+  "humanParticipants": 0,
+  "modelVersion": "1.23-native-journey-no-preparation-1",
+  "provenanceSha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57",
+  "scenarios": [
+    {
+      "automatedExits": 0,
+      "blocked": 43527,
+      "causeVisibleManual": 38458,
+      "coinsSpent": 18891,
+      "dayCap": 30,
+      "days": 16000,
+      "directCueManual": 3986,
+      "energyEmpty": 3671,
+      "energySpent": 71764,
+      "exhausted": 274,
+      "exits": 573217,
+      "horizon": 765,
+      "id": "manual_native_123",
+      "levels": [
+        {
+          "exhausted": 2,
+          "level": 27,
+          "starts": 1657,
+          "undos": 399
+        },
+        {
+          "exhausted": 39,
+          "level": 43,
+          "starts": 1115,
+          "undos": 1030
+        },
+        {
+          "exhausted": 3,
+          "level": 48,
+          "starts": 893,
+          "undos": 358
+        }
+      ],
+      "manualExits": 573217,
+      "meanLevels": 45.337,
+      "repeatedErrors": 1768,
+      "starts": 91713,
+      "undos": 12357
+    },
+    {
+      "automatedExits": 0,
+      "blocked": 44631,
+      "causeVisibleManual": 0,
+      "coinsSpent": 18146,
+      "dayCap": 31,
+      "days": 16000,
+      "directCueManual": 4072,
+      "energyEmpty": 3677,
+      "energySpent": 71750,
+      "exhausted": 255,
+      "exits": 573012,
+      "horizon": 773,
+      "id": "cause_hidden_123",
+      "levels": [
+        {
+          "exhausted": 1,
+          "level": 27,
+          "starts": 1648,
+          "undos": 363
+        },
+        {
+          "exhausted": 34,
+          "level": 43,
+          "starts": 1105,
+          "undos": 988
+        },
+        {
+          "exhausted": 5,
+          "level": 48,
+          "starts": 899,
+          "undos": 355
+        }
+      ],
+      "manualExits": 573012,
+      "meanLevels": 45.3365,
+      "repeatedErrors": 1827,
+      "starts": 91701,
+      "undos": 12263
+    },
+    {
+      "automatedExits": 115256,
+      "blocked": 31496,
+      "causeVisibleManual": 4094,
+      "coinsSpent": 12545,
+      "dayCap": 99,
+      "days": 16000,
+      "directCueManual": 41711,
+      "energyEmpty": 3381,
+      "energySpent": 69707,
+      "exhausted": 165,
+      "exits": 572224,
+      "horizon": 803,
+      "id": "loaned_mixed_123",
+      "levels": [
+        {
+          "exhausted": 2,
+          "level": 27,
+          "starts": 1627,
+          "undos": 533
+        },
+        {
+          "exhausted": 18,
+          "level": 43,
+          "starts": 1054,
+          "undos": 852
+        },
+        {
+          "exhausted": 5,
+          "level": 48,
+          "starts": 875,
+          "undos": 390
+        }
+      ],
+      "manualExits": 456968,
+      "meanLevels": 44.354,
+      "repeatedErrors": 453,
+      "starts": 89676,
+      "undos": 24489
+    },
+    {
+      "automatedExits": 0,
+      "blocked": 50777,
+      "causeVisibleManual": 44553,
+      "coinsSpent": 23045,
+      "dayCap": 2001,
+      "days": 16000,
+      "directCueManual": 4061,
+      "energyEmpty": 0,
+      "energySpent": 0,
+      "exhausted": 342,
+      "exits": 671010,
+      "horizon": 1248,
+      "id": "energy_unlimited_123",
+      "levels": [
+        {
+          "exhausted": 2,
+          "level": 27,
+          "starts": 1664,
+          "undos": 394
+        },
+        {
+          "exhausted": 44,
+          "level": 43,
+          "starts": 1220,
+          "undos": 1076
+        },
+        {
+          "exhausted": 4,
+          "level": 48,
+          "starts": 1049,
+          "undos": 381
+        }
+      ],
+      "manualExits": 671010,
+      "meanLevels": 52.7285,
+      "repeatedErrors": 2151,
+      "starts": 107047,
+      "undos": 15050
+    }
+  ],
+  "schemaVersion": 1,
+  "seed": 2026103002,
+  "sourceCount": 58,
+  "transfer": {
+    "coldCompleted": 4587,
+    "coldProbeCount": 8000,
+    "coldRowsReusedAsReferenceNotReexecuted": true,
+    "commonEnvironment": "Same native1.23 shell-free Board/budget,180 Coins; coach,Focus,dead-end warning,causal cues and companions all hidden/disabled for every training condition and cold reference.",
+    "heldOutLevels": [
+      401,
+      573,
+      721,
+      1000
+    ],
+    "reset": "Fatigue/frustration/memory reset; only final learned rule state transplanted. Different campaign exposure remains.",
+    "scenarios": [
+      {
+        "coldOnlyCompleted": 750,
+        "coldReferenceCompleted": 4587,
+        "completed": 6167,
+        "outcomes": {
+          "agent_give_up": 229,
+          "budget_exhausted": 1604,
+          "completed": 6167
+        },
+        "probes": 8000,
+        "scenario": "manual_native_123",
+        "trainedOnlyCompleted": 2330
+      },
+      {
+        "coldOnlyCompleted": 751,
+        "coldReferenceCompleted": 4587,
+        "completed": 6168,
+        "outcomes": {
+          "agent_give_up": 231,
+          "budget_exhausted": 1601,
+          "completed": 6168
+        },
+        "probes": 8000,
+        "scenario": "cause_hidden_123",
+        "trainedOnlyCompleted": 2332
+      },
+      {
+        "coldOnlyCompleted": 775,
+        "coldReferenceCompleted": 4587,
+        "completed": 6062,
+        "outcomes": {
+          "agent_give_up": 257,
+          "budget_exhausted": 1681,
+          "completed": 6062
+        },
+        "probes": 8000,
+        "scenario": "loaned_mixed_123",
+        "trainedOnlyCompleted": 2250
+      },
+      {
+        "coldOnlyCompleted": 765,
+        "coldReferenceCompleted": 4587,
+        "completed": 6164,
+        "outcomes": {
+          "agent_give_up": 216,
+          "budget_exhausted": 1620,
+          "completed": 6164
+        },
+        "probes": 8000,
+        "scenario": "energy_unlimited_123",
+        "trainedOnlyCompleted": 2342
+      }
+    ],
+    "trainedProbeCount": 32000
+  }
+}

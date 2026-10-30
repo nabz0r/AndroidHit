@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T18:56:46.959024+00:00",
+  "pythonVersion": "Python 3.9.6",
+  "tests": [
+    {
+      "test": "scripts/test-deploy-site-v123.py",
+      "exitCode": 0,
+      "wallSeconds": 1.275,
+      "log": "docs/validation/v1.23/site-transport/deploy-tests.txt",
+      "logSha256": "92dc13cad8016ad3774e9e323056e28e166130c804db453c9c149279e67e0275"
+    },
+    {
+      "test": "scripts/test-stage-site-v123-rest.py",
+      "exitCode": 0,
+      "wallSeconds": 5.752,
+      "log": "docs/validation/v1.23/site-transport/stage-tests.txt",
+      "logSha256": "51437cb70a01066e8dd8205efbd5a62f402fbf76fbaee61ab48a3aa4ba0eb023"
+    },
+    {
+      "test": "scripts/test-collect-site-v123-public-bytes.py",
+      "exitCode": 0,
+      "wallSeconds": 0.138,
+      "log": "docs/validation/v1.23/site-transport/collect-tests.txt",
+      "logSha256": "b88294b8d138fbc271cecda9651730cdfd8d54c22df35cd450afce2dcd4cb8e6"
+    }
+  ],
+  "sourceInputs": {
+    "scripts/test-deploy-site-v123.py": "b64e620bd9939d2381c2266c47ef49744bdc8f9b4ea0384283f719a0678bd34d",
+    "scripts/test-stage-site-v123-rest.py": "37b33409c87889d11e86606e07933d7143191ae2a67afbebbc22855e04c4790d",
+    "scripts/test-collect-site-v123-public-bytes.py": "40b0dc89da4997589efd0964a48da17712b7e8299c7cee733e8d5e98460dd5f9",
+    "scripts/deploy-site-v123.py": "9fb0465ddb86863a29ab4fad0bead27f9cd10c987a81e588d4091408a8d6bed1",
+    "scripts/stage-site-v123-rest.py": "edd154d00bafc7d106ff89b717dc8eabb1ad32f02f10433ba68ac93f19309e23",
+    "scripts/collect-site-v123-public-bytes.py": "75894f6eac8a02737e4d3214546ea1359d8e858185e7504b59076790a8dda358",
+    "scripts/deploy-cognitive-overlay.py": "62e25d22e0e00a5d9b7ccbfc44d1b29218113b8cd86f5fa13838ab3802466af5",
+    "scripts/test-deploy-cognitive-overlay.py": "1844fcaae8d956120cdded2f2abc86daa059be127be2e6167466700b24e5ede0",
+    "scripts/apk-byte-delta.py": "6c685e63761d0e61028c0ee217200f16ff780a5871cf1975b0e87a7fc425c004"
+  },
+  "scope": "Offline fictional payload, Git and provider fixtures only. No network request, token acquisition, Android signing/native acceptance, Hosting deployment, or public-origin collection."
+}

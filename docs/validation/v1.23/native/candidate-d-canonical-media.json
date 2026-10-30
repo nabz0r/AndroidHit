@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-10-30T19:07:27.696499+00:00",
+  "candidate": "D",
+  "apk_sha256": "6b0ab2145db60e1efbe7a58fa1992f7b97b7ee24e8dbaf0bfd2456e458bf6755",
+  "report": "docs/validation/v1.23/native/candidate-d-media-fr-en/report.json",
+  "checks": 86,
+  "touches": 33,
+  "scope": "Eight original SDK screenshots, no crop/redraw/resizing; 1080x2400, normal font/display, FR/EN puzzle/skills/wardrobe/map visually inspected. Scripted emulator evidence, not physical phone or human acceptance. Map Play appears grey but original AX confirms enabled/clickable.",
+  "visual_findings": [
+    "Board arrows are primary and distinct by direction and color. Key24 and relay badges do not overlap on U29.",
+    "FR/EN text and contextual actions visible without clipping. Wardrobe return footer visible.",
+    "Map Play grey tint is existing palette-index argument; target remains actually enabled/clickable. No source mutation."
+  ],
+  "capture_map": "docs/validation/v1.23/native/capture-map.json",
+  "files": [
+    {
+      "key": "puzzle",
+      "locale": "fr",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/puzzle-fr.png",
+      "sha256": "2c5cf83ff40c358c51f8dd0bf20dc85740e9359bdf8d2321a9e0207b4c4b9a6a",
+      "bytes": 312071,
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "key": "skills",
+      "locale": "fr",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/skills-fr.png",
+      "sha256": "2f900feefacce6017b8a26594295e8b02b82f192eb372ea2a1bb17e0f2d8b4db",
+      "bytes": 235359,
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "key": "wardrobe",
+      "locale": "fr",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/wardrobe-fr.png",
+      "sha256": "6a500528c4ddb804f69d595cf36b2ce7d8afc89608aa6adabc120006728abf01",
+      "bytes": 780793,
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "key": "map",
+      "locale": "fr",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/map-fr.png",
+      "sha256": "643b0a9855bd78ecd234348ec8391e0f45b16048fc5e7e5723649df2d3809bb5",
+      "bytes": 396727,
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "key": "puzzle",
+      "locale": "en",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/puzzle-en.png",
+      "sha256": "940fa5871ee60be926155a2c2e1bf149b642822eb113f39d79ba9e1f21645a53",
+      "bytes": 304947,
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "key": "skills",
+      "locale": "en",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/skills-en.png",
+      "sha256": "2c84bb08b59acc026e380cb0f4b504587b2211bf09d02bee9e8940def15c92c2",
+      "bytes": 233213,
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "key": "wardrobe",
+      "locale": "en",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/wardrobe-en.png",
+      "sha256": "2d52c0f44610c05a5ac3688d78bc2b13c1c6356b61a92afaeba244587e6d30db",
+      "bytes": 773371,
+      "width": 1080,
+      "height": 2400
+    },
+    {
+      "key": "map",
+      "locale": "en",
+      "source": "docs/validation/v1.23/native/candidate-d-media-fr-en/native/map-en.png",
+      "sha256": "65598ea0580ddf1eeb1bf6b49b059103f4170c6b73bf93077bed49d04c251b7b",
+      "bytes": 391240,
+      "width": 1080,
+      "height": 2400
+    }
+  ]
+}

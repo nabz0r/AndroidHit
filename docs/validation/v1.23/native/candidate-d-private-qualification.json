@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "candidate": "D private rc1; not final rc2",
+  "created_utc": "2026-10-30T19:18:43.798408+00:00",
+  "checks": 506,
+  "touches": 182,
+  "scope": "Exact D native evidence, bridged only by independently frozen source delta to final E. C and B observations stay attributed to those versions. No human/physical-device or public release claim.",
+  "reports": [
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-retained-context/report.json",
+      "sha256": "a2a64e18049a3ea47efb2e1cf4cc3ac228fd0b6eaac1366aa8e6dbe58593bb0d",
+      "checks": 52,
+      "touches": 15,
+      "first_install": false,
+      "upgrade_from": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd"
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-rewind-no-history/report.json",
+      "sha256": "e22f35ad83418382563b29a6402326a4b43e88ccac2ffea6ce7f21c4348df666",
+      "checks": 59,
+      "touches": 32,
+      "first_install": false,
+      "upgrade_from": null
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-fresh-c-upgrade/report.json",
+      "sha256": "ac2dcd38ccbfe7fd1b2d098b257aabfa61a88394b505f75e77bd59516f700357",
+      "checks": 38,
+      "touches": 9,
+      "first_install": false,
+      "upgrade_from": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd"
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-genuine-fresh-fr-en/report.json",
+      "sha256": "139e0a4244f08ca6f3f0eac185be1eeaa7768f143e305a87301672d06e0fbe0a",
+      "checks": 72,
+      "touches": 29,
+      "first_install": true,
+      "upgrade_from": null
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-media-fr-en/report.json",
+      "sha256": "b0fbc3bba029aa65697a6a795c8e599a453b122a820bad02093495bda5dbe7f2",
+      "checks": 86,
+      "touches": 33,
+      "first_install": false,
+      "upgrade_from": null
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-bundle-context/report.json",
+      "sha256": "9f55ab20056d3b0425a503414435b02cea884e4fd1748bbb2e6aedc13e686fb9",
+      "checks": 81,
+      "touches": 12,
+      "first_install": false,
+      "upgrade_from": null
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-u27-u29-causes-retry/report.json",
+      "sha256": "80407a3178bde85c3b1b9b81f0af03e9de5a20209ee1f32fc10db74777cce06d",
+      "checks": 72,
+      "touches": 26,
+      "first_install": false,
+      "upgrade_from": null
+    },
+    {
+      "report": "docs/validation/v1.23/native/candidate-d-short-font13-reduced/report.json",
+      "sha256": "92ba641d11e3d19ef606640db4a264b67e7f61727d5bdb7dc34da6983e6a0f64",
+      "checks": 46,
+      "touches": 26,
+      "first_install": false,
+      "upgrade_from": null
+    }
+  ],
+  "preserved_failures": [
+    "docs/validation/v1.23/native/candidate-c-retained-context/report.json",
+    "docs/validation/v1.23/native/candidate-d-u27-u29-causes/report.json",
+    "docs/validation/v1.23/native/device-creation-final-fresh/failure.json"
+  ],
+  "failure_explanation": "Two authored semantic selectors were wrong (hat_rose, Undo without leading glyph); original failures retained and separately named corrected runs passed. Official AVD first-create Java failure occurred before any AVD/boot/install and was separately retried."
+}

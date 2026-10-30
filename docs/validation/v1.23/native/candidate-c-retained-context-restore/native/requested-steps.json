@@ -1,0 +1,140 @@
+[
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0,1,2"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "context-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "context-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "context-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "context-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "context-battle_v119"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-before-restore"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_item_hat_dew"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_costume_toggle"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_apply"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "cosmetic_slot_v17_HAT",
+    "value": "hat_dew"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_save_v1",
+    "key": "companion_original_costume_v118",
+    "value": "true"
+  },
+  {
+    "op": "capture",
+    "name": "fr-initial-costume-restored"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "capture",
+    "name": "fr-u42-exact-context-return"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "context-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "context-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "context-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "context-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "context-battle_v119"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-before-restore"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "snapshot",
+    "name": "c-context-restored-final"
+  }
+]

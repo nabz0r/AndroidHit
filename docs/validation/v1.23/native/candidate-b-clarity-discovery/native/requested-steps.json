@@ -1,0 +1,130 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "level",
+    "value": "42"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0,1,2"
+  },
+  {
+    "op": "capture",
+    "name": "fr-b-u42-resumed"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "context-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "context-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "context-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "context-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "context-battle_v119"
+  },
+  {
+    "op": "snapshot",
+    "name": "b-resumed-baseline"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "fr-b-nova-context-sheet"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "capture",
+    "name": "fr-b-nova-wardrobe-context"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_item_hat_moon"
+  },
+  {
+    "op": "capture",
+    "name": "fr-b-nova-outfit-trying"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "capture",
+    "name": "fr-b-u42-context-return"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "context-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "context-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "context-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "context-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "context-battle_v119"
+  },
+  {
+    "op": "snapshot",
+    "name": "b-after-context-return"
+  }
+]

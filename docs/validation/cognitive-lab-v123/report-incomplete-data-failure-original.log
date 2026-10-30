@@ -1,0 +1,41 @@
+✔ bundled snapshot is exactly the displayed JSON and matches run provenance (17.765792ms)
+✔ actual HTML initializes four French conditions and exact scope, with no human claim (2.042125ms)
+✔ English updates text, scope labels, links and condition labels (3.15125ms)
+✔ every condition switch refreshes U27/U43/U48, resources, manual and automated counters (7.695708ms)
+✔ rapid language and condition changes stay synchronous and retain all four conditions (91.041042ms)
+✔ the single cold reference and four trained probe rows keep actual denominators (3.449584ms)
+✔ invalid or absent snapshot fails closed and remains bilingual (2.795083ms)
+✖ partial numeric data or missing probe rows fail closed instead of showing mixed results (2.388167ms)
+✔ invalid condition events cannot change the selected condition or counters (3.202166ms)
+✔ report has no async data fetch, import, oracle execution or archived dataset switch (0.328167ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 199.334125
+
+✖ failing tests:
+
+test at scripts/test-cognitive-report-v123.mjs:115:1
+✖ partial numeric data or missing probe rows fail closed instead of showing mixed results (2.388167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-cognitive-report-v123.mjs:118:36)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

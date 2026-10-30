@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "kind": "historical_factory_behavior_replay_after_constructor_injection",
+  "seed": 2026103001,
+  "profiles": 100,
+  "repetitions": 30,
+  "trajectories": 21000,
+  "sixCsv": {
+    "trajectories.csv.gz": {
+      "originalSha256": "7a2483f5b6ca4916b20658308fc70425b5fa7ec030482145b09f72a8cdbe1381",
+      "replaySha256": "7a2483f5b6ca4916b20658308fc70425b5fa7ec030482145b09f72a8cdbe1381",
+      "byteIdentical": true
+    },
+    "level-results.csv.gz": {
+      "originalSha256": "aa1f739b80503c60314993b812e4d5be2f785f3237f6fe11bdbf1eb34304b451",
+      "replaySha256": "aa1f739b80503c60314993b812e4d5be2f785f3237f6fe11bdbf1eb34304b451",
+      "byteIdentical": true
+    },
+    "blocked-events.csv.gz": {
+      "originalSha256": "c71f44d323e8551d041a6284132f6958e22ad1b22e25e7e58ec810564c94303e",
+      "replaySha256": "c71f44d323e8551d041a6284132f6958e22ad1b22e25e7e58ec810564c94303e",
+      "byteIdentical": true
+    },
+    "day-results.csv.gz": {
+      "originalSha256": "152802d6b02c62525a1afe2fc59049e63c3d95024c70f630863163fd8a80556f",
+      "replaySha256": "152802d6b02c62525a1afe2fc59049e63c3d95024c70f630863163fd8a80556f",
+      "byteIdentical": true
+    },
+    "chapter-results.csv.gz": {
+      "originalSha256": "a5589afbd15abdb7de5ddfe2725595fb9a16b9cc54cc38fe71339eccb3667d92",
+      "replaySha256": "a5589afbd15abdb7de5ddfe2725595fb9a16b9cc54cc38fe71339eccb3667d92",
+      "byteIdentical": true
+    },
+    "chapter-stage-results.csv.gz": {
+      "originalSha256": "4c334ea43ace4e01c7e5ac23767f113b9b347f86be93cfc61f8cc5eac0fc71aa",
+      "replaySha256": "4c334ea43ace4e01c7e5ac23767f113b9b347f86be93cfc61f8cc5eac0fc71aa",
+      "byteIdentical": true
+    }
+  },
+  "profilesJsonByteIdentical": true,
+  "actualReplayOutput": "/tmp/luma-lab123-legacy-replay-2026103001",
+  "baseData": "docs/validation/clarity-audit-2026-10-30/simulation/run-2026103001",
+  "replayProvenanceSha256": "3c31307c305f423ad98587541f03afb2ee6c945110b08c5ca2da2eb67b8955a1",
+  "originalAuditNotRewritten": true,
+  "sourceContextNote": "Replay executes CognitiveLab122 and historical create; newly compiled123 classes and uncompiled LumaView context are not part of the historical behavior claim."
+}

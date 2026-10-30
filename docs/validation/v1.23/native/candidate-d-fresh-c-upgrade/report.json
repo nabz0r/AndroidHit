@@ -1,0 +1,350 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T19:02:14.618853+00:00",
+  "serial": "emulator-5630",
+  "avd": "Luma123-Fresh-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "fresh-c-upgrade",
+  "expected_version": "1.23.0-rc1",
+  "expected_code": 31,
+  "apk_sha256": "6b0ab2145db60e1efbe7a58fa1992f7b97b7ee24e8dbaf0bfd2456e458bf6755",
+  "observer_sha256": "37c53ebfc11a400e6e96ccc633619c1826e6ce0d5b9c2afe2d3eda30563cbaa2",
+  "creation_receipt_sha256": "ced8bcf8a1f4db49f593baa80b901af1b63e715cad34fc9e5c290fa6ada9614b",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd",
+  "run_token": "c87dd0c7-b847-4662-9621-7c52eea7c720",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "before_update_installed_sha256": "50ebefa9e353082e5c03cbfdb1930db60c21710fc45171ba9dfb1e5fa61d31cd",
+  "installed_sha256": "6b0ab2145db60e1efbe7a58fa1992f7b97b7ee24e8dbaf0bfd2456e458bf6755",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "fresh-c-upgrade",
+    "runToken": "c87dd0c7-b847-4662-9621-7c52eea7c720",
+    "processId": 5406,
+    "checkCount": 38,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference run_id = 6d7c1fea-ca4e-482d-9799-b72a96fc925a"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference level = 2"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = "
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy remains bounded"
+      },
+      {
+        "passed": true,
+        "message": "Actual board team = nova"
+      },
+      {
+        "passed": true,
+        "message": "Actual board energy = 3"
+      },
+      {
+        "passed": true,
+        "message": "Actual once-per-avatar usage mask = 0"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real background wait"
+      },
+      {
+        "passed": true,
+        "message": "Actual contextual sheet visible before lifecycle check"
+      },
+      {
+        "passed": true,
+        "message": "Real Home action accepted"
+      },
+      {
+        "passed": true,
+        "message": "Actual onPause persisted duration observed"
+      },
+      {
+        "passed": true,
+        "message": "Actual sheet remains visible after app foreground return"
+      },
+      {
+        "passed": true,
+        "message": "Second real Home commits the resumed paused duration"
+      },
+      {
+        "passed": true,
+        "message": "Paused sheet excludes real background and resumed-sheet time: 0 ms"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy remains bounded"
+      },
+      {
+        "passed": true,
+        "message": "Actual board energy = 1"
+      },
+      {
+        "passed": true,
+        "message": "Actual once-per-avatar usage mask = 1"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded actual board timer observation"
+      },
+      {
+        "passed": true,
+        "message": "Actual puzzle is visible after leaving the contextual sheet"
+      },
+      {
+        "passed": true,
+        "message": "Real Home persists actual puzzle duration"
+      },
+      {
+        "passed": true,
+        "message": "Actual board duration baseline exists"
+      },
+      {
+        "passed": true,
+        "message": "Real foreground return remains on the puzzle"
+      },
+      {
+        "passed": true,
+        "message": "Second real Home commits actual resumed puzzle duration"
+      },
+      {
+        "passed": true,
+        "message": "Actual puzzle clock advances after sheet return: 2305 ms"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches .*Used.*"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 9,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 952051,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 952585,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "journey_continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 953602,
+        "label": "Resume  ·  Level 2",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 955518,
+        "label": "Nova. Guiding star. 2 ✦",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          66,
+          2077,
+          276,
+          2274
+        ]
+      },
+      {
+        "reason": "real-Home-foreground-paused-sheet-clock",
+        "input": "two real Home actions and two explicit Activity foreground intents",
+        "backgroundWaitMs": 1800,
+        "persistedDeltaMs": 0
+      },
+      {
+        "reason": "battle_skill_activate",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 960168,
+        "label": "Activate",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_activate",
+        "bounds": [
+          66,
+          1655,
+          1013,
+          1799
+        ]
+      },
+      {
+        "reason": "real-Home-foreground-resumed-puzzle-clock",
+        "input": "two real Home actions and two explicit Activity foreground intents",
+        "puzzleWaitMs": 1800,
+        "persistedDeltaMs": 2305
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 965718,
+        "label": "Nova. Guiding star. Used",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          66,
+          2077,
+          276,
+          2274
+        ]
+      },
+      {
+        "reason": "battle_skill_close_bottom",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 967652,
+        "label": "Return to puzzle",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_close_bottom",
+        "bounds": [
+          66,
+          1999,
+          1013,
+          2143
+        ]
+      },
+      {
+        "reason": "play_pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 968185,
+        "label": "Pause",
+        "resourceId": "com.androidhit.lumadrift:id/play_pause",
+        "bounds": [
+          55,
+          177,
+          188,
+          310
+        ]
+      },
+      {
+        "reason": "Leave level|Quitter le niveau",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 968756,
+        "label": "Leave level",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      }
+    ],
+    "captures": [
+      "en-c-to-d-u2-retained",
+      "en-nova-guide-actual-activation",
+      "en-nova-once-per-attempt-used"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 51.39,
+  "evidence_sha256": {
+    "authorized-update.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "battle-observer.apk": "37c53ebfc11a400e6e96ccc633619c1826e6ce0d5b9c2afe2d3eda30563cbaa2",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "ced8bcf8a1f4db49f593baa80b901af1b63e715cad34fc9e5c290fa6ada9614b",
+    "instrumentation.txt": "b35f62be4e48619b13f3a6cfb0807c5897bb8ae1d66bf28f58750af93440db48",
+    "native/after.json": "8118c5f07ee46c5324cbb64ae055055c45edae8dcd6bdcc7a6aaea575e1af3a2",
+    "native/before.json": "89c0560dd272b136fe1c6b3ecafa468e1f16d3bf68e3e72866c1d328ced470f1",
+    "native/c-to-d-fresh-upgrade-final.json": "8118c5f07ee46c5324cbb64ae055055c45edae8dcd6bdcc7a6aaea575e1af3a2",
+    "native/en-c-to-d-u2-retained-accessibility.json": "b9d519c2dc15b27ff85157547be7d3be8ae01c82a95fb6c949e165921960015f",
+    "native/en-c-to-d-u2-retained.png": "bbf9caf6aaaf6e6c7c70810a13b718b73d615888f337a7860e92d9a5c4f0ec50",
+    "native/en-nova-guide-actual-activation-accessibility.json": "792d2065c2564e5eb1d94d8005aed090c97de572b550261579074a71953d0762",
+    "native/en-nova-guide-actual-activation.png": "38c900c0a650853869bf4b2a8eac0bc48d69d6b02f6d905c87f7ae1f10735fef",
+    "native/en-nova-once-per-attempt-used-accessibility.json": "538035ea4f19a2226bb4fa23ab85ed0b467ef398f8d15474cc0fa60c0ef989c4",
+    "native/en-nova-once-per-attempt-used.png": "dfdd4e0d447502997d8df89f9ca25c6e414610821d1e4ec81bd063cb56df23cb",
+    "native/report.json": "c394ffa5fb56163332af12da952ed292984776dd9528786d5e79168abe571015",
+    "native/requested-steps.json": "81f8d50b3677815057c627dc0194e1d18b93b9efe6c79dbed678b01a1207559f",
+    "observer-install.txt": "1693ec3940e2b9d97346be0c7244e7884f71ec405cd93b187b30135f6bf2fbc1",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "8fed54f26842e41c70e14f248b683b1fa956cea6673a6fc290545854a8233d00",
+    "source-snapshot.json": "37d8ad9e4d88a1424415980c0911d96c27cb44a1b39da5f11e2169cff051ea32"
+  }
+}

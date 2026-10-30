@@ -1,0 +1,42 @@
+✔ bundled snapshot is exactly the displayed JSON and matches run provenance (16.334167ms)
+✔ actual HTML initializes four French conditions and exact scope, with no human claim (1.84175ms)
+✔ English updates text, scope labels, links and condition labels (2.740084ms)
+✖ English homepage link opens English directly and both home links retain chosen language (1.95525ms)
+✔ every condition switch refreshes U27/U43/U48, resources, manual and automated counters (8.020666ms)
+✔ rapid language and condition changes stay synchronous and retain all four conditions (88.338375ms)
+✔ the single cold reference and four trained probe rows keep actual denominators (3.181333ms)
+✔ invalid or absent snapshot fails closed and remains bilingual (2.061208ms)
+✔ partial numeric data or missing probe rows fail closed instead of showing mixed results (1.544125ms)
+✔ invalid condition events cannot change the selected condition or counters (2.628125ms)
+✔ report has no async data fetch, import, oracle execution or archived dataset switch (0.20525ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 10
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 185.211625
+
+✖ failing tests:
+
+test at scripts/test-cognitive-report-v123.mjs:80:1
+✖ English homepage link opens English directly and both home links retain chosen language (1.95525ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'fr' !== 'en'
+  
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-cognitive-report-v123.mjs:82:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'fr',
+    expected: 'en',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

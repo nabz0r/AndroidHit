@@ -1106,6 +1106,27 @@ public final class GameStore {
             LocalSaveTransactions.write(prefs,write);return true;
         }
     }
+    /**
+     * Apply one complete wardrobe draft after explicit confirmation. Validation
+     * finishes before the single write; invalid, partial or unowned selections
+     * leave the durable look untouched. This changes no ownership or gameplay.
+     */
+    public synchronized boolean applyCosmeticLook123(Map<CosmeticCatalog.Slot,String> selections, boolean original) {
+        if(selections==null)return false;
+        Map<CosmeticCatalog.Slot,String> draft=new HashMap<>(selections);
+        if(draft.size()!=CosmeticCatalog.Slot.values().length||draft.containsKey(null))return false;
+        synchronized(GOLD_GRANT_LOCK) {
+            LocalSaveTransactions.flush(prefs);
+            Map<String,Object> write=new HashMap<>();
+            for(CosmeticCatalog.Slot slot:CosmeticCatalog.Slot.values()) {
+                String id=draft.get(slot);CosmeticCatalog.Item item=CosmeticCatalog.find(id);
+                if(item==null||item.slot!=slot||!ownsCosmetic(id))return false;
+                write.put("cosmetic_slot_v17_"+slot.name(),id);
+            }
+            write.put(ORIGINAL_COMPANION_COSTUME_KEY,original);
+            LocalSaveTransactions.write(prefs,write);return true;
+        }
+    }
     public synchronized String equippedCosmetic(CosmeticCatalog.Slot slot) {
         LocalSaveTransactions.flush(prefs);if(slot==null)return "";
         String id=prefs.getString("cosmetic_slot_v17_"+slot.name(),CosmeticCatalog.starter(slot).id);

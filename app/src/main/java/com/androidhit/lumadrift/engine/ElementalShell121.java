@@ -39,6 +39,19 @@ public final class ElementalShell121 {
         return value;
     }
 
+    /**
+     * New 1.23 Journey attempts start without preparation taps. The historical
+     * factory and ES121 decoder stay intact for saved runs and reproducible
+     * experiments; expedition and other modes retain their existing contract.
+     */
+    public static ElementalShell121 createJourney123(Level level, int mode, int index) {
+        if (level != null && mode == 0 && level.progressionVersion == 6) {
+            if (index != level.number) throw new IllegalArgumentException("U index must match the level");
+            return empty(level);
+        }
+        return create(level, mode, index);
+    }
+
     /** Used for historical saved attempts and a caller's rejected-code fallback. */
     public static ElementalShell121 empty(Level level) {
         return new ElementalShell121(level);

@@ -1,0 +1,105 @@
+[
+  {
+    "op": "firstlight"
+  },
+  {
+    "op": "assert-starter"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "assert-shells",
+    "count": 0,
+    "layers": 0
+  },
+  {
+    "op": "capture",
+    "name": "fr-fresh-first-puzzle"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "fr-fresh-nova-sheet"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 2200
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "capture",
+    "name": "fr-fresh-first-victory"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "open-level",
+    "level": 2
+  },
+  {
+    "op": "capture",
+    "name": "en-fresh-second-puzzle"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "en-fresh-nova-sheet"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "capture",
+    "name": "en-fresh-context-wardrobe"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_item_hat_dew"
+  },
+  {
+    "op": "capture",
+    "name": "en-fresh-owned-outfit-trial"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Leave level|Quitter le niveau"
+  },
+  {
+    "op": "snapshot",
+    "name": "fresh-d-fr-en-final"
+  }
+]

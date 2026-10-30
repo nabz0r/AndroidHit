@@ -46,6 +46,9 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig118.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/CompanionSheetLayout123.java
+            /scripts/ClarityLayout123Test.java
+            /scripts/test-clarity-layout-v123.sh
             /app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/Adventure119Layout.java
@@ -83,6 +86,9 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorldScene122.java
             /app/src/main/java/com/androidhit/lumadrift/ui/JourneyMapScene.java
             /scripts/JourneyWorld122Test.java
+            /scripts/test-journey-clarity-v123.sh
+            /scripts/JourneyClarityV123Test.java
+            /scripts/WardrobeLookV123Test.java
             /scripts/test-journey-world-v122.sh
             /scripts/TacticalChapterV122Test.java
             /scripts/test-tactical-chapter-v122.sh
@@ -121,8 +127,14 @@ jobs:
             /scripts/test-site-v119.mjs
             /scripts/test-site-v120-runtime.mjs
             /scripts/test-site-v121-runtime.mjs
-            /scripts/test-site-v122-runtime.mjs
-            /scripts/check-site-v122.py
+            /scripts/test-site-v123-runtime.mjs
+            /scripts/check-site-v123.py
+            /scripts/deploy-site-v123.py
+            /scripts/stage-site-v123-rest.py
+            /scripts/collect-site-v123-public-bytes.py
+            /scripts/test-deploy-site-v123.py
+            /scripts/test-stage-site-v123-rest.py
+            /scripts/test-collect-site-v123-public-bytes.py
             /scripts/deploy-site-v122.py
             /scripts/deploy-cognitive-overlay.py
             /scripts/test-deploy-site-v122.py
@@ -139,6 +151,8 @@ jobs:
             /scripts/test-apk-byte-delta.py
             /public/assets/site.js
             /public/index.html
+            /public/assets/site-v123.js
+            /public/assets/site-v123.css
             /public/assets/site-v122.js
             /public/assets/site-v122.css
             /public/lab/ui-1-22/index.html
@@ -296,14 +310,17 @@ jobs:
         # browser, Firebase deployment or native gameplay claim is involved.
         run: node --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
 
-      - name: Check 1.22 homepage structure and local demo syntax
+      - name: Check 1.23 homepage structure and preserved map demo syntax
         # Bounded structure-only check accepts the pending or final page without
         # APKs, native captures, provider access or a deployment claim.
         run: |
-          python3 scripts/check-site-v122.py --structure-only
-          node --check public/assets/site-v122.js
+          python3 scripts/check-site-v123.py --structure-only
+          node --check public/assets/site-v123.js
           node --check public/lab/ui-1-22/simulation.mjs
-          node --test scripts/test-site-v122-runtime.mjs
+          node --test scripts/test-site-v123-runtime.mjs
+          python3 scripts/test-deploy-site-v123.py
+          python3 scripts/test-stage-site-v123-rest.py
+          python3 scripts/test-collect-site-v123-public-bytes.py
           python3 scripts/test-deploy-site-v122.py
           python3 scripts/test-stage-site-v122-rest.py
           python3 scripts/test-collect-site-v122-public-bytes.py
@@ -351,6 +368,11 @@ jobs:
           bash scripts/test-economy-curve-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/economy-curve-v121.json"
           bash scripts/test-session-energy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/session-energy-v121.json"
           bash scripts/simulate-summon-economy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/summon-economy-v121"
+
+      - name: Check 1.23 new Journey, preserved saves and atomic outfit application
+        run: |
+          bash scripts/test-journey-clarity-v123.sh "$RUNNER_TEMP/luma-puzzle-contracts/clarity123"
+          bash scripts/test-clarity-layout-v123.sh
 
       - name: Check 1.22 map navigation and durable tactical chapters
         # Pure Java contracts; Android UI recordings remain separate evidence.
