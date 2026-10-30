@@ -2,7 +2,11 @@
 
 Owner authorized full implementation and delivery on 30 October 2026: native keys/locks and causal feedback; a moving companion, independent 2D camera and minimap; targeted anticipation at U43/U48; a separately persisted 12-layout tactical chapter with a loan team and shared talent reserve; actual-mechanic cognitive comparisons; signed production/Lab packages, native qualification, documentation, Git main and the existing Firebase site.
 
-Status: final production C and Lab C pass their native scopes; exact canonical signed APKs are collected. The corrected lab rerun retains all behavioral results. Git main and existing Firebase publication are being closed separately. Historical 1.21 bytes, saves, probability and provider gates are retained. See [design study](docs/research/cognitive-design-2026/ANALYSE_ET_DIRECTION_FR.md).
+Final production C and Lab C pass their recorded native scopes; both exact signed APKs are collected. The corrected synthetic lab retains all behavioral results. Historical 1.21 bytes, saves, probabilities and provider gates remain preserved. See the [qualification register](docs/validation/v1.22/README.md) and [design study](docs/research/cognitive-design-2026/ANALYSE_ET_DIRECTION_FR.md).
+
+Source is published on main: [C1 application, lab and artifact metadata](https://github.com/nabz0r/AndroidHit/commit/716bf73066892d034510db80630cd1f227738372), then [C2 website](https://github.com/nabz0r/AndroidHit/commit/13ebe82be9b57569df50627449cc748f5245521c). The website binds the exact C packages and eight original FR/EN native captures; local source, interaction and browser checks have their own evidence.
+
+C2 is released on the existing Firebase site as version `990135f689f144c0`. Its [public byte receipt](docs/validation/site-v1.22/public-origin-c2.json) verifies all 35 new/changed bodies, including both complete APKs. Actual public browser review then found an [archive/current lab selection race](docs/validation/site-v1.22/browser-public/lab/archive-race-c2-failure.json). Final website closeout remains open for the C3 correction, its source/CI/Hosting receipts and public retest; C2 lab UI completion is not claimed. Technical and synthetic checks do not establish human enjoyment, retention, physical-phone performance or Play approval.
 
 ---
 

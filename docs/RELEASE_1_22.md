@@ -5,6 +5,24 @@ Qualification and publication status are recorded in the
 [delivery register](validation/v1.22/README.md). A successful build alone is not
 release acceptance.
 
+The exact application/lab source and artifact metadata are published as
+[C1](https://github.com/nabz0r/AndroidHit/commit/716bf73066892d034510db80630cd1f227738372);
+the prepared website is published as
+[C2](https://github.com/nabz0r/AndroidHit/commit/13ebe82be9b57569df50627449cc748f5245521c).
+C2 is released on the existing Firebase site, with both complete public APK
+hashes verified. Public browser review found an archive/current lab selection
+race; its C3 correction and final source/CI/Hosting/public retest remain open.
+This does not change the qualified Android packages or experiment data.
+
+| Signed Android variant | Version / code | SHA-256 |
+| --- | --- | --- |
+| Production | `1.22.0-rc1` / 30 | `9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e` |
+| Lab | `1.22.0-sandbox-rc1` / 30 | `882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8` |
+
+The [artifact manifest](../releases/manifest-1.22.0-rc1.json) records sizes,
+package identities and ignored physical delivery paths. Source publication does
+not imply that an APK was stored as a Git blob or downloaded from the public site.
+
 ## Native changes
 
 The Journey/Remix map uses an independent two-dimensional camera and a minimap.
@@ -57,12 +75,26 @@ binds all 51 recorded source hashes to the current candidate C sources. Fifty
 files supply executable/model inputs; `LumaView.java` is retained as UI context
 and is not compiled as a lab driver.
 
+Final C production passes 417 retained-profile assertions / 96 actual gestures /
+31 original PNGs and a separate 51 first-install assertions / 19 gestures /
+12 PNGs. Lab C passes 33 assertions / 4 gestures / 2 PNGs, with all seven
+production preference maps unchanged. Candidate B's complete chapter executions
+remain separately labeled B evidence; C cold reopening does not grant another
+reward. See the [accepted-phase manifest](validation/v1.22/native/retained-production-accepted.json).
+
 The [prepared website manifest](validation/site-v1.22/release/source-manifest.json)
 binds artifact commit `716bf73066892d034510db80630cd1f227738372` to the exact tested Android bytes and eight original FR/EN captures,
 with the archive, gallery, account/privacy routes and deliberate audio controls
 preserved. Its schematic browser demo has fictional levels and locks; it is not
-the Android game or player progress. Hosting publication is pending; local source
-checks and browser review do not establish public response bytes or rendering.
+the Android game or player progress. C2 Hosting version `990135f689f144c0` is
+released; the [original public receipt](validation/site-v1.22/public-origin-c2.json)
+verifies all 35 new/changed bodies / 803,549,445 bytes, including both full APKs.
+It does not re-observe historical responses or establish browser rendering.
+
+The actual [public lab race failure](validation/site-v1.22/browser-public/lab/archive-race-c2-failure.json)
+and [pre-fix browser report](validation/site-v1.22/browser-public/lab/report-before-fix.json)
+remain preserved. Final C3 correction and public browser acceptance are pending;
+C2 is not presented as complete lab UI acceptance.
 
 Prepared source passes [1,248 offline checks](validation/site-v1.22/source-qa-prepared.json)
 and [87 JavaScript interaction tests](validation/site-v1.22/runtime-tests-prepared.json).

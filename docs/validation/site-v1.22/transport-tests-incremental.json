@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "networkRequested": false,
+  "scope": "Offline fake-provider, sparse Git and tiny ZIP fixtures. REST overlay tests do not bypass the main CLI physical APK gate.",
+  "suites": [
+    {
+      "script": "scripts/test-deploy-site-v122.py",
+      "exitCode": 0,
+      "output": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.309s\n\nOK\n"
+    },
+    {
+      "script": "scripts/test-collect-site-v122-public-bytes.py",
+      "exitCode": 0,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.081s\n\nOK\n"
+    },
+    {
+      "script": "scripts/test-stage-site-v122-rest.py",
+      "exitCode": 0,
+      "output": "........\n----------------------------------------------------------------------\nRan 8 tests in 4.207s\n\nOK\n"
+    },
+    {
+      "script": "scripts/test-apk-byte-delta.py",
+      "exitCode": 0,
+      "output": "test_bad_copy_hash_keeps_existing_output (__main__.ExactApkDeltaTest) ... ok\ntest_bad_literal_hash_keeps_existing_output (__main__.ExactApkDeltaTest) ... ok\ntest_build_is_deterministic (__main__.ExactApkDeltaTest) ... ok\ntest_compressed_file_bound_is_enforced (__main__.ExactApkDeltaTest) ... ok\ntest_copy_outside_base_refuses (__main__.ExactApkDeltaTest) ... ok\ntest_corrupt_base64_refuses (__main__.ExactApkDeltaTest) ... ok\ntest_duplicate_json_keys_refuse (__main__.ExactApkDeltaTest) ... ok\ntest_existing_output_requires_explicit_replace (__main__.ExactApkDeltaTest) ... ok\ntest_expanded_gzip_bound_is_enforced (__main__.ExactApkDeltaTest) ... ok\ntest_false_statistics_refuse (__main__.ExactApkDeltaTest) ... ok\ntest_full_target_hash_checked_after_individually_valid_operations (__main__.ExactApkDeltaTest) ... ok\ntest_hash_equality_alone_cannot_authorize_copy (__main__.ExactApkDeltaTest) ... ok\ntest_input_alias_and_symlink_outputs_refuse (__main__.ExactApkDeltaTest) ... ok\ntest_report_cannot_clobber_an_artifact (__main__.ExactApkDeltaTest) ... ok\ntest_round_trip_preserves_full_bytes_offsets_headers_and_tail (__main__.ExactApkDeltaTest) ... ok\ntest_wrong_base_refuses_before_publication (__main__.ExactApkDeltaTest) ... ok\ntest_wrong_external_target_hash_refuses (__main__.ExactApkDeltaTest) ... ok\ntest_wrong_patch_hash_refuses (__main__.ExactApkDeltaTest) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.157s\n\nOK\n"
+    }
+  ]
+}

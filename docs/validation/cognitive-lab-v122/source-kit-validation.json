@@ -1,22 +1,23 @@
 {
   "schemaVersion": 1,
   "passed": true,
-  "standaloneExtractedKitSmokeTrajectories": 84,
-  "scenarioIdentifiersAreJSONList": [
-    "control_v121",
-    "cause_immediate",
-    "cause_repeat",
-    "cause_fading",
-    "team_information",
-    "team_execution",
-    "v122_combined"
-  ],
-  "sourceArchiveHasContextLumaView": true,
+  "validationKind": "UI async-version-switch patch only; ZIP integrity and extracted Node execution",
+  "zipSha256": "ee113bde73e48981f984cd49b94857c2c0bb95f4ee2ffd6b6f8d32d1b14aa1cf",
+  "zipBytes": 32357332,
   "all51ArchivedSourceHashesMatch": true,
-  "current15TestDashboardSourceIncluded": true,
-  "zipSha256": "30bbade218b9f0588040c8bc6806ed47b3a48150b072fe7a2c94527060f578cb",
-  "zipBytes": 32355703,
-  "humanParticipants": 0,
-  "scope": "SDK-free extracted source kit actually compiles/runs smoke; no native rendering, human measurement or hosting claim.",
-  "temporaryExtractionRemoved": true
+  "all24PublicDatasetSnapshotAnd121ArchiveFilesUnchanged": true,
+  "current21TestDashboardSourceIncluded": true,
+  "extractedNodeTests": 21,
+  "extractedNodePassed": 20,
+  "extractedNodeOptionalHistoricalDocsFixtureSkipped": 1,
+  "javaRerunPerformed": false,
+  "previousJavaSmoke": {
+    "trajectories": 84,
+    "archiveSha256": "30bbade218b9f0588040c8bc6806ed47b3a48150b072fe7a2c94527060f578cb",
+    "all51RecordedSourcesUnchanged": true,
+    "receipt": "async-version-switch-fix/source-kit-before-fix.json"
+  },
+  "detailReceipt": "async-version-switch-fix/validation.json",
+  "temporaryExtractionRemoved": true,
+  "humanParticipants": 0
 }

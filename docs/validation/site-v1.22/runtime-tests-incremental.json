@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "tests": 87,
+  "command": [
+    "node",
+    "--test",
+    "scripts/test-site-v122-runtime.mjs",
+    "scripts/test-site-v121-runtime.mjs",
+    "scripts/test-simulation-v121.mjs",
+    "scripts/test-site-v120-runtime.mjs",
+    "scripts/test-site-v119.mjs",
+    "scripts/test-site-v118.mjs",
+    "scripts/test-site-v117.mjs",
+    "scripts/test-site-v116.mjs"
+  ],
+  "log": "docs/validation/site-v1.22/runtime-tests-incremental.txt",
+  "networkRequested": false,
+  "scope": "Actual unchanged homepage/demo plus historical fixtures after the three-file lab correction; no public observation."
+}

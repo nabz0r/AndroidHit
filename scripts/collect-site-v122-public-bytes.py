@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect the 35 new/changed 1.22 public response identities, only with --fetch.
+"""Collect 1.22 public response identities, only with --fetch.
 
 One fixed HTTPS origin, no credentials, proxy, redirects, retries or fallback.
 Bodies stream through SHA-256 without being saved. A refusal stops the entire
@@ -23,6 +23,9 @@ ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://luma-drift-production.web.app'
 SOURCE = 'docs/validation/site-v1.22/release/source-manifest.json'
 BASELINE = 'docs/validation/cognitive-lab/site-manifest.json'
+PREVIOUS122 = '13ebe82be9b57569df50627449cc748f5245521c'
+INCREMENTAL_ALLOWED = frozenset(('/lab/cognitive/lab.js', '/lab/cognitive/index.html',
+                                '/lab/cognitive/cognitive-lab-v122-local.zip'))
 CHUNK = 1024 * 1024
 MIMES = {'.html': {'text/html'}, '.css': {'text/css'},
          '.js': {'text/javascript', 'application/javascript'},
@@ -59,6 +62,15 @@ def bounded_path(name):
             and not name.startswith('//'), 'Unbounded or noncanonical response path')
 
 
+def validate_entries(selected):
+    for name, value in selected.items():
+        bounded_path(name)
+        require(set(value) == {'sha256', 'bytes'} and re.fullmatch(r'[a-f0-9]{64}', value['sha256'])
+                and type(value['bytes']) is int and 0 < value['bytes'] <= 1024 ** 3,
+                'Invalid pinned response identity: ' + name)
+        require(Path(name).suffix in MIMES, 'Unqualified content type: ' + name)
+
+
 def select(source, baseline):
     require(source.get('status') == 'PASS' and source.get('edition') == '1.22'
             and source.get('native_capture_provenance_verified') and source.get('package_identity_verified'),
@@ -67,16 +79,30 @@ def select(source, baseline):
     require(len(before) == 539 and set(before) <= set(current), 'Historical physical baseline differs')
     selected = {name: value for name, value in sorted(current.items()) if before.get(name) != value}
     require(len(selected) == 35, 'Expected exactly 31 new and four changed physical paths')
-    for name, value in selected.items():
-        bounded_path(name)
-        require(set(value) == {'sha256', 'bytes'} and re.fullmatch(r'[a-f0-9]{64}', value['sha256'])
-                and type(value['bytes']) is int and 0 < value['bytes'] <= 1024 ** 3,
-                'Invalid pinned response identity: ' + name)
-        require(Path(name).suffix in MIMES, 'Unqualified content type: ' + name)
+    validate_entries(selected)
     for name in ('/releases/luma-drift-1.22.0-rc1.apk', '/releases/luma-drift-1.22.0-sandbox-rc1.apk',
                  '/lab/cognitive/cognitive-lab-v122-local.zip'):
         require(name in selected, 'Missing full release payload: ' + name)
     require(sum(name.endswith('.csv.gz') for name in selected) == 6, 'Six raw gzip datasets required')
+    return selected
+
+
+def select_incremental(source, previous):
+    require(source.get('status') == previous.get('status') == 'PASS'
+            and source.get('edition') == previous.get('edition') == '1.22'
+            and source.get('release') == previous.get('release') == '1.22.0-rc1',
+            'Accepted current and previous 1.22 source manifests required')
+    for key in ('artifact_source_commit', 'artifact_manifest', 'artifact_manifest_sha256',
+                'production_apk_sha256', 'lab_apk_sha256', 'firebase_config_sha256',
+                'screen_keys', 'screenshots', 'native_capture_provenance_verified', 'package_identity_verified'):
+        require(source[key] == previous[key], 'Incremental response baseline changed Android/native/config identity: ' + key)
+    before, current = previous['files'], source['files']
+    require(len(before) == 570 and set(before) == set(current),
+            'Incremental baseline must retain exactly570 physical paths without additions or deletions')
+    selected = {name: value for name, value in sorted(current.items()) if before[name] != value}
+    require(selected and set(selected) <= INCREMENTAL_ALLOWED,
+            'Unknown or empty incremental response subset')
+    validate_entries(selected)
     return selected
 
 
@@ -161,27 +187,39 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--commit', required=True)
     parser.add_argument('--output', required=True, type=Path)
+    parser.add_argument('--previous-source-commit', help='Collect only the intended differences against exact accepted C2')
     parser.add_argument('--fetch', action='store_true', help='Explicitly perform the one-origin GETs after deployment authorization')
     args = parser.parse_args()
-    require(re.fullmatch(r'[a-f0-9]{40}', args.commit), 'Exact C2 commit required')
+    require(re.fullmatch(r'[a-f0-9]{40}', args.commit), 'Exact source commit required')
+    require(args.previous_source_commit is None or args.previous_source_commit == PREVIOUS122,
+            'Only exact accepted C2 is an incremental response baseline')
     output = args.output.resolve()
     require(ROOT.resolve() != output and ROOT.resolve() not in output.parents and not output.exists(),
             'Use a new receipt path outside checkout')
     committed = subprocess.check_output(['git', 'show', args.commit + ':' + SOURCE], cwd=ROOT)
     source_path, baseline_path = ROOT / SOURCE, ROOT / BASELINE
-    require(hashlib.sha256(committed).hexdigest() == file_sha(source_path), 'Local manifest differs from exact C2 commit')
-    baseline_committed = subprocess.check_output(['git', 'show', args.commit + ':' + BASELINE], cwd=ROOT)
-    require(hashlib.sha256(baseline_committed).hexdigest() == file_sha(baseline_path), 'Local historical baseline differs from C2')
+    require(hashlib.sha256(committed).hexdigest() == file_sha(source_path), 'Local manifest differs from exact source commit')
     source = json.loads(committed)
-    selected = select(source, json.loads(baseline_committed))
+    if args.previous_source_commit:
+        baseline_committed = subprocess.check_output(['git', 'show', args.previous_source_commit + ':' + SOURCE], cwd=ROOT)
+        selected = select_incremental(source, json.loads(baseline_committed))
+        selection = 'Actualchangedpathsagainstexactprevious1.22sourcecommit'
+    else:
+        baseline_committed = subprocess.check_output(['git', 'show', args.commit + ':' + BASELINE], cwd=ROOT)
+        require(hashlib.sha256(baseline_committed).hexdigest() == file_sha(baseline_path), 'Local historical baseline differs from source commit')
+        selected = select(source, json.loads(baseline_committed))
+        selection = 'All31newand4changedphysicalpathsagainsthistorical539baseline'
     receipt = {'schema': 'luma-site122-public-response-v1', 'status': 'RUNNING' if args.fetch else 'PLANNED',
                'origin': ORIGIN, 'source_commit': args.commit, 'source_manifest_sha256': file_sha(source_path),
-               'baseline_manifest_sha256': file_sha(baseline_path), 'started_at_utc': utc(),
+               'baseline_manifest_sha256': hashlib.sha256(baseline_committed).hexdigest(),
+               'previous_source_commit': args.previous_source_commit,
+               'previous_source_manifest_sha256': hashlib.sha256(baseline_committed).hexdigest() if args.previous_source_commit else None,
+               'started_at_utc': utc(),
                'selected_paths': len(selected), 'expected_bytes': sum(row['bytes'] for row in selected.values()),
-               'selection': 'All31newand4changedphysicalpathsagainsthistorical539baseline',
+               'selection': selection,
                'expected_files': selected, 'files': {}, 'responses': {},
                'network_requested': args.fetch, 'credentials_used': False, 'redirects_followed': False,
-               'rendering_verified': False, 'scope': 'Only the 35 new/changed complete HTTP response bodies; historical paths and browser rendering are separate evidence.'}
+               'rendering_verified': False, 'scope': 'Only the selected new/changed complete HTTP response bodies; unchanged responses and browser rendering are separate evidence.'}
     output.parent.mkdir(parents=True, exist_ok=True)
     # Preserve the original incrementally updated JSON bytes at the caller's path;
     # no later transformation is needed by verify-site-v122-publication.py.

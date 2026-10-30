@@ -128,7 +128,7 @@ async function runUI(report, options = {}) {
   const document = {
     documentElement: new Element('html'), title: '',
     querySelector(selector) { if (!elements.has(selector)) elements.set(selector, new Element()); return elements.get(selector); },
-    querySelectorAll() { return []; },
+    querySelectorAll(selector) { if(selector==='[data-language]') return ['fr','en'].map(lang=>{const key='#language-'+lang;if(!elements.has(key)){const button=new Element('button');button.dataset.language=lang;elements.set(key,button);}return elements.get(key);});return []; },
     createElement: (tag) => new Element(tag),
     createTextNode: (value) => { const n = new Element('#text'); n.textContent = value; return n; },
   };
@@ -136,13 +136,14 @@ async function runUI(report, options = {}) {
   class LocalURL extends URL {}
   LocalURL.createObjectURL = () => 'blob:test-' + (++sequence);
   LocalURL.revokeObjectURL = () => {};
-  const window = { LumaCognitiveCore: core, COGNITIVE_LAB_SNAPSHOT: report,
+  const window = { LumaCognitiveCore: core, COGNITIVE_LAB_SNAPSHOT: options.snapshot121 === undefined ? report : options.snapshot121,
+    COGNITIVE_LAB_SNAPSHOT_V122: options.snapshot122 === undefined ? report : options.snapshot122,
     location: { href: options.url || 'https://example.test/lab/cognitive/' } };
   window.history = { replaceState: (_, __, href) => { window.location.href = href; } };
   const context = { window, document, navigator: { language: 'fr' },
     localStorage: { getItem: () => options.savedLanguage || 'fr', setItem: () => {} },
     URL: LocalURL, Blob, Intl, Map, Set,
-    fetch: async () => { throw new Error('offline'); } };
+    fetch: options.fetch || (async () => { throw new Error('offline'); }) };
   vm.runInNewContext(source, context, { timeout: 1500 });
   await new Promise((resolve) => setImmediate(resolve));
   return { elements, window, document };
@@ -263,4 +264,100 @@ test('scenario switch refreshes manual/automated and U43 counters control to exe
   assert.match(mechanics.textContent,/Sorties manuelles180/);
   assert.match(mechanics.textContent,/Sorties automatiques0/);
   assert.match(mechanics.textContent,/U43: 2 \/ 10/);
+});
+
+
+const currentIds=['control_v121','cause_immediate','cause_repeat','cause_fading','team_information','team_execution','v122_combined'];
+function versionReport(version) {
+  const report=fixture(),ids=version==='data-v122'?currentIds:['current_model','teaching_support','reward_muted'];
+  report.summary.scenarios=ids.map(id=>({...report.summary.scenarios[0],id,label:id,trajectories:3000}));
+  report.summary.totals.trajectories=ids.length*3000;
+  report.summary.scope={engineVersion:version==='data-v122'?'engine122':'engine121',humanParticipants:0};
+  report.summary.config.scenarios=ids;
+  report.summary.profileResults[0].scenario=ids[0];
+  report.traces.traces[0].scenario=ids[0];
+  report.pairedComparisons.comparisons[0].scenario=ids[1];
+  report.pairedComparisons.comparisons[0].baseline=ids[0];
+  return report;
+}
+function deferredReports() {
+  const calls=[];
+  const fetch=(url)=>new Promise((resolve,reject)=>calls.push({url,resolve,reject}));
+  function settle(batch,version,report,failed=false) {
+    const fields=['summary','profiles','pairedComparisons','traces'];
+    const group=calls.slice(batch*4,batch*4+4);assert.equal(group.length,4);
+    group.forEach((call,index)=>{assert.ok(call.url.startsWith(version+'/'));if(failed)call.reject(new Error('controlled transport failure'));else call.resolve({ok:true,json:async()=>report[fields[index]]});});
+  }
+  return {fetch,calls,settle};
+}
+const flushUI=()=>new Promise(resolve=>setImmediate(resolve));
+function selectVersion(ui,version) { const select=ui.elements.get('#report-version');select.value=version;select.events.change({target:select}); }
+function assertVersion(ui,version) {
+  const ids=version==='data-v122'?currentIds:['current_model','teaching_support','reward_muted'];
+  assert.deepEqual(Array.from(ui.elements.get('#scenario').children,option=>option.value),ids);
+  assert.equal(ui.elements.get('#report-version').value,version);
+  assert.match(ui.elements.get('#exact-scope').textContent,new RegExp(version==='data-v122'?'engine122':'engine121'));
+  assert.equal(ui.elements.get('#report').hidden,false);
+  assert.equal(ui.elements.get('#metrics').children[1].textContent.replace(/[^0-9]/g,''),version==='data-v122'?'21000':'9000');
+}
+
+test('published current/archive transitions load all7/all3 options in both directions', async()=>{
+  const current=versionReport('data-v122'),archive=versionReport('data'),network=deferredReports();
+  const ui=await runUI(current,{fetch:network.fetch,snapshot121:archive,snapshot122:current});
+  network.settle(0,'data-v122',current);await flushUI();assertVersion(ui,'data-v122');
+  selectVersion(ui,'data');network.settle(1,'data',archive);await flushUI();assertVersion(ui,'data');
+  selectVersion(ui,'data-v122');network.settle(2,'data-v122',current);await flushUI();assertVersion(ui,'data-v122');
+});
+
+test('newest version wins when older published requests resolve last, including a language change', async()=>{
+  for(const [older,newer]of[['data','data-v122'],['data-v122','data']]){
+    const current=versionReport('data-v122'),archive=versionReport('data'),reports={'data-v122':current,data:archive},network=deferredReports();
+    const ui=await runUI(current,{fetch:network.fetch,snapshot121:archive,snapshot122:current});
+    network.settle(0,'data-v122',current);await flushUI();assertVersion(ui,'data-v122');
+    selectVersion(ui,older);selectVersion(ui,newer);
+    ui.elements.get('#language-en').events.click();
+    assert.equal(ui.elements.get('#report').hidden,true);assert.match(ui.elements.get('#load-status').textContent,/Loading/);
+    network.settle(2,newer,reports[newer]);await flushUI();assertVersion(ui,newer);
+    network.settle(1,older,reports[older]);await flushUI();assertVersion(ui,newer);
+  }
+});
+
+test('stale failed request cannot activate its fallback or error over the latest selected report', async()=>{
+  for(const [snapshot121,snapshot122] of [[versionReport('data'),versionReport('data-v122')],[versionReport('data'),null],[null,null]]){
+    const current=versionReport('data-v122'),network=deferredReports();
+    const ui=await runUI(current,{fetch:network.fetch,snapshot121,snapshot122});
+    network.settle(0,'data-v122',current);await flushUI();selectVersion(ui,'data');selectVersion(ui,'data-v122');
+    network.settle(2,'data-v122',current);await flushUI();
+    const scenario=ui.elements.get('#scenario');scenario.value='team_execution';scenario.events.change({target:scenario});
+    network.settle(1,'data',null,true);await flushUI();
+    assertVersion(ui,'data-v122');assert.equal(ui.elements.get('#load-error').hidden,true);assert.equal(scenario.value,'team_execution');
+  }
+});
+
+test('a missing current snapshot never silently substitutes archive data and loading stays honest across languages', async()=>{
+  const archive=versionReport('data'),network=deferredReports();
+  const ui=await runUI(archive,{fetch:network.fetch,snapshot121:archive,snapshot122:null});
+  ui.elements.get('#language-en').events.click();
+  assert.match(ui.elements.get('#load-status').textContent,/Loading|Chargement/);
+  network.settle(0,'data-v122',null,true);await flushUI();
+  assert.equal(ui.elements.get('#report').hidden,true);assert.equal(ui.elements.get('#load-error').hidden,false);
+  assert.doesNotMatch(ui.elements.get('#load-status').textContent,/Report loaded|Rapport chargé/);
+});
+
+test('local import cancels an older published load instead of being overwritten by it', async()=>{
+  const current=versionReport('data-v122'),archive=versionReport('data'),network=deferredReports();
+  const ui=await runUI(current,{fetch:network.fetch,snapshot121:archive,snapshot122:current});
+  network.settle(0,'data-v122',current);await flushUI();selectVersion(ui,'data');
+  const local=versionReport('data-v122');local.summary.config.seed=765432;const raw=JSON.stringify(local);
+  await ui.elements.get('#import-file').events.change({target:{files:[{size:raw.length,text:async()=>raw}],value:'report.json'}});
+  network.settle(1,'data',archive);await flushUI();assert.match(ui.elements.get('#exact-scope').textContent,/765432/);
+});
+
+
+test('failed requests use only the snapshot matching their captured version in both directions', async()=>{
+  const current=versionReport('data-v122'),archive=versionReport('data'),network=deferredReports();
+  const ui=await runUI(current,{fetch:network.fetch,snapshot121:archive,snapshot122:current});
+  network.settle(0,'data-v122',null,true);await flushUI();assertVersion(ui,'data-v122');
+  selectVersion(ui,'data');network.settle(1,'data',null,true);await flushUI();assertVersion(ui,'data');
+  selectVersion(ui,'data-v122');network.settle(2,'data-v122',null,true);await flushUI();assertVersion(ui,'data-v122');
 });

@@ -1,0 +1,29 @@
+✔ full engine report aliases normalize without altering payloads (0.871917ms)
+✔ summary-only imports keep absent sections empty, with no previous-run mixing (0.370166ms)
+✔ invalid schema, non-finite rates, duplicate and unknown identities are rejected (0.815416ms)
+✔ deterministic chart bounds cannot leak invalid geometry (0.088875ms)
+✔ duration formatting preserves nonzero overruns in seconds and actual zero (12.867583ms)
+✔ CSV keeps quotes, commas and Unicode; spreadsheet formulas are inert (0.245459ms)
+✔ small nonzero overruns remain visible in the rendered report (9.53225ms)
+✔ explicit language query overrides saved language and preserves URL state (4.335541ms)
+✔ real render keeps hostile imported strings as text and never HTML (1.972ms)
+✔ retry traces remain separate samples and never merge their decisions (1.871792ms)
+﹣ complete published engine data passes the same importer contract when present (0.168125ms) # Full report is not generated in this checkout.
+✔ 1.22 mechanics render separate manual exits, cues, censures and exact spike denominators (2.949084ms)
+✔ 1.22 chapter and cue-free transfer remain separate from campaign returns (2.029ms)
+✔ local import removes published ZIP provenance in both languages and keeps actual local exports (5.89625ms)
+✔ scenario switch refreshes manual/automated and U43 counters control to execution and back (3.768791ms)
+✔ published current/archive transitions load all7/all3 options in both directions (4.1895ms)
+✔ newest version wins when older published requests resolve last, including a language change (9.451875ms)
+✔ stale failed request cannot activate its fallback or error over the latest selected report (10.152667ms)
+✔ a missing current snapshot never silently substitutes archive data and loading stays honest across languages (0.8065ms)
+✔ local import cancels an older published load instead of being overwritten by it (3.333916ms)
+✔ failed requests use only the snapshot matching their captured version in both directions (3.786167ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 133.273542

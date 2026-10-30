@@ -128,6 +128,11 @@ jobs:
             /scripts/test-deploy-site-v122.py
             /scripts/stage-site-v122-rest.py
             /scripts/test-stage-site-v122-rest.py
+            /scripts/collect-site-v122-public-bytes.py
+            /scripts/test-collect-site-v122-public-bytes.py
+            /scripts/verify-site-v122-publication.py
+            /docs/validation/site-v1.22/release/source-manifest.json
+            /docs/validation/cognitive-lab/site-manifest.json
             /scripts/test-deploy-cognitive-overlay.py
             /scripts/test-simulation-v121.mjs
             /scripts/apk-byte-delta.py
@@ -301,6 +306,7 @@ jobs:
           node --test scripts/test-site-v122-runtime.mjs
           python3 scripts/test-deploy-site-v122.py
           python3 scripts/test-stage-site-v122-rest.py
+          python3 scripts/test-collect-site-v122-public-bytes.py
 
       - name: Check exact APK delta transport and refused artifact replacement
         # Small generated ZIP fixtures only; no APK download or SDK is needed.

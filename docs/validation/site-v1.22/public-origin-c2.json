@@ -1,0 +1,900 @@
+{
+  "schema": "luma-site122-public-response-v1",
+  "status": "PASS",
+  "origin": "https://luma-drift-production.web.app",
+  "source_commit": "13ebe82be9b57569df50627449cc748f5245521c",
+  "source_manifest_sha256": "414444c62f2ce925d9e53974ca44d72866e4f81ee36047421f11158a77ae5ff5",
+  "baseline_manifest_sha256": "8fe188d73028a4e6849e3a3ed93f3d5ba170d78e0e79be25cb220045f1bfbc08",
+  "started_at_utc": "2026-10-30T14:59:45.709908+00:00",
+  "selected_paths": 35,
+  "expected_bytes": 803549445,
+  "selection": "All31newand4changedphysicalpathsagainsthistorical539baseline",
+  "expected_files": {
+    "/assets/screenshots/v1.22/home-en.png": {
+      "bytes": 868016,
+      "sha256": "4910c5566424ec071585483fb4ef5450de7ea1a49a010bd515412ac63819675a"
+    },
+    "/assets/screenshots/v1.22/home-fr.png": {
+      "bytes": 867169,
+      "sha256": "e7ac76fbe585d0e2f442732e1bef14f14b7bde08f617d86a89b8a556c9078ad2"
+    },
+    "/assets/screenshots/v1.22/keys-en.png": {
+      "bytes": 354141,
+      "sha256": "e92feb78e1124d4fb8bf2c619de6a6142ad586130283c14e8a48d7cc8ce2f8ce"
+    },
+    "/assets/screenshots/v1.22/keys-fr.png": {
+      "bytes": 353600,
+      "sha256": "3f57dce5c3226883edf5c787d83f241d9f3c6230b9ca5a2c37feb7a6ee874857"
+    },
+    "/assets/screenshots/v1.22/map-en.png": {
+      "bytes": 392281,
+      "sha256": "c3a9dea4d1fe1cfad7f21bd84033dad74cf654b6f35425d34667d8c2861bf900"
+    },
+    "/assets/screenshots/v1.22/map-fr.png": {
+      "bytes": 393594,
+      "sha256": "e497158f4a70483adbc4435528af22d7442332f373048c7c6089b5c7deb1e5ad"
+    },
+    "/assets/screenshots/v1.22/tactical-en.png": {
+      "bytes": 256456,
+      "sha256": "a01f76c32a7d97bac1aafa72f6b9b89314b89730acfd497f7e054f2eb6028a7b"
+    },
+    "/assets/screenshots/v1.22/tactical-fr.png": {
+      "bytes": 259537,
+      "sha256": "c3a9eed496990132386698e402b6300eff0c57e242c935f1a8d2d9fcc0d613d7"
+    },
+    "/assets/site-v122.css": {
+      "bytes": 5562,
+      "sha256": "5b538f1017e568b53c1939376a670528b80468ee923baea32f1778d01cbcee5c"
+    },
+    "/assets/site-v122.js": {
+      "bytes": 4290,
+      "sha256": "5b664cfd7615c887cf63e46b2453e742d8fa70596ccceffbe7f65b594d3af0f9"
+    },
+    "/index.html": {
+      "bytes": 39175,
+      "sha256": "0e1d00b81aa1716f910c1244731bb04efa40079d5777e660f453ae151a82b5ca"
+    },
+    "/lab/cognitive/cognitive-lab-v122-local.zip": {
+      "bytes": 32355703,
+      "sha256": "30bbade218b9f0588040c8bc6806ed47b3a48150b072fe7a2c94527060f578cb"
+    },
+    "/lab/cognitive/data-v122/blocked-events.csv.gz": {
+      "bytes": 2426131,
+      "sha256": "613c11457bb276ba9cbdf3a456079722ed713f52872100422133a0cf4c7635b0"
+    },
+    "/lab/cognitive/data-v122/chapter-results.csv.gz": {
+      "bytes": 1106864,
+      "sha256": "ee9db5b8b57ad6b9fb4605e261c710a4c46d1358c90ebe8d00dfd829eaf87aca"
+    },
+    "/lab/cognitive/data-v122/chapter-stage-results.csv.gz": {
+      "bytes": 1281782,
+      "sha256": "648c957cf6e22d27982a6999db8d9483a0e930840481c7bbfb108f817fbaa7b4"
+    },
+    "/lab/cognitive/data-v122/day-results.csv.gz": {
+      "bytes": 2124612,
+      "sha256": "345a6768673b501dfaad17e075f586c2d4e7c8d7940be3802bd3f8909b7820f1"
+    },
+    "/lab/cognitive/data-v122/level-results.csv.gz": {
+      "bytes": 16713561,
+      "sha256": "9e9fa9980a79a2dd524a0693f4c20b4b3d34c50433410a5d81f59b270a6dada4"
+    },
+    "/lab/cognitive/data-v122/paired-comparisons.json": {
+      "bytes": 19541,
+      "sha256": "c66fdf9ee4b90ba6b128a0ffbb292d696150854624eb89beca58c411b945fbe5"
+    },
+    "/lab/cognitive/data-v122/profiles.json": {
+      "bytes": 68501,
+      "sha256": "d18c0f87c8555933d34dbb3c887c04e8e23787ebc779cbb77ec1c113cf385816"
+    },
+    "/lab/cognitive/data-v122/provenance.json": {
+      "bytes": 8247,
+      "sha256": "3a04704901572723a9ef933b354d961df4d270e01486faa1018aa8f72e073e54"
+    },
+    "/lab/cognitive/data-v122/report.json": {
+      "bytes": 1355564,
+      "sha256": "3b7ae1109634a90cb9c80d29dcd03fd461ebf8293430e72007e6b0e14a46301a"
+    },
+    "/lab/cognitive/data-v122/summary.json": {
+      "bytes": 934126,
+      "sha256": "0e636109d3cca99a7f188a03860e497e9cffb00f83eaba718f9d0aa21aa6e94a"
+    },
+    "/lab/cognitive/data-v122/tactical-chapter.json": {
+      "bytes": 9022,
+      "sha256": "f10280967857567e61eff7a4575d484027ea86dddab438bc1d1105e89bcd8df0"
+    },
+    "/lab/cognitive/data-v122/traces.json": {
+      "bytes": 333326,
+      "sha256": "e3604579632ec7d6566c1b8762c54e316dec5fad4c4ed5b937ea4dbc9b99ccf4"
+    },
+    "/lab/cognitive/data-v122/trajectories.csv.gz": {
+      "bytes": 1569170,
+      "sha256": "47f91c93905a6b008609ce40289605cc689354cb38f88f190c7c35da351a0faa"
+    },
+    "/lab/cognitive/index.html": {
+      "bytes": 15301,
+      "sha256": "aac695275ac0c966330405797d1a56940d8e70fe8455b7b61b54bb0589a204c4"
+    },
+    "/lab/cognitive/lab.css": {
+      "bytes": 22936,
+      "sha256": "eab112a8cf1766730c1320af220398b66dd41f690b1bc4e43924038904b554f0"
+    },
+    "/lab/cognitive/lab.js": {
+      "bytes": 53103,
+      "sha256": "296a2ecb9194066f73fe57f17b1826e6538c19855c1230cc57bc68d2b9a99015"
+    },
+    "/lab/cognitive/snapshot-v122.js": {
+      "bytes": 1355627,
+      "sha256": "bfbe07094caa530f4603827f2a2f2e89c719ea3e0a0228a449ef25f0414dc4c5"
+    },
+    "/lab/ui-1-22/index.html": {
+      "bytes": 6898,
+      "sha256": "95b73f8b08e4877fc6e5ee64bead5d284b438dddce94d3c58fec451ec35bd992"
+    },
+    "/lab/ui-1-22/simulation.css": {
+      "bytes": 6929,
+      "sha256": "202e202e22ef890078b55776776e37b3fd6c086e83857aa829dbed3085a44593"
+    },
+    "/lab/ui-1-22/simulation.mjs": {
+      "bytes": 15640,
+      "sha256": "6e5ecad90ff4fa822192934b76e0170f7ad9333f86594d82e55d521dc3ddbba3"
+    },
+    "/releases/luma-drift-1.22.0-rc1.apk": {
+      "bytes": 368986073,
+      "sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e"
+    },
+    "/releases/luma-drift-1.22.0-sandbox-rc1.apk": {
+      "bytes": 368985756,
+      "sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8"
+    },
+    "/releases/manifest-1.22.0-rc1.json": {
+      "bytes": 1211,
+      "sha256": "13ddfc38e30c742d9407ac63fae1421fb08f5e3acf4421d60d2e44b3d2a0ee02"
+    }
+  },
+  "files": {
+    "/assets/screenshots/v1.22/home-en.png": {
+      "sha256": "4910c5566424ec071585483fb4ef5450de7ea1a49a010bd515412ac63819675a",
+      "bytes": 868016
+    },
+    "/assets/screenshots/v1.22/home-fr.png": {
+      "sha256": "e7ac76fbe585d0e2f442732e1bef14f14b7bde08f617d86a89b8a556c9078ad2",
+      "bytes": 867169
+    },
+    "/assets/screenshots/v1.22/keys-en.png": {
+      "sha256": "e92feb78e1124d4fb8bf2c619de6a6142ad586130283c14e8a48d7cc8ce2f8ce",
+      "bytes": 354141
+    },
+    "/assets/screenshots/v1.22/keys-fr.png": {
+      "sha256": "3f57dce5c3226883edf5c787d83f241d9f3c6230b9ca5a2c37feb7a6ee874857",
+      "bytes": 353600
+    },
+    "/assets/screenshots/v1.22/map-en.png": {
+      "sha256": "c3a9dea4d1fe1cfad7f21bd84033dad74cf654b6f35425d34667d8c2861bf900",
+      "bytes": 392281
+    },
+    "/assets/screenshots/v1.22/map-fr.png": {
+      "sha256": "e497158f4a70483adbc4435528af22d7442332f373048c7c6089b5c7deb1e5ad",
+      "bytes": 393594
+    },
+    "/assets/screenshots/v1.22/tactical-en.png": {
+      "sha256": "a01f76c32a7d97bac1aafa72f6b9b89314b89730acfd497f7e054f2eb6028a7b",
+      "bytes": 256456
+    },
+    "/assets/screenshots/v1.22/tactical-fr.png": {
+      "sha256": "c3a9eed496990132386698e402b6300eff0c57e242c935f1a8d2d9fcc0d613d7",
+      "bytes": 259537
+    },
+    "/assets/site-v122.css": {
+      "sha256": "5b538f1017e568b53c1939376a670528b80468ee923baea32f1778d01cbcee5c",
+      "bytes": 5562
+    },
+    "/assets/site-v122.js": {
+      "sha256": "5b664cfd7615c887cf63e46b2453e742d8fa70596ccceffbe7f65b594d3af0f9",
+      "bytes": 4290
+    },
+    "/index.html": {
+      "sha256": "0e1d00b81aa1716f910c1244731bb04efa40079d5777e660f453ae151a82b5ca",
+      "bytes": 39175
+    },
+    "/lab/cognitive/cognitive-lab-v122-local.zip": {
+      "sha256": "30bbade218b9f0588040c8bc6806ed47b3a48150b072fe7a2c94527060f578cb",
+      "bytes": 32355703
+    },
+    "/lab/cognitive/data-v122/blocked-events.csv.gz": {
+      "sha256": "613c11457bb276ba9cbdf3a456079722ed713f52872100422133a0cf4c7635b0",
+      "bytes": 2426131
+    },
+    "/lab/cognitive/data-v122/chapter-results.csv.gz": {
+      "sha256": "ee9db5b8b57ad6b9fb4605e261c710a4c46d1358c90ebe8d00dfd829eaf87aca",
+      "bytes": 1106864
+    },
+    "/lab/cognitive/data-v122/chapter-stage-results.csv.gz": {
+      "sha256": "648c957cf6e22d27982a6999db8d9483a0e930840481c7bbfb108f817fbaa7b4",
+      "bytes": 1281782
+    },
+    "/lab/cognitive/data-v122/day-results.csv.gz": {
+      "sha256": "345a6768673b501dfaad17e075f586c2d4e7c8d7940be3802bd3f8909b7820f1",
+      "bytes": 2124612
+    },
+    "/lab/cognitive/data-v122/level-results.csv.gz": {
+      "sha256": "9e9fa9980a79a2dd524a0693f4c20b4b3d34c50433410a5d81f59b270a6dada4",
+      "bytes": 16713561
+    },
+    "/lab/cognitive/data-v122/paired-comparisons.json": {
+      "sha256": "c66fdf9ee4b90ba6b128a0ffbb292d696150854624eb89beca58c411b945fbe5",
+      "bytes": 19541
+    },
+    "/lab/cognitive/data-v122/profiles.json": {
+      "sha256": "d18c0f87c8555933d34dbb3c887c04e8e23787ebc779cbb77ec1c113cf385816",
+      "bytes": 68501
+    },
+    "/lab/cognitive/data-v122/provenance.json": {
+      "sha256": "3a04704901572723a9ef933b354d961df4d270e01486faa1018aa8f72e073e54",
+      "bytes": 8247
+    },
+    "/lab/cognitive/data-v122/report.json": {
+      "sha256": "3b7ae1109634a90cb9c80d29dcd03fd461ebf8293430e72007e6b0e14a46301a",
+      "bytes": 1355564
+    },
+    "/lab/cognitive/data-v122/summary.json": {
+      "sha256": "0e636109d3cca99a7f188a03860e497e9cffb00f83eaba718f9d0aa21aa6e94a",
+      "bytes": 934126
+    },
+    "/lab/cognitive/data-v122/tactical-chapter.json": {
+      "sha256": "f10280967857567e61eff7a4575d484027ea86dddab438bc1d1105e89bcd8df0",
+      "bytes": 9022
+    },
+    "/lab/cognitive/data-v122/traces.json": {
+      "sha256": "e3604579632ec7d6566c1b8762c54e316dec5fad4c4ed5b937ea4dbc9b99ccf4",
+      "bytes": 333326
+    },
+    "/lab/cognitive/data-v122/trajectories.csv.gz": {
+      "sha256": "47f91c93905a6b008609ce40289605cc689354cb38f88f190c7c35da351a0faa",
+      "bytes": 1569170
+    },
+    "/lab/cognitive/index.html": {
+      "sha256": "aac695275ac0c966330405797d1a56940d8e70fe8455b7b61b54bb0589a204c4",
+      "bytes": 15301
+    },
+    "/lab/cognitive/lab.css": {
+      "sha256": "eab112a8cf1766730c1320af220398b66dd41f690b1bc4e43924038904b554f0",
+      "bytes": 22936
+    },
+    "/lab/cognitive/lab.js": {
+      "sha256": "296a2ecb9194066f73fe57f17b1826e6538c19855c1230cc57bc68d2b9a99015",
+      "bytes": 53103
+    },
+    "/lab/cognitive/snapshot-v122.js": {
+      "sha256": "bfbe07094caa530f4603827f2a2f2e89c719ea3e0a0228a449ef25f0414dc4c5",
+      "bytes": 1355627
+    },
+    "/lab/ui-1-22/index.html": {
+      "sha256": "95b73f8b08e4877fc6e5ee64bead5d284b438dddce94d3c58fec451ec35bd992",
+      "bytes": 6898
+    },
+    "/lab/ui-1-22/simulation.css": {
+      "sha256": "202e202e22ef890078b55776776e37b3fd6c086e83857aa829dbed3085a44593",
+      "bytes": 6929
+    },
+    "/lab/ui-1-22/simulation.mjs": {
+      "sha256": "6e5ecad90ff4fa822192934b76e0170f7ad9333f86594d82e55d521dc3ddbba3",
+      "bytes": 15640
+    },
+    "/releases/luma-drift-1.22.0-rc1.apk": {
+      "sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+      "bytes": 368986073
+    },
+    "/releases/luma-drift-1.22.0-sandbox-rc1.apk": {
+      "sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8",
+      "bytes": 368985756
+    },
+    "/releases/manifest-1.22.0-rc1.json": {
+      "sha256": "13ddfc38e30c742d9407ac63fae1421fb08f5e3acf4421d60d2e44b3d2a0ee02",
+      "bytes": 1211
+    }
+  },
+  "responses": {
+    "/assets/screenshots/v1.22/home-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/home-en.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:45.711255+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "868016",
+      "etag": "\"f340bbf415f86bd2032e9feba00a441349ede2622392ce8745942f9115ad2c21\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:45 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "4910c5566424ec071585483fb4ef5450de7ea1a49a010bd515412ac63819675a",
+      "bytes": 868016,
+      "durationSeconds": 0.496
+    },
+    "/assets/screenshots/v1.22/home-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/home-fr.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:46.208551+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "867169",
+      "etag": "\"d13290a6613d4439ae67dc0badafb8cf69c7e2215dd13f98421f6360bf709dea\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:46 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "e7ac76fbe585d0e2f442732e1bef14f14b7bde08f617d86a89b8a556c9078ad2",
+      "bytes": 867169,
+      "durationSeconds": 0.477
+    },
+    "/assets/screenshots/v1.22/keys-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/keys-en.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:46.686769+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "354141",
+      "etag": "\"a5e5f378c145a8b2979a897e3ea19c0697ef7d4543023f6e794a485dbcea1389\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:46 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "e92feb78e1124d4fb8bf2c619de6a6142ad586130283c14e8a48d7cc8ce2f8ce",
+      "bytes": 354141,
+      "durationSeconds": 0.224
+    },
+    "/assets/screenshots/v1.22/keys-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/keys-fr.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:46.911573+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "353600",
+      "etag": "\"5e7f036a4aa50b9f8d02170aa41de93142180a4c4d85156788b04ecdfcc0c383\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:47 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "3f57dce5c3226883edf5c787d83f241d9f3c6230b9ca5a2c37feb7a6ee874857",
+      "bytes": 353600,
+      "durationSeconds": 0.217
+    },
+    "/assets/screenshots/v1.22/map-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/map-en.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:47.130508+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "392281",
+      "etag": "\"fd407b35c033c31ee5e86becc56253717d978d4c6ac96f3f7db5784607cfdcc0\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:47 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "c3a9dea4d1fe1cfad7f21bd84033dad74cf654b6f35425d34667d8c2861bf900",
+      "bytes": 392281,
+      "durationSeconds": 0.305
+    },
+    "/assets/screenshots/v1.22/map-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/map-fr.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:47.436810+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "393594",
+      "etag": "\"22a2b5b8d0e2a3dd78fd04b6b4b2eacfe2991dcaae167c6ff44df4306c429525\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:47 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "e497158f4a70483adbc4435528af22d7442332f373048c7c6089b5c7deb1e5ad",
+      "bytes": 393594,
+      "durationSeconds": 0.227
+    },
+    "/assets/screenshots/v1.22/tactical-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/tactical-en.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:47.665584+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "256456",
+      "etag": "\"7990d9646263071c58d4b2037a10d03e08e39e657fba73e53c51f9011208bb16\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:47 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "a01f76c32a7d97bac1aafa72f6b9b89314b89730acfd497f7e054f2eb6028a7b",
+      "bytes": 256456,
+      "durationSeconds": 0.239
+    },
+    "/assets/screenshots/v1.22/tactical-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.22/tactical-fr.png?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:47.906232+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "259537",
+      "etag": "\"8be68855463966d0036ff03102614f3d0300e5ecb5cf83f9795b8b8322546168\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:48 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "c3a9eed496990132386698e402b6300eff0c57e242c935f1a8d2d9fcc0d613d7",
+      "bytes": 259537,
+      "durationSeconds": 0.232
+    },
+    "/assets/site-v122.css": {
+      "url": "https://luma-drift-production.web.app/assets/site-v122.css?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:48.139143+00:00",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "5562",
+      "etag": "\"4a5ed3f280dbf8ca24b42f113299998f1155dce74b1444f1becf0671e8158d34\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:48 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "5b538f1017e568b53c1939376a670528b80468ee923baea32f1778d01cbcee5c",
+      "bytes": 5562,
+      "durationSeconds": 0.12
+    },
+    "/assets/site-v122.js": {
+      "url": "https://luma-drift-production.web.app/assets/site-v122.js?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:48.261044+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "4290",
+      "etag": "\"f20cb6dbb4a70d6ef1663b6141ac2425efa14192e988e268548074b2796217f3\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:48 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "5b664cfd7615c887cf63e46b2453e742d8fa70596ccceffbe7f65b594d3af0f9",
+      "bytes": 4290,
+      "durationSeconds": 0.122
+    },
+    "/index.html": {
+      "url": "https://luma-drift-production.web.app/index.html?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:48.383794+00:00",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": null,
+      "etag": "\"16fdcdd90e322f20d1a6776e9f407246dcfc2e04e5df493e6b83cb88d58b27bb\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:48 GMT",
+      "cacheControl": "no-cache",
+      "age": null,
+      "sha256": "0e1d00b81aa1716f910c1244731bb04efa40079d5777e660f453ae151a82b5ca",
+      "bytes": 39175,
+      "durationSeconds": 0.15
+    },
+    "/lab/cognitive/cognitive-lab-v122-local.zip": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/cognitive-lab-v122-local.zip?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:48.537414+00:00",
+      "status": 200,
+      "contentType": "application/zip",
+      "contentEncoding": "",
+      "contentLength": "32355703",
+      "etag": "\"79bb7caa640ed87598d4ac30eef6fc040b7b12d5cfc681067b2c1aef3b082373\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:49 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "30bbade218b9f0588040c8bc6806ed47b3a48150b072fe7a2c94527060f578cb",
+      "bytes": 32355703,
+      "durationSeconds": 4.678
+    },
+    "/lab/cognitive/data-v122/blocked-events.csv.gz": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/blocked-events.csv.gz?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:53.218271+00:00",
+      "status": 200,
+      "contentType": "application/gzip",
+      "contentEncoding": "",
+      "contentLength": "2426131",
+      "etag": "\"f65d6a981b451f7b0254122dd9f6d1a99f10ba2fc2b43e397d1bd4908e92e739\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:53 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "613c11457bb276ba9cbdf3a456079722ed713f52872100422133a0cf4c7635b0",
+      "bytes": 2426131,
+      "durationSeconds": 0.518
+    },
+    "/lab/cognitive/data-v122/chapter-results.csv.gz": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/chapter-results.csv.gz?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:53.739322+00:00",
+      "status": 200,
+      "contentType": "application/gzip",
+      "contentEncoding": "",
+      "contentLength": "1106864",
+      "etag": "\"7ed157859dac629ee28b76d42340129fab8d84ccce796bfe212796c47b07511f\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:53 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "ee9db5b8b57ad6b9fb4605e261c710a4c46d1358c90ebe8d00dfd829eaf87aca",
+      "bytes": 1106864,
+      "durationSeconds": 0.402
+    },
+    "/lab/cognitive/data-v122/chapter-stage-results.csv.gz": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/chapter-stage-results.csv.gz?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:54.142779+00:00",
+      "status": 200,
+      "contentType": "application/gzip",
+      "contentEncoding": "",
+      "contentLength": "1281782",
+      "etag": "\"352ea5d13659b57a72bc06fce650a959b8e174fcc0872c0e8e69a8dfdb241ec7\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:54 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "648c957cf6e22d27982a6999db8d9483a0e930840481c7bbfb108f817fbaa7b4",
+      "bytes": 1281782,
+      "durationSeconds": 0.436
+    },
+    "/lab/cognitive/data-v122/day-results.csv.gz": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/day-results.csv.gz?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:54.580759+00:00",
+      "status": 200,
+      "contentType": "application/gzip",
+      "contentEncoding": "",
+      "contentLength": "2124612",
+      "etag": "\"868c878b4febf3ad73eca85b335e54b555574f1fb673b96f1dced58098701dbf\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:54 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "345a6768673b501dfaad17e075f586c2d4e7c8d7940be3802bd3f8909b7820f1",
+      "bytes": 2124612,
+      "durationSeconds": 0.502
+    },
+    "/lab/cognitive/data-v122/level-results.csv.gz": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/level-results.csv.gz?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:55.085664+00:00",
+      "status": 200,
+      "contentType": "application/gzip",
+      "contentEncoding": "",
+      "contentLength": "16713561",
+      "etag": "\"e9e1e1246bcb94596837ca370840076343bb2e5dfc8e4346d0c94dee512c9784\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:55 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "9e9fa9980a79a2dd524a0693f4c20b4b3d34c50433410a5d81f59b270a6dada4",
+      "bytes": 16713561,
+      "durationSeconds": 2.568
+    },
+    "/lab/cognitive/data-v122/paired-comparisons.json": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/paired-comparisons.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:57.655840+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "19541",
+      "etag": "\"782e2ca35930052253b09c76e09e8116b0153b1ae32a44c6adf7bce05957c538\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:57 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "c66fdf9ee4b90ba6b128a0ffbb292d696150854624eb89beca58c411b945fbe5",
+      "bytes": 19541,
+      "durationSeconds": 0.125
+    },
+    "/lab/cognitive/data-v122/profiles.json": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/profiles.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:57.782780+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "68501",
+      "etag": "\"e8d23b60f2a17737ddb438199b0767a5777bb58e536a583103e69bc0ab77e9ec\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:57 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "d18c0f87c8555933d34dbb3c887c04e8e23787ebc779cbb77ec1c113cf385816",
+      "bytes": 68501,
+      "durationSeconds": 0.156
+    },
+    "/lab/cognitive/data-v122/provenance.json": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/provenance.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:57.941416+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "8247",
+      "etag": "\"bae1047a55f7561bd21bda78a75bff82b469a2b87e975c9c9fec54898da1e1d7\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:58 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "3a04704901572723a9ef933b354d961df4d270e01486faa1018aa8f72e073e54",
+      "bytes": 8247,
+      "durationSeconds": 0.129
+    },
+    "/lab/cognitive/data-v122/report.json": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/report.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:58.073211+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "1355564",
+      "etag": "\"262fa8fdae82c820ac4deaa7f1faa1b82b7a6515421c35c073bc733af805fb0c\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:58 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "3b7ae1109634a90cb9c80d29dcd03fd461ebf8293430e72007e6b0e14a46301a",
+      "bytes": 1355564,
+      "durationSeconds": 0.36
+    },
+    "/lab/cognitive/data-v122/summary.json": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/summary.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:58.434643+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "934126",
+      "etag": "\"8b689130c2c6ed4ff293f270223640f9c817f447897985aa61195cf6f767bf72\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:58 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "0e636109d3cca99a7f188a03860e497e9cffb00f83eaba718f9d0aa21aa6e94a",
+      "bytes": 934126,
+      "durationSeconds": 0.306
+    },
+    "/lab/cognitive/data-v122/tactical-chapter.json": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/tactical-chapter.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:58.743960+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "9022",
+      "etag": "\"c52c2ac6351a43ecd170f7da98f4bd824d49be70ad6d87af73ad36831884cb43\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:58 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "f10280967857567e61eff7a4575d484027ea86dddab438bc1d1105e89bcd8df0",
+      "bytes": 9022,
+      "durationSeconds": 0.173
+    },
+    "/lab/cognitive/data-v122/traces.json": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/traces.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:58.918503+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "333326",
+      "etag": "\"61c0b367c94a18679c459e013d718fc045c32f69026a5313c4330b3f2b719b49\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:59 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "e3604579632ec7d6566c1b8762c54e316dec5fad4c4ed5b937ea4dbc9b99ccf4",
+      "bytes": 333326,
+      "durationSeconds": 0.219
+    },
+    "/lab/cognitive/data-v122/trajectories.csv.gz": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data-v122/trajectories.csv.gz?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:59.140446+00:00",
+      "status": 200,
+      "contentType": "application/gzip",
+      "contentEncoding": "",
+      "contentLength": "1569170",
+      "etag": "\"3e009dab758af36ace659d65bcc8c7529d3f7ed84f58da6243fbe4171eeb9714\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:59 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "47f91c93905a6b008609ce40289605cc689354cb38f88f190c7c35da351a0faa",
+      "bytes": 1569170,
+      "durationSeconds": 0.381
+    },
+    "/lab/cognitive/index.html": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/index.html?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:59.523916+00:00",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": null,
+      "etag": "\"17ea77e5ac3111fb973fda40aae76e95d0cc1207fbe7da5f81e36cac99baa7a7\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:59 GMT",
+      "cacheControl": "no-cache",
+      "age": null,
+      "sha256": "aac695275ac0c966330405797d1a56940d8e70fe8455b7b61b54bb0589a204c4",
+      "bytes": 15301,
+      "durationSeconds": 0.104
+    },
+    "/lab/cognitive/lab.css": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/lab.css?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:59.630956+00:00",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "22936",
+      "etag": "\"6195a55b7ebb9df85b31585718b162ed8cd08c7508d4349efa18e834b6e7ad86\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:59 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "eab112a8cf1766730c1320af220398b66dd41f690b1bc4e43924038904b554f0",
+      "bytes": 22936,
+      "durationSeconds": 0.12
+    },
+    "/lab/cognitive/lab.js": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/lab.js?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:59.753548+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "53103",
+      "etag": "\"d8c27d4563797ec99172523a23c97f98bd9e93143df29e29f4778d5b23355b95\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 14:59:59 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "296a2ecb9194066f73fe57f17b1826e6538c19855c1230cc57bc68d2b9a99015",
+      "bytes": 53103,
+      "durationSeconds": 0.139
+    },
+    "/lab/cognitive/snapshot-v122.js": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/snapshot-v122.js?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T14:59:59.895502+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "1355627",
+      "etag": "\"68bf49fb98865c98f2bcef5bdc0898f7e12edcd358a5d35b3c099625ba5c61cb\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 15:00:00 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "bfbe07094caa530f4603827f2a2f2e89c719ea3e0a0228a449ef25f0414dc4c5",
+      "bytes": 1355627,
+      "durationSeconds": 0.446
+    },
+    "/lab/ui-1-22/index.html": {
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:00:00.342430+00:00",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": null,
+      "etag": "\"2aa072cd1a8a8a348cd2547261c190a4266b6482e2de13a644811e9b0f70ef97\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 15:00:00 GMT",
+      "cacheControl": "no-cache",
+      "age": null,
+      "sha256": "95b73f8b08e4877fc6e5ee64bead5d284b438dddce94d3c58fec451ec35bd992",
+      "bytes": 6898,
+      "durationSeconds": 0.178
+    },
+    "/lab/ui-1-22/simulation.css": {
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/simulation.css?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:00:00.523251+00:00",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "6929",
+      "etag": "\"4e87e51406de01303706c0a8ebca180795dff1c64c5c00401caa79d32d97c6fd\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 15:00:00 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "202e202e22ef890078b55776776e37b3fd6c086e83857aa829dbed3085a44593",
+      "bytes": 6929,
+      "durationSeconds": 0.365
+    },
+    "/lab/ui-1-22/simulation.mjs": {
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/simulation.mjs?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:00:00.890507+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "15640",
+      "etag": "\"1dfa20cf4fd448790ce1ec929aff6c193867ae6d503cad72a234b2bdc26714e2\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 15:00:01 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "6e5ecad90ff4fa822192934b76e0170f7ad9333f86594d82e55d521dc3ddbba3",
+      "bytes": 15640,
+      "durationSeconds": 0.19
+    },
+    "/releases/luma-drift-1.22.0-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.22.0-rc1.apk?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:00:01.083650+00:00",
+      "status": 200,
+      "contentType": "application/vnd.android.package-archive",
+      "contentEncoding": "",
+      "contentLength": "368986073",
+      "etag": "\"3c03c9a54f8bfcaafe86d3a6f590cb69c403b3e786e4bb6d74e099bf8e51bd6d\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 15:00:06 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+      "bytes": 368986073,
+      "durationSeconds": 52.684
+    },
+    "/releases/luma-drift-1.22.0-sandbox-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.22.0-sandbox-rc1.apk?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:00:53.770281+00:00",
+      "status": 200,
+      "contentType": "application/vnd.android.package-archive",
+      "contentEncoding": "",
+      "contentLength": "368985756",
+      "etag": "\"c5fca1bbd9e348f5eb8c6c0dbd20ef3c5eab69bd1c99a36461373f56cffd4667\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 15:01:04 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8",
+      "bytes": 368985756,
+      "durationSeconds": 56.402
+    },
+    "/releases/manifest-1.22.0-rc1.json": {
+      "url": "https://luma-drift-production.web.app/releases/manifest-1.22.0-rc1.json?source_commit=13ebe82be9b57569df50627449cc748f5245521c",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:01:50.175075+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "1211",
+      "etag": "\"171a6f4099aa511d0a63dd26c3f58f58d94fa262a84d02040bc40b4b6c046b1b\"",
+      "lastModified": "Fri, 30 Oct 2026 14:57:54 GMT",
+      "date": "Fri, 30 Oct 2026 15:01:50 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "13ddfc38e30c742d9407ac63fae1421fb08f5e3acf4421d60d2e44b3d2a0ee02",
+      "bytes": 1211,
+      "durationSeconds": 0.193
+    }
+  },
+  "network_requested": true,
+  "credentials_used": false,
+  "redirects_followed": false,
+  "rendering_verified": false,
+  "scope": "Only the 35 new/changed complete HTTP response bodies; historical paths and browser rendering are separate evidence.",
+  "completed_at_utc": "2026-10-30T15:01:50.368908+00:00",
+  "verified_bytes": 803549445
+}

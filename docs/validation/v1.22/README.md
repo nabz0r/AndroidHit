@@ -5,6 +5,38 @@ release adds a living native map, key/lock associations and causal feedback,
 explicit consequence inspection and the separate T122 tactical chapter. The
 campaign rules/economy and existing profile remain the baseline.
 
+## Current delivery status
+
+Final production C and Lab C are qualified within the native scopes below. Exact
+signed packages are collected as `1.22.0-rc1` and `1.22.0-sandbox-rc1`, code 30;
+the [artifact manifest](../../../releases/manifest-1.22.0-rc1.json) records their
+sizes, hashes and separate package identities.
+
+Source publication passes exact remote-tree comparison for
+[C1 application/lab/artifact metadata](publication/c1/source-publication.json)
+at `716bf73066892d034510db80630cd1f227738372` and
+[C2 website](publication/c2/source-publication.json) at
+`13ebe82be9b57569df50627449cc748f5245521c`. The
+[prepared website manifest](../site-v1.22/release/source-manifest.json) binds the
+exact C packages and eight original native captures. Source, local browser,
+native emulator and public-origin evidence are separate scopes.
+
+C2 is released on the existing Firebase site as version `990135f689f144c0`.
+The [original public response receipt](../site-v1.22/public-origin-c2.json)
+passes all 35 new/changed bodies / 803,549,445 bytes, including both full signed
+APKs; it does not re-observe the historical bodies.
+
+Actual public browser review found an
+[archive/current laboratory race](../site-v1.22/browser-public/lab/archive-race-c2-failure.json):
+the current selector could show the archive's 9,000 trajectories / three
+scenarios. The [pre-fix report](../site-v1.22/browser-public/lab/report-before-fix.json)
+remains failed evidence. Final C3 source, CI, Hosting and public retest remain
+pending; C2 lab UI completion is not claimed. The correction changes no Android
+package, Java engine or experiment data. No build, local staging or source-tree
+receipt alone establishes public delivery.
+
+## Intermediate candidates and evidence boundaries
+
 Candidate A is an intermediate exact signed package, retained separately from B.
 Its map FR/EN checks passed. The key scenario reached actual unlocking, then its
 legacy Undo label did not match the expected regular expression; that phase did
@@ -62,5 +94,9 @@ Lab C upgrade preservation passes 6 assertions; its actual FR/EN startup passes
 byte-identical before/after each phase. Both C package bytes are canonical.
 [Final retained-device closeout](native/device-closeout-candidate-c/receipt.json)
 confirms a normal stop, retained userdata, restored display and absent observers.
-Git/Hosting publication remains a separate pending step until its receipts are recorded. Native emulator checks do not close
-human or physical-device acceptance.
+The [retained production register](native/README-retained-production.md) and
+[accepted-phase manifest](native/retained-production-accepted.json) retain exact
+B/C scope, original recordings and exclusions. The SDK observer is bound to all
+64 compiled inputs through its [build receipt](observer-builds/production-de0c4717.json)
+and [independent source audit](native/retained-observer-source-audit.json).
+Native emulator checks do not close human or physical-device acceptance.

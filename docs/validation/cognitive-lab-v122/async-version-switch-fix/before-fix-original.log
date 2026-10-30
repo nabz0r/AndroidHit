@@ -1,0 +1,128 @@
+✔ full engine report aliases normalize without altering payloads (0.887ms)
+✔ summary-only imports keep absent sections empty, with no previous-run mixing (0.400625ms)
+✔ invalid schema, non-finite rates, duplicate and unknown identities are rejected (1.299583ms)
+✔ deterministic chart bounds cannot leak invalid geometry (0.12275ms)
+✔ duration formatting preserves nonzero overruns in seconds and actual zero (11.908791ms)
+✔ CSV keeps quotes, commas and Unicode; spreadsheet formulas are inert (0.777417ms)
+✔ small nonzero overruns remain visible in the rendered report (9.011166ms)
+✔ explicit language query overrides saved language and preserves URL state (4.587458ms)
+✔ real render keeps hostile imported strings as text and never HTML (2.140208ms)
+✔ retry traces remain separate samples and never merge their decisions (2.124666ms)
+✔ complete published engine data passes the same importer contract when present (5.410666ms)
+✔ 1.22 mechanics render separate manual exits, cues, censures and exact spike denominators (2.728958ms)
+✔ 1.22 chapter and cue-free transfer remain separate from campaign returns (2.0645ms)
+✔ local import removes published ZIP provenance in both languages and keeps actual local exports (6.154958ms)
+✔ scenario switch refreshes manual/automated and U43 counters control to execution and back (3.97375ms)
+✔ published current/archive transitions load all7/all3 options in both directions (4.544292ms)
+✖ newest version wins when older published requests resolve last, including a language change (6.666167ms)
+✖ stale failed request cannot activate its fallback or error over the latest selected report (5.171792ms)
+✖ a missing current snapshot never silently substitutes archive data and loading stays honest across languages (2.079042ms)
+✖ local import cancels an older published load instead of being overwritten by it (4.904959ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 16
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 133.891458
+
+✖ failing tests:
+
+test at public/lab/cognitive/tests/lab.test.mjs:311:1
+✖ newest version wins when older published requests resolve last, including a language change (6.666167ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'current_model',
+  +   'teaching_support',
+  +   'reward_muted'
+  -   'control_v121',
+  -   'cause_immediate',
+  -   'cause_repeat',
+  -   'cause_fading',
+  -   'team_information',
+  -   'team_execution',
+  -   'v122_combined'
+    ]
+  
+      at assertVersion (file:///Users/n/androidhit/public/lab/cognitive/tests/lab.test.mjs:297:10)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/public/lab/cognitive/tests/lab.test.mjs:319:60)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'current_model', 'teaching_support', 'reward_muted' ],
+    expected: [ 'control_v121', 'cause_immediate', 'cause_repeat', 'cause_fading', 'team_information', 'team_execution', 'v122_combined' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at public/lab/cognitive/tests/lab.test.mjs:323:1
+✖ stale failed request cannot activate its fallback or error over the latest selected report (5.171792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'control_v121'
+  - 'team_execution'
+  
+      at TestContext.<anonymous> (file:///Users/n/androidhit/public/lab/cognitive/tests/lab.test.mjs:331:99)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'control_v121',
+    expected: 'team_execution',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at public/lab/cognitive/tests/lab.test.mjs:335:1
+✖ a missing current snapshot never silently substitutes archive data and loading stays honest across languages (2.079042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///Users/n/androidhit/public/lab/cognitive/tests/lab.test.mjs:341:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at public/lab/cognitive/tests/lab.test.mjs:345:1
+✖ local import cancels an older published load instead of being overwritten by it (4.904959ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /765432/. Input:
+  
+  '{\n' +
+    '  "scope": {\n' +
+    '    "engineVersion": "engine121",\n' +
+    '    "humanParticipants": 0\n' +
+    '  },\n' +
+    '  "config": {\n' +
+    '    "profiles": 1,\n' +
+    '    "repetitions": 2,\n' +
+    '    "seed": 17,\n' +
+    '    "scenarios": [\n' +
+    '      "current_model",\n' +
+    '      "teaching_support",\n' +
+    '      "reward_muted"\n' +
+    '    ]\n' +
+    '  }\n' +
+    '}'
+  
+      at TestContext.<anonymous> (file:///Users/n/androidhit/public/lab/cognitive/tests/lab.test.mjs:351:59)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '{\n  "scope": {\n    "engineVersion": "engine121",\n    "humanParticipants": 0\n  },\n  "config": {\n    "profiles": 1,\n    "repetitions": 2,\n    "seed": 17,\n    "scenarios": [\n      "current_model",\n      "teaching_support",\n      "reward_muted"\n    ]\n  }\n}',
+    expected: /765432/,
+    operator: 'match',
+    diff: 'simple'
+  }

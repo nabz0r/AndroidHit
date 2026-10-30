@@ -1,0 +1,29 @@
+✔ full engine report aliases normalize without altering payloads (0.883416ms)
+✔ summary-only imports keep absent sections empty, with no previous-run mixing (0.356ms)
+✔ invalid schema, non-finite rates, duplicate and unknown identities are rejected (1.107625ms)
+✔ deterministic chart bounds cannot leak invalid geometry (0.096583ms)
+✔ duration formatting preserves nonzero overruns in seconds and actual zero (11.708166ms)
+✔ CSV keeps quotes, commas and Unicode; spreadsheet formulas are inert (0.229708ms)
+✔ small nonzero overruns remain visible in the rendered report (7.994542ms)
+✔ explicit language query overrides saved language and preserves URL state (4.357625ms)
+✔ real render keeps hostile imported strings as text and never HTML (1.986542ms)
+✔ retry traces remain separate samples and never merge their decisions (1.952625ms)
+✔ complete published engine data passes the same importer contract when present (4.961333ms)
+✔ 1.22 mechanics render separate manual exits, cues, censures and exact spike denominators (2.604833ms)
+✔ 1.22 chapter and cue-free transfer remain separate from campaign returns (2.059417ms)
+✔ local import removes published ZIP provenance in both languages and keeps actual local exports (5.793792ms)
+✔ scenario switch refreshes manual/automated and U43 counters control to execution and back (4.448291ms)
+✔ published current/archive transitions load all7/all3 options in both directions (4.564ms)
+✔ newest version wins when older published requests resolve last, including a language change (8.697291ms)
+✔ stale failed request cannot activate its fallback or error over the latest selected report (11.175584ms)
+✔ a missing current snapshot never silently substitutes archive data and loading stays honest across languages (0.856625ms)
+✔ local import cancels an older published load instead of being overwritten by it (3.04575ms)
+✔ failed requests use only the snapshot matching their captured version in both directions (4.0455ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 135.022958

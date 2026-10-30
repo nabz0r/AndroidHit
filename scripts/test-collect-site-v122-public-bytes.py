@@ -56,11 +56,12 @@ class CollectorTests(unittest.TestCase):
     def tearDown(self):
         self.guard.stop()
 
-    def test_actual_manifests_select_all35_and_full803549445bytes(self):
+    def test_actual_manifests_select_all35_and_include_both_full_signed_apks(self):
         self.assertEqual(len(self.selected), 35)
-        self.assertEqual(sum(row['bytes'] for row in self.selected.values()), 803549445)
         self.assertEqual(sum(name.endswith('.apk') for name in self.selected), 2)
         self.assertEqual(sum(name.endswith('.csv.gz') for name in self.selected), 6)
+        self.assertEqual(self.selected['/releases/luma-drift-1.22.0-rc1.apk'],{'sha256':self.source['production_apk_sha256'],'bytes':368986073})
+        self.assertEqual(self.selected['/releases/luma-drift-1.22.0-sandbox-rc1.apk'],{'sha256':self.source['lab_apk_sha256'],'bytes':368985756})
 
     def test_all35_mocked_responses_have_fixed_url_identity_and_exact_receipt_map(self):
         payloads = {name: ('fixture ' + name).encode() for name in self.selected}
@@ -142,6 +143,25 @@ class CollectorTests(unittest.TestCase):
                                      '--receipt', str(path), '--commit', self.commit], capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(json.loads(result.stdout)['recordedResponsePaths'], 35)
+
+    def test_incremental_actual_three_changed_responses_exclude_unchanged_apks_and_datasets(self):
+        previous=copy.deepcopy(self.source);current=copy.deepcopy(previous);bodies={}
+        for name in MODULE.INCREMENTAL_ALLOWED:
+            bodies[name]=('new fixture '+name).encode();current['files'][name]={'sha256':hashlib.sha256(bodies[name]).hexdigest(),'bytes':len(bodies[name])}
+        selected=MODULE.select_incremental(current,previous)
+        self.assertEqual(set(selected),MODULE.INCREMENTAL_ALLOWED)
+        opener=Opener(lambda request:Response(request.full_url,bodies[MODULE.urllib.parse.urlsplit(request.full_url).path],sorted(MODULE.MIMES[Path(MODULE.urllib.parse.urlsplit(request.full_url).path).suffix])[0]))
+        receipt={'status':'RUNNING','files':{},'responses':{}}
+        with contextlib.redirect_stdout(io.StringIO()):MODULE.collect(selected,self.commit,receipt,opener,lambda value:None)
+        self.assertEqual(len(opener.requests),3);self.assertEqual(receipt['status'],'PASS')
+        self.assertFalse(any('.apk' in request.full_url or '.csv.gz' in request.full_url for request in opener.requests))
+
+    def test_incremental_unknown_added_deleted_and_android_identity_changes_refuse(self):
+        previous=copy.deepcopy(self.source)
+        for mutation in (lambda value:value['files']['/index.html'].update(sha256='0'*64),lambda value:value['files'].update({'/new.json':{'sha256':'0'*64,'bytes':1}}),lambda value:value['files'].pop('/index.html'),lambda value:value.update(production_apk_sha256='0'*64)):
+            with self.subTest(mutation=mutation):
+                current=copy.deepcopy(previous);mutation(current)
+                with self.assertRaises(MODULE.CollectionError):MODULE.select_incremental(current,previous)
 
 
 if __name__ == '__main__':

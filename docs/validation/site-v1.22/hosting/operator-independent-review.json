@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "Independent agent read and fake-opener tests only; no network, credentials, main() or target calls.",
+  "operatorScriptSha256": "52199efadba0f2330364dbac286be7f9776605276fc12cc727e79ca435432dc5",
+  "checks": 8,
+  "cases": [
+    "exact upload POST uses600s",
+    "GET retains60s",
+    "management POST retains60s",
+    "query suffix retains60s",
+    "hash63 retains60s",
+    "other host retains60s",
+    "other project retains60s",
+    "original opener exception propagates"
+  ],
+  "review": "Exact original C2 main() and rest_deploy retain frozen-input, checkout, payload, old-live, config, clone, hash, finalize/release checks. Existing NoRedirect opener and request bytes/headers/destination are delegated unchanged. Prior clone read-only; new clone content reuse is decided by provider.",
+  "limits": [
+    "Socket timeout applies per attempt, not a total duration.",
+    "Provider release has no atomic compare-and-swap.",
+    "Ambiguous release/post-check requires management read before any replay."
+  ]
+}

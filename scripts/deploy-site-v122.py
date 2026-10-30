@@ -13,11 +13,15 @@ import re
 import subprocess
 import importlib.util
 import sys
+import urllib.parse
 
 ROOT=Path(__file__).resolve().parents[1]
 PROJECT='luma-drift-production'
 RELEASE='1.22.0-rc1'
 SOURCE='docs/validation/site-v1.22/release/source-manifest.json'
+PREVIOUS122='13ebe82be9b57569df50627449cc748f5245521c'
+PREVIOUS122_LIVE='sites/luma-drift-production/versions/990135f689f144c0'
+INCREMENTAL_ALLOWED=frozenset(('/lab/cognitive/lab.js','/lab/cognitive/index.html','/lab/cognitive/cognitive-lab-v122-local.zip'))
 
 
 def run(*args):return subprocess.check_output(args,cwd=ROOT,text=True).strip()
@@ -32,6 +36,43 @@ def safe_file(name):
     path=(ROOT/name).resolve()
     assert ROOT.resolve() in path.parents and path.is_file(),'Missing bounded input: '+name
     return path
+
+
+def committed_source_bytes(commit):
+    assert re.fullmatch('[a-f0-9]{40}',commit),'Exact previous source commit required'
+    return subprocess.check_output(['git','show',commit+':'+SOURCE],cwd=ROOT)
+
+
+def deployment_baseline(source,previous_source_commit=None):
+    if previous_source_commit is None:
+        path=ROOT/'docs/validation/cognitive-lab/site-manifest.json';data=path.read_bytes();previous=json.loads(data)
+        before=previous['files'];assert len(before)==539 and set(before)<=set(source['files']),'Retain all539 historical physical paths plus2Firebase-managed paths'
+        changed=sorted(name for name in before if before[name]!=source['files'][name]);added=sorted(set(source['files'])-set(before))
+        allowed={'/index.html','/lab/cognitive/index.html','/lab/cognitive/lab.js','/lab/cognitive/lab.css'}
+        assert set(changed)<=allowed,'Unexpected historical overwrite: '+str(sorted(set(changed)-allowed))
+        return before,changed,added,hashlib.sha256(data).hexdigest()
+    assert previous_source_commit==PREVIOUS122,'Only the exact accepted C2 source is an incremental baseline'
+    data=committed_source_bytes(previous_source_commit);previous=json.loads(data)
+    assert previous['status']=='PASS' and previous['edition']=='1.22' and previous['release']==RELEASE,'Previous committed source is not accepted1.22'
+    for key in ('artifact_source_commit','artifact_manifest','artifact_manifest_sha256','production_apk_sha256','lab_apk_sha256','firebase_config_sha256','screen_keys','screenshots','native_capture_provenance_verified','package_identity_verified'):
+        assert source[key]==previous[key],'Incremental update changed Android/native/config identity: '+key
+    before,current=previous['files'],source['files']
+    assert len(before)==570 and set(before)==set(current),'Incremental update must retain exactly570 physical paths; no additions or deletions'
+    changed=sorted(name for name in before if before[name]!=current[name])
+    assert changed and set(changed)<=INCREMENTAL_ALLOWED,'Unexpected incremental overwrite: '+str(sorted(set(changed)-INCREMENTAL_ALLOWED))
+    return before,changed,[],hashlib.sha256(data).hexdigest()
+
+
+def configure_upload_timeout(client,helper):
+    """Keep the existing authenticated/pinned/retrying client; extend uploads only."""
+    original=client._opener
+    class UploadOpener:
+        def open(self,request,timeout=60):
+            helper.Client.check_url(request.full_url)
+            upload=request.get_method()=='POST' and urllib.parse.urlsplit(request.full_url).hostname==helper.UPLOAD_HOST
+            return original.open(request,timeout=600 if upload else timeout)
+    client._opener=UploadOpener()
+    return client
 
 
 def validate_artifact_manifest(source, expected_sha):
@@ -56,8 +97,8 @@ def validate_artifact_manifest(source, expected_sha):
     return artifact_commit
 
 
-def rest_deploy(source,commit,expected_live,output,deploy,token,*,client=None,helper=None):
-    """Clone all541 prior provider paths; upload only changed/new audited1.22 files.
+def rest_deploy(source,commit,expected_live,output,deploy,token,*,client=None,helper=None,previous_source_commit=None):
+    """Clone all541 legacy or572 accepted1.22 provider paths; upload the audited overlay.
 
     Reuses the historical, tested pinned-host/no-redirect Firebase client. Its
     credentials stay in memory. Historical APKs are never recompressed/uploaded.
@@ -69,14 +110,11 @@ def rest_deploy(source,commit,expected_live,output,deploy,token,*,client=None,he
         helper=importlib.util.module_from_spec(spec);spec.loader.exec_module(helper)
     assert helper.VERSION.fullmatch(expected_live),'Exact expected live version resource required'
     assert isinstance(token,str) and 20<len(token)<8192 and not any(char.isspace() for char in token),'A current OAuth token is required through stdin only'
-    client=client if client is not None else helper.Client(token)
-    baseline_path=ROOT/'docs/validation/cognitive-lab/site-manifest.json';baseline=json.loads(baseline_path.read_text())
-    before=baseline['files'];current=source['files']
-    assert len(before)==539 and set(before)<=set(current),'Retain all539 historical physical paths plus2Firebase-managed paths'
-    changed=sorted(name for name in before if before[name]!=current[name]);added=sorted(set(current)-set(before))
-    allowed={'/index.html','/lab/cognitive/index.html','/lab/cognitive/lab.js','/lab/cognitive/lab.css'}
-    assert set(changed)<=allowed,'Unexpected historical overwrite: '+str(sorted(set(changed)-allowed))
+    before,changed,added,baseline_sha=deployment_baseline(source,previous_source_commit);current=source['files']
+    if previous_source_commit is not None:assert expected_live==PREVIOUS122_LIVE,'Incremental update requires exact accepted C2 live version'
+    client=client if client is not None else configure_upload_timeout(helper.Client(token),helper)
     live=helper.live_channel(client,expected_live);old=helper.version(client,expected_live,'FINALIZED');old_files=helper.files(client,expected_live)
+    if previous_source_commit is not None:assert live['releaseMessage']=='Website1.22 from '+previous_source_commit,'Live release is not the exact previous source'
     assert set(old_files)==set(before)|set(helper.FIREBASE_RESERVED),'Live historical file set differs from exact baseline'
     overlay,blobs={},{}
     for name in changed+added:
@@ -85,7 +123,7 @@ def rest_deploy(source,commit,expected_live,output,deploy,token,*,client=None,he
         encoded=helper.compressed(raw);digest=helper.sha(encoded)
         overlay[name]={'rawSha256':entry['sha256'],'rawBytes':entry['bytes'],'gzipSha256':digest,'gzipBytes':len(encoded)};blobs[digest]=encoded
     expected=dict(old_files);expected.update({name:row['gzipSha256'] for name,row in overlay.items()})
-    preflight={'status':'PASS','edition':'1.22','sourceCommit':commit,'expectedLiveVersion':expected_live,'live':live,'historicalProviderPaths':len(old_files),'historicalPhysicalPaths':len(before),'preservedHistoricalPaths':len(old_files)-len(changed),'intentionalChanges':changed,'addedPaths':added,'finalExpectedProviderPaths':len(expected),'historicalApksUploaded':False,'publicOriginRequested':False,'publicOriginBytesVerified':False,'publicOriginRenderingVerified':False}
+    preflight={'status':'PASS','edition':'1.22','sourceCommit':commit,'expectedLiveVersion':expected_live,'live':live,'baselineMode':'previous-1.22-source' if previous_source_commit else 'historical-1.21-plus-lab','previousSourceCommit':previous_source_commit,'baselineSourceManifestSha256':baseline_sha,'historicalProviderPaths':len(old_files),'historicalPhysicalPaths':len(before),'preservedHistoricalPaths':len(old_files)-len(changed),'intentionalChanges':changed,'addedPaths':added,'finalExpectedProviderPaths':len(expected),'managementTimeoutSeconds':60,'uploadTimeoutSeconds':600,'historicalApksUploaded':False,'publicOriginRequested':False,'publicOriginBytesVerified':False,'publicOriginRenderingVerified':False}
     helper.save(output,'rest-preflight.json',preflight);helper.save(output,'baseline-provider-files.json',old_files);helper.save(output,'baseline-provider-config.json',old.get('config',{}));helper.save(output,'overlay-source-and-gzip-hashes.json',overlay)
     print(json.dumps({'rest_preflight':'PASS','historicalProviderPaths':len(old_files),'changed':len(changed),'added':len(added),'deployRequested':deploy}),flush=True)
     if not deploy:return preflight
@@ -128,8 +166,10 @@ def main():
     p.add_argument('--output',required=True,type=Path);p.add_argument('--deploy',action='store_true')
     p.add_argument('--transport',choices=('cli','rest'),default='cli')
     p.add_argument('--expected-live',help='Required REST precondition: exact sites/.../versions/... resource')
+    p.add_argument('--previous-source-commit',help='Incremental REST overlay against the exact accepted1.22C2 source, preserving all572provider paths')
     p.add_argument('--token-stdin',action='store_true',help='Read one current OAuth token from stdin; never persist or print it')
     a=p.parse_args();assert re.fullmatch('[a-f0-9]{64}',a.apk_sha256) and re.fullmatch('[a-f0-9]{40}',a.commit)
+    assert a.previous_source_commit is None or a.transport=='rest' and a.previous_source_commit==PREVIOUS122,'Incremental baseline is restricted to exact C2 and REST'
     assert run('git','rev-parse','HEAD')==a.commit,'Unexpected deployment source commit'
     assert not run('git','status','--porcelain','--untracked-files=all'),'Deployment checkout must be clean'
     output=a.output.resolve();assert output!=ROOT and ROOT.resolve() not in output.parents,'Receipts must be outside checkout'
@@ -146,10 +186,11 @@ def main():
     config=json.loads((ROOT/'firebase.json').read_text())
     assert config['hosting']['site']==PROJECT and config['hosting']['public']=='public','Unexpected existing Hosting destination'
     actual=payloads()
-    baseline=json.loads((ROOT/'docs/validation/cognitive-lab/site-manifest.json').read_text())['files'] if a.transport=='rest' else {}
+    baseline=deployment_baseline(source,a.previous_source_commit)[0] if a.transport=='rest' else {}
     missing=set(source['files'])-set(actual)
     assert not (set(actual)-set(source['files'])),'Unexpected physical Hosting file'
-    assert not missing or a.transport=='rest' and missing<=set(baseline),'Missing nonhistorical Hosting payload'
+    preserved={name for name in baseline if baseline[name]==source['files'][name]}
+    assert not missing or a.transport=='rest' and missing<=preserved,'Missing new or changed Hosting payload'
     for name,path in actual.items():
         entry=source['files'][name];assert sha(path)==entry['sha256'] and path.stat().st_size==entry['bytes'],'Hosting payload changed: '+name
     artifact_commit=validate_artifact_manifest(source,a.apk_sha256)
@@ -157,7 +198,7 @@ def main():
     output.mkdir(parents=True);(output/'deployment-preflight.json').write_text(json.dumps(record,indent=2)+'\n');print(json.dumps(record),flush=True)
     if a.transport=='rest':
         assert a.expected_live and a.token_stdin,'REST requires an exact expected-live resource and token through stdin'
-        token=sys.stdin.readline(8193).strip();rest_deploy(source,a.commit,a.expected_live,output,a.deploy,token);return
+        token=sys.stdin.readline(8193).strip();rest_deploy(source,a.commit,a.expected_live,output,a.deploy,token,previous_source_commit=a.previous_source_commit);return
     if not a.deploy:return
     message='Website1.22 from '+a.commit
     result=subprocess.run(['firebase','deploy','--only','hosting','--project',PROJECT,'--non-interactive','--message',message],cwd=ROOT,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
