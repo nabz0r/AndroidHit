@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "sourceCommit": "2db51f1f208d5a13c023f67df32450410b873c96",
+  "sourceTree": "2f24ea1a1710adae23aca0f0bca7a9f1ebef534a",
+  "repository": "nabz0r/AndroidHit",
+  "checkedAtUtc": "2026-10-30T19:46:28.541283+00:00",
+  "event": "push",
+  "branch": "main",
+  "discovery": "GET /repos/nabz0r/AndroidHit/actions/runs?head_sha=2db51f1f208d5a13c023f67df32450410b873c96&per_page=100; unfiltered by pull-request event",
+  "workflowRuns": [
+    {
+      "id": 41116841818,
+      "name": "Cognitive Lab contracts",
+      "path": ".github/workflows/cognitive-lab.yml",
+      "html_url": "https://github.com/nabz0r/AndroidHit/actions/runs/41116841818",
+      "head_sha": "2db51f1f208d5a13c023f67df32450410b873c96",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "created_at": "2026-10-30T19:38:04Z",
+      "updated_at": "2026-10-30T19:38:58Z"
+    },
+    {
+      "id": 41116841625,
+      "name": "Puzzle contracts",
+      "path": ".github/workflows/puzzle-contracts.yml",
+      "html_url": "https://github.com/nabz0r/AndroidHit/actions/runs/41116841625",
+      "head_sha": "2db51f1f208d5a13c023f67df32450410b873c96",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "created_at": "2026-10-30T19:38:04Z",
+      "updated_at": "2026-10-30T19:44:08Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": 124273164025,
+      "name": "Offline puzzle contracts (Java 17)",
+      "run_id": 41116841625,
+      "head_sha": "2db51f1f208d5a13c023f67df32450410b873c96",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "started_at": "2026-10-30T19:38:07Z",
+      "completed_at": "2026-10-30T19:44:07Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-30T19:38:08Z",
+          "completed_at": "2026-10-30T19:38:09Z"
+        },
+        {
+          "name": "Check out the tested revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-30T19:38:09Z",
+          "completed_at": "2026-10-30T19:38:12Z"
+        },
+        {
+          "name": "Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-30T19:38:12Z",
+          "completed_at": "2026-10-30T19:38:12Z"
+        },
+        {
+          "name": "Qualify all 1000 N boards and their pacing",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-30T19:38:12Z",
+          "completed_at": "2026-10-30T19:38:24Z"
+        },
+        {
+          "name": "Qualify all 1000 U boards and every reachable relay state",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-30T19:38:24Z",
+          "completed_at": "2026-10-30T19:38:29Z"
+        },
+        {
+          "name": "Preserve historical codes, six sealed challenges and original budgets",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-30T19:38:29Z",
+          "completed_at": "2026-10-30T19:38:51Z"
+        },
+        {
+          "name": "Qualify every L and M state and the finite daily and weekly geometry pool",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-30T19:38:51Z",
+          "completed_at": "2026-10-30T19:40:00Z"
+        },
+        {
+          "name": "Qualify every Guardian state and once-only reward transactions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-30T19:40:00Z",
+          "completed_at": "2026-10-30T19:41:42Z"
+        },
+        {
+          "name": "Check daily, weekly and Remix transactions and calendar boundaries",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-30T19:41:42Z",
+          "completed_at": "2026-10-30T19:41:53Z"
+        },
+        {
+          "name": "Check three-room ownership, migration and camera geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-30T19:41:53Z",
+          "completed_at": "2026-10-30T19:41:59Z"
+        },
+        {
+          "name": "Check strict budgets, the saved Return and legacy continuations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-30T19:41:59Z",
+          "completed_at": "2026-10-30T19:42:01Z"
+        },
+        {
+          "name": "Check adaptive home camera and recoverable player collection",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-30T19:42:01Z",
+          "completed_at": "2026-10-30T19:42:09Z"
+        },
+        {
+          "name": "Check contextual rules and six-language feedback",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-30T19:42:09Z",
+          "completed_at": "2026-10-30T19:42:11Z"
+        },
+        {
+          "name": "Check 1.17 scene transitions and original sprite geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-30T19:42:11Z",
+          "completed_at": "2026-10-30T19:42:13Z"
+        },
+        {
+          "name": "Check 50 synthesized arrangements, earcons and audio lifecycle model",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-30T19:42:13Z",
+          "completed_at": "2026-10-30T19:42:48Z"
+        },
+        {
+          "name": "Check puzzle gates, budgets, feedback and compact action reachability",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-30T19:42:48Z",
+          "completed_at": "2026-10-30T19:42:49Z"
+        },
+        {
+          "name": "Check 1.20 interactions and retained website language and media controls",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-30T19:42:49Z",
+          "completed_at": "2026-10-30T19:42:49Z"
+        },
+        {
+          "name": "Check 1.23 homepage structure and preserved map demo syntax",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-30T19:42:49Z",
+          "completed_at": "2026-10-30T19:42:55Z"
+        },
+        {
+          "name": "Check exact APK delta transport and refused artifact replacement",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-30T19:42:55Z",
+          "completed_at": "2026-10-30T19:42:56Z"
+        },
+        {
+          "name": "Check 1.18 expeditions, copies, durable costume choice and motion contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-30T19:42:56Z",
+          "completed_at": "2026-10-30T19:43:05Z"
+        },
+        {
+          "name": "Check 1.19 team ownership, durable skills, U-board effects and adventure/dock geometry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-30T19:43:05Z",
+          "completed_at": "2026-10-30T19:43:16Z"
+        },
+        {
+          "name": "Check 1.20 session pacing and genuine avatar reactions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-30T19:43:16Z",
+          "completed_at": "2026-10-30T19:43:25Z"
+        },
+        {
+          "name": "Check 1.21 elemental preparation, direct-exit Focus and confirmed-balance animation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-30T19:43:25Z",
+          "completed_at": "2026-10-30T19:43:31Z"
+        },
+        {
+          "name": "Check 1.21 menus, four independent rooms and chapter map",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-30T19:43:31Z",
+          "completed_at": "2026-10-30T19:43:36Z"
+        },
+        {
+          "name": "Check 1.21 logarithmic entitlements, earned-Coin Undo receipts and energy capacity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-30T19:43:36Z",
+          "completed_at": "2026-10-30T19:43:46Z"
+        },
+        {
+          "name": "Check 1.23 new Journey, preserved saves and atomic outfit application",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-30T19:43:46Z",
+          "completed_at": "2026-10-30T19:43:50Z"
+        },
+        {
+          "name": "Check 1.22 map navigation and durable tactical chapters",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-30T19:43:50Z",
+          "completed_at": "2026-10-30T19:43:58Z"
+        },
+        {
+          "name": "Check transactional premium refill outbox with a pinned JSON parser",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-30T19:43:58Z",
+          "completed_at": "2026-10-30T19:44:00Z"
+        },
+        {
+          "name": "Check power offers and preserved reward decisions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-30T19:44:00Z",
+          "completed_at": "2026-10-30T19:44:04Z"
+        },
+        {
+          "name": "Post Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 57,
+          "started_at": "2026-10-30T19:44:04Z",
+          "completed_at": "2026-10-30T19:44:04Z"
+        },
+        {
+          "name": "Post Check out the tested revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 58,
+          "started_at": "2026-10-30T19:44:04Z",
+          "completed_at": "2026-10-30T19:44:04Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 59,
+          "started_at": "2026-10-30T19:44:04Z",
+          "completed_at": "2026-10-30T19:44:04Z"
+        }
+      ]
+    },
+    {
+      "id": 124273164402,
+      "name": "Packaged 1.18 art and frozen rig revision",
+      "run_id": 41116841625,
+      "head_sha": "2db51f1f208d5a13c023f67df32450410b873c96",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "started_at": "2026-10-30T19:38:07Z",
+      "completed_at": "2026-10-30T19:39:40Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-30T19:38:08Z",
+          "completed_at": "2026-10-30T19:38:08Z"
+        },
+        {
+          "name": "Check out only shipped art and its recorded rig baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-30T19:38:08Z",
+          "completed_at": "2026-10-30T19:39:00Z"
+        },
+        {
+          "name": "Prepare the pinned image inspection runtime",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-30T19:39:00Z",
+          "completed_at": "2026-10-30T19:39:07Z"
+        },
+        {
+          "name": "Check polygon boundaries and refused asset revisions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-30T19:39:07Z",
+          "completed_at": "2026-10-30T19:39:09Z"
+        },
+        {
+          "name": "Inspect all 148 shipped sheets and verify their committed asset tree",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-30T19:39:09Z",
+          "completed_at": "2026-10-30T19:39:38Z"
+        },
+        {
+          "name": "Post Check out only shipped art and its recorded rig baseline",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-30T19:39:38Z",
+          "completed_at": "2026-10-30T19:39:38Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-30T19:39:38Z",
+          "completed_at": "2026-10-30T19:39:38Z"
+        }
+      ]
+    },
+    {
+      "id": 124273165907,
+      "name": "Local model, paired experiments and report",
+      "run_id": 41116841818,
+      "head_sha": "2db51f1f208d5a13c023f67df32450410b873c96",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "started_at": "2026-10-30T19:38:07Z",
+      "completed_at": "2026-10-30T19:38:57Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-30T19:38:08Z",
+          "completed_at": "2026-10-30T19:38:10Z"
+        },
+        {
+          "name": "Check out bounded study inputs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-30T19:38:10Z",
+          "completed_at": "2026-10-30T19:38:19Z"
+        },
+        {
+          "name": "Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-30T19:38:19Z",
+          "completed_at": "2026-10-30T19:38:19Z"
+        },
+        {
+          "name": "Validate preserved 1.21 and 1.22 factories, historical contracts and report archives",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-30T19:38:19Z",
+          "completed_at": "2026-10-30T19:38:34Z"
+        },
+        {
+          "name": "Verify historical 1.22 data and exact denominators without requiring current 1.22 sources",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-30T19:38:34Z",
+          "completed_at": "2026-10-30T19:38:43Z"
+        },
+        {
+          "name": "Validate 1.23 factory, final-action exhaustion regression and deterministic common-environment probes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-30T19:38:43Z",
+          "completed_at": "2026-10-30T19:38:48Z"
+        },
+        {
+          "name": "Verify complete 1.23 data, exact source hashes and no zero-budget horizon censoring",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-30T19:38:48Z",
+          "completed_at": "2026-10-30T19:38:53Z"
+        },
+        {
+          "name": "Exercise exact 1.23 report snapshot, French and English conditions and common probe denominators",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-30T19:38:53Z",
+          "completed_at": "2026-10-30T19:38:53Z"
+        },
+        {
+          "name": "Validate additive deployment and refusal boundaries without network",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-30T19:38:53Z",
+          "completed_at": "2026-10-30T19:38:54Z"
+        },
+        {
+          "name": "Post Set up Java 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-30T19:38:54Z",
+          "completed_at": "2026-10-30T19:38:55Z"
+        },
+        {
+          "name": "Post Check out bounded study inputs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-30T19:38:55Z",
+          "completed_at": "2026-10-30T19:38:55Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-30T19:38:55Z",
+          "completed_at": "2026-10-30T19:38:55Z"
+        }
+      ]
+    }
+  ],
+  "workflowCount": 2,
+  "jobCount": 3,
+  "stepCount": 51,
+  "allJobsAndStepsSucceeded": true,
+  "paginationScope": "Run collection total_count2 and job collections total_count2+1 fully returned at per_page100. Jobs requested with filter=all and every returned attempt is1.",
+  "rerunsTriggered": false,
+  "remoteMutationsPerformed": false,
+  "hostingRequested": false,
+  "originalLogs": {
+    "capture": "Complete decoded UTF-8 text returned by the workflow-job-logs tool, preserved without edits or truncation. Steps returned separately; complete step timing/metadata also retained in original final job collections.",
+    "jobCount": 3
+  },
+  "collectionAdapterLimitation": "The generic single-job fetch route was not supported by the connector; its INVALID_ARGUMENT response is preserved. Supported run job collections and purpose-built step/log tools supply all three accepted job records. No authentication or alternate network route was used.",
+  "scope": "Exact remote GitHub Actions verdicts for C1. Host Java contracts, bounded synthetic smokes, exhaustive precomputed-data validators, website DOM-double tests and frozen art integrity; no new full model campaign, Android/native/physical-device/human acceptance or Hosting/public delivery claim.",
+  "evidenceFiles": {
+    "job-124273164025-original.log": {
+      "sha256": "96d11fa367637304ced3b5c8c63c4686a241c038e289d892bc2b08af1ed96372",
+      "bytes": 118164
+    },
+    "job-124273164402-original.log": {
+      "sha256": "5851fb9692f3358a976fd7917116d794dab44dbfb1ecec10477e9aae58545484",
+      "bytes": 29366
+    },
+    "job-124273165907-original.log": {
+      "sha256": "27cb0768a9fd6357e60391e41e205107d20c7984f45045fe76d8360c5cbb4520",
+      "bytes": 51649
+    },
+    "observations/001-runs-initial.json": {
+      "sha256": "c18970735561f49ebb864a2f48c38621f103c84f14cff2f369bd45777f66a180",
+      "bytes": 23689
+    },
+    "observations/002-jobs-41116841625-initial.json": {
+      "sha256": "da2ec55141514ee8891782cc53d8283f5f9597b0ee523b33d1d05a16c5872ed3",
+      "bytes": 7943
+    },
+    "observations/002-jobs-41116841818-initial.json": {
+      "sha256": "a84c30ceba329c69c5a423236aa7acfa7f9c467e17eb4da0d2dfeb7a6788f5c6",
+      "bytes": 3283
+    },
+    "observations/003-job-124273165907-full-endpoint-unavailable.json": {
+      "sha256": "87af17e69a22bbb00512bddcaa53aa02a3abb0c320c9feca494439ed28b70f94",
+      "bytes": 166
+    },
+    "observations/004-jobs-puzzle-progress.json": {
+      "sha256": "f00c86474ed52f7b4e1089234f1fda224ddc5dce6a9525191f41951d3d6a3a95",
+      "bytes": 8268
+    },
+    "observations/004-runs-progress.json": {
+      "sha256": "0b1816834e0d7f81900a43a17c5bee7f5dbee3eb9a1d0bfab39a6ec4083023c4",
+      "bytes": 23697
+    },
+    "observations/005-jobs-puzzle-progress.json": {
+      "sha256": "be70a8f99399df53b3b6ae7eee592bb342518526c1466c60f73e28482abbb89f",
+      "bytes": 8440
+    },
+    "observations/006-jobs-puzzle-progress.json": {
+      "sha256": "f2e7d66c09656ce4db06f83b69b929c7e0a787e61962a6dcaaf3c25cf3498b68",
+      "bytes": 8999
+    },
+    "observations/007-runs-final.json": {
+      "sha256": "a1dc77a2d36db6d9b847f33c3984e8498665f05526fb7b345d74f9a887ffcce1",
+      "bytes": 23700
+    },
+    "observations/008-jobs-puzzle-final.json": {
+      "sha256": "9cd2670ede8565c753e55507e095ac834000e2b3cb26baf9c11cbd385625ddea",
+      "bytes": 9453
+    },
+    "observations/009-jobs-lab-final.json": {
+      "sha256": "a84c30ceba329c69c5a423236aa7acfa7f9c467e17eb4da0d2dfeb7a6788f5c6",
+      "bytes": 3283
+    },
+    "steps/job-124273164025.json": {
+      "sha256": "3532754501de4eb1866a7ad7899d9e8f9f1360c4ec16a6cf3b373a6afa888ecf",
+      "bytes": 5311
+    },
+    "steps/job-124273164402.json": {
+      "sha256": "1e1c7537b7526f05aa1817394cad3f44d631cde322bdb1ee8fc13eace7816a90",
+      "bytes": 1087
+    },
+    "steps/job-124273165907.json": {
+      "sha256": "a02c4368d7e2516a2a354327d31f425c784bcfb9b606cb0635534428cd986d4e",
+      "bytes": 1971
+    }
+  }
+}

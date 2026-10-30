@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-10-30T19:43:26.509318+00:00",
+  "baselineCommit": "8296d75187dfab174f12f032822987c45c6a3f79",
+  "currentCommit": "2db51f1f208d5a13c023f67df32450410b873c96",
+  "baselineTree": "846035f0e62e70b4bc4a5bdace5c19f9ad7e0cc8",
+  "currentTree": "2f24ea1a1710adae23aca0f0bca7a9f1ebef534a",
+  "baseline": {
+    "trackedBlobPaths": 57321,
+    "logicalBytesByPath": 9311658789,
+    "uniqueBlobObjects": 24625,
+    "logicalUniqueBlobBytes": 8086318676
+  },
+  "current": {
+    "trackedBlobPaths": 60107,
+    "logicalBytesByPath": 9233909509,
+    "uniqueBlobObjects": 25222,
+    "logicalUniqueBlobBytes": 8185767645
+  },
+  "logicalBytesByPathReduction": 77749280,
+  "logicalUniqueBlobBytesReduction": -99448969,
+  "changes": {
+    "removedPathCount": 6,
+    "removedPathBytes": 185306489,
+    "addedPathCount": 2792,
+    "addedPathBytes": 107602303,
+    "modifiedPathCount": 15,
+    "modifiedPathOldBytes": 751565,
+    "modifiedPathNewBytes": 706471
+  },
+  "publicTrackedBinaryRetirements": {
+    "count": 6,
+    "logicalBytes": 185306489,
+    "paths": [
+      {
+        "path": "public/releases/luma-drift-1.15.0-rc1.aab",
+        "bytes": 11382438,
+        "baselineGitBlob": "47177a38a55436871d36dd9b527d8d6ebde0c567"
+      },
+      {
+        "path": "public/releases/luma-drift-1.15.0-rc1.apk",
+        "bytes": 7970422,
+        "baselineGitBlob": "fd1807ad00acff997fa5ec7f9d0b945378f6c266"
+      },
+      {
+        "path": "public/releases/luma-drift-1.16.0-rc1.aab",
+        "bytes": 11415156,
+        "baselineGitBlob": "1ebf2fe914c8ec4239ae13952d00ca226bf497c9"
+      },
+      {
+        "path": "public/releases/luma-drift-1.16.0-rc1.apk",
+        "bytes": 7986806,
+        "baselineGitBlob": "a677ea0f8b8d56202e381c2e87952cc2556644f0"
+      },
+      {
+        "path": "public/releases/luma-drift-1.17.0-rc6.aab",
+        "bytes": 74724470,
+        "baselineGitBlob": "6e55282de44e7d0a02f34cfd3da691da2735ff0b"
+      },
+      {
+        "path": "public/releases/luma-drift-1.17.0-rc6.apk",
+        "bytes": 71827197,
+        "baselineGitBlob": "9bfb72f7043b4068176292ed1792bb02fe45c78a"
+      }
+    ]
+  },
+  "all14PublicLocalRetirementsLogicalBytes": 3136669533,
+  "scope": "Read-only immutable Git tree sizes. By-path logical bytes count every tracked path; unique-blob logical bytes deduplicate identical Git object IDs. Both exclude ignored APK files, object compression, packfiles, Git history, filesystem clones and Firebase history. No physical disk, bandwidth or Hosting storage recovery is asserted."
+}
