@@ -1,145 +1,223 @@
 {
-  "scope": "Independent public HTTPS bytes for all new/changed Cognitive Lab payloads only; historical APKs not redownloaded",
-  "origin": "https://luma-drift-production.web.app",
-  "sourceCommit": "8f3653d0a1a538f67c3136a8fff900a2beb652a9",
-  "recordedAtUtc": "2026-10-30T01:37:12.463051+00:00",
+  "schemaVersion": 1,
   "passed": true,
+  "sourceCommit": "64c0d9302680febbc19bc444ae4d315fd9a2a0f0",
+  "hostingVersion": "d88a6817932258f4",
+  "recordedAtUtc": "2026-10-30T02:07:23.247335+00:00",
   "responses": 15,
-  "bytes": 14353082,
+  "totalBytes": 14353398,
+  "manifestSha256": "8fe188d73028a4e6849e3a3ed93f3d5ba170d78e0e79be25cb220045f1bfbc08",
+  "historicalApksDownloaded": false,
+  "scope": "All15new/changedrawHTTPSresponses relative to the original1.21site. All539physicalpayloads verifiedlocally; provider541hashes recordedseparately. TheseGETsdo notprovebrowserrendering orhumanbehavior.",
   "files": [
     {
       "path": "/index.html",
+      "url": "https://luma-drift-production.web.app/index.html?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 38587,
       "sha256": "6849b4798c6e99bf43d6e691a97332e5c29b2e0130746a3369f5a979813db097",
+      "expected": {
+        "sha256": "6849b4798c6e99bf43d6e691a97332e5c29b2e0130746a3369f5a979813db097",
+        "bytes": 38587
+      },
       "contentType": "text/html; charset=utf-8",
-      "contentEncoding": null,
+      "etag": "\"efa3249bdcbad19e2947059e37df10b2afcbeee49b45d72616fcdc6f7f503ac3\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/cognitive-lab-local.zip",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/cognitive-lab-local.zip?cognitive_source=64c0d930",
       "status": 200,
-      "bytes": 6579270,
-      "sha256": "af2c44e5cc7d54f7845f9eafd49f23fc4742840a7a984f2488591cf000e0c2d0",
+      "bytes": 6579468,
+      "sha256": "c21452b86a9b999f3f720243b5960f5ce77fcd671f165d8a1ca47d86a02d063e",
+      "expected": {
+        "sha256": "c21452b86a9b999f3f720243b5960f5ce77fcd671f165d8a1ca47d86a02d063e",
+        "bytes": 6579468
+      },
       "contentType": "application/zip",
-      "contentEncoding": null,
+      "etag": "\"7431ddb837271980db269880b750f68fc8cbc4fa2bc46461223d91be733cd9c4\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/level-results.csv.gz",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/level-results.csv.gz?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 5178743,
       "sha256": "1fc0b3a4bab6e787845f7df20ccc11a9112bcc4886c390cd9e2a0a4da1f326e3",
+      "expected": {
+        "sha256": "1fc0b3a4bab6e787845f7df20ccc11a9112bcc4886c390cd9e2a0a4da1f326e3",
+        "bytes": 5178743
+      },
       "contentType": "application/gzip",
-      "contentEncoding": null,
+      "etag": "\"b9559b6dc1b0489617082bf0b3c5aa29d7eb16b47ec96c6a24599f6e7d76030b\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/paired-comparisons.json",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/paired-comparisons.json?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 57451,
       "sha256": "7e72d436e1faaef617551b210f09de668a97d166dc9636019a5b0742e923882b",
+      "expected": {
+        "sha256": "7e72d436e1faaef617551b210f09de668a97d166dc9636019a5b0742e923882b",
+        "bytes": 57451
+      },
       "contentType": "application/json",
-      "contentEncoding": null,
+      "etag": "\"fdbfcddfaed86928026c7889e168b057419b6f06a37d08af9c5c71c019bf3064\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/profiles.json",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/profiles.json?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 68609,
       "sha256": "97949535704946d569741a69cfd5ae5c475ff8944dd4ac5849910b27d8c99455",
+      "expected": {
+        "sha256": "97949535704946d569741a69cfd5ae5c475ff8944dd4ac5849910b27d8c99455",
+        "bytes": 68609
+      },
       "contentType": "application/json",
-      "contentEncoding": null,
+      "etag": "\"d12d8fd36368a0b96da846fec89173b1d0bda18fc8c91acea99ef3da8147a04f\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/provenance.json",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/provenance.json?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 6538,
       "sha256": "19042b336c4b8049cd825a8f8b5a0b786938e393791aef9478a668ea107c3871",
+      "expected": {
+        "sha256": "19042b336c4b8049cd825a8f8b5a0b786938e393791aef9478a668ea107c3871",
+        "bytes": 6538
+      },
       "contentType": "application/json",
-      "contentEncoding": null,
+      "etag": "\"1a18562775fa4353602cf528736a2cc962ce6537507b741abd15ad6d6373808b\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/report.json",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/report.json?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 665592,
       "sha256": "5e20d610ae2903672247b5896075fb5b29ae0bda959ef6f472550c8b46f73e38",
+      "expected": {
+        "sha256": "5e20d610ae2903672247b5896075fb5b29ae0bda959ef6f472550c8b46f73e38",
+        "bytes": 665592
+      },
       "contentType": "application/json",
-      "contentEncoding": null,
+      "etag": "\"88ad73d1ae43b8a2ecbf3c348a7069c23848de18fec3775949905ac90597a88c\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/summary.json",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/summary.json?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 221721,
       "sha256": "395032b3b35280de6e4cbba29a306da455c3faef43feabd1d1cfd12593e0ab32",
+      "expected": {
+        "sha256": "395032b3b35280de6e4cbba29a306da455c3faef43feabd1d1cfd12593e0ab32",
+        "bytes": 221721
+      },
       "contentType": "application/json",
-      "contentEncoding": null,
+      "etag": "\"4e69a6210c83eb7245bc3c7265391e8162f17adb49cfb4dd83d96852bb7ba91d\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/traces.json",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/traces.json?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 317741,
       "sha256": "236da172b09b283c4a5c71c54a16a4b483eb7c38e7c25f8e81a177a7d07fa2f8",
+      "expected": {
+        "sha256": "236da172b09b283c4a5c71c54a16a4b483eb7c38e7c25f8e81a177a7d07fa2f8",
+        "bytes": 317741
+      },
       "contentType": "application/json",
-      "contentEncoding": null,
+      "etag": "\"9c09f0b7aa164dbec4bfef92cbbdd45e879a4a9a418a07e517691ce00c06de57\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/data/trajectories.csv.gz",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/data/trajectories.csv.gz?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 465293,
       "sha256": "e48a0f1b3e9d883bef8054fea7bdd1667e7b6036276891aa937f73cfe22dcec4",
+      "expected": {
+        "sha256": "e48a0f1b3e9d883bef8054fea7bdd1667e7b6036276891aa937f73cfe22dcec4",
+        "bytes": 465293
+      },
       "contentType": "application/gzip",
-      "contentEncoding": null,
+      "etag": "\"eec89ef2752bad3a20f82c81990d319125a5ec0da10b4d818ad6e35ce97067c3\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/index.html",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/index.html?cognitive_source=64c0d930",
       "status": 200,
-      "bytes": 14034,
-      "sha256": "c4214d986702e248def28690eba2005ffb5f0f0a857c759ca0c4b409dd57229b",
+      "bytes": 14100,
+      "sha256": "13753740d64876b170416054d6acb8ef04ef8ad731630c66717dca6a48426e11",
+      "expected": {
+        "sha256": "13753740d64876b170416054d6acb8ef04ef8ad731630c66717dca6a48426e11",
+        "bytes": 14100
+      },
       "contentType": "text/html; charset=utf-8",
-      "contentEncoding": null,
+      "etag": "\"fd3eeddc984e810c68b2ec7e11884769719511a572c59d6e3664e455ec3281d5\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/lab-core.js",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/lab-core.js?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 5881,
       "sha256": "c49453bf037bb9a89f192601b335788633d00bbd1975eb676bea9c427cbb7e60",
+      "expected": {
+        "sha256": "c49453bf037bb9a89f192601b335788633d00bbd1975eb676bea9c427cbb7e60",
+        "bytes": 5881
+      },
       "contentType": "text/javascript; charset=utf-8",
-      "contentEncoding": null,
+      "etag": "\"be77ce03f5f3d547f627690b4af091b0899eff64e817425c5c63886b60f8272e\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/lab.css",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/lab.css?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 22577,
       "sha256": "076d5f4bf022d79ae03a4ab547428c03fb1b0a360bb5778c16f0b7a8cbd67666",
+      "expected": {
+        "sha256": "076d5f4bf022d79ae03a4ab547428c03fb1b0a360bb5778c16f0b7a8cbd67666",
+        "bytes": 22577
+      },
       "contentType": "text/css; charset=utf-8",
-      "contentEncoding": null,
+      "etag": "\"5c5d4f276877329ace7bee46918b29577ef9b1528979a6664960b3359dd16d20\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/lab.js",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/lab.js?cognitive_source=64c0d930",
       "status": 200,
-      "bytes": 45440,
-      "sha256": "bf28f34389cae8dfbfd1df361bdd325a7fa18cde2443cc987a032abfd0cc55ae",
+      "bytes": 45492,
+      "sha256": "ccf814b844266c95084b53b48f1b5153e9b41ad12e34d2ee763d6b6b1cecfc1a",
+      "expected": {
+        "sha256": "ccf814b844266c95084b53b48f1b5153e9b41ad12e34d2ee763d6b6b1cecfc1a",
+        "bytes": 45492
+      },
       "contentType": "text/javascript; charset=utf-8",
-      "contentEncoding": null,
+      "etag": "\"fe3bc2d38f68467d1d82ff2d034863acc1d07cf2c7d2c5316bde8c150c274285\"",
       "passed": true
     },
     {
       "path": "/lab/cognitive/snapshot.js",
+      "url": "https://luma-drift-production.web.app/lab/cognitive/snapshot.js?cognitive_source=64c0d930",
       "status": 200,
       "bytes": 665605,
       "sha256": "2225ed6c29649d6a5de120f568fb8df46221ad5ae4bf898aeb1dc03206664c4e",
+      "expected": {
+        "sha256": "2225ed6c29649d6a5de120f568fb8df46221ad5ae4bf898aeb1dc03206664c4e",
+        "bytes": 665605
+      },
       "contentType": "text/javascript; charset=utf-8",
-      "contentEncoding": null,
+      "etag": "\"84ea74d3f17d631ebb37e5ade75807fb0bd7d73468fefc8ace641ef9d75f18ce\"",
       "passed": true
     }
   ]

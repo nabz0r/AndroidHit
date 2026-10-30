@@ -24,3 +24,20 @@ The [independent HTTPS response check](../public-origin-overlay.json) and
 [actual responsive browser observation](../browser-public/report.json) have
 separate scopes. Historical APKs are preserved server-side; they are not
 downloaded or uploaded by the additive overlay.
+
+## Final navigation correction
+
+[Final deployment](final/deployment.json) is **DEPLOY/FINALIZED**, source
+`64c0d9302680febbc19bc444ae4d315fd9a2a0f0`, version `d88a6817932258f4`,
+released **2026-10-30T02:06:57.153Z**. Exactly three dashboard paths differ from
+the initial lab version; all other 538 provider hashes and serving config match.
+
+[All ten final JSON originals](final-receipt-index.json) retain their exact
+remote bytes. To reduce transfer size, Cloud Shell encoded unchanged lines as
+references to the earlier indexed originals and new lines as base64 literals.
+The [gzip transport envelope](final-transfer.json.gz), SHA-256
+`fc63b5c7d0497df80f4407af32ce2ce01014068ec4dbdaa1a1a3def59129ac16`,
+was exported through visible numbered blocks. Each reconstructed JSON then
+matches its independent remote byte length and SHA-256. The index and
+[independent final map check](final-integrity.json) document this verification.
+This preserves original bytes rather than deriving a new serialization.

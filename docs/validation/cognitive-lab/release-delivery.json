@@ -1,0 +1,59 @@
+{
+  "status": "DELIVERED",
+  "recordedAtUtc": "2026-10-30T02:13:45.997264+00:00",
+  "sourceCommit": "64c0d9302680febbc19bc444ae4d315fd9a2a0f0",
+  "publicTree": "32679e004bff8779e4b10a7788f71bfe4a14b061",
+  "site": {
+    "url": "https://luma-drift-production.web.app/lab/cognitive/index.html?lang=fr#results",
+    "version": "sites/luma-drift-production/versions/d88a6817932258f4",
+    "releasedAtUtc": "2026-10-30T02:06:57.153Z",
+    "physicalPayloads": 539,
+    "providerPaths": 541,
+    "finalChangedProviderPaths": 3,
+    "priorProviderHashesPreserved": 538,
+    "publicHttpsResponsesMatched": 15,
+    "publicHttpsBytesMatched": 14353398,
+    "publicFrEnResponsiveStatesPassed": 8
+  },
+  "study": {
+    "syntheticProfiles": 100,
+    "mainTrajectories": 9000,
+    "attempts": 305510,
+    "decisions": 3142360,
+    "humanParticipants": 0,
+    "clinicalDiagnosis": false,
+    "iqCalibration": false
+  },
+  "archive": {
+    "url": "https://luma-drift-production.web.app/lab/cognitive/cognitive-lab-local.zip",
+    "bytes": 6579468,
+    "sha256": "c21452b86a9b999f3f720243b5960f5ce77fcd671f165d8a1ca47d86a02d063e",
+    "extractedFiles": 115,
+    "independentSelfTestsPassed": true
+  },
+  "validation": {
+    "modelAssertions": 28139,
+    "dashboardTests": 11,
+    "offlineDeploymentTests": 11,
+    "ciWorkflows": 2,
+    "ciJobs": 3,
+    "ciSteps": 45,
+    "ci": "ci-final-runs.json"
+  },
+  "cleanup": {
+    "receipt": "../cleanup-2026-10-30/README.md",
+    "removedFileAndLinkEntries": 22120,
+    "removedLogicalBytes": 4968416699,
+    "gitAllocatedBytesSaved": 6097510400,
+    "observedVolumeFreeBytesIncrease": 11125407744,
+    "gitObjectsAndHistoryPreserved": true,
+    "trackedFilesDeleted": 0
+  },
+  "android": {
+    "releaseUnchanged": "1.21.0-rc1",
+    "versionCodeUnchanged": 29,
+    "newApkBuilt": false,
+    "scope": "Existing exact native acceptance remains historical and separately recorded; synthetic agent and browser checks do not replace human playtesting."
+  },
+  "documentationCloseout": "A subsequent docs-only commit records final receipts and screenshots without changing tested code, archive or public tree."
+}

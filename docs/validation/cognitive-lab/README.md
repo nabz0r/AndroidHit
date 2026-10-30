@@ -2,7 +2,7 @@
 
 30 October 2026. [Method and local commands](../../COGNITIVE_LAB.md) ·
 [Interactive FR/EN report](https://luma-drift-production.web.app/lab/cognitive/index.html) ·
-[Independent model review](model-review.md).
+[Independent model review](model-review.md) · [Final delivery register](release-delivery.json).
 
 ## Executed study
 
@@ -120,13 +120,25 @@ release-name aliases as different releases. Both refer to release ID
 verifies the existing release and preserves the initial failure receipt. It
 does not deploy a second version.
 
+A subsequent navigation correction is deployed from
+[`64c0d930`](https://github.com/nabz0r/AndroidHit/commit/64c0d9302680febbc19bc444ae4d315fd9a2a0f0),
+Firebase version **`d88a6817932258f4`**, on **2026-10-30T02:06:57.153Z**.
+Its [exact final receipt](hosting/final/deployment.json) changes only dashboard
+HTML, export-link JavaScript and the ZIP. It clones the exact earlier version,
+retains **538 of its 541 provider hashes**, verifies all 541 final entries and
+preserves serving configuration. Source study data and every older Android
+download remain unchanged. [Management originals and integrity](hosting/README.md).
+
 [Independent public-byte verification](public-origin-overlay.json) passes all
-**15 changed/new HTTPS responses / 14,353,082 bytes**, including the local ZIP
+**15 changed/new HTTPS responses / 14,353,398 bytes**, including the local ZIP
 and both raw gzip CSV files. [Actual public browser checks](browser-public/report.json)
 pass FR/EN at 320/375/768/1280 pixels with no observed console errors or
 horizontal overflow. Earlier saved origin-access refusals remain historical;
 the current authorized browser observation succeeded. Older APK responses were
 not redownloaded in this check.
+The [initial HTTPS receipt](public-origin-overlay-initial.json) and
+[initial browser review](browser-public/report-initial.json) remain separately
+preserved. The current response/browser records identify final source `64c0d930`.
 
 Source publication, remote CI, authenticated Firebase management and
 public-origin observation are recorded separately after release. A finalized
@@ -135,7 +147,19 @@ The Android release remains 1.21.0-rc1 / code 29.
 
 ## Final source validation and workspace maintenance
 
-Both workflows pass on validator/source commit
+Both workflows pass on **final source `64c0d930`**:
+[Cognitive Lab contracts](https://github.com/nabz0r/AndroidHit/actions/runs/40989676600)
+and [Puzzle contracts](https://github.com/nabz0r/AndroidHit/actions/runs/40989676563).
+All **three jobs / 45 steps** succeed, including the **11 offline deployment
+tests**. [Lab job records](ci-64c0d930-40989676600.json) and
+[engine/art job records](ci-64c0d930-40989676563.json) retain their exact source
+identity. [Final local integrity](final-local-integrity.json) confirms all 40
+simulation-source hashes and the documentation links after cleanup.
+[GitHub run metadata](ci-final-runs.json) binds both workflow results to that
+exact final source. The closing documentation commit changes no tested code
+or public payload and deliberately skips redundant CI.
+
+Both earlier workflows also pass on validator/source commit
 [`ea1b7fcc`](https://github.com/nabz0r/AndroidHit/commit/ea1b7fcca28caf119ee140a387ead703fae94f2c):
 [Cognitive Lab contracts](https://github.com/nabz0r/AndroidHit/actions/runs/40987738952)
 and [Puzzle contracts](https://github.com/nabz0r/AndroidHit/actions/runs/40987738959).
