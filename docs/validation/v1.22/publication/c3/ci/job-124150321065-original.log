@@ -1,0 +1,521 @@
+﻿2026-10-30T15:29:20.3516988Z Current runner version: '2.338.0'
+2026-10-30T15:29:20.3540337Z ##[group]Runner Image Provisioner
+2026-10-30T15:29:20.3541117Z Hosted Compute Agent
+2026-10-30T15:29:20.3541762Z Version: 20261021.618
+2026-10-30T15:29:20.3542341Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T15:29:20.3542980Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T15:29:20.3543664Z Worker ID: {d841f3c7-be16-4be7-b991-3dec22abc21d}
+2026-10-30T15:29:20.3544298Z Region: westus
+2026-10-30T15:29:20.3544850Z Cloud: Azure
+2026-10-30T15:29:20.3545408Z ##[endgroup]
+2026-10-30T15:29:20.3546856Z ##[group]Operating System
+2026-10-30T15:29:20.3547532Z Ubuntu
+2026-10-30T15:29:20.3548015Z 24.04.5
+2026-10-30T15:29:20.3548550Z LTS
+2026-10-30T15:29:20.3549046Z ##[endgroup]
+2026-10-30T15:29:20.3549549Z ##[group]Runner Image
+2026-10-30T15:29:20.3550141Z Image: ubuntu-24.04
+2026-10-30T15:29:20.3550661Z Version: 20261025.353.1
+2026-10-30T15:29:20.3551894Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T15:29:20.3553247Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T15:29:20.3554509Z ##[endgroup]
+2026-10-30T15:29:20.3555562Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T15:29:20.3557680Z Contents: read
+2026-10-30T15:29:20.3558239Z Metadata: read
+2026-10-30T15:29:20.3558835Z ##[endgroup]
+2026-10-30T15:29:20.3560741Z Secret source: Actions
+2026-10-30T15:29:20.3561569Z Cache mode: write
+2026-10-30T15:29:20.3562296Z Prepare workflow directory
+2026-10-30T15:29:20.3836948Z Prepare all required actions
+2026-10-30T15:29:20.3876714Z Getting action download info
+2026-10-30T15:29:20.7152972Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-30T15:29:20.8157255Z Download action repository 'actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad' (SHA:b843ebf9b913146b38da2eaa7aeddf76074ae1ad)
+2026-10-30T15:29:21.4998481Z Complete job name: Local model, paired experiments and report
+2026-10-30T15:29:21.5745278Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-30T15:29:21.5746497Z with:
+2026-10-30T15:29:21.5746967Z   persist-credentials: false
+2026-10-30T15:29:21.5747496Z   fetch-depth: 1
+2026-10-30T15:29:21.5747977Z   sparse-checkout-cone-mode: false
+2026-10-30T15:29:21.5752689Z   sparse-checkout: /.gitignore
+/scripts/cognitive_lab/
+/scripts/run-cognitive-lab.sh
+/scripts/test-cognitive-lab.sh
+/scripts/run-cognitive-lab-v122.sh
+/scripts/test-cognitive-lab-v122.sh
+/scripts/verify-cognitive-lab-v122.py
+/scripts/deploy-cognitive-overlay.py
+/scripts/test-deploy-cognitive-overlay.py
+/scripts/test-support/android/
+/app/src/main/java/com/androidhit/lumadrift/engine/
+/app/src/main/java/com/androidhit/lumadrift/data/
+/app/src/main/java/com/androidhit/lumadrift/onboarding/
+/app/src/main/java/com/androidhit/lumadrift/LumaView.java
+/public/lab/cognitive/
+/docs/validation/cognitive-lab/latest/
+/docs/validation/cognitive-lab-v122/latest/
+
+2026-10-30T15:29:21.5757596Z   repository: nabz0r/AndroidHit
+2026-10-30T15:29:21.5761856Z   token: ***
+2026-10-30T15:29:21.5762310Z   ssh-strict: true
+2026-10-30T15:29:21.5762769Z   ssh-user: git
+2026-10-30T15:29:21.5763215Z   clean: true
+2026-10-30T15:29:21.5763657Z   fetch-tags: false
+2026-10-30T15:29:21.5764123Z   show-progress: true
+2026-10-30T15:29:21.5764616Z   lfs: false
+2026-10-30T15:29:21.5765060Z   submodules: false
+2026-10-30T15:29:21.5765536Z   set-safe-directory: true
+2026-10-30T15:29:21.5766072Z   allow-unsafe-pr-checkout: false
+2026-10-30T15:29:21.5766896Z ##[endgroup]
+2026-10-30T15:29:21.7868909Z Syncing repository: nabz0r/AndroidHit
+2026-10-30T15:29:21.7870971Z ##[group]Getting Git version info
+2026-10-30T15:29:21.7871865Z Working directory is '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-30T15:29:21.7873149Z [command]/usr/bin/git version
+2026-10-30T15:29:21.7929249Z git version 2.56.0
+2026-10-30T15:29:21.7945081Z ##[endgroup]
+2026-10-30T15:29:21.7955250Z Temporarily overriding HOME='/home/runner/work/_temp/198e6fa5-dcd4-4610-b4cf-f016ecc29faf' before making global git config changes
+2026-10-30T15:29:21.7957750Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T15:29:21.7960655Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T15:29:21.8001472Z Deleting the contents of '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-30T15:29:21.8008192Z ##[group]Determining repository object format
+2026-10-30T15:29:21.8009502Z ##[endgroup]
+2026-10-30T15:29:21.8010590Z ##[group]Initializing the repository
+2026-10-30T15:29:21.8018911Z [command]/usr/bin/git init /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T15:29:21.8093146Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T15:29:21.8094238Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T15:29:21.8095576Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T15:29:21.8096744Z hint: call:
+2026-10-30T15:29:21.8097236Z hint:
+2026-10-30T15:29:21.8097870Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T15:29:21.8098615Z hint:
+2026-10-30T15:29:21.8099319Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T15:29:21.8100330Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T15:29:21.8100974Z hint:
+2026-10-30T15:29:21.8101474Z hint: 	git branch -m <name>
+2026-10-30T15:29:21.8102047Z hint:
+2026-10-30T15:29:21.8102805Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T15:29:21.8104040Z Initialized empty Git repository in /home/runner/work/AndroidHit/AndroidHit/.git/
+2026-10-30T15:29:21.8111497Z [command]/usr/bin/git remote add origin https://github.com/nabz0r/AndroidHit
+2026-10-30T15:29:21.8151134Z ##[endgroup]
+2026-10-30T15:29:21.8152064Z ##[group]Disabling automatic garbage collection
+2026-10-30T15:29:21.8154554Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T15:29:21.8184215Z ##[endgroup]
+2026-10-30T15:29:21.8185472Z ##[group]Setting up auth
+2026-10-30T15:29:21.8186129Z Removing SSH command configuration
+2026-10-30T15:29:21.8190774Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T15:29:21.8225435Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T15:29:21.8525442Z Removing HTTP extra header
+2026-10-30T15:29:21.8527499Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T15:29:21.8564355Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T15:29:21.8786702Z Removing includeIf entries pointing to credentials config files
+2026-10-30T15:29:21.8790805Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T15:29:21.8829951Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T15:29:21.9035707Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T15:29:21.9076198Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path /home/runner/work/_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:21.9112630Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:21.9148954Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:21.9187654Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:21.9221655Z ##[endgroup]
+2026-10-30T15:29:21.9222470Z ##[group]Fetching the repository
+2026-10-30T15:29:21.9227461Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +b122c0acbd172a7912c69b0b6914b8b0f9b2a243:refs/remotes/origin/main
+2026-10-30T15:29:22.5182362Z From https://github.com/nabz0r/AndroidHit
+2026-10-30T15:29:22.5184087Z  * [new ref]         b122c0acbd172a7912c69b0b6914b8b0f9b2a243 -> origin/main
+2026-10-30T15:29:22.5189314Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-30T15:29:22.5223634Z   origin/main
+2026-10-30T15:29:22.5231437Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-30T15:29:22.5263893Z b122c0acbd172a7912c69b0b6914b8b0f9b2a243
+2026-10-30T15:29:22.5268387Z ##[endgroup]
+2026-10-30T15:29:22.5269783Z ##[group]Determining the checkout info
+2026-10-30T15:29:22.5271405Z ##[endgroup]
+2026-10-30T15:29:22.5273085Z ##[group]Setting up sparse checkout
+2026-10-30T15:29:22.5274350Z [command]/usr/bin/git config core.sparseCheckout true
+2026-10-30T15:29:22.5316820Z [command]/usr/bin/git rev-parse --git-path info/sparse-checkout
+2026-10-30T15:29:22.5348837Z .git/info/sparse-checkout
+2026-10-30T15:29:22.5356063Z ##[endgroup]
+2026-10-30T15:29:22.5358042Z ##[group]Checking out the ref
+2026-10-30T15:29:22.5360082Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-30T15:29:28.6009344Z Updating files:   0% (1/166)
+2026-10-30T15:29:28.6019693Z Updating files:   1% (2/166)
+2026-10-30T15:29:28.6020725Z Updating files:   2% (4/166)
+2026-10-30T15:29:28.6021667Z Updating files:   3% (5/166)
+2026-10-30T15:29:28.6022351Z Updating files:   4% (7/166)
+2026-10-30T15:29:28.6023147Z Updating files:   5% (9/166)
+2026-10-30T15:29:28.6023684Z Updating files:   6% (10/166)
+2026-10-30T15:29:28.6024305Z Updating files:   7% (12/166)
+2026-10-30T15:29:28.6024801Z Updating files:   8% (14/166)
+2026-10-30T15:29:28.6025444Z Updating files:   9% (15/166)
+2026-10-30T15:29:28.6025906Z Updating files:  10% (17/166)
+2026-10-30T15:29:28.6031242Z Updating files:  11% (19/166)
+2026-10-30T15:29:28.6031748Z Updating files:  12% (20/166)
+2026-10-30T15:29:28.6032181Z Updating files:  13% (22/166)
+2026-10-30T15:29:28.6032723Z Updating files:  14% (24/166)
+2026-10-30T15:29:28.6033268Z Updating files:  15% (25/166)
+2026-10-30T15:29:28.6033745Z Updating files:  16% (27/166)
+2026-10-30T15:29:28.6034217Z Updating files:  17% (29/166)
+2026-10-30T15:29:28.6035555Z Updating files:  18% (30/166)
+2026-10-30T15:29:28.6036852Z Updating files:  19% (32/166)
+2026-10-30T15:29:28.6037981Z Updating files:  20% (34/166)
+2026-10-30T15:29:28.6039606Z Updating files:  21% (35/166)
+2026-10-30T15:29:28.6040745Z Updating files:  22% (37/166)
+2026-10-30T15:29:28.6044932Z Updating files:  23% (39/166)
+2026-10-30T15:29:28.6046042Z Updating files:  24% (40/166)
+2026-10-30T15:29:28.6047953Z Updating files:  25% (42/166)
+2026-10-30T15:29:28.6048844Z Updating files:  26% (44/166)
+2026-10-30T15:29:28.6051813Z Updating files:  27% (45/166)
+2026-10-30T15:29:28.6052278Z Updating files:  28% (47/166)
+2026-10-30T15:29:28.6053350Z Updating files:  29% (49/166)
+2026-10-30T15:29:28.6055417Z Updating files:  30% (50/166)
+2026-10-30T15:29:28.6057529Z Updating files:  31% (52/166)
+2026-10-30T15:29:28.6058127Z Updating files:  32% (54/166)
+2026-10-30T15:29:28.6060176Z Updating files:  33% (55/166)
+2026-10-30T15:29:28.6062136Z Updating files:  34% (57/166)
+2026-10-30T15:29:28.6062571Z Updating files:  35% (59/166)
+2026-10-30T15:29:28.6064218Z Updating files:  36% (60/166)
+2026-10-30T15:29:28.6065332Z Updating files:  37% (62/166)
+2026-10-30T15:29:28.6065859Z Updating files:  38% (64/166)
+2026-10-30T15:29:28.6067503Z Updating files:  39% (65/166)
+2026-10-30T15:29:28.6068270Z Updating files:  40% (67/166)
+2026-10-30T15:29:28.6076241Z Updating files:  41% (69/166)
+2026-10-30T15:29:28.6078350Z Updating files:  42% (70/166)
+2026-10-30T15:29:28.6080723Z Updating files:  43% (72/166)
+2026-10-30T15:29:28.6081146Z Updating files:  44% (74/166)
+2026-10-30T15:29:28.6088401Z Updating files:  45% (75/166)
+2026-10-30T15:29:28.6089540Z Updating files:  46% (77/166)
+2026-10-30T15:29:28.6093819Z Updating files:  47% (79/166)
+2026-10-30T15:29:28.6094605Z Updating files:  48% (80/166)
+2026-10-30T15:29:28.6095274Z Updating files:  49% (82/166)
+2026-10-30T15:29:28.6096281Z Updating files:  50% (83/166)
+2026-10-30T15:29:28.6102614Z Updating files:  51% (85/166)
+2026-10-30T15:29:28.6103094Z Updating files:  52% (87/166)
+2026-10-30T15:29:28.6104284Z Updating files:  53% (88/166)
+2026-10-30T15:29:28.6106749Z Updating files:  54% (90/166)
+2026-10-30T15:29:28.6420275Z Updating files:  55% (92/166)
+2026-10-30T15:29:28.6445394Z Updating files:  56% (93/166)
+2026-10-30T15:29:28.6759643Z Updating files:  57% (95/166)
+2026-10-30T15:29:28.6760098Z Updating files:  58% (97/166)
+2026-10-30T15:29:28.6791547Z Updating files:  59% (98/166)
+2026-10-30T15:29:28.6811435Z Updating files:  60% (100/166)
+2026-10-30T15:29:28.6812336Z Updating files:  61% (102/166)
+2026-10-30T15:29:28.6824202Z Updating files:  62% (103/166)
+2026-10-30T15:29:28.6870005Z Updating files:  63% (105/166)
+2026-10-30T15:29:28.6870850Z Updating files:  64% (107/166)
+2026-10-30T15:29:28.6874559Z Updating files:  65% (108/166)
+2026-10-30T15:29:28.6881357Z Updating files:  66% (110/166)
+2026-10-30T15:29:28.6892546Z Updating files:  67% (112/166)
+2026-10-30T15:29:28.7218459Z Updating files:  68% (113/166)
+2026-10-30T15:29:28.7234923Z Updating files:  69% (115/166)
+2026-10-30T15:29:28.7250184Z Updating files:  70% (117/166)
+2026-10-30T15:29:28.7530374Z Updating files:  71% (118/166)
+2026-10-30T15:29:28.7531184Z Updating files:  72% (120/166)
+2026-10-30T15:29:28.7531588Z Updating files:  73% (122/166)
+2026-10-30T15:29:28.7542506Z Updating files:  74% (123/166)
+2026-10-30T15:29:28.7545188Z Updating files:  75% (125/166)
+2026-10-30T15:29:28.7552695Z Updating files:  76% (127/166)
+2026-10-30T15:29:28.7582850Z Updating files:  77% (128/166)
+2026-10-30T15:29:28.7584477Z Updating files:  78% (130/166)
+2026-10-30T15:29:28.7587837Z Updating files:  79% (132/166)
+2026-10-30T15:29:28.7591310Z Updating files:  80% (133/166)
+2026-10-30T15:29:28.7596320Z Updating files:  81% (135/166)
+2026-10-30T15:29:28.7597094Z Updating files:  82% (137/166)
+2026-10-30T15:29:28.7601504Z Updating files:  83% (138/166)
+2026-10-30T15:29:28.7611583Z Updating files:  84% (140/166)
+2026-10-30T15:29:28.7613347Z Updating files:  85% (142/166)
+2026-10-30T15:29:28.7615387Z Updating files:  86% (143/166)
+2026-10-30T15:29:28.7618422Z Updating files:  87% (145/166)
+2026-10-30T15:29:28.7619240Z Updating files:  88% (147/166)
+2026-10-30T15:29:28.7620353Z Updating files:  89% (148/166)
+2026-10-30T15:29:28.7621556Z Updating files:  90% (150/166)
+2026-10-30T15:29:28.7622246Z Updating files:  91% (152/166)
+2026-10-30T15:29:28.7624100Z Updating files:  92% (153/166)
+2026-10-30T15:29:28.7626283Z Updating files:  93% (155/166)
+2026-10-30T15:29:28.7626892Z Updating files:  94% (157/166)
+2026-10-30T15:29:28.7627563Z Updating files:  95% (158/166)
+2026-10-30T15:29:28.7629724Z Updating files:  96% (160/166)
+2026-10-30T15:29:28.7630542Z Updating files:  97% (162/166)
+2026-10-30T15:29:28.7631643Z Updating files:  98% (163/166)
+2026-10-30T15:29:28.7632675Z Updating files:  99% (165/166)
+2026-10-30T15:29:28.7693644Z Updating files: 100% (166/166)
+2026-10-30T15:29:28.7710484Z Updating files: 100% (166/166), done.
+2026-10-30T15:29:28.8051164Z Switched to a new branch 'main'
+2026-10-30T15:29:28.8055212Z branch 'main' set up to track 'origin/main'.
+2026-10-30T15:29:28.8115178Z ##[endgroup]
+2026-10-30T15:29:28.8168922Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T15:29:28.8204431Z b122c0acbd172a7912c69b0b6914b8b0f9b2a243
+2026-10-30T15:29:28.8212786Z ##[group]Removing auth
+2026-10-30T15:29:28.8213205Z Removing SSH command configuration
+2026-10-30T15:29:28.8216876Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T15:29:28.8257151Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T15:29:28.8556155Z Removing HTTP extra header
+2026-10-30T15:29:28.8559729Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T15:29:28.8601437Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T15:29:28.8897182Z Removing includeIf entries pointing to credentials config files
+2026-10-30T15:29:28.8899656Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T15:29:28.8937832Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-30T15:29:28.8938368Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-30T15:29:28.8938759Z includeif.gitdir:/github/workspace/.git.path
+2026-10-30T15:29:28.8939091Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T15:29:28.8947003Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-30T15:29:28.8980736Z /home/runner/work/_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:28.8989720Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-506f92c2\-ad80\-40fd\-a3f8\-888278e2fc20\.config
+2026-10-30T15:29:28.9034534Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-30T15:29:28.9068999Z /home/runner/work/_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:28.9077644Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-506f92c2\-ad80\-40fd\-a3f8\-888278e2fc20\.config
+2026-10-30T15:29:28.9123874Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-30T15:29:28.9156659Z /github/runner_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:28.9164423Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-506f92c2\-ad80\-40fd\-a3f8\-888278e2fc20\.config
+2026-10-30T15:29:28.9210265Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T15:29:28.9241873Z /github/runner_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config
+2026-10-30T15:29:28.9248464Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-506f92c2\-ad80\-40fd\-a3f8\-888278e2fc20\.config
+2026-10-30T15:29:28.9290975Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T15:29:28.9581020Z Removing credentials config '/home/runner/work/_temp/git-credentials-506f92c2-ad80-40fd-a3f8-888278e2fc20.config'
+2026-10-30T15:29:28.9590843Z ##[endgroup]
+2026-10-30T15:29:28.9862387Z ##[group]Run actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+2026-10-30T15:29:28.9862738Z with:
+2026-10-30T15:29:28.9862923Z   distribution: temurin
+2026-10-30T15:29:28.9863118Z   java-version: 17
+2026-10-30T15:29:28.9863301Z   cache-jdk: false
+2026-10-30T15:29:28.9863483Z   overwrite-settings: false
+2026-10-30T15:29:28.9863690Z   java-package: jdk
+2026-10-30T15:29:28.9864037Z   check-latest: false
+2026-10-30T15:29:28.9864233Z   force-download: false
+2026-10-30T15:29:28.9864429Z   set-default: true
+2026-10-30T15:29:28.9864613Z   server-id: github
+2026-10-30T15:29:28.9864817Z   mvn-repositories-include-central: true
+2026-10-30T15:29:28.9865077Z   mvn-repositories-prioritize-central: true
+2026-10-30T15:29:28.9865327Z   cache-read-only: false
+2026-10-30T15:29:28.9865533Z   job-status: success
+2026-10-30T15:29:28.9867796Z   token: ***
+2026-10-30T15:29:28.9868011Z   show-download-progress: false
+2026-10-30T15:29:28.9868237Z   problem-matcher: true
+2026-10-30T15:29:28.9868475Z ##[endgroup]
+2026-10-30T15:29:29.0501992Z ##[group]Installed distributions
+2026-10-30T15:29:29.0660277Z Resolved Java 17.0.21+9 from tool-cache
+2026-10-30T15:29:29.0660684Z Setting Java 17.0.21+9 as the default
+2026-10-30T15:29:29.0667014Z 
+2026-10-30T15:29:29.0667274Z Java configuration:
+2026-10-30T15:29:29.0667562Z   Distribution: temurin
+2026-10-30T15:29:29.0667835Z   Version: 17.0.21+9
+2026-10-30T15:29:29.0668306Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T15:29:29.0668626Z 
+2026-10-30T15:29:29.0668988Z ##[endgroup]
+2026-10-30T15:29:29.0694829Z Creating settings.xml with server-id: github
+2026-10-30T15:29:29.0695244Z Creating toolchains.xml for JDK version 17 from temurin
+2026-10-30T15:29:29.0695561Z Writing to /home/runner/.m2/settings.xml
+2026-10-30T15:29:29.0703795Z Writing to /home/runner/.m2/toolchains.xml
+2026-10-30T15:29:29.0710902Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-10-30T15:29:29.0850975Z ##[group]Run bash scripts/test-cognitive-lab-v122.sh
+2026-10-30T15:29:29.0851587Z [36;1mbash scripts/test-cognitive-lab-v122.sh[0m
+2026-10-30T15:29:29.0881034Z shell: /usr/bin/bash -e {0}
+2026-10-30T15:29:29.0881302Z env:
+2026-10-30T15:29:29.0881592Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T15:29:29.0882008Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T15:29:29.0882349Z   MAVEN_ARGS: -ntp
+2026-10-30T15:29:29.0882548Z ##[endgroup]
+2026-10-30T15:29:32.6319485Z {"passed":true,"checks":28139,"scope":"Actual native engine on1000 U boards;5000 native SessionEnergyStore parity events;1000 GameStore award parity checks; paid Undo, bounded policy/no-oracle boundary, independent noncausal fictional IQ labels, shell learning, fatigue/reward sensitivity and exact-seed trajectories. All behavioral outcomes synthetic."}
+2026-10-30T15:29:33.2996942Z {"passed":true,"checks":225,"scope":"Frozen control behavior, cue timing/content/no knowledge bonus, actual native six-family effects, manual/automated exits, exhaustive reason/outcome conservation, no policy solver import. All behavioral outputs synthetic."}
+2026-10-30T15:29:33.6068190Z Completed current_model: 12 modeled trajectories
+2026-10-30T15:29:33.6603056Z Completed teaching_support: 12 modeled trajectories
+2026-10-30T15:29:33.6911533Z Completed reward_muted: 12 modeled trajectories
+2026-10-30T15:29:33.7767135Z Completed matched ablations; running held-out knowledge transfer
+2026-10-30T15:29:33.8769431Z Cognitive lab ready: /tmp/luma-cognitive-test.07nGHN/a (all behavioral metrics modeled)
+2026-10-30T15:29:34.1858140Z Completed current_model: 12 modeled trajectories
+2026-10-30T15:29:34.2609038Z Completed teaching_support: 12 modeled trajectories
+2026-10-30T15:29:34.3113248Z Completed reward_muted: 12 modeled trajectories
+2026-10-30T15:29:34.4132835Z Completed matched ablations; running held-out knowledge transfer
+2026-10-30T15:29:34.5157840Z Cognitive lab ready: /tmp/luma-cognitive-test.07nGHN/b (all behavioral metrics modeled)
+2026-10-30T15:29:34.5737464Z {"passed": true, "deterministicPayloads": ["summary.json", "profiles.json", "traces.json", "paired-comparisons.json", "report.json", "trajectories.csv.gz", "level-results.csv.gz"], "mainTrajectories": 36, "profileScenarioAggregates": 18, "csvSchemasValid": true, "traceScenarios": 3}
+2026-10-30T15:29:36.5832369Z 1.22 completed control_v121: 12 trajectories
+2026-10-30T15:29:36.6508154Z 1.22 completed cause_immediate: 12 trajectories
+2026-10-30T15:29:36.7239156Z 1.22 completed cause_repeat: 12 trajectories
+2026-10-30T15:29:36.7859699Z 1.22 completed cause_fading: 12 trajectories
+2026-10-30T15:29:36.8718335Z 1.22 completed team_information: 12 trajectories
+2026-10-30T15:29:36.9508001Z 1.22 completed team_execution: 12 trajectories
+2026-10-30T15:29:37.0198803Z 1.22 completed v122_combined: 12 trajectories
+2026-10-30T15:29:37.0491159Z Running cue-free held-out transfer
+2026-10-30T15:29:37.1282787Z Running separate shared-charge tactical chapter
+2026-10-30T15:29:37.3453256Z 1.22 data ready /tmp/luma122-verify.2ldM0j/a
+2026-10-30T15:29:39.2988478Z 1.22 completed control_v121: 12 trajectories
+2026-10-30T15:29:39.3627736Z 1.22 completed cause_immediate: 12 trajectories
+2026-10-30T15:29:39.4235666Z 1.22 completed cause_repeat: 12 trajectories
+2026-10-30T15:29:39.4728430Z 1.22 completed cause_fading: 12 trajectories
+2026-10-30T15:29:39.5508191Z 1.22 completed team_information: 12 trajectories
+2026-10-30T15:29:39.6167048Z 1.22 completed team_execution: 12 trajectories
+2026-10-30T15:29:39.6736681Z 1.22 completed v122_combined: 12 trajectories
+2026-10-30T15:29:39.7009964Z Running cue-free held-out transfer
+2026-10-30T15:29:39.7702445Z Running separate shared-charge tactical chapter
+2026-10-30T15:29:39.9612275Z 1.22 data ready /tmp/luma122-verify.2ldM0j/b
+2026-10-30T15:29:40.0680637Z {"passed": true, "deterministicFiles": ["profiles.json", "level-results.csv.gz", "report.json", "trajectories.csv.gz", "chapter-results.csv.gz", "tactical-chapter.json", "traces.json", "paired-comparisons.json", "chapter-stage-results.csv.gz", "summary.json", "blocked-events.csv.gz", "day-results.csv.gz"], "trajectories": 84, "exhaustiveBlockedReasons": true, "stopAttribution": true, "separateChapterConditions": 18, "administrativeAndHorizonCensoringSeparate": true}
+2026-10-30T15:29:40.2161453Z TAP version 13
+2026-10-30T15:29:40.3102725Z # Subtest: full engine report aliases normalize without altering payloads
+2026-10-30T15:29:40.3108345Z ok 1 - full engine report aliases normalize without altering payloads
+2026-10-30T15:29:40.3108799Z   ---
+2026-10-30T15:29:40.3109057Z   duration_ms: 1.760221
+2026-10-30T15:29:40.3109329Z   type: 'test'
+2026-10-30T15:29:40.3109675Z   ...
+2026-10-30T15:29:40.3112188Z # Subtest: summary-only imports keep absent sections empty, with no previous-run mixing
+2026-10-30T15:29:40.3112922Z ok 2 - summary-only imports keep absent sections empty, with no previous-run mixing
+2026-10-30T15:29:40.3113417Z   ---
+2026-10-30T15:29:40.3113688Z   duration_ms: 0.569071
+2026-10-30T15:29:40.3114052Z   type: 'test'
+2026-10-30T15:29:40.3114292Z   ...
+2026-10-30T15:29:40.3114733Z # Subtest: invalid schema, non-finite rates, duplicate and unknown identities are rejected
+2026-10-30T15:29:40.3116746Z ok 3 - invalid schema, non-finite rates, duplicate and unknown identities are rejected
+2026-10-30T15:29:40.3118127Z   ---
+2026-10-30T15:29:40.3118397Z   duration_ms: 1.593362
+2026-10-30T15:29:40.3118671Z   type: 'test'
+2026-10-30T15:29:40.3118904Z   ...
+2026-10-30T15:29:40.3119263Z # Subtest: deterministic chart bounds cannot leak invalid geometry
+2026-10-30T15:29:40.3120169Z ok 4 - deterministic chart bounds cannot leak invalid geometry
+2026-10-30T15:29:40.3120568Z   ---
+2026-10-30T15:29:40.3120802Z   duration_ms: 0.215031
+2026-10-30T15:29:40.3121066Z   type: 'test'
+2026-10-30T15:29:40.3121298Z   ...
+2026-10-30T15:29:40.3122014Z # Subtest: duration formatting preserves nonzero overruns in seconds and actual zero
+2026-10-30T15:29:40.3140591Z ok 5 - duration formatting preserves nonzero overruns in seconds and actual zero
+2026-10-30T15:29:40.3141196Z   ---
+2026-10-30T15:29:40.3141468Z   duration_ms: 41.219256
+2026-10-30T15:29:40.3141765Z   type: 'test'
+2026-10-30T15:29:40.3142062Z   ...
+2026-10-30T15:29:40.3142504Z # Subtest: CSV keeps quotes, commas and Unicode; spreadsheet formulas are inert
+2026-10-30T15:29:40.3143165Z ok 6 - CSV keeps quotes, commas and Unicode; spreadsheet formulas are inert
+2026-10-30T15:29:40.3144134Z   ---
+2026-10-30T15:29:40.3144427Z   duration_ms: 0.32766
+2026-10-30T15:29:40.3144747Z   type: 'test'
+2026-10-30T15:29:40.3144993Z   ...
+2026-10-30T15:29:40.3221767Z # Subtest: small nonzero overruns remain visible in the rendered report
+2026-10-30T15:29:40.3223902Z ok 7 - small nonzero overruns remain visible in the rendered report
+2026-10-30T15:29:40.3224373Z   ---
+2026-10-30T15:29:40.3224692Z   duration_ms: 19.630423
+2026-10-30T15:29:40.3224988Z   type: 'test'
+2026-10-30T15:29:40.3225231Z   ...
+2026-10-30T15:29:40.3289116Z # Subtest: explicit language query overrides saved language and preserves URL state
+2026-10-30T15:29:40.3289823Z ok 8 - explicit language query overrides saved language and preserves URL state
+2026-10-30T15:29:40.3290283Z   ---
+2026-10-30T15:29:40.3290523Z   duration_ms: 7.32508
+2026-10-30T15:29:40.3290787Z   type: 'test'
+2026-10-30T15:29:40.3291018Z   ...
+2026-10-30T15:29:40.3341487Z # Subtest: real render keeps hostile imported strings as text and never HTML
+2026-10-30T15:29:40.3343931Z ok 9 - real render keeps hostile imported strings as text and never HTML
+2026-10-30T15:29:40.3344388Z   ---
+2026-10-30T15:29:40.3344627Z   duration_ms: 4.87632
+2026-10-30T15:29:40.3344896Z   type: 'test'
+2026-10-30T15:29:40.3345131Z   ...
+2026-10-30T15:29:40.3514975Z # Subtest: retry traces remain separate samples and never merge their decisions
+2026-10-30T15:29:40.3518276Z ok 10 - retry traces remain separate samples and never merge their decisions
+2026-10-30T15:29:40.3518903Z   ---
+2026-10-30T15:29:40.3519303Z   duration_ms: 3.829865
+2026-10-30T15:29:40.3520136Z   type: 'test'
+2026-10-30T15:29:40.3520528Z   ...
+2026-10-30T15:29:40.3521103Z # Subtest: complete published engine data passes the same importer contract when present
+2026-10-30T15:29:40.3521960Z ok 11 - complete published engine data passes the same importer contract when present
+2026-10-30T15:29:40.3522587Z   ---
+2026-10-30T15:29:40.3522996Z   duration_ms: 12.016933
+2026-10-30T15:29:40.3523445Z   type: 'test'
+2026-10-30T15:29:40.3523815Z   ...
+2026-10-30T15:29:40.3556030Z # Subtest: 1.22 mechanics render separate manual exits, cues, censures and exact spike denominators
+2026-10-30T15:29:40.3557687Z ok 12 - 1.22 mechanics render separate manual exits, cues, censures and exact spike denominators
+2026-10-30T15:29:40.3558215Z   ---
+2026-10-30T15:29:40.3558454Z   duration_ms: 5.295436
+2026-10-30T15:29:40.3558729Z   type: 'test'
+2026-10-30T15:29:40.3558935Z   ...
+2026-10-30T15:29:40.3590689Z # Subtest: 1.22 chapter and cue-free transfer remain separate from campaign returns
+2026-10-30T15:29:40.3592339Z ok 13 - 1.22 chapter and cue-free transfer remain separate from campaign returns
+2026-10-30T15:29:40.3592799Z   ---
+2026-10-30T15:29:40.3593036Z   duration_ms: 3.890546
+2026-10-30T15:29:40.3593308Z   type: 'test'
+2026-10-30T15:29:40.3593530Z   ...
+2026-10-30T15:29:40.3697996Z # Subtest: local import removes published ZIP provenance in both languages and keeps actual local exports
+2026-10-30T15:29:40.3699349Z ok 14 - local import removes published ZIP provenance in both languages and keeps actual local exports
+2026-10-30T15:29:40.3699937Z   ---
+2026-10-30T15:29:40.3700759Z   duration_ms: 10.500787
+2026-10-30T15:29:40.3701046Z   type: 'test'
+2026-10-30T15:29:40.3701285Z   ...
+2026-10-30T15:29:40.3740681Z # Subtest: scenario switch refreshes manual/automated and U43 counters control to execution and back
+2026-10-30T15:29:40.3741798Z ok 15 - scenario switch refreshes manual/automated and U43 counters control to execution and back
+2026-10-30T15:29:40.3742363Z   ---
+2026-10-30T15:29:40.3742617Z   duration_ms: 6.25525
+2026-10-30T15:29:40.3742882Z   type: 'test'
+2026-10-30T15:29:40.3743125Z   ...
+2026-10-30T15:29:40.3816084Z # Subtest: published current/archive transitions load all7/all3 options in both directions
+2026-10-30T15:29:40.3817684Z ok 16 - published current/archive transitions load all7/all3 options in both directions
+2026-10-30T15:29:40.3819251Z   ---
+2026-10-30T15:29:40.3819888Z   duration_ms: 7.546
+2026-10-30T15:29:40.3820176Z   type: 'test'
+2026-10-30T15:29:40.3820428Z   ...
+2026-10-30T15:29:40.3961039Z # Subtest: newest version wins when older published requests resolve last, including a language change
+2026-10-30T15:29:40.3961910Z ok 17 - newest version wins when older published requests resolve last, including a language change
+2026-10-30T15:29:40.3962275Z   ---
+2026-10-30T15:29:40.3962460Z   duration_ms: 13.410016
+2026-10-30T15:29:40.3962671Z   type: 'test'
+2026-10-30T15:29:40.3962848Z   ...
+2026-10-30T15:29:40.4130487Z # Subtest: stale failed request cannot activate its fallback or error over the latest selected report
+2026-10-30T15:29:40.4131710Z ok 18 - stale failed request cannot activate its fallback or error over the latest selected report
+2026-10-30T15:29:40.4132430Z   ---
+2026-10-30T15:29:40.4132868Z   duration_ms: 17.108485
+2026-10-30T15:29:40.4133161Z   type: 'test'
+2026-10-30T15:29:40.4133404Z   ...
+2026-10-30T15:29:40.4141427Z # Subtest: a missing current snapshot never silently substitutes archive data and loading stays honest across languages
+2026-10-30T15:29:40.4142445Z ok 19 - a missing current snapshot never silently substitutes archive data and loading stays honest across languages
+2026-10-30T15:29:40.4144069Z   ---
+2026-10-30T15:29:40.4144305Z   duration_ms: 1.658209
+2026-10-30T15:29:40.4144577Z   type: 'test'
+2026-10-30T15:29:40.4144815Z   ...
+2026-10-30T15:29:40.4192232Z # Subtest: local import cancels an older published load instead of being overwritten by it
+2026-10-30T15:29:40.4193380Z ok 20 - local import cancels an older published load instead of being overwritten by it
+2026-10-30T15:29:40.4193884Z   ---
+2026-10-30T15:29:40.4194111Z   duration_ms: 5.32515
+2026-10-30T15:29:40.4194302Z   type: 'test'
+2026-10-30T15:29:40.4194471Z   ...
+2026-10-30T15:29:40.4255909Z # Subtest: failed requests use only the snapshot matching their captured version in both directions
+2026-10-30T15:29:40.4256864Z ok 21 - failed requests use only the snapshot matching their captured version in both directions
+2026-10-30T15:29:40.4257430Z   ---
+2026-10-30T15:29:40.4257665Z   duration_ms: 7.143509
+2026-10-30T15:29:40.4257935Z   type: 'test'
+2026-10-30T15:29:40.4258109Z   ...
+2026-10-30T15:29:40.4418098Z 1..21
+2026-10-30T15:29:40.4418414Z # tests 21
+2026-10-30T15:29:40.4418659Z # suites 0
+2026-10-30T15:29:40.4418958Z # pass 21
+2026-10-30T15:29:40.4419149Z # fail 0
+2026-10-30T15:29:40.4419396Z # cancelled 0
+2026-10-30T15:29:40.4419644Z # skipped 0
+2026-10-30T15:29:40.4419815Z # todo 0
+2026-10-30T15:29:40.4420016Z # duration_ms 238.617889
+2026-10-30T15:29:40.4527920Z ##[group]Run python3 scripts/verify-cognitive-lab-v122.py
+2026-10-30T15:29:40.4528345Z [36;1mpython3 scripts/verify-cognitive-lab-v122.py[0m
+2026-10-30T15:29:40.4546081Z shell: /usr/bin/bash -e {0}
+2026-10-30T15:29:40.4546300Z env:
+2026-10-30T15:29:40.4546830Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T15:29:40.4547241Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T15:29:40.4547584Z   MAVEN_ARGS: -ntp
+2026-10-30T15:29:40.4547771Z ##[endgroup]
+2026-10-30T15:29:47.2738236Z {"schemaVersion": 1, "passed": true, "modelVersion": "1.22-causal-cues-companions-1", "campaignTrajectories": 21000, "attemptRows": 777406, "blockedEventRows": 380310, "configuredDayRows": 168000, "chapterRuns": 54000, "chapterStageRows": 204851, "cueFreeProbes": 84000, "historicalControlTotalsExactlyPreserved": true, "completeReasonAndOutcomeConservation": true, "correctDayStopAttribution": true, "chapterResourceContinuity": true, "simulationProvenanceSha256": "3a04704901572723a9ef933b354d961df4d270e01486faa1018aa8f72e073e54", "humanParticipants": 0}
+2026-10-30T15:29:47.2913194Z ##[group]Run python3 scripts/test-deploy-cognitive-overlay.py
+2026-10-30T15:29:47.2913614Z [36;1mpython3 scripts/test-deploy-cognitive-overlay.py[0m
+2026-10-30T15:29:47.2931471Z shell: /usr/bin/bash -e {0}
+2026-10-30T15:29:47.2931688Z env:
+2026-10-30T15:29:47.2931952Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T15:29:47.2932505Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T15:29:47.2932821Z   MAVEN_ARGS: -ntp
+2026-10-30T15:29:47.2933011Z ##[endgroup]
+2026-10-30T15:29:48.4021558Z ...........
+2026-10-30T15:29:48.4021908Z ----------------------------------------------------------------------
+2026-10-30T15:29:48.4022247Z Ran 11 tests in 1.042s
+2026-10-30T15:29:48.4022375Z 
+2026-10-30T15:29:48.4022466Z OK
+2026-10-30T15:29:48.4283619Z Post job cleanup.
+2026-10-30T15:29:48.5041433Z Post job cleanup.
+2026-10-30T15:29:48.5791302Z [command]/usr/bin/git version
+2026-10-30T15:29:48.5868521Z git version 2.56.0
+2026-10-30T15:29:48.5896862Z Temporarily overriding HOME='/home/runner/work/_temp/5257ea7a-23f0-4980-84c3-b5e134987cc8' before making global git config changes
+2026-10-30T15:29:48.5897854Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T15:29:48.5901777Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T15:29:48.5943603Z Removing SSH command configuration
+2026-10-30T15:29:48.5944312Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T15:29:48.5981649Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T15:29:48.6299038Z Removing HTTP extra header
+2026-10-30T15:29:48.6305078Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T15:29:48.6345184Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T15:29:48.6648038Z Removing includeIf entries pointing to credentials config files
+2026-10-30T15:29:48.6654109Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T15:29:48.6696094Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T15:29:48.7121306Z Cleaning up orphan processes

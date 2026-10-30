@@ -1,5 +1,8 @@
 # 1.22 qualification register
 
+The [final delivery receipt](publication/delivery.json) joins the exact source,
+native, synthetic, CI, Hosting and public-origin evidence with their recorded hashes.
+
 The owner authorized implementation and complete delivery on 30 October 2026. The
 release adds a living native map, key/lock associations and causal feedback,
 explicit consequence inspection and the separate T122 tactical chapter. The
@@ -16,12 +19,14 @@ Source publication passes exact remote-tree comparison for
 [C1 application/lab/artifact metadata](publication/c1/source-publication.json)
 at `716bf73066892d034510db80630cd1f227738372` and
 [C2 website](publication/c2/source-publication.json) at
-`13ebe82be9b57569df50627449cc748f5245521c`. The
+`13ebe82be9b57569df50627449cc748f5245521c`, then the
+[C3 lab loading correction](publication/c3/source-publication.json) at
+`b122c0acbd172a7912c69b0b6914b8b0f9b2a243`. The
 [prepared website manifest](../site-v1.22/release/source-manifest.json) binds the
 exact C packages and eight original native captures. Source, local browser,
 native emulator and public-origin evidence are separate scopes.
 
-C2 is released on the existing Firebase site as version `990135f689f144c0`.
+C2 was initially released on the existing Firebase site as version `990135f689f144c0`.
 The [original public response receipt](../site-v1.22/public-origin-c2.json)
 passes all 35 new/changed bodies / 803,549,445 bytes, including both full signed
 APKs; it does not re-observe the historical bodies.
@@ -30,10 +35,38 @@ Actual public browser review found an
 [archive/current laboratory race](../site-v1.22/browser-public/lab/archive-race-c2-failure.json):
 the current selector could show the archive's 9,000 trajectories / three
 scenarios. The [pre-fix report](../site-v1.22/browser-public/lab/report-before-fix.json)
-remains failed evidence. Final C3 source, CI, Hosting and public retest remain
-pending; C2 lab UI completion is not claimed. The correction changes no Android
-package, Java engine or experiment data. No build, local staging or source-tree
-receipt alone establishes public delivery.
+remains failed evidence; it is not relabelled as C2 lab UI acceptance.
+
+The corrected C3 site is [DEPLOY/FINALIZED](../site-v1.22/hosting/c3/deployment/deployment.json),
+version `24e34cf6e6af1ed8`, released at **2026-10-30T15:32:03.071Z**. Only three
+provider paths change; 569 remain preserved, 572 total, with unchanged serving
+configuration. The [C3 public receipt](../site-v1.22/public-origin-c3.json) verifies
+the three complete replacement bodies / 32,426,083 bytes. The other bodies retain
+their C2 evidence and unchanged provider identities; they are not downloaded
+again by that three-response collection. The [final byte bridge](../site-v1.22/public-origin-final-bridge.json)
+records those two collections separately, with 569 provider paths / 567 raw
+payloads unchanged since C2.
+
+The actual [public lab retest](../site-v1.22/browser-public/lab-racefix/report.json)
+passes 15 checks, including rapid archive/current reversals in FR/EN and eight
+ready responsive states. The [final browser acceptance](../site-v1.22/browser-public/final-acceptance.json)
+retains the unchanged C2 homepage/demo observations separately and includes a C3
+desktop homepage revisit. It counts no failed archive frame as acceptance.
+
+[C3 remote contract CI](publication/c3/ci/receipt.json) passes both workflows,
+three jobs and all 47 steps on the first attempt, without a rerun: [Cognitive Lab
+contracts](https://github.com/nabz0r/AndroidHit/actions/runs/41081153263) and
+[Puzzle contracts](https://github.com/nabz0r/AndroidHit/actions/runs/41081153386).
+The verdict is bound to the exact C3 commit/tree; it does not perform a new full
+simulation or qualify Android, public rendering, people or provider transactions.
+
+[Independent C3 input integrity](publication/c3-input-integrity.json) verifies all
+502 native build inputs, all 51 lab-generation inputs, both canonical signed C
+APKs and their physical copies against immutable C1 receipts. All Android/config
+inputs remain unchanged from C1 to C3; the 570 current public payloads, 24 frozen
+inputs and 4,563 tracked public/script files and symlinks match C3. This read-only
+check performs no build, simulation rerun, Android launch or network collection.
+No build, local staging or source-tree receipt alone establishes public delivery.
 
 ## Intermediate candidates and evidence boundaries
 

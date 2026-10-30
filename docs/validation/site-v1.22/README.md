@@ -1,23 +1,27 @@
 # 1.22 website source and acceptance
 
-The exact website source and local browser evidence are published at
+The initial website source and local browser evidence are published at
 [C2 `13ebe82be9b57569df50627449cc748f5245521c`](https://github.com/nabz0r/AndroidHit/commit/13ebe82be9b57569df50627449cc748f5245521c),
 tree `5def59f208af92ac2dd3d7da850daddaa849ac11`. Its Android artifact metadata
 comes from [C1 `716bf73066892d034510db80630cd1f227738372`](https://github.com/nabz0r/AndroidHit/commit/716bf73066892d034510db80630cd1f227738372).
 The existing Firebase destination is `luma-drift-production`; this release does
-not create a second site. C2 is deployed and its changed bodies are verified.
-A later public archive-switch failure has a three-file correction prepared;
-that correction's publication and public acceptance remain pending.
+not create a second site. The later public archive-switch failure is corrected
+by the three-file update published at
+[C3 `b122c0acbd172a7912c69b0b6914b8b0f9b2a243`](https://github.com/nabz0r/AndroidHit/commit/b122c0acbd172a7912c69b0b6914b8b0f9b2a243),
+tree `9ab8c8440104138d779a45e7e897d20ce523091c`. Exact C3 is deployed as
+Firebase version `24e34cf6e6af1ed8`, with independent public byte and browser
+receipts. Its public source tree is `cf95386ee10d4c6ff4117cf419e3ad02a8b4cc0c`.
 
 | Scope | Recorded state |
 | --- | --- |
 | Exact C production/Lab Android acceptance | Passed; [native register](../v1.22/README.md) |
-| C2 website source publication | Published at the exact commit/tree above |
-| Prepared source and local browser | Passed, with separate receipts below |
-| C2 authenticated Hosting deployment | DEPLOY/FINALIZED, version `990135f689f144c0` |
-| C2 public response bytes | 35 complete responses /803,549,445 bytes PASS |
-| Additional C2 public lab interaction | Archive→current race reproduced; failing receipt preserved |
-| Prepared three-file correction | Offline checks pass; deployment/public acceptance pending |
+| C3 source and hosted CI | Published; two workflows, three jobs and 47 steps SUCCESS, attempt 1 |
+| Offline and local browser | Passed, with separate receipts below |
+| C3 authenticated Hosting deployment | DEPLOY/FINALIZED, version `24e34cf6e6af1ed8` |
+| Public response-byte chain | C2: 35 complete bodies; C3: three changed bodies; provider preservation PASS |
+| Public corrected lab | 15 checks, including eight responsive states and rapid FR/EN reversals PASS |
+| Public homepage and demo | Accepted on unchanged C2/C3 inputs; final C3 homepage revisited |
+| Historical C2 archive race | FAIL retained, excluded from final acceptance |
 
 Source publication, loopback rendering and Hosting management are different
 observations. None substitutes for the other rows.
@@ -42,7 +46,7 @@ updates are `/index.html`, `/lab/cognitive/index.html`, `/lab/cognitive/lab.js`
 and `/lab/cognitive/lab.css`. Gallery/audio markup, old APKs, prior lab data/ZIP,
 privacy and account/authentication routes remain preserved.
 
-The current [prepared correction manifest](release/source-manifest.json) has
+The current [delivered C3 manifest](release/source-manifest.json) has
 SHA-256 `b3f612758736370b15b47ebc4a72eb6a95fedf8342cb67fe3429f967d2549995`.
 Its [exact committed-C2 comparison](incremental-source-diff.json) retains all 570
 physical paths: **567 unchanged, three changed, no addition or removal**. The
@@ -86,7 +90,7 @@ No warnings or errors were observed in the recorded local browser scopes.
 These results do not establish public-origin rendering, phone-speaker quality,
 physical-phone comfort, human understanding, enjoyment or retention.
 
-The correction separately passes [1,248 source checks](source-qa-incremental.json),
+C3 separately passes [1,248 source checks](source-qa-incremental.json),
 [87 site/fixture tests](runtime-tests-incremental.json) and
 [47 offline transport tests](transport-tests-incremental.json): twelve deployment,
 nine collector, eight staging and eighteen byte-delta tests. Provider doubles
@@ -98,9 +102,12 @@ checks are retained in [the versioned lab evidence](../cognitive-lab-v122/async-
 
 The source-bound [actual local correction review](browser-local/lab-racefix/report.json)
 passes ready 7→3→7 scenario-count transitions, three rapid reversals, FR/EN and
-the current ZIP selection, with no observed browser errors. This validates the
-corrected runtime over loopback; deployment and its public interactions still
-need their own new receipts.
+the current ZIP selection, with no observed browser errors. This remains loopback
+evidence, separate from the public reports below. Exact C3 also passes
+[hosted CI](../v1.22/publication/c3/ci/receipt.json): **two workflows, three jobs,
+47 successful steps**, first attempt, with three original complete logs and no
+rerun. Runs are [41081153263](https://github.com/nabz0r/AndroidHit/actions/runs/41081153263)
+and [41081153386](https://github.com/nabz0r/AndroidHit/actions/runs/41081153386).
 
 ## Deployment and independent public checks
 
@@ -137,13 +144,48 @@ Every body is streamed through exact size/SHA-256 checks, with HTTP status,
 content type and identity encoding recorded. An access/security refusal stops the
 entire collection; a partial receipt cannot become PASS.
 
-No deployment, public byte collection or public rendering of the correction is
-claimed at this checkpoint. Incremental deployment must preserve all 572 provider
-paths/configuration from exact C2 and upload only the intended three-file delta.
-The unchanged original response receipt must be retained separately from the
+The original [C3 management receipt](hosting/c3/deployment/deployment.json)
+records source `b122c0acbd172a7912c69b0b6914b8b0f9b2a243`, version
+`24e34cf6e6af1ed8`, release `1793374323071000` at
+`2026-10-30T15:32:03.071Z`. It preserves all 572 provider paths and configuration,
+with **569 provider hashes unchanged and three uploaded blobs**. The
+[download collection record](hosting/c3/collection-receipt.json) and
+[original index](hosting/c3/original-index.json) retain the 12 original remote
+receipts, their archive and checked hashes without rewriting their contents.
+
+The [original C3 public response receipt](public-origin-c3.json) is PASS for the
+three complete corrected bodies, **32,426,083 bytes**, tied to the previous C2
+manifest. The [final byte-evidence bridge](public-origin-final-bridge.json) joins
+those observations to C2's original 35 bodies and the exact 567 raw/569 provider
+identities retained across C3. It does not label all 35 as fresh C3 downloads.
+The original response receipts remain separate from the
 [offline receipt validator](../../../scripts/verify-site-v122-publication.py),
-which makes no requests itself. The future incremental proof must retain the C2
-35-body receipt and preservation of 572 provider paths alongside its new three-body receipt;
-it does not freshly observe the unchanged responses or prove browser rendering.
+which makes no requests itself.
+
+## Actual public rendering and interactions
+
+The [final public browser register](browser-public/final-acceptance.json) links
+the accepted observations and excludes the historical C2 archive race:
+
+- [Corrected lab at C3](browser-public/lab-racefix/report.json): **15 checks**,
+  including current seven scenarios/21,000 trajectories/18 chapter rows,
+  archive three/9,000/zero, current ZIP identity, three rapid FR/EN reversals,
+  eight ready responsive states, final settled current data and no observed
+  warnings/errors.
+- [Public homepage](browser-public/homepage/report.json): eight FR/EN states and
+  40 individually visible native-image loads observed at C2, with all relevant
+  homepage/native inputs unchanged in C3. The [final C3 desktop revisit](browser-public/homepage/final-c3-revisit.json)
+  separately confirms the fully loaded 1080×2400 source image.
+- [Public schematic demo](browser-public/demo/report.json): seven interactions
+  and eight responsive states, observed while C2 served its byte-identical C3
+  demo sources. Destination travel, independent camera/minimap, recentering,
+  locked refusal and explicit key behavior are covered.
+
+The four public [lab JPEGs](browser-public/lab-racefix/) and four public
+[demo JPEGs](browser-public/demo/) at FR/EN 320/1280 were also visually reviewed
+without editing. Text and controls are readable; no overlap or horizontal
+clipping is visible in those eight frames. Expected vertical scrolling at mobile
+widths remains. This static visual review complements the interaction receipts.
+
 Play publication and live provider transactions retain their separate
 qualification gates.

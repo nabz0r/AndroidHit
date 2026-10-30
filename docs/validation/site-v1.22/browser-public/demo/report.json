@@ -1,0 +1,241 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T15:31:42.652Z",
+  "sourceCommit": "b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+  "servingSourceAtObservation": "13ebe82be9b57569df50627449cc748f5245521c",
+  "scope": "Actual public browser UI. Independent fictional schematic demo only; no Android state, engine or human validation.",
+  "entry": "Clicked Essayer la simulation from public homepage",
+  "interactions": [
+    {
+      "step": "destination8",
+      "state": "Browser tab: 4, Title: \"Luma Drift1.22 · Démo schématique\", URL: \"https://luma-drift-production.web.app/lab/ui-1-22/index.html\".\n1 AXWebArea Luma Drift1.22 · Démo schématique, URL: luma-drift-production.web.app/lab/ui-1-22/index.html\n\t2 link Description: Aller à la démo / Skip to demo, Value: luma-drift-production.web.app/lab/ui-1-22/index.html#demo\n\t3 container\n\t\t4 link Description: Luma Drift 1.22 · LAB, Value: luma-drift-production.web.app/index.html\n\t\t5 checkbox FR, Value: 1\n\t\t6 checkbox EN, Value: 0\n\t7 container demo\n\t\t8 text DÉMO SCHÉMATIQUE INDÉPENDANTE\n\t\t9 heading Un compagnon. Une caméra. Des liens., Value: 1\n\t\t\t10 text Un compagnon. Une caméra. Des liens.\n\t\t11 text Explore les mouvements et les associations. Ce n’est ni une capture Android ni la partie native complète. Les niveaux et les serrures sont fictifs ; aucun compte, gain ou fichier Android ne change.\n\t\t12 container luma-carte-vivante\n\t\t\t13 tab group Aperçu Luma\n\t\t\t\t14 tab (selected, settable, boolean) Carte, Value: 1, ID: lc-map-tab\n\t\t\t\t15 tab (selectable, settable, boolean) Clés, Value: 0, ID: lc-key-tab\n\t\t\t16 text Aperçu de mouvement\n\t\t\t17 container Description: Carte, ID: lc-map-panel\n\t\t\t\t18 container\n\t\t\t\t\t19 text Destination\n\t\t\t\t\t20 pop up button (collapsed, settable) Description: Choisir le niveau de destination, Value: Niveau 8, ID: lc-destination, Secondary Actions: Expand\n\t\t\t\t\t\t21 menu\n\t\t\t\t\t\t\t22 Niveau 1\n\t\t\t\t\t\t\t23 Niveau 2\n\t\t\t\t\t\t\t24 Niveau 3\n\t\t\t\t\t\t\t25 Niveau 4\n\t\t\t\t\t\t\t26 Niveau 5\n\t\t\t\t\t\t\t27 Niveau 6\n\t\t\t\t\t\t\t28 Niveau 7\n\t\t\t\t\t\t\t29 (selected) Niveau 8\n\t\t\t\t\t\t\t30 Niveau 9\n\t\t\t\t\t\t\t31 Niveau 10\n\t\t\t\t\t\t\t32 Niveau 11 · verrouillé\n\t\t\t\t\t\t\t33 Niveau 12 · verrouillé\n\t\t\t\t34 button Mon compagnon, ID: lc-recenter\n\t\t\t\t50 text Niveau actuel : 8 · Destination : 8 · caméra sur le compagnon\n\t\t\t\t36 container lc-viewport\n\t\t\t\t\t37 image Help: Choisir un niveau déplace le compagnon. Glisser déplace uniquement la caméra., ID: lc-map-svg, Chemin des niveaux de Luma Choisir un niveau déplace le compagnon. Glisser déplace uniquement la caméra.\n\t\t\t\t\t38 container lc-nodes\n\t\t\t\t\t\t42 checkbox Description: Niveau 6 · rejoindre, Value: 0\n\t\t\t\t\t\t43 checkbox Description: Niveau 7 · rejoindre, Value: 0\n\t\t\t\t\t\t51 checkbox Description: Niveau 8 · rejoindre, Value: 0\n\t\t\t\t\t\t52 checkbox Description: Niveau 9 · rejoindre, Value: 0\n\t\t\t\t\t53 text Jardin des lueurs\n\t\t\t\t45 text Glisser : déplacer la vue\n\t\t\t\t46 button Description: Minicarte. Cliquer ou utiliser les flèches pour déplacer uniquement la caméra., ID: lc-minimap\n\t\t\t\t47 text Minicarte · flèches au clavier\n\t\t\t48 text Démo interactive · aucune progression réelle\n\t\t49 link Description: Retour au jeu et aux APK, Value: luma-drift-production.web.app/index.html\n\nThe focused UI element is 1 AXWebArea Luma Drift1.22 · Démo schématique, URL: luma-drift-production.web.app/lab/ui-1-22/index.html"
+    },
+    {
+      "step": "minimap-arrow",
+      "state": "Browser tab: 4, Title: \"Luma Drift1.22 · Démo schématique\", URL: \"https://luma-drift-production.web.app/lab/ui-1-22/index.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 50, 53\n+\t\t\t\t53 text Niveau actuel : 8 · Destination : 8 · vue libre\n~\t\t\t\t\t\t51 checkbox Description: Niveau 8 · actuel, Value: 1\n+\t\t\t\t\t54 text Jardin des lueurs\nThe focused UI element is 46 button Description: Minicarte. Cliquer ou utiliser les flèches pour déplacer uniquement la caméra., ID: lc-minimap"
+    },
+    {
+      "step": "follow",
+      "state": "Browser tab: 4, Title: \"Luma Drift1.22 · Démo schématique\", URL: \"https://luma-drift-production.web.app/lab/ui-1-22/index.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t53 text Niveau actuel : 8 · Destination : 8 · caméra sur le compagnon\nThe focused UI element is 34 button Mon compagnon, ID: lc-recenter"
+    },
+    {
+      "step": "locked12",
+      "state": "Browser tab: 4, Title: \"Luma Drift1.22 · Démo schématique\", URL: \"https://luma-drift-production.web.app/lab/ui-1-22/index.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 53\n+\t\t\t\t55 text Niveau actuel : 8 · destination 12 verrouillée · compagnon immobile\nThe focused UI element is 34 button Mon compagnon, ID: lc-recenter"
+    },
+    {
+      "step": "keyA-test-start",
+      "state": "Browser tab: 4, Title: \"Luma Drift1.22 · Démo schématique\", URL: \"https://luma-drift-production.web.app/lab/ui-1-22/index.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 55, 66\n~\t\t\t\t\t52 checkbox (disabled) Clé A, Value: 1, ID: lc-key-a\n~\t\t\t\t\t53 checkbox (disabled) Clé B, Value: 0, ID: lc-key-b\n~\t\t\t\t\t54 button (disabled) En déplacement…, ID: lc-key-test\n+\t\t\t\t66 text Clé A → serrure A1\n~\t\t\t\t\t67 text Passage A\n+\t\t\t\t\t68 text Passage B\nThe focused UI element is 1 AXWebArea Luma Drift1.22 · Démo schématique, URL: luma-drift-production.web.app/lab/ui-1-22/index.html"
+    },
+    {
+      "step": "keyA-open",
+      "state": "Browser tab: 4, Title: \"Luma Drift1.22 · Démo schématique\", URL: \"https://luma-drift-production.web.app/lab/ui-1-22/index.html\".\n1 AXWebArea Luma Drift1.22 · Démo schématique, URL: luma-drift-production.web.app/lab/ui-1-22/index.html\n\t2 link Description: Aller à la démo / Skip to demo, Value: luma-drift-production.web.app/lab/ui-1-22/index.html#demo\n\t3 container\n\t\t4 link Description: Luma Drift 1.22 · LAB, Value: luma-drift-production.web.app/index.html\n\t\t5 checkbox FR, Value: 1\n\t\t6 checkbox EN, Value: 0\n\t7 container demo\n\t\t8 text DÉMO SCHÉMATIQUE INDÉPENDANTE\n\t\t9 heading Un compagnon. Une caméra. Des liens., Value: 1\n\t\t\t10 text Un compagnon. Une caméra. Des liens.\n\t\t11 text Explore les mouvements et les associations. Ce n’est ni une capture Android ni la partie native complète. Les niveaux et les serrures sont fictifs ; aucun compte, gain ou fichier Android ne change.\n\t\t12 container luma-carte-vivante\n\t\t\t13 tab group Aperçu Luma\n\t\t\t\t14 tab (selectable, settable, boolean) Carte, Value: 0, ID: lc-map-tab\n\t\t\t\t15 tab (selected, settable, boolean) Clés, Value: 1, ID: lc-key-tab\n\t\t\t16 text Aperçu de mouvement\n\t\t\t50 container Description: Clés, ID: lc-key-panel\n\t\t\t\t51 container Choisir une clé\n\t\t\t\t\t52 checkbox Clé A, Value: 1, ID: lc-key-a\n\t\t\t\t\t53 checkbox Clé B, Value: 0, ID: lc-key-b\n\t\t\t\t\t54 button (disabled) Passage dégagé, ID: lc-key-test\n\t\t\t\t66 text Clé A · A1 et A2 ouvertes · passage libre\n\t\t\t\t56 container lc-key-field\n\t\t\t\t\t57 image Help: Clé A : serrures A1 et A2. Clé B : serrure B1. La sélection ne joue aucun coup., ID: lc-key-svg, Clés et serrures associées Clé A : serrures A1 et A2. Clé B : serrure B1. La sélection ne joue aucun coup.\n\t\t\t\t\t58 text A\n\t\t\t\t\t59 text B\n\t\t\t\t\t60 container Description: Serrure A1 · ouverte · clé A, ID: lc-lock-a1\n\t\t\t\t\t\t61 text A1\n\t\t\t\t\t62 container Description: Serrure A2 · ouverte · clé A, ID: lc-lock-a2\n\t\t\t\t\t\t63 text A2\n\t\t\t\t\t64 container Description: Serrure B1 · fermée · clé B, ID: lc-lock-b1\n\t\t\t\t\t\t65 text B1\n\t\t\t\t\t67 text Passage A libre\n\t\t\t\t\t68 text Passage B\n\t\t\t48 text Démo interactive · aucune progression réelle\n\t\t49 link Description: Retour au jeu et aux APK, Value: luma-drift-production.web.app/index.html\n\nThe focused UI element is 1 AXWebArea Luma Drift1.22 · Démo schématique, URL: luma-drift-production.web.app/lab/ui-1-22/index.html"
+    },
+    {
+      "step": "keyB-selection",
+      "state": "Browser tab: 4, Title: \"Luma Drift1.22 · Démo schématique\", URL: \"https://luma-drift-production.web.app/lab/ui-1-22/index.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t\t52 checkbox Clé A, Value: 0, ID: lc-key-a\n~\t\t\t\t\t53 checkbox Clé B, Value: 1, ID: lc-key-b\n~\t\t\t\t\t54 button Tester la clé, ID: lc-key-test\n~\t\t\t\t66 text Clé B sélectionnée · B1 associée\nThe focused UI element is 53 checkbox Clé B, Value: 1, ID: lc-key-b"
+    }
+  ],
+  "responsiveStates": [
+    {
+      "lang": "fr",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 305,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift\n1.22 · LAB\nFR\nEN\n\nDÉMO SCHÉMATIQUE INDÉPENDANTE\n\nUn compagnon. Une caméra. Des liens.\n\nExplore les mouvements et les associations. Ce n’est ni une capture Android ni la partie native complète. Les niveaux et les serrures sont fictifs ; aucun compte, gain ou fichier Android ne change.\n\nCarte\nClés\nAperçu de mouvement\nDestination\nNiveau 1\nNiveau 2\nNiveau 3\nNiveau 4\nNiveau 5\nNiveau 6\nNiveau 7\nNiveau 8\nNiveau 9\nNiveau 10\nNiveau 11 · verrouillé\nNiveau 12 · verrouillé\nMon compagnon\nNiveau actuel : 4 · Destination : 4 · caméra sur le compagnon\n4\nJardin des lueurs\nGlisser : déplacer la vue\nMinicarte · flèches au clavier\nDémo interactive · aucune progression réelle\nRetour au jeu et aux APK",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=fr",
+      "viewportHeight": 780,
+      "width": 320
+    },
+    {
+      "lang": "fr",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 360,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift\n1.22 · LAB\nFR\nEN\n\nDÉMO SCHÉMATIQUE INDÉPENDANTE\n\nUn compagnon. Une caméra. Des liens.\n\nExplore les mouvements et les associations. Ce n’est ni une capture Android ni la partie native complète. Les niveaux et les serrures sont fictifs ; aucun compte, gain ou fichier Android ne change.\n\nCarte\nClés\nAperçu de mouvement\nDestination\nNiveau 1\nNiveau 2\nNiveau 3\nNiveau 4\nNiveau 5\nNiveau 6\nNiveau 7\nNiveau 8\nNiveau 9\nNiveau 10\nNiveau 11 · verrouillé\nNiveau 12 · verrouillé\nMon compagnon\nNiveau actuel : 4 · Destination : 4 · caméra sur le compagnon\n4\nJardin des lueurs\nGlisser : déplacer la vue\nMinicarte · flèches au clavier\nDémo interactive · aucune progression réelle\nRetour au jeu et aux APK",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=fr",
+      "viewportHeight": 780,
+      "width": 375
+    },
+    {
+      "lang": "fr",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 753,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift 1.22 · LAB\nFR\nEN\n\nDÉMO SCHÉMATIQUE INDÉPENDANTE\n\nUn compagnon. Une caméra. Des liens.\n\nExplore les mouvements et les associations. Ce n’est ni une capture Android ni la partie native complète. Les niveaux et les serrures sont fictifs ; aucun compte, gain ou fichier Android ne change.\n\nCarte\nClés\nAperçu de mouvement\nDestination\nNiveau 1\nNiveau 2\nNiveau 3\nNiveau 4\nNiveau 5\nNiveau 6\nNiveau 7\nNiveau 8\nNiveau 9\nNiveau 10\nNiveau 11 · verrouillé\nNiveau 12 · verrouillé\nMon compagnon\nNiveau actuel : 4 · Destination : 4 · caméra sur le compagnon\n3\n4\n5\n6\nJardin des lueurs\nGlisser : déplacer la vue\nMinicarte · flèches au clavier\nDémo interactive · aucune progression réelle\nRetour au jeu et aux APK",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=fr",
+      "viewportHeight": 780,
+      "width": 768
+    },
+    {
+      "lang": "fr",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 1265,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift 1.22 · LAB\nFR\nEN\n\nDÉMO SCHÉMATIQUE INDÉPENDANTE\n\nUn compagnon. Une caméra. Des liens.\n\nExplore les mouvements et les associations. Ce n’est ni une capture Android ni la partie native complète. Les niveaux et les serrures sont fictifs ; aucun compte, gain ou fichier Android ne change.\n\nCarte\nClés\nAperçu de mouvement\nDestination\nNiveau 1\nNiveau 2\nNiveau 3\nNiveau 4\nNiveau 5\nNiveau 6\nNiveau 7\nNiveau 8\nNiveau 9\nNiveau 10\nNiveau 11 · verrouillé\nNiveau 12 · verrouillé\nMon compagnon\nNiveau actuel : 4 · Destination : 4 · caméra sur le compagnon\n3\n4\n5\n6\n7\nJardin des lueurs\nGlisser : déplacer la vue\nMinicarte · flèches au clavier\nDémo interactive · aucune progression réelle\nRetour au jeu et aux APK",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=fr",
+      "viewportHeight": 780,
+      "width": 1280
+    },
+    {
+      "lang": "en",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 305,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift\n1.22 · LAB\nFR\nEN\n\nINDEPENDENT SCHEMATIC DEMO\n\nA companion. A camera. Connections.\n\nExplore movement and associations. This is neither an Android capture nor the full native game. Levels and locks are fictional; no account, reward or Android file changes.\n\nMap\nKeys\nMovement preview\nDestination\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7\nLevel 8\nLevel 9\nLevel 10\nLevel 11 · locked\nLevel 12 · locked\nMy companion\nCurrent level: 4 · Destination: 4 · camera follows companion\n4\nGlow garden\nDrag to move the view\nMinimap · arrow keys\nInteractive demo · no real progress\nBack to the game and APKs",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=en",
+      "viewportHeight": 780,
+      "width": 320
+    },
+    {
+      "lang": "en",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 360,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift\n1.22 · LAB\nFR\nEN\n\nINDEPENDENT SCHEMATIC DEMO\n\nA companion. A camera. Connections.\n\nExplore movement and associations. This is neither an Android capture nor the full native game. Levels and locks are fictional; no account, reward or Android file changes.\n\nMap\nKeys\nMovement preview\nDestination\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7\nLevel 8\nLevel 9\nLevel 10\nLevel 11 · locked\nLevel 12 · locked\nMy companion\nCurrent level: 4 · Destination: 4 · camera follows companion\n4\nGlow garden\nDrag to move the view\nMinimap · arrow keys\nInteractive demo · no real progress\nBack to the game and APKs",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=en",
+      "viewportHeight": 780,
+      "width": 375
+    },
+    {
+      "lang": "en",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 753,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift 1.22 · LAB\nFR\nEN\n\nINDEPENDENT SCHEMATIC DEMO\n\nA companion. A camera. Connections.\n\nExplore movement and associations. This is neither an Android capture nor the full native game. Levels and locks are fictional; no account, reward or Android file changes.\n\nMap\nKeys\nMovement preview\nDestination\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7\nLevel 8\nLevel 9\nLevel 10\nLevel 11 · locked\nLevel 12 · locked\nMy companion\nCurrent level: 4 · Destination: 4 · camera follows companion\n3\n4\n5\n6\nGlow garden\nDrag to move the view\nMinimap · arrow keys\nInteractive demo · no real progress\nBack to the game and APKs",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=en",
+      "viewportHeight": 780,
+      "width": 768
+    },
+    {
+      "lang": "en",
+      "locks": [
+        {
+          "id": "lc-lock-a1",
+          "label": null
+        },
+        {
+          "id": "lc-lock-a2",
+          "label": null
+        },
+        {
+          "id": "lc-lock-b1",
+          "label": null
+        }
+      ],
+      "scrollWidth": 1265,
+      "text": "Aller à la démo / Skip to demo\nLuma Drift 1.22 · LAB\nFR\nEN\n\nINDEPENDENT SCHEMATIC DEMO\n\nA companion. A camera. Connections.\n\nExplore movement and associations. This is neither an Android capture nor the full native game. Levels and locks are fictional; no account, reward or Android file changes.\n\nMap\nKeys\nMovement preview\nDestination\nLevel 1\nLevel 2\nLevel 3\nLevel 4\nLevel 5\nLevel 6\nLevel 7\nLevel 8\nLevel 9\nLevel 10\nLevel 11 · locked\nLevel 12 · locked\nMy companion\nCurrent level: 4 · Destination: 4 · camera follows companion\n3\n4\n5\n6\n7\nGlow garden\nDrag to move the view\nMinimap · arrow keys\nInteractive demo · no real progress\nBack to the game and APKs",
+      "url": "https://luma-drift-production.web.app/lab/ui-1-22/index.html?lang=en",
+      "viewportHeight": 780,
+      "width": 1280
+    }
+  ],
+  "consoleWarningsErrors": [],
+  "sourceInputsSha256": {
+    "public/lab/ui-1-22/index.html": "95b73f8b08e4877fc6e5ee64bead5d284b438dddce94d3c58fec451ec35bd992",
+    "public/lab/ui-1-22/simulation.css": "202e202e22ef890078b55776776e37b3fd6c086e83857aa829dbed3085a44593",
+    "public/lab/ui-1-22/simulation.mjs": "6e5ecad90ff4fa822192934b76e0170f7ad9333f86594d82e55d521dc3ddbba3"
+  },
+  "screenshots": {
+    "docs/validation/site-v1.22/browser-public/demo/en-320.jpg": {
+      "sha256": "24430d29ccef3f43b7089eab812170dde73c5520d965a9d772cf5644a83185e7",
+      "bytes": 28856
+    },
+    "docs/validation/site-v1.22/browser-public/demo/en-1280.jpg": {
+      "sha256": "02038a75d10d648372adc57c9667d037dc02cef3afed6f0cbc11bc76ca0ee82c",
+      "bytes": 44888
+    },
+    "docs/validation/site-v1.22/browser-public/demo/fr-320.jpg": {
+      "sha256": "79f7bf24d47bbdaee16e4bcf2fee0c97a6283d3c5c621b1f0ef84ca64a3211ce",
+      "bytes": 30837
+    },
+    "docs/validation/site-v1.22/browser-public/demo/fr-1280.jpg": {
+      "sha256": "4a2b625e549f8b49b3e82961195e43d01cf0ae72f5c8d6ea65cd0f4c26d10470",
+      "bytes": 46746
+    }
+  },
+  "sourceIdentityBridge": "All three demo source files byte-identical C2/current C3; separate C3 overlay changes only Cognitive Lab index/runtime/ZIP."
+}

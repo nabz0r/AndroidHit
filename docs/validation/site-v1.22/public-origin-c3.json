@@ -1,0 +1,102 @@
+{
+  "schema": "luma-site122-public-response-v1",
+  "status": "PASS",
+  "origin": "https://luma-drift-production.web.app",
+  "source_commit": "b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+  "source_manifest_sha256": "b3f612758736370b15b47ebc4a72eb6a95fedf8342cb67fe3429f967d2549995",
+  "baseline_manifest_sha256": "414444c62f2ce925d9e53974ca44d72866e4f81ee36047421f11158a77ae5ff5",
+  "previous_source_commit": "13ebe82be9b57569df50627449cc748f5245521c",
+  "previous_source_manifest_sha256": "414444c62f2ce925d9e53974ca44d72866e4f81ee36047421f11158a77ae5ff5",
+  "started_at_utc": "2026-10-30T15:32:26.729919+00:00",
+  "selected_paths": 3,
+  "expected_bytes": 32426083,
+  "selection": "Actualchangedpathsagainstexactprevious1.22sourcecommit",
+  "expected_files": {
+    "/lab/cognitive/cognitive-lab-v122-local.zip": {
+      "bytes": 32357332,
+      "sha256": "ee113bde73e48981f984cd49b94857c2c0bb95f4ee2ffd6b6f8d32d1b14aa1cf"
+    },
+    "/lab/cognitive/index.html": {
+      "bytes": 15301,
+      "sha256": "c4955ee043b3e018eff7e034cb3e81a76d464d67fa034b1fefd562aeeb4d6a76"
+    },
+    "/lab/cognitive/lab.js": {
+      "bytes": 53450,
+      "sha256": "e145f4d2afeb36aa1100923fabfb8da4b795587f9ba3e3ef8e67960f62d563c2"
+    }
+  },
+  "files": {
+    "/lab/cognitive/cognitive-lab-v122-local.zip": {
+      "sha256": "ee113bde73e48981f984cd49b94857c2c0bb95f4ee2ffd6b6f8d32d1b14aa1cf",
+      "bytes": 32357332
+    },
+    "/lab/cognitive/index.html": {
+      "sha256": "c4955ee043b3e018eff7e034cb3e81a76d464d67fa034b1fefd562aeeb4d6a76",
+      "bytes": 15301
+    },
+    "/lab/cognitive/lab.js": {
+      "sha256": "e145f4d2afeb36aa1100923fabfb8da4b795587f9ba3e3ef8e67960f62d563c2",
+      "bytes": 53450
+    }
+  },
+  "responses": {
+    "/lab/cognitive/cognitive-lab-v122-local.zip": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/cognitive-lab-v122-local.zip?source_commit=b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:32:26.730775+00:00",
+      "status": 200,
+      "contentType": "application/zip",
+      "contentEncoding": "",
+      "contentLength": "32357332",
+      "etag": "\"67271f22f9fcb491d0a422bf52ce15e72b704cad542c171e7f68a76ba61371e9\"",
+      "lastModified": "Fri, 30 Oct 2026 15:32:01 GMT",
+      "date": "Fri, 30 Oct 2026 15:32:27 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "ee113bde73e48981f984cd49b94857c2c0bb95f4ee2ffd6b6f8d32d1b14aa1cf",
+      "bytes": 32357332,
+      "durationSeconds": 5.152
+    },
+    "/lab/cognitive/index.html": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/index.html?source_commit=b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:32:31.884405+00:00",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": null,
+      "etag": "\"9e6b85b2616bb16a3453dd5d89aaa4c1d039357ee0f2a72def782c8cbfef8d5c\"",
+      "lastModified": "Fri, 30 Oct 2026 15:32:01 GMT",
+      "date": "Fri, 30 Oct 2026 15:32:31 GMT",
+      "cacheControl": "no-cache",
+      "age": null,
+      "sha256": "c4955ee043b3e018eff7e034cb3e81a76d464d67fa034b1fefd562aeeb4d6a76",
+      "bytes": 15301,
+      "durationSeconds": 0.126
+    },
+    "/lab/cognitive/lab.js": {
+      "url": "https://luma-drift-production.web.app/lab/cognitive/lab.js?source_commit=b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T15:32:32.011131+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "53450",
+      "etag": "\"c8f36b96b1ecc3f2793665df010187456a7d966989e47ee1cb34f7cf757a8299\"",
+      "lastModified": "Fri, 30 Oct 2026 15:32:01 GMT",
+      "date": "Fri, 30 Oct 2026 15:32:32 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "e145f4d2afeb36aa1100923fabfb8da4b795587f9ba3e3ef8e67960f62d563c2",
+      "bytes": 53450,
+      "durationSeconds": 0.138
+    }
+  },
+  "network_requested": true,
+  "credentials_used": false,
+  "redirects_followed": false,
+  "rendering_verified": false,
+  "scope": "Only the selected new/changed complete HTTP response bodies; unchanged responses and browser rendering are separate evidence.",
+  "completed_at_utc": "2026-10-30T15:32:32.150197+00:00",
+  "verified_bytes": 32426083
+}

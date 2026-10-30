@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T15:36:36.079885+00:00",
+  "finalSourceCommit": "b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+  "hostingVersion": "24e34cf6e6af1ed8",
+  "reports": {
+    "browser-public/homepage/report.json": {
+      "sha256": "f0977c84e16f5129e444bed7761358e9d8b5ab2979f706982fecce09a59956ba",
+      "status": "PASS"
+    },
+    "browser-public/homepage/final-c3-revisit.json": {
+      "sha256": "4e660d9f183574dff6b3e73350fc7d024d610261d9f7df85f5e3bb7572a5e6ef",
+      "status": "PASS"
+    },
+    "browser-public/demo/report.json": {
+      "sha256": "b543d19c39274a955d5ce723493030ca6756fb8cbd41a58d9dd5ccd11332c9b8",
+      "status": "PASS"
+    },
+    "browser-public/lab-racefix/report.json": {
+      "sha256": "b8f58dc63821b0e2bfddb8b03eeb743a33aea13a1629cfa91505c7de23b242f9",
+      "status": "PASS"
+    }
+  },
+  "scope": "Actual browser UI observations. Homepage8FR/EN sizes/40visible images and demo8sizes/7interactions were observed at C2 with unchanged C3 input identities; finalC3 homepage desktop revisited. CorrectedLab15checks includes8ready FR/EN sizes,current/archive/rapid reversals and final settled state at C3. No current failed archive frame is counted as acceptance.",
+  "historicalExcludedFailure": "browser-public/lab/archive-race-c2-failure.json",
+  "consoleWarningsErrorsObserved": 0
+}

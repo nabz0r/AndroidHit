@@ -7,17 +7,18 @@ release acceptance.
 
 The exact application/lab source and artifact metadata are published as
 [C1](https://github.com/nabz0r/AndroidHit/commit/716bf73066892d034510db80630cd1f227738372);
-the prepared website is published as
-[C2](https://github.com/nabz0r/AndroidHit/commit/13ebe82be9b57569df50627449cc748f5245521c).
-C2 is released on the existing Firebase site, with both complete public APK
-hashes verified. Public browser review found an archive/current lab selection
-race; its C3 correction and final source/CI/Hosting/public retest remain open.
-This does not change the qualified Android packages or experiment data.
+the initial website is published as
+[C2](https://github.com/nabz0r/AndroidHit/commit/13ebe82be9b57569df50627449cc748f5245521c),
+then the final lab loading correction as
+[C3](https://github.com/nabz0r/AndroidHit/commit/b122c0acbd172a7912c69b0b6914b8b0f9b2a243).
+The existing Firebase site is released from C3 as version `24e34cf6e6af1ed8`.
+Public bytes, scoped browser checks and [both C3 remote contract workflows](validation/v1.22/publication/c3/ci/receipt.json)
+pass. The correction changes no qualified Android package or experiment data.
 
 | Signed Android variant | Version / code | SHA-256 |
 | --- | --- | --- |
-| Production | `1.22.0-rc1` / 30 | `9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e` |
-| Lab | `1.22.0-sandbox-rc1` / 30 | `882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8` |
+| [Production APK](https://luma-drift-production.web.app/releases/luma-drift-1.22.0-rc1.apk) | `1.22.0-rc1` / 30 | `9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e` |
+| [Lab APK](https://luma-drift-production.web.app/releases/luma-drift-1.22.0-sandbox-rc1.apk) | `1.22.0-sandbox-rc1` / 30 | `882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8` |
 
 The [artifact manifest](../releases/manifest-1.22.0-rc1.json) records sizes,
 package identities and ignored physical delivery paths. Source publication does
@@ -93,8 +94,25 @@ It does not re-observe historical responses or establish browser rendering.
 
 The actual [public lab race failure](validation/site-v1.22/browser-public/lab/archive-race-c2-failure.json)
 and [pre-fix browser report](validation/site-v1.22/browser-public/lab/report-before-fix.json)
-remain preserved. Final C3 correction and public browser acceptance are pending;
-C2 is not presented as complete lab UI acceptance.
+remain preserved and failed. C3 is separately
+[DEPLOY/FINALIZED](validation/site-v1.22/hosting/c3/deployment/deployment.json),
+released at **2026-10-30T15:32:03.071Z**, with three uploads and 569 provider paths
+preserved out of 572. Configuration is unchanged. Its
+[three complete replacement responses](validation/site-v1.22/public-origin-c3.json)
+/ 32,426,083 bytes pass; unchanged bodies retain their C2 receipts. The
+[final byte bridge](validation/site-v1.22/public-origin-final-bridge.json) joins
+35 actual C2 responses and three actual C3 replacements; it does not claim 35
+fresh C3 downloads.
+The [public lab retest](validation/site-v1.22/browser-public/lab-racefix/report.json)
+passes 15 checks, including eight ready FR/EN responsive states and rapid
+archive/current reversal. The [final browser register](validation/site-v1.22/browser-public/final-acceptance.json)
+keeps unchanged C2 homepage/demo observations separate from the corrected C3 lab
+and final desktop homepage revisit. No failed frame contributes acceptance.
+
+[C3 input integrity](validation/v1.22/publication/c3-input-integrity.json) verifies
+all 502 Android and 51 lab-generation inputs against immutable receipts, both
+canonical APKs and all current public/script identities. It performs no build or
+rerun and does not substitute for public response or browser observation.
 
 Prepared source passes [1,248 offline checks](validation/site-v1.22/source-qa-prepared.json)
 and [87 JavaScript interaction tests](validation/site-v1.22/runtime-tests-prepared.json).

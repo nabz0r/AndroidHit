@@ -1,0 +1,175 @@
+{
+  "schema": "luma-release-delivery-v1",
+  "status": "DELIVERED_PLAYTEST_CANDIDATE",
+  "recordedAtUtc": "2026-10-30T15:38:41.581794+00:00",
+  "release": "1.22.0-rc1",
+  "versionCode": 30,
+  "artifactSourceCommit": "716bf73066892d034510db80630cd1f227738372",
+  "finalHostingSourceCommit": "b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+  "finalHostingSourceTree": "9ab8c8440104138d779a45e7e897d20ce523091c",
+  "finalHostingPublicTree": "cf95386ee10d4c6ff4117cf419e3ad02a8b4cc0c",
+  "hostingVersion": "sites/luma-drift-production/versions/24e34cf6e6af1ed8",
+  "hostingRelease": "sites/luma-drift-production/channels/live/releases/1793374323071000",
+  "hostingReleaseTime": "2026-10-30T15:32:03.071Z",
+  "url": "https://luma-drift-production.web.app",
+  "canonicalApks": {
+    "production": {
+      "path": "releases/luma-drift-1.22.0-rc1.apk",
+      "sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+      "bytes": 368986073,
+      "version": "1.22.0-rc1",
+      "code": 30,
+      "application_id": "com.androidhit.lumadrift",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    },
+    "lab": {
+      "path": "releases/luma-drift-1.22.0-sandbox-rc1.apk",
+      "sha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8",
+      "bytes": 368985756,
+      "version": "1.22.0-sandbox-rc1",
+      "code": 30,
+      "application_id": "com.androidhit.lumadrift.sandbox",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    }
+  },
+  "sourceCi": {
+    "commits": [
+      "716bf73066892d034510db80630cd1f227738372",
+      "13ebe82be9b57569df50627449cc748f5245521c",
+      "b122c0acbd172a7912c69b0b6914b8b0f9b2a243"
+    ],
+    "eachWorkflowCount": 2,
+    "eachJobCount": 3,
+    "eachSuccessfulStepCount": 47
+  },
+  "nativeScope": {
+    "productionC_retained": {
+      "assertions": 417,
+      "gestures": 96,
+      "png": 31,
+      "phases": 4
+    },
+    "productionC_firstInstall": {
+      "assertions": 51,
+      "gestures": 19,
+      "png": 12,
+      "phases": 3
+    },
+    "productionB_separateHistoricalAcceptance": {
+      "assertions": 1505,
+      "gestures": 138,
+      "png": 34,
+      "scope": "Distinct B build; exact B\u2192C delta preserves501 inputs and changes compact map selector/content height only."
+    },
+    "labC_upgradeAssertions": 6,
+    "labC_startupAssertions": 27,
+    "productionPreferenceMapsPreserved": 7,
+    "physicalDeviceAcceptance": false
+  },
+  "experimentScope": {
+    "humanParticipants": 0,
+    "syntheticProfiles": 100,
+    "repetitions": 30,
+    "campaignTrajectories": 21000,
+    "assistanceFreeProbes": 84000,
+    "tacticalRuns": 54000,
+    "generationInputsUnchanged": 51,
+    "clinicalOrIqCalibration": false,
+    "humanRetentionEvidence": false
+  },
+  "publicResponseScope": "Actual C2 35complete response bodies including both APKs, followed by actual C3 three changed lab bodies; source/provider preservation joins unchanged identities. Not35 fresh C3 body observations.",
+  "browserScope": "Public homepage8responsive/40visible image checks and demo8responsive/7interactions are bound C2 with identical C3 sources; final homepage C3 desktop revisit. Corrected lab C3 passes15checks including8ready FR/EN responsive states, archive/current and rapid reversals.",
+  "documentationCloseout": "Containing closeout commit adds documentation and evidence only. App, scripts, public payloads and release metadata must remain byte-identical to exact C3; remote main/tree alignment is verified after publication.",
+  "limits": [
+    "Play publication not performed",
+    "No physical-phone feel/FPS acceptance",
+    "No real-player comprehension, enjoyment or retention measurement",
+    "Real purchases remain unavailable; no live payment/provider transaction acceptance"
+  ],
+  "evidenceFiles": {
+    "releases/manifest-1.22.0-rc1.json": {
+      "sha256": "13ddfc38e30c742d9407ac63fae1421fb08f5e3acf4421d60d2e44b3d2a0ee02",
+      "bytes": 1211
+    },
+    "docs/validation/v1.22/native/retained-production-accepted.json": {
+      "sha256": "e5ddf55a0a3f3b2930f211db4d9c460ea1a982f8862afa5186511ff3bfcb0207",
+      "bytes": 7346
+    },
+    "docs/validation/v1.22/candidate-c/source-delta-from-b.json": {
+      "sha256": "3c740ab82776ec6370c57320fd508e8712e0969d402491b0d09c68e34fc142fd",
+      "bytes": 520
+    },
+    "docs/validation/v1.22/native-lab/candidate-c-upgrade-preservation/report.json": {
+      "sha256": "9b8ab1528490b1e1d21ca739cd63136181571413014171937b74759359fc401f",
+      "bytes": 5298
+    },
+    "docs/validation/v1.22/native-lab/candidate-c-launch-fr-en/report.json": {
+      "sha256": "8d741d59cc7e8327e783025941dafee92e736dd37b34b61bc2a4d7cd132510b0",
+      "bytes": 9355
+    },
+    "docs/validation/v1.22/publication/c3-input-integrity.json": {
+      "sha256": "fd740c8d4378a960fa59808bf5c788c05e2977caf7bd8b793afaf6e51cffe7fc",
+      "bytes": 109705
+    },
+    "docs/validation/cognitive-lab-v122/latest/provenance.json": {
+      "sha256": "3a04704901572723a9ef933b354d961df4d270e01486faa1018aa8f72e073e54",
+      "bytes": 8247
+    },
+    "docs/validation/cognitive-lab-v122/source-kit-validation.json": {
+      "sha256": "11d5288a18b3d29e0ddf9a73779c9e23adb27be10531990c60795ab21fe96760",
+      "bytes": 935
+    },
+    "docs/validation/cognitive-lab-v122/async-version-switch-fix/validation.json": {
+      "sha256": "3b79354ce19fe84a077c80e363a6565e0eb0456c56a0a46d08cf479d00978662",
+      "bytes": 6401
+    },
+    "docs/validation/site-v1.22/release/source-manifest.json": {
+      "sha256": "b3f612758736370b15b47ebc4a72eb6a95fedf8342cb67fe3429f967d2549995",
+      "bytes": 168432
+    },
+    "docs/validation/site-v1.22/hosting/c3/deployment/deployment.json": {
+      "sha256": "d430f75c60c98e1a6eda70d735c3e48c8739e2b5f96e4c4c271b354c1f6ee28d",
+      "bytes": 1845
+    },
+    "docs/validation/site-v1.22/hosting/c3/collection-receipt.json": {
+      "sha256": "a64315ef1b1f6df73b72469efd4d941ba0582540646247690409ce32eb1a3b76",
+      "bytes": 572
+    },
+    "docs/validation/site-v1.22/public-origin-final-bridge.json": {
+      "sha256": "8714cd30b903465eb7d51a9f416bcb52be25a9bb0371ac6a98444e677339c5af",
+      "bytes": 6767
+    },
+    "docs/validation/site-v1.22/public-origin-c3-validation.json": {
+      "sha256": "3cc4d1356c654938030a90a16caa56f82e476162b3eda150c09e7673b9105fdd",
+      "bytes": 341
+    },
+    "docs/validation/site-v1.22/browser-public/final-acceptance.json": {
+      "sha256": "711e1170cfe6640f5971e567281b87ef1a052946cae44d5c3bd2918597d393d5",
+      "bytes": 1343
+    },
+    "docs/validation/v1.22/publication/c1/source-publication.json": {
+      "sha256": "c5beb4cdfae138d495b337a70d2d75f5cc5bff9104abb3adb9b109fbd67495ec",
+      "bytes": 2657
+    },
+    "docs/validation/v1.22/publication/c1/ci/receipt.json": {
+      "sha256": "7170958d0a7fa09a07c769520a3abaf9ec8992d0cc2121e7b50a46ea0a8e3a1c",
+      "bytes": 12699
+    },
+    "docs/validation/v1.22/publication/c2/source-publication.json": {
+      "sha256": "1c29101b42af80803edd25373037f52fc4ea9c0d49b73286133631e06022aa1b",
+      "bytes": 937
+    },
+    "docs/validation/v1.22/publication/c2/ci/receipt.json": {
+      "sha256": "65f886b584f9f325e1be07496044cd901272678934a0d5852ebd29a9f7956f53",
+      "bytes": 12862
+    },
+    "docs/validation/v1.22/publication/c3/source-publication.json": {
+      "sha256": "cd4f0668ae6dcaeaa31813b54871fa41e9e0e4cc2cca6548717b4c908c11a7b6",
+      "bytes": 845
+    },
+    "docs/validation/v1.22/publication/c3/ci/receipt.json": {
+      "sha256": "86b0db48ba2c57b9f8e33ae11062041aebb0f22c282073d1d57ffc25596f27bc",
+      "bytes": 12403
+    }
+  }
+}
