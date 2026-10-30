@@ -1,0 +1,202 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T13:40:51.660261+00:00",
+  "serial": "emulator-5626",
+  "avd": "Luma122-FinalFresh-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "final-fresh-en",
+  "expected_version": "1.22.0-rc1",
+  "expected_code": 30,
+  "apk_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "observer_sha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "creation_receipt_sha256": "f193594762c83b8b7c64321ad45eddf262fa63e609645b48fd06ba5db5f19546",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "c392d6cc-dc49-4c45-847a-f833ae22dd6f",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 30,
+    "path": "native-ui-recording.mp4",
+    "sha256": "2cb2ba0891ca3dafe16c332e3d923913461c213d08494f3e9d5e01f80daf76ca",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": true,
+    "phase": "final-fresh-en",
+    "runToken": "c392d6cc-dc49-4c45-847a-f833ae22dd6f",
+    "processId": 14406,
+    "checkCount": 16,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Only genuine starter Nova is owned"
+      },
+      {
+        "passed": true,
+        "message": "Genuine starter balance and campaign unlock"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible semantic target briefing_play"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 5,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 451315,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 452189,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 483095,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "Remix",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 484367,
+        "label": "Remix",
+        "bounds": [
+          764,
+          435,
+          1044,
+          568
+        ]
+      },
+      {
+        "reason": "Continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 486949,
+        "label": "Continue",
+        "bounds": [
+          121,
+          1581,
+          958,
+          1714
+        ]
+      }
+    ],
+    "captures": [
+      "fresh-en-home",
+      "fresh-en-remix-locked",
+      "fresh-en-continue-briefing"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 57.875,
+  "evidence_sha256": {
+    "battle-observer.apk": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "f193594762c83b8b7c64321ad45eddf262fa63e609645b48fd06ba5db5f19546",
+    "instrumentation.txt": "ba9f954fe8c668703624cf4e8a272d642c1d0f5779581651d29cea58cbf8ebb1",
+    "native/after.json": "018e449729549daaacf72c2138201a0a8daf454a8474aed26611faa3cfb4e960",
+    "native/before.json": "1fd19374fbc23ddfaab7e0941f263204c2835d903c74b8756b276d5102b4e17f",
+    "native/fresh-en-continue-briefing-accessibility.json": "198e4dcc8be7931a91b45b1ebff75298ea82d2199d0a3d8c67009f52d4dc48f2",
+    "native/fresh-en-continue-briefing.png": "3463018b1a31174d00cdca2a5d77294b8a716ea3271eaf2c0e2819df22c80c45",
+    "native/fresh-en-home-accessibility.json": "c877f9bd1241e6cd60061772bbb52704ea9013c030814ca9fbcad79790d75663",
+    "native/fresh-en-home.png": "88b57f9366b84324a6233796b37cec0ec81589de5010b4c29189239a59345a23",
+    "native/fresh-en-remix-locked-accessibility.json": "78e62798597c19a5f5b394a2a31d9c4e6336f8421500dce3e76a8a81e39e8f6d",
+    "native/fresh-en-remix-locked.png": "f45ddc1d60444a0f47f5555a0d5ce8c054816dc8fd294a153e57c58ae61e6b14",
+    "native/report.json": "9c4e9f70bc721d59015398f6972ecc922cf682cd9a4d418e99133025db46a204",
+    "native/requested-steps.json": "6cd7e94a5e1e230c5a262b719f011c8b0b551cd7ea6476da7ab6c22a2ced9943",
+    "native-ui-recording.mp4": "2cb2ba0891ca3dafe16c332e3d923913461c213d08494f3e9d5e01f80daf76ca",
+    "observer-install.txt": "1df7b9a92d5904f32cd5d6c1737673d68a1f79fb8956d1df12877688f493790a",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "af19dbb36b28b3350b6cbb0e69a8311c7bdd8c01ac45cb687f238f33f0b0f7e6",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "7aacbca43d66aa270ee48967ef9681161c1bcb80299161e64012259b79611076"
+  }
+}

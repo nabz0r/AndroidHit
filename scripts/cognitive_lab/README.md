@@ -1,3 +1,15 @@
+# Versioned runners
+
+The original `CognitiveLab` runner and historical output data remain available.
+`CognitiveLab122` adds explicitly exposed cause feedback without starting
+knowledge or learning multipliers, actual six-family companion operations,
+complete blocking records, corrected day-stop attribution and a separate native
+shared-charge tactical chapter. See
+[`docs/validation/cognitive-lab-v122/README.md`](../../docs/validation/cognitive-lab-v122/README.md).
+
+Use `scripts/run-cognitive-lab-v122.sh` and `scripts/test-cognitive-lab-v122.sh`.
+The documentation below describes the original experiment.
+
 # Local cognitive hypothesis laboratory
 
 Run from the repository root:

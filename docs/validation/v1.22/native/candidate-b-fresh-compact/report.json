@@ -1,0 +1,150 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-30T13:29:15.381232+00:00",
+  "serial": "emulator-5624",
+  "avd": "Luma122-Fresh-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "fresh-compact",
+  "expected_version": "1.22.0-rc1",
+  "expected_code": 30,
+  "apk_sha256": "df0f950ed74529b63f13fa316051ceccc15db4c0f3968c7c70ad55d68262706f",
+  "observer_sha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "creation_receipt_sha256": "0d4e26dd360d44104d676f9efe7f368b041de129a5fbaefa5927d083e6520ea5",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "562bafaa-2cee-483a-a8b5-0c30c915563a",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "df0f950ed74529b63f13fa316051ceccc15db4c0f3968c7c70ad55d68262706f",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400\nOverride size: 1080x960",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 45,
+    "path": "native-ui-recording.mp4",
+    "sha256": "891fd3fe477f6281a90a8ace6ec4d8a295276e4d06e4fe8de9432eb26477f0a7",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": false,
+    "phase": "fresh-compact",
+    "runToken": "562bafaa-2cee-483a-a8b5-0c30c915563a",
+    "processId": 6488,
+    "checkCount": 10,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": false,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 3,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 191268,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          774,
+          279,
+          900,
+          407
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 198147,
+        "label": "Français",
+        "bounds": [
+          630,
+          842,
+          900,
+          984
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 218996,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          59,
+          587,
+          319,
+          784
+        ]
+      }
+    ],
+    "captures": [
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "error": "Current instrumentation execution failed",
+  "elapsed_seconds": 51.032,
+  "evidence_sha256": {
+    "battle-observer.apk": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "0d4e26dd360d44104d676f9efe7f368b041de129a5fbaefa5927d083e6520ea5",
+    "failure-android-runtime.txt": "04981bae51b356d38cfc16cff942e018e8136868a738fb85db91bca7e0852d7d",
+    "instrumentation.txt": "1fb50528191bc6f729ebf48b5edb5f350ad426425b0d96492a8b5ee1971a1aae",
+    "native/before.json": "1abce91e24b98adfe8546cebdc909947aa2820ae2c8b16c7225e7fdc2fda86ef",
+    "native/failure-accessibility.json": "69e9f67ae49d9a4178424c29fedfee8e9ddab60a3e0c74141dc1085fd5ce55c6",
+    "native/failure.png": "5087ec066098eae7d5961fae505038a8f82ee7d53eb18a89618b65b6eabe05d4",
+    "native/failure.txt": "d4c9d5d1f89da2ebcc63619ee0cf2d85fec9fc3c2929d9ad96aa23abb9eb3c5f",
+    "native/report.json": "8e432ae55a96cbff580a1ddc7d7024ae6bef65cc3bea78ff6cf5fa79c651371d",
+    "native/requested-steps.json": "45103958271ac80c52f6a501086f639543e5b96633dc61b686b6562a86ac942d",
+    "native-ui-recording.mp4": "891fd3fe477f6281a90a8ace6ec4d8a295276e4d06e4fe8de9432eb26477f0a7",
+    "observer-install.txt": "e6dc44db0a84cbc36a913751e2e31f665d34eca3f4ec4a4a242932e1f1786911",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "af70e349754fd882eb20f47612b1e7f65a539bdf1f8960e38762bedb07a567f1",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "1e1722ed8e4acafad25d17599d188513dbbe2f7f3a9623db607ae0b302c1a5e9"
+  }
+}

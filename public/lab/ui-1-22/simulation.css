@@ -1,0 +1,42 @@
+*{box-sizing:border-box} :root{color-scheme:light;--foreground:#352647;--muted-foreground:#715d7d;--background:#fbf8fc;--muted:#e4dcee;--border:#c7b5d4;--primary:#5f457a;--primary-foreground:#fff9ff;--viz-series-1:#4d8a77;--viz-series-2:#9471ae}body{margin:0;background:var(--background);color:var(--foreground);font:16px/1.6 system-ui,sans-serif}header{max-width:960px;margin:auto;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:12px}main{max-width:860px;margin:auto;padding:20px 22px 40px}.brand{font-weight:650;color:#5f457a;text-decoration:none}.brand small{margin-left:8px;font-weight:400}h1{font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.1;letter-spacing:-.04em;margin:.8rem 0 1rem}.eyebrow{font-size:.74rem;letter-spacing:.14em;color:#715d7d}.intro{max-width:720px;margin-bottom:28px;color:#715d7d}.text-small{font-size:12px}.text-muted{color:var(--muted-foreground)}button,select{font:inherit}button{cursor:pointer;min-height:42px;border:1px solid var(--border);border-radius:12px;padding:8px 13px;background:var(--background);color:var(--foreground)}button:disabled{opacity:.55;cursor:default}button[aria-pressed=true],button[aria-selected=true],.btn-primary{color:var(--primary-foreground);background:var(--primary);border-color:var(--primary)}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #4d8a77;outline-offset:4px}.nav,.viz-controls,.language{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.form-label{display:flex;align-items:center;gap:10px}.form-select{min-height:44px;padding:8px 10px;border:1px solid var(--border);border-radius:10px;background:var(--background);color:var(--foreground);max-width:190px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px}.lc-avatar img{width:38px;height:38px}.back{display:inline-block;margin-top:28px;color:#5f457a}.skip{position:absolute;top:-80px;left:20px}.skip:focus{top:10px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(max-width:420px){main,header{padding-inline:14px}.brand small{display:block;margin-left:0}.form-label{flex-wrap:wrap}.form-select{max-width:172px}}
+
+#luma-carte-vivante { width:100%; color:var(--foreground); background:transparent; }
+#luma-carte-vivante [hidden] { display:none !important; }
+#luma-carte-vivante .lc-heading { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding-right:94px; margin-bottom:16px; }
+#luma-carte-vivante .lc-map-controls, #luma-carte-vivante .lc-key-controls { margin-bottom:10px; }
+#luma-carte-vivante .lc-map-status, #luma-carte-vivante .lc-key-status { min-height:36px; margin-bottom:6px; }
+#luma-carte-vivante .lc-viewport { position:relative; width:100%; height:330px; overflow:hidden; touch-action:none; background:color-mix(in srgb,var(--muted) 45%,transparent); cursor:grab; }
+#luma-carte-vivante .lc-viewport.is-dragging { cursor:grabbing; }
+#luma-carte-vivante .lc-map-svg { position:absolute; inset:0; width:100%; height:100%; }
+#luma-carte-vivante #lc-route { stroke:var(--border); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+#luma-carte-vivante #lc-travelled { stroke:var(--viz-series-1); stroke-width:3; stroke-linecap:round; stroke-linejoin:round; opacity:.65; }
+#luma-carte-vivante .lc-node { position:absolute; transform:translate(-50%,-50%); z-index:2; }
+#luma-carte-vivante .lc-avatar { position:absolute; display:grid; place-items:center; width:42px; height:42px; transform:translate(-50%,-100%); color:var(--primary-foreground); background:var(--primary); border-radius:50%; pointer-events:none; z-index:3; }
+#luma-carte-vivante .lc-region { position:absolute; top:14px; left:14px; color:var(--muted-foreground); pointer-events:none; }
+#luma-carte-vivante .lc-map-footer { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-top:12px; }
+#luma-carte-vivante .lc-minimap-wrap { display:flex; flex-direction:column; align-items:flex-end; gap:3px; }
+#luma-carte-vivante .lc-minimap { display:block; padding:0; width:176px; max-width:100%; height:106px; background:transparent; border:1px solid var(--border); border-radius:0; touch-action:none; color:var(--foreground); }
+#luma-carte-vivante .lc-minimap-svg { width:100%; height:100%; display:block; }
+#luma-carte-vivante #lc-mini-route { stroke:var(--muted-foreground); stroke-width:9; opacity:.5; }
+#luma-carte-vivante #lc-mini-nodes { fill:var(--muted-foreground); }
+#luma-carte-vivante #lc-mini-frame { fill:color-mix(in srgb,var(--viz-series-1) 10%,transparent); stroke:var(--foreground); stroke-width:9; }
+#luma-carte-vivante #lc-mini-avatar { fill:var(--viz-series-1); stroke:var(--background); stroke-width:7; }
+#luma-carte-vivante .lc-key-field { position:relative; width:100%; height:268px; overflow:hidden; background:color-mix(in srgb,var(--muted) 45%,transparent); }
+#luma-carte-vivante .lc-key-svg { position:absolute; inset:0; width:100%; height:100%; }
+#luma-carte-vivante .lc-key-svg path { stroke:var(--border); stroke-width:3; stroke-linecap:round; }
+#luma-carte-vivante .lc-key-svg path.is-linked { stroke:var(--viz-series-1); }
+#luma-carte-vivante .lc-key-svg path.is-linked.lc-route-b { stroke:var(--viz-series-2); }
+#luma-carte-vivante .lc-dock, #luma-carte-vivante .lc-lock, #luma-carte-vivante .lc-key-runner { position:absolute; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; transform:translate(-50%,-50%); min-width:42px; min-height:54px; color:var(--muted-foreground); background:var(--background); }
+#luma-carte-vivante .lc-dock { background:transparent; }
+#luma-carte-vivante .lc-lock.is-linked { color:var(--foreground); background:color-mix(in srgb,var(--viz-series-1) 13%,var(--background)); }
+#luma-carte-vivante .lc-lock.is-linked.lc-group-b { background:color-mix(in srgb,var(--viz-series-2) 13%,var(--background)); }
+#luma-carte-vivante .lc-lock.is-open { background:transparent; color:var(--muted-foreground); transform:translate(-50%,-50%) translateY(-37px); }
+#luma-carte-vivante .lc-lock .lc-open-icon, #luma-carte-vivante .lc-lock.is-open .lc-closed-icon { display:none; }
+#luma-carte-vivante .lc-lock.is-open .lc-open-icon { display:block; }
+#luma-carte-vivante .lc-passage { position:absolute; right:10px; transform:translateY(-50%); color:var(--muted-foreground); }
+#luma-carte-vivante .lc-key-runner { z-index:3; color:var(--primary-foreground); background:var(--primary); width:38px; height:38px; min-width:0; min-height:0; border-radius:50%; }
+#luma-carte-vivante .lc-key-runner[hidden] { display:none; }
+#luma-carte-vivante .lc-scope { margin-top:12px; }
+@media (max-width:420px) { #luma-carte-vivante .lc-heading { padding-right:0; } #luma-carte-vivante .lc-viewport { height:300px; } #luma-carte-vivante .lc-map-footer { align-items:flex-start; } }
+@media (prefers-reduced-motion:reduce) { #luma-carte-vivante * { scroll-behavior:auto; } }
+

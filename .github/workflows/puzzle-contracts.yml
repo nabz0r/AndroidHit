@@ -78,6 +78,16 @@ jobs:
             /scripts/test-saga-map-v17.sh
             /scripts/SagaMapTest.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorld122.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/JourneyCamera122.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorldScene122.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/JourneyMapScene.java
+            /scripts/JourneyWorld122Test.java
+            /scripts/test-journey-world-v122.sh
+            /scripts/TacticalChapterV122Test.java
+            /scripts/test-tactical-chapter-v122.sh
+            /scripts/TacticalChapterSessionV122Test.java
+            /scripts/test-tactical-session-v122.sh
             /scripts/test-focused-journey-v120.sh
             /scripts/FocusedJourneyV120Test.java
             /app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java
@@ -111,11 +121,24 @@ jobs:
             /scripts/test-site-v119.mjs
             /scripts/test-site-v120-runtime.mjs
             /scripts/test-site-v121-runtime.mjs
+            /scripts/test-site-v122-runtime.mjs
+            /scripts/check-site-v122.py
+            /scripts/deploy-site-v122.py
+            /scripts/deploy-cognitive-overlay.py
+            /scripts/test-deploy-site-v122.py
+            /scripts/stage-site-v122-rest.py
+            /scripts/test-stage-site-v122-rest.py
+            /scripts/test-deploy-cognitive-overlay.py
             /scripts/test-simulation-v121.mjs
             /scripts/apk-byte-delta.py
             /scripts/test-apk-byte-delta.py
             /public/assets/site.js
             /public/index.html
+            /public/assets/site-v122.js
+            /public/assets/site-v122.css
+            /public/lab/ui-1-22/index.html
+            /public/lab/ui-1-22/simulation.css
+            /public/lab/ui-1-22/simulation.mjs
             /public/releases/manifest-1.19.0-*.json
             /public/assets/site-v118.js
             /public/assets/site-v118.css
@@ -268,6 +291,17 @@ jobs:
         # browser, Firebase deployment or native gameplay claim is involved.
         run: node --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
 
+      - name: Check 1.22 homepage structure and local demo syntax
+        # Bounded structure-only check accepts the pending or final page without
+        # APKs, native captures, provider access or a deployment claim.
+        run: |
+          python3 scripts/check-site-v122.py --structure-only
+          node --check public/assets/site-v122.js
+          node --check public/lab/ui-1-22/simulation.mjs
+          node --test scripts/test-site-v122-runtime.mjs
+          python3 scripts/test-deploy-site-v122.py
+          python3 scripts/test-stage-site-v122-rest.py
+
       - name: Check exact APK delta transport and refused artifact replacement
         # Small generated ZIP fixtures only; no APK download or SDK is needed.
         run: python3 scripts/test-apk-byte-delta.py
@@ -311,6 +345,13 @@ jobs:
           bash scripts/test-economy-curve-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/economy-curve-v121.json"
           bash scripts/test-session-energy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/session-energy-v121.json"
           bash scripts/simulate-summon-economy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/summon-economy-v121"
+
+      - name: Check 1.22 map navigation and durable tactical chapters
+        # Pure Java contracts; Android UI recordings remain separate evidence.
+        run: |
+          bash scripts/test-journey-world-v122.sh
+          bash scripts/test-tactical-chapter-v122.sh
+          bash scripts/test-tactical-session-v122.sh
 
       - name: Check transactional premium refill outbox with a pinned JSON parser
         run: |

@@ -1,0 +1,122 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "home-fr"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "capture",
+    "name": "map-fr"
+  },
+  {
+    "op": "open-level",
+    "level": 42
+  },
+  {
+    "op": "capture",
+    "name": "keys-fr"
+  },
+  {
+    "op": "tap",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "capture-fast",
+    "name": "keys-link-fr"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Observatoire des échos.*"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_keys"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_keys_entry"
+  },
+  {
+    "op": "assert-tactical",
+    "episode": "KEYS",
+    "layout": "t122_keys_entry",
+    "history": "",
+    "charge": 6,
+    "wins": 0,
+    "used": 0
+  },
+  {
+    "op": "capture",
+    "name": "tactical-fr"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "home-en"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "capture",
+    "name": "map-en"
+  },
+  {
+    "op": "open-level",
+    "level": 42
+  },
+  {
+    "op": "capture",
+    "name": "keys-en"
+  },
+  {
+    "op": "tap",
+    "regex": "Wall · release key 1"
+  },
+  {
+    "op": "capture-fast",
+    "name": "keys-link-en"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Echo Observatory.*"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_resume"
+  },
+  {
+    "op": "assert-tactical",
+    "episode": "KEYS",
+    "layout": "t122_keys_entry",
+    "history": "",
+    "charge": 6,
+    "wins": 0,
+    "used": 0
+  },
+  {
+    "op": "capture",
+    "name": "tactical-en"
+  }
+]

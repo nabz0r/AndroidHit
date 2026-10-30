@@ -16,7 +16,7 @@ public final class CognitiveLab {
     static final int CAMPAIGN_CAP=400,MAX_ACTIONS_PER_DAY=120,MAX_ATTEMPT_ACTIONS=110;
     static final int[] HELD_OUT={401,573,721,1000};
     static final class Config {int profiles=100,repetitions=30,days=8;long seed=DEFAULT_SEED;boolean smoke=false;Path output=Paths.get("docs/validation/cognitive-lab/latest");Path root=Paths.get(".").toAbsolutePath().normalize();}
-    static final class Trajectory {
+    static class Trajectory {
         String profile,scenario;int repetition,attempts,cleared,actions,blocked,undos,shellTaps,focusUses,coins=180,coinsEarned,coinsSpent,energySpent,energyRefilled,sessions;
         double sessionMinutes,overrun,knowledge,frustration,nodes;boolean d1,d7;Map<String,Integer> stopReasons=new TreeMap<>();double[] learned;
         double metric(String name){switch(name){case "completionRate":return attempts==0?0:(double)cleared/attempts;case "meanLevelsCleared":return cleared;case "meanActions":return actions;case "blockedRate":return actions==0?0:(double)blocked/actions;case "meanSessionMinutes":return sessions==0?0:sessionMinutes/sessions;case "modeledD1":return d1?1:0;case "modeledD7":return d7?1:0;case "meanOverrunMinutes":return sessions==0?0:overrun/sessions;case "meanKnowledge":return knowledge;default:throw new IllegalArgumentException(name);}}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "createdUtc": "2026-10-30T13:54:21.265615+00:00",
+  "candidate": "C",
+  "productionApkSha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "labApkSha256": "882481a2da12cc0e4a36af804d211a12c942fab2bbaef88d80ed740e2a3490f8",
+  "labVersion": "1.22.0-sandbox-rc1",
+  "versionCode": 30,
+  "observerSha256": "42b047fc45b211091cd5845501c4baa5df17c677d016686b3279f1664930665f",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "phases": [
+    {
+      "report": "docs/validation/v1.22/native-lab/candidate-c-upgrade-preservation/report.json",
+      "sha256": "9b8ab1528490b1e1d21ca739cd63136181571413014171937b74759359fc401f",
+      "checks": 6,
+      "touches": 0,
+      "productionPreferencesByteIdentical": true,
+      "productionPreferenceFiles": 7,
+      "captures": [],
+      "observerUninstalled": true,
+      "sandboxUpgradeByteIdenticalBeforeFirstActivity": true
+    },
+    {
+      "report": "docs/validation/v1.22/native-lab/candidate-c-launch-fr-en/report.json",
+      "sha256": "8d741d59cc7e8327e783025941dafee92e736dd37b34b61bc2a4d7cd132510b0",
+      "checks": 27,
+      "touches": 4,
+      "productionPreferencesByteIdentical": true,
+      "productionPreferenceFiles": 7,
+      "captures": [
+        "lab122-native-home-fr",
+        "lab122-native-home-en"
+      ],
+      "observerUninstalled": true
+    }
+  ],
+  "visualReview": {
+    "fr": true,
+    "en": true,
+    "pngs": {
+      "lab122-native-home-en.png": "cd76d262bddb5c9ec3725ebdbe731cba2b03ce7168581c22f3bd81fe9b012962",
+      "lab122-native-home-fr.png": "d90a9c7e1bf010b300da82ac9ec8e2dfa3ec8b06be7f3f545cd58f4a43e3894e"
+    }
+  },
+  "preservedLabValues": {
+    "coins": 730,
+    "campaignUnlocked": 11,
+    "testGold": 400,
+    "activeLevel11ResumeVisible": true
+  },
+  "scope": "Exact-byte Lab upgrade, real settings gestures and FR/EN home captures on the preserved task emulator. Both phases preserve all7 production preference files exactly. No clear, grant, direct save write, injected fixtures, progression, purchase or human acceptance claim."
+}

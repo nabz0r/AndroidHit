@@ -1,3 +1,11 @@
+# Luma Drift 1.22 — living map, visible causality and tactical chapter
+
+Owner authorized full implementation and delivery on 30 October 2026: native keys/locks and causal feedback; a moving companion, independent 2D camera and minimap; targeted anticipation at U43/U48; a separately persisted 12-layout tactical chapter with a loan team and shared talent reserve; actual-mechanic cognitive comparisons; signed production/Lab packages, native qualification, documentation, Git main and the existing Firebase site.
+
+Status: final production C and Lab C pass their native scopes; exact canonical signed APKs are collected. The corrected lab rerun retains all behavioral results. Git main and existing Firebase publication are being closed separately. Historical 1.21 bytes, saves, probability and provider gates are retained. See [design study](docs/research/cognitive-design-2026/ANALYSE_ET_DIRECTION_FR.md).
+
+---
+
 # Luma Drift 1.18 — Git and Hosting published; Android UX rework open
 
 ## Retour du propriétaire —2026-10-29

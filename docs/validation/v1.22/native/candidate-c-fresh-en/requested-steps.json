@@ -1,0 +1,36 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "assert-starter"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-en-home"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "tap",
+    "regex": "Remix"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-en-remix-locked"
+  },
+  {
+    "op": "tap",
+    "regex": "Continue"
+  },
+  {
+    "op": "assert-id",
+    "id": "briefing_play"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-en-continue-briefing"
+  }
+]

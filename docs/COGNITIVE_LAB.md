@@ -1,8 +1,33 @@
-# Cognitive Lab — local synthetic player study
+# Cognitive Lab - versioned synthetic studies
+
+The **1.22 experiment** executes exposed blocking feedback, actual six-family
+companion actions, a separate shared-charge tactical chapter and transfer with
+all assistance removed. It includes 21,000 campaign trajectories, 84,000
+assistance-free probes and 54,000 chapter runs, with zero human participants.
+
+[1.22 protocol and measured results](validation/cognitive-lab-v122/README.md)
+
+The 1.22 protocol was fully rerun before publication after correcting its scenario
+list serialization. The [comparison](validation/cognitive-lab-v122/rerun-scenario-metadata-comparison.json)
+confirms identical CSV streams and behavioral results; the [source binding](validation/cognitive-lab-v122/candidate-c-source-binding.json)
+now matches all51 source hashes. Local imports do not offer an unrelated published ZIP.
+- [Versioned outputs](validation/cognitive-lab-v122/latest/summary.json)
+- [Interactive FR/EN dashboard](https://luma-drift-production.web.app/lab/cognitive/index.html)
+
+Run `bash scripts/test-cognitive-lab-v122.sh`, then
+`bash scripts/run-cognitive-lab-v122.sh --profiles 100 --repetitions 30 --seed 20261030`.
+Prepare versioned site assets with `python3 scripts/package-cognitive-lab-v122.py`.
+The dashboard keeps the historical 1.21 report separately selectable; its data
+is never overwritten by the 1.22 package command.
+
+The earlier protocol below describes **the archived 1.21 experiment**. Its
+hypothetical `teaching_support` knowledge boost is not the new shipped UI.
+
+## Historical 1.21 protocol
 
 The lab compares **100 parameterized synthetic profiles** on the current Luma
 Drift puzzle engine. It measures the behavior of these agents under declared
-assumptions. The Android playtest release remains **1.21.0-rc1 / code 29**.
+assumptions. That historical Android playtest was **1.21.0-rc1 / code 29**.
 
 [Interactive FR/EN report](https://luma-drift-production.web.app/lab/cognitive/index.html)
 · [Recorded outputs](validation/cognitive-lab/latest/summary.json)

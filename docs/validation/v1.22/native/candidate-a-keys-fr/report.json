@@ -1,0 +1,531 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-30T13:16:50.929984+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "keys-fr",
+  "expected_version": "1.22.0-rc1",
+  "expected_code": 30,
+  "apk_sha256": "d0df4dbc66858b43dda5a214e1c14b8c052570e3c7ccece72d10c1a7ed37075a",
+  "observer_sha256": "861947ec96911fcd2d923f121e4d5f78adf9fc332c0836dac99a9b5629c27c8f",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "77ae6f56-0726-470d-b71b-3e0c4f8c3786",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "d0df4dbc66858b43dda5a214e1c14b8c052570e3c7ccece72d10c1a7ed37075a",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 30,
+    "path": "native-ui-recording.mp4",
+    "sha256": "551b8c2c0b9eb0739bd4f75c1b97571c8401efc4d22bd7d68bfd5caa74be65c5",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": false,
+    "phase": "keys-fr",
+    "runToken": "77ae6f56-0726-470d-b71b-3e0c4f8c3786",
+    "processId": 10300,
+    "checkCount": 73,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches Mur · libère la clé 1"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Native map baseline was actually observed"
+      },
+      {
+        "passed": true,
+        "message": "Map exploration preserves complete actual progression, owned items and earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Pan, minimap, walking and pinch cannot debit session energy; natural regeneration allowed"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board run_id"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board mode"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board level"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board history"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board budget_used"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board undos"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one authored real exit after free shell clearing"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "One real piece tap removes exactly one shell layer"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual run_id"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual history"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual undos"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual exit_chain_v121"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "One real piece tap removes exactly one shell layer"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual run_id"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual history"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual budget_used"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual undos"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves actual exit_chain_v121"
+      },
+      {
+        "passed": true,
+        "message": "Free shell tap preserves earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one authored real exit after free shell clearing"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one authored real exit after free shell clearing"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = 0,1,2"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible labels exclude Mur · libère la clé 1"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 13,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1649327,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1649908,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1665992,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U42",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1667609,
+        "point": [
+          858.0594,
+          882.1349
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U42",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1668692,
+        "label": "Niveau 42",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_42",
+        "bounds": [
+          403,
+          1168,
+          558,
+          1323
+        ]
+      },
+      {
+        "reason": "open-selected-real-U42",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1671019,
+        "label": "Jouer",
+        "resourceId": "com.androidhit.lumadrift:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U42",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1671596,
+        "label": "Jouer  →",
+        "resourceId": "com.androidhit.lumadrift:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "Mur · libère la clé 1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1673182,
+        "label": "Mur · libère la clé 1",
+        "bounds": [
+          320,
+          1743,
+          466,
+          1889
+        ]
+      },
+      {
+        "reason": "real-piece-0-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1674367,
+        "label": "Pièce, ligne 1, colonne 1, flèche : droite, Porte ouverte",
+        "bounds": [
+          174,
+          1304,
+          320,
+          1451
+        ]
+      },
+      {
+        "reason": "real-piece-4-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1675139,
+        "label": "Feu · 2 tap(s) pour éteindre. Pièce, ligne 5, colonne 2, flèche : bas, Porte ouverte, Interrupteur: bas",
+        "bounds": [
+          320,
+          1889,
+          466,
+          2036
+        ]
+      },
+      {
+        "reason": "real-piece-4-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1675880,
+        "label": "Feu · 1 tap(s) pour éteindre. Pièce, ligne 5, colonne 2, flèche : bas, Porte ouverte, Interrupteur: bas",
+        "bounds": [
+          320,
+          1889,
+          466,
+          2036
+        ]
+      },
+      {
+        "reason": "real-piece-4-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1676602,
+        "label": "Pièce, ligne 5, colonne 2, flèche : bas, Porte ouverte, Interrupteur: bas",
+        "bounds": [
+          320,
+          1889,
+          466,
+          2036
+        ]
+      },
+      {
+        "reason": "real-piece-3-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1677403,
+        "label": "Clé 1, Pièce, ligne 4, colonne 1, flèche : gauche, Porte ouverte, Interrupteur: bas",
+        "bounds": [
+          174,
+          1743,
+          320,
+          1889
+        ]
+      }
+    ],
+    "captures": [
+      "fr-key-and-associated-lock-inspected",
+      "fr-real-key-exit-unlocks-associated-lock",
+      "fr-key-lock-open-state",
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "error": "Current instrumentation execution failed",
+  "elapsed_seconds": 99.658,
+  "evidence_sha256": {
+    "battle-observer.apk": "861947ec96911fcd2d923f121e4d5f78adf9fc332c0836dac99a9b5629c27c8f",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "failure-android-runtime.txt": "d295453466f63218915463104270a21f68a99d0ebfafe5e4c275bdc055fa8629",
+    "instrumentation.txt": "1105030fd1e7ad55ea288bb41fe4a70252705069d17de2be28f4ed26ed57886f",
+    "native/before.json": "b87e0f7351ad68725e530fc4974c75ef1d1662900f64424c691f47792fc157e9",
+    "native/failure-accessibility.json": "ab304dae6690afe2b1b36dd925ad8a931c310dc30a3d5b4ec87c4db9ac02a19d",
+    "native/failure.png": "e469b64c8da069b5bfce122a2a54137d367263242e1a1d479a9059dd9e9bb2b6",
+    "native/failure.txt": "20f9954e13762f6185e350f3d8e3d006cc313e6cd8d6117ca2be77d8873cab95",
+    "native/fr-key-and-associated-lock-inspected-accessibility.json": "667cd88d81ac2108ddd85c939d8860c1a27aaae4e94a8b17d374b6887dfd4db6",
+    "native/fr-key-and-associated-lock-inspected.png": "85303028d4cecfd2bc8ae88a7dfd8862333e5913472059aa655fc1213d2a74f1",
+    "native/fr-key-lock-open-state-accessibility.json": "becacde4b4a86c755669c7bd267c9740fbc99fa2d9be6a95256482ebfdfa0f9a",
+    "native/fr-key-lock-open-state.png": "e1ba67b0777a341216378bff10b52611c6373cc50785cdbaad1a9f43b78589ca",
+    "native/fr-real-key-exit-unlocks-associated-lock-accessibility.json": "95976de8d4c57588470399075c03c3374a9df23c8ab54a65fd7971f0a58ddbbb",
+    "native/fr-real-key-exit-unlocks-associated-lock.png": "a0b38e4562cdf78274eab969898646543428c2fc1821f0fa0420a9529e9f9317",
+    "native/report.json": "0eca6b3ffcd3cf0107553be1110c6622cb4ceaa1d40e4501b1cc151f3daac6a5",
+    "native/requested-steps.json": "f0916f8efb24716c614f5ed9491fa8b5cbcb037e6e0b84800edd21cfb74c08d2",
+    "native-ui-recording.mp4": "551b8c2c0b9eb0739bd4f75c1b97571c8401efc4d22bd7d68bfd5caa74be65c5",
+    "observer-install.txt": "919954321aa7fbeccaff68ad9c94d385c90eda5e8246908c6622806e09a3aa6b",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "8dee5111fbf3157fb9d2b732a931d9f1c8c64225411bf1bcbcebc58ebe6da204",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "8e98c3ae6fb7367f13512b872af06663c26887cad8879ceb864b7c792dbcec5a"
+  }
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "home-fr"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "capture",
+    "name": "map-fr"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Observatoire des échos.*"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_keys"
+  },
+  {
+    "op": "assert-tactical",
+    "episode": "KEYS",
+    "charge": 6,
+    "used": 0,
+    "wins": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_keys_entry"
+  },
+  {
+    "op": "assert-tactical",
+    "layout": "t122_keys_entry",
+    "history": "",
+    "charge": 6
+  },
+  {
+    "op": "capture",
+    "name": "tactical-fr"
+  },
+  {
+    "op": "remember-energy",
+    "name": "free-chapter"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_talent_0"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 4,
+    "used": 1,
+    "history": ""
+  },
+  {
+    "op": "tactical-step",
+    "index": 0
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 4,
+    "history": "0"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_undo"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 4,
+    "history": "",
+    "undos": 1
+  },
+  {
+    "op": "tactical-step",
+    "index": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_talent_1"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 2,
+    "used": 3,
+    "history": "",
+    "undos": 2
+  },
+  {
+    "op": "remember-tactical",
+    "name": "used-guide"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_talent_0"
+  },
+  {
+    "op": "assert-tactical-unchanged",
+    "name": "used-guide"
+  },
+  {
+    "op": "assert-no-energy-debit",
+    "name": "free-chapter"
+  },
+  {
+    "op": "capture",
+    "name": "fr-shared-reserve-after-guide-rewind"
+  },
+  {
+    "op": "snapshot",
+    "name": "tactical-before-cold"
+  }
+]

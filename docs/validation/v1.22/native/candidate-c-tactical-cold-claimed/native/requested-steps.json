@@ -1,0 +1,42 @@
+[
+  {
+    "op": "assert-tactical",
+    "episode": "RELAYS",
+    "wins": 4,
+    "claimed": true,
+    "souvenir": "relays"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "completed-coins"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Echo Observatory.*"
+  },
+  {
+    "op": "assert-tactical",
+    "episode": "RELAYS",
+    "wins": 4,
+    "claimed": true
+  },
+  {
+    "op": "capture",
+    "name": "en-completed-chapter-cold-no-regrant"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "completed-coins"
+  },
+  {
+    "op": "snapshot",
+    "name": "tactical-claimed-cold-final"
+  }
+]

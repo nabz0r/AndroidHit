@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "scope": "Retained real production profile on task-owned emulator-5602 / Luma119-Battle-QA only. No clear, target uninstall, target preference injection, progress/currency/ownership grant, account or purchase. B and C are distinct candidate executions. Assertions are checks, not unique product requirements or human evidence.",
+  "observer_apk_sha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "observer_compiled_source_audit": "docs/validation/v1.22/native/retained-observer-source-audit.json",
+  "observer_compiled_input_count": 64,
+  "observer_build_receipt": "docs/validation/v1.22/observer-builds/production-de0c4717.json",
+  "B": {
+    "apk_sha256": "df0f950ed74529b63f13fa316051ceccc15db4c0f3968c7c70ad55d68262706f",
+    "phases": [
+      {
+        "phase": "candidate-b-world-en",
+        "report": "docs/validation/v1.22/native/candidate-b-world-en/report.json",
+        "assertions": 145,
+        "actual_gestures": 18,
+        "original_png_count": 8,
+        "original_video_count": 1,
+        "report_sha256": "7966283e0e9edcbc913defc2bd24cfda9436c1706b07245fbc9287be815be26f"
+      },
+      {
+        "phase": "candidate-b-world-fr-final",
+        "report": "docs/validation/v1.22/native/candidate-b-world-fr-final/report.json",
+        "assertions": 145,
+        "actual_gestures": 18,
+        "original_png_count": 8,
+        "original_video_count": 1,
+        "report_sha256": "2de804ede985f905987df136228569912c6f4a7a21de13d3a6423f5ae4ca1cd1"
+      },
+      {
+        "phase": "candidate-b-keys-fr-final",
+        "report": "docs/validation/v1.22/native/candidate-b-keys-fr-final/report.json",
+        "assertions": 75,
+        "actual_gestures": 14,
+        "original_png_count": 4,
+        "original_video_count": 1,
+        "report_sha256": "265bc362721b01b3d86f006eb69b28dc8a1e094036297fde45e31c203d11478a"
+      },
+      {
+        "phase": "candidate-b-tactical-prepare-fr",
+        "report": "docs/validation/v1.22/native/candidate-b-tactical-prepare-fr/report.json",
+        "assertions": 93,
+        "actual_gestures": 12,
+        "original_png_count": 4,
+        "original_video_count": 1,
+        "report_sha256": "05b4914d1974fb3f01f3afa936b37bec8476e8ac30806483ecaf655d758d6d00"
+      },
+      {
+        "phase": "candidate-b-tactical-cold-complete-fr",
+        "report": "docs/validation/v1.22/native/candidate-b-tactical-cold-complete-fr/report.json",
+        "assertions": 526,
+        "actual_gestures": 33,
+        "original_png_count": 4,
+        "original_video_count": 1,
+        "report_sha256": "a23f8fc5faa7c625ea9f7f3063586c32f6ebdcfd95125a5ef83ce1aa17ccaed6"
+      },
+      {
+        "phase": "candidate-b-tactical-relays-en",
+        "report": "docs/validation/v1.22/native/candidate-b-tactical-relays-en/report.json",
+        "assertions": 521,
+        "actual_gestures": 43,
+        "original_png_count": 6,
+        "original_video_count": 1,
+        "report_sha256": "c7cd3bfcf76bb8cb675fb4628aceaf6c9e65d8480a6975ba4795def24e5094a6"
+      }
+    ],
+    "totals": {
+      "assertions": 1505,
+      "actual_gestures": 138,
+      "original_png_count": 34,
+      "original_video_count": 6
+    }
+  },
+  "C": {
+    "apk_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+    "phases": [
+      {
+        "phase": "candidate-c-tactical-cold-claimed",
+        "report": "docs/validation/v1.22/native/candidate-c-tactical-cold-claimed/report.json",
+        "assertions": 25,
+        "actual_gestures": 2,
+        "original_png_count": 1,
+        "original_video_count": 1,
+        "report_sha256": "cb461d22c39590a30a1c2c6bdba7a266bcd617889344691940fa639a271eff3b"
+      },
+      {
+        "phase": "candidate-c-site-media-fr-en-retry",
+        "report": "docs/validation/v1.22/native/candidate-c-site-media-fr-en-retry/report.json",
+        "assertions": 72,
+        "actual_gestures": 30,
+        "original_png_count": 10,
+        "original_video_count": 1,
+        "report_sha256": "4729440c642098a48a94b86ca56729b695c192654912d3ac46094f3a53459a41"
+      },
+      {
+        "phase": "candidate-c-retained-world-keys-fr-retry",
+        "report": "docs/validation/v1.22/native/candidate-c-retained-world-keys-fr-retry/report.json",
+        "assertions": 214,
+        "actual_gestures": 33,
+        "original_png_count": 12,
+        "original_video_count": 1,
+        "report_sha256": "9c240a05a59ce854fc43b6a525193e5dd0780d03a29dbb29e50bd476ac9cbddc"
+      },
+      {
+        "phase": "candidate-c-compact-reduced-fr-en",
+        "report": "docs/validation/v1.22/native/candidate-c-compact-reduced-fr-en/report.json",
+        "assertions": 106,
+        "actual_gestures": 31,
+        "original_png_count": 8,
+        "original_video_count": 1,
+        "report_sha256": "571aeadc82fed5595209f5bfdac46b01981f4d33439eb865d47e3c49ccbcc0b2"
+      }
+    ],
+    "totals": {
+      "assertions": 417,
+      "actual_gestures": 96,
+      "original_png_count": 31,
+      "original_video_count": 4
+    }
+  },
+  "canonical_c_media": "docs/validation/v1.22/native/candidate-c-canonical-media.json",
+  "derived_c_reduced_motion_pixel_comparison": "docs/validation/v1.22/native/candidate-c-reduced-motion-pixel-comparison.json",
+  "restored_display_receipt": "docs/validation/v1.22/native/display-candidate-c-compact-restore.json",
+  "fresh_candidate_c_scope": "Separate coordinator run on emulator-5626: 51 assertions/19 gestures/12 PNG. Not included in retained totals; see docs/validation/v1.22/native/candidate-c-fresh-* and final-fresh-device.",
+  "excluded": [
+    {
+      "phase": "candidate-b-world-fr",
+      "reason": "Preliminary passed run used old observer while archived Java already included tactical extensions; source snapshot skew. Replaced by candidate-b-world-fr-final."
+    },
+    {
+      "phase": "candidate-a-keys-fr",
+      "reason": "Failed harness Undo label regex, retained. Replaced by corrected B and C actual Undo runs."
+    },
+    {
+      "phase": "candidate-c-site-media-fr-en",
+      "reason": "Failed harness navigation: Android Back toggles pause/resume during campaign play. Corrected program touches real pause then Leave level. Replaced by successful retry."
+    },
+    {
+      "phase": "candidate-c-retained-world-keys-fr",
+      "reason": "Failed before any gesture: unnecessary preamble assumed previous tactical screen, while each runner starts cold on Adventure. Replaced by successful retry."
+    }
+  ],
+  "prior_candidate_a_scope": "Historical migration/first-launch preservation and world FR/EN runs remain as A evidence; never relabeled as final C.",
+  "device_handoff": "Production C kept installed, reduced_motion=false restored through actual UI, display restored exactly to 1080x2400/density420/font1.0. Explicit exclusive 5602 handoff given to sandbox QA; no subsequent ADB from this production observer owner.",
+  "native_coverage_limits": [
+    "World gestures: first sector, retained U45 access, actual U42 campaign board.",
+    "Chapter completion: eight chosen stages across two episodes; not all twelve layouts or every route combination.",
+    "Public certificates supply QA move sequences; this observer is not a limited-perception player model.",
+    "Zero human participants; no retention, enjoyment, comprehension, physical-device performance or store-approval inference."
+  ]
+}

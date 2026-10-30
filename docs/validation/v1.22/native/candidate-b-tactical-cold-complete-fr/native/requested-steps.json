@@ -1,0 +1,116 @@
+[
+  {
+    "op": "assert-tactical",
+    "episode": "KEYS",
+    "charge": 2,
+    "used": 3,
+    "wins": 0,
+    "layout": "t122_keys_entry",
+    "history": "",
+    "undos": 2
+  },
+  {
+    "op": "snapshot",
+    "name": "tactical-cold-state-before-ui"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Observatoire des échos.*"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_resume"
+  },
+  {
+    "op": "capture",
+    "name": "fr-tactical-exact-cold-resume"
+  },
+  {
+    "op": "remember-energy",
+    "name": "free-chapter"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-fixed-reward"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 2,
+    "used": 3,
+    "wins": 1
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_keys_first_key"
+  },
+  {
+    "op": "capture",
+    "name": "fr-tactical-one-key-two-locks"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 2,
+    "wins": 2
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_keys_second_relay"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 2,
+    "wins": 3
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_keys_finale"
+  },
+  {
+    "op": "capture",
+    "name": "fr-tactical-transfer-finale"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 2,
+    "used": 3,
+    "wins": 4,
+    "claimed": true,
+    "souvenir": "keys"
+  },
+  {
+    "op": "assert-int-delta",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-fixed-reward",
+    "delta": 120
+  },
+  {
+    "op": "assert-no-energy-debit",
+    "name": "free-chapter"
+  },
+  {
+    "op": "capture",
+    "name": "fr-tactical-first-souvenir-120-coins"
+  },
+  {
+    "op": "snapshot",
+    "name": "tactical-keys-complete"
+  }
+]

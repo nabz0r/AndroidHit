@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "edition": "1.22",
+  "checks": [
+    {
+      "name": "relay-correct",
+      "log": "relay-correct.txt",
+      "exit_code": 0
+    },
+    {
+      "name": "battle",
+      "log": "battle.txt",
+      "exit_code": 0
+    },
+    {
+      "name": "battle-action",
+      "log": "battle-action.txt",
+      "exit_code": 0
+    },
+    {
+      "name": "save",
+      "log": "save.txt",
+      "exit_code": 0
+    },
+    {
+      "name": "tactical",
+      "log": "tactical.txt",
+      "exit_code": 0
+    },
+    {
+      "name": "shells",
+      "log": "shells.txt",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Current-source host regression checks. Historical output files restored; current copies stored in current-regressions. Does not establish Android rendering or human play."
+}

@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "phase": "lab-upgrade-preservation",
+  "runToken": "658b9fec-b7b6-4dd4-b416-5c3776d5361e",
+  "processId": 26904,
+  "checkCount": 6,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact separate Lab package"
+    },
+    {
+      "passed": true,
+      "message": "Unique host execution token"
+    },
+    {
+      "passed": true,
+      "message": "Bounded explicit phase"
+    },
+    {
+      "passed": true,
+      "message": "Fresh evidence output"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed version and code"
+    },
+    {
+      "passed": true,
+      "message": "Snapshot-only phase never launches an Activity or sends UI input"
+    }
+  ],
+  "touchCount": 0,
+  "actions": [],
+  "captures": [],
+  "package": "com.androidhit.lumadrift.sandbox",
+  "scope": "Actual native launch\/settings touchscreen input at observed accessibility bounds and read-only preferences. Host and observer both enforce a launch\/capture\/read-only allowlist. No target imports, target solver, reflection, preference writes, injected progress\/ownership\/currency, certificate execution, purchases, external identity, ads or publication."
+}

@@ -1,0 +1,246 @@
+[
+  {
+    "op": "tap",
+    "regex": "‹.*Retour|‹.*Back"
+  },
+  {
+    "op": "tap",
+    "regex": "‹.*Retour|‹.*Back"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "map-select",
+    "level": 41
+  },
+  {
+    "op": "remember-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-initial"
+  },
+  {
+    "op": "remember-node-bounds",
+    "id": "world_node_41",
+    "name": "before-pan"
+  },
+  {
+    "op": "drag-id",
+    "id": "world_node_41",
+    "dx": -0.18,
+    "dy": 0,
+    "reason": "actual-world-horizontal-camera-pan"
+  },
+  {
+    "op": "assert-node-moved",
+    "id": "world_node_41",
+    "name": "before-pan",
+    "allowAbsent": true
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-camera-panned"
+  },
+  {
+    "op": "tap",
+    "regex": "Me suivre|Follow me"
+  },
+  {
+    "op": "map-select",
+    "level": 41
+  },
+  {
+    "op": "pinch-id",
+    "id": "world_node_41",
+    "factor": 1.35
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-actual-two-finger-zoom"
+  },
+  {
+    "op": "tap-id-at",
+    "id": "world_minimap",
+    "x": 0.83,
+    "y": 0.76,
+    "reason": "actual-minimap-inspection-away-from-avatar"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-minimap-framing"
+  },
+  {
+    "op": "tap",
+    "regex": "Me suivre|Follow me"
+  },
+  {
+    "op": "map-locked-select"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-locked-node-does-not-enter"
+  },
+  {
+    "op": "map-select",
+    "level": 35
+  },
+  {
+    "op": "map-begin-travel",
+    "level": 41
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-world-walk-begins"
+  },
+  {
+    "op": "wait",
+    "ms": 250
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-world-walk-during"
+  },
+  {
+    "op": "wait",
+    "ms": 1500
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "map_avatar_journey122",
+    "value": "41"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-walk-arrived"
+  },
+  {
+    "op": "snapshot",
+    "name": "fr-world-final-state"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 42
+  },
+  {
+    "op": "assert-label",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "remember-map-neutral",
+    "name": "key-inspection"
+  },
+  {
+    "op": "tap",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-key-and-associated-lock-inspected"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "key-inspection"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 0
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 1
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 2
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "before-key-exit"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 2
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-real-key-exit-unlocks-associated-lock"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0,1,2"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "wait",
+    "ms": 1100
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-key-lock-open-state"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Retour.*gratuit.*"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "before-key-exit"
+  },
+  {
+    "op": "assert-label",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-undo-restores-key-and-lock"
+  },
+  {
+    "op": "snapshot",
+    "name": "fr-key-undo-final-state"
+  }
+]

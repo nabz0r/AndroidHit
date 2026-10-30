@@ -18,6 +18,7 @@ fi
  "$task_root"/app/src/main/java/com/androidhit/lumadrift/data/*.java \
  "$task_root"/scripts/cognitive_lab/*.java "$task_root"/scripts/cognitive_lab/tests/*.java
 "$task_java_bin/java" -Xmx768m -cp "$task_build" cognitive_lab.CognitiveLabTest "$task_root"
+"$task_java_bin/java" -Xmx768m -cp "$task_build" cognitive_lab.CognitiveLab122Test "$task_root"
 for task_trial in a b; do
  "$task_java_bin/java" -Xmx768m -cp "$task_build" cognitive_lab.CognitiveLab --root "$task_root" --smoke --output "$task_build/$task_trial"
 done

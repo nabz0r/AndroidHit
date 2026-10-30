@@ -1,0 +1,39 @@
+[
+  {
+    "op": "firstlight"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "assert-starter"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-fr-home"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-fr-map"
+  },
+  {
+    "op": "tap",
+    "regex": "Remix"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-fr-remix-locked"
+  },
+  {
+    "op": "tap",
+    "regex": "Continuer"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-fr-remix-continue"
+  }
+]

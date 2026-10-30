@@ -1,0 +1,14 @@
+[
+  {"op":"snapshot","name":"lab-before-fr-en"},
+  {"op":"remember-value","name":"earned-coins","pref":"luma_drift_save_v1","key":"coins"},
+  {"op":"remember-value","name":"campaign-unlocked","pref":"luma_drift_save_v1","key":"unlocked"},
+  {"op":"remember-value","name":"test-gold","pref":"luma_energy_purchases_v120","key":"account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance"},
+  {"op":"language","code":"fr"},
+  {"op":"capture","name":"lab122-native-home-fr"},
+  {"op":"language","code":"en"},
+  {"op":"capture","name":"lab122-native-home-en"},
+  {"op":"assert-value-unchanged","name":"earned-coins","pref":"luma_drift_save_v1","key":"coins"},
+  {"op":"assert-value-unchanged","name":"campaign-unlocked","pref":"luma_drift_save_v1","key":"unlocked"},
+  {"op":"assert-value-unchanged","name":"test-gold","pref":"luma_energy_purchases_v120","key":"account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance"},
+  {"op":"snapshot","name":"lab-after-fr-en"}
+]

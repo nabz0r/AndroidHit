@@ -1,6 +1,50 @@
-# Store presentation kit — Luma Drift 1.17
+# Store presentation kit — Luma Drift 1.22
 
-## Current copy draft · 29 October 2026
+## Current copy draft · 30 October 2026
+
+For candidate `1.22.0-rc1` / code 30. Exact C production and Lab packages have passed their scoped Android acceptance and are collected in the [canonical artifact manifest](../releases/manifest-1.22.0-rc1.json); public distribution remains pending. This is proposed store copy, not a Play submission or a publication receipt. Use only the [eight accepted unedited C captures](validation/v1.22/native/candidate-c-canonical-media.json), with their actual locale and profile. The browser explanation is schematic and must not be presented as an Android screenshot.
+
+### English short description draft
+
+Follow the paths, read the locks and choose your companion skills.
+
+### English description draft
+
+Find the right order. Open the passage. Bring your companions along.
+
+In Luma Drift, a piece that leaves can change the gates for those still inside. Follow the 1,000-puzzle Journey, read the linked keys and locks, and try another order when a path closes. Your companion follows the route on the map; dragging or using the minimap lets you explore without changing puzzle progress.
+
+Enter the Echo Observatory for two episodes built from twelve new boards. Choose four puzzles through branching routes with Nova, Hoot and Orbit on loan. Their roles help you read, repair or execute a move. Six shared Charge last for the whole sortie; each talent can be used once. All boards can still be solved manually. Complete an episode for the first time to earn 120 Coins and its local souvenir.
+
+Return to your companion, discover forms through copies, choose outfits and arrange your home. Appearance and puzzle skills have separate roles. Companion arrivals show their fixed odds, price and duplicate outcome before you spend earned Coins.
+
+Ordinary eligible campaign attempts include two free Undos. Later Undos have a Coin price capped at 40, shown and confirmed before use; the action you reverse remains spent. The separate Observatory chapter has free manual Undo with the same non-refunding action budget. Music, sound effects, haptics and reduced motion have separate controls.
+
+Progress and Coins stay on this device. Google sign-in does not synchronize gameplay saves. This playtest candidate uses test ads and keeps real purchases unavailable.
+
+### Description courte française proposée
+
+Explore les chemins, lis les cadenas et choisis tes talents.
+
+### Description française proposée
+
+Trouve le bon ordre. Ouvre le passage. Emmène tes compagnons.
+
+Dans Luma Drift, une pièce qui sort peut changer les portes pour celles qui restent. Parcours les 1 000 puzzles de l’Aventure, repère les clés et leurs cadenas et essaie un autre ordre lorsqu’un chemin se ferme. Ton compagnon suit les routes de la carte ; le glissement et la minimap permettent d’explorer sans modifier la progression des puzzles.
+
+Entre à l’Observatoire des échos : deux épisodes construits autour de douze nouveaux plateaux. Choisis quatre puzzles à travers les bifurcations avec Nova, Hoot et Orbit prêtés. Leurs rôles servent à lire, corriger ou exécuter un coup. Six Charge partagées durent tout le parcours et chaque talent ne sert qu’une fois. Tous les plateaux restent résolubles à la main. Termine un épisode pour la première fois et gagne 120 Coins ainsi que son souvenir local.
+
+Retrouve ton compagnon, découvre ses formes grâce aux copies, choisis ses tenues et aménage ta maison. Apparence et talents de puzzle ont des rôles distincts. Les rencontres de compagnons affichent leur probabilité fixe, leur prix et le résultat d’un doublon avant toute dépense de Coins gagnés en jouant.
+
+Les nouveaux essais éligibles de la campagne comprennent deux Undo gratuits. Les suivants ont un prix en Coins plafonné à 40, affiché et confirmé avant utilisation ; le coup annulé reste dépensé. Le chapitre séparé de l’Observatoire propose un Undo manuel gratuit avec le même budget d’actions sans remboursement. Musique, effets sonores, vibrations et mouvement réduit ont des réglages distincts.
+
+Progression et Coins restent sur cet appareil. La connexion Google ne synchronise pas les sauvegardes de jeu. Cette candidate utilise des annonces de test et garde les achats réels indisponibles.
+
+## Preserved 1.17 copy — historical, not current economy
+
+The older copy below is retained with its original date. Its free/repeatable Undo wording describes that earlier candidate and must not be reused for 1.22; the current campaign has the two-free-then-confirmed-Coins contract above.
+
+### Historical copy draft · 29 October 2026
 
 Copy for production **1.17.0-rc6 / code24**, frozen candidate H. Android
 qualification, Git delivery and Firebase delivery retain their separate records

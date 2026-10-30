@@ -1,0 +1,99 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-30T13:45:36.866232+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "retained-world-keys-fr",
+  "expected_version": "1.22.0-rc1",
+  "expected_code": 30,
+  "apk_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "observer_sha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "390a8ef9-c9da-4995-8a11-46c79db58809",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "9b2593388de22b1f50f49bea05b9b02008d4574f5cbb9012fb0df5a64c47a44e",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 60,
+    "path": "native-ui-recording.mp4",
+    "sha256": "46cf1be02bc73fe229614675471ab00ee2a34924617e54116721c65a6f1a50ee",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": false,
+    "phase": "retained-world-keys-fr",
+    "runToken": "390a8ef9-c9da-4995-8a11-46c79db58809",
+    "processId": 14530,
+    "checkCount": 7,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 0,
+    "actions": [],
+    "captures": [
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "error": "Current instrumentation execution failed",
+  "elapsed_seconds": 65.089,
+  "evidence_sha256": {
+    "battle-observer.apk": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "failure-android-runtime.txt": "ddd7b78c1e461a2cc0d39778e0c7aa17d6789e5144740dfe16fe5cecf50b684d",
+    "instrumentation.txt": "73b6f3b00962f260188c9648ed0a027f53def1496a9b2a4a139f79426cd599a3",
+    "native/before.json": "f6d2c1d6fa2463cb2ebdc7ff34577cb6eb214e6020c9ef331a70af3d0f67447b",
+    "native/failure-accessibility.json": "b0a60873ce7f5c5c045fa96be5fc88498f4d446aa48b81b183dbebfacdbd72a6",
+    "native/failure.png": "a8c3e82421995e3d38bc63a0b8d28f972a16ccc954ea8c8db2984d6e5703103d",
+    "native/failure.txt": "eccb56775baeb08680f26af67e4b6a4e83524e48bb6b78736940d83d171675e7",
+    "native/report.json": "518a840e3e265ec953ebc6b2114585e18043376136baa4f79d6916d310e28aa5",
+    "native/requested-steps.json": "a8256c84923b24d562502332f4a6c0b8420eee1068bd876c17563707f3bb1aae",
+    "native-ui-recording.mp4": "46cf1be02bc73fe229614675471ab00ee2a34924617e54116721c65a6f1a50ee",
+    "observer-install.txt": "974fb3aabb4c4ef07416c7767f9c861fbef88ac76f14cefc8cf0e917100f3c8e",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "7d5804efadd2c46a81fe805d3765995d6dc2469ac5f59b25fb90f69663639f61",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "4b333dc4f61d6e0b48759b9d119f52d61f4f4def3459d9168cd7c443b914efbb"
+  }
+}

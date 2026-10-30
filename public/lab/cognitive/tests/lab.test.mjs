@@ -203,3 +203,64 @@ test('complete published engine data passes the same importer contract when pres
     assert.ok(result.traces.traces.length > 0);
   }
 });
+
+test('1.22 mechanics render separate manual exits, cues, censures and exact spike denominators', async () => {
+  const report=fixture();
+  report.summary.scenarios[0].totals={actions:300,shellTaps:100};
+  report.summary.scenarios[0].mechanics={manualExits:180,automatedExits:40,repeatedErrors:5,
+    causalCueObservations:20,skillUses:12,horizonCensored:1,administrativeCensored:0,
+    budgetExhaustedAttempts:3,closedGateBlocked:6,pieceBlocked:4,barrierBlocked:2,
+    u43Starts:10,u43Exhausted:2,u48Starts:8,u48Exhausted:1};
+  const rendered=await runUI(report);
+  const text=rendered.elements.get('#mechanics-results').textContent;
+  assert.match(text,/Sorties manuelles180/);
+  assert.match(text,/Sorties automatiques40/);
+  assert.match(text,/100 \/ 300 interactions/);
+  assert.match(text,/U43: 2 \/ 10/);
+});
+
+test('1.22 chapter and cue-free transfer remain separate from campaign returns', async () => {
+  const report=fixture();
+  report.pairedComparisons.transferWithoutCues={scenarios:[{scenario:'current_model',completed:4,probes:8,completionRate:.5}]};
+  report.pairedComparisons.tacticalChapter={comparisons:[{episode:'KEYS',capacity:6,policy:'manual',finished:4,runs:8,manualExits:24,automatedExits:0,chargeSpent:0}]};
+  const rendered=await runUI(report);
+  assert.match(rendered.elements.get('#chapter-results').textContent,/KEYS/);
+  assert.match(rendered.elements.get('#chapter-results').textContent,/4 \/ 8/);
+  assert.match(rendered.elements.get('#transfer-results').textContent,/Transfert avec toutes les aides/);
+});
+
+
+test('local import removes published ZIP provenance in both languages and keeps actual local exports', async () => {
+  for (const lang of ['fr','en']) {
+    const rendered=await runUI(fixture(), {url:'https://example.test/lab/cognitive/?lang='+lang});
+    const exports=rendered.elements.get('#export-links');
+    assert.ok(exports.children.some(link=>String(link.href||'').endsWith('.zip')), 'published snapshot offers its published archive');
+    const report=fixture();report.summary.config.seed=9182;
+    const raw=JSON.stringify(report);
+    await rendered.elements.get('#import-file').events.change({target:{files:[{size:raw.length,text:async()=>raw}],value:'report.json'}});
+    assert.equal(exports.children.some(link=>String(link.href||'').endsWith('.zip')),false,'imported report must not offer an unrelated published archive');
+    assert.ok(exports.children.some(link=>link.download==='luma-cognitive-report.json'&&String(link.href).startsWith('blob:')));
+    assert.match(rendered.elements.get('#exact-scope').textContent,/9182/);
+  }
+});
+
+
+test('scenario switch refreshes manual/automated and U43 counters control to execution and back', async () => {
+  const report=JSON.parse(JSON.stringify(fixture()).replaceAll('current_model','control_v121').replaceAll('teaching_support','team_execution'));
+  report.summary.scenarios[0].totals={actions:300,shellTaps:100};
+  report.summary.scenarios[0].mechanics={manualExits:180,automatedExits:0,u43Starts:10,u43Exhausted:2,u48Starts:8,u48Exhausted:1};
+  report.summary.scenarios[1].totals={actions:500,shellTaps:30};
+  report.summary.scenarios[1].mechanics={manualExits:20,automatedExits:400,u43Starts:4,u43Exhausted:3,u48Starts:2,u48Exhausted:0};
+  const rendered=await runUI(report);
+  const mechanics=rendered.elements.get('#mechanics-results');
+  assert.match(mechanics.textContent,/Sorties manuelles180/);
+  assert.match(mechanics.textContent,/Sorties automatiques0/);
+  rendered.elements.get('#scenario').events.change({target:{value:'team_execution'}});
+  assert.match(mechanics.textContent,/Sorties manuelles20/);
+  assert.match(mechanics.textContent,/Sorties automatiques400/);
+  assert.match(mechanics.textContent,/U43: 3 \/ 4/);
+  rendered.elements.get('#scenario').events.change({target:{value:'control_v121'}});
+  assert.match(mechanics.textContent,/Sorties manuelles180/);
+  assert.match(mechanics.textContent,/Sorties automatiques0/);
+  assert.match(mechanics.textContent,/U43: 2 \/ 10/);
+});

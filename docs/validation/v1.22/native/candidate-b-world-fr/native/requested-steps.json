@@ -1,0 +1,140 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "map-select",
+    "level": 41
+  },
+  {
+    "op": "remember-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-initial"
+  },
+  {
+    "op": "remember-node-bounds",
+    "id": "world_node_41",
+    "name": "before-pan"
+  },
+  {
+    "op": "drag-id",
+    "id": "world_node_41",
+    "dx": -0.18,
+    "dy": 0,
+    "reason": "actual-world-horizontal-camera-pan"
+  },
+  {
+    "op": "assert-node-moved",
+    "id": "world_node_41",
+    "name": "before-pan",
+    "allowAbsent": true
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-camera-panned"
+  },
+  {
+    "op": "tap",
+    "regex": "Me suivre|Follow me"
+  },
+  {
+    "op": "map-select",
+    "level": 41
+  },
+  {
+    "op": "pinch-id",
+    "id": "world_node_41",
+    "factor": 1.35
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-actual-two-finger-zoom"
+  },
+  {
+    "op": "tap-id-at",
+    "id": "world_minimap",
+    "x": 0.83,
+    "y": 0.76,
+    "reason": "actual-minimap-inspection-away-from-avatar"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-minimap-framing"
+  },
+  {
+    "op": "tap",
+    "regex": "Me suivre|Follow me"
+  },
+  {
+    "op": "map-locked-select"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-locked-node-does-not-enter"
+  },
+  {
+    "op": "map-select",
+    "level": 35
+  },
+  {
+    "op": "map-begin-travel",
+    "level": 41
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-world-walk-begins"
+  },
+  {
+    "op": "wait",
+    "ms": 250
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-world-walk-during"
+  },
+  {
+    "op": "wait",
+    "ms": 1500
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "map_avatar_journey122",
+    "value": "41"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "exploration"
+  },
+  {
+    "op": "capture",
+    "name": "fr-world-walk-arrived"
+  },
+  {
+    "op": "snapshot",
+    "name": "fr-world-final-state"
+  }
+]

@@ -31,6 +31,9 @@ jobs:
             /scripts/cognitive_lab/
             /scripts/run-cognitive-lab.sh
             /scripts/test-cognitive-lab.sh
+            /scripts/run-cognitive-lab-v122.sh
+            /scripts/test-cognitive-lab-v122.sh
+            /scripts/verify-cognitive-lab-v122.py
             /scripts/deploy-cognitive-overlay.py
             /scripts/test-deploy-cognitive-overlay.py
             /scripts/test-support/android/
@@ -40,6 +43,7 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/LumaView.java
             /public/lab/cognitive/
             /docs/validation/cognitive-lab/latest/
+            /docs/validation/cognitive-lab-v122/latest/
       - name: Set up Java 17
         uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
         with:
@@ -47,9 +51,9 @@ jobs:
           java-version: '17'
           cache-jdk: false
           overwrite-settings: false
-      - name: Validate decisions, native rules, pairing and reproducibility
-        run: bash scripts/test-cognitive-lab.sh
-      - name: Validate bilingual report and imported data
-        run: node --test public/lab/cognitive/tests/*.test.mjs
+      - name: Validate frozen control, causal cues, native skills, shared charge and bilingual report
+        run: bash scripts/test-cognitive-lab-v122.sh
+      - name: Verify complete versioned data and exact denominators without a massive rerun
+        run: python3 scripts/verify-cognitive-lab-v122.py
       - name: Validate additive deployment and refusal boundaries without network
         run: python3 scripts/test-deploy-cognitive-overlay.py

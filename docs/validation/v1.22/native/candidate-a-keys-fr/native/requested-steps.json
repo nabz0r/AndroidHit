@@ -1,0 +1,100 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 42
+  },
+  {
+    "op": "assert-label",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "remember-map-neutral",
+    "name": "key-inspection"
+  },
+  {
+    "op": "tap",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-key-and-associated-lock-inspected"
+  },
+  {
+    "op": "assert-map-neutral",
+    "name": "key-inspection"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 0
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 1
+  },
+  {
+    "op": "unseal-step",
+    "level": 42,
+    "index": 2
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "before-key-exit"
+  },
+  {
+    "op": "certificate-exit",
+    "level": 42,
+    "index": 2
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-real-key-exit-unlocks-associated-lock"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0,1,2"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "wait",
+    "ms": 1100
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-key-lock-open-state"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Annuler.*"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "before-key-exit"
+  },
+  {
+    "op": "assert-label",
+    "regex": "Mur · libère la clé 1"
+  },
+  {
+    "op": "capture-fast",
+    "name": "fr-undo-restores-key-and-lock"
+  },
+  {
+    "op": "snapshot",
+    "name": "fr-key-undo-final-state"
+  }
+]

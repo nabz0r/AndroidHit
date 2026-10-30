@@ -1,0 +1,71 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'"><meta name="description" content="Démo schématique indépendante de la carte et des clés Luma Drift1.22. Aucun compte ni fichier Android modifié."><title>Luma Drift1.22 · Démo schématique</title><link rel="stylesheet" href="simulation.css"><script type="module" src="simulation.mjs"></script></head><body><a class="skip" href="#demo">Aller à la démo / Skip to demo</a><header><a class="brand" href="/index.html">Luma Drift <small>1.22 · LAB</small></a><div class="language"><button type="button" data-language="fr">FR</button><button type="button" data-language="en">EN</button></div></header><main id="demo"><p class="eyebrow" data-copy="independent">DÉMO SCHÉMATIQUE INDÉPENDANTE</p><h1 data-copy="title">Un compagnon. Une caméra. Des liens.</h1><p class="intro" data-copy="intro">Explore les mouvements et les associations. Ce n’est ni une capture Android ni la partie native complète. Les niveaux et les serrures sont fictifs ; aucun compte, gain ou fichier Android ne change.</p><div id="luma-carte-vivante">
+  <div class="lc-heading">
+    <div class="nav nav-pills" role="tablist" aria-label="Aperçu Luma">
+      <button type="button" class="nav-link active" id="lc-map-tab" data-copy="lc-map-tab" role="tab" aria-controls="lc-map-panel" aria-selected="true">Carte</button>
+      <button type="button" class="nav-link" id="lc-key-tab" data-copy="lc-key-tab" role="tab" aria-controls="lc-key-panel" aria-selected="false">Clés</button>
+    </div>
+    <span class="text-small text-muted"><span data-copy="movement">Aperçu de mouvement</span></span>
+  </div>
+  <section id="lc-map-panel" role="tabpanel" aria-labelledby="lc-map-tab">
+    <div class="viz-controls lc-map-controls">
+      <label class="form-label" for="lc-destination"><span data-copy="destination">Destination</span>
+        <select class="form-select" id="lc-destination" aria-label="Choisir le niveau de destination"></select>
+      </label>
+      <button type="button" class="btn" id="lc-recenter" data-copy="lc-recenter"><span  aria-hidden="true">◎</span> Mon compagnon</button>
+    </div>
+    <div class="lc-map-status text-small" id="lc-map-status" aria-live="polite"></div>
+    <div class="lc-viewport" id="lc-viewport">
+      <svg class="lc-map-svg" id="lc-map-svg" role="img" aria-labelledby="lc-map-title lc-map-desc">
+        <title id="lc-map-title">Chemin des niveaux de Luma</title>
+        <desc id="lc-map-desc">Choisir un niveau déplace le compagnon sur le chemin. Glisser la carte déplace uniquement la caméra.</desc>
+        <g id="lc-world">
+          <path id="lc-route" fill="none"></path>
+          <path id="lc-travelled" fill="none"></path>
+        </g>
+      </svg>
+      <div id="lc-nodes"></div>
+      <div class="lc-avatar" id="lc-avatar" aria-hidden="true"><img src="/assets/brand/nova-companion.svg" alt=""></div>
+      <span class="lc-region text-small" id="lc-region"></span>
+    </div>
+    <div class="lc-map-footer">
+      <span class="text-small text-muted"><span data-copy="drag">Glisser : déplacer la vue</span></span>
+      <div class="lc-minimap-wrap">
+        <button type="button" class="lc-minimap cursor-interaction" id="lc-minimap" aria-label="Minicarte. Cliquer pour déplacer la caméra ; utiliser les touches fléchées pour explorer.">
+          <svg class="lc-minimap-svg" id="lc-minimap-svg" viewBox="0 0 1200 720" aria-hidden="true">
+            <path id="lc-mini-route" fill="none"></path>
+            <g id="lc-mini-nodes"></g>
+            <rect id="lc-mini-frame" rx="18"></rect>
+            <circle id="lc-mini-avatar" r="22"></circle>
+          </svg>
+        </button>
+        <span class="text-small text-muted"><span data-copy="mini">Minicarte · flèches au clavier</span></span>
+      </div>
+    </div>
+  </section>
+  <section id="lc-key-panel" role="tabpanel" aria-labelledby="lc-key-tab" hidden>
+    <div class="viz-controls lc-key-controls" aria-label="Choisir une clé">
+      <button type="button" class="btn" id="lc-key-a" data-copy="lc-key-a" aria-pressed="true"><span  aria-hidden="true">🔑</span> Clé A</button>
+      <button type="button" class="btn" id="lc-key-b" data-copy="lc-key-b" aria-pressed="false"><span  aria-hidden="true">🔑</span> Clé B</button>
+      <button type="button" class="btn btn-primary" id="lc-key-test" data-copy="lc-key-test">Tester la clé</button>
+    </div>
+    <div class="lc-key-status text-small" id="lc-key-status" aria-live="polite"></div>
+    <div class="lc-key-field" id="lc-key-field">
+      <svg class="lc-key-svg" id="lc-key-svg" role="img" aria-labelledby="lc-key-title lc-key-desc">
+        <title id="lc-key-title">Clés et serrures associées</title>
+        <desc id="lc-key-desc">La clé A ouvre les serrures A1 et A2. La clé B ouvre la serrure B1. La sélection montre les associations ; Tester la clé déclenche le déplacement et l'ouverture.</desc>
+        <path id="lc-key-path-a" fill="none"></path>
+        <path id="lc-key-path-b" fill="none"></path>
+      </svg>
+      <div class="lc-dock lc-group-a" id="lc-dock-a"><span  aria-hidden="true">🔑</span><span class="text-small">A</span></div>
+      <div class="lc-dock lc-group-b" id="lc-dock-b"><span  aria-hidden="true">🔑</span><span class="text-small">B</span></div>
+      <div class="lc-lock lc-group-a" id="lc-lock-a1"><span  class="lc-closed-icon" aria-hidden="true">🔒</span><span  class="lc-open-icon" aria-hidden="true">🔓</span><span class="text-small">A1</span></div>
+      <div class="lc-lock lc-group-a" id="lc-lock-a2"><span  class="lc-closed-icon" aria-hidden="true">🔒</span><span  class="lc-open-icon" aria-hidden="true">🔓</span><span class="text-small">A2</span></div>
+      <div class="lc-lock lc-group-b" id="lc-lock-b1"><span  class="lc-closed-icon" aria-hidden="true">🔒</span><span  class="lc-open-icon" aria-hidden="true">🔓</span><span class="text-small">B1</span></div>
+      <span class="lc-passage text-small" id="lc-passage-a">Passage A</span>
+      <span class="lc-passage text-small" id="lc-passage-b">Passage B</span>
+      <div class="lc-key-runner" id="lc-key-runner" hidden aria-hidden="true"><span  aria-hidden="true">🔑</span></div>
+    </div>
+  </section>
+  <div class="text-small text-muted lc-scope"><span data-copy="scope">Démo interactive · aucune progression réelle</span></div>
+</div>
+<a class="back" href="/index.html" data-copy="back">Retour au jeu et aux APK</a></main><noscript>JavaScript est nécessaire à la démo. / JavaScript is required for this demo.</noscript></body></html>

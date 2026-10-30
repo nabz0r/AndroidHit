@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "reason": "Full real rerun after correcting only String[] protocol serialization; current candidateC context captured.",
+  "oldCompleteLocalCopy": "/tmp/luma-cognitive122-before-scenarios-fix-20261030/latest",
+  "files": {
+    "blocked-events.csv.gz": {
+      "oldSha256": "613c11457bb276ba9cbdf3a456079722ed713f52872100422133a0cf4c7635b0",
+      "newSha256": "613c11457bb276ba9cbdf3a456079722ed713f52872100422133a0cf4c7635b0",
+      "byteIdentical": true,
+      "decompressedByteIdentical": true,
+      "rows": 380310,
+      "uncompressedSha256": "4205ec72b5266e185e592efedc86ccab3c3f029248ebbf8bfd6fd737ec1288cd"
+    },
+    "chapter-results.csv.gz": {
+      "oldSha256": "ee9db5b8b57ad6b9fb4605e261c710a4c46d1358c90ebe8d00dfd829eaf87aca",
+      "newSha256": "ee9db5b8b57ad6b9fb4605e261c710a4c46d1358c90ebe8d00dfd829eaf87aca",
+      "byteIdentical": true,
+      "decompressedByteIdentical": true,
+      "rows": 54000,
+      "uncompressedSha256": "a4d8cfd5bb18b09c7224a7ddf4b0e6ff2690e44f4d5817414361b0f329f7cd69"
+    },
+    "chapter-stage-results.csv.gz": {
+      "oldSha256": "648c957cf6e22d27982a6999db8d9483a0e930840481c7bbfb108f817fbaa7b4",
+      "newSha256": "648c957cf6e22d27982a6999db8d9483a0e930840481c7bbfb108f817fbaa7b4",
+      "byteIdentical": true,
+      "decompressedByteIdentical": true,
+      "rows": 204851,
+      "uncompressedSha256": "88d7315efcb1ecaeea1539abde91755d27c9354aa93f896c9b64534533f09f54"
+    },
+    "day-results.csv.gz": {
+      "oldSha256": "345a6768673b501dfaad17e075f586c2d4e7c8d7940be3802bd3f8909b7820f1",
+      "newSha256": "345a6768673b501dfaad17e075f586c2d4e7c8d7940be3802bd3f8909b7820f1",
+      "byteIdentical": true,
+      "decompressedByteIdentical": true,
+      "rows": 168000,
+      "uncompressedSha256": "9bea7880dce3c28a12780d25816bd0325534848b3ef16da028193ee9101c4ac4"
+    },
+    "level-results.csv.gz": {
+      "oldSha256": "9e9fa9980a79a2dd524a0693f4c20b4b3d34c50433410a5d81f59b270a6dada4",
+      "newSha256": "9e9fa9980a79a2dd524a0693f4c20b4b3d34c50433410a5d81f59b270a6dada4",
+      "byteIdentical": true,
+      "decompressedByteIdentical": true,
+      "rows": 777406,
+      "uncompressedSha256": "aec7117a051fec44f8f612dcbc8e8f64bd1b85a7e77d2447dda951adbb2cf4e1"
+    },
+    "paired-comparisons.json": {
+      "oldSha256": "c66fdf9ee4b90ba6b128a0ffbb292d696150854624eb89beca58c411b945fbe5",
+      "newSha256": "c66fdf9ee4b90ba6b128a0ffbb292d696150854624eb89beca58c411b945fbe5",
+      "byteIdentical": true
+    },
+    "profiles.json": {
+      "oldSha256": "d18c0f87c8555933d34dbb3c887c04e8e23787ebc779cbb77ec1c113cf385816",
+      "newSha256": "d18c0f87c8555933d34dbb3c887c04e8e23787ebc779cbb77ec1c113cf385816",
+      "byteIdentical": true
+    },
+    "provenance.json": {
+      "oldSha256": "116ee61802a6bb81b793060316a43bc1fdff0dd41c97970a23338fb7baf3e1a0",
+      "newSha256": "3a04704901572723a9ef933b354d961df4d270e01486faa1018aa8f72e073e54",
+      "byteIdentical": false,
+      "allowedMetadataDifferences": [
+        "elapsedSeconds",
+        "sourceSha256",
+        "outputs"
+      ],
+      "sourceChanges": {
+        "app/src/main/java/com/androidhit/lumadrift/LumaView.java": {
+          "old": "1bb9697077ae19bf7db500667e21a20517b4046346fc5005c735e13c597942ad",
+          "new": "d1e4b2995172d61ca9cfb23facde6761ea9311635ffdb9fb60571f6892abf8af"
+        },
+        "scripts/cognitive_lab/CognitiveLab122.java": {
+          "old": "ecb30427887ff4acdffb9218207d8dee668b3e17ae4b143dd3bd9beecfcab188",
+          "new": "cc831897e9fe17816bc9731f50a71c2c99ff4fdd3e6bd84a4a6e798191b271e4"
+        }
+      }
+    },
+    "report.json": {
+      "oldSha256": "9f053e4821ebb8dcebca3fd10f4b2cde700f2368839c66c9f942cee76d3536cb",
+      "newSha256": "3b7ae1109634a90cb9c80d29dcd03fd461ebf8293430e72007e6b0e14a46301a",
+      "byteIdentical": false,
+      "onlyDifference": "summary.config.scenarios"
+    },
+    "summary.json": {
+      "oldSha256": "fe1c328d73ece8bf8c3a90a8f7d5f419b708dfbb62aae109762704e84012a9cf",
+      "newSha256": "0e636109d3cca99a7f188a03860e497e9cffb00f83eaba718f9d0aa21aa6e94a",
+      "byteIdentical": false,
+      "onlyDifference": "config.scenarios"
+    },
+    "tactical-chapter.json": {
+      "oldSha256": "f10280967857567e61eff7a4575d484027ea86dddab438bc1d1105e89bcd8df0",
+      "newSha256": "f10280967857567e61eff7a4575d484027ea86dddab438bc1d1105e89bcd8df0",
+      "byteIdentical": true
+    },
+    "traces.json": {
+      "oldSha256": "e3604579632ec7d6566c1b8762c54e316dec5fad4c4ed5b937ea4dbc9b99ccf4",
+      "newSha256": "e3604579632ec7d6566c1b8762c54e316dec5fad4c4ed5b937ea4dbc9b99ccf4",
+      "byteIdentical": true
+    },
+    "trajectories.csv.gz": {
+      "oldSha256": "47f91c93905a6b008609ce40289605cc689354cb38f88f190c7c35da351a0faa",
+      "newSha256": "47f91c93905a6b008609ce40289605cc689354cb38f88f190c7c35da351a0faa",
+      "byteIdentical": true,
+      "decompressedByteIdentical": true,
+      "rows": 21000,
+      "uncompressedSha256": "fe3e30f630ab13b739f232e0469a501e60572cc3cc9b973f657116687eeb8a9d"
+    }
+  },
+  "historical121All8FilesByteIdentical": true,
+  "seed": 20261030,
+  "allBehavioralResultsIdentical": true
+}

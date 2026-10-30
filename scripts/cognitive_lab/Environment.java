@@ -5,17 +5,18 @@ import com.androidhit.lumadrift.data.EconomyCurve121;
 import java.util.*;
 
 /** Real mechanics and native rendered assistance. Hidden references never reach the policy. */
-final class Environment {
+class Environment {
     static final class Energy {
         int count=10,cap=10,spent,refilled;double anchor;
         void refresh(double now){if(count<cap){int ticks=(int)((now-anchor)/600);if(ticks>0){int added=Math.min(cap-count,ticks);count+=added;refilled+=added;anchor=count==cap?now:anchor+ticks*600;}}}
         void capacity(int requested,double now){refresh(now);if(requested>cap){if(count==cap)anchor=now;cap=requested;}}
         boolean reserve(int level,double now){capacity(EconomyCurve121.energyCapacity(level),now);if(level<=10)return true;if(count==0)return false;if(count==cap)anchor=now;count--;spent++;return true;}
     }
-    final Board board;final MoveBudget budget;final ElementalShell121 shells;final ExitChain121 chain=new ExitChain121();
+    Board board;MoveBudget budget;final ElementalShell121 shells;final ExitChain121 chain=new ExitChain121();
     final CognitiveAgent.Piece[] pieces;final CognitiveAgent.Wall[] walls;final int level,ordinal,startDay;
     int undos,actions,blocked,shellTaps,focusUses,focusRequests,exits,hintsUsed,paidUndoCoins,coachCueObservations,deadEndWarningObservations,focusCueObservations;double seconds;int visibleFocus=-1;double focusExpires;
-    Environment(int level,int ordinal,int day){this.level=level;this.ordinal=ordinal;startDay=day;Level source=RelayCatalog.get(level);board=new Board(source);budget=MoveBudget.start(0,source);shells=ElementalShell121.create(source,0,level);
+    Environment(int level,int ordinal,int day){this(RelayCatalog.get(level),ordinal,day);}
+    Environment(Level source,int ordinal,int day){this.level=source.number;this.ordinal=ordinal;startDay=day;board=new Board(source);budget=MoveBudget.start(0,source);shells=ElementalShell121.create(source,0,level);
         pieces=new CognitiveAgent.Piece[source.tiles.size()];for(Tile p:source.tiles)pieces[p.id]=new CognitiveAgent.Piece(p.id,p.row,p.col,p.direction.ordinal(),p.switchMask);
         walls=new CognitiveAgent.Wall[source.barriers.size()];for(int i=0;i<walls.length;i++){Barrier w=source.barriers.get(i);walls[i]=new CognitiveAgent.Wall(w.row,w.col,w.keyTileId);}}
     CognitiveAgent.Observation observation(double modelClock,int coins){

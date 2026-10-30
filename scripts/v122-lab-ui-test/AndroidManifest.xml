@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.androidhit.lumadrift.sandbox.v122test">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="36" />
+    <application android:allowBackup="false" android:label="Luma Lab 1.22 qualification" />
+    <instrumentation android:name="com.androidhit.lumadrift.qa.v122.BattleInstrumentation" android:targetPackage="com.androidhit.lumadrift.sandbox" android:functionalTest="true" />
+    <instrumentation android:name="com.androidhit.lumadrift.qa.v122.ProductionSnapshot" android:targetPackage="com.androidhit.lumadrift" android:functionalTest="true" />
+    <instrumentation android:name="com.androidhit.lumadrift.qa.v122.SandboxSnapshot" android:targetPackage="com.androidhit.lumadrift.sandbox" android:functionalTest="true" />
+</manifest>

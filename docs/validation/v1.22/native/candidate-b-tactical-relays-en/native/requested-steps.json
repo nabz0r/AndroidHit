@@ -1,0 +1,161 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "home-en"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "capture",
+    "name": "map-en"
+  },
+  {
+    "op": "tap",
+    "regex": ".*Echo Observatory.*"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_relays"
+  },
+  {
+    "op": "assert-tactical",
+    "episode": "RELAYS",
+    "charge": 6,
+    "used": 0,
+    "wins": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_relays_entry"
+  },
+  {
+    "op": "capture",
+    "name": "tactical-en"
+  },
+  {
+    "op": "remember-energy",
+    "name": "free-chapter"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-relay-reward"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_talent_2"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 3,
+    "used": 4
+  },
+  {
+    "op": "capture",
+    "name": "en-flow-two-real-exits-cost-three"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_undo"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_undo"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 3,
+    "used": 4,
+    "history": "",
+    "undos": 2
+  },
+  {
+    "op": "remember-tactical",
+    "name": "used-flow"
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_talent_2"
+  },
+  {
+    "op": "assert-tactical-unchanged",
+    "name": "used-flow"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 3,
+    "used": 4,
+    "wins": 1
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_relays_first_relay"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 3,
+    "wins": 2
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_relays_second_key"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 3,
+    "wins": 3
+  },
+  {
+    "op": "tap-id",
+    "id": "tactical_route_t122_relays_finale"
+  },
+  {
+    "op": "capture",
+    "name": "en-tactical-transfer-finale"
+  },
+  {
+    "op": "tactical-solve-active"
+  },
+  {
+    "op": "assert-tactical",
+    "charge": 3,
+    "used": 4,
+    "wins": 4,
+    "claimed": true,
+    "souvenir": "relays"
+  },
+  {
+    "op": "assert-int-delta",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-relay-reward",
+    "delta": 120
+  },
+  {
+    "op": "assert-no-energy-debit",
+    "name": "free-chapter"
+  },
+  {
+    "op": "capture",
+    "name": "en-second-souvenir-120-coins"
+  },
+  {
+    "op": "snapshot",
+    "name": "tactical-relays-complete"
+  }
+]

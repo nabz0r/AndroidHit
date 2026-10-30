@@ -1,0 +1,94 @@
+{
+  "workflow": ".github/workflows/puzzle-contracts.yml",
+  "workflowSha256": "2bf48b95307632b39fb270e9dd3f3f5747b76b2889d4bf8f65e83e6c761346f0",
+  "patterns": 183,
+  "selectedFiles": 449,
+  "sourceHashes": {
+    "public/index.html": "e23d0b99014ecc5cc31107b7c2df11d3efd2af65841feef2136397d0180b0f31",
+    ".github/workflows/puzzle-contracts.yml": "2bf48b95307632b39fb270e9dd3f3f5747b76b2889d4bf8f65e83e6c761346f0",
+    "scripts/test-journey-world-v122.sh": "d25433fc497be54de7d041e788eb0bfe7ae687857065480cc8cfeb0a277a0555",
+    "scripts/test-tactical-chapter-v122.sh": "94a611cbeb7a16795a7820c1638515d54c35c1b47c0292c14799889184c5c80b",
+    "scripts/test-tactical-session-v122.sh": "5d05c37f420db5efb4e7a196c0b68c27c6c2bf235a190bf2c3cbcf914cf4e3ad"
+  },
+  "steps": [
+    {
+      "command": [
+        "bash",
+        "scripts/test-journey-world-v122.sh"
+      ],
+      "exitCode": 0,
+      "log": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-puzzle-sparse-logs-3klrx6hv/step-0.log",
+      "outputTail": "JourneyWorld122: 171865 checks passed; catalogue identities, exact edges, reversible travel, interruption, bounded camera and minimap.\nJourneyWorldScene122: Android 36 jar unavailable; renderer compilation not performed.\n"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-tactical-chapter-v122.sh"
+      ],
+      "exitCode": 0,
+      "log": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-puzzle-sparse-logs-3klrx6hv/step-1.log",
+      "outputTail": "{\"passed\":true,\"checks\":8020,\"layouts\":12,\"completeRouteCapacityCombinations\":24,\"actualTalentDrafts\":123,\"scope\":\"Twelve hand-authored native U layouts, distinct from U1-U1000, exact mechanical effects and legal traps/repairs, all branches at Charge4/6/8, immutable drafts, per-sortie resource and canonical cold replay. Not human enjoyment or Android disk/gesture/render validation.\"}\n"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-tactical-session-v122.sh"
+      ],
+      "exitCode": 0,
+      "log": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-puzzle-sparse-logs-3klrx6hv/step-2.log",
+      "outputTail": "{\"passed\":true,\"checks\":1874,\"completeRoutes\":8,\"scope\":\"Actual isolated chapter session and GameStore, all branch routes, loans, persistent Charge, reset, no campaign mutation before reward, atomic writes, before/after-memory disk failures, cold recovery, milestone/claim crash windows, concurrent handles and strict corrupt-record refusal. Not Android filesystem/gestures/rendering or human enjoyment.\"}\n"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-site-v122-runtime.mjs",
+        "scripts/test-site-v121-runtime.mjs",
+        "scripts/test-simulation-v121.mjs",
+        "scripts/test-site-v120-runtime.mjs",
+        "scripts/test-site-v119.mjs",
+        "scripts/test-site-v118.mjs",
+        "scripts/test-site-v117.mjs",
+        "scripts/test-site-v116.mjs"
+      ],
+      "exitCode": 0,
+      "log": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-puzzle-sparse-logs-3klrx6hv/step-3.log",
+      "outputTail": "d pressed language (0.684583ms)\n\u2714 Switching back keeps unrelated route state and removes only language parameter (5.639708ms)\n\u2714 Same-origin APK download and GitHub addresses never acquire a language parameter (4.572708ms)\n\u2714 Legal page does not inherit the product-page title (1.65675ms)\n\u2714 Exact support plus-tag is an encoded mailto and remains a text node (3.594541ms)\n\u2714 Existing qualification control is preserved (8.259708ms)\n\u2714 Unsupported requested language keeps the French site default (0.625167ms)\n\u2714 A deliberate preview stops another preview without autoplaying anything (0.596958ms)\n\u2714 Historical 1.19 homepage selects the 1.19 runtime and every advertised navigation destination exists (1.017917ms)\n\u2714 Historical 1.19 native screenshots switch as exactly three paired 1.19 FR/EN views (0.867ms)\n\u2714 Historical 1.19 squad copy explains once-only energy, two-role combo and local save limits in both languages (0.224167ms)\n\u2714 Historical 1.19 signed APK is primary and provider availability remains explicit (1.022584ms)\n\u2714 Historical 1.19 homepage retains four manually started audio previews and a deliberate gallery load (0.560458ms)\n\u2714 French default exposes only French and exact current title (7.907791ms)\n\u2714 English URL switches real source, alt, metadata and pressed language (0.922625ms)\n\u2714 Switching back keeps unrelated route state and removes only language parameter (0.833959ms)\n\u2714 Same-origin APK download and GitHub addresses never acquire a language parameter (1.447291ms)\n\u2714 Legal page does not inherit the product-page title (5.602583ms)\n\u2714 Exact support plus-tag is an encoded mailto and remains a text node (1.6035ms)\n\u2714 Existing qualification control is preserved (13.02425ms)\n\u2714 Unsupported requested language keeps the French site default (0.909ms)\n\u2714 A deliberate preview stops another preview without autoplaying anything (0.925209ms)\n\u2714 French default exposes only French and exact current title (3.972ms)\n\u2714 English URL switches real source, alt, metadata and pressed language (1.945166ms)\n\u2714 Switching back keeps unrelated route state and removes only language parameter (2.076125ms)\n\u2714 Same-origin APK download and GitHub addresses never acquire a language parameter (3.685ms)\n\u2714 Legal page does not inherit the product-page title (5.524667ms)\n\u2714 Exact support plus-tag is an encoded mailto and remains a text node (6.946625ms)\n\u2714 Existing qualification control is preserved (6.174167ms)\n\u2714 Unsupported requested language keeps the French site default (2.442959ms)\n\u2714 A deliberate preview stops another preview without autoplaying anything (0.75675ms)\n\u2714 actual homepage fr: locale, every paired capture, exact download URLs (32.237334ms)\n\u2714 actual homepage en: locale, every paired capture, exact download URLs (19.770625ms)\n\u2714 homepage language switch keeps binary identity and preserves selected route parameters (12.396584ms)\n\u2714 demo fr: travel follows path, camera explores independently and recenter works (133.134084ms)\n\u2714 demo en: travel follows path, camera explores independently and recenter works (113.27125ms)\n\u2714 demo fr: selecting a key only highlights; explicit use opens only its locks (36.823208ms)\n\u2714 demo en: selecting a key only highlights; explicit use opens only its locks (37.261709ms)\n\u2714 English demo has translated navigation labels and a language-bound return link (13.302167ms)\n\u2714 reduced motion and narrow viewport retain the same final mechanical state (39.795333ms)\n\u2139 tests 87\n\u2139 suites 0\n\u2139 pass 87\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 554.151708\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check-site-v122.py",
+        "--structure-only"
+      ],
+      "exitCode": 0,
+      "log": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-puzzle-sparse-logs-3klrx6hv/step-4.log",
+      "outputTail": "{\"passed\": true, \"checks\": 95, \"edition\": \"1.22-pending\", \"structureOnly\": true, \"nativeEvidenceRequired\": false, \"networkRequested\": false, \"scope\": \"Source/link/provenance scope only. Browser and Hosting/public delivery are separate.\"}\n"
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "public/assets/site-v122.js"
+      ],
+      "exitCode": 0,
+      "log": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-puzzle-sparse-logs-3klrx6hv/step-5.log",
+      "outputTail": ""
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "public/lab/ui-1-22/simulation.mjs"
+      ],
+      "exitCode": 0,
+      "log": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-puzzle-sparse-logs-3klrx6hv/step-6.log",
+      "outputTail": ""
+    }
+  ],
+  "scope": "Exact positive sparse patterns from offline-puzzle-contracts, copied from current workspace; new Java1.22 commands plus existing Node website commands only; no AVD, APK, network or full workflow execution.",
+  "passed": true,
+  "sourceUnchangedSinceSnapshot": true,
+  "elapsedSeconds": 6.6362317090000005,
+  "temporarySourceTreeRemoved": true
+}

@@ -1,0 +1,116 @@
+{
+  "observer_apk_sha256": "de0c47173b4268f0d0b81c17c6af7afea600eb6cc691a3590249de495bf3eb59",
+  "build_receipt_sha256": "fcf4c85d66b05775218a8d00029591fe0f3933afc8cc069464d1583415d7822c",
+  "compiled_input_scope": "AndroidManifest.xml, all Java and packaged fixture assets. Runtime host scenarios are recorded separately and need not be compiled into observer.",
+  "phases": [
+    {
+      "phase": "candidate-b-world-en",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "5733164563bb837be37a04a5984cbeef5900ee22b4f54fcc211728d659a12e64",
+      "assertions": 145,
+      "gestures": 18,
+      "native_png_count": 8
+    },
+    {
+      "phase": "candidate-b-world-fr-final",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "a79dfc8a3bae728e468641a1604e9ab7e10dab23fbfa860a07d314790991ec1c",
+      "assertions": 145,
+      "gestures": 18,
+      "native_png_count": 8
+    },
+    {
+      "phase": "candidate-b-keys-fr-final",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "2639608d13d97552e46035335d25e539bcea96c0ac8b9640c7260ce164745a07",
+      "assertions": 75,
+      "gestures": 14,
+      "native_png_count": 4
+    },
+    {
+      "phase": "candidate-b-tactical-prepare-fr",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "652cda2ac3127968d5aafc53c2050649bf17310203ae5547d8d648434c15f0c9",
+      "assertions": 93,
+      "gestures": 12,
+      "native_png_count": 4
+    },
+    {
+      "phase": "candidate-b-tactical-cold-complete-fr",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "a5ddee655b11ec39239f6bdd68d03b303d86bb4547e4266c1814939054661729",
+      "assertions": 526,
+      "gestures": 33,
+      "native_png_count": 4
+    },
+    {
+      "phase": "candidate-b-tactical-relays-en",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "d72a6cf629a0a41e9684e7cbf67d0e9cdc8fd601c9afc08a483ed48cd6d1397b",
+      "assertions": 521,
+      "gestures": 43,
+      "native_png_count": 6
+    },
+    {
+      "phase": "candidate-c-tactical-cold-claimed",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "71a0359f926085277c3441a22e4796da7da3066a9066c0ac157d8b172e9815ec",
+      "assertions": 25,
+      "gestures": 2,
+      "native_png_count": 1
+    },
+    {
+      "phase": "candidate-c-site-media-fr-en-retry",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "631edde6db61f93cfddb3accdfbec26c45004a961507da02e272fa7bc9c54cae",
+      "assertions": 72,
+      "gestures": 30,
+      "native_png_count": 10
+    },
+    {
+      "phase": "candidate-c-retained-world-keys-fr-retry",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "e807001b5d0e6b4dd97f44e50bbd3d6b932c278d0f0608129f3abcb675490446",
+      "assertions": 214,
+      "gestures": 33,
+      "native_png_count": 12,
+      "visual_review": "Actual WALK at35, between39/40, HAPPY arrived41; minimap and camera concordant. Actual key1 opening and Undo restoration inspected."
+    },
+    {
+      "phase": "candidate-c-compact-reduced-fr-en",
+      "passed": true,
+      "compiled_input_count": 64,
+      "compiled_inputs_match": true,
+      "actual_requested_steps_sha256": "edbbb89fdf2a7a8a65e514a93b946569ceee73879512c9d28d578b81a5622435",
+      "assertions": 106,
+      "gestures": 31,
+      "native_png_count": 8,
+      "visual_review": "FR/EN compact home and map, immediate open key1 barrier and later open state inspected; primary controls readable, minimap and Play reachable. Static reduced-motion map exact pixel comparison passed."
+    }
+  ],
+  "excluded": [
+    "candidate-b-world-fr preliminary source snapshot did not match observer Java; rerun final accepted",
+    "candidate-a-keys-fr failed Undo label regex; retained",
+    "candidate-c-site-media-fr-en failed test navigation pause/back; retained",
+    "candidate-c-retained-world-keys-fr failed before any gesture: unnecessary preamble assumed a prior screen; retry starts at the cold Adventure view"
+  ],
+  "build_receipt": "docs/validation/v1.22/observer-builds/production-de0c4717.json"
+}

@@ -1,3 +1,11 @@
+# Luma Drift 1.22 — living map, visible causality and tactical chapter
+
+Owner authorized full implementation and delivery on 30 October 2026: native keys/locks and causal feedback; a moving companion, independent 2D camera and minimap; targeted anticipation at U43/U48; a separately persisted 12-layout tactical chapter with a loan team and shared talent reserve; actual-mechanic cognitive comparisons; signed production/Lab packages, native qualification, documentation, Git main and the existing Firebase site.
+
+Status: final production C and Lab C pass their native scopes; exact canonical signed APKs are collected. The corrected lab rerun retains all behavioral results. Git main and existing Firebase publication are being closed separately. Historical 1.21 bytes, saves, probability and provider gates are retained. See [design study](docs/research/cognitive-design-2026/ANALYSE_ET_DIRECTION_FR.md).
+
+---
+
 # Luma Drift 1.18 — prototype published; Android UX rework open
 
 **Publication —29 October 2026:** frozen H source/artifact metadata is published on Git main at `4972565151521c5910b2e5d90921491f00acb7eb`; clean site source `98917d050b626fe1693e6b1a3522b386353a8aa6` is released on the existing Firebase host at **2026-10-29T18:13:48.028Z**, version `1e51ed3275f5cb9c`. Both Git commits pass hosted contracts. Fifteen Node tests and68 local publication checks pass. The486 payloads contain the37-identity gallery, six H captures, exact external production/Lab APKs and the [interactive UX proposal](https://luma-drift-production.web.app/lab/ui-1-19/index.html?revision=a2a044047f9232b871bd2c035c27d3f24d8ad26c). [Publication evidence](docs/validation/site-v1.18/README.md) separates management, public bytes and browser rendering. APK H remains frozen. The CSS-only wardrobe prototype correction is released from `a2a044047f9232b871bd2c035c27d3f24d8ad26c` as Hosting version `381fee5ff7548191` at2026-10-29T18:40:32.706Z; its targeted public bytes and20 browser assertions pass, separately from initial C2 evidence.

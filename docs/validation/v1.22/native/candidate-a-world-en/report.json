@@ -1,0 +1,878 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T13:15:29.411142+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "world-en",
+  "expected_version": "1.22.0-rc1",
+  "expected_code": 30,
+  "apk_sha256": "d0df4dbc66858b43dda5a214e1c14b8c052570e3c7ccece72d10c1a7ed37075a",
+  "observer_sha256": "861947ec96911fcd2d923f121e4d5f78adf9fc332c0836dac99a9b5629c27c8f",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "6a2ec4be-736e-48f1-b996-af6f7cbaf396",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. No external identity, ad or real-money purchase.",
+  "installed_sha256": "d0df4dbc66858b43dda5a214e1c14b8c052570e3c7ccece72d10c1a7ed37075a",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native_video": {
+    "requested_seconds": 45,
+    "path": "native-ui-recording.mp4",
+    "sha256": "81e16d8aa2fce4b8195b35bca6e7ca02390b404f88274a95a632e816c9cda6cc",
+    "scope": "Unedited actual task-emulator screen recording during this native gesture program; not a frame-rate or phone performance benchmark."
+  },
+  "native": {
+    "passed": true,
+    "phase": "world-en",
+    "runToken": "6a2ec4be-736e-48f1-b996-af6f7cbaf396",
+    "processId": 7266,
+    "checkCount": 145,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_node_41"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_node_41"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_node_41"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_node_41"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Bounded actual drag timing"
+      },
+      {
+        "passed": true,
+        "message": "Real drag stays inside target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual earlier node bounds observed"
+      },
+      {
+        "passed": true,
+        "message": "Real AX node position changed after camera gesture"
+      },
+      {
+        "passed": true,
+        "message": "Native map baseline was actually observed"
+      },
+      {
+        "passed": true,
+        "message": "Map exploration preserves complete actual progression, owned items and earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Pan, minimap, walking and pinch cannot debit session energy; natural regeneration allowed"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board run_id"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board mode"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board level"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board history"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board budget_used"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board undos"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_node_41"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_node_41"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Bounded two-finger pinch"
+      },
+      {
+        "passed": true,
+        "message": "Both pointers remain inside target window"
+      },
+      {
+        "passed": true,
+        "message": "Native map baseline was actually observed"
+      },
+      {
+        "passed": true,
+        "message": "Map exploration preserves complete actual progression, owned items and earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Pan, minimap, walking and pinch cannot debit session energy; natural regeneration allowed"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board run_id"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board mode"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board level"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board history"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board budget_used"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board undos"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Pointer fraction inside observed control"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Native map baseline was actually observed"
+      },
+      {
+        "passed": true,
+        "message": "Map exploration preserves complete actual progression, owned items and earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Pan, minimap, walking and pinch cannot debit session energy; natural regeneration allowed"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board run_id"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board mode"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board level"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board history"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board budget_used"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board undos"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Observed locked-node scenario remains in first real sector"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Next genuinely locked node is visible"
+      },
+      {
+        "passed": true,
+        "message": "Locked node cannot move confirmed companion destination"
+      },
+      {
+        "passed": true,
+        "message": "Locked node cannot open a puzzle"
+      },
+      {
+        "passed": true,
+        "message": "Native map baseline was actually observed"
+      },
+      {
+        "passed": true,
+        "message": "Map exploration preserves complete actual progression, owned items and earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Pan, minimap, walking and pinch cannot debit session energy; natural regeneration allowed"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board run_id"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board mode"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board level"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board history"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board budget_used"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board undos"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Short travel uses genuinely unlocked destination"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Real destination node visible before short-travel pointer gesture"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference map_avatar_journey122 = 41"
+      },
+      {
+        "passed": true,
+        "message": "Native map baseline was actually observed"
+      },
+      {
+        "passed": true,
+        "message": "Map exploration preserves complete actual progression, owned items and earned Coins"
+      },
+      {
+        "passed": true,
+        "message": "Observe actual energy codec without writing it"
+      },
+      {
+        "passed": true,
+        "message": "Pan, minimap, walking and pinch cannot debit session energy; natural regeneration allowed"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board run_id"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board mode"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board level"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board history"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board budget_used"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board undos"
+      },
+      {
+        "passed": true,
+        "message": "World exploration preserves actual board battle_v119"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 18,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1566791,
+        "label": "Réglages",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1567356,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1585093,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1586366,
+        "point": [
+          836.79065,
+          884.48206
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1588640,
+        "label": "Level 41",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_41",
+        "bounds": [
+          199,
+          1168,
+          354,
+          1323
+        ]
+      },
+      {
+        "reason": "actual-world-horizontal-camera-pan",
+        "input": "actual SDK touchscreen drag",
+        "uptimeMs": 1594448,
+        "from": [
+          276.5,
+          1245.5
+        ],
+        "to": [
+          82.09999,
+          1245.5
+        ]
+      },
+      {
+        "reason": "Me suivre|Follow me",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1598127,
+        "label": "Follow me",
+        "resourceId": "com.androidhit.lumadrift:id/world_follow",
+        "bounds": [
+          188,
+          435,
+          584,
+          568
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1599179,
+        "point": [
+          836.79065,
+          884.48206
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1599997,
+        "label": "Level 41",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_41",
+        "bounds": [
+          199,
+          1168,
+          354,
+          1323
+        ]
+      },
+      {
+        "reason": "actual-two-pointer-pinch-world_node_41",
+        "input": "actual SDK two-pointer touchscreen pinch",
+        "center": [
+          276.5,
+          1245.5
+        ],
+        "factor": 1.350000023841858,
+        "uptimeMs": 1603650
+      },
+      {
+        "reason": "actual-minimap-inspection-away-from-avatar",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1606740,
+        "point": [
+          1014.67,
+          1004.95996
+        ]
+      },
+      {
+        "reason": "Me suivre|Follow me",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1609264,
+        "label": "Follow me",
+        "resourceId": "com.androidhit.lumadrift:id/world_follow",
+        "bounds": [
+          188,
+          435,
+          584,
+          568
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U46",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1610343,
+        "point": [
+          943.1344,
+          881.34863
+        ]
+      },
+      {
+        "reason": "actual-locked-world-node-inspection",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1611237,
+        "label": "Level 46 · Complete the previous puzzle first",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_46",
+        "bounds": [
+          472,
+          1168,
+          627,
+          1323
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U35",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1614125,
+        "point": [
+          943.1344,
+          844.6506
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U35",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1615069,
+        "label": "Level 35",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_35",
+        "bounds": [
+          472,
+          1168,
+          627,
+          1323
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1617466,
+        "point": [
+          836.79065,
+          884.48206
+        ]
+      },
+      {
+        "reason": "begin-real-world-travel-to-U41",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1618470,
+        "label": "Level 41",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_41",
+        "bounds": [
+          295,
+          1168,
+          451,
+          1323
+        ]
+      }
+    ],
+    "captures": [
+      "en-world-initial",
+      "en-world-camera-panned",
+      "en-world-actual-two-finger-zoom",
+      "en-world-minimap-framing",
+      "en-locked-node-does-not-enter",
+      "en-world-walk-begins",
+      "en-world-walk-during",
+      "en-world-walk-arrived"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, ads, real-money purchase or publication. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 66.084,
+  "evidence_sha256": {
+    "battle-observer.apk": "861947ec96911fcd2d923f121e4d5f78adf9fc332c0836dac99a9b5629c27c8f",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "ae2e0f99237af1ba4c2945314f70153dbcac13f77d4c7c8698e6eff6ed002ab9",
+    "native/after.json": "b87e0f7351ad68725e530fc4974c75ef1d1662900f64424c691f47792fc157e9",
+    "native/before.json": "98df2339ab0a1aa9abb5654e4197560badb309a960a5ce8217102ae547cadee8",
+    "native/en-locked-node-does-not-enter-accessibility.json": "59913ef10f489d5bfce67859904f2f4f3ad46a5baaa516c2cac483c69529e585",
+    "native/en-locked-node-does-not-enter.png": "0c26b2a3946fb4e92d8b1726317bc338be28a10f3ae0ce943f2e9a6b70184313",
+    "native/en-world-actual-two-finger-zoom-accessibility.json": "8be83a41ad5a37c42c73dce73bd72276de9ec98f100799984d4ec6f1726c6e0a",
+    "native/en-world-actual-two-finger-zoom.png": "360fd0f38d504a1fb614acc88581a5ba35385ba5e89b437cf20e6e540f05def3",
+    "native/en-world-camera-panned-accessibility.json": "48ea8b6bce2f9a842cbf8beab0148c321a15d30875af14bf49c6ccb42946c8c0",
+    "native/en-world-camera-panned.png": "53f5113af889d2d8abdf565e3eeb0fd9701b8baa33abdbd06ef9f67abb14115c",
+    "native/en-world-final-state.json": "b87e0f7351ad68725e530fc4974c75ef1d1662900f64424c691f47792fc157e9",
+    "native/en-world-initial-accessibility.json": "b5fcd91701fe4b577377cf59aa42936f063a60a2dd7fd9872d147e014e5f362b",
+    "native/en-world-initial.png": "7ca9daae6153af50bade21b7ade6d481e7127430c5b25c03a43cf2e5543941a1",
+    "native/en-world-minimap-framing-accessibility.json": "6f07a99e09714b96dee186da8b24f40a32d7a4d76d37896717165db899d2b0b7",
+    "native/en-world-minimap-framing.png": "6d05cf1788f1b8842c550c67ba34f1a7245c9abe1bc30a4d8fb615e104933f80",
+    "native/en-world-walk-arrived-accessibility.json": "0a70f717bb3f569ec2019c08490060dd882c8e8da70ec8f9132a3ccd6c26c607",
+    "native/en-world-walk-arrived.png": "d4ded0462e5388a929cc46daeb86ae78aecebc95bc7e29b9d29d76d746bfb314",
+    "native/en-world-walk-begins-accessibility.json": "df9c70a4f9f8ae50fb94ed715fa6e8f589e276a3da9d20f930abe6f1755e7ca6",
+    "native/en-world-walk-begins.png": "16d235bf60271ab6e53de3da38d6901e847ce771595521209188f7b536ca1a96",
+    "native/en-world-walk-during-accessibility.json": "0a70f717bb3f569ec2019c08490060dd882c8e8da70ec8f9132a3ccd6c26c607",
+    "native/en-world-walk-during.png": "06535b8be743c72d0baedb16c67fcd6598cdfb48e7a35ae44c46d303547e42bf",
+    "native/report.json": "8eea0a2e232aab4c49fc59a3fd794ddaaba09c1c7beaa314a5290ed655155a15",
+    "native/requested-steps.json": "defc3cb9161a456d085ffa3ce37d5d625da9ebd41901c51f70734d5b6b7c3f72",
+    "native-ui-recording.mp4": "81e16d8aa2fce4b8195b35bca6e7ca02390b404f88274a95a632e816c9cda6cc",
+    "observer-install.txt": "4e8c9fe57c81d1bd0dab85d5e31dde35fcef1ec83a47a013bdd97bec594c6b1b",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "5733164563bb837be37a04a5984cbeef5900ee22b4f54fcc211728d659a12e64",
+    "screenrecord.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-snapshot.json": "8e98c3ae6fb7367f13512b872af06663c26887cad8879ceb864b7c792dbcec5a"
+  }
+}
