@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "sourceCommit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "verifier": {
+    "path": "docs/validation/site-v1.23/verification/verify-delivery.py",
+    "sha256": "1400d91afb27ed70863fc36fbe5f90d4ceddd7b632bd7e26347d217b36f395e3",
+    "bytes": 14806
+  },
+  "actualExecutedPath": "/tmp/luma123-verify-delivery.py",
+  "exitCode": 0,
+  "stderrBytes": 0,
+  "stdout": {
+    "path": "docs/validation/site-v1.23/delivery-check.json",
+    "sha256": "67138517a49fba393c2227e04bd6eebe5a1397ef87526ea3081e6d066ad4ca19",
+    "bytes": 3432
+  },
+  "stdoutPreservedWithoutReformatting": true,
+  "commandArguments": [
+    "--hosting-provider",
+    "docs/validation/site-v1.23/hosting/receipts/final-deployment/deployment.json",
+    "--public-origin",
+    "docs/validation/site-v1.23/public-response.json",
+    "--browser-public",
+    "docs/validation/site-v1.23/browser-public/report.json",
+    "--browser-evidence-root",
+    "docs/validation/site-v1.23",
+    "--retirements",
+    "docs/validation/v1.23/cleanup/public-retirements.json",
+    "--source-c2",
+    "docs/validation/site-v1.23/release/source-manifest.json",
+    "--c1-ci",
+    "docs/validation/v1.23/publication/c1/ci/receipt.json",
+    "--c2-ci",
+    "docs/validation/v1.23/publication/c2/ci/receipt.json"
+  ],
+  "scope": "The verifier itself only read supplied local evidence. The invoking wrapper saved its original stdout; no network, deployment, app/public write or browser replay occurred."
+}

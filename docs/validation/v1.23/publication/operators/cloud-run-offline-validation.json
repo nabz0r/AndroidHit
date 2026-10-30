@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "external_network": false,
+  "actual_firebase_auth_or_deployment": false,
+  "checks": [
+    "offline plan has no subprocess/network",
+    "real local sparse Git + pinned dependency fetch + no historical APK checkout; stage-only never authenticates",
+    "fake deploy gets exact stdin token, baseline flags and new external receipt path; no token on disk/argv",
+    "auth refusal stops before deployment without fallback"
+  ]
+}

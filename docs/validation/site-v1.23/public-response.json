@@ -1,0 +1,668 @@
+{
+  "schema": "luma-site123-public-response-v1",
+  "status": "PASS",
+  "origin": "https://luma-drift-production.web.app",
+  "source_commit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "source_manifest_sha256": "78994a2e02ad2e74b7439e112852bfbc69b7fd596998cd62f7933e435584507c",
+  "baseline_manifest_sha256": "b3f612758736370b15b47ebc4a72eb6a95fedf8342cb67fe3429f967d2549995",
+  "previous_source_commit": "b122c0acbd172a7912c69b0b6914b8b0f9b2a243",
+  "previous_source_manifest_sha256": "b3f612758736370b15b47ebc4a72eb6a95fedf8342cb67fe3429f967d2549995",
+  "started_at_utc": "2026-10-30T20:07:25.541200+00:00",
+  "selected_paths": 21,
+  "expected_bytes": 753990693,
+  "retired_paths": [
+    "/releases/luma-drift-1.15.0-rc1.aab",
+    "/releases/luma-drift-1.15.0-rc1.apk",
+    "/releases/luma-drift-1.16.0-rc1.aab",
+    "/releases/luma-drift-1.16.0-rc1.apk",
+    "/releases/luma-drift-1.17.0-rc6.aab",
+    "/releases/luma-drift-1.17.0-rc6.apk",
+    "/releases/luma-drift-1.18.0-prototype1.apk",
+    "/releases/luma-drift-1.18.0-sandbox-prototype1.apk",
+    "/releases/luma-drift-1.19.0-prototype2.apk",
+    "/releases/luma-drift-1.19.0-sandbox-prototype2.apk",
+    "/releases/luma-drift-1.20.0-rc1.apk",
+    "/releases/luma-drift-1.20.0-sandbox-rc1.apk",
+    "/releases/luma-drift-1.21.0-rc1.apk",
+    "/releases/luma-drift-1.21.0-sandbox-rc1.apk"
+  ],
+  "retired_responses": {
+    "/releases/luma-drift-1.15.0-rc1.aab": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.15.0-rc1.aab?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.15.0-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.15.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.16.0-rc1.aab": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.16.0-rc1.aab?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.16.0-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.16.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.17.0-rc6.aab": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.17.0-rc6.aab?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.17.0-rc6.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.17.0-rc6.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.18.0-prototype1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.18.0-prototype1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.18.0-sandbox-prototype1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.18.0-sandbox-prototype1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.19.0-prototype2.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.19.0-prototype2.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.19.0-sandbox-prototype2.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.19.0-sandbox-prototype2.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.20.0-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.20.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.20.0-sandbox-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.20.0-sandbox-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.21.0-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    },
+    "/releases/luma-drift-1.21.0-sandbox-rc1.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-sandbox-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "expectedStatus": 404,
+      "bodyRead": false,
+      "status": 404,
+      "contentType": "text/html; charset=utf-8"
+    }
+  },
+  "selection": "All new 1.23 paths and the changed homepage against exact 1.22 C3",
+  "expected_files": {
+    "/assets/screenshots/v1.23/map-en.png": {
+      "bytes": 391227,
+      "sha256": "928a6bd3f71089854c0c90b7f192016705426d24f8d1dd95a00d7e5945b67c37"
+    },
+    "/assets/screenshots/v1.23/map-fr.png": {
+      "bytes": 393082,
+      "sha256": "71bde4225408c67e3e86d0135dfe76622a61ac6d64014df7aa2e48fb011664cf"
+    },
+    "/assets/screenshots/v1.23/puzzle-en.png": {
+      "bytes": 304370,
+      "sha256": "51576d383d226c11f694d1b1b4517a0c54fc3a97e820e4f624c02865164c7845"
+    },
+    "/assets/screenshots/v1.23/puzzle-fr.png": {
+      "bytes": 310882,
+      "sha256": "45b4df84378dad3be4be9885902a146245911840cec4e91396f999cf0897413f"
+    },
+    "/assets/screenshots/v1.23/skills-en.png": {
+      "bytes": 232666,
+      "sha256": "21ad01d5d79ee0d3115f9405b84575df0ee5f0ba8017e419d8b84e4b3e40455f"
+    },
+    "/assets/screenshots/v1.23/skills-fr.png": {
+      "bytes": 234170,
+      "sha256": "51c014c65361c246bf7e11121aab83926b4c84ea7445af9c1b288e6f8faec649"
+    },
+    "/assets/screenshots/v1.23/wardrobe-en.png": {
+      "bytes": 772702,
+      "sha256": "261757e939a291f938d23afd5e436a44a70d580ab00ed8bf94262cbe0332f9a5"
+    },
+    "/assets/screenshots/v1.23/wardrobe-fr.png": {
+      "bytes": 779807,
+      "sha256": "7abbfa86d3af6a254df96945c48b16c211ac0ce12599fef6cb1982d3465b402d"
+    },
+    "/assets/site-v123.css": {
+      "bytes": 5562,
+      "sha256": "2ce30b892a0b8b652f082009d30863466d7043e1e1ac7544e49cfe7b023e4e50"
+    },
+    "/assets/site-v123.js": {
+      "bytes": 4291,
+      "sha256": "575e914980a8362b5e788299c969af33bf05102f95d5caf9500758ef9a890361"
+    },
+    "/index.html": {
+      "bytes": 37392,
+      "sha256": "34854680e870e5e4f431e7c72479664e948ff8419a34fb2512253656cb36fb12"
+    },
+    "/lab/clarity-123/cognitive-lab-1.23-source.zip": {
+      "bytes": 12487546,
+      "sha256": "07d35901a7f8ddf6b25f92e5bf8c41f7ecb3dadaaf55984720ac40cc909ba01e"
+    },
+    "/lab/clarity-123/data/provenance.json": {
+      "bytes": 9286,
+      "sha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57"
+    },
+    "/lab/clarity-123/data/snapshot.js": {
+      "bytes": 3809,
+      "sha256": "1118190c514d43006280eb7aaee2b1d1d25c5b635f9dbb8fb6cd815205374f6e"
+    },
+    "/lab/clarity-123/data/view.json": {
+      "bytes": 5946,
+      "sha256": "774cd926970f6bbd30fbfd494c92f2b95bafc9edac463c1f75eecb3a384d9553"
+    },
+    "/lab/clarity-123/index.html": {
+      "bytes": 7360,
+      "sha256": "83f5d5ae3839319a853121b634b2e2a86d93c8fbc96cbb4414e18e1623d63991"
+    },
+    "/lab/clarity-123/report.css": {
+      "bytes": 4170,
+      "sha256": "2439ee9458cdfb69c96e032167153178e4c8c4512f1c051c23e6ecb4b7756231"
+    },
+    "/lab/clarity-123/report.js": {
+      "bytes": 17001,
+      "sha256": "60bc8a85c2eb5122274fa7f6b6a15065b408f7de507aa266666af19c3f119e24"
+    },
+    "/releases/luma-drift-1.23.0-rc2.apk": {
+      "bytes": 369002457,
+      "sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb"
+    },
+    "/releases/luma-drift-1.23.0-sandbox-rc2.apk": {
+      "bytes": 368985756,
+      "sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c"
+    },
+    "/releases/manifest-1.23.0-rc2.json": {
+      "bytes": 1211,
+      "sha256": "e59871e370a77e4903df0721ccfe3dfc3560d80303befa7ecff1ae7551bdf972"
+    }
+  },
+  "files": {
+    "/assets/screenshots/v1.23/map-en.png": {
+      "sha256": "928a6bd3f71089854c0c90b7f192016705426d24f8d1dd95a00d7e5945b67c37",
+      "bytes": 391227
+    },
+    "/assets/screenshots/v1.23/map-fr.png": {
+      "sha256": "71bde4225408c67e3e86d0135dfe76622a61ac6d64014df7aa2e48fb011664cf",
+      "bytes": 393082
+    },
+    "/assets/screenshots/v1.23/puzzle-en.png": {
+      "sha256": "51576d383d226c11f694d1b1b4517a0c54fc3a97e820e4f624c02865164c7845",
+      "bytes": 304370
+    },
+    "/assets/screenshots/v1.23/puzzle-fr.png": {
+      "sha256": "45b4df84378dad3be4be9885902a146245911840cec4e91396f999cf0897413f",
+      "bytes": 310882
+    },
+    "/assets/screenshots/v1.23/skills-en.png": {
+      "sha256": "21ad01d5d79ee0d3115f9405b84575df0ee5f0ba8017e419d8b84e4b3e40455f",
+      "bytes": 232666
+    },
+    "/assets/screenshots/v1.23/skills-fr.png": {
+      "sha256": "51c014c65361c246bf7e11121aab83926b4c84ea7445af9c1b288e6f8faec649",
+      "bytes": 234170
+    },
+    "/assets/screenshots/v1.23/wardrobe-en.png": {
+      "sha256": "261757e939a291f938d23afd5e436a44a70d580ab00ed8bf94262cbe0332f9a5",
+      "bytes": 772702
+    },
+    "/assets/screenshots/v1.23/wardrobe-fr.png": {
+      "sha256": "7abbfa86d3af6a254df96945c48b16c211ac0ce12599fef6cb1982d3465b402d",
+      "bytes": 779807
+    },
+    "/assets/site-v123.css": {
+      "sha256": "2ce30b892a0b8b652f082009d30863466d7043e1e1ac7544e49cfe7b023e4e50",
+      "bytes": 5562
+    },
+    "/assets/site-v123.js": {
+      "sha256": "575e914980a8362b5e788299c969af33bf05102f95d5caf9500758ef9a890361",
+      "bytes": 4291
+    },
+    "/index.html": {
+      "sha256": "34854680e870e5e4f431e7c72479664e948ff8419a34fb2512253656cb36fb12",
+      "bytes": 37392
+    },
+    "/lab/clarity-123/cognitive-lab-1.23-source.zip": {
+      "sha256": "07d35901a7f8ddf6b25f92e5bf8c41f7ecb3dadaaf55984720ac40cc909ba01e",
+      "bytes": 12487546
+    },
+    "/lab/clarity-123/data/provenance.json": {
+      "sha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57",
+      "bytes": 9286
+    },
+    "/lab/clarity-123/data/snapshot.js": {
+      "sha256": "1118190c514d43006280eb7aaee2b1d1d25c5b635f9dbb8fb6cd815205374f6e",
+      "bytes": 3809
+    },
+    "/lab/clarity-123/data/view.json": {
+      "sha256": "774cd926970f6bbd30fbfd494c92f2b95bafc9edac463c1f75eecb3a384d9553",
+      "bytes": 5946
+    },
+    "/lab/clarity-123/index.html": {
+      "sha256": "83f5d5ae3839319a853121b634b2e2a86d93c8fbc96cbb4414e18e1623d63991",
+      "bytes": 7360
+    },
+    "/lab/clarity-123/report.css": {
+      "sha256": "2439ee9458cdfb69c96e032167153178e4c8c4512f1c051c23e6ecb4b7756231",
+      "bytes": 4170
+    },
+    "/lab/clarity-123/report.js": {
+      "sha256": "60bc8a85c2eb5122274fa7f6b6a15065b408f7de507aa266666af19c3f119e24",
+      "bytes": 17001
+    },
+    "/releases/luma-drift-1.23.0-rc2.apk": {
+      "sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+      "bytes": 369002457
+    },
+    "/releases/luma-drift-1.23.0-sandbox-rc2.apk": {
+      "sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+      "bytes": 368985756
+    },
+    "/releases/manifest-1.23.0-rc2.json": {
+      "sha256": "e59871e370a77e4903df0721ccfe3dfc3560d80303befa7ecff1ae7551bdf972",
+      "bytes": 1211
+    }
+  },
+  "responses": {
+    "/assets/screenshots/v1.23/map-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/map-en.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:25.542101+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "391227",
+      "etag": "\"30e7568345eb2c7b25613568059e2b76e22ef99ce627f77a7228faace3644a28\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:25 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "928a6bd3f71089854c0c90b7f192016705426d24f8d1dd95a00d7e5945b67c37",
+      "bytes": 391227,
+      "durationSeconds": 0.231
+    },
+    "/assets/screenshots/v1.23/map-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/map-fr.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:25.773879+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "393082",
+      "etag": "\"a00d1726c7e9b4964563341ef108b9e811af42e044ce841ba14524bcd2b60bec\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:25 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "71bde4225408c67e3e86d0135dfe76622a61ac6d64014df7aa2e48fb011664cf",
+      "bytes": 393082,
+      "durationSeconds": 0.268
+    },
+    "/assets/screenshots/v1.23/puzzle-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/puzzle-en.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:26.043377+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "304370",
+      "etag": "\"84bc23d168dbb4418af326baf6e4875a85b61c36f494578b902a4cfe180cade3\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:26 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "51576d383d226c11f694d1b1b4517a0c54fc3a97e820e4f624c02865164c7845",
+      "bytes": 304370,
+      "durationSeconds": 0.228
+    },
+    "/assets/screenshots/v1.23/puzzle-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/puzzle-fr.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:26.272792+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "310882",
+      "etag": "\"1085bb532054a6eec229c84e2e2dd187719f67d4ab97e183f1092e511f906c27\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:26 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "45b4df84378dad3be4be9885902a146245911840cec4e91396f999cf0897413f",
+      "bytes": 310882,
+      "durationSeconds": 0.195
+    },
+    "/assets/screenshots/v1.23/skills-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/skills-en.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:26.468990+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "232666",
+      "etag": "\"c7dcedb8896954bb3f76ddd435947052e1bdd1826f3ad04a1b6d1a0768eff79e\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:26 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "21ad01d5d79ee0d3115f9405b84575df0ee5f0ba8017e419d8b84e4b3e40455f",
+      "bytes": 232666,
+      "durationSeconds": 0.208
+    },
+    "/assets/screenshots/v1.23/skills-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/skills-fr.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:26.678675+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "234170",
+      "etag": "\"ee6236e1545f7477eef54e31bd604a550feddbd6d86e4a92f8c74ed67ae8da6a\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:26 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "51c014c65361c246bf7e11121aab83926b4c84ea7445af9c1b288e6f8faec649",
+      "bytes": 234170,
+      "durationSeconds": 0.18
+    },
+    "/assets/screenshots/v1.23/wardrobe-en.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/wardrobe-en.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:26.860401+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "772702",
+      "etag": "\"0ea4805a7f3bd69bbb5169ed02b9b308fd7cd0f7722279ef730a13dbe8c71273\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:27 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "261757e939a291f938d23afd5e436a44a70d580ab00ed8bf94262cbe0332f9a5",
+      "bytes": 772702,
+      "durationSeconds": 0.259
+    },
+    "/assets/screenshots/v1.23/wardrobe-fr.png": {
+      "url": "https://luma-drift-production.web.app/assets/screenshots/v1.23/wardrobe-fr.png?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:27.121731+00:00",
+      "status": 200,
+      "contentType": "image/png",
+      "contentEncoding": "",
+      "contentLength": "779807",
+      "etag": "\"3f7ac2072fb0aa414f4a0455a17c018dc42bd314fb6b34e2cf56243483a6c725\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:27 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "7abbfa86d3af6a254df96945c48b16c211ac0ce12599fef6cb1982d3465b402d",
+      "bytes": 779807,
+      "durationSeconds": 0.491
+    },
+    "/assets/site-v123.css": {
+      "url": "https://luma-drift-production.web.app/assets/site-v123.css?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:27.613725+00:00",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "5562",
+      "etag": "\"725be893dde5b1fec32813435f98ce2b56701817ecfad4d1c9cce02dac0c76b3\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:27 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "2ce30b892a0b8b652f082009d30863466d7043e1e1ac7544e49cfe7b023e4e50",
+      "bytes": 5562,
+      "durationSeconds": 0.235
+    },
+    "/assets/site-v123.js": {
+      "url": "https://luma-drift-production.web.app/assets/site-v123.js?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:27.850368+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "4291",
+      "etag": "\"44cafddf4e705c4a905e00ebfef0d22b0708f35cc249e2eb5c6f90890301f8b1\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:28 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "575e914980a8362b5e788299c969af33bf05102f95d5caf9500758ef9a890361",
+      "bytes": 4291,
+      "durationSeconds": 0.383
+    },
+    "/index.html": {
+      "url": "https://luma-drift-production.web.app/index.html?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:28.235349+00:00",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": null,
+      "etag": "\"e164cb94be3240f2118c790970b7ee4b8ce2cb049a4843a038f876310afbb875\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:28 GMT",
+      "cacheControl": "no-cache",
+      "age": null,
+      "sha256": "34854680e870e5e4f431e7c72479664e948ff8419a34fb2512253656cb36fb12",
+      "bytes": 37392,
+      "durationSeconds": 0.322
+    },
+    "/lab/clarity-123/cognitive-lab-1.23-source.zip": {
+      "url": "https://luma-drift-production.web.app/lab/clarity-123/cognitive-lab-1.23-source.zip?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:28.560305+00:00",
+      "status": 200,
+      "contentType": "application/zip",
+      "contentEncoding": "",
+      "contentLength": "12487546",
+      "etag": "\"a3df4c59c5c785ae12c7ad621aa6e937e73f3ffd776156acd3679af5ceee8a59\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:29 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "07d35901a7f8ddf6b25f92e5bf8c41f7ecb3dadaaf55984720ac40cc909ba01e",
+      "bytes": 12487546,
+      "durationSeconds": 3.041
+    },
+    "/lab/clarity-123/data/provenance.json": {
+      "url": "https://luma-drift-production.web.app/lab/clarity-123/data/provenance.json?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:31.603941+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "9286",
+      "etag": "\"2dfefd6ba8d1be18bb8f7fa76b702047d9ec164a514075896926f74335af1877\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:31 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57",
+      "bytes": 9286,
+      "durationSeconds": 0.232
+    },
+    "/lab/clarity-123/data/snapshot.js": {
+      "url": "https://luma-drift-production.web.app/lab/clarity-123/data/snapshot.js?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:31.837302+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "3809",
+      "etag": "\"2af16bdc952925f2615d6ce11d7e31da4eb33c5808e6db96ed834e3f742aac37\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:32 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "1118190c514d43006280eb7aaee2b1d1d25c5b635f9dbb8fb6cd815205374f6e",
+      "bytes": 3809,
+      "durationSeconds": 0.191
+    },
+    "/lab/clarity-123/data/view.json": {
+      "url": "https://luma-drift-production.web.app/lab/clarity-123/data/view.json?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:32.029930+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "5946",
+      "etag": "\"a98aca85a314b986391a6e1a016316b3078ede7f6ff7f2d366dd6e6f279de53f\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:32 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "774cd926970f6bbd30fbfd494c92f2b95bafc9edac463c1f75eecb3a384d9553",
+      "bytes": 5946,
+      "durationSeconds": 0.147
+    },
+    "/lab/clarity-123/index.html": {
+      "url": "https://luma-drift-production.web.app/lab/clarity-123/index.html?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:32.178447+00:00",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": null,
+      "etag": "\"dd301a28deab1e04ba905a637dbe095ea30a98c33f69c89d6591049b244a033e\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:32 GMT",
+      "cacheControl": "no-cache",
+      "age": null,
+      "sha256": "83f5d5ae3839319a853121b634b2e2a86d93c8fbc96cbb4414e18e1623d63991",
+      "bytes": 7360,
+      "durationSeconds": 0.573
+    },
+    "/lab/clarity-123/report.css": {
+      "url": "https://luma-drift-production.web.app/lab/clarity-123/report.css?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:32.753671+00:00",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "4170",
+      "etag": "\"2e92a7cf3e0e2731b2eeb283a1df7625282e39bf9c4883859be9859f646e395e\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:33 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "2439ee9458cdfb69c96e032167153178e4c8c4512f1c051c23e6ecb4b7756231",
+      "bytes": 4170,
+      "durationSeconds": 0.275
+    },
+    "/lab/clarity-123/report.js": {
+      "url": "https://luma-drift-production.web.app/lab/clarity-123/report.js?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:33.030168+00:00",
+      "status": 200,
+      "contentType": "text/javascript; charset=utf-8",
+      "contentEncoding": "",
+      "contentLength": "17001",
+      "etag": "\"582f672953ebff5ba5b3dda88d651411e6c41d0200a6ea4beba16f40cee37431\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:33 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "60bc8a85c2eb5122274fa7f6b6a15065b408f7de507aa266666af19c3f119e24",
+      "bytes": 17001,
+      "durationSeconds": 0.309
+    },
+    "/releases/luma-drift-1.23.0-rc2.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.23.0-rc2.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:07:33.340441+00:00",
+      "status": 200,
+      "contentType": "application/vnd.android.package-archive",
+      "contentEncoding": "",
+      "contentLength": "369002457",
+      "etag": "\"028912c65b673610c52cdf413da15dc78b9ef9f715ae1a469172ddc12a5919d1\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:07:38 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+      "bytes": 369002457,
+      "durationSeconds": 92.063
+    },
+    "/releases/luma-drift-1.23.0-sandbox-rc2.apk": {
+      "url": "https://luma-drift-production.web.app/releases/luma-drift-1.23.0-sandbox-rc2.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:09:05.404140+00:00",
+      "status": 200,
+      "contentType": "application/vnd.android.package-archive",
+      "contentEncoding": "",
+      "contentLength": "368985756",
+      "etag": "\"c3aa92123b7996f30fc404a68b2aad523d84a3e8f2eb668442b9c9b16306954a\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:09:15 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+      "bytes": 368985756,
+      "durationSeconds": 85.921
+    },
+    "/releases/manifest-1.23.0-rc2.json": {
+      "url": "https://luma-drift-production.web.app/releases/manifest-1.23.0-rc2.json?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+      "requestedEncoding": "identity",
+      "startedAtUtc": "2026-10-30T20:10:31.327073+00:00",
+      "status": 200,
+      "contentType": "application/json",
+      "contentEncoding": "",
+      "contentLength": "1211",
+      "etag": "\"f823dfafb0b6c5297cea84626fc805f388e3aeaa5132776c9e6f2b2cf7c402b6\"",
+      "lastModified": "Fri, 30 Oct 2026 20:04:31 GMT",
+      "date": "Fri, 30 Oct 2026 20:10:31 GMT",
+      "cacheControl": "max-age=3600",
+      "age": null,
+      "sha256": "e59871e370a77e4903df0721ccfe3dfc3560d80303befa7ecff1ae7551bdf972",
+      "bytes": 1211,
+      "durationSeconds": 0.109
+    }
+  },
+  "network_requested": true,
+  "credentials_used": false,
+  "redirects_followed": false,
+  "rendering_verified": false,
+  "scope": "Selected new/changed complete HTTP bodies plus HTTP404 checks for the exact14 retired binary paths without reading their bodies; unchanged responses and browser rendering remain separate evidence.",
+  "completed_at_utc": "2026-10-30T20:10:33.725135+00:00",
+  "verified_bytes": 753990693
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T20:16:46.494477+00:00",
+  "finalSourceCommit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "hostingVersion": "sites/luma-drift-production/versions/cf8b817321bf33d5",
+  "origin": "https://luma-drift-production.web.app",
+  "scope": "Acceptance index for the release operator’s original public browser observations and independent four-image sample review. Hosting management, complete HTTP bodies, CI, native acceptance and simulations remain separately scoped evidence.",
+  "reports": {
+    "browser-public/home/report.json": {
+      "status": "PASS",
+      "sha256": "7be27d8955c1eaa8680cba606c9295043ca900f1e3bf343c1013392d9029a646",
+      "bytes": 6414
+    },
+    "browser-public/lab/report.json": {
+      "status": "PASS",
+      "sha256": "26d6d43f56534a99f25f885d5abb6ee8002c04964c163db5db231d6a0625fa86",
+      "bytes": 7012
+    }
+  },
+  "sourceInputCount": 10,
+  "sourceInputs": {
+    "public/index.html": {
+      "sha256": "34854680e870e5e4f431e7c72479664e948ff8419a34fb2512253656cb36fb12",
+      "bytes": 37392
+    },
+    "public/assets/site-v123.js": {
+      "sha256": "575e914980a8362b5e788299c969af33bf05102f95d5caf9500758ef9a890361",
+      "bytes": 4291
+    },
+    "public/assets/site-v123.css": {
+      "sha256": "2ce30b892a0b8b652f082009d30863466d7043e1e1ac7544e49cfe7b023e4e50",
+      "bytes": 5562
+    },
+    "public/lab/clarity-123/index.html": {
+      "sha256": "83f5d5ae3839319a853121b634b2e2a86d93c8fbc96cbb4414e18e1623d63991",
+      "bytes": 7360
+    },
+    "public/lab/clarity-123/report.js": {
+      "sha256": "60bc8a85c2eb5122274fa7f6b6a15065b408f7de507aa266666af19c3f119e24",
+      "bytes": 17001
+    },
+    "public/lab/clarity-123/report.css": {
+      "sha256": "2439ee9458cdfb69c96e032167153178e4c8c4512f1c051c23e6ecb4b7756231",
+      "bytes": 4170
+    },
+    "public/lab/clarity-123/data/snapshot.js": {
+      "sha256": "1118190c514d43006280eb7aaee2b1d1d25c5b635f9dbb8fb6cd815205374f6e",
+      "bytes": 3809
+    },
+    "public/lab/clarity-123/data/view.json": {
+      "sha256": "774cd926970f6bbd30fbfd494c92f2b95bafc9edac463c1f75eecb3a384d9553",
+      "bytes": 5946
+    },
+    "public/lab/clarity-123/data/provenance.json": {
+      "sha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57",
+      "bytes": 9286
+    },
+    "public/lab/clarity-123/cognitive-lab-1.23-source.zip": {
+      "sha256": "07d35901a7f8ddf6b25f92e5bf8c41f7ecb3dadaaf55984720ac40cc909ba01e",
+      "bytes": 12487546
+    }
+  },
+  "originalObservations": {
+    "browser-public/home/observations.json": {
+      "sha256": "c5c180376e3fc7a8431b7c07a6421d2bb4dd0610b921736e44aece779abf337c",
+      "bytes": 11068
+    },
+    "browser-public/lab/observations.json": {
+      "sha256": "191f403da31208cc410eb9327c192e81180f19ec172787ca248346f95fea2f41",
+      "bytes": 7341
+    }
+  },
+  "jpegEvidenceCount": 26,
+  "independentPixelReviewSampleCount": 4,
+  "toolIncidents": {
+    "path": "browser-public/tool-incidents.json",
+    "sha256": "84ece112dcbdd50458a3b3bde06b6ff9acaf5ea46d54c6563635a3b5b6702e8d",
+    "bytes": 1812
+  },
+  "sessionCleanup": {
+    "path": "docs/validation/v1.23/publication/session-cleanup.json",
+    "sha256": "b02ae30eee96a9a1173ae681f07981b657b4dc13563dac5670d9772d180f13b5",
+    "bytes": 824
+  },
+  "scopeLimits": [
+    "No new browser gestures, network fetch, native run or simulation occurred in this closeout.",
+    "Independent pixel review covers four of the 26 originals; operator observations cover the recorded states.",
+    "Gallery/audio control preservation is observed; audio playback and audible output are not qualified.",
+    "No human, retention, emotion, physical-device or Play validation is inferred."
+  ]
+}

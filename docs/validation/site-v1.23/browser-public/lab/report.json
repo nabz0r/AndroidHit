@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T20:16:46.494477+00:00",
+  "sourceCommit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "hostingVersion": "sites/luma-drift-production/versions/cf8b817321bf33d5",
+  "origin": "https://luma-drift-production.web.app",
+  "sourceManifest": {
+    "path": "release/source-manifest.json",
+    "sha256": "78994a2e02ad2e74b7439e112852bfbc69b7fd596998cd62f7933e435584507c",
+    "bytes": 172115
+  },
+  "operatorObservations": "Actual public-browser operation recorded by the release operator; independent closeout review binds the original observations, source bytes and JPEG sample without replaying the browser.",
+  "browserWarningsErrorsReturned": [],
+  "scopeLimits": [
+    "No human participants, comprehension, enjoyment, retention or physical-device acceptance is established.",
+    "No fresh native or browser replay was performed by this offline closeout.",
+    "The collected browser log queries were filtered to error/warn; their empty responses do not qualify info/debug output or uncollected logs.",
+    "The retained FR320 bottom screenshot is additional evidence after an unavailable Control+Home tool command; the accepted FR320 top state has its own original JPEG.",
+    "Runtime language-button state is read from the DOM. The original ?lang=en URL is not rewritten by language-button toggles, so URL language is not used as a proxy for the rendered language.",
+    "These observations do not establish human cognitive transfer or causal differences between game releases.",
+    "Responsive widths were 320, 375, 736 and 1280 CSS pixels; no 768-pixel observation is claimed."
+  ],
+  "scope": "Public synthetic-lab French/English rendering, direct English entry, four condition selections with displayed metric/resource text checked against frozen C2 aggregates, six language reversals and eight actual responsive states.",
+  "sourceInputs": {
+    "public/lab/clarity-123/index.html": {
+      "sha256": "83f5d5ae3839319a853121b634b2e2a86d93c8fbc96cbb4414e18e1623d63991",
+      "bytes": 7360
+    },
+    "public/lab/clarity-123/report.js": {
+      "sha256": "60bc8a85c2eb5122274fa7f6b6a15065b408f7de507aa266666af19c3f119e24",
+      "bytes": 17001
+    },
+    "public/lab/clarity-123/report.css": {
+      "sha256": "2439ee9458cdfb69c96e032167153178e4c8c4512f1c051c23e6ecb4b7756231",
+      "bytes": 4170
+    },
+    "public/lab/clarity-123/data/snapshot.js": {
+      "sha256": "1118190c514d43006280eb7aaee2b1d1d25c5b635f9dbb8fb6cd815205374f6e",
+      "bytes": 3809
+    },
+    "public/lab/clarity-123/data/view.json": {
+      "sha256": "774cd926970f6bbd30fbfd494c92f2b95bafc9edac463c1f75eecb3a384d9553",
+      "bytes": 5946
+    },
+    "public/lab/clarity-123/data/provenance.json": {
+      "sha256": "b4324d42b1d7c919c6f12a95bb47dcfdef6832a113053d3e008ae6ffc34f8c57",
+      "bytes": 9286
+    },
+    "public/lab/clarity-123/cognitive-lab-1.23-source.zip": {
+      "sha256": "07d35901a7f8ddf6b25f92e5bf8c41f7ecb3dadaaf55984720ac40cc909ba01e",
+      "bytes": 12487546
+    }
+  },
+  "originalObservations": {
+    "path": "observations.json",
+    "sha256": "191f403da31208cc410eb9327c192e81180f19ec172787ca248346f95fea2f41",
+    "bytes": 7341
+  },
+  "jpegEvidence": {
+    "en-1280.jpg": {
+      "sha256": "7a0e81ba241835657b48bd75b4f64192ba49760a78e2485c52a23d940c38991c",
+      "bytes": 84318
+    },
+    "en-320.jpg": {
+      "sha256": "ef5fbb7774632f327186ef31495ff8cc2fc97bb9baa8a69d465ddaea15c94e2a",
+      "bytes": 37281
+    },
+    "en-375.jpg": {
+      "sha256": "698df4c4e3725404024071390b7f8dcc82c5f9bd39ec34864e44e83d31c63f53",
+      "bytes": 47250
+    },
+    "en-736.jpg": {
+      "sha256": "23c01a5da5b5674a0530c84532bdf9083c2b784c8404accb472dbc0bbedfc05e",
+      "bytes": 64961
+    },
+    "fr-1280.jpg": {
+      "sha256": "23ed925e7fa1c14ff4f1c1f33b15a79f2074d0e25fc0f4a8165dbdfc7913e8e5",
+      "bytes": 92296
+    },
+    "fr-320-top.jpg": {
+      "sha256": "75a9a881fc4fe8f87d906f717f62355da5c33562137499bd0854cdad966416d3",
+      "bytes": 39058
+    },
+    "fr-320.jpg": {
+      "sha256": "f65a4d852b46c9f277e4a2a939c6cc22ec91cdf1b701f5a4e327d1fa86e1fe9e",
+      "bytes": 31343
+    },
+    "fr-375.jpg": {
+      "sha256": "4dd3a57ce4ca68f26653cba76b426162cecdbd517b324b319c877d86e008cf95",
+      "bytes": 43381
+    },
+    "fr-736.jpg": {
+      "sha256": "1cbc81ad3ec1d7d24bbddb346aff3000cf0afaa673c543729b4454ef5facb7c4",
+      "bytes": 70507
+    }
+  },
+  "coverage": {
+    "directEnglishEntry": true,
+    "conditionIds": [
+      "manual_native_123",
+      "cause_hidden_123",
+      "loaned_mixed_123",
+      "energy_unlimited_123"
+    ],
+    "conditionSelections": 4,
+    "languageReversals": 6,
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "viewportWidths": [
+      320,
+      375,
+      736,
+      1280
+    ],
+    "localizedResponsiveStates": 8,
+    "additionalBottomView": 1,
+    "jpegCount": 9,
+    "canonicalFrench320Top": "fr-320-top.jpg",
+    "retainedFrench320Bottom": "fr-320.jpg",
+    "horizontalOverflowObserved": false,
+    "trajectories": 8000,
+    "startedAttempts": 380137,
+    "executedProbes": 40000,
+    "humanParticipants": 0
+  },
+  "conditionTextChecks": [
+    {
+      "id": "manual_native_123",
+      "status": "PASS",
+      "observedMetricTextMatchesSource": true,
+      "observedResourceTextMatchesSource": true,
+      "blockedDenominator": 616744,
+      "exhaustedDenominator": 91713,
+      "configuredDayDenominator": 16000
+    },
+    {
+      "id": "cause_hidden_123",
+      "status": "PASS",
+      "observedMetricTextMatchesSource": true,
+      "observedResourceTextMatchesSource": true,
+      "blockedDenominator": 617643,
+      "exhaustedDenominator": 91701,
+      "configuredDayDenominator": 16000
+    },
+    {
+      "id": "loaned_mixed_123",
+      "status": "PASS",
+      "observedMetricTextMatchesSource": true,
+      "observedResourceTextMatchesSource": true,
+      "blockedDenominator": 603720,
+      "exhaustedDenominator": 89676,
+      "configuredDayDenominator": 16000
+    },
+    {
+      "id": "energy_unlimited_123",
+      "status": "PASS",
+      "observedMetricTextMatchesSource": true,
+      "observedResourceTextMatchesSource": true,
+      "blockedDenominator": 721787,
+      "exhaustedDenominator": 107047,
+      "configuredDayDenominator": 16000
+    }
+  ],
+  "independentPixelReview": {
+    "sampleCount": 2,
+    "files": [
+      "fr-320-top.jpg",
+      "en-1280.jpg"
+    ],
+    "status": "PASS",
+    "findings": "Readable French mobile top and English desktop report with correct counts, selected-condition context and visible synthetic-evidence limits; no material clipping or blank/inconsistent report seen in this sample."
+  },
+  "checks": {
+    "responsivePairsMatchExpected": true,
+    "conditionAndLanguageSelectionRetainedInRecordedStates": true,
+    "sourceBytesMatchFrozenC2Manifest": true,
+    "allObservedConditionMetricAndResourceTextMatchesSource": true
+  },
+  "toolIncidents": "../tool-incidents.json",
+  "collectedBrowserLogLevels": [
+    "error",
+    "warn"
+  ]
+}

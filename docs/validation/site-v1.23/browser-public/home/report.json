@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T20:16:46.494477+00:00",
+  "sourceCommit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "hostingVersion": "sites/luma-drift-production/versions/cf8b817321bf33d5",
+  "origin": "https://luma-drift-production.web.app",
+  "sourceManifest": {
+    "path": "release/source-manifest.json",
+    "sha256": "78994a2e02ad2e74b7439e112852bfbc69b7fd596998cd62f7933e435584507c",
+    "bytes": 172115
+  },
+  "operatorObservations": "Actual public-browser operation recorded by the release operator; independent closeout review binds the original observations, source bytes and JPEG sample without replaying the browser.",
+  "browserWarningsErrorsReturned": [],
+  "scopeLimits": [
+    "No human participants, comprehension, enjoyment, retention or physical-device acceptance is established.",
+    "No fresh native or browser replay was performed by this offline closeout.",
+    "The collected browser log queries were filtered to error/warn; their empty responses do not qualify info/debug output or uncollected logs.",
+    "The 40 image occurrences include the hero puzzle image repeated in the gallery; they are eight distinct native PNGs, not 40 unique captures or 40 images simultaneously in the viewport.",
+    "Audio controls were present, paused and without autoplay; playback, audible output and listening quality were not tested.",
+    "Responsive widths were 320, 375, 736 and 1280 CSS pixels; no 768-pixel observation is claimed."
+  ],
+  "scope": "Public homepage French/English rendering and recorded DOM observations at four actual viewport widths, download target, native screenshot loading, and retained gallery/audio control state.",
+  "sourceInputs": {
+    "public/index.html": {
+      "sha256": "34854680e870e5e4f431e7c72479664e948ff8419a34fb2512253656cb36fb12",
+      "bytes": 37392
+    },
+    "public/assets/site-v123.js": {
+      "sha256": "575e914980a8362b5e788299c969af33bf05102f95d5caf9500758ef9a890361",
+      "bytes": 4291
+    },
+    "public/assets/site-v123.css": {
+      "sha256": "2ce30b892a0b8b652f082009d30863466d7043e1e1ac7544e49cfe7b023e4e50",
+      "bytes": 5562
+    }
+  },
+  "originalObservations": {
+    "path": "observations.json",
+    "sha256": "c5c180376e3fc7a8431b7c07a6421d2bb4dd0610b921736e44aece779abf337c",
+    "bytes": 11068
+  },
+  "jpegEvidence": {
+    "en-1280-hero.jpg": {
+      "sha256": "5b444ee395cbbd83f0280536da397fa53aef70b62563b897755e26badfbd2414",
+      "bytes": 68263
+    },
+    "en-1280-screens.jpg": {
+      "sha256": "3ed912afa3a7a2cbe5a26dd2cd3e46fdd2723ef4f8d7d50506be5f81e0466766",
+      "bytes": 60064
+    },
+    "en-320-hero.jpg": {
+      "sha256": "b83377615a2c97a77e4d422bd9596f586a95acdfb27e95274b4ef2ee9eea1f82",
+      "bytes": 29857
+    },
+    "en-320-screens.jpg": {
+      "sha256": "8c6eb7bb3d399cf2cfc428da965e5e7a619b712d91cb7f0ce360955095fae5d9",
+      "bytes": 34535
+    },
+    "en-375-hero.jpg": {
+      "sha256": "855b8ae552b6081ca73d4261a72821d1a31435e9210c9b6abc7b6bd944b9e70d",
+      "bytes": 33653
+    },
+    "en-375-screens.jpg": {
+      "sha256": "7f8f13d6bae8adf0e004fd8646a13bffc729fd12af7a1f70ba9f7e4e45512c70",
+      "bytes": 37511
+    },
+    "en-736-hero.jpg": {
+      "sha256": "f01ec2c536c69b7757a0409db75f007f974d864cc2a74815f7bcdbe9626978ee",
+      "bytes": 50349
+    },
+    "en-736-screens.jpg": {
+      "sha256": "f74c3b041132fd8a5912e60243e6bf034f4a14cc064c5d77eed59efe88bded21",
+      "bytes": 53320
+    },
+    "fr-1280-hero.jpg": {
+      "sha256": "bb45e14547e9e46b00e560216dbcca0f9c8187dab61ebd8e4e9fcdce7eaf12de",
+      "bytes": 71179
+    },
+    "fr-1280-screens.jpg": {
+      "sha256": "8605651e3720a6a55b12ef27df9bea9645cf03b6ee1b2bfaac5d1f3715c48d23",
+      "bytes": 61727
+    },
+    "fr-320-hero.jpg": {
+      "sha256": "6e281cda9c3f3ef4d840bbf59b12cd4f2d1079f370616d5c1815c70177f496af",
+      "bytes": 31218
+    },
+    "fr-320-screens.jpg": {
+      "sha256": "cb705f2ef96f0da772295a024e3f6e57eb49eb05ac7aa05f946b2f822f7f8eff",
+      "bytes": 35250
+    },
+    "fr-375-hero.jpg": {
+      "sha256": "82a50aa56eb5baf9224324fe9ad360f60d0282e5002110211c1a9e7a9b285b19",
+      "bytes": 32911
+    },
+    "fr-375-screens.jpg": {
+      "sha256": "26d8ec9d2de0caff67295cf25ed7147b5a0b263389d6ea920a4762e483cd14cc",
+      "bytes": 38704
+    },
+    "fr-736-hero.jpg": {
+      "sha256": "c1074eff1cca56e5b2c554eadccaf587ed4cd9cd4277f756220bf6f358606148",
+      "bytes": 53214
+    },
+    "fr-736-screens.jpg": {
+      "sha256": "0595dafc489a2cbba169bdf30ffa442735b47b330a318e4f49162757b488afa8",
+      "bytes": 54141
+    },
+    "gallery.jpg": {
+      "sha256": "14d38541b11dfb0a7e05b56e7b3e3ae4d4dcdbaa0df3daaa1e8ddd944814fab4",
+      "bytes": 83293
+    }
+  },
+  "coverage": {
+    "languages": [
+      "fr",
+      "en"
+    ],
+    "viewportWidths": [
+      320,
+      375,
+      736,
+      1280
+    ],
+    "localizedResponsiveStates": 8,
+    "loadedDisplayedImageOccurrences": 40,
+    "distinctNativePngSources": 8,
+    "nativePngSources": [
+      "assets/screenshots/v1.23/map-en.png",
+      "assets/screenshots/v1.23/map-fr.png",
+      "assets/screenshots/v1.23/puzzle-en.png",
+      "assets/screenshots/v1.23/puzzle-fr.png",
+      "assets/screenshots/v1.23/skills-en.png",
+      "assets/screenshots/v1.23/skills-fr.png",
+      "assets/screenshots/v1.23/wardrobe-en.png",
+      "assets/screenshots/v1.23/wardrobe-fr.png"
+    ],
+    "jpegCount": 17,
+    "horizontalOverflowObserved": false,
+    "downloadTarget": "https://luma-drift-production.web.app/releases/luma-drift-1.23.0-rc2.apk",
+    "galleryObservedLabel": "Hoot. Jump. Form 4 / 4, visual level 10.",
+    "galleryViewportWidth": 720,
+    "audioControlCount": 4,
+    "audioAutoplayObserved": false,
+    "audioPausedObserved": true
+  },
+  "independentPixelReview": {
+    "sampleCount": 2,
+    "files": [
+      "fr-375-hero.jpg",
+      "en-1280-screens.jpg"
+    ],
+    "status": "PASS",
+    "findings": "Readable mobile French hero and desktop English native screenshot gallery; no material clipping, missing native image or contradictory download/version label seen in this sample. The desktop gallery capture is a scrolled view."
+  },
+  "checks": {
+    "statePairsMatchExpected": true,
+    "allImagesCompleteDisplayedAnd1080x2400": true,
+    "allDownloadTargetsMatchExactEProductionApk": true,
+    "sourceBytesMatchFrozenC2Manifest": true
+  },
+  "collectedBrowserLogLevels": [
+    "error",
+    "warn"
+  ]
+}

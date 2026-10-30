@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "hostingVersion": "sites/luma-drift-production/versions/cf8b817321bf33d5",
+  "productFailureCount": 0,
+  "scope": "Tool-context incidents are preserved separately from product acceptance; no missing raw tool exception is reconstructed.",
+  "incidents": [
+    {
+      "id": "control-home-unavailable",
+      "classification": "TOOL_COMMAND_UNAVAILABLE",
+      "source": {
+        "path": "lab/observations.json",
+        "sha256": "191f403da31208cc410eb9327c192e81180f19ec172787ca248346f95fea2f41",
+        "bytes": 7341
+      },
+      "originalOperatorNote": "Control+Home locator press unavailable; no product failure. Responsive observations captured after real language-button gestures.",
+      "retainedAdditionalEvidence": {
+        "path": "lab/fr-320.jpg",
+        "sha256": "f65a4d852b46c9f277e4a2a939c6cc22ec91cdf1b701f5a4e327d1fa86e1fe9e",
+        "bytes": 31343
+      },
+      "canonicalTopEvidence": {
+        "path": "lab/fr-320-top.jpg",
+        "sha256": "75a9a881fc4fe8f87d906f717f62355da5c33562137499bd0854cdad966416d3",
+        "bytes": 39058
+      },
+      "additionalScrollY": 3145,
+      "acceptedTopScrollY": 0
+    },
+    {
+      "id": "stale-browser-context",
+      "classification": "TOOL_CONTEXT_RECOVERY",
+      "source": "Release-operator handoff and hashed session-cleanup receipt; no raw exception payload supplied.",
+      "operatorNote": "A stale browser3 context was replaced by the current browser6 inventory; this is a tool context issue, not a product defect.",
+      "sessionCleanup": {
+        "path": "docs/validation/v1.23/publication/session-cleanup.json",
+        "sha256": "b02ae30eee96a9a1173ae681f07981b657b4dc13563dac5670d9772d180f13b5",
+        "bytes": 824
+      }
+    }
+  ]
+}

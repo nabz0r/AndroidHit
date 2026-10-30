@@ -1,0 +1,1548 @@
+﻿2026-10-30T19:47:19.2700695Z Current runner version: '2.338.2'
+2026-10-30T19:47:19.2722080Z ##[group]Runner Image Provisioner
+2026-10-30T19:47:19.2722786Z Hosted Compute Agent
+2026-10-30T19:47:19.2723268Z Version: 20261021.618
+2026-10-30T19:47:19.2723900Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T19:47:19.2724535Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T19:47:19.2725198Z Worker ID: {9544231d-9bdc-43af-bba8-6e73d838f976}
+2026-10-30T19:47:19.2725797Z Region: centralus
+2026-10-30T19:47:19.2726258Z Cloud: Azure
+2026-10-30T19:47:19.2726777Z ##[endgroup]
+2026-10-30T19:47:19.2728136Z ##[group]Operating System
+2026-10-30T19:47:19.2728759Z Ubuntu
+2026-10-30T19:47:19.2729226Z 24.04.5
+2026-10-30T19:47:19.2729677Z LTS
+2026-10-30T19:47:19.2730165Z ##[endgroup]
+2026-10-30T19:47:19.2730680Z ##[group]Runner Image
+2026-10-30T19:47:19.2731250Z Image: ubuntu-24.04
+2026-10-30T19:47:19.2731752Z Version: 20261025.353.1
+2026-10-30T19:47:19.2732838Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-30T19:47:19.2734139Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-30T19:47:19.2734965Z ##[endgroup]
+2026-10-30T19:47:19.2735883Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T19:47:19.2737766Z Contents: read
+2026-10-30T19:47:19.2738561Z Metadata: read
+2026-10-30T19:47:19.2739051Z ##[endgroup]
+2026-10-30T19:47:19.2741892Z Secret source: Actions
+2026-10-30T19:47:19.2742723Z Cache mode: write
+2026-10-30T19:47:19.2743532Z Prepare workflow directory
+2026-10-30T19:47:19.3064559Z Prepare all required actions
+2026-10-30T19:47:19.3106365Z Getting action download info
+2026-10-30T19:47:19.5366362Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-30T19:47:19.6458664Z Download action repository 'actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad' (SHA:b843ebf9b913146b38da2eaa7aeddf76074ae1ad)
+2026-10-30T19:47:20.4085196Z Complete job name: Offline puzzle contracts (Java 17)
+2026-10-30T19:47:20.4887701Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-30T19:47:20.4888765Z with:
+2026-10-30T19:47:20.4889176Z   persist-credentials: false
+2026-10-30T19:47:20.4889624Z   fetch-depth: 1
+2026-10-30T19:47:20.4890029Z   sparse-checkout-cone-mode: false
+2026-10-30T19:47:20.4933603Z   sparse-checkout: /.gitattributes
+/.gitignore
+/.github/workflows/puzzle-contracts.yml
+/app/src/main/java/com/androidhit/lumadrift/engine/*.java
+/app/src/main/java/com/androidhit/lumadrift/data/*.java
+/app/src/main/java/com/androidhit/lumadrift/onboarding/*.java
+/app/src/main/java/com/androidhit/lumadrift/progression/LearningGuide.java
+/app/src/main/java/com/androidhit/lumadrift/progression/LearningStrings.java
+/app/src/main/java/com/androidhit/lumadrift/ui/HomeScene.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionMotion.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig118.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionSheetLayout123.java
+/scripts/ClarityLayout123Test.java
+/scripts/test-clarity-layout-v123.sh
+/app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/Adventure119Layout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/PuzzleReaction.java
+/app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/Menu120Layout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/Menu121Layout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/RewardMotion121.java
+/app/src/main/java/com/androidhit/lumadrift/ui/VictoryLayout.java
+/scripts/test-menu-v120.sh
+/scripts/MenuV120Test.java
+/scripts/test-menu-v121.sh
+/scripts/Menu121LayoutTest.java
+/scripts/test-elemental-shell-v121.sh
+/scripts/ElementalShellV121Test.java
+/scripts/test-arcade-presentation-v121.sh
+/scripts/ArcadePresentationV121Test.java
+/scripts/test-home-kitchen-v121.sh
+/scripts/HomeKitchenV121Test.java
+/scripts/test-economy-curve-v121.sh
+/scripts/EconomyCurveV121Test.java
+/scripts/test-session-energy-v121.sh
+/scripts/SessionEnergyV121Test.java
+/scripts/simulate-summon-economy-v121.sh
+/scripts/SummonEconomyV121Simulation.java
+/scripts/test-economy.sh
+/scripts/EconomyTest.java
+/scripts/test-meta.sh
+/scripts/MetaTest.java
+/scripts/test-saga-map-v17.sh
+/scripts/SagaMapTest.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorld122.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyCamera122.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorldScene122.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyMapScene.java
+/scripts/JourneyWorld122Test.java
+/scripts/test-journey-clarity-v123.sh
+/scripts/JourneyClarityV123Test.java
+/scripts/WardrobeLookV123Test.java
+/scripts/test-journey-world-v122.sh
+/scripts/TacticalChapterV122Test.java
+/scripts/test-tactical-chapter-v122.sh
+/scripts/TacticalChapterSessionV122Test.java
+/scripts/test-tactical-session-v122.sh
+/scripts/test-focused-journey-v120.sh
+/scripts/FocusedJourneyV120Test.java
+/app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java
+/scripts/test-wallet-energy-transport-v120.sh
+/scripts/WalletEnergyTransportV120Test.java
+/scripts/test-support/vault/
+/app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseController.java
+/app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseJournal.java
+/app/src/main/java/com/androidhit/lumadrift/commerce/BillingPolicy.java
+/scripts/test-energy-purchase-v120.sh
+/scripts/EnergyPurchaseV120Test.java
+/scripts/test-support/energy/
+/scripts/test-session-energy-v120.sh
+/scripts/SessionEnergyV120Test.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SpriteGeometry.java
+/app/src/main/java/com/androidhit/lumadrift/audio/*.java
+/scripts/test-scene-transition-v117.sh
+/scripts/SceneTransitionV117Test.java
+/scripts/test-root-scenes-v117.sh
+/scripts/RootSceneV117GeometryTest.java
+/scripts/test-play-scene-v117-geometry.sh
+/scripts/PlaySceneV117GeometryTest.java
+/scripts/test-art-v117-geometry.sh
+/scripts/SpriteV117GeometryTest.java
+/scripts/test-audio-scenes-v117.sh
+/scripts/AudioSceneV117Test.java
+/scripts/test-support/audio/
+/scripts/test-site-v117.mjs
+/scripts/test-site-v116.mjs
+/scripts/test-site-v118.mjs
+/scripts/test-site-v119.mjs
+/scripts/test-site-v120-runtime.mjs
+/scripts/test-site-v121-runtime.mjs
+/scripts/test-site-v123-runtime.mjs
+/scripts/check-site-v123.py
+/scripts/deploy-site-v123.py
+/scripts/stage-site-v123-rest.py
+/scripts/collect-site-v123-public-bytes.py
+/scripts/test-deploy-site-v123.py
+/scripts/test-stage-site-v123-rest.py
+/scripts/test-collect-site-v123-public-bytes.py
+/scripts/deploy-site-v122.py
+/scripts/deploy-cognitive-overlay.py
+/scripts/test-deploy-site-v122.py
+/scripts/stage-site-v122-rest.py
+/scripts/test-stage-site-v122-rest.py
+/scripts/collect-site-v122-public-bytes.py
+/scripts/test-collect-site-v122-public-bytes.py
+/scripts/verify-site-v122-publication.py
+/docs/validation/site-v1.22/release/source-manifest.json
+/docs/validation/cognitive-lab/site-manifest.json
+/scripts/test-deploy-cognitive-overlay.py
+/scripts/test-simulation-v121.mjs
+/scripts/apk-byte-delta.py
+/scripts/test-apk-byte-delta.py
+/public/assets/site.js
+/public/index.html
+/public/assets/site-v123.js
+/public/assets/site-v123.css
+/public/assets/site-v122.js
+/public/assets/site-v122.css
+/public/lab/ui-1-22/index.html
+/public/lab/ui-1-22/simulation.css
+/public/lab/ui-1-22/simulation.mjs
+/public/releases/manifest-1.19.0-*.json
+/public/assets/site-v118.js
+/public/assets/site-v118.css
+/public/assets/site-v119.js
+/public/assets/site-v119.css
+/public/assets/companion-gallery-v118.mjs
+/public/assets/gallery-core-v118.mjs
+/public/assets/companions-v118/*.json
+/docs/validation/site-v1.17/index.template.html
+/docs/validation/site-v1.18/index.template.html
+/docs/validation/site-v1.19/index.template.html
+/docs/validation/site-v1.20/staging/site-v120.js
+/docs/validation/site-v1.21/staging/site-v121.js
+/docs/validation/site-v1.21/staging/lab/ui-1-21/simulation-core.mjs
+/docs/validation/site-v1.21/staging/lab/ui-1-21/simulation.mjs
+/docs/validation/site-v1.21/staging/native-economy-fixture.json
+/docs/validation/v1.7/audio/audio-biome-metrics.csv
+/docs/validation/v1.7/audio/legacy-pcm.sha256
+/scripts/test-relay-v115.sh
+/scripts/RelayV115Test.java
+/scripts/test-engine.sh
+/scripts/EngineTest.java
+/scripts/test-sealed.sh
+/scripts/SealedTest.java
+/scripts/test-progression-v3.sh
+/scripts/ProgressionV3Test.java
+/scripts/GenerateProgressionV3.java
+/scripts/LegacyContentFingerprint.java
+/scripts/test-move-budget.sh
+/scripts/MoveBudgetTest.java
+/scripts/test-strategy-v4.sh
+/scripts/StrategyV4Audit.java
+/scripts/StrategyV4ContractTest.java
+/scripts/test-guardian-v19.sh
+/scripts/GuardianV19Test.java
+/scripts/test-guardian-store-v19.sh
+/scripts/GuardianStoreV19Test.java
+/scripts/test-data.sh
+/scripts/DataTest.java
+/scripts/test-collection-events.sh
+/scripts/CollectionEventsTest.java
+/scripts/test-home-v115.sh
+/scripts/test-home-v115-geometry.sh
+/scripts/HomeV115Test.java
+/scripts/HomeV115GeometryTest.java
+/scripts/test-home-v116-geometry.sh
+/scripts/HomeV116GeometryTest.java
+/scripts/test-profile-summon-v116.sh
+/scripts/ProfileSummonV116Test.java
+/scripts/home-render-support/
+/scripts/test-learning-v114.sh
+/scripts/test-deliberate-play-v114.sh
+/scripts/test-learning-guide.sh
+/scripts/test-power-offers-v114.sh
+/scripts/LearningV114Test.java
+/scripts/DeliberatePlayV114Test.java
+/scripts/LearningGuideTest.java
+/scripts/PowerOffersV114Test.java
+/scripts/RewardsCosmeticsV17Test.java
+/scripts/test-expedition-v118-model.sh
+/scripts/test-expedition-v118-store.sh
+/scripts/test-companion-motion-v118.sh
+/scripts/ExpeditionV118ModelTest.java
+/scripts/ExpeditionV118StoreTest.java
+/scripts/CompanionMotionV118Test.java
+/scripts/test-companion-battle-v119.sh
+/scripts/CompanionBattleV119Test.java
+/scripts/test-companion-action-v119.sh
+/scripts/CompanionBattleActionV119Test.java
+/scripts/test-squad-store-v119.sh
+/scripts/SquadV119StoreTest.java
+/scripts/test-companion-battle-v119-geometry.sh
+/scripts/CompanionBattleV119GeometryTest.java
+/scripts/test-adventure-v119-geometry.sh
+/scripts/AdventureV119GeometryTest.java
+/scripts/AuditJourneyV114.java
+/scripts/ProgressionAnalysis.java
+/scripts/test-support/android/annotation/*.java
+/scripts/test-support/android/content/*.java
+/scripts/test-support/android/graphics/*.java
+/docs/validation/v1.14/audit-learning-rc1/LearningLayouts.java
+/docs/validation/v1.6/legacy-content-before.sha256
+
+2026-10-30T19:47:20.4987654Z   repository: nabz0r/AndroidHit
+2026-10-30T19:47:20.4991535Z   token: ***
+2026-10-30T19:47:20.4991928Z   ssh-strict: true
+2026-10-30T19:47:20.4992323Z   ssh-user: git
+2026-10-30T19:47:20.4992698Z   clean: true
+2026-10-30T19:47:20.4993077Z   fetch-tags: false
+2026-10-30T19:47:20.4993472Z   show-progress: true
+2026-10-30T19:47:20.4993935Z   lfs: false
+2026-10-30T19:47:20.4994312Z   submodules: false
+2026-10-30T19:47:20.4994705Z   set-safe-directory: true
+2026-10-30T19:47:20.4995151Z   allow-unsafe-pr-checkout: false
+2026-10-30T19:47:20.4996308Z ##[endgroup]
+2026-10-30T19:47:20.6951522Z Syncing repository: nabz0r/AndroidHit
+2026-10-30T19:47:20.6953575Z ##[group]Getting Git version info
+2026-10-30T19:47:20.6954756Z Working directory is '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-30T19:47:20.6955722Z [command]/usr/bin/git version
+2026-10-30T19:47:20.6995089Z git version 2.56.0
+2026-10-30T19:47:20.7012227Z ##[endgroup]
+2026-10-30T19:47:20.7115113Z Temporarily overriding HOME='/home/runner/work/_temp/00c1f563-2912-47a7-a8cf-553d6fbeb93f' before making global git config changes
+2026-10-30T19:47:20.7117134Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T19:47:20.7118829Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T19:47:20.7120937Z Deleting the contents of '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-30T19:47:20.7121967Z ##[group]Determining repository object format
+2026-10-30T19:47:20.7122774Z ##[endgroup]
+2026-10-30T19:47:20.7123405Z ##[group]Initializing the repository
+2026-10-30T19:47:20.7124178Z [command]/usr/bin/git init /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T19:47:20.7175063Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T19:47:20.7176846Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T19:47:20.7178441Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T19:47:20.7179508Z hint: call:
+2026-10-30T19:47:20.7180064Z hint:
+2026-10-30T19:47:20.7180758Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T19:47:20.7181639Z hint:
+2026-10-30T19:47:20.7182463Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T19:47:20.7183873Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T19:47:20.7184959Z hint:
+2026-10-30T19:47:20.7185533Z hint: 	git branch -m <name>
+2026-10-30T19:47:20.7186214Z hint:
+2026-10-30T19:47:20.7187091Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T19:47:20.7188679Z Initialized empty Git repository in /home/runner/work/AndroidHit/AndroidHit/.git/
+2026-10-30T19:47:20.7191709Z [command]/usr/bin/git remote add origin https://github.com/nabz0r/AndroidHit
+2026-10-30T19:47:20.7234629Z ##[endgroup]
+2026-10-30T19:47:20.7235690Z ##[group]Disabling automatic garbage collection
+2026-10-30T19:47:20.7238482Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T19:47:20.7273026Z ##[endgroup]
+2026-10-30T19:47:20.7274621Z ##[group]Setting up auth
+2026-10-30T19:47:20.7275399Z Removing SSH command configuration
+2026-10-30T19:47:20.7278529Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T19:47:20.7314260Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T19:47:20.7641807Z Removing HTTP extra header
+2026-10-30T19:47:20.7644905Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T19:47:20.7706242Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T19:47:20.7911791Z Removing includeIf entries pointing to credentials config files
+2026-10-30T19:47:20.7916178Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T19:47:20.7955112Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T19:47:20.8159035Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T19:47:20.8199804Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path /home/runner/work/_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:20.8237234Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:20.8274591Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:20.8311317Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:20.8346881Z ##[endgroup]
+2026-10-30T19:47:20.8347547Z ##[group]Fetching the repository
+2026-10-30T19:47:20.8352463Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +c99ac52903eca6707d3f4d644d7c480c79b63e68:refs/remotes/origin/main
+2026-10-30T19:47:21.3668292Z From https://github.com/nabz0r/AndroidHit
+2026-10-30T19:47:21.3670004Z  * [new ref]         c99ac52903eca6707d3f4d644d7c480c79b63e68 -> origin/main
+2026-10-30T19:47:21.3678688Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-30T19:47:21.3714170Z   origin/main
+2026-10-30T19:47:21.3724264Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-30T19:47:21.3756838Z c99ac52903eca6707d3f4d644d7c480c79b63e68
+2026-10-30T19:47:21.3761443Z ##[endgroup]
+2026-10-30T19:47:21.3762952Z ##[group]Determining the checkout info
+2026-10-30T19:47:21.3764476Z ##[endgroup]
+2026-10-30T19:47:21.3765978Z ##[group]Setting up sparse checkout
+2026-10-30T19:47:21.3767350Z [command]/usr/bin/git config core.sparseCheckout true
+2026-10-30T19:47:21.3806720Z [command]/usr/bin/git rev-parse --git-path info/sparse-checkout
+2026-10-30T19:47:21.3837435Z .git/info/sparse-checkout
+2026-10-30T19:47:21.3844734Z ##[endgroup]
+2026-10-30T19:47:21.3846669Z ##[group]Checking out the ref
+2026-10-30T19:47:21.3848710Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-30T19:47:22.7375884Z Switched to a new branch 'main'
+2026-10-30T19:47:22.7379755Z branch 'main' set up to track 'origin/main'.
+2026-10-30T19:47:22.7409516Z ##[endgroup]
+2026-10-30T19:47:22.7449770Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T19:47:22.7483208Z c99ac52903eca6707d3f4d644d7c480c79b63e68
+2026-10-30T19:47:22.7496102Z ##[group]Removing auth
+2026-10-30T19:47:22.7496542Z Removing SSH command configuration
+2026-10-30T19:47:22.7497051Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T19:47:22.7539497Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T19:47:22.7836036Z Removing HTTP extra header
+2026-10-30T19:47:22.7840077Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T19:47:22.7881266Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T19:47:22.8174850Z Removing includeIf entries pointing to credentials config files
+2026-10-30T19:47:22.8175424Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T19:47:22.8212452Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-30T19:47:22.8213261Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-30T19:47:22.8213998Z includeif.gitdir:/github/workspace/.git.path
+2026-10-30T19:47:22.8214503Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T19:47:22.8220727Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-30T19:47:22.8251462Z /home/runner/work/_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:22.8259986Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-dbe9fb42\-8ed8\-440a\-ae19\-bf69a6ecbbfc\.config
+2026-10-30T19:47:22.8300296Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-30T19:47:22.8329813Z /home/runner/work/_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:22.8336624Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-dbe9fb42\-8ed8\-440a\-ae19\-bf69a6ecbbfc\.config
+2026-10-30T19:47:22.8379332Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-30T19:47:22.8409792Z /github/runner_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:22.8416481Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-dbe9fb42\-8ed8\-440a\-ae19\-bf69a6ecbbfc\.config
+2026-10-30T19:47:22.8454975Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-30T19:47:22.8484571Z /github/runner_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config
+2026-10-30T19:47:22.8493125Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-dbe9fb42\-8ed8\-440a\-ae19\-bf69a6ecbbfc\.config
+2026-10-30T19:47:22.8533652Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T19:47:22.8824362Z Removing credentials config '/home/runner/work/_temp/git-credentials-dbe9fb42-8ed8-440a-ae19-bf69a6ecbbfc.config'
+2026-10-30T19:47:22.8830404Z ##[endgroup]
+2026-10-30T19:47:22.9100076Z ##[group]Run actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+2026-10-30T19:47:22.9100441Z with:
+2026-10-30T19:47:22.9100650Z   distribution: temurin
+2026-10-30T19:47:22.9100875Z   java-version: 17
+2026-10-30T19:47:22.9101085Z   cache-jdk: false
+2026-10-30T19:47:22.9101303Z   overwrite-settings: false
+2026-10-30T19:47:22.9101538Z   java-package: jdk
+2026-10-30T19:47:22.9101756Z   check-latest: false
+2026-10-30T19:47:22.9101980Z   force-download: false
+2026-10-30T19:47:22.9102210Z   set-default: true
+2026-10-30T19:47:22.9102418Z   server-id: github
+2026-10-30T19:47:22.9102657Z   mvn-repositories-include-central: true
+2026-10-30T19:47:22.9102973Z   mvn-repositories-prioritize-central: true
+2026-10-30T19:47:22.9103250Z   cache-read-only: false
+2026-10-30T19:47:22.9103473Z   job-status: success
+2026-10-30T19:47:22.9105608Z   token: ***
+2026-10-30T19:47:22.9105837Z   show-download-progress: false
+2026-10-30T19:47:22.9106088Z   problem-matcher: true
+2026-10-30T19:47:22.9106347Z ##[endgroup]
+2026-10-30T19:47:22.9745197Z ##[group]Installed distributions
+2026-10-30T19:47:22.9811907Z Resolved Java 17.0.21+9 from tool-cache
+2026-10-30T19:47:22.9812335Z Setting Java 17.0.21+9 as the default
+2026-10-30T19:47:22.9818964Z 
+2026-10-30T19:47:22.9819273Z Java configuration:
+2026-10-30T19:47:22.9819545Z   Distribution: temurin
+2026-10-30T19:47:22.9819789Z   Version: 17.0.21+9
+2026-10-30T19:47:22.9820092Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:22.9820326Z 
+2026-10-30T19:47:22.9828841Z ##[endgroup]
+2026-10-30T19:47:22.9866613Z Creating settings.xml with server-id: github
+2026-10-30T19:47:22.9867131Z Creating toolchains.xml for JDK version 17 from temurin
+2026-10-30T19:47:22.9867492Z Writing to /home/runner/.m2/settings.xml
+2026-10-30T19:47:22.9867813Z Writing to /home/runner/.m2/toolchains.xml
+2026-10-30T19:47:22.9869611Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-10-30T19:47:23.0010842Z ##[group]Run sh scripts/test-learning-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/learning"
+2026-10-30T19:47:23.0011815Z [36;1msh scripts/test-learning-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/learning"[0m
+2026-10-30T19:47:23.0154196Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:47:23.0154513Z env:
+2026-10-30T19:47:23.0154836Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:23.0155281Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:23.0155640Z   MAVEN_ARGS: -ntp
+2026-10-30T19:47:23.0155867Z ##[endgroup]
+2026-10-30T19:47:31.1417629Z {
+2026-10-30T19:47:31.1418489Z   "passed":true,
+2026-10-30T19:47:31.1419449Z   "scope":"RC2:1000 N boards; exact independent branch bounds and choice metrics; exhaustive runtime first30;970 exact physical bases with opening-only initial supersets of preserved V4; not human comprehension, win rate or enjoyment",
+2026-10-30T19:47:31.1420774Z   "checks":201143,
+2026-10-30T19:47:31.1421241Z   "boards":1000,
+2026-10-30T19:47:31.1421699Z   "uniqueUnderD4TranslationAndIds":1000,
+2026-10-30T19:47:31.1422198Z   "preservedGeometrySources":970,
+2026-10-30T19:47:31.1422681Z   "reauthoredInitialGateStates":291,
+2026-10-30T19:47:31.1423179Z   "initialStatesWithFreeExit":321,
+2026-10-30T19:47:31.1423721Z   "maximumHardExpertRun":4,
+2026-10-30T19:47:31.1424191Z   "episodesWithThreeOrMoreNormals":97,
+2026-10-30T19:47:31.1424649Z   "independentGateStates":24960432,
+2026-10-30T19:47:31.1425160Z   "introRuntimeStates":6052,
+2026-10-30T19:47:31.1425587Z   "introRuntimeTransitions":20429,
+2026-10-30T19:47:31.1426081Z   "meaningfulChoiceBoards":966,
+2026-10-30T19:47:31.1426505Z   "hardBoards":442,
+2026-10-30T19:47:31.1426884Z   "expertBoards":38,
+2026-10-30T19:47:31.1427263Z   "peaks":476,
+2026-10-30T19:47:31.1427628Z   "recoveries":279,
+2026-10-30T19:47:31.1428191Z   "maximumPositiveScoreStep":35,
+2026-10-30T19:47:31.1428640Z   "maximumPieceIncrease":2,
+2026-10-30T19:47:31.1429075Z   "maximumMinimumActionIncrease":4
+2026-10-30T19:47:31.1429468Z }
+2026-10-30T19:47:31.1429704Z 
+2026-10-30T19:47:31.1878158Z ##[group]Run sh scripts/test-relay-v115.sh "$RUNNER_TEMP/luma-puzzle-contracts/relay"
+2026-10-30T19:47:31.1878673Z [36;1msh scripts/test-relay-v115.sh "$RUNNER_TEMP/luma-puzzle-contracts/relay"[0m
+2026-10-30T19:47:31.1917640Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:47:31.1917852Z env:
+2026-10-30T19:47:31.1918236Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:31.1918630Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:31.1918953Z   MAVEN_ARGS: -ntp
+2026-10-30T19:47:31.1919134Z ##[endgroup]
+2026-10-30T19:47:32.6690093Z PASS U1–U100 reachable_states=2818 transitions=5620
+2026-10-30T19:47:32.7158992Z PASS U1–U200 reachable_states=5910 transitions=10732
+2026-10-30T19:47:32.7647253Z PASS U1–U300 reachable_states=9989 transitions=17838
+2026-10-30T19:47:32.8274500Z PASS U1–U400 reachable_states=15713 transitions=28016
+2026-10-30T19:47:32.9172724Z PASS U1–U500 reachable_states=23969 transitions=44179
+2026-10-30T19:47:33.0355988Z PASS U1–U600 reachable_states=36376 transitions=70940
+2026-10-30T19:47:33.1739627Z PASS U1–U700 reachable_states=57498 transitions=120581
+2026-10-30T19:47:33.2982234Z PASS U1–U800 reachable_states=85191 transitions=186514
+2026-10-30T19:47:33.6009483Z PASS U1–U900 reachable_states=137759 transitions=327670
+2026-10-30T19:47:33.9170790Z PASS U1–U1000 reachable_states=191954 transitions=471517
+2026-10-30T19:47:34.5586537Z {
+2026-10-30T19:47:34.5586885Z   "passed": true,
+2026-10-30T19:47:34.5587167Z   "boards": 1000,
+2026-10-30T19:47:34.5587469Z   "checks": 13312469,
+2026-10-30T19:47:34.5587769Z   "reachable_states": 191954,
+2026-10-30T19:47:34.5588230Z   "legal_transitions": 471517,
+2026-10-30T19:47:34.5588598Z   "post_teaching_boards_with_order_consequence": 970,
+2026-10-30T19:47:34.5589018Z   "boards_with_keys": 652,
+2026-10-30T19:47:34.5589329Z   "relay_pieces": 5698,
+2026-10-30T19:47:34.5589650Z   "max_reachable_states_per_board": 2362,
+2026-10-30T19:47:34.5590023Z   "max_planner_cache_bytes": 65600,
+2026-10-30T19:47:34.5609151Z   "slowest_host_viability_ms": 0.559,
+2026-10-30T19:47:34.5609503Z   "seconds": 2.047,
+2026-10-30T19:47:34.5610310Z   "scope": "Host exact model, all reachable U states, transitions, previews, Undo, save/budget, six-language guide and historical identifiers. Not Android execution or human enjoyment."
+2026-10-30T19:47:34.5611134Z }
+2026-10-30T19:47:34.5611264Z 
+2026-10-30T19:47:34.5829780Z ##[group]Run sh scripts/test-engine.sh
+2026-10-30T19:47:34.5830090Z [36;1msh scripts/test-engine.sh[0m
+2026-10-30T19:47:34.5830453Z [36;1mbash scripts/test-sealed.sh[0m
+2026-10-30T19:47:34.5830813Z [36;1msh scripts/test-progression-v3.sh "$RUNNER_TEMP/luma-puzzle-contracts/progression-v3"[0m
+2026-10-30T19:47:34.5831179Z [36;1mbash scripts/test-move-budget.sh[0m
+2026-10-30T19:47:34.5869748Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:47:34.5869953Z env:
+2026-10-30T19:47:34.5870210Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:34.5870609Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:34.5870914Z   MAVEN_ARGS: -ntp
+2026-10-30T19:47:34.5871090Z ##[endgroup]
+2026-10-30T19:47:36.0179627Z Challenge codes: campaign/remix exhaustive 1..240, 1007 event round trips including Long.MAX_VALUE; malformed/overflow/tamper + 10000 fuzz inputs rejected.
+2026-10-30T19:47:38.8394457Z Remix design: level,tiles,switches,paired,initial choices,unsafe choices,path blockers,closed gates,ray dependencies,ray depth
+2026-10-30T19:47:38.8492092Z 1,10,1,1,2,0,7,5,10,4
+2026-10-30T19:47:38.8492620Z 2,10,1,1,2,0,7,5,12,6
+2026-10-30T19:47:38.8493827Z 3,10,1,1,2,0,7,5,12,4
+2026-10-30T19:47:38.8502569Z 4,11,2,2,2,0,8,4,12,5
+2026-10-30T19:47:38.8502860Z 5,11,2,2,2,0,9,4,13,6
+2026-10-30T19:47:38.8503046Z 6,11,2,1,2,0,8,7,11,4
+2026-10-30T19:47:38.8503217Z 7,12,3,3,3,1,8,5,14,4
+2026-10-30T19:47:38.8503473Z 8,12,3,3,2,0,10,6,16,6
+2026-10-30T19:47:38.8503663Z 9,12,3,2,2,1,10,1,15,8
+2026-10-30T19:47:38.8503839Z 10,13,4,4,2,0,10,7,20,7
+2026-10-30T19:47:38.8504019Z 11,13,4,4,2,0,10,6,19,7
+2026-10-30T19:47:38.8505000Z 12,13,4,3,2,0,9,8,14,8
+2026-10-30T19:47:40.9020435Z 240 remix averages: 15.30 tiles, 4.69 switches (3.73 paired), 2.55 legal / 0.14 unsafe starts, 10.88 blocked tiles, 8.01 closed-gate tiles, 19.87 ray dependencies, 6.21 ray depth
+2026-10-30T19:47:40.9058917Z PASS: 240 campaign + 240 remix + 1002 event + 1002 paired-switch seeds; 437039 assertions, 1543 alternate legal starts (53 correctly require undo), 5.00 s.
+2026-10-30T19:47:43.3110221Z PASS 10425 sealed-cell checks; all 6 P boards, every piece-subset ×16 gate states, exact independent oracle, undo/history/restart, hostile definitions and isolation.
+2026-10-30T19:47:47.9237331Z PASS 582831 checks; 1240 V3 boards, independent exact oracle, genuine seals, D4 uniqueness, historical sessions, codes and fixed budgets; 2.0795 s.
+2026-10-30T19:47:51.9075738Z PASS 390327 move-budget checks; 2722 real certified boards, 100000 corrupt saves, 20000 valid snapshots, 100000 unlimited friend actions.
+2026-10-30T19:47:51.9077057Z Verified: blocked attempts/undo accounting, fixed100gold, max2continuations, remaining+3 extension floor5, last-action win, copy isolation and overflow rejection.
+2026-10-30T19:47:51.9209292Z Runtime 2.73s. No ad completion, payment, retention or human difficulty is inferred.
+2026-10-30T19:47:51.9449329Z ##[group]Run sh scripts/test-strategy-v4.sh "$RUNNER_TEMP/luma-puzzle-contracts/strategy"
+2026-10-30T19:47:51.9449857Z [36;1msh scripts/test-strategy-v4.sh "$RUNNER_TEMP/luma-puzzle-contracts/strategy"[0m
+2026-10-30T19:47:51.9488762Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:47:51.9488977Z env:
+2026-10-30T19:47:51.9489220Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:51.9489614Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:47:51.9489917Z   MAVEN_ARGS: -ntp
+2026-10-30T19:47:51.9490093Z ##[endgroup]
+2026-10-30T19:47:54.9191063Z PASS 33611 strategy contract checks;1240unique V4maps;key_boards=591 meaningful_decision_boards=1161 reauthored_switches=8830;legacy/migration/malformed/zero-action contracts.
+2026-10-30T19:47:55.5449291Z L100 states=79273 checks=3548467
+2026-10-30T19:47:56.5604691Z L200 states=347117 checks=17367988
+2026-10-30T19:47:59.8187876Z L300 states=1091792 checks=60243426
+2026-10-30T19:48:05.8673400Z L400 states=2450894 checks=140674295
+2026-10-30T19:48:11.0740601Z L500 states=3677056 checks=212260403
+2026-10-30T19:48:16.6777806Z L600 states=4973893 checks=289170730
+2026-10-30T19:48:23.2259442Z L700 states=6488876 checks=379226702
+2026-10-30T19:48:28.9503158Z L800 states=7844285 checks=459850085
+2026-10-30T19:48:33.1014491Z L900 states=8801431 checks=515534551
+2026-10-30T19:48:37.8686660Z L1000 states=9938665 checks=582064841
+2026-10-30T19:48:39.3019191Z M100 states=10422477 checks=606439056
+2026-10-30T19:48:45.1532860Z M200 states=11993625 checks=696661907
+2026-10-30T19:48:50.5486045Z PASS StrategyV4Audit boards=1240 reachable_states=13254058 action_edges=57403554 reference_gate_states=31230944 checks=773092810 sampled_complete_plans=13839 peak_cache_states=279897 peak_cache_bytes=9437184 worst_observed_cost_ns=34777154 elapsed_seconds=55.593234618
+2026-10-30T19:48:50.5980047Z ##[group]Run bash scripts/test-guardian-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardians"
+2026-10-30T19:48:50.5980586Z [36;1mbash scripts/test-guardian-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardians"[0m
+2026-10-30T19:48:50.5981105Z [36;1mbash scripts/test-guardian-store-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardian-store"[0m
+2026-10-30T19:48:50.6019740Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:48:50.6019948Z env:
+2026-10-30T19:48:50.6020194Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:48:50.6020584Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:48:50.6020885Z   MAVEN_ARGS: -ntp
+2026-10-30T19:48:50.6021060Z ##[endgroup]
+2026-10-30T19:48:52.3239174Z Guardian10 states=87480 assertions=6054540
+2026-10-30T19:48:55.0485088Z Guardian20 states=356010 assertions=26212787
+2026-10-30T19:49:02.5669030Z Guardian30 states=1028718 assertions=77180231
+2026-10-30T19:49:09.6227756Z Guardian40 states=1664256 assertions=125191831
+2026-10-30T19:49:19.3552196Z Guardian50 states=2479514 assertions=188226288
+2026-10-30T19:49:27.6139737Z Guardian60 states=3200320 assertions=242486987
+2026-10-30T19:49:35.8220536Z Guardian70 states=3904882 assertions=296276713
+2026-10-30T19:49:44.8425447Z Guardian80 states=4687221 assertions=356653174
+2026-10-30T19:49:52.5346637Z Guardian90 states=5363766 assertions=408100959
+2026-10-30T19:50:02.6486480Z Guardian100 states=6197718 assertions=472484606
+2026-10-30T19:50:02.6654405Z {
+2026-10-30T19:50:02.6654679Z   "passed":true,
+2026-10-30T19:50:02.6655104Z   "encounters":100,
+2026-10-30T19:50:02.6655467Z   "unique_patterns":100,
+2026-10-30T19:50:02.6655905Z   "assertions":472484607,
+2026-10-30T19:50:02.6656284Z   "reachable_productive_states":6197718,
+2026-10-30T19:50:02.6656683Z   "productive_edges":34045573,
+2026-10-30T19:50:02.6657075Z   "sampled_complete_plans":1661,
+2026-10-30T19:50:02.6657460Z   "largest_state_set":228228,
+2026-10-30T19:50:02.6657891Z   "elapsed_host_seconds":71.342901459,
+2026-10-30T19:50:02.6659100Z   "scope":"Independent coordinate and finite-work oracle; all reachable productive states on all 100 encounters; blocked-budget, undo, repeat-ID save and malformed-record contracts. No human playtime or retention estimate."
+2026-10-30T19:50:02.6660152Z }
+2026-10-30T19:50:02.6660303Z 
+2026-10-30T19:50:05.5963621Z {
+2026-10-30T19:50:05.5963955Z   "passed":true,
+2026-10-30T19:50:05.5964312Z   "assertions":5303,
+2026-10-30T19:50:05.5964693Z   "encounters_actually_solved_before_reward_requests":100,
+2026-10-30T19:50:05.5965598Z   "concurrent_two_handle_trials":24,
+2026-10-30T19:50:05.5966612Z   "localized_languages":6,
+2026-10-30T19:50:05.5966906Z   "visual_variants":444,
+2026-10-30T19:50:05.5967200Z   "legacy_visual_variants":288,
+2026-10-30T19:50:05.5967522Z   "elapsed_host_seconds":0.469945035,
+2026-10-30T19:50:05.5968909Z   "scope":"Real GameStore, GuardianEncounter, AvatarStyles and V19Strings with established Android preference doubles. completeGuardian is a local caller contract after a solved board, not server purchase/anti-cheat verification. No Google or social service validation."
+2026-10-30T19:50:05.5970025Z }
+2026-10-30T19:50:05.5970146Z 
+2026-10-30T19:50:05.6551058Z ##[group]Run bash scripts/test-data.sh
+2026-10-30T19:50:05.6551375Z [36;1mbash scripts/test-data.sh[0m
+2026-10-30T19:50:05.6551796Z [36;1mbash scripts/test-collection-events.sh[0m
+2026-10-30T19:50:05.6552050Z [36;1mbash scripts/test-economy.sh[0m
+2026-10-30T19:50:05.6552271Z [36;1mbash scripts/test-meta.sh[0m
+2026-10-30T19:50:05.6591928Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:05.6592146Z env:
+2026-10-30T19:50:05.6592405Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:05.6592807Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:05.6593112Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:05.6593284Z ##[endgroup]
+2026-10-30T19:50:08.0750153Z PASS 9142 data, economy, campaign, Remix, milestone, event and localization checks
+2026-10-30T19:50:08.7411125Z Companions: 37 unique IDs and silhouettes; original 24 cost 12200 coins unchanged; 13 local guests cost 6760 coins.
+2026-10-30T19:50:09.0336747Z Event clocks: 604 time zones, 14496 boundary scenarios; DST 23/25-hour days verified.
+2026-10-30T19:50:09.0346698Z Collection/event checks: 87267 passed.
+2026-10-30T19:50:11.8214218Z PASS 6611 progression-price, power milestones/rewards/loot, continuation debits and atomic test-gold checks
+2026-10-30T19:50:11.8215831Z SANDBOX ONLY: no live payment, Play verification, ad completion or revenue is claimed by these JVM checks
+2026-10-30T19:50:11.8217065Z DURABILITY MODEL: memory-before-disk failures and process reload are simulated; no physical storage fault was injected
+2026-10-30T19:50:14.5033411Z PASS 362 first-clear progression, claims, migration, journal and feature-copy checks
+2026-10-30T19:50:14.6392543Z PASS exported journal parses as JSON and round-trips Unicode and control characters
+2026-10-30T19:50:14.6497822Z ##[group]Run bash scripts/test-home-v115.sh
+2026-10-30T19:50:14.6498245Z [36;1mbash scripts/test-home-v115.sh[0m
+2026-10-30T19:50:14.6498499Z [36;1mbash scripts/test-home-v115-geometry.sh[0m
+2026-10-30T19:50:14.6536911Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:14.6537118Z env:
+2026-10-30T19:50:14.6537370Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:14.6537780Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:14.6538195Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:14.6538375Z ##[endgroup]
+2026-10-30T19:50:17.0168487Z PASS 2086 v1.15 home upgrade and durability checks
+2026-10-30T19:50:19.3075572Z PASS 6494 home camera and geometry checks (Java2D preview is an approximation; native UI QA required)
+2026-10-30T19:50:19.3210173Z ##[group]Run sh scripts/test-deliberate-play-v114.sh
+2026-10-30T19:50:19.3210596Z [36;1msh scripts/test-deliberate-play-v114.sh[0m
+2026-10-30T19:50:19.3250332Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:19.3250543Z env:
+2026-10-30T19:50:19.3250800Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:19.3251190Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:19.3251487Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:19.3251657Z ##[endgroup]
+2026-10-30T19:50:20.7603503Z PASS 24474 deliberate-play checks; 19920 productive actions across1000 boards, blocked L15, one-return persistence, strict failure, retry and codes.
+2026-10-30T19:50:20.7833374Z ##[group]Run bash scripts/test-home-v116-geometry.sh
+2026-10-30T19:50:20.7833709Z [36;1mbash scripts/test-home-v116-geometry.sh[0m
+2026-10-30T19:50:20.7834137Z [36;1mbash scripts/test-profile-summon-v116.sh "$RUNNER_TEMP/luma-puzzle-contracts/profile-summon.json"[0m
+2026-10-30T19:50:20.7873164Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:20.7873367Z env:
+2026-10-30T19:50:20.7873616Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:20.7874006Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:20.7874306Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:20.7874477Z ##[endgroup]
+2026-10-30T19:50:23.8617112Z PASS 149208 enlarged home viewport, inverse, picking, pan and render clip checks (native device review still required)
+2026-10-30T19:50:26.5005706Z PASS 60717 v1.16 profile, badge and summon store checks
+2026-10-30T19:50:26.5325979Z ##[group]Run sh scripts/test-learning-guide.sh
+2026-10-30T19:50:26.5326285Z [36;1msh scripts/test-learning-guide.sh[0m
+2026-10-30T19:50:26.5364527Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:26.5364733Z env:
+2026-10-30T19:50:26.5364981Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:26.5365378Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:26.5365750Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:26.5366038Z ##[endgroup]
+2026-10-30T19:50:27.9638743Z PASS 5089 learning guide checks; actual block causes, L15 toggles, N1..30 and L1..30, six languages, no solver or state mutation.
+2026-10-30T19:50:27.9762185Z ##[group]Run bash scripts/test-scene-transition-v117.sh
+2026-10-30T19:50:27.9762668Z [36;1mbash scripts/test-scene-transition-v117.sh[0m
+2026-10-30T19:50:27.9763069Z [36;1mbash scripts/test-root-scenes-v117.sh[0m
+2026-10-30T19:50:27.9763487Z [36;1mbash scripts/test-art-v117-geometry.sh[0m
+2026-10-30T19:50:27.9802327Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:27.9802741Z env:
+2026-10-30T19:50:27.9803129Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:27.9803616Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:27.9804098Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:27.9804381Z ##[endgroup]
+2026-10-30T19:50:28.5989077Z PASS 14843 scene transition and root gesture contracts; native compositing and route review still required
+2026-10-30T19:50:29.4020597Z Root scene 1.17 geometry PASS: 202444 checks across 420 live-helper layouts (caption bands, unique target centres, physical floor, unchanged object size)
+2026-10-30T19:50:30.0049977Z Sprite 1.17 geometry PASS: 19857 checks (aspect, anchors, odd sheet seams, invalid inputs)
+2026-10-30T19:50:30.0151237Z ##[group]Run bash scripts/test-audio-scenes-v117.sh "$RUNNER_TEMP/luma-puzzle-contracts/audio-scenes-v117"
+2026-10-30T19:50:30.0151862Z [36;1mbash scripts/test-audio-scenes-v117.sh "$RUNNER_TEMP/luma-puzzle-contracts/audio-scenes-v117"[0m
+2026-10-30T19:50:30.0191021Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:30.0191240Z env:
+2026-10-30T19:50:30.0191496Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:30.0191882Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:30.0192182Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:30.0192354Z ##[endgroup]
+2026-10-30T19:50:57.7457027Z PASS 1714 audio scene checks (1638 DSP, 76 lifecycle); 50 loops, 4 scene previews, 3 earcons; maximum live tracks=2
+2026-10-30T19:50:57.7804857Z ##[group]Run bash scripts/test-play-scene-v117-geometry.sh
+2026-10-30T19:50:57.7805413Z [36;1mbash scripts/test-play-scene-v117-geometry.sh[0m
+2026-10-30T19:50:57.7857809Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:57.7858323Z env:
+2026-10-30T19:50:57.7858696Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:57.7859311Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:57.7859777Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:57.7860034Z ##[endgroup]
+2026-10-30T19:50:58.5056464Z Play scene 1.17/1.19 geometry PASS: 403778 checks across 3568 live-helper layouts; gate/cell separation, physical48dp gate/action targets, companion dock separation without board shrinkage, reading bands and reachable final controls. No native glyph/gameplay claim.
+2026-10-30T19:50:58.5293894Z ##[group]Run node --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs
+2026-10-30T19:50:58.5295124Z [36;1mnode --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs[0m
+2026-10-30T19:50:58.5335357Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:58.5335571Z env:
+2026-10-30T19:50:58.5335827Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:58.5336226Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:58.5336529Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:58.5336701Z ##[endgroup]
+2026-10-30T19:50:58.6866115Z TAP version 13
+2026-10-30T19:50:58.7552925Z # Subtest: Demo catalogue copies the actual native Coin price, fixed23 odds and thresholds
+2026-10-30T19:50:58.7579703Z ok 1 - Demo catalogue copies the actual native Coin price, fixed23 odds and thresholds
+2026-10-30T19:50:58.7603498Z   ---
+2026-10-30T19:50:58.7616067Z   duration_ms: 2.19951
+2026-10-30T19:50:58.7616906Z   type: 'test'
+2026-10-30T19:50:58.7617577Z   ...
+2026-10-30T19:50:58.7618458Z # Subtest: Every one of10000 uniform rolls matches its exact published probability
+2026-10-30T19:50:58.7619407Z ok 2 - Every one of10000 uniform rolls matches its exact published probability
+2026-10-30T19:50:58.7620153Z   ---
+2026-10-30T19:50:58.7620629Z   duration_ms: 11.402889
+2026-10-30T19:50:58.7621112Z   type: 'test'
+2026-10-30T19:50:58.7621575Z   ...
+2026-10-30T19:50:58.7622171Z # Subtest: Free elemental taps never spend Charge, Coins or exit credit
+2026-10-30T19:50:58.7622902Z ok 3 - Free elemental taps never spend Charge, Coins or exit credit
+2026-10-30T19:50:58.7623503Z   ---
+2026-10-30T19:50:58.7623899Z   duration_ms: 0.301741
+2026-10-30T19:50:58.7624427Z   type: 'test'
+2026-10-30T19:50:58.7624850Z   ...
+2026-10-30T19:50:58.7625294Z # Subtest: Blocked exits restart the clean chain without losing existing currency
+2026-10-30T19:50:58.7625846Z ok 4 - Blocked exits restart the clean chain without losing existing currency
+2026-10-30T19:50:58.7626355Z   ---
+2026-10-30T19:50:58.7626768Z   duration_ms: 0.137285
+2026-10-30T19:50:58.7627186Z   type: 'test'
+2026-10-30T19:50:58.7627546Z   ...
+2026-10-30T19:50:58.7628319Z # Subtest: Three distinct manual exits earn exactly one free Focus; Guide cost stays separate
+2026-10-30T19:50:58.7629253Z ok 5 - Three distinct manual exits earn exactly one free Focus; Guide cost stays separate
+2026-10-30T19:50:58.7630024Z   ---
+2026-10-30T19:50:58.7630299Z   duration_ms: 0.373789
+2026-10-30T19:50:58.7630575Z   type: 'test'
+2026-10-30T19:50:58.7630824Z   ...
+2026-10-30T19:50:58.7631225Z # Subtest: Demo board remains solvable and only one first-clear reward is issued
+2026-10-30T19:50:58.7631848Z ok 6 - Demo board remains solvable and only one first-clear reward is issued
+2026-10-30T19:50:58.7632253Z   ---
+2026-10-30T19:50:58.7632460Z   duration_ms: 0.411225
+2026-10-30T19:50:58.7632722Z   type: 'test'
+2026-10-30T19:50:58.7632946Z   ...
+2026-10-30T19:50:58.7633308Z # Subtest: Targeted copy opens actual form milestone and cannot be claimed twice
+2026-10-30T19:50:58.7633906Z ok 7 - Targeted copy opens actual form milestone and cannot be claimed twice
+2026-10-30T19:50:58.7634329Z   ---
+2026-10-30T19:50:58.7634561Z   duration_ms: 0.319869
+2026-10-30T19:50:58.7634817Z   type: 'test'
+2026-10-30T19:50:58.7635024Z   ...
+2026-10-30T19:50:58.7635455Z # Subtest: Random arrival debits exact Coins and duplicates add a copy plus exact compensation
+2026-10-30T19:50:58.7636316Z ok 8 - Random arrival debits exact Coins and duplicates add a copy plus exact compensation
+2026-10-30T19:50:58.7636842Z   ---
+2026-10-30T19:50:58.7637075Z   duration_ms: 0.216614
+2026-10-30T19:50:58.7637329Z   type: 'test'
+2026-10-30T19:50:58.7637552Z   ...
+2026-10-30T19:50:58.7638634Z # Subtest: New arrivals do not receive duplicate compensation; Gold and player XP are untouched
+2026-10-30T19:50:58.7639407Z ok 9 - New arrivals do not receive duplicate compensation; Gold and player XP are untouched
+2026-10-30T19:50:58.7639919Z   ---
+2026-10-30T19:50:58.7640150Z   duration_ms: 0.382041
+2026-10-30T19:50:58.7640412Z   type: 'test'
+2026-10-30T19:50:58.7640638Z   ...
+2026-10-30T19:50:58.7641069Z # Subtest: Reset constructs independent memory and does not persist or send account state
+2026-10-30T19:50:58.7642035Z ok 10 - Reset constructs independent memory and does not persist or send account state
+2026-10-30T19:50:58.7642573Z   ---
+2026-10-30T19:50:58.7642798Z   duration_ms: 1.248086
+2026-10-30T19:50:58.7643060Z   type: 'test'
+2026-10-30T19:50:58.7643287Z   ...
+2026-10-30T19:50:58.7643711Z # Subtest: Interactive curve matches outputs run through the exact native Java class
+2026-10-30T19:50:58.7644396Z ok 11 - Interactive curve matches outputs run through the exact native Java class
+2026-10-30T19:50:58.7644878Z   ---
+2026-10-30T19:50:58.7645119Z   duration_ms: 1.925705
+2026-10-30T19:50:58.7645384Z   type: 'test'
+2026-10-30T19:50:58.7645611Z   ...
+2026-10-30T19:50:58.7646010Z # Subtest: Level slider terms are monotone, bounded and independent of demo balances
+2026-10-30T19:50:58.7646664Z ok 12 - Level slider terms are monotone, bounded and independent of demo balances
+2026-10-30T19:50:58.7647133Z   ---
+2026-10-30T19:50:58.7647354Z   duration_ms: 2.825606
+2026-10-30T19:50:58.7647695Z   type: 'test'
+2026-10-30T19:50:58.7647937Z   ...
+2026-10-30T19:50:58.7698785Z # Subtest: French default exposes only French and exact current title
+2026-10-30T19:50:58.7699435Z ok 13 - French default exposes only French and exact current title
+2026-10-30T19:50:58.7699942Z   ---
+2026-10-30T19:50:58.7700194Z   duration_ms: 4.456245
+2026-10-30T19:50:58.7700534Z   type: 'test'
+2026-10-30T19:50:58.7700834Z   ...
+2026-10-30T19:50:58.7701273Z # Subtest: English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.7702015Z ok 14 - English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.7702623Z   ---
+2026-10-30T19:50:58.7703106Z   duration_ms: 1.110731
+2026-10-30T19:50:58.7703498Z   type: 'test'
+2026-10-30T19:50:58.7703808Z   ...
+2026-10-30T19:50:58.7704342Z # Subtest: Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.7719242Z ok 15 - Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.7720202Z   ---
+2026-10-30T19:50:58.7720571Z   duration_ms: 1.11036
+2026-10-30T19:50:58.7720926Z   type: 'test'
+2026-10-30T19:50:58.7721273Z   ...
+2026-10-30T19:50:58.7721787Z # Subtest: Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.7722670Z ok 16 - Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.7723242Z   ---
+2026-10-30T19:50:58.7723574Z   duration_ms: 1.427545
+2026-10-30T19:50:58.7723909Z   type: 'test'
+2026-10-30T19:50:58.7724231Z   ...
+2026-10-30T19:50:58.7724631Z # Subtest: Legal page does not inherit the product-page title
+2026-10-30T19:50:58.7725235Z ok 17 - Legal page does not inherit the product-page title
+2026-10-30T19:50:58.7725821Z   ---
+2026-10-30T19:50:58.7726227Z   duration_ms: 1.048058
+2026-10-30T19:50:58.7726586Z   type: 'test'
+2026-10-30T19:50:58.7726925Z   ...
+2026-10-30T19:50:58.7727400Z # Subtest: Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.7728229Z ok 18 - Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.7728740Z   ---
+2026-10-30T19:50:58.7729085Z   duration_ms: 0.937312
+2026-10-30T19:50:58.7729424Z   type: 'test'
+2026-10-30T19:50:58.7729771Z   ...
+2026-10-30T19:50:58.7730134Z # Subtest: Existing qualification control is preserved
+2026-10-30T19:50:58.7730689Z ok 19 - Existing qualification control is preserved
+2026-10-30T19:50:58.7731112Z   ---
+2026-10-30T19:50:58.7731799Z   duration_ms: 2.512227
+2026-10-30T19:50:58.7732145Z   type: 'test'
+2026-10-30T19:50:58.7732477Z   ...
+2026-10-30T19:50:58.7732902Z # Subtest: Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.7733558Z ok 20 - Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.7734048Z   ---
+2026-10-30T19:50:58.7734389Z   duration_ms: 0.967246
+2026-10-30T19:50:58.7734714Z   type: 'test'
+2026-10-30T19:50:58.7735060Z   ...
+2026-10-30T19:50:58.7829448Z # Subtest: French default exposes only French and exact current title
+2026-10-30T19:50:58.7845861Z ok 21 - French default exposes only French and exact current title
+2026-10-30T19:50:58.7846587Z   ---
+2026-10-30T19:50:58.7846949Z   duration_ms: 4.683634
+2026-10-30T19:50:58.7847303Z   type: 'test'
+2026-10-30T19:50:58.7847633Z   ...
+2026-10-30T19:50:58.7848264Z # Subtest: English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.7849024Z ok 22 - English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.7849634Z   ---
+2026-10-30T19:50:58.7849941Z   duration_ms: 1.529998
+2026-10-30T19:50:58.7850298Z   type: 'test'
+2026-10-30T19:50:58.7850623Z   ...
+2026-10-30T19:50:58.7851199Z # Subtest: Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.7852074Z ok 23 - Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.7852612Z   ---
+2026-10-30T19:50:58.7852907Z   duration_ms: 1.456619
+2026-10-30T19:50:58.7853238Z   type: 'test'
+2026-10-30T19:50:58.7853532Z   ...
+2026-10-30T19:50:58.7854027Z # Subtest: Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.7854874Z ok 24 - Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.7855456Z   ---
+2026-10-30T19:50:58.7855762Z   duration_ms: 1.502557
+2026-10-30T19:50:58.7856109Z   type: 'test'
+2026-10-30T19:50:58.7856406Z   ...
+2026-10-30T19:50:58.7856785Z # Subtest: Legal page does not inherit the product-page title
+2026-10-30T19:50:58.7857348Z ok 25 - Legal page does not inherit the product-page title
+2026-10-30T19:50:58.7857779Z   ---
+2026-10-30T19:50:58.7858212Z   duration_ms: 2.068268
+2026-10-30T19:50:58.7858588Z   type: 'test'
+2026-10-30T19:50:58.7858897Z   ...
+2026-10-30T19:50:58.7859358Z # Subtest: Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.7860067Z ok 26 - Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.7860625Z   ---
+2026-10-30T19:50:58.7860932Z   duration_ms: 3.843287
+2026-10-30T19:50:58.7861279Z   type: 'test'
+2026-10-30T19:50:58.7861595Z   ...
+2026-10-30T19:50:58.7861975Z # Subtest: Existing qualification control is preserved
+2026-10-30T19:50:58.7862502Z ok 27 - Existing qualification control is preserved
+2026-10-30T19:50:58.7862942Z   ---
+2026-10-30T19:50:58.7863247Z   duration_ms: 3.035059
+2026-10-30T19:50:58.7863601Z   type: 'test'
+2026-10-30T19:50:58.7863921Z   ...
+2026-10-30T19:50:58.7864371Z # Subtest: Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.7865041Z ok 28 - Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.7865549Z   ---
+2026-10-30T19:50:58.7865857Z   duration_ms: 1.317179
+2026-10-30T19:50:58.7866205Z   type: 'test'
+2026-10-30T19:50:58.7866524Z   ...
+2026-10-30T19:50:58.7867016Z # Subtest: A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.7867788Z ok 29 - A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.7868523Z   ---
+2026-10-30T19:50:58.7868838Z   duration_ms: 1.344331
+2026-10-30T19:50:58.7869245Z   type: 'test'
+2026-10-30T19:50:58.7869555Z   ...
+2026-10-30T19:50:58.7870014Z # Subtest: Staged product has four accessible manually started audio sources
+2026-10-30T19:50:58.7870708Z ok 30 - Staged product has four accessible manually started audio sources
+2026-10-30T19:50:58.7871226Z   ---
+2026-10-30T19:50:58.7871823Z   duration_ms: 0.987297
+2026-10-30T19:50:58.7872182Z   type: 'test'
+2026-10-30T19:50:58.7872512Z   ...
+2026-10-30T19:50:58.8700511Z # Subtest: Historical 1.18 markup stays pinned to its recorded release instead of following the current homepage
+2026-10-30T19:50:58.8701841Z ok 31 - Historical 1.18 markup stays pinned to its recorded release instead of following the current homepage
+2026-10-30T19:50:58.8702718Z   ---
+2026-10-30T19:50:58.8703194Z   duration_ms: 1.928995
+2026-10-30T19:50:58.8703639Z   type: 'test'
+2026-10-30T19:50:58.8704479Z   ...
+2026-10-30T19:50:58.8704972Z # Subtest: French default exposes only French and exact current title
+2026-10-30T19:50:58.8705928Z ok 32 - French default exposes only French and exact current title
+2026-10-30T19:50:58.8706696Z   ---
+2026-10-30T19:50:58.8706917Z   duration_ms: 3.003452
+2026-10-30T19:50:58.8707161Z   type: 'test'
+2026-10-30T19:50:58.8707392Z   ...
+2026-10-30T19:50:58.8708513Z # Subtest: English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.8710647Z ok 33 - English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.8711298Z   ---
+2026-10-30T19:50:58.8711509Z   duration_ms: 2.384376
+2026-10-30T19:50:58.8711754Z   type: 'test'
+2026-10-30T19:50:58.8711974Z   ...
+2026-10-30T19:50:58.8713841Z # Subtest: Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.8715606Z ok 34 - Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.8716167Z   ---
+2026-10-30T19:50:58.8726163Z   duration_ms: 1.46483
+2026-10-30T19:50:58.8726564Z   type: 'test'
+2026-10-30T19:50:58.8726816Z   ...
+2026-10-30T19:50:58.8727313Z # Subtest: Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.8728295Z ok 35 - Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.8728872Z   ---
+2026-10-30T19:50:58.8729088Z   duration_ms: 1.225412
+2026-10-30T19:50:58.8729379Z   type: 'test'
+2026-10-30T19:50:58.8729608Z   ...
+2026-10-30T19:50:58.8748848Z # Subtest: Legal page does not inherit the product-page title
+2026-10-30T19:50:58.8749494Z ok 36 - Legal page does not inherit the product-page title
+2026-10-30T19:50:58.8750060Z   ---
+2026-10-30T19:50:58.8750431Z   duration_ms: 1.220385
+2026-10-30T19:50:58.8750847Z   type: 'test'
+2026-10-30T19:50:58.8751267Z   ...
+2026-10-30T19:50:58.8751842Z # Subtest: Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.8752656Z ok 37 - Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.8753278Z   ---
+2026-10-30T19:50:58.8753644Z   duration_ms: 1.130671
+2026-10-30T19:50:58.8754049Z   type: 'test'
+2026-10-30T19:50:58.8754412Z   ...
+2026-10-30T19:50:58.8754851Z # Subtest: Existing qualification control is preserved
+2026-10-30T19:50:58.8755467Z ok 38 - Existing qualification control is preserved
+2026-10-30T19:50:58.8755973Z   ---
+2026-10-30T19:50:58.8756346Z   duration_ms: 2.065058
+2026-10-30T19:50:58.8756723Z   type: 'test'
+2026-10-30T19:50:58.8757078Z   ...
+2026-10-30T19:50:58.8789770Z # Subtest: Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.8794983Z ok 39 - Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.8805147Z   ---
+2026-10-30T19:50:58.8805534Z   duration_ms: 1.380554
+2026-10-30T19:50:58.8805817Z   type: 'test'
+2026-10-30T19:50:58.8806083Z   ...
+2026-10-30T19:50:58.8806515Z # Subtest: A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.8807231Z ok 40 - A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.8807701Z   ---
+2026-10-30T19:50:58.8807931Z   duration_ms: 1.428386
+2026-10-30T19:50:58.8808327Z   type: 'test'
+2026-10-30T19:50:58.8808590Z   ...
+2026-10-30T19:50:58.8808969Z # Subtest: Staged product has four accessible manually started audio sources
+2026-10-30T19:50:58.8809943Z ok 41 - Staged product has four accessible manually started audio sources
+2026-10-30T19:50:58.8810377Z   ---
+2026-10-30T19:50:58.8810586Z   duration_ms: 0.888479
+2026-10-30T19:50:58.8810839Z   type: 'test'
+2026-10-30T19:50:58.8810989Z   ...
+2026-10-30T19:50:58.8811253Z # Subtest: Gallery does not download artwork or metadata before a deliberate choice
+2026-10-30T19:50:58.8811661Z ok 42 - Gallery does not download artwork or metadata before a deliberate choice
+2026-10-30T19:50:58.8811949Z   ---
+2026-10-30T19:50:58.8812112Z   duration_ms: 1.440064
+2026-10-30T19:50:58.8812454Z   type: 'test'
+2026-10-30T19:50:58.8812608Z   ...
+2026-10-30T19:50:58.8812930Z # Subtest: Roster exposes exactly37 identities, four form metadata paths each and no initial image URLs
+2026-10-30T19:50:58.8813435Z ok 43 - Roster exposes exactly37 identities, four form metadata paths each and no initial image URLs
+2026-10-30T19:50:58.8813772Z   ---
+2026-10-30T19:50:58.8813926Z   duration_ms: 2.524916
+2026-10-30T19:50:58.8814102Z   type: 'test'
+2026-10-30T19:50:58.8814260Z   ...
+2026-10-30T19:50:58.8814549Z # Subtest: Image cache deduplicates concurrent requests, bounds references and permits retry
+2026-10-30T19:50:58.8815013Z ok 44 - Image cache deduplicates concurrent requests, bounds references and permits retry
+2026-10-30T19:50:58.8815326Z   ---
+2026-10-30T19:50:58.8815471Z   duration_ms: 0.419578
+2026-10-30T19:50:58.8815643Z   type: 'test'
+2026-10-30T19:50:58.8815803Z   ...
+2026-10-30T19:50:58.8816056Z # Subtest: SourceClip is applied before the original source rectangle is drawn
+2026-10-30T19:50:58.8816445Z ok 45 - SourceClip is applied before the original source rectangle is drawn
+2026-10-30T19:50:58.8816729Z   ---
+2026-10-30T19:50:58.8816887Z   duration_ms: 1.505081
+2026-10-30T19:50:58.8817072Z   type: 'test'
+2026-10-30T19:50:58.8817225Z   ...
+2026-10-30T19:50:58.8817526Z # Subtest: Every local gallery frame preserves the exact source domain and contains no garment rewrite
+2026-10-30T19:50:58.8818226Z ok 46 - Every local gallery frame preserves the exact source domain and contains no garment rewrite
+2026-10-30T19:50:58.8818760Z   ---
+2026-10-30T19:50:58.8818979Z   duration_ms: 35.210939
+2026-10-30T19:50:58.8819207Z   type: 'test'
+2026-10-30T19:50:58.8819362Z   ...
+2026-10-30T19:50:58.8869323Z # Subtest: French default exposes only French and exact current title
+2026-10-30T19:50:58.8869909Z ok 47 - French default exposes only French and exact current title
+2026-10-30T19:50:58.8870315Z   ---
+2026-10-30T19:50:58.8870541Z   duration_ms: 3.814455
+2026-10-30T19:50:58.8870798Z   type: 'test'
+2026-10-30T19:50:58.8871030Z   ...
+2026-10-30T19:50:58.8871416Z # Subtest: English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.8872060Z ok 48 - English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.8872505Z   ---
+2026-10-30T19:50:58.8872727Z   duration_ms: 1.528776
+2026-10-30T19:50:58.8872983Z   type: 'test'
+2026-10-30T19:50:58.8873212Z   ...
+2026-10-30T19:50:58.8873647Z # Subtest: Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.8874350Z ok 49 - Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.8874841Z   ---
+2026-10-30T19:50:58.8875095Z   duration_ms: 1.587935
+2026-10-30T19:50:58.8875354Z   type: 'test'
+2026-10-30T19:50:58.8875580Z   ...
+2026-10-30T19:50:58.8876012Z # Subtest: Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.8876721Z ok 50 - Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.8877214Z   ---
+2026-10-30T19:50:58.8877438Z   duration_ms: 2.948009
+2026-10-30T19:50:58.8877692Z   type: 'test'
+2026-10-30T19:50:58.8877927Z   ...
+2026-10-30T19:50:58.8878369Z # Subtest: Legal page does not inherit the product-page title
+2026-10-30T19:50:58.8878856Z ok 51 - Legal page does not inherit the product-page title
+2026-10-30T19:50:58.8879217Z   ---
+2026-10-30T19:50:58.8879432Z   duration_ms: 1.236639
+2026-10-30T19:50:58.8879948Z   type: 'test'
+2026-10-30T19:50:58.8880172Z   ...
+2026-10-30T19:50:58.8880562Z # Subtest: Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.8881160Z ok 52 - Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.8881588Z   ---
+2026-10-30T19:50:58.8881809Z   duration_ms: 1.264781
+2026-10-30T19:50:58.8882038Z   type: 'test'
+2026-10-30T19:50:58.8882187Z   ...
+2026-10-30T19:50:58.8882448Z # Subtest: Existing qualification control is preserved
+2026-10-30T19:50:58.8918631Z ok 53 - Existing qualification control is preserved
+2026-10-30T19:50:58.8938967Z   ---
+2026-10-30T19:50:58.8939418Z   duration_ms: 2.137026
+2026-10-30T19:50:58.8939861Z   type: 'test'
+2026-10-30T19:50:58.8940246Z   ...
+2026-10-30T19:50:58.8940773Z # Subtest: Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.8941494Z ok 54 - Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.8942065Z   ---
+2026-10-30T19:50:58.8942460Z   duration_ms: 1.18991
+2026-10-30T19:50:58.8942864Z   type: 'test'
+2026-10-30T19:50:58.8943255Z   ...
+2026-10-30T19:50:58.8943800Z # Subtest: A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.8944571Z ok 55 - A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.8945205Z   ---
+2026-10-30T19:50:58.8945582Z   duration_ms: 2.60115
+2026-10-30T19:50:58.8945997Z   type: 'test'
+2026-10-30T19:50:58.8946372Z   ...
+2026-10-30T19:50:58.8947044Z # Subtest: Historical 1.19 homepage selects the 1.19 runtime and every advertised navigation destination exists
+2026-10-30T19:50:58.8948227Z ok 56 - Historical 1.19 homepage selects the 1.19 runtime and every advertised navigation destination exists
+2026-10-30T19:50:58.8948949Z   ---
+2026-10-30T19:50:58.8949306Z   duration_ms: 1.447875
+2026-10-30T19:50:58.8949712Z   type: 'test'
+2026-10-30T19:50:58.8950078Z   ...
+2026-10-30T19:50:58.8950690Z # Subtest: Historical 1.19 native screenshots switch as exactly three paired 1.19 FR/EN views
+2026-10-30T19:50:58.8951578Z ok 57 - Historical 1.19 native screenshots switch as exactly three paired 1.19 FR/EN views
+2026-10-30T19:50:58.8952241Z   ---
+2026-10-30T19:50:58.8952606Z   duration_ms: 0.691545
+2026-10-30T19:50:58.8953004Z   type: 'test'
+2026-10-30T19:50:58.8953359Z   ...
+2026-10-30T19:50:58.8954062Z # Subtest: Historical 1.19 squad copy explains once-only energy, two-role combo and local save limits in both languages
+2026-10-30T19:50:58.8955168Z ok 58 - Historical 1.19 squad copy explains once-only energy, two-role combo and local save limits in both languages
+2026-10-30T19:50:58.8955937Z   ---
+2026-10-30T19:50:58.8956296Z   duration_ms: 0.369242
+2026-10-30T19:50:58.8956694Z   type: 'test'
+2026-10-30T19:50:58.8957052Z   ...
+2026-10-30T19:50:58.8957623Z # Subtest: Historical 1.19 signed APK is primary and provider availability remains explicit
+2026-10-30T19:50:58.8958696Z ok 59 - Historical 1.19 signed APK is primary and provider availability remains explicit
+2026-10-30T19:50:58.8959352Z   ---
+2026-10-30T19:50:58.8959726Z   duration_ms: 1.97275
+2026-10-30T19:50:58.8960116Z   type: 'test'
+2026-10-30T19:50:58.8960470Z   ...
+2026-10-30T19:50:58.8961133Z # Subtest: Historical 1.19 homepage retains four manually started audio previews and a deliberate gallery load
+2026-10-30T19:50:58.8962129Z ok 60 - Historical 1.19 homepage retains four manually started audio previews and a deliberate gallery load
+2026-10-30T19:50:58.8962808Z   ---
+2026-10-30T19:50:58.8963156Z   duration_ms: 0.623192
+2026-10-30T19:50:58.8963554Z   type: 'test'
+2026-10-30T19:50:58.8963914Z   ...
+2026-10-30T19:50:58.8964444Z # Subtest: French default exposes only French and exact current title
+2026-10-30T19:50:58.8965230Z ok 61 - French default exposes only French and exact current title
+2026-10-30T19:50:58.8965784Z   ---
+2026-10-30T19:50:58.8966148Z   duration_ms: 3.987584
+2026-10-30T19:50:58.8966546Z   type: 'test'
+2026-10-30T19:50:58.8966901Z   ...
+2026-10-30T19:50:58.8968207Z # Subtest: English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.8969287Z ok 62 - English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.8969905Z   ---
+2026-10-30T19:50:58.8970277Z   duration_ms: 1.213084
+2026-10-30T19:50:58.8970705Z   type: 'test'
+2026-10-30T19:50:58.8971068Z   ...
+2026-10-30T19:50:58.8971653Z # Subtest: Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.8972529Z ok 63 - Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.8973399Z   ---
+2026-10-30T19:50:58.8973788Z   duration_ms: 1.359473
+2026-10-30T19:50:58.8974194Z   type: 'test'
+2026-10-30T19:50:58.8974553Z   ...
+2026-10-30T19:50:58.8975120Z # Subtest: Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.8976005Z ok 64 - Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.8976642Z   ---
+2026-10-30T19:50:58.8977027Z   duration_ms: 1.040946
+2026-10-30T19:50:58.8977429Z   type: 'test'
+2026-10-30T19:50:58.8977801Z   ...
+2026-10-30T19:50:58.8978427Z # Subtest: Legal page does not inherit the product-page title
+2026-10-30T19:50:58.8979017Z ok 65 - Legal page does not inherit the product-page title
+2026-10-30T19:50:58.8979391Z   ---
+2026-10-30T19:50:58.8979654Z   duration_ms: 1.226535
+2026-10-30T19:50:58.8979940Z   type: 'test'
+2026-10-30T19:50:58.8980196Z   ...
+2026-10-30T19:50:58.8980558Z # Subtest: Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.8981075Z ok 66 - Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.8981472Z   ---
+2026-10-30T19:50:58.8981736Z   duration_ms: 1.77182
+2026-10-30T19:50:58.8982020Z   type: 'test'
+2026-10-30T19:50:58.8982333Z   ...
+2026-10-30T19:50:58.8982756Z # Subtest: Existing qualification control is preserved
+2026-10-30T19:50:58.8983275Z ok 67 - Existing qualification control is preserved
+2026-10-30T19:50:58.8983718Z   ---
+2026-10-30T19:50:58.8984014Z   duration_ms: 1.634675
+2026-10-30T19:50:58.8984296Z   type: 'test'
+2026-10-30T19:50:58.8984565Z   ...
+2026-10-30T19:50:58.8984911Z # Subtest: Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.8985379Z ok 68 - Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.8985757Z   ---
+2026-10-30T19:50:58.8986024Z   duration_ms: 1.021458
+2026-10-30T19:50:58.8986305Z   type: 'test'
+2026-10-30T19:50:58.8986576Z   ...
+2026-10-30T19:50:58.8986966Z # Subtest: A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.8987502Z ok 69 - A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.8987904Z   ---
+2026-10-30T19:50:58.8988379Z   duration_ms: 1.017742
+2026-10-30T19:50:58.8988680Z   type: 'test'
+2026-10-30T19:50:58.8988914Z   ...
+2026-10-30T19:50:58.9141540Z # Subtest: French default exposes only French and exact current title
+2026-10-30T19:50:58.9142246Z ok 70 - French default exposes only French and exact current title
+2026-10-30T19:50:58.9142606Z   ---
+2026-10-30T19:50:58.9142830Z   duration_ms: 5.763379
+2026-10-30T19:50:58.9143057Z   type: 'test'
+2026-10-30T19:50:58.9143360Z   ...
+2026-10-30T19:50:58.9145490Z # Subtest: English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.9146907Z ok 71 - English URL switches real source, alt, metadata and pressed language
+2026-10-30T19:50:58.9147283Z   ---
+2026-10-30T19:50:58.9147510Z   duration_ms: 1.646192
+2026-10-30T19:50:58.9147811Z   type: 'test'
+2026-10-30T19:50:58.9148210Z   ...
+2026-10-30T19:50:58.9150332Z # Subtest: Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.9151072Z ok 72 - Switching back keeps unrelated route state and removes only language parameter
+2026-10-30T19:50:58.9151512Z   ---
+2026-10-30T19:50:58.9151759Z   duration_ms: 1.239654
+2026-10-30T19:50:58.9152392Z   type: 'test'
+2026-10-30T19:50:58.9153481Z   ...
+2026-10-30T19:50:58.9154342Z # Subtest: Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.9158865Z ok 73 - Same-origin APK download and GitHub addresses never acquire a language parameter
+2026-10-30T19:50:58.9159189Z   ---
+2026-10-30T19:50:58.9159427Z   duration_ms: 1.033656
+2026-10-30T19:50:58.9159682Z   type: 'test'
+2026-10-30T19:50:58.9159872Z   ...
+2026-10-30T19:50:58.9160394Z # Subtest: Legal page does not inherit the product-page title
+2026-10-30T19:50:58.9161010Z ok 74 - Legal page does not inherit the product-page title
+2026-10-30T19:50:58.9161665Z   ---
+2026-10-30T19:50:58.9161934Z   duration_ms: 1.022169
+2026-10-30T19:50:58.9162223Z   type: 'test'
+2026-10-30T19:50:58.9162464Z   ...
+2026-10-30T19:50:58.9162840Z # Subtest: Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.9163486Z ok 75 - Exact support plus-tag is an encoded mailto and remains a text node
+2026-10-30T19:50:58.9163998Z   ---
+2026-10-30T19:50:58.9164269Z   duration_ms: 0.930111
+2026-10-30T19:50:58.9164638Z   type: 'test'
+2026-10-30T19:50:58.9164876Z   ...
+2026-10-30T19:50:58.9177219Z # Subtest: Existing qualification control is preserved
+2026-10-30T19:50:58.9177656Z ok 76 - Existing qualification control is preserved
+2026-10-30T19:50:58.9178200Z   ---
+2026-10-30T19:50:58.9178364Z   duration_ms: 2.46015
+2026-10-30T19:50:58.9178552Z   type: 'test'
+2026-10-30T19:50:58.9179007Z   ...
+2026-10-30T19:50:58.9179258Z # Subtest: Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.9179722Z ok 77 - Unsupported requested language keeps the French site default
+2026-10-30T19:50:58.9180108Z   ---
+2026-10-30T19:50:58.9180345Z   duration_ms: 0.943131
+2026-10-30T19:50:58.9180609Z   type: 'test'
+2026-10-30T19:50:58.9182423Z   ...
+2026-10-30T19:50:58.9182686Z # Subtest: A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.9183712Z ok 78 - A deliberate preview stops another preview without autoplaying anything
+2026-10-30T19:50:58.9184181Z   ---
+2026-10-30T19:50:58.9184433Z   duration_ms: 0.990721
+2026-10-30T19:50:58.9184692Z   type: 'test'
+2026-10-30T19:50:58.9184910Z   ...
+2026-10-30T19:50:58.9268795Z 1..78
+2026-10-30T19:50:58.9269039Z # tests 78
+2026-10-30T19:50:58.9269229Z # suites 0
+2026-10-30T19:50:58.9269444Z # pass 78
+2026-10-30T19:50:58.9269639Z # fail 0
+2026-10-30T19:50:58.9269812Z # cancelled 0
+2026-10-30T19:50:58.9270036Z # skipped 0
+2026-10-30T19:50:58.9270405Z # todo 0
+2026-10-30T19:50:58.9270696Z # duration_ms 263.228997
+2026-10-30T19:50:58.9359050Z ##[group]Run python3 scripts/check-site-v123.py --structure-only
+2026-10-30T19:50:58.9359473Z [36;1mpython3 scripts/check-site-v123.py --structure-only[0m
+2026-10-30T19:50:58.9359769Z [36;1mnode --check public/assets/site-v123.js[0m
+2026-10-30T19:50:58.9360054Z [36;1mnode --check public/lab/ui-1-22/simulation.mjs[0m
+2026-10-30T19:50:58.9360334Z [36;1mnode --test scripts/test-site-v123-runtime.mjs[0m
+2026-10-30T19:50:58.9360612Z [36;1mpython3 scripts/test-deploy-site-v123.py[0m
+2026-10-30T19:50:58.9360903Z [36;1mpython3 scripts/test-stage-site-v123-rest.py[0m
+2026-10-30T19:50:58.9361216Z [36;1mpython3 scripts/test-collect-site-v123-public-bytes.py[0m
+2026-10-30T19:50:58.9361518Z [36;1mpython3 scripts/test-deploy-site-v122.py[0m
+2026-10-30T19:50:58.9361788Z [36;1mpython3 scripts/test-stage-site-v122-rest.py[0m
+2026-10-30T19:50:58.9362084Z [36;1mpython3 scripts/test-collect-site-v122-public-bytes.py[0m
+2026-10-30T19:50:58.9402389Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:50:58.9402705Z env:
+2026-10-30T19:50:58.9402979Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:58.9403366Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:50:58.9403681Z   MAVEN_ARGS: -ntp
+2026-10-30T19:50:58.9403858Z ##[endgroup]
+2026-10-30T19:50:58.9867111Z {"passed": true, "checks": 92, "edition": "1.23", "structureOnly": true, "nativeEvidenceRequired": false, "networkRequested": false, "scope": "Source/link/provenance scope only. Browser and Hosting/public delivery are separate."}
+2026-10-30T19:50:59.0758973Z TAP version 13
+2026-10-30T19:50:59.6797857Z # Subtest: actual homepage fr: locale, every paired capture, exact download URLs
+2026-10-30T19:50:59.6801437Z ok 1 - actual homepage fr: locale, every paired capture, exact download URLs
+2026-10-30T19:50:59.6801965Z   ---
+2026-10-30T19:50:59.6802368Z   duration_ms: 26.841933
+2026-10-30T19:50:59.6802663Z   type: 'test'
+2026-10-30T19:50:59.6802934Z   ...
+2026-10-30T19:50:59.6806255Z # Subtest: actual homepage en: locale, every paired capture, exact download URLs
+2026-10-30T19:50:59.6808330Z ok 2 - actual homepage en: locale, every paired capture, exact download URLs
+2026-10-30T19:50:59.6808952Z   ---
+2026-10-30T19:50:59.6809189Z   duration_ms: 13.192329
+2026-10-30T19:50:59.6809460Z   type: 'test'
+2026-10-30T19:50:59.6809689Z   ...
+2026-10-30T19:50:59.6811482Z # Subtest: homepage language switch keeps binary identity and preserves selected route parameters
+2026-10-30T19:50:59.6819587Z ok 3 - homepage language switch keeps binary identity and preserves selected route parameters
+2026-10-30T19:50:59.6820077Z   ---
+2026-10-30T19:50:59.6820285Z   duration_ms: 29.129515
+2026-10-30T19:50:59.6820536Z   type: 'test'
+2026-10-30T19:50:59.6820740Z   ...
+2026-10-30T19:50:59.6822327Z # Subtest: demo fr: travel follows path, camera explores independently and recenter works
+2026-10-30T19:50:59.6822944Z ok 4 - demo fr: travel follows path, camera explores independently and recenter works
+2026-10-30T19:50:59.6823524Z   ---
+2026-10-30T19:50:59.6823754Z   duration_ms: 187.709425
+2026-10-30T19:50:59.6824023Z   type: 'test'
+2026-10-30T19:50:59.6824242Z   ...
+2026-10-30T19:50:59.6824643Z # Subtest: demo en: travel follows path, camera explores independently and recenter works
+2026-10-30T19:50:59.6825317Z ok 5 - demo en: travel follows path, camera explores independently and recenter works
+2026-10-30T19:50:59.6825786Z   ---
+2026-10-30T19:50:59.6826017Z   duration_ms: 166.656931
+2026-10-30T19:50:59.6826284Z   type: 'test'
+2026-10-30T19:50:59.6826495Z   ...
+2026-10-30T19:50:59.6826885Z # Subtest: demo fr: selecting a key only highlights; explicit use opens only its locks
+2026-10-30T19:50:59.6827514Z ok 6 - demo fr: selecting a key only highlights; explicit use opens only its locks
+2026-10-30T19:50:59.6828301Z   ---
+2026-10-30T19:50:59.6879111Z   duration_ms: 52.568819
+2026-10-30T19:50:59.6882486Z   type: 'test'
+2026-10-30T19:50:59.6882899Z   ...
+2026-10-30T19:50:59.6883842Z # Subtest: demo en: selecting a key only highlights; explicit use opens only its locks
+2026-10-30T19:50:59.6884438Z ok 7 - demo en: selecting a key only highlights; explicit use opens only its locks
+2026-10-30T19:50:59.6884857Z   ---
+2026-10-30T19:50:59.6885124Z   duration_ms: 51.701662
+2026-10-30T19:50:59.6885410Z   type: 'test'
+2026-10-30T19:50:59.6885665Z   ...
+2026-10-30T19:50:59.6886052Z # Subtest: English demo has translated navigation labels and a language-bound return link
+2026-10-30T19:50:59.6886858Z ok 8 - English demo has translated navigation labels and a language-bound return link
+2026-10-30T19:50:59.6887552Z   ---
+2026-10-30T19:50:59.6887926Z   duration_ms: 9.957212
+2026-10-30T19:50:59.6888425Z   type: 'test'
+2026-10-30T19:50:59.6888658Z   ...
+2026-10-30T19:50:59.6889057Z # Subtest: reduced motion and narrow viewport retain the same final mechanical state
+2026-10-30T19:50:59.6889589Z ok 9 - reduced motion and narrow viewport retain the same final mechanical state
+2026-10-30T19:50:59.6889897Z   ---
+2026-10-30T19:50:59.6890081Z   duration_ms: 29.951213
+2026-10-30T19:50:59.6890266Z   type: 'test'
+2026-10-30T19:50:59.6890421Z   ...
+2026-10-30T19:50:59.7024040Z 1..9
+2026-10-30T19:50:59.7024306Z # tests 9
+2026-10-30T19:50:59.7024475Z # suites 0
+2026-10-30T19:50:59.7024701Z # pass 9
+2026-10-30T19:50:59.7024884Z # fail 0
+2026-10-30T19:50:59.7025094Z # cancelled 0
+2026-10-30T19:50:59.7025330Z # skipped 0
+2026-10-30T19:50:59.7025621Z # todo 0
+2026-10-30T19:50:59.7026147Z # duration_ms 635.916871
+2026-10-30T19:51:00.3422224Z ..................
+2026-10-30T19:51:00.3422601Z ----------------------------------------------------------------------
+2026-10-30T19:51:00.3422914Z Ran 18 tests in 0.533s
+2026-10-30T19:51:00.3423043Z 
+2026-10-30T19:51:00.3423113Z OK
+2026-10-30T19:51:01.9281834Z ..........
+2026-10-30T19:51:01.9282182Z ----------------------------------------------------------------------
+2026-10-30T19:51:01.9282497Z Ran 10 tests in 1.490s
+2026-10-30T19:51:01.9282630Z 
+2026-10-30T19:51:01.9282696Z OK
+2026-10-30T19:51:02.0625585Z .........
+2026-10-30T19:51:02.0625920Z ----------------------------------------------------------------------
+2026-10-30T19:51:02.0626226Z Ran 9 tests in 0.050s
+2026-10-30T19:51:02.0626347Z 
+2026-10-30T19:51:02.0626420Z OK
+2026-10-30T19:51:02.4177265Z ............
+2026-10-30T19:51:02.4177859Z ----------------------------------------------------------------------
+2026-10-30T19:51:02.4178622Z Ran 12 tests in 0.260s
+2026-10-30T19:51:02.4178781Z 
+2026-10-30T19:51:02.4178873Z OK
+2026-10-30T19:51:03.5244510Z ........
+2026-10-30T19:51:03.5244958Z ----------------------------------------------------------------------
+2026-10-30T19:51:03.5245409Z Ran 8 tests in 1.012s
+2026-10-30T19:51:03.5245586Z 
+2026-10-30T19:51:03.5245691Z OK
+2026-10-30T19:51:03.6773577Z .........
+2026-10-30T19:51:03.6774096Z ----------------------------------------------------------------------
+2026-10-30T19:51:03.6774558Z Ran 9 tests in 0.064s
+2026-10-30T19:51:03.6774727Z 
+2026-10-30T19:51:03.6774840Z OK
+2026-10-30T19:51:03.6957307Z ##[group]Run python3 scripts/test-apk-byte-delta.py
+2026-10-30T19:51:03.6957648Z [36;1mpython3 scripts/test-apk-byte-delta.py[0m
+2026-10-30T19:51:03.6996732Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:03.6996934Z env:
+2026-10-30T19:51:03.6997178Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:03.6997563Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:03.6997861Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:03.6998195Z ##[endgroup]
+2026-10-30T19:51:03.7874565Z test_bad_copy_hash_keeps_existing_output (__main__.ExactApkDeltaTest.test_bad_copy_hash_keeps_existing_output) ... ok
+2026-10-30T19:51:03.7979227Z test_bad_literal_hash_keeps_existing_output (__main__.ExactApkDeltaTest.test_bad_literal_hash_keeps_existing_output) ... ok
+2026-10-30T19:51:03.8169664Z test_build_is_deterministic (__main__.ExactApkDeltaTest.test_build_is_deterministic) ... ok
+2026-10-30T19:51:03.8287147Z test_compressed_file_bound_is_enforced (__main__.ExactApkDeltaTest.test_compressed_file_bound_is_enforced) ... ok
+2026-10-30T19:51:03.8412105Z test_copy_outside_base_refuses (__main__.ExactApkDeltaTest.test_copy_outside_base_refuses) ... ok
+2026-10-30T19:51:03.8547868Z test_corrupt_base64_refuses (__main__.ExactApkDeltaTest.test_corrupt_base64_refuses) ... ok
+2026-10-30T19:51:03.8668861Z test_duplicate_json_keys_refuse (__main__.ExactApkDeltaTest.test_duplicate_json_keys_refuse) ... ok
+2026-10-30T19:51:03.8789612Z test_existing_output_requires_explicit_replace (__main__.ExactApkDeltaTest.test_existing_output_requires_explicit_replace) ... ok
+2026-10-30T19:51:03.8909941Z test_expanded_gzip_bound_is_enforced (__main__.ExactApkDeltaTest.test_expanded_gzip_bound_is_enforced) ... ok
+2026-10-30T19:51:03.9033115Z test_false_statistics_refuse (__main__.ExactApkDeltaTest.test_false_statistics_refuse) ... ok
+2026-10-30T19:51:03.9191886Z test_full_target_hash_checked_after_individually_valid_operations (__main__.ExactApkDeltaTest.test_full_target_hash_checked_after_individually_valid_operations) ... ok
+2026-10-30T19:51:03.9354886Z test_hash_equality_alone_cannot_authorize_copy (__main__.ExactApkDeltaTest.test_hash_equality_alone_cannot_authorize_copy) ... ok
+2026-10-30T19:51:03.9482084Z test_input_alias_and_symlink_outputs_refuse (__main__.ExactApkDeltaTest.test_input_alias_and_symlink_outputs_refuse) ... ok
+2026-10-30T19:51:03.9622183Z test_report_cannot_clobber_an_artifact (__main__.ExactApkDeltaTest.test_report_cannot_clobber_an_artifact) ... ok
+2026-10-30T19:51:03.9827830Z test_round_trip_preserves_full_bytes_offsets_headers_and_tail (__main__.ExactApkDeltaTest.test_round_trip_preserves_full_bytes_offsets_headers_and_tail) ... ok
+2026-10-30T19:51:03.9971964Z test_wrong_base_refuses_before_publication (__main__.ExactApkDeltaTest.test_wrong_base_refuses_before_publication) ... ok
+2026-10-30T19:51:04.0092766Z test_wrong_external_target_hash_refuses (__main__.ExactApkDeltaTest.test_wrong_external_target_hash_refuses) ... ok
+2026-10-30T19:51:04.0209562Z test_wrong_patch_hash_refuses (__main__.ExactApkDeltaTest.test_wrong_patch_hash_refuses) ... ok
+2026-10-30T19:51:04.0210342Z 
+2026-10-30T19:51:04.0210544Z ----------------------------------------------------------------------
+2026-10-30T19:51:04.0210960Z Ran 18 tests in 0.248s
+2026-10-30T19:51:04.0211132Z 
+2026-10-30T19:51:04.0211228Z OK
+2026-10-30T19:51:04.0373653Z ##[group]Run bash scripts/test-expedition-v118-model.sh "$RUNNER_TEMP/luma-puzzle-contracts/expedition-model.json"
+2026-10-30T19:51:04.0374311Z [36;1mbash scripts/test-expedition-v118-model.sh "$RUNNER_TEMP/luma-puzzle-contracts/expedition-model.json"[0m
+2026-10-30T19:51:04.0374867Z [36;1mbash scripts/test-expedition-v118-store.sh "$RUNNER_TEMP/luma-puzzle-contracts/expedition-store.json"[0m
+2026-10-30T19:51:04.0375427Z [36;1mbash scripts/test-companion-motion-v118.sh "$RUNNER_TEMP/luma-puzzle-contracts/companion-motion.json"[0m
+2026-10-30T19:51:04.0414266Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:04.0414464Z env:
+2026-10-30T19:51:04.0414710Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:04.0415116Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:04.0415412Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:04.0415582Z ##[endgroup]
+2026-10-30T19:51:06.5322820Z {
+2026-10-30T19:51:06.5323275Z   "passed": true,
+2026-10-30T19:51:06.5323566Z   "checks": 17559,
+2026-10-30T19:51:06.5323859Z   "certified_board_references": 27,
+2026-10-30T19:51:06.5324636Z   "scope": "Pure model and codec with actual U board certificates, copies thresholds and migration, immutable branching and skill effects, idempotent completion/claim contracts. Store atomicity and native rendering are validated separately."
+2026-10-30T19:51:06.5325376Z }
+2026-10-30T19:51:06.5325470Z 
+2026-10-30T19:51:09.2639081Z {
+2026-10-30T19:51:09.2649671Z   "passed": true,
+2026-10-30T19:51:09.2678607Z   "checks": 1005,
+2026-10-30T19:51:09.2698759Z   "wardrobe_mode_checks": 118,
+2026-10-30T19:51:09.2713518Z   "actual_U_certificates_played": 52,
+2026-10-30T19:51:09.2714010Z   "certificate_actions_played": 328,
+2026-10-30T19:51:09.2714264Z   "checks_excluding_certificate_actions": 677,
+2026-10-30T19:51:09.2715066Z   "count_note": "Each real certificate action is one assertion. Random departure routes choose different real U boards, so the aggregate assertion count can vary; fixed-scope checks and52 played certificates remain explicit.",
+2026-10-30T19:51:09.2715958Z   "source_manifest_sha256": "c7036afcf9e956856fbb6f708b5a7ccd789576317855d926627202a436f40646",
+2026-10-30T19:51:09.2716401Z   "source_file_count": 95,
+2026-10-30T19:51:09.2718163Z   "scope": "Actual GameStore APIs with durable JVM preference doubles, explicit historical receipt/maximum-copy/old-wardrobe-choice fixtures, earned paid draws, real U certificates, four-stage route, skill/choice resume, copy/discovery/home rewards, cap/surplus, failed writes before/after memory, repeated refusal, cold recreation, corrupt receipt refusal and concurrent store handles. Wardrobe mode preserves explicit selections and changes atomically with single-item/four-slot signature equip, including failed-write recovery. No Android rendering or device performance claim."
+2026-10-30T19:51:09.2720379Z }
+2026-10-30T19:51:09.2720467Z 
+2026-10-30T19:51:11.8170281Z {
+2026-10-30T19:51:11.8170647Z   "passed": true,
+2026-10-30T19:51:11.8170973Z   "checks": 1093910,
+2026-10-30T19:51:11.8171277Z   "identities": 37,
+2026-10-30T19:51:11.8171579Z   "authored_forms_contract": 4,
+2026-10-30T19:51:11.8171930Z   "poses_per_form_contract": 20,
+2026-10-30T19:51:11.8173156Z   "scope": "Pure source/frame/evolution/stance, reduced-motion semantics and equipment-anchor contracts. Explicit synthetic pixel fixtures test conversion; generated atlas pixels, garment fit and native presentation must be qualified separately."
+2026-10-30T19:51:11.8174263Z }
+2026-10-30T19:51:11.8174386Z 
+2026-10-30T19:51:11.8445015Z ##[group]Run bash scripts/test-companion-battle-v119.sh
+2026-10-30T19:51:11.8445363Z [36;1mbash scripts/test-companion-battle-v119.sh[0m
+2026-10-30T19:51:11.8445970Z [36;1mbash scripts/test-companion-action-v119.sh "$RUNNER_TEMP/luma-puzzle-contracts/companion-action-v119"[0m
+2026-10-30T19:51:11.8446413Z [36;1mbash scripts/test-squad-store-v119.sh[0m
+2026-10-30T19:51:11.8446709Z [36;1mbash scripts/test-companion-battle-v119-geometry.sh[0m
+2026-10-30T19:51:11.8447016Z [36;1mbash scripts/test-adventure-v119-geometry.sh[0m
+2026-10-30T19:51:11.8485744Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:11.8485979Z env:
+2026-10-30T19:51:11.8486242Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:11.8486631Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:11.8486933Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:11.8487109Z ##[endgroup]
+2026-10-30T19:51:13.1259264Z CompanionBattle v1.19: 88946 checks passed (pure model only)
+2026-10-30T19:51:15.0849802Z PASS actual U1–U250 × all 37 identities
+2026-10-30T19:51:15.2644926Z PASS actual U1–U500 × all 37 identities
+2026-10-30T19:51:15.5187373Z PASS actual U1–U750 × all 37 identities
+2026-10-30T19:51:15.9234995Z PASS actual U1–U1000 × all 37 identities
+2026-10-30T19:51:16.0107743Z {
+2026-10-30T19:51:16.0108474Z   "passed": true,
+2026-10-30T19:51:16.0109015Z   "checks": 2313118,
+2026-10-30T19:51:16.0109328Z   "boards": 1000,
+2026-10-30T19:51:16.0109626Z   "identities": 37,
+2026-10-30T19:51:16.0109926Z   "prepared_drafts": 74019,
+2026-10-30T19:51:16.0110248Z   "refused_drafts": 74297,
+2026-10-30T19:51:16.0110558Z   "identity_board_coverage": {
+2026-10-30T19:51:16.0110872Z     "GUIDE": 14000,
+2026-10-30T19:51:16.0111142Z     "VISION": 12000,
+2026-10-30T19:51:16.0111421Z     "TRAIL": 14000,
+2026-10-30T19:51:16.0111688Z     "PULSE": 12000,
+2026-10-30T19:51:16.0111952Z     "FLOW": 12000,
+2026-10-30T19:51:16.0112233Z     "REWIND": 10000
+2026-10-30T19:51:16.0112507Z   },
+2026-10-30T19:51:16.0113298Z   "scope": "Actual host U boards and MoveBudget, all 1000 boards times every identity, pure draft nonmutation and canonical restore. Not Android commits, gestures, rendering, disk failures or player acceptance."
+2026-10-30T19:51:16.0114534Z }
+2026-10-30T19:51:18.3423501Z PASS 799 v1.19 squad storage, ownership, failed-commit recovery and six-language copy checks
+2026-10-30T19:51:18.9109009Z Companion battle 1.19 geometry PASS: 14859 checks across 412 layouts; distinct logical targets, bounds and exact hit routing. Physical text/touch adaptation and native artwork require host/native validation.
+2026-10-30T19:51:19.4829383Z Adventure 1.19 geometry PASS: 3362 checks across 84 layouts; distinct CTA/cards/rewards, physical48dp targets, full scroll reachability and pinned-navigation clearance. No native glyph or rendering claim.
+2026-10-30T19:51:19.4937884Z ##[group]Run bash scripts/test-focused-journey-v120.sh "$RUNNER_TEMP/luma-puzzle-contracts/focused-journey-v120.json"
+2026-10-30T19:51:19.4939222Z [36;1mbash scripts/test-focused-journey-v120.sh "$RUNNER_TEMP/luma-puzzle-contracts/focused-journey-v120.json"[0m
+2026-10-30T19:51:19.4939950Z [36;1mbash scripts/test-session-energy-v120.sh[0m
+2026-10-30T19:51:19.4940379Z [36;1mbash scripts/test-menu-v120.sh[0m
+2026-10-30T19:51:19.4983893Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:19.4984109Z env:
+2026-10-30T19:51:19.4984368Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:19.4984765Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:19.4985067Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:19.4985244Z ##[endgroup]
+2026-10-30T19:51:22.0910279Z {
+2026-10-30T19:51:22.0910646Z   "passed":true,
+2026-10-30T19:51:22.0910942Z   "checks":178587,
+2026-10-30T19:51:22.0911211Z   "frozen_u_boards":1000,
+2026-10-30T19:51:22.0911587Z   "solved_runs_within_allowance":4000,
+2026-10-30T19:51:22.0911950Z   "actually_exhausted_runs":1000,
+2026-10-30T19:51:22.0913245Z   "scope":"Actual frozen U1-U1000, policy6 and preserved5, finite correction budgets, three grades, idempotent extension ordinals, strict display receipts, actual GameStore/MetaProgress cold interruption recovery and pure compact layout. Not Android rendering, ads, real payments, sound or human acceptance."
+2026-10-30T19:51:22.0914490Z }
+2026-10-30T19:51:24.4324789Z PASS session energy / reactions: 20202 assertions
+2026-10-30T19:51:26.9669387Z PASS menu1.20: 73838 assertions; pure layout, six-language copy, actual claim receipts
+2026-10-30T19:51:26.9925780Z ##[group]Run bash scripts/test-elemental-shell-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/elemental-shells-v121.json"
+2026-10-30T19:51:26.9926440Z [36;1mbash scripts/test-elemental-shell-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/elemental-shells-v121.json"[0m
+2026-10-30T19:51:26.9927085Z [36;1mbash scripts/test-arcade-presentation-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/arcade-presentation-v121.json"[0m
+2026-10-30T19:51:26.9967842Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:26.9968208Z env:
+2026-10-30T19:51:26.9968468Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:26.9968874Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:26.9969174Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:26.9969347Z ##[endgroup]
+2026-10-30T19:51:29.8183694Z {
+2026-10-30T19:51:29.8184051Z   "passed": true,
+2026-10-30T19:51:29.8184358Z   "checks": 291912,
+2026-10-30T19:51:29.8184611Z   "boards": 1000,
+2026-10-30T19:51:29.8184945Z   "certified_plans_solved": 1000,
+2026-10-30T19:51:29.8185312Z   "shell_taps": 4950,
+2026-10-30T19:51:29.8185621Z   "certified_companion_exits": 22770,
+2026-10-30T19:51:29.8185947Z   "boards_with_original_keys": 652,
+2026-10-30T19:51:29.8186158Z   "seconds": 1.374,
+2026-10-30T19:51:29.8187301Z   "scope": "Actual U1-U1000 with deterministic bounded shell taps, unchanged board/action budgets/keys/arrows, every intermediate canonical cold roundtrip, strict malformed and cross-puzzle rejection, actual PULSE/FLOW draft exits and non-bypassing hints, Undo retains broken shells. Pure host model, not Android taps/rendering, native persistence, human difficulty or enjoyment."
+2026-10-30T19:51:29.8188595Z }
+2026-10-30T19:51:31.3451251Z {
+2026-10-30T19:51:31.3452282Z   "passed":true,
+2026-10-30T19:51:31.3452760Z   "checks":71010,
+2026-10-30T19:51:31.3453110Z   "boards_with_actual_direct_exits":1000,
+2026-10-30T19:51:31.3454265Z   "scope":"Pure confirmed-balance display and actual U1-U1000 direct-exit chain model: unknown/reset/spend/interrupted/large/reduced-motion/clock cases, real Undo anti-farm, once-only Focus, strict codecs and absent foreign IDs. No Android animation, input, persistence, player acceptance or extra economy credit."
+2026-10-30T19:51:31.3455323Z }
+2026-10-30T19:51:31.3706215Z ##[group]Run bash scripts/test-menu-v121.sh
+2026-10-30T19:51:31.3706661Z [36;1mbash scripts/test-menu-v121.sh[0m
+2026-10-30T19:51:31.3707293Z [36;1mbash scripts/test-home-kitchen-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/home-kitchen-v121.json"[0m
+2026-10-30T19:51:31.3707926Z [36;1msh scripts/test-saga-map-v17.sh[0m
+2026-10-30T19:51:31.3751873Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:31.3752107Z env:
+2026-10-30T19:51:31.3752371Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:31.3752776Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:31.3753083Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:31.3753254Z ##[endgroup]
+2026-10-30T19:51:32.0814262Z Menu121LayoutTest: 5232 checks passed; host geometry and six-language formatting only.
+2026-10-30T19:51:34.4459572Z {
+2026-10-30T19:51:34.4461279Z   "passed":true,
+2026-10-30T19:51:34.4461917Z   "checks":627,
+2026-10-30T19:51:34.4462185Z   "rooms":4,
+2026-10-30T19:51:34.4463110Z   "scope":"Actual host GameStore kitchen separation, original three starter bytes, exact paid ownership/440-Coin debit, all free floor paths, six-language room names, cold reconstruction and explicit failure doubles. Intrinsic rear-wall scenery is not paid furnishing. No native rendering or touch acceptance."
+2026-10-30T19:51:34.4463997Z }
+2026-10-30T19:51:35.1107577Z PASS 177034 SagaMap/page geometry checks; every Journey1..1000 and Remix1..240 jump, 13 viewports including 266.67 landscape, virtual culling, biome/world boundaries, captain clearance, pinned hit clipping and final menu controls.
+2026-10-30T19:51:35.1109080Z Scope: pure geometry and explicit fixed-page contracts; Android screenshots, real gesture delivery and text measurement are separate checks.
+2026-10-30T19:51:35.1316405Z ##[group]Run bash scripts/test-economy-curve-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/economy-curve-v121.json"
+2026-10-30T19:51:35.1317027Z [36;1mbash scripts/test-economy-curve-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/economy-curve-v121.json"[0m
+2026-10-30T19:51:35.1317581Z [36;1mbash scripts/test-session-energy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/session-energy-v121.json"[0m
+2026-10-30T19:51:35.1318423Z [36;1mbash scripts/simulate-summon-economy-v121.sh "$RUNNER_TEMP/luma-puzzle-contracts/summon-economy-v121"[0m
+2026-10-30T19:51:35.1356951Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:35.1357162Z env:
+2026-10-30T19:51:35.1357411Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:35.1357790Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:35.1358321Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:35.1358494Z ##[endgroup]
+2026-10-30T19:51:37.8249668Z {
+2026-10-30T19:51:37.8250679Z   "passed":true,
+2026-10-30T19:51:37.8252330Z   "checks":47008,
+2026-10-30T19:51:37.8252875Z   "boards":1000,
+2026-10-30T19:51:37.8275487Z   "three_star_zero_spend_route_income":96154,
+2026-10-30T19:51:37.8276114Z   "one_star_route_income":61191,
+2026-10-30T19:51:37.8276519Z   "max_base_allowance_route_undo_cost":22514,
+2026-10-30T19:51:37.8276963Z   "median_base_undo_share_of_corrected_reward":0.367647,
+2026-10-30T19:51:37.8277433Z   "maximum_base_undo_share_of_corrected_reward":0.378788,
+2026-10-30T19:51:37.8277878Z   "optional_one_hint_pack_each_board_cost":58337,
+2026-10-30T19:51:37.8280331Z   "scope":"Actual U1-U1000 certified zero-Coin-expense route and full base correction allowance, monotone versioned logarithmic reward/price math, actual new/legacy GameStore entitlement deltas, real earned-Coin reservation/cancel/complete and cold/failure doubles. No measured player median, real purchase, retention, monetary exchange rate or optimal-balance claim. Repeated attempts or purchases can cost more than first-clear income."
+2026-10-30T19:51:37.8282442Z }
+2026-10-30T19:51:40.2160580Z {
+2026-10-30T19:51:40.2160915Z   "passed":true,
+2026-10-30T19:51:40.2161206Z   "checks":6044,
+2026-10-30T19:51:40.2162823Z   "scope":"Actual SessionEnergyStore10-to16 storage migration, no immediate grant/retroactive full-cap ticks, unchanged ten-minute refill and ten-unit receipts, real pending debit/cold refund/resume, old codec and atomic refusal/retry doubles;6000 eligibility checks. No provider, native persistence or human pacing result."
+2026-10-30T19:51:40.2164080Z }
+2026-10-30T19:51:43.0842434Z {
+2026-10-30T19:51:43.0842774Z   "passed":true,
+2026-10-30T19:51:43.0843078Z   "checks":800060,
+2026-10-30T19:51:43.0843888Z   "fixed_seed_method":"SummonCatalog.draw(v121-fixed-cohort-N, banner, v121-fixed-draw-N),2000 independent modeled empty collections times200 draws per banner",
+2026-10-30T19:51:43.0844786Z   "actual_catalog_draws":800000,
+2026-10-30T19:51:43.0845105Z   "banners":[
+2026-10-30T19:51:43.0845992Z     {"banner":"AVATARS","draws":400000,"pool_size":23,"price_coins":180,"mature_expected_duplicate_refund":61.500000,"mature_expected_net_price":118.500000,"observed_complete_pool_at_200_draws":0.913000},
+2026-10-30T19:51:43.0847580Z     {"banner":"SIGNATURES","draws":400000,"pool_size":5,"price_coins":260,"mature_expected_duplicate_refund":98.000000,"mature_expected_net_price":162.000000,"observed_complete_pool_at_200_draws":1.000000}
+2026-10-30T19:51:43.0848722Z   ],
+2026-10-30T19:51:43.0850561Z   "scope":"Pure fixed-seed source-pool simulation and exact independent-draw arithmetic, not real GameStore purchases, human cohorts, calendar/play time, RNG security, conversion, addiction, retention or revenue. First-clear equivalents are mechanical gross Coin ratios excluding other income, duplicate refunds and optional spending; current curve changes earnings, not these fixed draw odds/prices."
+2026-10-30T19:51:43.0852818Z }
+2026-10-30T19:51:43.1211676Z ##[group]Run bash scripts/test-journey-clarity-v123.sh "$RUNNER_TEMP/luma-puzzle-contracts/clarity123"
+2026-10-30T19:51:43.1212240Z [36;1mbash scripts/test-journey-clarity-v123.sh "$RUNNER_TEMP/luma-puzzle-contracts/clarity123"[0m
+2026-10-30T19:51:43.1212648Z [36;1mbash scripts/test-clarity-layout-v123.sh[0m
+2026-10-30T19:51:43.1252107Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:43.1252309Z env:
+2026-10-30T19:51:43.1252567Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:43.1252953Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:43.1253251Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:43.1253422Z ##[endgroup]
+2026-10-30T19:51:45.9403873Z {
+2026-10-30T19:51:45.9404661Z   "passed":true,
+2026-10-30T19:51:45.9404993Z   "assertions":52861,
+2026-10-30T19:51:45.9405334Z   "certified_control_boards":1000,
+2026-10-30T19:51:45.9405725Z   "legacy_preparation_states_roundtripped":5950,
+2026-10-30T19:51:45.9406168Z   "reachable_engine_states_U1_U27":1096,
+2026-10-30T19:51:45.9406504Z   "full_margin_recovery_boards":6,
+2026-10-30T19:51:45.9407573Z   "scope":"Real Java Board/MoveBudget and ES121 codecs;1000 preserved certificates with new Journey factory, historical partial-save compatibility, six-language teaching/no planner mutation, first actual trap U27 and exact recovery budgets. Certified controls are not synthetic players or human learning/rendering evidence."
+2026-10-30T19:51:45.9410851Z }
+2026-10-30T19:51:46.0298522Z {
+2026-10-30T19:51:46.0298974Z   "passed":true,
+2026-10-30T19:51:46.0299308Z   "assertions":79,
+2026-10-30T19:51:46.0299608Z   "invalid_drafts_refused_without_write":9,
+2026-10-30T19:51:46.0299965Z   "failed_commits_exercised":4,
+2026-10-30T19:51:46.0301626Z   "scope":"Real GameStore complete-look API, four owned slots plus original-costume flag in one transaction; invalid/no ownership/slot mismatch/partial/null refusal, no unrelated currency/gameplay mutation, cold reconstruction and repeated disk failures with both memory-before-disk modes. Host persistence doubles, not physical storage or native wardrobe UI acceptance."
+2026-10-30T19:51:46.0303335Z }
+2026-10-30T19:51:46.6599244Z Clarity123 geometry PASS: 1204 checks. No native glyph, art or comprehension claim.
+2026-10-30T19:51:46.6706150Z ##[group]Run bash scripts/test-journey-world-v122.sh
+2026-10-30T19:51:46.6706479Z [36;1mbash scripts/test-journey-world-v122.sh[0m
+2026-10-30T19:51:46.6706755Z [36;1mbash scripts/test-tactical-chapter-v122.sh[0m
+2026-10-30T19:51:46.6707039Z [36;1mbash scripts/test-tactical-session-v122.sh[0m
+2026-10-30T19:51:46.6746438Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:46.6746645Z env:
+2026-10-30T19:51:46.6746895Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:46.6747305Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:46.6747602Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:46.6747771Z ##[endgroup]
+2026-10-30T19:51:47.5316084Z JourneyWorld122: 171865 checks passed; catalogue identities, exact edges, reversible travel, interruption, bounded camera and minimap.
+2026-10-30T19:51:48.3513256Z JourneyWorldScene122: Android 36 Canvas compilation passed.
+2026-10-30T19:51:50.0261929Z {"passed":true,"checks":8020,"layouts":12,"completeRouteCapacityCombinations":24,"actualTalentDrafts":123,"scope":"Twelve hand-authored native U layouts, distinct from U1-U1000, exact mechanical effects and legal traps/repairs, all branches at Charge4/6/8, immutable drafts, per-sortie resource and canonical cold replay. Not human enjoyment or Android disk/gesture/render validation."}
+2026-10-30T19:51:52.7003338Z {"passed":true,"checks":1874,"completeRoutes":8,"scope":"Actual isolated chapter session and GameStore, all branch routes, loans, persistent Charge, reset, no campaign mutation before reward, atomic writes, before/after-memory disk failures, cold recovery, milestone/claim crash windows, concurrent handles and strict corrupt-record refusal. Not Android filesystem/gestures/rendering or human enjoyment."}
+2026-10-30T19:51:52.7325449Z ##[group]Run curl --fail --location --retry 2 https://repo.maven.apache.org/maven2/org/json/json/20240303/json-20240303.jar --output "$RUNNER_TEMP/json-20240303.jar"
+2026-10-30T19:51:52.7326320Z [36;1mcurl --fail --location --retry 2 https://repo.maven.apache.org/maven2/org/json/json/20240303/json-20240303.jar --output "$RUNNER_TEMP/json-20240303.jar"[0m
+2026-10-30T19:51:52.7327074Z [36;1mprintf '3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed  %s\n' "$RUNNER_TEMP/json-20240303.jar" | sha256sum --check[0m
+2026-10-30T19:51:52.7327677Z [36;1mLUMA_JSON_JAR="$RUNNER_TEMP/json-20240303.jar" bash scripts/test-energy-purchase-v120.sh[0m
+2026-10-30T19:51:52.7328387Z [36;1mLUMA_JSON_JAR="$RUNNER_TEMP/json-20240303.jar" bash scripts/test-wallet-energy-transport-v120.sh[0m
+2026-10-30T19:51:52.7368385Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:52.7368607Z env:
+2026-10-30T19:51:52.7368863Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:52.7369299Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:52.7369595Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:52.7369767Z ##[endgroup]
+2026-10-30T19:51:52.7495021Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-10-30T19:51:52.7495603Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-10-30T19:51:52.7495879Z 
+2026-10-30T19:51:52.8123983Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-10-30T19:51:52.8124545Z 100 78332  100 78332    0     0  1214k      0 --:--:-- --:--:-- --:--:-- 1233k
+2026-10-30T19:51:52.8170984Z /home/runner/work/_temp/json-20240303.jar: OK
+2026-10-30T19:51:53.7938263Z Energy purchase1.20: 84 checks passed (real controller/journal, explicit HTTP/energy doubles; no real payment)
+2026-10-30T19:51:54.8209964Z Wallet energy transport1.20: 36 checks passed (actual client; controlled URLConnection/Firebase doubles, no real socket or payment)
+2026-10-30T19:51:54.8321034Z ##[group]Run sh scripts/test-power-offers-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json"
+2026-10-30T19:51:54.8321631Z [36;1msh scripts/test-power-offers-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json"[0m
+2026-10-30T19:51:54.8360706Z shell: /usr/bin/sh -e {0}
+2026-10-30T19:51:54.8360912Z env:
+2026-10-30T19:51:54.8361163Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:54.8361556Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-30T19:51:54.8361861Z   MAVEN_ARGS: -ntp
+2026-10-30T19:51:54.8362037Z ##[endgroup]
+2026-10-30T19:51:57.3808269Z {
+2026-10-30T19:51:57.3809004Z   "passed":true,
+2026-10-30T19:51:57.3809704Z   "checks":868,
+2026-10-30T19:51:57.3811052Z   "currentOfferedPowers":5,
+2026-10-30T19:51:57.3811642Z   "futureMilestonesCompared":200,
+2026-10-30T19:51:57.3813295Z   "scope":"Actual store/presentation/dashboard APIs on JVM prefs doubles. New Shield offers refused; historical stock/receipts/escrow and exact pre-retirement decisions retained under both memory-before-disk failure models. No native or external-service acceptance."
+2026-10-30T19:51:57.3814832Z }
+2026-10-30T19:51:57.3815115Z 
+2026-10-30T19:51:57.4210334Z Post job cleanup.
+2026-10-30T19:51:57.5063804Z Post job cleanup.
+2026-10-30T19:51:57.5909064Z [command]/usr/bin/git version
+2026-10-30T19:51:57.5959901Z git version 2.56.0
+2026-10-30T19:51:57.5994810Z Temporarily overriding HOME='/home/runner/work/_temp/0eff8b44-2be8-42f7-9a56-6dc2f5cedb0a' before making global git config changes
+2026-10-30T19:51:57.5995894Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T19:51:57.6000696Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-30T19:51:57.6047661Z Removing SSH command configuration
+2026-10-30T19:51:57.6053098Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T19:51:57.6125447Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T19:51:57.6524081Z Removing HTTP extra header
+2026-10-30T19:51:57.6530938Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T19:51:57.6596458Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T19:51:57.7009402Z Removing includeIf entries pointing to credentials config files
+2026-10-30T19:51:57.7015355Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T19:51:57.7065084Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T19:51:57.7558749Z Cleaning up orphan processes

@@ -7,16 +7,21 @@ counter, contextual companion skills and a reversible outfit preview. New Journe
 attempts start without the repeated fire/ice/water preparations. Saved attempts
 retain their exact state. The map, movement, minimap and tactical Observatory remain.
 
-**Candidate E is locally qualified:** production `1.23.0-rc2`, separate Lab
+**1.23 is available as a direct APK:** production `1.23.0-rc2`, separate Lab
 `1.23.0-sandbox-rc2`, code 31. Its production emulator runs passed 495 checks with
 142 actual SDK touchscreen gestures; Lab passed 27 checks with four gestures and
 left seven production preference files byte-identical. The separate study ran
-8,000 synthetic trajectories. Git publication, exact-commit CI, Hosting and public
-response acceptance for 1.23 are still pending. The website link below is not a
-claim that these new downloads are already live.
+8,000 synthetic trajectories.
+
+[Delivery evidence](docs/validation/site-v1.23/README.md) binds artifact source C1,
+site source C2, their successful CI and Firebase version `cf8b817321bf33d5`.
+Complete public bytes for 21 new or changed paths and HTTP 404 responses for
+14 retired downloads were verified. Public FR/EN browser observations are
+recorded separately.
 
 - [Website](https://luma-drift-production.web.app/)
 - [Release changes and validation](docs/RELEASE_1_23.md)
+- [Public delivery and browser evidence](docs/validation/site-v1.23/README.md)
 - [Android evidence](docs/validation/v1.23/README.md)
 - [Exact E APK identities](releases/manifest-1.23.0-rc2.json)
 - [Synthetic 1.23 study](docs/validation/cognitive-lab-v123/README.md)

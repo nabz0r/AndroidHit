@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T20:17:33.883525+00:00",
+  "sourceCommit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "hostingVersion": "sites/luma-drift-production/versions/cf8b817321bf33d5",
+  "hostingRelease": "sites/luma-drift-production/channels/live/releases/1793390673242000",
+  "hostingReleaseTime": "2026-10-30T20:04:33.242Z",
+  "scope": "Final provider-map and original public-HTTP verification of the exact 14 retired duplicate public binaries. Immutable earlier local-removal receipts keep their historical pending status.",
+  "evidence": {
+    "originalLocalRetirements": {
+      "path": "docs/validation/v1.23/cleanup/public-retirements.json",
+      "sha256": "8004a0b19c91548d70634ba11d475dd6b8815d157a9e8e54f712ae89e7865e3d",
+      "bytes": 8368
+    },
+    "sourceManifest": {
+      "path": "docs/validation/site-v1.23/release/source-manifest.json",
+      "sha256": "78994a2e02ad2e74b7439e112852bfbc69b7fd596998cd62f7933e435584507c",
+      "bytes": 172115
+    },
+    "originalHostingDeployment": {
+      "path": "docs/validation/site-v1.23/hosting/receipts/final-deployment/deployment.json",
+      "sha256": "fccde8e00353a359c37b63116702c445e30c05bfb17410d38e541acab1699158",
+      "bytes": 3370
+    },
+    "originalBaselineProviderMap": {
+      "path": "docs/validation/site-v1.23/hosting/receipts/final-deployment/baseline-provider-files.json",
+      "sha256": "9d77f8a046209fc01234ab02ae61e4789fa4bb777e02794d79358ca5c54d1197",
+      "bytes": 66527
+    },
+    "originalFinalProviderMap": {
+      "path": "docs/validation/site-v1.23/hosting/receipts/final-deployment/verified-provider-files.json",
+      "sha256": "fef9361e67074aaf0dc00e127ddc43e8c08aeecf323ac1cbc12d89455d8651c4",
+      "bytes": 67111
+    },
+    "originalPublicCollector": {
+      "path": "docs/validation/site-v1.23/public-response.json",
+      "sha256": "09a924118c0c3b5bce7c5f82ec709ade46ae6b5a5faa5c8cdffd4ea87baf1eea",
+      "bytes": 29847
+    },
+    "offlineConsistencyCheck": {
+      "path": "docs/validation/site-v1.23/delivery-check.json",
+      "sha256": "67138517a49fba393c2227e04bd6eebe5a1397ef87526ea3081e6d066ad4ca19",
+      "bytes": 3432
+    },
+    "verifierExecution": {
+      "path": "docs/validation/site-v1.23/delivery-check-execution.json",
+      "sha256": "0c3a673e92bf1d7abfb9795708b44dc7493c5b09db03d8c9a97336b8c7da1946",
+      "bytes": 1492
+    }
+  },
+  "retiredCount": 14,
+  "retiredLogicalBytes": 3136669533,
+  "finalProviderPaths": 578,
+  "untouchedProviderPaths": 557,
+  "retiredProviderPathsAbsent": 14,
+  "retiredPublicHttp404": 14,
+  "retiredResponseBodiesRead": false,
+  "canonicalCopiesPreservedByOriginalReceipt": true,
+  "retirements": [
+    {
+      "path": "/releases/luma-drift-1.15.0-rc1.aab",
+      "retiredSha256": "5653697409d4fa73b48ae0e6cf826eaf76169bd26a718ecc8365fce8850c3659",
+      "retiredBytes": 11382438,
+      "canonicalPath": "releases/luma-drift-1.15.0-rc1.aab",
+      "canonicalSha256": "5653697409d4fa73b48ae0e6cf826eaf76169bd26a718ecc8365fce8850c3659",
+      "canonicalBytes": 11382438,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "bb334fd64d391197986d783640c3c076b6742aae810ac0a1416574940d35378e",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.15.0-rc1.aab?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.15.0-rc1.apk",
+      "retiredSha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+      "retiredBytes": 7970422,
+      "canonicalPath": "releases/luma-drift-1.15.0-rc1.apk",
+      "canonicalSha256": "07b5bfc2632edc3d34f7583ac71c8343b52d7b926ed526aeb7a88599253df0f9",
+      "canonicalBytes": 7970422,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "cc95a3fd52a46130d515c6df875f7bfdcce1c9549b3f76c726a877a5a4dd0d0c",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.15.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.16.0-rc1.aab",
+      "retiredSha256": "d62c8cb03da3af9b5aadab55b7c57faf0846d831c8cacbcb899f233d54e1c202",
+      "retiredBytes": 11415156,
+      "canonicalPath": "releases/luma-drift-1.16.0-rc1.aab",
+      "canonicalSha256": "d62c8cb03da3af9b5aadab55b7c57faf0846d831c8cacbcb899f233d54e1c202",
+      "canonicalBytes": 11415156,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "e9b3c05e1078e129d520f262b21d77704764de473d3e94ca9c02463adbbbcffc",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.16.0-rc1.aab?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.16.0-rc1.apk",
+      "retiredSha256": "516be7f14ff2b80683de658b6df767f4b19dbb44580d57be36a307d330ed5a66",
+      "retiredBytes": 7986806,
+      "canonicalPath": "releases/luma-drift-1.16.0-rc1.apk",
+      "canonicalSha256": "516be7f14ff2b80683de658b6df767f4b19dbb44580d57be36a307d330ed5a66",
+      "canonicalBytes": 7986806,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "596e082abeba25b1cae8e7d9c5108fff568b59615cdab938dc6e2e70c147405e",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.16.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.17.0-rc6.aab",
+      "retiredSha256": "cfad9ff262e843ef0a2c7982964ff7ca41abf0e6df57cefa2c7c6b3d7d4e799b",
+      "retiredBytes": 74724470,
+      "canonicalPath": "releases/luma-drift-1.17.0-rc6.aab",
+      "canonicalSha256": "cfad9ff262e843ef0a2c7982964ff7ca41abf0e6df57cefa2c7c6b3d7d4e799b",
+      "canonicalBytes": 74724470,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "ed016dbab8b4f7d6c7beeffa61ae1105706351ab50c8ff26cd3bb5be22eb23cb",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.17.0-rc6.aab?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.17.0-rc6.apk",
+      "retiredSha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "retiredBytes": 71827197,
+      "canonicalPath": "releases/luma-drift-1.17.0-rc6.apk",
+      "canonicalSha256": "15546854a856ecc5052aa79acdd49724439b2082fd638da68cf7747be1924a47",
+      "canonicalBytes": 71827197,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "da591cd2b28c135c244c7dfccc0e4cffd43300a24379c7ae89a7925b29a65d91",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.17.0-rc6.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.18.0-prototype1.apk",
+      "retiredSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+      "retiredBytes": 368887773,
+      "canonicalPath": "releases/luma-drift-1.18.0-prototype1.apk",
+      "canonicalSha256": "3a30526941d69bd6e65cd148c7eb7fa5b47647f85f7b53f9a043b26b5abdbbd2",
+      "canonicalBytes": 368887773,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "25e16f3759a0070db871ef1995c91792c76a202e6ea8aec8b38b959006e0e79a",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.18.0-prototype1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.18.0-sandbox-prototype1.apk",
+      "retiredSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+      "retiredBytes": 368887460,
+      "canonicalPath": "releases/luma-drift-1.18.0-sandbox-prototype1.apk",
+      "canonicalSha256": "96981f3d9b366713b0842204c69e3a1e46a9e31bfb6d0196b1e278ef0902ee06",
+      "canonicalBytes": 368887460,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "6e30f948c5a13be7839039146832f1d0bc9a98e279e4ab83f213e2d0411c1f9e",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.18.0-sandbox-prototype1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.19.0-prototype2.apk",
+      "retiredSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "retiredBytes": 368904157,
+      "canonicalPath": "releases/luma-drift-1.19.0-prototype2.apk",
+      "canonicalSha256": "86e310ea661af5644b47a96b22df85f148f6a9508ee87234339be7b093e8a526",
+      "canonicalBytes": 368904157,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "9a9fd4e8d423577be2a8ffccefc185a7933fd3fa84938f8f74845409c959d171",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.19.0-prototype2.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.19.0-sandbox-prototype2.apk",
+      "retiredSha256": "448d359abb6d4943c6eadf9f03c221fd35d5fa18c21441817bb4c7a31bb87d11",
+      "retiredBytes": 368903840,
+      "canonicalPath": "releases/luma-drift-1.19.0-sandbox-prototype2.apk",
+      "canonicalSha256": "448d359abb6d4943c6eadf9f03c221fd35d5fa18c21441817bb4c7a31bb87d11",
+      "canonicalBytes": 368903840,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "7a774d934cb1686c8fff5356ccb22e7000198320d081b91710b07a751a424059",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.19.0-sandbox-prototype2.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.20.0-rc1.apk",
+      "retiredSha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+      "retiredBytes": 368936921,
+      "canonicalPath": "releases/luma-drift-1.20.0-rc1.apk",
+      "canonicalSha256": "e4fa1a70dbb2e842c9a16a9f22d0f2a49a4316ccbc6013fe0acfa233093f5d26",
+      "canonicalBytes": 368936921,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "0d35289d644bfdf08ad1f7f4df027dde45506e2c23c03b41d923290d5566ed47",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.20.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.20.0-sandbox-rc1.apk",
+      "retiredSha256": "7c8ccfde3a0050b35b0312a61e2cb07973c594629bbf97493ec8bbe2829410cf",
+      "retiredBytes": 368920220,
+      "canonicalPath": "releases/luma-drift-1.20.0-sandbox-rc1.apk",
+      "canonicalSha256": "7c8ccfde3a0050b35b0312a61e2cb07973c594629bbf97493ec8bbe2829410cf",
+      "canonicalBytes": 368920220,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "457dacb04698cfa7cba9fc4a4f493bc5140c7bf97b871a3ba157ba3acc8390a2",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.20.0-sandbox-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.21.0-rc1.apk",
+      "retiredSha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+      "retiredBytes": 368969685,
+      "canonicalPath": "releases/luma-drift-1.21.0-rc1.apk",
+      "canonicalSha256": "e382a73037418146bf57e1530998efeb312953ea8b9b5bb61b548af7cbf90bcc",
+      "canonicalBytes": 368969685,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "d9ca6da9d901c87a501c662a75087e42f90380a0d286391c9b36f2c1aefbf1fc",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    },
+    {
+      "path": "/releases/luma-drift-1.21.0-sandbox-rc1.apk",
+      "retiredSha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+      "retiredBytes": 368952988,
+      "canonicalPath": "releases/luma-drift-1.21.0-sandbox-rc1.apk",
+      "canonicalSha256": "9c0998683f09a1d940a97a0dc5badea98a5ab5c84ea2ba814917e30f8df5235b",
+      "canonicalBytes": 368952988,
+      "canonicalCopyQualification": "Bound to unchanged original local retirement receipt; not a fresh 3.14 GB reread during this closeout.",
+      "baselineProviderGzipSha256": "9224dda6b1d388a761725cc71a652fcb8321ab391bbcf024aa89834b95b7e8dc",
+      "presentInFinalProviderMap": false,
+      "originalPublicResponse": {
+        "url": "https://luma-drift-production.web.app/releases/luma-drift-1.21.0-sandbox-rc1.apk?source_commit=c99ac52903eca6707d3f4d644d7c480c79b63e68",
+        "expectedStatus": 404,
+        "bodyRead": false,
+        "status": 404,
+        "contentType": "text/html; charset=utf-8"
+      }
+    }
+  ],
+  "limits": [
+    "Logical retired public payload size is not a claim of physical disk space reclaimed.",
+    "Canonical release copies, historical evidence and previous Hosting versions are retained.",
+    "The collector verifies the recorded live version at collection time; no new network request was made in this closeout.",
+    "Six tracked public duplicate files and eight ignored public duplicates were removed earlier; this receipt does not rewrite their historical local-removal evidence."
+  ]
+}

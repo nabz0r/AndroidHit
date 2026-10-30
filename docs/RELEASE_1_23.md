@@ -2,10 +2,13 @@
 
 Production `1.23.0-rc2`, Lab `1.23.0-sandbox-rc2`, Android code 31.
 The two application IDs and the existing signing certificate are preserved.
-Candidate **E** is locally qualified. Git publication, its exact-commit CI,
-Hosting deployment and public response acceptance remain pending. The
+Candidate **E** is qualified in the bounded native scope below and its signed
+downloads are live on the [existing website](https://luma-drift-production.web.app/).
+Artifact source C1 and site source C2 are published on main; their exact-commit
+CI, Hosting, selected public responses and public browser checks have
+[separate accepted receipts](validation/site-v1.23/README.md). The
 [canonical manifest](../releases/manifest-1.23.0-rc2.json) binds both ignored,
-external signed APKs; this document does not announce live 1.23 downloads.
+external signed APKs.
 
 The board now presents one goal and one move count. The four directions share a
 sculpted toy material; the main arrow, left key tag and lower relay rail have
@@ -56,16 +59,37 @@ probes**, with 104 separate oracle controls. Its 58 engine/runner sources are
 distinct from the archived UI context. Agents do not inspect the artwork and
 establish no human comprehension, enjoyment or retention.
 
+[Artifact C1](validation/v1.23/publication/c1/git-publication.json)
+(`2db51f1f208d5a13c023f67df32450410b873c96`) and
+[site C2](validation/v1.23/publication/c2/git-publication.json)
+(`c99ac52903eca6707d3f4d644d7c480c79b63e68`) each passed two workflows,
+three jobs and 51 reported steps, including setup and cleanup:
+[C1 CI](validation/v1.23/publication/c1/ci/receipt.json) /
+[C2 CI](validation/v1.23/publication/c2/ci/receipt.json).
+App, public, script and workflow trees are identical between these commits.
+
+[Hosting management](validation/site-v1.23/hosting/receipts/final-deployment/deployment.json)
+finalized and released `cf8b817321bf33d5`, preserving serving configuration and
+the complete expected 578-path provider map. The [public collector](validation/site-v1.23/public-response.json)
+verified 21 complete new/changed bodies, **753,990,693 bytes**, including both APKs,
+eight native captures and the source ZIP. Its 14 retirement checks returned
+HTTP 404. [Public browser evidence](validation/site-v1.23/browser-public/README.md)
+records actual FR/EN rendering and interactions separately from those byte checks.
+
 The website keeps its existing Firebase destination, gallery, audio, account and
 privacy pages. [Cleanup receipt](validation/v1.23/cleanup/public-retirements.json)
 records 14 obsolete public binary copies removed locally, totalling
 3,136,669,533 logical bytes. Their canonical local files, manifests, historical
-evidence and prior finalized Hosting versions are preserved. Their removal from
-the live version and public HTTP 404 checks are still pending.
+evidence and prior finalized Hosting versions are preserved. The final provider
+map excludes exactly these 14 paths, and all 14 returned HTTP 404 publicly.
+The [Git-tip accounting](validation/v1.23/cleanup/README.md) separately records
+a net reduction of 77,749,280 logical bytes by tracked path, not physical disk
+or historical Git storage recovery.
 The main README points to the current release; [earlier chronology](archive/README.md)
 has one archive entry point. No Git history is rewritten.
 
 The prepared [website source manifest](validation/site-v1.23/release/source-manifest.json)
-is a local source/capture identity record. Exact publication, CI, Hosting,
-public responses and browser receipts have separate scopes; no pending gate is
-inferred from local success. Test ads and closed real checkout remain explicit.
+is a local source/capture identity record. The linked publication, CI, Hosting,
+public-response and browser receipts establish their own scopes. Test ads and
+closed real checkout remain explicit; none of these gates establishes human
+enjoyment, retention or Play approval.

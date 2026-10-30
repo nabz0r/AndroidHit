@@ -1,12 +1,14 @@
 # Android 1.23 qualification — candidate E
 
-**Local qualification passed. Publication remains pending.** The current candidate
+**Native qualification, source publication and delivery passed in separate scopes.**
+The current candidate
 is production `1.23.0-rc2` / separate Lab `1.23.0-sandbox-rc2`, Android code 31.
 [Candidate identities and 501 frozen inputs](candidate-e/candidate.json), the
 original build/package/signer outputs beside that file, and the
 [canonical release manifest](../../../releases/manifest-1.23.0-rc2.json) bind the
-exact signed files. Git publication, exact-commit CI, Hosting, public response
-bytes and public browser acceptance for 1.23 are separate pending gates.
+exact signed files. [Public delivery](../site-v1.23/README.md) links the exact
+source commits, CI, Hosting management, complete selected HTTP bodies and actual
+public browser observations.
 
 | Channel | Application ID | Exact APK SHA-256 |
 | --- | --- | --- |
@@ -67,11 +69,28 @@ probes are a single shared reference for 32,000 trained probes. Its 104 oracle
 controls and 58 engine/runner source inputs remain distinct from agents and UI
 context; no artwork or text comprehension is simulated.
 
+## Publication and public delivery
+
+| Gate | Original evidence | Result |
+| --- | --- | --- |
+| Artifact source C1 | [Git publication](publication/c1/git-publication.json) | Main `2db51f1f208d5a13c023f67df32450410b873c96` |
+| Site source C2 | [Git publication](publication/c2/git-publication.json) | Main `c99ac52903eca6707d3f4d644d7c480c79b63e68` |
+| Exact-commit CI | [C1](publication/c1/ci/receipt.json), [C2](publication/c2/ci/receipt.json) | Each: two workflows, three jobs, 51 successful reported steps |
+| Hosting management | [Deployment](../site-v1.23/hosting/receipts/final-deployment/deployment.json) | `cf8b817321bf33d5`, 578 expected provider paths, config preserved |
+| Public HTTP | [Collector](../site-v1.23/public-response.json) | 21 complete bodies / 753,990,693 bytes, plus 14 HTTP 404 retirements |
+| Public browser | [Independent report](../site-v1.23/browser-public/README.md) | Actual FR/EN rendered observations, separate from byte identity |
+
+The [C1→C2 comparison](publication/c2/ci/input-delta-from-c1.json) preserves
+identical app, public, script and workflow trees. The 51 CI steps include setup
+and cleanup; they are not 51 distinct gameplay tests. These delivery checks do
+not add to the 495 native E checks above.
+
 The [rc2 transport receipt](site-transport/rc2/receipt.json) records **37 passing
 offline tests**, with the private rc1 logs/sources preserved separately. The
 [cleanup manifest](cleanup/public-retirements.json) records 14 public binary
 copies removed locally, with their full original hashes and retained canonical
-files. Hosting retirement and public HTTP 404 verification are still pending.
+files. The final Hosting map excludes those paths, and all 14 public retirement
+checks returned HTTP 404.
 The [prepared site source](../site-v1.23/release/source-manifest.json) links exact
 E APK/capture identities; its local PASS is not a publication receipt.
 

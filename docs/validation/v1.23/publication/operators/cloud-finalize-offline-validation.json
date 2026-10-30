@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "external_network": false,
+  "actual_auth_or_firebase_deploy": false,
+  "checks": [
+    "check-only validates real local Git, frozen inputs and both physical tiny fake APKs; zero auth/write/clone/restage",
+    "deploy passes token only to child stdin; new final receipt/logs, originals byte-identical, no token disk/argv",
+    "existing finalization refuses before authentication",
+    "operator not STAGED_ONLY refuses before OAuth",
+    "staging source mismatch refuses before OAuth",
+    "dirty tracked source refuses before OAuth",
+    "changed ignored APK refuses before OAuth",
+    "HEAD mismatch refuses before OAuth",
+    "auth refusal stops before deploy with separate FAIL receipt and no fallback"
+  ]
+}

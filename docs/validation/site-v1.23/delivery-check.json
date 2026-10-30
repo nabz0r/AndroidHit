@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-30T20:17:02.907249+00:00",
+  "sourceCommit": "c99ac52903eca6707d3f4d644d7c480c79b63e68",
+  "networkRequested": false,
+  "filesWritten": false,
+  "checks": {
+    "sourceAndRetirements": {
+      "status": "PASS",
+      "manifestSha256": "78994a2e02ad2e74b7439e112852bfbc69b7fd596998cd62f7933e435584507c",
+      "apkIdentities": {
+        "/releases/luma-drift-1.23.0-rc2.apk": {
+          "sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+          "bytes": 369002457
+        },
+        "/releases/luma-drift-1.23.0-sandbox-rc2.apk": {
+          "sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+          "bytes": 368985756
+        }
+      },
+      "retiredPaths": 14
+    },
+    "c1CI": {
+      "status": "PASS",
+      "workflows": 2,
+      "jobs": 3,
+      "steps": 51,
+      "evidenceFiles": 17
+    },
+    "c2CIAndUnchangedAppPublic": {
+      "status": "PASS",
+      "workflows": 2,
+      "jobs": 3,
+      "steps": 51,
+      "evidenceFiles": 16
+    },
+    "provider": {
+      "status": "PASS",
+      "version": "sites/luma-drift-production/versions/cf8b817321bf33d5",
+      "providerPaths": 578,
+      "untouchedProviderPaths": 557
+    },
+    "publicOrigin": {
+      "status": "PASS",
+      "completeResponseBodies": 21,
+      "verifiedBytes": 753990693,
+      "retiredHttp404": 14,
+      "renderingInferred": false
+    },
+    "browserDeclaredScope": {
+      "status": "PASS",
+      "hashedReports": 2,
+      "scope": "Declared public browser verdict/source and leaf evidence hashes only; no fresh observation or automatic interpretation of pixels, responsive coverage, interactions, console output, native or human behavior."
+    }
+  },
+  "inputFiles": {
+    "hosting_provider": {
+      "path": "docs/validation/site-v1.23/hosting/receipts/final-deployment/deployment.json",
+      "sha256": "fccde8e00353a359c37b63116702c445e30c05bfb17410d38e541acab1699158",
+      "bytes": 3370
+    },
+    "public_origin": {
+      "path": "docs/validation/site-v1.23/public-response.json",
+      "sha256": "09a924118c0c3b5bce7c5f82ec709ade46ae6b5a5faa5c8cdffd4ea87baf1eea",
+      "bytes": 29847
+    },
+    "browser_public": {
+      "path": "docs/validation/site-v1.23/browser-public/report.json",
+      "sha256": "ffbbc74488516f449e8e56f9313bb98610dbe654db94052d1cb1f370becbbe6b",
+      "bytes": 3744
+    },
+    "retirements": {
+      "path": "docs/validation/v1.23/cleanup/public-retirements.json",
+      "sha256": "8004a0b19c91548d70634ba11d475dd6b8815d157a9e8e54f712ae89e7865e3d",
+      "bytes": 8368
+    },
+    "source_c2": {
+      "path": "docs/validation/site-v1.23/release/source-manifest.json",
+      "sha256": "78994a2e02ad2e74b7439e112852bfbc69b7fd596998cd62f7933e435584507c",
+      "bytes": 172115
+    },
+    "c1_ci": {
+      "path": "docs/validation/v1.23/publication/c1/ci/receipt.json",
+      "sha256": "f8070930d595c9196c601ac399e8e9049b79823c7acaac965eebbd31443e1176",
+      "bytes": 21044
+    },
+    "c2_ci": {
+      "path": "docs/validation/v1.23/publication/c2/ci/receipt.json",
+      "sha256": "2077db329962533437274ffa2507750c863334d748bc54e1b69652b2fd176f21",
+      "bytes": 20623
+    }
+  },
+  "scope": "Offline consistency of supplied original receipts and pinned identities. No network, re-fetch, deployment, build, new simulation, browser/native replay, human or physical-device acceptance."
+}
