@@ -34,7 +34,8 @@ def fixture(root):
               'preservedPayloads': 524, 'intentionalChanges': ['/index.html']}
     current = copy.deepcopy(previous)
     names = ['/index.html', '/lab/cognitive/data/provenance.json',
-             '/lab/cognitive/index.html', '/lab/cognitive/local.zip']
+             '/lab/cognitive/index.html', '/lab/cognitive/lab.js',
+             '/lab/cognitive/cognitive-lab-local.zip']
     for name in names:
         raw = ('new fixture bytes for ' + name).encode()
         path = root / ('public' + name)
@@ -175,7 +176,7 @@ class OverlayTests(unittest.TestCase):
     def test_sparse_source_requires_no_historical_apks(self):
         self.assertFalse((self.root / 'public/historical').exists())
         self.assertEqual(len(self.source['baselineFiles']), 525)
-        self.assertEqual(len(self.source['overlay']), 4)
+        self.assertEqual(len(self.source['overlay']), 5)
         self.assertEqual(MODULE.compressed(b'hello'), MODULE.compressed(b'hello'))
         (self.root / 'public/index.html').write_text('changed')
         with self.assertRaises(MODULE.DeploymentError):
@@ -192,15 +193,15 @@ class OverlayTests(unittest.TestCase):
         client = FakeClient(self.source)
         result = execute(self.source, client, client.old, self.receipts, True)
         self.assertEqual(result['status'], 'DEPLOY/FINALIZED')
-        self.assertEqual(result['verifiedProviderFiles'], 530)
+        self.assertEqual(result['verifiedProviderFiles'], 531)
         self.assertEqual(result['historicalPhysicalSourcePaths'], 525)
         self.assertEqual(result['retainedHistoricalPhysicalSourcePaths'], 524)
         self.assertEqual(result['historicalProviderFiles'], 527)
         self.assertEqual(result['retainedHistoricalProviderPaths'], 526)
-        self.assertEqual(result['expectedFinalPhysicalSourcePaths'], 528)
-        self.assertEqual(result['expectedFinalProviderPaths'], 530)
+        self.assertEqual(result['expectedFinalPhysicalSourcePaths'], 529)
+        self.assertEqual(result['expectedFinalProviderPaths'], 531)
         self.assertEqual(result['firebaseManagedReservedPathCount'], 2)
-        self.assertEqual(result['uploadedOverlayBlobs'], 3)
+        self.assertEqual(result['uploadedOverlayBlobs'], 4)
         self.assertFalse(result['historicalApksUploaded'])
         for path, row in client.maps[client.old].items():
             if path != '/index.html':
@@ -279,6 +280,88 @@ class OverlayTests(unittest.TestCase):
                 self.assertFalse(any(c[1].endswith('/releases') for c in client.calls))
                 if fault in ('unexpected_hash', 'untrusted_upload', 'race_before_clone'):
                     self.assertFalse(client.uploads)
+
+    def prepare_followup(self, changed=None):
+        original = self.receipts / 'original'
+        original.mkdir()
+        original_client = FakeClient(self.source, 'release_live_alias')
+        execute(self.source, original_client, original_client.old, original, True)
+        for path in (sorted(MODULE.UPDATE_ALLOWED) if changed is None else changed):
+            (self.root / ('public' + path)).write_text('Audited offline-link follow-up: ' + path)
+        manifest = json.loads((self.root / MODULE.MANIFEST).read_text())
+        for path in (sorted(MODULE.UPDATE_ALLOWED) if changed is None else changed):
+            raw = (self.root / ('public' + path)).read_bytes()
+            manifest['files'][path] = {'sha256': MODULE.sha(raw), 'bytes': len(raw)}
+        (self.root / MODULE.MANIFEST).write_text(json.dumps(manifest))
+        git(self.root, 'add', '.')
+        git(self.root, 'commit', '-qm', 'offline links only')
+        current = MODULE.validate_source(self.root, git(self.root, 'rev-parse', 'HEAD'))
+        return current, original
+
+    def followup_client(self, source, old_version, context):
+        client = FakeClient(source, 'release_live_alias')
+        client.old, client.new = old_version, 'sites/' + MODULE.SITE + '/versions/followup-version'
+        client.maps = {old_version: {path: (value, 'ACTIVE') for path, value in context['priorProviderFiles'].items()}}
+        client.states, client.live = {old_version: 'FINALIZED'}, old_version
+        client.serving = copy.deepcopy(context['priorProviderConfig'])
+        client.message, client.release_name = context['priorReleaseMessage'], context['priorReleaseName']
+        return client
+
+    def test_followup_only_changes_audited_three_paths_and_is_readonly_by_default(self):
+        current, original = self.prepare_followup()
+        original_hashes = {p.name: MODULE.sha(p.read_bytes()) for p in original.iterdir() if p.is_file()}
+        narrowed, old_version, context = MODULE.validate_update(current, original)
+        self.assertEqual(set(narrowed['overlay']), MODULE.UPDATE_ALLOWED)
+        preflight = self.receipts / 'followup-preflight'
+        preflight.mkdir()
+        client = self.followup_client(narrowed, old_version, context)
+        with contextlib.redirect_stdout(io.StringIO()):
+            result = MODULE.execute(narrowed, client, old_version, preflight, False, context)
+        self.assertTrue(all(call[0] == 'GET' for call in client.calls))
+        self.assertEqual(result['deploymentKind'], 'audited-cognitive-followup')
+        output = self.receipts / 'followup-deploy'
+        output.mkdir()
+        client = self.followup_client(narrowed, old_version, context)
+        with contextlib.redirect_stdout(io.StringIO()):
+            result = MODULE.execute(narrowed, client, old_version, output, True, context)
+        self.assertEqual(result['status'], 'DEPLOY/FINALIZED')
+        self.assertEqual(result['verifiedProviderFiles'], 531)
+        self.assertEqual(result['overlayPaths'], 3)
+        self.assertEqual(result['retainedHistoricalProviderPaths'], 528)
+        populated = [call for call in client.calls if call[1].endswith(':populateFiles')]
+        self.assertEqual(set(populated[0][2]['files']), MODULE.UPDATE_ALLOWED)
+        self.assertEqual(len(client.uploads), 2)  # one exact provider-cache hit
+        for path, value in context['priorProviderFiles'].items():
+            if path not in MODULE.UPDATE_ALLOWED:
+                self.assertEqual(client.maps[client.new][path], (value, 'ACTIVE'))
+        self.assertEqual(original_hashes, {p.name: MODULE.sha(p.read_bytes()) for p in original.iterdir() if p.is_file()})
+        client.calls.clear()
+        with contextlib.redirect_stdout(io.StringIO()):
+            recovered = MODULE.recover(current, client, output)
+        self.assertTrue(recovered['recoveredReadOnly'])
+        self.assertTrue(all(call[0] == 'GET' for call in client.calls))
+
+    def test_followup_refuses_unapproved_source_and_prior_provider_identity(self):
+        current, original = self.prepare_followup(changed=['/index.html'])
+        with self.assertRaises(MODULE.DeploymentError):
+            MODULE.validate_update(current, original)
+
+    def test_followup_refuses_prior_receipt_and_live_map_mismatch(self):
+        current, original = self.prepare_followup()
+        narrowed, old_version, context = MODULE.validate_update(current, original)
+        client = self.followup_client(narrowed, old_version, context)
+        client.maps[old_version]['/__/firebase/init.json'] = ('f' * 64, 'ACTIVE')
+        output = self.receipts / 'changed-live-map'
+        output.mkdir()
+        with self.assertRaises(MODULE.DeploymentError):
+            with contextlib.redirect_stdout(io.StringIO()):
+                MODULE.execute(narrowed, client, old_version, output, True, context)
+        self.assertTrue(all(call[0] == 'GET' for call in client.calls))
+        saved = json.loads((original / 'verified-provider-files.json').read_text())
+        saved['/__/firebase/init.json'] = 'f' * 64
+        (original / 'verified-provider-files.json').write_text(json.dumps(saved))
+        with self.assertRaises(MODULE.DeploymentError):
+            MODULE.validate_update(current, original)
 
     def test_auth_host_pinning_and_errors_do_not_leak_token(self):
         for url in ('http://firebasehosting.googleapis.com/v1beta1/sites/x',

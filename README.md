@@ -5,6 +5,8 @@
 
 **[Open the FR/EN report](https://luma-drift-production.web.app/lab/cognitive/index.html)** · [Method, local commands and limits](docs/COGNITIVE_LAB.md) · [Recorded run and delivery](docs/validation/cognitive-lab/README.md). A separate headless lab compares 100 heterogeneous cognitive agents with repeated, paired scenarios on the current puzzle engine. Cognitive parameters, IQ labels and continuation measures are synthetic hypotheses. This adds no Android release and establishes no human retention or clinical outcome.
 
+[Workspace cleanup, 30 October 2026](docs/validation/cleanup-2026-10-30/README.md) removes 4.97 GB of ignored reproducible files and saves another 6.10 GB of allocated Git storage. Source, published releases, historical evidence and all Git objects remain. The reusable cleanup script defaults to a dry run.
+
 ## Current 1.21 — delivered for playtesting
 
 **[Production APK](https://luma-drift-production.web.app/releases/luma-drift-1.21.0-rc1.apk)** · **[Separate Lab APK](https://luma-drift-production.web.app/releases/luma-drift-1.21.0-sandbox-rc1.apk)** · **[Playable simulation](https://luma-drift-production.web.app/lab/ui-1-21/index.html)** · [Website](https://luma-drift-production.web.app/)

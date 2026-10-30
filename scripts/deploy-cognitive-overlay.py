@@ -32,6 +32,8 @@ API = 'https://firebasehosting.googleapis.com/v1beta1/'
 UPLOAD_HOST = 'upload-firebasehosting.googleapis.com'
 EXPECTED_LIVE = 'sites/luma-drift-production/versions/d08a2aa131c05c4f'
 FIREBASE_RESERVED = frozenset(('/__/firebase/init.js', '/__/firebase/init.json'))
+UPDATE_ALLOWED = frozenset(('/lab/cognitive/index.html', '/lab/cognitive/lab.js',
+                            '/lab/cognitive/cognitive-lab-local.zip'))
 MANIFEST = 'docs/validation/cognitive-lab/site-manifest.json'
 BASELINE = 'docs/validation/site-v1.21/release/source-manifest.json'
 CONFIG = 'firebase.json'
@@ -293,28 +295,41 @@ def clone(client, old_name, output):
     return name
 
 
-def execute(source, client, expected_live, output, deploy):
-    live = live_channel(client, expected_live)
+def execute(source, client, expected_live, output, deploy, update_context=None):
+    def checked_live():
+        current = live_channel(client, expected_live)
+        if update_context is not None:
+            require(current['releaseMessage'] == update_context['priorReleaseMessage'] and
+                    same_release(current['releaseName'], update_context['priorReleaseName']),
+                    'Follow-up live release identity differs from the exact prior receipt')
+        return current
+
+    live = checked_live()
     old = version(client, expected_live, 'FINALIZED')
     old_files = files(client, expected_live)
     physical_baseline = set(source['baselineFiles'])
     require(not physical_baseline.intersection(FIREBASE_RESERVED),
             'Firebase-managed reserved paths must not be declared as physical source payloads')
     require(set(old_files) == physical_baseline.union(FIREBASE_RESERVED),
-            'Live provider paths differ from the 525-path baseline plus the exact two Firebase-managed reserved paths')
+            'Live provider paths differ from the exact physical baseline plus two Firebase-managed reserved paths')
+    if update_context is not None:
+        require(old_files == update_context['priorProviderFiles'] and
+                old.get('config', {}) == update_context['priorProviderConfig'],
+                'Follow-up current provider hashes or config differ from the prior deployment receipts')
     overlay = source['overlay']
     expected_files = dict(old_files)
     expected_files.update({name: item['gzipSha256'] for name, item in overlay.items()})
+    overwritten = physical_baseline.intersection(overlay)
     preflight = {'status': 'PASS', 'mode': 'deploy' if deploy else 'read-only-preflight',
                  'sourceCommit': source['commit'], 'sourcePublicTree': source['publicTree'],
                  'sourceCheckoutClean': True, 'manifestSha256': source['manifestSha256'],
                  'baselineManifestSha256': source['baselineManifestSha256'],
                  'firebaseConfigSha256': source['firebaseConfigSha256'],
                  'expectedLiveVersion': expected_live, 'live': live,
-                 'historicalProviderFiles': len(old_files), 'retainedHistoricalPaths': len(old_files) - 1,
+                 'historicalProviderFiles': len(old_files), 'retainedHistoricalPaths': len(old_files) - len(overwritten),
                  'historicalPhysicalSourcePaths': len(physical_baseline),
-                 'retainedHistoricalPhysicalSourcePaths': len(physical_baseline) - 1,
-                 'retainedHistoricalProviderPaths': len(old_files) - 1,
+                 'retainedHistoricalPhysicalSourcePaths': len(physical_baseline) - len(overwritten),
+                 'retainedHistoricalProviderPaths': len(old_files) - len(overwritten),
                  'firebaseManagedReservedPaths': sorted(FIREBASE_RESERVED),
                  'firebaseManagedReservedPathCount': len(FIREBASE_RESERVED),
                  'overlayPaths': len(overlay), 'finalExpectedPaths': len(expected_files),
@@ -329,13 +344,16 @@ def execute(source, client, expected_live, output, deploy):
                  'publicOriginRequested': False, 'publicOriginBytesVerified': False,
                  'publicOriginRenderingVerified': False,
                  'identityScope': 'Overlay raw bytes equal exact Git/source-manifest hashes. Historical physical paths and exactly /__/firebase/init.js plus /__/firebase/init.json are preserved by cloning authenticated provider compressed hashes/config. These two Firebase-managed reserved paths are provider-only entries, not physical source files. Historical raw source bytes are not reverified on this sparse checkout. Public HTTP and rendering remain separate evidence.'}
+    if update_context is not None:
+        preflight.update({key: value for key, value in update_context.items()
+                          if key not in ('priorProviderFiles', 'priorProviderConfig')})
     save(output, 'preflight.json', preflight)
     save(output, 'overlay-source-and-gzip-hashes.json', overlay)
     save(output, 'baseline-provider-files.json', old_files)
     save(output, 'baseline-provider-config.json', old.get('config', {}))
     print(json.dumps({'preflight': 'PASS', 'commit': source['commit'], 'overlayPaths': len(overlay),
-                      'preservedPhysicalSourcePaths': len(physical_baseline) - 1,
-                      'preservedProviderPaths': len(old_files) - 1,
+                      'preservedPhysicalSourcePaths': len(physical_baseline) - len(overwritten),
+                      'preservedProviderPaths': len(old_files) - len(overwritten),
                       'firebaseManagedReservedPaths': len(FIREBASE_RESERVED),
                       'finalPhysicalSourcePaths': len(source['allSourceFiles']),
                       'finalProviderPaths': len(expected_files), 'deployRequested': deploy}), flush=True)
@@ -343,7 +361,7 @@ def execute(source, client, expected_live, output, deploy):
         return preflight
 
     # Recheck immediately before the first mutation, independently of preflight.
-    live_channel(client, expected_live)
+    checked_live()
     name = clone(client, expected_live, output)
     cloned = version(client, name, 'CREATED')
     require(cloned.get('config', {}) == old.get('config', {}), 'Clone changed provider serving config')
@@ -388,7 +406,7 @@ def execute(source, client, expected_live, output, deploy):
 
     # An optimistic concurrency check: if another deploy happened, leave this
     # finalized version unreleased. The API does not offer a release compare-and-swap.
-    before_release = live_channel(client, expected_live)
+    before_release = checked_live()
     save(output, 'live-immediately-before-release.json', before_release)
     message = 'Cognitive Lab 1 from ' + source['commit']
     release = client.api('POST', 'sites/' + SITE + '/releases', {'message': message}, versionName=name)
@@ -408,6 +426,91 @@ def execute(source, client, expected_live, output, deploy):
     save(output, 'deployment.json', result)
     print('COGNITIVE_LAB_OVERLAY_RECEIPT ' + json.dumps(result, sort_keys=True), flush=True)
     return result
+
+
+def validate_update(source, receipts):
+    """Bind a narrowly allowed follow-up to an exact earlier Git/provider release."""
+    receipt_hashes = {}
+    def read(name):
+        path = receipts / name
+        require(path.is_file() and not path.is_symlink(), 'Missing bounded follow-up receipt: ' + name)
+        raw = path.read_bytes()
+        receipt_hashes[name] = sha(raw)
+        return json.loads(raw)
+
+    deployed = read('deployment.json')
+    prior = read('preflight.json')
+    prior_files = read('verified-provider-files.json')
+    prior_config = read('baseline-provider-config.json')
+    finalized = read('finalized-version.json')
+    prior_overlay = read('overlay-source-and-gzip-hashes.json')
+    original_files = read('baseline-provider-files.json')
+    old_commit = deployed.get('deploymentSourceCommit', deployed.get('sourceCommit', ''))
+    old_name = deployed.get('version', '')
+    require(deployed.get('status') == 'DEPLOY/FINALIZED' and
+            re.fullmatch(r'[a-f0-9]{40}', old_commit) is not None and
+            isinstance(old_name, str) and VERSION.fullmatch(old_name) is not None,
+            'Follow-up needs an exact previously finalized deployment receipt')
+    require(prior.get('status') == 'PASS' and prior.get('sourceCommit') == old_commit and
+            finalized.get('name') == old_name and finalized.get('status') == 'FINALIZED',
+            'Prior deployment source/version receipts disagree')
+    old_manifest_bytes = git(source['root'], 'show', old_commit + ':' + MANIFEST, binary=True)
+    old_manifest = json.loads(old_manifest_bytes)
+    require(sha(old_manifest_bytes) == prior.get('manifestSha256') == deployed.get('manifestSha256') and
+            git(source['root'], 'rev-parse', old_commit + ':public') == prior.get('sourcePublicTree') == deployed.get('sourcePublicTree'),
+            'Prior receipt is not proven by the exact older Git manifest/public tree')
+    require(old_manifest.get('status') == 'PASS' and old_manifest.get('release') == 'cognitive-lab-1' and
+            old_manifest.get('baselineManifestSha256') == source['baselineManifestSha256'] and
+            old_manifest.get('firebaseConfigSha256') == source['firebaseConfigSha256'] and
+            sha(git(source['root'], 'show', old_commit + ':' + CONFIG, binary=True)) == source['firebaseConfigSha256'],
+            'Follow-up changed historical metadata or Hosting config')
+    old_physical = old_manifest['files']
+    require(set(old_physical) == set(source['allSourceFiles']), 'Follow-up may not add or remove any physical path')
+    changed = sorted(path for path in old_physical if old_physical[path] != source['allSourceFiles'][path])
+    require(changed and set(changed).issubset(UPDATE_ALLOWED),
+            'Follow-up changes paths outside the exact dashboard index, script and offline archive allowlist')
+    require(set(prior_overlay) == set(source['overlay']), 'Prior overlay footprint differs from current audited overlay')
+    require(set(prior_files) == set(old_physical).union(FIREBASE_RESERVED) and
+            all(isinstance(value, str) and HEX.fullmatch(value) for value in prior_files.values()) and
+            canonical_hash(prior_files) == prior.get('expectedProviderFileMapSha256') == deployed.get('expectedProviderFileMapSha256'),
+            'Prior full provider file map identity differs')
+    require(canonical_hash(original_files) == prior.get('oldProviderFileMapSha256') and
+            set(original_files) == set(source['baselineFiles']).union(FIREBASE_RESERVED),
+            'Prior original historical provider map differs')
+    for path, row in prior_overlay.items():
+        raw = git(source['root'], 'show', old_commit + ':public' + path, binary=True)
+        encoded = compressed(raw)
+        expected = {'rawSha256': sha(raw), 'rawBytes': len(raw),
+                    'gzipSha256': sha(encoded), 'gzipBytes': len(encoded)}
+        require(row == expected and old_physical[path] == {'sha256': sha(raw), 'bytes': len(raw)} and
+                prior_files[path] == sha(encoded), 'Prior overlay is not proven by old Git bytes/provider identity: ' + path)
+    for path, value in original_files.items():
+        if path not in prior_overlay:
+            require(prior_files[path] == value, 'Prior historical provider hash changed outside the original overlay')
+    config_hash = canonical_hash(prior_config)
+    require(config_hash == prior.get('providerServingConfigSha256') == deployed.get('providerServingConfigSha256') ==
+            finalized.get('providerConfigSha256'), 'Prior serving config receipts disagree')
+    prior_live = deployed.get('live', {})
+    old_message = 'Cognitive Lab 1 from ' + old_commit
+    require(prior_live.get('versionName') == old_name and prior_live.get('releaseMessage') == old_message and
+            isinstance(prior_live.get('releaseName'), str) and RELEASE_NAME.fullmatch(prior_live['releaseName']) is not None,
+            'Prior live release receipt identity differs')
+    narrowed = dict(source)
+    narrowed['baselineFiles'] = old_physical
+    narrowed['overlay'] = {path: source['overlay'][path] for path in changed}
+    narrowed['blobs'] = {row['gzipSha256']: source['blobs'][row['gzipSha256']]
+                         for row in narrowed['overlay'].values()}
+    context = {'deploymentKind': 'audited-cognitive-followup',
+               'priorDeploymentSourceCommit': old_commit, 'priorVersion': old_name,
+               'priorManifestSha256': sha(old_manifest_bytes),
+               'priorSourcePublicTree': prior['sourcePublicTree'],
+               'priorReleaseMessage': old_message, 'priorReleaseName': prior_live['releaseName'],
+               'priorProviderFileMapSha256': canonical_hash(prior_files),
+               'priorReceiptSha256': receipt_hashes,
+               'changedPaths': changed, 'allowedFollowupPaths': sorted(UPDATE_ALLOWED),
+               'priorProviderFiles': prior_files, 'priorProviderConfig': prior_config,
+               'followupScope': 'Only the listed dashboard index/script/offline archive raw bytes differ. Current full provider map/config and exact prior release are verified before cloning; every other provider hash is preserved.'}
+    return narrowed, old_name, context
 
 
 def recover(source, client, output):
@@ -442,14 +545,27 @@ def recover(source, client, output):
             sha(git(source['root'], 'show', deployment_commit + ':' + MANIFEST, binary=True)) == source['manifestSha256'] and
             sha(git(source['root'], 'show', deployment_commit + ':' + CONFIG, binary=True)) == source['firebaseConfigSha256'],
             'Original deployment commit does not prove the same public tree and source metadata')
-    require(overlay == source['overlay'], 'Recovery overlay bytes or gzip identities differ')
+    followup = previous.get('deploymentKind') == 'audited-cognitive-followup'
+    changed = previous.get('changedPaths', []) if followup else list(source['overlay'])
+    require(isinstance(changed, list) and changed and
+            (not followup or set(changed).issubset(UPDATE_ALLOWED)) and
+            overlay == {path: source['overlay'][path] for path in changed},
+            'Recovery overlay bytes or gzip identities differ')
     require(operation.get('done') is True and operation.get('versionStatus') == 'CREATED',
             'Recovery clone did not finish as a mutable version')
     name = operation.get('versionName', '')
     require(isinstance(name, str) and VERSION.fullmatch(name) is not None and
             finalized.get('name') == name and finalized.get('status') == 'FINALIZED' and
             uploads.get('version') == name, 'Recovery version receipts disagree')
-    physical_baseline = set(source['baselineFiles'])
+    if followup:
+        old_commit = previous.get('priorDeploymentSourceCommit', '')
+        require(re.fullmatch(r'[a-f0-9]{40}', old_commit) is not None, 'Missing follow-up prior source identity')
+        old_manifest = git(source['root'], 'show', old_commit + ':' + MANIFEST, binary=True)
+        require(sha(old_manifest) == previous.get('priorManifestSha256'), 'Follow-up prior source manifest differs')
+        physical_baseline = set(json.loads(old_manifest)['files'])
+        require(physical_baseline == set(source['allSourceFiles']), 'Follow-up recovery path footprint differs')
+    else:
+        physical_baseline = set(source['baselineFiles'])
     require(set(baseline_files) == physical_baseline.union(FIREBASE_RESERVED) and
             all(isinstance(value, str) and HEX.fullmatch(value) for value in baseline_files.values()) and
             canonical_hash(baseline_files) == previous.get('oldProviderFileMapSha256'),
@@ -507,14 +623,23 @@ def main():
     parser.add_argument('--deploy', action='store_true', help='Explicitly clone, upload overlay, finalize and release')
     parser.add_argument('--recover', action='store_true',
                         help='Read-only verification of an already released version using existing --output receipts')
+    parser.add_argument('--update-from-receipts', type=Path,
+                        help='Audit a narrow dashboard index/script/archive follow-up against prior finalized receipts; --deploy releases it')
     args = parser.parse_args()
     require(not (args.deploy and args.recover), '--recover cannot be combined with --deploy')
+    require(not (args.recover and args.update_from_receipts), '--recover cannot be combined with --update-from-receipts')
     require(VERSION.fullmatch(args.expected_live_version) is not None, 'Expected live version must belong to the fixed site')
     output = args.output.resolve()
     require(output != ROOT and ROOT not in output.parents, 'Receipts must be outside the source checkout')
     require(output.is_dir() if args.recover else not output.exists(),
             'Recovery requires an existing receipt directory; preflight/deploy requires a new directory')
     source = validate_source(ROOT, args.commit)
+    update_context = None
+    expected_live = args.expected_live_version
+    if args.update_from_receipts:
+        source, expected_live, update_context = validate_update(source, args.update_from_receipts.resolve())
+        require(args.expected_live_version in (EXPECTED_LIVE, expected_live),
+                'Explicit expected-live version differs from the prior finalized update receipt')
     client = Client(access_token())
     if not args.recover:
         output.mkdir(parents=True, exist_ok=False)
@@ -522,7 +647,7 @@ def main():
         if args.recover:
             recover(source, client, output)
         else:
-            execute(source, client, args.expected_live_version, output, args.deploy)
+            execute(source, client, expected_live, output, args.deploy, update_context)
     except Exception as error:
         # Only controlled error text is safe; an arbitrary library exception can
         # include a request object. Keep unknown failures deliberately generic.

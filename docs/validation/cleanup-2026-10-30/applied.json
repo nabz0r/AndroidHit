@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "mode": "apply",
+  "root": "/Users/n/androidhit",
+  "recordedAtUtc": "2026-10-30T01:45:40.204875+00:00",
+  "subprocesses": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "returnCode": 0,
+      "stdout": "/Users/n/androidhit\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "ps",
+        "-axo",
+        "pid=,comm=,args="
+      ],
+      "returnCode": 0,
+      "stdout": "Process list inspected; unrelated commands omitted.",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "lsof",
+        "-n",
+        "-P",
+        "-a",
+        "-d",
+        "cwd",
+        "-Fpn"
+      ],
+      "returnCode": 0,
+      "stdout": "Working directories inspected; unrelated paths omitted.",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "-version"
+      ],
+      "returnCode": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Homebrew (build 17.0.20.1+0)\nOpenJDK 64-Bit Server VM Homebrew (build 17.0.20.1+0, mixed mode, sharing)\n"
+    },
+    {
+      "argv": [
+        "./gradlew",
+        "--status"
+      ],
+      "returnCode": 0,
+      "stdout": "   PID STATUS   INFO\n 97648 IDLE     8.14.3\n\nOnly Daemons for the current Gradle version are displayed. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:status in the Gradle documentation.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "./gradlew",
+        "--stop"
+      ],
+      "returnCode": 0,
+      "stdout": "Stopping Daemon(s)\n1 Daemon stopped\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "df",
+        "-k",
+        "/Users/n/androidhit"
+      ],
+      "returnCode": 0,
+      "stdout": "Filesystem   1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on\n/dev/disk3s1   971350180 705049528 240850392    75% 2799723 2408503920    0%   /System/Volumes/Data\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "df",
+        "-k",
+        "/Users/n/androidhit"
+      ],
+      "returnCode": 0,
+      "stdout": "Filesystem   1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on\n/dev/disk3s1   971350180 700121148 245778772    75% 2773889 2457787720    0%   /System/Volumes/Data\n",
+      "stderr": ""
+    }
+  ],
+  "targets": [
+    {
+      "path": ".DS_Store",
+      "before": {
+        "files": 1,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 6148,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": ".gradle",
+      "before": {
+        "files": 15,
+        "directories": 10,
+        "symlinks": 0,
+        "logicalBytes": 37515351,
+        "allocatedBytes": 38596608
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": "app/.DS_Store",
+      "before": {
+        "files": 1,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 6148,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": "app/build",
+      "before": {
+        "files": 8593,
+        "directories": 2076,
+        "symlinks": 0,
+        "logicalBytes": 3480151763,
+        "allocatedBytes": 3536322560
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": "build",
+      "before": {
+        "files": 8076,
+        "directories": 789,
+        "symlinks": 3,
+        "logicalBytes": 1380521518,
+        "allocatedBytes": 1399193600
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": "docs/validation/v1.17/review/__pycache__",
+      "before": {
+        "files": 1,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 4389,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": "scripts/v118-art/__pycache__",
+      "before": {
+        "files": 2,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 84731,
+        "allocatedBytes": 90112
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": "scripts/v118-fresh-ui/__pycache__",
+      "before": {
+        "files": 1,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 5656,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    },
+    {
+      "path": "server/node_modules",
+      "before": {
+        "files": 5430,
+        "directories": 826,
+        "symlinks": 7,
+        "logicalBytes": 70120995,
+        "allocatedBytes": 84406272
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": true,
+      "after": {
+        "files": 0,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 0,
+        "allocatedBytes": 0
+      }
+    }
+  ],
+  "success": true,
+  "scope": "Ignored reproducible outputs only; no Git refs/index/history edits, releases, public payloads, source, evidence, signing material or global caches removed.",
+  "activeBackendProcesses": [],
+  "before": {
+    "files": 22120,
+    "directories": 3704,
+    "symlinks": 10,
+    "logicalBytes": 4968416699,
+    "allocatedBytes": 5058641920
+  },
+  "diskFreeBeforeBytes": 246630801408,
+  "after": {
+    "files": 0,
+    "directories": 0,
+    "symlinks": 0,
+    "logicalBytes": 0,
+    "allocatedBytes": 0
+  },
+  "logicalBytesRemoved": 4968416699,
+  "filesRemoved": 22120,
+  "diskFreeAfterBytes": 251677462528,
+  "diskFreeChangeBytes": 5046661120,
+  "diskMeasurementNote": "Free-space delta is a volume-wide observation; APFS clones, snapshots and concurrent activity prevent attributing it exactly to logical file sizes."
+}

@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "mode": "dry-run",
+  "root": "/Users/n/androidhit",
+  "recordedAtUtc": "2026-10-30T01:45:18.848678+00:00",
+  "subprocesses": [
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "returnCode": 0,
+      "stdout": "/Users/n/androidhit\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "ps",
+        "-axo",
+        "pid=,comm=,args="
+      ],
+      "returnCode": 0,
+      "stdout": "Process list inspected; unrelated commands omitted.",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "lsof",
+        "-n",
+        "-P",
+        "-a",
+        "-d",
+        "cwd",
+        "-Fpn"
+      ],
+      "returnCode": 0,
+      "stdout": "Working directories inspected; unrelated paths omitted.",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "df",
+        "-k",
+        "/Users/n/androidhit"
+      ],
+      "returnCode": 0,
+      "stdout": "Filesystem   1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on\n/dev/disk3s1   971350180 705048588 240851332    75% 2799720 2408513320    0%   /System/Volumes/Data\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "df",
+        "-k",
+        "/Users/n/androidhit"
+      ],
+      "returnCode": 0,
+      "stdout": "Filesystem   1024-blocks      Used Available Capacity iused      ifree %iused  Mounted on\n/dev/disk3s1   971350180 705048588 240851332    75% 2799720 2408513320    0%   /System/Volumes/Data\n",
+      "stderr": ""
+    }
+  ],
+  "targets": [
+    {
+      "path": ".DS_Store",
+      "before": {
+        "files": 1,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 6148,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 1,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 6148,
+        "allocatedBytes": 8192
+      }
+    },
+    {
+      "path": ".gradle",
+      "before": {
+        "files": 15,
+        "directories": 10,
+        "symlinks": 0,
+        "logicalBytes": 37515351,
+        "allocatedBytes": 38596608
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 15,
+        "directories": 10,
+        "symlinks": 0,
+        "logicalBytes": 37515351,
+        "allocatedBytes": 38596608
+      }
+    },
+    {
+      "path": "app/.DS_Store",
+      "before": {
+        "files": 1,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 6148,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 1,
+        "directories": 0,
+        "symlinks": 0,
+        "logicalBytes": 6148,
+        "allocatedBytes": 8192
+      }
+    },
+    {
+      "path": "app/build",
+      "before": {
+        "files": 8593,
+        "directories": 2076,
+        "symlinks": 0,
+        "logicalBytes": 3480151763,
+        "allocatedBytes": 3536322560
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 8593,
+        "directories": 2076,
+        "symlinks": 0,
+        "logicalBytes": 3480151763,
+        "allocatedBytes": 3536322560
+      }
+    },
+    {
+      "path": "build",
+      "before": {
+        "files": 8076,
+        "directories": 789,
+        "symlinks": 3,
+        "logicalBytes": 1380521518,
+        "allocatedBytes": 1399193600
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 8076,
+        "directories": 789,
+        "symlinks": 3,
+        "logicalBytes": 1380521518,
+        "allocatedBytes": 1399193600
+      }
+    },
+    {
+      "path": "docs/validation/v1.17/review/__pycache__",
+      "before": {
+        "files": 1,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 4389,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 1,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 4389,
+        "allocatedBytes": 8192
+      }
+    },
+    {
+      "path": "scripts/v118-art/__pycache__",
+      "before": {
+        "files": 2,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 84731,
+        "allocatedBytes": 90112
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 2,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 84731,
+        "allocatedBytes": 90112
+      }
+    },
+    {
+      "path": "scripts/v118-fresh-ui/__pycache__",
+      "before": {
+        "files": 1,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 5656,
+        "allocatedBytes": 8192
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 1,
+        "directories": 1,
+        "symlinks": 0,
+        "logicalBytes": 5656,
+        "allocatedBytes": 8192
+      }
+    },
+    {
+      "path": "server/node_modules",
+      "before": {
+        "files": 5430,
+        "directories": 826,
+        "symlinks": 7,
+        "logicalBytes": 70120995,
+        "allocatedBytes": 84406272
+      },
+      "ignored": true,
+      "trackedFiles": 0,
+      "removed": false,
+      "after": {
+        "files": 5430,
+        "directories": 826,
+        "symlinks": 7,
+        "logicalBytes": 70120995,
+        "allocatedBytes": 84406272
+      }
+    }
+  ],
+  "success": true,
+  "scope": "Ignored reproducible outputs only; no Git refs/index/history edits, releases, public payloads, source, evidence, signing material or global caches removed.",
+  "activeBackendProcesses": [],
+  "before": {
+    "files": 22120,
+    "directories": 3704,
+    "symlinks": 10,
+    "logicalBytes": 4968416699,
+    "allocatedBytes": 5058641920
+  },
+  "diskFreeBeforeBytes": 246631763968,
+  "after": {
+    "files": 22120,
+    "directories": 3704,
+    "symlinks": 10,
+    "logicalBytes": 4968416699,
+    "allocatedBytes": 5058641920
+  },
+  "logicalBytesRemoved": 0,
+  "filesRemoved": 0,
+  "diskFreeAfterBytes": 246631763968,
+  "diskFreeChangeBytes": 0,
+  "diskMeasurementNote": "Free-space delta is a volume-wide observation; APFS clones, snapshots and concurrent activity prevent attributing it exactly to logical file sizes."
+}

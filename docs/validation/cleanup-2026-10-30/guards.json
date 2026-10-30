@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "checks": [
+    {
+      "check": "tracked_file_refusal",
+      "passed": true,
+      "reason": "Tracked file found in cleanup target: app/build"
+    },
+    {
+      "check": "root_parent_traversal_refusal",
+      "passed": true,
+      "reason": "Unsafe target path: ../outside"
+    },
+    {
+      "check": "non_allowlisted_source_refusal",
+      "passed": true,
+      "reason": "Target is outside the cleanup allowlist: app/src"
+    },
+    {
+      "check": "symlink_directory_refusal",
+      "passed": true,
+      "reason": "Symlink target/ancestor refused: app/build"
+    },
+    {
+      "check": "external_symlink_target_preserved",
+      "passed": true
+    },
+    {
+      "check": "dry_run_changes_no_candidate",
+      "passed": true
+    }
+  ]
+}

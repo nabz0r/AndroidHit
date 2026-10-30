@@ -63,7 +63,7 @@ zero. No model is selected on held-out results.
   safe text rendering, inert CSV formulas, chart geometry and retry attribution.
   Actual local browser checks cover FR/EN at 320/375/768/1280 pixels, scenario
   changes, profile selection, optional IQ labels and full local report import.
-- **Eight offline deployment tests** cover exact source identity, sparse checkouts,
+- **Eleven offline deployment tests** cover exact source identity, sparse checkouts,
   preserved provider hashes/config, forbidden paths/hosts and concurrent changes.
 
 The historical v1.9 solver-driven simulations are preserved. Their outputs are
@@ -85,6 +85,15 @@ network service is needed for these commands.
 extraction and self-test. Raw [trajectories](latest/trajectories.csv.gz) and
 [attempts](latest/level-results.csv.gz) are gzip-compressed CSV; the
 [single-file report](latest/report.json) is importable in the dashboard.
+
+The final archive is **6,579,468 bytes**, SHA-256
+`c21452b86a9b999f3f720243b5960f5ce77fcd671f165d8a1ca47d86a02d063e`.
+All 115 extracted files, local asset links, 28,139 model assertions, deterministic
+smoke outputs and 11 dashboard tests pass from that exact independent extraction.
+Game-home and fresh-ZIP links use the hosted destinations so they remain usable
+from an extracted local dashboard. The [earlier archive self-test](archive-validation-before-final.json)
+is preserved as historical evidence for its different 6,578,412-byte archive;
+it does not identify the final download.
 
 ## Publication scopes
 
@@ -123,3 +132,24 @@ Source publication, remote CI, authenticated Firebase management and
 public-origin observation are recorded separately after release. A finalized
 Hosting release is not by itself a public-byte or public-render verification.
 The Android release remains 1.21.0-rc1 / code 29.
+
+## Final source validation and workspace maintenance
+
+Both workflows pass on validator/source commit
+[`ea1b7fcc`](https://github.com/nabz0r/AndroidHit/commit/ea1b7fcca28caf119ee140a387ead703fae94f2c):
+[Cognitive Lab contracts](https://github.com/nabz0r/AndroidHit/actions/runs/40987738952)
+and [Puzzle contracts](https://github.com/nabz0r/AndroidHit/actions/runs/40987738959).
+All three jobs and 45 steps succeed, including the eight deployment tests.
+The exact returned job records are retained in
+[the lab receipt](ci-ea1b7fcc-40987738952.json) and
+[the engine/art receipt](ci-ea1b7fcc-40987738959.json). This commit retains the
+same public tree as initial deployed source `8f3653d0`; it fixes only management
+verification and records the separate public checks. The later navigation-only
+correction changes the dashboard HTML, export-link JavaScript and ZIP, with its
+own exact archive and delivery checks. The simulated engine and all study data
+remain unchanged.
+
+The separately requested [workspace cleanup](../cleanup-2026-10-30/README.md)
+removes only ignored regenerable outputs and compacts Git storage. Its source,
+release-copy and object-preservation checks pass. Tests were not rerun merely
+to recreate the removed compilation caches.

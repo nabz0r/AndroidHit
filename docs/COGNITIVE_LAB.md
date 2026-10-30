@@ -27,6 +27,12 @@ prepare a new snapshot with `python3 scripts/package-cognitive-lab.py --prepare`
 Preparation verifies the earlier site assets; deployment is a separate action.
 The runner's help documents shorter smoke runs and custom output directories.
 
+The ZIP includes a dashboard snapshot, code and raw results. Extract it before
+opening `public/lab/cognitive/index.html`; its scripts and snapshot work locally.
+The game-home and fresh-ZIP navigation links deliberately open the public site,
+because the Android website and a recursive copy of the ZIP are not bundled.
+Using those optional links requires a connection; running the simulation does not.
+
 ## What a profile means
 
 Each profile has a stable identifier and explicit parameters for planning,

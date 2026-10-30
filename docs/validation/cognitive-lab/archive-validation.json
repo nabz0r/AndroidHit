@@ -1,8 +1,31 @@
 {
   "passed": true,
-  "archiveBytes": 6578412,
+  "archiveBytes": 6579468,
+  "archiveSha256": "c21452b86a9b999f3f720243b5960f5ce77fcd671f165d8a1ca47d86a02d063e",
   "extractedFiles": 115,
-  "independentTemporaryDirectory": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-cognitive-delivery-ze730zrf",
-  "command": "bash scripts/test-cognitive-lab.sh",
-  "stdout": "{\"passed\":true,\"checks\":28139,\"scope\":\"Actual native engine on1000 U boards;5000 native SessionEnergyStore parity events;1000 GameStore award parity checks; paid Undo, bounded policy/no-oracle boundary, independent noncausal fictional IQ labels, shell learning, fatigue/reward sensitivity and exact-seed trajectories. All behavioral outcomes synthetic.\"}\nCompleted current_model: 12 modeled trajectories\nCompleted teaching_support: 12 modeled trajectories\nCompleted reward_muted: 12 modeled trajectories\nCompleted matched ablations; running held-out knowledge transfer\nCognitive lab ready: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-cognitive-test.vdzHjV/a (all behavioral metrics modeled)\nCompleted current_model: 12 modeled trajectories\nCompleted teaching_support: 12 modeled trajectories\nCompleted reward_muted: 12 modeled trajectories\nCompleted matched ablations; running held-out knowledge transfer\nCognitive lab ready: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-cognitive-test.vdzHjV/b (all behavioral metrics modeled)\n{\"passed\": true, \"deterministicPayloads\": [\"summary.json\", \"profiles.json\", \"traces.json\", \"paired-comparisons.json\", \"report.json\", \"trajectories.csv.gz\", \"level-results.csv.gz\"], \"mainTrajectories\": 36, \"profileScenarioAggregates\": 18, \"csvSchemasValid\": true, \"traceScenarios\": 3}\n"
+  "independentTemporaryDirectory": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-cognitive-final-archive-2py3bjag",
+  "offlineLocalAssetLinksValid": true,
+  "homeAndFreshZipLinksUseHostedDestinations": true,
+  "results": [
+    {
+      "argv": [
+        "bash",
+        "scripts/test-cognitive-lab.sh"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"passed\":true,\"checks\":28139,\"scope\":\"Actual native engine on1000 U boards;5000 native SessionEnergyStore parity events;1000 GameStore award parity checks; paid Undo, bounded policy/no-oracle boundary, independent noncausal fictional IQ labels, shell learning, fatigue/reward sensitivity and exact-seed trajectories. All behavioral outcomes synthetic.\"}\nCompleted current_model: 12 modeled trajectories\nCompleted teaching_support: 12 modeled trajectories\nCompleted reward_muted: 12 modeled trajectories\nCompleted matched ablations; running held-out knowledge transfer\nCognitive lab ready: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-cognitive-test.F2AAGh/a (all behavioral metrics modeled)\nCompleted current_model: 12 modeled trajectories\nCompleted teaching_support: 12 modeled trajectories\nCompleted reward_muted: 12 modeled trajectories\nCompleted matched ablations; running held-out knowledge transfer\nCognitive lab ready: /var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma-cognitive-test.F2AAGh/b (all behavioral metrics modeled)\n{\"passed\": true, \"deterministicPayloads\": [\"summary.json\", \"profiles.json\", \"traces.json\", \"paired-comparisons.json\", \"report.json\", \"trajectories.csv.gz\", \"level-results.csv.gz\"], \"mainTrajectories\": 36, \"profileScenarioAggregates\": 18, \"csvSchemasValid\": true, \"traceScenarios\": 3}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "public/lab/cognitive/tests/lab.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "\u2714 full engine report aliases normalize without altering payloads (0.798625ms)\n\u2714 summary-only imports keep absent sections empty, with no previous-run mixing (0.36ms)\n\u2714 invalid schema, non-finite rates, duplicate and unknown identities are rejected (1.034041ms)\n\u2714 deterministic chart bounds cannot leak invalid geometry (0.082333ms)\n\u2714 duration formatting preserves nonzero overruns in seconds and actual zero (10.961375ms)\n\u2714 CSV keeps quotes, commas and Unicode; spreadsheet formulas are inert (0.177125ms)\n\u2714 small nonzero overruns remain visible in the rendered report (7.492958ms)\n\u2714 explicit language query overrides saved language and preserves URL state (3.8315ms)\n\u2714 real render keeps hostile imported strings as text and never HTML (1.786625ms)\n\u2714 retry traces remain separate samples and never merge their decisions (1.828583ms)\n\ufe63 complete published engine data passes the same importer contract when present (0.165208ms) # Full report is not generated in this checkout.\n\u2139 tests 11\n\u2139 suites 0\n\u2139 pass 10\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 1\n\u2139 todo 0\n\u2139 duration_ms 78.537542\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Exact final archive bytes; sourceengine tests and dashboard tests executed from independent extraction; all build outputs remain in temporary directories."
 }
