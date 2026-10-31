@@ -1,0 +1,45 @@
+{
+  "status": "WAITING_FOR_EXISTING_GOOGLE_SESSION_AUTHORIZATION",
+  "observedUtc": "2026-10-31T02:08:49.895060+00:00",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "ciGate": "Coordinator confirmed workflows 41156960006 and 41156960012 COMPLETED/SUCCESS, three jobs, exact target.",
+  "workspace": "/tmp/luma124-cloud-39c0985b24ec-g5pa_wji",
+  "staged": true,
+  "reusedApks": 2,
+  "frozenInputs": 69,
+  "retryFinalizer": {
+    "cloudPath": "/tmp/luma124-cloud-finalize-retry.py",
+    "sha256": "f2f838f560efd674c1f26c67644d77559dbfdf31313e04e235978cbbfea81885",
+    "transferred": true,
+    "checkOnlyStatus": "VALIDATED_ONLY",
+    "checkOnlySourceManifestSha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd",
+    "deployExecuted": false,
+    "futureCommand": "python3 -u /tmp/luma124-cloud-finalize-retry.py /tmp/luma124-cloud-39c0985b24ec-g5pa_wji 66119799d6fbe5254a8d37d50db76afe8daffbdc --deploy",
+    "requiresBeforeExecution": "Existing standard Google authorization restored and credentialReady confirmed; never auth login/new scope/Restart without further coordinator direction."
+  },
+  "authenticationObservations": {
+    "reloadExistingTab": "No standard Authorize dialog",
+    "authListCount": 0,
+    "originalInteractiveProjectRead": "No active account selected",
+    "newTerminalSameVmProjectRead": "No active account selected",
+    "newOfficialConsoleFrontend": "Same visible Google principal compared in memory; panel remained about:blank and Activate Cloud Shell disabled. No command sent from unverified new frontend."
+  },
+  "preservedTabs": [
+    "1712524959",
+    "1712525002"
+  ],
+  "vmRestarted": false,
+  "authLoginAttempted": false,
+  "newScopeOrPermission": false,
+  "hostingDeployerCalled": false,
+  "uploaded": false,
+  "released": false,
+  "backup": {
+    "directory": "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure",
+    "archiveSha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d",
+    "archiveBytes": 31746,
+    "originalFilesVerified": 31,
+    "collectionSha256": "6d34d8517e6725fc5ee5dbd21feeea2d62240dd2a5ea1a8491f31ab391526c5a"
+  },
+  "privacy": "No Cloud Shell screenshots, account email or token captured into repository evidence."
+}

@@ -1,0 +1,43 @@
+{
+  "status": "AUTHORIZATION_BLOCKED_BEFORE_HOSTING",
+  "observedUtc": "2026-10-31T02:00:34.431419+00:00",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "workspacePreserved": true,
+  "initialFinalOperatorSha256": "08f2958b07e50d564274de24ce115765291e1a015ff1c9fabcb08d4eb129c451",
+  "initialFinalizerOutcome": "FAIL before deployer: gcloud token acquisition failed; no auth fallback attempted",
+  "hostingDeployerCalled": false,
+  "uploaded": false,
+  "released": false,
+  "refresh": "Only existing Cloud Shell browser tab reloaded; VM/workspace not restarted. Standard Authorize dialog did not appear.",
+  "redactedDiagnostic": {
+    "returncode": 1,
+    "credentialReady": false,
+    "errorType": "AUTHORIZATION_REQUIRED",
+    "tmpFreeBytes": 33076432896,
+    "homeFreeBytes": 96387072
+  },
+  "singleInteractiveProjectRead": "No active account selected; no auth login, account change, permission/scope change or new credential attempted.",
+  "retryFinalizer": {
+    "sha256": "f2f838f560efd674c1f26c67644d77559dbfdf31313e04e235978cbbfea81885",
+    "reviewedIndependently": true,
+    "offlineTestsPassed": 10,
+    "transferred": false,
+    "deployExecuted": false,
+    "requires": "Standard existing Cloud Shell authorization restored; complete exact C2b CI GO already received.",
+    "newOutputs": "receipts-c2b/final2-* only; preserves initial FAIL by exact hash."
+  },
+  "files": {
+    "offline-tests.log": {
+      "bytes": 915,
+      "sha256": "34a1cef591700e953f1ddbc3df55e9c729f855663b06c1fe5e4fde8e220a0dc0"
+    },
+    "cloud-finalize-retry.py": {
+      "bytes": 17043,
+      "sha256": "f2f838f560efd674c1f26c67644d77559dbfdf31313e04e235978cbbfea81885"
+    },
+    "test-finalizer-retry-offline.py": {
+      "bytes": 9821,
+      "sha256": "f84fd7fdeee902fa37f71fa1135631f799436f1e8e4396f98959a4447ab6a433"
+    }
+  }
+}

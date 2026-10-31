@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "startedFromStep": "Check 1.22 map navigation and durable tactical chapters",
+  "workflowSha256": "11437ada51bdcfc677cdee00da636663ed8012731f6a3ac8e10b79f73b561262",
+  "stepCount": 3,
+  "completedSteps": 3,
+  "steps": [
+    {
+      "name": "Check 1.22 map navigation and durable tactical chapters",
+      "exitCode": 0,
+      "elapsedSeconds": 3.276,
+      "originalCommand": "bash scripts/test-journey-world-v122.sh\nbash scripts/test-tactical-chapter-v122.sh\nbash scripts/test-tactical-session-v122.sh",
+      "executedCommand": "bash scripts/test-journey-world-v122.sh\nbash scripts/test-tactical-chapter-v122.sh\nbash scripts/test-tactical-session-v122.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining-fixed-20-22/01.log",
+      "outputSha256": "141718d801b39587a30d846bdf5d545ab2d6ef35dfce4eeb4a0e53b2479981f4"
+    },
+    {
+      "name": "Check transactional premium refill outbox with a pinned JSON parser",
+      "exitCode": 0,
+      "elapsedSeconds": 1.113,
+      "originalCommand": "curl --fail --location --retry 2 https://repo.maven.apache.org/maven2/org/json/json/20240303/json-20240303.jar --output \"$RUNNER_TEMP/json-20240303.jar\"\nprintf '3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed  %s\\n' \"$RUNNER_TEMP/json-20240303.jar\" | sha256sum --check\nLUMA_JSON_JAR=\"$RUNNER_TEMP/json-20240303.jar\" bash scripts/test-energy-purchase-v120.sh\nLUMA_JSON_JAR=\"$RUNNER_TEMP/json-20240303.jar\" bash scripts/test-wallet-energy-transport-v120.sh",
+      "executedCommand": "bash scripts/test-energy-purchase-v120.sh\nbash scripts/test-wallet-energy-transport-v120.sh",
+      "adaptations": [
+        "Use the already cached org.json20240303 JAR after verifying the exact CI SHA256; no dependency download. Same two test commands."
+      ],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining-fixed-20-22/02.log",
+      "outputSha256": "7eb33d0fc1e8e0008f9b46098698ba0a03cbf1cfb4c2271848f801baf9ba281e"
+    },
+    {
+      "name": "Check power offers and preserved reward decisions",
+      "exitCode": 0,
+      "elapsedSeconds": 1.231,
+      "originalCommand": "sh scripts/test-power-offers-v114.sh \"$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json\"",
+      "executedCommand": "sh scripts/test-power-offers-v114.sh \"$RUNNER_TEMP/luma-puzzle-contracts/power-offers.json\"",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining-fixed-20-22/03.log",
+      "outputSha256": "827aa1c3db58dfa9bfe64f579a7d2176df7f4dc3dd442ee7c895fa4442547fc5"
+    }
+  ],
+  "env": {
+    "JAVA_HOME": "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",
+    "RUNNER_TEMP": "/tmp/luma124-ci-home-fix/remaining-fixed-20-22/runner-temp",
+    "LUMA_JSON_JAR": "/Users/n/.gradle/caches/modules-2/files-2.1/org.json/json/20240303/ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a/json-20240303.jar"
+  },
+  "jsonJarSha256": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed",
+  "networkRequested": false,
+  "appOrPublicMutation": false,
+  "verifiedFrozenSiteInputs": 69,
+  "verifiedNativeBuildInputs": 522,
+  "completedAtUtc": "2026-10-31T01:45:51.243708+00:00"
+}

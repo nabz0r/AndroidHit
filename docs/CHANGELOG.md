@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.24.0-rc2 / code 33 — locally qualified, publication pending
+## 1.24.0-rc2 / code 33 — source/CI accepted, Hosting AUTH_REQUIRED
 
 31 October 2026. Candidate D connects first-win XP → player rank → one copy for
 the captain actually played → companion level → talent uses captured at the next
@@ -17,12 +17,23 @@ close the reproduced persistence gaps without activating live commerce.
 
 [Release](RELEASE_1_24.md) · [Qualification register](validation/v1.24/README.md) ·
 [Exact D identities](../releases/manifest-1.24.0-rc2.json). The artifact source object
-is `787fba142b8edd1f840b9b70cb7749167edacd24` (522 matched native inputs); final main,
-CI, Hosting and public-origin delivery remain pending. Production's B-created
+is `787fba142b8edd1f840b9b70cb7749167edacd24` (522 matched native inputs).
+Published source C2b `66119799d6fbe5254a8d37d50db76afe8daffbdc` has
+[two successful workflows/three successful jobs](validation/v1.24/publication/c2-ci/c2b-ci.json).
+Its app/public trees are unchanged from C2; the original C2 contract failure is
+preserved. Hosting is **AUTH_REQUIRED**: zero active Google accounts stopped
+token acquisition before any Firebase API, version clone, upload or release.
+The public site remains 1.23 at `cf8b817321bf33d5`;
+[originals and auth handoff](validation/v1.24/publication/operator-preparation/c2b/auth-retry/handoff.json)
+are preserved. No 1.24 public-origin acceptance is claimed. Production's B-created
 fresh profile updated to D passes 254 checks/46 real taps; retained production
 passes 60/46 separately. Lab records 11 PASS phases, 568 assertions/118 touches/39
-PNGs, with 4 stopped phases excluded. Test-ad ready is observed; actual display,
-early close and earned +35 remain unqualified. The new study executes 8,000
+PNGs, with 4 stopped phases excluded. A
+[separate SDK supplement](validation/v1.24/native-lab/sdk-diagnosis/summary.json)
+adds three PASS phases, 142 assertions/22 gestures/10 PNGs: actual test-ad display,
+earned +35 Coins (730→765) and cold persistence. Its three stopped phases remain
+separate; Android Back and early close are unqualified, with zero Back actions.
+The new study executes 8,000
 synthetic trajectories, not people; GUIDE-policy limitations are
 explicit and do not justify a human balancing or retention claim.
 

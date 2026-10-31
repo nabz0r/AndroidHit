@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-10-31T01:38:01.458191+00:00",
+  "status": "OBSERVED_SYSTEMUI_IMMERSIVE_EDUCATION_NO_SYSTEM_INPUT",
+  "exact_apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "version": "1.24.0-sandbox-rc2",
+  "code": 33,
+  "serial": "emulator-5638",
+  "avd": "Luma124-LabFresh-QA",
+  "profile_asserted_before_diagnostic": {
+    "coins": 730,
+    "test_gold": 450,
+    "energy": 10
+  },
+  "actual_sdk_show_clicks": 1,
+  "systemui_input_sent": false,
+  "identified_surface": {
+    "title": "Viewing full screen",
+    "description": "To exit, swipe down from the top of your screen",
+    "title_id": "com.android.systemui:id/immersive_cling_title",
+    "description_id": "com.android.systemui:id/immersive_cling_description",
+    "button": {
+      "label": "Got it",
+      "resourceId": "com.android.systemui:id/ok",
+      "bounds": [
+        835,
+        564,
+        1017,
+        690
+      ],
+      "clickable": true,
+      "enabled": true,
+      "visible": true
+    }
+  },
+  "visual_observation": "Android full-screen education overlay. A Google Ads video creative is visible behind it; no permission request or consent form. No claim of completed viewing/early close/reward.",
+  "observations": {
+    "only-show-active-window-before-package-check.png": {
+      "bytes": 331060,
+      "sha256": "885bc41af03a8356e5310406583be89c7cebe9a6fc87525f0640a92779172587"
+    },
+    "only-show-active-window-before-package-check-accessibility.json": {
+      "bytes": 1269,
+      "sha256": "d30154c9cf9c198e3e59f6e4e4779f45560907bd8a7f2db4673bf3040bec9618"
+    },
+    "failure.png": {
+      "bytes": 349290,
+      "sha256": "6f2ed93c4e98cbc2e9f64d62abfea52dd6939070cf0ac7f404fb66f0e58aec26"
+    },
+    "failure-accessibility.json": {
+      "bytes": 1269,
+      "sha256": "d30154c9cf9c198e3e59f6e4e4779f45560907bd8a7f2db4673bf3040bec9618"
+    },
+    "report.json": {
+      "bytes": 6745,
+      "sha256": "1ce8170e56b82808bb1e1acf12bc1e54ff15937d65a9062f3d31aae2a0a894f4"
+    }
+  },
+  "stopped_setup_attempt": "readonly-before-package-guard/report.json; no Watch click, Load only applied privacy choices",
+  "repo_outputs_written": false,
+  "old_evidence_modified": false,
+  "next_scope": "No SystemUI input is authorized by this receipt; coordinator received exact IDs/labels/bounds. Input guards remain unchanged."
+}

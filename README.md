@@ -2,10 +2,14 @@
 
 An Android puzzle game with little companions, linked keys and a world to explore.
 
-**1.24 is locally qualified; final publication is pending.** Candidate D is
+**1.24 source and CI are accepted; website deployment is AUTH_REQUIRED.** Candidate D is
 production `1.24.0-rc2`, separate Lab `1.24.0-sandbox-rc2`, code 33. Its immutable
-artifact source object is `787fba142b8edd1f840b9b70cb7749167edacd24`; this does not
-mean that main or the public website has been updated to 1.24.
+artifact source object is `787fba142b8edd1f840b9b70cb7749167edacd24`.
+Published source C2b is `66119799d6fbe5254a8d37d50db76afe8daffbdc`;
+both workflows and all three CI jobs pass on that exact commit. This does not
+establish deployment or public-origin acceptance. Cloud Shell has zero active
+Google accounts; token acquisition stopped before any Firebase API call. No
+Hosting version was cloned, uploaded or released. The public site remains 1.23.
 
 The new loop connects first wins to companion growth: win → player XP → a new
 rank → one copy for the captain actually played → companion level → more talent
@@ -16,13 +20,16 @@ remain; outfits are cosmetic.
 
 The production profile created fresh on B and upgraded to D passed 254 assertions
 with 46 actual SDK taps. Retained production separately passes 60 checks/46 taps.
-Lab passes 11 phases with 568 assertions/118 touches/39 PNGs across retained and fresh
-profiles. SDK test-ad loading is observed; display, early close and an actual
-35-Coin ad reward remain unqualified. The new simulation executed 8,000 synthetic
+Lab's immutable baseline passes 11 phases with 568 assertions/118 touches/39 PNGs.
+A separate SDK supplement passes three phases with 142 assertions/22 gestures/10
+PNGs: an actual test ad grants 35 Coins, 730→765, retained after a cold process.
+Android Back and early close remain unqualified; no Back action was sent.
+The new simulation executed 8,000 synthetic
 trajectories: it exercises the engine, not human perception, enjoyment or
-retention. Final main/CI/Hosting/public-origin receipts remain pending.
+retention. The [preserved auth failure and handoff](docs/validation/v1.24/publication/operator-preparation/c2b/auth-retry/handoff.json)
+record the remaining deployment blocker; no 1.24 public-origin pass is claimed.
 
-- [Release changes, exact artifacts and pending gates](docs/RELEASE_1_24.md)
+- [Release changes, exact artifacts and AUTH_REQUIRED handoff](docs/RELEASE_1_24.md)
 - [1.24 qualification register](docs/validation/v1.24/README.md)
 - [Exact candidate D metadata](releases/manifest-1.24.0-rc2.json)
 - [Synthetic 1.24 study](docs/validation/v1.24/simulation/README.md)

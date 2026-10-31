@@ -1,0 +1,28 @@
+{
+  "status": "FAIL_HISTORICAL_CATALOG_EXPECTATION",
+  "headSha": "39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da",
+  "runs": [
+    {
+      "id": 41155837961,
+      "name": "Cognitive Lab contracts",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-31T01:32:29Z",
+      "updated_at": "2026-10-31T01:33:50Z",
+      "html_url": "https://github.com/nabz0r/AndroidHit/actions/runs/41155837961"
+    },
+    {
+      "id": 41155837958,
+      "name": "Puzzle contracts",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-31T01:32:29Z",
+      "updated_at": "2026-10-31T01:36:23Z",
+      "html_url": "https://github.com/nabz0r/AndroidHit/actions/runs/41155837958"
+    }
+  ],
+  "failedStep": "Check three-room ownership, migration and camera geometry",
+  "failure": "HomeV115Test expected42furniture; current native catalog has48",
+  "appChangeRequired": false,
+  "scope": "Original C2 results. A corrected contract and new source CI will be recorded separately."
+}

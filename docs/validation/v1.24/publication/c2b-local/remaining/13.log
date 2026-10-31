@@ -1,0 +1,25 @@
+CompanionBattle v1.19: 88946 checks passed (pure model only)
+PASS actual U1–U250 × all 37 identities
+PASS actual U1–U500 × all 37 identities
+PASS actual U1–U750 × all 37 identities
+PASS actual U1–U1000 × all 37 identities
+{
+  "passed": true,
+  "checks": 2313118,
+  "boards": 1000,
+  "identities": 37,
+  "prepared_drafts": 74019,
+  "refused_drafts": 74297,
+  "identity_board_coverage": {
+    "GUIDE": 14000,
+    "VISION": 12000,
+    "TRAIL": 14000,
+    "PULSE": 12000,
+    "FLOW": 12000,
+    "REWIND": 10000
+  },
+  "scope": "Actual host U boards and MoveBudget, all 1000 boards times every identity, pure draft nonmutation and canonical restore. Not Android commits, gestures, rendering, disk failures or player acceptance."
+}
+PASS 799 v1.19 squad storage, ownership, failed-commit recovery and six-language copy checks
+Companion battle 1.19 geometry PASS: 14859 checks across 412 layouts; distinct logical targets, bounds and exact hit routing. Physical text/touch adaptation and native artwork require host/native validation.
+Adventure 1.19 geometry PASS: 3362 checks across 84 layouts; distinct CTA/cards/rewards, physical48dp targets, full scroll reachability and pinned-navigation clearance. No native glyph or rendering claim.

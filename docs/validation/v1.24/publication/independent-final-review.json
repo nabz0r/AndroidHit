@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T02:16:58.540465+00:00",
+  "status": "PASS_WITH_EXPLICIT_SCOPE_LIMITS",
+  "reviewer": "independent cognition_research",
+  "read_only": true,
+  "repo_writes": false,
+  "network_requests": false,
+  "android_or_ads_tests_or_avd_operations": false,
+  "checks": [
+    {
+      "check": "cloud_archive_collection_and_indexes",
+      "status": "PASS",
+      "indexed_originals": 31,
+      "archive_regular_members": 32,
+      "archive": {
+        "path": "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure/inbound.tgz",
+        "bytes": 31746,
+        "sha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d"
+      },
+      "collection": {
+        "path": "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure/collection.json",
+        "bytes": 1876,
+        "sha256": "6d34d8517e6725fc5ee5dbd21feeea2d62240dd2a5ea1a8491f31ab391526c5a"
+      },
+      "complete_index": {
+        "path": "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure/originals/complete-pre-deploy-export-index.json",
+        "bytes": 5083,
+        "sha256": "74cb3dc2b74254955a2be91d9f340d3fbf6e3cd540c7dd26379af0bae792576a"
+      },
+      "all_original_bytes_match_tar": true,
+      "nested_indexes": {
+        "auth-failure-attempt1-index.json": {
+          "verified_entries": 6,
+          "export_path_mappings": {
+            "receipts/operator.json": "receipts/operator.json",
+            "receipts/staging.json": "receipts/staging.json",
+            "receipts-c2b/restage-operator.json": "receipts-c2b/restage-operator.json",
+            "receipts-c2b/staging.json": "receipts-c2b/staging.json",
+            "receipts-c2b/final-operator.json": "receipts-c2b/final-operator.json",
+            "luma124-finalizer-deploy-66119799d6fb.log": "outer-logs/luma124-finalizer-deploy-66119799d6fb.log"
+          }
+        },
+        "stage-export-index.json": {
+          "verified_entries": 13,
+          "export_path_mappings": {
+            "checkout.log": "receipts/checkout.log",
+            "clone.log": "receipts/clone.log",
+            "fetch-artifact-c1.log": "receipts/fetch-artifact-c1.log",
+            "fetch-c2.log": "receipts/fetch-c2.log",
+            "fetch-previous-c3.log": "receipts/fetch-previous-c3.log",
+            "fetch-previous-deployment-c2.log": "receipts/fetch-previous-deployment-c2.log",
+            "operator.json": "receipts/operator.json",
+            "sparse-cone.log": "receipts/sparse-cone.log",
+            "sparse-config.log": "receipts/sparse-config.log",
+            "stage-launch.json": "outer-logs/luma124-stage-39c0985b24ec-launch.json",
+            "stage-stdout.log": "outer-logs/luma124-stage-39c0985b24ec.log",
+            "staging.json": "receipts/staging.json",
+            "staging.log": "receipts/staging.log"
+          }
+        }
+      }
+    },
+    {
+      "check": "cloud_privacy_bounded_review",
+      "status": "PASS",
+      "text_files_reviewed": 34,
+      "archive_originals_byte_identical_to_reviewed_text": true,
+      "no_screenshot_or_credential_file_present": true,
+      "categories_checked": [
+        "email_or_account",
+        "google_access_token",
+        "oauth_refresh_token",
+        "jwt",
+        "bearer_literal",
+        "json_token_literal",
+        "private_key",
+        "google_api_key",
+        "github_token"
+      ],
+      "detected_account_email_or_token_material": [],
+      "scope": "Only the collected Cloud evidence directory. No browser, account/session store, gcloud credentials, environment secrets or unrelated files scanned. Pattern scan and explicit receipt/operator review establish no detected private account/credential material in this bounded set; this is not a universal secret-absence guarantee."
+    },
+    {
+      "check": "auth_required_scope",
+      "status": "AUTH_REQUIRED_BEFORE_HOSTING",
+      "source_commit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+      "target_staging_passed": true,
+      "reused_apks": 2,
+      "restage_base_downloads": 0,
+      "hosting_deployer_called": false,
+      "uploaded": false,
+      "released": false,
+      "token_failure_precedes_deployer_branch": true
+    },
+    {
+      "check": "native_candidate_d_immutable",
+      "status": "PASS",
+      "candidate": {
+        "path": "docs/validation/v1.24/candidate-d/candidate.json",
+        "bytes": 102454,
+        "sha256": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3"
+      },
+      "frozen_inputs_verified": 522,
+      "apks": {
+        "production": {
+          "path": "releases/luma-drift-1.24.0-rc2.apk",
+          "bytes": 340290322,
+          "sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e"
+        },
+        "lab": {
+          "path": "releases/luma-drift-1.24.0-sandbox-rc2.apk",
+          "bytes": 340290009,
+          "sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b"
+        }
+      }
+    },
+    {
+      "check": "hosting_source_manifest_inputs_immutable",
+      "status": "PASS",
+      "manifest": {
+        "path": "docs/validation/site-v1.24/release/source-manifest.json",
+        "bytes": 185936,
+        "sha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd"
+      },
+      "frozen_inputs_verified": 69
+    },
+    {
+      "check": "simulation_source_and_kit_binding",
+      "status": "PASS",
+      "executed_driver_sources": 68,
+      "additional_uncompiled_ui_context": 1,
+      "current_bound_source_files": 69,
+      "source_kit_pinned_payloads": 95,
+      "embedded_manifest_additional_file": true,
+      "all_source_zip_bytes_match_current_bound_sources": true,
+      "zip": {
+        "path": "public/lab/clarity-124/cognitive-lab-1.24-source.zip",
+        "bytes": 834641,
+        "sha256": "3539f208f1386cf678aa2a213fe628d4df13c5ea784fc168c882580cf137a969"
+      },
+      "provenance": {
+        "path": "docs/validation/v1.24/simulation/run-2026103102/provenance.json",
+        "bytes": 10972,
+        "sha256": "aa7cdefd473e14dcb1c7125091c32dee9c4603361f2441067df98af3582d14cf"
+      },
+      "limit": "LumaView is context only, not a compiled simulation driver."
+    },
+    {
+      "check": "native_sdk_supplement_and_old_index_immutable",
+      "status": "PASS",
+      "summary": {
+        "path": "docs/validation/v1.24/native-lab/sdk-diagnosis/summary.json",
+        "bytes": 4771,
+        "sha256": "b31fdb4ec9af148236bb47bb6e26f4c4be7288847de8e986bb6220d3167fd0bf"
+      },
+      "manifest": {
+        "path": "docs/validation/v1.24/native-lab/sdk-diagnosis/manifest.json",
+        "bytes": 147524,
+        "sha256": "a0eb36299b3c65f61483770fcee0dae0e8d94b3b5ace8bf6f9c611de444ff142"
+      },
+      "all_local_copies_verified": 823,
+      "local_observer_apks_ignored_in_git": 9,
+      "immutable_old_index": {
+        "path": "docs/validation/v1.24/native-lab/index.json",
+        "bytes": 1933,
+        "sha256": "ea52d0d05f1326ece87f6634b5128fc027069f8638dd60ff3c5ecd50aeee4976"
+      },
+      "baseline_counts": {
+        "assertions": 568,
+        "touches": 118,
+        "original_pngs": 39
+      },
+      "supplement_counts": {
+        "assertions": 142,
+        "touches": 22,
+        "original_pngs": 10
+      },
+      "standard_back_actions_sent": 0,
+      "close_or_early_back_qualified": false,
+      "actual_test_reward_coins": "730->765;765 cold",
+      "dedicated_test_gold": 450,
+      "energy": 10,
+      "opt_in": false,
+      "normal_shutdown": true,
+      "limit": "823 local files does not mean823 tracked/published files; nine APKs are ignored. Full reward is real SDK test evidence only, not production commerce or human evidence."
+    }
+  ],
+  "limits": [
+    "Hosting1.24 remains AUTH_REQUIRED. Evidence supports a failed token acquisition before this operator called the committed Firebase deployer; no version/upload/release or public-origin acceptance follows.",
+    "Privacy finding is bounded to34collected text files and the byte-identical32-member archive. No browser, credentials store or unrelated account data was scanned.",
+    "Simulation69bound files means68executed sources plus1uncompiled UI context. Hosting69frozen inputs are a separate source-manifest set.",
+    "The568native baseline is immutable; the142SDK supplement is separate. Zero Back/SDK Close were sent and early close remains unqualified.",
+    "This file audit adds no Android execution, human study, physical-device, real commerce, production ad or new public verification."
+  ]
+}

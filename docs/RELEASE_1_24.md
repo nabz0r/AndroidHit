@@ -1,7 +1,7 @@
 # 1.24 — companion growth and Pulse presentation
 
-31 October 2026. **Candidate D is locally built and qualified within the scopes
-below; publication is pending.** Production is `1.24.0-rc2`, Lab is
+31 October 2026. **Candidate D, published source and exact-source CI are accepted
+within the scopes below; website deployment is AUTH_REQUIRED.** Production is `1.24.0-rc2`, Lab is
 `1.24.0-sandbox-rc2`, both code 33. [Qualification register](validation/v1.24/README.md)
 contains the original evidence links and open gates.
 
@@ -9,7 +9,18 @@ The [verified artifact source object](validation/v1.24/publication/c1/git-public
 is `787fba142b8edd1f840b9b70cb7749167edacd24`, tree
 `8a07f1f8d0808d229cb6134056330a0eb6864a8b`. Its 522 native build inputs match D.
 The receipt explicitly records that main was not updated at this stage. This
-source object is not a website deployment or a completed release publication.
+source object is not a website deployment.
+
+Published source C2b is `66119799d6fbe5254a8d37d50db76afe8daffbdc`, tree
+`ee94f27e3c9dbbbc49c0d95568424c9d4af2118a`. Its
+[CI receipt](validation/v1.24/publication/c2-ci/c2b-ci.json) records two successful
+workflows and three successful jobs. App tree `81eba0e25202124ebebb5f4468d5dd8ba8ac3897`
+and public tree `d003cdc3ca4a4aa87ea19a5ece1222fa49c9975b` are unchanged from C2.
+The [original C2 failure](validation/v1.24/publication/c2-ci/c2-ci-first-verdict.json)
+and [22-step local correction/recheck](validation/v1.24/publication/c2b-local/final-receipt.json)
+remain separate: historical furniture counts, the initial decoration badge count
+and renderer compile dependencies were corrected in tests/harness/sparse inputs,
+without changing the app, public payloads or 69 frozen site inputs.
 
 ## What changes
 
@@ -86,12 +97,25 @@ Earlier A/B/C artifacts retain their own identities and results.
   has one spent marker, one used marker and one energy receipt; cold readback
   retains 730 Coins/450 Gold/10 energy. Minor/UMP/Do not consent/test-ad ready
   paths pass, but two Watch attempts stop at the SystemUI foreground boundary.
-  Actual ad display, early close and earned +35 remain **unqualified**. Four
+  Those earlier phases did not qualify ad display, early close or earned +35. Four
   stopped phases stay outside the five-phase totals. Ads opt-in was revoked and
   Lab 5634/5638 stopped normally with data preserved. The
   [final Lab index](validation/v1.24/native-lab/index.json) joins retained and
   fresh: 11 PASS phases, 568 assertions/118 touches/39 PNGs; 522 app inputs remain
   unchanged. [Fresh summary](validation/v1.24/native-lab/fresh-d-summary.json).
+- **Separate Lab SDK supplement, same D APK:** three PASS phases record 142
+  assertions/22 gestures/10 PNGs; three stopped phases remain separate. After one
+  precisely identified Android full-screen help acknowledgement, an actual SDK
+  Test Ad displays Reward granted and credits 730→765 Coins. Cold restart retains
+  765, with the pending entry empty and the transaction marker present; test Gold
+  450 and energy 10 are unchanged. No callback or reward was injected. Android Back
+  and early close remain **unqualified**: zero Back and zero SDK Close actions
+  were sent. Ads opt-in is revoked and 5638 stopped normally with its profile
+  preserved. The [supplement](validation/v1.24/native-lab/sdk-diagnosis/summary.json)
+  does not rewrite or merge into the immutable 568-assertion index. Its
+  [collection receipt](validation/v1.24/native-lab/sdk-diagnosis/collection-receipt.json)
+  records 823 byte-verified local copies, including nine observer APKs retained
+  locally and ignored in Git; 823 is not a claim of tracked publication.
 - **Synthetic model:** 8,000 trajectories, 350,874 attempts and 40,000 probes;
   104 oracle controls are separate. The policy can repeatedly request GUIDE
   before following its visible cue. Nova's evolving-capacity mean is 42.5065
@@ -108,18 +132,34 @@ Earlier A/B/C artifacts retain their own identities and results.
   These are local observations, not public-origin acceptance.
 
 No host/emulator/synthetic result establishes human comprehension, emotion,
-enjoyment, retention, physical-device comfort, real ad fulfillment or real-money
+enjoyment, retention, physical-device comfort, production-ad fulfillment or real-money
 commerce. The exact native formats, profile origins and preserved failed observer
 attempts remain visible in the underlying reports.
 
-## Remaining closeout fields
+## Delivery status and authentication handoff
 
-- **Final source/main and CI:** pending the final source commit/tree and exact
-  workflow/job outcomes. C1 above is the artifact-source object only.
-- **Firebase and public origin:** pending exact Hosting version/release/config,
-  provider-map preservation, complete public response hashes and actual public
-  FR/EN browser records. The last verified live release remains 1.23 at
-  `cf8b817321bf33d5`; local 1.24 source application does not replace that evidence.
+- **Source/main and CI:** accepted at C2b above. Exact runs are
+  [Cognitive Lab 41156960006](https://github.com/nabz0r/AndroidHit/actions/runs/41156960006)
+  and [Puzzle 41156960012](https://github.com/nabz0r/AndroidHit/actions/runs/41156960012),
+  with three successful jobs. This documentation closeout records the accepted
+  source and CI; it does not change app/public payloads.
+  C1 remains the immutable artifact-source object.
+- **Firebase: AUTH_REQUIRED.** Cloud Shell reports zero active Google accounts.
+  The first finalizer failed while acquiring a token, before the Hosting deployer
+  or any Firebase API call. No Hosting version was cloned, uploaded or released.
+  Initial staging and C2b restaging passed, reusing both exact D APKs; the second
+  finalizer passed check-only and its deployment command was not executed.
+- **Public origin:** 1.24 is not deployed or publicly qualified. The live release
+  remains 1.23 at `cf8b817321bf33d5`. There is no 1.24 Hosting version/release receipt,
+  public response collection or public FR/EN browser acceptance.
 
-These fields are deliberately open for the coordinator's final receipts. Test
-ads, closed real purchases and the absence of a Play publication remain unchanged.
+The [preserved Cloud collection](validation/site-v1.24/hosting/pre-deploy-auth-failure/collection.json)
+verifies 31 original files plus their original index. Its
+[31,746-byte archive](validation/site-v1.24/hosting/pre-deploy-auth-failure/inbound.tgz)
+has SHA-256 `a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d`.
+The [handoff](validation/v1.24/publication/operator-preparation/c2b/auth-retry/handoff.json)
+keeps the exact workspace, retry script/hash and future command. Restoring the
+existing standard Google authorization and confirming credential readiness are
+required before that command; no new login, scope or VM restart was attempted.
+Credentials and account identifiers are absent from the collected evidence.
+Test ads, closed real purchases and the absence of a Play publication remain unchanged.

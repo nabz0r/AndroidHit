@@ -1,0 +1,737 @@
+﻿2026-10-31T01:32:32.9416311Z Current runner version: '2.338.2'
+2026-10-31T01:32:32.9445057Z ##[group]Runner Image Provisioner
+2026-10-31T01:32:32.9446443Z Hosted Compute Agent
+2026-10-31T01:32:32.9447533Z Version: 20261021.618
+2026-10-31T01:32:32.9448442Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-31T01:32:32.9449632Z Build Date: 2026-10-21T00:45:21Z
+2026-10-31T01:32:32.9450660Z Worker ID: {a8354437-5cc4-48a0-9565-42912a4d4189}
+2026-10-31T01:32:32.9451821Z Region: northcentralus
+2026-10-31T01:32:32.9453092Z Cloud: Azure
+2026-10-31T01:32:32.9453920Z ##[endgroup]
+2026-10-31T01:32:32.9455809Z ##[group]Operating System
+2026-10-31T01:32:32.9456920Z Ubuntu
+2026-10-31T01:32:32.9457633Z 24.04.5
+2026-10-31T01:32:32.9458258Z LTS
+2026-10-31T01:32:32.9458827Z ##[endgroup]
+2026-10-31T01:32:32.9459415Z ##[group]Runner Image
+2026-10-31T01:32:32.9460124Z Image: ubuntu-24.04
+2026-10-31T01:32:32.9460780Z Version: 20261025.353.1
+2026-10-31T01:32:32.9462194Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-31T01:32:32.9464127Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-31T01:32:32.9465236Z ##[endgroup]
+2026-10-31T01:32:32.9466492Z ##[group]GITHUB_TOKEN Permissions
+2026-10-31T01:32:32.9468857Z Contents: read
+2026-10-31T01:32:32.9469538Z Metadata: read
+2026-10-31T01:32:32.9470203Z ##[endgroup]
+2026-10-31T01:32:32.9472686Z Secret source: Actions
+2026-10-31T01:32:32.9473747Z Cache mode: write
+2026-10-31T01:32:32.9474511Z Prepare workflow directory
+2026-10-31T01:32:33.0025249Z Prepare all required actions
+2026-10-31T01:32:33.0092790Z Getting action download info
+2026-10-31T01:32:33.2446160Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-31T01:32:33.3291423Z Download action repository 'actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad' (SHA:b843ebf9b913146b38da2eaa7aeddf76074ae1ad)
+2026-10-31T01:32:33.8687454Z Complete job name: Offline puzzle contracts (Java 17)
+2026-10-31T01:32:33.9637703Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-31T01:32:33.9638709Z with:
+2026-10-31T01:32:33.9639160Z   persist-credentials: false
+2026-10-31T01:32:33.9639692Z   fetch-depth: 1
+2026-10-31T01:32:33.9640178Z   sparse-checkout-cone-mode: false
+2026-10-31T01:32:33.9699161Z   sparse-checkout: /.gitattributes
+/.gitignore
+/.github/workflows/puzzle-contracts.yml
+/app/src/main/java/com/androidhit/lumadrift/engine/*.java
+/app/src/main/java/com/androidhit/lumadrift/data/*.java
+/app/src/main/java/com/androidhit/lumadrift/onboarding/*.java
+/app/src/main/java/com/androidhit/lumadrift/progression/LearningGuide.java
+/app/src/main/java/com/androidhit/lumadrift/progression/LearningStrings.java
+/app/src/main/java/com/androidhit/lumadrift/ui/HomeScene.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionMotion.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionRig118.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionSheetLayout123.java
+/app/src/main/java/com/androidhit/lumadrift/ui/BattleDockLayout124.java
+/app/src/main/java/com/androidhit/lumadrift/ui/PauseLayout124.java
+/scripts/test-battle-dock-v124.sh
+/scripts/BattleDockLayout124Test.java
+/scripts/test-pause-layout-v124.sh
+/scripts/PauseLayout124Test.java
+/scripts/test-companion-battle-v124.sh
+/scripts/CompanionBattleV124Test.java
+/scripts/playtest-2026-10-31/run-rank-copy-tests.py
+/scripts/playtest-2026-10-31/EconomyStateStress.java
+/scripts/playtest-2026-10-31/RankCopyV124Test.java
+/scripts/ClarityLayout123Test.java
+/scripts/test-clarity-layout-v123.sh
+/app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/Adventure119Layout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/PuzzleReaction.java
+/app/src/main/java/com/androidhit/lumadrift/ui/ExperienceLayout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/Menu120Layout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/Menu121Layout.java
+/app/src/main/java/com/androidhit/lumadrift/ui/RewardMotion121.java
+/app/src/main/java/com/androidhit/lumadrift/ui/VictoryLayout.java
+/scripts/test-menu-v120.sh
+/scripts/MenuV120Test.java
+/scripts/test-menu-v121.sh
+/scripts/Menu121LayoutTest.java
+/scripts/test-elemental-shell-v121.sh
+/scripts/ElementalShellV121Test.java
+/scripts/test-arcade-presentation-v121.sh
+/scripts/ArcadePresentationV121Test.java
+/scripts/test-home-kitchen-v121.sh
+/scripts/HomeKitchenV121Test.java
+/scripts/test-economy-curve-v121.sh
+/scripts/EconomyCurveV121Test.java
+/scripts/test-session-energy-v121.sh
+/scripts/SessionEnergyV121Test.java
+/scripts/simulate-summon-economy-v121.sh
+/scripts/SummonEconomyV121Simulation.java
+/scripts/test-economy.sh
+/scripts/EconomyTest.java
+/scripts/test-meta.sh
+/scripts/MetaTest.java
+/scripts/test-saga-map-v17.sh
+/scripts/SagaMapTest.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorld122.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyCamera122.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorldScene122.java
+/app/src/main/java/com/androidhit/lumadrift/ui/JourneyMapScene.java
+/scripts/JourneyWorld122Test.java
+/scripts/test-journey-clarity-v123.sh
+/scripts/JourneyClarityV123Test.java
+/scripts/WardrobeLookV123Test.java
+/scripts/test-journey-world-v122.sh
+/scripts/TacticalChapterV122Test.java
+/scripts/test-tactical-chapter-v122.sh
+/scripts/TacticalChapterSessionV122Test.java
+/scripts/test-tactical-session-v122.sh
+/scripts/test-focused-journey-v120.sh
+/scripts/FocusedJourneyV120Test.java
+/app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java
+/scripts/test-wallet-energy-transport-v120.sh
+/scripts/WalletEnergyTransportV120Test.java
+/scripts/test-support/vault/
+/app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseController.java
+/app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseJournal.java
+/app/src/main/java/com/androidhit/lumadrift/commerce/BillingPolicy.java
+/scripts/test-energy-purchase-v120.sh
+/scripts/EnergyPurchaseV120Test.java
+/scripts/test-support/energy/
+/scripts/test-session-energy-v120.sh
+/scripts/SessionEnergyV120Test.java
+/app/src/main/java/com/androidhit/lumadrift/ui/SpriteGeometry.java
+/app/src/main/java/com/androidhit/lumadrift/audio/*.java
+/scripts/test-scene-transition-v117.sh
+/scripts/SceneTransitionV117Test.java
+/scripts/test-root-scenes-v117.sh
+/scripts/RootSceneV117GeometryTest.java
+/scripts/test-play-scene-v117-geometry.sh
+/scripts/PlaySceneV117GeometryTest.java
+/scripts/test-art-v117-geometry.sh
+/scripts/SpriteV117GeometryTest.java
+/scripts/test-audio-scenes-v117.sh
+/scripts/AudioSceneV117Test.java
+/scripts/test-support/audio/
+/scripts/test-site-v117.mjs
+/scripts/test-site-v116.mjs
+/scripts/test-site-v118.mjs
+/scripts/test-site-v119.mjs
+/scripts/test-site-v120-runtime.mjs
+/scripts/test-site-v121-runtime.mjs
+/scripts/test-site-v123-runtime.mjs
+/scripts/fixtures/site-v123-index.html
+/scripts/check-site-v123.py
+/scripts/check-site-v124.py
+/docs/validation/site-v1.24/staging/preserved-sections.json
+/docs/validation/site-v1.24/staging/art-copies.json
+/docs/validation/site-v1.24/staging/index.preview.html
+/scripts/deploy-site-v124.py
+/scripts/stage-site-v124-rest.py
+/scripts/collect-site-v124-public-bytes.py
+/scripts/test-deploy-site-v124.py
+/scripts/test-stage-site-v124-rest.py
+/scripts/test-collect-site-v124-public-bytes.py
+/scripts/test-site-v124-runtime.mjs
+/public/assets/site-v124.js
+/public/assets/site-v124.css
+/docs/validation/site-v1.23/release/source-manifest.json
+/releases/manifest-1.23.0-rc2.json
+/scripts/deploy-site-v123.py
+/scripts/stage-site-v123-rest.py
+/scripts/collect-site-v123-public-bytes.py
+/scripts/test-deploy-site-v123.py
+/scripts/test-stage-site-v123-rest.py
+/scripts/test-collect-site-v123-public-bytes.py
+/scripts/deploy-site-v122.py
+/scripts/deploy-cognitive-overlay.py
+/scripts/test-deploy-site-v122.py
+/scripts/stage-site-v122-rest.py
+/scripts/test-stage-site-v122-rest.py
+/scripts/collect-site-v122-public-bytes.py
+/scripts/test-collect-site-v122-public-bytes.py
+/scripts/verify-site-v122-publication.py
+/docs/validation/site-v1.22/release/source-manifest.json
+/docs/validation/cognitive-lab/site-manifest.json
+/scripts/test-deploy-cognitive-overlay.py
+/scripts/test-simulation-v121.mjs
+/scripts/apk-byte-delta.py
+/scripts/test-apk-byte-delta.py
+/public/assets/site.js
+/public/index.html
+/public/assets/site-v123.js
+/public/assets/site-v123.css
+/public/assets/site-v122.js
+/public/assets/site-v122.css
+/public/lab/ui-1-22/index.html
+/public/lab/ui-1-22/simulation.css
+/public/lab/ui-1-22/simulation.mjs
+/public/releases/manifest-1.19.0-*.json
+/public/assets/site-v118.js
+/public/assets/site-v118.css
+/public/assets/site-v119.js
+/public/assets/site-v119.css
+/public/assets/companion-gallery-v118.mjs
+/public/assets/gallery-core-v118.mjs
+/public/assets/companions-v118/*.json
+/docs/validation/site-v1.17/index.template.html
+/docs/validation/site-v1.18/index.template.html
+/docs/validation/site-v1.19/index.template.html
+/docs/validation/site-v1.20/staging/site-v120.js
+/docs/validation/site-v1.21/staging/site-v121.js
+/docs/validation/site-v1.21/staging/lab/ui-1-21/simulation-core.mjs
+/docs/validation/site-v1.21/staging/lab/ui-1-21/simulation.mjs
+/docs/validation/site-v1.21/staging/native-economy-fixture.json
+/docs/validation/v1.7/audio/audio-biome-metrics.csv
+/docs/validation/v1.7/audio/legacy-pcm.sha256
+/scripts/test-relay-v115.sh
+/scripts/RelayV115Test.java
+/scripts/test-engine.sh
+/scripts/EngineTest.java
+/scripts/test-sealed.sh
+/scripts/SealedTest.java
+/scripts/test-progression-v3.sh
+/scripts/ProgressionV3Test.java
+/scripts/GenerateProgressionV3.java
+/scripts/LegacyContentFingerprint.java
+/scripts/test-move-budget.sh
+/scripts/MoveBudgetTest.java
+/scripts/test-strategy-v4.sh
+/scripts/StrategyV4Audit.java
+/scripts/StrategyV4ContractTest.java
+/scripts/test-guardian-v19.sh
+/scripts/GuardianV19Test.java
+/scripts/test-guardian-store-v19.sh
+/scripts/GuardianStoreV19Test.java
+/scripts/test-data.sh
+/scripts/DataTest.java
+/scripts/test-collection-events.sh
+/scripts/CollectionEventsTest.java
+/scripts/test-home-v115.sh
+/scripts/test-home-v115-geometry.sh
+/scripts/HomeV115Test.java
+/scripts/HomeV115GeometryTest.java
+/scripts/test-home-v116-geometry.sh
+/scripts/HomeV116GeometryTest.java
+/scripts/test-profile-summon-v116.sh
+/scripts/ProfileSummonV116Test.java
+/scripts/home-render-support/
+/scripts/test-learning-v114.sh
+/scripts/test-deliberate-play-v114.sh
+/scripts/test-learning-guide.sh
+/scripts/test-power-offers-v114.sh
+/scripts/LearningV114Test.java
+/scripts/DeliberatePlayV114Test.java
+/scripts/LearningGuideTest.java
+/scripts/PowerOffersV114Test.java
+/scripts/RewardsCosmeticsV17Test.java
+/scripts/test-expedition-v118-model.sh
+/scripts/test-expedition-v118-store.sh
+/scripts/test-companion-motion-v118.sh
+/scripts/ExpeditionV118ModelTest.java
+/scripts/ExpeditionV118StoreTest.java
+/scripts/CompanionMotionV118Test.java
+/scripts/test-companion-battle-v119.sh
+/scripts/CompanionBattleV119Test.java
+/scripts/test-companion-action-v119.sh
+/scripts/CompanionBattleActionV119Test.java
+/scripts/test-squad-store-v119.sh
+/scripts/SquadV119StoreTest.java
+/scripts/test-companion-battle-v119-geometry.sh
+/scripts/CompanionBattleV119GeometryTest.java
+/scripts/test-adventure-v119-geometry.sh
+/scripts/AdventureV119GeometryTest.java
+/scripts/AuditJourneyV114.java
+/scripts/ProgressionAnalysis.java
+/scripts/test-support/android/annotation/*.java
+/scripts/test-support/android/content/*.java
+/scripts/test-support/android/graphics/*.java
+/docs/validation/v1.14/audit-learning-rc1/LearningLayouts.java
+/docs/validation/v1.6/legacy-content-before.sha256
+
+2026-10-31T01:32:33.9769856Z   repository: nabz0r/AndroidHit
+2026-10-31T01:32:33.9773730Z   token: ***
+2026-10-31T01:32:33.9774183Z   ssh-strict: true
+2026-10-31T01:32:33.9774632Z   ssh-user: git
+2026-10-31T01:32:33.9775324Z   clean: true
+2026-10-31T01:32:33.9775752Z   fetch-tags: false
+2026-10-31T01:32:33.9776212Z   show-progress: true
+2026-10-31T01:32:33.9776675Z   lfs: false
+2026-10-31T01:32:33.9777099Z   submodules: false
+2026-10-31T01:32:33.9777559Z   set-safe-directory: true
+2026-10-31T01:32:33.9778075Z   allow-unsafe-pr-checkout: false
+2026-10-31T01:32:33.9779217Z ##[endgroup]
+2026-10-31T01:32:34.1967238Z Syncing repository: nabz0r/AndroidHit
+2026-10-31T01:32:34.1969540Z ##[group]Getting Git version info
+2026-10-31T01:32:34.1970396Z Working directory is '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-31T01:32:34.1971631Z [command]/usr/bin/git version
+2026-10-31T01:32:34.2020066Z git version 2.56.0
+2026-10-31T01:32:34.2044264Z ##[endgroup]
+2026-10-31T01:32:34.2051543Z Temporarily overriding HOME='/home/runner/work/_temp/af798a80-aae3-498d-9925-7e62a0397943' before making global git config changes
+2026-10-31T01:32:34.2055046Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-31T01:32:34.2058126Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-31T01:32:34.2105086Z Deleting the contents of '/home/runner/work/AndroidHit/AndroidHit'
+2026-10-31T01:32:34.2108375Z ##[group]Determining repository object format
+2026-10-31T01:32:34.2110092Z ##[endgroup]
+2026-10-31T01:32:34.2111497Z ##[group]Initializing the repository
+2026-10-31T01:32:34.2114084Z [command]/usr/bin/git init /home/runner/work/AndroidHit/AndroidHit
+2026-10-31T01:32:34.2206316Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-31T01:32:34.2207908Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-31T01:32:34.2209126Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-31T01:32:34.2210211Z hint: call:
+2026-10-31T01:32:34.2210737Z hint:
+2026-10-31T01:32:34.2211453Z hint: 	git config --global init.defaultBranch <name>
+2026-10-31T01:32:34.2212374Z hint:
+2026-10-31T01:32:34.2213637Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-31T01:32:34.2214828Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-31T01:32:34.2215868Z hint:
+2026-10-31T01:32:34.2216611Z hint: 	git branch -m <name>
+2026-10-31T01:32:34.2217566Z hint:
+2026-10-31T01:32:34.2218807Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-31T01:32:34.2220831Z Initialized empty Git repository in /home/runner/work/AndroidHit/AndroidHit/.git/
+2026-10-31T01:32:34.2245601Z [command]/usr/bin/git remote add origin https://github.com/nabz0r/AndroidHit
+2026-10-31T01:32:34.2316381Z ##[endgroup]
+2026-10-31T01:32:34.2317847Z ##[group]Disabling automatic garbage collection
+2026-10-31T01:32:34.2320101Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-31T01:32:34.2360032Z ##[endgroup]
+2026-10-31T01:32:34.2361789Z ##[group]Setting up auth
+2026-10-31T01:32:34.2363113Z Removing SSH command configuration
+2026-10-31T01:32:34.2364882Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-31T01:32:34.2405159Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-31T01:32:34.2774141Z Removing HTTP extra header
+2026-10-31T01:32:34.2780325Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-31T01:32:34.2834785Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-31T01:32:34.3094976Z Removing includeIf entries pointing to credentials config files
+2026-10-31T01:32:34.3096413Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-31T01:32:34.3142373Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-31T01:32:34.3402830Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-31T01:32:34.3454415Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path /home/runner/work/_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:34.3500755Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:34.3548879Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:34.3597213Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:34.3641478Z ##[endgroup]
+2026-10-31T01:32:34.3643150Z ##[group]Fetching the repository
+2026-10-31T01:32:34.3651150Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin +39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da:refs/remotes/origin/main
+2026-10-31T01:32:34.8126958Z From https://github.com/nabz0r/AndroidHit
+2026-10-31T01:32:34.8129606Z  * [new ref]         39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da -> origin/main
+2026-10-31T01:32:34.8139005Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-31T01:32:34.8182595Z   origin/main
+2026-10-31T01:32:34.8192059Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-10-31T01:32:34.8230685Z 39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da
+2026-10-31T01:32:34.8236272Z ##[endgroup]
+2026-10-31T01:32:34.8238044Z ##[group]Determining the checkout info
+2026-10-31T01:32:34.8241164Z ##[endgroup]
+2026-10-31T01:32:34.8242933Z ##[group]Setting up sparse checkout
+2026-10-31T01:32:34.8254168Z [command]/usr/bin/git config core.sparseCheckout true
+2026-10-31T01:32:34.8291899Z [command]/usr/bin/git rev-parse --git-path info/sparse-checkout
+2026-10-31T01:32:34.8329386Z .git/info/sparse-checkout
+2026-10-31T01:32:34.8338272Z ##[endgroup]
+2026-10-31T01:32:34.8340219Z ##[group]Checking out the ref
+2026-10-31T01:32:34.8342775Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-31T01:32:36.4635577Z Updating files:   0% (1/508)
+2026-10-31T01:32:36.4637296Z Updating files:   1% (6/508)
+2026-10-31T01:32:36.4640091Z Updating files:   2% (11/508)
+2026-10-31T01:32:36.4642957Z Updating files:   3% (16/508)
+2026-10-31T01:32:36.4650677Z Updating files:   4% (21/508)
+2026-10-31T01:32:36.4656539Z Updating files:   5% (26/508)
+2026-10-31T01:32:36.4660147Z Updating files:   6% (31/508)
+2026-10-31T01:32:36.4663970Z Updating files:   7% (36/508)
+2026-10-31T01:32:36.4666815Z Updating files:   8% (41/508)
+2026-10-31T01:32:36.4674456Z Updating files:   9% (46/508)
+2026-10-31T01:32:36.4678520Z Updating files:  10% (51/508)
+2026-10-31T01:32:36.4682926Z Updating files:  11% (56/508)
+2026-10-31T01:32:36.4688936Z Updating files:  12% (61/508)
+2026-10-31T01:32:36.4693222Z Updating files:  13% (67/508)
+2026-10-31T01:32:36.4696255Z Updating files:  14% (72/508)
+2026-10-31T01:32:36.4712393Z Updating files:  15% (77/508)
+2026-10-31T01:32:36.4724155Z Updating files:  16% (82/508)
+2026-10-31T01:32:36.4731789Z Updating files:  17% (87/508)
+2026-10-31T01:32:36.4740204Z Updating files:  18% (92/508)
+2026-10-31T01:32:36.4745392Z Updating files:  19% (97/508)
+2026-10-31T01:32:36.4750327Z Updating files:  20% (102/508)
+2026-10-31T01:32:36.4753561Z Updating files:  21% (107/508)
+2026-10-31T01:32:36.4758346Z Updating files:  22% (112/508)
+2026-10-31T01:32:36.4761255Z Updating files:  23% (117/508)
+2026-10-31T01:32:36.4764938Z Updating files:  24% (122/508)
+2026-10-31T01:32:36.4782055Z Updating files:  25% (127/508)
+2026-10-31T01:32:36.4791326Z Updating files:  26% (133/508)
+2026-10-31T01:32:36.4799403Z Updating files:  27% (138/508)
+2026-10-31T01:32:36.4810279Z Updating files:  28% (143/508)
+2026-10-31T01:32:36.4815855Z Updating files:  29% (148/508)
+2026-10-31T01:32:36.4820076Z Updating files:  30% (153/508)
+2026-10-31T01:32:36.4823941Z Updating files:  31% (158/508)
+2026-10-31T01:32:36.4829093Z Updating files:  32% (163/508)
+2026-10-31T01:32:36.4834161Z Updating files:  33% (168/508)
+2026-10-31T01:32:36.4838629Z Updating files:  34% (173/508)
+2026-10-31T01:32:36.4842717Z Updating files:  35% (178/508)
+2026-10-31T01:32:36.4846713Z Updating files:  36% (183/508)
+2026-10-31T01:32:36.4851665Z Updating files:  37% (188/508)
+2026-10-31T01:32:36.4856255Z Updating files:  38% (194/508)
+2026-10-31T01:32:36.4861636Z Updating files:  39% (199/508)
+2026-10-31T01:32:36.4865331Z Updating files:  40% (204/508)
+2026-10-31T01:32:36.4869745Z Updating files:  41% (209/508)
+2026-10-31T01:32:36.4875200Z Updating files:  42% (214/508)
+2026-10-31T01:32:36.4881008Z Updating files:  43% (219/508)
+2026-10-31T01:32:36.4885532Z Updating files:  44% (224/508)
+2026-10-31T01:32:36.4890267Z Updating files:  45% (229/508)
+2026-10-31T01:32:36.4895374Z Updating files:  46% (234/508)
+2026-10-31T01:32:36.4900136Z Updating files:  47% (239/508)
+2026-10-31T01:32:36.4905171Z Updating files:  48% (244/508)
+2026-10-31T01:32:36.4909689Z Updating files:  49% (249/508)
+2026-10-31T01:32:36.4915611Z Updating files:  50% (254/508)
+2026-10-31T01:32:36.4920133Z Updating files:  51% (260/508)
+2026-10-31T01:32:36.4924962Z Updating files:  52% (265/508)
+2026-10-31T01:32:36.4930077Z Updating files:  53% (270/508)
+2026-10-31T01:32:36.4935102Z Updating files:  54% (275/508)
+2026-10-31T01:32:36.4940375Z Updating files:  55% (280/508)
+2026-10-31T01:32:36.4945669Z Updating files:  56% (285/508)
+2026-10-31T01:32:36.4949769Z Updating files:  57% (290/508)
+2026-10-31T01:32:36.4954039Z Updating files:  58% (295/508)
+2026-10-31T01:32:36.4957000Z Updating files:  59% (300/508)
+2026-10-31T01:32:36.4959552Z Updating files:  60% (305/508)
+2026-10-31T01:32:36.4965281Z Updating files:  61% (310/508)
+2026-10-31T01:32:36.4970430Z Updating files:  62% (315/508)
+2026-10-31T01:32:36.4974715Z Updating files:  63% (321/508)
+2026-10-31T01:32:36.4983480Z Updating files:  64% (326/508)
+2026-10-31T01:32:36.4986432Z Updating files:  65% (331/508)
+2026-10-31T01:32:36.4991913Z Updating files:  66% (336/508)
+2026-10-31T01:32:36.4996363Z Updating files:  67% (341/508)
+2026-10-31T01:32:36.5000083Z Updating files:  68% (346/508)
+2026-10-31T01:32:36.5004253Z Updating files:  69% (351/508)
+2026-10-31T01:32:36.5009457Z Updating files:  70% (356/508)
+2026-10-31T01:32:36.5014212Z Updating files:  71% (361/508)
+2026-10-31T01:32:36.5018181Z Updating files:  72% (366/508)
+2026-10-31T01:32:36.5022976Z Updating files:  73% (371/508)
+2026-10-31T01:32:36.5027378Z Updating files:  74% (376/508)
+2026-10-31T01:32:36.5035270Z Updating files:  75% (381/508)
+2026-10-31T01:32:36.5039068Z Updating files:  76% (387/508)
+2026-10-31T01:32:36.5042346Z Updating files:  77% (392/508)
+2026-10-31T01:32:36.5046946Z Updating files:  78% (397/508)
+2026-10-31T01:32:36.5050807Z Updating files:  79% (402/508)
+2026-10-31T01:32:36.5053505Z Updating files:  80% (407/508)
+2026-10-31T01:32:36.5056858Z Updating files:  81% (412/508)
+2026-10-31T01:32:36.5058884Z Updating files:  82% (417/508)
+2026-10-31T01:32:36.5063363Z Updating files:  83% (422/508)
+2026-10-31T01:32:36.5065617Z Updating files:  84% (427/508)
+2026-10-31T01:32:36.5067890Z Updating files:  85% (432/508)
+2026-10-31T01:32:36.5070034Z Updating files:  86% (437/508)
+2026-10-31T01:32:36.5073439Z Updating files:  87% (442/508)
+2026-10-31T01:32:36.5075523Z Updating files:  88% (448/508)
+2026-10-31T01:32:36.5077520Z Updating files:  89% (453/508)
+2026-10-31T01:32:36.5079970Z Updating files:  90% (458/508)
+2026-10-31T01:32:36.5084781Z Updating files:  91% (463/508)
+2026-10-31T01:32:36.5088729Z Updating files:  92% (468/508)
+2026-10-31T01:32:36.5093908Z Updating files:  93% (473/508)
+2026-10-31T01:32:36.5097517Z Updating files:  94% (478/508)
+2026-10-31T01:32:36.5100073Z Updating files:  95% (483/508)
+2026-10-31T01:32:36.5104805Z Updating files:  96% (488/508)
+2026-10-31T01:32:36.5109555Z Updating files:  97% (493/508)
+2026-10-31T01:32:36.5113987Z Updating files:  98% (498/508)
+2026-10-31T01:32:36.5116612Z Updating files:  99% (503/508)
+2026-10-31T01:32:36.5117188Z Updating files: 100% (508/508)
+2026-10-31T01:32:36.5117657Z Updating files: 100% (508/508), done.
+2026-10-31T01:32:36.5731955Z Switched to a new branch 'main'
+2026-10-31T01:32:36.5736372Z branch 'main' set up to track 'origin/main'.
+2026-10-31T01:32:36.5758195Z ##[endgroup]
+2026-10-31T01:32:36.5821080Z [command]/usr/bin/git log -1 --format=%H
+2026-10-31T01:32:36.5863541Z 39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da
+2026-10-31T01:32:36.5873195Z ##[group]Removing auth
+2026-10-31T01:32:36.5873754Z Removing SSH command configuration
+2026-10-31T01:32:36.5878237Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-31T01:32:36.5932655Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-31T01:32:36.6311954Z Removing HTTP extra header
+2026-10-31T01:32:36.6316591Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-31T01:32:36.6364662Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-31T01:32:36.6736997Z Removing includeIf entries pointing to credentials config files
+2026-10-31T01:32:36.6740086Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-31T01:32:36.6782980Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-31T01:32:36.6784447Z includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-31T01:32:36.6785016Z includeif.gitdir:/github/workspace/.git.path
+2026-10-31T01:32:36.6785474Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-31T01:32:36.6792304Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path
+2026-10-31T01:32:36.6831249Z /home/runner/work/_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:36.6841776Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-6369bc72\-becd\-4eea\-953f\-85b23e3dc51b\.config
+2026-10-31T01:32:36.6896518Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path
+2026-10-31T01:32:36.6936761Z /home/runner/work/_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:36.6946054Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/AndroidHit/AndroidHit/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-6369bc72\-becd\-4eea\-953f\-85b23e3dc51b\.config
+2026-10-31T01:32:36.7002321Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-31T01:32:36.7041372Z /github/runner_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:36.7050361Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-6369bc72\-becd\-4eea\-953f\-85b23e3dc51b\.config
+2026-10-31T01:32:36.7099272Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-31T01:32:36.7136334Z /github/runner_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config
+2026-10-31T01:32:36.7145224Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-6369bc72\-becd\-4eea\-953f\-85b23e3dc51b\.config
+2026-10-31T01:32:36.7194397Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-31T01:32:36.7557506Z Removing credentials config '/home/runner/work/_temp/git-credentials-6369bc72-becd-4eea-953f-85b23e3dc51b.config'
+2026-10-31T01:32:36.7567486Z ##[endgroup]
+2026-10-31T01:32:36.7897011Z ##[group]Run actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+2026-10-31T01:32:36.7897478Z with:
+2026-10-31T01:32:36.7897748Z   distribution: temurin
+2026-10-31T01:32:36.7898037Z   java-version: 17
+2026-10-31T01:32:36.7898305Z   cache-jdk: false
+2026-10-31T01:32:36.7898586Z   overwrite-settings: false
+2026-10-31T01:32:36.7898890Z   java-package: jdk
+2026-10-31T01:32:36.7899166Z   check-latest: false
+2026-10-31T01:32:36.7899455Z   force-download: false
+2026-10-31T01:32:36.7899733Z   set-default: true
+2026-10-31T01:32:36.7900018Z   server-id: github
+2026-10-31T01:32:36.7900316Z   mvn-repositories-include-central: true
+2026-10-31T01:32:36.7900702Z   mvn-repositories-prioritize-central: true
+2026-10-31T01:32:36.7901063Z   cache-read-only: false
+2026-10-31T01:32:36.7901352Z   job-status: success
+2026-10-31T01:32:36.7903992Z   token: ***
+2026-10-31T01:32:36.7904287Z   show-download-progress: false
+2026-10-31T01:32:36.7904611Z   problem-matcher: true
+2026-10-31T01:32:36.7904945Z ##[endgroup]
+2026-10-31T01:32:36.8687872Z ##[group]Installed distributions
+2026-10-31T01:32:36.8890637Z Resolved Java 17.0.21+9 from tool-cache
+2026-10-31T01:32:36.8891293Z Setting Java 17.0.21+9 as the default
+2026-10-31T01:32:36.8899049Z 
+2026-10-31T01:32:36.8899317Z Java configuration:
+2026-10-31T01:32:36.8899724Z   Distribution: temurin
+2026-10-31T01:32:36.8900024Z   Version: 17.0.21+9
+2026-10-31T01:32:36.8900526Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:32:36.8900909Z 
+2026-10-31T01:32:36.8901297Z ##[endgroup]
+2026-10-31T01:32:36.8932400Z Creating settings.xml with server-id: github
+2026-10-31T01:32:36.8933290Z Creating toolchains.xml for JDK version 17 from temurin
+2026-10-31T01:32:36.8933950Z Writing to /home/runner/.m2/settings.xml
+2026-10-31T01:32:36.8945606Z Writing to /home/runner/.m2/toolchains.xml
+2026-10-31T01:32:36.8957869Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-10-31T01:32:36.9092788Z ##[group]Run sh scripts/test-learning-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/learning"
+2026-10-31T01:32:36.9093607Z [36;1msh scripts/test-learning-v114.sh "$RUNNER_TEMP/luma-puzzle-contracts/learning"[0m
+2026-10-31T01:32:36.9220685Z shell: /usr/bin/sh -e {0}
+2026-10-31T01:32:36.9221069Z env:
+2026-10-31T01:32:36.9221469Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:32:36.9222078Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:32:36.9222831Z   MAVEN_ARGS: -ntp
+2026-10-31T01:32:36.9223112Z ##[endgroup]
+2026-10-31T01:32:47.5003995Z {
+2026-10-31T01:32:47.5004577Z   "passed":true,
+2026-10-31T01:32:47.5005836Z   "scope":"RC2:1000 N boards; exact independent branch bounds and choice metrics; exhaustive runtime first30;970 exact physical bases with opening-only initial supersets of preserved V4; not human comprehension, win rate or enjoyment",
+2026-10-31T01:32:47.5007171Z   "checks":201143,
+2026-10-31T01:32:47.5007771Z   "boards":1000,
+2026-10-31T01:32:47.5008184Z   "uniqueUnderD4TranslationAndIds":1000,
+2026-10-31T01:32:47.5008696Z   "preservedGeometrySources":970,
+2026-10-31T01:32:47.5009155Z   "reauthoredInitialGateStates":291,
+2026-10-31T01:32:47.5009606Z   "initialStatesWithFreeExit":321,
+2026-10-31T01:32:47.5010081Z   "maximumHardExpertRun":4,
+2026-10-31T01:32:47.5010518Z   "episodesWithThreeOrMoreNormals":97,
+2026-10-31T01:32:47.5010984Z   "independentGateStates":24960432,
+2026-10-31T01:32:47.5011419Z   "introRuntimeStates":6052,
+2026-10-31T01:32:47.5011998Z   "introRuntimeTransitions":20429,
+2026-10-31T01:32:47.5012277Z   "meaningfulChoiceBoards":966,
+2026-10-31T01:32:47.5012773Z   "hardBoards":442,
+2026-10-31T01:32:47.5013020Z   "expertBoards":38,
+2026-10-31T01:32:47.5013247Z   "peaks":476,
+2026-10-31T01:32:47.5013465Z   "recoveries":279,
+2026-10-31T01:32:47.5013708Z   "maximumPositiveScoreStep":35,
+2026-10-31T01:32:47.5013991Z   "maximumPieceIncrease":2,
+2026-10-31T01:32:47.5014290Z   "maximumMinimumActionIncrease":4
+2026-10-31T01:32:47.5014564Z }
+2026-10-31T01:32:47.5014685Z 
+2026-10-31T01:32:47.5545370Z ##[group]Run sh scripts/test-relay-v115.sh "$RUNNER_TEMP/luma-puzzle-contracts/relay"
+2026-10-31T01:32:47.5546003Z [36;1msh scripts/test-relay-v115.sh "$RUNNER_TEMP/luma-puzzle-contracts/relay"[0m
+2026-10-31T01:32:47.5595324Z shell: /usr/bin/sh -e {0}
+2026-10-31T01:32:47.5595595Z env:
+2026-10-31T01:32:47.5595924Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:32:47.5596450Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:32:47.5596863Z   MAVEN_ARGS: -ntp
+2026-10-31T01:32:47.5597085Z ##[endgroup]
+2026-10-31T01:32:49.4450194Z PASS U1–U100 reachable_states=2818 transitions=5620
+2026-10-31T01:32:49.5009516Z PASS U1–U200 reachable_states=5910 transitions=10732
+2026-10-31T01:32:49.5574775Z PASS U1–U300 reachable_states=9989 transitions=17838
+2026-10-31T01:32:49.6180934Z PASS U1–U400 reachable_states=15713 transitions=28016
+2026-10-31T01:32:49.7176565Z PASS U1–U500 reachable_states=23969 transitions=44179
+2026-10-31T01:32:49.8429139Z PASS U1–U600 reachable_states=36376 transitions=70940
+2026-10-31T01:32:49.9798794Z PASS U1–U700 reachable_states=57498 transitions=120581
+2026-10-31T01:32:50.1304966Z PASS U1–U800 reachable_states=85191 transitions=186514
+2026-10-31T01:32:50.4187116Z PASS U1–U900 reachable_states=137759 transitions=327670
+2026-10-31T01:32:50.7224135Z PASS U1–U1000 reachable_states=191954 transitions=471517
+2026-10-31T01:32:51.7787111Z {
+2026-10-31T01:32:51.7787818Z   "passed": true,
+2026-10-31T01:32:51.7789269Z   "boards": 1000,
+2026-10-31T01:32:51.7789755Z   "checks": 13312469,
+2026-10-31T01:32:51.7790180Z   "reachable_states": 191954,
+2026-10-31T01:32:51.7790618Z   "legal_transitions": 471517,
+2026-10-31T01:32:51.7791101Z   "post_teaching_boards_with_order_consequence": 970,
+2026-10-31T01:32:51.7791596Z   "boards_with_keys": 652,
+2026-10-31T01:32:51.7792008Z   "relay_pieces": 5698,
+2026-10-31T01:32:51.7792410Z   "max_reachable_states_per_board": 2362,
+2026-10-31T01:32:51.7793253Z   "max_planner_cache_bytes": 65600,
+2026-10-31T01:32:51.7793836Z   "slowest_host_viability_ms": 0.055,
+2026-10-31T01:32:51.7794250Z   "seconds": 2.529,
+2026-10-31T01:32:51.7795204Z   "scope": "Host exact model, all reachable U states, transitions, previews, Undo, save/budget, six-language guide and historical identifiers. Not Android execution or human enjoyment."
+2026-10-31T01:32:51.7795924Z }
+2026-10-31T01:32:51.7796031Z 
+2026-10-31T01:32:51.8412716Z ##[group]Run sh scripts/test-engine.sh
+2026-10-31T01:32:51.8413145Z [36;1msh scripts/test-engine.sh[0m
+2026-10-31T01:32:51.8413437Z [36;1mbash scripts/test-sealed.sh[0m
+2026-10-31T01:32:51.8413889Z [36;1msh scripts/test-progression-v3.sh "$RUNNER_TEMP/luma-puzzle-contracts/progression-v3"[0m
+2026-10-31T01:32:51.8414370Z [36;1mbash scripts/test-move-budget.sh[0m
+2026-10-31T01:32:51.8460357Z shell: /usr/bin/sh -e {0}
+2026-10-31T01:32:51.8460617Z env:
+2026-10-31T01:32:51.8460941Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:32:51.8461448Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:32:51.8461827Z   MAVEN_ARGS: -ntp
+2026-10-31T01:32:51.8462046Z ##[endgroup]
+2026-10-31T01:32:53.5734917Z Challenge codes: campaign/remix exhaustive 1..240, 1007 event round trips including Long.MAX_VALUE; malformed/overflow/tamper + 10000 fuzz inputs rejected.
+2026-10-31T01:32:57.2455641Z Remix design: level,tiles,switches,paired,initial choices,unsafe choices,path blockers,closed gates,ray dependencies,ray depth
+2026-10-31T01:32:57.2583426Z 1,10,1,1,2,0,7,5,10,4
+2026-10-31T01:32:57.2583709Z 2,10,1,1,2,0,7,5,12,6
+2026-10-31T01:32:57.2583951Z 3,10,1,1,2,0,7,5,12,4
+2026-10-31T01:32:57.2584168Z 4,11,2,2,2,0,8,4,12,5
+2026-10-31T01:32:57.2584379Z 5,11,2,2,2,0,9,4,13,6
+2026-10-31T01:32:57.2584583Z 6,11,2,1,2,0,8,7,11,4
+2026-10-31T01:32:57.2584851Z 7,12,3,3,3,1,8,5,14,4
+2026-10-31T01:32:57.2585159Z 8,12,3,3,2,0,10,6,16,6
+2026-10-31T01:32:57.2586701Z 9,12,3,2,2,1,10,1,15,8
+2026-10-31T01:32:57.2588256Z 10,13,4,4,2,0,10,7,20,7
+2026-10-31T01:32:57.2589970Z 11,13,4,4,2,0,10,6,19,7
+2026-10-31T01:32:57.2591873Z 12,13,4,3,2,0,9,8,14,8
+2026-10-31T01:32:59.9425909Z 240 remix averages: 15.30 tiles, 4.69 switches (3.73 paired), 2.55 legal / 0.14 unsafe starts, 10.88 blocked tiles, 8.01 closed-gate tiles, 19.87 ray dependencies, 6.21 ray depth
+2026-10-31T01:32:59.9473309Z PASS: 240 campaign + 240 remix + 1002 event + 1002 paired-switch seeds; 437039 assertions, 1543 alternate legal starts (53 correctly require undo), 6.51 s.
+2026-10-31T01:33:02.8653169Z PASS 10425 sealed-cell checks; all 6 P boards, every piece-subset ×16 gate states, exact independent oracle, undo/history/restart, hostile definitions and isolation.
+2026-10-31T01:33:09.0154159Z PASS 582831 checks; 1240 V3 boards, independent exact oracle, genuine seals, D4 uniqueness, historical sessions, codes and fixed budgets; 2.7809 s.
+2026-10-31T01:33:14.2237875Z PASS 390327 move-budget checks; 2722 real certified boards, 100000 corrupt saves, 20000 valid snapshots, 100000 unlimited friend actions.
+2026-10-31T01:33:14.2239834Z Verified: blocked attempts/undo accounting, fixed100gold, max2continuations, remaining+3 extension floor5, last-action win, copy isolation and overflow rejection.
+2026-10-31T01:33:14.2372878Z Runtime 3.64s. No ad completion, payment, retention or human difficulty is inferred.
+2026-10-31T01:33:14.2698336Z ##[group]Run sh scripts/test-strategy-v4.sh "$RUNNER_TEMP/luma-puzzle-contracts/strategy"
+2026-10-31T01:33:14.2699035Z [36;1msh scripts/test-strategy-v4.sh "$RUNNER_TEMP/luma-puzzle-contracts/strategy"[0m
+2026-10-31T01:33:14.2746875Z shell: /usr/bin/sh -e {0}
+2026-10-31T01:33:14.2747138Z env:
+2026-10-31T01:33:14.2747466Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:33:14.2747994Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:33:14.2748389Z   MAVEN_ARGS: -ntp
+2026-10-31T01:33:14.2748606Z ##[endgroup]
+2026-10-31T01:33:18.0350030Z PASS 33611 strategy contract checks;1240unique V4maps;key_boards=591 meaningful_decision_boards=1161 reauthored_switches=8830;legacy/migration/malformed/zero-action contracts.
+2026-10-31T01:33:18.6833713Z L100 states=79273 checks=3548467
+2026-10-31T01:33:19.9816118Z L200 states=347117 checks=17367988
+2026-10-31T01:33:24.0672202Z L300 states=1091792 checks=60243426
+2026-10-31T01:33:31.6998115Z L400 states=2450894 checks=140674295
+2026-10-31T01:33:38.2773387Z L500 states=3677056 checks=212260403
+2026-10-31T01:33:45.3195257Z L600 states=4973893 checks=289170730
+2026-10-31T01:33:53.7157864Z L700 states=6488876 checks=379226702
+2026-10-31T01:34:00.9107645Z L800 states=7844285 checks=459850085
+2026-10-31T01:34:06.1025784Z L900 states=8801431 checks=515534551
+2026-10-31T01:34:12.1203849Z L1000 states=9938665 checks=582064841
+2026-10-31T01:34:13.9387583Z M100 states=10422477 checks=606439056
+2026-10-31T01:34:21.2892010Z M200 states=11993625 checks=696661907
+2026-10-31T01:34:28.0784384Z PASS StrategyV4Audit boards=1240 reachable_states=13254058 action_edges=57403554 reference_gate_states=31230944 checks=773092810 sampled_complete_plans=13839 peak_cache_states=279897 peak_cache_bytes=9437184 worst_observed_cost_ns=44940474 elapsed_seconds=69.997684281
+2026-10-31T01:34:28.1286923Z ##[group]Run bash scripts/test-guardian-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardians"
+2026-10-31T01:34:28.1288094Z [36;1mbash scripts/test-guardian-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardians"[0m
+2026-10-31T01:34:28.1289382Z [36;1mbash scripts/test-guardian-store-v19.sh "$RUNNER_TEMP/luma-puzzle-contracts/guardian-store"[0m
+2026-10-31T01:34:28.1348991Z shell: /usr/bin/sh -e {0}
+2026-10-31T01:34:28.1349259Z env:
+2026-10-31T01:34:28.1349595Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:34:28.1350136Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:34:28.1350537Z   MAVEN_ARGS: -ntp
+2026-10-31T01:34:28.1350766Z ##[endgroup]
+2026-10-31T01:34:30.3547644Z Guardian10 states=87480 assertions=6054540
+2026-10-31T01:34:34.0471535Z Guardian20 states=356010 assertions=26212787
+2026-10-31T01:34:44.1889952Z Guardian30 states=1028718 assertions=77180231
+2026-10-31T01:34:53.6911963Z Guardian40 states=1664256 assertions=125191831
+2026-10-31T01:35:06.4119493Z Guardian50 states=2479514 assertions=188226288
+2026-10-31T01:35:17.2955508Z Guardian60 states=3200320 assertions=242486987
+2026-10-31T01:35:28.2268541Z Guardian70 states=3904882 assertions=296276713
+2026-10-31T01:35:40.3356227Z Guardian80 states=4687221 assertions=356653174
+2026-10-31T01:35:50.7840972Z Guardian90 states=5363766 assertions=408100959
+2026-10-31T01:36:03.8918075Z Guardian100 states=6197718 assertions=472484606
+2026-10-31T01:36:03.9073975Z {
+2026-10-31T01:36:03.9077221Z   "passed":true,
+2026-10-31T01:36:03.9077637Z   "encounters":100,
+2026-10-31T01:36:03.9078007Z   "unique_patterns":100,
+2026-10-31T01:36:03.9078510Z   "assertions":472484607,
+2026-10-31T01:36:03.9078908Z   "reachable_productive_states":6197718,
+2026-10-31T01:36:03.9079360Z   "productive_edges":34045573,
+2026-10-31T01:36:03.9079762Z   "sampled_complete_plans":1661,
+2026-10-31T01:36:03.9080158Z   "largest_state_set":228228,
+2026-10-31T01:36:03.9080589Z   "elapsed_host_seconds":94.859551229,
+2026-10-31T01:36:03.9081884Z   "scope":"Independent coordinate and finite-work oracle; all reachable productive states on all 100 encounters; blocked-budget, undo, repeat-ID save and malformed-record contracts. No human playtime or retention estimate."
+2026-10-31T01:36:03.9083245Z }
+2026-10-31T01:36:03.9083432Z 
+2026-10-31T01:36:07.2172205Z {
+2026-10-31T01:36:07.2172986Z   "passed":true,
+2026-10-31T01:36:07.2174366Z   "assertions":5303,
+2026-10-31T01:36:07.2174976Z   "encounters_actually_solved_before_reward_requests":100,
+2026-10-31T01:36:07.2175638Z   "concurrent_two_handle_trials":24,
+2026-10-31T01:36:07.2176162Z   "localized_languages":6,
+2026-10-31T01:36:07.2176625Z   "visual_variants":444,
+2026-10-31T01:36:07.2177076Z   "legacy_visual_variants":288,
+2026-10-31T01:36:07.2177591Z   "elapsed_host_seconds":0.523768239,
+2026-10-31T01:36:07.2179528Z   "scope":"Real GameStore, GuardianEncounter, AvatarStyles and V19Strings with established Android preference doubles. completeGuardian is a local caller contract after a solved board, not server purchase/anti-cheat verification. No Google or social service validation."
+2026-10-31T01:36:07.2181480Z }
+2026-10-31T01:36:07.2181654Z 
+2026-10-31T01:36:07.2743842Z ##[group]Run bash scripts/test-data.sh
+2026-10-31T01:36:07.2744323Z [36;1mbash scripts/test-data.sh[0m
+2026-10-31T01:36:07.2744720Z [36;1mbash scripts/test-collection-events.sh[0m
+2026-10-31T01:36:07.2745164Z [36;1mbash scripts/test-economy.sh[0m
+2026-10-31T01:36:07.2745550Z [36;1mbash scripts/test-meta.sh[0m
+2026-10-31T01:36:07.2809735Z shell: /usr/bin/sh -e {0}
+2026-10-31T01:36:07.2810124Z env:
+2026-10-31T01:36:07.2810645Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:36:07.2811461Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:36:07.2812095Z   MAVEN_ARGS: -ntp
+2026-10-31T01:36:07.2812434Z ##[endgroup]
+2026-10-31T01:36:10.1487644Z PASS 9142 data, economy, campaign, Remix, milestone, event and localization checks
+2026-10-31T01:36:10.9240142Z Companions: 37 unique IDs and silhouettes; original 24 cost 12200 coins unchanged; 13 local guests cost 6760 coins.
+2026-10-31T01:36:11.3044419Z Event clocks: 604 time zones, 14496 boundary scenarios; DST 23/25-hour days verified.
+2026-10-31T01:36:11.3063606Z Collection/event checks: 87267 passed.
+2026-10-31T01:36:14.6087384Z PASS 6611 progression-price, power milestones/rewards/loot, continuation debits and atomic test-gold checks
+2026-10-31T01:36:14.6089515Z SANDBOX ONLY: no live payment, Play verification, ad completion or revenue is claimed by these JVM checks
+2026-10-31T01:36:14.6093485Z DURABILITY MODEL: memory-before-disk failures and process reload are simulated; no physical storage fault was injected
+2026-10-31T01:36:17.8454702Z PASS 362 first-clear progression, claims, migration, journal and feature-copy checks
+2026-10-31T01:36:18.0230904Z PASS exported journal parses as JSON and round-trips Unicode and control characters
+2026-10-31T01:36:18.0373859Z ##[group]Run bash scripts/test-home-v115.sh
+2026-10-31T01:36:18.0374226Z [36;1mbash scripts/test-home-v115.sh[0m
+2026-10-31T01:36:18.0374548Z [36;1mbash scripts/test-home-v115-geometry.sh[0m
+2026-10-31T01:36:18.0419142Z shell: /usr/bin/sh -e {0}
+2026-10-31T01:36:18.0419415Z env:
+2026-10-31T01:36:18.0419735Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:36:18.0420238Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+2026-10-31T01:36:18.0420622Z   MAVEN_ARGS: -ntp
+2026-10-31T01:36:18.0420843Z ##[endgroup]
+2026-10-31T01:36:20.7860147Z ##[error]Exception in thread "main" java.lang.AssertionError: 100 tiles and 42 distinctive furniture types
+2026-10-31T01:36:20.7895532Z 	at HomeV115Test.check(HomeV115Test.java:8)
+2026-10-31T01:36:20.7896117Z 	at HomeV115Test.catalog(HomeV115Test.java:13)
+2026-10-31T01:36:20.7896613Z 	at HomeV115Test.main(HomeV115Test.java:82)
+2026-10-31T01:36:20.7977843Z ##[error]Process completed with exit code 1.
+2026-10-31T01:36:20.8226564Z Post job cleanup.
+2026-10-31T01:36:20.9163506Z Post job cleanup.
+2026-10-31T01:36:21.0153161Z [command]/usr/bin/git version
+2026-10-31T01:36:21.0198321Z git version 2.56.0
+2026-10-31T01:36:21.0234408Z Temporarily overriding HOME='/home/runner/work/_temp/98e93357-b923-4bda-9f9d-9d9d2b68a4d4' before making global git config changes
+2026-10-31T01:36:21.0235701Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-31T01:36:21.0239111Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidHit/AndroidHit
+2026-10-31T01:36:21.0276035Z Removing SSH command configuration
+2026-10-31T01:36:21.0282620Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-31T01:36:21.0326720Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-31T01:36:21.0718323Z Removing HTTP extra header
+2026-10-31T01:36:21.0724573Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-31T01:36:21.0781286Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-31T01:36:21.1179845Z Removing includeIf entries pointing to credentials config files
+2026-10-31T01:36:21.1187353Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-31T01:36:21.1238936Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-31T01:36:21.1770454Z Cleaning up orphan processes

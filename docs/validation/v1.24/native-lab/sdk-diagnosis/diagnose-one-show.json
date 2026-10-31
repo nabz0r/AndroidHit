@@ -1,0 +1,78 @@
+[
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_commerce_privacy_v1",
+    "key": "explicit_ads_opt_in",
+    "value": "false"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "tap",
+    "regex": "Allow optional advertising"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "assert-label",
+    "regex": "Ad status: Test ad ready"
+  },
+  {
+    "op": "capture-fast",
+    "name": "ready-before-only-show"
+  },
+  {
+    "op": "tap",
+    "regex": "Watch an ad.*"
+  },
+  {
+    "op": "wait",
+    "ms": 1000
+  },
+  {
+    "op": "capture-fast",
+    "name": "only-show-active-window-before-package-check"
+  },
+  {
+    "op": "snapshot",
+    "name": "only-show-final-state"
+  }
+]

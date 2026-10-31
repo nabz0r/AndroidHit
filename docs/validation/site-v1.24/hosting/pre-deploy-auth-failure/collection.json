@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "collectedUtc": "2026-10-31T02:08:06.017234+00:00",
+  "scope": "Verified local recovery of Cloud pre-deployment originals. Authentication failed before committed Hosting deployer was called; no Hosting/public-origin success claimed.",
+  "method": "28 numbered base64 fragments of up to 1536 characters read from rendered Cloud Shell terminal AX through CUA; recomposed in memory, SHA verified before local archive write and bounded extraction.",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "originalStageCommit": "39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da",
+  "archive": {
+    "path": "inbound.tgz",
+    "bytes": 31746,
+    "sha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d"
+  },
+  "filesVerified": 31,
+  "members": 32,
+  "allIndexedSizesAndHashesMatch": true,
+  "originalStagePreserved": true,
+  "targetStagePassed": true,
+  "targetReusedApks": 2,
+  "baseDownloadsOnRestage": 0,
+  "firstFinalizerFailedBeforeHosting": true,
+  "final2Deployed": false,
+  "rawLogFiles": [
+    "outer-logs/luma124-finalizer-check-66119799d6fb.log",
+    "outer-logs/luma124-finalizer-deploy-66119799d6fb.log",
+    "outer-logs/luma124-finalizer-retry-check-66119799d6fb.log",
+    "outer-logs/luma124-restage-66119799d6fb.log",
+    "outer-logs/luma124-stage-39c0985b24ec.log",
+    "receipts-c2b/checkout-c2b.log",
+    "receipts-c2b/fetch-c2b.log",
+    "receipts-c2b/staging.log",
+    "receipts/checkout.log",
+    "receipts/clone.log",
+    "receipts/fetch-artifact-c1.log",
+    "receipts/fetch-c2.log",
+    "receipts/fetch-previous-c3.log",
+    "receipts/fetch-previous-deployment-c2.log",
+    "receipts/sparse-cone.log",
+    "receipts/sparse-config.log",
+    "receipts/staging.log"
+  ],
+  "privacy": "No Cloud Shell screenshot or token/account credential file collected. Only explicit receipt/log/operator whitelist included."
+}

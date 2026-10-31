@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "deliveryStatus": "AUTH_REQUIRED",
+  "scope": "Read-only documentation link/hash validation. No game, native, CI, browser or network retest; no git mutation or publication by this agent.",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "ciJobs": 3,
+  "localLinksVerified": 204,
+  "frozenSiteInputsUnchanged": 69,
+  "nativeInputsUnchanged": 522,
+  "originalLabIndexUnchanged": true,
+  "originalSdkReadmeManifestSummaryUnchanged": true,
+  "sdkSupplementSeparate": {
+    "assertions": 142,
+    "gestures": 22,
+    "pngs": 10,
+    "baselineAssertions": 568,
+    "baselineGestures": 118,
+    "baselinePngs": 39,
+    "backAndEarlyCloseQualified": false,
+    "backActions": 0,
+    "ignoredLocalObserverApks": 9
+  },
+  "authBlock": {
+    "zeroActiveAccounts": true,
+    "originalCloudFilesVerified": 31,
+    "archiveBytes": 31746,
+    "archiveSha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d",
+    "firebaseDeployerCalled": false,
+    "uploaded": false,
+    "released": false,
+    "lastLiveEdition": "1.23",
+    "lastLiveVersion": "cf8b817321bf33d5"
+  },
+  "evidence": {
+    "docs/validation/v1.24/publication/c2-ci/c2b-ci.json": "594512699168c060d93aca4308066ca57bb57f8dab604193c85bcd6f7febcdda",
+    "docs/validation/v1.24/publication/operator-preparation/c2b/auth-retry/handoff.json": "d1413906341ef9857f8bc74de0272fc8dafa03d276d0f10eb7e3b8b6c12c305d",
+    "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure/collection.json": "6d34d8517e6725fc5ee5dbd21feeea2d62240dd2a5ea1a8491f31ab391526c5a",
+    "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure/originals/complete-pre-deploy-export-index.json": "74cb3dc2b74254955a2be91d9f340d3fbf6e3cd540c7dd26379af0bae792576a",
+    "docs/validation/v1.24/native-lab/sdk-diagnosis/summary.json": "b31fdb4ec9af148236bb47bb6e26f4c4be7288847de8e986bb6220d3167fd0bf",
+    "docs/validation/v1.24/native-lab/sdk-diagnosis/collection-receipt.json": "dbf4c95b01f2ea0f6542a51ea1de357486fe5bac31fea34070c21bf21b16b89e"
+  },
+  "documents": {
+    "README.md": "548322cfc576de22d424c6b4afbcfac1a7787939b90e870e073d8f1b81e359ea",
+    "docs/CHANGELOG.md": "8632c64e83a3daa0f252dea95626557c1489e4c309ace022b0038e5039152096",
+    "docs/RELEASE_1_24.md": "005f7c547efe96b16447fc7723ad0d9ea73d182631063714ed61a19f30acdce3",
+    "docs/validation/v1.24/README.md": "439ef32c4cc7d7f523b49b569cef6cf86ef9c6d1a6aadb2af7e33226b0749e74",
+    "docs/validation/site-v1.24/README.md": "23b6720ef1c819276912ea1ce589d7746072245da9878e759fc87c468954f484",
+    "docs/validation/v1.24/native-lab/README.md": "6f899a8fd7558246d097ff693d3d626bc368180dacedcd042274b8771df36390"
+  },
+  "historicalChangelogTailUnchanged": true,
+  "whitespaceScope": "All six edited documents pass git diff --check HEAD. Newly collected original CI/test logs retain their literal whitespace/EOF; they are not reformatted to satisfy a global staged diff check."
+}

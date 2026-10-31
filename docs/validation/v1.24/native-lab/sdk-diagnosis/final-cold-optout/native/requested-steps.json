@@ -1,0 +1,72 @@
+[
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "765"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "assert-pref",
+    "key": "gold_tx_v1_0767fea959f96da6e89dbcd0d000173f27766b284975949fedc616603bc0d7e9",
+    "value": "true"
+  },
+  {
+    "op": "assert-pref",
+    "key": "ad_coins_pending_v1_0767fea959f96da6e89dbcd0d000173f27766b284975949fedc616603bc0d7e9",
+    "value": ""
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "tap",
+    "regex": "Allow optional advertising"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_commerce_privacy_v1",
+    "key": "explicit_ads_opt_in",
+    "value": "false"
+  },
+  {
+    "op": "capture",
+    "name": "diagnostic-final-test-ads-disabled"
+  },
+  {
+    "op": "snapshot",
+    "name": "cold-paid-sdk-reward-state"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "diagnostic-final-home-fr-765-coins"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "765"
+  }
+]

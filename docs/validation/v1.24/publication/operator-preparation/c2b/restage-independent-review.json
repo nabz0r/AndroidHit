@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "reviewedScript": "/tmp/luma124-cloud-restage.py",
+  "scriptSha256": "ae50494c446cd87ba27cee44ca20730e131f3eb3718c3b0db75edac8055d33cc",
+  "timestampUtc": "2026-10-31T01:49:37.145193+00:00",
+  "scope": "Independent read-only source review plus offline exact-Git-object checks. main was not called. No Cloud filesystem, network, auth, checkout or staging was executed.",
+  "checks": [
+    "Original and C2b app/public trees exactly equal pinned identities.",
+    "Exact six-path source delta, target commit and target tree.",
+    "All69 frozen source inputs hash-identical in both exact commits.",
+    "Wrapper has no auth/deploy invocation and stage command omits base downloads; source enforces reuse, no reconstruction, and unauthenticated stage.",
+    "Preserves original workspace39; new exclusive receipt/log destinations and original receipt SHA checks before/after."
+  ],
+  "networkExecuted": false,
+  "mainExecuted": false,
+  "originalSourceCommit": "39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da",
+  "targetSourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "frozenInputs": 69,
+  "limits": [
+    "The real Cloud restage and physical reconstructed APK hash checks remain runtime gates.",
+    "This wrapper may fetch the exact public Git commit and lazy blobs on actual execution; it does not authenticate to Firebase or deploy."
+  ]
+}

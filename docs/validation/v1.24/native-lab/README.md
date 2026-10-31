@@ -4,6 +4,30 @@ Qualification SDK figée le31octobre2026 sur le seul APK Lab SHA-256 `1929ee6bc8
 
 Les11 phases terminées PASS totalisent568 assertions,118 actions tactiles et39 PNG originaux. Les3 vérifications supplémentaires de cycle de vie utilisent les API publiques Android Home/foreground et Activity.recreate ; elles ne sont pas ajoutées au compteur de gestes. Les4 phases arrêtées restent conservées et ne sont pas comptées comme des phases PASS. Un PNG SDK en lecture seule, pris après un arrêt, reste également hors des39 PNG des phases PASS.
 
+## Supplément SDK ultérieur, distinct de l’index figé
+
+Le [nouveau diagnostic SDK](sdk-diagnosis/summary.json) ajoute trois phases PASS,
+142 assertions/22 gestes/10 PNG, sans modifier l’index ni les résultats ci-dessous.
+Un vrai Test Ad accorde +35 Coins, 730→765 ; un processus froid conserve 765,
+Gold test 450 et énergie 10, sans second crédit. Android Retour et fermeture
+anticipée restent non qualifiés : zéro action Back et zéro clic SDK Close ont
+été envoyés. Trois arrêts du diagnostic restent séparés. Opt-out et
+[arrêt normal de 5638](sdk-diagnosis/cleanup.json) sont enregistrés.
+
+Le README original du diagnostic conserve la mention « hors dépôt », qui décrit
+sa provenance avant collecte. Les preuves ont ensuite été copiées ici sans
+changer leurs octets : le [reçu de collecte](sdk-diagnosis/collection-receipt.json)
+vérifie 823 fichiers locaux, dont neuf APK observers conservés localement et
+ignorés dans Git. Ce nombre ne signifie pas que 823 fichiers sont suivis ou
+publiés. Les sections et le tableau suivants décrivent le bilan antérieur de
+568 assertions ; son index et ses anciens rapports restent immuables.
+
+La source C2b `66119799d6fbe5254a8d37d50db76afe8daffbdc` a ses trois jobs CI
+verts, mais le site reste en 1.23 : le [passage Hosting](../publication/operator-preparation/c2b/auth-retry/handoff.json)
+est AUTH_REQUIRED, faute de compte Google actif dans Cloud Shell, avant tout
+appel Firebase, clonage de version, upload ou release. Ces preuves natives ne
+signifient donc pas que le site 1.24 est livré.
+
 ## Profil conservé —5634
 
 [Résumé retained](retained-d-summary.json) :330 assertions,53 gestes,22 PNG. Upgrade E→B→D, avec15 fichiers de préférences Lab identiques juste après B→D et avant première Activity. L’APK de production E et ses5 fichiers de préférences sont restés inchangés. Le refus Gold insuffisant hérité de B devient terminal REFUSED sous D en conservant les mêmes identifiants, puis reste stable après retour froid FR/EN.

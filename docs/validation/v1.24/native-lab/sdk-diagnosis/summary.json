@@ -1,0 +1,105 @@
+{
+  "created_utc": "2026-10-31T01:50:07.591622+00:00",
+  "status": "FROZEN_ACTUAL_TEST_SDK_REWARD_PROVEN_BACK_UNQUALIFIED",
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "version": "1.24.0-sandbox-rc2",
+  "code": 33,
+  "serial": "emulator-5638",
+  "avd": "Luma124-LabFresh-QA",
+  "frozen_repo_baseline_index_sha256": "ea52d0d05f1326ece87f6634b5128fc027069f8638dd60ff3c5ecd50aeee4976",
+  "repo_or_old_proof_writes": false,
+  "phases": [
+    {
+      "path": "readonly-before-package-guard/report.json",
+      "sha256": "040871d108e1d86ff60ce163e7ada31c4f1fa056e7d656d35c06bc4fb827420d",
+      "bytes": 9796,
+      "passed": false,
+      "assertions": 29,
+      "touches": 6,
+      "original_pngs": 1
+    },
+    {
+      "path": "readonly-before-guard-loaded/report.json",
+      "sha256": "594f5a075879c9cf8d4c75100097f1007ec2d8c22e16f40b72c7ad39c46159df",
+      "bytes": 11688,
+      "passed": false,
+      "assertions": 38,
+      "touches": 7,
+      "original_pngs": 3
+    },
+    {
+      "path": "acknowledge-identified-and-observe/report.json",
+      "sha256": "7a13d3a8b15f47328a6c71d586f7843f669eca965d938884d6a672efa336c85e",
+      "bytes": 13117,
+      "passed": true,
+      "assertions": 47,
+      "touches": 8,
+      "original_pngs": 2
+    },
+    {
+      "path": "single-full-sdk-view/report.json",
+      "sha256": "1d1262494e5d19b90af18df83617ee2f527f55ec565f3beed632260d405f7642",
+      "bytes": 15377,
+      "passed": true,
+      "assertions": 62,
+      "touches": 7,
+      "original_pngs": 6
+    },
+    {
+      "path": "one-standard-back-in-identified-sdk/report.json",
+      "sha256": "16249fd38281e056452f9e494a8f36544491a656e850987f8e00f8d1838c5ac3",
+      "bytes": 12288,
+      "passed": false,
+      "assertions": 42,
+      "touches": 7,
+      "original_pngs": 3
+    },
+    {
+      "path": "final-cold-optout/report.json",
+      "sha256": "36776f41b405312f641e02a12a8b8e2e230e14dd07b5609c1b842a01d9497191",
+      "bytes": 11223,
+      "passed": true,
+      "assertions": 33,
+      "touches": 7,
+      "original_pngs": 2
+    }
+  ],
+  "passed_phase_totals": {
+    "assertions": 142,
+    "touches": 22,
+    "original_pngs": 10
+  },
+  "stopped_phase_totals_separate": {
+    "assertions": 109,
+    "touches": 20,
+    "original_pngs": 7
+  },
+  "results": {
+    "systemui_identification": "Viewing full screen / To exit, swipe down from the top of your screen / unique com.android.systemui:id/ok Got it. Screenshot+AX precede package guard, input guards remain separate.",
+    "systemui_acknowledgements": 1,
+    "systemui_ack_guard": "All3 exact IDs,labels,visible/enabled flags and observed1080x2400 rectangles; one injection at uniqueOK centre. No generic SystemUI input allowed.",
+    "actual_sdk_full_view": "Exactly one intentionally completed view, Test Ad marker and Reward granted visible. Captured at3,9,21,36,45seconds; no Close at3seconds, Close after Reward granted at9seconds.",
+    "coins": "730 ->765 =35 actual earned LumaCoins, then765 after a cold process; no second grant.",
+    "gold_and_energy": "Dedicated Lab Gold450 and sessionenergy10 unchanged.",
+    "reward_receipts": {
+      "gold_tx_v1_0767fea959f96da6e89dbcd0d000173f27766b284975949fedc616603bc0d7e9": true,
+      "ad_coins_pending_v1_0767fea959f96da6e89dbcd0d000173f27766b284975949fedc616603bc0d7e9": ""
+    },
+    "back_display_bound": "At most one post-full display for Back was started. Actual resumed publicSDKcomponent uses libraries.ads.mobile.sdk.common.AdActivity, so the old exact gms.ads.AdActivity guard stopped beforeinput. Coordinator adjusted authorization only while that same display remained active; it had already ended, so no new display was launched.",
+    "standard_back_actions_sent": 0,
+    "back_or_early_close": "UNQUALIFIED; no standard Back or SDK Close control was pressed. No wildcard/fallback or unknown-coordinate input.",
+    "final_opt_in": false,
+    "emulator": "Normal SDK shutdown, observer absent, target app/data preserved, production package absent."
+  },
+  "cleanup": {
+    "path": "cleanup.json",
+    "sha256": "9d3d4b9f67d2bfcad327a7ac00cc86b20333677d13dd67e496620ed8c8a32c17",
+    "bytes": 592
+  },
+  "observation": {
+    "path": "observation.json",
+    "sha256": "91d049326347ddf8a26b7ba75d8257a819ba81429ca288a3d4ea20e7e00a3be9",
+    "bytes": 2349
+  },
+  "scope": "Official Android SDK emulator Lab diagnostic only, real SDK test-ad display and actual earned reward callback. No callback/reward injection, real purchase, production ads, target API/solver, target preference/progress/ownership writes, profile reset/copy or other-device action. Temporary observer forks/outputs only. Separate from the immutable568assertion baseline; not human usability/retention or physical-device evidence."
+}

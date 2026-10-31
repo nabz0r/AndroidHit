@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "script": "/tmp/luma124-cloud-finalize.py",
+  "scriptSha256": "73df5e4c523246f633ba918fe293a0c5692d3fae41ec043200ee42395258563b",
+  "checks": [
+    "check-only: no subprocess/auth and no output file writes after successful mocked validation",
+    "validation refusal: auth/deploy never called and no final attempt file written",
+    "mock deploy: exactly one mocked token acquisition, RAM\u2192stdin only, exact C2b argument, original receipts unchanged and no token in any output",
+    "mock gcloud failure: no deploy call, separate FAIL receipt, no credential-like stdout persisted"
+  ],
+  "testCount": 4,
+  "scope": "Source review plus control-flow tests of main with validation and every subprocess mocked. No Cloud validation, auth, network or deployment was performed. The successful deploy receipt in the temporary fixture was synthetic and deleted with that fixture.",
+  "networkExecuted": false,
+  "authExecuted": false,
+  "deploymentExecuted": false,
+  "ciGate": "External root decision. The script does not query GitHub Actions; root must invoke --deploy only after exact C2b CI acceptance.",
+  "sourceReview": "No concrete blocking defect found in pinned original39\u2192C2b chain, exact app/public/diff6/manifest/69/C1/APK checks before auth, original receipt preservation and exclusive final output guards."
+}

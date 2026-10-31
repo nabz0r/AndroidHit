@@ -1,0 +1,219 @@
+{
+  "status": "FAIL",
+  "startedFromStep": "Check three-room ownership, migration and camera geometry",
+  "workflowSha256": "aebf50636241ae6a1eb5b1b0101f7c6dbcd425bf77156f8f0fa7ae7aa67e50a8",
+  "stepCount": 22,
+  "completedSteps": 20,
+  "steps": [
+    {
+      "name": "Check three-room ownership, migration and camera geometry",
+      "exitCode": 0,
+      "elapsedSeconds": 3.267,
+      "originalCommand": "bash scripts/test-home-v115.sh\nbash scripts/test-home-v115-geometry.sh",
+      "executedCommand": "bash scripts/test-home-v115.sh \"$RUNNER_TEMP/luma-puzzle-contracts/home115.json\"\nbash scripts/test-home-v115-geometry.sh \"$RUNNER_TEMP/luma-puzzle-contracts/all48-furniture-rotations.png\"",
+      "adaptations": [
+        "Write new home JSON and optional Java2D preview under RUNNER_TEMP only; all native/assertion calls unchanged."
+      ],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/01.log",
+      "outputSha256": "1f4ec5b056b1b556a5556ccac678a75b7e38554f28f301077f627022917b54c0"
+    },
+    {
+      "name": "Check strict budgets, the saved Return and legacy continuations",
+      "exitCode": 0,
+      "elapsedSeconds": 0.805,
+      "originalCommand": "sh scripts/test-deliberate-play-v114.sh",
+      "executedCommand": "sh scripts/test-deliberate-play-v114.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/02.log",
+      "outputSha256": "ec6ef87ec2689a5a83d0eadc443cb19d5733dc89d712abe4d02cbfdc25691280"
+    },
+    {
+      "name": "Check adaptive home camera and recoverable player collection",
+      "exitCode": 0,
+      "elapsedSeconds": 3.13,
+      "originalCommand": "bash scripts/test-home-v116-geometry.sh\nbash scripts/test-profile-summon-v116.sh \"$RUNNER_TEMP/luma-puzzle-contracts/profile-summon.json\"",
+      "executedCommand": "bash scripts/test-home-v116-geometry.sh\nbash scripts/test-profile-summon-v116.sh \"$RUNNER_TEMP/luma-puzzle-contracts/profile-summon.json\"",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/03.log",
+      "outputSha256": "f289a831d248148893ea8f35425ec31c27a53b94abbb179ea351ef2efbf77479"
+    },
+    {
+      "name": "Check contextual rules and six-language feedback",
+      "exitCode": 0,
+      "elapsedSeconds": 0.745,
+      "originalCommand": "sh scripts/test-learning-guide.sh",
+      "executedCommand": "sh scripts/test-learning-guide.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/04.log",
+      "outputSha256": "16f981f882a1bdeda59d1cc37acfcbfd736b563b3ce8cd018aad572293688a71"
+    },
+    {
+      "name": "Check 1.17 scene transitions and original sprite geometry",
+      "exitCode": 0,
+      "elapsedSeconds": 1.109,
+      "originalCommand": "bash scripts/test-scene-transition-v117.sh\nbash scripts/test-root-scenes-v117.sh\nbash scripts/test-art-v117-geometry.sh",
+      "executedCommand": "bash scripts/test-scene-transition-v117.sh\nbash scripts/test-root-scenes-v117.sh\nbash scripts/test-art-v117-geometry.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/05.log",
+      "outputSha256": "9a7a3a4008e795dc176269ebedf1afd488fc7e154c8d6e34cba861ef991d56da"
+    },
+    {
+      "name": "Check 50 synthesized arrangements, earcons and audio lifecycle model",
+      "exitCode": 0,
+      "elapsedSeconds": 17.972,
+      "originalCommand": "bash scripts/test-audio-scenes-v117.sh \"$RUNNER_TEMP/luma-puzzle-contracts/audio-scenes-v117\"",
+      "executedCommand": "bash scripts/test-audio-scenes-v117.sh \"$RUNNER_TEMP/luma-puzzle-contracts/audio-scenes-v117\"",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/06.log",
+      "outputSha256": "025f7f5fafb47c2b6864e2af17a69e75dfb6caed8fe385dde13e6474ce0e8348"
+    },
+    {
+      "name": "Check puzzle gates, budgets, feedback and compact action reachability",
+      "exitCode": 0,
+      "elapsedSeconds": 0.43,
+      "originalCommand": "bash scripts/test-play-scene-v117-geometry.sh",
+      "executedCommand": "bash scripts/test-play-scene-v117-geometry.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/07.log",
+      "outputSha256": "a10b441043ced2f74e888667eab5ef8fca851ec4a8ae02a391fb76d597d8d2bd"
+    },
+    {
+      "name": "Check 1.20 interactions and retained website language and media controls",
+      "exitCode": 0,
+      "elapsedSeconds": 0.203,
+      "originalCommand": "node --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs",
+      "executedCommand": "node --test scripts/test-site-v121-runtime.mjs scripts/test-simulation-v121.mjs scripts/test-site-v120-runtime.mjs scripts/test-site-v119.mjs scripts/test-site-v118.mjs scripts/test-site-v117.mjs scripts/test-site-v116.mjs",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/08.log",
+      "outputSha256": "274000eed379081be3a4b97f7b7959a2f8cfd54f427544ece2c42980f0e8997f"
+    },
+    {
+      "name": "Check 1.23 homepage structure and preserved map demo syntax",
+      "exitCode": 0,
+      "elapsedSeconds": 10.433,
+      "originalCommand": "python3 scripts/check-site-v123.py --structure-only\nnode --check public/assets/site-v123.js\nnode --check public/lab/ui-1-22/simulation.mjs\nnode --test scripts/test-site-v123-runtime.mjs\npython3 scripts/test-deploy-site-v123.py\npython3 scripts/test-stage-site-v123-rest.py\npython3 scripts/test-collect-site-v123-public-bytes.py\npython3 scripts/test-deploy-site-v122.py\npython3 scripts/test-stage-site-v122-rest.py\npython3 scripts/test-collect-site-v122-public-bytes.py",
+      "executedCommand": "python3 scripts/check-site-v123.py --structure-only\nnode --check public/assets/site-v123.js\nnode --check public/lab/ui-1-22/simulation.mjs\nnode --test scripts/test-site-v123-runtime.mjs\npython3 scripts/test-deploy-site-v123.py\npython3 scripts/test-stage-site-v123-rest.py\npython3 scripts/test-collect-site-v123-public-bytes.py\npython3 scripts/test-deploy-site-v122.py\npython3 scripts/test-stage-site-v122-rest.py\npython3 scripts/test-collect-site-v122-public-bytes.py",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/09.log",
+      "outputSha256": "3aa775042a020bfad2c16b827a8bf82a6f605b82f505d6e700e07f464d8d130b"
+    },
+    {
+      "name": "Check exact APK delta transport and refused artifact replacement",
+      "exitCode": 0,
+      "elapsedSeconds": 0.254,
+      "originalCommand": "python3 scripts/test-apk-byte-delta.py",
+      "executedCommand": "python3 scripts/test-apk-byte-delta.py",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/10.log",
+      "outputSha256": "7daebaca288d09e2c8f80bf9764c5e5dc9a36e74be110fd038e8b6ef1660b58c"
+    },
+    {
+      "name": "Check 1.24 website interactions and exact Hosting preparation guards",
+      "exitCode": 0,
+      "elapsedSeconds": 7.928,
+      "originalCommand": "python3 scripts/check-site-v124.py --structure-only\nnode --check public/assets/site-v124.js\nnode --test scripts/test-site-v124-runtime.mjs\npython3 scripts/test-deploy-site-v124.py\npython3 scripts/test-stage-site-v124-rest.py\npython3 scripts/test-collect-site-v124-public-bytes.py",
+      "executedCommand": "python3 scripts/check-site-v124.py --structure-only\nnode --check public/assets/site-v124.js\nnode --test scripts/test-site-v124-runtime.mjs\npython3 scripts/test-deploy-site-v124.py\npython3 scripts/test-stage-site-v124-rest.py\npython3 scripts/test-collect-site-v124-public-bytes.py",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/11.log",
+      "outputSha256": "ea05b9fb528526148dbbd969dd4ace9ecc0e0dd6824331e6fad075f60a5d390e"
+    },
+    {
+      "name": "Check 1.18 expeditions, copies, durable costume choice and motion contracts",
+      "exitCode": 0,
+      "elapsedSeconds": 3.681,
+      "originalCommand": "bash scripts/test-expedition-v118-model.sh \"$RUNNER_TEMP/luma-puzzle-contracts/expedition-model.json\"\nbash scripts/test-expedition-v118-store.sh \"$RUNNER_TEMP/luma-puzzle-contracts/expedition-store.json\"\nbash scripts/test-companion-motion-v118.sh \"$RUNNER_TEMP/luma-puzzle-contracts/companion-motion.json\"",
+      "executedCommand": "bash scripts/test-expedition-v118-model.sh \"$RUNNER_TEMP/luma-puzzle-contracts/expedition-model.json\"\nbash scripts/test-expedition-v118-store.sh \"$RUNNER_TEMP/luma-puzzle-contracts/expedition-store.json\"\nbash scripts/test-companion-motion-v118.sh \"$RUNNER_TEMP/luma-puzzle-contracts/companion-motion.json\"",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/12.log",
+      "outputSha256": "8d09012f0c632ad2d1f1680110daf58c4f129c12ffb70a078d3d6133c6586a2f"
+    },
+    {
+      "name": "Check 1.19 team ownership, durable skills, U-board effects and adventure/dock geometry",
+      "exitCode": 0,
+      "elapsedSeconds": 4.117,
+      "originalCommand": "bash scripts/test-companion-battle-v119.sh\nbash scripts/test-companion-action-v119.sh \"$RUNNER_TEMP/luma-puzzle-contracts/companion-action-v119\"\nbash scripts/test-squad-store-v119.sh\nbash scripts/test-companion-battle-v119-geometry.sh\nbash scripts/test-adventure-v119-geometry.sh",
+      "executedCommand": "bash scripts/test-companion-battle-v119.sh\nbash scripts/test-companion-action-v119.sh \"$RUNNER_TEMP/luma-puzzle-contracts/companion-action-v119\"\nbash scripts/test-squad-store-v119.sh\nbash scripts/test-companion-battle-v119-geometry.sh\nbash scripts/test-adventure-v119-geometry.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/13.log",
+      "outputSha256": "57dd15ebda9fce4c17435040b2dc061fc0de967364f966c214af2641fe248d58"
+    },
+    {
+      "name": "Check 1.20 session pacing and genuine avatar reactions",
+      "exitCode": 0,
+      "elapsedSeconds": 3.694,
+      "originalCommand": "bash scripts/test-focused-journey-v120.sh \"$RUNNER_TEMP/luma-puzzle-contracts/focused-journey-v120.json\"\nbash scripts/test-session-energy-v120.sh\nbash scripts/test-menu-v120.sh",
+      "executedCommand": "bash scripts/test-focused-journey-v120.sh \"$RUNNER_TEMP/luma-puzzle-contracts/focused-journey-v120.json\"\nbash scripts/test-session-energy-v120.sh\nbash scripts/test-menu-v120.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/14.log",
+      "outputSha256": "33a4bbc9e2a5fd8f81b5a521f6298319ec92811a72055c22c18abe007da6f6a3"
+    },
+    {
+      "name": "Check 1.21 elemental preparation, direct-exit Focus and confirmed-balance animation",
+      "exitCode": 0,
+      "elapsedSeconds": 3.28,
+      "originalCommand": "bash scripts/test-elemental-shell-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/elemental-shells-v121.json\"\nbash scripts/test-arcade-presentation-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/arcade-presentation-v121.json\"",
+      "executedCommand": "bash scripts/test-elemental-shell-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/elemental-shells-v121.json\"\nbash scripts/test-arcade-presentation-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/arcade-presentation-v121.json\"",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/15.log",
+      "outputSha256": "2f217b89093004f5d653b6f81adac392e281aaa47bf9e7f4cde9fa67e8488f19"
+    },
+    {
+      "name": "Check 1.21 menus, four independent rooms and chapter map",
+      "exitCode": 0,
+      "elapsedSeconds": 1.957,
+      "originalCommand": "bash scripts/test-menu-v121.sh\nbash scripts/test-home-kitchen-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/home-kitchen-v121.json\"\nsh scripts/test-saga-map-v17.sh",
+      "executedCommand": "bash scripts/test-menu-v121.sh\nbash scripts/test-home-kitchen-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/home-kitchen-v121.json\"\nsh scripts/test-saga-map-v17.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/16.log",
+      "outputSha256": "43ed6ddcbb1ad34586ebe74f07513cdd876e5073e27937aceb3054b01d125ee6"
+    },
+    {
+      "name": "Check 1.21 logarithmic entitlements, earned-Coin Undo receipts and energy capacity",
+      "exitCode": 0,
+      "elapsedSeconds": 4.2,
+      "originalCommand": "bash scripts/test-economy-curve-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/economy-curve-v121.json\"\nbash scripts/test-session-energy-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/session-energy-v121.json\"\nbash scripts/simulate-summon-economy-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/summon-economy-v121\"",
+      "executedCommand": "bash scripts/test-economy-curve-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/economy-curve-v121.json\"\nbash scripts/test-session-energy-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/session-energy-v121.json\"\nbash scripts/simulate-summon-economy-v121.sh \"$RUNNER_TEMP/luma-puzzle-contracts/summon-economy-v121\"",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/17.log",
+      "outputSha256": "5f1030e4cb58ea61f4884b87428eadf0301e033f93fe36c3e584397d66e5f592"
+    },
+    {
+      "name": "Check 1.23 new Journey, preserved saves and atomic outfit application",
+      "exitCode": 0,
+      "elapsedSeconds": 2.227,
+      "originalCommand": "bash scripts/test-journey-clarity-v123.sh \"$RUNNER_TEMP/luma-puzzle-contracts/clarity123\"\nbash scripts/test-clarity-layout-v123.sh",
+      "executedCommand": "bash scripts/test-journey-clarity-v123.sh \"$RUNNER_TEMP/luma-puzzle-contracts/clarity123\"\nbash scripts/test-clarity-layout-v123.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/18.log",
+      "outputSha256": "6d32672c50f1b729423525b808405b168a93c0f7670951e8650df3957a7e2e50"
+    },
+    {
+      "name": "Check 1.24 rank copies, captured talent capacity and readable round UI layouts",
+      "exitCode": 0,
+      "elapsedSeconds": 3.325,
+      "originalCommand": "bash scripts/test-companion-battle-v124.sh\nbash scripts/test-battle-dock-v124.sh\nbash scripts/test-pause-layout-v124.sh\npython3 scripts/playtest-2026-10-31/run-rank-copy-tests.py --output \"$RUNNER_TEMP/luma-puzzle-contracts/rank-copy124\"",
+      "executedCommand": "bash scripts/test-companion-battle-v124.sh\nbash scripts/test-battle-dock-v124.sh\nbash scripts/test-pause-layout-v124.sh\npython3 scripts/playtest-2026-10-31/run-rank-copy-tests.py --output \"$RUNNER_TEMP/luma-puzzle-contracts/rank-copy124\"",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/19.log",
+      "outputSha256": "6e38fbaf0a4de11ef0b84288219bf332e11bbb799678e35ced8f6f68fc2c08d4"
+    },
+    {
+      "name": "Check 1.22 map navigation and durable tactical chapters",
+      "exitCode": 1,
+      "elapsedSeconds": 0.871,
+      "originalCommand": "bash scripts/test-journey-world-v122.sh\nbash scripts/test-tactical-chapter-v122.sh\nbash scripts/test-tactical-session-v122.sh",
+      "executedCommand": "bash scripts/test-journey-world-v122.sh\nbash scripts/test-tactical-chapter-v122.sh\nbash scripts/test-tactical-session-v122.sh",
+      "adaptations": [],
+      "originalCombinedOutput": "/tmp/luma124-ci-home-fix/remaining/20.log",
+      "outputSha256": "ac68c216e9c1be2db5d4e17e7d9edb4903cdd1e181f2a70529db1d45e5c078ab"
+    }
+  ],
+  "env": {
+    "JAVA_HOME": "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",
+    "RUNNER_TEMP": "/tmp/luma124-ci-home-fix/remaining/runner-temp",
+    "LUMA_JSON_JAR": "/Users/n/.gradle/caches/modules-2/files-2.1/org.json/json/20240303/ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a/json-20240303.jar"
+  },
+  "jsonJarSha256": "3cf6cd6892e32e2b4c1c39e0f52f5248a2f5b37646fdfbb79a66b46b618414ed",
+  "networkRequested": false,
+  "appOrPublicMutation": false
+}
