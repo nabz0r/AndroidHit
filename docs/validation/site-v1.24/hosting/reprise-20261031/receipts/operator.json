@@ -1,0 +1,28 @@
+{
+  "source_commit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "repository": "https://github.com/nabz0r/AndroidHit.git",
+  "sparse_initial_files": [
+    ".gitignore",
+    "scripts/stage-site-v124-rest.py",
+    "docs/validation/site-v1.24/release/source-manifest.json"
+  ],
+  "previous_source_commit": "5cc870701c8039e664d1c00a90d0586c3d00521c",
+  "expected_live": "sites/luma-drift-production/versions/cf8b817321bf33d5",
+  "production_apk_sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e",
+  "lab_apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "staging_base_download_host": "luma-drift-production.web.app",
+  "auth": "gcloud auth print-access-token --quiet; stdout in memory, deploy stdin only",
+  "receipts": "/tmp/luma124-cloud-66119799d6fb-5mb_1ou2/receipts",
+  "publication_command_requires": "--deploy",
+  "started_utc": "2026-10-31T09:54:02.824619+00:00",
+  "status": "STAGED_ONLY",
+  "workspace": "/tmp/luma124-cloud-66119799d6fb-5mb_1ou2",
+  "checkout": "/tmp/luma124-cloud-66119799d6fb-5mb_1ou2/source",
+  "staging": "/tmp/luma124-cloud-66119799d6fb-5mb_1ou2/receipts/staging.json",
+  "deployment": "/tmp/luma124-cloud-66119799d6fb-5mb_1ou2/receipts/deployment/deployment.json",
+  "script_sha256": "8291593809f68b6ff1a1e7fe00de85f2317d6ebab52b70640c52b9a21b35111a",
+  "network_requested": true,
+  "artifact_source_commit": "787fba142b8edd1f840b9b70cb7749167edacd24",
+  "staging_passed": true,
+  "finished_utc": "2026-10-31T09:56:00.006810+00:00"
+}

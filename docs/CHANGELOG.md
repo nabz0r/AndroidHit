@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.24.0-rc2 / code 33 — source/CI accepted, Hosting AUTH_REQUIRED
+## 1.24.0-rc2 / code 33 — delivered for playtesting
 
 31 October 2026. Candidate D connects first-win XP → player rank → one copy for
 the captain actually played → companion level → talent uses captured at the next
@@ -21,11 +21,15 @@ is `787fba142b8edd1f840b9b70cb7749167edacd24` (522 matched native inputs).
 Published source C2b `66119799d6fbe5254a8d37d50db76afe8daffbdc` has
 [two successful workflows/three successful jobs](validation/v1.24/publication/c2-ci/c2b-ci.json).
 Its app/public trees are unchanged from C2; the original C2 contract failure is
-preserved. Hosting is **AUTH_REQUIRED**: zero active Google accounts stopped
-token acquisition before any Firebase API, version clone, upload or release.
-The public site remains 1.23 at `cf8b817321bf33d5`;
-[originals and auth handoff](validation/v1.24/publication/operator-preparation/c2b/auth-retry/handoff.json)
-are preserved. No 1.24 public-origin acceptance is claimed. Production's B-created
+preserved. [Hosting and public delivery](validation/site-v1.24/README.md) pass:
+version `ded69bffe410a798`, release `1793441472461000` at
+`2026-10-31T10:11:12.461Z`, source C2b. Its 631-entry provider map preserves 577
+historical hashes and serving config; 54 overlay uploads delete no payload.
+All 54 selected new/changed public responses match, 711,388,755 bytes including
+both exact D APKs. FR/EN browser checks cover 1280×720 and 320×740, eight loaded
+native images, Miko/pose, explicit audio start/stop and the report/raw links.
+The earlier auth failure and its 31 originals remain historical, separately from
+the successful 33-original collection. Production's B-created
 fresh profile updated to D passes 254 checks/46 real taps; retained production
 passes 60/46 separately. Lab records 11 PASS phases, 568 assertions/118 touches/39
 PNGs, with 4 stopped phases excluded. A

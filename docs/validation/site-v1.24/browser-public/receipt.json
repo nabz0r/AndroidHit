@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "scope": "Actual public-origin browser only, separate from HTTP body identity/native/human gates.",
+  "origin": "https://luma-drift-production.web.app",
+  "observedAt": "2026-10-31T10:12:22.066Z",
+  "finishedAt": "2026-10-31T10:21:18.340Z",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "measuredViewports": [
+    [
+      1280,
+      720
+    ],
+    [
+      320,
+      740
+    ]
+  ],
+  "locales": [
+    "fr",
+    "en"
+  ],
+  "nativeCapturesLoaded": 8,
+  "gallery": "Explicit open, Miko, pose18; loaded label observed in AX.",
+  "audio": "Four paused/no-autoplay at entry. Adventure started via Space, currentTime6.727819 and pause control observed, then Space stopped; all paused in download observation.",
+  "downloadAnchor": "https://luma-drift-production.web.app/#download",
+  "report": "FR/EN320; control43.144 vs42.507; level-derived capacity label before experimental control;11raw links expanded.",
+  "consoleWarningsOrErrors": [],
+  "viewportNote": "The first override was set before tab creation; the new tab measured1280x720. Its original capture is retained as viewport-attempt-fr-1280.jpg. Setting320x740 after creation resized the live pages; only the later measured320 captures are called mobile. Desktop captures were made before this override.",
+  "cleanup": "QA tabs6/7 closed, viewport reset. Final public tab8 marked deliverable at measured1280x720. A stale predeployment tab1 could not attach for cleanup and was left to normal temporary-tab lifecycle. No Cloud/user tabs touched.",
+  "files": {
+    "home-en-desktop.jpg": {
+      "bytes": 87736,
+      "sha256": "95693fff3f67e05757dc6a410380a2b98df4fabbea254686d15f815bc68cf005"
+    },
+    "home-en-mobile.jpg": {
+      "bytes": 27081,
+      "sha256": "7f605c680f9647f230927a20189d02e1f80386c1c1613bf07d3d8ea1c3a8854d"
+    },
+    "home-fr-after-language-switch.jpg": {
+      "bytes": 87005,
+      "sha256": "9e79b34ddf066a27d030ea8ddcb969e288f0424869e438a2b4c4fb6951dff617"
+    },
+    "home-fr-desktop.jpg": {
+      "bytes": 86876,
+      "sha256": "989c06563aecbec2310519970ffc57be5caa1fc98dcb79b7e21d636563e7918d"
+    },
+    "home-fr-mobile.jpg": {
+      "bytes": 26915,
+      "sha256": "eb12cb29abbbe40ae909b1c790a634c6fccbe6b266cad07a5805e288d5583bf0"
+    },
+    "native-en-desktop.jpg": {
+      "bytes": 91485,
+      "sha256": "ffa67d11bd067c8c3e1f3966e8cbb2a0505a40809acc24ab03eae884d173f2fd"
+    },
+    "native-fr-desktop.jpg": {
+      "bytes": 94529,
+      "sha256": "434748aca6e65bcb6f6e680b24c15aa09cb886b6110e65cadab0a684ee10fd9e"
+    },
+    "observations.json": {
+      "bytes": 9607,
+      "sha256": "cff5fc32726baf0505dca47caf37185efd922856ff40fa35597899ba8a466cec"
+    },
+    "report-en-mobile.jpg": {
+      "bytes": 28407,
+      "sha256": "f505443b7d85049cd39b249c6f8507457f0ab2d6819c811346a797acdbc241f5"
+    },
+    "report-fr-mobile.jpg": {
+      "bytes": 40753,
+      "sha256": "79a4551c1ba1d6a6a92ce5e4d73c954138c30c184aad2bb1e7fa63198ec6ab0e"
+    },
+    "viewport-attempt-fr-1280.jpg": {
+      "bytes": 86697,
+      "sha256": "f6b92edbc5740bbdfee167e5eb236f300897e765e9fbf91562c48717d5acd005"
+    }
+  },
+  "humanAcceptance": false,
+  "frNativeScreenshotNote": "Language switching scrolled the first FR capture back to the header; that unedited image is retained as home-fr-after-language-switch.jpg. The later native-fr-desktop.jpg explicitly focuses the four native phones at measured1280x720.",
+  "formatNote": "Browser screenshot bytes are JPEG/JFIF. The initial .png suffix was corrected to .jpg by rename only; no screenshot pixel bytes were edited or re-encoded. Historical C3 local-browser files are immutable and are not renamed."
+}

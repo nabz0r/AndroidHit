@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "recordedUtc": "2026-10-31T10:20:44.937070+00:00",
+  "scope": "One successful resumed Hosting management deployment and verified recovery of its original receipts. Public HTTP and browser proofs belong to the separate parent-task records.",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "artifactCommit": "787fba142b8edd1f840b9b70cb7749167edacd24",
+  "sourceManifestSha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd",
+  "finalizerSha256": "656ba1c80f37a42c15c76cc0380e5bc82454ed6d4a8537297f33e4a47c56834a",
+  "actualCheckOnly": "VALIDATED_ONLY",
+  "frozenInputsChecked": 69,
+  "deploymentInvocationsInResumedVm": 1,
+  "additionalScopesRequested": false,
+  "credentialHandling": "Existing authorized Google principal checked in memory; OAuth token stdout captured in RAM and passed to committed deployer through stdin only. No token/account credential file or Cloud Shell screenshot collected.",
+  "version": "sites/luma-drift-production/versions/ded69bffe410a798",
+  "release": {
+    "channel": "sites/luma-drift-production/channels/live",
+    "releaseMessage": "Website1.24 from 66119799d6fbe5254a8d37d50db76afe8daffbdc",
+    "releaseName": "sites/luma-drift-production/channels/live/releases/1793441472461000",
+    "releaseTime": "2026-10-31T10:11:12.461Z",
+    "releaseType": "DEPLOY",
+    "url": "https://luma-drift-production.web.app",
+    "versionName": "sites/luma-drift-production/versions/ded69bffe410a798",
+    "versionStatus": "FINALIZED"
+  },
+  "providerFinalPaths": 631,
+  "providerConfigUnchanged": true,
+  "historicalPayloadDeletions": 0,
+  "uploadedOverlayBlobs": 54,
+  "collectionFragments": 80,
+  "originalsVerified": 33,
+  "evidence": [
+    {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/collection.json",
+      "bytes": 2355,
+      "sha256": "bc813db938e7556bfecdd017499aebad781b1e88b938ed20c2f2ed40619e4dcd"
+    },
+    {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/archive-index.json",
+      "bytes": 5936,
+      "sha256": "9ab9a56930dade5a72bca49ad9563b9f216546a092286697544482d0a22dc51d"
+    },
+    {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/inbound.tgz",
+      "bytes": 91661,
+      "sha256": "21c16722f8d21b6925eec7e316baba7d83a2a88cef2047ba422c1feb01658d05"
+    },
+    {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/reprise-20261031-final2-operator.json",
+      "bytes": 1717,
+      "sha256": "adeab1cbb99212c02fd828519d35fa00a09ed2c555d7050596eecb6394f29217"
+    },
+    {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/reprise-20261031-final2-deployment/deployment.json",
+      "bytes": 4328,
+      "sha256": "feb99de71a49f0a8bcdf1f6ff624eb9952f8c11925806544112405dda17428ab"
+    }
+  ],
+  "collectionNotes": [
+    "Direct browser download did not yield a path through the documented download API; archive recovered through 80 visible numbered base64 fragments of at most 1536 characters, then exact byte count/SHA checked before extraction.",
+    "Initial collector stopped before archive creation because its literal credential marker matched its own source. A new collector version recognizes credential-shaped values instead; both collector sources are preserved in the archive. No Hosting retry occurred.",
+    "The finalized-version response did not provide fileCount (stored null in the reduced original receipt).631 paths were established by the complete verified provider map equaling baseline 578 plus overlay 54 with one overwrite, not by an invented fileCount.",
+    "Initial local extractor rejected that optional null fileCount before writing any destination. The revised extractor accepts an absent count only while independently requiring exact 631 complete map equality. All 33 indexed original byte lengths and SHA-256 values matched."
+  ],
+  "previousAuthFailureArchive": {
+    "path": "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure/inbound.tgz",
+    "bytes": 31746,
+    "sha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d"
+  },
+  "rawLogFilesToForceAdd": [
+    "docs/validation/site-v1.24/hosting/reprise-20261031/outer/reprise-20261031-final2-launch.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/outer/reprise-20261031-finalizer-check.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/outer/reprise-20261031-stage-66119799d6fb.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/checkout.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/clone.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/fetch-artifact-c1.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/fetch-c2.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/fetch-previous-c3.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/fetch-previous-deployment-c2.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/reprise-20261031-final2-deployment.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/sparse-cone.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/sparse-config.log",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/staging.log"
+  ],
+  "noSourceMutation": {
+    "appTree": "81eba0e25202124ebebb5f4468d5dd8ba8ac3897",
+    "publicTree": "d003cdc3ca4a4aa87ea19a5ece1222fa49c9975b",
+    "currentMainDocsOnly": "4cf73bd9d3d65b865cde5a49376396d7e44751b8"
+  },
+  "tabs": "Existing user Cloud Shell tabs and VM preserved; no close, reset, restart or extra deployment.",
+  "independentRecoveryReview": {
+    "path": "docs/validation/v1.24/publication/reprise-20261031/collection-independent-review.json",
+    "sha256": "91bba42cf5cfed53f9a175a7125b365d6620a18cd5258ce0c87b84cd99e7b77b",
+    "status": "PASS",
+    "scope": "Archive/index/extracted-original identity and extraction boundaries only; no network or Hosting provider double review."
+  }
+}

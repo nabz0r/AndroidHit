@@ -1,0 +1,36 @@
+{
+  "status": "PREPARED_FOR_ONE_DEPLOYMENT",
+  "createdUtc": "2026-10-31T10:00:12.656080+00:00",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "currentMainDocsOnly": "4cf73bd9d3d65b865cde5a49376396d7e44751b8",
+  "oldVmWorkspaceExpired": true,
+  "priorLocalArchiveSha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d",
+  "workspace": "/tmp/luma124-cloud-66119799d6fb-5mb_1ou2",
+  "stageStatus": "STAGED_ONLY",
+  "operatorScriptSha256": "8291593809f68b6ff1a1e7fe00de85f2317d6ebab52b70640c52b9a21b35111a",
+  "operatorReceiptSha256": "237ad3d890eab5a212e699dbc82408f77792dfa2a3aa7f2bf438c8198ba3e967",
+  "stagingSha256": "4b9b5b69fa89d29824ae54baf68b005a50a8a8671f26c5c7ffad9acbbea4a9c5",
+  "sourceManifestSha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd",
+  "credentialReady": true,
+  "sameVisiblePrincipal": true,
+  "additionalScopeRequested": false,
+  "offlineFixtureTestsPassed": 10,
+  "independentReview": "Root and gameplay read-only review accepted exact finalizer656ba1c8; explicit coordinator GO after actual check-only VALIDATED_ONLY.",
+  "finalizerSha256": "656ba1c80f37a42c15c76cc0380e5bc82454ed6d4a8537297f33e4a47c56834a",
+  "finalOutputsPrefix": "receipts/reprise-20261031-final2-",
+  "files": {
+    "offline-tests.log": {
+      "bytes": 927,
+      "sha256": "e6fe8367754bb2f3dfd34244a701a5f71f8e7581a349c095661148852a651a94"
+    },
+    "test-finalizer-offline.py": {
+      "bytes": 8681,
+      "sha256": "a744c2fb17dd6e48860584f354389d0902038dde1ac992a86ae1971242462699"
+    },
+    "cloud-finalize.py": {
+      "bytes": 14221,
+      "sha256": "656ba1c80f37a42c15c76cc0380e5bc82454ed6d4a8537297f33e4a47c56834a"
+    }
+  },
+  "scope": "Preparation and synthetic offline orchestration checks; no Hosting/public-origin success claimed by this record."
+}

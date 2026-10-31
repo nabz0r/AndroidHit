@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "script": "/tmp/reprise-20261031-cloud-finalize.py",
+  "scriptSha256": "656ba1c80f37a42c15c76cc0380e5bc82454ed6d4a8537297f33e4a47c56834a",
+  "scope": "Independent source review and read-only exact Git/release/manifest/archive pin comparisons. No main, Cloud/network/auth/deploy execution. Ten fixture tests were authored/executed by lab agent; their source and original stdout were independently read, not rerun.",
+  "findings": [],
+  "guaranteesReviewed": [
+    "Exact fresh C2b workspace and owner-only ordinary checkout; operator/stage SHA and STAGED_ONLY scope before token.",
+    "Exact6611 tree/app/public and source67237/69 frozen inputs/config/C1 manifest/two physical D rc2 code33 APK checks before token.",
+    "No clone/restage in finalizer; new exclusive reprise-20261031-final2 output paths; original stage hashes checked after success.",
+    "check-only returns before token acquisition or output writes.",
+    "One gcloud token stdout in RAM, no credential argv/log/file, committed deployer stdin only.",
+    "Expectedcf8 and previous5cc/c99 baseline remain pinned; frozen deployer verifies live/provider/config before clone and release. Final management receipt must be exact source,631 paths and unchanged serving config.",
+    "Historical auth-failure archive remains an explicit local provenance reference; old VM evidence is not forged into the new stage."
+  ],
+  "fixtureTestCount": 10,
+  "fixtureTestSource": {
+    "path": "/tmp/reprise-20261031-finalizer-offline-test.py",
+    "sha256": "a744c2fb17dd6e48860584f354389d0902038dde1ac992a86ae1971242462699"
+  },
+  "fixtureOriginalStdout": {
+    "path": "/tmp/reprise-20261031-finalizer-offline-test.log",
+    "sha256": "e6fe8367754bb2f3dfd34244a701a5f71f8e7581a349c095661148852a651a94"
+  },
+  "actualPinsCompared": {
+    "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+    "sourceTree": "ee94f27e3c9dbbbc49c0d95568424c9d4af2118a",
+    "appTree": "81eba0e25202124ebebb5f4468d5dd8ba8ac3897",
+    "publicTree": "d003cdc3ca4a4aa87ea19a5ece1222fa49c9975b",
+    "artifactSourceCommit": "787fba142b8edd1f840b9b70cb7749167edacd24",
+    "sourceManifestSha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd",
+    "priorLocalArchiveSha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d"
+  },
+  "networkExecuted": false,
+  "authExecuted": false,
+  "deployExecuted": false,
+  "runtimeAcceptanceRemaining": "Actual Cloud check-only/physical stage validation, credential acquisition and authenticated Firebase management must still run on root GO. Public response bodies and browser acceptance remain separate."
+}

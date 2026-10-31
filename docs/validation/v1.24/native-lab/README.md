@@ -23,10 +23,11 @@ publiés. Les sections et le tableau suivants décrivent le bilan antérieur de
 568 assertions ; son index et ses anciens rapports restent immuables.
 
 La source C2b `66119799d6fbe5254a8d37d50db76afe8daffbdc` a ses trois jobs CI
-verts, mais le site reste en 1.23 : le [passage Hosting](../publication/operator-preparation/c2b/auth-retry/handoff.json)
-est AUTH_REQUIRED, faute de compte Google actif dans Cloud Shell, avant tout
-appel Firebase, clonage de version, upload ou release. Ces preuves natives ne
-signifient donc pas que le site 1.24 est livré.
+verts. Le [site 1.24 livré](../../site-v1.24/README.md) est désormais qualifié
+séparément : Hosting `ded69bffe410a798`, 54 corps HTTP complets conformes et
+contrôle navigateur réel FR/EN. Le [premier blocage AUTH_REQUIRED](../publication/operator-preparation/c2b/auth-retry/handoff.json)
+reste historique ; ces nouveaux reçus de site ne modifient aucun résultat natif
+ni la séparation entre le bilan 568 et le supplément SDK 142.
 
 ## Profil conservé —5634
 

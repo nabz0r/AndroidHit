@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "scope": "C4 documentation and collected receipt integrity only. No new native, CI, browser, HTTP, Firebase or build execution by this agent. Actual operations belong to the bound original receipts.",
+  "runtimeSourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "documentationParent": "4cf73bd9d3d65b865cde5a49376396d7e44751b8",
+  "hostingVersion": "sites/luma-drift-production/versions/ded69bffe410a798",
+  "releaseName": "sites/luma-drift-production/channels/live/releases/1793441472461000",
+  "releaseTime": "2026-10-31T10:11:12.461Z",
+  "hosting": {
+    "providerEntries": 631,
+    "preservedHistoricalHashes": 577,
+    "overlayUploads": 54,
+    "payloadDeletions": 0,
+    "servingConfigUnchanged": true,
+    "providerCountEvidence": "Complete retained provider map; reduced version payload omits fileCount.",
+    "servingConfigEvidence": "Exact deployer guard plus retained baseline config; reduced finalized-version payload does not archive a complete final config object.",
+    "archiveOriginals": 33,
+    "archiveMembers": 34
+  },
+  "publicHttp": {
+    "selectedCompleteBodies": 54,
+    "verifiedBytes": 711388755,
+    "bothCanonicalApksAndManifest": true,
+    "all629BodiesFreshlyFetched": false
+  },
+  "publicBrowser": {
+    "jpegCaptures": 10,
+    "acceptedViews": 9,
+    "viewportSetupAttempts": 1,
+    "nativeImagesLoaded": 8,
+    "locales": [
+      "fr",
+      "en"
+    ],
+    "measuredViewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "audibleQualityOrHumanAcceptance": false
+  },
+  "localLinksVerified": 222,
+  "unchanged": {
+    "frozenSiteInputs": 69,
+    "nativeInputs": 522,
+    "oldLabIndex": true,
+    "sdkOriginalReadmeManifestSummary": true,
+    "ignoredLocalObserverApks": 9,
+    "authFailureArchive": true,
+    "historicalC3Review": true,
+    "historicalLocalBrowserFiles": true,
+    "appAndPublicSource": true,
+    "historicalChangelogTail": true
+  },
+  "sdkScopesSeparate": {
+    "baseline": [
+      568,
+      118,
+      39
+    ],
+    "supplement": [
+      142,
+      22,
+      10
+    ],
+    "backAndEarlyCloseQualified": false
+  },
+  "evidenceSha256": {
+    "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/reprise-20261031-final2-deployment/deployment.json": "feb99de71a49f0a8bcdf1f6ff624eb9952f8c11925806544112405dda17428ab",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/collection.json": "bc813db938e7556bfecdd017499aebad781b1e88b938ed20c2f2ed40619e4dcd",
+    "docs/validation/site-v1.24/hosting/reprise-20261031/archive-index.json": "9ab9a56930dade5a72bca49ad9563b9f216546a092286697544482d0a22dc51d",
+    "docs/validation/site-v1.24/public-origin/responses.json": "995a30c0f4536eaf125a0dd1f09cba7d8faca3caced65f86946b7ac8c4e12921",
+    "docs/validation/site-v1.24/browser-public/receipt.json": "4127612c2fd2e83325a43676a888f4f370cf341d028ecdf11b5fe96344e582bb",
+    "docs/validation/site-v1.24/browser-public/observations.json": "cff5fc32726baf0505dca47caf37185efd922856ff40fa35597899ba8a466cec",
+    "docs/validation/v1.24/publication/c2-ci/c2b-ci.json": "594512699168c060d93aca4308066ca57bb57f8dab604193c85bcd6f7febcdda",
+    "docs/validation/v1.24/publication/c4-hosting-collection-review.json": "91bba42cf5cfed53f9a175a7125b365d6620a18cd5258ce0c87b84cd99e7b77b",
+    "docs/validation/v1.24/publication/reprise-20261031/independent-public-http-review.json": "9961bd6a8d0cff06c9c3fe03f2f4ccfeeb056a435a79cf799c8af7c4e9fcca04",
+    "docs/validation/v1.24/publication/reprise-20261031/independent-hosting-browser-review.json": "1153608c640b878af4cb0fabfdbeb5803de8bca8888ee326bf0082df059b40ed"
+  },
+  "documentsSha256": {
+    "README.md": "ca6592e9c08588edcf6c06e053c2036490f43699d34a7e75512d0ae351abc193",
+    "docs/CHANGELOG.md": "ef1b289c51cb97d984c5faa9265e8d090a3d2bbca26df7eeddc21b65c5edfbd6",
+    "docs/RELEASE_1_24.md": "d43f2018fb52597d84b1d5a2982fcbb6010d035c5cfbe743d4c7e98606b8aece",
+    "docs/validation/v1.24/README.md": "1284bae21a4764c2ff48e31397cf877d751fd905ca9d5d5d58e756487886fe4d",
+    "docs/validation/site-v1.24/README.md": "4342ceba83118c2c7e071a9938d9600f939ec29fe11bb498c278c58e2cdb6fcc",
+    "docs/validation/v1.24/native-lab/README.md": "8bfcde1dbda23530dab605c4f37ae3e7c584a8815746056f4fe52172b58ea29d"
+  },
+  "formatCheck": "Only the six edited documents were checked. Immutable original logs retain literal whitespace/EOF."
+}

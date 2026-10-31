@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-31T10:26:30.288925+00:00",
+  "status": "PASS_WITH_EXPLICIT_SCOPE_LIMITS",
+  "read_only_review": true,
+  "source_commit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "source_public_tree": "d003cdc3ca4a4aa87ea19a5ece1222fa49c9975b",
+  "new_network_native_or_simulation_requests": false,
+  "management": {
+    "status": "PASS_DEPLOY_FINALIZED",
+    "archive": {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/inbound.tgz",
+      "bytes": 91661,
+      "sha256": "21c16722f8d21b6925eec7e316baba7d83a2a88cef2047ba422c1feb01658d05"
+    },
+    "collection": {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/collection.json",
+      "bytes": 2355,
+      "sha256": "bc813db938e7556bfecdd017499aebad781b1e88b938ed20c2f2ed40619e4dcd"
+    },
+    "archive_index": {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/archive-index.json",
+      "bytes": 5936,
+      "sha256": "9ab9a56930dade5a72bca49ad9563b9f216546a092286697544482d0a22dc51d"
+    },
+    "indexed_originals": 33,
+    "regular_archive_members": 34,
+    "version": "sites/luma-drift-production/versions/ded69bffe410a798",
+    "live": {
+      "channel": "sites/luma-drift-production/channels/live",
+      "releaseMessage": "Website1.24 from 66119799d6fbe5254a8d37d50db76afe8daffbdc",
+      "releaseName": "sites/luma-drift-production/channels/live/releases/1793441472461000",
+      "releaseTime": "2026-10-31T10:11:12.461Z",
+      "releaseType": "DEPLOY",
+      "url": "https://luma-drift-production.web.app",
+      "versionName": "sites/luma-drift-production/versions/ded69bffe410a798",
+      "versionStatus": "FINALIZED"
+    },
+    "provider_paths": 631,
+    "baseline_provider_paths": 578,
+    "overlay_blobs_uploaded": 54,
+    "preserved_historical_hashes": 577,
+    "new_paths": 53,
+    "only_overwritten_path": "/index.html",
+    "deleted_paths": 0,
+    "map_exactly_baseline_plus_overlay": true,
+    "all54rawhashes_match_exact_source": true,
+    "serving_config_source_and_baseline_equal": true,
+    "finalized_config_equality_checked_by_committed_deployer": true,
+    "fileCount_null_count_taken_from631entry_map": true,
+    "deployment_receipt": {
+      "path": "docs/validation/site-v1.24/hosting/reprise-20261031/receipts/reprise-20261031-final2-deployment/deployment.json",
+      "bytes": 4328,
+      "sha256": "feb99de71a49f0a8bcdf1f6ff624eb9952f8c11925806544112405dda17428ab"
+    },
+    "limit": "Reduced finalized-version receipt omits full config. The retained baseline config matches exact committed firebase.json; the exact deployed client asserts clone/finalized config equality before PASS. This is not an independent comparison of two retained full API config objects. Release checks are not atomic compare-and-swap."
+  },
+  "public_http": {
+    "status": "PASS",
+    "original_receipt": {
+      "path": "docs/validation/site-v1.24/public-origin/responses.json",
+      "bytes": 61648,
+      "sha256": "995a30c0f4536eaf125a0dd1f09cba7d8faca3caced65f86946b7ac8c4e12921"
+    },
+    "independent_review": {
+      "path": "/tmp/luma124-public-bytes-independent-review.json",
+      "bytes": 1718,
+      "sha256": "9961bd6a8d0cff06c9c3fe03f2f4ccfeeb056a435a79cf799c8af7c4e9fcca04"
+    },
+    "responses": 54,
+    "complete_collected_bytes": 711388755,
+    "full_apks": 2,
+    "all54etag_match_management_gzip_hashes": true,
+    "scope": "Original bounded full-body collector observations; this reviewer made no duplicate fetch. Unchanged historical raw bodies were not fetched anew."
+  },
+  "browser": {
+    "status": "PASS_OBSERVED_PUBLIC_SCOPE",
+    "receipt": {
+      "path": "docs/validation/site-v1.24/browser-public/receipt.json",
+      "bytes": 3673,
+      "sha256": "4127612c2fd2e83325a43676a888f4f370cf341d028ecdf11b5fe96344e582bb"
+    },
+    "observations": {
+      "path": "docs/validation/site-v1.24/browser-public/observations.json",
+      "bytes": 9607,
+      "sha256": "cff5fc32726baf0505dca47caf37185efd922856ff40fa35597899ba8a466cec"
+    },
+    "all_file_hashes_verified": true,
+    "JPEG_captures_visually_reviewed": 10,
+    "successful_views": 9,
+    "failed_viewport_attempt_preserved": 1,
+    "prior_nine_image_hashes_preserved_across_rename": true,
+    "new_FR_native_row_visually_reviewed": true,
+    "raster_sizes": {
+      "home-en-desktop.jpg": [
+        1265,
+        712
+      ],
+      "home-en-mobile.jpg": [
+        305,
+        705
+      ],
+      "home-fr-after-language-switch.jpg": [
+        1265,
+        712
+      ],
+      "home-fr-desktop.jpg": [
+        1265,
+        712
+      ],
+      "home-fr-mobile.jpg": [
+        305,
+        705
+      ],
+      "native-en-desktop.jpg": [
+        1265,
+        712
+      ],
+      "native-fr-desktop.jpg": [
+        1265,
+        712
+      ],
+      "report-en-mobile.jpg": [
+        305,
+        705
+      ],
+      "report-fr-mobile.jpg": [
+        305,
+        705
+      ],
+      "viewport-attempt-fr-1280.jpg": [
+        1265,
+        712
+      ]
+    },
+    "measured_DOM_viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        320,
+        740
+      ]
+    ],
+    "locales": [
+      "fr",
+      "en"
+    ],
+    "loaded_native_D_images": 8,
+    "both_native_rows_visually_reviewed": true,
+    "gallery": "Miko pose18 loaded; not all companion/pose combinations",
+    "audio": "Recorded actual Space play progressed6.727819s then stopped; no independent audible-quality claim",
+    "download": "Anchor/details/current and archive links observed; full binary bytes separately verified",
+    "report": "FR42,507 to ENsingle43.144; explicit pre-control capacity label and11rawlinks",
+    "console": "Recorded filtered error/warning observations empty",
+    "visual_findings": "No blocking overlap or horizontal clipping in inspected regions. Ordinary vertical folds are not full-page screenshots. JPEG suffix and FR-native framing corrections preserve originals.",
+    "cleanup": "QA tabs6/7 closed, viewport reset. Final public tab8 marked deliverable at measured1280x720. A stale predeployment tab1 could not attach for cleanup and was left to normal temporary-tab lifecycle. No Cloud/user tabs touched.",
+    "human_acceptance": false
+  },
+  "privacy": {
+    "status": "PASS_BOUNDED_NO_PRIVATE_MATERIAL_DETECTED",
+    "Cloud_text_files_scanned": 35,
+    "account_email_token_key_candidates": [],
+    "scope": "Collected Cloud whitelist only; no browser, account or credential-store scan. Pattern review is bounded, not a universal absence guarantee."
+  },
+  "historical_auth_failure_archive_unchanged": {
+    "path": "docs/validation/site-v1.24/hosting/pre-deploy-auth-failure/inbound.tgz",
+    "bytes": 31746,
+    "sha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d"
+  },
+  "limits": [
+    "Management, HTTP identities and browser observations remain separate gates joined by exactC2bsource. No human enjoyment/comprehension/retention, Play publication, real purchase or production-ad acceptance follows.",
+    "No new Android, ads or simulation execution; historical568baseline and separate142SDKsupplement and zeroBack/Close gap remain unchanged."
+  ]
+}

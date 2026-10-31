@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "collectedUtc": "2026-10-31T10:19:38.318733+00:00",
+  "scope": "Original stage and successful Hosting management evidence. Public HTTP bodies and rendering are separately verified by the parent task.",
+  "method": "Numbered base64 fragments read through rendered Cloud Shell terminal AX via CUA; full archive SHA/bytes checked before bounded extraction; every indexed original SHA/byte count checked.",
+  "sourceCommit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "version": "sites/luma-drift-production/versions/ded69bffe410a798",
+  "live": {
+    "channel": "sites/luma-drift-production/channels/live",
+    "releaseMessage": "Website1.24 from 66119799d6fbe5254a8d37d50db76afe8daffbdc",
+    "releaseName": "sites/luma-drift-production/channels/live/releases/1793441472461000",
+    "releaseTime": "2026-10-31T10:11:12.461Z",
+    "releaseType": "DEPLOY",
+    "url": "https://luma-drift-production.web.app",
+    "versionName": "sites/luma-drift-production/versions/ded69bffe410a798",
+    "versionStatus": "FINALIZED"
+  },
+  "archive": {
+    "path": "inbound.tgz",
+    "bytes": 91661,
+    "sha256": "21c16722f8d21b6925eec7e316baba7d83a2a88cef2047ba422c1feb01658d05"
+  },
+  "filesVerified": 33,
+  "members": 34,
+  "allIndexedSizesAndHashesMatch": true,
+  "originalFreshStagePreserved": true,
+  "providerBaselinePaths": 578,
+  "providerFinalPaths": 631,
+  "providerMapMatchesBaselinePlusOverlay": true,
+  "finalizedVersionFileCountField": null,
+  "providerServingConfigUnchanged": true,
+  "historicalPayloadDeletions": 0,
+  "uploadedOverlayBlobs": 54,
+  "rawLogFiles": [
+    "outer/reprise-20261031-final2-launch.log",
+    "outer/reprise-20261031-finalizer-check.log",
+    "outer/reprise-20261031-stage-66119799d6fb.log",
+    "receipts/checkout.log",
+    "receipts/clone.log",
+    "receipts/fetch-artifact-c1.log",
+    "receipts/fetch-c2.log",
+    "receipts/fetch-previous-c3.log",
+    "receipts/fetch-previous-deployment-c2.log",
+    "receipts/reprise-20261031-final2-deployment.log",
+    "receipts/sparse-cone.log",
+    "receipts/sparse-config.log",
+    "receipts/staging.log"
+  ],
+  "privacy": "Explicit receipt/log/script whitelist only. No Cloud Shell screenshots or credential/config/profile files collected.",
+  "previousAuthFailureArchiveUnmodifiedSha256": "a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d"
+}

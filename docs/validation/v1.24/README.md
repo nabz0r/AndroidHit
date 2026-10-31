@@ -1,7 +1,7 @@
 # 1.24 qualification register
 
 31 October 2026. **Candidate D, source C2b and exact-source CI are accepted;
-Website deployment is AUTH_REQUIRED; public Hosting remains 1.23. The original native Lab index
+Hosting/public response and actual-browser checks also pass. The original native Lab index
 is immutable; a separate SDK supplement now proves a test-ad reward and cold
 persistence. Android Back/early close remain unqualified.** This register separates candidates, profiles and test mechanisms.
 [Release behavior](../../RELEASE_1_24.md).
@@ -152,26 +152,37 @@ audio start/stop. Native images are lazy-loaded: the initial 320 hero observatio
 does not claim those images were loaded; the later desktop EN observation binds
 all four 1080×2400 originals. Public-origin acceptance remains separate.
 
-## Delivery status and authentication handoff
+## Delivery status and preserved history
 
 | Gate | Current status | Required final record |
 | --- | --- | --- |
 | Source/main | Accepted C2b; this closeout records its evidence | Commit `66119799d6fbe5254a8d37d50db76afe8daffbdc`, tree `ee94f27e3c9dbbbc49c0d95568424c9d4af2118a`; app/public trees unchanged. C1 is artifact source only. |
 | CI | PASS, exact C2b | [Two workflows/three successful jobs and steps](publication/c2-ci/c2b-ci.json); original failed C2 and local retries remain separate. |
-| Hosting | AUTH_REQUIRED, stopped before Firebase | Zero active Google accounts; first token acquisition failed before the deployer/API. No Hosting version clone, upload or release. |
-| Public origin/browser | 1.24 not deployed or publicly qualified | Live release remains 1.23 at `cf8b817321bf33d5`; no new public response/browser acceptance is claimed. |
+| Hosting | PASS, exact C2b | [Original management collection](../site-v1.24/hosting/reprise-20261031/collection.json): version `ded69bffe410a798`, release `1793441472461000` at `2026-10-31T10:11:12.461Z`; 631 provider entries, 577 historical hashes/config preserved, 54 overlay uploads, zero deletion. |
+| Public response bodies | PASS, 54/54 selected new/changed paths | [HTTP receipt](../site-v1.24/public-origin/responses.json): 711,388,755 complete bytes, including both exact D APKs. This does not claim 629 freshly fetched responses. |
+| Public browser | PASS within measured scope | [Actual receipt](../site-v1.24/browser-public/receipt.json): FR/EN home 1280×720/320×740, eight native images loaded, gallery/audio/report interactions; nine accepted JPEG captures and one preserved failed viewport-setup attempt. |
 
-The [Cloud collection](../site-v1.24/hosting/pre-deploy-auth-failure/collection.json)
+Hosting uses the C2b runtime/public source, not the later documentation-only main
+`4cf73bd9d3d65b865cde5a49376396d7e44751b8`. The exact
+[production](https://luma-drift-production.web.app/releases/luma-drift-1.24.0-rc2.apk),
+[Lab](https://luma-drift-production.web.app/releases/luma-drift-1.24.0-sandbox-rc2.apk)
+and [manifest](https://luma-drift-production.web.app/releases/manifest-1.24.0-rc2.json)
+full-response identities are recorded in the HTTP receipt.
+
+The earlier [AUTH_REQUIRED collection](../site-v1.24/hosting/pre-deploy-auth-failure/collection.json)
 verifies 31 originals and their original index (32 archive members), preserving
 initial staging, C2b restage and the failure before any Firebase operation.
 The [31,746-byte original archive](../site-v1.24/hosting/pre-deploy-auth-failure/inbound.tgz)
 has SHA-256 `a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d`.
-The [AUTH_REQUIRED handoff](publication/operator-preparation/c2b/auth-retry/handoff.json)
-records the second finalizer's successful check-only, exact script/workspace and
-future command; its deploy mode remains unexecuted. It requires restoration of
-the existing standard Google authorization and credential readiness. No new
-login, added scope or VM restart was attempted, and no account identifier or
-token was collected.
+The [old handoff](publication/operator-preparation/c2b/auth-retry/handoff.json)
+records that historical blocked state. After authorization restoration and expiry
+of the old VM, a fresh exact C2b stage and reviewed finalizer completed. The
+[successful collection](../site-v1.24/hosting/reprise-20261031/collection.json)
+verifies 33 new originals plus their index (34 archive members). Its
+[91,661-byte archive](../site-v1.24/hosting/reprise-20261031/inbound.tgz) has SHA-256
+`21c16722f8d21b6925eec7e316baba7d83a2a88cef2047ba422c1feb01658d05`.
+The old collection, C3 AUTH_REQUIRED review, native index and SDK supplement stay
+immutable. No account identifier or token was collected.
 
 No human comprehension, emotion, enjoyment, retention, calibrated IQ,
 clinical result, physical-device acceptance or Play publication is established.

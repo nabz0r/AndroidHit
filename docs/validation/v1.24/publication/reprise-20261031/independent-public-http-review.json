@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-31T10:17:22.980731+00:00",
+  "status": "PASS_OFFLINE_ORIGINAL_PUBLIC_RESPONSE_SCOPE",
+  "source_commit": "66119799d6fbe5254a8d37d50db76afe8daffbdc",
+  "response_receipt_sha256": "995a30c0f4536eaf125a0dd1f09cba7d8faca3caced65f86946b7ac8c4e12921",
+  "response_count": 54,
+  "complete_reported_bytes": 711388755,
+  "full_apks": {
+    "/releases/luma-drift-1.24.0-rc2.apk": {
+      "sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e",
+      "bytes": 340290322
+    },
+    "/releases/luma-drift-1.24.0-sandbox-rc2.apk": {
+      "sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+      "bytes": 340290009
+    }
+  },
+  "committed_source_manifest_sha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd",
+  "committed_baseline_manifest_sha256": "78994a2e02ad2e74b7439e112852bfbc69b7fd596998cd62f7933e435584507c",
+  "source_physical_paths": 629,
+  "baseline_physical_paths": 576,
+  "added_paths": 53,
+  "overwritten_paths": [
+    "/index.html"
+  ],
+  "historical_source_paths_deleted": 0,
+  "statuses_mime_lengths_hashes_urls_identity_encoding_all_match": true,
+  "progress_stdout_54_original_lines_agree": true,
+  "new_network_or_auth_requested_by_reviewer": false,
+  "rendering_review": "PENDING_ORIGINAL_BROWSER_REPORT",
+  "hosting_management_review": "PENDING_ORIGINAL_MANAGEMENT_RECEIPTS",
+  "scope": "Independent local verification of the original full-body collection receipt and collector stdout against locally committed exactC2b source. No duplicate fetch. Complete-body identities are observations recorded by the bounded collector; this review does not retain or independently redownload all711MB response bodies."
+}

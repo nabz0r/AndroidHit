@@ -1,7 +1,7 @@
 # 1.24 — companion growth and Pulse presentation
 
-31 October 2026. **Candidate D, published source and exact-source CI are accepted
-within the scopes below; website deployment is AUTH_REQUIRED.** Production is `1.24.0-rc2`, Lab is
+31 October 2026. **Candidate D, source/CI, Hosting and public delivery are accepted
+for playtesting within the scopes below.** Production is `1.24.0-rc2`, Lab is
 `1.24.0-sandbox-rc2`, both code 33. [Qualification register](validation/v1.24/README.md)
 contains the original evidence links and open gates.
 
@@ -130,13 +130,24 @@ Earlier A/B/C artifacts retain their own identities and results.
   separately recorded [local browser observations](validation/site-v1.24/browser-local/observations.json):
   FR/EN homepage at 320/1280, mobile report, Miko gallery/pose and audio start/stop.
   These are local observations, not public-origin acceptance.
+- **Public delivery:** [original Hosting receipts](validation/site-v1.24/hosting/reprise-20261031/collection.json)
+  bind source C2b to version `ded69bffe410a798`, release `1793441472461000` at
+  `2026-10-31T10:11:12.461Z`. The 631-entry provider map preserves 577 historical
+  hashes and serving config; 54 overlay uploads delete no payload. The separate
+  [HTTP collection](validation/site-v1.24/public-origin/responses.json) passes all
+  54 selected new/changed complete responses, 711,388,755 bytes including both D
+  APKs. [Actual public browser checks](validation/site-v1.24/browser-public/receipt.json)
+  cover FR/EN home at 1280×720 and 320×740, all eight native images loaded, Miko
+  pose 18, one explicit audio start/stop and the mobile report/11 expanded raw links.
+  Nine accepted JPEG captures and one failed viewport-setup attempt are kept
+  separately; the initial FR header frame and later FR native frame are both preserved.
 
 No host/emulator/synthetic result establishes human comprehension, emotion,
 enjoyment, retention, physical-device comfort, production-ad fulfillment or real-money
 commerce. The exact native formats, profile origins and preserved failed observer
 attempts remain visible in the underlying reports.
 
-## Delivery status and authentication handoff
+## Delivery status and preserved history
 
 - **Source/main and CI:** accepted at C2b above. Exact runs are
   [Cognitive Lab 41156960006](https://github.com/nabz0r/AndroidHit/actions/runs/41156960006)
@@ -144,22 +155,25 @@ attempts remain visible in the underlying reports.
   with three successful jobs. This documentation closeout records the accepted
   source and CI; it does not change app/public payloads.
   C1 remains the immutable artifact-source object.
-- **Firebase: AUTH_REQUIRED.** Cloud Shell reports zero active Google accounts.
-  The first finalizer failed while acquiring a token, before the Hosting deployer
-  or any Firebase API call. No Hosting version was cloned, uploaded or released.
-  Initial staging and C2b restaging passed, reusing both exact D APKs; the second
-  finalizer passed check-only and its deployment command was not executed.
-- **Public origin:** 1.24 is not deployed or publicly qualified. The live release
-  remains 1.23 at `cf8b817321bf33d5`. There is no 1.24 Hosting version/release receipt,
-  public response collection or public FR/EN browser acceptance.
+- **Firebase/public origin:** accepted by the distinct management, full-response
+  and actual-browser receipts above. Hosting used exact C2b, rather than the later
+  documentation-only main `4cf73bd9d3d65b865cde5a49376396d7e44751b8`.
+- **Exact public artifacts:** [production](https://luma-drift-production.web.app/releases/luma-drift-1.24.0-rc2.apk),
+  [separate Lab](https://luma-drift-production.web.app/releases/luma-drift-1.24.0-sandbox-rc2.apk)
+  and [canonical manifest](https://luma-drift-production.web.app/releases/manifest-1.24.0-rc2.json)
+  match the bytes/hashes above; the HTTP receipt verifies their complete bodies.
 
-The [preserved Cloud collection](validation/site-v1.24/hosting/pre-deploy-auth-failure/collection.json)
+The earlier [AUTH_REQUIRED Cloud collection](validation/site-v1.24/hosting/pre-deploy-auth-failure/collection.json)
 verifies 31 original files plus their original index. Its
 [31,746-byte archive](validation/site-v1.24/hosting/pre-deploy-auth-failure/inbound.tgz)
 has SHA-256 `a58d8ab07773f1ec182951582f7e89861a26f45196d9f462b782fc6027dad49d`.
 The [handoff](validation/v1.24/publication/operator-preparation/c2b/auth-retry/handoff.json)
-keeps the exact workspace, retry script/hash and future command. Restoring the
-existing standard Google authorization and confirming credential readiness are
-required before that command; no new login, scope or VM restart was attempted.
-Credentials and account identifiers are absent from the collected evidence.
+records that failed period, not the current deployment state. After authorization
+was restored and the old VM expired, a fresh pinned stage reconstructed the same
+D APK bytes and the reviewed finalizer completed. The successful collection has
+33 originals plus their index; its
+[91,661-byte archive](validation/site-v1.24/hosting/reprise-20261031/inbound.tgz)
+has SHA-256 `21c16722f8d21b6925eec7e316baba7d83a2a88cef2047ba422c1feb01658d05`.
+Both collections remain immutable. Credentials and account identifiers are absent
+from the collected evidence.
 Test ads, closed real purchases and the absence of a Play publication remain unchanged.
