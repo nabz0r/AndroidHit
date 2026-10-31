@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "createdAtUtc": "2026-10-31T00:37:09.112423+00:00",
+  "scope": "Local staged source/full payload preservation, current1.24JS DOM doubles and retained1.22demo. No real browser/native/Hosting claim.",
+  "commands": {
+    "full-source": {
+      "command": [
+        "python3",
+        "scripts/check-site-v124.py",
+        "--preview"
+      ],
+      "exitCode": 0
+    },
+    "structure": {
+      "command": [
+        "python3",
+        "scripts/check-site-v124.py",
+        "--preview",
+        "--structure-only"
+      ],
+      "exitCode": 0
+    },
+    "runtime": {
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-site-v124-runtime.mjs"
+      ],
+      "exitCode": 0
+    },
+    "legacy-current": {
+      "command": [
+        "python3",
+        "scripts/check-site-v123.py",
+        "--structure-only"
+      ],
+      "exitCode": 0
+    }
+  },
+  "sourceInputs": {
+    "scripts/check-site-v124.py": "f2d0488a57667713de7a264b7d004f05967e7c89313ec13aea12d6e250f7ea9f",
+    "scripts/check-site-v123.py": "67893f4c81ff0a9ca76f101c9f07a5f01afd7f27aac22836d6a0a652346c49a0",
+    "scripts/test-site-v124-runtime.mjs": "2a7b843fe764c875a16c0d66b44d14295116ce3bc094f3a5ce6a665f97cd913e",
+    "scripts/serve-site-v124-preview.py": "0f3ce6efdfaee635c2c6986319162cf89c2aeb27a4aa27f22c73b96d217fe4c4",
+    "public/assets/site-v124.css": "195fbeb9758bcb43ec1cedda477d98c0b43544b4ca738e600fa9970fd0949d95",
+    "public/assets/site-v124.js": "547541162cfb8d4de0dbba2eb6f1b3c3b6199fc83e716415f7c68e2010a1ec68",
+    "docs/validation/site-v1.24/staging/index.preview.html": "548238e22a6e7b88ae2890434dc4fe6440224a3caf1a7fe541a00028bae9c8d5"
+  },
+  "outputs": {
+    "runtime.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "full-source.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "structure.stdout.log": {
+      "sha256": "cb9ce4f492a4967636762314f6bb246e5f27ee2f87abf57dc0abdf2cbc71df64",
+      "bytes": 582
+    },
+    "legacy-current.stdout.log": {
+      "sha256": "c7cef404a49babd458b0533960fc4ba10de017301a513a8e8313cba103604156",
+      "bytes": 230
+    },
+    "runtime.stdout.log": {
+      "sha256": "1b6835a838ea9f9b2f0ba526517054b4d1f70e5a7ce54d74f6e7ec351050d1fb",
+      "bytes": 1478
+    },
+    "full-source.stdout.log": {
+      "sha256": "30e9aff6688d33b592c455196b247e9939c26ae7329057de6d1d64ef59acbae2",
+      "bytes": 585
+    },
+    "structure.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "legacy-current.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-31T01:18:18.664351+00:00",
+  "serial": "emulator-5638",
+  "avd": "Luma124-LabFresh-QA",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "phase": "d11b-sdk-early-close-settled",
+  "expected_version": "1.24.0-sandbox-rc2",
+  "expected_code": 33,
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "observer_sha256": "1eec5c23331828bba82c500b773b9986426b8f16f9c3622267e26682a77cfda6",
+  "observer_build_receipt_sha256": "0c5aa143d79cbf01a2661ac1133f09a55d6dff2bc84fa5721a7dd98eb8bc5f95",
+  "production_isolation_kind": "PACKAGE_ABSENCE",
+  "previous_lab_apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "creation_receipt_sha256": "4bf9b98d13d02f926703eb4b4f28b155a31414c8e334207561bd832ba3c42f2a",
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "first_install": false,
+  "candidate_manifest": "docs/validation/v1.24/candidate-d/candidate.json",
+  "candidate_manifest_sha256": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+  "frozen_source_count": 522,
+  "run_token": "835aff84-1167-4a9f-8d73-9ab9f1d2eb0d",
+  "scope": "Pinned 5638 newly created Lab-only task emulator. Production package remains absent; genuine Lab first install requires absence, later runs require the same exact APK. No profile is copied or reset. Actual SDK touchscreen Lab simulations, optional test-ad UI, earned campaign gestures, cosmetics; no direct grants, clears, preference writes, injected fixtures/progress, external identity or real commerce.",
+  "original_configuration": {
+    "size": "Physical size: 1080x2400",
+    "font_scale": "1.0"
+  },
+  "production_package_absent_before": true,
+  "installed_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420",
+    "page_size": "16384",
+    "font_scale": "1.0"
+  },
+  "native": {
+    "passed": false,
+    "phase": "d11b-sdk-early-close-settled",
+    "runToken": "835aff84-1167-4a9f-8d73-9ab9f1d2eb0d",
+    "processId": 7814,
+    "checkCount": 23,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact separate Lab package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches Ad status: Test ad ready"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 4,
+    "actions": [
+      {
+        "reason": "menu_wallet_1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1077968,
+        "label": "LumaGold: 450. Premium wallet",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/menu_wallet_1",
+        "bounds": [
+          382,
+          150,
+          697,
+          316
+        ]
+      },
+      {
+        "reason": "shop_gold_wallet",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1080118,
+        "label": "View wallet \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/shop_gold_wallet",
+        "bounds": [
+          66,
+          1434,
+          1013,
+          1600
+        ]
+      },
+      {
+        "reason": "Load test ad",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1086685,
+        "label": "Load test ad",
+        "bounds": [
+          66,
+          2194,
+          1014,
+          2352
+        ]
+      },
+      {
+        "reason": "Watch an ad.*",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1123534,
+        "label": "Watch an ad \u00b7 +35 LumaCoins",
+        "bounds": [
+          66,
+          1850,
+          1014,
+          2008
+        ]
+      }
+    ],
+    "captures": [],
+    "package": "com.androidhit.lumadrift.sandbox",
+    "scope": "Actual SDK touchscreen input on the separate Lab package; read-only preferences. Explicit Lab simulation choices, test ads, earned campaign exits and local cosmetic transactions only. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, production ads or real purchases. Frozen authored certificates script real touches only."
+  },
+  "error": "Native Lab UI phase failed",
+  "production_package_absent_after": true,
+  "elapsed_seconds": 62.39,
+  "evidence_sha256": {
+    "battle-observer.apk": "1eec5c23331828bba82c500b773b9986426b8f16f9c3622267e26682a77cfda6",
+    "candidate-manifest.json": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "4bf9b98d13d02f926703eb4b4f28b155a31414c8e334207561bd832ba3c42f2a",
+    "failure-android-runtime.txt": "7a33427dbfca3ddafb4a5313437b5155090885a51a07ce13c4aa0517216485a0",
+    "instrumentation.txt": "e83487a333ea734603b6d5f3429d51f2b0ed87bf929a7bd4e1ee0a0cfbeacb2a",
+    "native/before.json": "666538159764df2624b8925172a0c128a36063abd5fdf7ab571b2eb05859598f",
+    "native/failure.txt": "6894ddec723fa46195d0cd69ab20ac8e81226ccd104bb72099a0f6cd65beb622",
+    "native/report.json": "33d86f081b156a24fe919f3174e006bf62b00388958a5195ecf368c7d6dcea01",
+    "native/requested-steps.json": "4c8d0290798a2f053c602fbbe0a5a22f0abf07b7a5a81ad0d4a096daa65dddde",
+    "observer-build-receipt.json": "0c5aa143d79cbf01a2661ac1133f09a55d6dff2bc84fa5721a7dd98eb8bc5f95",
+    "observer-install.txt": "732ce85d7a4000bb20b933babc461c2339c394605fe1026f38099517f956ae1a",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "a7d9b0d5150d3d96eb4658946138e6c945018aef4b210237ac4a7b02f909a048",
+    "source-snapshot.json": "19c0d07835c4932100bca366b3d1907982fe373bb1545709783738c7bb385531"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS_NO_CONCRETE_BLOCKER_FOUND",
+  "created_utc": "2026-10-31T01:02:34.127385+00:00",
+  "scope": "Independent read-only bounded review and offline fixtures; no network/authentication/deployment, no app/public/source edits.",
+  "sources": {
+    "scripts/deploy-site-v124.py": "c519126e18ca6e44de3a93a5216ad9b1a9543aa58dfa507aaf1b35e55da06af4",
+    "scripts/stage-site-v124-rest.py": "eb4fca0707f335135125bb8b77bb38454ab5b1b6c815fa07879240b40831e3e7",
+    "scripts/collect-site-v124-public-bytes.py": "f07931ebf8bddb1bc0cdc1065d371d7bdb8440d63058503f3a542b4cd115da9d",
+    "scripts/prepare-site-v124.py": "52ac535f11d4f5393726b4181c155e98b24886d95e58396f9ecc8fe0ce174ee7",
+    "scripts/apk-byte-delta.py": "fd7d4c299e16529c67ce0a3ed11c28156397d30ac113de1f09a364e3871bcff9",
+    "scripts/test-deploy-site-v124.py": "dda37d0f30e9d8084bd370d5d3afbc3558b953d6c6cfb556663c69dc65078827",
+    "scripts/test-stage-site-v124-rest.py": "46b180e0a38fe9f83bd045069c0da2271517f75082a19866b835dfabde98f5ca",
+    "scripts/test-collect-site-v124-public-bytes.py": "c4ea53e2419401d2ecb4bd289c7e480e5f02da7b03121be1d6cc30e94b532bd6",
+    "scripts/test-prepare-site-v124.py": "ae5c5f6c0b3f1e237521bb2ccfe357ab8dbe644007ba4c7f069f341646b2621e",
+    "scripts/test-apk-byte-delta.py": "c696aa9bb4a648ae9045a859cb996eef7897cf22253ca273264c42d12d557fc3"
+  },
+  "tests": [
+    {
+      "log": "/tmp/luma124-review-test-deploy-site-v124.py.log",
+      "sha256": "b4db3cf066428dd4a5e6e8fd482b2f72cada6cc681401b077225bf8b99670979",
+      "tail": "....................\n----------------------------------------------------------------------\nRan 20 tests in 1.465s\n\nOK\n"
+    },
+    {
+      "log": "/tmp/luma124-review-test-stage-site-v124-rest.py.log",
+      "sha256": "e00abd1fcf2e69a5b51f71c5ecf0033ca72143c4a2666058496358b39c516565",
+      "tail": "...........\n----------------------------------------------------------------------\nRan 11 tests in 6.550s\n\nOK\n"
+    },
+    {
+      "log": "/tmp/luma124-review-test-collect-site-v124-public-bytes.py.log",
+      "sha256": "fe231033cbc2e31a6ba4e2f79db22f09f5f18b4a37711260864f5536e5bd967c",
+      "tail": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.103s\n\nOK\n"
+    },
+    {
+      "log": "/tmp/luma124-review-test-prepare-site-v124.py.log",
+      "sha256": "5610bb341ae4df72930d9f88afd8d925eec567770a8ccf6387603ee214544c29",
+      "tail": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.020s\n\nOK\n"
+    },
+    {
+      "log": "/tmp/luma124-review-test-apk-byte-delta.py.log",
+      "sha256": "11c03f0a2b22e6d2a0c86281bb80de4a17c7d5affe6e3f750013b9cf6fe18a8f",
+      "tail": "wrong_patch_hash_refuses (__main__.ExactApkDeltaTest) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.174s\n\nOK\n"
+    }
+  ],
+  "findings": [
+    "Exact5cc87070 closeout and c99ac529 deployment are accepted only with shared public tree62e59825; expected live versioncf8b817321bf33d5 and deployed release messagec99 are checked separately.",
+    "Only/index.html may overwrite. All576 historical physical paths remain; clone retains full578 provider paths including reserved ones, unchanged config and historical file hashes.",
+    "Capture gate checks8unique FR/EN slots, passing original report, exact D APK/code33, PNG1080x2400 and report-bound original hash before copies.",
+    "Source/artifact commit metadata and ignored external APKs are verified. Stage restores only exact committed bounded inputs, checks base/patch/final hashes and preserves dirty-checkout refusal.",
+    "Delta envelope12MiB compressed,64MiB expanded JSON,32MiB literals,20000ops,1GiB APK, final output exact hash; bounds enforced separately.",
+    "Upload600s only on POST pinned upload host after existing endpoint validation; management remains60s. Caller constructs and verifies exact version/files/hash URL. Original no-redirect opener and in-memory token remain.",
+    "Collector has fixed HTTPS origin, proxies disabled, identity encoding, bounded streaming, MIME/size/full SHA checks, no retry/fallback; refusals never become PASS.",
+    "Deployment management/public bytes/browser rendering are explicitly separate scopes; no retirement or human validation claim."
+  ],
+  "limits": [
+    "Read-only review is not actual Firebase/public response evidence.",
+    "API live check immediately before release has no atomic compare-and-swap; code records this limitation."
+  ]
+}

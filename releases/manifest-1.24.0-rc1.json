@@ -1,0 +1,30 @@
+{
+  "edition": "1.24",
+  "version": "1.24.0-rc1",
+  "version_code": 32,
+  "artifact_policy": "Ignored external signed APK files; never require Git blobs",
+  "candidate_report": "docs/validation/v1.24/candidate-b/candidate.json",
+  "candidate_report_sha256": "e57740be9334c1a1595f479a341cb953497f3a354b5eb7f302e52e3ee988fb81",
+  "apks": {
+    "production": {
+      "path": "releases/luma-drift-1.24.0-rc1.apk",
+      "sha256": "92954de5519efdb6436a2cbed42fc24a6e79cf4fdf8cf55025e2136eef0065ed",
+      "bytes": 340290326,
+      "version": "1.24.0-rc1",
+      "code": 32,
+      "application_id": "com.androidhit.lumadrift",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    },
+    "lab": {
+      "path": "releases/luma-drift-1.24.0-sandbox-rc1.apk",
+      "sha256": "52e95e007c82f4b26174453c8df4daa057abfbaa733eb1f81473c09dbc4f8654",
+      "bytes": 340290009,
+      "version": "1.24.0-sandbox-rc1",
+      "code": 32,
+      "application_id": "com.androidhit.lumadrift.sandbox",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287"
+    }
+  },
+  "publicly_published": false,
+  "live_services_validated": false
+}

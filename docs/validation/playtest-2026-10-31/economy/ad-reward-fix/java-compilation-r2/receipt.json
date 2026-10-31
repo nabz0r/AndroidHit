@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "startedAtUtc": "2026-10-30T23:44:27.969544+00:00",
+  "completedAtUtc": "2026-10-30T23:44:36.449720+00:00",
+  "command": [
+    "./gradlew",
+    "--offline",
+    "--no-daemon",
+    ":app:compileProductionReleaseJavaWithJavac",
+    ":app:compileLabReleaseJavaWithJavac"
+  ],
+  "javaHome": "/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home",
+  "exitCode": 0,
+  "sourceInputs": {
+    "app/src/main/java/com/androidhit/lumadrift/data/AdCoinsRewardJournal.java": "41a6f55928810bc470cf658a3e066cfd7490ee886d0fe75722e80ba6ea446967",
+    "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java": "2778d959011a096d1b8eed2721994be85700f69509b6dc7275ee73acd14eb807",
+    "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java": "3f63f100db6a259173f1fe83e23e5313befa5ad616d165a143d47f663c339ea5",
+    "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceCopy.java": "4bf5ba5110e28a30eb45d45d054437c4cc486ac3c07143eb91993e9f53c5d3fc",
+    "app/src/main/java/com/androidhit/lumadrift/commerce/AdsController.java": "b2cc36c2f979e0a2efbd2544f7cea4af0a58febd280526b7160f2acfdd54d050",
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "3acb1853cd465c325f822493c1f139e446faa871cb22273ed438503a29ffd8fe"
+  },
+  "outputs": {
+    "stdout.log": {
+      "sha256": "fc90ddd55b94ef33bf682538fe65531865cdb7a3e450bef02c3994f01982837a",
+      "bytes": 2862
+    },
+    "stderr.log": {
+      "sha256": "f1d8093b354fd28f86384d50a1e01780d477a415f950dd84c1bb9852366f8a57",
+      "bytes": 470
+    }
+  },
+  "scope": "Offline Java compilation of both flavours; no assemble/package/APK/native/deploy/publication."
+}

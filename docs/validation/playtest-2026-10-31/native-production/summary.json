@@ -1,0 +1,84 @@
+{
+  "candidate_commit": "5cc870701c8039e664d1c00a90d0586c3d00521c",
+  "apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "programs": 10,
+  "passed_programs": 7,
+  "checks_executed": 156,
+  "touches_executed": 81,
+  "phases": [
+    {
+      "name": "decor-cancel-place",
+      "passed": true,
+      "checks": 13,
+      "touches": 9
+    },
+    {
+      "name": "decor-purchases",
+      "passed": true,
+      "checks": 23,
+      "touches": 20
+    },
+    {
+      "name": "equipment",
+      "passed": false,
+      "checks": 14,
+      "touches": 4
+    },
+    {
+      "name": "equipment-durable",
+      "passed": true,
+      "checks": 16,
+      "touches": 9
+    },
+    {
+      "name": "equipment-retry",
+      "passed": false,
+      "checks": 27,
+      "touches": 17
+    },
+    {
+      "name": "home-return-puzzle",
+      "passed": true,
+      "checks": 21,
+      "touches": 10
+    },
+    {
+      "name": "house-inspect",
+      "passed": true,
+      "checks": 8,
+      "touches": 2
+    },
+    {
+      "name": "initial",
+      "passed": true,
+      "checks": 7,
+      "touches": 0
+    },
+    {
+      "name": "wallet-refusal",
+      "passed": false,
+      "checks": 12,
+      "touches": 4
+    },
+    {
+      "name": "wallet-refusal-retry",
+      "passed": true,
+      "checks": 15,
+      "touches": 6
+    }
+  ],
+  "failed_programs_retained": {
+    "equipment": "Observed UX continuity: closing gear preview returns Outfit tab.",
+    "equipment-retry": "Observed back stack: after equipping, wardrobe Back returns to item preview. All exact debit and equip assertions before navigation passed.",
+    "wallet-refusal": "Harness expected status text without its actual accessibility prefix. New wallet-refusal-retry matches the observed prefix and passes."
+  },
+  "economic_actions": {
+    "starting_coins": 1007,
+    "wall_cost": 180,
+    "floor_cost": 180,
+    "plush_cost": 120,
+    "gear_cost": 450,
+    "ending_coins": 77
+  },
+  "scope": "SDK touchscreen gestures on retained task emulator5602, exact published APK E. No account sign-in, real purchase, provider reward injection or state injection. Native baseline does not qualify subsequent1.24 source changes."
+}

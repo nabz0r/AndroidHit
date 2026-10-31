@@ -1,0 +1,121 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "fr-large-font-compact-home"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "assert-id",
+    "id": "world_minimap"
+  },
+  {
+    "op": "assert-id",
+    "id": "world_play"
+  },
+  {
+    "op": "map-select",
+    "level": 41
+  },
+  {
+    "op": "capture",
+    "name": "fr-large-font-compact-map"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "en-large-font-compact-home"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "assert-id",
+    "id": "world_minimap"
+  },
+  {
+    "op": "assert-id",
+    "id": "world_play"
+  },
+  {
+    "op": "map-select",
+    "level": 41
+  },
+  {
+    "op": "capture",
+    "name": "en-large-font-compact-map"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "true"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "map-select",
+    "level": 41
+  },
+  {
+    "op": "capture",
+    "name": "en-reduced-map-static-a"
+  },
+  {
+    "op": "wait",
+    "ms": 1600
+  },
+  {
+    "op": "capture",
+    "name": "en-reduced-map-static-b"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "false"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  }
+]

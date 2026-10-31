@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "seed": 2026103103,
+  "randomizedSessions": 10000,
+  "randomizedActionGroups": 240000,
+  "directedLostResponseScenarios": 1000,
+  "actionGroups": 241000,
+  "publicApiCalls": 941451,
+  "assertions": 1559001,
+  "committedRepliesLost": 8379,
+  "modeledRefundDebtsObserved": 3784,
+  "reconstructedServiceSnapshots": 21775,
+  "elapsedSeconds": 14.902425833,
+  "actionFamilies": {
+    "eight-concurrent-distinct-requests": 21536,
+    "closed-offer-gates": 21735,
+    "verified-purchase-retry": 21951,
+    "provider-unavailable-no-credit": 21884,
+    "refund-or-committed-reply-loss": 21838,
+    "eight-concurrent-same-request": 21854,
+    "pending-purchased-retry": 21997,
+    "invalid-request-and-other-account": 21967,
+    "use-request-stock-refusal": 21891,
+    "reconstruct-from-memory-document-snapshot": 21775,
+    "spend-request-ownership-refusal": 21572,
+    "directed-lost-buy-and-use": 1000
+  },
+  "expectedErrorCounts": {
+    "SKU_NOT_AVAILABLE": 43470,
+    "PLAY_UNAVAILABLE": 21884,
+    "INVALID_REQUEST_ID": 21967,
+    "INSUFFICIENT_ITEM": 36185,
+    "INSUFFICIENT_GOLD": 14284,
+    "PURCHASE_REVOKED": 12808,
+    "REQUEST_CONFLICT": 2794,
+    "ALREADY_OWNED": 511
+  },
+  "scope": "Actual WalletService public methods and catalogue with MemoryStore/FakePlay; eight-way concurrency, controlled provider replies, pending/purchased/revoked fixtures, account isolation and lost committed replies. Consumables and energy enabled only in explicit experimental fixtures; closed gates also tested. No Firestore durability, real authentication, deployed backend, provider network, payment or Android client validation. Negative balances caused solely by modeled purchase refunds are permitted contractual debt, not overspending."
+}

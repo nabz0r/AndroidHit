@@ -47,6 +47,17 @@ jobs:
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneTransition.java
             /app/src/main/java/com/androidhit/lumadrift/ui/SceneRootLayout.java
             /app/src/main/java/com/androidhit/lumadrift/ui/CompanionSheetLayout123.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/BattleDockLayout124.java
+            /app/src/main/java/com/androidhit/lumadrift/ui/PauseLayout124.java
+            /scripts/test-battle-dock-v124.sh
+            /scripts/BattleDockLayout124Test.java
+            /scripts/test-pause-layout-v124.sh
+            /scripts/PauseLayout124Test.java
+            /scripts/test-companion-battle-v124.sh
+            /scripts/CompanionBattleV124Test.java
+            /scripts/playtest-2026-10-31/run-rank-copy-tests.py
+            /scripts/playtest-2026-10-31/EconomyStateStress.java
+            /scripts/playtest-2026-10-31/RankCopyV124Test.java
             /scripts/ClarityLayout123Test.java
             /scripts/test-clarity-layout-v123.sh
             /app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java
@@ -128,7 +139,23 @@ jobs:
             /scripts/test-site-v120-runtime.mjs
             /scripts/test-site-v121-runtime.mjs
             /scripts/test-site-v123-runtime.mjs
+            /scripts/fixtures/site-v123-index.html
             /scripts/check-site-v123.py
+            /scripts/check-site-v124.py
+            /docs/validation/site-v1.24/staging/preserved-sections.json
+            /docs/validation/site-v1.24/staging/art-copies.json
+            /docs/validation/site-v1.24/staging/index.preview.html
+            /scripts/deploy-site-v124.py
+            /scripts/stage-site-v124-rest.py
+            /scripts/collect-site-v124-public-bytes.py
+            /scripts/test-deploy-site-v124.py
+            /scripts/test-stage-site-v124-rest.py
+            /scripts/test-collect-site-v124-public-bytes.py
+            /scripts/test-site-v124-runtime.mjs
+            /public/assets/site-v124.js
+            /public/assets/site-v124.css
+            /docs/validation/site-v1.23/release/source-manifest.json
+            /releases/manifest-1.23.0-rc2.json
             /scripts/deploy-site-v123.py
             /scripts/stage-site-v123-rest.py
             /scripts/collect-site-v123-public-bytes.py
@@ -329,6 +356,15 @@ jobs:
         # Small generated ZIP fixtures only; no APK download or SDK is needed.
         run: python3 scripts/test-apk-byte-delta.py
 
+      - name: Check 1.24 website interactions and exact Hosting preparation guards
+        run: |
+          python3 scripts/check-site-v124.py --structure-only
+          node --check public/assets/site-v124.js
+          node --test scripts/test-site-v124-runtime.mjs
+          python3 scripts/test-deploy-site-v124.py
+          python3 scripts/test-stage-site-v124-rest.py
+          python3 scripts/test-collect-site-v124-public-bytes.py
+
       - name: Check 1.18 expeditions, copies, durable costume choice and motion contracts
         # Pure Java only. Native H APKs/captures remain separate frozen release evidence.
         run: |
@@ -373,6 +409,13 @@ jobs:
         run: |
           bash scripts/test-journey-clarity-v123.sh "$RUNNER_TEMP/luma-puzzle-contracts/clarity123"
           bash scripts/test-clarity-layout-v123.sh
+
+      - name: Check 1.24 rank copies, captured talent capacity and readable round UI layouts
+        run: |
+          bash scripts/test-companion-battle-v124.sh
+          bash scripts/test-battle-dock-v124.sh
+          bash scripts/test-pause-layout-v124.sh
+          python3 scripts/playtest-2026-10-31/run-rank-copy-tests.py --output "$RUNNER_TEMP/luma-puzzle-contracts/rank-copy124"
 
       - name: Check 1.22 map navigation and durable tactical chapters
         # Pure Java contracts; Android UI recordings remain separate evidence.

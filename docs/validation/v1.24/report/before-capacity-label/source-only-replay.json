@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "archiveSha256": "68a0ce765b5b9cec90629ce0969707db45fd849e4f49d6cb0f8e32e1e86784cc",
+  "archiveBytes": 834425,
+  "noCsvGzipInZip": true,
+  "extractedRoot": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma124-source-only-replay-g0mciro5",
+  "tests": [
+    {
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v124.sh"
+      ],
+      "returncode": 0,
+      "log": "docs/validation/v1.24/report/source-only-replay-0-original.log",
+      "sha256": "77f91f16aa71266c841dd746e5adf53ffdc341d102394bea38d79d093f7e5195"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "scripts/test-cognitive-report-v124.mjs"
+      ],
+      "returncode": 0,
+      "log": "docs/validation/v1.24/report/source-only-replay-1-original.log",
+      "sha256": "847726ca8aa912c61a5860c0177ee35319f78702226ce6c63c022f17738de2dc"
+    }
+  ],
+  "scope": "Source-only ZIP extraction: Java host tests and static-report runtime. The one raw-identity Node case explicitly skips in source-only kit, since its 11 ledgers are separate public downloads; it executes and passes in full repository."
+}

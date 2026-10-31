@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "checkedAtUtc": "2026-10-31T00:59:53.949254+00:00",
+  "manifest": "releases/manifest-1.24.0-rc2.json",
+  "manifestSha256": "0d2325d2081f69f84dd25183262978bd665d374b22444ecd1623f2df4eeaabe2",
+  "channels": {
+    "production": {
+      "receipt": "releases/deltas/1.24.0-rc2/production-build.json",
+      "receiptSha256": "22910d2909c5eae8cf1d07c68ab062f580e86f78cbc3c672e9cb9ca0251e12fc",
+      "patch": "releases/deltas/1.24.0-rc2/production.json.gz",
+      "patchSha256": "bd8e1c18d8748c089ae0446e61ea547d03ddba5ff1d3c89591c1761e1ecee13e",
+      "patchBytes": 10487135,
+      "base": {
+        "bytes": 369002457,
+        "name": "luma-drift-1.23.0-rc2.apk",
+        "sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb"
+      },
+      "target": {
+        "bytes": 340290322,
+        "name": "luma-drift-1.24.0-rc2.apk",
+        "sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e"
+      }
+    },
+    "lab": {
+      "receipt": "releases/deltas/1.24.0-rc2/lab-build.json",
+      "receiptSha256": "baa882b91b8fa8d6856c8753d68c33351afd6763814f1b34ddd12fac47f88e6a",
+      "patch": "releases/deltas/1.24.0-rc2/lab.json.gz",
+      "patchSha256": "ec53d3032be751a3fb43ca08f305deb1c566b03fdcc5faea10f468ba2dd84844",
+      "patchBytes": 10483680,
+      "base": {
+        "bytes": 368985756,
+        "name": "luma-drift-1.23.0-sandbox-rc2.apk",
+        "sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c"
+      },
+      "target": {
+        "bytes": 340290009,
+        "name": "luma-drift-1.24.0-sandbox-rc2.apk",
+        "sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b"
+      }
+    }
+  },
+  "publicTreeBridge": {
+    "5cc870701c8039e664d1c00a90d0586c3d00521c": "62e59825f561bb4857510d3e602d43ec87535dd5",
+    "c99ac52903eca6707d3f4d644d7c480c79b63e68": "62e59825f561bb4857510d3e602d43ec87535dd5"
+  },
+  "immutable123ScriptsVerified": {
+    "scripts/deploy-site-v123.py": "9351f97c5cb438221c5fc3ef37d5058964c5be6aa73b467d4bf4a286b6a7e67d",
+    "scripts/stage-site-v123-rest.py": "adbfc3c60042694d92b295a167c8f82f64ed8a85106d956d2ec69d11a5101467",
+    "scripts/collect-site-v123-public-bytes.py": "2f319cf91dfa9e69c737e766581a9f63e461654c49a8c8e9f7452a10ef382452",
+    "scripts/test-deploy-site-v123.py": "2d508b04a2eb7f41b99d210d8f1b4f65e083affa5a99ba645d9619221cd211e3",
+    "scripts/test-stage-site-v123-rest.py": "6266bb1ccb18c80ef6eb439ecb40aeccae7c344a5ac69a3273ced2fcc48ff442",
+    "scripts/test-collect-site-v123-public-bytes.py": "9804d9176feb62a4dc1b07599b68baf592544381755c1d3f5959ef8c88f1d272"
+  },
+  "deltaHelperSha256": "fd7d4c299e16529c67ce0a3ed11c28156397d30ac113de1f09a364e3871bcff9",
+  "networkRequested": false,
+  "scope": "Local manifests, delta receipts and compressed patch bytes only; no real delta application, Android build, native acceptance, Hosting or public-origin claim."
+}

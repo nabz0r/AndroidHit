@@ -1,0 +1,79 @@
+[
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "capture",
+    "name": "native-lab-commerce-default"
+  },
+  {
+    "op": "tap",
+    "regex": "Age group:.*"
+  },
+  {
+    "op": "tap",
+    "regex": "Under 18"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*Test ads require age 18 or over.*"
+  },
+  {
+    "op": "capture",
+    "name": "minor-test-ad-refused"
+  },
+  {
+    "op": "tap",
+    "regex": "Age group:.*"
+  },
+  {
+    "op": "tap",
+    "regex": "18 or over"
+  },
+  {
+    "op": "tap",
+    "regex": "Allow optional advertising"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "wait",
+    "ms": 3000
+  },
+  {
+    "op": "capture",
+    "name": "test-ad-sdk-consent-or-status"
+  },
+  {
+    "op": "snapshot",
+    "name": "ad-setup-actual-state"
+  }
+]

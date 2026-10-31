@@ -1,0 +1,19 @@
+{
+  "status": "PASS_REAL_ELAPSED_TICKS_BRIDGE",
+  "scope": "Actual retained5634 native B\u2192D observation while other authorized work proceeded. Two real ten-minute recharge deadlines crossed; not a claim of a freshD-only full20minute observation or an injected clock test. No new attempt, ad or refill in either compared discovery phase.",
+  "source_before": "b01-upgrade-discovery/native/retained-after-ui.json",
+  "source_after": "d01-upgrade-refusal/native/retained-after-ui.json",
+  "before_count": 4,
+  "after_count": 6,
+  "anchor_delta_ms": 1200000,
+  "real_tick_ms": 600000,
+  "ticks": 2,
+  "same_energy_store_sha256": "8d2f396e1da379205f327536aa33beaeb27a3ffc54b57305111877922ab8c276",
+  "same_run_receipt": true,
+  "device_clock_writes": 0,
+  "boundaries": [
+    "Original B energy capture shows4/10 and next recharge01:51.",
+    "Original D energy capture shows6/10 and next recharge04:56.",
+    "The retained Goldtest0 and Coins2630 were unchanged; only unpaid SPEND became terminalREFUSED under the new controller."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T23:47:05.285323+00:00",
+  "baselineSourceManifest": {
+    "path": "docs/validation/v1.23/candidate-e/source-inputs.json",
+    "sha256": "b62788cd6c3c33f728a9b19678b076385354f54d5c3b8eee9a6fe268a5ee6eaf",
+    "bytes": 91841
+  },
+  "baselineInputCount": 501,
+  "baselineCopiesMatchE": 5,
+  "baselineModelAppInputsMatchingE": 88,
+  "baselineAdHostAppInputsMatchingE": 90,
+  "existingEInputsUnchanged": 497,
+  "changedExistingInputs": [
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+      "baselineSha256": "cce41eb9a605a62e1d474d88fe5d75e375ae940a731786d8e73b2557b87633b8",
+      "currentSha256": "3acb1853cd465c325f822493c1f139e446faa871cb22273ed438503a29ffd8fe"
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java",
+      "baselineSha256": "499b7ec65cfaee1ce9d399875b2cc1daf9d03ced3628b53841b97b6dd8ddb024",
+      "currentSha256": "3f63f100db6a259173f1fe83e23e5313befa5ad616d165a143d47f663c339ea5"
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceCopy.java",
+      "baselineSha256": "cfcc3e52542b842faf1cceda8d04ad145cbf78a34b1e9123150de5e2cf1b745f",
+      "currentSha256": "4bf5ba5110e28a30eb45d45d054437c4cc486ac3c07143eb91993e9f53c5d3fc"
+    },
+    {
+      "path": "app/src/main/java/com/androidhit/lumadrift/data/GameStore.java",
+      "baselineSha256": "cda7f02dfaed110dbe7c29e0a28f9e78aec9e0cd1bcb8dbf453e788d5d569542",
+      "currentSha256": "2778d959011a096d1b8eed2721994be85700f69509b6dc7275ee73acd14eb807"
+    }
+  ],
+  "newSource": {
+    "path": "app/src/main/java/com/androidhit/lumadrift/data/AdCoinsRewardJournal.java",
+    "sha256": "41a6f55928810bc470cf658a3e066cfd7490ee886d0fe75722e80ba6ea446967",
+    "bytes": 4970
+  },
+  "noChangeToPublicOrVersionConfig": true,
+  "originalToCorrectedDeterminism": [
+    {
+      "path": "model/sessions.csv",
+      "sha256": "1d2a97f60f25011ca51bf7496c9c4bd8cfade64b6d8805dfad6c30a448972af9",
+      "bytes": 1579279,
+      "byteIdentical": true
+    },
+    {
+      "path": "model/action-families.csv",
+      "sha256": "27621c30eac45872f49074838add962e296c47671b3345c50ab2592150bc5db9",
+      "bytes": 1065,
+      "byteIdentical": true
+    },
+    {
+      "path": "wallet/sessions.csv",
+      "sha256": "9eb1b3d62400539c0b45536ed04522702b24210cf5cbf5004a05b8f7afa03394",
+      "bytes": 1032649,
+      "byteIdentical": true
+    }
+  ],
+  "originalReceipt": {
+    "path": "docs/validation/playtest-2026-10-31/economy/qualified-stress/receipt.json",
+    "sha256": "92d8f71c74b24a293d696853b80b4ef271ca2bc70ac00b249f5616f0b985d379",
+    "bytes": 16666
+  },
+  "correctedReceipt": {
+    "path": "docs/validation/playtest-2026-10-31/economy/ad-reward-fix/source-corrected-stress/receipt.json",
+    "sha256": "9c87b01e7a118b1a5807d42fe654c68015365731bd99c9b47f644878811cd2d3",
+    "bytes": 16836
+  },
+  "scope": "Exact source binding and deterministic host workload bridge. E source reproduces the ad fault under controlled SDK/storage adapters; no storage fault was injected into the installed APK. Corrected source has Java compilation and host tests only; E canonical APKs/public release are unchanged and no corrected APK has native acceptance."
+}

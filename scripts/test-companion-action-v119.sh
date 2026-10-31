@@ -10,7 +10,7 @@ else task_java_bin="$(dirname "$(command -v javac)")"; fi
     "$task_root/scripts/test-support/android/graphics/Color.java" \
     "$task_root"/app/src/main/java/com/androidhit/lumadrift/engine/*.java \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/data/Catalog.java" \
-    "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattle.java" \
+    "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionProgression.java" "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattle.java" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java" \
     "$task_root/scripts/CompanionBattleActionV119Test.java"
 "$task_java_bin/java" -Xmx512m "-Dluma.test.root=$task_root" -cp "$task_build" CompanionBattleActionV119Test "${1:-$task_root/docs/validation/v1.19/actions}"

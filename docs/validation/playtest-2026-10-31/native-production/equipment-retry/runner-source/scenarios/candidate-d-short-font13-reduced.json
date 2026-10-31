@@ -1,0 +1,379 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "true"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "top"
+  },
+  {
+    "op": "capture",
+    "name": "fr-short-font13-board-top"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "fr-short-font13-board-context-before"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "fr-compact-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "fr-compact-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "fr-compact-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "fr-compact-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "fr-compact-battle_v119"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "level",
+    "name": "fr-compact-level"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "fr-short-font13-sheet"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "fr-short-font13-sheet-scrolled"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_item_hat_moon"
+  },
+  {
+    "op": "assert-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "assert-id",
+    "id": "wardrobe_apply"
+  },
+  {
+    "op": "assert-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "capture",
+    "name": "fr-short-font13-outfit-trial-sticky-footer"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "fr-short-font13-outfit-scrolled-sticky-footer"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "capture",
+    "name": "fr-short-font13-board-context-after"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "fr-compact-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "fr-compact-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "fr-compact-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "fr-compact-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "fr-compact-battle_v119"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "level",
+    "name": "fr-compact-level"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "top"
+  },
+  {
+    "op": "capture",
+    "name": "en-short-font13-board-top"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "en-short-font13-board-context-before"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "en-compact-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "en-compact-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "en-compact-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "en-compact-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "en-compact-battle_v119"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "level",
+    "name": "en-compact-level"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "en-short-font13-sheet"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "en-short-font13-sheet-scrolled"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_item_hat_moon"
+  },
+  {
+    "op": "assert-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "assert-id",
+    "id": "wardrobe_apply"
+  },
+  {
+    "op": "assert-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "capture",
+    "name": "en-short-font13-outfit-trial-sticky-footer"
+  },
+  {
+    "op": "scroll",
+    "forward": true
+  },
+  {
+    "op": "capture",
+    "name": "en-short-font13-outfit-scrolled-sticky-footer"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "capture",
+    "name": "en-short-font13-board-context-after"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "en-compact-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "en-compact-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "en-compact-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "en-compact-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "en-compact-battle_v119"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "level",
+    "name": "en-compact-level"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap",
+    "regex": "Settings"
+  },
+  {
+    "op": "tap",
+    "regex": "Reduce motion:.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "reduce_motion",
+    "value": "false"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "d-short-font13-reduced-final"
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "status": "PASS_EXACT_CANDIDATE_D_RETAINED_UI_SCOPE",
+  "created_utc": "2026-10-31T01:19:12.502472+00:00",
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "version": "1.24.0-sandbox-rc2",
+  "code": 33,
+  "candidate_manifest": {
+    "path": "docs/validation/v1.24/candidate-d/candidate.json",
+    "sha256": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3"
+  },
+  "app_inputs": {
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": {
+      "path": "app/src/main/java/com/androidhit/lumadrift/LumaView.java",
+      "bytes": 427432,
+      "sha256": "a5a7b604667d8cc260a9ff07d726c9b72bfddf93e2c0827802a5e78522eab46d"
+    },
+    "app/src/main/java/com/androidhit/lumadrift/ui/PulseUi124.java": {
+      "path": "app/src/main/java/com/androidhit/lumadrift/ui/PulseUi124.java",
+      "bytes": 13252,
+      "sha256": "f04884135106cbb338a84c7515ee41400c9529f50766aaeb838b0f8a4b606bf5"
+    }
+  },
+  "historical_correction_receipt": {
+    "path": "docs/validation/v1.24/ui-pulse/alpha-correction.json",
+    "sha256": "cc53e613297d76ce8c5e1f88fc77618ac9a3e63743f0c5d621ea09057d8a9b15"
+  },
+  "accepted": [
+    "Opaque white/cyan home, buttons, pause/restart and companion sheet in original exact-D native PNGs; B translucency is historical rejected evidence.",
+    "XP capsule is separate from Settings in the observed home.",
+    "1080x1300 and real font_scale1.3: visible48dp actions, scrollable sheet, readable metadata and reachable return; original configuration restored.",
+    "Legacy remaining1/1 remains distinct from Charge; genuine GUIDE costs2 and consumes1 use.",
+    "Real public SDK Home/foreground and Activity.recreate retain actual board/budget/run/effects and paused time; board resumes its actual clock."
+  ],
+  "reports": [
+    {
+      "path": "docs/validation/v1.24/native-lab/d01-upgrade-refusal/report.json",
+      "sha256": "d61e65aa4bfe7f4ea9be3bef4cd9452e5adcfaa57b968f103dbe93fef222e891"
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d02-modal-context/report.json",
+      "sha256": "3b15df65d23b98975b3647f3e6c94294457c5344878c655917f9235801a9511f"
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d03-short-large-context/report.json",
+      "sha256": "79d70dfdcb604f8cc3d3214730764d31c6bd382534093345bd1223a1972e195d"
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d04-guide-lifecycle/report.json",
+      "sha256": "510c5668fb8a00ffaa87dfc96a329e2037f2b5516a823755a20aa22d01e3b430"
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d05-restart-drain-refusal/report.json",
+      "sha256": "b09bf5cd0ee24b1fa421b1631fe78df721a58a38b8d924ec2fe5ca97aa00aecd"
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d06-cold-final-refusal/report.json",
+      "sha256": "01767ee9a20c8353a6adf7e399e7430022b6659a1b1efe7c2ab17efed2b18059"
+    }
+  ],
+  "counts": {
+    "assertions": 330,
+    "touches": 53,
+    "original_pngs": 22,
+    "separate_public_sdk_lifecycle_operations": 3
+  },
+  "limits": [
+    "Scripted Android emulator observation, not human comprehension, preference or physical-device validation.",
+    "No real purchase or production ad qualification.",
+    "B screenshots and alpha-correction pending wording remain immutable historical state; this later receipt closes their native-retest question for D only."
+  ]
+}

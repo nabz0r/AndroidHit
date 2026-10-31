@@ -1,0 +1,97 @@
+[
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "77"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_owned_v1_copper_wish",
+    "value": "EARNED_COINS"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_HEAD",
+    "value": "lantern_leaf"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_AURA",
+    "value": "mint_orbit"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_CHARM",
+    "value": "copper_wish"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-owned-switch"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_wardrobe"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_slot_2"
+  },
+  {
+    "op": "tap",
+    "regex": "Boussole de rosée"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_CHARM",
+    "value": "dew_compass"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_slot_2"
+  },
+  {
+    "op": "tap",
+    "regex": "Vœu de cuivre"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "450 LumaCoins"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_CHARM",
+    "value": "copper_wish"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-owned-switch"
+  },
+  {
+    "op": "capture",
+    "name": "durable-gear-after-relaunch"
+  },
+  {
+    "op": "snapshot",
+    "name": "durable-gear-state"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "scope": "Local browser only; actual public/ served on127.0.0.1:8814. No Hosting or public-origin acceptance.",
+  "viewportsObserved": {
+    "mobile": [
+      320,
+      740
+    ],
+    "desktop": [
+      1280,
+      720
+    ]
+  },
+  "checks": [
+    "FR and EN homepage text and Android links",
+    "No document horizontal overflow in observed sizes",
+    "Four exact D 1080x2400 captures loaded in both languages",
+    "Gallery explicit-load then Miko and pose18 selection",
+    "No autoplay; Adventure keyboard Space starts and stops",
+    "Files/checksums expansion identifies rc2 code33 APKs",
+    "Android navigation reaches download anchor",
+    "Lab124 EN single-use control updates metrics and capacity label",
+    "Lab124 mobile raw11links fit; tables scroll inside wrappers"
+  ],
+  "notes": [
+    "At first mobile hero observation native images below fold were intentionally lazy and not yet loaded. Subsequent desktop section observation confirms both locale sets loaded.",
+    "Viewport overrides did not resize existing tabs consistently; reported sizes come from DOM measurements, using a fresh default1280x720 tab for desktop. An early misnamed desktop screenshot was replaced by actual1280capture.",
+    "Exact-role locators for language and details did not match the browser accessibility mapping; visible text controls were used successfully. No site source mutation was needed."
+  ],
+  "consoleErrorsOrWarnings": [],
+  "files": {
+    "report-fr-320.png": "73d09302ee9134cb4cfd567e1c51dadfa6328efe5f912bb00777d7e025c6ce6a",
+    "home-fr-320.png": "eb12cb29abbbe40ae909b1c790a634c6fccbe6b266cad07a5805e288d5583bf0",
+    "native-en-desktop.png": "473c6048b4e041f173a007090bdb1e7fa1da53af9439c042d27d6abdc910cd74",
+    "report-en-320.png": "94eec86ed02d023ef43a358ff0b1aa686d4d09b65d53fe36fef5a7639cd7b0f9",
+    "observations.json": "2b5c827267c7cbeb7f9b234ca6fb7b9a45ef8d2e8699ec86e5a558d9fbd20473",
+    "home-fr-desktop.png": "fc92a5cc8ea80d4569002168a043fefc76340ddc2cdb2bef1f743e4aa08b0d86",
+    "native-fr-desktop.png": "8eb310372eff91ea03890d523ace19b534fb6c20da62814e80a906b3e30dbea3",
+    "home-en-320.png": "a07352cd99b775426f929a5dda0e17d8c5966491a5b924bb09d8c4559743959e"
+  }
+}

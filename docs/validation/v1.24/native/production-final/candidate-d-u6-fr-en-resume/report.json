@@ -1,0 +1,601 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-31T00:50:34.076700+00:00",
+  "serial": "emulator-5636",
+  "avd": "Luma124-Fresh-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "final-u6-fr-en-resume",
+  "release_manifest_sha256": "0d2325d2081f69f84dd25183262978bd665d374b22444ecd1623f2df4eeaabe2",
+  "expected_version": "1.24.0-rc2",
+  "expected_code": 33,
+  "apk_sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e",
+  "observer_sha256": "06ae95cc03ba74136bf60c8e67c8e7a0761dd7b7dff117cc0223284d8b64dbe4",
+  "creation_receipt_sha256": "3b72bacb85f227fed2a4dfc574e47917a561d64dea29f8980234377c63d86f3a",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "031f9b6a-e1ff-430b-9076-9304dc28dabb",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. Production UI availability and refusal paths may be observed. No account sign-in, real-money purchase, ad configuration change or injected provider callback.",
+  "installed_sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": false,
+    "phase": "final-u6-fr-en-resume",
+    "runToken": "031f9b6a-e1ff-430b-9076-9304dc28dabb",
+    "processId": 6409,
+    "checkCount": 88,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference level = 5"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = 0"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual captured battle version"
+      },
+      {
+        "passed": true,
+        "message": "Actual Charge remains bounded"
+      },
+      {
+        "passed": true,
+        "message": "Actual board team = nova"
+      },
+      {
+        "passed": true,
+        "message": "Actual board Charge = 0"
+      },
+      {
+        "passed": true,
+        "message": "Actual captured slot capacity and bounded uses"
+      },
+      {
+        "passed": true,
+        "message": "Explicit expected slot count"
+      },
+      {
+        "passed": true,
+        "message": "Actual capacities slot 0 = 2"
+      },
+      {
+        "passed": true,
+        "message": "Explicit expected slot count"
+      },
+      {
+        "passed": true,
+        "message": "Actual uses slot 0 = 2"
+      },
+      {
+        "passed": true,
+        "message": "Explicit expected slot count"
+      },
+      {
+        "passed": true,
+        "message": "Actual remaining slot 0 = 0"
+      },
+      {
+        "passed": true,
+        "message": "Actual captured companion levels"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference xp = 140"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference companion_copies_v118_nova = 2"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Already performed real exit agrees with public certificate"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 5"
+      },
+      {
+        "passed": true,
+        "message": "Real native U5 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Actual ready durable victory receipt"
+      },
+      {
+        "passed": true,
+        "message": "Actual rank-aware receipt"
+      },
+      {
+        "passed": true,
+        "message": "Actual receipt rankBefore = 2"
+      },
+      {
+        "passed": true,
+        "message": "Actual rank-aware receipt"
+      },
+      {
+        "passed": true,
+        "message": "Actual receipt rankAfter = 2"
+      },
+      {
+        "passed": true,
+        "message": "Actual rank-aware receipt"
+      },
+      {
+        "passed": true,
+        "message": "Actual receipt copies = 0"
+      },
+      {
+        "passed": true,
+        "message": "Actual immutable victory captain"
+      },
+      {
+        "passed": true,
+        "message": "Actual settled rank reward status"
+      },
+      {
+        "passed": true,
+        "message": "Actual receipt stars = 3"
+      },
+      {
+        "passed": true,
+        "message": "Actual receipt xp = 35"
+      },
+      {
+        "passed": true,
+        "message": "Won session inactive only after real result"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1–U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual captured battle version"
+      },
+      {
+        "passed": true,
+        "message": "Actual Charge remains bounded"
+      },
+      {
+        "passed": true,
+        "message": "Actual board team = nova"
+      },
+      {
+        "passed": true,
+        "message": "Actual board Charge = 3"
+      },
+      {
+        "passed": true,
+        "message": "Actual captured slot capacity and bounded uses"
+      },
+      {
+        "passed": true,
+        "message": "Explicit expected slot count"
+      },
+      {
+        "passed": true,
+        "message": "Actual capacities slot 0 = 2"
+      },
+      {
+        "passed": true,
+        "message": "Explicit expected slot count"
+      },
+      {
+        "passed": true,
+        "message": "Actual uses slot 0 = 0"
+      },
+      {
+        "passed": true,
+        "message": "Explicit expected slot count"
+      },
+      {
+        "passed": true,
+        "message": "Actual remaining slot 0 = 2"
+      },
+      {
+        "passed": true,
+        "message": "Actual captured companion levels"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable elemental-shell identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual shelled piece count = 0"
+      },
+      {
+        "passed": true,
+        "message": "Actual remaining shell layers = 0"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 14,
+    "actions": [
+      {
+        "reason": "resume-genuinely-preserved-active-attempt",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1748488,
+        "label": "Resume  ·  Level 5",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "real-piece-1-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1751479,
+        "label": "Piece, row 2, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          836,
+          466,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-1-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1752375,
+        "label": "Piece, row 2, column 5, arrow right, Gate open",
+        "bounds": [
+          759,
+          836,
+          905,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-4-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1753094,
+        "label": "Piece, row 5, column 4, arrow down, Gate open",
+        "bounds": [
+          613,
+          1275,
+          759,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-3-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1753831,
+        "label": "Piece, row 4, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1128,
+          320,
+          1275
+        ]
+      },
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1755847,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1756407,
+        "label": "Français",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1768703,
+        "label": "Tous les niveaux",
+        "resourceId": "com.androidhit.lumadrift:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1769974,
+        "point": [
+          943.1344,
+          741.0925
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1770900,
+        "label": "Niveau 6",
+        "resourceId": "com.androidhit.lumadrift:id/world_node_6",
+        "bounds": [
+          469,
+          996,
+          624,
+          1151
+        ]
+      },
+      {
+        "reason": "open-selected-real-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1773375,
+        "label": "Jouer",
+        "resourceId": "com.androidhit.lumadrift:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1773978,
+        "label": "Jouer  →",
+        "resourceId": "com.androidhit.lumadrift:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "battle_skill_0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1776551,
+        "label": "Nova. Étoile guide. Usages restants : 2 sur 2. Coût : 2 Charge",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_0",
+        "bounds": [
+          66,
+          2110,
+          286,
+          2337
+        ]
+      },
+      {
+        "reason": "battle_skill_close_bottom",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1779023,
+        "label": "Revenir au puzzle",
+        "resourceId": "com.androidhit.lumadrift:id/battle_skill_close_bottom",
+        "bounds": [
+          66,
+          2079,
+          1013,
+          2234
+        ]
+      }
+    ],
+    "captures": [
+      "upgrade-b-to-d-preserved-u5",
+      "puzzle-fr",
+      "companion-fr",
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, real-money purchase, ad configuration change, injected ad-provider callback or publication. Ad UI availability/refusal observation only. Earned coin draws only when expressly listed."
+  },
+  "error": "Current instrumentation execution failed",
+  "elapsed_seconds": 61.603,
+  "evidence_sha256": {
+    "battle-observer.apk": "06ae95cc03ba74136bf60c8e67c8e7a0761dd7b7dff117cc0223284d8b64dbe4",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "3b72bacb85f227fed2a4dfc574e47917a561d64dea29f8980234377c63d86f3a",
+    "failure-android-runtime.txt": "9e7a03112422a4ac18b09443c942317b5f77fc752e31c1e65602c82087be0422",
+    "instrumentation.txt": "d603b447d239ecd3508903e8fc3b57c17d243e1e5b01c2c63d9d7c68882ac8bd",
+    "native/before.json": "fe674fb6599527eb7a7460e46cabe161f4e9f87440c713259f300de42bd4667c",
+    "native/companion-fr-accessibility.json": "19e3497bda0c367d143204afcdcce7cb0560dd383737ff4f5418e36612ffa7a3",
+    "native/companion-fr.png": "dae1529b1546af8bf4ea8bc4b49d31dd6197eda3bafd3a0342c62f6abf75676f",
+    "native/failure-accessibility.json": "a3c90e9c2897775582bca39a66ad48ed7c0a3e389834918fe7e978c946856c8b",
+    "native/failure.png": "e435a9c875f6cf34842e5c6d9e5275cbe2bea42203f7c737f8eb4310108442db",
+    "native/failure.txt": "8eb74a15df67bd8cc7ab4d90654b1255c3a08482ba9b498cd196a3095f600be3",
+    "native/puzzle-fr-accessibility.json": "a3c90e9c2897775582bca39a66ad48ed7c0a3e389834918fe7e978c946856c8b",
+    "native/puzzle-fr.png": "315a4d7a21b479633eb2a993aaef5152915b2a5e3f786c3ca093720daea88106",
+    "native/report.json": "783e49380a326fb51b248e9b86a9f41b35a21e317754e5da3ec4eae71f3ccab7",
+    "native/requested-steps.json": "d35d9f600dc66d1eb73351ec6e7c6b04599bd10c5672a3396c42f01dea9801ea",
+    "native/upgrade-b-to-d-preserved-u5-accessibility.json": "0fbc5626502cd21b335b53c3a7196b86108186ef3067c943fc5fec907aec2673",
+    "native/upgrade-b-to-d-preserved-u5.png": "9151783a24b4740d37981450a7736e51fa1061d74442c4bcf4449887170fdfe6",
+    "observer-build-receipt.json": "0ff58202244d95fdc538a9e08bf85509580b2e0eb782e1002bbacc6a449a3ab4",
+    "observer-install.txt": "00afb74efee973e99b973802f039beeba2370714716e598afeea723728847742",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "release-manifest.json": "0d2325d2081f69f84dd25183262978bd665d374b22444ecd1623f2df4eeaabe2",
+    "requested-steps.json": "a91169828e2f832050ce1e2f7eb3ac10a7140e557ed7bc61fdfb5c3f5fd23339",
+    "source-snapshot.json": "03f44bd44c890614f506ab2d2eef0921434455014002ead2161f5f2a5919d753"
+  }
+}

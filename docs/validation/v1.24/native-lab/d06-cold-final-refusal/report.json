@@ -1,0 +1,284 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-31T00:58:30.796373+00:00",
+  "serial": "emulator-5634",
+  "avd": "Luma123-RC2-Fresh-QA",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "phase": "d06-cold-final-refusal",
+  "expected_version": "1.24.0-sandbox-rc2",
+  "expected_code": 33,
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "observer_sha256": "afafb757244296fbe2fbfcfe9a5fe1b3ce48e4aaf2734b3ee1ca499c5ee3ebd5",
+  "observer_build_receipt_sha256": "2d67f6c6f21a8187051a30047a0050ff919923519a60e7db2f0e6ca535e157b1",
+  "production_apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "previous_lab_apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "creation_receipt_sha256": "1cca407cfd82d4078854c912a6b22af1e1293e743e9d88a227757105a29daf7e",
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "first_install": false,
+  "candidate_manifest": "docs/validation/v1.24/candidate-d/candidate.json",
+  "candidate_manifest_sha256": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+  "frozen_source_count": 522,
+  "run_token": "4811516f-b389-4a64-bc4f-afdbb48a3f2c",
+  "scope": "Pinned 5634 task emulator only. Snapshot persistent production preferences before and after Lab and refuse any change. Preserve old sandbox preferences byte-for-byte before first 1.24 Activity. Actual SDK touchscreen Lab simulations, optional test-ad UI, earned campaign gestures, cosmetics; no direct grants, clears, preference writes, injected fixtures/progress, external identity or real commerce.",
+  "original_configuration": {
+    "size": "Physical size: 1080x2400",
+    "font_scale": "1.0"
+  },
+  "installed_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420",
+    "page_size": "16384",
+    "font_scale": "1.0"
+  },
+  "native": {
+    "passed": true,
+    "phase": "d06-cold-final-refusal",
+    "runToken": "4811516f-b389-4a64-bc4f-afdbb48a3f2c",
+    "processId": 6580,
+    "checkCount": 31,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact separate Lab package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 0"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches .*LumaGold insuffisants. Aucun nouveau d\u00e9bit.*"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox = 1|REFUSED|07e027f3-b4a0-4a75-8782-fb02b47b9482|22af858d-0ec3-40f8-8de2-075f52186be6"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches .*Not enough LumaGold. No new debit.*"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox = 1|REFUSED|07e027f3-b4a0-4a75-8782-fb02b47b9482|22af858d-0ec3-40f8-8de2-075f52186be6"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 0"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      }
+    ],
+    "touchCount": 6,
+    "actions": [
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1598182,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-fr",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1598733,
+        "label": "Fran\u00e7ais",
+        "bounds": [
+          708,
+          1565,
+          1013,
+          1725
+        ]
+      },
+      {
+        "reason": "menu_wallet_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1599750,
+        "label": "\u00c9nergie: 0 / 10. \u00c9nergie 0/10",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/menu_wallet_2",
+        "bounds": [
+          720,
+          150,
+          1035,
+          316
+        ]
+      },
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1602199,
+        "label": "R\u00e9glages",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1602783,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "menu_wallet_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1603799,
+        "label": "Energy: 0 / 10. Energy 0/10",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/menu_wallet_2",
+        "bounds": [
+          720,
+          150,
+          1035,
+          316
+        ]
+      }
+    ],
+    "captures": [
+      "cold-terminal-refusal-fr",
+      "cold-terminal-refusal-en"
+    ],
+    "package": "com.androidhit.lumadrift.sandbox",
+    "scope": "Actual SDK touchscreen input on the separate Lab package; read-only preferences. Explicit Lab simulation choices, test ads, earned campaign exits and local cosmetic transactions only. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, production ads or real purchases. Frozen authored certificates script real touches only."
+  },
+  "production_preferences_exactly_preserved": true,
+  "production_preference_file_count": 5,
+  "elapsed_seconds": 15.489,
+  "evidence_sha256": {
+    "battle-observer.apk": "afafb757244296fbe2fbfcfe9a5fe1b3ce48e4aaf2734b3ee1ca499c5ee3ebd5",
+    "candidate-manifest.json": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "1cca407cfd82d4078854c912a6b22af1e1293e743e9d88a227757105a29daf7e",
+    "instrumentation.txt": "8f2a5e6f4be3908a8010d19951eb5b52d094095fc76362a9f745997d3144b5b5",
+    "native/after.json": "44caee1d5ca4f845305b5a0aed0d3c603f3e943fd7c4817ac7cdbf8fb991bb65",
+    "native/before.json": "44caee1d5ca4f845305b5a0aed0d3c603f3e943fd7c4817ac7cdbf8fb991bb65",
+    "native/cold-terminal-refusal-en-accessibility.json": "8b9137f9587133ab16ccb5fe50fb42172cb85abc51d86e9998126d7cc5b5df65",
+    "native/cold-terminal-refusal-en.png": "32c29752664ab4607de82b08d1df99c9f529d795888937765d4134095dc80417",
+    "native/cold-terminal-refusal-fr-accessibility.json": "e61006febae91cf29561030cc4504201f94072e411d41d0020f4e06f0fb9bbb9",
+    "native/cold-terminal-refusal-fr.png": "b028ecb80c58ff412e5387be8c09a25e80c8216528cee4b522468002998e8628",
+    "native/report.json": "e47b348c04f3330f1ebfe7e5cb21d2efb89f94e677e1b9bf6b6ec3379a26d4ac",
+    "native/requested-steps.json": "2aeb14906f86146e39b29b266e2eae5ff083d5152f604c0ce8fdf27868689773",
+    "native/warm-final-cold-state.json": "44caee1d5ca4f845305b5a0aed0d3c603f3e943fd7c4817ac7cdbf8fb991bb65",
+    "observer-build-receipt.json": "2d67f6c6f21a8187051a30047a0050ff919923519a60e7db2f0e6ca535e157b1",
+    "observer-install.txt": "effc57245c8e23019c5c31ab90e0a7311133f839d9ab95f8e82f0d5deecc9187",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "production-after/report.json": "345b31f89e3c17d13ac6a051e39e9eeb7398b2b0145c872161c1606bfbb81c57",
+    "production-after-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "production-before/report.json": "a167095de141c2951d59892744ab6a425c8787ca4b9cf660da66b348e367595d",
+    "production-before-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "requested-steps.json": "e78c51a41fe37e5cfe3dcb4e38f0e20bcb3402d2750b63ae3770c0f156cb7820",
+    "source-snapshot.json": "f436ef1ba01f89063722cfb1866224b014a7e608e938c54c90870d299f7e908c"
+  }
+}

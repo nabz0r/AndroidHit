@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T23:29:25.621215+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "house-inspect",
+  "expected_version": "1.23.0-rc2",
+  "expected_code": 31,
+  "apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "observer_sha256": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "8a0b50c4-4148-478b-90b7-a3bdd42cede6",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. Production UI availability and refusal paths may be observed. No account sign-in, real-money purchase, ad configuration change or injected provider callback.",
+  "installed_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "house-inspect",
+    "runToken": "8a0b50c4-4148-478b-90b7-a3bdd42cede6",
+    "processId": 3874,
+    "checkCount": 8,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 2,
+    "actions": [
+      {
+        "reason": "home_room_quick",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 53065,
+        "label": "Maison",
+        "resourceId": "com.androidhit.lumadrift:id/home_room_quick",
+        "bounds": [
+          66,
+          1878,
+          286,
+          2104
+        ]
+      },
+      {
+        "reason": "Décorer",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 55544,
+        "label": "Décorer",
+        "bounds": [
+          767,
+          1734,
+          1005,
+          2019
+        ]
+      }
+    ],
+    "captures": [
+      "house",
+      "decorating"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, real-money purchase, ad configuration change, injected ad-provider callback or publication. Ad UI availability/refusal observation only. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 13.471,
+  "evidence_sha256": {
+    "battle-observer.apk": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "83cb2fc28e7a0afd0894e04845d55d8de9726566e6de80af610f41404ab43fc9",
+    "native/after.json": "cd3f37251be0a2e7c87021e3c15731f1fdf8df45cf3557569392e67f56e8bb17",
+    "native/before.json": "cd3f37251be0a2e7c87021e3c15731f1fdf8df45cf3557569392e67f56e8bb17",
+    "native/decor-state.json": "cd3f37251be0a2e7c87021e3c15731f1fdf8df45cf3557569392e67f56e8bb17",
+    "native/decorating-accessibility.json": "c3cae03d6ccfba7138a008baee8e5634689ad5afa49a8fd4cfbf55b7d78f8bb8",
+    "native/decorating.png": "ff7586067397739746530ed528ab83bde3fbfd936f97139c90f779575d913a87",
+    "native/house-accessibility.json": "bc9cfba98a3540f0b72f9231473a3921d3264ac2904560dc649eb4f31b811421",
+    "native/house.png": "60272baf48c8fe3c4584f77fbd19c3b28e96fac9a34eab1f5157153283c11592",
+    "native/report.json": "a3f4ae569aeac40942035051a8016e74d2fc37292fa26e4c14e4d6e6c766c4a9",
+    "native/requested-steps.json": "0ebe7b57f3f76fab707cd7461119cc35f6547c5e2d8f84e02155364101da67bf",
+    "observer-install.txt": "89b7d0b825a3ec3b56c35b3289b4589f1bd46f23b23f430aa401672642ae994b",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "a508ab7ef02f385dbda4866dcf4e792aac12c3a554ae496c118e8f7aff97fcd8",
+    "source-snapshot.json": "ff3806a81e3fcae44b4045c199a4c5fa6c06a4e3668608dad10f65b528517927"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "status": "PASS_WITH_EXPLICIT_COVERAGE_LIMITS",
+  "created_utc": "2026-10-30T23:48:55.473666+00:00",
+  "scope": "SDK native Lab baseline E rc2 only; current unbuilt source fixes are not tested. Scripted UI execution is not human comprehension.",
+  "app_code_commit": "5cc870701c8039e664d1c00a90d0586c3d00521c",
+  "app_inputs_count": 501,
+  "lab_sha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+  "version": "1.23.0-sandbox-rc2",
+  "code": 31,
+  "serial": "emulator-5634",
+  "phases": [
+    {
+      "phase": "01-discovery",
+      "passed": true,
+      "checks": 27,
+      "touches": 8,
+      "captures": [
+        "first-lab-entry",
+        "firstlight-new",
+        "firstlight-solved",
+        "adventure-fr",
+        "gold-shop-fr",
+        "commerce-wallet-fr"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/01-discovery/report.json",
+      "sha256": "476e81b2220a5c9b9aca77a74f094d61c49c5afa4420a0e1eee0d49d647ab381",
+      "error": null
+    },
+    {
+      "phase": "02-cancel-pending",
+      "passed": true,
+      "checks": 27,
+      "touches": 6,
+      "captures": [
+        "simulate-choices-fr",
+        "pending-purchase-fr"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/02-cancel-pending/report.json",
+      "sha256": "7a11bce2c921a2714daf259329c0d460e06a88cf0660c044932030d77fc9c115",
+      "error": null
+    },
+    {
+      "phase": "03-restart-complete-ads",
+      "passed": false,
+      "checks": 40,
+      "touches": 10,
+      "captures": [
+        "purchase-choice-en",
+        "wallet-credit-en",
+        "failure"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/03-restart-complete-ads/report.json",
+      "sha256": "95537d9c449df414af4496ef1a01187d842ae25f5d3af32d9360742773a7c02a",
+      "error": "Native smoke failed"
+    },
+    {
+      "phase": "04-ads-gates",
+      "passed": true,
+      "checks": 33,
+      "touches": 9,
+      "captures": [
+        "persisted-credit-en",
+        "ad-minor-refusal-en",
+        "ad-load-result-en"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/04-ads-gates/report.json",
+      "sha256": "c98c044610977270c51110fcc813e8cbbdb5054fe440b86aa9913b9371ee5e15",
+      "error": null
+    },
+    {
+      "phase": "04b-ad-sdk-consent",
+      "passed": true,
+      "checks": 24,
+      "touches": 4,
+      "captures": [
+        "test-ump-before-choice",
+        "test-ump-refused",
+        "test-ad-sdk-result"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/04b-ad-sdk-consent/report.json",
+      "sha256": "f4ad4f14787088650d776d286125018fd127dfeb3d3750d935caf88cbd108206",
+      "error": null
+    },
+    {
+      "phase": "05-energy-first-refill",
+      "passed": false,
+      "checks": 317,
+      "touches": 93,
+      "captures": [
+        "failure"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/05-energy-first-refill/report.json",
+      "sha256": "3add85812240cc1939ae5a945bd0e6d9208cb10ae72bc735f39dc65c7cef8d23",
+      "error": "Native Lab UI phase failed"
+    },
+    {
+      "phase": "05b-energy-xp-actual",
+      "passed": false,
+      "checks": 101,
+      "touches": 28,
+      "captures": [
+        "xp-and-energy-before-u10",
+        "first-u10-victory-xp35",
+        "u11-start-energy9",
+        "u11-exit-energy-still9",
+        "u11-retry-energy8",
+        "u11-exhausted-energy0",
+        "failure"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/05b-energy-xp-actual/report.json",
+      "sha256": "7332932045e852c0e6396014aab4bcd65487651b48d794095b5f22a4e730651e",
+      "error": "Native Lab UI phase failed"
+    },
+    {
+      "phase": "05c-energy-refill-replay",
+      "passed": true,
+      "checks": 73,
+      "touches": 13,
+      "captures": [
+        "energy-zero-menu-hud",
+        "energy-zero-offer-fr",
+        "energy-confirmation-fr",
+        "energy-refilled-fr",
+        "replay-u1-zero-xp-zero-coins",
+        "energy-refilled-menu-hud"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/05c-energy-refill-replay/report.json",
+      "sha256": "dabf53ed124846a4bf28c575e82007950fe2abb8918082767ec2285c5af67033",
+      "error": null
+    },
+    {
+      "phase": "06-energy-exhaust-gold",
+      "passed": true,
+      "checks": 601,
+      "touches": 260,
+      "captures": [
+        "refill-en-cycle-1",
+        "refill-en-cycle-9",
+        "zero-gold-zero-energy-en",
+        "insufficient-gold-refusal-en"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/06-energy-exhaust-gold/report.json",
+      "sha256": "140f4b5fb332df56b2e172ff4ddc0dc6fae537d9e67d9621c2653bc4dc05186b",
+      "error": null
+    },
+    {
+      "phase": "07-cold-persistence-optout",
+      "passed": true,
+      "checks": 44,
+      "touches": 10,
+      "captures": [
+        "cold-insufficient-gold-fr",
+        "optional-advertising-disabled-fr",
+        "final-home-fr"
+      ],
+      "production_preferences_identical": true,
+      "report": "docs/validation/playtest-2026-10-31/native-lab/07-cold-persistence-optout/report.json",
+      "sha256": "a4afda131c641c57c15f798a24bc2798b37bc7c7815fca276a1a409dd6170655",
+      "error": null
+    }
+  ],
+  "totals": {
+    "programs": 10,
+    "completed_pass": 7,
+    "preserved_stops": 3,
+    "executed_assertions": 1287,
+    "actual_touches": 441,
+    "original_pngs": 38
+  },
+  "all_production_preferences_identical": true,
+  "findings": {
+    "simulation_pending_cancel_and_idempotency": true,
+    "minor_ad_refusal": true,
+    "official_publisher_test_ump_seen": true,
+    "ump_do_not_consent_selected": true,
+    "explicit_test_ad_loaded_ready": true,
+    "coins_reward_actual_view_not_tested": true,
+    "u1_u10_energy_free_observed": true,
+    "u11_start_10_to_9": true,
+    "one_exit_keeps_energy9": true,
+    "confirmed_retry_9_to_8": true,
+    "zero_energy_reached_real_restarts": true,
+    "energy_refill_cancel_preserves_gold_and_coins": true,
+    "ten_refills_total_cost500_gold_for100_energy": true,
+    "insufficient_gold_refusal_fr_en_cold_restored": true,
+    "coins_final": 2630,
+    "xp_first_u10_315_to_350": true,
+    "xp_replay_unchanged350": true,
+    "ad_opt_in_disabled_at_end": true
+  },
+  "limits": [
+    "No actual ad impression/completion/early-close reward verified; load-ready only.",
+    "No native ten-minute regeneration tick observed; displayed countdown and debit/refill only.",
+    "Lab home decoration/wardrobe/equipment not exercised in this stopped scope; separate production QA is owned by root.",
+    "No paid production checkout, external sign-in, real ads or purchase; no preference/progress/currency injection.",
+    "U10 map node was obscured by the minimap in its framed position; selected-level Play remained accessible.",
+    "Three preserved stops: incorrect Age range test selector; covered U10 node in map harness; legacy Back helper alternated pause/resume. Later programs use observed controls."
+  ],
+  "cleanup": "cleanup.json"
+}

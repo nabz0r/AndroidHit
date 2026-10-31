@@ -1,0 +1,754 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-31T00:56:49.430130+00:00",
+  "serial": "emulator-5634",
+  "avd": "Luma123-RC2-Fresh-QA",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "phase": "d05-restart-drain-refusal",
+  "expected_version": "1.24.0-sandbox-rc2",
+  "expected_code": 33,
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "observer_sha256": "afafb757244296fbe2fbfcfe9a5fe1b3ce48e4aaf2734b3ee1ca499c5ee3ebd5",
+  "observer_build_receipt_sha256": "2d67f6c6f21a8187051a30047a0050ff919923519a60e7db2f0e6ca535e157b1",
+  "production_apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "previous_lab_apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "creation_receipt_sha256": "1cca407cfd82d4078854c912a6b22af1e1293e743e9d88a227757105a29daf7e",
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "first_install": false,
+  "candidate_manifest": "docs/validation/v1.24/candidate-d/candidate.json",
+  "candidate_manifest_sha256": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+  "frozen_source_count": 522,
+  "run_token": "fa272dd4-9293-433e-abba-0277946314df",
+  "scope": "Pinned 5634 task emulator only. Snapshot persistent production preferences before and after Lab and refuse any change. Preserve old sandbox preferences byte-for-byte before first 1.24 Activity. Actual SDK touchscreen Lab simulations, optional test-ad UI, earned campaign gestures, cosmetics; no direct grants, clears, preference writes, injected fixtures/progress, external identity or real commerce.",
+  "original_configuration": {
+    "size": "Physical size: 1080x2400",
+    "font_scale": "1.0"
+  },
+  "installed_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420",
+    "page_size": "16384",
+    "font_scale": "1.0"
+  },
+  "native": {
+    "passed": true,
+    "phase": "d05-restart-drain-refusal",
+    "runToken": "fa272dd4-9293-433e-abba-0277946314df",
+    "processId": 6255,
+    "checkCount": 90,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact separate Lab package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Bounded actual control list"
+      },
+      {
+        "passed": true,
+        "message": "Actual control visible pause_restart_confirm"
+      },
+      {
+        "passed": true,
+        "message": "Actual48dp physical control pause_restart_confirm"
+      },
+      {
+        "passed": true,
+        "message": "Actual control visible pause_restart_cancel"
+      },
+      {
+        "passed": true,
+        "message": "Actual48dp physical control pause_restart_cancel"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged run"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged history"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Battle remains exactly unchanged: before-cancel"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Energy drain uses only a real active eligible campaign attempt"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Actual explicit restart creates exactly one new run identity"
+      },
+      {
+        "passed": true,
+        "message": "Actual energy debit confirmed against committed board run"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one energy debited, accounting only for actual elapsed refill ticks"
+      },
+      {
+        "passed": true,
+        "message": "Read actual durable energy before bounded real restart"
+      },
+      {
+        "passed": true,
+        "message": "Real bounded eligible restarts exhaust current session energy"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 0"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable battle codec identity is supported"
+      },
+      {
+        "passed": true,
+        "message": "Actual Charge and team remain bounded"
+      },
+      {
+        "passed": true,
+        "message": "Levelled metadata has one entry per actual companion"
+      },
+      {
+        "passed": true,
+        "message": "Actual captured battle policy = v124_1"
+      },
+      {
+        "passed": true,
+        "message": "Actual talent Charge = 3"
+      },
+      {
+        "passed": true,
+        "message": "Actual talent usage stays inside its captured capacity for slot 0"
+      },
+      {
+        "passed": true,
+        "message": "Actual slot capacity = 1"
+      },
+      {
+        "passed": true,
+        "message": "Actual slot uses remaining = 1"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 0"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches .*Not enough LumaGold. No new debit.*"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Actual durable session energy = 0"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      }
+    ],
+    "touchCount": 24,
+    "actions": [
+      {
+        "reason": "journey_continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1497049,
+        "label": "Resume  \u00b7  Level 11",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "\u21bb\\s*Restart",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1497582,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "pause_restart_cancel",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1499615,
+        "label": "Cancel",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_cancel",
+        "bounds": [
+          99,
+          1494,
+          980,
+          1660
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1500149,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1500699,
+        "label": "Restart \u00b7 1 Energy",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_confirm",
+        "bounds": [
+          99,
+          1294,
+          980,
+          1461
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1501232,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1501782,
+        "label": "Restart \u00b7 1 Energy",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_confirm",
+        "bounds": [
+          99,
+          1294,
+          980,
+          1461
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1502316,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1502865,
+        "label": "Restart \u00b7 1 Energy",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_confirm",
+        "bounds": [
+          99,
+          1294,
+          980,
+          1461
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1503400,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1503950,
+        "label": "Restart \u00b7 1 Energy",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_confirm",
+        "bounds": [
+          99,
+          1294,
+          980,
+          1461
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1504482,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1505033,
+        "label": "Restart \u00b7 1 Energy",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_confirm",
+        "bounds": [
+          99,
+          1294,
+          980,
+          1461
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1505566,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1506116,
+        "label": "Restart \u00b7 1 Energy",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_confirm",
+        "bounds": [
+          99,
+          1294,
+          980,
+          1461
+        ]
+      },
+      {
+        "reason": "request-real-paid-attempt-restart-7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1506649,
+        "label": "\u21bb  Restart",
+        "bounds": [
+          393,
+          1723,
+          686,
+          1977
+        ]
+      },
+      {
+        "reason": "confirm-real-one-energy-restart-7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1507199,
+        "label": "Restart \u00b7 1 Energy",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_restart_confirm",
+        "bounds": [
+          99,
+          1294,
+          980,
+          1461
+        ]
+      },
+      {
+        "reason": "open-real-pause-to-leave",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1507750,
+        "label": "Pause",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/play_pause",
+        "bounds": [
+          55,
+          177,
+          188,
+          310
+        ]
+      },
+      {
+        "reason": "leave-real-level-with-save",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1508315,
+        "label": "Leave level",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/pause_exit",
+        "bounds": [
+          556,
+          1422,
+          980,
+          1588
+        ]
+      },
+      {
+        "reason": "menu_wallet_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1508882,
+        "label": "Energy: 0 / 10. Energy 0/10",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/menu_wallet_2",
+        "bounds": [
+          720,
+          150,
+          1035,
+          316
+        ]
+      },
+      {
+        "reason": "energy_buy",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1510816,
+        "label": "+10 energy \u00b7 50 LumaGold",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/energy_buy",
+        "bounds": [
+          66,
+          1903,
+          1013,
+          2063
+        ]
+      },
+      {
+        "reason": "Cancel",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1511367,
+        "label": "Cancel",
+        "bounds": [
+          625,
+          1422,
+          869,
+          1712
+        ]
+      },
+      {
+        "reason": "energy_buy",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1513399,
+        "label": "+10 energy \u00b7 50 LumaGold",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/energy_buy",
+        "bounds": [
+          66,
+          1903,
+          1013,
+          2063
+        ]
+      },
+      {
+        "reason": "Yes",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 1513983,
+        "label": "Yes",
+        "bounds": [
+          216,
+          1422,
+          459,
+          1712
+        ]
+      }
+    ],
+    "captures": [
+      "restart-confirm-cost",
+      "warm-energy-zero-gold-zero",
+      "warm-refill-cancelled",
+      "warm-insufficient-gold-terminal"
+    ],
+    "package": "com.androidhit.lumadrift.sandbox",
+    "scope": "Actual SDK touchscreen input on the separate Lab package; read-only preferences. Explicit Lab simulation choices, test ads, earned campaign exits and local cosmetic transactions only. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, production ads or real purchases. Frozen authored certificates script real touches only."
+  },
+  "production_preferences_exactly_preserved": true,
+  "production_preference_file_count": 5,
+  "elapsed_seconds": 27.146,
+  "evidence_sha256": {
+    "battle-observer.apk": "afafb757244296fbe2fbfcfe9a5fe1b3ce48e4aaf2734b3ee1ca499c5ee3ebd5",
+    "candidate-manifest.json": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "1cca407cfd82d4078854c912a6b22af1e1293e743e9d88a227757105a29daf7e",
+    "instrumentation.txt": "54e15d77f878eb8fd4dbb59abd003cdcae34c937b2e66b58d550df14ccdf0858",
+    "native/after.json": "44caee1d5ca4f845305b5a0aed0d3c603f3e943fd7c4817ac7cdbf8fb991bb65",
+    "native/before.json": "99ffded4e0fdbdcd83a899f8da5f2b2282992edbdd355c43600d87257daaf938",
+    "native/cancel-preserves-run.json": "99ffded4e0fdbdcd83a899f8da5f2b2282992edbdd355c43600d87257daaf938",
+    "native/genuine-energy-restarts.json": "ded2a63fe23b5093aa07910b1d1b1b045fc6ada710d6324e045fae0d2ec53af7",
+    "native/report.json": "108b11de9de130d2ede17d1d0e09c0188fe0354dce00b9f212d9abbfd1d2e932",
+    "native/requested-steps.json": "8ae43b278512472331569a0090649633bba3e030ce74063bc61f712474654eda",
+    "native/restart-confirm-cost-accessibility.json": "12b1b858b84260c4f671b1dd297d16136d2294343e6c64ba79b644d897ed593c",
+    "native/restart-confirm-cost.png": "68f9d4f5365742e5aac05d34ba1eb971297b310221abf3a35bfd7ecb1e77635e",
+    "native/warm-energy-zero-gold-zero-accessibility.json": "8b9137f9587133ab16ccb5fe50fb42172cb85abc51d86e9998126d7cc5b5df65",
+    "native/warm-energy-zero-gold-zero.png": "ec71cd736b7fa144b994321bd8c03c74680c20e035d7fda91929ce455b8c461f",
+    "native/warm-final-energy-refusal.json": "44caee1d5ca4f845305b5a0aed0d3c603f3e943fd7c4817ac7cdbf8fb991bb65",
+    "native/warm-insufficient-gold-terminal-accessibility.json": "8b9137f9587133ab16ccb5fe50fb42172cb85abc51d86e9998126d7cc5b5df65",
+    "native/warm-insufficient-gold-terminal.png": "bba29a19793bb67e1406c8c47056a3e08bbcaf8050e19e1f516ec5e212abcf84",
+    "native/warm-refill-cancelled-accessibility.json": "8b9137f9587133ab16ccb5fe50fb42172cb85abc51d86e9998126d7cc5b5df65",
+    "native/warm-refill-cancelled.png": "547e860cb56801bcceef458a32f7628ea30d4e446dcbc86d02b9f9b49267a811",
+    "observer-build-receipt.json": "2d67f6c6f21a8187051a30047a0050ff919923519a60e7db2f0e6ca535e157b1",
+    "observer-install.txt": "974fb3aabb4c4ef07416c7767f9c861fbef88ac76f14cefc8cf0e917100f3c8e",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "production-after/report.json": "d49064b00b1a30f9b59c8dd65d5ba0d66b1a918f599218e5c76ffdaf8f0353aa",
+    "production-after-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "production-before/report.json": "ef85e1c4815ca9ecf56d3824d30b30a8dac84f570f89df6d3fe0d1043fddef9f",
+    "production-before-instrumentation.txt": "e15f13aa9319121f2252806ce0e999c19494e1d4ab2c4fa3c172ea77ba03a32c",
+    "requested-steps.json": "d4d3bb664d27e631f0e73f5c580611a06d845e443153c25ec9b1f973b75658b7",
+    "source-snapshot.json": "f436ef1ba01f89063722cfb1866224b014a7e608e938c54c90870d299f7e908c"
+  }
+}

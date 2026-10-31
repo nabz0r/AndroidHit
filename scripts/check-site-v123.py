@@ -44,6 +44,11 @@ def links(page,base,structure):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--structure-only',action='store_true');parser.add_argument('--pending',action='store_true');args=parser.parse_args()
     text=(PUBLIC/'index.html').read_text();page=Page();page.feed(text);checks=0
+    if page.edition in ('1.24','1.24-pending'):
+        assert args.structure_only,'Use check-site-v124.py for current1.24 release evidence;1.23 receipts remain historical'
+        import importlib.util
+        spec=importlib.util.spec_from_file_location('site_v124',ROOT/'scripts/check-site-v124.py');current=importlib.util.module_from_spec(spec);spec.loader.exec_module(current)
+        print(json.dumps(current.check(PUBLIC/'index.html',True)));return
     assert page.edition in ('1.23','1.23-pending') and page.languages=={'fr','en'};checks+=2
     if args.pending:assert page.edition=='1.23-pending';checks+=1
     for identifier in ('main','hero-title','little-world','progression','simulation','screens','companions','sound','cognitive-lab','download'):assert identifier in page.ids;checks+=1

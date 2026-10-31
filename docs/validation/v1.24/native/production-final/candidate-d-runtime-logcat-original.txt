@@ -1,0 +1,1063 @@
+--------- beginning of main
+10-31 01:53:22.308  6899  6899 I idhit.lumadrift: Using CollectorTypeCMC GC.
+10-31 01:53:22.310  6899  6899 E idhit.lumadrift: Not starting debugger since process cannot load the jdwp agent.
+10-31 01:53:22.316  6899  6899 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+--------- beginning of system
+10-31 01:53:22.334  6899  6899 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.androidhit.lumadrift]: arm64-v8a, null instrumentation[com.androidhit.lumadrift.v123test]: null, null
+10-31 01:53:22.339  6899  6899 W idhit.lumadrift: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk*2267564170])
+10-31 01:53:22.355  6899  6899 E idhit.lumadrift: Unable to resolve path '/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk': No such file or directory
+10-31 01:53:22.355  6899  6899 W idhit.lumadrift: ClassLoaderContext classpath element mismatch. expected=/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk, found=/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk (PCL[/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk*2267564170] | PCL[/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk*2267564170])
+10-31 01:53:22.355  6899  6899 I idhit.lumadrift: Failed to add image file: Class loader contexts don't match: PCL[/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk*2267564170]
+10-31 01:53:22.355  6899  6899 D nativeloader: Configuring clns-9 for other apk /data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk:/data/app/~~2pUw4-e38xRJwwGqM--N5A==/com.androidhit.lumadrift-Fl0kq3KmHK29Q-cTCcGriQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/lib/arm64:/data/app/~~2pUw4-e38xRJwwGqM--N5A==/com.androidhit.lumadrift-Fl0kq3KmHK29Q-cTCcGriQ==/lib/arm64:/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk!/lib/arm64-v8a:/data/app/~~2pUw4-e38xRJwwGqM--N5A==/com.androidhit.lumadrift-Fl0kq3KmHK29Q-cTCcGriQ==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.androidhit.lumadrift
+10-31 01:53:22.360  6899  6899 I idhit.lumadrift: AssetManager2(0xb4007548a9caaf18) locale list changing from [] to [en-US]
+10-31 01:53:22.372  6899  6899 V GraphicsEnvironment: Currently set values for:
+10-31 01:53:22.372  6899  6899 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-31 01:53:22.372  6899  6899 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-31 01:53:22.372  6899  6899 V GraphicsEnvironment: com.androidhit.lumadrift is not listed in per-application setting
+10-31 01:53:22.373  6899  6899 V GraphicsEnvironment: ANGLE allowlist from config: com.dreamgames.royalmatch com.dts.freefiremax com.dxx.firenow com.gramgames.mergedragons com.ludo.king com.mojang.minecraftpe com.my.defense com.nintendo.zaka com.os.airforce com.playrix.fishdomdd.gplay io.teslatech.callbreak jp.konami.prospia net.peakgames.toonblast
+10-31 01:53:22.373  6899  6899 V GraphicsEnvironment: com.androidhit.lumadrift is not listed in ANGLE allowlist or settings, returning default
+10-31 01:53:22.373  6899  6899 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-31 01:53:22.375  6899  6899 W idhit.lumadrift: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk*2267564170];PCL[/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk*2267564170:/data/app/~~2pUw4-e38xRJwwGqM--N5A==/com.androidhit.lumadrift-Fl0kq3KmHK29Q-cTCcGriQ==/base.apk*3652815525])
+10-31 01:53:22.376  6899  6899 E idhit.lumadrift: Unable to resolve path '/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk': No such file or directory
+10-31 01:53:22.376  6899  6899 W idhit.lumadrift: ClassLoaderContext classpath element mismatch. expected=/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk, found=/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk (PCL[/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk*2267564170] | PCL[/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk*2267564170];PCL[/data/app/~~Dldc7B05xA3IX_T1e6zyqA==/com.androidhit.lumadrift.v123test-c9Ck2NYjCMtDhQHn-4lSmA==/base.apk*2267564170:/data/app/~~2pUw4-e38xRJwwGqM--N5A==/com.androidhit.lumadrift-Fl0kq3KmHK29Q-cTCcGriQ==/base.apk*3652815525])
+10-31 01:53:22.376  6899  6899 I idhit.lumadrift: Failed to add image file: Class loader contexts don't match: PCL[/data/app/~~bJWPGrc7PGHhKLq4QY-rdw==/com.androidhit.lumadrift.v123test-6nJyGyp-6PlNXy3UT0uG2g==/base.apk*2267564170]
+10-31 01:53:22.376  6899  6899 I incfs   : Initial API level of the device: 36
+10-31 01:53:22.376  6899  6899 W libc    : Access denied finding property "ro.incremental.enable"
+10-31 01:53:22.376  6899  6899 I incfs   : ro.incremental.enable: on
+10-31 01:53:22.376  6899  6899 I incfs   : IncFs_Features: v2
+10-31 01:53:22.376  6899  6899 I incfs-mounts: [incfs] Loaded incremental-fs mount info: 1 instances, 2 mount points
+10-31 01:53:22.376  6899  6899 I idhit.lumadrift: AssetManager2(0xb4007548a9caf6f8) locale list changing from [] to [en-US]
+10-31 01:53:22.404  6899  6899 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+10-31 01:53:22.416  6899  6912 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-31 01:53:22.424  6899  6914 I UiAutomation: Initialized for user 0 on display 0
+10-31 01:53:22.430  6899  6915 V UiAutomation: Init UiAutomation@ee50c4b[id=6, displayId=0, flags=0]
+10-31 01:53:23.299  6899  6899 I idhit.lumadrift: Waiting for a blocking GC Alloc
+10-31 01:53:23.312  6899  6899 I idhit.lumadrift: WaitForGcToComplete blocked Alloc on Background for 12.870ms
+10-31 01:53:23.690  6899  6899 I Choreographer: Skipped 75 frames!  The application may be doing too much work on its main thread.
+10-31 01:53:23.692  6899  6920 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-31 01:53:23.692  6899  6899 I idhit.lumadrift: AssetManager2(0xb4007548a9caddf8) locale list changing from [] to [en-US]
+10-31 01:53:23.726  6899  6920 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+10-31 01:53:23.726  6899  6920 I EGL_emulation: Opening libGLESv2_emulation.so
+10-31 01:53:23.729  6899  6920 W HWUI    : Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+10-31 01:53:23.729  6899  6920 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-31 01:53:23.739  6899  6923 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.743  6899  6925 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.751  6899  6925 I ApexCodecsLazy: Failed to load libcom.android.media.swcodec.apexcodecs.so: dlopen failed: library "libcom.android.media.swcodec.apexcodecs.so" not found
+10-31 01:53:23.751  6899  6925 I Codec2Client: Available Codec2 services: "default" "software"
+10-31 01:53:23.751  6899  6924 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.754  6899  6927 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.755  6899  6925 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.755  6899  6927 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.758  6899  6925 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.759  6899  6927 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.759  6899  6925 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.759  6899  6927 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.764  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:23.765  6899  6925 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.765  6899  6925 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.765  6899  6925 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.765  6899  6925 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.765  6899  6925 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.765  6899  6925 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.765  6899  6925 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.766  6899  6925 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.766  6899  6925 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.766  6899  6925 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.766  6899  6925 D CCodecConfig: }
+10-31 01:53:23.768  6899  6927 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.769  6899  6927 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.769  6899  6923 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.769  6899  6925 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.769  6899  6925 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.769  6899  6925 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.769  6899  6925 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.769  6899  6925 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.770  6899  6925 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.770  6899  6925 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.770  6899  6925 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.770  6899  6925 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.770  6899  6925 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.770  6899  6925 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.770  6899  6925 D CCodec  : }
+10-31 01:53:23.770  6899  6925 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.770  6899  6925 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.770  6899  6925 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.770  6899  6925 D CCodec  : }
+10-31 01:53:23.770  6899  6925 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.770  6899  6925 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.770  6899  6925 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.770  6899  6925 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.770  6899  6925 D C2Store : Using DMABUF Heaps
+10-31 01:53:23.771  6899  6925 D CCodecBufferChannel: [c2.android.raw.decoder#633] Created input block pool with allocatorID 16 => poolID 17 - OK (0)
+10-31 01:53:23.771  6899  6925 I CCodecBufferChannel: [c2.android.raw.decoder#633] Created output block pool with allocatorID 16 => poolID 177 - OK
+10-31 01:53:23.771  6899  6925 D CCodecBufferChannel: [c2.android.raw.decoder#633] Configured output block pool ids 177 => OK
+10-31 01:53:23.771  6899  6925 I DMABUFHEAPS: Using DMA-BUF heap named: system
+10-31 01:53:23.771  6899  6927 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.771  6899  6927 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.771  6899  6927 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.771  6899  6927 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.771  6899  6927 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.771  6899  6927 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.771  6899  6927 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.771  6899  6927 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.771  6899  6927 D CCodecConfig: }
+10-31 01:53:23.776  6899  6924 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.777  6899  6927 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.777  6899  6927 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.777  6899  6927 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.777  6899  6927 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.777  6899  6927 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.777  6899  6927 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.777  6899  6927 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.777  6899  6927 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.777  6899  6927 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.777  6899  6927 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.777  6899  6927 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.777  6899  6927 D CCodec  : }
+10-31 01:53:23.777  6899  6927 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.777  6899  6927 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.777  6899  6927 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.777  6899  6927 D CCodec  : }
+10-31 01:53:23.777  6899  6927 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.777  6899  6927 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.781  6899  6927 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.781  6899  6927 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.786  6899  6927 D CCodecBufferChannel: [c2.android.raw.decoder#615] Created input block pool with allocatorID 16 => poolID 18 - OK (0)
+10-31 01:53:23.786  6899  6927 I CCodecBufferChannel: [c2.android.raw.decoder#615] Created output block pool with allocatorID 16 => poolID 178 - OK
+10-31 01:53:23.786  6899  6927 D CCodecBufferChannel: [c2.android.raw.decoder#615] Configured output block pool ids 178 => OK
+10-31 01:53:23.795  6899  6925 D CCodecBufferChannel: [c2.android.raw.decoder#633] MediaCodec discarded an unknown buffer
+10-31 01:53:23.795  6899  6925 D CCodecBufferChannel: [c2.android.raw.decoder#633] MediaCodec discarded an unknown buffer
+10-31 01:53:23.795  6899  6925 D CCodecBufferChannel: [c2.android.raw.decoder#633] MediaCodec discarded an unknown buffer
+10-31 01:53:23.795  6899  6899 D CompatChangeReporter: Compat change id reported: 377864165; UID 10213; state: ENABLED
+10-31 01:53:23.795  6899  6927 D CCodecBufferChannel: [c2.android.raw.decoder#615] MediaCodec discarded an unknown buffer
+10-31 01:53:23.795  6899  6927 D CCodecBufferChannel: [c2.android.raw.decoder#615] MediaCodec discarded an unknown buffer
+10-31 01:53:23.795  6899  6927 D CCodecBufferChannel: [c2.android.raw.decoder#615] MediaCodec discarded an unknown buffer
+10-31 01:53:23.795  6899  6925 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.796  6899  6899 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+10-31 01:53:23.797  6899  6927 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.807  6899  6924 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.808  6899  6935 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.810  6899  6935 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.810  6899  6935 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.810  6899  6935 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.812  6899  6935 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.812  6899  6935 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.812  6899  6935 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.812  6899  6935 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.812  6899  6935 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.812  6899  6935 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.812  6899  6935 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.815  6899  6935 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.815  6899  6935 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.815  6899  6935 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.815  6899  6935 D CCodecConfig: }
+10-31 01:53:23.816  6899  6924 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.816  6899  6935 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.816  6899  6935 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.816  6899  6935 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.816  6899  6935 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.816  6899  6935 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.817  6899  6935 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.817  6899  6935 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.817  6899  6935 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.817  6899  6935 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.817  6899  6935 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.817  6899  6935 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.817  6899  6935 D CCodec  : }
+10-31 01:53:23.817  6899  6935 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.817  6899  6935 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.817  6899  6935 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.817  6899  6935 D CCodec  : }
+10-31 01:53:23.817  6899  6935 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.818  6899  6935 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.818  6899  6935 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.818  6899  6935 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.818  6899  6935 D CCodecBufferChannel: [c2.android.raw.decoder#912] Created input block pool with allocatorID 16 => poolID 19 - OK (0)
+10-31 01:53:23.821  6899  6899 W HWUI    : Unknown dataspace 0
+10-31 01:53:23.822  6899  6935 I CCodecBufferChannel: [c2.android.raw.decoder#912] Created output block pool with allocatorID 16 => poolID 180 - OK
+10-31 01:53:23.822  6899  6935 D CCodecBufferChannel: [c2.android.raw.decoder#912] Configured output block pool ids 180 => OK
+10-31 01:53:23.822  6899  6923 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.823  6899  6940 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.824  6899  6940 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.825  6899  6940 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.825  6899  6940 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.826  6899  6940 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.827  6899  6940 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.827  6899  6940 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.827  6899  6940 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.827  6899  6940 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.827  6899  6940 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.827  6899  6940 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.827  6899  6940 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.827  6899  6940 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.827  6899  6940 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.827  6899  6940 D CCodecConfig: }
+10-31 01:53:23.827  6899  6935 D CCodecBufferChannel: [c2.android.raw.decoder#912] MediaCodec discarded an unknown buffer
+10-31 01:53:23.827  6899  6935 D CCodecBufferChannel: [c2.android.raw.decoder#912] MediaCodec discarded an unknown buffer
+10-31 01:53:23.827  6899  6935 D CCodecBufferChannel: [c2.android.raw.decoder#912] MediaCodec discarded an unknown buffer
+10-31 01:53:23.832  6899  6923 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.832  6899  6940 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.833  6899  6940 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.833  6899  6940 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.833  6899  6940 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.833  6899  6940 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.833  6899  6940 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.833  6899  6940 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.834  6899  6940 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.834  6899  6940 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.834  6899  6940 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.834  6899  6940 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.834  6899  6940 D CCodec  : }
+10-31 01:53:23.834  6899  6940 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.834  6899  6940 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.834  6899  6940 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.834  6899  6940 D CCodec  : }
+10-31 01:53:23.834  6899  6940 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.834  6899  6940 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.834  6899  6940 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.834  6899  6940 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.834  6899  6940 D CCodecBufferChannel: [c2.android.raw.decoder#617] Created input block pool with allocatorID 16 => poolID 20 - OK (0)
+10-31 01:53:23.834  6899  6942 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.837  6899  6940 I CCodecBufferChannel: [c2.android.raw.decoder#617] Created output block pool with allocatorID 16 => poolID 182 - OK
+10-31 01:53:23.839  6899  6940 D CCodecBufferChannel: [c2.android.raw.decoder#617] Configured output block pool ids 182 => OK
+10-31 01:53:23.869  6899  6924 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.871  6899  6940 D CCodecBufferChannel: [c2.android.raw.decoder#617] MediaCodec discarded an unknown buffer
+10-31 01:53:23.871  6899  6940 D CCodecBufferChannel: [c2.android.raw.decoder#617] MediaCodec discarded an unknown buffer
+10-31 01:53:23.871  6899  6940 D CCodecBufferChannel: [c2.android.raw.decoder#617] MediaCodec discarded an unknown buffer
+10-31 01:53:23.872  6899  6946 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.874  6899  6940 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.883  6899  6946 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.884  6899  6946 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.891  6899  6923 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.891  6899  6950 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.891  6899  6946 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.891  6899  6946 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.891  6899  6946 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.891  6899  6946 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.891  6899  6946 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.891  6899  6946 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.891  6899  6946 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.891  6899  6946 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.892  6899  6946 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.892  6899  6946 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.892  6899  6946 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.892  6899  6946 D CCodecConfig: }
+10-31 01:53:23.892  6899  6950 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.893  6899  6924 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.893  6899  6946 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.893  6899  6946 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.893  6899  6946 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.893  6899  6946 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.893  6899  6946 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.893  6899  6946 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.893  6899  6946 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.894  6899  6946 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.894  6899  6946 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.894  6899  6946 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.894  6899  6946 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.894  6899  6946 D CCodec  : }
+10-31 01:53:23.894  6899  6946 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.894  6899  6946 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.894  6899  6946 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.894  6899  6946 D CCodec  : }
+10-31 01:53:23.894  6899  6946 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.894  6899  6946 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.894  6899  6950 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.894  6899  6950 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.894  6899  6950 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.894  6899  6946 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.894  6899  6946 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.895  6899  6950 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.895  6899  6950 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.895  6899  6950 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.895  6899  6950 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.895  6899  6950 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.895  6899  6950 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.896  6899  6946 D CCodecBufferChannel: [c2.android.raw.decoder#339] Created input block pool with allocatorID 16 => poolID 21 - OK (0)
+10-31 01:53:23.896  6899  6946 I CCodecBufferChannel: [c2.android.raw.decoder#339] Created output block pool with allocatorID 16 => poolID 185 - OK
+10-31 01:53:23.896  6899  6946 D CCodecBufferChannel: [c2.android.raw.decoder#339] Configured output block pool ids 185 => OK
+10-31 01:53:23.901  6899  6950 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.901  6899  6950 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.901  6899  6950 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.901  6899  6950 D CCodecConfig: }
+10-31 01:53:23.906  6899  6923 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.906  6899  6950 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.906  6899  6950 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.906  6899  6950 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.906  6899  6950 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.906  6899  6950 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.906  6899  6950 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.906  6899  6950 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.906  6899  6950 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.906  6899  6950 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.906  6899  6950 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.906  6899  6950 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.906  6899  6950 D CCodec  : }
+10-31 01:53:23.906  6899  6950 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.906  6899  6950 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.906  6899  6950 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.906  6899  6950 D CCodec  : }
+10-31 01:53:23.906  6899  6950 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.906  6899  6950 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.910  6899  6950 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.910  6899  6950 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.910  6899  6950 D CCodecBufferChannel: [c2.android.raw.decoder#617] Created input block pool with allocatorID 16 => poolID 22 - OK (0)
+10-31 01:53:23.911  6899  6950 I CCodecBufferChannel: [c2.android.raw.decoder#617] Created output block pool with allocatorID 16 => poolID 186 - OK
+10-31 01:53:23.911  6899  6950 D CCodecBufferChannel: [c2.android.raw.decoder#617] Configured output block pool ids 186 => OK
+10-31 01:53:23.914  6899  6950 D CCodecBufferChannel: [c2.android.raw.decoder#617] MediaCodec discarded an unknown buffer
+10-31 01:53:23.914  6899  6950 D CCodecBufferChannel: [c2.android.raw.decoder#617] MediaCodec discarded an unknown buffer
+10-31 01:53:23.915  6899  6946 D CCodecBufferChannel: [c2.android.raw.decoder#339] MediaCodec discarded an unknown buffer
+10-31 01:53:23.915  6899  6946 D CCodecBufferChannel: [c2.android.raw.decoder#339] MediaCodec discarded an unknown buffer
+10-31 01:53:23.915  6899  6946 D CCodecBufferChannel: [c2.android.raw.decoder#339] MediaCodec discarded an unknown buffer
+10-31 01:53:23.916  6899  6950 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.916  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:23.918  6899  6946 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.924  6899  6899 I LumaArt117: Sprite ready: key=pulse/icon/xp, pixels=411x415, decode=1, evictions=0, residentBytes=682260
+10-31 01:53:23.954  6899  6923 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.955  6899  6954 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.956  6899  6954 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.957  6899  6954 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.957  6899  6954 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.958  6899  6924 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.958  6899  6954 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.958  6899  6954 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.958  6899  6954 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.958  6899  6954 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.958  6899  6954 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.958  6899  6954 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.958  6899  6954 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.958  6899  6954 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.958  6899  6954 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.958  6899  6954 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.958  6899  6954 D CCodecConfig: }
+10-31 01:53:23.958  6899  6956 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.959  6899  6956 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.959  6899  6923 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.959  6899  6956 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.959  6899  6956 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.960  6899  6954 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.960  6899  6954 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.960  6899  6954 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.960  6899  6954 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.960  6899  6954 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.960  6899  6954 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.960  6899  6954 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.960  6899  6954 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.960  6899  6954 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.960  6899  6954 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.960  6899  6954 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.960  6899  6954 D CCodec  : }
+10-31 01:53:23.960  6899  6954 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.960  6899  6954 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.960  6899  6954 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.960  6899  6954 D CCodec  : }
+10-31 01:53:23.961  6899  6954 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.961  6899  6954 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.962  6899  6954 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.962  6899  6954 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.962  6899  6954 D CCodecBufferChannel: [c2.android.raw.decoder#664] Created input block pool with allocatorID 16 => poolID 23 - OK (0)
+10-31 01:53:23.963  6899  6956 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:23.963  6899  6954 I CCodecBufferChannel: [c2.android.raw.decoder#664] Created output block pool with allocatorID 16 => poolID 189 - OK
+10-31 01:53:23.963  6899  6954 D CCodecBufferChannel: [c2.android.raw.decoder#664] Configured output block pool ids 189 => OK
+10-31 01:53:23.963  6899  6956 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:23.963  6899  6956 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:23.964  6899  6956 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:23.964  6899  6956 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:23.964  6899  6956 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:23.964  6899  6956 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:23.964  6899  6956 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.964  6899  6956 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:23.964  6899  6956 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:23.964  6899  6956 D CCodecConfig: }
+10-31 01:53:23.964  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:23.964  6899  6924 E MediaCodec: Media Quality Service not found.
+10-31 01:53:23.964  6899  6956 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:23.964  6899  6956 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:23.964  6899  6956 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:23.964  6899  6956 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:23.964  6899  6956 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:23.965  6899  6956 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:23.965  6899  6956 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:23.965  6899  6956 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:23.965  6899  6956 D CCodec  : encoding statistics level = 0
+10-31 01:53:23.965  6899  6956 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:23.965  6899  6956 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.965  6899  6956 D CCodec  : }
+10-31 01:53:23.965  6899  6956 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:23.965  6899  6956 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:23.965  6899  6956 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:23.965  6899  6956 D CCodec  : }
+10-31 01:53:23.965  6899  6956 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:23.965  6899  6956 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:23.966  6899  6899 I LumaArt117: Sprite ready: key=companion118/nova/0/16, pixels=285x310, decode=2, evictions=0, residentBytes=1035660
+10-31 01:53:23.967  6899  6956 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:23.967  6899  6956 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:23.968  6899  6956 D CCodecBufferChannel: [c2.android.raw.decoder#622] Created input block pool with allocatorID 16 => poolID 24 - OK (0)
+10-31 01:53:23.970  6899  6956 I CCodecBufferChannel: [c2.android.raw.decoder#622] Created output block pool with allocatorID 16 => poolID 190 - OK
+10-31 01:53:23.972  6899  6956 D CCodecBufferChannel: [c2.android.raw.decoder#622] Configured output block pool ids 190 => OK
+10-31 01:53:23.982  6899  6956 D CCodecBufferChannel: [c2.android.raw.decoder#622] MediaCodec discarded an unknown buffer
+10-31 01:53:23.982  6899  6956 D CCodecBufferChannel: [c2.android.raw.decoder#622] MediaCodec discarded an unknown buffer
+10-31 01:53:23.984  6899  6956 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.988  6899  6954 D CCodecBufferChannel: [c2.android.raw.decoder#664] MediaCodec discarded an unknown buffer
+10-31 01:53:23.988  6899  6954 D CCodecBufferChannel: [c2.android.raw.decoder#664] MediaCodec discarded an unknown buffer
+10-31 01:53:23.988  6899  6954 D CCodecBufferChannel: [c2.android.raw.decoder#664] MediaCodec discarded an unknown buffer
+10-31 01:53:23.990  6899  6954 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:23.994  6899  6924 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:23.994  6899  6960 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:23.996  6899  6960 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:23.997  6899  6960 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:23.997  6899  6960 D CCodecConfig: read media type: audio/raw
+10-31 01:53:23.998  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:23.998  6899  6899 I LumaArt117: Sprite ready: key=pulse/gear/firefly_ring, pixels=427x391, decode=3, evictions=0, residentBytes=1703488
+10-31 01:53:23.999  6899  6960 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:24.000  6899  6960 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:24.000  6899  6960 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:24.000  6899  6960 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:24.000  6899  6960 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:24.000  6899  6960 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:24.000  6899  6960 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:24.000  6899  6960 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.000  6899  6960 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:24.000  6899  6960 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:24.000  6899  6960 D CCodecConfig: }
+10-31 01:53:24.001  6899  6924 E MediaCodec: Media Quality Service not found.
+10-31 01:53:24.002  6899  6960 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:24.002  6899  6960 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:24.002  6899  6960 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:24.002  6899  6960 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:24.002  6899  6960 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:24.002  6899  6960 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:24.002  6899  6960 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:24.003  6899  6960 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:24.003  6899  6960 D CCodec  : encoding statistics level = 0
+10-31 01:53:24.003  6899  6960 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:24.003  6899  6960 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.003  6899  6960 D CCodec  : }
+10-31 01:53:24.003  6899  6960 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.003  6899  6960 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:24.003  6899  6960 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:24.003  6899  6960 D CCodec  : }
+10-31 01:53:24.003  6899  6960 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.003  6899  6960 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:24.005  6899  6960 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:24.005  6899  6960 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:24.005  6899  6960 D CCodecBufferChannel: [c2.android.raw.decoder#174] Created input block pool with allocatorID 16 => poolID 25 - OK (0)
+10-31 01:53:24.006  6899  6960 I CCodecBufferChannel: [c2.android.raw.decoder#174] Created output block pool with allocatorID 16 => poolID 192 - OK
+10-31 01:53:24.006  6899  6960 D CCodecBufferChannel: [c2.android.raw.decoder#174] Configured output block pool ids 192 => OK
+10-31 01:53:24.015  6899  6960 D CCodecBufferChannel: [c2.android.raw.decoder#174] MediaCodec discarded an unknown buffer
+10-31 01:53:24.015  6899  6960 D CCodecBufferChannel: [c2.android.raw.decoder#174] MediaCodec discarded an unknown buffer
+10-31 01:53:24.015  6899  6960 D CCodecBufferChannel: [c2.android.raw.decoder#174] MediaCodec discarded an unknown buffer
+10-31 01:53:24.016  6899  6923 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:24.016  6899  6962 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:24.018  6899  6963 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:24.021  6899  6962 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:24.021  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.021  6899  6899 I LumaArt117: Sprite ready: key=pulse/gear/moonbud, pixels=414x386, decode=4, evictions=0, residentBytes=2342704
+10-31 01:53:24.022  6899  6962 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:24.022  6899  6962 D CCodecConfig: read media type: audio/raw
+10-31 01:53:24.022  6899  6962 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:24.022  6899  6962 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:24.022  6899  6962 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:24.023  6899  6962 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:24.023  6899  6962 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:24.023  6899  6962 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:24.023  6899  6962 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:24.023  6899  6962 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.023  6899  6962 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:24.023  6899  6962 D CCodecConfig: }
+10-31 01:53:24.023  6899  6923 E MediaCodec: Media Quality Service not found.
+10-31 01:53:24.023  6899  6962 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:24.023  6899  6962 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:24.023  6899  6962 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:24.023  6899  6962 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:24.023  6899  6962 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:24.023  6899  6962 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:24.023  6899  6962 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:24.024  6899  6962 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:24.024  6899  6962 D CCodec  : encoding statistics level = 0
+10-31 01:53:24.024  6899  6962 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:24.024  6899  6962 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.024  6899  6962 D CCodec  : }
+10-31 01:53:24.024  6899  6962 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.024  6899  6962 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:24.024  6899  6962 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:24.024  6899  6962 D CCodec  : }
+10-31 01:53:24.024  6899  6962 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.024  6899  6962 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:24.024  6899  6962 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:24.024  6899  6962 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:24.024  6899  6962 D CCodecBufferChannel: [c2.android.raw.decoder#16] Created input block pool with allocatorID 16 => poolID 26 - OK (0)
+10-31 01:53:24.024  6899  6962 I CCodecBufferChannel: [c2.android.raw.decoder#16] Created output block pool with allocatorID 16 => poolID 194 - OK
+10-31 01:53:24.024  6899  6962 D CCodecBufferChannel: [c2.android.raw.decoder#16] Configured output block pool ids 194 => OK
+10-31 01:53:24.037  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.038  6899  6899 I LumaArt117: Sprite ready: key=pulse/gear/pebble_heart, pixels=317x376, decode=5, evictions=0, residentBytes=2819472
+10-31 01:53:24.038  6899  6962 D CCodecBufferChannel: [c2.android.raw.decoder#16] MediaCodec discarded an unknown buffer
+10-31 01:53:24.038  6899  6962 D CCodecBufferChannel: [c2.android.raw.decoder#16] MediaCodec discarded an unknown buffer
+10-31 01:53:24.038  6899  6962 D CCodecBufferChannel: [c2.android.raw.decoder#16] MediaCodec discarded an unknown buffer
+10-31 01:53:24.039  6899  6962 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:24.047  6899  6924 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:24.048  6899  6966 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:24.050  6899  6966 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:24.053  6899  6923 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:24.053  6899  6967 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:24.059  6899  6966 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:24.059  6899  6966 D CCodecConfig: read media type: audio/raw
+10-31 01:53:24.059  6899  6966 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:24.059  6899  6966 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:24.059  6899  6966 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:24.059  6899  6966 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:24.059  6899  6966 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:24.059  6899  6966 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:24.059  6899  6966 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:24.060  6899  6966 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.060  6899  6966 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:24.060  6899  6966 D CCodecConfig: }
+10-31 01:53:24.060  6899  6924 E MediaCodec: Media Quality Service not found.
+10-31 01:53:24.060  6899  6966 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:24.060  6899  6966 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:24.060  6899  6966 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:24.060  6899  6966 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:24.060  6899  6966 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:24.060  6899  6966 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:24.060  6899  6966 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:24.060  6899  6966 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:24.061  6899  6966 D CCodec  : encoding statistics level = 0
+10-31 01:53:24.061  6899  6966 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:24.061  6899  6966 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.061  6899  6966 D CCodec  : }
+10-31 01:53:24.061  6899  6966 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.061  6899  6966 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:24.061  6899  6966 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:24.061  6899  6966 D CCodec  : }
+10-31 01:53:24.061  6899  6966 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.061  6899  6966 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:24.061  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.062  6899  6899 I LumaArt117: Sprite ready: key=pulse/furniture/sofa, pixels=522x393, decode=6, evictions=0, residentBytes=3640056
+10-31 01:53:24.065  6899  6966 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:24.066  6899  6966 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:24.066  6899  6966 D CCodecBufferChannel: [c2.android.raw.decoder#420] Created input block pool with allocatorID 16 => poolID 27 - OK (0)
+10-31 01:53:24.067  6899  6967 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:24.067  6899  6966 I CCodecBufferChannel: [c2.android.raw.decoder#420] Created output block pool with allocatorID 16 => poolID 196 - OK
+10-31 01:53:24.067  6899  6966 D CCodecBufferChannel: [c2.android.raw.decoder#420] Configured output block pool ids 196 => OK
+10-31 01:53:24.068  6899  6967 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:24.068  6899  6967 D CCodecConfig: read media type: audio/raw
+10-31 01:53:24.069  6899  6967 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:24.072  6899  6967 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:24.072  6899  6967 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:24.072  6899  6967 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:24.072  6899  6967 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:24.072  6899  6967 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:24.077  6899  6966 D CCodecBufferChannel: [c2.android.raw.decoder#420] MediaCodec discarded an unknown buffer
+10-31 01:53:24.077  6899  6966 D CCodecBufferChannel: [c2.android.raw.decoder#420] MediaCodec discarded an unknown buffer
+10-31 01:53:24.077  6899  6966 D CCodecBufferChannel: [c2.android.raw.decoder#420] MediaCodec discarded an unknown buffer
+10-31 01:53:24.078  6899  6967 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:24.078  6899  6966 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:24.078  6899  6967 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.078  6899  6967 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:24.078  6899  6967 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:24.078  6899  6967 D CCodecConfig: }
+10-31 01:53:24.087  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.088  6899  6923 E MediaCodec: Media Quality Service not found.
+10-31 01:53:24.088  6899  6967 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:24.088  6899  6967 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:24.088  6899  6967 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:24.088  6899  6967 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:24.088  6899  6967 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:24.088  6899  6899 I LumaArt117: Sprite ready: key=pulse/furniture/kitchen, pixels=469x399, decode=7, evictions=0, residentBytes=4388580
+10-31 01:53:24.090  6899  6967 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:24.090  6899  6967 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:24.090  6899  6967 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:24.090  6899  6967 D CCodec  : encoding statistics level = 0
+10-31 01:53:24.090  6899  6967 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:24.090  6899  6967 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.090  6899  6967 D CCodec  : }
+10-31 01:53:24.090  6899  6967 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.090  6899  6967 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:24.090  6899  6967 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:24.090  6899  6967 D CCodec  : }
+10-31 01:53:24.090  6899  6967 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.090  6899  6967 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:24.091  6899  6967 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:24.091  6899  6967 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:24.091  6899  6967 D CCodecBufferChannel: [c2.android.raw.decoder#486] Created input block pool with allocatorID 16 => poolID 28 - OK (0)
+10-31 01:53:24.096  6899  6967 I CCodecBufferChannel: [c2.android.raw.decoder#486] Created output block pool with allocatorID 16 => poolID 198 - OK
+10-31 01:53:24.096  6899  6967 D CCodecBufferChannel: [c2.android.raw.decoder#486] Configured output block pool ids 198 => OK
+10-31 01:53:24.104  6899  6924 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:24.105  6899  6971 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:24.106  6899  6971 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:24.106  6899  6971 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:24.106  6899  6971 D CCodecConfig: read media type: audio/raw
+10-31 01:53:24.115  6899  6967 D CCodecBufferChannel: [c2.android.raw.decoder#486] MediaCodec discarded an unknown buffer
+10-31 01:53:24.115  6899  6967 D CCodecBufferChannel: [c2.android.raw.decoder#486] MediaCodec discarded an unknown buffer
+10-31 01:53:24.115  6899  6967 D CCodecBufferChannel: [c2.android.raw.decoder#486] MediaCodec discarded an unknown buffer
+10-31 01:53:24.116  6899  6967 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:24.118  6899  6971 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:24.118  6899  6971 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:24.118  6899  6971 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:24.118  6899  6971 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:24.118  6899  6971 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:24.118  6899  6971 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:24.118  6899  6971 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:24.118  6899  6971 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.118  6899  6971 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:24.118  6899  6971 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:24.118  6899  6971 D CCodecConfig: }
+10-31 01:53:24.119  6899  6924 E MediaCodec: Media Quality Service not found.
+10-31 01:53:24.119  6899  6971 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:24.119  6899  6971 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:24.119  6899  6971 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:24.119  6899  6971 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:24.119  6899  6971 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:24.119  6899  6971 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:24.119  6899  6971 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:24.119  6899  6971 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:24.119  6899  6971 D CCodec  : encoding statistics level = 0
+10-31 01:53:24.119  6899  6971 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:24.119  6899  6971 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.119  6899  6971 D CCodec  : }
+10-31 01:53:24.119  6899  6971 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.119  6899  6971 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:24.119  6899  6971 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:24.119  6899  6971 D CCodec  : }
+10-31 01:53:24.119  6899  6971 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.119  6899  6971 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:24.120  6899  6971 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:24.120  6899  6971 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:24.120  6899  6971 D CCodecBufferChannel: [c2.android.raw.decoder#710] Created input block pool with allocatorID 16 => poolID 29 - OK (0)
+10-31 01:53:24.120  6899  6971 I CCodecBufferChannel: [c2.android.raw.decoder#710] Created output block pool with allocatorID 16 => poolID 200 - OK
+10-31 01:53:24.120  6899  6971 D CCodecBufferChannel: [c2.android.raw.decoder#710] Configured output block pool ids 200 => OK
+10-31 01:53:24.122  6899  6971 D CCodecBufferChannel: [c2.android.raw.decoder#710] MediaCodec discarded an unknown buffer
+10-31 01:53:24.122  6899  6971 D CCodecBufferChannel: [c2.android.raw.decoder#710] MediaCodec discarded an unknown buffer
+10-31 01:53:24.122  6899  6971 D CCodecBufferChannel: [c2.android.raw.decoder#710] MediaCodec discarded an unknown buffer
+10-31 01:53:24.123  6899  6971 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:24.126  6899  6923 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-31 01:53:24.127  6899  6975 D CCodec  : allocate(c2.android.raw.decoder)
+10-31 01:53:24.129  6899  6975 I CCodec  : setting up 'default' as default (vendor) store
+10-31 01:53:24.131  6899  6975 I CCodec  : Created component [c2.android.raw.decoder] for [c2.android.raw.decoder]
+10-31 01:53:24.131  6899  6975 D CCodecConfig: read media type: audio/raw
+10-31 01:53:24.132  6899  6975 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-31 01:53:24.132  6899  6975 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-31 01:53:24.132  6899  6975 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-31 01:53:24.132  6899  6975 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-31 01:53:24.132  6899  6975 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-31 01:53:24.133  6899  6975 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-31 01:53:24.135  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.138  6899  6899 I LumaArt117: Sprite ready: key=pulse/furniture/greenhouse, pixels=458x480, decode=8, evictions=0, residentBytes=5267940
+10-31 01:53:24.140  6899  6975 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-31 01:53:24.143  6899  6975 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.143  6899  6975 D CCodecConfig: c2 config diff is Dict {
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 65536
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   string input.media-type.value = "audio/raw"
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 output.large-frame.max-size = 0
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 output.large-frame.threshold-size = 0
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 raw.pcm-encoding.value = 0
+10-31 01:53:24.143  6899  6975 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-31 01:53:24.143  6899  6975 D CCodecConfig: }
+10-31 01:53:24.144  6899  6923 E MediaCodec: Media Quality Service not found.
+10-31 01:53:24.144  6899  6975 D CCodec  : [c2.android.raw.decoder] buffers are bound to CCodec for this session
+10-31 01:53:24.144  6899  6975 D CCodecConfig: no c2 equivalents for durationUs
+10-31 01:53:24.144  6899  6975 D CCodecConfig: no c2 equivalents for track-id
+10-31 01:53:24.144  6899  6975 D CCodecConfig: no c2 equivalents for bits-per-sample
+10-31 01:53:24.144  6899  6975 D CCodecConfig: no c2 equivalents for flags
+10-31 01:53:24.144  6899  6975 D CCodecConfig: c2 config diff is   c2::u32 raw.channel-count.value = 1
+10-31 01:53:24.144  6899  6975 D CCodecConfig:   c2::u32 raw.sample-rate.value = 22050
+10-31 01:53:24.144  6899  6975 W Codec2Client: query -- param skipped: index = 1107298332.
+10-31 01:53:24.144  6899  6975 D CCodec  : encoding statistics level = 0
+10-31 01:53:24.145  6899  6975 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t bitrate = 64000
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t max-input-size = 65536
+10-31 01:53:24.145  6899  6975 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.145  6899  6975 D CCodec  : }
+10-31 01:53:24.145  6899  6975 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t android._codec-pcm-encoding = 2
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t buffer-batch-max-output-size = 0
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t buffer-batch-threshold-output-size = 0
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t channel-count = 1
+10-31 01:53:24.145  6899  6975 D CCodec  :   string mime = "audio/raw"
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t pcm-encoding = 2
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t sample-rate = 22050
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t channel-mask = 0
+10-31 01:53:24.145  6899  6975 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-31 01:53:24.145  6899  6975 D CCodec  : }
+10-31 01:53:24.145  6899  6975 I CCodecConfig: query failed after returning 9 values (BAD_INDEX)
+10-31 01:53:24.154  6899  6975 E idhit.lumadrift: Failed to query component interface for required system resources: 6
+10-31 01:53:24.155  6899  6975 W Codec2Client: query -- param skipped: index = 1342179345.
+10-31 01:53:24.155  6899  6975 W Codec2Client: query -- param skipped: index = 2415921170.
+10-31 01:53:24.155  6899  6975 D CCodecBufferChannel: [c2.android.raw.decoder#306] Created input block pool with allocatorID 16 => poolID 30 - OK (0)
+10-31 01:53:24.156  6899  6975 I CCodecBufferChannel: [c2.android.raw.decoder#306] Created output block pool with allocatorID 16 => poolID 202 - OK
+10-31 01:53:24.156  6899  6975 D CCodecBufferChannel: [c2.android.raw.decoder#306] Configured output block pool ids 202 => OK
+10-31 01:53:24.159  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.159  6899  6899 I LumaArt117: Sprite ready: key=pulse/icon/coins, pixels=399x396, decode=9, evictions=0, residentBytes=5899956
+10-31 01:53:24.172  6899  6975 D CCodecBufferChannel: [c2.android.raw.decoder#306] MediaCodec discarded an unknown buffer
+10-31 01:53:24.172  6899  6975 D CCodecBufferChannel: [c2.android.raw.decoder#306] MediaCodec discarded an unknown buffer
+10-31 01:53:24.172  6899  6975 D CCodecBufferChannel: [c2.android.raw.decoder#306] MediaCodec discarded an unknown buffer
+10-31 01:53:24.174  6899  6975 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-31 01:53:24.177  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.177  6899  6899 I LumaArt117: Sprite ready: key=pulse/icon/gold, pixels=385x410, decode=10, evictions=0, residentBytes=6531356
+10-31 01:53:24.193  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:24.194  6899  6899 I LumaArt117: Sprite ready: key=pulse/icon/energy, pixels=402x424, decode=11, evictions=0, residentBytes=7213148
+10-31 01:53:24.678  6899  6899 D InsetsController: hide(ime(), fromIme=false)
+10-31 01:53:24.678  6899  6899 I ImeTracker: com.androidhit.lumadrift:4c0e2948: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-31 01:53:24.874  6899  6922 D AudioSystem: onNewServiceWithAdapter: media.audio_flinger service obtained 0xb4007548c9ce48d0
+10-31 01:53:24.895  6899  6922 D AudioSystem: getService: checking for service media.audio_flinger: 0xb400754879cdfbe0
+10-31 01:53:24.916  6899  6922 I LumaAudio: Original ambient ready: biome=0, 529200 mono frames at 22050 Hz; scene=ADVENTURE
+10-31 01:53:24.920  6899  6922 I LumaAudio: Ambient playing; fade to 0.27
+10-31 01:53:24.943  6899  6943 D AudioSystem: onNewService: media.audio_policy service obtained 0xb400754879cde5b0
+10-31 01:53:24.943  6899  6943 D AudioSystem: getService: checking for service media.audio_policy: 0xb400754879cde5b0
+10-31 01:53:27.470  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:27.495  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:27.496  6899  6899 I LumaArt117: Sprite ready: key=pulse/arrow/up, pixels=549x521, decode=12, evictions=0, residentBytes=8357264
+10-31 01:53:27.516  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:27.517  6899  6899 I LumaArt117: Sprite ready: key=pulse/arrow/right, pixels=547x518, decode=13, evictions=0, residentBytes=9490648
+10-31 01:53:27.535  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:27.542  6899  6899 I LumaArt117: Sprite ready: key=pulse/arrow/down, pixels=552x523, decode=14, evictions=0, residentBytes=10645432
+10-31 01:53:27.565  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:27.567  6899  6899 I LumaArt117: Sprite ready: key=pulse/arrow/left, pixels=553x520, decode=15, evictions=0, residentBytes=11795672
+10-31 01:53:27.586  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:27.587  6899  6899 I LumaArt117: Sprite ready: key=pulse/icon/charge, pixels=406x409, decode=16, evictions=0, residentBytes=12459888
+10-31 01:53:27.625  6899  6899 I LumaAudio: Ambient paused
+10-31 01:53:27.749  6899  6922 I LumaAudio: Original ambient ready: biome=0, 564480 mono frames at 22050 Hz; scene=PUZZLE
+10-31 01:53:27.751  6899  6922 I LumaAudio: Ambient playing; fade to 0.27
+10-31 01:53:28.788  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d3f328 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:28.788  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d40a48 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:28.788  6899  6929 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 2
+10-31 01:53:29.188  6899  6987 D ProfileInstaller: Installing profile for com.androidhit.lumadrift
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d466c8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d41828 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869cc73c8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d48e18 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d41388 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d45b38 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 3/6 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d3de58 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d451f8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d49508 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 2/4 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d42aa8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d476f8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: bufferpool2 0xb400754869d43888 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 1/2 (fetch/transfer)
+10-31 01:53:29.793  6899  6929 D BufferPoolAccessor2.0: evictor expired: 12, evicted: 12
+10-31 01:53:31.534  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:31.534  6899  6899 I LumaArt117: Sprite ready: key=companion118/nova/0/8, pixels=285x266, decode=17, evictions=0, residentBytes=12763128
+10-31 01:53:32.149  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:32.149  6899  6899 I LumaArt117: Sprite ready: key=companion118/nova/0/9, pixels=273x267, decode=18, evictions=0, residentBytes=13054692
+10-31 01:53:33.340  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:33.340  6899  6899 I LumaArt117: Sprite ready: key=companion118/nova/0/12, pixels=287x296, decode=19, evictions=0, residentBytes=13394500
+10-31 01:53:38.550  6899  6899 I LumaAudio: Ambient paused
+10-31 01:53:38.664  6899  6922 I LumaAudio: Original ambient ready: biome=0, 529200 mono frames at 22050 Hz; scene=ADVENTURE
+10-31 01:53:38.667  6899  6922 I LumaAudio: Ambient playing; fade to 0.27
+10-31 01:53:55.301  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:55.302  6899  6899 I LumaArt117: Sprite ready: key=action/map, pixels=588x438, decode=20, evictions=0, residentBytes=14424676
+10-31 01:53:55.332  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:55.332  6899  6899 I LumaArt117: Sprite ready: key=action/portal, pixels=435x496, decode=21, evictions=0, residentBytes=15287716
+10-31 01:53:59.137  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:59.137  6899  6899 I LumaArt117: Sprite ready: key=companion118/nova/0/3, pixels=294x278, decode=22, evictions=0, residentBytes=15614644
+10-31 01:53:59.378  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:53:59.380  6899  6899 I LumaArt117: Sprite ready: key=companion118/nova/0/7, pixels=294x288, decode=23, evictions=0, residentBytes=15953332
+10-31 01:54:04.536  6899  6899 I LumaAudio: Ambient paused
+10-31 01:54:04.663  6899  6922 I LumaAudio: Original ambient ready: biome=0, 564480 mono frames at 22050 Hz; scene=PUZZLE
+10-31 01:54:04.667  6899  6922 I LumaAudio: Ambient playing; fade to 0.27
+10-31 01:54:11.425  6899  6899 W HWUI    : Image decoding logging dropped!
+10-31 01:54:11.425  6899  6899 I LumaArt117: Sprite ready: key=pulse/icon/copies, pixels=438x360, decode=24, evictions=0, residentBytes=16584052
+10-31 01:54:13.923  6899  6899 I LumaAudio: Ambient paused
+10-31 01:54:13.968  6899  6922 I LumaAudio: Original ambient ready: biome=0, 529200 mono frames at 22050 Hz; scene=ADVENTURE
+10-31 01:54:13.972  6899  6922 I LumaAudio: Ambient playing; fade to 0.27
+10-31 01:54:30.913  6899  6903 W idhit.lumadrift: Suspending all threads took: 5.070ms
+10-31 01:54:30.916  6899  6903 I idhit.lumadrift: Background concurrent mark compact GC freed 6352KB AllocSpace bytes, 2(128KB) LOS objects, 49% free, 12MB/25MB, paused 5.321ms,487us total 14.935ms
+10-31 01:54:31.092  6899  6899 I LumaAudio: Ambient paused
+10-31 01:54:31.186  6899  6922 I LumaAudio: Original ambient ready: biome=0, 564480 mono frames at 22050 Hz; scene=PUZZLE
+10-31 01:54:31.188  6899  6922 I LumaAudio: Ambient playing; fade to 0.27

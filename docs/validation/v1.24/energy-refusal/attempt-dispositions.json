@@ -1,0 +1,22 @@
+{
+  "before-fix": {
+    "status": "HARNESS_FIXTURE_FAIL",
+    "reason": "Native observer excludes every key containing seed. Missing normal initialization caused reseeding500 rather than reproducing exhaustedGold; original logs retained."
+  },
+  "after-fix-1": {
+    "status": "HARNESS_FIXTURE_FAIL",
+    "reason": "Same incomplete initialization fixture; corrected by calling real seedLab before overlaying actual disclosed native wallet fields."
+  },
+  "before-fix-qualified": {
+    "status": "EXPECTED_PRODUCT_FAIL",
+    "reason": "Original controller/journal bytes verified against frozen candidateB; inherited0Gold+SPEND becomes generic save error and pending status."
+  },
+  "after-fix-2": {
+    "status": "PASS_SUPERSEDED",
+    "assertions": 6149
+  },
+  "after-fix-final": {
+    "status": "PASS_ACCEPTED_HOST",
+    "assertions": 6194
+  }
+}

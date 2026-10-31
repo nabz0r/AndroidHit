@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T23:29:04.311046+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "initial",
+  "expected_version": "1.23.0-rc2",
+  "expected_code": 31,
+  "apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "observer_sha256": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "1b091040-9aa9-4e89-8e48-5d343215d3b0",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. Production UI availability and refusal paths may be observed. No account sign-in, real-money purchase, ad configuration change or injected provider callback.",
+  "installed_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "initial",
+    "runToken": "1b091040-9aa9-4e89-8e48-5d343215d3b0",
+    "processId": 3559,
+    "checkCount": 7,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 0,
+    "actions": [],
+    "captures": [
+      "initial"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, real-money purchase, ad configuration change, injected ad-provider callback or publication. Ad UI availability/refusal observation only. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 12.921,
+  "evidence_sha256": {
+    "battle-observer.apk": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "494a268c6acdb39fc59d3f7c06d9c4f1cfde870b078b9ee707bb5fbaf7fbc94c",
+    "native/after.json": "cd3f37251be0a2e7c87021e3c15731f1fdf8df45cf3557569392e67f56e8bb17",
+    "native/before.json": "feec841276fbd9f4a6a9bc430b1077038cce886dbb843e70205a72556246af52",
+    "native/initial-accessibility.json": "a66d64db03d0cca5968629cc2cf6f729b0e2f6a721780e675f1a44999fb63ad2",
+    "native/initial-state.json": "cd3f37251be0a2e7c87021e3c15731f1fdf8df45cf3557569392e67f56e8bb17",
+    "native/initial.png": "19e6516c2ff18a84f3a8434d6786554c420418c6064e7c9789e7c7e3170c95f3",
+    "native/report.json": "0fbc12d0ba376332c8f9eca37b623fa48aa38cc2171d386f3817549d52f98920",
+    "native/requested-steps.json": "0ab92104917bad278e067ea35290f06fa859c213ad96d52cdd04d4aee1d001c8",
+    "observer-install.txt": "83e06f1773402f424b8d6c4f8dd141ee4ad64b445be4612093061b9229207566",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "4a575ce3b0f842c7449d344561edd3792e7a3ffc45fd5ccceef9b5f44f56860f",
+    "source-snapshot.json": "8ac47fdfca740256315553326c421c25e2d1205ddc391c7026336c15e19202ea"
+  }
+}

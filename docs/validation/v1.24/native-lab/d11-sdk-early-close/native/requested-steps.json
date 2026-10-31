@@ -1,0 +1,68 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "assert-label",
+    "regex": "Ad status: Test ad ready"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-before-sdk-early-close"
+  },
+  {
+    "op": "tap",
+    "regex": "Watch an ad.*"
+  },
+  {
+    "op": "wait",
+    "ms": 1000
+  },
+  {
+    "op": "capture-fast",
+    "name": "actual-sdk-test-ad-before-early-back"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "wait",
+    "ms": 1000
+  },
+  {
+    "op": "capture-fast",
+    "name": "actual-sdk-after-early-back"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-before-sdk-early-close"
+  },
+  {
+    "op": "snapshot",
+    "name": "sdk-early-back-state"
+  }
+]

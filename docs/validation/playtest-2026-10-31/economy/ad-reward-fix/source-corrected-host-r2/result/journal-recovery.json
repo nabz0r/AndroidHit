@@ -1,0 +1,12 @@
+{
+  "status":"PASS",
+  "assertions":88076,
+  "failureRecoveryCases":8000,
+  "firstJournalWriteFailureCases":4000,
+  "atomicFulfillmentFailureCases":4000,
+  "coldRecoveryCases":4000,
+  "concurrentSameShowHandles":32,
+  "noDurableWriteProcessDeathCasesWithDocumentedLoss":2,
+  "elapsedSeconds":0.301274167,
+  "scope":"Actual GameStore and new local journal; two failure-memory modes, repeated refusal, initial journal versus atomic credit/receipt/ack, cold reconstruction, multiple earned IDs, legacy receipts, full-wallet retention and32concurrent handles. Host preference doubles, no APK/native/provider test. Process death before every durable write remains unrecoverable by design; two cases explicitly preserve that limit."
+}

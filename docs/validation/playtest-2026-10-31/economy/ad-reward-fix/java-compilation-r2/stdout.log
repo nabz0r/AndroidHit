@@ -1,0 +1,55 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.experimental.lint.version=9.4.0' is experimental.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preProductionReleaseBuild UP-TO-DATE
+> Task :app:generateProductionReleaseBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileProductionRelease UP-TO-DATE
+> Task :app:checkProductionReleaseAarMetadata UP-TO-DATE
+> Task :app:generateProductionReleaseResValues UP-TO-DATE
+> Task :app:mapProductionReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateProductionReleaseResources UP-TO-DATE
+> Task :app:mergeProductionReleaseResources UP-TO-DATE
+> Task :app:packageProductionReleaseResources UP-TO-DATE
+> Task :app:parseProductionReleaseLocalResources UP-TO-DATE
+> Task :app:createProductionReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksProductionRelease UP-TO-DATE
+> Task :app:processProductionReleaseMainManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifestForPackage UP-TO-DATE
+> Task :app:processProductionReleaseResources UP-TO-DATE
+
+> Task :app:compileProductionReleaseJavaWithJavac
+
+> Task :app:preLabReleaseBuild UP-TO-DATE
+> Task :app:generateLabReleaseBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileLabRelease UP-TO-DATE
+> Task :app:checkLabReleaseAarMetadata UP-TO-DATE
+> Task :app:generateLabReleaseResValues UP-TO-DATE
+> Task :app:mapLabReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateLabReleaseResources UP-TO-DATE
+> Task :app:mergeLabReleaseResources UP-TO-DATE
+> Task :app:packageLabReleaseResources UP-TO-DATE
+> Task :app:parseLabReleaseLocalResources UP-TO-DATE
+> Task :app:createLabReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksLabRelease UP-TO-DATE
+> Task :app:processLabReleaseMainManifest UP-TO-DATE
+> Task :app:processLabReleaseManifest UP-TO-DATE
+> Task :app:processLabReleaseManifestForPackage UP-TO-DATE
+> Task :app:processLabReleaseResources UP-TO-DATE
+
+> Task :app:compileLabReleaseJavaWithJavac
+
+[Incubating] Problems report is available at: file:///Users/n/androidhit/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 8s
+32 actionable tasks: 2 executed, 30 up-to-date

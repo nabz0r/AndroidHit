@@ -1,0 +1,105 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-battle",
+    "team": "nova,miko,orbit",
+    "energy": 3,
+    "used": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 1800
+  },
+  {
+    "op": "capture",
+    "name": "fr-guide-paused-before-recreation"
+  },
+  {
+    "op": "recreate-context-check"
+  },
+  {
+    "op": "capture",
+    "name": "fr-guide-sheet-restored-from-bundle"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 1800
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_outfit"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_item_hat_moon"
+  },
+  {
+    "op": "capture",
+    "name": "fr-outfit-draft-before-recreation"
+  },
+  {
+    "op": "recreate-context-check",
+    "visibleId": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*En essai.*"
+  },
+  {
+    "op": "capture",
+    "name": "fr-outfit-draft-restored-from-bundle"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_cancel"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_return_puzzle"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "used": 1
+  },
+  {
+    "op": "board-timer-advance-check",
+    "ms": 1800
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "snapshot",
+    "name": "d-context-recreation-final"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "kind": "new_isolated_1.24_limited_perception_rank_capacity_study",
+  "status": "APPROVED_RULES_FROZEN",
+  "recordedAtUtc": "2026-10-31T00:10:17.298593+00:00",
+  "coordinatorApproval": {
+    "by": "root",
+    "date": "2026-10-31",
+    "seed": 2026103102,
+    "cohortsApproved": true,
+    "memoryGeometryFixApproved": true,
+    "finalRunRequiresRulesFreeze": true,
+    "rulesFreezeReceivedAtUtc": "2026-10-31T00:12:30.782032+00:00",
+    "rankCoordinatorOwner": "gameplay_design_gaps",
+    "rankCoordinatorAssertions": 31278
+  },
+  "command": [
+    "bash",
+    "scripts/run-cognitive-lab-v124.sh",
+    "--profiles",
+    "100",
+    "--repetitions",
+    "20",
+    "--seed",
+    "2026103102",
+    "--output",
+    "docs/validation/v1.24/simulation/run-2026103102"
+  ],
+  "seed": 2026103102,
+  "profiles": 100,
+  "repetitions": 20,
+  "modeledDays": 8,
+  "scenarios": [
+    "native_rank_124",
+    "single_use_control_124",
+    "manual_control_124",
+    "loaned_trio_rank_124"
+  ],
+  "expected": {
+    "trajectories": 8000,
+    "coldProbesExecutedOnce": 8000,
+    "trainedProbes": 32000,
+    "oracleControlsSeparate": 104,
+    "humanParticipants": 0
+  },
+  "initialState": {
+    "modeledXp": 0,
+    "rankFloor": 1,
+    "ownedStarter": "nova",
+    "starterCopies": 1,
+    "modeledCoins": 180,
+    "energy": 10,
+    "teamChoicePolicy": "fixed starter Nova; separately loaned mixed trio,not acquisition or actual fresh-install wallet validation"
+  },
+  "energy": "Current business policy retained:new starts afterU10 cost1,one refill per10modeledminutes,retries count as new starts.No unlimited energy cohort.",
+  "policy": "Agent124 uses same bounded policy in all cohorts;negative episodic memory keyed to actual native board identity+visible geometry.Learned rules,fatigue,frustration and accumulated decision/node counters transfer.No solver in agent.No extra desire/return coefficient added for ranks/copies.",
+  "rankSource": "app/src/main/java/com/androidhit/lumadrift/data/RankCopyRules124.java",
+  "capacitySource": "CompanionProgression.skillCharges(level),captured by CompanionBattle.State.start(team,levels);legacy one-use control explicit",
+  "commonProbes": "Same shell-free geometry/budget,180Coins,no coach/Focus/cause/dead-end/companion information;learned-rule state transplanted,fatigue/frustration/memory reset,feedback continues within probe.",
+  "comparisons": "Paired fresh-profile parameters and input RNG keys;actions and resulting RNG streams can diverge.No causal before/after 1.23-to-1.24 inference because gameplay AND negative-memory model change.",
+  "limits": [
+    "No rendering,visual perception,emotion,fun,comprehension or human retention measurement",
+    "Journey progression only;events/Remix,Android receipts/migration/transaction-failure qualification separate",
+    "No decor/equipment/stockpowers/ads/LumaGold/real purchases/social/acquisition model",
+    "Fixed skill-choice policy is not an optimal scheduler,does not optimize refusals or long-term remaining uses",
+    "New raw output refuses overwrite;old release and prior8000-trajectory study remain unchanged"
+  ]
+}

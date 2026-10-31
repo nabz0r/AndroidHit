@@ -1,0 +1,150 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "hoot",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "open-level",
+    "level": 29
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "assert-owned-team",
+    "count": 3
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "refusal-run_id"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "refusal-history"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "refusal-budget_used"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "refusal-undos"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "refusal-battle_v119"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "fr-rewind-no-history-before"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-id",
+    "id": "battle_skill_close"
+  },
+  {
+    "op": "capture",
+    "name": "fr-rewind-no-history-refused"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "refusal-run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "history",
+    "name": "refusal-history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "budget_used",
+    "name": "refusal-budget_used"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "undos",
+    "name": "refusal-undos"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_session",
+    "key": "battle_v119",
+    "name": "refusal-battle_v119"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 2200
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close_bottom"
+  },
+  {
+    "op": "board-timer-advance-check",
+    "ms": 1800
+  },
+  {
+    "op": "capture",
+    "name": "fr-after-refusal-return-running"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "tap",
+    "regex": "Quitter le niveau|Leave level"
+  },
+  {
+    "op": "choose-owned-team",
+    "ids": [
+      "nova",
+      "miko",
+      "orbit"
+    ]
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "e-rewind-refusal-final"
+  }
+]

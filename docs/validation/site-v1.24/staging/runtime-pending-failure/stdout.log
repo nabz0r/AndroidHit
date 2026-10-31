@@ -1,0 +1,177 @@
+✖ actual homepage fr: locale, every paired capture, exact download URLs (5.691083ms)
+✖ actual homepage en: locale, every paired capture, exact download URLs (2.804083ms)
+✖ homepage language switch keeps binary identity and preserves selected route parameters (2.233541ms)
+✖ demo fr: travel follows path, camera explores independently and recenter works (0.585625ms)
+✖ demo en: travel follows path, camera explores independently and recenter works (0.44375ms)
+✖ demo fr: selecting a key only highlights; explicit use opens only its locks (0.673792ms)
+✖ demo en: selecting a key only highlights; explicit use opens only its locks (0.348875ms)
+✖ English demo has translated navigation labels and a language-bound return link (0.349834ms)
+✖ reduced motion and narrow viewport retain the same final mechanical state (0.365ms)
+✖ 1.24 preview fr: eight language reversals preserve title, binary links, explicit historical labs and absent native captures (1.857709ms)
+✖ 1.24 preview en: eight language reversals preserve title, binary links, explicit historical labs and absent native captures (4.543291ms)
+✖ 1.24 audio remains user-started and one selected preview pauses the others (2.194666ms)
+✖ a pending1.24 preview remains visibly pending even when retained public site-config says preparation=false (2.708666ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 0
+ℹ fail 13
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.861625
+
+✖ failing tests:
+
+test at scripts/test-site-v124-runtime.mjs:83:35
+✖ actual homepage fr: locale, every paired capture, exact download URLs (5.691083ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:84:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.start (node:internal/test_runner/test:1257:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at scripts/test-site-v124-runtime.mjs:83:35
+✖ actual homepage en: locale, every paired capture, exact download URLs (2.804083ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:84:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at scripts/test-site-v124-runtime.mjs:93:1
+✖ homepage language switch keeps binary identity and preserves selected route parameters (2.233541ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:94:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:98:35
+✖ demo fr: travel follows path, camera explores independently and recenter works (0.585625ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:99:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:98:35
+✖ demo en: travel follows path, camera explores independently and recenter works (0.44375ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:99:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:105:35
+✖ demo fr: selecting a key only highlights; explicit use opens only its locks (0.673792ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:106:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:105:35
+✖ demo en: selecting a key only highlights; explicit use opens only its locks (0.348875ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:106:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:113:1
+✖ English demo has translated navigation labels and a language-bound return link (0.349834ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:114:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:118:1
+✖ reduced motion and narrow viewport retain the same final mechanical state (0.365ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:119:13)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:123:34
+✖ 1.24 preview fr: eight language reversals preserve title, binary links, explicit historical labs and absent native captures (1.857709ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:124:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:123:34
+✖ 1.24 preview en: eight language reversals preserve title, binary links, explicit historical labs and absent native captures (4.543291ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:124:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:127:1
+✖ 1.24 audio remains user-started and one selected preview pauses the others (2.194666ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:128:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)
+
+test at scripts/test-site-v124-runtime.mjs:131:1
+✖ a pending1.24 preview remains visibly pending even when retained public site-config says preparation=false (2.708666ms)
+  ReferenceError: configuration is not defined
+      at boot (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:72:69)
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:132:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7)

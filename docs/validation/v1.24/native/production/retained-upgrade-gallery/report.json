@@ -1,0 +1,306 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-31T00:31:56.455271+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "upgrade-gallery",
+  "release_manifest_sha256": "b1539d1cea74940cf5bbb7bc43baecf3fbbf7ba2c36fd1c3508d7cb9f5047247",
+  "expected_version": "1.24.0-rc1",
+  "expected_code": 32,
+  "apk_sha256": "92954de5519efdb6436a2cbed42fc24a6e79cf4fdf8cf55025e2136eef0065ed",
+  "observer_sha256": "72418c8b74d48027027612c87bde7d0cb482118172b73817d78864e8e097dbb7",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "run_token": "9062a000-b70f-4234-af83-1bc3e76aa975",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. Production UI availability and refusal paths may be observed. No account sign-in, real-money purchase, ad configuration change or injected provider callback.",
+  "before_update_installed_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "installed_sha256": "92954de5519efdb6436a2cbed42fc24a6e79cf4fdf8cf55025e2136eef0065ed",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "upgrade-gallery",
+    "runToken": "9062a000-b70f-4234-af83-1bc3e76aa975",
+    "processId": 3627,
+    "checkCount": 19,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference coins = 77"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_HEAD = lantern_leaf"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_AURA = mint_orbit"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_CHARM = copper_wish"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches Vœu de cuivre"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 11,
+    "actions": [
+      {
+        "reason": "home_room_quick",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 262780,
+        "label": "Maison",
+        "resourceId": "com.androidhit.lumadrift:id/home_room_quick",
+        "bounds": [
+          66,
+          1878,
+          286,
+          2104
+        ]
+      },
+      {
+        "reason": "house_room_kitchen",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 266423,
+        "label": "Cuisine",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_kitchen",
+        "bounds": [
+          818,
+          568,
+          1071,
+          817
+        ]
+      },
+      {
+        "reason": "house_room_garden",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 269250,
+        "label": "Jardin",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_garden",
+        "bounds": [
+          548,
+          568,
+          801,
+          817
+        ]
+      },
+      {
+        "reason": "house_room_bedroom",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 272393,
+        "label": "Chambre",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_bedroom",
+        "bounds": [
+          278,
+          568,
+          531,
+          817
+        ]
+      },
+      {
+        "reason": "house_room_living",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 275261,
+        "label": "Salon",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_living",
+        "bounds": [
+          8,
+          568,
+          261,
+          817
+        ]
+      },
+      {
+        "reason": "root_nav_adventure",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 279113,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "home_wardrobe",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 280293,
+        "label": "Look et tenues",
+        "resourceId": "com.androidhit.lumadrift:id/home_wardrobe",
+        "bounds": [
+          553,
+          1457,
+          985,
+          1590
+        ]
+      },
+      {
+        "reason": "Équipement",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 281047,
+        "label": "Équipement",
+        "bounds": [
+          540,
+          1376,
+          1013,
+          1515
+        ]
+      },
+      {
+        "reason": "wardrobe_slot_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 281672,
+        "label": "Charme",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_slot_2",
+        "bounds": [
+          697,
+          1543,
+          1013,
+          1676
+        ]
+      },
+      {
+        "reason": "Vœu de cuivre",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 289267,
+        "label": "Vœu de cuivre",
+        "bounds": [
+          714,
+          1196,
+          1013,
+          1611
+        ]
+      },
+      {
+        "reason": "Fermer l’aperçu|Fermer|Close preview",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 291415,
+        "label": "Fermer",
+        "bounds": [
+          66,
+          2238,
+          1013,
+          2337
+        ]
+      }
+    ],
+    "captures": [
+      "upgraded-adventure-fr",
+      "home-fr",
+      "kitchen-fr",
+      "garden-fr",
+      "bedroom-fr",
+      "living-fr",
+      "gear-detail-fr",
+      "gear-tab-preserved-fr"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, real-money purchase, ad configuration change, injected ad-provider callback or publication. Ad UI availability/refusal observation only. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 55.193,
+  "evidence_sha256": {
+    "authorized-update.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "battle-observer.apk": "72418c8b74d48027027612c87bde7d0cb482118172b73817d78864e8e097dbb7",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "f94a257d940e53dcade6db8ed4172c659ff9ed4a4aee1ce08ea5512b83eed101",
+    "native/after-gallery.json": "5a337f729a7d83864462c7d4cd46b4766fecf117a4aba52d1b52d2fb3bdf3f94",
+    "native/after.json": "5a337f729a7d83864462c7d4cd46b4766fecf117a4aba52d1b52d2fb3bdf3f94",
+    "native/bedroom-fr-accessibility.json": "69b522942b178abc840df9c9aac331733d9f9b0371f3a92427c731e874d23cbb",
+    "native/bedroom-fr.png": "fb5bca9fe4ce4713a1cceb2a2439da469ca84e7e353e4f6e523a7d52b3746f48",
+    "native/before.json": "5a337f729a7d83864462c7d4cd46b4766fecf117a4aba52d1b52d2fb3bdf3f94",
+    "native/garden-fr-accessibility.json": "c54d20f7d24466ebf687a265c3e88fe20d5199221f1c7a87fa900d16e603a874",
+    "native/garden-fr.png": "b9643272c29d66514e92b21aa70a91edfa25044c31a7b8124c752f35a2877a1c",
+    "native/gear-detail-fr-accessibility.json": "bdf9e3026cee418b5ab2a84b292b68f2c456a1969a6feb036f5e109c00a02d05",
+    "native/gear-detail-fr.png": "01d7c348f066ec9b5e21123ef043b1311f9bb744da44102b18ad74856b2a270a",
+    "native/gear-tab-preserved-fr-accessibility.json": "e8b11fcb8bbc5907ea62b838670b88c42d78b231fd9a5127e308daf73885cdef",
+    "native/gear-tab-preserved-fr.png": "172fa764d4807250423adb9e2f03c1f065a9095eeaf0ecd7ad3819a95389a9a4",
+    "native/home-fr-accessibility.json": "c0540fccae45b6c5dd9cb7f1cf5ff35aa46f2cb6b30e6d95f4b3164590a633b2",
+    "native/home-fr.png": "9240bfba693f2eb961367c30aef655066e8ee8fbc2c354c1aa2b7716762d6f58",
+    "native/kitchen-fr-accessibility.json": "d987abfbbcbffe82058dd6776083d65d0fc6c699630b1426ea408acf04593979",
+    "native/kitchen-fr.png": "c3553de9ac9df76af31e55bafd9af7fac017ab9e7bc754f8193f2d1653386414",
+    "native/living-fr-accessibility.json": "c0540fccae45b6c5dd9cb7f1cf5ff35aa46f2cb6b30e6d95f4b3164590a633b2",
+    "native/living-fr.png": "55c301ca2bde34c49b5500e7387fc1da90075f0ce976f989ef467c5a4c631442",
+    "native/report.json": "6120afd61b2ab8f3135e5fa7359ea9570631ee7e9d90b05174fe91a986af03cd",
+    "native/requested-steps.json": "f2a18da549b7da742933889095d1af2387e3ebc31c0dbf22f8e4c195d32ba78b",
+    "native/upgraded-adventure-fr-accessibility.json": "e118d5e37a3708402908775fdb0f878842bd281dcbd7d997d7ac60c9853164a5",
+    "native/upgraded-adventure-fr.png": "5900f9224dd0522c0a9f35699b11f0b45cc7bc38a3254b8c651786699d94c4c7",
+    "native/upgraded-state.json": "5a337f729a7d83864462c7d4cd46b4766fecf117a4aba52d1b52d2fb3bdf3f94",
+    "observer-build-receipt.json": "a9f4d8d691fe034a9299f9973bf609cebdd52ce1161496a123056c09efbea5ce",
+    "observer-install.txt": "66161507cf929b02d7c4ebf05cdbd7ac0cea88bbd836c954541598972920051f",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "release-manifest.json": "b1539d1cea74940cf5bbb7bc43baecf3fbbf7ba2c36fd1c3508d7cb9f5047247",
+    "requested-steps.json": "a53c8886c3e7cb939789a0fafe8889f1e7113ea3c04d39c434b19b4df82f3e0c",
+    "source-snapshot.json": "1f5b30e63c90378ddbf4696bcad421333986f06f56506370306c87e43a59e2b0"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-30T23:36:43.294836+00:00",
+  "kind": "new_isolated_1.23_generated_agent_playtest_no_publication",
+  "sourceCommitBeforeRun": "5cc870701c8039e664d1c00a90d0586c3d00521c",
+  "seed": 2026103101,
+  "runtimeSourceCount": 58,
+  "runtimeMatchesFrozen1_23": true,
+  "protectedExistingFilesUnchanged": 235,
+  "runtimeAndPublishedReleaseNotModified": true,
+  "counts": {
+    "actions": 2633398,
+    "attemptRows": 377413,
+    "blockedEvents": 173154,
+    "coldProbes": 8000,
+    "completedPuzzles": 372673,
+    "configuredDays": 64000,
+    "humanParticipants": 0,
+    "oracleBoardsSeparate": 104,
+    "outcomes": {
+      "budget_exhausted": 1042,
+      "completed": 372673,
+      "horizon_censored": 3698
+    },
+    "trainedProbes": 32000,
+    "trajectories": 8000
+  },
+  "zeroBudgetHorizonRows": 0,
+  "probeAdaptationExplicitlyDocumented": true,
+  "allConditionalU43U48CompletionCountsUniquePerTrajectory": true,
+  "localReadmeLinksVerified": 11,
+  "provenanceSha256": "f83733416785260fc130f61ffa5ffaffe7330fef1c71df2521d9a0d932ca794f",
+  "validationSha256": "c3a85b5709a16c180cd1462fadd02d35e72ffbb08308aae6439514455efdc51b",
+  "analysisSha256": "f984fa26b1851ac7f1ba5bd14a717ca023df186260acf5d1176b996ab0b621b4",
+  "analysisDetailSha256": "c9eae6a81019acc9be787bd6740e831e343c591bd9025244068e121eafbaf216",
+  "files": {
+    "README.md": {
+      "sha256": "b521639ad22175e21357baccee939ddb79f58c953af68ac418701112d23363e1",
+      "bytes": 16236
+    },
+    "analysis-detail-original.log": {
+      "sha256": "bb82753cc5de379612c3bf612126a0bd3e62aa5f49a06cfda748c2ab0ff6f4dd",
+      "bytes": 2222
+    },
+    "analysis-detail.json": {
+      "sha256": "c9eae6a81019acc9be787bd6740e831e343c591bd9025244068e121eafbaf216",
+      "bytes": 79235
+    },
+    "analysis-original.log": {
+      "sha256": "42cbac41d0ad32d6205f4a39a37e440b20cce3b45619873ea39dbe1dbc08a6e6",
+      "bytes": 384
+    },
+    "analysis.json": {
+      "sha256": "f984fa26b1851ac7f1ba5bd14a717ca023df186260acf5d1176b996ab0b621b4",
+      "bytes": 664508
+    },
+    "analyze-playtest.py": {
+      "sha256": "ec259c3cb133a9dc8480e3783a28c1ccb0c0450771ed32cf7e5dcf74f7f908b2",
+      "bytes": 13288
+    },
+    "execution-receipt.json": {
+      "sha256": "e169f1f6bbd9a0110e9701978e7ea1ce3d991523d49386ab4e96c1c699b01265",
+      "bytes": 2221
+    },
+    "preflight.json": {
+      "sha256": "683b530b6cb1561f7709491debcf1c9d6bd842f5d658b00101523f3c2fadf59a",
+      "bytes": 45904
+    },
+    "run-2026103101/blocked-events.csv.gz": {
+      "sha256": "e37d525dff6c1cbad0e12f9e3389b38f119a0d44cda2b29d5bf62c4d3fe912fa",
+      "bytes": 1201701
+    },
+    "run-2026103101/day-results.csv.gz": {
+      "sha256": "75ed5c3e7833f0e6bf8dc76b2d8d3f6ed5dc66b17b413076940644b4711c7664",
+      "bytes": 808348
+    },
+    "run-2026103101/learned-rules.csv.gz": {
+      "sha256": "9c602c335c11a6be96179cdaba4c260752a4a54fd60bc84ed379aef91525eeb2",
+      "bytes": 366762
+    },
+    "run-2026103101/level-results.csv.gz": {
+      "sha256": "9db4c7696fa1fa239064a3462122ddbe13d7d394e2375b835d8f8888702cdee9",
+      "bytes": 7735448
+    },
+    "run-2026103101/manual-assistance-events.csv.gz": {
+      "sha256": "4b1faba67a0d98118fb98d2e5c4c751a29c668247048fd305d3cc478d3212825",
+      "bytes": 802640
+    },
+    "run-2026103101/oracle-controls.json": {
+      "sha256": "e1b8a4d9caedd2dc3c19310a982bccd90140247d15b0fee2ebd51369d4d1ee29",
+      "bytes": 7369
+    },
+    "run-2026103101/paired-comparisons.json": {
+      "sha256": "75c675099d734236e28c7d52e95cf386bb6a94e939bbcdf4feb3a3fc4874b8cd",
+      "bytes": 5170
+    },
+    "run-2026103101/probe-results.csv.gz": {
+      "sha256": "82d51224b743629211ddae016174940e5c4279e6106eaece98c14fa38397e260",
+      "bytes": 247298
+    },
+    "run-2026103101/profiles.json": {
+      "sha256": "bdc26eda48f200865d1dd0befdf030277412b9a9ce08c20b886683bc598d7146",
+      "bytes": 68479
+    },
+    "run-2026103101/provenance.json": {
+      "sha256": "f83733416785260fc130f61ffa5ffaffe7330fef1c71df2521d9a0d932ca794f",
+      "bytes": 9286
+    },
+    "run-2026103101/report.json": {
+      "sha256": "9284f256c92508b2adf9902d79849df6d8359927d7e8b652e3522fbbc8e76357",
+      "bytes": 759274
+    },
+    "run-2026103101/summary.json": {
+      "sha256": "f31acf0c7f8dbc4f0661a62b73126b8729c8e0a2c589d352b83bdb80ab8eafcb",
+      "bytes": 563252
+    },
+    "run-2026103101/traces.json": {
+      "sha256": "d153c3e961d8dd6e24b701bc0fc756e1bf133513ffc48f70546c80d46f611a98",
+      "bytes": 114917
+    },
+    "run-2026103101/trajectories.csv.gz": {
+      "sha256": "6a87ba07030b6a3f37c14f7d361ad05a4733c835e8f1c51607891689ac79e03d",
+      "bytes": 570338
+    },
+    "run-original.log": {
+      "sha256": "ceba6cd3ef98d69f13f28a00e3cd9a8c9cca1b066d1900b925c23e27a85a16c9",
+      "bytes": 446
+    },
+    "validation-original.log": {
+      "sha256": "c3a85b5709a16c180cd1462fadd02d35e72ffbb08308aae6439514455efdc51b",
+      "bytes": 645
+    },
+    "validation.json": {
+      "sha256": "c3a85b5709a16c180cd1462fadd02d35e72ffbb08308aae6439514455efdc51b",
+      "bytes": 645
+    }
+  },
+  "logicalBytesNewEvidence": 14086016,
+  "limits": [
+    "Zero humans; no understanding,enjoyment,emotion or retention measurement",
+    "No decoration,equipment/ownership,LumaGold,ads,purchases or provider lifecycle in this runner",
+    "Manual exits may follow cues; explicit native assistance and104oracle controls are separate from bounded policy search",
+    "Trio result concerns frequent/refusal-prone synthetic policy; no human nerf recommendation"
+  ],
+  "noAppPublicScriptWorkflowOrGitPublication": true
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*LumaGold insuffisants. Aucun nouveau débit.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": "1|REFUSED|07e027f3-b4a0-4a75-8782-fb02b47b9482|22af858d-0ec3-40f8-8de2-075f52186be6"
+  },
+  {
+    "op": "capture",
+    "name": "cold-terminal-refusal-fr"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*Not enough LumaGold. No new debit.*"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": "1|REFUSED|07e027f3-b4a0-4a75-8782-fb02b47b9482|22af858d-0ec3-40f8-8de2-075f52186be6"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "capture",
+    "name": "cold-terminal-refusal-en"
+  },
+  {
+    "op": "snapshot",
+    "name": "warm-final-cold-state"
+  }
+]

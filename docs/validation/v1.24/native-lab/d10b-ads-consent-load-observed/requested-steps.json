@@ -1,0 +1,45 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "wait",
+    "ms": 2000
+  },
+  {
+    "op": "tap",
+    "regex": "Do not consent"
+  },
+  {
+    "op": "capture",
+    "name": "ump-test-no-consent"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "capture",
+    "name": "sdk-test-ad-load-status"
+  },
+  {
+    "op": "snapshot",
+    "name": "sdk-test-ad-load-state"
+  }
+]

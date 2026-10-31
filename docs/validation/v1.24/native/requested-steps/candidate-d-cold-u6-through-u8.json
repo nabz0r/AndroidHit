@@ -1,0 +1,166 @@
+[
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "level",
+    "value": "6"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": "0"
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "2",
+    "capacities": [
+      2
+    ],
+    "uses": [
+      2
+    ],
+    "remaining": [
+      0
+    ],
+    "energy": 0
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp",
+    "value": "175"
+  },
+  {
+    "op": "assert-pref",
+    "key": "companion_copies_v118_nova",
+    "value": "2"
+  },
+  {
+    "op": "capture",
+    "name": "cold-d-u6-two-uses-en"
+  },
+  {
+    "op": "solve",
+    "level": 6
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "xp": 35,
+    "captain": "nova"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "open-level",
+    "level": 7
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "2",
+    "capacities": [
+      2
+    ],
+    "uses": [
+      0
+    ],
+    "remaining": [
+      2
+    ],
+    "energy": 3
+  },
+  {
+    "op": "solve",
+    "level": 7
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "xp": 35,
+    "captain": "nova",
+    "rankBefore": 2,
+    "rankAfter": 3,
+    "copies": 1,
+    "rankStatus": "COPY"
+  },
+  {
+    "op": "assert-pref",
+    "key": "companion_copies_v118_nova",
+    "value": "3"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp",
+    "value": "245"
+  },
+  {
+    "op": "capture",
+    "name": "u7-rank3-copy-nova-fr"
+  },
+  {
+    "op": "open-level",
+    "level": 8
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "2",
+    "capacities": [
+      2
+    ],
+    "uses": [
+      0
+    ],
+    "remaining": [
+      2
+    ],
+    "energy": 3
+  },
+  {
+    "op": "solve",
+    "level": 8
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "xp": 35,
+    "captain": "nova",
+    "rankBefore": 3,
+    "rankAfter": 3,
+    "copies": 0,
+    "rankStatus": "NONE"
+  },
+  {
+    "op": "assert-pref",
+    "key": "companion_copies_v118_nova",
+    "value": "3"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp",
+    "value": "280"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "620"
+  },
+  {
+    "op": "capture",
+    "name": "u8-victory-280xp-fr"
+  },
+  {
+    "op": "snapshot",
+    "name": "u1-u8-d-complete"
+  }
+]

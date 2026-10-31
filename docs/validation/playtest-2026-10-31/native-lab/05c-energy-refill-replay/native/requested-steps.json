@@ -1,0 +1,138 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "capture",
+    "name": "energy-zero-menu-hud"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "capture",
+    "name": "energy-zero-offer-fr"
+  },
+  {
+    "op": "remember-value",
+    "name": "coins-energy",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "remember-value",
+    "name": "gold-energy",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "capture",
+    "name": "energy-confirmation-fr"
+  },
+  {
+    "op": "tap",
+    "regex": "Annuler"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "coins-energy",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "gold-energy",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "tap",
+    "regex": "Oui"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-int-delta",
+    "name": "gold-energy",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "delta": -50
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "coins-energy",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "capture",
+    "name": "energy-refilled-fr"
+  },
+  {
+    "op": "snapshot",
+    "name": "energy-refilled"
+  },
+  {
+    "op": "remember-value",
+    "name": "xp-replay",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp"
+  },
+  {
+    "op": "remember-value",
+    "name": "coins-replay",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "xp-replay",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "coins-replay",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "capture",
+    "name": "replay-u1-zero-xp-zero-coins"
+  },
+  {
+    "op": "tap-id",
+    "id": "victory_map"
+  },
+  {
+    "op": "capture",
+    "name": "energy-refilled-menu-hud"
+  },
+  {
+    "op": "snapshot",
+    "name": "replay-and-refill"
+  }
+]

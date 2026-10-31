@@ -1,0 +1,189 @@
+[
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "527"
+  },
+  {
+    "op": "assert-pref",
+    "key": "home_wallpaper_v113",
+    "value": "wallpaper_dusk"
+  },
+  {
+    "op": "assert-pref",
+    "key": "home_floor_v113",
+    "value": "floor_rose"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_wardrobe"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "capture",
+    "name": "gear-head-list"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "avatar_slot_v1_HEAD",
+    "name": "head-before"
+  },
+  {
+    "op": "tap",
+    "regex": "Feuille lanterne"
+  },
+  {
+    "op": "capture",
+    "name": "head-preview"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "avatar_slot_v1_HEAD",
+    "name": "head-before"
+  },
+  {
+    "op": "tap",
+    "regex": "Fermer"
+  },
+  {
+    "op": "assert-id",
+    "id": "wardrobe_item_hat_dew"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "avatar_slot_v1_HEAD",
+    "name": "head-before"
+  },
+  {
+    "op": "tap",
+    "regex": "Feuille lanterne"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_HEAD",
+    "value": "lantern_leaf"
+  },
+  {
+    "op": "capture",
+    "name": "head-equipped"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_slot_1"
+  },
+  {
+    "op": "tap",
+    "regex": "Orbite menthe"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_AURA",
+    "value": "mint_orbit"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_slot_2"
+  },
+  {
+    "op": "tap",
+    "regex": "Vœu de cuivre"
+  },
+  {
+    "op": "capture",
+    "name": "charm-priced-preview"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "gear-coins"
+  },
+  {
+    "op": "tap",
+    "regex": "450 LumaCoins"
+  },
+  {
+    "op": "assert-int-delta",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "gear-coins",
+    "delta": -450
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_owned_v1_copper_wish",
+    "value": "EARNED_COINS"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "450 LumaCoins"
+  },
+  {
+    "op": "capture",
+    "name": "charm-owned-before-equip"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_CHARM",
+    "value": "copper_wish"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "77"
+  },
+  {
+    "op": "capture",
+    "name": "charm-equipped"
+  },
+  {
+    "op": "snapshot",
+    "name": "gear-state"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_back"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_shop"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_category_2"
+  },
+  {
+    "op": "capture",
+    "name": "premium-shop-state"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "status": "SOURCE_CORRECTION_PENDING_NEW_APK",
+  "date": "2026-10-31T00:35:09.712886+00:00",
+  "defect": "Native B panels/actions/orbs were translucent: Paint alpha from shadow fill multiplied the gradient shader alpha. Surface text/board content remained visible underneath.",
+  "observed": [
+    "docs/validation/v1.24/native-lab/b01-upgrade-discovery/native/home-fr.png",
+    "docs/validation/v1.24/native/production/candidate-b-fresh-rank-capacity/native/companion-fr.png"
+  ],
+  "fix": "Reset Paint to opaque WHITE before each panel/action/orb gradient; no geometry, controls or game state changed.",
+  "source": "app/src/main/java/com/androidhit/lumadrift/ui/PulseUi124.java",
+  "sha256": "dca3946d03afbd081b3a3378adf1b5bc8888414ca68baaefe75b2b7cdbfa29d1",
+  "sdk_javac_passed": true,
+  "native_retest": "PENDING_EXACT_NEXT_CANDIDATE",
+  "additional_layout_fix": "Home rank/XP capsule ends atx306; XP text ends294, leaving settings control startingx318 clear. Rank, XP, progress and profile action values/callback unchanged.",
+  "shared_luma_view_sha256_after_fix": "1abbae7e25873e193574117a9349020e10bcec8653cbef7266002bd0db7855bf"
+}

@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "startedAtUtc": "2026-10-30T23:45:08.181508+00:00",
+  "scope": "Existing contracts rerun to new dated output paths; test doubles stay explicit. No native/provider/payment acceptance.",
+  "runs": [
+    {
+      "command": [
+        "bash",
+        "scripts/test-journey-clarity-v123.sh",
+        "/Users/n/androidhit/docs/validation/playtest-2026-10-31/economy/ad-reward-fix/targeted-regressions/clarity"
+      ],
+      "exitCode": 0,
+      "stdout": "0.stdout.log",
+      "stderr": "0.stderr.log"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-session-energy-v121.sh",
+        "/Users/n/androidhit/docs/validation/playtest-2026-10-31/economy/ad-reward-fix/targeted-regressions/session-energy.json"
+      ],
+      "exitCode": 0,
+      "stdout": "1.stdout.log",
+      "stderr": "1.stderr.log"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-energy-purchase-v120.sh"
+      ],
+      "exitCode": 0,
+      "stdout": "2.stdout.log",
+      "stderr": "2.stderr.log"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-wallet-energy-transport-v120.sh"
+      ],
+      "exitCode": 0,
+      "stdout": "3.stdout.log",
+      "stderr": "3.stderr.log"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/test-commerce-v112.py"
+      ],
+      "exitCode": 0,
+      "stdout": "4.stdout.log",
+      "stderr": "4.stderr.log"
+    }
+  ],
+  "completedAtUtc": "2026-10-30T23:45:13.263797+00:00",
+  "outputs": {
+    "0.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "0.stdout.log": {
+      "sha256": "e68fa24c21987c78dffd04bc8ac6b0c213e62a249a37d30e0c50286493767490",
+      "bytes": 1016
+    },
+    "1.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "1.stdout.log": {
+      "sha256": "71960301839265955b0b14b7afd6edd8577b0e830a1bbb86fa374ff274b1a051",
+      "bytes": 363
+    },
+    "2.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "2.stdout.log": {
+      "sha256": "e4eba6a11a223d02a8d1022c7b1a556493c7b791343aa7d36bb3c8f636c5c36d",
+      "bytes": 111
+    },
+    "3.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "3.stdout.log": {
+      "sha256": "0a3f1f7b1aefd3d413cc16e5e963b973f98a681b42363da2f08e2338a0a73559",
+      "bytes": 132
+    },
+    "4.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "4.stdout.log": {
+      "sha256": "b950e6e51d857283df34cc2363a39e0f9cc08aa59822c75e59da982cca98b24c",
+      "bytes": 802
+    },
+    "clarity/journey.json": {
+      "sha256": "b650f3c80428d4fb89eb78d22cab9f19f380d3cf1a9214a6ab05ed5909396c4a",
+      "bytes": 528
+    },
+    "clarity/source-inputs.json": {
+      "sha256": "ef6a0c8bcd2d3484888bddcb92fc37eb5423f6c97bc668230e917eb8a834a41d",
+      "bytes": 14014
+    },
+    "clarity/wardrobe.json": {
+      "sha256": "9f496ed456c6f328651f13cb9932248660cd66ea7d56af106657a1d417995292",
+      "bytes": 488
+    },
+    "session-energy.json": {
+      "sha256": "71960301839265955b0b14b7afd6edd8577b0e830a1bbb86fa374ff274b1a051",
+      "bytes": 363
+    }
+  }
+}

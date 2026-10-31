@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-31T01:21:13.830849+00:00",
+  "passed": true,
+  "serial": "emulator-5638",
+  "avd": "Luma124-LabFresh-QA",
+  "normal_sdk_stop": true,
+  "exact_avd_verified_before_stop": true,
+  "observer_absent_before_stop": true,
+  "production_package_absent_before_stop": true,
+  "lab_package_present_before_stop": true,
+  "lab_userdata_preserved": true,
+  "game_uninstalled_or_cleared": false,
+  "optional_ads_disabled_via_ui": true,
+  "last_report": {
+    "path": "docs/validation/v1.24/native-lab/d12-final-opt-out-persistence/report.json",
+    "sha256": "765380e7216f77f63f20ac597219b4ed0060fcff87a2f64e3e2f8eba8a0f3578"
+  },
+  "shutdown_observation": {
+    "official_adb_emu_kill_returned_success": true,
+    "first_disconnection_assertion_at_2_seconds_failed": true,
+    "later_adb_devices_confirmed_absent": true,
+    "headful_emulator_session_45317_exit_code": 0
+  },
+  "scope": "Normal shutdown of only the exact task-owned fresh emulator. Shutdown needed more than the initial2second assertion; subsequent disconnection and normal emulator exit were verified. No profile reset, game uninstall, target preference write or other-device command."
+}

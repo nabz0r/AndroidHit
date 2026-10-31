@@ -1,0 +1,100 @@
+[
+  {
+    "op": "snapshot",
+    "name": "retained-before-ui"
+  },
+  {
+    "op": "remember-value",
+    "name": "coins",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "remember-value",
+    "name": "unlocked",
+    "pref": "luma_drift_save_v1",
+    "key": "unlocked"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "home-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_outbox",
+    "value": "1|REFUSED|2a79c72f-9e39-4cb1-a90b-da35f668ad50|a9adc56f-bb17-4d5c-94a8-a89f992d74a0"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*LumaGold insuffisants. Aucun nouveau débit.*"
+  },
+  {
+    "op": "capture",
+    "name": "session-energy-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "capture",
+    "name": "home-en"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "coins",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "unlocked",
+    "pref": "luma_drift_save_v1",
+    "key": "unlocked"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp",
+    "value": "350"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*Not enough LumaGold. No new debit.*"
+  },
+  {
+    "op": "capture",
+    "name": "session-energy-en-terminal-refusal"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_back"
+  },
+  {
+    "op": "snapshot",
+    "name": "retained-after-ui"
+  }
+]

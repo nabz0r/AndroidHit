@@ -1,0 +1,109 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "earn-through",
+    "level": 10
+  },
+  {
+    "op": "open-level",
+    "level": 11
+  },
+  {
+    "op": "drain-energy"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "capture",
+    "name": "real-attempt-energy-zero"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "capture",
+    "name": "energy-zero-offer-fr"
+  },
+  {
+    "op": "remember-value",
+    "name": "coins-energy",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "remember-value",
+    "name": "gold-energy",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "capture",
+    "name": "energy-confirmation-fr"
+  },
+  {
+    "op": "tap",
+    "regex": "Annuler"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "coins-energy",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "gold-energy",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "tap",
+    "regex": "Oui"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-int-delta",
+    "name": "gold-energy",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "delta": -50
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "coins-energy",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "capture",
+    "name": "energy-refilled-fr"
+  },
+  {
+    "op": "snapshot",
+    "name": "energy-refilled"
+  }
+]

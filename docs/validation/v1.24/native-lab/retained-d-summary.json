@@ -1,0 +1,72 @@
+{
+  "status": "PASS_RETAINED_D_ONLY",
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "version": "1.24.0-sandbox-rc2",
+  "code": 33,
+  "serial": "emulator-5634",
+  "scope": "Actual task-owned retained Lab SDK checks. Three additional public SDK lifecycle checks are labelled separately from touchscreen touchCount. No human usability/retention, physical-device, production commerce/ad or fresh Lab qualification in this retained summary.",
+  "phases": [
+    {
+      "report": "docs/validation/v1.24/native-lab/d01-upgrade-refusal/report.json",
+      "sha256": "d61e65aa4bfe7f4ea9be3bef4cd9452e5adcfaa57b968f103dbe93fef222e891",
+      "checks": 42,
+      "touches": 8,
+      "pngs": 4,
+      "production_preserved": true,
+      "configuration_restored": null
+    },
+    {
+      "report": "docs/validation/v1.24/native-lab/d02-modal-context/report.json",
+      "sha256": "3b15df65d23b98975b3647f3e6c94294457c5344878c655917f9235801a9511f",
+      "checks": 55,
+      "touches": 5,
+      "pngs": 4,
+      "production_preserved": true,
+      "configuration_restored": null
+    },
+    {
+      "report": "docs/validation/v1.24/native-lab/d03-short-large-context/report.json",
+      "sha256": "79d70dfdcb604f8cc3d3214730764d31c6bd382534093345bd1223a1972e195d",
+      "checks": 47,
+      "touches": 5,
+      "pngs": 5,
+      "production_preserved": true,
+      "configuration_restored": true
+    },
+    {
+      "report": "docs/validation/v1.24/native-lab/d04-guide-lifecycle/report.json",
+      "sha256": "510c5668fb8a00ffaa87dfc96a329e2037f2b5516a823755a20aa22d01e3b430",
+      "checks": 65,
+      "touches": 5,
+      "pngs": 3,
+      "production_preserved": true,
+      "configuration_restored": null
+    },
+    {
+      "report": "docs/validation/v1.24/native-lab/d05-restart-drain-refusal/report.json",
+      "sha256": "b09bf5cd0ee24b1fa421b1631fe78df721a58a38b8d924ec2fe5ca97aa00aecd",
+      "checks": 90,
+      "touches": 24,
+      "pngs": 4,
+      "production_preserved": true,
+      "configuration_restored": null
+    },
+    {
+      "report": "docs/validation/v1.24/native-lab/d06-cold-final-refusal/report.json",
+      "sha256": "01767ee9a20c8353a6adf7e399e7430022b6659a1b1efe7c2ab17efed2b18059",
+      "checks": 31,
+      "touches": 6,
+      "pngs": 2,
+      "production_preserved": true,
+      "configuration_restored": null
+    }
+  ],
+  "totals": {
+    "checks": 330,
+    "touches": 53,
+    "original_pngs": 22
+  },
+  "cleanup": "cleanup-retained.json",
+  "natural_energy_regeneration": "real-time-energy-regeneration.json",
+  "fresh_lab": "IN_PROGRESS_5638"
+}

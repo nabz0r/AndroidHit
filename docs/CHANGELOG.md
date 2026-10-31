@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.24.0-rc2 / code 33 — locally qualified, publication pending
+
+31 October 2026. Candidate D connects first-win XP → player rank → one copy for
+the captain actually played → companion level → talent uses captured at the next
+attempt. Keep the existing 25/30/35 XP and 120-XP rank curve, Charge costs and
+session energy rules. Existing ranks form a migration floor; a captain at 92 copies
+receives 45 existing LumaCoins instead, idempotently. Existing attempts keep their
+captured capacity and legacy one-use saves remain compatible.
+
+Original Pulse artwork and Nunito refresh arrows, keys/locks, resources, the
+four-room home and 48 furnishings/18 gameplay equipment items. Results explain
+the captain reward and future uses. Wardrobe preview/apply returns preserve
+context. Replayable earned ad-Coins and a durable insufficient-Lab-Gold refusal
+close the reproduced persistence gaps without activating live commerce.
+
+[Release](RELEASE_1_24.md) · [Qualification register](validation/v1.24/README.md) ·
+[Exact D identities](../releases/manifest-1.24.0-rc2.json). The artifact source object
+is `787fba142b8edd1f840b9b70cb7749167edacd24` (522 matched native inputs); final main,
+CI, Hosting and public-origin delivery remain pending. Production's B-created
+fresh profile updated to D passes 254 checks/46 real taps; retained production
+passes 60/46 separately. Lab records 11 PASS phases, 568 assertions/118 touches/39
+PNGs, with 4 stopped phases excluded. Test-ad ready is observed; actual display,
+early close and earned +35 remain unqualified. The new study executes 8,000
+synthetic trajectories, not people; GUIDE-policy limitations are
+explicit and do not justify a human balancing or retention claim.
+
+
 ## Cognitive Lab 1 — local research and report
 
 30 October 2026. Add a separate reproducible headless simulation and bilingual report for 100 heterogeneous synthetic profiles, bounded decisions, repeated paired scenarios, cognition/persistence measures and actual decision traces. [Method and commands](COGNITIVE_LAB.md) · [Executed results and delivery](validation/cognitive-lab/README.md). The current Android release remains 1.21.0-rc1 / code 29. No human retention, calibrated IQ or clinical addiction result is implied.

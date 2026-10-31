@@ -1,0 +1,114 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "77"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_HEAD",
+    "value": "lantern_leaf"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_AURA",
+    "value": "mint_orbit"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_CHARM",
+    "value": "copper_wish"
+  },
+  {
+    "op": "capture",
+    "name": "upgraded-adventure-fr"
+  },
+  {
+    "op": "snapshot",
+    "name": "upgraded-state"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_room_quick"
+  },
+  {
+    "op": "capture",
+    "name": "home-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "house_room_kitchen"
+  },
+  {
+    "op": "capture",
+    "name": "kitchen-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "house_room_garden"
+  },
+  {
+    "op": "capture",
+    "name": "garden-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "house_room_bedroom"
+  },
+  {
+    "op": "capture",
+    "name": "bedroom-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "house_room_living"
+  },
+  {
+    "op": "capture",
+    "name": "living-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_wardrobe"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_slot_2"
+  },
+  {
+    "op": "tap",
+    "regex": "Vœu de cuivre"
+  },
+  {
+    "op": "capture",
+    "name": "gear-detail-fr"
+  },
+  {
+    "op": "tap",
+    "regex": "Fermer l’aperçu|Fermer|Close preview"
+  },
+  {
+    "op": "assert-label",
+    "regex": "Vœu de cuivre"
+  },
+  {
+    "op": "capture",
+    "name": "gear-tab-preserved-fr"
+  },
+  {
+    "op": "snapshot",
+    "name": "after-final-gallery"
+  }
+]

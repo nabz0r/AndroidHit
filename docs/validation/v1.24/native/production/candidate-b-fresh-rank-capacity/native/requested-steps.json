@@ -1,0 +1,255 @@
+[
+  {
+    "op": "firstlight"
+  },
+  {
+    "op": "assert-starter"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "first-session-fr"
+  },
+  {
+    "op": "open-level",
+    "level": 1
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "1",
+    "capacities": [
+      1
+    ],
+    "uses": [
+      0
+    ],
+    "remaining": [
+      1
+    ],
+    "energy": 3
+  },
+  {
+    "op": "solve",
+    "level": 1
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "xp": 35,
+    "captain": "nova"
+  },
+  {
+    "op": "open-level",
+    "level": 2
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "1",
+    "capacities": [
+      1
+    ],
+    "uses": [
+      0
+    ],
+    "remaining": [
+      1
+    ],
+    "energy": 3
+  },
+  {
+    "op": "solve",
+    "level": 2
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "xp": 35,
+    "captain": "nova"
+  },
+  {
+    "op": "open-level",
+    "level": 3
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "1",
+    "capacities": [
+      1
+    ],
+    "uses": [
+      0
+    ],
+    "remaining": [
+      1
+    ],
+    "energy": 3
+  },
+  {
+    "op": "solve",
+    "level": 3
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "xp": 35,
+    "captain": "nova"
+  },
+  {
+    "op": "open-level",
+    "level": 4
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "1",
+    "capacities": [
+      1
+    ],
+    "uses": [
+      0
+    ],
+    "remaining": [
+      1
+    ],
+    "energy": 3
+  },
+  {
+    "op": "solve",
+    "level": 4
+  },
+  {
+    "op": "assert-victory",
+    "stars": 3,
+    "xp": 35,
+    "captain": "nova"
+  },
+  {
+    "op": "assert-victory",
+    "rankBefore": 1,
+    "rankAfter": 2,
+    "copies": 1,
+    "rankCoins": 0,
+    "rankStatus": "COPY"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp",
+    "value": "140"
+  },
+  {
+    "op": "assert-pref",
+    "key": "companion_copies_v118_nova",
+    "value": "2"
+  },
+  {
+    "op": "capture",
+    "name": "u4-rank2-copy-nova-fr"
+  },
+  {
+    "op": "open-level",
+    "level": 5
+  },
+  {
+    "op": "assert-battle",
+    "version": "v124_1",
+    "team": "nova",
+    "levels": "2",
+    "capacities": [
+      2
+    ],
+    "uses": [
+      0
+    ],
+    "remaining": [
+      2
+    ],
+    "energy": 3
+  },
+  {
+    "op": "assert-shells",
+    "count": 0,
+    "layers": 0
+  },
+  {
+    "op": "capture",
+    "name": "puzzle-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "companion-fr"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 1,
+    "capacities": [
+      2
+    ],
+    "uses": [
+      1
+    ],
+    "remaining": [
+      1
+    ]
+  },
+  {
+    "op": "certificate-step",
+    "level": 5,
+    "index": 0
+  },
+  {
+    "op": "assert-battle",
+    "energy": 2,
+    "uses": [
+      1
+    ],
+    "remaining": [
+      1
+    ],
+    "credited": "1"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "assert-battle",
+    "energy": 0,
+    "uses": [
+      2
+    ],
+    "remaining": [
+      0
+    ]
+  },
+  {
+    "op": "capture",
+    "name": "u5-two-uses-fr"
+  },
+  {
+    "op": "snapshot",
+    "name": "u5-two-uses-saved"
+  }
+]

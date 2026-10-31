@@ -1,0 +1,96 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-energy",
+    "count": 9
+  },
+  {
+    "op": "drain-energy"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "500"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-zero-energy-500-gold"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-refill-50-gold-confirm"
+  },
+  {
+    "op": "tap",
+    "regex": "Cancel"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "500"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-refill-cancel-preserves-500"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "tap",
+    "regex": "Yes"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-paid-refill-ten-energy-450-gold"
+  },
+  {
+    "op": "snapshot",
+    "name": "fresh-paid-refill-state"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-wallet-after-real-refill"
+  }
+]

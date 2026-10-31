@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "startedAtUtc": "2026-10-31T00:12:30.896782+00:00",
+  "finishedAtUtc": "2026-10-31T00:12:51.362016+00:00",
+  "elapsedHostSeconds": 20.465111625,
+  "exitCode": 0,
+  "command": [
+    "bash",
+    "scripts/run-cognitive-lab-v124.sh",
+    "--profiles",
+    "100",
+    "--repetitions",
+    "20",
+    "--seed",
+    "2026103102",
+    "--output",
+    "docs/validation/v1.24/simulation/run-2026103102"
+  ],
+  "seed": 2026103102,
+  "output": "docs/validation/v1.24/simulation/run-2026103102",
+  "executionLogSha256": "b33415201e1ef3188d26d1a43e507d895223f1281d4a3e4ecbcc42a443a8587e",
+  "protocolSha256": "866b49c4e2cb75e2ae8e26fefb83b9ebe5c3988a9ba020bb89c6c27456e38c6e",
+  "protectedPreexistingFilesChecked": 261,
+  "changedProtectedPreexistingFiles": [],
+  "scope": "Actual newly executed host trajectories with native rules;not human play,Android persistence,rendering or time measurement."
+}

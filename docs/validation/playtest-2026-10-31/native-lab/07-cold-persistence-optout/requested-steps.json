@@ -1,0 +1,103 @@
+[
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "2630"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_drift_meta_v1",
+    "key": "xp",
+    "value": "350"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "tap",
+    "regex": "Oui"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "0"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*LumaGold insuffisants. Aucun nouveau d\u00e9bit.*"
+  },
+  {
+    "op": "capture",
+    "name": "cold-insufficient-gold-fr"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "wait",
+    "ms": 2000
+  },
+  {
+    "op": "tap",
+    "regex": "Autoriser la publicit\u00e9 facultative"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_commerce_privacy_v1",
+    "key": "explicit_ads_opt_in",
+    "value": "false"
+  },
+  {
+    "op": "capture",
+    "name": "optional-advertising-disabled-fr"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "snapshot",
+    "name": "final-lab-state"
+  },
+  {
+    "op": "capture",
+    "name": "final-home-fr"
+  }
+]

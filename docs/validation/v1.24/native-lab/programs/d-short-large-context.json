@@ -1,0 +1,99 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "capture",
+    "name": "short-large-puzzle"
+  },
+  {
+    "op": "remember-value",
+    "name": "history",
+    "pref": "luma_session",
+    "key": "history"
+  },
+  {
+    "op": "remember-value",
+    "name": "run",
+    "pref": "luma_session",
+    "key": "run_id"
+  },
+  {
+    "op": "remember-battle",
+    "name": "before-sheet"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "short-large-sheet-top"
+  },
+  {
+    "op": "seek-id",
+    "id": "battle_skill_close_bottom"
+  },
+  {
+    "op": "assert-controls",
+    "ids": [
+      "battle_skill_close_bottom"
+    ]
+  },
+  {
+    "op": "capture",
+    "name": "short-large-sheet-return"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close_bottom"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "history",
+    "pref": "luma_session",
+    "key": "history"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "run",
+    "pref": "luma_session",
+    "key": "run_id"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "before-sheet"
+  },
+  {
+    "op": "tap-id",
+    "id": "play_pause"
+  },
+  {
+    "op": "capture",
+    "name": "short-large-pause"
+  },
+  {
+    "op": "assert-controls",
+    "ids": [
+      "pause_resume",
+      "pause_help",
+      "pause_exit"
+    ]
+  },
+  {
+    "op": "tap-id",
+    "id": "pause_resume"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "before-sheet"
+  },
+  {
+    "op": "capture",
+    "name": "short-large-return-puzzle"
+  }
+]

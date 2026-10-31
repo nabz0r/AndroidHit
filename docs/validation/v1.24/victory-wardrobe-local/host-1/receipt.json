@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "startedAtUtc": "2026-10-31T00:24:51.251806+00:00",
+  "sourceInputs": {
+    "app/src/main/java/com/androidhit/lumadrift/LumaView.java": "5813e3286c9f1f01db1449884e22128e4e5dd2b3eb8563809243a5448e37a726",
+    "app/src/main/java/com/androidhit/lumadrift/ui/VictoryLayout.java": "2ff899e4a3c87c781d4cfe44630a9b34d0d10c879180572bb97e62bfbf2990a8",
+    "app/src/main/java/com/androidhit/lumadrift/ui/PlaySceneLayout.java": "4b0504a432c6636259bb026dc5cf30cf570019e4641c34c7b76f437a1f36ecf4",
+    "scripts/playtest-2026-10-31/test-victory-wardrobe-124.py": "1fedbc9d245111efdba62846dd29e929ce6196ba08a42f6560ec45dd314fab6a"
+  },
+  "scope": "Exact extracted LumaView victory layout and wardrobe navigation blocks, with real VictoryLayout/PlaySceneLayout and explicit host callbacks/preferences-free UI field adapters. Measured text heights are fixtures, not Android typography/native interaction proof. No reward/economy mutation or native APK test.",
+  "result": "PASS assertions=30387 geometries=2160 wardrobeRoundTrips=36",
+  "completedAtUtc": "2026-10-31T00:24:51.632807+00:00",
+  "outputs": {
+    "compile.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "run.stdout.log": {
+      "sha256": "fc8a9fd732743fdea0a81eac653bbc079b9bf6c6a5f40af91ea1b3f69865f8e0",
+      "bytes": 60
+    },
+    "compile.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "run.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "extracted-host.java": {
+      "sha256": "fb86362679ac47870a3149b06e22539b693e2de571c0fdcfd7f98e2b2244253a",
+      "bytes": 6497
+    }
+  }
+}

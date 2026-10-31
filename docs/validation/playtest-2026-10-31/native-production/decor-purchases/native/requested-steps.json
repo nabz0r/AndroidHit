@@ -1,0 +1,174 @@
+[
+  {
+    "op": "tap-id",
+    "id": "home_room_quick"
+  },
+  {
+    "op": "assert-pref",
+    "key": "home_layout_v113",
+    "value": "2|3,3|bed,0,0,0;lamp,5,0,0;plant,0,5,0;rug,2,2,0;cushion,4,4,1;"
+  },
+  {
+    "op": "tap",
+    "regex": "Décorer"
+  },
+  {
+    "op": "tap",
+    "regex": "Meubles"
+  },
+  {
+    "op": "tap",
+    "regex": "Murs"
+  },
+  {
+    "op": "tap",
+    "regex": "Murs Crépuscule, 180 LumaCoins"
+  },
+  {
+    "op": "capture",
+    "name": "walls-priced-offer"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "walls-coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Obtenir pour 180 LumaCoins"
+  },
+  {
+    "op": "assert-int-delta",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "walls-coins",
+    "delta": -180
+  },
+  {
+    "op": "assert-pref",
+    "key": "home_owned_v113_wallpaper_dusk",
+    "value": "true"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "Obtenir pour 180 LumaCoins"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "home_wallpaper_v113",
+    "value": "wallpaper_dusk"
+  },
+  {
+    "op": "tap",
+    "regex": "Retour"
+  },
+  {
+    "op": "tap",
+    "regex": "Sol"
+  },
+  {
+    "op": "tap",
+    "regex": "Sol Rose, 180 LumaCoins"
+  },
+  {
+    "op": "capture",
+    "name": "floor-priced-offer"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "floor-coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Obtenir pour 180 LumaCoins"
+  },
+  {
+    "op": "assert-int-delta",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "floor-coins",
+    "delta": -180
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "home_floor_v113",
+    "value": "floor_rose"
+  },
+  {
+    "op": "tap",
+    "regex": "Retour"
+  },
+  {
+    "op": "tap",
+    "regex": "Meubles"
+  },
+  {
+    "op": "tap",
+    "regex": "Peluche Étoile de poche, 120 LumaCoins"
+  },
+  {
+    "op": "capture",
+    "name": "plush-priced-offer"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "plush-coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Obtenir pour 120 LumaCoins"
+  },
+  {
+    "op": "assert-int-delta",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "plush-coins",
+    "delta": -120
+  },
+  {
+    "op": "assert-pref",
+    "key": "home_owned_v113_plush",
+    "value": "true"
+  },
+  {
+    "op": "tap",
+    "regex": "Placer"
+  },
+  {
+    "op": "capture",
+    "name": "plush-draft"
+  },
+  {
+    "op": "tap",
+    "regex": "Placer"
+  },
+  {
+    "op": "capture",
+    "name": "room-customized"
+  },
+  {
+    "op": "snapshot",
+    "name": "purchased-home-state"
+  },
+  {
+    "op": "tap",
+    "regex": "Terminé"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_adventure"
+  }
+]

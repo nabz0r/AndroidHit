@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 1,
+  "status": "FROZEN_PASS_WITH_LOCAL_SOURCE_FIX",
+  "recordedAtUtc": "2026-10-30T23:52:02.140594+00:00",
+  "baseline": "1.23.0-rc2 E / code31",
+  "nativeRequalificationOfFix": false,
+  "publishedFix": false,
+  "appRulesChangedByAdFix": false,
+  "publicOrVersionChanged": false,
+  "acceptedDistinctWorkloads": {
+    "localModelSessions": 10000,
+    "localModelRandomizedActionGroups": 400000,
+    "walletModelSessions": 10000,
+    "walletModelRandomizedActionGroups": 240000,
+    "walletPublicApiCalls": 941451,
+    "adCallbackLifecycleFixtures": 10000,
+    "journalFailureRecoveryFixtures": 8000
+  },
+  "scope": "These are host model/API fixtures, not human sessions or live provider operations. Baseline and corrected repeats are separate evidence; repeated seed trajectories are not added to unique counts.",
+  "files": {
+    "README.md": {
+      "sha256": "498413c38cea7f18d3a5c3ce8a563c1a2e72096c253db603bb889af159d68cb0",
+      "bytes": 5370
+    },
+    "ad-reward-fix/baseline/AdsCallbackStress.java": {
+      "sha256": "f8e2a8b10b162abd5ec7e634e86b989ef28d765c4dce141889ca1fa864ca3107",
+      "bytes": 5557
+    },
+    "ad-reward-fix/baseline/EconomyStateStress.java": {
+      "sha256": "967f743973e06f32459fcf5da5c8eb7ad57354037c2daaadb4e1832ed9c6771e",
+      "bytes": 21993
+    },
+    "ad-reward-fix/baseline/LumaView.java": {
+      "sha256": "cce41eb9a605a62e1d474d88fe5d75e375ae940a731786d8e73b2557b87633b8",
+      "bytes": 414883
+    },
+    "ad-reward-fix/baseline/commerce/AdsController.java": {
+      "sha256": "b2cc36c2f979e0a2efbd2544f7cea4af0a58febd280526b7160f2acfdd54d050",
+      "bytes": 18669
+    },
+    "ad-reward-fix/baseline/commerce/CommerceActivity.java": {
+      "sha256": "499b7ec65cfaee1ce9d399875b2cc1daf9d03ced3628b53841b97b6dd8ddb024",
+      "bytes": 32962
+    },
+    "ad-reward-fix/baseline/commerce/CommerceCopy.java": {
+      "sha256": "cfcc3e52542b842faf1cceda8d04ad145cbf78a34b1e9123150de5e2cf1b745f",
+      "bytes": 5522
+    },
+    "ad-reward-fix/baseline/data/GameStore.java": {
+      "sha256": "cda7f02dfaed110dbe7c29e0a28f9e78aec9e0cd1bcb8dbf453e788d5d569542",
+      "bytes": 103125
+    },
+    "ad-reward-fix/baseline/run-ads-callback-stress.py": {
+      "sha256": "d48fec67c7922d9e9a0cbcba582e0944232b27200dd076eabf434e79eb684298",
+      "bytes": 8045
+    },
+    "ad-reward-fix/baseline/run-economy-stress.py": {
+      "sha256": "932e5ebdf0aca2cdf6a007181dafe0db67a989deb3460b6cb2f18d7cd778f243",
+      "bytes": 3358
+    },
+    "ad-reward-fix/baseline/source-inputs.json": {
+      "sha256": "41121ea6e47e5176a3f1a9f73946203fb0ab5d83744623481062e670a59c96e1",
+      "bytes": 862
+    },
+    "ad-reward-fix/baseline/wallet-state-stress.mjs": {
+      "sha256": "6696a6f5c5d6162a4b0c64503b127f4f7f20bbd25ca84f6c21f7f0abd127bce8",
+      "bytes": 11297
+    },
+    "ad-reward-fix/canonical-apks-unchanged.json": {
+      "sha256": "2ef375c56fd544248f14838dcfbb8282a10d4b1735fb902c9cfac91c425b9dda",
+      "bytes": 594
+    },
+    "ad-reward-fix/java-compilation/receipt.json": {
+      "sha256": "0d13564447e64260495a9a8b92fd79084ab2693648d8807fc3fdb0d566c64969",
+      "bytes": 1643
+    },
+    "ad-reward-fix/java-compilation/stderr.log": {
+      "sha256": "23531437063d4675e9d6b7036fbf4e19978f0e25a90279babf75c40d496d637f",
+      "bytes": 142
+    },
+    "ad-reward-fix/java-compilation/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/java-compilation-r2/receipt.json": {
+      "sha256": "926daa6169e731e1ba09cf94d121c281fca0ca05b395fcd600fde8d2bb53a0f3",
+      "bytes": 1666
+    },
+    "ad-reward-fix/java-compilation-r2/stderr.log": {
+      "sha256": "f1d8093b354fd28f86384d50a1e01780d477a415f950dd84c1bb9852366f8a57",
+      "bytes": 470
+    },
+    "ad-reward-fix/java-compilation-r2/stdout.log": {
+      "sha256": "fc90ddd55b94ef33bf682538fe65531865cdb7a3e450bef02c3994f01982837a",
+      "bytes": 2862
+    },
+    "ad-reward-fix/local-source.diff": {
+      "sha256": "5432afe370dbabfbae91612d473acfe112c732b361833348a6464ade6279d5ff",
+      "bytes": 24545
+    },
+    "ad-reward-fix/root-review.json": {
+      "sha256": "297fab4d64cbde77bc71f7b168d4c99c52e148cbb53d8bd9d82ea6a2cac859a7",
+      "bytes": 904
+    },
+    "ad-reward-fix/source-binding-and-requalification.json": {
+      "sha256": "39b8cce290a7f1e59dc8d4a1ecd531dc51319b572efb1293ccce88b0b57a4b2c",
+      "bytes": 3267
+    },
+    "ad-reward-fix/source-corrected-host/compile.stderr.log": {
+      "sha256": "905f8b70686983265fe8576e2ed511da9ed04ff5e2eb9e77101ac57e54d3298a",
+      "bytes": 653
+    },
+    "ad-reward-fix/source-corrected-host/compile.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-host/receipt.json": {
+      "sha256": "0a880dfdbd94d487723b33ce84aa91a4a4e0cd96247e448d1100080003ba9794",
+      "bytes": 20081
+    },
+    "ad-reward-fix/source-corrected-host-r2/compile.stderr.log": {
+      "sha256": "c19e97f84c2f46460928182a5344b0ae6c8eab98937e8ee0a02017c513137019",
+      "bytes": 303
+    },
+    "ad-reward-fix/source-corrected-host-r2/compile.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-host-r2/journal.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-host-r2/journal.stdout.log": {
+      "sha256": "99765a1de6f31ddf53d83c10dbfd39def5f8a7d15290e904dde291b03e115bcb",
+      "bytes": 729
+    },
+    "ad-reward-fix/source-corrected-host-r2/receipt.json": {
+      "sha256": "1f25b0f7b8c11d333d3a95eb89b2d184aa4f182f125ec46958d241a9f854f572",
+      "bytes": 20860
+    },
+    "ad-reward-fix/source-corrected-host-r2/result/journal-recovery.json": {
+      "sha256": "99765a1de6f31ddf53d83c10dbfd39def5f8a7d15290e904dde291b03e115bcb",
+      "bytes": 729
+    },
+    "ad-reward-fix/source-corrected-host-r2/result/summary.json": {
+      "sha256": "d5eab36c9deb49a84824c90c151e775b7923a813cfccbdbb34af7d5292564eb9",
+      "bytes": 1082
+    },
+    "ad-reward-fix/source-corrected-host-r2/run.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-host-r2/run.stdout.log": {
+      "sha256": "d5eab36c9deb49a84824c90c151e775b7923a813cfccbdbb34af7d5292564eb9",
+      "bytes": 1082
+    },
+    "ad-reward-fix/source-corrected-stress/compile.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-stress/compile.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-stress/model/action-families.csv": {
+      "sha256": "27621c30eac45872f49074838add962e296c47671b3345c50ab2592150bc5db9",
+      "bytes": 1065
+    },
+    "ad-reward-fix/source-corrected-stress/model/sessions.csv": {
+      "sha256": "1d2a97f60f25011ca51bf7496c9c4bd8cfade64b6d8805dfad6c30a448972af9",
+      "bytes": 1579279
+    },
+    "ad-reward-fix/source-corrected-stress/model/summary.json": {
+      "sha256": "29b29eb9e47236a59cdd376b827a1e319beba2b5eac6d50f061ebff66f265a1d",
+      "bytes": 715
+    },
+    "ad-reward-fix/source-corrected-stress/model.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-stress/model.stdout.log": {
+      "sha256": "29b29eb9e47236a59cdd376b827a1e319beba2b5eac6d50f061ebff66f265a1d",
+      "bytes": 715
+    },
+    "ad-reward-fix/source-corrected-stress/receipt.json": {
+      "sha256": "9c87b01e7a118b1a5807d42fe654c68015365731bd99c9b47f644878811cd2d3",
+      "bytes": 16836
+    },
+    "ad-reward-fix/source-corrected-stress/wallet/sessions.csv": {
+      "sha256": "9eb1b3d62400539c0b45536ed04522702b24210cf5cbf5004a05b8f7afa03394",
+      "bytes": 1032649
+    },
+    "ad-reward-fix/source-corrected-stress/wallet/summary.json": {
+      "sha256": "35027fea6193a23861cbe55d4c2df9fd3c11a30d3c3e868cd41a4cfc5ebc393d",
+      "bytes": 1755
+    },
+    "ad-reward-fix/source-corrected-stress/wallet.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/source-corrected-stress/wallet.stdout.log": {
+      "sha256": "35027fea6193a23861cbe55d4c2df9fd3c11a30d3c3e868cd41a4cfc5ebc393d",
+      "bytes": 1755
+    },
+    "ad-reward-fix/source-snapshot/LumaView.java": {
+      "sha256": "3acb1853cd465c325f822493c1f139e446faa871cb22273ed438503a29ffd8fe",
+      "bytes": 414911
+    },
+    "ad-reward-fix/source-snapshot/commerce/AdsController.java": {
+      "sha256": "b2cc36c2f979e0a2efbd2544f7cea4af0a58febd280526b7160f2acfdd54d050",
+      "bytes": 18669
+    },
+    "ad-reward-fix/source-snapshot/commerce/CommerceActivity.java": {
+      "sha256": "3f63f100db6a259173f1fe83e23e5313befa5ad616d165a143d47f663c339ea5",
+      "bytes": 34423
+    },
+    "ad-reward-fix/source-snapshot/commerce/CommerceCopy.java": {
+      "sha256": "4bf5ba5110e28a30eb45d45d054437c4cc486ac3c07143eb91993e9f53c5d3fc",
+      "bytes": 6051
+    },
+    "ad-reward-fix/source-snapshot/data/AdCoinsRewardJournal.java": {
+      "sha256": "41a6f55928810bc470cf658a3e066cfd7490ee886d0fe75722e80ba6ea446967",
+      "bytes": 4970
+    },
+    "ad-reward-fix/source-snapshot/data/GameStore.java": {
+      "sha256": "2778d959011a096d1b8eed2721994be85700f69509b6dc7275ee73acd14eb807",
+      "bytes": 103818
+    },
+    "ad-reward-fix/source-snapshot/manifest.json": {
+      "sha256": "de109e44c0ee5f91acb1bbce986067c215ff63c47824b3fd9d2af2ccfaddd3a7",
+      "bytes": 1777
+    },
+    "ad-reward-fix/targeted-regressions/0.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/targeted-regressions/0.stdout.log": {
+      "sha256": "e68fa24c21987c78dffd04bc8ac6b0c213e62a249a37d30e0c50286493767490",
+      "bytes": 1016
+    },
+    "ad-reward-fix/targeted-regressions/1.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/targeted-regressions/1.stdout.log": {
+      "sha256": "71960301839265955b0b14b7afd6edd8577b0e830a1bbb86fa374ff274b1a051",
+      "bytes": 363
+    },
+    "ad-reward-fix/targeted-regressions/2.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/targeted-regressions/2.stdout.log": {
+      "sha256": "e4eba6a11a223d02a8d1022c7b1a556493c7b791343aa7d36bb3c8f636c5c36d",
+      "bytes": 111
+    },
+    "ad-reward-fix/targeted-regressions/3.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/targeted-regressions/3.stdout.log": {
+      "sha256": "0a3f1f7b1aefd3d413cc16e5e963b973f98a681b42363da2f08e2338a0a73559",
+      "bytes": 132
+    },
+    "ad-reward-fix/targeted-regressions/4.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ad-reward-fix/targeted-regressions/4.stdout.log": {
+      "sha256": "b950e6e51d857283df34cc2363a39e0f9cc08aa59822c75e59da982cca98b24c",
+      "bytes": 802
+    },
+    "ad-reward-fix/targeted-regressions/clarity/journey.json": {
+      "sha256": "b650f3c80428d4fb89eb78d22cab9f19f380d3cf1a9214a6ab05ed5909396c4a",
+      "bytes": 528
+    },
+    "ad-reward-fix/targeted-regressions/clarity/source-inputs.json": {
+      "sha256": "ef6a0c8bcd2d3484888bddcb92fc37eb5423f6c97bc668230e917eb8a834a41d",
+      "bytes": 14014
+    },
+    "ad-reward-fix/targeted-regressions/clarity/wardrobe.json": {
+      "sha256": "9f496ed456c6f328651f13cb9932248660cd66ea7d56af106657a1d417995292",
+      "bytes": 488
+    },
+    "ad-reward-fix/targeted-regressions/receipt.json": {
+      "sha256": "0de2c606970d8011a33070dbc122c93a0a64766effbbd44e084e9efa4b457705",
+      "bytes": 3371
+    },
+    "ad-reward-fix/targeted-regressions/session-energy.json": {
+      "sha256": "71960301839265955b0b14b7afd6edd8577b0e830a1bbb86fa374ff274b1a051",
+      "bytes": 363
+    },
+    "ads-callbacks/compile.stderr.log": {
+      "sha256": "c19e97f84c2f46460928182a5344b0ae6c8eab98937e8ee0a02017c513137019",
+      "bytes": 303
+    },
+    "ads-callbacks/compile.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ads-callbacks/receipt.json": {
+      "sha256": "f47f899a813e27805bfe0fbf3644e697faf83972f32edf66f319254db2ff338c",
+      "bytes": 20169
+    },
+    "ads-callbacks/result/summary.json": {
+      "sha256": "0ac62ed35b1bde01dda7c25f3ab032a63b805a4b995bde8287d395c1fb9bb57b",
+      "bytes": 1096
+    },
+    "ads-callbacks/run.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "ads-callbacks/run.stdout.log": {
+      "sha256": "0ac62ed35b1bde01dda7c25f3ab032a63b805a4b995bde8287d395c1fb9bb57b",
+      "bytes": 1096
+    },
+    "attempt-dispositions.json": {
+      "sha256": "61b3f5f845e97080ae6e4c90572ed74e8211128150d7207a90a254d516a8a7de",
+      "bytes": 1623
+    },
+    "attempts/first-wallet-harness/wallet-state-stress.mjs": {
+      "sha256": "aff785e2b474e80c50d8f1a43bb41560eb88033453d45788c4eeeec0fa2a4651",
+      "bytes": 11128
+    },
+    "attempts/initial/EconomyStateStress.java": {
+      "sha256": "306bae380b9f35ece310fb4ddedeec1d30dbbfb49d317f3e52bf80d9fbbf20ef",
+      "bytes": 21149
+    },
+    "audit-core.md": {
+      "sha256": "1a78a6c1b2925714c828ab8ef8fb90fd3a05d94cd61a0bb22a40a319df468974",
+      "bytes": 7355
+    },
+    "final-stress/compile.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "final-stress/compile.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "final-stress/model/action-families.csv": {
+      "sha256": "27621c30eac45872f49074838add962e296c47671b3345c50ab2592150bc5db9",
+      "bytes": 1065
+    },
+    "final-stress/model/sessions.csv": {
+      "sha256": "1d2a97f60f25011ca51bf7496c9c4bd8cfade64b6d8805dfad6c30a448972af9",
+      "bytes": 1579279
+    },
+    "final-stress/model/summary.json": {
+      "sha256": "38bc45738e0b42b442b0dcc1aa173f919cc34c867f1d50a941e8afb4eb831113",
+      "bytes": 715
+    },
+    "final-stress/model.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "final-stress/model.stdout.log": {
+      "sha256": "38bc45738e0b42b442b0dcc1aa173f919cc34c867f1d50a941e8afb4eb831113",
+      "bytes": 715
+    },
+    "final-stress/receipt.json": {
+      "sha256": "fc4caa899e8df055449197ff59c75f444ee3b9f6dfff4a87738a90216670ea34",
+      "bytes": 16519
+    },
+    "final-stress/wallet/failure.txt": {
+      "sha256": "ef8ee9cf829540eb32cdcfcf81e1bbf646aa74cbd226940664b7c637513faa94",
+      "bytes": 260
+    },
+    "final-stress/wallet.stderr.log": {
+      "sha256": "4cc81a245fd8d8e94bf36d657baa8b38a4cd0b6577d6eece44eb5dd0b464ab88",
+      "bytes": 475
+    },
+    "final-stress/wallet.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "findings.json": {
+      "sha256": "11a58d6bf4cdd736fdd5d55874cad2bd7c07634689ac73746b7e3f0772d7f599",
+      "bytes": 2856
+    },
+    "model-stress/action-families.csv": {
+      "sha256": "adf993469f6003de3a6d168b75243dff8345abee03109b74d0d1c76d97425506",
+      "bytes": 1068
+    },
+    "model-stress/sessions.csv": {
+      "sha256": "b9209f2cbe26aa15dfb5b1e27781b93ab42c837695cbc514c579bd57099e26c7",
+      "bytes": 1580589
+    },
+    "model-stress/summary.json": {
+      "sha256": "552186165fbc32c89937a27e3eaf9a4e322aba291b569ec3afdc26de10376876",
+      "bytes": 760
+    },
+    "qualified-stress/compile.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "qualified-stress/compile.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "qualified-stress/model/action-families.csv": {
+      "sha256": "27621c30eac45872f49074838add962e296c47671b3345c50ab2592150bc5db9",
+      "bytes": 1065
+    },
+    "qualified-stress/model/sessions.csv": {
+      "sha256": "1d2a97f60f25011ca51bf7496c9c4bd8cfade64b6d8805dfad6c30a448972af9",
+      "bytes": 1579279
+    },
+    "qualified-stress/model/summary.json": {
+      "sha256": "83e3eeb2011e4748777daaf51b552fb9b675d7f5c877412aa9e4477dd2cf6121",
+      "bytes": 715
+    },
+    "qualified-stress/model.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "qualified-stress/model.stdout.log": {
+      "sha256": "83e3eeb2011e4748777daaf51b552fb9b675d7f5c877412aa9e4477dd2cf6121",
+      "bytes": 715
+    },
+    "qualified-stress/receipt.json": {
+      "sha256": "92d8f71c74b24a293d696853b80b4ef271ca2bc70ac00b249f5616f0b985d379",
+      "bytes": 16666
+    },
+    "qualified-stress/wallet/sessions.csv": {
+      "sha256": "9eb1b3d62400539c0b45536ed04522702b24210cf5cbf5004a05b8f7afa03394",
+      "bytes": 1032649
+    },
+    "qualified-stress/wallet/summary.json": {
+      "sha256": "d993a5fc8117735bb257a5f771a89457957916c9d753b2c6720aa6722f906282",
+      "bytes": 1755
+    },
+    "qualified-stress/wallet.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "qualified-stress/wallet.stdout.log": {
+      "sha256": "d993a5fc8117735bb257a5f771a89457957916c9d753b2c6720aa6722f906282",
+      "bytes": 1755
+    },
+    "runtime-environment.json": {
+      "sha256": "265aecf369b83b741fa37f9575b365c860a8d24cc896a7df93956ebf367d2861",
+      "bytes": 545
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "status": "FUNCTIONAL_PASS_VISUAL_REJECTED_PENDING_D_RC2_CODE33",
+  "date": "2026-10-31T00:37:30.396946+00:00",
+  "candidate": "B",
+  "lab_apk_sha256": "52e95e007c82f4b26174453c8df4daa057abfbaa733eb1f81473c09dbc4f8654",
+  "expected_version": "1.24.0-sandbox-rc1",
+  "expected_code": 32,
+  "serial": "emulator-5634",
+  "scope": "Actual retained Lab upgrade and SDK UI observation only. Scripted functional checks are separate from visual acceptance, enjoyment or human understanding. No fresh124 Lab, ads, refill, physical-device or publication acceptance yet.",
+  "phases": [
+    {
+      "report": "docs/validation/v1.24/native-lab/b01-upgrade-discovery/report.json",
+      "sha256": "d37388262578e36dcd488e124b9072167763753c51feebad1427e032edaafd29",
+      "functional_passed": true,
+      "checks": 28,
+      "touches": 6,
+      "original_pngs": 3,
+      "production_preference_files": 5,
+      "production_preferences_identical": true
+    },
+    {
+      "report": "docs/validation/v1.24/native-lab/b02-modal-context/report.json",
+      "sha256": "f3d9ba656d75fbdc09e8d48005173f5e29d9ec97722416b6cb3647d0e8799930",
+      "functional_passed": true,
+      "checks": 55,
+      "touches": 5,
+      "original_pngs": 4,
+      "production_preference_files": 5,
+      "production_preferences_identical": true
+    }
+  ],
+  "totals": {
+    "checks": 83,
+    "touches": 11,
+    "original_pngs": 7
+  },
+  "independently_viewed_original_pngs": [
+    "b01-upgrade-discovery/native/home-fr.png",
+    "b01-upgrade-discovery/native/session-energy-fr.png",
+    "b01-upgrade-discovery/native/home-en.png",
+    "b02-modal-context/native/puzzle-before-context.png",
+    "b02-modal-context/native/talent-effect-charge-uses.png",
+    "b02-modal-context/native/pause-new-surface.png"
+  ],
+  "visual_defects": [
+    {
+      "issue": "Translucent panels/actions/orbs allow board or underlying content through modal/nav surfaces",
+      "severity": "material readability defect",
+      "source_cause": "Paint retains shadow alpha when gradient shader is set",
+      "source_fix": "docs/validation/v1.24/ui-pulse/alpha-correction.json",
+      "native_retest": "PENDING_C"
+    },
+    {
+      "issue": "Settings orb overlaps right end of home XP",
+      "severity": "visible hierarchy/clipping defect",
+      "source_fix": "Home XP capsule/text now end at306/294 before settingsx318",
+      "native_retest": "PENDING_C"
+    }
+  ],
+  "observed_values": {
+    "coins": 2630,
+    "xp": 350,
+    "unlocked": 11,
+    "session_energy_count": 4,
+    "session_energy_max": 10,
+    "talent_policy": "v119_1 restored legacy",
+    "talent_charge": 3,
+    "talent_capacity": 1
+  },
+  "notes": [
+    "No board exits or purchases in these two phases. Board run/history/battle unchanged during talent preview/close and pause/resume.",
+    "The energy page displays inherited pending-confirmation copy at4energy/0testGold. Its underlying retained journal state needs transaction-specific inspection; this is not yet classified as a new124 regression.",
+    "The dock extends below the initial viewport and can require real scrolling to expose its remaining-use counters. Short/large-font native checks remain pending."
+  ],
+  "next_qualification": "FinalD1.24.0-sandbox-rc2/code33, corrected surfaces/XP/hero and inherited insufficient-Gold restoration"
+}

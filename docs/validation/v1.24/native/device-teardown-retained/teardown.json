@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "recordedAtUtc": "2026-10-31T01:14:34.073414+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "observerAbsentBeforeShutdown": true,
+  "lastNativeReport": "docs/validation/v1.24/native/production-final/retained-wardrobe-apply-return/report.json",
+  "shutdownCommand": [
+    "/Users/n/Library/Android/sdk/platform-tools/adb",
+    "-s",
+    "emulator-5602",
+    "emu",
+    "kill"
+  ],
+  "shutdownCommandExitCode": 0,
+  "avdNoLongerListed": true,
+  "userdataFilesPreserved": {
+    "userdata-qemu.img": {
+      "bytes": 10158080,
+      "mtimeNs": 1793301147461977157
+    },
+    "userdata-qemu.img.qcow2": {
+      "bytes": 7337934848,
+      "mtimeNs": 1793409254131147761
+    }
+  },
+  "gameClearOrUninstall": false,
+  "profileCopiedOrRestored": false,
+  "harnessNote": "The first post-shutdown assertion was sampled after only two seconds and stopped before writing its JSON. A subsequent devices inventory confirms normal shutdown completed; no second kill or game mutation was issued."
+}

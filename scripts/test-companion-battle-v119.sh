@@ -9,6 +9,6 @@ else task_java_bin="$(dirname "$(command -v javac)")"; fi
 "$task_java_bin/javac" -Xlint:all -d "$task_build" \
     "$task_root/scripts/test-support/android/graphics/Color.java" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/data/Catalog.java" \
-    "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattle.java" \
+    "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionProgression.java" "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattle.java" \
     "$task_root/scripts/CompanionBattleV119Test.java"
 "$task_java_bin/java" -Xmx256m -cp "$task_build" CompanionBattleV119Test

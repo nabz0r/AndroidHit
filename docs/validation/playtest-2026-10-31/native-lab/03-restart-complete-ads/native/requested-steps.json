@@ -1,0 +1,147 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_lab_purchases_v1",
+    "key": "pending_amount",
+    "value": "500"
+  },
+  {
+    "op": "remember-value",
+    "name": "coins-before",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Complete pending test"
+  },
+  {
+    "op": "assert-int-delta",
+    "name": "coins-before",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "delta": 500
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_lab_purchases_v1",
+    "key": "pending_tx",
+    "absent": true
+  },
+  {
+    "op": "remember-value",
+    "name": "credited",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Repeat last test confirmation"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "credited",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Simulate.*1400.*"
+  },
+  {
+    "op": "capture",
+    "name": "purchase-choice-en"
+  },
+  {
+    "op": "tap",
+    "regex": "Cancel"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "credited",
+    "pref": "luma_drift_save_v1",
+    "key": "coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Simulate.*1400.*"
+  },
+  {
+    "op": "tap",
+    "regex": "Complete test purchase"
+  },
+  {
+    "op": "assert-int-delta",
+    "name": "credited",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "delta": 1400
+  },
+  {
+    "op": "capture",
+    "name": "wallet-credit-en"
+  },
+  {
+    "op": "tap",
+    "regex": "Age range:.*"
+  },
+  {
+    "op": "tap",
+    "regex": "Under 18"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*Test ads require age 18 or over.*"
+  },
+  {
+    "op": "capture",
+    "name": "ad-minor-refusal-en"
+  },
+  {
+    "op": "tap",
+    "regex": "Age range:.*"
+  },
+  {
+    "op": "tap",
+    "regex": "18 or over"
+  },
+  {
+    "op": "tap",
+    "regex": "Allow optional advertising"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "capture",
+    "name": "ad-load-result-en"
+  },
+  {
+    "op": "snapshot",
+    "name": "purchase-and-ad-result"
+  }
+]

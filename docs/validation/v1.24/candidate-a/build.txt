@@ -1,0 +1,67 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.experimental.lint.version=9.4.0' is experimental.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preProductionReleaseBuild UP-TO-DATE
+> Task :app:mergeProductionReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeProductionReleaseNativeLibs UP-TO-DATE
+> Task :app:stripProductionReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractProductionReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeProductionReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeProductionReleaseArtProfile UP-TO-DATE
+> Task :app:expandProductionReleaseL8ArtProfileWildcards UP-TO-DATE
+> Task :app:checkProductionReleaseDuplicateClasses UP-TO-DATE
+> Task :app:generateProductionReleaseBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileProductionRelease UP-TO-DATE
+> Task :app:checkProductionReleaseAarMetadata UP-TO-DATE
+> Task :app:generateProductionReleaseResValues UP-TO-DATE
+> Task :app:mapProductionReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateProductionReleaseResources UP-TO-DATE
+> Task :app:mergeProductionReleaseResources UP-TO-DATE
+> Task :app:packageProductionReleaseResources UP-TO-DATE
+> Task :app:parseProductionReleaseLocalResources UP-TO-DATE
+> Task :app:createProductionReleaseCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksProductionRelease UP-TO-DATE
+> Task :app:processProductionReleaseMainManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifest UP-TO-DATE
+> Task :app:processProductionReleaseManifestForPackage UP-TO-DATE
+> Task :app:processProductionReleaseResources UP-TO-DATE
+
+> Task :app:compileProductionReleaseJavaWithJavac FAILED
+/Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/ui/LivingWorld121.java:60: error: non-static method number(Canvas,String,RectF,float,float,int) cannot be referenced from a static context
+        fill(tone);c.drawOval(rect,p);PulseUi124.number(c,String.valueOf(layers),rect,12,10,0xffffffff);
+                                                ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 error
+
+[Incubating] Problems report is available at: file:///Users/n/androidhit/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileProductionReleaseJavaWithJavac'.
+> Compilation failed; see the compiler output below.
+  Note: Recompile with -Xlint:deprecation for details.
+  /Users/n/androidhit/app/src/main/java/com/androidhit/lumadrift/ui/LivingWorld121.java:60: error: non-static method number(Canvas,String,RectF,float,float,int) cannot be referenced from a static context
+          fill(tone);c.drawOval(rect,p);PulseUi124.number(c,String.valueOf(layers),rect,12,10,0xffffffff);
+                                                  ^
+  Note: Some input files use or override a deprecated API.
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 5s
+23 actionable tasks: 1 executed, 22 up-to-date

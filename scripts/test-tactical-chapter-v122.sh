@@ -12,7 +12,7 @@ while IFS= read -r file; do task_engines+=("$file"); done < <(find "$task_root/a
     "$task_root/scripts/test-support/android/graphics/Color.java" \
     "${task_engines[@]}" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/data/Catalog.java" \
-    "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattle.java" \
+    "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionProgression.java" "$task_root/app/src/main/java/com/androidhit/lumadrift/data/CompanionBattle.java" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/data/TacticalChapterCatalog.java" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/data/TacticalChapterRun.java" \
     "$task_root/app/src/main/java/com/androidhit/lumadrift/data/TacticalChapterAction.java" \

@@ -1,0 +1,87 @@
+{
+  "passed": false,
+  "phase": "d10-ads-consent-load",
+  "runToken": "f4c601d8-d1b2-4158-91b8-016d6d36b484",
+  "processId": 6512,
+  "checkCount": 11,
+  "checks": [
+    {
+      "passed": true,
+      "message": "Exact separate Lab package"
+    },
+    {
+      "passed": true,
+      "message": "Unique host execution token"
+    },
+    {
+      "passed": true,
+      "message": "Bounded explicit phase"
+    },
+    {
+      "passed": true,
+      "message": "Fresh evidence output"
+    },
+    {
+      "passed": true,
+      "message": "Exact installed version and code"
+    },
+    {
+      "passed": true,
+      "message": "Explicit bounded gesture program"
+    },
+    {
+      "passed": true,
+      "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+    },
+    {
+      "passed": true,
+      "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+    },
+    {
+      "passed": true,
+      "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+    },
+    {
+      "passed": true,
+      "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+    },
+    {
+      "passed": true,
+      "message": "Distinct bounded native capture label"
+    }
+  ],
+  "touchCount": 2,
+  "actions": [
+    {
+      "reason": "menu_wallet_1",
+      "input": "actual SDK touchscreen",
+      "uptimeMs": 819284,
+      "label": "LumaGold: 450. Premium wallet",
+      "resourceId": "com.androidhit.lumadrift.sandbox:id\/menu_wallet_1",
+      "bounds": [
+        382,
+        150,
+        697,
+        316
+      ]
+    },
+    {
+      "reason": "shop_gold_wallet",
+      "input": "actual SDK touchscreen",
+      "uptimeMs": 821517,
+      "label": "View wallet →",
+      "resourceId": "com.androidhit.lumadrift.sandbox:id\/shop_gold_wallet",
+      "bounds": [
+        66,
+        1434,
+        1013,
+        1600
+      ]
+    }
+  ],
+  "captures": [
+    "failure"
+  ],
+  "package": "com.androidhit.lumadrift.sandbox",
+  "scope": "Actual SDK touchscreen input on the separate Lab package; read-only preferences. Explicit Lab simulation choices, test ads, earned campaign exits and local cosmetic transactions only. No target imports, target solver, reflection, preference writes, injected progress\/ownership\/currency, external identity, production ads or real purchases. Frozen authored certificates script real touches only."
+}

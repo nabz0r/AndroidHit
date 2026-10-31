@@ -1,0 +1,30 @@
+{
+  "attempt-1": {
+    "status": "FAIL",
+    "classification": "Harness fixture spent currency below the old victory baseline while recovering an unowned captain; original failure retained. Per-run Coins recording was then added to support legitimate spending during a pending grant."
+  },
+  "attempt-2": {
+    "status": "PASS_SUPERSEDED",
+    "classification": "Initial rank/XP/copy transaction suite, before per-run Coins recording and wallet-cap recovery."
+  },
+  "attempt-3": {
+    "status": "FAIL",
+    "classification": "Boundary fixture incorrectly requested a two-billion-Coin milestone; real public API refuses amounts above500. Corrected to an explicitly disclosed direct full-wallet preference fixture."
+  },
+  "attempt-4": {
+    "status": "PASS_SUPERSEDED",
+    "classification": "Added per-run Coins and full-wallet/purchase recovery."
+  },
+  "attempt-5": {
+    "status": "PASS_SUPERSEDED",
+    "classification": "Added recovery of already-earned daily/weekly rank receipts after period rollover."
+  },
+  "attempt-6": {
+    "status": "FAIL",
+    "classification": "Host harness compile error: a local test variable name shadowed another method local. No production-source compile failure."
+  },
+  "attempt-7": {
+    "status": "PASS_ACCEPTED_HOST",
+    "classification": "Final coordinator/legacy/grade boundary suite,31 298 assertions."
+  }
+}

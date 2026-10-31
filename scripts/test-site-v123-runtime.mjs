@@ -2,11 +2,16 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { createHash } from 'node:crypto';
 
 // Executes the shipped scripts against the actual shipped markup. The generic
 // DOM/event/clock double provides no map, key, language or camera logic of its
 // own. This qualifies state transitions, not browser layout, native UI or Hosting.
-const homeMarkup=fs.readFileSync(new URL('../public/index.html',import.meta.url),'utf8');
+// Exact historical1.23 homepage from accepted5cc87070 (same public tree as deployed c99ac529).
+// Current1.24 markup has separate tests; historical assertions must not read it.
+const homeBytes=fs.readFileSync(new URL('./fixtures/site-v123-index.html',import.meta.url));
+assert.equal(createHash('sha256').update(homeBytes).digest('hex'),'34854680e870e5e4f431e7c72479664e948ff8419a34fb2512253656cb36fb12','Frozen1.23 homepage fixture changed');
+const homeMarkup=homeBytes.toString('utf8');
 const homeScript=fs.readFileSync(new URL('../public/assets/site-v123.js',import.meta.url),'utf8');
 const demoMarkup=fs.readFileSync(new URL('../public/lab/ui-1-22/index.html',import.meta.url),'utf8');
 const demoScript=fs.readFileSync(new URL('../public/lab/ui-1-22/simulation.mjs',import.meta.url),'utf8');

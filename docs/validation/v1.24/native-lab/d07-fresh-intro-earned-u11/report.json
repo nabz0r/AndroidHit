@@ -1,0 +1,2580 @@
+{
+  "passed": false,
+  "created_utc": "2026-10-31T01:02:00.812662+00:00",
+  "serial": "emulator-5638",
+  "avd": "Luma124-LabFresh-QA",
+  "package": "com.androidhit.lumadrift.sandbox",
+  "phase": "d07-fresh-intro-earned-u11",
+  "expected_version": "1.24.0-sandbox-rc2",
+  "expected_code": 33,
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "observer_sha256": "afafb757244296fbe2fbfcfe9a5fe1b3ce48e4aaf2734b3ee1ca499c5ee3ebd5",
+  "observer_build_receipt_sha256": "2d67f6c6f21a8187051a30047a0050ff919923519a60e7db2f0e6ca535e157b1",
+  "production_isolation_kind": "PACKAGE_ABSENCE",
+  "previous_lab_apk_sha256": null,
+  "creation_receipt_sha256": "4bf9b98d13d02f926703eb4b4f28b155a31414c8e334207561bd832ba3c42f2a",
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "first_install": true,
+  "candidate_manifest": "docs/validation/v1.24/candidate-d/candidate.json",
+  "candidate_manifest_sha256": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+  "frozen_source_count": 522,
+  "run_token": "f7d366e7-fc44-4403-9f2b-d7b22952ee8c",
+  "scope": "Pinned 5638 newly created Lab-only task emulator. Production package remains absent; genuine Lab first install requires absence, later runs require the same exact APK. No profile is copied or reset. Actual SDK touchscreen Lab simulations, optional test-ad UI, earned campaign gestures, cosmetics; no direct grants, clears, preference writes, injected fixtures/progress, external identity or real commerce.",
+  "original_configuration": {
+    "size": "Physical size: 1080x2400",
+    "font_scale": "1.0"
+  },
+  "production_package_absent_before": true,
+  "installed_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420",
+    "page_size": "16384",
+    "font_scale": "1.0"
+  },
+  "native": {
+    "passed": false,
+    "phase": "d07-fresh-intro-earned-u11",
+    "runToken": "f7d366e7-fc44-4403-9f2b-d7b22952ee8c",
+    "processId": 4398,
+    "checkCount": 329,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact separate Lab package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Genuine first launch has no game or board preferences"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Untouched real first-light introduction"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Three real introduction exits persisted"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "First light completed through UI"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Supported language selected"
+      },
+      {
+        "passed": true,
+        "message": "Language saved by actual UI"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded Lab SDK UI operation; direct target writes are unavailable"
+      },
+      {
+        "passed": true,
+        "message": "Genuine funding stays within public certificates"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U1 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U1 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Real native U1 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U1"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U2 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U2 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U2 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Real native U2 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U2"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U3 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U3 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U3 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U3 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Real native U3 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U3"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U4 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U4 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U4 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U4 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U4 step 5"
+      },
+      {
+        "passed": true,
+        "message": "Real native U4 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U4"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U5 step 5"
+      },
+      {
+        "passed": true,
+        "message": "Real native U5 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U5"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U6 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U6 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U6 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U6 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U6 step 5"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U6 step 6"
+      },
+      {
+        "passed": true,
+        "message": "Real native U6 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U6"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U7 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U7 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U7 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U7 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U7 step 5"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U7 step 6"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U7 step 7"
+      },
+      {
+        "passed": true,
+        "message": "Real native U7 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U7"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 5"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 6"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 7"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U8 step 8"
+      },
+      {
+        "passed": true,
+        "message": "Real native U8 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U8"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": true,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Selecting destination remains on the real map"
+      },
+      {
+        "passed": true,
+        "message": "Actual visual companion destination agrees with confirmed arrival or its genuine initial default"
+      },
+      {
+        "passed": true,
+        "message": "Actual campaign board selected"
+      },
+      {
+        "passed": true,
+        "message": "Actual board preserves existing U certificate and budget identities"
+      },
+      {
+        "passed": true,
+        "message": "Existing genuine board history is a bounded certificate prefix"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U9 step 1"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U9 step 2"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U9 step 3"
+      },
+      {
+        "passed": true,
+        "message": "Read actual encoded shell state only"
+      },
+      {
+        "passed": true,
+        "message": "At most two real free taps for an observed shell"
+      },
+      {
+        "passed": true,
+        "message": "Exactly one certificate exit persisted for U9 step 4"
+      },
+      {
+        "passed": true,
+        "message": "Real native U9 victory awarded"
+      },
+      {
+        "passed": true,
+        "message": "Real first-clear campaign reward is exactly 55 earned coins for U9"
+      },
+      {
+        "passed": true,
+        "message": "Only existing frozen U1\u2013U60 certificates"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world minimap is visible"
+      },
+      {
+        "passed": true,
+        "message": "Actual native world Play is visible"
+      },
+      {
+        "passed": true,
+        "message": "World selection uses genuinely unlocked campaign node"
+      },
+      {
+        "passed": true,
+        "message": "Native gesture fixture currently selects the actual first sector only"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible pointer target world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Nonempty actual target bounds world_minimap"
+      },
+      {
+        "passed": true,
+        "message": "Bounded pointer settle"
+      },
+      {
+        "passed": true,
+        "message": "Actual target window exists"
+      },
+      {
+        "passed": true,
+        "message": "Pointer remains in actual target window"
+      },
+      {
+        "passed": false,
+        "message": "Actual world node visible after real minimap framing"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 97,
+    "actions": [
+      {
+        "reason": "real-piece-2-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 107388,
+        "label": "Piece, row 3, column 1, arrow up",
+        "bounds": [
+          168,
+          1318,
+          346,
+          1496
+        ]
+      },
+      {
+        "reason": "real-piece-1-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 107968,
+        "label": "Piece, row 2, column 3, arrow right",
+        "bounds": [
+          545,
+          1130,
+          722,
+          1307
+        ]
+      },
+      {
+        "reason": "real-piece-3-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 108571,
+        "label": "Piece, row 4, column 2, arrow down",
+        "bounds": [
+          357,
+          1507,
+          534,
+          1684
+        ]
+      },
+      {
+        "reason": "complete-genuine-firstlight",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 110570,
+        "label": "Discover your little home  \u2192",
+        "bounds": [
+          66,
+          1817,
+          1013,
+          1977
+        ]
+      },
+      {
+        "reason": "open-real-settings",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 111254,
+        "label": "Settings",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/settings_entry",
+        "bounds": [
+          880,
+          371,
+          1013,
+          515
+        ]
+      },
+      {
+        "reason": "select-real-language-en",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 111803,
+        "label": "English",
+        "bounds": [
+          387,
+          1565,
+          692,
+          1725
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 121591,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 122134,
+        "point": [
+          836.79065,
+          742.65717
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 122701,
+        "label": "Level 1",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_1",
+        "bounds": [
+          199,
+          1013,
+          354,
+          1168
+        ]
+      },
+      {
+        "reason": "open-selected-real-U1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 124502,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 125087,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 125633,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          357,
+          690,
+          540,
+          872
+        ]
+      },
+      {
+        "reason": "real-piece-1-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 126202,
+        "label": "Piece, row 2, column 4, arrow right, Gate open",
+        "bounds": [
+          722,
+          872,
+          905,
+          1055
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 132635,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 133167,
+        "point": [
+          858.0594,
+          744.9885
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 133717,
+        "label": "Level 2",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_2",
+        "bounds": [
+          403,
+          1037,
+          558,
+          1192
+        ]
+      },
+      {
+        "reason": "open-selected-real-U2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 135501,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 136083,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 136634,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          357,
+          690,
+          540,
+          872
+        ]
+      },
+      {
+        "reason": "real-piece-1-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 137184,
+        "label": "Piece, row 2, column 4, arrow right, Gate open",
+        "bounds": [
+          722,
+          872,
+          905,
+          1055
+        ]
+      },
+      {
+        "reason": "real-piece-3-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 137750,
+        "label": "Piece, row 4, column 3, arrow down, Gate open",
+        "bounds": [
+          540,
+          1238,
+          722,
+          1421
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 143950,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 144483,
+        "point": [
+          879.3281,
+          746.16266
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 145033,
+        "label": "Level 3",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_3",
+        "bounds": [
+          469,
+          1050,
+          624,
+          1205
+        ]
+      },
+      {
+        "reason": "open-selected-real-U3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 146916,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 147501,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 148051,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          357,
+          690,
+          540,
+          872
+        ]
+      },
+      {
+        "reason": "real-piece-1-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 148601,
+        "label": "Piece, row 2, column 4, arrow right, Gate open",
+        "bounds": [
+          722,
+          872,
+          905,
+          1055
+        ]
+      },
+      {
+        "reason": "real-piece-3-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 149150,
+        "label": "Piece, row 4, column 3, arrow down, Gate open",
+        "bounds": [
+          540,
+          1238,
+          722,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-2-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 149717,
+        "label": "Piece, row 3, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1055,
+          357,
+          1238
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 156001,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 156536,
+        "point": [
+          900.59686,
+          745.5967
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 157084,
+        "label": "Level 4",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_4",
+        "bounds": [
+          469,
+          1044,
+          624,
+          1199
+        ]
+      },
+      {
+        "reason": "open-selected-real-U4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 158867,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 159467,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 160017,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          357,
+          690,
+          540,
+          872
+        ]
+      },
+      {
+        "reason": "real-piece-1-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 160567,
+        "label": "Piece, row 2, column 4, arrow right, Gate open",
+        "bounds": [
+          722,
+          872,
+          905,
+          1055
+        ]
+      },
+      {
+        "reason": "real-piece-3-2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 161117,
+        "label": "Piece, row 4, column 3, arrow down, Gate open",
+        "bounds": [
+          540,
+          1238,
+          722,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-2-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 161667,
+        "label": "Piece, row 3, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1055,
+          357,
+          1238
+        ]
+      },
+      {
+        "reason": "real-piece-1-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 162233,
+        "label": "Piece, row 2, column 2, arrow left, Gate open",
+        "bounds": [
+          357,
+          872,
+          540,
+          1055
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 168467,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 169000,
+        "point": [
+          921.8656,
+          743.57153
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 169550,
+        "label": "Level 5",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_5",
+        "bounds": [
+          469,
+          1022,
+          624,
+          1177
+        ]
+      },
+      {
+        "reason": "open-selected-real-U5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 171333,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U5",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 171901,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 172450,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          690,
+          466,
+          836
+        ]
+      },
+      {
+        "reason": "real-piece-1-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 172983,
+        "label": "Piece, row 2, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          836,
+          466,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-1-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 173517,
+        "label": "Piece, row 2, column 5, arrow right, Gate open",
+        "bounds": [
+          759,
+          836,
+          905,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-4-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 174068,
+        "label": "Piece, row 5, column 4, arrow down, Gate open",
+        "bounds": [
+          613,
+          1275,
+          759,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-3-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 174617,
+        "label": "Piece, row 4, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1128,
+          320,
+          1275
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 183600,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 184133,
+        "point": [
+          943.1344,
+          741.0925
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 184683,
+        "label": "Level 6",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_6",
+        "bounds": [
+          469,
+          996,
+          624,
+          1151
+        ]
+      },
+      {
+        "reason": "open-selected-real-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 186467,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U6",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 187066,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 187618,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          690,
+          466,
+          836
+        ]
+      },
+      {
+        "reason": "real-piece-1-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 188167,
+        "label": "Piece, row 2, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          836,
+          466,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-1-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 188717,
+        "label": "Piece, row 2, column 5, arrow right, Gate open",
+        "bounds": [
+          759,
+          836,
+          905,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-4-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 189269,
+        "label": "Piece, row 5, column 4, arrow down, Gate open",
+        "bounds": [
+          613,
+          1275,
+          759,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-3-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 189818,
+        "label": "Piece, row 4, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1128,
+          320,
+          1275
+        ]
+      },
+      {
+        "reason": "real-piece-2-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 190383,
+        "label": "Piece, row 3, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          982,
+          466,
+          1128
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 196633,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 197168,
+        "point": [
+          964.40314,
+          739.39014
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 197717,
+        "label": "Level 7",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_7",
+        "bounds": [
+          469,
+          978,
+          624,
+          1133
+        ]
+      },
+      {
+        "reason": "open-selected-real-U7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 199501,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U7",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 200067,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 200617,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          690,
+          466,
+          836
+        ]
+      },
+      {
+        "reason": "real-piece-1-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 201167,
+        "label": "Piece, row 2, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          836,
+          466,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-1-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 201718,
+        "label": "Piece, row 2, column 5, arrow right, Gate open",
+        "bounds": [
+          759,
+          836,
+          905,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-4-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 202270,
+        "label": "Piece, row 5, column 4, arrow down, Gate open",
+        "bounds": [
+          613,
+          1275,
+          759,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-3-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 202817,
+        "label": "Piece, row 4, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1128,
+          320,
+          1275
+        ]
+      },
+      {
+        "reason": "real-piece-2-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 203367,
+        "label": "Piece, row 3, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          982,
+          466,
+          1128
+        ]
+      },
+      {
+        "reason": "real-piece-2-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 203933,
+        "label": "Piece, row 3, column 4, arrow right, Gate open",
+        "bounds": [
+          613,
+          982,
+          759,
+          1128
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 210200,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U8",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 210733,
+        "point": [
+          985.6719,
+          739.30945
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U8",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 211283,
+        "label": "Level 8",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_8",
+        "bounds": [
+          469,
+          977,
+          625,
+          1132
+        ]
+      },
+      {
+        "reason": "open-selected-real-U8",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 213067,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U8",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 213668,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-0-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 214217,
+        "label": "Piece, row 1, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          690,
+          466,
+          836
+        ]
+      },
+      {
+        "reason": "real-piece-1-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 214750,
+        "label": "Piece, row 2, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          836,
+          466,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-1-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 215300,
+        "label": "Piece, row 2, column 5, arrow right, Gate open",
+        "bounds": [
+          759,
+          836,
+          905,
+          982
+        ]
+      },
+      {
+        "reason": "real-piece-4-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 215833,
+        "label": "Piece, row 5, column 4, arrow down, Gate open",
+        "bounds": [
+          613,
+          1275,
+          759,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-3-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 216383,
+        "label": "Piece, row 4, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1128,
+          320,
+          1275
+        ]
+      },
+      {
+        "reason": "real-piece-2-1",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 216934,
+        "label": "Piece, row 3, column 2, arrow up, Gate open",
+        "bounds": [
+          320,
+          982,
+          466,
+          1128
+        ]
+      },
+      {
+        "reason": "real-piece-2-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 217483,
+        "label": "Piece, row 3, column 5, arrow up, Gate open",
+        "bounds": [
+          759,
+          982,
+          905,
+          1128
+        ]
+      },
+      {
+        "reason": "real-piece-2-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 218050,
+        "label": "Piece, row 3, column 4, arrow right, Gate open",
+        "bounds": [
+          613,
+          982,
+          759,
+          1128
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 226117,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U9",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 226649,
+        "point": [
+          1006.9406,
+          740.89056
+        ]
+      },
+      {
+        "reason": "actual-world-walk-to-U9",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 227200,
+        "label": "Level 9",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_node_9",
+        "bounds": [
+          521,
+          994,
+          676,
+          1149
+        ]
+      },
+      {
+        "reason": "open-selected-real-U9",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 228983,
+        "label": "Play",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/world_play",
+        "bounds": [
+          614,
+          1827,
+          1032,
+          1960
+        ]
+      },
+      {
+        "reason": "start-real-U9",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 229550,
+        "label": "Play  \u2192",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/briefing_play",
+        "bounds": [
+          66,
+          1971,
+          1013,
+          2126
+        ]
+      },
+      {
+        "reason": "real-piece-2-4",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 230101,
+        "label": "Key 1, Piece, row 3, column 5, arrow right, Gate open",
+        "bounds": [
+          759,
+          982,
+          905,
+          1128
+        ]
+      },
+      {
+        "reason": "real-piece-2-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 230635,
+        "label": "Piece, row 3, column 1, arrow right, Gate open",
+        "bounds": [
+          174,
+          982,
+          320,
+          1128
+        ]
+      },
+      {
+        "reason": "real-piece-4-3",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 231166,
+        "label": "Piece, row 5, column 4, arrow down, Gate open",
+        "bounds": [
+          613,
+          1275,
+          759,
+          1421
+        ]
+      },
+      {
+        "reason": "real-piece-4-0",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 231718,
+        "label": "Piece, row 5, column 1, arrow left, Gate open",
+        "bounds": [
+          174,
+          1275,
+          320,
+          1421
+        ]
+      },
+      {
+        "reason": "open-real-world-map",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 237950,
+        "label": "All levels",
+        "resourceId": "com.androidhit.lumadrift.sandbox:id/journey_entry",
+        "bounds": [
+          66,
+          1655,
+          360,
+          1877
+        ]
+      },
+      {
+        "reason": "actual-minimap-frame-U10",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 238483,
+        "point": [
+          1028.2094,
+          743.3485
+        ]
+      }
+    ],
+    "captures": [
+      "fresh-intro",
+      "firstlight-new",
+      "firstlight-solved",
+      "fresh-home-en",
+      "failure"
+    ],
+    "package": "com.androidhit.lumadrift.sandbox",
+    "scope": "Actual SDK touchscreen input on the separate Lab package; read-only preferences. Explicit Lab simulation choices, test ads, earned campaign exits and local cosmetic transactions only. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, production ads or real purchases. Frozen authored certificates script real touches only."
+  },
+  "error": "Native Lab UI phase failed",
+  "production_package_absent_after": true,
+  "elapsed_seconds": 149.241,
+  "evidence_sha256": {
+    "battle-observer.apk": "afafb757244296fbe2fbfcfe9a5fe1b3ce48e4aaf2734b3ee1ca499c5ee3ebd5",
+    "candidate-manifest.json": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "4bf9b98d13d02f926703eb4b4f28b155a31414c8e334207561bd832ba3c42f2a",
+    "failure-android-runtime.txt": "74e8b162a4395d4db1b57242dea8236aa447146be19029719ea859478691e209",
+    "first-install.txt": "781a31c82430c97897af612ece5e0ca2205e301cb5ff121ce2660541ea5182c7",
+    "instrumentation.txt": "8f69ca733a7643452526d6d2a9fe51888a05aee0d162d593e92526d58f3c7f29",
+    "native/before.json": "50c0c8d23bcb66c3c421ed1d7db5160bfc044a3a0acc134f41dc9c3fdc34f977",
+    "native/failure-accessibility.json": "63ed2fb304959285eb6c0f4a43a319d6635d17893963cd45219ab94e2ed20369",
+    "native/failure.png": "14fd84247f19ecea5dfafc2e85c3583b0d45e8ddecb0bae2939c10349948d834",
+    "native/failure.txt": "7398ba2b9697abd5d23876ee93e44223ff74fa0ca43e7d2b3d27133f7d7026a5",
+    "native/firstlight-new-accessibility.json": "1d180478794ccb9ef75d9f1e4f995013d40baf481f1b338b25848a95ea3ae9d7",
+    "native/firstlight-new.png": "7494e82fbae081828a94301ac6422df1b91065f6b7632afcc3839165613a6065",
+    "native/firstlight-solved-accessibility.json": "9a2fb4c1daeb78d484c17ae5feb4dc7cbdcbafcca1b8549495b5d783e3a0ecc0",
+    "native/firstlight-solved.png": "7d2251d9ee4bebf34cb5e527b6c0df25647dc3c2d801e60ef3e4bc54019b035b",
+    "native/fresh-home-en-accessibility.json": "7460f7d024e0ee13fa2a45c30e6df707e5ef7a441ffdd282899f2dc34e9128ca",
+    "native/fresh-home-en.png": "eba8b2fd28c73f16b17c2ed56628c01dbb5fdeb427eed74091900d6985343ea9",
+    "native/fresh-initialized.json": "3e505894846e0c1b063661200d0db0d83a43086fd3782d3701adede3d74cdebe",
+    "native/fresh-intro-accessibility.json": "1d180478794ccb9ef75d9f1e4f995013d40baf481f1b338b25848a95ea3ae9d7",
+    "native/fresh-intro.png": "7494e82fbae081828a94301ac6422df1b91065f6b7632afcc3839165613a6065",
+    "native/report.json": "b71e123b7489517768e27b217c3d509866a013dca22679edcf2fb2ee77920ec6",
+    "native/requested-steps.json": "098918e00d1024cc19de4463976608efe6763e74f3782082bea9ae1461c4138f",
+    "observer-build-receipt.json": "2d67f6c6f21a8187051a30047a0050ff919923519a60e7db2f0e6ca535e157b1",
+    "observer-install.txt": "302e4c262932e0fb13ab5b6c72ac09c475a3aa1bf4c6ff3fea8d225f1d7ecf08",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "8c9fe82074e3c7041ca8f660b3211a07f65c60a2e6b114f94792c97213714c55",
+    "source-snapshot.json": "f436ef1ba01f89063722cfb1866224b014a7e608e938c54c90870d299f7e908c"
+  }
+}

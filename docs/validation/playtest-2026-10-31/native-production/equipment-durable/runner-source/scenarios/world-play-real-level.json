@@ -1,0 +1,57 @@
+[
+  {
+    "op": "language",
+    "code": "en"
+  },
+  {
+    "op": "open-map"
+  },
+  {
+    "op": "map-select",
+    "level": 42
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_session",
+    "key": "run_id",
+    "name": "prior-board-run"
+  },
+  {
+    "op": "tap-id",
+    "id": "world_play"
+  },
+  {
+    "op": "capture",
+    "name": "world-play-real-level-briefing"
+  },
+  {
+    "op": "tap-id",
+    "id": "briefing_play"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "mode",
+    "value": "0"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "level",
+    "value": "42"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_session",
+    "key": "history",
+    "value": ""
+  },
+  {
+    "op": "capture",
+    "name": "world-play-real-u42"
+  },
+  {
+    "op": "snapshot",
+    "name": "world-play-real-board-state"
+  }
+]

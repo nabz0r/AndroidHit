@@ -1,0 +1,15 @@
+[
+ {"op":"snapshot","name":"retained-before-ui"},
+ {"op":"remember-value","name":"coins","pref":"luma_drift_save_v1","key":"coins"},
+ {"op":"remember-value","name":"unlocked","pref":"luma_drift_save_v1","key":"unlocked"},
+ {"op":"language","code":"fr"},
+ {"op":"capture","name":"home-fr"},
+ {"op":"tap-id","id":"menu_wallet_2"},
+ {"op":"capture","name":"session-energy-fr"},
+ {"op":"tap-id","id":"energy_back"},
+ {"op":"language","code":"en"},
+ {"op":"capture","name":"home-en"},
+ {"op":"assert-value-unchanged","name":"coins","pref":"luma_drift_save_v1","key":"coins"},
+ {"op":"assert-value-unchanged","name":"unlocked","pref":"luma_drift_save_v1","key":"unlocked"},
+ {"op":"snapshot","name":"retained-after-ui"}
+]

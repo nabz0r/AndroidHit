@@ -1,0 +1,80 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "2080"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_lab_purchases_v1",
+    "key": "pending_tx",
+    "absent": true
+  },
+  {
+    "op": "capture",
+    "name": "persisted-credit-en"
+  },
+  {
+    "op": "tap",
+    "regex": "Age group:.*"
+  },
+  {
+    "op": "tap",
+    "regex": "Under 18"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*Test ads require age 18 or over.*"
+  },
+  {
+    "op": "capture",
+    "name": "ad-minor-refusal-en"
+  },
+  {
+    "op": "tap",
+    "regex": "Age group:.*"
+  },
+  {
+    "op": "tap",
+    "regex": "18 or over"
+  },
+  {
+    "op": "tap",
+    "regex": "Allow optional advertising"
+  },
+  {
+    "op": "tap",
+    "regex": "Load test ad"
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "wait",
+    "ms": 15000
+  },
+  {
+    "op": "capture",
+    "name": "ad-load-result-en"
+  },
+  {
+    "op": "snapshot",
+    "name": "ad-load-result"
+  }
+]

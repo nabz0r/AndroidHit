@@ -1,0 +1,28 @@
+{
+  "status": "PREPARED_NO_FINAL_GAME_EXECUTION",
+  "date": "2026-10-31T00:43:26.333169+00:00",
+  "expected_version": "1.24.0-sandbox-rc2",
+  "expected_code": 33,
+  "observer_sha256": "2d4cbac9252b38b570e41489122b3b7b3b5e7c7f865bda5dd6e9a52f119788ba",
+  "sdk_compile_sign_verify": true,
+  "fixture_hashes_preserved": 60,
+  "guards": [
+    {
+      "runner": "run.py",
+      "passed": true,
+      "scope": "Known old Bcode32 rejected before observer/device operations or evidence directory creation",
+      "exit_code": 1
+    },
+    {
+      "runner": "run-fresh.py",
+      "passed": true,
+      "scope": "Known old Bcode32 rejected before observer/device operations or evidence directory creation",
+      "exit_code": 1
+    }
+  ],
+  "retained_serial": "emulator-5634",
+  "fresh_serial": "emulator-5638",
+  "fresh_booted": false,
+  "fresh_installed": false,
+  "game_build_invoked": false
+}

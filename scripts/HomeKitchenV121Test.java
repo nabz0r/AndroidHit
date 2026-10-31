@@ -8,16 +8,22 @@ public final class HomeKitchenV121Test {
     private static void check(boolean value,String why){checks++;if(!value)throw new AssertionError(why);}
     private static GameStore store(RewardsCosmeticsV17Test.Ctx context){return new GameStore(context,null,new RewardsCosmeticsV17Test.Clock("2026-10-30"));}
     private static void starter(){
+        check(HomeCatalog.ITEMS.size()==48,"expanded inventory has 48 stable furnishing IDs");
+        for(HomeCatalog.Item item:HomeCatalog.ITEMS)for(String lang:new String[]{"en","fr","de","es","pt","it"})check(!HomeStrings.name(lang,item.id).equals(item.id),"each furniture has six-language names");
         check(HomeCatalog.ROOMS.equals(Arrays.asList("living","bedroom","garden","kitchen")),"original three IDs remain ordered and kitchen appended once");
         check(HomeLayout.starter("living").encode().equals("2|3,3|bed,0,0,0;lamp,5,0,0;plant,0,5,0;rug,2,2,0;cushion,4,4,0;"),"original living starter byte-identical");
         check(HomeLayout.starter("bedroom").encode().equals("2|5,5|bed,2,1,0;lamp,7,1,0;rug,4,4,0;cushion,7,6,0;"),"original bedroom starter byte-identical");
-        check(HomeLayout.starter("garden").encode().equals("2|5,5|plant,1,1,0;flowerbed,5,1,0;garden_path,4,4,0;"),"original garden starter byte-identical");
+        String legacyGarden="2|5,5|plant,1,1,0;flowerbed,5,1,0;garden_path,4,4,0;";
+        check(HomeLayout.decode(legacyGarden).encode().equals(legacyGarden),"saved original garden remains byte-identical");
+        check(HomeLayout.starter("garden").placements().size()==5,"new garden contains five free furnishings");
         HomeLayout kitchen=HomeLayout.starter("kitchen");Set<String> contents=new HashSet<>();
         for(HomeLayout.Placement placement:kitchen.placements()){
             contents.add(placement.id);check(HomeCatalog.item(placement.id).starter(),"kitchen starter uses existing free items only");
             check(!placement.id.equals("kitchen"),"paid kitchen furniture is not granted as architecture");
         }
-        check(contents.equals(new HashSet<>(Arrays.asList("plant","rug","cushion"))),"kitchen welcome content explicit");
+        check(contents.equals(new HashSet<>(Arrays.asList("plant","rug","cushion","herb_cart","seed_shelf"))),"expanded kitchen welcome content explicit");
+        String legacyKitchen="2|5,5|plant,1,1,0;rug,4,4,0;cushion,7,6,0;";
+        check(HomeLayout.decode(legacyKitchen).encode().equals(legacyKitchen),"saved original kitchen remains byte-identical");
         for(int x=0;x<HomeCatalog.SIZE;x++)for(int y=0;y<HomeCatalog.SIZE;y++)if(!kitchen.isBlocked(x,y)){
             List<HomeLayout.Cell> path=kitchen.pathTo(x,y);
             check(x==kitchen.companionX&&y==kitchen.companionY||!path.isEmpty(),"every free kitchen floor cell remains reachable");
@@ -61,7 +67,7 @@ public final class HomeKitchenV121Test {
     }
     public static void main(String[] args)throws Exception{
         starter();independentPersistence();failedKitchenEdits();
-        String report="{\n  \"passed\":true,\n  \"checks\":"+checks+",\n  \"rooms\":4,\n  \"scope\":\"Actual host GameStore kitchen separation, original three starter bytes, exact paid ownership/440-Coin debit, all free floor paths, six-language room names, cold reconstruction and explicit failure doubles. Intrinsic rear-wall scenery is not paid furnishing. No native rendering or touch acceptance.\"\n}\n";
+        String report="{\n  \"passed\":true,\n  \"checks\":"+checks+",\n  \"rooms\":4,\n  \"scope\":\"Actual host GameStore kitchen separation, preserved living/bedroom starters and old serialized garden/kitchen saves, enriched free welcome layouts, exact paid ownership/440-Coin debit, all free floor paths, six-language room names, cold reconstruction and explicit failure doubles. Intrinsic rear-wall scenery is not paid furnishing. No native rendering or touch acceptance.\"\n}\n";
         if(args.length>0){Path out=Path.of(args[0]);Files.createDirectories(out.getParent());Files.writeString(out,report);}System.out.print(report);
     }
 }

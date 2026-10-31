@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "scripts/prepare-site-v124.py",
+    "--capture-map",
+    "docs/validation/site-v1.24/native-capture-map.json",
+    "--preview"
+  ],
+  "exitCode": 0,
+  "recordedAtUtc": "2026-10-31T01:02:25.585830+00:00",
+  "originalCombinedOutputSha256": "05aef531d6d3050b0d4bc581fbcc1cba7f8e8bf4c903f0b85474fbfce47b301b",
+  "preparerSha256": "52ac535f11d4f5393726b4181c155e98b24886d95e58396f9ecc8fe0ce174ee7",
+  "publicIndexStill123": true,
+  "earlierAttempt": {
+    "exitCode": 1,
+    "observedError": "AssertionError: Physical APK must be ignored",
+    "disposition": "Expected safety gate: exact1.24 public APK ignore rules had not been added yet; parent added them before this run. No public copy occurred."
+  },
+  "networkRequested": false,
+  "finalPreviewSha256": "f454c732835ec5e741951a131404ee144e54b62873caf2bd40ee7ba5ef19af42",
+  "previewMapSha256": "c9353aa53c723e08f9204d80376ae45a166240a96913a22466244c22680ddc9d"
+}

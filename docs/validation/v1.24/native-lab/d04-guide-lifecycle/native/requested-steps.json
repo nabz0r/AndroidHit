@@ -1,0 +1,71 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_activate"
+  },
+  {
+    "op": "wait",
+    "ms": 1000
+  },
+  {
+    "op": "assert-battle",
+    "policy": "v119_1",
+    "energy": 1,
+    "remaining0": 0
+  },
+  {
+    "op": "remember-battle",
+    "name": "spent-guide"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_0"
+  },
+  {
+    "op": "capture",
+    "name": "used-guide-paused-sheet"
+  },
+  {
+    "op": "background-sheet-timer-check",
+    "ms": 3000
+  },
+  {
+    "op": "recreate-context-check",
+    "visibleId": "battle_skill_close"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "spent-guide"
+  },
+  {
+    "op": "capture",
+    "name": "sheet-after-lifecycle"
+  },
+  {
+    "op": "tap-id",
+    "id": "battle_skill_close_bottom"
+  },
+  {
+    "op": "board-timer-advance",
+    "ms": 1800
+  },
+  {
+    "op": "snapshot",
+    "name": "guide-lifecycle-completed"
+  },
+  {
+    "op": "capture",
+    "name": "board-after-live-timer"
+  }
+]

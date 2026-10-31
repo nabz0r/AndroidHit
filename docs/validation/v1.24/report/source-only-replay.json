@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "archiveSha256": "3539f208f1386cf678aa2a213fe628d4df13c5ea784fc168c882580cf137a969",
+  "archiveBytes": 834641,
+  "noCsvGzipInZip": true,
+  "sourceInputs68ByteIdenticalToPreviousHostTestedKit": true,
+  "uncompiledUiContextIdentical": true,
+  "previousHostEvidence": "before-capacity-label/source-only-replay.json",
+  "previousHostEvidenceSha256": "1e60f4488ebc13f39f7c70a18f44bf672d0f18678dc309e00ca5c4f070ed77dc",
+  "newRuntimeTests": {
+    "total": 16,
+    "passed": 15,
+    "skipped": 1,
+    "skipReason": "11 raw ledgers are separate downloads, tested in full repository.",
+    "originalLog": "docs/validation/v1.24/report/source-only-final-runtime-original.log",
+    "sha256": "4afd4c8daed85236c98cf86eab262ddeb2924b2332c7750a29fffd7473d45da6"
+  },
+  "scope": "Only capacity label and its runtime regression changed. Java host source inputs are byte-identical to previous successfully extracted/tested kit; no simulation rerun needed."
+}

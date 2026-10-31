@@ -1,0 +1,44 @@
+✔ actual homepage fr: locale, every paired capture, exact download URLs (13.543625ms)
+✔ actual homepage en: locale, every paired capture, exact download URLs (8.145084ms)
+✔ homepage language switch keeps binary identity and preserves selected route parameters (11.256542ms)
+✔ demo fr: travel follows path, camera explores independently and recenter works (106.574334ms)
+✔ demo en: travel follows path, camera explores independently and recenter works (102.545167ms)
+✔ demo fr: selecting a key only highlights; explicit use opens only its locks (33.102083ms)
+✔ demo en: selecting a key only highlights; explicit use opens only its locks (32.849333ms)
+✔ English demo has translated navigation labels and a language-bound return link (5.745709ms)
+✔ reduced motion and narrow viewport retain the same final mechanical state (13.390833ms)
+✔ 1.24 preview fr: eight language reversals preserve title, binary links, explicit historical labs and absent native captures (26.434167ms)
+✔ 1.24 preview en: eight language reversals preserve title, binary links, explicit historical labs and absent native captures (25.359ms)
+✔ 1.24 audio remains user-started and one selected preview pauses the others (5.118417ms)
+✖ a pending1.24 preview remains visibly pending even when retained public site-config says preparation=false (6.872625ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 447.835208
+
+✖ failing tests:
+
+test at scripts/test-site-v124-runtime.mjs:131:1
+✖ a pending1.24 preview remains visibly pending even when retained public site-config says preparation=false (6.872625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///Users/n/androidhit/scripts/test-site-v124-runtime.mjs:132:68)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1397:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:969:18)
+      at Test.postRun (node:internal/test_runner/test:1537:19)
+      at Test.run (node:internal/test_runner/test:1462:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

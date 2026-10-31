@@ -1,0 +1,57 @@
+[
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "730"
+  },
+  {
+    "op": "assert-energy",
+    "count": 10
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_energy_purchases_v120",
+    "key": "account_a62f3a5b36687638fdc1a80a62a2451b266a6740c763b7ea03ba79e85bd6c20d_balance",
+    "value": "450"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_1"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "tap",
+    "regex": "Allow optional advertising"
+  },
+  {
+    "op": "assert-pref",
+    "pref": "luma_commerce_privacy_v1",
+    "key": "explicit_ads_opt_in",
+    "value": "false"
+  },
+  {
+    "op": "capture",
+    "name": "test-ads-opt-out-restored"
+  },
+  {
+    "op": "snapshot",
+    "name": "fresh-final-energy-gold-coins-state"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "capture",
+    "name": "fresh-final-home-fr"
+  }
+]

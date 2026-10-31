@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN_EXACT_D_NATIVE_LAB_WITH_EXPLICIT_SDK_GAP",
+  "created_utc": "2026-10-31T01:21:13.830849+00:00",
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "version": "1.24.0-sandbox-rc2",
+  "code": 33,
+  "app_input_count_rechecked": 522,
+  "app_inputs_unchanged": true,
+  "retained": {
+    "path": "docs/validation/v1.24/native-lab/retained-d-summary.json",
+    "sha256": "0370b52239a6c43b963bbe0b6a89415e0d02722887d60bd2e2a00716bb4ede4f"
+  },
+  "fresh": {
+    "path": "docs/validation/v1.24/native-lab/fresh-d-summary.json",
+    "sha256": "11ce10aae839845f1b67f6075adee8f5d85107374431206a4b40924ba9a8250f"
+  },
+  "retained_cleanup": {
+    "path": "docs/validation/v1.24/native-lab/cleanup-retained.json",
+    "sha256": "92a91ad351cc99fbdbcaf19f539e51b3354e83194f058620474aa618f10dcd24"
+  },
+  "fresh_cleanup": {
+    "path": "docs/validation/v1.24/native-lab/cleanup-fresh.json",
+    "sha256": "05f5042413ff54ce885710e7b16ecf8d53bd6a06cf5d21c850fc2e7baabfe1ca"
+  },
+  "natural_regeneration_bridge": {
+    "path": "docs/validation/v1.24/native-lab/real-time-energy-regeneration.json",
+    "sha256": "a14d69bd69df729bf012a77296e2bc457e5f5ae1b5b122d4af981ef24d6009c6"
+  },
+  "ui_exact_d_retest": {
+    "path": "docs/validation/v1.24/ui-pulse/native-retest-d.json",
+    "sha256": "156109ace4ee81af9d524cb529713cfef6a60256bdd896ef7fca32210dc3ec68"
+  },
+  "passed_phase_totals": {
+    "assertions": 568,
+    "touches": 118,
+    "original_pngs": 39
+  },
+  "passed_phase_count": 11,
+  "stopped_phases_separately_preserved": 4,
+  "additional_readonly_pngs_not_in_pass_totals": 1,
+  "extra_public_sdk_lifecycle_checks": 3,
+  "no_running_owned_emulator": true,
+  "no_app_or_public_edits_during_native_D_QA": true,
+  "scope": "Only these Lab-native phases and the explicit B-to-D natural-clock bridge. Does not replace production-native, simulation, site, CI, human, device or commerce gates."
+}

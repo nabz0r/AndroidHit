@@ -1,0 +1,57 @@
+{
+  "recordedAtUtc": "2026-10-30T23:51:19.814326+00:00",
+  "status": "PASS_WITH_LOCAL_SOURCE_FIX",
+  "baselineArtifact": {
+    "version": "1.23.0-rc2",
+    "code": 31,
+    "productionApkSha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+    "labApkSha256": "099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c",
+    "unchanged": true
+  },
+  "findings": [
+    {
+      "id": "AD_EARNED_SAVE_FAILURE_HAS_NO_RETRY",
+      "severity": "P2",
+      "baseline": "Exact E-source host reproduction with actual AdsController and GameStore, controlled SDK/preferences; not a native storage-fault replay.",
+      "source": "commerce/AdsController.java286–290; baseline CommerceActivity.java142",
+      "before": {
+        "path": "docs/validation/playtest-2026-10-31/economy/ads-callbacks/result/summary.json",
+        "sha256": "0ac62ed35b1bde01dda7c25f3ab032a63b805a4b995bde8287d395c1fb9bb57b",
+        "bytes": 1096
+      },
+      "localFixStatus": "HOST_AND_JAVA_COMPILATION_PASS_NOT_NATIVE_QUALIFIED",
+      "after": {
+        "path": "docs/validation/playtest-2026-10-31/economy/ad-reward-fix/source-corrected-host-r2/result/summary.json",
+        "sha256": "d5eab36c9deb49a84824c90c151e775b7923a813cfccbdbb34af7d5292564eb9",
+        "bytes": 1082
+      },
+      "journalRecovery": {
+        "path": "docs/validation/playtest-2026-10-31/economy/ad-reward-fix/source-corrected-host-r2/result/journal-recovery.json",
+        "sha256": "99765a1de6f31ddf53d83c10dbfd39def5f8a7d15290e904dde291b03e115bcb",
+        "bytes": 729
+      },
+      "javaCompilation": {
+        "path": "docs/validation/playtest-2026-10-31/economy/ad-reward-fix/java-compilation-r2/receipt.json",
+        "sha256": "926daa6169e731e1ba09cf94d121c281fca0ca05b395fcd600fde8d2bb53a0f3",
+        "bytes": 1666
+      },
+      "scopeLimit": "No local journal can recover an SDK-only event if the process dies before every durable write. CONTINUATION/POWER are unchanged."
+    },
+    {
+      "id": "GEAR_PREVIEW_RETURN_RESETS_TAB",
+      "severity": "P2_UX",
+      "status": "ROOT_NATIVE_OBSERVATION_AND_STATIC_CONFIRMATION",
+      "source": "LumaView.go wardrobe resets wardrobeMode=0, line384 in source snapshot.",
+      "effect": "Returns to outfit tab after gear preview; no equipment loss established.",
+      "changedHere": false
+    },
+    {
+      "id": "XP_COMPANION_LOOP_DISCONNECTED_IN_E",
+      "severity": "DESIGN_OBSERVATION",
+      "status": "STATIC_RULE_AUDIT",
+      "effect": "Player XP/rank does not improve or evolve puzzle companions in E; copies and fixed puzzle talents are separate. A subsequent1.24design is outside this1.23baseline report.",
+      "changedHere": false
+    }
+  ],
+  "scope": "Model/API/storage and static rules audit only; independent native reports remain separate. No human product validation or new publication."
+}

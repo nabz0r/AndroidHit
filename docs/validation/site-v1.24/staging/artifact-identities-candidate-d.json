@@ -1,0 +1,30 @@
+{
+  "status": "PASS_LOCAL_BYTES",
+  "candidate": "D",
+  "checkedAtUtc": "2026-10-31T00:54:47.529466+00:00",
+  "manifest": "releases/manifest-1.24.0-rc2.json",
+  "manifestSha256": "0d2325d2081f69f84dd25183262978bd665d374b22444ecd1623f2df4eeaabe2",
+  "apks": {
+    "production": {
+      "path": "releases/luma-drift-1.24.0-rc2.apk",
+      "sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e",
+      "bytes": 340290322,
+      "version": "1.24.0-rc2",
+      "code": 33,
+      "application_id": "com.androidhit.lumadrift",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "physicalLocalBytesVerified": true
+    },
+    "lab": {
+      "path": "releases/luma-drift-1.24.0-sandbox-rc2.apk",
+      "sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+      "bytes": 340290009,
+      "version": "1.24.0-sandbox-rc2",
+      "code": 33,
+      "application_id": "com.androidhit.lumadrift.sandbox",
+      "signer_certificate_sha256": "dcc06861630bb1ac0daf76f8f2d22de633238c8b36a199050ba5bdcb5ddcc287",
+      "physicalLocalBytesVerified": true
+    }
+  },
+  "scope": "Canonical local D files match the parent1.24rc2/code33manifest. No new signer inspection, native acceptance, public-byte check or publication by this subtask. CandidateB identity receipt remains unchanged."
+}

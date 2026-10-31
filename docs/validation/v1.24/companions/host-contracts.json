@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Host state/action,layout geometry,limited-perception deterministic smoke and preserved one-use controls. No Android persistence/rendering or human evidence.",
+  "tests": [
+    {
+      "name": "state124",
+      "command": [
+        "bash",
+        "scripts/test-companion-battle-v124.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.013352708,
+      "log": "docs/validation/v1.24/companions/state124-original.log",
+      "logSha256": "0e0dd13cfaf2d943433d00e8c42baf1aa1ab05342ffb209cdea2293c5673cb5f"
+    },
+    {
+      "name": "legacy-state119",
+      "command": [
+        "bash",
+        "scripts/test-companion-battle-v119.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.7982629579999998,
+      "log": "docs/validation/v1.24/companions/legacy-state119-original.log",
+      "logSha256": "89bde279c60e48376c2c274df31a09b33680dd82369f6790b33d1505d3dcad5e"
+    },
+    {
+      "name": "legacy-actions119",
+      "command": [
+        "bash",
+        "scripts/test-companion-action-v119.sh",
+        "/tmp/luma124-legacy-actions-final-20261031"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.719015875,
+      "log": "docs/validation/v1.24/companions/legacy-actions119-original.log",
+      "logSha256": "cd6701067defbfbc5ba0b426a2492da59ee11cf701eb61a203a6185f48364d9f"
+    },
+    {
+      "name": "dock124",
+      "command": [
+        "bash",
+        "scripts/test-battle-dock-v124.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.3344300419999997,
+      "log": "docs/validation/v1.24/companions/dock124-original.log",
+      "logSha256": "b6f779501563b3e84fd92c5c77bc517cc14cc1177050011e2c82ce8cf1f18de0"
+    },
+    {
+      "name": "cognitive-smoke124",
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v124.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.504197125,
+      "log": "docs/validation/v1.24/companions/cognitive-smoke124-original.log",
+      "logSha256": "431e4800a6fab011fb19114a72437f51934a11e224204a12d50bb51476878fc0"
+    },
+    {
+      "name": "cognitive-smoke123-legacy",
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v123.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.0707248330000008,
+      "log": "docs/validation/v1.24/companions/cognitive-smoke123-legacy-original.log",
+      "logSha256": "e649220758ab68d3548b1f7ed5356eda1b67ff6a1ac5ba9b3efe21571774800f"
+    },
+    {
+      "name": "cognitive-smoke124-memory-scope",
+      "command": [
+        "bash",
+        "scripts/test-cognitive-lab-v124.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.425441209,
+      "log": "docs/validation/v1.24/companions/cognitive-smoke124-memory-scope-original.log",
+      "logSha256": "7032906d66610d32418261f5b1e1a644e2013b56463e7f8be011dbdb6306e2d3"
+    },
+    {
+      "name": "dock124-final-text-reflow",
+      "command": [
+        "bash",
+        "scripts/test-battle-dock-v124.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.301917375,
+      "log": "docs/validation/v1.24/companions/dock124-final-text-reflow-original.log",
+      "logSha256": "7e79a18b3cd79bffb130d5428162801f939748456e4c6cbe8119d9ccd445c6e9"
+    },
+    {
+      "name": "sheet124-final-large-text",
+      "command": [
+        "bash",
+        "scripts/test-pause-layout-v124.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.32622933300000007,
+      "log": "docs/validation/v1.24/companions/sheet124-final-large-text-original.log",
+      "logSha256": "5d64c2b4d0d373348f33926b53504f3c50cef336dd4ebfc52b5b1a0e2fd5fae1"
+    },
+    {
+      "name": "sheet123-constructor-compatibility",
+      "command": [
+        "bash",
+        "scripts/test-clarity-layout-v123.sh"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.309614167,
+      "log": "docs/validation/v1.24/companions/sheet123-constructor-compatibility-original.log",
+      "logSha256": "038dac0e7e07877b17b07194ed1651e6eeae4f5692fcc68d21d3ef6441052a03"
+    }
+  ],
+  "sourceSha256": {
+    "app/src/main/java/com/androidhit/lumadrift/data/CompanionBattle.java": "e38ea18c750028fc43301dbd67f857f05d774a1351708a55a0bc72109736e0ef",
+    "app/src/main/java/com/androidhit/lumadrift/data/CompanionProgression.java": "d0e0fbe320ede7a3686151d311e36ab557db5918eb2b92466d7eda7329441c82",
+    "app/src/main/java/com/androidhit/lumadrift/data/CompanionBattleAction.java": "8c3d0e9b46e9be99a2de5d87edc83fb7b2872badac554e8579282709bc548268",
+    "app/src/main/java/com/androidhit/lumadrift/data/RankCopyRules124.java": "1bf39fc256ac32b315dd4cbacc44af1e014a7f3255777634f75153db3635f3bd",
+    "app/src/main/java/com/androidhit/lumadrift/ui/BattleDockLayout124.java": "1a5a66b08b3e8ee87e50cadab2ac8d409a97cc768e47d57c24ea43148049d396",
+    "scripts/CompanionBattleV124Test.java": "fe4cdde8d320c8941d928854e8580563d109718bcd6fcf0d5fffbaf1d7b03c5d",
+    "scripts/BattleDockLayout124Test.java": "478099a472a9c727adc8055475b9d6225fd1519fb04085951f34c5c08b26fca4",
+    "scripts/test-companion-battle-v124.sh": "15619d156b9c3e77a69407e7431f8d3886303b5ab7a82433e2afe128173d349c",
+    "scripts/test-battle-dock-v124.sh": "7db1e874352390f3955046956c097f7e720a5cf8a45b2b5d08a2571a28b98698",
+    "scripts/cognitive_lab/v124/Agent124.java": "8e4848f06d72b954685ccf51b581d57c2ca093a0eb760db95ff203fc2cabce83",
+    "scripts/cognitive_lab/v124/CognitiveLab124.java": "2b07a56aec0a118f749a05fdb18059a5ccb454eeac9b1911b64509c7a7f823e9",
+    "scripts/cognitive_lab/v124/Environment124.java": "022ed34560ee4799dea47e314de179a48204b334794e89f20fa4325e64b18fbb",
+    "scripts/cognitive_lab/v124/Progression124.java": "6603822e113b5f9c9f6672f6c3bba88d5764ba85ffe822895761537d802af02d",
+    "scripts/cognitive_lab/v124/tests/CognitiveLab124Test.java": "0f50ce1fa46d43b57ddfac0cc7684366d4244724a04943c4d1396c16b5a7ae31",
+    "scripts/run-cognitive-lab-v124.sh": "06f3e4b2e1f153b9b4597c130b43f20cdaa612258cc3170fe59893a92b9fcff1",
+    "scripts/test-cognitive-lab-v124.sh": "4bb53921536d214e2ce655408f1947ebed36e00772d20c226b1d9ebe1168c4f3",
+    "scripts/verify-cognitive-lab-v124.py": "bf2c1a1745c2c66b54336991c329ee3b864773ed59f6d78c8b2b2dcfa5ce5cee",
+    "app/src/main/java/com/androidhit/lumadrift/ui/CompanionSheetLayout123.java": "725e1e544b8f03e5bb89a9c59228e7e040138b087d55b4a810cb9ce8a0a6a7f3",
+    "scripts/PauseLayout124Test.java": "300aebb658f302f92b1e206a99cd5f44f981a564299d7511368bbf35bf7bdc12"
+  },
+  "noHistoricalEvidenceOverwritten": true,
+  "initialCognitiveSmokeSupersededBy": "cognitive-smoke124-memory-scope",
+  "initialDockTestSupersededBy": "dock124-final-text-reflow"
+}

@@ -1,0 +1,65 @@
+{
+  "edition": "1.24-pending",
+  "versionName": "1.24.0-rc2",
+  "versionCode": 33,
+  "status": "LOCAL_PREVIEW_PENDING_NATIVE",
+  "index": "docs/validation/site-v1.24/staging/index.preview.html",
+  "activePublicIndexUnchanged": true,
+  "expectedScreenshots": [
+    {
+      "key": "puzzle",
+      "locale": "fr",
+      "path": "public/assets/screenshots/v1.24/puzzle-fr.png"
+    },
+    {
+      "key": "puzzle",
+      "locale": "en",
+      "path": "public/assets/screenshots/v1.24/puzzle-en.png"
+    },
+    {
+      "key": "map",
+      "locale": "fr",
+      "path": "public/assets/screenshots/v1.24/map-fr.png"
+    },
+    {
+      "key": "map",
+      "locale": "en",
+      "path": "public/assets/screenshots/v1.24/map-en.png"
+    },
+    {
+      "key": "companion",
+      "locale": "fr",
+      "path": "public/assets/screenshots/v1.24/companion-fr.png"
+    },
+    {
+      "key": "companion",
+      "locale": "en",
+      "path": "public/assets/screenshots/v1.24/companion-en.png"
+    },
+    {
+      "key": "home",
+      "locale": "fr",
+      "path": "public/assets/screenshots/v1.24/home-fr.png"
+    },
+    {
+      "key": "home",
+      "locale": "en",
+      "path": "public/assets/screenshots/v1.24/home-en.png"
+    }
+  ],
+  "requirementsBeforeFinal": [
+    "Exact1.24production/LabAPKidentity",
+    "8unalteredFR/ENnativePNGswithsameproductionAPKhash",
+    "Replacependingnativeblocksanddownloadsection",
+    "FinalsourcehashmanifestandbrowserQA"
+  ],
+  "preservedSections": {
+    "companions": "ab9b102cf84d7cbfa8a46f85402d9ef349b972fabf70cd1e7594bc923c55d467",
+    "sound": "f21c06c630578a3ac06fc00a4d6c8bde757ff8fded949af40d13207c1a7c67de"
+  },
+  "productionApkSha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e",
+  "labApkSha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "artifactManifest": "releases/manifest-1.24.0-rc2.json",
+  "captureStatus": "NOT_COLLECTED",
+  "artifactIdentityReceipt": "docs/validation/site-v1.24/staging/artifact-identities-candidate-d.json"
+}

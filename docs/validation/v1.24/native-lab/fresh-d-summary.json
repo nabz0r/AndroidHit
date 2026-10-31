@@ -1,0 +1,140 @@
+{
+  "status": "PASS_MECHANICS_WITH_AD_DISPLAY_COVERAGE_GAP",
+  "created_utc": "2026-10-31T01:21:13.830849+00:00",
+  "serial": "emulator-5638",
+  "avd": "Luma124-LabFresh-QA",
+  "apk_sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+  "version": "1.24.0-sandbox-rc2",
+  "code": 33,
+  "candidate_manifest": {
+    "path": "docs/validation/v1.24/candidate-d/candidate.json",
+    "sha256": "1b3a1ccf98c4900e68ad8c30216fc965ed855b0e6d5769ac4d54eb7bed087ef3"
+  },
+  "creation": {
+    "path": "docs/validation/v1.24/native-lab/device-creation-fresh/creation.json",
+    "sha256": "4bf9b98d13d02f926703eb4b4f28b155a31414c8e334207561bd832ba3c42f2a"
+  },
+  "genuine_first_install_absence_and_empty_game_prefs_observed_in_preserved_stopped_phase": {
+    "path": "docs/validation/v1.24/native-lab/d07-fresh-intro-earned-u11/report.json",
+    "sha256": "d67d014b3becd20b082dedbaf0e2c6d942a7b7a9809e6e5747cc71e88313d878"
+  },
+  "passed_phases": [
+    {
+      "path": "docs/validation/v1.24/native-lab/d07b-fresh-earned-u10-u11/report.json",
+      "sha256": "a65b24d3b67720d6062a1c2c640416e05a3af1d10e615c4e857652cf21ed5d01",
+      "phase": "d07b-fresh-earned-u10-u11",
+      "passed": true,
+      "assertions": 75,
+      "touches": 17,
+      "original_pngs": 5
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d08-fresh-refill-cancel-buy/report.json",
+      "sha256": "ad2bc9ff023fa8cac28ec9b6603c4b03748a76edd07e12237523ef749c2ba4a5",
+      "phase": "d08-fresh-refill-cancel-buy",
+      "passed": true,
+      "assertions": 80,
+      "touches": 26,
+      "original_pngs": 5
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d09-ads-gates-setup/report.json",
+      "sha256": "be0fe6d4fd17da609c55f3e6da6215bbd27955fba15c07a7e132347eddddfe88",
+      "phase": "d09-ads-gates-setup",
+      "passed": true,
+      "assertions": 34,
+      "touches": 11,
+      "original_pngs": 3
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d10b-ads-consent-load-observed/report.json",
+      "sha256": "856319312d6a5adfefa362633695de43a27525e67fbe0ef7c66b7aa44b48406a",
+      "phase": "d10b-ads-consent-load-observed",
+      "passed": true,
+      "assertions": 22,
+      "touches": 4,
+      "original_pngs": 2
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d12-final-opt-out-persistence/report.json",
+      "sha256": "765380e7216f77f63f20ac597219b4ed0060fcff87a2f64e3e2f8eba8a0f3578",
+      "phase": "d12-final-opt-out-persistence",
+      "passed": true,
+      "assertions": 27,
+      "touches": 7,
+      "original_pngs": 2
+    }
+  ],
+  "preserved_stopped_phases": [
+    {
+      "path": "docs/validation/v1.24/native-lab/d07-fresh-intro-earned-u11/report.json",
+      "sha256": "d67d014b3becd20b082dedbaf0e2c6d942a7b7a9809e6e5747cc71e88313d878",
+      "phase": "d07-fresh-intro-earned-u11",
+      "passed": false,
+      "assertions": 329,
+      "touches": 97,
+      "original_pngs": 5,
+      "reason": "Harness-only U10 node target obscured by fixed minimap, after genuine first install/intro and U1-U9 wins. Continuation used only actual already-selected current node and visible Play, then exact started-board assertions; no progress injection."
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d10-ads-consent-load/report.json",
+      "sha256": "bbb436432adabf5f665885e0b5a590608c96b4264082db1bea9dc21f0e3cb4f7",
+      "phase": "d10-ads-consent-load",
+      "passed": false,
+      "assertions": 11,
+      "touches": 2,
+      "original_pngs": 1,
+      "reason": "UMP test consent appeared automatically before Load; native target was masked. Observed control order was exercised in d10b."
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d11-sdk-early-close/report.json",
+      "sha256": "0a9c353f1f1d05c1c99a0286b6b943d649d5700d8e617145a888818a93386cc5",
+      "phase": "d11-sdk-early-close",
+      "passed": false,
+      "assertions": 23,
+      "touches": 4,
+      "original_pngs": 0,
+      "reason": "After actual Watch click, target-only foreground guard saw com.android.systemui at1second; no capture/back/reward assertion followed."
+    },
+    {
+      "path": "docs/validation/v1.24/native-lab/d11b-sdk-early-close-settled/report.json",
+      "sha256": "49770724ed83823530bd5771e72bd54ac947de4bd81c404e80be95d8c8a61757",
+      "phase": "d11b-sdk-early-close-settled",
+      "passed": false,
+      "assertions": 23,
+      "touches": 4,
+      "original_pngs": 0,
+      "reason": "Same target-only guard at6seconds. No exception to input boundary; actual early close and earned reward remain unqualified."
+    }
+  ],
+  "passed_phase_totals": {
+    "assertions": 238,
+    "touches": 65,
+    "original_pngs": 17
+  },
+  "stopped_phase_totals_not_in_pass_totals": {
+    "assertions": 386,
+    "touches": 107,
+    "original_pngs": 6
+  },
+  "results": {
+    "campaign": "Actual intro and U1-U10 wins with authored certificates controlling real gestures only; first U11 is eligible and costs1 energy.",
+    "paid_start_energy": "10 ->9 on first U11 start;9 ->9 on resume of same board.",
+    "earned_progress": "730 Coins,350 totalXP,unlocked11,Nova level2/copies3; U11 snapshot capacity2.",
+    "restart_and_cancel": "Nine real U11 restart confirmations consumed9 energy to0; refill cancel retained500Gold and0energy.",
+    "refill": "Confirmed50Gold purchase debited500 ->450 and credited0 ->10energy; exactly1spent,1used,1energyreceipt,stock0,outboxempty.",
+    "cold_persistence": "Final separate process retained730Coins,450testGold,10energy; no SDK reward credited.",
+    "ad_gates": "Minor load refusal; adult explicit opt-in; real Google Publisher Test Ads UMP shown; actual Do not consent then visible Test ad ready.",
+    "ads_display_gap": "Two real Watch clicks reached a com.android.systemui foreground boundary before capture; no actual early-close or earned35Coins reward qualification. No target-only guard was broadened.",
+    "ads_final_opt_in": false
+  },
+  "cleanup": {
+    "path": "docs/validation/v1.24/native-lab/cleanup-fresh.json",
+    "sha256": "05f5042413ff54ce885710e7b16ecf8d53bd6a06cf5d21c850fc2e7baabfe1ca"
+  },
+  "read_only_sdk_window_observation_after_stop": {
+    "path": "docs/validation/v1.24/native-lab/d11-sdk-early-close/sdk-window-readonly/receipt.json",
+    "sha256": "c5afd9e3aa2091f5cc8c16714d548490d7197beb08443089905a7d86f316d74f"
+  },
+  "scope": "Scripted official Android SDK emulator QA, real touch input and read-only preferences. No target API/solver/reflection, direct grant, injected progress/currency/ownership, target preference writes, profile copy/reset, real purchase or production ad activation. Zero human participants. The SDK window screenshot was taken after the stopped instrumentation/observer cleanup and shows the launcher; it does not identify the earlier SystemUI surface."
+}

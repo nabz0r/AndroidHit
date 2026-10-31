@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "command": [
+        "bash",
+        "scripts/test-companion-battle-v124.sh"
+      ],
+      "exit_code": 0,
+      "log": "docs/validation/v1.24/host-integration/0-test-companion-battle-v124.txt"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-journey-clarity-v123.sh",
+        "/tmp/luma124-clarity-current"
+      ],
+      "exit_code": 0,
+      "log": "docs/validation/v1.24/host-integration/1-test-journey-clarity-v123.txt"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-session-energy-v121.sh",
+        "/tmp/luma124-energy-current.json"
+      ],
+      "exit_code": 0,
+      "log": "docs/validation/v1.24/host-integration/2-test-session-energy-v121.txt"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-elemental-shell-v121.sh",
+        "/tmp/luma124-element-current.json"
+      ],
+      "exit_code": 0,
+      "log": "docs/validation/v1.24/host-integration/3-test-elemental-shell-v121.txt"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-engine.sh"
+      ],
+      "exit_code": 0,
+      "log": "docs/validation/v1.24/host-integration/4-test-engine.txt"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/test-focused-journey-v120.sh",
+        "/tmp/luma124-focused-current.json"
+      ],
+      "exit_code": 0,
+      "log": "docs/validation/v1.24/host-integration/5-test-focused-journey-v120.txt"
+    }
+  ],
+  "scope": "Host model regressions only; native UI and real providers separate."
+}

@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T23:36:36.515176+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "home-return-puzzle",
+  "expected_version": "1.23.0-rc2",
+  "expected_code": 31,
+  "apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "observer_sha256": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "b60bc578-ccc2-4d77-9079-fc21906aad5f",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. Production UI availability and refusal paths may be observed. No account sign-in, real-money purchase, ad configuration change or injected provider callback.",
+  "installed_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "home-return-puzzle",
+    "runToken": "b60bc578-ccc2-4d77-9079-fc21906aad5f",
+    "processId": 5636,
+    "checkCount": 21,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_layout_v113 = 2|3,3|bed,0,0,0;lamp,5,0,0;plant,0,5,0;rug,2,2,0;cushion,4,4,1;plush,2,0,0;"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_floor_v113 = floor_rose"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Bounded real-time wait"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_floor_v113 = floor_rose"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference home_wallpaper_v113 = wallpaper_dusk"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference run_id = c60c3476-cd12-467b-94cb-1746916f1037"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference history = "
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference level = 29"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 10,
+    "actions": [
+      {
+        "reason": "home_room_quick",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 484428,
+        "label": "Maison",
+        "resourceId": "com.androidhit.lumadrift:id/home_room_quick",
+        "bounds": [
+          66,
+          1878,
+          286,
+          2104
+        ]
+      },
+      {
+        "reason": "Lampe Lueur douce",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 486882,
+        "label": "Lampe Lueur douce",
+        "bounds": [
+          919,
+          1131,
+          1080,
+          1386
+        ]
+      },
+      {
+        "reason": "house_room_kitchen",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 493779,
+        "label": "Cuisine",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_kitchen",
+        "bounds": [
+          818,
+          568,
+          1071,
+          817
+        ]
+      },
+      {
+        "reason": "house_room_garden",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 496082,
+        "label": "Jardin",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_garden",
+        "bounds": [
+          548,
+          568,
+          801,
+          817
+        ]
+      },
+      {
+        "reason": "house_room_bedroom",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 498132,
+        "label": "Chambre",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_bedroom",
+        "bounds": [
+          278,
+          568,
+          531,
+          817
+        ]
+      },
+      {
+        "reason": "house_room_living",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 500461,
+        "label": "Salon",
+        "resourceId": "com.androidhit.lumadrift:id/house_room_living",
+        "bounds": [
+          8,
+          568,
+          261,
+          817
+        ]
+      },
+      {
+        "reason": "root_nav_adventure",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 502929,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      },
+      {
+        "reason": "journey_continue",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 503678,
+        "label": "Reprendre  ·  Niveau 29",
+        "resourceId": "com.androidhit.lumadrift:id/journey_continue",
+        "bounds": [
+          66,
+          1662,
+          1013,
+          1839
+        ]
+      },
+      {
+        "reason": "play_pause",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 506156,
+        "label": "Pause",
+        "resourceId": "com.androidhit.lumadrift:id/play_pause",
+        "bounds": [
+          55,
+          177,
+          188,
+          310
+        ]
+      },
+      {
+        "reason": "Quitter le niveau|Leave level",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 507001,
+        "label": "Quitter le niveau",
+        "bounds": [
+          121,
+          1528,
+          958,
+          1661
+        ]
+      }
+    ],
+    "captures": [
+      "customized-room-cold",
+      "lamp-interaction",
+      "kitchen",
+      "garden",
+      "bedroom",
+      "living-return",
+      "u29-return-after-home-gear"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, real-money purchase, ad configuration change, injected ad-provider callback or publication. Ad UI availability/refusal observation only. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 32.216,
+  "evidence_sha256": {
+    "battle-observer.apk": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "62d514624956ff83ba66b969b31058e4faa2ab09159cb2d97e41578bfea262f6",
+    "native/after-walk-lamp.json": "45c52a7cdea352e515b4be8b391d9bc6a696d3734c1e2a5b55ddc907181b2a46",
+    "native/after.json": "e6b6bd115abd898709909b54f6afa2a79c2e4b09c84c88cf95983f35f4600adf",
+    "native/bedroom-accessibility.json": "69b522942b178abc840df9c9aac331733d9f9b0371f3a92427c731e874d23cbb",
+    "native/bedroom.png": "ebbe5d62a0e63a45aec5783bd8cb9b23e339d42375518f9c1207773293103aaa",
+    "native/before.json": "0e9bfef8164158a48d341c710e087eb5dd7d6364017d8451e9ed918887bd4068",
+    "native/customized-room-cold-accessibility.json": "fdbad3fdd3e2518d829ac28a2c552a337b20743258b77231a333a157428626ea",
+    "native/customized-room-cold.png": "cc6636d373dbe0b4565291f4a793683db76285d575ff30f53e9b59037cab781c",
+    "native/garden-accessibility.json": "c3d5ac2e2da9d86879ea887a77ca712958b80b3c5229ffde0ed922cf61d28051",
+    "native/garden.png": "18b7db9dc4e4f2e53d45e4229121087c8302babed0e329aefeea2abca23325ce",
+    "native/kitchen-accessibility.json": "9c8fbfa66ddc41957ee42c19bc97ac9fed5834113c7e5f5c1968cd5d5fd14fc3",
+    "native/kitchen.png": "24921266021e47f4a410634decac6474aad7bd6a648806f72ca4685e15995761",
+    "native/lamp-interaction-accessibility.json": "c0540fccae45b6c5dd9cb7f1cf5ff35aa46f2cb6b30e6d95f4b3164590a633b2",
+    "native/lamp-interaction.png": "4e5b21027a69ec5c52c2dc8d0087babcd29af5e070852f88e8ffb619194204c7",
+    "native/living-return-accessibility.json": "c0540fccae45b6c5dd9cb7f1cf5ff35aa46f2cb6b30e6d95f4b3164590a633b2",
+    "native/living-return.png": "8ae9914e18a2901394cd9db368bbb690cfc8f8902816eabc395d572fe763fe6f",
+    "native/report.json": "99caa751bc2966e3a5c9ec2ade0079fb764ed7da4b50ba52e22c65cb93ec24d8",
+    "native/requested-steps.json": "7396362e2684d406553344bd43e598c576facf6c2c1663bc70a6a47b47197c80",
+    "native/u29-return-after-home-gear-accessibility.json": "187ded7b6446b3cdbc14cbc2ba7a32f38500e39d43dd4b78298556684d64d31b",
+    "native/u29-return-after-home-gear.png": "3b24f8cc06d50de6a8953763c63b559fe2234cb73fd5627dccf0155299f2e42d",
+    "observer-install.txt": "731d4d4c2354a66e09f7465c03dd2d504690fd0e41dc874d89fa88d05928ff9c",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "27170b15e5e51dea949c4452a4d1e2050ecda0450833616649998d2980ce43de",
+    "source-snapshot.json": "ff3806a81e3fcae44b4045c199a4c5fa6c06a4e3668608dad10f65b528517927"
+  }
+}

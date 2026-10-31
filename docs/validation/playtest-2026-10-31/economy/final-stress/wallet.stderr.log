@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: energy inventory nonnegative and exact
+    at ck (file:///Users/n/androidhit/scripts/playtest-2026-10-31/wallet-state-stress.mjs:9:37)
+    at file:///Users/n/androidhit/scripts/playtest-2026-10-31/wallet-state-stress.mjs:51:152 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.7.0

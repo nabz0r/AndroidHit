@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Luma Drift 1.24 : étude locale d’agents synthétiques, données et limites explicites.">
+  <title>Luma Drift · Lab 1.24</title>
+  <link rel="stylesheet" href="report.css?v=e7bedba2c9aa0d6a">
+  <script defer src="data/snapshot.js?v=79bfdc824abe8128"></script>
+  <script defer src="report.js?v=ea5420a3ce5e24a0"></script>
+</head>
+<body>
+  <header class="page-header">
+    <a id="brand-home" class="brand" href="https://luma-drift-production.web.app/">Luma Drift <span>Lab 1.24</span></a>
+    <button id="language" type="button" aria-label="Switch to English">English</button>
+  </header>
+  <main>
+    <p class="eyebrow" data-i18n="eyebrow">Étude locale · 31 octobre 2026</p>
+    <h1 data-i18n="title">Un rang, une copie, davantage d’usages. Que fait le modèle ?</h1>
+    <p class="lead" data-i18n="lead">8 000 trajectoires exécutent le moteur 1.24 : victoires → XP → rang → copie du capitaine → capacité au prochain départ. Les résultats décrivent une politique synthétique, pas le plaisir ni la compréhension humaine.</p>
+    <p class="status caution" data-i18n="policyLimit">Prudence : cette politique demande trop souvent les talents, parfois avant de suivre un indice déjà visible. Davantage d’usages réduit certains blocages mais peut coûter des décisions. Aucun recul chez de vrais joueurs, ni besoin de nerf, n’est établi.</p>
+    <p id="status" class="status" role="status" aria-live="polite">Chargement du rapport…</p>
+    <div id="report" hidden>
+      <section class="count-grid" aria-label="Périmètre" id="scope-counts"></section>
+      <section class="panel">
+        <h2 data-i18n="conditions">Quatre conditions, les mêmes profils</h2>
+        <p data-i18n="conditionScope">Chaque condition compte 2 000 trajectoires : 100 profils générés ×20 répétitions, sur huit jours modélisés. Les paramètres sont appariés ; les actions et les expositions peuvent diverger.</p>
+        <label class="select-label" for="condition" data-i18n="choose">Condition à examiner</label>
+        <select id="condition"></select>
+        <p id="condition-note" class="note"></p>
+        <div id="metrics" class="metric-grid"></div>
+        <h3 data-i18n="progressTitle">Niveaux terminés par trajectoire</h3>
+        <div id="progress-chart" class="bar-chart"></div>
+        <p id="progress-axis" class="note"></p>
+      </section>
+      <div class="columns">
+        <section class="panel">
+          <h2 data-i18n="hardLevels">U27, U33, U36, U43 et U48</h2>
+          <p class="note" data-i18n="arrivalLimit">Arrivées = trajectoires distinctes ayant commencé ce niveau. Départs = tentatives, retries compris. Les victoires ont pour dénominateur les arrivées ; épuisements et censures sont des issues de tentatives. Les non-arrivants sont exclus de ces taux conditionnels.</p>
+          <div class="table-wrap"><table><thead><tr><th data-i18n="level">Niveau</th><th data-i18n="arrivals">Arrivées</th><th data-i18n="starts">Départs</th><th data-i18n="wins">Victoires / arrivées</th><th data-i18n="exhausted">Épuisements</th><th data-i18n="horizonShort">Censures</th></tr></thead><tbody id="levels"></tbody></table></div>
+        </section>
+        <section class="panel">
+          <h2 data-i18n="resources">Effort et ressources</h2>
+          <table><tbody id="resources"></tbody></table>
+          <p class="note" data-i18n="dailyLimit">Les raisons d’arrêt sont rapportées aux 16 000 journées configurées par condition. Le cap quotidien est administratif ; les autres arrêts suivent les hypothèses d’utilité et de disponibilité.</p>
+        </section>
+      </div>
+      <section class="panel"><h2 data-i18n="progression">Rang, copies et capacité capturée</h2><table><tbody id="progression"></tbody></table><p class="note" data-i18n="progressLimit">Pas de nouveau compteur : XP → rang → copie existante → niveau compagnon → 1/2/3/4 usages. Une capacité gagnée ne modifie jamais une partie déjà ouverte. Les répétitions GUIDE peuvent réafficher la même information ; ce ne sont pas autant de nouveaux indices.</p><h3 data-i18n="quantilesTitle">Distribution par trajectoire · 2 000 par condition</h3><p id="quantiles" class="cold-reference"></p><p class="note" data-i18n="quantilesNote">Niveaux terminés : P10 · Q1 · médiane · Q3 · P90. Les coins payés et l’énergie dépensée sont des ressources différentes de la Charge des talents.</p><h3 data-i18n="pairedTitle">Comparaisons appariées au régime Nova évolutif</h3><table><thead><tr><th data-i18n="training">Entraînement</th><th data-i18n="pairedHeader">Écart moyen de niveaux [intervalle]</th></tr></thead><tbody id="paired"></tbody></table><p class="note" data-i18n="pairedNote">2 000 paires par condition, mêmes profils et graines d’entrée ; les trajectoires peuvent diverger. Écart = condition moins Nova évolutive. Intervalles par rééchantillonnage de 100 profils synthétiques, sans inférence sur une population humaine.</p></section>
+      <section class="panel">
+        <h2 data-i18n="assistance">Faire soi-même, suivre une aide, automatiser</h2>
+        <div id="assistance" class="metric-grid"></div>
+        <p class="note" data-i18n="manualLimit">Une sortie manuelle peut suivre un indice. Les deux sous-ensembles d’aide peuvent se chevaucher et ne s’ajoutent pas au total. Seules les sondes ci-dessous retirent toutes les aides.</p>
+      </section>
+      <section class="panel">
+        <h2 data-i18n="probes">Sondes sans aide, environnement commun</h2>
+        <p data-i18n="probeScope">Toutes les conditions et la référence froide utilisent les mêmes quatre géométries sans coques. Coach, Focus, cause visible, avertissement d’impasse et compagnons sont désactivés. Fatigue, frustration et mémoire repartent à zéro ; seuls les états de règle appris sont transplantés. Les politiques continuent à recevoir le feedback et à s’adapter pendant chaque sonde ; leurs états ne sont pas figés.</p>
+        <p id="cold-reference" class="cold-reference"></p>
+        <table><thead><tr><th data-i18n="training">Entraînement</th><th data-i18n="probeCompleted">Sondes terminées</th><th data-i18n="pairedExtra">Écart avec le froid</th></tr></thead><tbody id="probes"></tbody></table>
+        <p class="note" data-i18n="probeLimit">8 000 sondes froides sont exécutées une seule fois et servent de référence commune à 32 000 sondes entraînées. L’exposition d’entraînement diffère entre régimes. Il s’agit de comportement du modèle, pas de transfert cognitif humain.</p>
+      </section>
+      <section class="panel limits">
+        <h2 data-i18n="boundaries">Ce qui est vérifié, ce qui reste ouvert</h2>
+        <ul>
+          <li data-i18n="terminal">Un budget épuisé est classé après le coup, avant tout arrêt de journée. Aucune tentative à budget zéro n’est appelée « censurée à l’horizon ». Une victoire au dernier coup reste une victoire.</li>
+          <li data-i18n="perception">L’agent reçoit des directions, clés et règles déjà structurées. Il ne lit ni sprite, ni texte, ni nouvel écran d’inspection. Reconnaître temporairement une cause affichée avec certitude est une hypothèse.</li>
+          <li data-i18n="oracle">104 contrôles oracle certifient séparément le moteur. Ils ne sont ni des trajectoires d’agents, ni des données d’entraînement. La politique bornée ne reçoit aucune solution cachée.</li>
+          <li data-i18n="human">Zéro participant humain. Aucun résultat n’établit plaisir, émotion, compréhension, rétention, mesure de QI ou validité clinique. Les durées et probabilités de retour sont des hypothèses.</li>
+          <li data-i18n="version">Les archives 1.21 à 1.23 restent inchangées. La mémoire négative de l’agent, les règles de capacité et la graine changent : comparer 1.23 et 1.24 ne démontre pas un effet causal de release.</li>
+        </ul>
+      </section>
+      <section class="panel evidence">
+        <h2 data-i18n="evidence">Données et reproduction</h2>
+        <p id="run-scope"></p>
+        <p><span data-i18n="provenanceHash">SHA256 de la provenance du run</span><br><code id="provenance-hash"></code></p>
+        <nav id="downloads" class="downloads" aria-label="Données et code">
+          <a href="https://luma-drift-production.web.app/lab/clarity-124/cognitive-lab-1.24-source.zip" data-i18n="download">Kit des sources exactes · sans CSV bruts</a>
+          <a href="data/view.json" data-i18n="aggregates">Agrégats affichés · JSON</a>
+          <a href="data/provenance.json" data-i18n="hashes">Empreintes de l’exécution</a>
+        </nav>
+        <details><summary data-i18n="rawLedgers">Ledgers CSV gzip individuels</summary><nav id="raw-downloads" class="downloads"><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/attempt-companion-capacities.csv.gz">attempt-companion-capacities.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/blocked-events.csv.gz">blocked-events.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/companion-progression.csv.gz">companion-progression.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/companion-use-events.csv.gz">companion-use-events.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/day-results.csv.gz">day-results.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/learned-rules.csv.gz">learned-rules.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/level-results.csv.gz">level-results.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/manual-assistance-events.csv.gz">manual-assistance-events.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/probe-results.csv.gz">probe-results.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/progression-trajectories.csv.gz">progression-trajectories.csv.gz</a><a href="https://luma-drift-production.web.app/lab/clarity-124/raw/trajectories.csv.gz">trajectories.csv.gz</a></nav></details>
+        <p class="note" data-i18n="archiveScope">Le ZIP contient les 68 sources exécutées, le runner, le protocole, les empreintes et ce rapport portable. Les 11 ledgers bruts sont des téléchargements séparés, avec taille et SHA256. Aucun build Android ni preuve de rendu ne résulte de la simulation. Les archives et les preuves natives restent séparées.</p>
+      </section>
+    </div>
+  </main>
+  <footer><a id="footer-home" href="https://luma-drift-production.web.app/" data-i18n="home">Retour à Luma Drift</a><span data-i18n="footer">Étude synthétique · aucune donnée de joueur collectée</span></footer>
+</body>
+</html>

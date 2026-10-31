@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "createdAtUtc": "2026-10-31T00:56:54.753634+00:00",
+  "offlinePythonTests": 43,
+  "runtimeDomTests": 13,
+  "commands": [
+    {
+      "name": "deploy",
+      "command": [
+        "python3",
+        "scripts/test-deploy-site-v124.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "testCount": 20,
+      "originalCombinedOutput": "docs/validation/site-v1.24/transport-validation/qualification-1/deploy.log",
+      "outputSha256": "45714443a656e0ddbd4d2de4fb0cc49761576bbd5f05cfab88ceb7a936adbd78"
+    },
+    {
+      "name": "stage",
+      "command": [
+        "python3",
+        "scripts/test-stage-site-v124-rest.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "testCount": 11,
+      "originalCombinedOutput": "docs/validation/site-v1.24/transport-validation/qualification-1/stage.log",
+      "outputSha256": "f8681772e8dfe707b313015a8ebf615a7eb617eaffdd72acc61f20d6b30f8e25"
+    },
+    {
+      "name": "collector",
+      "command": [
+        "python3",
+        "scripts/test-collect-site-v124-public-bytes.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "testCount": 8,
+      "originalCombinedOutput": "docs/validation/site-v1.24/transport-validation/qualification-1/collector.log",
+      "outputSha256": "f2ce366f054fbb6fe825ca2025a5ba4dd3fff84e9b9bf8ad371479d1f82853d3"
+    },
+    {
+      "name": "prepare",
+      "command": [
+        "python3",
+        "scripts/test-prepare-site-v124.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "testCount": 4,
+      "originalCombinedOutput": "docs/validation/site-v1.24/transport-validation/qualification-1/prepare.log",
+      "outputSha256": "71f385628efaeed61b8ca36819a695a12058846f3539952fa581e781da33250f"
+    },
+    {
+      "name": "runtime",
+      "command": [
+        "node",
+        "scripts/test-site-v124-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "testCount": 13,
+      "originalCombinedOutput": "docs/validation/site-v1.24/transport-validation/qualification-1/runtime.log",
+      "outputSha256": "d1b8e1a6e397184a444abf399ee2c3c7d3a7b795a1bd91476e801168181a92a3"
+    }
+  ],
+  "sourceInputs": {
+    "scripts/deploy-site-v124.py": "c519126e18ca6e44de3a93a5216ad9b1a9543aa58dfa507aaf1b35e55da06af4",
+    "scripts/stage-site-v124-rest.py": "eb4fca0707f335135125bb8b77bb38454ab5b1b6c815fa07879240b40831e3e7",
+    "scripts/collect-site-v124-public-bytes.py": "f07931ebf8bddb1bc0cdc1065d371d7bdb8440d63058503f3a542b4cd115da9d",
+    "scripts/prepare-site-v124.py": "a96400f3135e22e3abcdd0dc89d4b76d31d29ede1e49436133b2cbcceb64ad7a",
+    "scripts/test-deploy-site-v124.py": "dda37d0f30e9d8084bd370d5d3afbc3558b953d6c6cfb556663c69dc65078827",
+    "scripts/test-stage-site-v124-rest.py": "46b180e0a38fe9f83bd045069c0da2271517f75082a19866b835dfabde98f5ca",
+    "scripts/test-collect-site-v124-public-bytes.py": "c4ea53e2419401d2ecb4bd289c7e480e5f02da7b03121be1d6cc30e94b532bd6",
+    "scripts/test-prepare-site-v124.py": "ae5c5f6c0b3f1e237521bb2ccfe357ab8dbe644007ba4c7f069f341646b2621e",
+    "scripts/test-site-v124-runtime.mjs": "fa960ee1368074a3b76a2839038c993cca0df33c5ad3dbc383beedf74ce7cec0",
+    "scripts/deploy-cognitive-overlay.py": "62e25d22e0e00a5d9b7ccbfc44d1b29218113b8cd86f5fa13838ab3802466af5",
+    "scripts/test-deploy-cognitive-overlay.py": "1844fcaae8d956120cdded2f2abc86daa059be127be2e6167466700b24e5ede0",
+    "scripts/apk-byte-delta.py": "fd7d4c299e16529c67ce0a3ed11c28156397d30ac113de1f09a364e3871bcff9",
+    "docs/validation/site-v1.24/staging/index.preview.html": "e0d0856756d3b0dde527095f2471fea9e073b187d2fb44a181114f9114b35d43",
+    "public/assets/site-v124.css": "195fbeb9758bcb43ec1cedda477d98c0b43544b4ca738e600fa9970fd0949d95",
+    "public/assets/site-v124.js": "547541162cfb8d4de0dbba2eb6f1b3c3b6199fc83e716415f7c68e2010a1ec68"
+  },
+  "networkRequested": false,
+  "realHostingRequested": false,
+  "fakeArtifactsAreAndroidAcceptance": false,
+  "scope": "43 offline Python contract tests (mocked Firebase state machine, temporary Git/ZIP/delta/unsigned APK fixtures, fake PNG headers and native report fixture) and13 DOM/event tests. No native, live Hosting, public-origin or browser rendering acceptance."
+}

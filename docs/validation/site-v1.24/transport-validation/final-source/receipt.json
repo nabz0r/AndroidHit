@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "createdAtUtc": "2026-10-31T01:06:01.999804+00:00",
+  "independentReview": {
+    "path": "docs/validation/site-v1.24/transport-validation/final-source/independent-review-original.json",
+    "sha256": "588b278a52a482be21c7c54553df846fd1beb2c330de2ba0b3681f6b3c649ba6",
+    "pythonTests": 43,
+    "deltaTests": 18,
+    "scope": "Current four publication scripts and source gates, read-only bounded review plus offline fixtures."
+  },
+  "copiedOriginalLogs": {
+    "/tmp/luma124-review-test-deploy-site-v124.py.log": {
+      "copy": "docs/validation/site-v1.24/transport-validation/final-source/luma124-review-test-deploy-site-v124.py.log",
+      "sha256": "b4db3cf066428dd4a5e6e8fd482b2f72cada6cc681401b077225bf8b99670979"
+    },
+    "/tmp/luma124-review-test-stage-site-v124-rest.py.log": {
+      "copy": "docs/validation/site-v1.24/transport-validation/final-source/luma124-review-test-stage-site-v124-rest.py.log",
+      "sha256": "e00abd1fcf2e69a5b51f71c5ecf0033ca72143c4a2666058496358b39c516565"
+    },
+    "/tmp/luma124-review-test-collect-site-v124-public-bytes.py.log": {
+      "copy": "docs/validation/site-v1.24/transport-validation/final-source/luma124-review-test-collect-site-v124-public-bytes.py.log",
+      "sha256": "fe231033cbc2e31a6ba4e2f79db22f09f5f18b4a37711260864f5536e5bd967c"
+    },
+    "/tmp/luma124-review-test-prepare-site-v124.py.log": {
+      "copy": "docs/validation/site-v1.24/transport-validation/final-source/luma124-review-test-prepare-site-v124.py.log",
+      "sha256": "5610bb341ae4df72930d9f88afd8d925eec567770a8ccf6387603ee214544c29"
+    },
+    "/tmp/luma124-review-test-apk-byte-delta.py.log": {
+      "copy": "docs/validation/site-v1.24/transport-validation/final-source/luma124-review-test-apk-byte-delta.py.log",
+      "sha256": "11c03f0a2b22e6d2a0c86281bb80de4a17c7d5affe6e3f750013b9cf6fe18a8f"
+    }
+  },
+  "postApplicationTests": [
+    {
+      "name": "runtime",
+      "command": [
+        "node",
+        "scripts/test-site-v124-runtime.mjs"
+      ],
+      "exitCode": 0,
+      "testCount": 13,
+      "originalCombinedOutput": "docs/validation/site-v1.24/transport-validation/final-source/runtime-final.log",
+      "sha256": "1136d87d48d42068cfcaa0f279d0b4cc3f25715471028faab1ffbcffbde99e04"
+    },
+    {
+      "name": "prepare",
+      "command": [
+        "python3",
+        "scripts/test-prepare-site-v124.py"
+      ],
+      "exitCode": 0,
+      "testCount": 4,
+      "originalCombinedOutput": "docs/validation/site-v1.24/transport-validation/final-source/prepare-final.log",
+      "sha256": "9d654695c0a90577e252109954dd749137ace81d33f39cf1a31990e7f48cf31d"
+    }
+  ],
+  "sourceBindings": {
+    "scripts/deploy-site-v124.py": "c519126e18ca6e44de3a93a5216ad9b1a9543aa58dfa507aaf1b35e55da06af4",
+    "scripts/stage-site-v124-rest.py": "eb4fca0707f335135125bb8b77bb38454ab5b1b6c815fa07879240b40831e3e7",
+    "scripts/collect-site-v124-public-bytes.py": "f07931ebf8bddb1bc0cdc1065d371d7bdb8440d63058503f3a542b4cd115da9d",
+    "scripts/prepare-site-v124.py": "52ac535f11d4f5393726b4181c155e98b24886d95e58396f9ecc8fe0ce174ee7",
+    "scripts/apk-byte-delta.py": "fd7d4c299e16529c67ce0a3ed11c28156397d30ac113de1f09a364e3871bcff9",
+    "scripts/test-deploy-site-v124.py": "dda37d0f30e9d8084bd370d5d3afbc3558b953d6c6cfb556663c69dc65078827",
+    "scripts/test-stage-site-v124-rest.py": "46b180e0a38fe9f83bd045069c0da2271517f75082a19866b835dfabde98f5ca",
+    "scripts/test-collect-site-v124-public-bytes.py": "c4ea53e2419401d2ecb4bd289c7e480e5f02da7b03121be1d6cc30e94b532bd6",
+    "scripts/test-prepare-site-v124.py": "ae5c5f6c0b3f1e237521bb2ccfe357ab8dbe644007ba4c7f069f341646b2621e",
+    "scripts/test-apk-byte-delta.py": "c696aa9bb4a648ae9045a859cb996eef7897cf22253ca273264c42d12d557fc3"
+  },
+  "sourceManifestSha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd",
+  "homepageSha256": "f454c732835ec5e741951a131404ee144e54b62873caf2bd40ee7ba5ef19af42",
+  "sourceCheck": {
+    "path": "docs/validation/site-v1.24/finalization/source-check.json",
+    "sha256": "509920fc9de225d1c1a96c4745252d41fe282d170df67657d23d6fbf5752108f",
+    "checks": 1413
+  },
+  "artifactCommit": "787fba142b8edd1f840b9b70cb7749167edacd24",
+  "nativeOriginalCaptures": 8,
+  "physicalSourcePaths": 629,
+  "expectedProviderPaths": 631,
+  "preservedHistoricalPhysicalPaths": 575,
+  "networkRequested": false,
+  "realBrowserRendering": false,
+  "hostingRequested": false
+}

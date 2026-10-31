@@ -1,0 +1,238 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T23:35:37.594132+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "equipment-durable",
+  "expected_version": "1.23.0-rc2",
+  "expected_code": 31,
+  "apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "observer_sha256": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "59f34909-ce32-4253-8439-d392772ee366",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. Production UI availability and refusal paths may be observed. No account sign-in, real-money purchase, ad configuration change or injected provider callback.",
+  "installed_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "equipment-durable",
+    "runToken": "59f34909-ce32-4253-8439-d392772ee366",
+    "processId": 5390,
+    "checkCount": 16,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference coins = 77"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_owned_v1_copper_wish = EARNED_COINS"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_HEAD = lantern_leaf"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_AURA = mint_orbit"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_CHARM = copper_wish"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_CHARM = dew_compass"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible labels exclude 450 LumaCoins"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference avatar_slot_v1_CHARM = copper_wish"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged before-owned-switch"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 9,
+    "actions": [
+      {
+        "reason": "home_wardrobe",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 428061,
+        "label": "Look et tenues",
+        "resourceId": "com.androidhit.lumadrift:id/home_wardrobe",
+        "bounds": [
+          553,
+          1457,
+          985,
+          1590
+        ]
+      },
+      {
+        "reason": "Équipement",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 428705,
+        "label": "Équipement",
+        "bounds": [
+          540,
+          1376,
+          1013,
+          1515
+        ]
+      },
+      {
+        "reason": "wardrobe_slot_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 429324,
+        "label": "Charme",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_slot_2",
+        "bounds": [
+          697,
+          1543,
+          1013,
+          1676
+        ]
+      },
+      {
+        "reason": "Boussole de rosée",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 437245,
+        "label": "Boussole de rosée",
+        "bounds": [
+          390,
+          1196,
+          689,
+          1611
+        ]
+      },
+      {
+        "reason": "Équiper",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 437883,
+        "label": "Équiper",
+        "bounds": [
+          66,
+          2058,
+          1013,
+          2207
+        ]
+      },
+      {
+        "reason": "Équipement",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 438492,
+        "label": "Équipement",
+        "bounds": [
+          540,
+          1376,
+          1013,
+          1515
+        ]
+      },
+      {
+        "reason": "wardrobe_slot_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 439085,
+        "label": "Charme",
+        "resourceId": "com.androidhit.lumadrift:id/wardrobe_slot_2",
+        "bounds": [
+          697,
+          1543,
+          1013,
+          1676
+        ]
+      },
+      {
+        "reason": "Vœu de cuivre",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 446818,
+        "label": "Vœu de cuivre",
+        "bounds": [
+          714,
+          1196,
+          1013,
+          1611
+        ]
+      },
+      {
+        "reason": "Équiper",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 447428,
+        "label": "Équiper",
+        "bounds": [
+          66,
+          2058,
+          1013,
+          2207
+        ]
+      }
+    ],
+    "captures": [
+      "durable-gear-after-relaunch"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, real-money purchase, ad configuration change, injected ad-provider callback or publication. Ad UI availability/refusal observation only. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 33.129,
+  "evidence_sha256": {
+    "battle-observer.apk": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "1d52b1ac2e51246f349c039bf915deb0d9d8e512b8652cf282a8559d6748785e",
+    "native/after.json": "0e9bfef8164158a48d341c710e087eb5dd7d6364017d8451e9ed918887bd4068",
+    "native/before.json": "0e9bfef8164158a48d341c710e087eb5dd7d6364017d8451e9ed918887bd4068",
+    "native/durable-gear-after-relaunch-accessibility.json": "36346eab0a1ff1200fc500b174ca992b788b1c451478ec26c931a73c77198b43",
+    "native/durable-gear-after-relaunch.png": "4c09180aa2395bfcb65b1344dd0cd5f77689b13f6fa6cbff261cc2ca7018a52a",
+    "native/durable-gear-state.json": "0e9bfef8164158a48d341c710e087eb5dd7d6364017d8451e9ed918887bd4068",
+    "native/report.json": "db993baf96ae6984ad6cff66e04fc14217c59485785fbc6f12c7e25b4ac3c722",
+    "native/requested-steps.json": "7df123f9601fa8a9858cb29d67a8215310c04bf4b9ff3f789b810e5a1201f6b6",
+    "observer-install.txt": "5cf33a58520800aa684f3fe05320a8b0effd5c67026045fb284bc783a9edf696",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "beb2e65737fe4816989bc9d3d409a306adb223a0dfb6947d4f251095c07980e4",
+    "source-snapshot.json": "ff3806a81e3fcae44b4045c199a4c5fa6c06a4e3668608dad10f65b528517927"
+  }
+}

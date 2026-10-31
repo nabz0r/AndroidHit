@@ -1,0 +1,17 @@
+# Baseline natif Lab E — 31 octobre 2026
+
+Gel de la version **1.23.0-sandbox-rc2 / code31**, APK SHA-256 `099d4dc7d38cb4552b3b1ad46f7e3ccb70b304c7c8a1c6c332e16ada00ba558c`. Les501 sources du candidat sont vérifiées contre le commit immuable `5cc870701c8039e664d1c00a90d0586c3d00521c`. Les correctifs locaux ultérieurs ne sont pas testés ici.
+
+[Résumé et index des originaux](summary.json) :10 programmes SDK,7 terminés PASS,3 arrêts de harness conservés ;1 287 assertions exécutées,441 gestes réels et38 PNG originaux. Ces totaux incluent les séquences interrompues et ne constituent pas un score de compréhension humaine. Aucun modèle ni préférence, progression, possession ou monnaie n’est injecté dans l’application. Les certificats publics des niveaux ne font que choisir les cibles de vrais gestes.
+
+Le portefeuille simulé est distinct : annuler ne crédite rien ;500 Coins en attente sont repris après relance et crédités une seule fois ; répéter la confirmation ne recrédite pas ; la validation suivante crédite1 400 Coins. Le solde LumaGold test de l’énergie demeure séparé. La pub refuse le profil mineur ; le vrai formulaire «Publisher Test Ads» a été affiché, «Do not consent» choisi, puis le chargement volontaire a atteint «Test ad ready». **Aucune impression complète, fermeture anticipée ou récompense vidéo n’a été qualifiée.** L’opt-in facultatif a été désactivé par l’UI avant clôture.
+
+U1–U10 sont gratuits en énergie : dix premières victoires ont été jouées. Le passage U11 débite10→9 ; une sortie de pièce laisse9 ; un redémarrage confirmé débite9→8. Les redémarrages suivants atteignent0. Annuler une recharge conserve les soldes ;10 recharges UI donnent au total100 unités pour500 Gold test, sans débit de Coins. À Gold0/énergie0, l’achat suivant est refusé sans nouveau débit, en EN puis après relance en FR. Une première victoire U10 fait315→350 XP (+35) ; rejouer U1 laisse350 XP et2 630 Coins, avec +0 XP/+0 Coins affichés.
+
+Le plateau ne montre pas l’énergie de session dans ce cadrage : le compteur visible «Charge compagnons3/6» concerne les talents. Les écrans Énergie et le HUD de menu montrent les soldes de session. Ce constat décrit une difficulté de lecture possible, sans exclure d’autres bugs signalés par l’utilisateur. Aucun tick réel de régénération de dix minutes n’a été attendu ; seul le compte à rebours a été observé.
+
+Les trois arrêts sont conservés : sélecteur de test «Age range» au lieu de «Age group» ; pastille U10 masquée par la minimap lors d’un cadrage (Jouer restait disponible pour U10 déjà sélectionné) ; ancien helper Retour alternant pause/reprise. Les séquences suivantes utilisent les contrôles observés. Les arrêts ne sont pas transformés en PASS.
+
+Les cinq fichiers de préférences du profil de production présent sur5634 restent identiques en octets avant/après **chaque** phase, y compris les phases interrompues. Le profil Lab, son historique et ses achats de test sont conservés. L’observer seul est désinstallé. [Arrêt normal de5634](cleanup.json) effectué par le SDK, sans wipe, suppression du jeu ou effacement des données.5602 et5626 n’ont pas été utilisés.
+
+Décoration, tenue et équipement du **Lab** restent hors de ce périmètre arrêté à la réorientation du travail ; une QA production séparée appartient au coordinateur. Aucune conclusion sur des joueurs humains, la rétention, un appareil physique, des achats réels ou des pubs de production.

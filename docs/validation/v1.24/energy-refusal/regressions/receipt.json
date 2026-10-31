@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "Existing host energy controller/journal tests and real-client transport tests with explicit HTTP/energy doubles. No newAPK/native/provider claim.",
+  "startedAtUtc": "2026-10-31T00:45:37.134434+00:00",
+  "checks": {
+    "purchase": {
+      "command": [
+        "bash",
+        "scripts/test-energy-purchase-v120.sh"
+      ],
+      "exitCode": 0
+    },
+    "transport": {
+      "command": [
+        "bash",
+        "scripts/test-wallet-energy-transport-v120.sh"
+      ],
+      "exitCode": 0
+    }
+  },
+  "sourceInputs": {
+    "app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseController.java": "a7b0a680f79d08bfd40e1bb9c9a21a4c8ea12a1675622485f4cd34ba9c8187ca",
+    "app/src/main/java/com/androidhit/lumadrift/wallet/EnergyPurchaseJournal.java": "c71a90e60edf81485537c4814f1d0556e24b53dcd7a2cc13b9af5d1a77fde278",
+    "app/src/main/java/com/androidhit/lumadrift/wallet/ProductionWalletClient.java": "c086d2f28a0359547a00faae80897325d5213d8c4db30edede3bf2fc75bafd72"
+  }
+}

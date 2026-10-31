@@ -1,0 +1,3 @@
+# Lab playtest 2026-10-31
+
+Separate dated clone of the SDK observer, pinned only to preserved Luma123-RC2-Fresh-QA / emulator-5634 and immutable creation receipt. Exact final Lab E rc2/code31 and production E identities are mandatory. This harness permits explicit Lab simulation and native UI transactions through genuine touchscreen input; no writes to target preferences, progress/ownership/currency injection, external identity or real purchase. The existing historical smoke harness is unchanged. Frozen public gesture certificates may play earned boards through real touches; they are scripted QA, not human understanding. Every run preserves production preference files byte-for-byte and removes only its observer. First Lab install requires package absence.

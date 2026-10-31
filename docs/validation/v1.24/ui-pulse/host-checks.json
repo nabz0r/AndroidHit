@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-31T00:23:11.107303+00:00",
+  "status": "PASS",
+  "scope": "Host geometry/copy tests and Android SDK javac of 16 presentation sources against existing compiled app dependencies. No new APK, no native rendering or interaction qualification. Shared LumaView integration requires the coordinator build.",
+  "sdk_javac": {
+    "passed": true,
+    "source_count": 16,
+    "sources": [
+      "app/src/main/java/com/androidhit/lumadrift/ui/PulseUi124.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/SceneActionView.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/ScenicUi.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/PauseLayout124.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/CompanionSheetLayout123.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/BattleDockLayout124.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/PremiumUi.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/CompanionBattleScene.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/ExpeditionScene.java",
+      "app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorldScene122.java",
+      "app/src/main/java/com/androidhit/lumadrift/data/Clarity124Strings.java",
+      "app/src/main/java/com/androidhit/lumadrift/identity/AccountActivity.java",
+      "app/src/main/java/com/androidhit/lumadrift/social/SocialActivity.java",
+      "app/src/main/java/com/androidhit/lumadrift/social/CosmeticVaultActivity.java",
+      "app/src/main/java/com/androidhit/lumadrift/sharing/ShareComposer.java",
+      "app/src/main/java/com/androidhit/lumadrift/commerce/CommerceActivity.java"
+    ],
+    "android_platform": 36,
+    "output_temp": "/var/folders/rc/bkb1hwys1z344_h6c8fd5p300000gn/T/luma124-pulse-sdk-final-o69wauyu"
+  },
+  "host_checks": [
+    {
+      "script": "scripts/test-pause-layout-v124.sh",
+      "passed": true,
+      "output": "PASS 3282 pause/sheet/locale checks"
+    },
+    {
+      "script": "scripts/test-battle-dock-v124.sh",
+      "passed": true,
+      "output": "BattleDockLayout124: 2563 checks passed (pure geometry only)"
+    }
+  ],
+  "helper_sha256": {
+    "app/src/main/java/com/androidhit/lumadrift/ui/PulseUi124.java": "844ce285729b2b8b7b2e95230fc8dde85622e96248ff1861e178affd34144e2a",
+    "app/src/main/java/com/androidhit/lumadrift/ui/PauseLayout124.java": "08f850e69cc4075a761ce088697691a7f2b51a14e121a77b582fd50d21efe5b3",
+    "app/src/main/java/com/androidhit/lumadrift/ui/CompanionSheetLayout123.java": "725e1e544b8f03e5bb89a9c59228e7e040138b087d55b4a810cb9ce8a0a6a7f3",
+    "app/src/main/java/com/androidhit/lumadrift/ui/BattleDockLayout124.java": "1a5a66b08b3e8ee87e50cadab2ac8d409a97cc768e47d57c24ea43148049d396",
+    "app/src/main/java/com/androidhit/lumadrift/data/Clarity124Strings.java": "0c5417290dc36238db294a74d5358434199e2886417358c5b8b367be6efacc53"
+  },
+  "native_acceptance": "PENDING_EXACT_124_APK",
+  "font": "Nunito original Google Fonts variable font, installed400/600/800/900; provenance docs/art/v1.24/font-provenance.json",
+  "independent_review": "lab_analysis_deep checked remaining/capacity and separate charge; found fixed-metadata baseline risk at large text. Layout corrected with explicit font-aware positions and32/40font tests, plus2-column dock for large text.",
+  "harness_issue_preserved": "Earlier isolated SDK compile lacked R.jar and AndroidX Core on its classpath; final invocation includes both. No app-source workaround.",
+  "additional_copy_validation": {
+    "passed": true,
+    "checks": 48,
+    "scope": "Actual String.format for reward and try-on keys in all six languages",
+    "output": "PASS 48 six-language reward/try-on format checks"
+  }
+}

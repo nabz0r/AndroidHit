@@ -1,0 +1,26 @@
+{
+  "status": "PREPARED_ONLY",
+  "observed_utc": "2026-10-31T01:26:55.667959+00:00",
+  "surface": "Existing user-owned Brave Cloud Shell tab 1712524959; same luma-drift-production project.",
+  "method": "CUA UI only; existing tab reconnected without closing or resetting.",
+  "cloud_script": {
+    "path": "/tmp/luma124-cloud-run.py",
+    "bytes": 10743,
+    "sha256": "8291593809f68b6ff1a1e7fe00de85f2317d6ebab52b70640c52b9a21b35111a"
+  },
+  "observed_stdout": "LUMA124_PREPARED_ONLY {\"path\": \"/tmp/luma124-cloud-run.py\", \"sha256\": \"8291593809f68b6ff1a1e7fe00de85f2317d6ebab52b70640c52b9a21b35111a\", \"bytes\": 10743, \"stage_executed\": false, \"deploy_executed\": false, \"awaiting_exact_C2_and_CI_gate\": true}",
+  "shell_prompt_restored": true,
+  "standard_api_authorization": "Rejected during preparation; same-access refresh deferred to coordinator execution gate.",
+  "initial_transfer": "A mistyped compressed paste was rejected by zlib before any file write; corrected transfer passed full SHA before exclusive create. Operator source unchanged.",
+  "executed": {
+    "operator": false,
+    "clone": false,
+    "staging": false,
+    "base_downloads": false,
+    "gcloud": false,
+    "deployment": false
+  },
+  "future_source_commit": null,
+  "awaiting": "Exact remote C2 SHA, green CI and explicit coordinator gate.",
+  "privacy": "No Cloud Shell screenshot, account identifier, auth value or token stored in this receipt."
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "op": "tap-id",
+    "id": "home_room_quick"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "home_layout_v113",
+    "name": "layout-before"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-before"
+  },
+  {
+    "op": "tap",
+    "regex": "Décorer"
+  },
+  {
+    "op": "tap",
+    "regex": "Coussin Miette de soleil"
+  },
+  {
+    "op": "capture",
+    "name": "cushion-selected"
+  },
+  {
+    "op": "tap",
+    "regex": "Tourner"
+  },
+  {
+    "op": "capture",
+    "name": "cushion-rotated-draft"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "home_layout_v113",
+    "name": "layout-before"
+  },
+  {
+    "op": "tap",
+    "regex": "Annuler"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "home_layout_v113",
+    "name": "layout-before"
+  },
+  {
+    "op": "tap",
+    "regex": "Coussin Miette de soleil"
+  },
+  {
+    "op": "tap",
+    "regex": "Tourner"
+  },
+  {
+    "op": "tap",
+    "regex": "Placer"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "coins-before"
+  },
+  {
+    "op": "capture",
+    "name": "cushion-placed"
+  },
+  {
+    "op": "snapshot",
+    "name": "layout-placed"
+  },
+  {
+    "op": "tap",
+    "regex": "Meubles"
+  },
+  {
+    "op": "capture",
+    "name": "furniture-catalog"
+  }
+]

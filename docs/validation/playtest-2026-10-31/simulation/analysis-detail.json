@@ -1,0 +1,3023 @@
+{
+  "counts": {
+    "actions": 2633398,
+    "attemptRows": 377413,
+    "blockedEvents": 173154,
+    "coldProbes": 8000,
+    "completedPuzzles": 372673,
+    "configuredDays": 64000,
+    "humanParticipants": 0,
+    "oracleBoardsSeparate": 104,
+    "outcomes": {
+      "budget_exhausted": 1042,
+      "completed": 372673,
+      "horizon_censored": 3698
+    },
+    "trainedProbes": 32000,
+    "trajectories": 8000
+  },
+  "denominatorLimits": [
+    "Each condition has2000 trajectories and16000 configured days over8 modeled days; active-day counts differ.",
+    "Starts retain retries; unique arriving trajectories are separate and later levels are arrival-selected.",
+    "Horizon censoring is a positive-budget open attempt at the finite8-day study endpoint, not a human dropout or loss.",
+    "Manual exits may follow coach/Focus/GUIDE; absence of a direct cue on one action does not prove no prior help.",
+    "Exact solver continuation stays inside explicitly requested native assistance or the separate104-board control; bounded policy has no solver access."
+  ],
+  "nativeFirstAttemptAccounting": {
+    "1": {
+      "firstStarts": 2000,
+      "first_completed": 2000,
+      "starts": 2000
+    },
+    "10": {
+      "firstStarts": 1987,
+      "first_completed": 1984,
+      "first_horizon_censored": 3,
+      "starts": 1987
+    },
+    "11": {
+      "firstStarts": 1982,
+      "first_completed": 1978,
+      "first_horizon_censored": 4,
+      "starts": 1982
+    },
+    "12": {
+      "firstStarts": 1975,
+      "first_completed": 1969,
+      "first_horizon_censored": 6,
+      "starts": 1975
+    },
+    "13": {
+      "firstStarts": 1964,
+      "first_completed": 1960,
+      "first_horizon_censored": 4,
+      "starts": 1964
+    },
+    "14": {
+      "firstStarts": 1958,
+      "first_completed": 1953,
+      "first_horizon_censored": 5,
+      "starts": 1958
+    },
+    "15": {
+      "firstStarts": 1947,
+      "first_completed": 1944,
+      "first_horizon_censored": 3,
+      "starts": 1947
+    },
+    "16": {
+      "firstStarts": 1935,
+      "first_completed": 1928,
+      "first_horizon_censored": 7,
+      "starts": 1935
+    },
+    "17": {
+      "firstStarts": 1927,
+      "first_completed": 1916,
+      "first_horizon_censored": 11,
+      "starts": 1927
+    },
+    "18": {
+      "firstStarts": 1912,
+      "first_completed": 1909,
+      "first_horizon_censored": 3,
+      "starts": 1912
+    },
+    "19": {
+      "firstStarts": 1904,
+      "first_completed": 1894,
+      "first_horizon_censored": 10,
+      "starts": 1904
+    },
+    "2": {
+      "firstStarts": 2000,
+      "first_completed": 2000,
+      "starts": 2000
+    },
+    "20": {
+      "firstStarts": 1885,
+      "first_completed": 1872,
+      "first_horizon_censored": 13,
+      "starts": 1885
+    },
+    "21": {
+      "firstStarts": 1862,
+      "first_completed": 1852,
+      "first_horizon_censored": 10,
+      "starts": 1862
+    },
+    "22": {
+      "firstStarts": 1842,
+      "first_completed": 1829,
+      "first_horizon_censored": 13,
+      "starts": 1842
+    },
+    "23": {
+      "firstStarts": 1820,
+      "first_completed": 1797,
+      "first_horizon_censored": 23,
+      "starts": 1820
+    },
+    "24": {
+      "firstStarts": 1792,
+      "first_completed": 1780,
+      "first_horizon_censored": 12,
+      "starts": 1792
+    },
+    "25": {
+      "firstStarts": 1770,
+      "first_completed": 1742,
+      "first_horizon_censored": 28,
+      "starts": 1770
+    },
+    "26": {
+      "firstStarts": 1730,
+      "first_completed": 1700,
+      "first_horizon_censored": 30,
+      "starts": 1730
+    },
+    "27": {
+      "firstStarts": 1695,
+      "first_completed": 1685,
+      "first_horizon_censored": 10,
+      "starts": 1695
+    },
+    "28": {
+      "firstStarts": 1669,
+      "first_budget_exhausted": 12,
+      "first_completed": 1646,
+      "first_horizon_censored": 11,
+      "retryStarts": 12,
+      "starts": 1681
+    },
+    "29": {
+      "firstStarts": 1637,
+      "first_budget_exhausted": 4,
+      "first_completed": 1617,
+      "first_horizon_censored": 16,
+      "retryStarts": 3,
+      "starts": 1640
+    },
+    "3": {
+      "firstStarts": 2000,
+      "first_completed": 2000,
+      "starts": 2000
+    },
+    "30": {
+      "firstStarts": 1602,
+      "first_budget_exhausted": 3,
+      "first_completed": 1582,
+      "first_horizon_censored": 17,
+      "retryStarts": 1,
+      "starts": 1603
+    },
+    "31": {
+      "firstStarts": 1564,
+      "first_budget_exhausted": 3,
+      "first_completed": 1550,
+      "first_horizon_censored": 11,
+      "retryStarts": 3,
+      "starts": 1567
+    },
+    "32": {
+      "firstStarts": 1536,
+      "first_budget_exhausted": 1,
+      "first_completed": 1515,
+      "first_horizon_censored": 20,
+      "retryStarts": 1,
+      "starts": 1537
+    },
+    "33": {
+      "firstStarts": 1502,
+      "first_budget_exhausted": 94,
+      "first_completed": 1378,
+      "first_horizon_censored": 30,
+      "retryStarts": 89,
+      "starts": 1591
+    },
+    "34": {
+      "firstStarts": 1443,
+      "first_budget_exhausted": 17,
+      "first_completed": 1405,
+      "first_horizon_censored": 21,
+      "retryStarts": 16,
+      "starts": 1459
+    },
+    "35": {
+      "firstStarts": 1401,
+      "first_completed": 1380,
+      "first_horizon_censored": 21,
+      "starts": 1401
+    },
+    "36": {
+      "firstStarts": 1361,
+      "first_budget_exhausted": 42,
+      "first_completed": 1291,
+      "first_horizon_censored": 28,
+      "retryStarts": 38,
+      "starts": 1399
+    },
+    "37": {
+      "firstStarts": 1307,
+      "first_completed": 1294,
+      "first_horizon_censored": 13,
+      "starts": 1307
+    },
+    "38": {
+      "firstStarts": 1273,
+      "first_budget_exhausted": 1,
+      "first_completed": 1253,
+      "first_horizon_censored": 19,
+      "retryStarts": 1,
+      "starts": 1274
+    },
+    "39": {
+      "firstStarts": 1233,
+      "first_budget_exhausted": 2,
+      "first_completed": 1213,
+      "first_horizon_censored": 18,
+      "retryStarts": 2,
+      "starts": 1235
+    },
+    "4": {
+      "firstStarts": 2000,
+      "first_completed": 2000,
+      "starts": 2000
+    },
+    "40": {
+      "firstStarts": 1195,
+      "first_budget_exhausted": 1,
+      "first_completed": 1182,
+      "first_horizon_censored": 12,
+      "retryStarts": 1,
+      "starts": 1196
+    },
+    "41": {
+      "firstStarts": 1162,
+      "first_completed": 1148,
+      "first_horizon_censored": 14,
+      "starts": 1162
+    },
+    "42": {
+      "firstStarts": 1129,
+      "first_budget_exhausted": 4,
+      "first_completed": 1110,
+      "first_horizon_censored": 15,
+      "retryStarts": 4,
+      "starts": 1133
+    },
+    "43": {
+      "firstStarts": 1088,
+      "first_budget_exhausted": 37,
+      "first_completed": 1038,
+      "first_horizon_censored": 13,
+      "retryStarts": 37,
+      "starts": 1125
+    },
+    "44": {
+      "firstStarts": 1039,
+      "first_completed": 1024,
+      "first_horizon_censored": 15,
+      "starts": 1039
+    },
+    "45": {
+      "firstStarts": 999,
+      "first_completed": 987,
+      "first_horizon_censored": 12,
+      "starts": 999
+    },
+    "46": {
+      "firstStarts": 968,
+      "first_budget_exhausted": 6,
+      "first_completed": 947,
+      "first_horizon_censored": 15,
+      "retryStarts": 6,
+      "starts": 974
+    },
+    "47": {
+      "firstStarts": 924,
+      "first_completed": 909,
+      "first_horizon_censored": 15,
+      "starts": 924
+    },
+    "48": {
+      "firstStarts": 877,
+      "first_budget_exhausted": 11,
+      "first_completed": 854,
+      "first_horizon_censored": 12,
+      "retryStarts": 10,
+      "starts": 887
+    },
+    "49": {
+      "firstStarts": 839,
+      "first_completed": 825,
+      "first_horizon_censored": 14,
+      "starts": 839
+    },
+    "5": {
+      "firstStarts": 1999,
+      "first_completed": 1999,
+      "starts": 1999
+    },
+    "50": {
+      "firstStarts": 801,
+      "first_completed": 797,
+      "first_horizon_censored": 4,
+      "starts": 801
+    },
+    "51": {
+      "firstStarts": 759,
+      "first_completed": 742,
+      "first_horizon_censored": 17,
+      "starts": 759
+    },
+    "52": {
+      "firstStarts": 714,
+      "first_budget_exhausted": 1,
+      "first_completed": 700,
+      "first_horizon_censored": 13,
+      "retryStarts": 1,
+      "starts": 715
+    },
+    "53": {
+      "firstStarts": 683,
+      "first_completed": 664,
+      "first_horizon_censored": 19,
+      "starts": 683
+    },
+    "54": {
+      "firstStarts": 649,
+      "first_completed": 641,
+      "first_horizon_censored": 8,
+      "starts": 649
+    },
+    "55": {
+      "firstStarts": 614,
+      "first_completed": 601,
+      "first_horizon_censored": 13,
+      "starts": 614
+    },
+    "56": {
+      "firstStarts": 574,
+      "first_completed": 568,
+      "first_horizon_censored": 6,
+      "starts": 574
+    },
+    "57": {
+      "firstStarts": 536,
+      "first_completed": 524,
+      "first_horizon_censored": 12,
+      "starts": 536
+    },
+    "58": {
+      "firstStarts": 509,
+      "first_budget_exhausted": 1,
+      "first_completed": 502,
+      "first_horizon_censored": 6,
+      "retryStarts": 1,
+      "starts": 510
+    },
+    "59": {
+      "firstStarts": 482,
+      "first_budget_exhausted": 1,
+      "first_completed": 473,
+      "first_horizon_censored": 8,
+      "retryStarts": 1,
+      "starts": 483
+    },
+    "6": {
+      "firstStarts": 1999,
+      "first_completed": 1999,
+      "starts": 1999
+    },
+    "60": {
+      "firstStarts": 460,
+      "first_budget_exhausted": 1,
+      "first_completed": 457,
+      "first_horizon_censored": 2,
+      "retryStarts": 1,
+      "starts": 461
+    },
+    "61": {
+      "firstStarts": 441,
+      "first_budget_exhausted": 2,
+      "first_completed": 431,
+      "first_horizon_censored": 8,
+      "starts": 441
+    },
+    "62": {
+      "firstStarts": 397,
+      "first_completed": 392,
+      "first_horizon_censored": 5,
+      "starts": 397
+    },
+    "63": {
+      "firstStarts": 377,
+      "first_budget_exhausted": 1,
+      "first_completed": 367,
+      "first_horizon_censored": 9,
+      "retryStarts": 1,
+      "starts": 378
+    },
+    "64": {
+      "firstStarts": 351,
+      "first_completed": 348,
+      "first_horizon_censored": 3,
+      "starts": 351
+    },
+    "65": {
+      "firstStarts": 333,
+      "first_budget_exhausted": 5,
+      "first_completed": 320,
+      "first_horizon_censored": 8,
+      "retryStarts": 4,
+      "starts": 337
+    },
+    "66": {
+      "firstStarts": 305,
+      "first_completed": 299,
+      "first_horizon_censored": 6,
+      "starts": 305
+    },
+    "67": {
+      "firstStarts": 288,
+      "first_completed": 284,
+      "first_horizon_censored": 4,
+      "starts": 288
+    },
+    "68": {
+      "firstStarts": 263,
+      "first_budget_exhausted": 14,
+      "first_completed": 240,
+      "first_horizon_censored": 9,
+      "retryStarts": 14,
+      "starts": 277
+    },
+    "69": {
+      "firstStarts": 229,
+      "first_completed": 228,
+      "first_horizon_censored": 1,
+      "starts": 229
+    },
+    "7": {
+      "firstStarts": 1999,
+      "first_completed": 1999,
+      "starts": 1999
+    },
+    "70": {
+      "firstStarts": 214,
+      "first_budget_exhausted": 1,
+      "first_completed": 207,
+      "first_horizon_censored": 6,
+      "retryStarts": 1,
+      "starts": 215
+    },
+    "71": {
+      "firstStarts": 192,
+      "first_completed": 186,
+      "first_horizon_censored": 6,
+      "starts": 192
+    },
+    "72": {
+      "firstStarts": 171,
+      "first_completed": 165,
+      "first_horizon_censored": 6,
+      "starts": 171
+    },
+    "73": {
+      "firstStarts": 147,
+      "first_completed": 143,
+      "first_horizon_censored": 4,
+      "starts": 147
+    },
+    "74": {
+      "firstStarts": 136,
+      "first_completed": 132,
+      "first_horizon_censored": 4,
+      "starts": 136
+    },
+    "75": {
+      "firstStarts": 123,
+      "first_completed": 121,
+      "first_horizon_censored": 2,
+      "starts": 123
+    },
+    "76": {
+      "firstStarts": 116,
+      "first_completed": 113,
+      "first_horizon_censored": 3,
+      "starts": 116
+    },
+    "77": {
+      "firstStarts": 103,
+      "first_completed": 102,
+      "first_horizon_censored": 1,
+      "starts": 103
+    },
+    "78": {
+      "firstStarts": 95,
+      "first_completed": 89,
+      "first_horizon_censored": 6,
+      "starts": 95
+    },
+    "79": {
+      "firstStarts": 75,
+      "first_completed": 75,
+      "starts": 75
+    },
+    "8": {
+      "firstStarts": 1998,
+      "first_completed": 1994,
+      "first_horizon_censored": 4,
+      "starts": 1998
+    },
+    "80": {
+      "firstStarts": 68,
+      "first_completed": 67,
+      "first_horizon_censored": 1,
+      "starts": 68
+    },
+    "81": {
+      "firstStarts": 64,
+      "first_completed": 62,
+      "first_horizon_censored": 2,
+      "starts": 64
+    },
+    "82": {
+      "firstStarts": 57,
+      "first_completed": 55,
+      "first_horizon_censored": 2,
+      "starts": 57
+    },
+    "83": {
+      "firstStarts": 45,
+      "first_budget_exhausted": 1,
+      "first_completed": 44,
+      "starts": 45
+    },
+    "84": {
+      "firstStarts": 35,
+      "first_completed": 35,
+      "starts": 35
+    },
+    "85": {
+      "firstStarts": 31,
+      "first_completed": 30,
+      "first_horizon_censored": 1,
+      "starts": 31
+    },
+    "86": {
+      "firstStarts": 29,
+      "first_completed": 29,
+      "starts": 29
+    },
+    "87": {
+      "firstStarts": 25,
+      "first_completed": 25,
+      "starts": 25
+    },
+    "88": {
+      "firstStarts": 22,
+      "first_budget_exhausted": 1,
+      "first_completed": 21,
+      "retryStarts": 1,
+      "starts": 23
+    },
+    "89": {
+      "firstStarts": 19,
+      "first_completed": 18,
+      "first_horizon_censored": 1,
+      "starts": 19
+    },
+    "9": {
+      "firstStarts": 1992,
+      "first_completed": 1991,
+      "first_horizon_censored": 1,
+      "starts": 1992
+    },
+    "90": {
+      "firstStarts": 15,
+      "first_completed": 15,
+      "starts": 15
+    },
+    "91": {
+      "firstStarts": 12,
+      "first_completed": 12,
+      "starts": 12
+    },
+    "92": {
+      "firstStarts": 9,
+      "first_completed": 9,
+      "starts": 9
+    },
+    "93": {
+      "firstStarts": 7,
+      "first_completed": 7,
+      "starts": 7
+    },
+    "94": {
+      "firstStarts": 4,
+      "first_completed": 4,
+      "starts": 4
+    }
+  },
+  "notModeled": [
+    "decoration rendering or room interactions",
+    "outfit rendering, equipment or squad ownership/acquisition",
+    "LumaGold, real-money purchases or provider balances",
+    "ads, rewarded ads, consent or ad lifecycle",
+    "gacha, home purchases or stock powers",
+    "Android persistence or navigation",
+    "inspection/HUD/visual comprehension",
+    "human enjoyment/emotion/retention"
+  ],
+  "probeInterpretation": "Cold/trained policies are adaptive during each probe; only initial learned-rule states are transplanted, fatigue/frustration/memory reset. Different prior campaign exposure remains. No human transfer/comprehension claim.",
+  "probes": {
+    "coldCompleted": 4602,
+    "coldProbeCount": 8000,
+    "coldRowsReusedAsReferenceNotReexecuted": true,
+    "commonEnvironment": "Same native1.23 shell-free Board/budget,180 Coins; coach,Focus,dead-end warning,causal cues and companions all hidden/disabled for every training condition and cold reference.",
+    "heldOutLevels": [
+      401,
+      573,
+      721,
+      1000
+    ],
+    "reset": "Fatigue/frustration/memory reset; only final learned rule state transplanted. Different campaign exposure remains.",
+    "scenarios": [
+      {
+        "coldOnlyCompleted": 739,
+        "coldReferenceCompleted": 4602,
+        "completed": 6182,
+        "outcomes": {
+          "agent_give_up": 189,
+          "budget_exhausted": 1629,
+          "completed": 6182
+        },
+        "probes": 8000,
+        "scenario": "manual_native_123",
+        "trainedOnlyCompleted": 2319
+      },
+      {
+        "coldOnlyCompleted": 736,
+        "coldReferenceCompleted": 4602,
+        "completed": 6182,
+        "outcomes": {
+          "agent_give_up": 188,
+          "budget_exhausted": 1630,
+          "completed": 6182
+        },
+        "probes": 8000,
+        "scenario": "cause_hidden_123",
+        "trainedOnlyCompleted": 2316
+      },
+      {
+        "coldOnlyCompleted": 787,
+        "coldReferenceCompleted": 4602,
+        "completed": 6041,
+        "outcomes": {
+          "agent_give_up": 230,
+          "budget_exhausted": 1729,
+          "completed": 6041
+        },
+        "probes": 8000,
+        "scenario": "loaned_mixed_123",
+        "trainedOnlyCompleted": 2226
+      },
+      {
+        "coldOnlyCompleted": 747,
+        "coldReferenceCompleted": 4602,
+        "completed": 6191,
+        "outcomes": {
+          "agent_give_up": 185,
+          "budget_exhausted": 1624,
+          "completed": 6191
+        },
+        "probes": 8000,
+        "scenario": "energy_unlimited_123",
+        "trainedOnlyCompleted": 2336
+      }
+    ],
+    "trainedProbeCount": 32000
+  },
+  "profilePairedDifferences": {
+    "cause_hidden_123": {
+      "meanPairedLevels": -0.1735000000000001,
+      "profileClusters": 100,
+      "profileMeanDifferenceQuantiles": {
+        "0": -3.9,
+        "0.1": -1.2,
+        "0.25": -0.6,
+        "0.5": -0.1,
+        "0.75": 0.25,
+        "0.9": 0.7,
+        "1": 3.25
+      },
+      "profilesMeanLevelsEqual": 6,
+      "profilesMeanLevelsHigher": 36,
+      "profilesMeanLevelsLower": 58,
+      "repetitionsPerProfile": 20,
+      "scope": "Within generated profiles, not population/human inference; acquisition and different campaign exposure remain excluded."
+    },
+    "energy_unlimited_123": {
+      "meanPairedLevels": 6.872999999999999,
+      "profileClusters": 100,
+      "profileMeanDifferenceQuantiles": {
+        "0": -1.5,
+        "0.1": 0.1,
+        "0.25": 1.5,
+        "0.5": 4.5,
+        "0.75": 10.75,
+        "0.9": 17.5,
+        "1": 31.1
+      },
+      "profilesMeanLevelsEqual": 4,
+      "profilesMeanLevelsHigher": 92,
+      "profilesMeanLevelsLower": 4,
+      "repetitionsPerProfile": 20,
+      "scope": "Within generated profiles, not population/human inference; acquisition and different campaign exposure remain excluded."
+    },
+    "loaned_mixed_123": {
+      "meanPairedLevels": -1.127,
+      "profileClusters": 100,
+      "profileMeanDifferenceQuantiles": {
+        "0": -4.55,
+        "0.1": -3.65,
+        "0.25": -2.7,
+        "0.5": -1.05,
+        "0.75": 0.25,
+        "0.9": 1.2,
+        "1": 3.8
+      },
+      "profilesMeanLevelsEqual": 2,
+      "profilesMeanLevelsHigher": 28,
+      "profilesMeanLevelsLower": 70,
+      "repetitionsPerProfile": 20,
+      "scope": "Within generated profiles, not population/human inference; acquisition and different campaign exposure remain excluded."
+    }
+  },
+  "provenanceSha256": "f83733416785260fc130f61ffa5ffaffe7330fef1c71df2521d9a0d932ca794f",
+  "scenarios": {
+    "cause_hidden_123": {
+      "actions": 628973,
+      "activeDays": 11900,
+      "attempts": 91112,
+      "automatedExitShare": {
+        "denominator": 570012,
+        "numerator": 0,
+        "ratio": 0.0
+      },
+      "automatedExits": 0,
+      "blocked": 45339,
+      "blockedReasons": {
+        "barrierBlocked": 7241,
+        "closedGateBlocked": 15483,
+        "pieceBlocked": 22615
+      },
+      "coinSpendRelativeToEarned": {
+        "denominator": 5433818,
+        "numerator": 19118,
+        "ratio": 0.0035183364625020566
+      },
+      "coinsSpentQuantiles": {
+        "0": 0,
+        "0.1": 0,
+        "0.25": 0,
+        "0.5": 0,
+        "0.75": 15,
+        "0.9": 31,
+        "1": 177
+      },
+      "completedPuzzles": 90035,
+      "configuredDays": 16000,
+      "dailyStops": {
+        "availability_hard_limit": 38,
+        "day_action_cap": 25,
+        "energy_empty": 3530,
+        "exogenous_unavailability": 2329,
+        "modeled_return_utility": 1771,
+        "utility_stop": 8156,
+        "utility_stop_after_planned_time": 151
+      },
+      "dayCapPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 25,
+        "ratio": 0.0015625
+      },
+      "directCueManualShare": {
+        "denominator": 570012,
+        "numerator": 4170,
+        "ratio": 0.007315635460306099
+      },
+      "endCoinQuantiles": {
+        "0": 400,
+        "0.1": 1431,
+        "0.25": 2013,
+        "0.5": 2769,
+        "0.75": 3682,
+        "0.9": 4506,
+        "1": 6444
+      },
+      "endCoinZeroTrajectories": 0,
+      "endCoinsCaution": "Final balances do not prove absence of any intermediate affordability constraint. No cosmetic/gacha/equipment purchase occurs in this protocol.",
+      "energyStopPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 3530,
+        "ratio": 0.220625
+      },
+      "energyStopWithAction": 3530,
+      "energyStopWithoutAction": 0,
+      "energyStoppedTrajectories": {
+        "denominator": 2000,
+        "numerator": 1361,
+        "ratio": 0.6805
+      },
+      "learningCurveArrivals": [
+        {
+          "arrivingTrajectories": 2000,
+          "level": 1,
+          "outcomes": {
+            "completed": 2000
+          },
+          "starts": 2000
+        },
+        {
+          "arrivingTrajectories": 1989,
+          "level": 10,
+          "outcomes": {
+            "completed": 1985,
+            "horizon_censored": 4
+          },
+          "starts": 1989
+        },
+        {
+          "arrivingTrajectories": 1982,
+          "level": 11,
+          "outcomes": {
+            "completed": 1977,
+            "horizon_censored": 5
+          },
+          "starts": 1982
+        },
+        {
+          "arrivingTrajectories": 1963,
+          "level": 13,
+          "outcomes": {
+            "completed": 1960,
+            "horizon_censored": 3
+          },
+          "starts": 1963
+        },
+        {
+          "arrivingTrajectories": 1927,
+          "level": 17,
+          "outcomes": {
+            "completed": 1917,
+            "horizon_censored": 10
+          },
+          "starts": 1927
+        },
+        {
+          "arrivingTrajectories": 1692,
+          "level": 27,
+          "outcomes": {
+            "completed": 1680,
+            "horizon_censored": 12
+          },
+          "starts": 1692
+        },
+        {
+          "arrivingTrajectories": 1636,
+          "level": 29,
+          "outcomes": {
+            "budget_exhausted": 3,
+            "completed": 1618,
+            "horizon_censored": 17
+          },
+          "starts": 1638
+        },
+        {
+          "arrivingTrajectories": 1572,
+          "level": 31,
+          "outcomes": {
+            "budget_exhausted": 3,
+            "completed": 1563,
+            "horizon_censored": 9
+          },
+          "starts": 1575
+        },
+        {
+          "arrivingTrajectories": 1502,
+          "level": 33,
+          "outcomes": {
+            "budget_exhausted": 89,
+            "completed": 1455,
+            "horizon_censored": 40
+          },
+          "starts": 1584
+        },
+        {
+          "arrivingTrajectories": 1364,
+          "level": 36,
+          "outcomes": {
+            "budget_exhausted": 36,
+            "completed": 1332,
+            "horizon_censored": 28
+          },
+          "starts": 1396
+        },
+        {
+          "arrivingTrajectories": 1085,
+          "level": 43,
+          "outcomes": {
+            "budget_exhausted": 42,
+            "completed": 1056,
+            "horizon_censored": 25
+          },
+          "starts": 1123
+        },
+        {
+          "arrivingTrajectories": 859,
+          "level": 48,
+          "outcomes": {
+            "budget_exhausted": 16,
+            "completed": 844,
+            "horizon_censored": 14
+          },
+          "starts": 874
+        },
+        {
+          "arrivingTrajectories": 427,
+          "level": 61,
+          "outcomes": {
+            "budget_exhausted": 2,
+            "completed": 416,
+            "horizon_censored": 9
+          },
+          "starts": 427
+        },
+        {
+          "arrivingTrajectories": 70,
+          "level": 80,
+          "outcomes": {
+            "completed": 69,
+            "horizon_censored": 1
+          },
+          "starts": 70
+        },
+        {
+          "arrivingTrajectories": 5,
+          "level": 94,
+          "outcomes": {
+            "completed": 5
+          },
+          "starts": 5
+        }
+      ],
+      "manualAssistance": {
+        "directCueFollowedManualExits": 4170,
+        "eventRows": 4170,
+        "source_native_earned_focus": 626,
+        "source_native_u1_coach": 3544
+      },
+      "manualExits": 570012,
+      "outcomes": {
+        "budget_exhausted": 266,
+        "completed": 90035,
+        "horizon_censored": 811
+      },
+      "paidUndoTrajectories": {
+        "denominator": 2000,
+        "numerator": 588,
+        "ratio": 0.294
+      },
+      "repeatedErrors": 1860,
+      "resources": {
+        "coinsEarned": 5433818,
+        "coinsEnd": 5774700,
+        "coinsSpent": 19118,
+        "energyRefilled": 58370,
+        "energySpent": 71136
+      },
+      "skillRequests": 0,
+      "skillUnavailable": {
+        "denominator": 0,
+        "numerator": 0,
+        "ratio": null
+      },
+      "stopsByModeledDay": {
+        "0": {
+          "availability_hard_limit": 14,
+          "day_action_cap": 24,
+          "energy_empty": 194,
+          "utility_stop": 1715,
+          "utility_stop_after_planned_time": 53
+        },
+        "1": {
+          "availability_hard_limit": 2,
+          "energy_empty": 401,
+          "exogenous_unavailability": 338,
+          "modeled_return_utility": 254,
+          "utility_stop": 986,
+          "utility_stop_after_planned_time": 19
+        },
+        "2": {
+          "availability_hard_limit": 3,
+          "energy_empty": 489,
+          "exogenous_unavailability": 326,
+          "modeled_return_utility": 264,
+          "utility_stop": 899,
+          "utility_stop_after_planned_time": 19
+        },
+        "3": {
+          "availability_hard_limit": 4,
+          "energy_empty": 477,
+          "exogenous_unavailability": 317,
+          "modeled_return_utility": 273,
+          "utility_stop": 921,
+          "utility_stop_after_planned_time": 8
+        },
+        "4": {
+          "availability_hard_limit": 4,
+          "energy_empty": 494,
+          "exogenous_unavailability": 355,
+          "modeled_return_utility": 248,
+          "utility_stop": 885,
+          "utility_stop_after_planned_time": 14
+        },
+        "5": {
+          "availability_hard_limit": 4,
+          "day_action_cap": 1,
+          "energy_empty": 499,
+          "exogenous_unavailability": 323,
+          "modeled_return_utility": 236,
+          "utility_stop": 922,
+          "utility_stop_after_planned_time": 15
+        },
+        "6": {
+          "availability_hard_limit": 3,
+          "energy_empty": 484,
+          "exogenous_unavailability": 341,
+          "modeled_return_utility": 259,
+          "utility_stop": 902,
+          "utility_stop_after_planned_time": 11
+        },
+        "7": {
+          "availability_hard_limit": 4,
+          "energy_empty": 492,
+          "exogenous_unavailability": 329,
+          "modeled_return_utility": 237,
+          "utility_stop": 926,
+          "utility_stop_after_planned_time": 12
+        }
+      },
+      "topExhaustionLevels": [
+        {
+          "arrivingTrajectories": 1502,
+          "blocked": 895,
+          "blockedReasons": {
+            "barrierBlocked": 197,
+            "closedGateBlocked": 228,
+            "pieceBlocked": 470
+          },
+          "exhausted": 89,
+          "level": 33,
+          "paidUndoCoins": 5764,
+          "starts": 1584,
+          "undos": 1720
+        },
+        {
+          "arrivingTrajectories": 1085,
+          "blocked": 781,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 18,
+            "pieceBlocked": 763
+          },
+          "exhausted": 42,
+          "level": 43,
+          "paidUndoCoins": 2860,
+          "starts": 1123,
+          "undos": 1055
+        },
+        {
+          "arrivingTrajectories": 1364,
+          "blocked": 1689,
+          "blockedReasons": {
+            "barrierBlocked": 508,
+            "closedGateBlocked": 61,
+            "pieceBlocked": 1120
+          },
+          "exhausted": 36,
+          "level": 36,
+          "paidUndoCoins": 2852,
+          "starts": 1396,
+          "undos": 1334
+        },
+        {
+          "arrivingTrajectories": 859,
+          "blocked": 319,
+          "blockedReasons": {
+            "barrierBlocked": 133,
+            "closedGateBlocked": 75,
+            "pieceBlocked": 111
+          },
+          "exhausted": 16,
+          "level": 48,
+          "paidUndoCoins": 929,
+          "starts": 874,
+          "undos": 422
+        },
+        {
+          "arrivingTrajectories": 1668,
+          "blocked": 611,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 31,
+            "pieceBlocked": 580
+          },
+          "exhausted": 14,
+          "level": 28,
+          "paidUndoCoins": 1025,
+          "starts": 1681,
+          "undos": 950
+        },
+        {
+          "arrivingTrajectories": 1442,
+          "blocked": 535,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 97,
+            "pieceBlocked": 438
+          },
+          "exhausted": 14,
+          "level": 34,
+          "paidUndoCoins": 939,
+          "starts": 1454,
+          "undos": 709
+        },
+        {
+          "arrivingTrajectories": 248,
+          "blocked": 152,
+          "blockedReasons": {
+            "barrierBlocked": 3,
+            "closedGateBlocked": 85,
+            "pieceBlocked": 64
+          },
+          "exhausted": 14,
+          "level": 68,
+          "paidUndoCoins": 809,
+          "starts": 260,
+          "undos": 218
+        },
+        {
+          "arrivingTrajectories": 950,
+          "blocked": 719,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 162,
+            "pieceBlocked": 557
+          },
+          "exhausted": 7,
+          "level": 46,
+          "paidUndoCoins": 521,
+          "starts": 957,
+          "undos": 377
+        },
+        {
+          "arrivingTrajectories": 317,
+          "blocked": 100,
+          "blockedReasons": {
+            "barrierBlocked": 63,
+            "closedGateBlocked": 5,
+            "pieceBlocked": 32
+          },
+          "exhausted": 5,
+          "level": 65,
+          "paidUndoCoins": 415,
+          "starts": 322,
+          "undos": 182
+        },
+        {
+          "arrivingTrajectories": 1636,
+          "blocked": 1238,
+          "blockedReasons": {
+            "barrierBlocked": 920,
+            "closedGateBlocked": 238,
+            "pieceBlocked": 80
+          },
+          "exhausted": 3,
+          "level": 29,
+          "paidUndoCoins": 303,
+          "starts": 1638,
+          "undos": 449
+        }
+      ],
+      "trajectories": 2000,
+      "undosAllIncludingCompanionRewinds": 12834
+    },
+    "energy_unlimited_123": {
+      "actions": 730582,
+      "activeDays": 11885,
+      "attempts": 105713,
+      "automatedExitShare": {
+        "denominator": 663208,
+        "numerator": 0,
+        "ratio": 0.0
+      },
+      "automatedExits": 0,
+      "blocked": 51292,
+      "blockedReasons": {
+        "barrierBlocked": 8502,
+        "closedGateBlocked": 16853,
+        "pieceBlocked": 25937
+      },
+      "coinSpendRelativeToEarned": {
+        "denominator": 6434712,
+        "numerator": 22748,
+        "ratio": 0.0035352009538266826
+      },
+      "coinsSpentQuantiles": {
+        "0": 0,
+        "0.1": 0,
+        "0.25": 0,
+        "0.5": 0,
+        "0.75": 15,
+        "0.9": 34,
+        "1": 349
+      },
+      "completedPuzzles": 104128,
+      "configuredDays": 16000,
+      "dailyStops": {
+        "availability_hard_limit": 61,
+        "day_action_cap": 1831,
+        "exogenous_unavailability": 2329,
+        "modeled_return_utility": 1786,
+        "repeated_budget_exhaustion": 1,
+        "utility_stop": 9720,
+        "utility_stop_after_planned_time": 272
+      },
+      "dayCapPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 1831,
+        "ratio": 0.1144375
+      },
+      "directCueManualShare": {
+        "denominator": 663208,
+        "numerator": 4143,
+        "ratio": 0.006246908963703695
+      },
+      "endCoinQuantiles": {
+        "0": 400,
+        "0.1": 1492,
+        "0.25": 2048,
+        "0.5": 3032,
+        "0.75": 4365,
+        "0.9": 5934,
+        "1": 9278
+      },
+      "endCoinZeroTrajectories": 0,
+      "endCoinsCaution": "Final balances do not prove absence of any intermediate affordability constraint. No cosmetic/gacha/equipment purchase occurs in this protocol.",
+      "energyStopPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 0,
+        "ratio": 0.0
+      },
+      "energyStopWithAction": 0,
+      "energyStopWithoutAction": 0,
+      "energyStoppedTrajectories": {
+        "denominator": 2000,
+        "numerator": 0,
+        "ratio": 0.0
+      },
+      "learningCurveArrivals": [
+        {
+          "arrivingTrajectories": 2000,
+          "level": 1,
+          "outcomes": {
+            "completed": 2000
+          },
+          "starts": 2000
+        },
+        {
+          "arrivingTrajectories": 1987,
+          "level": 10,
+          "outcomes": {
+            "completed": 1984,
+            "horizon_censored": 3
+          },
+          "starts": 1987
+        },
+        {
+          "arrivingTrajectories": 1982,
+          "level": 11,
+          "outcomes": {
+            "completed": 1978,
+            "horizon_censored": 4
+          },
+          "starts": 1982
+        },
+        {
+          "arrivingTrajectories": 1964,
+          "level": 13,
+          "outcomes": {
+            "completed": 1960,
+            "horizon_censored": 4
+          },
+          "starts": 1964
+        },
+        {
+          "arrivingTrajectories": 1927,
+          "level": 17,
+          "outcomes": {
+            "completed": 1916,
+            "horizon_censored": 11
+          },
+          "starts": 1927
+        },
+        {
+          "arrivingTrajectories": 1704,
+          "level": 27,
+          "outcomes": {
+            "completed": 1694,
+            "horizon_censored": 10
+          },
+          "starts": 1704
+        },
+        {
+          "arrivingTrajectories": 1651,
+          "level": 29,
+          "outcomes": {
+            "budget_exhausted": 6,
+            "completed": 1631,
+            "horizon_censored": 19
+          },
+          "starts": 1656
+        },
+        {
+          "arrivingTrajectories": 1593,
+          "level": 31,
+          "outcomes": {
+            "budget_exhausted": 4,
+            "completed": 1583,
+            "horizon_censored": 10
+          },
+          "starts": 1597
+        },
+        {
+          "arrivingTrajectories": 1546,
+          "level": 33,
+          "outcomes": {
+            "budget_exhausted": 93,
+            "completed": 1504,
+            "horizon_censored": 37
+          },
+          "starts": 1634
+        },
+        {
+          "arrivingTrajectories": 1430,
+          "level": 36,
+          "outcomes": {
+            "budget_exhausted": 46,
+            "completed": 1390,
+            "horizon_censored": 34
+          },
+          "starts": 1470
+        },
+        {
+          "arrivingTrajectories": 1199,
+          "level": 43,
+          "outcomes": {
+            "budget_exhausted": 43,
+            "completed": 1162,
+            "horizon_censored": 32
+          },
+          "starts": 1237
+        },
+        {
+          "arrivingTrajectories": 1026,
+          "level": 48,
+          "outcomes": {
+            "budget_exhausted": 12,
+            "completed": 1011,
+            "horizon_censored": 13
+          },
+          "starts": 1036
+        },
+        {
+          "arrivingTrajectories": 686,
+          "level": 61,
+          "outcomes": {
+            "budget_exhausted": 5,
+            "completed": 673,
+            "horizon_censored": 12
+          },
+          "starts": 690
+        },
+        {
+          "arrivingTrajectories": 313,
+          "level": 80,
+          "outcomes": {
+            "budget_exhausted": 1,
+            "completed": 306,
+            "horizon_censored": 7
+          },
+          "starts": 314
+        },
+        {
+          "arrivingTrajectories": 161,
+          "level": 94,
+          "outcomes": {
+            "completed": 153,
+            "horizon_censored": 8
+          },
+          "starts": 161
+        }
+      ],
+      "manualAssistance": {
+        "directCueFollowedManualExits": 4143,
+        "eventRows": 49099,
+        "manualExitsWithCauseVisible": 44967,
+        "source_native_earned_focus": 599,
+        "source_native_u1_coach": 3544
+      },
+      "manualExits": 663208,
+      "outcomes": {
+        "budget_exhausted": 315,
+        "completed": 104128,
+        "horizon_censored": 1270
+      },
+      "paidUndoTrajectories": {
+        "denominator": 2000,
+        "numerator": 663,
+        "ratio": 0.3315
+      },
+      "repeatedErrors": 2164,
+      "resources": {
+        "coinsEarned": 6434712,
+        "coinsEnd": 6771964,
+        "coinsSpent": 22748,
+        "energyRefilled": 0,
+        "energySpent": 0
+      },
+      "skillRequests": 0,
+      "skillUnavailable": {
+        "denominator": 0,
+        "numerator": 0,
+        "ratio": null
+      },
+      "stopsByModeledDay": {
+        "0": {
+          "availability_hard_limit": 17,
+          "day_action_cap": 198,
+          "utility_stop": 1732,
+          "utility_stop_after_planned_time": 53
+        },
+        "1": {
+          "availability_hard_limit": 4,
+          "day_action_cap": 188,
+          "exogenous_unavailability": 338,
+          "modeled_return_utility": 254,
+          "utility_stop": 1182,
+          "utility_stop_after_planned_time": 34
+        },
+        "2": {
+          "availability_hard_limit": 6,
+          "day_action_cap": 242,
+          "exogenous_unavailability": 326,
+          "modeled_return_utility": 266,
+          "utility_stop": 1123,
+          "utility_stop_after_planned_time": 37
+        },
+        "3": {
+          "availability_hard_limit": 8,
+          "day_action_cap": 225,
+          "exogenous_unavailability": 317,
+          "modeled_return_utility": 278,
+          "repeated_budget_exhaustion": 1,
+          "utility_stop": 1145,
+          "utility_stop_after_planned_time": 26
+        },
+        "4": {
+          "availability_hard_limit": 6,
+          "day_action_cap": 235,
+          "exogenous_unavailability": 355,
+          "modeled_return_utility": 249,
+          "utility_stop": 1121,
+          "utility_stop_after_planned_time": 34
+        },
+        "5": {
+          "availability_hard_limit": 9,
+          "day_action_cap": 248,
+          "exogenous_unavailability": 323,
+          "modeled_return_utility": 242,
+          "utility_stop": 1147,
+          "utility_stop_after_planned_time": 31
+        },
+        "6": {
+          "availability_hard_limit": 5,
+          "day_action_cap": 239,
+          "exogenous_unavailability": 341,
+          "modeled_return_utility": 256,
+          "utility_stop": 1126,
+          "utility_stop_after_planned_time": 33
+        },
+        "7": {
+          "availability_hard_limit": 6,
+          "day_action_cap": 256,
+          "exogenous_unavailability": 329,
+          "modeled_return_utility": 241,
+          "utility_stop": 1144,
+          "utility_stop_after_planned_time": 24
+        }
+      },
+      "topExhaustionLevels": [
+        {
+          "arrivingTrajectories": 1546,
+          "blocked": 934,
+          "blockedReasons": {
+            "barrierBlocked": 208,
+            "closedGateBlocked": 243,
+            "pieceBlocked": 483
+          },
+          "exhausted": 93,
+          "level": 33,
+          "paidUndoCoins": 5624,
+          "starts": 1634,
+          "undos": 1688
+        },
+        {
+          "arrivingTrajectories": 1430,
+          "blocked": 1709,
+          "blockedReasons": {
+            "barrierBlocked": 513,
+            "closedGateBlocked": 65,
+            "pieceBlocked": 1131
+          },
+          "exhausted": 46,
+          "level": 36,
+          "paidUndoCoins": 3344,
+          "starts": 1470,
+          "undos": 1404
+        },
+        {
+          "arrivingTrajectories": 1199,
+          "blocked": 806,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 17,
+            "pieceBlocked": 789
+          },
+          "exhausted": 43,
+          "level": 43,
+          "paidUndoCoins": 2992,
+          "starts": 1237,
+          "undos": 1083
+        },
+        {
+          "arrivingTrajectories": 1682,
+          "blocked": 585,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 25,
+            "pieceBlocked": 560
+          },
+          "exhausted": 19,
+          "level": 28,
+          "paidUndoCoins": 1270,
+          "starts": 1701,
+          "undos": 957
+        },
+        {
+          "arrivingTrajectories": 531,
+          "blocked": 352,
+          "blockedReasons": {
+            "barrierBlocked": 7,
+            "closedGateBlocked": 203,
+            "pieceBlocked": 142
+          },
+          "exhausted": 15,
+          "level": 68,
+          "paidUndoCoins": 1117,
+          "starts": 546,
+          "undos": 397
+        },
+        {
+          "arrivingTrajectories": 1495,
+          "blocked": 528,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 101,
+            "pieceBlocked": 427
+          },
+          "exhausted": 13,
+          "level": 34,
+          "paidUndoCoins": 1024,
+          "starts": 1507,
+          "undos": 727
+        },
+        {
+          "arrivingTrajectories": 1026,
+          "blocked": 395,
+          "blockedReasons": {
+            "barrierBlocked": 175,
+            "closedGateBlocked": 82,
+            "pieceBlocked": 138
+          },
+          "exhausted": 12,
+          "level": 48,
+          "paidUndoCoins": 762,
+          "starts": 1036,
+          "undos": 462
+        },
+        {
+          "arrivingTrajectories": 1651,
+          "blocked": 1290,
+          "blockedReasons": {
+            "barrierBlocked": 936,
+            "closedGateBlocked": 254,
+            "pieceBlocked": 100
+          },
+          "exhausted": 6,
+          "level": 29,
+          "paidUndoCoins": 393,
+          "starts": 1656,
+          "undos": 506
+        },
+        {
+          "arrivingTrajectories": 598,
+          "blocked": 177,
+          "blockedReasons": {
+            "barrierBlocked": 125,
+            "closedGateBlocked": 7,
+            "pieceBlocked": 45
+          },
+          "exhausted": 6,
+          "level": 65,
+          "paidUndoCoins": 510,
+          "starts": 602,
+          "undos": 274
+        },
+        {
+          "arrivingTrajectories": 1087,
+          "blocked": 822,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 177,
+            "pieceBlocked": 645
+          },
+          "exhausted": 5,
+          "level": 46,
+          "paidUndoCoins": 460,
+          "starts": 1092,
+          "undos": 402
+        }
+      ],
+      "trajectories": 2000,
+      "undosAllIncludingCompanionRewinds": 15339
+    },
+    "loaned_mixed_123": {
+      "actions": 643304,
+      "activeDays": 11896,
+      "attempts": 89138,
+      "automatedExitShare": {
+        "denominator": 569693,
+        "numerator": 115019,
+        "ratio": 0.2018964600232055
+      },
+      "automatedExits": 115019,
+      "blocked": 32051,
+      "blockedReasons": {
+        "barrierBlocked": 5377,
+        "closedGateBlocked": 9759,
+        "pieceBlocked": 16915
+      },
+      "coinSpendRelativeToEarned": {
+        "denominator": 5161359,
+        "numerator": 14768,
+        "ratio": 0.0028612619273334795
+      },
+      "coinsSpentQuantiles": {
+        "0": 0,
+        "0.1": 0,
+        "0.25": 0,
+        "0.5": 0,
+        "0.75": 14,
+        "0.9": 30,
+        "1": 152
+      },
+      "completedPuzzles": 88128,
+      "configuredDays": 16000,
+      "dailyStops": {
+        "availability_hard_limit": 49,
+        "day_action_cap": 110,
+        "energy_empty": 3214,
+        "exogenous_unavailability": 2329,
+        "modeled_return_utility": 1775,
+        "utility_stop": 8365,
+        "utility_stop_after_planned_time": 158
+      },
+      "dayCapPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 110,
+        "ratio": 0.006875
+      },
+      "directCueManualShare": {
+        "denominator": 454674,
+        "numerator": 41178,
+        "ratio": 0.09056598793861097
+      },
+      "endCoinQuantiles": {
+        "0": 400,
+        "0.1": 1399,
+        "0.25": 1915,
+        "0.5": 2604,
+        "0.75": 3508,
+        "0.9": 4310,
+        "1": 6328
+      },
+      "endCoinZeroTrajectories": 0,
+      "endCoinsCaution": "Final balances do not prove absence of any intermediate affordability constraint. No cosmetic/gacha/equipment purchase occurs in this protocol.",
+      "energyStopPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 3214,
+        "ratio": 0.200875
+      },
+      "energyStopWithAction": 3214,
+      "energyStopWithoutAction": 0,
+      "energyStoppedTrajectories": {
+        "denominator": 2000,
+        "numerator": 1311,
+        "ratio": 0.6555
+      },
+      "learningCurveArrivals": [
+        {
+          "arrivingTrajectories": 2000,
+          "level": 1,
+          "outcomes": {
+            "completed": 2000
+          },
+          "starts": 2000
+        },
+        {
+          "arrivingTrajectories": 1986,
+          "level": 10,
+          "outcomes": {
+            "completed": 1979,
+            "horizon_censored": 7
+          },
+          "starts": 1986
+        },
+        {
+          "arrivingTrajectories": 1978,
+          "level": 11,
+          "outcomes": {
+            "completed": 1976,
+            "horizon_censored": 2
+          },
+          "starts": 1978
+        },
+        {
+          "arrivingTrajectories": 1961,
+          "level": 13,
+          "outcomes": {
+            "completed": 1956,
+            "horizon_censored": 5
+          },
+          "starts": 1961
+        },
+        {
+          "arrivingTrajectories": 1918,
+          "level": 17,
+          "outcomes": {
+            "completed": 1914,
+            "horizon_censored": 4
+          },
+          "starts": 1918
+        },
+        {
+          "arrivingTrajectories": 1653,
+          "level": 27,
+          "outcomes": {
+            "budget_exhausted": 1,
+            "completed": 1641,
+            "horizon_censored": 12
+          },
+          "starts": 1654
+        },
+        {
+          "arrivingTrajectories": 1599,
+          "level": 29,
+          "outcomes": {
+            "budget_exhausted": 5,
+            "completed": 1576,
+            "horizon_censored": 22
+          },
+          "starts": 1603
+        },
+        {
+          "arrivingTrajectories": 1531,
+          "level": 31,
+          "outcomes": {
+            "budget_exhausted": 4,
+            "completed": 1517,
+            "horizon_censored": 13
+          },
+          "starts": 1534
+        },
+        {
+          "arrivingTrajectories": 1462,
+          "level": 33,
+          "outcomes": {
+            "budget_exhausted": 54,
+            "completed": 1433,
+            "horizon_censored": 21
+          },
+          "starts": 1508
+        },
+        {
+          "arrivingTrajectories": 1337,
+          "level": 36,
+          "outcomes": {
+            "budget_exhausted": 46,
+            "completed": 1295,
+            "horizon_censored": 36
+          },
+          "starts": 1377
+        },
+        {
+          "arrivingTrajectories": 1024,
+          "level": 43,
+          "outcomes": {
+            "budget_exhausted": 25,
+            "completed": 1003,
+            "horizon_censored": 17
+          },
+          "starts": 1045
+        },
+        {
+          "arrivingTrajectories": 806,
+          "level": 48,
+          "outcomes": {
+            "budget_exhausted": 7,
+            "completed": 789,
+            "horizon_censored": 15
+          },
+          "starts": 811
+        },
+        {
+          "arrivingTrajectories": 402,
+          "level": 61,
+          "outcomes": {
+            "completed": 393,
+            "horizon_censored": 9
+          },
+          "starts": 402
+        },
+        {
+          "arrivingTrajectories": 63,
+          "level": 80,
+          "outcomes": {
+            "completed": 61,
+            "horizon_censored": 2
+          },
+          "starts": 63
+        },
+        {
+          "arrivingTrajectories": 7,
+          "level": 94,
+          "outcomes": {
+            "completed": 7
+          },
+          "starts": 7
+        }
+      ],
+      "manualAssistance": {
+        "directCueFollowedManualExits": 41178,
+        "eventRows": 45116,
+        "manualExitsWithCauseVisible": 4189,
+        "source_companion_guide": 37508,
+        "source_native_earned_focus": 126,
+        "source_native_u1_coach": 3544
+      },
+      "manualExits": 454674,
+      "outcomes": {
+        "budget_exhausted": 184,
+        "completed": 88128,
+        "horizon_censored": 826
+      },
+      "paidUndoTrajectories": {
+        "denominator": 2000,
+        "numerator": 536,
+        "ratio": 0.268
+      },
+      "repeatedErrors": 519,
+      "resources": {
+        "coinsEarned": 5161359,
+        "coinsEnd": 5506591,
+        "coinsSpent": 14768,
+        "energyRefilled": 56798,
+        "energySpent": 69175
+      },
+      "skillRequests": 152281,
+      "skillUnavailable": {
+        "denominator": 152281,
+        "numerator": 11706,
+        "ratio": 0.07687104760278696
+      },
+      "stopsByModeledDay": {
+        "0": {
+          "availability_hard_limit": 15,
+          "day_action_cap": 107,
+          "energy_empty": 117,
+          "utility_stop": 1721,
+          "utility_stop_after_planned_time": 40
+        },
+        "1": {
+          "availability_hard_limit": 6,
+          "day_action_cap": 1,
+          "energy_empty": 393,
+          "exogenous_unavailability": 338,
+          "modeled_return_utility": 253,
+          "utility_stop": 990,
+          "utility_stop_after_planned_time": 19
+        },
+        "2": {
+          "availability_hard_limit": 6,
+          "energy_empty": 460,
+          "exogenous_unavailability": 326,
+          "modeled_return_utility": 266,
+          "utility_stop": 930,
+          "utility_stop_after_planned_time": 12
+        },
+        "3": {
+          "availability_hard_limit": 7,
+          "energy_empty": 437,
+          "exogenous_unavailability": 317,
+          "modeled_return_utility": 275,
+          "utility_stop": 948,
+          "utility_stop_after_planned_time": 16
+        },
+        "4": {
+          "availability_hard_limit": 2,
+          "day_action_cap": 1,
+          "energy_empty": 461,
+          "exogenous_unavailability": 355,
+          "modeled_return_utility": 250,
+          "utility_stop": 914,
+          "utility_stop_after_planned_time": 17
+        },
+        "5": {
+          "availability_hard_limit": 4,
+          "day_action_cap": 1,
+          "energy_empty": 454,
+          "exogenous_unavailability": 323,
+          "modeled_return_utility": 238,
+          "utility_stop": 957,
+          "utility_stop_after_planned_time": 23
+        },
+        "6": {
+          "availability_hard_limit": 6,
+          "energy_empty": 444,
+          "exogenous_unavailability": 341,
+          "modeled_return_utility": 256,
+          "utility_stop": 938,
+          "utility_stop_after_planned_time": 15
+        },
+        "7": {
+          "availability_hard_limit": 3,
+          "energy_empty": 448,
+          "exogenous_unavailability": 329,
+          "modeled_return_utility": 237,
+          "utility_stop": 967,
+          "utility_stop_after_planned_time": 16
+        }
+      },
+      "topExhaustionLevels": [
+        {
+          "arrivingTrajectories": 1462,
+          "blocked": 734,
+          "blockedReasons": {
+            "barrierBlocked": 152,
+            "closedGateBlocked": 212,
+            "pieceBlocked": 370
+          },
+          "exhausted": 54,
+          "level": 33,
+          "paidUndoCoins": 3753,
+          "starts": 1508,
+          "undos": 1583
+        },
+        {
+          "arrivingTrajectories": 1337,
+          "blocked": 1245,
+          "blockedReasons": {
+            "barrierBlocked": 324,
+            "closedGateBlocked": 32,
+            "pieceBlocked": 889
+          },
+          "exhausted": 46,
+          "level": 36,
+          "paidUndoCoins": 3316,
+          "starts": 1377,
+          "undos": 1598
+        },
+        {
+          "arrivingTrajectories": 1024,
+          "blocked": 530,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 8,
+            "pieceBlocked": 522
+          },
+          "exhausted": 25,
+          "level": 43,
+          "paidUndoCoins": 1625,
+          "starts": 1045,
+          "undos": 939
+        },
+        {
+          "arrivingTrajectories": 1413,
+          "blocked": 388,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 71,
+            "pieceBlocked": 317
+          },
+          "exhausted": 10,
+          "level": 34,
+          "paidUndoCoins": 657,
+          "starts": 1423,
+          "undos": 654
+        },
+        {
+          "arrivingTrajectories": 227,
+          "blocked": 93,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 38,
+            "pieceBlocked": 55
+          },
+          "exhausted": 8,
+          "level": 68,
+          "paidUndoCoins": 541,
+          "starts": 235,
+          "undos": 203
+        },
+        {
+          "arrivingTrajectories": 1624,
+          "blocked": 402,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 11,
+            "pieceBlocked": 391
+          },
+          "exhausted": 7,
+          "level": 28,
+          "paidUndoCoins": 882,
+          "starts": 1630,
+          "undos": 949
+        },
+        {
+          "arrivingTrajectories": 806,
+          "blocked": 189,
+          "blockedReasons": {
+            "barrierBlocked": 57,
+            "closedGateBlocked": 61,
+            "pieceBlocked": 71
+          },
+          "exhausted": 7,
+          "level": 48,
+          "paidUndoCoins": 441,
+          "starts": 811,
+          "undos": 372
+        },
+        {
+          "arrivingTrajectories": 1599,
+          "blocked": 1086,
+          "blockedReasons": {
+            "barrierBlocked": 830,
+            "closedGateBlocked": 200,
+            "pieceBlocked": 56
+          },
+          "exhausted": 5,
+          "level": 29,
+          "paidUndoCoins": 416,
+          "starts": 1603,
+          "undos": 919
+        },
+        {
+          "arrivingTrajectories": 1531,
+          "blocked": 227,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 108,
+            "pieceBlocked": 119
+          },
+          "exhausted": 4,
+          "level": 31,
+          "paidUndoCoins": 221,
+          "starts": 1534,
+          "undos": 364
+        },
+        {
+          "arrivingTrajectories": 1561,
+          "blocked": 619,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 11,
+            "pieceBlocked": 608
+          },
+          "exhausted": 3,
+          "level": 30,
+          "paidUndoCoins": 387,
+          "starts": 1564,
+          "undos": 692
+        }
+      ],
+      "trajectories": 2000,
+      "undosAllIncludingCompanionRewinds": 25201
+    },
+    "manual_native_123": {
+      "actions": 630539,
+      "activeDays": 11905,
+      "attempts": 91450,
+      "automatedExitShare": {
+        "denominator": 572420,
+        "numerator": 0,
+        "ratio": 0.0
+      },
+      "automatedExits": 0,
+      "blocked": 44472,
+      "blockedReasons": {
+        "barrierBlocked": 7212,
+        "closedGateBlocked": 15010,
+        "pieceBlocked": 22250
+      },
+      "coinSpendRelativeToEarned": {
+        "denominator": 5456743,
+        "numerator": 19466,
+        "ratio": 0.00356732944908712
+      },
+      "coinsSpentQuantiles": {
+        "0": 0,
+        "0.1": 0,
+        "0.25": 0,
+        "0.5": 0,
+        "0.75": 15,
+        "0.9": 31,
+        "1": 177
+      },
+      "completedPuzzles": 90382,
+      "configuredDays": 16000,
+      "dailyStops": {
+        "availability_hard_limit": 35,
+        "day_action_cap": 19,
+        "energy_empty": 3604,
+        "exogenous_unavailability": 2329,
+        "modeled_return_utility": 1766,
+        "utility_stop": 8092,
+        "utility_stop_after_planned_time": 155
+      },
+      "dayCapPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 19,
+        "ratio": 0.0011875
+      },
+      "directCueManualShare": {
+        "denominator": 572420,
+        "numerator": 4079,
+        "ratio": 0.007125886586771951
+      },
+      "endCoinQuantiles": {
+        "0": 400,
+        "0.1": 1431,
+        "0.25": 1999,
+        "0.5": 2793,
+        "0.75": 3681,
+        "0.9": 4515,
+        "1": 6444
+      },
+      "endCoinZeroTrajectories": 0,
+      "endCoinsCaution": "Final balances do not prove absence of any intermediate affordability constraint. No cosmetic/gacha/equipment purchase occurs in this protocol.",
+      "energyStopPerConfiguredDay": {
+        "denominator": 16000,
+        "numerator": 3604,
+        "ratio": 0.22525
+      },
+      "energyStopWithAction": 3604,
+      "energyStopWithoutAction": 0,
+      "energyStoppedTrajectories": {
+        "denominator": 2000,
+        "numerator": 1378,
+        "ratio": 0.689
+      },
+      "learningCurveArrivals": [
+        {
+          "arrivingTrajectories": 2000,
+          "level": 1,
+          "outcomes": {
+            "completed": 2000
+          },
+          "starts": 2000
+        },
+        {
+          "arrivingTrajectories": 1987,
+          "level": 10,
+          "outcomes": {
+            "completed": 1984,
+            "horizon_censored": 3
+          },
+          "starts": 1987
+        },
+        {
+          "arrivingTrajectories": 1982,
+          "level": 11,
+          "outcomes": {
+            "completed": 1978,
+            "horizon_censored": 4
+          },
+          "starts": 1982
+        },
+        {
+          "arrivingTrajectories": 1964,
+          "level": 13,
+          "outcomes": {
+            "completed": 1960,
+            "horizon_censored": 4
+          },
+          "starts": 1964
+        },
+        {
+          "arrivingTrajectories": 1927,
+          "level": 17,
+          "outcomes": {
+            "completed": 1916,
+            "horizon_censored": 11
+          },
+          "starts": 1927
+        },
+        {
+          "arrivingTrajectories": 1695,
+          "level": 27,
+          "outcomes": {
+            "completed": 1685,
+            "horizon_censored": 10
+          },
+          "starts": 1695
+        },
+        {
+          "arrivingTrajectories": 1637,
+          "level": 29,
+          "outcomes": {
+            "budget_exhausted": 4,
+            "completed": 1620,
+            "horizon_censored": 16
+          },
+          "starts": 1640
+        },
+        {
+          "arrivingTrajectories": 1564,
+          "level": 31,
+          "outcomes": {
+            "budget_exhausted": 3,
+            "completed": 1553,
+            "horizon_censored": 11
+          },
+          "starts": 1567
+        },
+        {
+          "arrivingTrajectories": 1502,
+          "level": 33,
+          "outcomes": {
+            "budget_exhausted": 98,
+            "completed": 1456,
+            "horizon_censored": 37
+          },
+          "starts": 1591
+        },
+        {
+          "arrivingTrajectories": 1361,
+          "level": 36,
+          "outcomes": {
+            "budget_exhausted": 43,
+            "completed": 1326,
+            "horizon_censored": 30
+          },
+          "starts": 1399
+        },
+        {
+          "arrivingTrajectories": 1088,
+          "level": 43,
+          "outcomes": {
+            "budget_exhausted": 39,
+            "completed": 1069,
+            "horizon_censored": 17
+          },
+          "starts": 1125
+        },
+        {
+          "arrivingTrajectories": 877,
+          "level": 48,
+          "outcomes": {
+            "budget_exhausted": 11,
+            "completed": 863,
+            "horizon_censored": 13
+          },
+          "starts": 887
+        },
+        {
+          "arrivingTrajectories": 441,
+          "level": 61,
+          "outcomes": {
+            "budget_exhausted": 2,
+            "completed": 431,
+            "horizon_censored": 8
+          },
+          "starts": 441
+        },
+        {
+          "arrivingTrajectories": 68,
+          "level": 80,
+          "outcomes": {
+            "completed": 67,
+            "horizon_censored": 1
+          },
+          "starts": 68
+        },
+        {
+          "arrivingTrajectories": 4,
+          "level": 94,
+          "outcomes": {
+            "completed": 4
+          },
+          "starts": 4
+        }
+      ],
+      "manualAssistance": {
+        "directCueFollowedManualExits": 4079,
+        "eventRows": 43316,
+        "manualExitsWithCauseVisible": 39245,
+        "source_native_earned_focus": 535,
+        "source_native_u1_coach": 3544
+      },
+      "manualExits": 572420,
+      "outcomes": {
+        "budget_exhausted": 277,
+        "completed": 90382,
+        "horizon_censored": 791
+      },
+      "paidUndoTrajectories": {
+        "denominator": 2000,
+        "numerator": 603,
+        "ratio": 0.3015
+      },
+      "repeatedErrors": 1820,
+      "resources": {
+        "coinsEarned": 5456743,
+        "coinsEnd": 5797277,
+        "coinsSpent": 19466,
+        "energyRefilled": 58605,
+        "energySpent": 71476
+      },
+      "skillRequests": 0,
+      "skillUnavailable": {
+        "denominator": 0,
+        "numerator": 0,
+        "ratio": null
+      },
+      "stopsByModeledDay": {
+        "0": {
+          "availability_hard_limit": 15,
+          "day_action_cap": 19,
+          "energy_empty": 203,
+          "utility_stop": 1710,
+          "utility_stop_after_planned_time": 53
+        },
+        "1": {
+          "availability_hard_limit": 1,
+          "energy_empty": 411,
+          "exogenous_unavailability": 338,
+          "modeled_return_utility": 254,
+          "utility_stop": 977,
+          "utility_stop_after_planned_time": 19
+        },
+        "2": {
+          "availability_hard_limit": 3,
+          "energy_empty": 487,
+          "exogenous_unavailability": 326,
+          "modeled_return_utility": 264,
+          "utility_stop": 900,
+          "utility_stop_after_planned_time": 20
+        },
+        "3": {
+          "availability_hard_limit": 2,
+          "energy_empty": 498,
+          "exogenous_unavailability": 317,
+          "modeled_return_utility": 275,
+          "utility_stop": 900,
+          "utility_stop_after_planned_time": 8
+        },
+        "4": {
+          "availability_hard_limit": 4,
+          "energy_empty": 501,
+          "exogenous_unavailability": 355,
+          "modeled_return_utility": 246,
+          "utility_stop": 881,
+          "utility_stop_after_planned_time": 13
+        },
+        "5": {
+          "availability_hard_limit": 4,
+          "energy_empty": 497,
+          "exogenous_unavailability": 323,
+          "modeled_return_utility": 236,
+          "utility_stop": 927,
+          "utility_stop_after_planned_time": 13
+        },
+        "6": {
+          "availability_hard_limit": 3,
+          "energy_empty": 496,
+          "exogenous_unavailability": 341,
+          "modeled_return_utility": 258,
+          "utility_stop": 889,
+          "utility_stop_after_planned_time": 13
+        },
+        "7": {
+          "availability_hard_limit": 3,
+          "energy_empty": 511,
+          "exogenous_unavailability": 329,
+          "modeled_return_utility": 233,
+          "utility_stop": 908,
+          "utility_stop_after_planned_time": 16
+        }
+      },
+      "topExhaustionLevels": [
+        {
+          "arrivingTrajectories": 1502,
+          "blocked": 908,
+          "blockedReasons": {
+            "barrierBlocked": 191,
+            "closedGateBlocked": 228,
+            "pieceBlocked": 489
+          },
+          "exhausted": 98,
+          "level": 33,
+          "paidUndoCoins": 5855,
+          "starts": 1591,
+          "undos": 1742
+        },
+        {
+          "arrivingTrajectories": 1361,
+          "blocked": 1637,
+          "blockedReasons": {
+            "barrierBlocked": 517,
+            "closedGateBlocked": 54,
+            "pieceBlocked": 1066
+          },
+          "exhausted": 43,
+          "level": 36,
+          "paidUndoCoins": 3117,
+          "starts": 1399,
+          "undos": 1353
+        },
+        {
+          "arrivingTrajectories": 1088,
+          "blocked": 735,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 16,
+            "pieceBlocked": 719
+          },
+          "exhausted": 39,
+          "level": 43,
+          "paidUndoCoins": 2843,
+          "starts": 1125,
+          "undos": 1062
+        },
+        {
+          "arrivingTrajectories": 1443,
+          "blocked": 526,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 94,
+            "pieceBlocked": 432
+          },
+          "exhausted": 18,
+          "level": 34,
+          "paidUndoCoins": 1016,
+          "starts": 1459,
+          "undos": 718
+        },
+        {
+          "arrivingTrajectories": 263,
+          "blocked": 162,
+          "blockedReasons": {
+            "barrierBlocked": 3,
+            "closedGateBlocked": 90,
+            "pieceBlocked": 69
+          },
+          "exhausted": 16,
+          "level": 68,
+          "paidUndoCoins": 879,
+          "starts": 277,
+          "undos": 233
+        },
+        {
+          "arrivingTrajectories": 1669,
+          "blocked": 588,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 26,
+            "pieceBlocked": 562
+          },
+          "exhausted": 12,
+          "level": 28,
+          "paidUndoCoins": 947,
+          "starts": 1681,
+          "undos": 949
+        },
+        {
+          "arrivingTrajectories": 877,
+          "blocked": 340,
+          "blockedReasons": {
+            "barrierBlocked": 148,
+            "closedGateBlocked": 73,
+            "pieceBlocked": 119
+          },
+          "exhausted": 11,
+          "level": 48,
+          "paidUndoCoins": 805,
+          "starts": 887,
+          "undos": 416
+        },
+        {
+          "arrivingTrajectories": 968,
+          "blocked": 714,
+          "blockedReasons": {
+            "barrierBlocked": 0,
+            "closedGateBlocked": 164,
+            "pieceBlocked": 550
+          },
+          "exhausted": 6,
+          "level": 46,
+          "paidUndoCoins": 420,
+          "starts": 974,
+          "undos": 368
+        },
+        {
+          "arrivingTrajectories": 333,
+          "blocked": 106,
+          "blockedReasons": {
+            "barrierBlocked": 68,
+            "closedGateBlocked": 4,
+            "pieceBlocked": 34
+          },
+          "exhausted": 5,
+          "level": 65,
+          "paidUndoCoins": 429,
+          "starts": 337,
+          "undos": 182
+        },
+        {
+          "arrivingTrajectories": 1637,
+          "blocked": 1238,
+          "blockedReasons": {
+            "barrierBlocked": 908,
+            "closedGateBlocked": 244,
+            "pieceBlocked": 86
+          },
+          "exhausted": 4,
+          "level": 29,
+          "paidUndoCoins": 361,
+          "starts": 1640,
+          "undos": 508
+        }
+      ],
+      "trajectories": 2000,
+      "undosAllIncludingCompanionRewinds": 12955
+    }
+  },
+  "schemaVersion": 1,
+  "seed": 2026103101,
+  "trajectoryQuantilesByCohort": {
+    "cause_hidden_123": {
+      "actions": {
+        "0": 14.0,
+        "0.1": 142.0,
+        "0.25": 219.0,
+        "0.5": 312.0,
+        "0.75": 409.0,
+        "0.9": 493.0,
+        "1": 713.0
+      },
+      "coinsSpent": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 15.0,
+        "0.9": 31.0,
+        "1": 177.0
+      },
+      "energySpent": {
+        "0": 0.0,
+        "0.1": 13.0,
+        "0.25": 23.0,
+        "0.5": 34.0,
+        "0.75": 48.0,
+        "0.9": 60.0,
+        "1": 84.0
+      },
+      "levelsCleared": {
+        "0": 4.0,
+        "0.1": 22.0,
+        "0.25": 32.0,
+        "0.5": 44.0,
+        "0.75": 58.0,
+        "0.9": 69.0,
+        "1": 94.0
+      },
+      "undos": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 1.0,
+        "0.5": 5.0,
+        "0.75": 10.0,
+        "0.9": 14.0,
+        "1": 31.0
+      }
+    },
+    "energy_unlimited_123": {
+      "actions": {
+        "0": 14.0,
+        "0.1": 144.0,
+        "0.25": 229.0,
+        "0.5": 339.0,
+        "0.75": 484.0,
+        "0.9": 624.0,
+        "1": 940.0
+      },
+      "coinsSpent": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 15.0,
+        "0.9": 34.0,
+        "1": 349.0
+      },
+      "energySpent": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 0.0,
+        "0.9": 0.0,
+        "1": 0.0
+      },
+      "levelsCleared": {
+        "0": 4.0,
+        "0.1": 23.0,
+        "0.25": 33.0,
+        "0.5": 48.0,
+        "0.75": 68.0,
+        "0.9": 89.0,
+        "1": 131.0
+      },
+      "undos": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 2.0,
+        "0.5": 6.0,
+        "0.75": 12.0,
+        "0.9": 17.0,
+        "1": 45.0
+      }
+    },
+    "loaned_mixed_123": {
+      "actions": {
+        "0": 14.0,
+        "0.1": 139.0,
+        "0.25": 220.0,
+        "0.5": 314.0,
+        "0.75": 422.0,
+        "0.9": 509.0,
+        "1": 729.0
+      },
+      "coinsSpent": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 14.0,
+        "0.9": 30.0,
+        "1": 152.0
+      },
+      "energySpent": {
+        "0": 0.0,
+        "0.1": 13.0,
+        "0.25": 22.0,
+        "0.5": 33.0,
+        "0.75": 47.0,
+        "0.9": 59.0,
+        "1": 84.0
+      },
+      "levelsCleared": {
+        "0": 4.0,
+        "0.1": 22.0,
+        "0.25": 31.0,
+        "0.5": 43.0,
+        "0.75": 56.0,
+        "0.9": 68.0,
+        "1": 94.0
+      },
+      "undos": {
+        "0": 0.0,
+        "0.1": 3.0,
+        "0.25": 6.0,
+        "0.5": 12.0,
+        "0.75": 18.0,
+        "0.9": 23.0,
+        "1": 49.0
+      }
+    },
+    "manual_native_123": {
+      "actions": {
+        "0": 14.0,
+        "0.1": 142.0,
+        "0.25": 218.0,
+        "0.5": 313.0,
+        "0.75": 409.0,
+        "0.9": 495.0,
+        "1": 711.0
+      },
+      "coinsSpent": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 0.0,
+        "0.5": 0.0,
+        "0.75": 15.0,
+        "0.9": 31.0,
+        "1": 177.0
+      },
+      "energySpent": {
+        "0": 0.0,
+        "0.1": 13.0,
+        "0.25": 23.0,
+        "0.5": 35.0,
+        "0.75": 48.0,
+        "0.9": 60.0,
+        "1": 84.0
+      },
+      "levelsCleared": {
+        "0": 4.0,
+        "0.1": 22.0,
+        "0.25": 32.0,
+        "0.5": 44.0,
+        "0.75": 58.0,
+        "0.9": 70.0,
+        "1": 94.0
+      },
+      "undos": {
+        "0": 0.0,
+        "0.1": 0.0,
+        "0.25": 1.0,
+        "0.5": 6.0,
+        "0.75": 10.0,
+        "0.9": 14.0,
+        "1": 31.0
+      }
+    }
+  },
+  "trioInterpretation": {
+    "chargeDerivation": "Derived from each successful family use and the native per-board trio costs, not a separately recorded per-turn charge ledger. Refused drafts spend no native charge/Coins.",
+    "commonRuleMean": {
+      "loaned": 0.7464880963991882,
+      "native": 0.7782276021103631
+    },
+    "derivedChargeSpentFromSuccessfulFamilyCounts": 299916,
+    "manualLearningExposure": {
+      "loanedAutomatedExits": 115019,
+      "loanedManualExits": 454674,
+      "nativeManualExits": 572420,
+      "note": "CognitiveAgent.feedback learns on exit, not skill_flow/skill_pulse; automation changes manual learning exposure. It still applies fatigue for every modeled action."
+    },
+    "modeledRequestCost": "Each request, including refusal, consumes one policy decision and the same uncalibrated duration/fatigue rule; native GUIDE/refusal do not spend a productive-move budget unit.",
+    "nativeChargeState": "Initial3 per board, cap6, +1 per distinct exited tile; one use per slot and one combo after two distinct families. Different from the separate tactical chapter.",
+    "nativeCostsCharge": {
+      "FLOW": 3,
+      "GUIDE": 2,
+      "REWIND": 2,
+      "combo_PULSE": 0
+    },
+    "observedDecisionDifference": 12765,
+    "observedRefusalDifference": -12421,
+    "policyChoice": "Pressure is remembered block, visible dead-end warning or >8 present pieces; requests also occur every6th decision. Ready slots are shuffled and sampled; REWIND additionally requires remembered block/dead-end. This is not an optimized scheduler.",
+    "randomness": "Same profile/input seeds are paired. Changed actionIndex, state and exposure change subsequent random draws; this is not the same exact action stream with extra ability effects.",
+    "requestsPerAllDecisions": {
+      "denominator": 643304,
+      "numerator": 152281,
+      "ratio": 0.23671701093106837
+    },
+    "scope": "Paired total effect of this synthetic policy and environment, not an intrinsic talent nerf or measured human outcome. Contribution of each mechanism is not identified without another policy experiment.",
+    "successfulFamilyUses": {
+      "FLOW": 52548,
+      "GUIDE": 50050,
+      "PULSE": 16891,
+      "REWIND": 21086,
+      "TRAIL": 0,
+      "VISION": 0
+    },
+    "unavailablePerRequest": {
+      "denominator": 152281,
+      "numerator": 11706,
+      "ratio": 0.07687104760278696
+    }
+  },
+  "u43U48ConditionalProgression": {
+    "cause_hidden_123": {
+      "43": {
+        "arrivingTrajectories": 1085,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 1123,
+          "numerator": 42,
+          "ratio": 0.037399821905609976
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 1056,
+        "completedPerAttemptStart": {
+          "denominator": 1123,
+          "numerator": 1056,
+          "ratio": 0.9403383793410508
+        },
+        "horizonOpenAttempts": 25,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 1085,
+          "numerator": 1056,
+          "ratio": 0.9732718894009217
+        },
+        "retryStarts": 38,
+        "startsIncludingRetries": 1123
+      },
+      "48": {
+        "arrivingTrajectories": 859,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 874,
+          "numerator": 16,
+          "ratio": 0.018306636155606407
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 844,
+        "completedPerAttemptStart": {
+          "denominator": 874,
+          "numerator": 844,
+          "ratio": 0.965675057208238
+        },
+        "horizonOpenAttempts": 14,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 859,
+          "numerator": 844,
+          "ratio": 0.9825378346915018
+        },
+        "retryStarts": 15,
+        "startsIncludingRetries": 874
+      }
+    },
+    "energy_unlimited_123": {
+      "43": {
+        "arrivingTrajectories": 1199,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 1237,
+          "numerator": 43,
+          "ratio": 0.034761519805982216
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 1162,
+        "completedPerAttemptStart": {
+          "denominator": 1237,
+          "numerator": 1162,
+          "ratio": 0.9393694421988682
+        },
+        "horizonOpenAttempts": 32,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 1199,
+          "numerator": 1162,
+          "ratio": 0.969140950792327
+        },
+        "retryStarts": 38,
+        "startsIncludingRetries": 1237
+      },
+      "48": {
+        "arrivingTrajectories": 1026,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 1036,
+          "numerator": 12,
+          "ratio": 0.011583011583011582
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 1011,
+        "completedPerAttemptStart": {
+          "denominator": 1036,
+          "numerator": 1011,
+          "ratio": 0.9758687258687259
+        },
+        "horizonOpenAttempts": 13,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 1026,
+          "numerator": 1011,
+          "ratio": 0.9853801169590644
+        },
+        "retryStarts": 10,
+        "startsIncludingRetries": 1036
+      }
+    },
+    "loaned_mixed_123": {
+      "43": {
+        "arrivingTrajectories": 1024,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 1045,
+          "numerator": 25,
+          "ratio": 0.023923444976076555
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 1003,
+        "completedPerAttemptStart": {
+          "denominator": 1045,
+          "numerator": 1003,
+          "ratio": 0.9598086124401913
+        },
+        "horizonOpenAttempts": 17,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 1024,
+          "numerator": 1003,
+          "ratio": 0.9794921875
+        },
+        "retryStarts": 21,
+        "startsIncludingRetries": 1045
+      },
+      "48": {
+        "arrivingTrajectories": 806,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 811,
+          "numerator": 7,
+          "ratio": 0.008631319358816275
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 789,
+        "completedPerAttemptStart": {
+          "denominator": 811,
+          "numerator": 789,
+          "ratio": 0.9728729963008631
+        },
+        "horizonOpenAttempts": 15,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 806,
+          "numerator": 789,
+          "ratio": 0.9789081885856079
+        },
+        "retryStarts": 5,
+        "startsIncludingRetries": 811
+      }
+    },
+    "manual_native_123": {
+      "43": {
+        "arrivingTrajectories": 1088,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 1125,
+          "numerator": 39,
+          "ratio": 0.034666666666666665
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 1069,
+        "completedPerAttemptStart": {
+          "denominator": 1125,
+          "numerator": 1069,
+          "ratio": 0.9502222222222222
+        },
+        "horizonOpenAttempts": 17,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 1088,
+          "numerator": 1069,
+          "ratio": 0.9825367647058824
+        },
+        "retryStarts": 37,
+        "startsIncludingRetries": 1125
+      },
+      "48": {
+        "arrivingTrajectories": 877,
+        "budgetExhaustedPerAttemptStart": {
+          "denominator": 887,
+          "numerator": 11,
+          "ratio": 0.012401352874859075
+        },
+        "completedAttemptAndUniqueProgressedTrajectoryCount": 863,
+        "completedPerAttemptStart": {
+          "denominator": 887,
+          "numerator": 863,
+          "ratio": 0.9729425028184893
+        },
+        "horizonOpenAttempts": 13,
+        "progressedPerArrivingTrajectory": {
+          "denominator": 877,
+          "numerator": 863,
+          "ratio": 0.984036488027366
+        },
+        "retryStarts": 10,
+        "startsIncludingRetries": 887
+      }
+    }
+  }
+}

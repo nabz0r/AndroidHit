@@ -1,0 +1,108 @@
+[
+  {
+    "op": "language",
+    "code": "fr"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-owned-gear"
+  },
+  {
+    "op": "remember-battle",
+    "name": "before-wardrobe"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_wardrobe"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_slot_2"
+  },
+  {
+    "op": "tap",
+    "regex": "Boussole de rosée"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_CHARM",
+    "value": "dew_compass"
+  },
+  {
+    "op": "assert-label",
+    "regex": "Boussole de rosée"
+  },
+  {
+    "op": "capture",
+    "name": "applied-gear-keeps-tab"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_back"
+  },
+  {
+    "op": "seek-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "Aperçu"
+  },
+  {
+    "op": "capture",
+    "name": "back-after-equip-is-parent"
+  },
+  {
+    "op": "tap-id",
+    "id": "home_wardrobe"
+  },
+  {
+    "op": "tap",
+    "regex": "Équipement"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_slot_2"
+  },
+  {
+    "op": "tap",
+    "regex": "Vœu de cuivre"
+  },
+  {
+    "op": "tap",
+    "regex": "Équiper"
+  },
+  {
+    "op": "assert-pref",
+    "key": "avatar_slot_v1_CHARM",
+    "value": "copper_wish"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "before-owned-gear"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "before-wardrobe"
+  },
+  {
+    "op": "tap-id",
+    "id": "wardrobe_back"
+  },
+  {
+    "op": "snapshot",
+    "name": "restored-owned-gear"
+  }
+]

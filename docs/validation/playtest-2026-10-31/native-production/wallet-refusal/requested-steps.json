@@ -1,0 +1,73 @@
+[
+  {
+    "op": "assert-pref",
+    "key": "coins",
+    "value": "77"
+  },
+  {
+    "op": "tap-id",
+    "id": "root_nav_shop"
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_category_2"
+  },
+  {
+    "op": "capture",
+    "name": "premium-purchases-closed"
+  },
+  {
+    "op": "assert-label",
+    "regex": "Les achats en argent réel sont indisponibles dans cette version."
+  },
+  {
+    "op": "tap-id",
+    "id": "shop_gold_wallet"
+  },
+  {
+    "op": "capture",
+    "name": "wallet-production-top"
+  },
+  {
+    "op": "remember-value",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "wallet-local-coins"
+  },
+  {
+    "op": "tap",
+    "regex": "Charger une publicité de test"
+  },
+  {
+    "op": "assert-label",
+    "regex": "Les publicités de test sont réservées aux 18 ans et plus"
+  },
+  {
+    "op": "capture",
+    "name": "ad-refused-age-unspecified"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "pref": "luma_drift_save_v1",
+    "key": "coins",
+    "name": "wallet-local-coins"
+  },
+  {
+    "op": "assert-no-label",
+    "regex": "Simuler.*achat.*"
+  },
+  {
+    "op": "snapshot",
+    "name": "wallet-after-refusal"
+  },
+  {
+    "op": "back"
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "capture",
+    "name": "return-from-wallet"
+  }
+]

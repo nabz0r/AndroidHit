@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "createdAtUtc": "2026-10-31T00:34:07.948330+00:00",
+  "checks": {
+    "source-full": {
+      "exitCode": 0,
+      "command": [
+        "python3",
+        "scripts/check-site-v124.py",
+        "--preview"
+      ]
+    },
+    "source-structure": {
+      "exitCode": 0,
+      "command": [
+        "python3",
+        "scripts/check-site-v124.py",
+        "--preview",
+        "--structure-only"
+      ]
+    },
+    "legacy-current-structure": {
+      "exitCode": 0,
+      "command": [
+        "python3",
+        "scripts/check-site-v123.py",
+        "--structure-only"
+      ]
+    }
+  },
+  "scope": "Local staging source, payload preservation and legacy structural compatibility only; no real browser/native/Hosting acceptance.",
+  "sourceInputs": {
+    "scripts/check-site-v124.py": "f2d0488a57667713de7a264b7d004f05967e7c89313ec13aea12d6e250f7ea9f",
+    "scripts/check-site-v123.py": "67893f4c81ff0a9ca76f101c9f07a5f01afd7f27aac22836d6a0a652346c49a0",
+    "public/assets/site-v124.css": "ba8307135a5e43481d9a376d33581dcc465aa24aeaac86f32390dd2172a8584b",
+    "public/assets/site-v124.js": "6e5a157ded96f68ebd6ba26927de4483c7f18a1a795e3429d1ff66f10bf986d9",
+    "docs/validation/site-v1.24/staging/index.preview.html": "3c7854c59fc3f070de7e1e4ee5a775663ea3c87e45287acd5a8378adec1708d3"
+  }
+}

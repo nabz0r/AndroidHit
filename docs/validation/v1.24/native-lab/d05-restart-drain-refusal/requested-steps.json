@@ -1,0 +1,129 @@
+[
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "journey_continue"
+  },
+  {
+    "op": "remember-value",
+    "name": "run",
+    "pref": "luma_session",
+    "key": "run_id"
+  },
+  {
+    "op": "remember-value",
+    "name": "history",
+    "pref": "luma_session",
+    "key": "history"
+  },
+  {
+    "op": "remember-battle",
+    "name": "before-cancel"
+  },
+  {
+    "op": "tap",
+    "regex": "\u21bb\\s*Restart"
+  },
+  {
+    "op": "capture",
+    "name": "restart-confirm-cost"
+  },
+  {
+    "op": "assert-controls",
+    "ids": [
+      "pause_restart_confirm",
+      "pause_restart_cancel"
+    ]
+  },
+  {
+    "op": "tap-id",
+    "id": "pause_restart_cancel"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "run",
+    "pref": "luma_session",
+    "key": "run_id"
+  },
+  {
+    "op": "assert-value-unchanged",
+    "name": "history",
+    "pref": "luma_session",
+    "key": "history"
+  },
+  {
+    "op": "assert-battle-unchanged",
+    "name": "before-cancel"
+  },
+  {
+    "op": "snapshot",
+    "name": "cancel-preserves-run"
+  },
+  {
+    "op": "drain-energy"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "assert-battle",
+    "policy": "v124_1",
+    "energy": 3,
+    "remaining0": 1,
+    "capacity0": 1
+  },
+  {
+    "op": "adventure"
+  },
+  {
+    "op": "tap-id",
+    "id": "menu_wallet_2"
+  },
+  {
+    "op": "capture",
+    "name": "warm-energy-zero-gold-zero"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "tap",
+    "regex": "Cancel"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "capture",
+    "name": "warm-refill-cancelled"
+  },
+  {
+    "op": "tap-id",
+    "id": "energy_buy"
+  },
+  {
+    "op": "tap",
+    "regex": "Yes"
+  },
+  {
+    "op": "assert-label",
+    "regex": ".*Not enough LumaGold. No new debit.*"
+  },
+  {
+    "op": "assert-energy",
+    "count": 0
+  },
+  {
+    "op": "capture",
+    "name": "warm-insufficient-gold-terminal"
+  },
+  {
+    "op": "snapshot",
+    "name": "warm-final-energy-refusal"
+  }
+]

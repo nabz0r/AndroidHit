@@ -22,7 +22,9 @@ import zlib
 SCHEMA = "luma-apk-byte-delta-v1"
 CHUNK = 1024 * 1024
 MAX_APK = 1024 * CHUNK
-MAX_PATCH = 10 * CHUNK
+# The 1.24 original art delta is just above 10 MiB; retain a bounded 12 MiB
+# envelope. Literal, JSON, operation, APK and exact-byte guards stay independent.
+MAX_PATCH = 12 * CHUNK
 MAX_JSON = 64 * CHUNK
 MAX_LITERAL_TOTAL = 32 * CHUNK
 MAX_OPERATIONS = 20000
@@ -219,7 +221,7 @@ def build(base, target, output, expected_base, expected_target, report=None, rep
                     encoded_bytes += len(encoded)
                     require(encoded_bytes <= MAX_JSON, "Expanded delta JSON exceeds bound")
                     compressed.write(encoded)
-            require(stream.tell() <= MAX_PATCH, "Delta exceeds 10 MiB; use another transport")
+            require(stream.tell() <= MAX_PATCH, "Delta exceeds 12 MiB; use another transport")
 
         atomic_writer(output, replace, emit)
     result = {"passed": True, "operation": "build", "schema": SCHEMA, "base": base_meta, "target": target_meta,

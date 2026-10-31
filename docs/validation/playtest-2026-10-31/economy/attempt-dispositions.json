@@ -1,0 +1,30 @@
+{
+  "scope": "Original incomplete/failed attempts retained; no old10/30 evidence overwritten. These attempts are not added to accepted unique workload counts.",
+  "attempts": [
+    {
+      "path": "model-stress",
+      "status": "EXPLORATORY_MODEL_PASS",
+      "disposition": "Before adding the earned-capsule family; superseded by qualified-stress; unused seed fixture not treated as capsule coverage."
+    },
+    {
+      "path": "final-stress",
+      "status": "WALLET_HARNESS_FAIL_MODEL_PASS",
+      "disposition": "Harness expected energyRefills=0 field on initial wallet; actual backward-compatible response omits zero stock. Fixed oracle normalizes missing energyRefills to0. Original failure/stdout/stderr retained; not a product defect. Original wrapper receipt remained RUNNING when its child failed, so this ledger explicitly marks the failure."
+    },
+    {
+      "path": "ad-reward-fix/source-corrected-host",
+      "status": "HARNESS_COMPILE_FAIL",
+      "disposition": "New test lambda captured a reassigned local variable. Test compile fixed; no app compile error. Original stderr retained."
+    },
+    {
+      "path": "ad-reward-fix/java-compilation",
+      "status": "ENVIRONMENT_START_FAIL",
+      "disposition": "JAVA_HOME absent, Gradle could not find Java; no compilation executed. java-compilation-r2 sets JDK17 explicitly and passes."
+    },
+    {
+      "path": "ads-callbacks",
+      "status": "BASELINE_PASS_WITH_PRODUCT_FINDING",
+      "disposition": "Original E-source reward-loss reproduction is immutable and remains a valid finding; not replaced by the corrected-source evidence."
+    }
+  ]
+}

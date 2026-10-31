@@ -1,0 +1,209 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-30T23:39:32.416361+00:00",
+  "serial": "emulator-5602",
+  "avd": "Luma119-Battle-QA",
+  "package": "com.androidhit.lumadrift",
+  "phase": "wallet-refusal-retry",
+  "expected_version": "1.23.0-rc2",
+  "expected_code": 31,
+  "apk_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "observer_sha256": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+  "creation_receipt_sha256": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+  "first_install": false,
+  "fresh": false,
+  "snapshot_only": false,
+  "upgrade_from_sha256": null,
+  "run_token": "dae7a57a-dc10-4a29-a9e7-ffc7c5744f54",
+  "scope": "Task-owned QA AVD only. Real native UI gestures and read-only preferences. Observer installed/uninstalled; first game install requires absence. An owner-authorized update requires its explicit previous installed APK hash and preserves data. Never clear/uninstall the game, inject fixtures or grant ownership/currency/progress. Production UI availability and refusal paths may be observed. No account sign-in, real-money purchase, ad configuration change or injected provider callback.",
+  "installed_sha256": "429a443c9228787c7b854d36a40f0bcf7d52fdc8a3601214cd27b5cfae6945fb",
+  "device": {
+    "sdk": "36",
+    "abi": "arm64-v8a",
+    "page_size": "16384",
+    "size": "Physical size: 1080x2400",
+    "density": "Physical density: 420"
+  },
+  "native": {
+    "passed": true,
+    "phase": "wallet-refusal-retry",
+    "runToken": "dae7a57a-dc10-4a29-a9e7-ffc7c5744f54",
+    "processId": 6164,
+    "checkCount": 15,
+    "checks": [
+      {
+        "passed": true,
+        "message": "Exact production package"
+      },
+      {
+        "passed": true,
+        "message": "Unique host execution token"
+      },
+      {
+        "passed": true,
+        "message": "Bounded explicit phase"
+      },
+      {
+        "passed": true,
+        "message": "Fresh evidence output"
+      },
+      {
+        "passed": true,
+        "message": "Exact installed version and code"
+      },
+      {
+        "passed": true,
+        "message": "Explicit bounded gesture program"
+      },
+      {
+        "passed": true,
+        "message": "Read-only preference coins = 77"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches Les achats en argent réel sont indisponibles dans cette version."
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible label matches État de la publicité: Les publicités de test sont réservées aux 18 ans et plus"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      },
+      {
+        "passed": true,
+        "message": "Actual value unchanged wallet-local-coins"
+      },
+      {
+        "passed": true,
+        "message": "Actual visible labels exclude Simuler.*achat.*"
+      },
+      {
+        "passed": true,
+        "message": "Distinct bounded native capture label"
+      }
+    ],
+    "touchCount": 6,
+    "actions": [
+      {
+        "reason": "root_nav_shop",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 659279,
+        "label": "Boutique",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_shop",
+        "bounds": [
+          864,
+          2134,
+          1080,
+          2303
+        ]
+      },
+      {
+        "reason": "shop_category_2",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 659954,
+        "label": "Gold",
+        "resourceId": "com.androidhit.lumadrift:id/shop_category_2",
+        "bounds": [
+          708,
+          582,
+          1013,
+          742
+        ]
+      },
+      {
+        "reason": "shop_gold_wallet",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 666547,
+        "label": "Voir le portefeuille →",
+        "resourceId": "com.androidhit.lumadrift:id/shop_gold_wallet",
+        "bounds": [
+          66,
+          1434,
+          1013,
+          1600
+        ]
+      },
+      {
+        "reason": "Charger une publicité de test",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 680634,
+        "label": "Charger une publicité de test",
+        "bounds": [
+          66,
+          1861,
+          1014,
+          2019
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 683255,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          -221,
+          2134,
+          -5,
+          2303
+        ]
+      },
+      {
+        "reason": "return-actual-adventure-tab",
+        "input": "actual SDK touchscreen",
+        "uptimeMs": 684494,
+        "label": "Accueil",
+        "resourceId": "com.androidhit.lumadrift:id/root_nav_adventure",
+        "bounds": [
+          0,
+          2134,
+          216,
+          2303
+        ]
+      }
+    ],
+    "captures": [
+      "premium-purchases-closed",
+      "wallet-production-top",
+      "ad-refused-age-unspecified",
+      "return-from-wallet"
+    ],
+    "package": "com.androidhit.lumadrift",
+    "scope": "Actual native touchscreen input at observed accessibility bounds and read-only preferences. Existing U certificates script genuine board touches. No target imports, target solver, reflection, preference writes, injected progress/ownership/currency, external identity, real-money purchase, ad configuration change, injected ad-provider callback or publication. Ad UI availability/refusal observation only. Earned coin draws only when expressly listed."
+  },
+  "elapsed_seconds": 35.496,
+  "evidence_sha256": {
+    "battle-observer.apk": "bcf90611b2a5d3c0a89ab603718491ab46ea3d2437a7af44cf88fe6135fd08dd",
+    "candidate-signature.txt": "3acc84da234c7dfcab83005ad6d7ec81d6adf82de6a51a168a8f633b1fe6233f",
+    "device-creation.json": "022362d42b38acf665a2266d1fb2dbec40981f5640d6955d7d86c94c1a1196ae",
+    "instrumentation.txt": "2141d240fbb333fb6525b616b802929ecf1e3e984644a10068149407e2a1251c",
+    "native/ad-refused-age-unspecified-accessibility.json": "eeb528fd0d07afb18608dc577c764554723e3c107d55c682f5ce4d3c5a7564f7",
+    "native/ad-refused-age-unspecified.png": "fed6bdfd9f73d1023ab14ea9d26dacff55c1d7c030b3d205e4ef27939cc0fade",
+    "native/after.json": "5a337f729a7d83864462c7d4cd46b4766fecf117a4aba52d1b52d2fb3bdf3f94",
+    "native/before.json": "2f97016cce3d601d59974a5f42d6e1ea6db2041828efa62b75fa97920f0f8d58",
+    "native/premium-purchases-closed-accessibility.json": "49476145e4d56c37c041e41b6681df964e4a2a0b52f0fc7438ff0e678c6f0787",
+    "native/premium-purchases-closed.png": "0ca680c9004a6d6451d1b99e60f107e607cdc0ae70aa6ad641f555b36a25a451",
+    "native/report.json": "1e3a26d1a243b1f839c9b9f63bdd24e2f1acaf3880098873210eed3387feedda",
+    "native/requested-steps.json": "3ddbfb0d0e69e533e6c406f1842d9f186d7607c7089b76dff1950acee7550850",
+    "native/return-from-wallet-accessibility.json": "e118d5e37a3708402908775fdb0f878842bd281dcbd7d997d7ac60c9853164a5",
+    "native/return-from-wallet.png": "6e18e085938fd9c6c8c429ab09dbe5aeebf74d32c2cde3b67fcd517daf4c250f",
+    "native/wallet-after-refusal.json": "5a337f729a7d83864462c7d4cd46b4766fecf117a4aba52d1b52d2fb3bdf3f94",
+    "native/wallet-production-top-accessibility.json": "30ae7d770c6a8f15c040f3f1f0e2c16ea3b11cf9c6fc16e09ecba9351c59b379",
+    "native/wallet-production-top.png": "c8cfebcd68cea307f3a2e93df4cddd0ddfcc67311c83b3ecbe6a7793fd00e054",
+    "observer-install.txt": "4e8c9fe57c81d1bd0dab85d5e31dde35fcef1ec83a47a013bdd97bec594c6b1b",
+    "observer-signature.txt": "b0bf102663cdd1ab80015f29b95cc7c3b49311faa5467fbb491709dae0dd90c2",
+    "observer-uninstall.txt": "7fc0023a6402c7bd7abd98bb3e580968de4833eed07d88d1cc8d70819d69c7a0",
+    "requested-steps.json": "66bb7a0569017058da946661af0239322993a92eac8529176dc8e2a2c605e6d6",
+    "source-snapshot.json": "ff3806a81e3fcae44b4045c199a4c5fa6c06a4e3668608dad10f65b528517927"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status":"PASS",
+  "lifecycleSessions":10000,
+  "lifecycleVariants":8,
+  "assertions":113774,
+  "acceptedUniqueEarnedShows":3750,
+  "unearnedOrInvalidatedShows":6250,
+  "injectedRewardSaveFailures":2,
+  "finding":{"id":"AD_EARNED_SAVE_FAILURE_HAS_NO_RETRY","status":"RECOVERED_IN_HOST_FIXTURE","cases":[
+    {"memoryBeforeFailedDiskCommit":false,"reportedStatus":"commerce_save_error","listenerCallsAfterDuplicateEarnedCallback":1,"coldCoins":215,"expectedEarnedCoinsIfDurablyFulfilled":215},
+    {"memoryBeforeFailedDiskCommit":true,"reportedStatus":"commerce_save_error","listenerCallsAfterDuplicateEarnedCallback":1,"coldCoins":215,"expectedEarnedCoinsIfDurablyFulfilled":215}
+  ]},
+  "elapsedSeconds":0.233348417,
+  "scope":"Actual AdsController+GameStore; current production BuildConfig. Consent, SDK init/load/show/earned/dismiss/error callbacks and Android preferences are controlled host doubles, no UMP/Google Ads request or rendered creative. Eight deterministic lifecycle variants repeat1250 times; this is callback stress, not10k real ad views or human sessions."
+}
