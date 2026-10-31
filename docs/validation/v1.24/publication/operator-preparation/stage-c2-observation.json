@@ -1,0 +1,33 @@
+{
+  "status": "STAGED_ONLY",
+  "scope": "Observed Cloud Shell staging receipt; original files remain in Cloud workspace pending final combined export. No authentication, upload or deployment.",
+  "source_commit": "39c0985b24ecc4cf6ef00b6eb1c1392ebe3758da",
+  "workspace": "/tmp/luma124-cloud-39c0985b24ec-g5pa_wji",
+  "operator_json_sha256": "f547d2ee51fae21cbd31a57d63040f7258126593135de228c672c129f22f15fc",
+  "staging_json_sha256": "cd4410973f4734e4373cd6b168696d57e285ae34aa5aefe087ba73fa67c41eba",
+  "source_manifest_sha256": "67237fb745f52863e075c476f8d8eca938469bba5288bf4e65edff196a5384bd",
+  "archive": {
+    "cloud_home_name": "luma124-stage-39c0985b24ec-receipts.tgz",
+    "bytes": 10508,
+    "sha256": "383ebd649bf3cd14062b9a98288f1b18e428a3d84d73866fbbab8bd6c4202819",
+    "original_files": 13,
+    "locally_collected": false
+  },
+  "apks": {
+    "production": {
+      "sha256": "2cb544e6ee341d346e7b6c90a75c46c3b7fa909ce236b5048677476920e7f67e",
+      "bytes": 340290322,
+      "reconstructed": true
+    },
+    "lab": {
+      "sha256": "1929ee6bc8644ee936bfe7db917fd02e3000598f6b83d053af51a8c5d5cd238b",
+      "bytes": 340290009,
+      "reconstructed": true
+    }
+  },
+  "authenticated": false,
+  "uploaded": false,
+  "deployed": false,
+  "next_gate": "Coordinator C2b exact source and full green CI; no 39c0 finalizer transferred.",
+  "transfer_observation": "Cloud Shell Download marked Success; documented Playwright download event timed out after 30 seconds. No browser profile/history lookup. Coordinator authorized visible numbered base64 fallback for one later complete export."
+}

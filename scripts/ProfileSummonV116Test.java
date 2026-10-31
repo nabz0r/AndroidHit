@@ -48,7 +48,10 @@ public final class ProfileSummonV116Test {
     private static void badges(){
         RewardsCosmeticsV17Test.Ctx context=new RewardsCosmeticsV17Test.Ctx();GameStore s=store(context);
         check(!s.badgeUnlocked("first_win")&&!s.badgeUnlocked("journey_10")&&!s.badgeUnlocked("journey_100")&&!s.badgeUnlocked("collector_5"),"unearned progression badges locked");
-        check(s.badgeProgress("decorator_5")==7&&s.badgeUnlocked("decorator_5")&&!s.badgeUnlocked("decorator_10"),"starter room designs count once across rooms");
+        Set<String> starterDesigns=new HashSet<>();
+        for(String room:HomeCatalog.ROOMS)for(HomeLayout.Placement item:s.homeLayout(room).placements())starterDesigns.add(item.id);
+        check(starterDesigns.equals(new HashSet<>(Arrays.asList("bed","lamp","plant","rug","cushion","flowerbed","garden_path","herb_cart","seed_shelf"))),"seven historical starter designs plus two explicit 1.24 additions");
+        check(s.badgeProgress("decorator_5")==9&&s.badgeUnlocked("decorator_5")&&!s.badgeUnlocked("decorator_10"),"nine distinct starter designs count once across four rooms, below ten");
         check(!s.equipBadge(0,"first_win")&&!s.equipBadge(-1,"decorator_5")&&!s.equipBadge(3,"decorator_5")&&!s.equipBadge(0,"unknown")&&!s.equipBadge(0,null),"locked and invalid badge assignments rejected");
         check(s.equipBadge(0,"decorator_5")&&s.equippedBadges().get(0).equals("decorator_5"),"earned badge equipped");
         check(s.equipBadge(2,"decorator_5")&&s.equippedBadges().equals(Arrays.asList("","","decorator_5")),"badge move cannot duplicate across slots");

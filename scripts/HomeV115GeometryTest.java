@@ -18,7 +18,7 @@ public final class HomeV115GeometryTest{
         for(int x=0;x<10;x++)for(int y=0;y<10;y++){PointF p=HomeScene.floorPoint(x,y);int[] tile=HomeScene.cellAt(p.x,p.y);check(tile!=null&&tile[0]==x&&tile[1]==y,"raw ten-by-ten projection remains stable");}
     }
     static void preview(String path)throws Exception{
-        if(path==null)return;int cols=6,cellW=230,cellH=230;BufferedImage sheet=new BufferedImage(cols*cellW,14*cellH,BufferedImage.TYPE_INT_ARGB);java.awt.Graphics2D labels=sheet.createGraphics();labels.setColor(new java.awt.Color(0xfffbf6ed,true));labels.fillRect(0,0,sheet.getWidth(),sheet.getHeight());labels.setFont(new java.awt.Font("SansSerif",java.awt.Font.PLAIN,13));Canvas c=new Canvas(sheet);HomeScene scene=new HomeScene();
+        if(path==null)return;int cols=6,cellW=230,cellH=230;int rows=(HomeCatalog.ITEMS.size()*2+cols-1)/cols;BufferedImage sheet=new BufferedImage(cols*cellW,rows*cellH,BufferedImage.TYPE_INT_ARGB);java.awt.Graphics2D labels=sheet.createGraphics();labels.setColor(new java.awt.Color(0xfffbf6ed,true));labels.fillRect(0,0,sheet.getWidth(),sheet.getHeight());labels.setFont(new java.awt.Font("SansSerif",java.awt.Font.PLAIN,13));Canvas c=new Canvas(sheet);HomeScene scene=new HomeScene();
         int index=0;for(HomeCatalog.Item item:HomeCatalog.ITEMS)for(int rotation=0;rotation<2;rotation++){
             int x=index%cols*cellW,y=index/cols*cellH;c.save();c.translate(x,y);scene.drawItem(c,item.id,new RectF(18,12,cellW-18,cellH-42),0,true,rotation);c.restore();labels.setColor(new java.awt.Color(0xff59475f,true));labels.drawString(item.id+" · "+(rotation==0?"A":"B"),x+12,y+cellH-14);index++;
         }

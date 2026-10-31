@@ -11,7 +11,9 @@ cd "$TASK_ROOT"
 "$TASK_JAVA_HOME/bin/java" -cp "$TASK_BUILD" JourneyWorld122Test
 TASK_ANDROID_JAR=${ANDROID_HOME:-$HOME/Library/Android/sdk}/platforms/android-36/android.jar
 if [ -f "$TASK_ANDROID_JAR" ]; then
-    "$TASK_JAVA_HOME/bin/javac" -Xlint:all -cp "$TASK_ANDROID_JAR:$TASK_BUILD" -d "$TASK_BUILD" \
+    "$TASK_JAVA_HOME/bin/javac" -Xlint:all -cp "$TASK_ANDROID_JAR:$TASK_BUILD" \
+        -sourcepath app/src/main/java -d "$TASK_BUILD" \
+        app/src/main/java/com/androidhit/lumadrift/ui/PulseUi124.java \
         app/src/main/java/com/androidhit/lumadrift/ui/SagaMap.java \
         app/src/main/java/com/androidhit/lumadrift/ui/JourneyMapScene.java \
         app/src/main/java/com/androidhit/lumadrift/ui/JourneyWorldScene122.java

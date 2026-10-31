@@ -9,8 +9,33 @@ public final class HomeV115Test {
     private static GameStore store(RewardsCosmeticsV17Test.Ctx c){return new GameStore(c,null,new RewardsCosmeticsV17Test.Clock("2026-10-28"));}
     private static void fund(GameStore s,int amount){while(s.coins()<amount)check(s.grantMilestone("home-v115-funding:"+funds++,Math.min(500,amount-s.coins()))>0,"earned funding");}
     private static boolean refused(Runnable task){try{task.run();return false;}catch(GameStore.LocalSaveException expected){return true;}}
+    /** Exact shipped IDs/prices from 1.23 main 5cc8707; independent of the current catalogue. */
+    private static void catalogCompatibility(){
+        String[] historical={
+            "bed=0","sofa=240","lamp=0","plant=0","rug=0","table=140",
+            "bookshelf=220","cushion=0","plush=120","gate_lamp=180","mobile=160","stool=100",
+            "aquarium=420","piano=560","greenhouse=640","library=380","bay_window=280","telescope=390",
+            "fireplace=350","desk=230","easel=190","record_player=210","arcade=400","terrarium=170",
+            "bonsai=150","cactus=130","cherry_tree=460","fountain=370","pond=420","hammock=270",
+            "swing=320","bench=180","picnic=220","flowerbed=0","garden_path=0","lantern=160",
+            "canopy_bed=520","wardrobe=280","bath=340","mirror=150","kitchen=440","chess_table=240"
+        };
+        String[] added={"tea_station=180","herb_cart=0","bubble_fridge=280","cooking_island=320","seed_shelf=0","bloom_arch=260"};
+        check(historical.length==42&&added.length==6,"42 historical identities plus six explicit additions");
+        int index=0,free=0;
+        for(String[] segment:Arrays.asList(historical,added))for(String contract:segment){
+            String[] fields=contract.split("=");String id=fields[0];int price=Integer.parseInt(fields[1]);
+            HomeCatalog.Item item=HomeCatalog.item(id);
+            check(item!=null&&HomeCatalog.ITEMS.get(index++).id.equals(id),"exact catalogue identity and stable order "+id);
+            check(item.price==price&&HomeCatalog.price(id)==price,"historical/new earned price contract "+id);
+            check(item.starter()==(price==0),"free ownership follows the explicit zero-price contract "+id);
+            if(item.starter())free++;
+        }
+        check(index==HomeCatalog.ITEMS.size()&&free==9,"no undeclared furnishing and exactly nine free identities");
+    }
     private static void catalog(){
-        check(HomeCatalog.SIZE==10&&HomeCatalog.ITEMS.size()==42,"100 tiles and 42 distinctive furniture types");
+        check(HomeCatalog.SIZE==10&&HomeCatalog.ITEMS.size()==48,"100 tiles and 48 distinctive furniture types");
+        catalogCompatibility();
         check(HomeCatalog.ROOMS.subList(0,3).equals(Arrays.asList("living","bedroom","garden")),"three original room identities and ordering stay stable");
         check(HomeCatalog.ROOMS.equals(Arrays.asList("living","bedroom","garden","kitchen")),"1.21 adds only the separately saved kitchen");
         Set<String> ids=new HashSet<>();Set<String> themes=new HashSet<>();int large=0;
@@ -79,7 +104,7 @@ public final class HomeV115Test {
         }
     }
     public static void main(String[] args)throws Exception{
-        catalog();layouts();independentRooms();legacyAndFaults();String report="{\n  \"passed\":true,\n  \"checks\":"+checks+",\n  \"rooms\":"+HomeCatalog.ROOMS.size()+",\n  \"tiles_per_room\":100,\n  \"furniture_types\":42,\n  \"languages\":6,\n  \"scope\":\"Actual GameStore on host JVM: v1 migration without relocation, complete ten-by-ten paths, collisions, independent rooms and surfaces, exact ownership, failed writes before/after memory and cold restart. Rendering and touch require device validation.\"\n}\n";
+        catalog();layouts();independentRooms();legacyAndFaults();String report="{\n  \"passed\":true,\n  \"checks\":"+checks+",\n  \"rooms\":"+HomeCatalog.ROOMS.size()+",\n  \"tiles_per_room\":100,\n  \"furniture_types\":48,\n  \"preserved_historical_furniture\":42,\n  \"added_furniture\":6,\n  \"languages\":6,\n  \"scope\":\"Actual GameStore on host JVM: v1 migration without relocation, complete ten-by-ten paths, collisions, independent rooms and surfaces, exact ownership, failed writes before/after memory and cold restart. Rendering and touch require device validation.\"\n}\n";
         if(args.length>0){Path out=Path.of(args[0]);if(out.getParent()!=null)Files.createDirectories(out.getParent());Files.writeString(out,report);}System.out.println("PASS "+checks+" v1.15 home upgrade and durability checks");
     }
 }
