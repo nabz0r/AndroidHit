@@ -119,6 +119,13 @@ public final class CompanionPortrait {
         if (canvas == null || item == null || !finite(x) || !finite(y) || !finite(r) || r <= 0) return;
         int index = AvatarGearCatalog.ITEMS.indexOf(item);
         if (index < 0) return;
+        ArtLibrary art=CharacterSprites.library();
+        if(art!=null){
+            int save=canvas.save();
+            if(!reduceMotion)canvas.rotate((float)Math.sin((time%120000L)*.0018f)*2,x,y);
+            boolean drawn=art.draw(canvas,"pulse/gear/"+item.id,x-r,y-r,x+r,y+r,.5f,.5f,255);
+            canvas.restoreToCount(save);if(drawn)return;
+        }
         int variant = index % 6;
         int color = gearColor(item), light = blend(color, WHITE, .44f);
         canvas.save(); canvas.translate(x, y); canvas.scale(r, r);
@@ -187,6 +194,8 @@ public final class CompanionPortrait {
 
     private void aura(Canvas canvas, AvatarGearCatalog.Item item, AvatarStyles.Style style) {
         if (item == null) return;
+        ArtLibrary art=CharacterSprites.library();
+        if(art!=null&&art.draw(canvas,"pulse/gear/"+item.id,-1.55f,-1.55f,1.55f,1.55f,.5f,.5f,215))return;
         int variant = AvatarGearCatalog.ITEMS.indexOf(item) % 6;
         canvas.save(); canvas.scale(1.38f, 1.32f);
         auraGlyph(canvas, variant, blend(gearColor(item), style.accent, .2f), blend(style.secondary, WHITE, .45f));

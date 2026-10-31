@@ -19,7 +19,7 @@ public final class MetaProgress {
     public static final int WEEKLY_MISSION_COUNT = 3;
     private static final int[] WEEKLY_TARGETS = {10, 24, 3};
     private static final int[] WEEKLY_REWARDS = {150, 180, 200};
-    public static final int XP_PER_RANK = 120;
+    public static final int XP_PER_RANK = RankCopyRules124.XP_PER_RANK;
     public static final int BADGE_BOARDS = 7;
     private static final int[] TARGETS = {3, 6, 1};
     private static final int[] REWARDS = {35, 40, 45};
@@ -157,24 +157,52 @@ public final class MetaProgress {
         synchronized(LocalSaveTransactions.LOCK) {
             LocalSaveTransactions.flush(prefs);
             if (stars < 1 || stars > 3 || !validBoard(mode, index, period)) return 0;
-            String identity = "campaign".equals(mode) ? mode + "_" + index : mode + "_" + period + "_" + index;
-            String seen = "seen_" + identity;
+            String identity = boardIdentity(mode,index,period),seen="seen_"+identity;
             if (prefs.getBoolean(seen, false)) return 0;
-            recordVisit();
-            String day = dayId(), week=weekId();
-            int rewardXp = winXp(stars);
-            Map<String,Object> write=new HashMap<>();write.put(seen,true);
-            write.put("xp",safeAdd(xp(),rewardXp));write.put("boards",safeAdd(completedBoards(),1));
-            write.put("mission_"+day+"_0",Math.min(TARGETS[0],missionProgress(0)+1));
-            write.put("mission_"+day+"_1",Math.min(TARGETS[1],missionProgress(1)+stars));
-            write.put("weekly_mission_"+week+"_0",Math.min(WEEKLY_TARGETS[0],weeklyMissionProgress(0)+1));
-            write.put("weekly_mission_"+week+"_1",Math.min(WEEKLY_TARGETS[1],weeklyMissionProgress(1)+stars));
-            if ("daily".equals(mode) || "weekly".equals(mode)) {
-                write.put("mission_"+day+"_2",1);
-                write.put("weekly_mission_"+week+"_2",Math.min(WEEKLY_TARGETS[2],weeklyMissionProgress(2)+1));
-            }
-            LocalSaveTransactions.write(prefs,write);return rewardXp;
+            int rewardXp=winXp(stars);
+            LocalSaveTransactions.write(prefs,firstWinWrites(mode,stars,seen,rewardXp));
+            return rewardXp;
         }
+    }
+
+    /** A run-bound XP snapshot is committed with the first-win marker, never reconstructed from a mutable avatar. */
+    public synchronized RankVictoryXp124 recordWin124(int mode,int index,int stars,String period,String runId,String captainId) {
+        String kind=mode==0?"campaign":mode==1?"daily":mode==2?"weekly":mode==3?"remix":"";
+        if(runId==null||!runId.matches("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")||captainId==null||!captainId.matches("[a-z0-9_]{0,60}"))throw new IllegalArgumentException("Run and explicit captain snapshot required");
+        synchronized(LocalSaveTransactions.LOCK){
+            LocalSaveTransactions.flush(prefs);
+            if(stars<1||stars>3)return null;
+            String identity=boardIdentity(kind,index,period),key="rank_xp_v124_"+runId,record=prefs.getString(key,"");
+            if(!record.isEmpty()){
+                RankVictoryXp124 old=RankVictoryXp124.decode(record);
+                if(old==null)throw new GameStore.LocalSaveException("Invalid run XP receipt");
+                if(!old.boardKey.equals(identity)||old.stars!=stars)throw new IllegalArgumentException("Run XP receipt context changed");
+                return old;
+            }
+            // An award already earned in its active period must remain recoverable
+            // after midnight/week rollover; a new expired event still earns nothing.
+            if(!validBoard(kind,index,period))return null;
+            String seen="seen_"+identity;boolean first=!prefs.getBoolean(seen,false);int before=xp();
+            int after=first?safeAdd(before,winXp(stars)):before;
+            RankVictoryXp124 award=new RankVictoryXp124(runId,identity,captainId,stars,before,after,first);
+            Map<String,Object> write=first?firstWinWrites(kind,stars,seen,winXp(stars)):new HashMap<>();
+            write.put(key,award.encode());LocalSaveTransactions.write(prefs,write);return award;
+        }
+    }
+    private static String boardIdentity(String mode,int index,String period){return "campaign".equals(mode)?mode+"_"+index:mode+"_"+period+"_"+index;}
+    private Map<String,Object> firstWinWrites(String mode,int stars,String seen,int rewardXp){
+        recordVisit();String day=dayId(),week=weekId();
+        Map<String,Object> write=new HashMap<>();write.put(seen,true);
+        write.put("xp",safeAdd(xp(),rewardXp));write.put("boards",safeAdd(completedBoards(),1));
+        write.put("mission_"+day+"_0",Math.min(TARGETS[0],missionProgress(0)+1));
+        write.put("mission_"+day+"_1",Math.min(TARGETS[1],missionProgress(1)+stars));
+        write.put("weekly_mission_"+week+"_0",Math.min(WEEKLY_TARGETS[0],weeklyMissionProgress(0)+1));
+        write.put("weekly_mission_"+week+"_1",Math.min(WEEKLY_TARGETS[1],weeklyMissionProgress(1)+stars));
+        if("daily".equals(mode)||"weekly".equals(mode)){
+            write.put("mission_"+day+"_2",1);
+            write.put("weekly_mission_"+week+"_2",Math.min(WEEKLY_TARGETS[2],weeklyMissionProgress(2)+1));
+        }
+        return write;
     }
 
     private boolean validBoard(String mode, int index, String period) {
@@ -194,6 +222,6 @@ public final class MetaProgress {
     private static String formatDay(long time) { return new SimpleDateFormat("yyyy-MM-dd", Locale.ROOT).format(new Date(time)); }
     private static boolean validMission(int mission) { return mission >= 0 && mission < MISSION_COUNT; }
     private static boolean validWeeklyMission(int mission) { return mission>=0&&mission<WEEKLY_MISSION_COUNT; }
-    private static int winXp(int stars) { return 20 + 5 * stars; }
+    private static int winXp(int stars) { return RankCopyRules124.xpForStars(stars); }
     private static int safeAdd(int value, int increment) { return (int) Math.min(2_000_000_000L, (long) value + increment); }
 }

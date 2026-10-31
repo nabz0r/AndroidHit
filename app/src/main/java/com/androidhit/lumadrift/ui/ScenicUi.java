@@ -12,12 +12,7 @@ import android.text.TextPaint;
 import android.text.TextUtils;
 import java.util.Locale;
 
-/**
- * Original world objects for 1.17's navigation. These are illustrations, not
- * control backgrounds: no pill, tab bar or rectangular action surface is drawn.
- * The caller owns actions, saved state, 48 dp minimum hit areas and accessibility.
- * Keep one instance on the UI thread; drawing never advances transaction state.
- */
+/** Original illustrations and Pulse controls; callers own input, state and accessibility. */
 public final class ScenicUi {
     public enum Kind {
         BOOK, PORTAL, HOUSE, MIRROR, DUMMY, BLUEPRINT, KEY, CAPSULE, CHEST,
@@ -33,6 +28,7 @@ public final class ScenicUi {
     private final TextPaint text=new TextPaint(Paint.ANTI_ALIAS_FLAG);
     private final Path path=new Path();
     private final RectF area=new RectF();
+    private final PulseUi124 pulse=new PulseUi124();
     private float minimumTextSize=11f;
     private ArtLibrary registeredArt;
 
@@ -90,21 +86,23 @@ public final class ScenicUi {
         objectAction(c,box,label,accent,pressed,value);
     }
 
-    /** Object plus free-standing caption. Labels are optional and never get a button plate. */
+    /** Legacy action entry point uses the same luminous controls as the current UI. */
     public void objectAction(Canvas c,RectF box,String label,int accent,boolean pressed,Kind kind) {
         if(!valid(box))return;
-        if(label==null||label.trim().length()==0){object(c,box,accent,pressed,kind);return;}
+        pulse.action(c,box,accent,pressed,true);
+        if(label==null||label.trim().length()==0){area.set(box);area.inset(box.width()*.25f,box.height()*.25f);pulse.symbol(c,area,kind,PulseUi124.INK);return;}
         float textSize=Math.max(minimumTextSize,box.height()<70?13f:14f);
         if(box.width()>box.height()*1.65f) {
-            float size=Math.min(box.height(),66f);
-            area.set(box.left,box.centerY()-size*.5f,box.left+size,box.centerY()+size*.5f);
-            object(c,area,accent,pressed,kind);
-            caption(c,label,box.left+size+5,box.centerY()+textSize*.34f,
-                    Math.max(1,box.width()-size-7),textSize,false);
+            float size=Math.min(box.height()*.48f,30f),left=box.left+box.height()*.25f;
+            area.set(left,box.centerY()-size*.5f,left+size,box.centerY()+size*.5f);
+            pulse.symbol(c,area,kind,PulseUi124.INK);
+            caption(c,label,left+size+9,box.centerY()+textSize*.34f,
+                    Math.max(1,box.right-left-size-box.height()*.25f-9),textSize,false);
         } else {
             float captionSpace=Math.max(20,textSize*1.5f);
-            area.set(box.left,box.top,box.right,Math.max(box.top+1,box.bottom-captionSpace));
-            object(c,area,accent,pressed,kind);
+            float size=Math.min(box.width()*.38f,Math.max(1,box.height()-captionSpace-12));
+            area.set(box.centerX()-size*.5f,box.top+7,box.centerX()+size*.5f,box.top+7+size);
+            pulse.symbol(c,area,kind,PulseUi124.INK);
             caption(c,label,box.centerX(),box.bottom-4,box.width()-2,textSize,true);
         }
     }
@@ -112,6 +110,7 @@ public final class ScenicUi {
     /** Draws a complete object inside the supplied art box, with no text or hit registration. */
     public void object(Canvas c,RectF box,int accent,boolean pressed,Kind kind) {
         if(!valid(box))return;
+        if(kind==Kind.RETURN||kind==Kind.CLOSE||kind==Kind.CANCEL||kind==Kind.ZOOM_IN||kind==Kind.ZOOM_OUT||kind==Kind.UNDO||kind==Kind.RETRY||kind==Kind.CONFIRM||kind==Kind.EXPAND||kind==Kind.GEAR||kind==Kind.PAUSE||kind==Kind.ROTATE){control(c,box,accent,pressed,kind);return;}
         int color=tone(accent);
         float scale=Math.min(box.width(),box.height())/112f;
         c.save();c.translate(box.centerX(),box.centerY()+(pressed?2*scale:0));
@@ -165,6 +164,12 @@ public final class ScenicUi {
         c.restore();
     }
 
+    /** A control glyph is separate from the illustrated world-object renderer. */
+    public void control(Canvas c,RectF box,int accent,boolean pressed,Kind kind){
+        if(!valid(box))return;pulse.orb(c,box,accent,pressed);
+        area.set(box);area.inset(box.width()*.27f,box.height()*.27f);pulse.symbol(c,area,kind,PulseUi124.INK);
+    }
+
     /** The main destinations use the same original painted assets as the cast and home. */
     private boolean rasterObject(Canvas c,Kind kind) {
         ArtLibrary library=CharacterSprites.library();
@@ -196,16 +201,13 @@ public final class ScenicUi {
         return library.draw(c,"action/"+key,-53,-53,53,45,.5f,1,255);
     }
 
-    /** A visible object selector. The active state lights its floor, not an enclosing chip. */
+    /** An orb selector keeps its selected state visible without changing caller hit bounds. */
     public void selector(Canvas c,RectF box,int accent,boolean selected,Kind kind) {
         if(!valid(box))return;
-        if(selected) {
-            float y=box.bottom-3,r=Math.min(box.width()*.32f,26);
-            stroke(c,tone(accent),2.2f);c.drawArc(box.centerX()-r,y-r*.22f,box.centerX()+r,y+r*.22f,7,166,false,p);
-            sparkle(c,box.centerX()-r-4,y-2,3,GOLD);
-            sparkle(c,box.centerX()+r+4,y-2,3,GOLD);
-        }
-        object(c,box,accent,false,kind);
+        pulse.orb(c,box,selected?accent:PulseUi124.LINE,false);
+        area.set(box);area.inset(box.width()*.27f,box.height()*.27f);
+        pulse.symbol(c,area,kind,selected?PulseUi124.BLUE:PulseUi124.MUTED);
+        if(selected){float r=Math.max(2,Math.min(box.width(),box.height())*.05f);fill(PulseUi124.BLUE);c.drawCircle(box.centerX(),box.bottom-r*1.2f,r,p);}
     }
 
     /** Objects float above a quiet ground shadow; captions stay on clear background. */
@@ -223,23 +225,10 @@ public final class ScenicUi {
         c.restore();
     }
 
-    /** Readable fabric/parchment window for a modal; deliberately not an action silhouette. */
+    /** Floating white modal surface, distinct from filled action capsules. */
     public void windowModal(Canvas c,RectF box,int accent) {
         if(!valid(box))return;
-        float w=box.width(),h=box.height(),fold=Math.min(22,w*.07f),y=box.top;
-        path.reset();path.moveTo(box.left+fold,y+5);
-        path.cubicTo(box.left+w*.35f,y-3,box.right-w*.3f,y+1,box.right-fold,y+5);
-        path.lineTo(box.right-3,y+h*.3f);path.quadTo(box.right+2,y+h*.6f,box.right-fold*.4f,box.bottom-fold);
-        path.quadTo(box.right-w*.22f,box.bottom+3,box.centerX(),box.bottom-2);
-        path.quadTo(box.left+w*.17f,box.bottom+2,box.left+fold*.4f,box.bottom-fold);
-        path.quadTo(box.left-2,y+h*.57f,box.left+3,y+h*.31f);path.close();
-        c.save();c.translate(0,7);fill(0x37263049);c.drawPath(path,p);c.restore();
-        fill(CREAM);p.setShader(new LinearGradient(box.left,y,box.right,box.bottom,0xfffffcf0,0xffffefdd,Shader.TileMode.CLAMP));c.drawPath(path,p);p.setShader(null);
-        line(c,box.left+fold,y+5,box.right-fold,y+5,mix(tone(accent),CREAM,.45f),3);
-        circle(c,box.left+fold*.6f,y+5,fold*.3f,GOLD);circle(c,box.right-fold*.6f,y+5,fold*.3f,GOLD);
-        line(c,box.left+fold*.6f,y+5,box.left+fold*.6f,y+26,mix(tone(accent),INK,.2f),2);
-        line(c,box.right-fold*.6f,y+5,box.right-fold*.6f,y+26,mix(tone(accent),INK,.2f),2);
-        sparkle(c,box.centerX(),box.top+6,5,tone(accent));
+        pulse.panel(c,box,accent);
     }
 
     /** A static, learnable gesture cue; caller decides when it is needed and owns its copy. */
@@ -258,12 +247,11 @@ public final class ScenicUi {
 
     private void caption(Canvas c,String label,float x,float baseline,float width,float size,boolean centered) {
         if(width<=0)return;
-        text.setTypeface(Typeface.create("sans-serif-medium",Typeface.NORMAL));text.setTextSize(size);
+        text.setTypeface(PulseUi124.face(800));text.setTextSize(size);
         text.setTextAlign(Paint.Align.LEFT);text.setShader(null);
         String value=TextUtils.ellipsize(label,text,width,TextUtils.TruncateAt.END).toString();
         float left=centered?x-text.measureText(value)*.5f:x;
-        text.setColor(0xe6fff9ef);text.setStyle(Paint.Style.STROKE);text.setStrokeJoin(Paint.Join.ROUND);text.setStrokeWidth(3.1f);
-        c.drawText(value,left,baseline,text);text.setStyle(Paint.Style.FILL);text.setColor(INK);c.drawText(value,left,baseline,text);
+        text.setStyle(Paint.Style.FILL);text.setColor(PulseUi124.INK);c.drawText(value,left,baseline,text);
     }
 
     private void book(Canvas c,int a,boolean help) {

@@ -57,13 +57,7 @@ public final class CharacterSprites {
             ArtRegions117.register(library,ArtLibrary.ROOT + GARMENT_SHEETS[sheet] + ".png",
                     namespaced("cosmetic/", COSMETIC_IDS[sheet]));
         }
-        for (int sheet = 0; sheet < 7; sheet++) {
-            String[] keys = new String[6];
-            for (int cell = 0; cell < keys.length; cell++) {
-                keys[cell] = "furniture/" + HomeCatalog.ITEMS.get(sheet * 6 + cell).id;
-            }
-            ArtRegions117.register(library,ArtLibrary.ROOT + "furniture-" + sheet + ".png", keys);
-        }
+        ArtPack124.register(library);
     }
 
     /** No bob or tilt here: callers apply their one shared transform to body, garments and gear. */

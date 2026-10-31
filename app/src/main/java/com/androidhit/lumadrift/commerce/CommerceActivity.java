@@ -31,13 +31,13 @@ public final class CommerceActivity extends Activity {
     public static final String EXTRA_POWER_ID="com.androidhit.lumadrift.extra.POWER_ID";
     private static final String CONTINUATION_PREFS="luma_ad_continuations_v1";
     private static final Object CONTINUATION_LOCK=new Object();
-    private static final int BG=0xfffff6ec,CARD=0xfffff7e6,WHITE=0xff263049,MUTED=0xff6c667b,MINT=0xff237d75,GOLD=0xff91632e;
+    private static final int BG=com.androidhit.lumadrift.ui.PulseUi124.BACKGROUND,CARD=com.androidhit.lumadrift.ui.PulseUi124.WHITE,WHITE=com.androidhit.lumadrift.ui.PulseUi124.INK,MUTED=com.androidhit.lumadrift.ui.PulseUi124.MUTED,MINT=com.androidhit.lumadrift.ui.PulseUi124.BLUE_INK,GOLD=com.androidhit.lumadrift.ui.PulseUi124.ORANGE_INK;
     private GameStore store;private PlayJournal journal;private SharedPreferences simulations;
     private AdsController ads;private PlayGoldBilling billing;
     private LinearLayout content,catalog,paidCatalog;private TextView wallet,adStatus,billingStatus,pending,serverBalance,walletStatus;
     private ProductionWalletClient server;private ProductionWalletClient.Wallet currentWallet;
     private boolean walletBusy,spendBusy;private String observedUid="";private final Set<String> verifying=new HashSet<>();
-    private SceneActionView watch,finishPending,replay,returnToRun,accountButton,ages;private SceneActionView.Toggle optIn,metrics;
+    private SceneActionView watch,loadAd,finishPending,replay,returnToRun,accountButton,ages;private SceneActionView.Toggle optIn,metrics;
     private boolean updating,alive,returning,powerRewarded;
     private String continuationRequest="";
     private int continuationMoves;
@@ -94,9 +94,23 @@ public final class CommerceActivity extends Activity {
     private String powerName(){Catalog.BoosterItem item=Catalog.booster(powerId);return item==null?"":t(item.nameKey);}
     private boolean powerAvailable(){return isPower()&&Catalog.isPowerOffered(powerId)&&store.boosterUnlocked(powerId)&&store.boosterStock(powerId)<store.boosterStockLimit();}
     private boolean allowPurposeRequest(){
+        if(!isAdPurpose()&&store.hasPendingAdCoins()){adStatus.setText(copy("reward_pending"));refresh();return false;}
         if(isRewardComplete())return false;
         if(isPower()&&!powerAvailable()){adStatus.setText(t("ads_power_unavailable"));refresh();return false;}
         return true;
+    }
+    private void loadOrRetryAdCoins(){
+        if(!isAdPurpose()&&store.hasPendingAdCoins()){retryAdCoins(true);return;}
+        if(allowPurposeRequest())ads.loadRewarded();
+    }
+    private void retryAdCoins(boolean feedback){
+        if(isAdPurpose())return;
+        try{
+            int credited=store.retryPendingAdCoins();
+            if(store.hasPendingAdCoins())adStatus.setText(copy("reward_pending"));
+            else if(credited>0){adStatus.setText(t("ads_rewarded"));if(feedback)toast(t("gold_reward_received",credited));}
+        }catch(GameStore.LocalSaveException unavailable){if(adStatus!=null)adStatus.setText(t("commerce_save_error"));}
+        refresh();
     }
     private void returnToGame(){
         if(!alive||returning||!isAdPurpose()||!isRewardComplete()||ads.isAdShowing())return;
@@ -106,7 +120,7 @@ public final class CommerceActivity extends Activity {
         if(isContinuation())startActivity(new Intent(this,MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP));
         finish();
     }
-    private String t(String key,Object...args){if(key.equals("ads_watch")||key.equals("ads_reward_note"))return CommerceCopy.get(store.resolvedLanguage(),key,CommerceConfig.REWARDED_GOLD);if(key.equals("gold_reward_received"))return "+"+args[0]+" LumaCoins";if(CommerceConfig.MODE_SANDBOX){if(key.equals("gold_balance")||key.equals("gold_pack"))return args[0]+" LumaCoins · Lab";if(key.equals("gold_packs")||key.equals("commerce_title"))return "LumaCoins · Lab";}return CommerceConfig.MODE_SANDBOX?Strings.get(store.resolvedLanguage(),key,args):WalletStrings.get(store.resolvedLanguage(),key,args);}
+    private String t(String key,Object...args){if(key.equals("ads_reward_pending"))return copy("reward_pending");if(key.equals("ads_watch")||key.equals("ads_reward_note"))return CommerceCopy.get(store.resolvedLanguage(),key,CommerceConfig.REWARDED_GOLD);if(key.equals("gold_reward_received"))return "+"+args[0]+" LumaCoins";if(CommerceConfig.MODE_SANDBOX){if(key.equals("gold_balance")||key.equals("gold_pack"))return args[0]+" LumaCoins · Lab";if(key.equals("gold_packs")||key.equals("commerce_title"))return "LumaCoins · Lab";}return CommerceConfig.MODE_SANDBOX?Strings.get(store.resolvedLanguage(),key,args):WalletStrings.get(store.resolvedLanguage(),key,args);}
     private String copy(String key){return CommerceCopy.get(store.resolvedLanguage(),key);}
     private String number(long value){return NumberFormat.getIntegerInstance(Locale.forLanguageTag(store.resolvedLanguage())).format(value);}
     @Override public void onCreate(Bundle state){
@@ -139,7 +153,10 @@ public final class CommerceActivity extends Activity {
                     if(got!=1&&!store.hasBoosterGranted(powerId,id))throw new AdsController.RewardUnavailableException("ads_power_unavailable");
                     powerRewarded=true;refresh();return;
                 }
-                int got=store.grantGold(id,amount);refresh();toast(t("gold_reward_received",got));
+                store.recordEarnedAdCoins(id);
+                int got=store.retryPendingAdCoins();
+                if(store.hasPendingAdCoins())throw new AdsController.RewardUnavailableException("ads_reward_pending");
+                refresh();toast(t("gold_reward_received",got));
             }
             public void onEvent(String event,Map<String,String> fields){journal.record(event,fields);}
         },isContinuation()?AdsController.RewardPlacement.CONTINUATION:isPower()?AdsController.RewardPlacement.POWER:AdsController.RewardPlacement.GOLD,powerId);
@@ -189,7 +206,7 @@ public final class CommerceActivity extends Activity {
         adCard.addView(button(t("privacy_choices"),()->ads.showPrivacyOptions(),ScenicUi.Kind.SHIELD));
         adStatus=paragraph(adCard,t("ads_opt_in_required"),MINT);adStatus.setContentDescription(t("ad_status")+": "+adStatus.getText());
         Object offer=isContinuation()?Integer.valueOf(continuationMoves):powerName();
-        adCard.addView(button(t("ads_load"),()->{if(allowPurposeRequest())ads.loadRewarded();},ScenicUi.Kind.LANTERN));watch=button(t(isContinuation()?"ads_continue_watch":isPower()?"ads_power_watch":"ads_watch",offer),()->{if(allowPurposeRequest())ads.showRewarded();},ScenicUi.Kind.PLAY);adCard.addView(watch);paragraph(adCard,t(isContinuation()?"ads_continue_note":isPower()?"ads_power_note":"ads_reward_note",offer),MUTED);
+        loadAd=button(t("ads_load"),this::loadOrRetryAdCoins,ScenicUi.Kind.LANTERN);adCard.addView(loadAd);watch=button(t(isContinuation()?"ads_continue_watch":isPower()?"ads_power_watch":"ads_watch",offer),()->{if(allowPurposeRequest())ads.showRewarded();},ScenicUi.Kind.PLAY);adCard.addView(watch);paragraph(adCard,t(isContinuation()?"ads_continue_note":isPower()?"ads_power_note":"ads_reward_note",offer),MUTED);
         if(isAdPurpose()){
             returnToRun=button(t(isContinuation()?"ads_continue_return":"ads_power_return"),()->returnToGame(),ScenicUi.Kind.RETURN);adCard.addView(returnToRun);
             if(isRewardComplete())adStatus.setText(t(isContinuation()?"ads_continue_earned":"ads_power_earned",powerName()));
@@ -225,7 +242,8 @@ public final class CommerceActivity extends Activity {
         }catch(IllegalStateException failure){toast(t("commerce_save_error"));}
     }
     private void repeatLast(){String tx=simulations.getString("last_tx","");if(tx.isEmpty())return;try{int got=store.grantGold(tx,simulations.getInt("last_amount",0));refresh();toast(t(got==0?"already_credited":"test_gold_added",got));}catch(IllegalStateException failed){toast(t("commerce_save_error"));}}
-    private void refresh(){if(wallet==null)return;wallet.setText(number(store.coins()));wallet.setContentDescription(t(CommerceConfig.MODE_SANDBOX?"gold_balance":"wallet_local",store.coins()));updating=true;optIn.setChecked(ads.isExplicitOptIn());ages.setText(ageLabel());ages.setContentDescription(t("age_label")+": "+ageLabel());updating=false;boolean earned=isRewardComplete();watch.setEnabled(ads.isRewardedReady()&&!earned&&(!isPower()||powerAvailable()));if(returnToRun!=null)returnToRun.setVisibility(earned&&!ads.isAdShowing()?View.VISIBLE:View.GONE);if(pending!=null){boolean waiting=!simulations.getString("pending_tx","").isEmpty();pending.setText(waiting?t("pending_note"):t("no_pending"));finishPending.setVisibility(waiting?View.VISIBLE:View.GONE);replay.setVisibility(simulations.getString("last_tx","").isEmpty()?View.GONE:View.VISIBLE);}adStatus.setContentDescription(t("ad_status")+": "+adStatus.getText());}
+    private void refresh(){try{refreshUnsafe();}catch(GameStore.LocalSaveException unavailable){if(adStatus!=null)adStatus.setText(t("commerce_save_error"));if(watch!=null)watch.setEnabled(false);if(loadAd!=null)loadAd.setText(copy("reward_retry"));}}
+    private void refreshUnsafe(){if(wallet==null)return;wallet.setText(number(store.coins()));wallet.setContentDescription(t(CommerceConfig.MODE_SANDBOX?"gold_balance":"wallet_local",store.coins()));updating=true;optIn.setChecked(ads.isExplicitOptIn());ages.setText(ageLabel());ages.setContentDescription(t("age_label")+": "+ageLabel());updating=false;boolean earned=isRewardComplete(),rewardPending=!isAdPurpose()&&store.hasPendingAdCoins();loadAd.setText(rewardPending?copy("reward_retry"):t("ads_load"));watch.setEnabled(ads.isRewardedReady()&&!earned&&!rewardPending&&(!isPower()||powerAvailable()));if(returnToRun!=null)returnToRun.setVisibility(earned&&!ads.isAdShowing()?View.VISIBLE:View.GONE);if(pending!=null){boolean waiting=!simulations.getString("pending_tx","").isEmpty();pending.setText(waiting?t("pending_note"):t("no_pending"));finishPending.setVisibility(waiting?View.VISIBLE:View.GONE);replay.setVisibility(simulations.getString("last_tx","").isEmpty()?View.GONE:View.VISIBLE);}adStatus.setContentDescription(t("ad_status")+": "+adStatus.getText());}
     private String ageLabel(){return t(ads.ageStatus()==AdsController.AgeStatus.ADULT?"age_adult":ads.ageStatus()==AdsController.AgeStatus.MINOR?"age_minor":"age_unknown");}
     private void chooseAge(){SceneActionView.showChoices(this,t("age_label"),"",new SceneActionView.Choice(t("cancel"),ScenicUi.Kind.CANCEL,null),new SceneActionView.Choice(t("age_unknown"),ScenicUi.Kind.HELP,()->selectAge(AdsController.AgeStatus.UNKNOWN)),new SceneActionView.Choice(t("age_minor"),ScenicUi.Kind.SHIELD,()->selectAge(AdsController.AgeStatus.MINOR)),new SceneActionView.Choice(t("age_adult"),ScenicUi.Kind.PROFILE,()->selectAge(AdsController.AgeStatus.ADULT)));}
     private void selectAge(AdsController.AgeStatus age){if(!updating){ads.setAgeStatus(age);refresh();}}
@@ -310,8 +328,8 @@ public final class CommerceActivity extends Activity {
     private LinearLayout offerDetail(LinearLayout row){
         LinearLayout detail=new LinearLayout(this);detail.setOrientation(LinearLayout.VERTICAL);detail.setPadding(dp(16),0,0,0);row.addView(detail,new LinearLayout.LayoutParams(0,-2,1));return detail;
     }
-    private TextView heading(LinearLayout parent,String text,int size,int color){TextView v=new TextView(this);v.setText(text);v.setTextColor(color);v.setTextSize(size);v.setTypeface(Typeface.create("sans-serif-medium",Typeface.NORMAL));v.setPadding(0,dp(9),0,dp(9));parent.addView(v);return v;}
-    private TextView paragraph(LinearLayout parent,String text,int color){TextView v=new TextView(this);v.setText(text);v.setTextSize(15);v.setTextColor(color);v.setLineSpacing(dp(3),1);v.setPadding(0,dp(6),0,dp(12));parent.addView(v);return v;}
+    private TextView heading(LinearLayout parent,String text,int size,int color){com.androidhit.lumadrift.ui.PulseUi124.install(getAssets());TextView v=new TextView(this);v.setText(text);v.setTextColor(color);v.setTextSize(size);v.setTypeface(com.androidhit.lumadrift.ui.PulseUi124.face(size>=26?900:size>=20?800:400));v.setPadding(0,dp(9),0,dp(9));parent.addView(v);return v;}
+    private TextView paragraph(LinearLayout parent,String text,int color){TextView v=new TextView(this);v.setText(text);v.setTextSize(15);v.setTypeface(com.androidhit.lumadrift.ui.PulseUi124.face(400));v.setTextColor(color);v.setLineSpacing(dp(3),1);v.setPadding(0,dp(6),0,dp(12));parent.addView(v);return v;}
     private LinearLayout card(){LinearLayout box=new LinearLayout(this);box.setOrientation(LinearLayout.VERTICAL);box.setPadding(dp(5),dp(14),dp(5),dp(22));box.setBackground(SceneActionView.shelf());LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(-1,-2);p.topMargin=dp(20);content.addView(box,p);return box;}
     private SceneActionView button(String text,Runnable action,ScenicUi.Kind kind){
         SceneActionView b=SceneActionView.create(this,text,kind,ScenicUi.TEAL,action);
@@ -319,7 +337,7 @@ public final class CommerceActivity extends Activity {
     }
     private SceneActionView.Toggle toggle(LinearLayout parent,String label,boolean checked){SceneActionView.Toggle v=new SceneActionView.Toggle(this);v.setText(label);v.setTextColor(WHITE);v.setChecked(checked);parent.addView(v,new LinearLayout.LayoutParams(-1,-2));return v;}
     @Override protected void onResume(){super.onResume();if(accountButton!=null)accountButton.setText(server.isSignedIn()?copy("account"):t("wallet_sign_in"));if(server!=null&&!server.uid().equals(observedUid)){observedUid=server.uid();walletBusy=false;spendBusy=false;currentWallet=null;verifying.clear();if(serverBalance!=null){serverBalance.setText("—");serverBalance.setContentDescription(t("wallet_balance_unknown"));}showPaidCatalog();}
-        if(billing!=null&&!isAdPurpose()){billing.refreshPurchases();if(server!=null)refreshServerWallet();}if(ads!=null){ads.setLocalMetricsEnabled(journal.isEnabled());refresh();}}
+        if(billing!=null&&!isAdPurpose()){billing.refreshPurchases();if(server!=null)refreshServerWallet();}if(ads!=null){ads.setLocalMetricsEnabled(journal.isEnabled());retryAdCoins(false);refresh();}}
     @Override protected void onSaveInstanceState(Bundle out){out.putBoolean("power_rewarded",powerRewarded);super.onSaveInstanceState(out);}
     @Override protected void onDestroy(){alive=false;if(ads!=null)ads.close();if(billing!=null)billing.close();if(server!=null)server.close();verifying.clear();super.onDestroy();}
 }

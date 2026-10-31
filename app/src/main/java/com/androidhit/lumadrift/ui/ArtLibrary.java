@@ -28,6 +28,7 @@ import java.util.BitSet;
 public final class ArtLibrary {
     public static final String ROOT="art/v117/";
     public static final String ROOT118="art/v118/";
+    public static final String ROOT124="art/v124/";
     public static final int DEFAULT_CACHE_BYTES=48*1024*1024;
     private static final long MAX_SPRITE_BYTES=4L*1024*1024;
     private static final int ALPHA_THRESHOLD=8;
@@ -62,7 +63,7 @@ public final class ArtLibrary {
 
     /** Equal row-major cells; null/empty keys deliberately leave a cell unused. */
     public synchronized void registerSheet(String path,int columns,int rows,String... keys){
-        if(path==null||!(path.startsWith(ROOT)||path.startsWith(ROOT118))||path.contains("..")||path.contains("\\")
+        if(path==null||!(path.startsWith(ROOT)||path.startsWith(ROOT118)||path.startsWith(ROOT124))||path.contains("..")||path.contains("\\")
                 ||columns<=0||rows<=0||keys==null||(long)columns*rows!=keys.length)
             throw new IllegalArgumentException("Invalid packaged art sheet");
         if(sheets.containsKey(path))throw new IllegalArgumentException("Sheet already registered: "+path);
@@ -84,7 +85,7 @@ public final class ArtLibrary {
 
     /** Optional source-coordinate exclusions isolate interleaved bounding boxes without editing PNGs. */
     public synchronized void registerRegions(String path,String[] keys,int[][] regions,int[][][] exclusions){
-        if(path==null||!(path.startsWith(ROOT)||path.startsWith(ROOT118))||path.contains("..")||path.contains("\\")||keys==null||regions==null||keys.length!=regions.length||keys.length==0)
+        if(path==null||!(path.startsWith(ROOT)||path.startsWith(ROOT118)||path.startsWith(ROOT124))||path.contains("..")||path.contains("\\")||keys==null||regions==null||keys.length!=regions.length||keys.length==0)
             throw new IllegalArgumentException("Invalid packaged art regions");
         if(sheets.containsKey(path))throw new IllegalArgumentException("Sheet already registered: "+path);
         Map<String,Boolean> incoming=new LinkedHashMap<>();

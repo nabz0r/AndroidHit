@@ -24,9 +24,7 @@ import java.util.*;
 @android.annotation.SuppressLint("ApplySharedPref")
 public final class LumaView extends View {
     private final android.text.TextPaint p = new android.text.TextPaint(3);
-    private final Typeface bold = Typeface.create("sans-serif-medium", Typeface.NORMAL);
-    private final Typeface medium = Typeface.create("sans-serif-medium", Typeface.NORMAL);
-    private final Typeface regular = Typeface.create("sans-serif", Typeface.NORMAL);
+    private final Typeface bold,medium,regular;
     private final GameStore store;
     private final SharedPreferences prefs;
     private final SharedPreferences expeditionPrefs;
@@ -96,6 +94,7 @@ public final class LumaView extends View {
     private final ArrowScene123 arrow123=new ArrowScene123();
     private final PremiumUi premium=new PremiumUi();
     private final ScenicUi scenic=new ScenicUi();
+    private final PulseUi124 pulse124=new PulseUi124();
     private final SceneTransition sceneTransition=new SceneTransition();
     private SceneRootLayout sceneRootLayout;
     private PlaySceneLayout playSceneLayout;
@@ -158,12 +157,16 @@ public final class LumaView extends View {
     private PrismStory.Snapshot hubStory;
     private long hubRefreshAt;
     private int rewardTab=0,wardrobeMode=0,wardrobeGearSlot=0,shopCategory=0,shopLookPage=0,storyChapter=0;
+    private boolean wardrobePreview124=false;
+    private float wardrobePreviewScroll124=0;
     private GuardianEncounter guardian;private boolean guardianSaveBlocked,localSaveBlocked;private int guardianHint=-1;
     private String avatarStyle="plush_classic";private int gestureGate=-1;private boolean gestureGuardian;
     private int wardrobeSlot=0,wardrobePage=0,questTab=0,activeBiome=-1;
     private int[] guidanceSavedHistory=new int[0];
     private Board guidanceBoard;private long guidanceMask=-1;private int guidanceGates=-1,guidanceBudget=-2,guidanceHistory=0;private Board.Guidance guidance;
     private final MetaProgress meta;
+    private final RankCopyCoordinator124 rankCopies124;
+    private String runCaptain124="";
     private final PlayJournal journal;
     private int cachedStars,cachedCompleted,cachedEconomyProgress,journeyTab=0,xpReward=0;
     private String friendCode="";
@@ -208,7 +211,7 @@ public final class LumaView extends View {
     private Hit pressed;
     private long actionGeneration=0;
     private float downX, downY;
-    private final int PEACH=0xffffb398, WHITE=0xfff7f5ff, TEXT=0xff463252, INK=0xff30203f, GOLD=0xffffd992;
+    private final int PEACH=PulseUi124.CORAL, WHITE=PulseUi124.WHITE, TEXT=PulseUi124.INK, INK=PulseUi124.INK, GOLD=PulseUi124.ORANGE;
     private static class Hit {
         RectF r; String name,semanticId=""; Runnable action; int gate=-1,guardianPiece=-1,playPiece=-1; boolean selected,homeItem;
         Hit(RectF r,String n,Runnable a){this.r=r;name=n;action=a;}
@@ -218,14 +221,14 @@ public final class LumaView extends View {
         Flight(Tile t,long a,float x,float y,int c){tile=t;at=a;this.x=x;this.y=y;color=c;}
     }
     public LumaView(Context c) {
-        super(c); if(CharacterSprites.library()==null)CharacterSprites.install(c.getAssets()); store=new GameStore(c, new GameStore.ExternalOwnership() {
+        super(c);PulseUi124.install(c.getAssets());bold=PulseUi124.face(800);medium=PulseUi124.face(600);regular=PulseUi124.face(400); if(CharacterSprites.library()==null)CharacterSprites.install(c.getAssets()); store=new GameStore(c, new GameStore.ExternalOwnership() {
             public boolean ownsCharacter(String id) { return com.androidhit.lumadrift.wallet.ProductionWalletClient.ownsCharacter(c,id); }
             public boolean ownsSkin(String id) { return com.androidhit.lumadrift.wallet.ProductionWalletClient.ownsSkin(c,id); }
             public boolean ownsCosmetic(String id) { return com.androidhit.lumadrift.social.CosmeticVaultClient.ownsCosmetic(c,id); }
         }); prefs=c.getSharedPreferences("luma_session",0);expeditionPrefs=c.getSharedPreferences("luma_expedition_session_v118",0);
         sessionEnergy=new SessionEnergyStore(c.getSharedPreferences("luma_session_energy_v120",0));
         sessionEnergy.recover(prefs.getString("run_id",""),expeditionPrefs.getString("run_id",""),System.currentTimeMillis());
-        meta=new MetaProgress(c);journal=new PlayJournal(c);
+        meta=new MetaProgress(c);rankCopies124=new RankCopyCoordinator124(store,meta);journal=new PlayJournal(c);
         audio=new AudioEngine(c);backdrop=new WorldBackdrop(c);
         identity=new GoogleAccountController((Activity)c,snapshot->{if(mapSocial!=null&&(profileSnapshot==null||!profileSnapshot.uid.equals(snapshot.uid))){mapSocial.close();mapSocial=null;}profileSnapshot=snapshot;profileSignedIn=snapshot.signedIn;profileName=snapshot.displayName;displayedGold=com.androidhit.lumadrift.wallet.ProductionWalletClient.cachedBalance(getContext());postInvalidate();});
         profileSnapshot=identity.snapshot();chapter=(store.unlockedLevel()-1)/10;
@@ -296,12 +299,13 @@ public final class LumaView extends View {
     public void resumeApp(){
         try{resumeAppUnsafe();}catch(GameStore.LocalSaveException failure){blockLocalSave();}
     }
-    private void resumeAppUnsafe(){energyPurchases.onForeground();running=true;reduceMotion=prefs.getBoolean("reduce_motion",false)||!android.animation.ValueAnimator.areAnimatorsEnabled();finishScenePresentation();identity.onResume();thawEffects();if(powerSaveBlocked){powerSaveBlocked=!saveSession();if(!powerSaveBlocked)reconcilePowerReservation();}if(board!=null&&board.isSolved()&&!won)finishLevel();resumeFlow();meta.recordVisit();if(screen.equals("play")&&!battleSheet123&&!paused&&!help&&!won&&!outOfMoves()&&activeStarted==0)activeStarted=SystemClock.uptimeMillis();applyPendingContinuation();if(prefs.getBoolean("session_migration_notice",false)){notice(t("moves_migration"));prefs.edit().putBoolean("session_migration_notice",false).commit();}log("session_start","version",BuildConfig.VERSION_NAME,"language",store.resolvedLanguage());syncStyle();audio.resume();refreshFriends();invalidate();}
+    private void resumeAppUnsafe(){store.retryPendingAdCoins();energyPurchases.onForeground();running=true;reduceMotion=prefs.getBoolean("reduce_motion",false)||!android.animation.ValueAnimator.areAnimatorsEnabled();finishScenePresentation();identity.onResume();thawEffects();if(powerSaveBlocked){powerSaveBlocked=!saveSession();if(!powerSaveBlocked)reconcilePowerReservation();}if(board!=null&&board.isSolved()&&!won)finishLevel();resumeFlow();meta.recordVisit();if(screen.equals("play")&&!battleSheet123&&!paused&&!help&&!won&&!outOfMoves()&&activeStarted==0)activeStarted=SystemClock.uptimeMillis();applyPendingContinuation();if(prefs.getBoolean("session_migration_notice",false)){notice(t("moves_migration"));prefs.edit().putBoolean("session_migration_notice",false).commit();}log("session_start","version",BuildConfig.VERSION_NAME,"language",store.resolvedLanguage());syncStyle();audio.resume();refreshFriends();invalidate();}
     public void pauseApp(){finishScenePresentation();if(guardian!=null)persistGuardian();identity.onPause();actionGeneration++;freezeEffects();stopTimer();saveSession();running=false;audio.pause();}
     public void release(){energyPurchases.close();finishScenePresentation();for(Bitmap bitmap:scenery.values())if(bitmap!=null&&!bitmap.isRecycled())bitmap.recycle();scenery.clear();if(sceneDialog!=null)sceneDialog.dismiss();if(mapSocial!=null){mapSocial.close();mapSocial=null;}identity.close();actionGeneration++;running=false;audio.release();backdrop.close();guideWorker.shutdownNow();}
     public String screenName(){return screen;}
     public void saveUiState(Bundle out){
         out.putString("context_run_v123",runId);out.putBoolean("battle_sheet_v123",battleSheet123);out.putFloat("battle_return_scroll_v123",battleReturnScroll123);
+        out.putBoolean("wardrobe_preview_v124",wardrobePreview124);out.putFloat("wardrobe_preview_scroll_v124",wardrobePreviewScroll124);
         out.putBoolean("wardrobe_from_play_v123",wardrobeFromPlay123);out.putString("wardrobe_actor_v123",wardrobeActor123);out.putFloat("wardrobe_return_scroll_v123",wardrobeReturnScroll123);out.putBoolean("wardrobe_original_v123",wardrobeOriginal123);
         Bundle look123=new Bundle();for(Map.Entry<CosmeticCatalog.Slot,String> item:wardrobeDraft123.entrySet())look123.putString(item.getKey().name(),item.getValue());out.putBundle("wardrobe_draft_v123",look123);
         out.putStringArrayList("squad_draft_v119",new ArrayList<>(squadDraft));out.putInt("squad_slot_v119",squadEditSlot);out.putInt("squad_page_v119",squadPage);
@@ -341,7 +345,9 @@ public final class LumaView extends View {
     private void restoreContext123(Bundle state){
         boolean sameRun=board!=null&&!runId.isEmpty()&&runId.equals(state.getString("context_run_v123",""));
         battleReturnScroll123=finiteScroll123(state.getFloat("battle_return_scroll_v123",0));wardrobeReturnScroll123=finiteScroll123(state.getFloat("wardrobe_return_scroll_v123",0));
-        if(screen.equals("wardrobe")){
+        wardrobePreview124=!screen.equals("wardrobe")&&menuHistory.contains("wardrobe")&&state.getBoolean("wardrobe_preview_v124",false);
+        wardrobePreviewScroll124=finiteScroll123(state.getFloat("wardrobe_preview_scroll_v124",0));
+        if(screen.equals("wardrobe")||wardrobePreview124){
             wardrobeFromPlay123=sameRun&&!won&&state.getBoolean("wardrobe_from_play_v123",false);
             String actor=state.getString("wardrobe_actor_v123",store.equippedCharacter());wardrobeActor123=Catalog.character(actor)!=null&&store.ownsCharacter(actor)?actor:store.equippedCharacter();
             wardrobeMode=wardrobeFromPlay123?0:Math.max(0,Math.min(1,state.getInt("wardrobe_mode_v110",0)));
@@ -381,13 +387,19 @@ public final class LumaView extends View {
     private void go(String s){
         if(!screen.equals(s)){menuGiftAt=0;menuGiftClosingAt=0;}
         boolean leavingExpedition=mode==5&&board!=null&&!Arrays.asList("play","battle_skill","squad","item","companion_motion","wardrobe").contains(s);
-        if(s.equals("wardrobe")&&!screen.equals("wardrobe")){wardrobeMode=0;if(!screen.equals("play")){wardrobeFromPlay123=false;wardrobeActor123=store.equippedCharacter();}beginWardrobe123();}
-        if(screen.equals("wardrobe")&&!s.equals("wardrobe"))wardrobeDraft123.clear();
+        boolean returningWardrobe=s.equals("wardrobe")&&navigatingBack&&wardrobePreview124;
+        if(s.equals("wardrobe")&&!screen.equals("wardrobe")){
+            if(!returningWardrobe){wardrobeMode=0;if(!screen.equals("play")){wardrobeFromPlay123=false;wardrobeActor123=store.equippedCharacter();}beginWardrobe123();}
+            wardrobePreview124=false;
+        }
+        if(screen.equals("wardrobe")&&!s.equals("wardrobe")){
+            wardrobePreview124=s.equals("item");if(wardrobePreview124)wardrobePreviewScroll124=contentScroll;else wardrobeDraft123.clear();
+        }
         if(!s.equals("play"))battleSheet123=false;
         boolean changing=!screen.equals(s);if(changing){beginScenePresentation();sfx(s.equals("summon_reveal")?AudioEngine.Sound.REVEAL:s.equals("wardrobe")?AudioEngine.Sound.FABRIC:AudioEngine.Sound.SCENE);}
         if(!s.equals("home")){homePath=Collections.emptyList();homeActivity="idle";homeUsingItem="";}
         if(!navigatingBack&&!screen.equals(s)&&!screen.equals("play"))menuHistory.push(screen);
-        contentScroll=0;scrolling=false;
+        contentScroll=returningWardrobe?wardrobePreviewScroll124:0;scrolling=false;
         if(screen.equals("play")&&!s.equals("play")&&board!=null&&!won)log("level_exit","mode",""+mode,"level",""+levelIndex,"remaining",""+board.remainingCount(),"event_index",""+eventIndex,"period",eventPeriod);
         stopTimer();if(leavingExpedition){saveSession();board=null;mode=0;won=false;restoreSession();}actionGeneration++;pendingAction=-1;actionPreview=null;powerConfirmation="";deadEndOpen=false;powerTrayOpen=false;gesturePiece=-1;screen=s;paused=false;restartConfirm=false;help=false;selected=-1;pressed=null;focused=hovered=-1;hits.clear();syncStyle();
         if(s.equals("play")&&!won&&running&&!outOfMoves()){thawEffects();activeStarted=SystemClock.uptimeMillis();resumeFlow();}else freezeEffects();
@@ -404,6 +416,7 @@ public final class LumaView extends View {
 
     private void notice(String s){toast=s;toastUntil=SystemClock.uptimeMillis()+2700;announceForAccessibility(s);invalidate();}
     private String q123(String key,Object...args){return Clarity123Strings.get(store.resolvedLanguage(),key,args);}
+    private String q124(String key,Object...args){return Clarity124Strings.get(store.resolvedLanguage(),key,args);}
     private String l(String key,Object...args){return LearningStrings.get(store.resolvedLanguage(),key,args);}
     private LearningGuide.Context lesson(Board current){return current.level.progressionVersion==6&&mode==0?LearningGuide.contextJourney123(current,RelayCatalog.lesson(current.level.number)):LearningGuide.context(current,current.level.progressionVersion==6?RelayCatalog.lesson(current.level.number):current.level.progressionVersion==5?LearningCatalog.lesson(current.level.number):null);}
     private boolean hasReturn(){return board!=null&&moveBudget!=null&&board.canUndo()&&moveBudget.undoRemaining(undos)>0;}
@@ -495,11 +508,10 @@ public final class LumaView extends View {
     }
     private void drawSessionEnergy(Canvas c){
         modernAction(c,new RectF(20,16,124,66),"‹ "+en20("back"),0xffece8f8,"energy_back",()->backMenu(),true);
-        center(c,en20("title"),195,111,28,TEXT,true);
-        float pulse=reduceMotion?0:(float)Math.sin(frameTime*.002)*3;
-        p.setColor(0xffe9e2fd);c.drawCircle(195,214,70+pulse,p);
-        icon(c,"star",195,210,45,0xffa08ae7);
-        center(c,sessionEnergyCount()+" / "+sessionEnergy.maximum(),195,318,34,TEXT,true);
+        center(c,q124("session_energy"),195,111,28,TEXT,true);
+        pulse124.orb(c,new RectF(130,149,260,279),PulseUi124.CYAN,false);
+        resourceIcon124(c,"energy",new RectF(163,180,227,244),ScenicUi.Kind.LANTERN,PulseUi124.BLUE);
+        pulse124.number(c,sessionEnergyCount()+" / "+sessionEnergy.maximum(),new RectF(52,284,338,332),40,minimumTextSize(),INK);
         SessionEnergyStore.Snapshot energy=sessionEnergy.snapshot(System.currentTimeMillis());
         String countdown=String.format(Locale.ROOT,"%02d:%02d",(energy.nextInMs+999)/60000,((energy.nextInMs+999)/1000)%60);
         fit(c,energy.count==sessionEnergy.maximum()?en20("full"):en20("next",countdown),195,356,17,342,TEXT,true,true);
@@ -567,6 +579,7 @@ public final class LumaView extends View {
             .putLong("focus_ms",effectRemaining(focusUntil)).putLong("trail_ms",effectRemaining(trailUntil))
             .putString("trail_ids",joinIds(trail)).putString("focus_ids",joinIds(safeHighlights))
             .putString("battle_v119",battleState==null?"":battleState.encode())
+            .putString("captain_v124",runCaptain124)
             .putString("elements_v121",elements121==null?"":elements121.encode()).putString("exit_chain_v121",exitChain121.encode()).putBoolean("economy_policy_v121",economyPolicy121).putString("last_paid_undo_v121",lastPaidUndo121);
         boolean saved=e.commit();if(saved)confirmSessionEnergyRun();return saved;
     }
@@ -626,6 +639,8 @@ public final class LumaView extends View {
                 String encodedBattle=prefs.getString("battle_v119",null);
                 battleState=encodedBattle==null?CompanionBattle.State.start(store.companionSquad()):CompanionBattle.State.decode(encodedBattle);
                 if(battleState!=null)for(String member:battleState.team())if(!store.ownsCharacter(member)){battleState=null;break;}
+                runCaptain124="";String savedCaptain=prefs.getString("captain_v124",null);
+                if(battleState!=null&&!battleState.team().isEmpty()){String actual=battleState.team().get(0);if(savedCaptain==null?encodedBattle!=null:actual.equals(savedCaptain))runCaptain124=actual;}
                 if(flowRemaining>0)powerGate.tryBegin("flow",false,now);
                 if(matchingVictory&&savedVictory.ready&&board.isSolved()){publishVictory(savedVictory,true);screen="play";contentScroll=0;}
                 if((policy==2||ledgerUpgraded)&&!saveSession())powerSaveBlocked=true;
@@ -640,7 +655,7 @@ public final class LumaView extends View {
         try{
             if(localSaveBlocked)drawLocalSaveRetry(c);
             else if(transition.active&&outgoingScene!=null&&!outgoingScene.isRecycled()){
-                c.drawColor(skin.bg);sceneBitmapPaint.setAlpha(transition.outgoingAlpha255());
+                c.drawColor(PulseUi124.BACKGROUND);sceneBitmapPaint.setAlpha(transition.outgoingAlpha255());
                 c.drawBitmap(outgoingScene,transition.outgoingOffsetX*getWidth(),0,sceneBitmapPaint);sceneBitmapPaint.setAlpha(255);
                 int incoming=c.saveLayerAlpha(0,0,getWidth(),getHeight(),transition.incomingAlpha255());
                 c.translate(transition.incomingOffsetX*getWidth(),0);drawFrame(c);c.restoreToCount(incoming);
@@ -689,7 +704,7 @@ public final class LumaView extends View {
         menuHudInset=0;
         frameTime=SystemClock.uptimeMillis();layout=new ExperienceLayout(getWidth(),getHeight(),safeTop,safeBottom,getResources().getDisplayMetrics().density,getResources().getConfiguration().fontScale);
         premium.setMinimumTextSize(layout.minimumTextSize);scenic.setMinimumTextSize(layout.minimumTextSize);scale=layout.scale;ox=layout.offsetX;top=safeTop;viewportH=layout.viewportHeight;drawingScroll=0;drawingClipBottom=viewportH;hits.clear();
-        c.drawColor(skin.bg);c.save();c.translate(ox,top);c.scale(scale,scale);float y=Math.max(16,viewportH/2-130);
+        c.drawColor(PulseUi124.BACKGROUND);c.save();c.translate(ox,top);c.scale(scale,scale);float y=Math.max(16,viewportH/2-130);
         scenePaper(c,new RectF(24,y,366,y+260),SweetUi.CREAM,true);
         wrap(c,t("commerce_save_error"),195,y+58,290,18,TEXT,true,25);label(44,y+25,302,103,t("commerce_save_error"));
         objectAction(c,t("retry"),44,y+151,302,52,PEACH,()->retryLocalSave());c.restore();if(running)postInvalidateDelayed(500);
@@ -731,15 +746,15 @@ public final class LumaView extends View {
             playSceneLayout=new PlaySceneLayout(viewportH,board.level.progressionVersion==6,
                     48*getResources().getDisplayMetrics().density/Math.max(.01f,scale),
                     Math.max(42,twoLineLayout("Mg\nMg",338,12,PremiumUi.MUTED).getHeight()),minimumTextSize(),0,true);
-            H=won?viewportH:Math.max(viewportH,playSceneLayout.undoRect.bottom+(battleEnabled()?Math.max(122,52+battleMinimumTouch()):16));
+            H=won?victoryLayout124().height:Math.max(viewportH,playSceneLayout.undoRect.bottom+(battleEnabled()?16+new BattleDockLayout124(battleMinimumTouch(),minimumTextSize()).height:16));
             if(battleSheet123&&battleEnabled()){
                 String skillId=battleComboPreview?battleState.team().get(0):battleState.team().get(battleSelected);
-                battleSheetLayout123=new CompanionSheetLayout123(viewportH,battleMinimumTouch(),proseHeight123(battleComboPreview?v19("combo_detail"):battleDetail(skillId)));
+                battleSheetLayout123=new CompanionSheetLayout123(viewportH,battleMinimumTouch(),proseHeight123(battleComboPreview?v19("combo_detail"):battleDetail(skillId)),minimumTextSize());
                 H=battleSheetLayout123.contentHeight;
             }
         }
         contentScroll=clampScroll(contentScroll);
-        c.drawColor(skin.bg);c.save();c.translate(ox,top);c.scale(scale,scale);hits.clear();
+        c.drawColor(PulseUi124.BACKGROUND);c.save();c.translate(ox,top);c.scale(scale,scale);hits.clear();
         background(c);c.save();drawingScroll=contentScroll;drawingClipBottom=viewportH+menuHudInset;
         c.clipRect(0,menuHudInset,390,drawingClipBottom);c.translate(0,menuHudInset-contentScroll);
         switch(screen){
@@ -775,10 +790,10 @@ public final class LumaView extends View {
         else if(Arrays.asList("adventure","journey","events","guardians","story").contains(screen))audio.setScene(AudioEngine.Scene.ADVENTURE);
         int visibleLevel=screen.equals("play")?levelIndex:store.unlockedLevel();int biome=SagaMap.biome(visibleLevel);
         if(biome!=activeBiome){activeBiome=biome;audio.setBiome(biome);}backdrop.setBiome(biome);
-        p.setColor(WHITE);p.setStyle(Paint.Style.FILL);p.setShader(new LinearGradient(0,0,390,viewportH,new int[]{0xfff4f1ff,0xfffaf8ff,0xfffff5ee},null,Shader.TileMode.CLAMP));
+        p.setColor(WHITE);p.setStyle(Paint.Style.FILL);p.setShader(new LinearGradient(0,0,390,viewportH,new int[]{0xfff4fcff,0xffffffff,0xffedfaff},null,Shader.TileMode.CLAMP));
         c.drawRect(0,0,390,viewportH+menuHudInset,p);p.setShader(null);
         if(screen.equals("play")&&board!=null){
-            p.setShader(new LinearGradient(0,82,390,viewportH,new int[]{0xfff6f2fc,0xfff5f5fc,0xffe9f2f1},null,Shader.TileMode.CLAMP));c.drawRect(0,82,390,viewportH,p);p.setShader(null);
+            drawScenery(c,"adventure");p.setColor(0xccf8fdff);c.drawRect(0,82,390,viewportH,p);
         }
         if(screen.equals("home")){p.setColor(0x18b7d7ce);c.drawCircle(330,260,185,p);}
     }
@@ -852,8 +867,19 @@ public final class LumaView extends View {
     }
     private void label(float x,float y,float w,float h,String name){hit(x,y,w,h,name,null);}
     private void objectAction(Canvas c,String label,float x,float y,float w,float h,int color,Runnable action){
-        String caption=actionCaption(label);scenic.objectAction(c,new RectF(x,y,x+w,y+Math.max(48,h)),caption,color,pressed!=null&&pressed.name.equals(label),actionKind(label));
+        RectF face=new RectF(x,y,x+w,y+Math.max(48,h));boolean down=pressed!=null&&pressed.name.equals(label);
+        pulse124.action(c,face,color,down,true);String caption=actionCaption(label);
+        float iconSpace=w>=230?43:0;
+        if(iconSpace>0)pulse124.symbol(c,new RectF(x+14,y+face.height()/2-13,x+40,y+face.height()/2+13),actionKind(label),INK);
+        pulseCaption124(c,caption,new RectF(x+iconSpace+8,y+4,x+w-10,y+face.height()-6),INK,true);
         hit(x,y,w,Math.max(48,h),label,action);
+    }
+    private void pulseCaption124(Canvas c,String caption,RectF face,int color,boolean heavy){
+        float size=Math.max(minimumTextSize(),15);p.setTypeface(heavy?bold:regular);p.setTextSize(size);
+        if(p.measureText(caption)>face.width()&&face.height()>=size*2.6f){
+            android.text.StaticLayout lines=twoLineLayout(caption,face.width(),size,color,true);
+            c.save();c.translate(face.left,face.centerY()-lines.getHeight()/2f);lines.draw(c);c.restore();
+        }else fit(c,caption,face.centerX(),face.centerY()+size*.34f,size,face.width(),color,heavy,true);
     }
     private void sceneAction(Canvas c,String label,float x,float y,float w,Runnable action){
         objectAction(c,label,x,y,w,48,0xff7876bb,action);
@@ -892,9 +918,9 @@ public final class LumaView extends View {
 
 
 
-    private void sceneShelf(Canvas c,RectF bounds,int color,boolean raised){scenic.shelf(c,bounds,color);}
-    private void scenePaper(Canvas c,RectF bounds,int color,boolean raised){scenic.windowModal(c,bounds,color);}
-    private void sceneWindow(Canvas c,RectF bounds,int color){scenic.windowModal(c,bounds,color);}
+    private void sceneShelf(Canvas c,RectF bounds,int color,boolean raised){pulse124.panel(c,bounds,color);}
+    private void scenePaper(Canvas c,RectF bounds,int color,boolean raised){pulse124.panel(c,bounds,color);}
+    private void sceneWindow(Canvas c,RectF bounds,int color){pulse124.panel(c,bounds,color);}
     private void sceneStage(Canvas c,RectF bounds,int color){sceneAura(c,bounds,color,frameTime,reduceMotion);}
     private void sceneAura(Canvas c,RectF bounds,int color,long time,boolean still){
         float x=bounds.centerX(),y=bounds.centerY();p.setColor(WHITE);p.setStyle(Paint.Style.FILL);p.setShader(new RadialGradient(x,y,Math.max(1,bounds.width()*.63f),new int[]{alpha(color,65),alpha(color,20),alpha(color,0)},null,Shader.TileMode.CLAMP));
@@ -903,7 +929,7 @@ public final class LumaView extends View {
     private boolean drawScenery(Canvas c,String place){
         Bitmap image=scenery.get(place);
         if(!scenery.containsKey(place)){
-            try(java.io.InputStream input=getContext().getAssets().open("art/v117/world-"+place+".png")){
+            try(java.io.InputStream input=getContext().getAssets().open("art/v124/world-"+place+".webp")){
                 BitmapFactory.Options options=new BitmapFactory.Options();options.inScaled=false;options.inSampleSize=2;image=BitmapFactory.decodeStream(input,null,options);
             }catch(java.io.IOException failure){image=null;}scenery.put(place,image);
         }
@@ -913,7 +939,7 @@ public final class LumaView extends View {
     }
     private void sceneDestination(Canvas c,ScenicUi.Kind kind,String name,float x,float y,float size,int accent,Runnable action){
         RectF bounds=new RectF(x-size/2,y-size*.52f,x+size/2,y+size*.48f);
-        scenic.object(c,bounds,accent,pressed!=null&&pressed.name.equals(name),kind);
+        pulse124.orb(c,bounds,accent,pressed!=null&&pressed.name.equals(name));RectF glyph=new RectF(bounds);glyph.inset(size*.26f,size*.26f);pulse124.symbol(c,glyph,kind,INK);
         sceneCaption(c,name,x,y+size*.57f,Math.max(76,size+30),15);hit(bounds.left-6,bounds.top-5,bounds.width()+12,bounds.height()+29,name,action);
     }
     private SceneRootLayout rootLayout(){
@@ -927,22 +953,22 @@ public final class LumaView extends View {
     private RectF sceneRect(SceneRootLayout.Rect rect){return new RectF(rect.left,rect.top,rect.right,rect.bottom);}
     private void sceneHit(SceneRootLayout.Rect rect,String name,Runnable action){hit(rect.left,rect.top,rect.width(),rect.height(),name,action);}
     private void sceneCaption(Canvas c,String name,float x,float baseline,float width,float size){
-        p.setTypeface(bold);p.setTextSize(Math.max(minimumTextSize(),size));p.setColor(0xff45315e);p.setShadowLayer(5,0,1,0xfffaf5ff);
+        p.setTypeface(bold);p.setTextSize(Math.max(minimumTextSize(),size));p.setColor(INK);p.clearShadowLayer();
         String value=android.text.TextUtils.ellipsize(name,p,width,android.text.TextUtils.TruncateAt.END).toString();c.drawText(value,x-p.measureText(value)/2,baseline,p);p.clearShadowLayer();
     }
     private void sceneHeading(Canvas c,String title,String subtitle){
-        p.setColor(WHITE);p.setStyle(Paint.Style.FILL);p.setShader(new LinearGradient(0,0,0,115,new int[]{0xfffaf6ff,0xeefaf6ff,0x00faf6ff},new float[]{0,.64f,1},Shader.TileMode.CLAMP));c.drawRect(0,0,390,116,p);p.setShader(null);
+        p.setColor(WHITE);p.setStyle(Paint.Style.FILL);p.setShader(new LinearGradient(0,0,0,115,new int[]{PulseUi124.WHITE,0xeef3fcff,0x00f3fcff},new float[]{0,.64f,1},Shader.TileMode.CLAMP));c.drawRect(0,0,390,116,p);p.setShader(null);
         fit(c,title,23,46,29,menuHudInset>0?342:258,TEXT,true,false);if(subtitle!=null)fit(c,subtitle,24,70,12,326,TEXT,false,false);if(menuHudInset==0)wallet(c,282,15);
     }
     private void sceneSiblings(Canvas c){
         String[] destinations=rootPlaces;
         String[] names={m20("home"),v19("squad"),r("collection"),m20("gifts"),m20("shop")};
-        String[] glyphs={"⌂","◉","◇","♡","⌑"};float y=viewportH-77;
-        round(c,10,y,370,68,27,0xfffbfaff);
+        ScenicUi.Kind[] glyphs={ScenicUi.Kind.HOUSE,ScenicUi.Kind.PROFILE,ScenicUi.Kind.CAPSULE,ScenicUi.Kind.CHEST,ScenicUi.Kind.SATCHEL};float y=viewportH-77;
+        pulse124.panel(c,new RectF(10,y,380,y+68),PulseUi124.CYAN);
         for(int i=0;i<5;i++){final String destination=destinations[i];float x=i*78f;boolean chosen=destination.equals(screen);
-            if(chosen)round(c,x+5,y+6,68,55,21,0xffe3d8fb);
-            if(i==4)icon(c,"shop",x+39,y+22,23,chosen?0xff7252b7:0xff747184);else if(i==3)drawGiftIcon(c,x+39,y+24,24,chosen?0xffba99d7:0xffcbbbd9,false);else center(c,glyphs[i],x+39,y+30,23,chosen?0xff7252b7:0xff747184,true);
-            fit(c,names[i],x+39,y+52,11,70,chosen?0xff513780:0xff666173,chosen,true);
+            if(chosen)pulse124.orb(c,new RectF(x+19,y+3,x+59,y+43),PulseUi124.CYAN,false);
+            pulse124.symbol(c,new RectF(x+28,y+11,x+50,y+33),glyphs[i],chosen?PulseUi124.BLUE:PulseUi124.MUTED);
+            fit(c,names[i],x+39,y+55,11,70,chosen?INK:PulseUi124.MUTED,chosen,true);
             motionHit(menuRect(Menu120Layout.navigation(i,viewportH,battleMinimumTouch())),names[i],"root_nav_"+destination,()->{if(destination.equals("squad"))openSquad();else if(destination.equals("rewards")){rewardTab=0;goRoot(destination);}else goRoot(destination);});
         }
     }
@@ -952,17 +978,20 @@ public final class LumaView extends View {
         c.save();c.translate(0,contentScroll);float oldScroll=drawingScroll,oldClip=drawingClipBottom;drawingScroll=0;drawingClipBottom=viewportH+menuHudInset;sceneSiblings(c);drawingScroll=oldScroll;drawingClipBottom=oldClip;c.restore();
     }
     private void drawNamedWallet(Canvas c){
-        for(int i=0;i<2;i++){float left=157+i*85;int color=i==0?0xffffe6a8:0xffe6d9fb;round(c,left,12,78,55,17,color);
+        for(int i=0;i<2;i++){float left=157+i*85;int color=i==0?PulseUi124.ORANGE:PulseUi124.BLUE;pulse124.metric(c,new RectF(left,12,left+78,67),color);
             String name=i==0?"LumaCoins":"LumaGold",amount=i==0?String.valueOf(store.coins()):displayedGold==null?"—":String.valueOf(displayedGold);
-            fit(c,name,left+39,32,11,70,TEXT,true,true);fit(c,amount,left+39,55,17,68,TEXT,true,true);
+            fit(c,name,left+39,32,11,70,TEXT,true,true);pulse124.number(c,amount,new RectF(left+5,36,left+73,61),18,minimumTextSize(),INK);
             final int category=i==0?0:2;motionHit(new RectF(left,12,left+78,67),name+": "+amount,"wallet_"+name.toLowerCase(Locale.ROOT),()->{shopCategory=category;go("shop");});}
+    }
+    private void resourceIcon124(Canvas c,String key,RectF box,ScenicUi.Kind fallback,int color){
+        ArtLibrary library=CharacterSprites.library();if(library==null||!library.draw(c,"pulse/icon/"+key,box))pulse124.symbol(c,box,fallback,color);
     }
     private boolean menuHudVisible(){if(screen.equals("wardrobe")&&wardrobeFromPlay123)return false;return !Arrays.asList("play","guardian","tutorial","firstlight").contains(screen);}
     /** Fixed above the scroll container; all values and touch bounds use the same transform. */
     private void drawMenuWalletHud(Canvas c){
         float inset=menuHudInset,oldClip=drawingClipBottom,oldScroll=drawingScroll;
         menuHudInset=0;drawingScroll=0;drawingClipBottom=viewportH+inset;
-        round(c,0,0,390,inset,0,0xfffbfaff);
+        round(c,0,0,390,inset,0,PulseUi124.WHITE);
         int actual=store.coins();
         if(menuCoinTarget<0){menuCoinFrom=menuCoinTarget=actual;menuCoinAt=frameTime;}
         else if(actual!=menuCoinTarget){menuCoinFrom=menuCoinTarget;menuCoinTarget=actual;menuCoinAt=frameTime;}
@@ -971,16 +1000,14 @@ public final class LumaView extends View {
         String shownGold=displayedGold==null?"—":String.valueOf(goldMotion121.sample(displayedGold,frameTime,reduceMotion));if(displayedGold==null)goldMotion121.unavailable();
         String[] names={"LumaCoins","LumaGold",m20("energy")};
         String[] values={String.valueOf(shown),shownGold,sessionEnergyCount()+" / "+sessionEnergy.maximum()};
-        int[] colors={0xffffedb8,0xffefe1ff,0xffffe4ec};
+        int[] colors={PulseUi124.ORANGE,PulseUi124.BLUE,PulseUi124.CYAN};
         for(int i=0;i<3;i++){
             Menu120Layout.Rect r=Menu120Layout.wallet(i,battleMinimumTouch());
-            round(c,r.left,r.top,r.width(),r.height(),21,colors[i]);
-            float bounce=reduceMotion?0:(float)Math.sin(frameTime*.002+i)*1.25f;
-            if(i==0)shopArt.coin(c,r.left+18,r.top+38+bounce,10,frameTime,reduceMotion);
-            else if(i==1)shopArt.gold(c,r.left+18,r.top+38+bounce,11,frameTime,reduceMotion);
-            else center(c,"♡",r.left+18,r.top+43+bounce,23,0xffb85478,true);
+            pulse124.metric(c,menuRect(r),colors[i]);
+            RectF glyph=new RectF(r.left+8,r.top+26,r.left+29,r.top+47);
+            resourceIcon124(c,i==0?"coins":i==1?"gold":"energy",glyph,i==0?ScenicUi.Kind.COIN:ScenicUi.Kind.LANTERN,colors[i]);
             fit(c,names[i],r.centerX(),r.top+20,11,r.width()-12,TEXT,true,true);
-            fit(c,values[i],r.left+35,r.top+45,19,r.width()-44,TEXT,true,false);
+            pulse124.number(c,values[i],new RectF(r.left+32,r.top+25,r.right-7,r.bottom-6),21,minimumTextSize(),INK);
             final int wallet=i;String status=i==0?m20("earned"):i==1?(displayedGold==null?m20("wallet_unknown"):m20("gold")):sessionEnergyLabel();
             motionHit(menuRect(r),names[i]+": "+(i==0?actual:values[i])+". "+status,"menu_wallet_"+i,()->{if(wallet==2)openSessionEnergy();else{shopCategory=wallet==0?0:2;goRoot("shop");}});
         }
@@ -991,10 +1018,10 @@ public final class LumaView extends View {
     /** Read-only puzzle wallet strip; the play owner reserves its 42-unit band. */
     private void drawPlayWalletHud120(Canvas c){drawPlayWalletHud120(c,store.coins());}
     private void drawPlayWalletHud120(Canvas c,int displayedCoins){
-        round(c,12,3,366,37,16,0xfffbf7ff);
+        pulse124.metric(c,new RectF(12,3,378,40),PulseUi124.CYAN);
         String gold=displayedGold==null?"—":String.valueOf(displayedGold);
-        String[] names={"LumaCoins","LumaGold",m20("energy")},values={String.valueOf(displayedCoins),gold,"♡ "+sessionEnergyCount()+"/"+sessionEnergy.maximum()};
-        for(int i=0;i<3;i++){fit(c,names[i],73+i*122,17,11,112,PremiumUi.MUTED,false,true);fit(c,values[i],73+i*122,35,16,112,TEXT,true,true);}
+        String[] names={"LumaCoins","LumaGold",m20("energy")},values={String.valueOf(displayedCoins),gold,sessionEnergyCount()+"/"+sessionEnergy.maximum()};
+        for(int i=0;i<3;i++){fit(c,names[i],73+i*122,17,11,112,PulseUi124.MUTED,false,true);resourceIcon124(c,i==0?"coins":i==1?"gold":"energy",new RectF(21+i*122,20,39+i*122,38),i==0?ScenicUi.Kind.COIN:ScenicUi.Kind.LANTERN,PulseUi124.CYAN);pulse124.number(c,values[i],new RectF(44+i*122,19,129+i*122,39),17,minimumTextSize(),INK);}
         label(12,3,366,37,"LumaCoins: "+store.coins()+". LumaGold: "+gold+(displayedGold==null?". "+m20("wallet_unknown"):"")+". "+sessionEnergyLabel());
     }
     private void showMenuGift(String title,String detail,String power){
@@ -1316,14 +1343,14 @@ public final class LumaView extends View {
         }
         for(Tile tile:practice.remainingTiles()){
             float x=left+(tile.col+.5f)*unit,y=top+(tile.row+.5f)*unit;boolean lit=tile.id==tutorial.expectedTileId()||tile.id==tutorial.highlightedHintId();
-            sweet.tile(c,new RectF(x-unit*.38f,y-unit*.38f,x+unit*.38f,y+unit*.38f),tile.direction,directionColor(tile.direction),tile.isSwitch(),false,lit,frameTime,reduceMotion);
+            arrow123.tile(c,x,y,unit*.80f,tile.direction,tile.switchMask,practice.level.isKey(tile.id)?KeyLinkScene122.number(practice,tile.id):0,lit);
             if(practice.level.isKey(tile.id))sweet.key(c,x-unit*.26f,y-unit*.25f,10,tile.direction,frameTime,reduceMotion);
             final int id=tile.id;String description=t("piece_description",tile.row+1,tile.col+1,t("direction_"+tile.direction.name().toLowerCase(Locale.ROOT)));
             hit(left+tile.col*unit,top+tile.row*unit,unit,unit,description,()->practicePiece(id,null));
         }
         Iterator<Flight> flight=practiceFlights.iterator();while(flight.hasNext()){
             Flight f=flight.next();float amount=(frameTime-f.at)/(reduceMotion?100f:360f);if(amount>=1){flight.remove();continue;}float dist=reduceMotion?0:amount*amount*280;
-            c.saveLayerAlpha(0,0,390,H,Math.round(255*(1-amount)));sweet.tile(c,new RectF(f.x-unit*.38f+f.tile.direction.dc*dist,f.y-unit*.38f+f.tile.direction.dr*dist,f.x+unit*.38f+f.tile.direction.dc*dist,f.y+unit*.38f+f.tile.direction.dr*dist),f.tile.direction,directionColor(f.tile.direction),f.tile.isSwitch(),false,false,frameTime,reduceMotion);c.restore();
+            c.saveLayerAlpha(0,0,390,H,Math.round(255*(1-amount)));arrow123.tile(c,f.x+f.tile.direction.dc*dist,f.y+f.tile.direction.dr*dist,unit*.80f,f.tile.direction,f.tile.switchMask,0,false);c.restore();
         }
         if(!tutorial.lessonComplete()){
             int target=tutorial.expectedTileId();Tile tile=practice.level.tile(target);
@@ -1427,7 +1454,7 @@ public final class LumaView extends View {
             float x=60+(piece.col+.5f)*unit,y=270+(piece.row+.5f)*unit,w=unit*.76f;
             // Separate visible slabs and an explicit count communicate a real additional hit.
             for(int layer=piece.layers-1;layer>0;layer--)scenePaper(c,new RectF(x-w/2+layer*3,y-w/2+layer*7,x+w/2+layer*3,y+w/2+layer*7),0xffb29ac8,true);
-            sweet.tile(c,new RectF(x-w/2,y-w/2,x+w/2,y+w/2),piece.direction,directionColor(piece.direction),false,false,piece.id==guardianHint,frameTime,reduceMotion);
+            arrow123.tile(c,x,y,w,piece.direction,0,0,piece.id==guardianHint);
             if(piece.layers>1){round(c,x+w*.04f,y-w*.46f,w*.44f,22,7,GOLD);fit(c,"×"+piece.layers,x+w*.26f,y-w*.46f+16,12,w*.40f,TEXT,true,true);}
             if(piece.cellwise){p.setColor(TEXT);c.drawCircle(x-7,y+w*.31f,2.7f,p);c.drawCircle(x+2,y+w*.24f,2.7f,p);}
             guardianHit(60+piece.col*unit,270+piece.row*unit,unit,piece.id,q("guardian_piece",piece.id+1,t("direction_"+piece.direction.name().toLowerCase(Locale.ROOT)),piece.layers,piece.cellwise?q("guardian_cell"):""),()->guardianMove(piece.id));
@@ -1594,9 +1621,9 @@ public final class LumaView extends View {
     private String battleDetail(String id){CompanionBattle.Definition def=CompanionBattle.find(id);return def==null?"":v19("skill_"+def.effect.name().toLowerCase(Locale.ROOT)+"_detail",def.amount,def.durationMs/1000,def.cost);}
     private void modernAction(Canvas c,RectF area,String caption,int color,String id,Runnable action,boolean enabled){
         int faceColor=color>=SweetUi.PEACH&&color<=SweetUi.CREAM?SweetUi.fill(color):color;
-        boolean down=pressed!=null&&id.equals(pressed.semanticId);c.save();if(down&&!reduceMotion)c.scale(.98f,.98f,area.centerX(),area.centerY());
-        round(c,area.left,area.top+3,area.width(),area.height(),22,alpha(faceColor,35));round(c,area.left,area.top,area.width(),area.height()-3,22,enabled?faceColor:0xffe8e5f0);
-        fit(c,caption,area.centerX(),area.centerY()+5,15,area.width()-24,enabled?0xff30203f:0xff797184,true,true);c.restore();
+        boolean down=pressed!=null&&id.equals(pressed.semanticId);
+        pulse124.action(c,area,faceColor,down,enabled);
+        pulseCaption124(c,caption,new RectF(area.left+12,area.top+5,area.right-12,area.bottom-7),enabled?INK:PulseUi124.MUTED,true);
         if(enabled)motionHit(area,caption,id,action);else label(area.left,area.top,area.width(),area.height(),caption);
     }
     private void drawBattleActor(Canvas c,String id,RectF box,CompanionMotion.Action action,CompanionMotion.Facing facing,long elapsed,boolean reduced){
@@ -1623,20 +1650,29 @@ public final class LumaView extends View {
     }
     private void drawBattleDock(Canvas c){
         float y=playSceneLayout.undoRect.bottom+16;
-        fit(c,q123("companions_charge",battleState.energy(),CompanionBattle.MAX_ENERGY),24,y+12,12,342,PremiumUi.MUTED,true,false);
+        BattleDockLayout124 dock=new BattleDockLayout124(battleMinimumTouch(),minimumTextSize());
+        resourceIcon124(c,"charge",new RectF(24,y+1,46,y+23),ScenicUi.Kind.LANTERN,PulseUi124.CYAN);
+        fit(c,q124("talent_charge"),53,y+dock.headerHeight*.73f,13,220,PulseUi124.MUTED,true,false);
+        pulse124.number(c,battleState.energy()+"/"+CompanionBattle.MAX_ENERGY,new RectF(282,y,366,y+dock.headerHeight),20,minimumTextSize(),INK);
         for(int i=0;i<3;i++){
-            final int slot=i;float x=24+i*84;RectF box=new RectF(x,y+20,x+Math.max(76,battleMinimumTouch()),y+20+Math.max(71,battleMinimumTouch()));
-            boolean occupied=i<battleState.team().size();String id=occupied?battleState.team().get(i):"";
-            round(c,box.left,box.top,box.width(),box.height(),21,occupied?0xfff1eaf9:0xffece9f0);
-            if(occupied){CompanionBattle.Definition def=CompanionBattle.find(id);drawBattleActor(c,id,new RectF(x+8,y+16,x+68,y+78),CompanionMotion.Action.IDLE,CompanionMotion.Facing.FRONT,frameTime,reduceMotion);
-                fit(c,t(Catalog.character(id).nameKey),x+38,y+84,12,70,TEXT,true,true);
-                String state=battleState.used(i)?v19("used"):def.cost+" ✦";
-                round(c,x+49,y+20,27,20,8,battleState.canUse(i)?0xffd4eddf:0xffe4dded);fit(c,state,x+62.5f,y+34,11,25,TEXT,true,true);
-                motionHit(box,t(Catalog.character(id).nameKey)+". "+battleFamily(id)+". "+state,"battle_skill_"+i,()->openBattleSkill(slot,false));
-            }else{fit(c,"+",x+38,y+58,26,60,PremiumUi.MUTED,true,true);motionHit(box,q123("team_next"),"battle_skill_"+i,()->notice(q123("team_next")));}
+            final int slot=i;BattleDockLayout124.Rect r=dock.slot(i);RectF box=new RectF(r.left,y+r.top,r.right,y+r.bottom);
+            boolean occupied=i<battleState.team().size();float type=Math.max(12,minimumTextSize()),line=Math.max(18,type*1.35f),artSize=Math.max(20,Math.min(66,Math.min(box.width()-14,box.height()-2*line-16))),cx=box.centerX();
+            RectF orb=new RectF(cx-artSize/2,box.top+2,cx+artSize/2,box.top+2+artSize);
+            pulse124.orb(c,orb,occupied?PulseUi124.CYAN:PulseUi124.LINE,pressed!=null&&("battle_skill_"+i).equals(pressed.semanticId));
+            if(occupied){String id=battleState.team().get(i);CompanionBattle.Definition def=CompanionBattle.find(id);
+                drawBattleActor(c,id,new RectF(orb.left-3,orb.top-4,orb.right+3,orb.bottom+4),CompanionMotion.Action.STANCE,CompanionMotion.Facing.FRONT,frameTime,reduceMotion);
+                fit(c,battleFamily(id),cx,box.bottom-line-6-type*.25f,12,box.width()-4,INK,true,true);
+                pulse124.number(c,battleState.remaining(i)+"/"+battleState.capacity(i),new RectF(box.left+4,box.bottom-line-2,box.right-4,box.bottom-2),16,minimumTextSize(),PulseUi124.MUTED);
+                String detail=q124("uses_ax",battleState.remaining(i),battleState.capacity(i))+". "+q124("skill_cost",def.cost);
+                motionHit(box,t(Catalog.character(id).nameKey)+". "+battleFamily(id)+". "+detail,"battle_skill_"+i,()->openBattleSkill(slot,false));
+            }else{RectF glyph=new RectF(orb);glyph.inset(18,18);pulse124.symbol(c,glyph,ScenicUi.Kind.PROFILE,PulseUi124.MUTED);
+                fit(c,"+",cx,box.bottom-17,24,box.width()-8,PulseUi124.MUTED,true,true);motionHit(box,q123("team_next"),"battle_skill_"+i,()->notice(q123("team_next")));}
         }
-        RectF combo=new RectF(276,y+20,366,y+20+Math.max(71,battleMinimumTouch()));round(c,combo.left,combo.top,combo.width(),combo.height(),21,battleState.comboReady()?0xffded2f6:0xffeee8f6);
-        fit(c,"✦",321,y+52,25,75,0xff8160a8,true,true);fit(c,v19("combo"),321,y+83,12,82,TEXT,true,true);
+        BattleDockLayout124.Rect r=dock.slot(3);RectF combo=new RectF(r.left,y+r.top,r.right,y+r.bottom);float type=Math.max(12,minimumTextSize()),line=Math.max(18,type*1.35f),size=Math.max(20,Math.min(66,Math.min(combo.width()-14,combo.height()-2*line-16)));
+        RectF orb=new RectF(combo.centerX()-size/2,combo.top+2,combo.centerX()+size/2,combo.top+2+size);pulse124.orb(c,orb,battleState.comboReady()?PulseUi124.CORAL:PulseUi124.LINE,false);
+        RectF glyph=new RectF(orb);glyph.inset(size*.27f,size*.27f);pulse124.symbol(c,glyph,ScenicUi.Kind.STARS,battleState.comboReady()?PulseUi124.CORAL:PulseUi124.MUTED);
+        fit(c,v19("combo"),combo.centerX(),combo.bottom-line-6-type*.25f,12,combo.width()-4,INK,true,true);
+        pulse124.number(c,(battleState.comboSpent()?0:1)+"/1",new RectF(combo.left+4,combo.bottom-line-2,combo.right-4,combo.bottom-2),16,minimumTextSize(),PulseUi124.MUTED);
         motionHit(combo,v19("combo")+". "+q123("talents"),"battle_combo",()->openBattleSkill(-1,true));
     }
     private void openBattleSkill(int slot,boolean combo){
@@ -1650,31 +1686,42 @@ public final class LumaView extends View {
         if(screen.equals("play")&&running&&!paused&&!help&&!won&&!outOfMoves())activeStarted=SystemClock.uptimeMillis();invalidate();
     }
     private void drawBattleSheet123(Canvas c){
-        hits.clear();round(c,0,0,390,viewportH,0,0x8b30223f);
+        hits.clear();round(c,0,0,390,viewportH,0,0x9a163b62);
         CompanionSheetLayout123 sheet=battleSheetLayout123;
         c.save();c.translate(0,-contentScroll);drawingScroll=contentScroll;
-        float height=sheet.height,y=sheet.top;
-        round(c,12,y,366,height+24,28,0xfffffbff);round(c,171,y+9,48,4,2,0xffd4c9df);
+        float y=sheet.top;pulse124.panel(c,new RectF(12,y,378,y+sheet.height),PulseUi124.CYAN);
+        round(c,173,y+9,44,4,2,PulseUi124.LINE);
         String id=battleComboPreview?battleState.team().get(0):battleState.team().get(battleSelected);
-        fit(c,battleComboPreview?v19("combo"):t(Catalog.character(id).nameKey),32,y+43,23,267,TEXT,true,false);
-        modernAction(c,new RectF(366-battleMinimumTouch(),y+17,366,y+17+battleMinimumTouch()),"×",0xffeee6f5,"battle_skill_close",()->closeBattleSheet123(),true);
-        drawBattleActor(c,id,new RectF(24,y+57,120,y+155),CompanionMotion.Action.STANCE,CompanionMotion.Facing.FRONT,frameTime,reduceMotion);
-        fit(c,battleComboPreview?v19("combo"):battleFamily(id),128,y+87,18,232,TEXT,true,false);
-        String charge=battleComboPreview?v19("combo_ready"):CompanionBattle.find(id).cost+" ✦ · "+q123("charge_available",battleState.energy());
-        if(battleComboPreview&&!battleState.comboReady())charge=v19(battleState.comboSpent()?"combo_used":"combo_locked_short");
-        fit(c,charge,128,y+114,13,228,PremiumUi.MUTED,true,false);
-        float after=prose(c,battleComboPreview?v19("combo_detail"):battleDetail(id),y+166,TEXT);
-        fit(c,q123("puzzle_talent"),32,after+12,12,326,PremiumUi.MUTED,false,false);
+        fit(c,battleComboPreview?v19("combo"):t(Catalog.character(id).nameKey),32,sheet.titleY,24,sheet.titleRight-32,INK,true,false);
+        modernAction(c,new RectF(366-sheet.closeSize,sheet.closeTop,366,sheet.closeTop+sheet.closeSize),"×",PulseUi124.CYAN,"battle_skill_close",()->closeBattleSheet123(),true);
+        RectF portrait=new RectF(30,sheet.portraitTop,132,sheet.portraitTop+102);pulse124.orb(c,portrait,PulseUi124.CYAN,false);
+        drawBattleActor(c,id,new RectF(26,sheet.portraitTop-6,136,sheet.portraitTop+114),CompanionMotion.Action.STANCE,CompanionMotion.Facing.FRONT,frameTime,reduceMotion);
+        fit(c,battleComboPreview?v19("combo"):battleFamily(id),144,sheet.familyY,18,208,INK,true,false);
+        int remaining=battleComboPreview?(battleState.comboSpent()?0:1):battleState.remaining(battleSelected),capacity=battleComboPreview?1:battleState.capacity(battleSelected);
+        String cost=battleComboPreview?v19(battleState.comboReady()?"combo_ready":battleState.comboSpent()?"combo_used":"combo_locked_short"):q124("skill_cost",CompanionBattle.find(id).cost);
+        fit(c,cost,144,sheet.costY,13,208,PulseUi124.MUTED,true,false);
+        fit(c,q124("uses",remaining,capacity),144,sheet.usesY,14,208,INK,true,false);
+        label(144,sheet.usesY-minimumTextSize(),208,minimumTextSize()*1.4f,q124("uses_ax",remaining,capacity));
+        RectF charge=new RectF(24,sheet.chargeY,366,sheet.chargeY+sheet.chargeHeight);pulse124.metric(c,charge,PulseUi124.CYAN);
+        resourceIcon124(c,"charge",new RectF(35,charge.centerY()-11,57,charge.centerY()+11),ScenicUi.Kind.LANTERN,PulseUi124.CYAN);
+        fit(c,q124("talent_charge"),65,charge.centerY()+Math.max(12,minimumTextSize())*.34f,12,205,PulseUi124.MUTED,true,false);
+        pulse124.number(c,battleState.energy()+"/"+CompanionBattle.MAX_ENERGY,new RectF(282,charge.top+2,350,charge.bottom-2),18,minimumTextSize(),INK);
+        label(24,charge.top,342,charge.height(),q124("talent_charge")+": "+battleState.energy()+"/"+CompanionBattle.MAX_ENERGY);
+        prose(c,battleComboPreview?v19("combo_detail"):battleDetail(id),sheet.detailY+Math.max(20,minimumTextSize()),INK);
         boolean available=battleComboPreview?battleState.comboReady():battleState.canUse(battleSelected);
-        String status=available?v19("skill_activate"):battleComboPreview?v19(battleState.comboSpent()?"combo_used":"combo_locked_short"):battleState.used(battleSelected)?v19("used"):v19("need_energy",CompanionBattle.find(id).cost);
+        String status=available?v19("skill_activate"):battleComboPreview?v19(battleState.comboSpent()?"combo_used":"combo_locked_short"):remaining==0?q124("uses_empty"):v19("need_energy",CompanionBattle.find(id).cost);
         final int slot=battleSelected;final boolean combo=battleComboPreview;
-        float controls=sheet.controlsY;
-        modernAction(c,new RectF(24,controls,366,controls+sheet.buttonHeight),status,0xffc9e9da,"battle_skill_activate",()->activateBattleSkill(slot,combo),available);
-        modernAction(c,new RectF(24,sheet.outfitY,189,sheet.outfitY+sheet.buttonHeight),q123("outfit"),0xffeaddf4,"battle_outfit",()->openWardrobeFromPlay123(id),true);
-        modernAction(c,new RectF(201,sheet.outfitY,366,sheet.outfitY+sheet.buttonHeight),q123("equipment"),0xffede8f5,"battle_equipment",()->notice(q123("equipment_next")),true);
+        modernAction(c,new RectF(24,sheet.controlsY,366,sheet.controlsY+sheet.buttonHeight),status,PulseUi124.CYAN,"battle_skill_activate",()->activateBattleSkill(slot,combo),available);
+        sheetObject124(c,new RectF(24,sheet.outfitY,189,sheet.outfitY+sheet.buttonHeight),q123("outfit"),ScenicUi.Kind.CLOTH_RAIL,"battle_outfit",()->openWardrobeFromPlay123(id));
+        sheetObject124(c,new RectF(201,sheet.outfitY,366,sheet.outfitY+sheet.buttonHeight),q123("equipment"),ScenicUi.Kind.SHIELD,"battle_equipment",()->notice(q123("equipment_next")));
         if(arcadeEnabled121()&&battleComboPreview)drawFocus121(c,sheet.returnY);
-        else modernAction(c,new RectF(24,sheet.returnY,366,sheet.returnY+sheet.buttonHeight),q123("return_puzzle"),0xfff0eaf6,"battle_skill_close_bottom",()->closeBattleSheet123(),true);
+        else sheetObject124(c,new RectF(24,sheet.returnY,366,sheet.returnY+sheet.buttonHeight),q123("return_puzzle"),ScenicUi.Kind.RETURN,"battle_skill_close_bottom",()->closeBattleSheet123());
         drawingScroll=0;c.restore();
+    }
+    private void sheetObject124(Canvas c,RectF box,String caption,ScenicUi.Kind kind,String id,Runnable action){
+        pulse124.metric(c,box,PulseUi124.CYAN);float size=Math.min(28,box.height()*.48f);
+        pulse124.symbol(c,new RectF(box.left+15,box.centerY()-size/2,box.left+15+size,box.centerY()+size/2),kind,INK);
+        pulseCaption124(c,caption,new RectF(box.left+size+24,box.top+5,box.right-12,box.bottom-5),INK,true);motionHit(box,caption,id,action);
     }
     private void drawBattleSkillPage(Canvas c){
         if(!battleEnabled()||!battleComboPreview&&(battleSelected<0||battleSelected>=battleState.team().size())){modernAction(c,new RectF(24,100,366,156),v19("back"),0xffc3eddd,"battle_skill_close",()->backMenu(),true);return;}
@@ -1696,7 +1743,7 @@ public final class LumaView extends View {
         final int slot=battleSelected;final boolean combo=battleComboPreview;
         modernAction(c,new RectF(24,y,366,y+58),status,0xffc3b3f4,"battle_skill_activate",()->activateBattleSkill(slot,combo),available);y+=77;
         modernAction(c,new RectF(24,y,366,y+55),v19("team_back_play"),0xffe5f4f0,"battle_skill_close_bottom",()->backMenu(),true);y+=72;
-        fit(c,v19("once_per_run"),195,y+14,12,335,PremiumUi.MUTED,false,true);battleSkillHeight=Math.max(830,y+52);H=Math.max(viewportH,battleSkillHeight);
+        fit(c,q124("uses",battleComboPreview?(battleState.comboSpent()?0:1):battleState.remaining(battleSelected),battleComboPreview?1:battleState.capacity(battleSelected)),195,y+14,12,335,PremiumUi.MUTED,false,true);battleSkillHeight=Math.max(830,y+52);H=Math.max(viewportH,battleSkillHeight);
     }
     private void activateBattleSkill(int slot,boolean combo){
         if(!battleEnabled()||won||paused||help||!running||powerSaveBlocked||flowRemaining>0||!battlePreviewState.equals(battleState.encode())||battlePreviewHistory!=Arrays.hashCode(board.history()))return;
@@ -1762,23 +1809,26 @@ public final class LumaView extends View {
     private int readyGiftCount120(){ensureHub();return hubObjectives.readyCount;}
     private void drawAdventure(Canvas c){
         Menu121Layout menu=new Menu121Layout(viewportH,battleMinimumTouch());ensureHub();int current=Math.min(1000,store.unlockedLevel());
-        round(c,0,0,390,menu.contentHeight,0,0xfff7f4fc);
+        round(c,0,0,390,menu.contentHeight,0,PulseUi124.BACKGROUND);
         String name=profileSignedIn&&!profileName.isEmpty()?profileName:store.playerNickname();
         fit(c,m20("hello",name),24,36,24,280,TEXT,true,false);
         int shownHomeXp121=(int)xpMotion121.sample(meta.xp(),frameTime,reduceMotion);
-        fit(c,Menu121Strings.get(store.resolvedLanguage(),"player_level",1+shownHomeXp121/MetaProgress.XP_PER_RANK),24,64,12,176,0xff655291,true,false);
-        fit(c,Menu121Strings.get(store.resolvedLanguage(),"xp_progress",shownHomeXp121%MetaProgress.XP_PER_RANK,MetaProgress.XP_PER_RANK),260,64,12,100,0xff655291,true,true);
-        round(c,24,78,342,7,4,0xffe6dff1);if(shownHomeXp121%MetaProgress.XP_PER_RANK>0)round(c,24,78,342f*(shownHomeXp121%MetaProgress.XP_PER_RANK)/MetaProgress.XP_PER_RANK,7,4,0xff8c6cc8);
+        pulse124.metric(c,new RectF(24,46,306,89),PulseUi124.CYAN);
+        fit(c,q124("player_rank"),37,66,13,62,INK,true,false);
+        pulse124.number(c,String.valueOf(1+shownHomeXp121/MetaProgress.XP_PER_RANK),new RectF(101,49,151,73),22,minimumTextSize(),INK);
+        resourceIcon124(c,"xp",new RectF(160,49,185,74),ScenicUi.Kind.STARS,PulseUi124.CYAN);
+        pulse124.number(c,(shownHomeXp121%MetaProgress.XP_PER_RANK)+"/"+MetaProgress.XP_PER_RANK+" XP",new RectF(190,49,294,73),18,minimumTextSize(),INK);
+        round(c,37,78,254,5,3,PulseUi124.LINE);if(shownHomeXp121%MetaProgress.XP_PER_RANK>0)round(c,37,78,254f*(shownHomeXp121%MetaProgress.XP_PER_RANK)/MetaProgress.XP_PER_RANK,5,3,PulseUi124.CYAN);
         fit(c,Menu121Strings.get(store.resolvedLanguage(),"coins_loop"),24,103,12,342,PremiumUi.MUTED,false,false);
         motionHit(menuRect(menu.profile),m20("hello",name)+". "+Menu121Strings.get(store.resolvedLanguage(),"player_level",meta.rank())+". "+Menu121Strings.get(store.resolvedLanguage(),"xp_progress",meta.rankProgress(),MetaProgress.XP_PER_RANK)+". "+Menu121Strings.get(store.resolvedLanguage(),"xp_rule"),"home_profile",()->openAccount());
-        round(c,menu.settings.left,menu.settings.top,menu.settings.width(),menu.settings.height(),20,0xffe9e2f4);icon(c,"settings",menu.settings.centerX(),menu.settings.centerY(),22,0xff695781);
+        pulse124.orb(c,menuRect(menu.settings),PulseUi124.CYAN,false);RectF settingsGlyph=menuRect(menu.settings);settingsGlyph.inset(13,13);pulse124.symbol(c,settingsGlyph,ScenicUi.Kind.GEAR,INK);
         motionHit(menuRect(menu.settings),t("settings"),"settings_entry",()->go("settings"));
         hero121Scene.draw(c,menuRect(menu.hero),frameTime,reduceMotion,character.color);
         CompanionProgression.Stats avatarProgress=store.companionStats(character.id);CompanionProgression.Definition avatarDefinition=CompanionProgression.find(character.id);
         hero121Fit(c,Menu121Strings.get(store.resolvedLanguage(),"avatar_role"),42,140,11,239,0xffe9e3ff,true,false);
         String grade=(avatarDefinition==null?"":avatarDefinition.rarity.name()+" · ")+Menu121Strings.get(store.resolvedLanguage(),"companion_level",Math.max(1,avatarProgress.level));
         c.save();c.clipRect(menu.hero.left,menu.hero.top+20,menu.hero.right,menu.hero.bottom-89);dressedMascot(c,195,245,67);c.restore();
-        round(c,264,145,86,30,12,0xb52e2854);hero121Fit(c,grade,307,165,12,78,0xffddfff4,true,true);
+        round(c,264,145,86,30,15,0xffbdeef8);hero121Fit(c,grade,307,165,12,78,0xffddfff4,true,true);
         hero121Fit(c,t(character.nameKey),195,379,24,300,0xfffffaff,true,true);
         String copyProgress=avatarProgress.maxed()?Menu121Strings.get(store.resolvedLanguage(),"max_evolution"):Menu121Strings.get(store.resolvedLanguage(),"copies_progress",avatarProgress.copies,avatarProgress.nextThreshold);
         hero121Fit(c,copyProgress+" · "+Menu121Strings.get(store.resolvedLanguage(),"evolve_by_copies"),195,400,12,306,0xffe8e0f8,false,true);
@@ -1801,7 +1851,7 @@ public final class LumaView extends View {
         modernAction(c,menuRect(menu.play),play,0xffb7e7d6,"journey_continue",()->continueGame(),true);
         String[] rooms={"", "living", "kitchen", "garden"};String[] roomNames={r("house"),h("room_living"),Menu121Strings.get(store.resolvedLanguage(),"kitchen"),h("room_garden")};String[] roomArt={"", "sofa", "kitchen", "greenhouse"};
         for(int i=0;i<4;i++){final int roomIndex=i;Menu120Layout.Rect place=menu.environments[i];round(c,place.left,place.top,place.width(),place.height(),20,i==0?0xffdcece4:i==2?0xffffead4:0xffe9e1f3);
-            RectF illustration=new RectF(place.centerX()-29,place.top+8,place.centerX()+29,place.top+62);if(i==0)scenic.object(c,illustration,0xff8cb7a6,false,ScenicUi.Kind.HOUSE);else homeScene.drawItem(c,roomArt[i],illustration,frameTime,reduceMotion);
+            RectF illustration=new RectF(place.centerX()-29,place.top+8,place.centerX()+29,place.top+62);if(i==0){pulse124.orb(c,illustration,PulseUi124.CYAN,false);RectF houseGlyph=new RectF(illustration);houseGlyph.inset(12,12);pulse124.symbol(c,houseGlyph,ScenicUi.Kind.HOUSE,INK);}else homeScene.drawItem(c,roomArt[i],illustration,frameTime,reduceMotion);
             fit(c,roomNames[i],place.centerX(),place.bottom-13,12,place.width()-8,TEXT,true,true);
             motionHit(menuRect(place),roomNames[i],i==0?"home_room_quick":"home_room_"+rooms[i],()->{if(roomIndex>0){if(!HomeCatalog.validRoom(rooms[roomIndex])){notice(b("item_unavailable"));return;}switchHomeRoom(rooms[roomIndex]);}goRoot("home");});
         }
@@ -1818,11 +1868,11 @@ public final class LumaView extends View {
         fit(c,"⌂  "+h("room_title"),menu.room.centerX(),menu.room.centerY()+5,13,155,PremiumUi.MUTED,false,true);fit(c,"✦  "+r("atelier"),menu.atelier.centerX(),menu.atelier.centerY()+5,13,155,PremiumUi.MUTED,false,true);
         motionHit(menuRect(menu.room),h("room_title"),"home_room",()->goRoot("home"));motionHit(menuRect(menu.atelier),r("atelier"),"home_atelier",()->goRoot("atelier"));H=menu.contentHeight;drawFixedNavigation(c);
     }
-    /** Dark hero stages retain their authored high-contrast text, with the normal minimum font size. */
+    /** Bright hero stages share the same blue ink and rounded typography as the interface. */
     private void hero121Fit(Canvas c,String caption,float x,float y,float size,float width,int color,boolean heavy,boolean centered){
         p.setShader(null);p.setTypeface(heavy?bold:regular);p.setTextAlign(Paint.Align.LEFT);p.setTextSize(Math.max(minimumTextSize(),size));
         float measured=p.measureText(caption);if(measured>width)p.setTextSize(Math.max(minimumTextSize(),p.getTextSize()*width/measured));
-        String visible=android.text.TextUtils.ellipsize(caption,p,width,android.text.TextUtils.TruncateAt.END).toString();p.setColor(color);c.drawText(visible,centered?x-p.measureText(visible)/2:x,y,p);
+        String visible=android.text.TextUtils.ellipsize(caption,p,width,android.text.TextUtils.TruncateAt.END).toString();p.setColor(INK);c.drawText(visible,centered?x-p.measureText(visible)/2:x,y,p);
     }
     private void drawStorefront(Canvas c,float x,float y,float size){
         c.save();c.translate(x,y);float s=size/78f;c.scale(s,s);
@@ -1945,10 +1995,10 @@ public final class LumaView extends View {
     private interface SceneTextCommit { String commit(String value); }
     private void showTextSheet(String title,String hint,String value,int inputType,int maxLength,SceneTextCommit commit){
         finishScenePresentation();android.widget.LinearLayout box=new android.widget.LinearLayout(getContext());box.setOrientation(android.widget.LinearLayout.VERTICAL);int pad=(int)(24*getResources().getDisplayMetrics().density);box.setPadding(pad,pad,pad,pad);
-        android.graphics.drawable.GradientDrawable paper=new android.graphics.drawable.GradientDrawable();paper.setColor(0xfff9f3ff);paper.setCornerRadius(pad);box.setBackground(paper);
+        android.graphics.drawable.GradientDrawable paper=new android.graphics.drawable.GradientDrawable();paper.setColor(PulseUi124.WHITE);paper.setCornerRadius(pad);paper.setStroke(Math.max(1,pad/16),PulseUi124.LINE);box.setBackground(paper);
         android.widget.TextView heading=new android.widget.TextView(getContext());heading.setText(title);heading.setTextSize(23);heading.setTextColor(TEXT);heading.setTypeface(bold);box.addView(heading);
-        android.widget.EditText field=new android.widget.EditText(getContext());field.setSingleLine(true);field.setText(value);field.setSelectAllOnFocus(true);field.setHint(hint);field.setTextColor(TEXT);field.setTextSize(19);field.setInputType(inputType);field.setImeOptions(android.view.inputmethod.EditorInfo.IME_ACTION_DONE);field.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(maxLength)});box.addView(field,new android.widget.LinearLayout.LayoutParams(-1,(int)(68*getResources().getDisplayMetrics().density)));
-        android.widget.TextView note=new android.widget.TextView(getContext());note.setText(hint);note.setTextSize(13);note.setTextColor(PremiumUi.MUTED);box.addView(note);
+        android.widget.EditText field=new android.widget.EditText(getContext());field.setSingleLine(true);field.setText(value);field.setSelectAllOnFocus(true);field.setHint(hint);field.setTextColor(TEXT);field.setTextSize(19);field.setInputType(inputType);field.setTypeface(regular);field.setImeOptions(android.view.inputmethod.EditorInfo.IME_ACTION_DONE);field.setFilters(new android.text.InputFilter[]{new android.text.InputFilter.LengthFilter(maxLength)});box.addView(field,new android.widget.LinearLayout.LayoutParams(-1,(int)(68*getResources().getDisplayMetrics().density)));
+        android.widget.TextView note=new android.widget.TextView(getContext());note.setText(hint);note.setTextSize(13);note.setTypeface(regular);note.setTextColor(PulseUi124.MUTED);box.addView(note);
         android.app.Dialog dialog=new android.app.Dialog(getContext());sceneDialog=dialog;dialog.setContentView(box);dialog.setCanceledOnTouchOutside(true);
         field.setOnEditorActionListener((view,action,event)->{if(action==android.view.inputmethod.EditorInfo.IME_ACTION_DONE||event!=null&&event.getKeyCode()==KeyEvent.KEYCODE_ENTER&&event.getAction()==KeyEvent.ACTION_DOWN&&event.getRepeatCount()==0){String error=commit.commit(field.getText().toString());if(error!=null)field.setError(error);else dialog.dismiss();return true;}return false;});
         dialog.setOnDismissListener(closed->{if(sceneDialog==dialog)sceneDialog=null;});dialog.show();android.view.Window window=dialog.getWindow();if(window!=null){window.setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));window.setLayout(Math.round((Math.min(390,getResources().getDisplayMetrics().widthPixels/getResources().getDisplayMetrics().density)-32)*getResources().getDisplayMetrics().density),android.view.ViewGroup.LayoutParams.WRAP_CONTENT);window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);}field.requestFocus();
@@ -1960,9 +2010,9 @@ public final class LumaView extends View {
         hero121Fit(c,store.playerNickname(),195,402,26,305,0xfff8f2ff,true,true);
         motionHit(new RectF(24,112,366,436),d("edit_nickname"),"profile_nickname",()->editPlayerNickname());
         int shownXp=(int)xpMotion121.sample(meta.xp(),frameTime,reduceMotion);
-        round(c,24,451,342,113,25,0xffe5dcf5);fit(c,Menu121Strings.get(store.resolvedLanguage(),"player_level",1+shownXp/MetaProgress.XP_PER_RANK),44,485,23,300,TEXT,true,false);
+        pulse124.panel(c,new RectF(24,451,366,564),PulseUi124.CYAN);fit(c,Menu121Strings.get(store.resolvedLanguage(),"player_level",1+shownXp/MetaProgress.XP_PER_RANK),44,485,23,300,TEXT,true,false);
         fit(c,Menu121Strings.get(store.resolvedLanguage(),"xp_progress",shownXp%MetaProgress.XP_PER_RANK,MetaProgress.XP_PER_RANK),44,512,15,300,TEXT,true,false);
-        round(c,44,533,302,9,5,0xffcec1e3);float amount=(shownXp%MetaProgress.XP_PER_RANK)/(float)MetaProgress.XP_PER_RANK;if(amount>0)round(c,44,533,302*amount,9,5,0xff8a6cc1);
+        round(c,44,533,302,9,5,PulseUi124.LINE);float amount=(shownXp%MetaProgress.XP_PER_RANK)/(float)MetaProgress.XP_PER_RANK;if(amount>0)round(c,44,533,302*amount,9,5,PulseUi124.CYAN);
         motionHit(new RectF(24,451,366,564),Menu121Strings.get(store.resolvedLanguage(),"xp_rule")+". "+meta.xp()+" XP","profile_progression",()->go("economy"));
         modernAction(c,new RectF(24,582,366,638),a21("evolution"),0xffbfe9d9,"profile_evolution",()->go("evolution"),true);
         fit(c,d("choose_flag"),24,678,20,342,TEXT,true,false);
@@ -2094,6 +2144,7 @@ public final class LumaView extends View {
             if(room.equals(store.homeRoom())){p.setColor(0xff70b5a5);c.drawCircle(x,156,2.8f,p);}
             sceneCaption(c,h("room_"+room),x,166,lane-8,12);motionHit(new RectF(x-lane/2+3,83,x+lane/2-3,173),h("room_"+room),"house_room_"+id,()->switchHomeRoom(id));
         }
+        if(!homeDecorating)fit(c,h("camera_hint"),195,192,12,342,PremiumUi.MUTED,false,true);
         if(homeDecorating){
             float yy=viewportH-184;
             if(homeSelection.isEmpty()){
@@ -2182,7 +2233,7 @@ public final class LumaView extends View {
             arrow123.tile(c,x,y,52,tile.direction,tile.switchMask,0,tile.id==0);
             hit(x-32,y-32,64,64,t("piece_description",tile.row+1,tile.col+1,t("direction_"+tile.direction.name().toLowerCase(Locale.ROOT))),()->firstLightMove(id));
         }
-        for(Iterator<Flight> it=practiceFlights.iterator();it.hasNext();){Flight f=it.next();float progress=(frameTime-f.at)/(reduceMotion?90f:360f);if(progress>=1){it.remove();continue;}float distance=reduceMotion?0:progress*progress*220;c.saveLayerAlpha(0,0,390,H,(int)(255*(1-progress)));sweet.tile(c,new RectF(f.x-26+f.tile.direction.dc*distance,f.y-26+f.tile.direction.dr*distance,f.x+26+f.tile.direction.dc*distance,f.y+26+f.tile.direction.dr*distance),f.tile.direction,f.color,f.tile.isSwitch(),false,false,frameTime,reduceMotion);c.restore();}
+        for(Iterator<Flight> it=practiceFlights.iterator();it.hasNext();){Flight f=it.next();float progress=(frameTime-f.at)/(reduceMotion?90f:360f);if(progress>=1){it.remove();continue;}float distance=reduceMotion?0:progress*progress*220;c.saveLayerAlpha(0,0,390,H,(int)(255*(1-progress)));arrow123.tile(c,f.x+f.tile.direction.dc*distance,f.y+f.tile.direction.dr*distance,52,f.tile.direction,f.tile.switchMask,0,false);c.restore();}
         if(!solved)wrap(c,h("first_gate"),195,623,330,14,TEXT,true,22);
         else objectAction(c,h("first_home")+"  →",24,610,342,58,PEACH,()->finishFirstLight());
         sceneAction(c,h("first_skip"),24,700,342,()->finishFirstLight());
@@ -2289,7 +2340,10 @@ public final class LumaView extends View {
         return b("portrait_current",t(character.nameKey),AvatarStyles.find(avatarStyle).name(store.resolvedLanguage()),items.toString());
     }
     private void showAppliedLook(String name,boolean showCompanion){
-        if(showCompanion)go("wardrobe");else{contentScroll=0;actionGeneration++;hits.clear();}
+        if(showCompanion){
+            if(menuHistory.contains("wardrobe"))returnToMenu("wardrobe");
+            else{navigatingBack=true;try{go("wardrobe");}finally{navigatingBack=false;}}
+        }else{contentScroll=0;actionGeneration++;hits.clear();}
         sfx(AudioEngine.Sound.SELECT);haptic();notice(b("look_applied",name));
     }
     private View companionPreview(Catalog.CharacterItem who,AvatarLoadout gear,List<CosmeticCatalog.Item> clothes){
@@ -2657,6 +2711,7 @@ public final class LumaView extends View {
     private void previewCosmetic(boolean chars,int index){openItem(chars?"character":"theme",chars?Catalog.CHARACTERS[index].id:Catalog.SKINS[index].id);}
     /** Ordinary scrollable item page: looking never grants, spends or equips an item. */
     private void openItem(String kind,String id){
+        if(!screen.equals("wardrobe")&&!screen.equals("item"))wardrobePreview124=false;
         boolean fromPlay=screen.equals("play");if(!screen.equals("item"))detailParent=navParent();
         detailKind=kind;detailId=id;detailMessage="";detailHeight=1100;go("item");if(fromPlay)menuHistory.push("play");
     }
@@ -2781,10 +2836,11 @@ public final class LumaView extends View {
             int price=cloth!=null?cloth.priceCoins:gear!=null?gear.priceCoins:who!=null?who.price:theme.price;
             boolean direct=cloth!=null?cloth.priceCoins>0:gear!=null?gear.source==AvatarGearCatalog.Source.EARNED_COINS:true;
             if(!equipped&&(owned||direct)){
-                String action=owned?(who!=null?q123("show_home"):e("action_equip")):price+" LumaCoins";
+                String action=owned?(cloth!=null&&wardrobePreview124?q124("try_on"):who!=null?q123("show_home"):e("action_equip")):price+" LumaCoins";
                 objectAction(c,action,24,y,342,54,PEACH,()->savedAction(()->{
                     if(!owned){boolean bought=cloth!=null?store.purchaseCosmetic(cloth.id):gear!=null?store.purchaseAvatarGear(gear.id):who!=null?store.purchaseCharacter(who.id):store.purchaseSkin(theme.id);
                         if(!bought){notice(t("not_enough"));return;}sfx(AudioEngine.Sound.PURCHASE);notice(e("owned"));actionGeneration++;hits.clear();return;}
+                    if(cloth!=null&&wardrobePreview124){returnToMenu("wardrobe");tryCosmetic123(cloth);return;}
                     boolean applied=cloth!=null?store.equipCosmetic(cloth.id):gear!=null?store.equipAvatarGear(gear.id):who!=null?store.equipCharacter(who.id):store.equipSkin(theme.id);
                     if(applied)showAppliedLook(name,theme==null);else notice(b("item_unavailable"));
                 }));y+=73;
@@ -2803,7 +2859,7 @@ public final class LumaView extends View {
         fit(c,Menu121Strings.get(store.resolvedLanguage(),"coins_role"),24,68,12,342,0xff74618e,false,false);
         String[] tabs={m20("shop_tab_powers"),m20("shop_tab_looks"),m20("shop_tab_gold")};
         for(int i=0;i<3;i++){final int category=i;float xx=24+i*116;boolean on=shopCategory==i;RectF area=new RectF(xx,88,xx+110,146);
-            round(c,xx,88,110,58,21,on?0xff715496:0xffeae3f3);hero121Fit(c,tabs[i],area.centerX(),123,13,100,on?0xfffffaff:TEXT,true,true);int before=hits.size();motionHit(area,tabs[i],"shop_category_"+i,()->selectShopCategory(category));if(hits.size()>before)hits.get(hits.size()-1).selected=on;
+            round(c,xx,88,110,58,21,on?0xffc7effb:0xffedf8ff);hero121Fit(c,tabs[i],area.centerX(),123,13,100,on?0xfffffaff:TEXT,true,true);int before=hits.size();motionHit(area,tabs[i],"shop_category_"+i,()->selectShopCategory(category));if(hits.size()>before)hits.get(hits.size()-1).selected=on;
         }
         round(c,24,161,342,44,16,shopCategory==2?0xffe9e1f5:0xffffefd0);if(shopCategory==2)shopArt.gold(c,48,183,14,frameTime,reduceMotion);else shopArt.coin(c,48,183,14,frameTime,reduceMotion);
         fit(c,Menu121Strings.get(store.resolvedLanguage(),shopCategory==2?"gold_role":"coins_loop"),72,188,12,278,0xff6b4d6f,true,false);
@@ -3063,11 +3119,11 @@ public final class LumaView extends View {
         label(276,90,90,43,budgetLabel);
         sweet.progress(c,new RectF(24,139,366,144),1f-board.remainingCount()/(float)board.level.tiles.size(),SweetUi.MINT);
         float boardW=scene.boardWidth;cell=boardW/board.level.size;bx=scene.boardX;by=scene.boardY;
-        round(c,bx-14,by-10,boardW+28,boardW+28,25,0x146b5381);
-        round(c,bx-13,by-13,boardW+26,boardW+26,25,0xfffffcfa);
-        stroke(c,new RectF(bx-13,by-13,bx+boardW+13,by+boardW+13),25,0xffe8e0ef,1);
+        round(c,bx-14,by-9,boardW+28,boardW+28,31,0x20277db2);
+        round(c,bx-13,by-13,boardW+26,boardW+26,31,0xfaffffff);
+        stroke(c,new RectF(bx-13,by-13,bx+boardW+13,by+boardW+13),31,0xffbbe8f5,1.4f);
         for(int row=0;row<board.level.size;row++)for(int col=0;col<board.level.size;col++){
-            p.setColor(0x386f5785);c.drawCircle(bx+(col+.5f)*cell,by+(row+.5f)*cell,1.8f,p);
+            p.setColor(0x226fb8d6);c.drawCircle(bx+(col+.5f)*cell,by+(row+.5f)*cell,1.8f,p);
         }
         drawGates(c,boardW);drawBarriers(c);
         if(selected>=0&&board.isPresent(selected))drawRay(c,board.level.tile(selected));
@@ -3124,9 +3180,9 @@ public final class LumaView extends View {
         // Overlays are anchored to the visible window, including after reaching
         // the compact action row by scrolling the puzzle scene.
         c.save();c.translate(0,contentScroll);float oldDrawingScroll=drawingScroll,oldHeight=H;drawingScroll=0;H=viewportH;
-        round(c,0,0,390,82,0,0xfffbf7ff);
+        round(c,0,0,390,82,0,PulseUi124.WHITE);
         scenic.object(c,new RectF(20,18,68,66),0xffb7a6cb,false,ScenicUi.Kind.PAUSE);motionHit(new RectF(20,18,68,66),t("pause"),"play_pause",()->setPaused(true));
-        scenic.object(c,new RectF(322,18,370,66),0xff9fafd0,false,ScenicUi.Kind.BOOK);motionHit(new RectF(322,18,370,66),t("how_to_play"),"play_help",()->setHelp(true));
+        scenic.control(c,new RectF(322,18,370,66),PulseUi124.CYAN,false,ScenicUi.Kind.BOOK);motionHit(new RectF(322,18,370,66),t("how_to_play"),"play_help",()->setHelp(true));
         fit(c,mode==5?x("expedition"):t("level_number",levelIndex),195,39,20,230,TEXT,true,true);
         fit(c,hasLegacyElements123()?q123("saved_elements"):worldName(levelIndex),195,61,12,230,PremiumUi.MUTED,false,true);
         if(battleSheet123&&!paused&&!won)drawBattleSheet123(c);
@@ -3143,7 +3199,7 @@ public final class LumaView extends View {
     }
     private void compactPlayAction(Canvas c,PlaySceneLayout.Rect area,String caption,String description,ScenicUi.Kind kind,Runnable action){
         float artSize=42,center=area.centerX();
-        scenic.object(c,new RectF(center-artSize/2,area.top,center+artSize/2,area.top+artSize),0xffaaa1cd,pressed!=null&&pressed.name.equals(description),kind);
+        scenic.control(c,new RectF(center-artSize/2,area.top,center+artSize/2,area.top+artSize),PulseUi124.CYAN,pressed!=null&&pressed.name.equals(description),kind);
         android.text.StaticLayout words=twoLineLayout(caption,area.width()-6,12,TEXT,true);
         c.save();c.translate(area.left+3,area.top+artSize+4);words.draw(c);c.restore();
         hit(area.left,area.top,area.width(),area.height(),description,action);
@@ -3339,7 +3395,8 @@ public final class LumaView extends View {
     private void resetMoveRun(){
         economyPolicy121=board.level.progressionVersion==6&&(mode==0||mode==5);lastPaidUndo121="";if(economyPolicy121)store.activateEconomy121();
         elements121=ElementalShell121.createJourney123(board.level,mode,levelIndex);exitChain121=new ExitChain121();
-        battleState=CompanionBattle.State.start(store.companionSquad());battleSelected=-1;battleEffectAt=0;
+        List<String> runTeam124=store.companionSquad();List<Integer> runLevels124=new ArrayList<>();for(String member:runTeam124)runLevels124.add(store.companionStats(member).level);
+        battleState=CompanionBattle.State.start(runTeam124,runLevels124);runCaptain124=battleState==null||battleState.team().isEmpty()?"":battleState.team().get(0);battleSelected=-1;battleEffectAt=0;
         if(!pendingContinuation.isEmpty())com.androidhit.lumadrift.commerce.CommerceActivity.acknowledgeContinuationReward(getContext(),pendingContinuation);
         moveBudget=board.level.progressionVersion==6?MoveBudget.start(mode==5?0:mode,board.level):MoveBudget.startDeliberate(mode==5?0:mode,board.level);flowRemaining=0;powerGate.cancel();lastPowerRequest="";effectsPausedAt=0;runId=UUID.randomUUID().toString();pendingContinuation=lastAppliedContinuation="";shieldCharges=0;gearGrace=0;focusUntil=trailUntil=0;trail=new int[0];safeHighlights.clear();newlyFreed.clear();consequenceUntil=0;
     }
@@ -3448,7 +3505,7 @@ public final class LumaView extends View {
         stopTimer();resultStars=JourneyExperience.stars(moveBudget);
         try{
             VictoryReceipt receipt=readVictory();
-            if(receipt==null||!receipt.matches(runId,mode,levelIndex,eventIndex,eventPeriod))receipt=VictoryReceipt.pending(runId,mode,levelIndex,eventIndex,eventPeriod,resultStars,store.coins(),meta.xp(),activeElapsed,moveBudget.used(),moveBudget.isUnlimited()?0:moveBudget.total(),undos,character.id);
+            if(receipt==null||!receipt.matches(runId,mode,levelIndex,eventIndex,eventPeriod))receipt=VictoryReceipt.pending124(runId,mode,levelIndex,eventIndex,eventPeriod,resultStars,store.coins(),meta.xp(),activeElapsed,moveBudget.used(),moveBudget.isUnlimited()?0:moveBudget.total(),undos,character.id,runCaptain124);
             // Persist the baseline before any award. Interrupted idempotent grants
             // then recover their exact durable deltas instead of reporting zero.
             if(!victoryPreferences().edit().putString("receipt",receipt.encode()).commit())throw new IllegalStateException("Victory receipt baseline unavailable");
@@ -3458,8 +3515,8 @@ public final class LumaView extends View {
             else if(mode==2)reward=store.completeWeekly(eventPeriod,eventIndex,resultStars);
             else if(mode==3)reward=store.completeRemix(levelIndex,resultStars);else if(mode==5){if(store.completeExpeditionStage(eventPeriod,runId,levelIndex,resultStars)==null)throw new IllegalStateException("Expedition stage receipt refused");reward=0;}else reward=0;
             if(mode!=4&&mode!=5)reward+=store.claimAvatarVictoryBonus(mode,mode==1||mode==2?eventIndex:levelIndex,eventPeriod);
-            boolean badgeBefore=meta.badgeUnlocked();xpReward=mode==5?0:meta.recordWin(mode,mode==1||mode==2?eventIndex:levelIndex,resultStars,eventPeriod);
-            receipt=receipt.settle(store.coins(),meta.xp());
+            boolean badgeBefore=meta.badgeUnlocked();
+            receipt=rankCopies124.settleVictoryReceipt(receipt,board.isSolved());xpReward=receipt.xp;
             if(!victoryPreferences().edit().putString("receipt",receipt.encode()).commit())throw new IllegalStateException("Victory receipt result unavailable");
             publishVictory(receipt,false);syncStyle();
             if(!badgeBefore&&meta.badgeUnlocked())notice(t("badge_unlocked"));
@@ -3480,45 +3537,102 @@ public final class LumaView extends View {
     private void drawSaveRetry(Canvas c){scrim(c);float y=H/2-130;scenic.windowModal(c,new RectF(24,y,366,y+260),0xfff9f2ff);wrap(c,t("commerce_save_error"),195,y+54,290,17,TEXT,true,25);objectAction(c,t("retry"),44,y+143,302,49,skin.accent2,()->{powerSaveBlocked=!saveSession();if(!powerSaveBlocked){reconcileUndo121();reconcilePowerReservation();if(!powerSaveBlocked){if(board.isSolved())finishLevel();else resumeFlow();}}});}
     private boolean restartConfirm=false,deadEndOpen=false,powerTrayOpen=false;
     private String powerConfirmation="";
-    private void scrim(Canvas c){round(c,0,0,390,H,0,0x80524a69);hits.clear();}
+    private void scrim(Canvas c){round(c,0,0,390,H,0,0x99163b62);hits.clear();}
     private void drawPause(Canvas c){
-        scrim(c);float y=H/2-192;scenic.windowModal(c,new RectF(24,y,366,y+384),0xfff9f2ff);mascot(c,195,y+74,33,character,false);
-        center(c,t(restartConfirm?"restart":"paused"),195,y+137,25,TEXT,true);
-        if(restartConfirm){wrap(c,t("confirm_restart"),195,y+168,280,13,skin.muted,true,18);
-            objectAction(c,restartLabel120(),44,y+224,302,49,PEACH,()->{restartRun();});
-            sceneAction(c,t("cancel"),44,y+291,302,()->{setPaused(false);restartConfirm=false;});
+        scrim(c);String note=q124(restartConfirm?"restart_note":"pause_note");
+        android.text.StaticLayout copy=twoLineLayout(note,318,15,PulseUi124.MUTED,true);
+        PauseLayout124 modal=new PauseLayout124(viewportH,battleMinimumTouch(),minimumTextSize(),copy.getHeight(),restartConfirm);
+        pulse124.panel(c,new RectF(24,modal.top,366,modal.top+modal.height),PulseUi124.CYAN);
+        if(modal.portraitSize>0){RectF art=new RectF(42,modal.top+13,42+modal.portraitSize,modal.top+13+modal.portraitSize);pulse124.orb(c,art,PulseUi124.CYAN,false);drawBattleActor(c,character.id,art,CompanionMotion.Action.STANCE,CompanionMotion.Facing.FRONT,frameTime,true);}
+        fit(c,q124(restartConfirm?"restart":"pause"),modal.portraitSize>0?231:195,modal.titleY,24,modal.portraitSize>0?222:312,INK,true,true);
+        if(modal.bodyHeight>0){c.save();c.clipRect(36,modal.bodyY,354,modal.bodyY+modal.bodyHeight);c.translate(36,modal.bodyY);copy.draw(c);c.restore();label(36,modal.bodyY,318,modal.bodyHeight,note);}
+        if(restartConfirm){
+            RectF cost=new RectF(44,modal.costY-6,346,modal.costY+minimumTextSize()*1.5f+13);pulse124.metric(c,cost,SessionEnergyStore.costsEnergy(mode,levelIndex)?PulseUi124.CORAL:PulseUi124.CYAN);
+            pulseCaption124(c,q124(SessionEnergyStore.costsEnergy(mode,levelIndex)?"restart_paid":"restart_free"),new RectF(cost.left+10,cost.top+3,cost.right-10,cost.bottom-3),INK,true);
+            modernAction(c,new RectF(modal.primary.left,modal.primary.top,modal.primary.right,modal.primary.bottom),restartLabel120(),PulseUi124.CORAL,"pause_restart_confirm",()->restartRun(),true);
+            modernAction(c,new RectF(modal.secondary.left,modal.secondary.top,modal.secondary.right,modal.secondary.bottom),t("cancel"),PulseUi124.CYAN,"pause_restart_cancel",()->{setPaused(false);restartConfirm=false;},true);
         }else{
-            objectAction(c,t("resume"),44,y+174,302,49,PEACH,()->setPaused(false));
-            sceneAction(c,t("how_to_play"),44,y+239,302,()->setHelp(true));
-            sceneAction(c,t("exit"),44,y+299,302,()->{saveSession();goRoot("adventure");});
+            modernAction(c,new RectF(modal.primary.left,modal.primary.top,modal.primary.right,modal.primary.bottom),t("resume"),PulseUi124.CYAN,"pause_resume",()->setPaused(false),true);
+            modernAction(c,new RectF(modal.secondary.left,modal.secondary.top,modal.secondary.right,modal.secondary.bottom),t("how_to_play"),PulseUi124.BLUE,"pause_help",()->setHelp(true),true);
+            modernAction(c,new RectF(modal.tertiary.left,modal.tertiary.top,modal.tertiary.right,modal.tertiary.bottom),t("exit"),PulseUi124.CORAL,"pause_exit",()->{saveSession();goRoot("adventure");},true);
         }
     }
     private void victoryButton120(Canvas c,PlaySceneLayout.Rect area,String caption,int color,String id,Runnable action){modernAction(c,new RectF(area.left,area.top,area.right,area.bottom),caption,color,id,action,true);}
+    private String victoryPanelKey124="";
+    private VictoryPanel124 victoryPanelCache124;
+    private final class VictoryPanel124 {
+        final Catalog.CharacterItem actor;
+        final android.text.StaticLayout title,note,capacity;
+        final String noteIcon;
+        final float headerHeight,height;
+        VictoryPanel124(Catalog.CharacterItem actor,String title,String note,String capacity,String noteIcon){
+            this.actor=actor;this.noteIcon=noteIcon;
+            this.title=victoryWords124(title,232,19,PulseUi124.INK,true);
+            this.note=note.isEmpty()?null:victoryWords124(note,noteIcon.isEmpty()?306:274,15,PulseUi124.INK,true);
+            this.capacity=capacity.isEmpty()?null:victoryWords124(capacity,306,14,PulseUi124.MUTED,false);
+            headerHeight=Math.max(78,this.title.getHeight()+28);
+            height=headerHeight+(this.note==null?0:this.note.getHeight()+12)+(this.capacity==null?0:this.capacity.getHeight()+12)+12;
+        }
+    }
+    private android.text.StaticLayout victoryWords124(String value,int width,float size,int color,boolean strong){
+        android.text.TextPaint copy=new android.text.TextPaint(Paint.ANTI_ALIAS_FLAG);copy.setTypeface(strong?bold:regular);copy.setTextSize(Math.max(size,minimumTextSize()));copy.setColor(color);
+        return android.text.StaticLayout.Builder.obtain(value,0,value.length(),copy,width).setIncludePad(false).setLineSpacing(4,1).build();
+    }
+    private VictoryPanel124 victoryPanel124(){
+        VictoryReceipt receipt=victoryResult;String captain=receipt!=null&&receipt.rankAware?receipt.captainId:"";
+        Catalog.CharacterItem actor=Catalog.character(captain);if(actor==null)actor=receipt==null?character:Catalog.character(receipt.avatarId);if(actor==null)actor=character;
+        int resultXp=receipt==null?meta.xp():receipt.beforeXp+receipt.xp;
+        int rank=receipt!=null&&receipt.rankAfter>0?receipt.rankAfter:RankCopyRules124.rankForXp(resultXp);
+        String title=receipt!=null&&receipt.rankAfter>receipt.rankBefore&&(receipt.rankCopies>0||receipt.rankCoins>0)?q124("rank_reached",rank):rank==RankCopyRules124.rankForXp(resultXp)?q124("rank_toward",rank,resultXp%RankCopyRules124.XP_PER_RANK):t("rank",rank);
+        String note="",capacity="",icon="";
+        if(receipt!=null&&receipt.rankCopies>0){note=q124("captain_copy",t(actor.nameKey),receipt.rankCopies);icon="copies";}
+        else if(receipt!=null&&receipt.rankCoins>0){note=q124("captain_max",t(actor.nameKey),receipt.rankCoins);icon="coins";}
+        else if(receipt!=null&&receipt.rankRewardStatus.equals("LEGACY_NO_CAPTAIN"))note=q124("legacy_captain");
+        if(!captain.isEmpty()&&store.ownsCharacter(captain)&&CompanionBattle.find(captain)!=null){int level=store.companionStats(captain).level;capacity=q124("next_capacity",t(actor.nameKey),level,CompanionProgression.skillCharges(level));}
+        String key=actor.id+"|"+title+"|"+note+"|"+capacity+"|"+minimumTextSize();
+        if(!key.equals(victoryPanelKey124)||victoryPanelCache124==null){victoryPanelKey124=key;victoryPanelCache124=new VictoryPanel124(actor,title,note,capacity,icon);}
+        return victoryPanelCache124;
+    }
+    private VictoryLayout victoryLayout124(){
+        boolean gifts=readyGiftCount120()>0;VictoryLayout probe=new VictoryLayout(viewportH,minimumTextSize(),battleMinimumTouch(),gifts);
+        float required=probe.height-probe.metricsY+probe.starsY+30+victoryPanel124().height+24;
+        return new VictoryLayout(Math.max(viewportH,required),minimumTextSize(),battleMinimumTouch(),gifts);
+    }
+    private void victoryCopy124(Canvas c,android.text.StaticLayout copy,float x,float y,String semanticId){
+        c.save();c.translate(x,y);copy.draw(c);c.restore();int before=hits.size();label(x,y,copy.getWidth(),copy.getHeight(),copy.getText().toString());
+        if(hits.size()>before)hits.get(hits.size()-1).semanticId=semanticId;
+    }
     private void drawWin(Canvas c){
-        hits.clear();int gifts=readyGiftCount120();VictoryLayout area=new VictoryLayout(viewportH,minimumTextSize(),battleMinimumTouch(),gifts>0);
-        p.setShader(new LinearGradient(0,0,390,area.height,new int[]{0xfffff2da,0xfff4edff,0xffe6f7ef},null,Shader.TileMode.CLAMP));c.drawRect(0,0,390,area.height,p);p.setShader(null);
+        int checkpoint=c.save();c.translate(0,-contentScroll);float priorScroll=drawingScroll;drawingScroll=contentScroll;
+        hits.clear();int gifts=readyGiftCount120();VictoryLayout area=victoryLayout124();VictoryPanel124 panel=victoryPanel124();
+        c.drawColor(PulseUi124.BACKGROUND);
         long age=Math.max(0,frameTime-winAt);int shown=VictoryLayout.displayedStars(resultStars,age,reduceMotion);
         for(int k=0;k<12;k++){float xx=22+(k*79%346),yy=25+(k*113%Math.max(80,(int)area.height-80));float pulse=reduceMotion?1:.75f+.25f*(float)Math.sin(age*.002+k);star(c,xx,yy,3*pulse,alpha(k%2==0?GOLD:0xffb4d8ca,100));}
-        scenic.object(c,new RectF(15,55,63,103),0xffbba7d9,false,ScenicUi.Kind.RETURN);hit(15,55,48,48,vr("map"),()->leaveVictory(()->goRoot(mode==5?"expedition":"adventure")));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_back";
+        scenic.object(c,new RectF(15,55,63,103),0xffbba7d9,false,ScenicUi.Kind.RETURN);int beforeBack=hits.size();hit(15,55,48,48,vr("map"),()->leaveVictory(()->goRoot(mode==5?"expedition":"adventure")));if(hits.size()>beforeBack)hits.get(hits.size()-1).semanticId="victory_back";
         fit(c,t("victory"),195,area.titleY,29,245,TEXT,true,true);
         for(int k=0;k<3;k++){float pop=reduceMotion?1:Math.max(.65f,Math.min(1.12f,(age-180-k*250)/180f));star(c,143+k*52,area.starsY,18*(k<shown?pop:1),k<shown?GOLD:0xffddd5e9);}
-        Catalog.CharacterItem actor=victoryResult==null?character:Catalog.character(victoryResult.avatarId);if(actor==null)actor=character;
-        if(area.avatarRadius>=24){
-            sceneAura(c,new RectF(195-area.avatarRadius*1.55f,area.avatarY-area.avatarRadius*1.25f,195+area.avatarRadius*1.55f,area.avatarY+area.avatarRadius*1.25f),0xffe8d3f0,frameTime,true);
-            drawCompanion(c,actor,195,area.avatarY,area.avatarRadius,AvatarStyles.find(avatarStyle),AvatarStage.Pose.WIN,frameTime,reduceMotion,loadout,presentedCosmetics());
-            float bubbleY=area.avatarY-area.avatarRadius*.88f;round(c,230,bubbleY-28,139,37,18,0xfffffaf0);fit(c,vr("nice"),299,bubbleY-4,14,125,TEXT,true,true);
-        }
+        float panelY=area.starsY+30;pulse124.panel(c,new RectF(24,panelY,366,panelY+panel.height),PulseUi124.CYAN);
+        drawCompanion(c,panel.actor,66,panelY+panel.headerHeight/2,17,AvatarStyles.find(avatarStyle),AvatarStage.Pose.WIN,frameTime,reduceMotion,loadout,presentedCosmetics());
+        victoryCopy124(c,panel.title,110,panelY+(panel.headerHeight-panel.title.getHeight())/2,"victory_rank");
+        float detailY=panelY+panel.headerHeight;
+        if(panel.note!=null){if(!panel.noteIcon.isEmpty())resourceIcon124(c,panel.noteIcon,new RectF(42,detailY,66,detailY+24),panel.noteIcon.equals("copies")?ScenicUi.Kind.DUMMY:ScenicUi.Kind.COIN,PulseUi124.ORANGE);victoryCopy124(c,panel.note,panel.noteIcon.isEmpty()?42:74,detailY,"victory_captain_reward");detailY+=panel.note.getHeight()+12;}
+        if(panel.capacity!=null)victoryCopy124(c,panel.capacity,42,detailY,"victory_next_capacity");
         int spent=victoryResult==null?moveBudget.used():victoryResult.used,total=victoryResult==null?moveBudget.total():victoryResult.total;
         String moves=moveBudget.isUnlimited()?"∞":spent+" / "+total;
         fit(c,vr("moves")+" · "+moves,112,area.metricsY,14,174,TEXT,true,true);
         fit(c,vr("time")+" · "+VictoryLayout.clock(activeElapsed),286,area.metricsY,14,174,TEXT,true,true);
         float progress=VictoryLayout.rewardProgress(age,reduceMotion);int shownCoins=Math.round(reward*progress),shownXp=Math.round(xpReward*progress);
-        round(c,0,0,390,42,0,0xfffbf7ff);drawPlayWalletHud120(c,victoryResult==null?store.coins():victoryResult.beforeCoins+shownCoins);
+        round(c,0,0,390,42,0,PulseUi124.WHITE);drawPlayWalletHud120(c,store.coins());
         if(mode==5){fit(c,x("step",eventIndex+1,ExpeditionCatalog.STAGES)+" · "+x("route_saved"),195,area.rewardY-10,17,340,TEXT,true,true);}
-        else{coin(c,56,area.rewardY-15,11);fit(c,"+"+shownCoins+" LumaCoins",165,area.rewardY-7,22,218,TEXT,true,true);fit(c,"+"+shownXp+" XP",312,area.rewardY-7,16,92,TEXT,true,true);}
-        fit(c,reward==0&&xpReward==0&&mode!=5?vr("replay"):vr("saved"),195,area.rewardY+14,12,340,PremiumUi.MUTED,false,true);
-        label(24,area.metricsY-24,342,area.rewardY-area.metricsY+60,t("victory")+", "+resultStars+" "+t("stars")+", "+vr("moves")+" "+moves+", "+VictoryLayout.clock(activeElapsed)+", +"+reward+" LumaCoins, +"+xpReward+" XP");
-        if(area.gifts!=null){victoryButton120(c,area.gifts,"✦ "+vr("gifts",gifts)+"  →",0xffffe1ac,"victory_gifts",()->leaveVictory(()->openRewards(3)));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_gifts";}
+        else if(reward==0&&xpReward==0)fit(c,vr("replay"),195,area.rewardY-7,16,340,PulseUi124.MUTED,false,true);
+        else{
+            resourceIcon124(c,"coins",new RectF(34,area.rewardY-31,62,area.rewardY-3),ScenicUi.Kind.COIN,PulseUi124.ORANGE);
+            fit(c,"+"+shownCoins+" LumaCoins",145,area.rewardY-7,22,158,TEXT,true,true);
+            resourceIcon124(c,"xp",new RectF(245,area.rewardY-31,273,area.rewardY-3),ScenicUi.Kind.MEDAL,PulseUi124.BLUE);
+            fit(c,"+"+shownXp+" XP",321,area.rewardY-7,16,86,TEXT,true,true);
+        }
+        label(24,area.metricsY-24,342,area.rewardY-area.metricsY+48,t("victory")+", "+resultStars+" "+t("stars")+", "+vr("moves")+" "+moves+", "+VictoryLayout.clock(activeElapsed)+", +"+reward+" LumaCoins, +"+xpReward+" XP");
+        if(area.gifts!=null)victoryButton120(c,area.gifts,"✦ "+vr("gifts",gifts)+"  →",PulseUi124.ORANGE,"victory_gifts",()->leaveVictory(()->openRewards(3)));
         victoryButton120(c,area.next,(mode==4?t("retry"):t("next"))+"  →",0xffbde8d8,"victory_next",()->leaveVictory(()->{
             if(mode==5)goRoot("expedition");
             else if(mode==0&&levelIndex<BalancedCatalog.LEVEL_COUNT)start(levelIndex+1,0,0);
@@ -3526,9 +3640,10 @@ public final class LumaView extends View {
             else if(mode==1&&eventIndex<2&&eventPeriod.equals(store.dailyId()))start(1,1,eventIndex+1);
             else if(mode==2&&eventIndex<6&&eventPeriod.equals(store.weeklyId()))start(1,2,eventIndex+1);
             else if(mode==4)openChallenge(friendCode);else goRoot("adventure");
-        }));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_next";
-        victoryButton120(c,area.map,(mode==5?x("route"):vr("map")),0xffeee7f7,"victory_map",()->leaveVictory(()->goRoot(mode==5?"expedition":"adventure")));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_map";
-        victoryButton120(c,area.shop,vr("shop")+"  →",0xffe7d6f7,"victory_shop",()->leaveVictory(()->goRoot("shop")));if(!hits.isEmpty())hits.get(hits.size()-1).semanticId="victory_shop";
+        }));
+        victoryButton120(c,area.map,(mode==5?x("route"):vr("map")),PulseUi124.CYAN,"victory_map",()->leaveVictory(()->goRoot(mode==5?"expedition":"adventure")));
+        victoryButton120(c,area.shop,vr("shop")+"  →",PulseUi124.VIOLET,"victory_shop",()->leaveVictory(()->goRoot("shop")));
+        drawingScroll=priorScroll;c.restoreToCount(checkpoint);
     }
     private void drawHelp(Canvas c){
         if(board!=null&&moveBudget!=null&&moveBudget.policyVersion()==MoveBudget.FOCUSED_RELAY_POLICY_VERSION){

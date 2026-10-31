@@ -10,6 +10,7 @@ public final class LivingWorld121 {
     private final Paint p=new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path path=new Path();
     private final RectF rect=new RectF();
+    private final PulseUi124 pulse124=new PulseUi124();
     private static final int[] SKY={0xffe6f8ff,0xffe4faf0,0xffffeee0,0xffe7e8ff,0xffdff8fb,0xfffff3d7,0xffeee3ff,0xffffe5dc,0xffffe6f4,0xffe5e4ff};
     private static final int[] INK={0xff68adc1,0xff65bba4,0xffda9e79,0xff9894d3,0xff6ebdcc,0xffcfad62,0xffad83cc,0xffcc8b85,0xffc782af,0xff8d8ccb};
     private void fill(int color){p.setShader(null);p.setStyle(Paint.Style.FILL);p.setColor(color);}
@@ -49,12 +50,14 @@ public final class LivingWorld121 {
     }
     public void shell(Canvas c,float x,float y,float size,int type,int layers,long now,boolean still){
         float r=size*.5f;int tone=type==1?0xff3a96c6:type==2?0xffd25f4b:0xff367dc5;
-        rect.set(x-r,y-r,x+r,y+r);fill(alpha(tone,60));c.drawRoundRect(rect,11,11,p);
-        p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(2.8f);p.setColor(alpha(tone,230));c.drawRoundRect(rect,11,11,p);
-        // Distinct silhouettes, not colour alone: crystal cracks, flame tongues, water waves.
-        if(type==1){path.reset();path.moveTo(x-r*.8f,y-r*.85f);path.lineTo(x-r*.42f,y-r*.12f);path.lineTo(x-r*.72f,y+r*.38f);path.moveTo(x+r*.7f,y-r*.8f);path.lineTo(x+r*.4f,y+r*.15f);path.lineTo(x+r*.78f,y+r*.7f);c.drawPath(path,p);}
-        else if(type==2){for(int i=0;i<3;i++){float xx=x-r*.65f+i*r*.65f,dy=still?0:(float)Math.sin(now*.004+i)*2;path.reset();path.moveTo(xx-5,y-r+4);path.quadTo(xx-10,y-r-7+dy,xx+1,y-r-13+dy);path.quadTo(xx-2,y-r-3,xx+6,y-r+4);c.drawPath(path,p);}}
-        else{for(int n=0;n<2;n++){float yy=y+r*(.35f+n*.32f);path.reset();path.moveTo(x-r+4,yy);path.cubicTo(x-r*.4f,yy-5,x+r*.4f,yy+5,x+r-4,yy);c.drawPath(path,p);}}
-        fill(0xfffcfcff);c.drawCircle(x+r-3,y+r-3,9,p);fill(tone);p.setTextSize(12);p.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);p.setTextAlign(Paint.Align.CENTER);c.drawText(String.valueOf(layers),x+r-3,y+r+1,p);p.setTextAlign(Paint.Align.LEFT);
+        // The arrow remains visible. A round rim and a separate element medallion identify the shell.
+        fill(alpha(tone,18));c.drawCircle(x,y,r*.97f,p);
+        p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(2.5f);p.setColor(alpha(tone,210));c.drawCircle(x,y,r*.97f,p);
+        float badge=Math.max(11,size*.20f),xx=x+r*.69f,yy=y-r*.67f;
+        fill(0xffffffff);c.drawCircle(xx,yy,badge,p);
+        ArtLibrary art=CharacterSprites.library();String key=type==1?"ice":type==2?"fire":"water";
+        if(art!=null)art.draw(c,"pulse/element/"+key,xx-badge*.82f,yy-badge*.82f,xx+badge*.82f,yy+badge*.82f,.5f,.5f,255);
+        rect.set(xx+badge*.12f,yy+badge*.16f,xx+badge*1.12f,yy+badge*1.16f);
+        fill(tone);c.drawOval(rect,p);pulse124.number(c,String.valueOf(layers),rect,12,10,0xffffffff);
     }
 }

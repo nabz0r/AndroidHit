@@ -1,0 +1,134 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING: The option setting 'android.experimental.lint.version=9.4.0' is experimental.
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preProductionReleaseBuild UP-TO-DATE
+> Task :app:mergeProductionReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeProductionReleaseNativeLibs UP-TO-DATE
+> Task :app:stripProductionReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractProductionReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeProductionReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeProductionReleaseArtProfile UP-TO-DATE
+> Task :app:expandProductionReleaseL8ArtProfileWildcards UP-TO-DATE
+> Task :app:checkProductionReleaseDuplicateClasses UP-TO-DATE
+> Task :app:generateProductionReleaseBuildConfig
+> Task :app:javaPreCompileProductionRelease UP-TO-DATE
+> Task :app:checkProductionReleaseAarMetadata UP-TO-DATE
+> Task :app:generateProductionReleaseResValues UP-TO-DATE
+> Task :app:mapProductionReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateProductionReleaseResources UP-TO-DATE
+> Task :app:mergeProductionReleaseResources UP-TO-DATE
+> Task :app:packageProductionReleaseResources UP-TO-DATE
+> Task :app:parseProductionReleaseLocalResources UP-TO-DATE
+> Task :app:createProductionReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksProductionRelease UP-TO-DATE
+> Task :app:processProductionReleaseMainManifest
+> Task :app:processProductionReleaseManifest
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:processProductionReleaseJavaRes NO-SOURCE
+> Task :app:mergeProductionReleaseJavaResource UP-TO-DATE
+> Task :app:mergeProductionReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeProductionReleaseShaders UP-TO-DATE
+> Task :app:compileProductionReleaseShaders NO-SOURCE
+> Task :app:generateProductionReleaseAssets UP-TO-DATE
+> Task :app:processProductionReleaseManifestForPackage
+> Task :app:mergeProductionReleaseAssets UP-TO-DATE
+> Task :app:compressProductionReleaseAssets UP-TO-DATE
+> Task :app:extractProductionReleaseVersionControlInfo UP-TO-DATE
+> Task :app:collectProductionReleaseDependencies UP-TO-DATE
+> Task :app:sdkProductionReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningProductionRelease UP-TO-DATE
+> Task :app:writeProductionReleaseAppMetadata UP-TO-DATE
+> Task :app:writeProductionReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:preLabReleaseBuild UP-TO-DATE
+> Task :app:mergeLabReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeLabReleaseNativeLibs UP-TO-DATE
+> Task :app:stripLabReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractLabReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeLabReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeLabReleaseArtProfile UP-TO-DATE
+> Task :app:expandLabReleaseL8ArtProfileWildcards UP-TO-DATE
+> Task :app:checkLabReleaseDuplicateClasses UP-TO-DATE
+> Task :app:generateLabReleaseBuildConfig
+> Task :app:javaPreCompileLabRelease UP-TO-DATE
+> Task :app:checkLabReleaseAarMetadata UP-TO-DATE
+> Task :app:generateLabReleaseResValues UP-TO-DATE
+> Task :app:mapLabReleaseSourceSetPaths UP-TO-DATE
+> Task :app:generateLabReleaseResources UP-TO-DATE
+> Task :app:mergeLabReleaseResources UP-TO-DATE
+> Task :app:packageLabReleaseResources UP-TO-DATE
+> Task :app:parseLabReleaseLocalResources UP-TO-DATE
+> Task :app:createLabReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksLabRelease UP-TO-DATE
+> Task :app:processLabReleaseMainManifest
+> Task :app:processLabReleaseManifest
+> Task :app:processLabReleaseJavaRes NO-SOURCE
+> Task :app:mergeLabReleaseJavaResource UP-TO-DATE
+> Task :app:mergeLabReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeLabReleaseShaders UP-TO-DATE
+> Task :app:compileLabReleaseShaders NO-SOURCE
+> Task :app:generateLabReleaseAssets UP-TO-DATE
+> Task :app:mergeLabReleaseAssets UP-TO-DATE
+> Task :app:compressLabReleaseAssets UP-TO-DATE
+> Task :app:processLabReleaseManifestForPackage
+> Task :app:extractLabReleaseVersionControlInfo UP-TO-DATE
+> Task :app:collectLabReleaseDependencies UP-TO-DATE
+> Task :app:sdkLabReleaseDependencyData UP-TO-DATE
+> Task :app:validateSigningLabRelease UP-TO-DATE
+> Task :app:writeLabReleaseAppMetadata UP-TO-DATE
+> Task :app:writeLabReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:processProductionReleaseResources
+> Task :app:processLabReleaseResources
+
+> Task :app:compileProductionReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:mergeProductionReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :app:generateProductionReleaseLintVitalReportModel
+> Task :app:expandProductionReleaseArtProfileWildcards
+
+> Task :app:compileLabReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:mergeLabReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :app:generateLabReleaseLintVitalReportModel
+> Task :app:expandLabReleaseArtProfileWildcards
+> Task :app:lintVitalAnalyzeLabRelease
+> Task :app:lintVitalAnalyzeProductionRelease
+> Task :app:lintVitalReportLabRelease
+> Task :app:lintVitalReportProductionRelease
+> Task :app:lintVitalProductionRelease
+> Task :app:lintVitalLabRelease
+> Task :app:minifyProductionReleaseWithR8
+> Task :app:convertShrunkResourcesToBinaryProductionRelease
+> Task :app:optimizeProductionReleaseResources
+> Task :app:l8DexDesugarLibProductionRelease
+> Task :app:compileProductionReleaseArtProfile
+> Task :app:packageProductionRelease
+> Task :app:createProductionReleaseApkListingFileRedirect
+> Task :app:assembleProductionRelease
+> Task :app:minifyLabReleaseWithR8
+> Task :app:convertShrunkResourcesToBinaryLabRelease
+> Task :app:optimizeLabReleaseResources
+> Task :app:l8DexDesugarLibLabRelease
+> Task :app:compileLabReleaseArtProfile
+> Task :app:packageLabRelease
+> Task :app:createLabReleaseApkListingFileRedirect
+> Task :app:assembleLabRelease
+
+[Incubating] Problems report is available at: file:///Users/n/androidhit/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 32s
+95 actionable tasks: 38 executed, 57 up-to-date

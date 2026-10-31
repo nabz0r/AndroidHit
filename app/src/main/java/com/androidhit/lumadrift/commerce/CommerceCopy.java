@@ -25,6 +25,8 @@ final class CommerceCopy {
         add("owned","In your collection","Dans ta collection","In deiner Sammlung","En tu colección","Na tua coleção","Nella tua collezione");
         add("buy","Unlock","Débloquer","Freischalten","Desbloquear","Desbloquear","Sblocca");
         add("google","Google Play price","Prix Google Play","Google-Play-Preis","Precio Google Play","Preço Google Play","Prezzo Google Play");
+        add("reward_retry","Retry saving reward","Réessayer l’enregistrement","Belohnung erneut speichern","Reintentar guardar recompensa","Tentar salvar a recompensa","Riprova a salvare il premio");
+        add("reward_pending","Your earned reward is waiting to be saved.","Ta récompense gagnée attend son enregistrement.","Deine verdiente Belohnung wartet auf das Speichern.","Tu recompensa ganada está pendiente de guardar.","A recompensa ganha aguarda ser salva.","Il premio ottenuto è in attesa di essere salvato.");
         add("ads_watch","Watch an ad · +%d LumaCoins","Voir une publicité · +%d LumaCoins","Anzeige ansehen · +%d LumaCoins","Ver anuncio · +%d LumaCoins","Ver anúncio · +%d LumaCoins","Guarda annuncio · +%d LumaCoins");
         add("ads_reward_note","Optional. +%d LumaCoins after the reward is confirmed. Closing early gives no reward.","Facultatif. +%d LumaCoins après confirmation de la récompense. Fermer trop tôt ne donne pas de récompense.","Freiwillig. +%d LumaCoins nach bestätigter Belohnung. Vorzeitiges Schließen gibt keine Belohnung.","Opcional. +%d LumaCoins tras confirmar la recompensa. Cerrar antes no da recompensa.","Opcional. +%d LumaCoins após confirmação da recompensa. Fechar antes não dá recompensa.","Facoltativo. +%d LumaCoins dopo la conferma della ricompensa. Chiudendo prima non si riceve il premio.");
     }

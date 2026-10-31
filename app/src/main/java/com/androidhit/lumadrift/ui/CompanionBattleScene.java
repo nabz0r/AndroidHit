@@ -14,8 +14,6 @@ public final class CompanionBattleScene {
     public static final float HEIGHT=CompanionBattleLayout.HEIGHT;
     public static final long EFFECT_DURATION_MS=760;
     private static final int INK=0xff34344e, MUTED=0xff666778, LIGHT=0xfff5f5fc, ACCENT=0xff7160db;
-    private static final Typeface REGULAR=Typeface.create("sans-serif",Typeface.NORMAL);
-    private static final Typeface MEDIUM=Typeface.create("sans-serif-medium",Typeface.NORMAL);
     private static final ThreadLocal<Brush> BRUSH=ThreadLocal.withInitial(Brush::new);
     private CompanionBattleScene(){}
 
@@ -196,15 +194,15 @@ public final class CompanionBattleScene {
     private static void fill(Brush b,int color){b.paint.setStyle(Paint.Style.FILL);b.paint.setColor(color);b.paint.setStrokeWidth(1);b.paint.setShader(null);}
     private static void stroke(Brush b,int color,float width){fill(b,color);b.paint.setStyle(Paint.Style.STROKE);b.paint.setStrokeWidth(width);b.paint.setStrokeCap(Paint.Cap.ROUND);b.paint.setStrokeJoin(Paint.Join.ROUND);}
     private static void label(Canvas c,Brush b,String value,float x,float baseline,float size,int color,boolean bold,float width){
-        fill(b,color);b.paint.setTypeface(bold?MEDIUM:REGULAR);b.paint.setTextSize(size);b.paint.setTextAlign(Paint.Align.CENTER);
+        fill(b,color);b.paint.setTypeface(PulseUi124.face(bold?800:400));b.paint.setTextSize(size);b.paint.setTextAlign(Paint.Align.CENTER);
         c.drawText(fit(value,b.paint,width),x,baseline,b.paint);
     }
     private static void labelLeft(Canvas c,Brush b,String value,float x,float baseline,float size,int color,boolean bold,float width){
-        fill(b,color);b.paint.setTypeface(bold?MEDIUM:REGULAR);b.paint.setTextSize(size);b.paint.setTextAlign(Paint.Align.LEFT);
+        fill(b,color);b.paint.setTypeface(PulseUi124.face(bold?800:400));b.paint.setTextSize(size);b.paint.setTextAlign(Paint.Align.LEFT);
         c.drawText(fit(value,b.paint,width),x,baseline,b.paint);
     }
     private static void centeredTwoLines(Canvas c,Brush b,String value,float x,float baseline,float size,int color,float width){
-        fill(b,color);b.paint.setTypeface(REGULAR);b.paint.setTextSize(size);
+        fill(b,color);b.paint.setTypeface(PulseUi124.face(400));b.paint.setTextSize(size);
         if(b.paint.measureText(value)<=width){label(c,b,value,x,baseline,size,color,false,width);return;}
         int split=-1;float best=Float.MAX_VALUE;
         for(int n=0;n<value.length();n++)if(value.charAt(n)==' '){

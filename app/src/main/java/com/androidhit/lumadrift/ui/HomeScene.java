@@ -16,11 +16,10 @@ import java.util.List;
 /** Original editable cutaway and raster furnishings, with one camera for drawing and hit targets. */
 public final class HomeScene {
     public static final float WIDTH = 390, HEIGHT = 440;
-    public static final float DETAIL_ZOOM = 2.0f;
+    public static final float DETAIL_ZOOM = 1.0f;
     public static final float ORIGIN_X = 320, ORIGIN_Y = 140, TILE_X = 28, TILE_Y = 15.5f;
     public static final int TARGET_FLOOR=-1,TARGET_COMPANION=-2,TARGET_WARDROBE=-3,TARGET_PUZZLE=-4,TARGET_OUTSIDE=-5;
-    private static final int INK = 0xff59475f, WHITE = 0xfffffcf7;
-    private static final int WOOD = 0xffc69a76, WOOD_DARK = 0xffa77962;
+    private static final int INK = 0xff163b62, WHITE = 0xffffffff;
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path path = new Path();
     private final Path floorPath = new Path();
@@ -61,7 +60,7 @@ public final class HomeScene {
         float scale=cameraScale(),maxX=Math.max(0,(WORLD_WIDTH*scale-viewportWidth)*.5f),maxY=Math.max(0,(WORLD_HEIGHT*scale-viewportHeight)*.5f);
         cameraPanX=finite(panX)?clamp(panX,-maxX,maxX):0;cameraPanY=finite(panY)?clamp(panY,-maxY,maxY):0;
     }
-    /** Return to the close room view used on first arrival. */
+    /** Return to the whole-room view used on first arrival. */
     public void resetCamera(){setCamera(DETAIL_ZOOM,0,0);}
     /** Fit the entire cutaway into the current viewport. */
     public void resetOverview(){setCamera(1,0,0);}
@@ -204,16 +203,15 @@ public final class HomeScene {
             circle(c,392,48,25,0x48ffe3a0);oval(c,91,50,188,75,0x55ffffff);oval(c,130,40,210,70,0x55ffffff);
         }else{
             quad(c,40,155,320,0,320,140,40,295,left);quad(c,320,0,600,155,600,295,320,140,right);
-            RoomMaterials.wall(c,true,bedroom,left);RoomMaterials.wall(c,false,bedroom,right);
-            wallMaterials(c,true,left,bedroom);wallMaterials(c,false,right,bedroom);
-            line(c,40,155,320,0,0xffa87d95,7);line(c,320,0,600,155,0xff8e739e,7);
-            line(c,40,153,320,-2,0xffffe7b9,3);line(c,320,-2,600,153,0xffffe4b4,3);
-            line(c,40,155,40,295,0xffdfbc9a,6);line(c,600,155,600,295,0xffb49abe,6);
-            line(c,43,157,43,294,0xfffff2d1,1.7f);line(c,597,157,597,294,0xfff4d5dc,1.7f);
+            RoomMaterials.wall(c,true,room,left);RoomMaterials.wall(c,false,room,right);
+            line(c,40,155,320,0,0xffa6d9ec,7);line(c,320,0,600,155,0xff83c6e4,7);
+            line(c,40,153,320,-2,0xffffffff,3);line(c,320,-2,600,153,0xffeffcff,3);
+            line(c,40,155,40,295,0xffc9e8f3,6);line(c,600,155,600,295,0xffa9d5e8,6);
+            line(c,43,157,43,294,0xffffffff,1.7f);line(c,597,157,597,294,0xfff0fcff,1.7f);
         }
         int grass=has(floor,"cloud")?0xffc8d7b8:has(floor,"rose")?0xffd2c8aa:has(floor,"mint")?0xffa9cbb0:0xffbed3aa;
         fill(garden?grass:ground==null?0xffe6ceb0:blend(ground.color,WHITE,.18f));c.drawPath(floorPath,paint);
-        boolean paintedFloor=!garden&&RoomMaterials.floor(c,ground==null?0xfff8eedc:blend(ground.color,WHITE,.65f));
+        boolean paintedFloor=RoomMaterials.floor(c,room,garden?0xffffffff:ground==null?0xfff7fcff:blend(ground.color,WHITE,.65f));
         c.save();c.clipPath(floorPath);
         if(garden){
             for(int x=0;x<10;x++)for(int y=0;y<10;y++){float xx=px(x,y),yy=py(x,y);line(c,xx-4,yy+2,xx-2,yy-2,0x4f73996d,1.2f);line(c,xx-2,yy-2,xx+1,yy+1,0x4f73996d,1.2f);}
@@ -235,81 +233,45 @@ public final class HomeScene {
         }
         c.restore();
         if(!garden){
-            line(c,40,290,320,135,0xffba977e,7);line(c,320,135,600,290,0xffa98ba8,7);
-            line(c,40,287,320,132,0xffffedc6,2);line(c,320,132,600,287,0xfff0d9e3,2);
+            line(c,40,290,320,135,0xffa5d3e5,7);line(c,320,135,600,290,0xff85bad4,7);
+            line(c,40,287,320,132,0xffffffff,2);line(c,320,132,600,287,0xffe8faff,2);
             if(kitchen)kitchenArchitecture(c);
             else{c.save();c.translate(70,0);window(c,time,reduceMotion);c.restore();}
             wardrobe(c);
+        }else{
+            ArtLibrary art=CharacterSprites.library();
+            if(art!=null){int save=c.save();c.clipOutPath(floorPath);art.draw(c,"pulse/furniture/cherry_tree",50,32,175,212,.5f,1,255);art.draw(c,"pulse/furniture/greenhouse",399,47,576,238,.5f,1,255);c.restoreToCount(save);}
         }
         c.save();c.translate(210,32);puzzleDoor(c);c.restore();
     }
 
     /** Intrinsic rear-wall fixtures, clipped outside the editable floor; never a paid item grant. */
     private void kitchenArchitecture(Canvas c){
-        c.save();path.reset();path.moveTo(40,155);path.lineTo(320,0);path.lineTo(320,140);path.lineTo(40,295);path.close();c.clipPath(path);
-        c.translate(66,153);c.skew(0,-.554f);
-        round(c,0,10,228,65,3,0xffdcebe4);
-        for(int col=0;col<=12;col++)line(c,col*19,10,col*19,65,0xfff7fbf1,1.4f);
-        for(int row=0;row<=4;row++)line(c,0,10+row*13.75f,228,10+row*13.75f,0xfff7fbf1,1.4f);
-        round(c,0,67,228,121,3,0xff9bbbae);
-        for(int col=0;col<4;col++){
-            round(c,5+col*56,75,54+col*56,115,2,0xffc8dccb);
-            line(c,36+col*56,81,46+col*56,81,0xff8e9274,2.2f);
-        }
-        round(c,-3,61,231,72,3,0xffead9ba);line(c,0,63,228,63,0xfffff2d8,2);
-        round(c,20,62,82,69,3,0xffa4c9c8);round(c,26,63,76,67,2,0xffd6e9df);
-        line(c,60,62,60,49,0xff7b9f9d,2.5f);arc(c,45,41,60,56,180,180,0xff7b9f9d,2.5f);
-        circle(c,162,65,7,0xff898d83);circle(c,192,65,7,0xff898d83);
-        round(c,12,0,111,8,2,0xffb5c9b5);round(c,132,0,217,8,2,0xffb5c9b5);
-        c.restore();
-    }
-
-    /** Subtle woven paper and gilded panel work remain tied to the player's chosen wall colour. */
-    private void wallMaterials(Canvas c,boolean left,int color,boolean bedroom){
-        c.save();path.reset();
-        if(left){path.moveTo(40,155);path.lineTo(320,0);path.lineTo(320,140);path.lineTo(40,295);}
-        else{path.moveTo(320,0);path.lineTo(600,155);path.lineTo(600,295);path.lineTo(320,140);}
-        path.close();c.clipPath(path);
-        for(int n=0;n<=10;n++){
-            float x=(left?40:320)+n*28,y=left?155-n*15.5f:n*15.5f;
-            line(c,x,y+6,x,y+133,bedroom?0x38fff6ed:0x187a607e,bedroom?5.5f:.8f);
-            if(n%2==0){
-                float bx=x+14,by=y+(left?-7.75f:7.75f);
-                line(c,bx,by+41,bx,by+105,0x2ac99f79,.65f);
-                diamond(c,bx,by+42,2.1f,3.2f,0x39c79e79);
-                diamond(c,bx,by+106,2.1f,3.2f,0x39c79e79);
-            }
-        }
-        for(int n=0;n<5;n++){
-            float x=(left?55:335)+n*56,y=left?155-(x-40)*.554f:(x-320)*.554f;
-            line(c,x,y+114,x+42,y+114+(left?-23.25f:23.25f),blend(color,WHITE,.60f),1.3f);
-            line(c,x,y+116,x+42,y+116+(left?-23.25f:23.25f),0x24a27d87,.8f);
-        }
-        c.restore();
+        ArtLibrary art=CharacterSprites.library();if(art==null)return;
+        int save=c.save();c.clipOutPath(floorPath);art.draw(c,"pulse/furniture/kitchen",62,44,303,235,.5f,1,255);c.restoreToCount(save);
     }
 
     private void window(Canvas c,long time,boolean reduced) {
         ArtLibrary art=CharacterSprites.library();if(art==null)return;
-        art.draw(c,"furniture/bay_window",55,62,175,189,.5f,1,255);
+        art.draw(c,"pulse/furniture/bay_window",55,62,175,189,.5f,1,255);
     }
 
     private void wardrobe(Canvas c) {
         ArtLibrary art=CharacterSprites.library();if(art==null)return;
         oval(c,420,222,479,236,0x205d405f);
-        art.draw(c,"furniture/wardrobe",421,82,493,216,.5f,1,255);
+        art.draw(c,"pulse/furniture/wardrobe",421,82,493,216,.5f,1,255);
     }
 
     private void puzzleDoor(Canvas c) {
         c.save();c.translate(332,183);c.skew(0,.554f);
-        path.reset();path.moveTo(-23,35);path.lineTo(-23,-29);path.cubicTo(-23,-60,23,-60,23,-29);path.lineTo(23,35);path.close();shape(c,0xff795b8b);
-        path.reset();path.moveTo(-20,34);path.lineTo(-20,-29);path.cubicTo(-20,-56,20,-56,20,-29);path.lineTo(20,34);path.close();shape(c,0xffffdc9a);
-        path.reset();path.moveTo(-16,33);path.lineTo(-16,-28);path.cubicTo(-16,-50,16,-50,16,-28);path.lineTo(16,33);path.close();shape(c,0xff547da5);
-        arc(c,-14,-43,14,-17,180,180,0xffbadfe7,2.3f);
-        line(c,0,-40,0,-19,0xffe8d6a7,1.5f);line(c,-13,-28,13,-28,0xffe8d6a7,1.5f);
-        round(c,-12,-13,12,27,4,0xff6b9ba7);round(c,-9,-10,9,11,3,0xff8ebcba);
-        star(c,0,-1,7,0xffffe8ae);
-        circle(c,11,15,3.0f,0xff866685);circle(c,10.5f,14.3f,2.1f,0xffffda84);
-        round(c,-25,31,25,37,2.5f,0xffb3888f);line(c,-24,32,24,32,0xffffdbb0,1.5f);
+        path.reset();path.moveTo(-25,35);path.lineTo(-25,-29);path.cubicTo(-25,-64,25,-64,25,-29);path.lineTo(25,35);path.close();shape(c,0xff8acbde);
+        path.reset();path.moveTo(-22,34);path.lineTo(-22,-29);path.cubicTo(-22,-60,22,-60,22,-29);path.lineTo(22,34);path.close();shape(c,WHITE);
+        path.reset();path.moveTo(-17,32);path.lineTo(-17,-28);path.cubicTo(-17,-52,17,-52,17,-28);path.lineTo(17,32);path.close();shape(c,0xff44cce8);
+        arc(c,-14,-45,14,-16,180,180,0xffb5f4ff,2.3f);
+        round(c,-12,-18,12,27,10,0xff7ce0f1);round(c,-9,-14,9,8,8,0xffa4f1f8);
+        star(c,0,-2,7,WHITE);
+        circle(c,11,15,3.0f,0xff1489b5);circle(c,10.5f,14.3f,2.1f,WHITE);
+        round(c,-27,31,27,38,3.5f,0xff9ad8e8);line(c,-24,32,24,32,WHITE,1.5f);
         c.restore();
     }
 
@@ -344,7 +306,7 @@ public final class HomeScene {
         c.save();
         if((rotation&1)!=0)c.scale(-1,1,bounds.centerX(),bounds.bottom);
         // The same outer bounds are used for the room's touch target and bitmap fit.
-        art.draw(c,"furniture/"+id,bounds.left,bounds.top,bounds.right,bounds.bottom,.5f,1,255);
+        art.draw(c,"pulse/furniture/"+id,bounds.left,bounds.top,bounds.right,bounds.bottom,.5f,1,255);
         boolean active="lamp".equals(id)?lampOn:"gate_lamp".equals(id)?gateLampOn:false;
         if(active&&("lamp".equals(id)||"gate_lamp".equals(id)||"lantern".equals(id))){
             float unit=Math.min(bounds.width(),bounds.height());
@@ -386,18 +348,14 @@ public final class HomeScene {
     private void outlineFootprint(Canvas c,HomeLayout.Placement p,int color,float width){
         float x=p.x,y=p.y,w=p.width(),d=p.depth();path.reset();path.moveTo(ORIGIN_X+(x-y)*TILE_X,ORIGIN_Y+(x+y)*TILE_Y);path.lineTo(ORIGIN_X+(x+w-y)*TILE_X,ORIGIN_Y+(x+w+y)*TILE_Y);path.lineTo(ORIGIN_X+(x+w-y-d)*TILE_X,ORIGIN_Y+(x+w+y+d)*TILE_Y);path.lineTo(ORIGIN_X+(x-y-d)*TILE_X,ORIGIN_Y+(x+y+d)*TILE_Y);path.close();strokePath(c,color,width);
     }
-    private void wallClip(Canvas c,boolean left){path.reset();path.moveTo(left?27:195,left?128:35);path.lineTo(left?195:363,left?35:128);path.lineTo(left?195:363,left?145:238);path.lineTo(left?27:195,left?238:145);path.close();c.clipPath(path);}
-    private void leg(Canvas c,float x,float y,float h){line(c,x,y-h,x,y,WOOD_DARK,5);line(c,x-1,y-h,x-1,y-2,WOOD,2);}
-    private void leaf(Canvas c,float x,float y,float xx,float yy,int color){path.reset();path.moveTo(x,y);path.quadTo(xx+12,yy-9,xx,yy);path.quadTo(xx-7,yy+11,x,y);path.close();shape(c,color);}
-    private void book(Canvas c,float x,float y,float w,float h,int color){round(c,x,y,x+w,y+h,1,color);line(c,x+2,y+4,x+w-2,y+4,0x90fff9e9,1);}
     private static float depth(HomeLayout.Placement p){return !HomeCatalog.item(p.itemId).solid?-1:p.x+p.y+(p.width()+p.depth())*.5f;}
     private static float itemWidth(String id){if(isNew(id)){HomeCatalog.Item item=HomeCatalog.item(id);return Math.max(54,(item.width+item.depth)*26f);}return "bed".equals(id)||"sofa".equals(id)?93:"rug".equals(id)?108:"bookshelf".equals(id)?58:"table".equals(id)?68:"cushion".equals(id)?60:"mobile".equals(id)?59:"plant".equals(id)?49:"lamp".equals(id)||"gate_lamp".equals(id)?55:"plush".equals(id)?45:49;}
     private static float naturalWidth(String id){if(isNew(id))return newWidth(id);return "bed".equals(id)||"sofa".equals(id)?96:"rug".equals(id)?108:"bookshelf".equals(id)?64:"table".equals(id)?80:"cushion".equals(id)?74:"mobile".equals(id)?79:"plant".equals(id)?60:"lamp".equals(id)?64:"gate_lamp".equals(id)?50:"plush".equals(id)?56:64;}
     private static float naturalHeight(String id){if(isNew(id))return newHeight(id);return "rug".equals(id)?40:"cushion".equals(id)?40:"table".equals(id)?54:"stool".equals(id)?50:"plush".equals(id)?70:"plant".equals(id)?90:"bookshelf".equals(id)||"mobile".equals(id)?92:"lamp".equals(id)?88:"gate_lamp".equals(id)?82:"bed".equals(id)?75:66;}
     private static float itemHeight(String id){if(isNew(id))return newHeight(id)*.96f;return "rug".equals(id)?47:"cushion".equals(id)?34:"table".equals(id)?57:"stool".equals(id)?48:"plush".equals(id)?58:"plant".equals(id)?73:"bookshelf".equals(id)||"mobile".equals(id)?82:"lamp".equals(id)||"gate_lamp".equals(id)?82:76;}
     private static boolean isNew(String id){return HomeCatalog.item(id)!=null&&HomeCatalog.ITEMS.indexOf(HomeCatalog.item(id))>=12;}
-    private static float newWidth(String id){switch(id){case "greenhouse":return 162;case "cherry_tree":return 138;case "pond":return 158;case "canopy_bed":return 132;case "piano":return 148;case "library":case "bay_window":case "kitchen":return 148;case "aquarium":case "hammock":return 144;case "picnic":case "bath":return 132;case "bench":case "swing":return 124;case "flowerbed":case "fireplace":return 126;case "desk":return 114;case "telescope":case "chess_table":return 108;case "fountain":return 112;case "wardrobe":return 108;case "garden_path":return 104;case "easel":return 90;case "record_player":case "bonsai":return 86;case "terrarium":case "arcade":return 80;case "mirror":case "cactus":return 66;default:return 60;}}
-    private static float newHeight(String id){switch(id){case "canopy_bed":return 152;case "cherry_tree":return 150;case "greenhouse":return 142;case "piano":case "library":case "bay_window":case "wardrobe":case "swing":case "telescope":case "mirror":case "fountain":return 122;case "arcade":return 116;case "aquarium":case "kitchen":case "desk":case "easel":case "cactus":return 106;case "fireplace":return 102;case "terrarium":case "bonsai":case "lantern":case "record_player":return 94;case "bath":return 104;case "hammock":return 90;case "flowerbed":return 82;case "bench":return 76;case "picnic":case "chess_table":return 74;case "pond":return 52;case "garden_path":return 48;default:return 96;}}
+    private static float newWidth(String id){switch(id){case "tea_station":return 114;case "herb_cart":return 74;case "bubble_fridge":return 84;case "cooking_island":return 132;case "seed_shelf":return 118;case "bloom_arch":return 128;case "greenhouse":return 162;case "cherry_tree":return 138;case "pond":return 158;case "canopy_bed":return 132;case "piano":return 148;case "library":case "bay_window":case "kitchen":return 148;case "aquarium":case "hammock":return 144;case "picnic":case "bath":return 132;case "bench":case "swing":return 124;case "flowerbed":case "fireplace":return 126;case "desk":return 114;case "telescope":case "chess_table":return 108;case "fountain":return 112;case "wardrobe":return 108;case "garden_path":return 104;case "easel":return 90;case "record_player":case "bonsai":return 86;case "terrarium":case "arcade":return 80;case "mirror":case "cactus":return 66;default:return 60;}}
+    private static float newHeight(String id){switch(id){case "tea_station":return 114;case "herb_cart":return 96;case "bubble_fridge":return 128;case "cooking_island":return 108;case "seed_shelf":return 116;case "bloom_arch":return 148;case "canopy_bed":return 152;case "cherry_tree":return 150;case "greenhouse":return 142;case "piano":case "library":case "bay_window":case "wardrobe":case "swing":case "telescope":case "mirror":case "fountain":return 122;case "arcade":return 116;case "aquarium":case "kitchen":case "desk":case "easel":case "cactus":return 106;case "fireplace":return 102;case "terrarium":case "bonsai":case "lantern":case "record_player":return 94;case "bath":return 104;case "hammock":return 90;case "flowerbed":return 82;case "bench":return 76;case "picnic":case "chess_table":return 74;case "pond":return 52;case "garden_path":return 48;default:return 96;}}
     private static float px(float x,float y){return ORIGIN_X+(x-y)*TILE_X;}
     private static float py(float x,float y){return ORIGIN_Y+(x+y+1)*TILE_Y;}
     private static boolean has(String text,String value){return text!=null&&text.contains(value);}

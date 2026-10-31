@@ -17,7 +17,7 @@ public final class CompanionHeroScene {
         if(box.width()<=0||box.height()<=0)return;
         float x=box.centerX(),y=box.top,w=box.width(),h=box.height();
         c.save();path.reset();path.addRoundRect(box,30,30,Path.Direction.CW);c.clipPath(path);
-        paint.setStyle(Paint.Style.FILL);paint.setShader(new LinearGradient(box.left,y,box.right,box.bottom,new int[]{0xff282556,0xff5c438b,0xffad83bd},null,Shader.TileMode.CLAMP));c.drawRect(box,paint);paint.setShader(null);
+        paint.setStyle(Paint.Style.FILL);paint.setColor(0xffffffff);paint.setShader(new LinearGradient(box.left,y,box.right,box.bottom,new int[]{0xffffffff,0xffe1f8ff,0xffc6edff},null,Shader.TileMode.CLAMP));c.drawRect(box,paint);paint.setShader(null);
         float haloY=y+h*.42f;
         paint.setShader(new RadialGradient(x,haloY,w*.54f,new int[]{0x9cc2f7ef,0x4c918fd9,0x007c78cb},null,Shader.TileMode.CLAMP));c.drawCircle(x,haloY,w*.54f,paint);paint.setShader(null);
         paint.setStyle(Paint.Style.STROKE);paint.setStrokeWidth(1.2f);paint.setColor(0x6dd2f9f1);
@@ -36,7 +36,7 @@ public final class CompanionHeroScene {
         float floor=y+h*.73f;
         paint.setShader(new RadialGradient(x,floor,w*.40f,new int[]{0xffb5ede8,0x558ccfe4,0x0074a0c9},null,Shader.TileMode.CLAMP));c.drawOval(x-w*.44f,floor-15,x+w*.44f,floor+22,paint);paint.setShader(null);
         paint.setStyle(Paint.Style.STROKE);paint.setStrokeWidth(1.8f);paint.setColor(0x99d5fff4);c.drawOval(x-w*.31f,floor-10,x+w*.31f,floor+9,paint);
-        paint.setStyle(Paint.Style.FILL);paint.setShader(new LinearGradient(0,y+h*.69f,0,box.bottom,new int[]{0x00252154,0xdc30254d},null,Shader.TileMode.CLAMP));c.drawRect(box.left,y+h*.69f,box.right,box.bottom,paint);paint.setShader(null);
+        paint.setStyle(Paint.Style.FILL);paint.setColor(0xffffffff);paint.setShader(new LinearGradient(0,y+h*.69f,0,box.bottom,new int[]{0x00ffffff,0xfaffffff},null,Shader.TileMode.CLAMP));c.drawRect(box.left,y+h*.69f,box.right,box.bottom,paint);paint.setShader(null);
         // Small facets anchor the stage without imitating another game's logos or character art.
         for(int sign=-1;sign<=1;sign+=2){float xx=x+sign*w*.39f,yy=y+h*.47f;path.reset();path.moveTo(xx,yy-16);path.lineTo(xx+7,yy);path.lineTo(xx,yy+16);path.lineTo(xx-7,yy);path.close();paint.setColor(0x7ac1f7ef);c.drawPath(path,paint);}
         c.restore();paint.setStyle(Paint.Style.FILL);paint.setAlpha(255);paint.setShader(null);

@@ -23,8 +23,8 @@ import java.util.*;
 
 /** Six-language native account-cosmetic preview. Paid draws remain closed in this candidate. */
 public final class CosmeticVaultActivity extends Activity {
-    private static final int BG=0xfffff6ec,CARD=0xfffff7e6,WHITE=0xff263049,MINT=0xff237d75,
-            MUTED=0xff6c667b,GOLD=0xff91632e,LILAC=0xff7157a3;
+    private static final int BG=com.androidhit.lumadrift.ui.PulseUi124.BACKGROUND,CARD=com.androidhit.lumadrift.ui.PulseUi124.WHITE,WHITE=com.androidhit.lumadrift.ui.PulseUi124.INK,MINT=com.androidhit.lumadrift.ui.PulseUi124.BLUE_INK,
+            MUTED=com.androidhit.lumadrift.ui.PulseUi124.MUTED,GOLD=com.androidhit.lumadrift.ui.PulseUi124.ORANGE_INK,LILAC=com.androidhit.lumadrift.ui.PulseUi124.BLUE_INK;
     private GameStore store;
     private CosmeticVaultClient client;
     private CosmeticVaultProtocol.Catalog catalog;
@@ -140,7 +140,7 @@ public final class CosmeticVaultActivity extends Activity {
     }
     private LinearLayout card(LinearLayout parent,int color){LinearLayout card=new LinearLayout(this);card.setOrientation(LinearLayout.VERTICAL);card.setPadding(dp(5),dp(10),dp(5),dp(22));card.setBackground(SceneActionView.shelf());LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(-1,-2);params.topMargin=dp(15);parent.addView(card,params);return card;}
     private GradientDrawable shape(int fill,int border,int radius){GradientDrawable background=new GradientDrawable();background.setColor(fill);background.setCornerRadius(dp(radius));background.setStroke(dp(1),border);return background;}
-    private TextView label(LinearLayout parent,String value,int size,int color){TextView text=new TextView(this);text.setText(value);text.setTextColor(color);text.setTextSize(size);text.setTypeface(Typeface.create("sans-serif",size>=20?Typeface.BOLD:Typeface.NORMAL));text.setLineSpacing(dp(3),1);text.setPadding(0,dp(8),0,dp(5));if(Build.VERSION.SDK_INT>=28&&size>=20)text.setAccessibilityHeading(true);parent.addView(text);return text;}
+    private TextView label(LinearLayout parent,String value,int size,int color){com.androidhit.lumadrift.ui.PulseUi124.install(getAssets());TextView text=new TextView(this);text.setText(value);text.setTextColor(color);text.setTextSize(size);text.setTypeface(com.androidhit.lumadrift.ui.PulseUi124.face(size>=20?800:400));text.setLineSpacing(dp(3),1);text.setPadding(0,dp(8),0,dp(5));if(Build.VERSION.SDK_INT>=28&&size>=20)text.setAccessibilityHeading(true);parent.addView(text);return text;}
     private void button(LinearLayout parent,String value,Runnable action,int color,boolean enabled){ScenicUi.Kind kind=value.equals(t("back"))?ScenicUi.Kind.RETURN:value.equals(t("sign_in"))?ScenicUi.Kind.PROFILE:value.equals(t("load"))||value.equals(t("refresh"))?ScenicUi.Kind.RETRY:ScenicUi.Kind.CAPSULE;SceneActionView control=SceneActionView.create(this,value,kind,color,action);control.setEnabled(enabled);LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(-1,-2);params.topMargin=dp(10);parent.addView(control,params);}
     private int dp(float value){return Math.round(value*getResources().getDisplayMetrics().density);}
     private int color(CosmeticCatalog.Item item){if(item.id.contains("pumpkin")||item.id.contains("witch"))return 0xffffb88b;if(item.id.contains("cupid")||item.id.contains("valentine"))return 0xffffb3d3;if(item.id.contains("star"))return GOLD;if(item.id.contains("moon"))return LILAC;if(item.id.contains("aurora"))return 0xff9adaff;return MINT;}

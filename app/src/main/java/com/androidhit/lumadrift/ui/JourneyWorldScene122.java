@@ -82,7 +82,7 @@ public final class JourneyWorldScene122 {
         fill(open?ink:0xff9790a5);canvas.drawCircle(x,y+5,JourneyWorld122.NODE_RADIUS,paint);
         fill(open?(current?accent:stars>0?0xffc8ecda:0xfffaf2ff):0xffddd8e7);canvas.drawCircle(x,y,JourneyWorld122.NODE_RADIUS,paint);
         paint.setStyle(Paint.Style.STROKE);paint.setStrokeWidth(2);paint.setColor(0xcfffffff);canvas.drawCircle(x,y,JourneyWorld122.NODE_RADIUS-4,paint);
-        fill(open?0xff403753:0xff777180);paint.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));paint.setTextAlign(Paint.Align.CENTER);paint.setTextSize(open?19:14);
+        fill(open?PulseUi124.INK:PulseUi124.MUTED);paint.setTypeface(PulseUi124.face(900));paint.setTextAlign(Paint.Align.CENTER);paint.setTextSize(open?19:14);
         if(open)canvas.drawText(String.valueOf(level),x,y+7,paint);
         else{
             paint.setStyle(Paint.Style.STROKE);paint.setStrokeWidth(2.4f);rect.set(x-5,y-15,x+5,y-5);canvas.drawArc(rect,180,180,false,paint);

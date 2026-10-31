@@ -14,7 +14,7 @@ import com.androidhit.lumadrift.ui.ScenicUi;
 public final class AccountActivity extends Activity {
     private GameStore store;private GoogleAccountController account;private TextView status,profile;
     private LinearLayout body;private SceneActionView signIn,signOut,delete;
-    private static final int BG=0xfffff6ec,WHITE=0xff263049,MINT=0xff237d75,MUTED=0xff6c667b;
+    private static final int BG=com.androidhit.lumadrift.ui.PulseUi124.BACKGROUND,WHITE=com.androidhit.lumadrift.ui.PulseUi124.INK,MINT=com.androidhit.lumadrift.ui.PulseUi124.BLUE_INK,MUTED=com.androidhit.lumadrift.ui.PulseUi124.MUTED;
     private String t(String key,Object...args){return Strings.get(store.resolvedLanguage(),key,args);}
     @Override public void onCreate(Bundle saved){
         super.onCreate(saved);store=new GameStore(this);getWindow().setStatusBarColor(BG);getWindow().setNavigationBarColor(BG);
@@ -46,7 +46,7 @@ public final class AccountActivity extends Activity {
         });account.announce();
         if(!account.isConfigured())status.setText(t("google_not_configured"));
     }
-    private TextView text(String value,int size,int color){TextView v=new TextView(this);v.setText(value);v.setTextSize(size);v.setTextColor(color);v.setTypeface(Typeface.create("sans-serif",Typeface.NORMAL));v.setLineSpacing(dp(3),1);v.setPadding(0,dp(12),0,dp(16));body.addView(v);return v;}
+    private TextView text(String value,int size,int color){com.androidhit.lumadrift.ui.PulseUi124.install(getAssets());TextView v=new TextView(this);v.setText(value);v.setTextSize(size);v.setTextColor(color);v.setTypeface(com.androidhit.lumadrift.ui.PulseUi124.face(size>=20?800:400));v.setLineSpacing(dp(3),1);v.setPadding(0,dp(12),0,dp(16));body.addView(v);return v;}
     private SceneActionView addButton(String value,Runnable action){ScenicUi.Kind kind=value.equals(t("google_sign_in"))?ScenicUi.Kind.MAIL:value.equals(t("account_delete"))?ScenicUi.Kind.CANCEL:ScenicUi.Kind.RETURN;SceneActionView b=SceneActionView.create(this,value,kind,MINT,action);LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(-1,-2);p.topMargin=dp(12);body.addView(b,p);return b;}
     private int dp(float x){return Math.round(x*getResources().getDisplayMetrics().density);}
     @Override protected void onResume(){super.onResume();if(account!=null)account.onResume();}

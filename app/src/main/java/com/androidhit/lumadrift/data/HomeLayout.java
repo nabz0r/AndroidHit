@@ -35,8 +35,8 @@ public final class HomeLayout {
     public static HomeLayout starter(String room){
         if(!HomeCatalog.validRoom(room))throw new IllegalArgumentException("Unknown room");
         if("bedroom".equals(room)){List<Placement> p=new ArrayList<>();p.add(new Placement("bed",2,1,0));p.add(new Placement("lamp",7,1,0));p.add(new Placement("rug",4,4,0));p.add(new Placement("cushion",7,6,0));return new HomeLayout(p,5,5);}
-        if("garden".equals(room)){List<Placement> p=new ArrayList<>();p.add(new Placement("plant",1,1,0));p.add(new Placement("flowerbed",5,1,0));p.add(new Placement("garden_path",4,4,0));return new HomeLayout(p,5,5);}
-        if("kitchen".equals(room)){List<Placement> p=new ArrayList<>();p.add(new Placement("plant",1,1,0));p.add(new Placement("rug",4,4,0));p.add(new Placement("cushion",7,6,0));return new HomeLayout(p,5,5);}
+        if("garden".equals(room)){List<Placement> p=new ArrayList<>();p.add(new Placement("plant",1,1,0));p.add(new Placement("flowerbed",5,1,0));p.add(new Placement("garden_path",4,4,0));p.add(new Placement("seed_shelf",1,7,0));p.add(new Placement("herb_cart",7,6,0));return new HomeLayout(p,5,5);}
+        if("kitchen".equals(room)){List<Placement> p=new ArrayList<>();p.add(new Placement("plant",1,1,0));p.add(new Placement("rug",4,4,0));p.add(new Placement("cushion",7,6,0));p.add(new Placement("herb_cart",1,6,0));p.add(new Placement("seed_shelf",7,1,0));return new HomeLayout(p,5,5);}
         List<Placement> p=new ArrayList<>();p.add(new Placement("bed",0,0,0));p.add(new Placement("lamp",5,0,0));
         p.add(new Placement("plant",0,5,0));p.add(new Placement("rug",2,2,0));p.add(new Placement("cushion",4,4,0));
         return new HomeLayout(p,3,3);

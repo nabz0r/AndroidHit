@@ -24,21 +24,22 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-/** An accessible action carried by an illustrated world object and free-standing text. */
+/** A real accessible Android button using the same luminous surfaces as the puzzle. */
 public final class SceneActionView extends TextView {
-    public static final int BACKGROUND=0xfffff6ec, INK=ScenicUi.INK, MUTED=0xff6c667b;
-    private final ScenicUi scene=new ScenicUi();
-    private final RectF art=new RectF();
+    public static final int BACKGROUND=PulseUi124.BACKGROUND, INK=PulseUi124.INK, MUTED=PulseUi124.MUTED;
+    private final PulseUi124 pulse=new PulseUi124();
+    private final RectF art=new RectF(),face=new RectF();
     private ScenicUi.Kind kind=ScenicUi.Kind.LANTERN;
     private int accent=ScenicUi.TEAL;
 
     public SceneActionView(Context context) {
         super(context);
+        PulseUi124.install(context.getAssets());
         setBackground(null);setGravity(Gravity.CENTER_VERTICAL);setMaxLines(3);
-        setTextSize(15);setTypeface(Typeface.create("sans-serif-medium",Typeface.NORMAL));
-        setTextColor(new ColorStateList(new int[][]{new int[]{-android.R.attr.state_enabled},new int[]{}},new int[]{0xff918597,INK}));
+        setTextSize(15);setTypeface(PulseUi124.face(800));
+        setTextColor(new ColorStateList(new int[][]{new int[]{-android.R.attr.state_enabled},new int[]{}},new int[]{MUTED,INK}));
         setMinHeight(dp(60));setMinimumHeight(dp(60));setMinimumWidth(dp(48));
-        setPadding(dp(66),dp(9),dp(8),dp(9));setCompoundDrawablePadding(dp(8));
+        setPadding(dp(62),dp(12),dp(17),dp(12));setCompoundDrawablePadding(dp(8));
         setClickable(true);setFocusable(true);setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_YES);
     }
 
@@ -56,32 +57,33 @@ public final class SceneActionView extends TextView {
     @Override public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo info){super.onInitializeAccessibilityNodeInfo(info);info.setClassName("android.widget.Button");info.setClickable(isClickable());}
 
     @Override protected void onDraw(Canvas canvas) {
-        float size=Math.min(dp(58),Math.max(dp(40),getHeight()-dp(4)));
-        art.set(dp(1),(getHeight()-size)*.5f,dp(1)+size,(getHeight()+size)*.5f);
-        int saved=canvas.save();
-        if(!isEnabled())canvas.saveLayerAlpha(art,105);
-        if(hasFocus())scene.selector(canvas,art,accent,true,kind);else scene.object(canvas,art,accent,isPressed(),kind);
-        canvas.restoreToCount(saved);
+        face.set(dp(3),dp(3),getWidth()-dp(3),getHeight()-dp(4));
+        pulse.action(canvas,face,accent,isPressed(),isEnabled());
+        float size=Math.min(dp(29),Math.max(dp(24),getHeight()-dp(24)));
+        art.set(dp(18),(getHeight()-size)*.5f,dp(18)+size,(getHeight()+size)*.5f);
+        if(getCompoundDrawables()[0]==null&&getCompoundDrawablesRelative()[0]==null)pulse.symbol(canvas,art,kind,isEnabled()?INK:MUTED);
+        if(hasFocus())pulse.focus(canvas,face);
         super.onDraw(canvas);
     }
 
-    /** Explicit consent remains a real checkable control, carried by a lamp rather than a slider pill. */
+    /** Explicit consent remains a real checked control with the original accessibility state. */
     public static final class Toggle extends CompoundButton {
-        private final ScenicUi scene=new ScenicUi();private final RectF lamp=new RectF(),state=new RectF();
+        private final PulseUi124 pulse=new PulseUi124();private final RectF state=new RectF(),face=new RectF();
         public Toggle(Context context){
-            super(context);setButtonDrawable((Drawable)null);setBackground(null);setGravity(Gravity.CENTER_VERTICAL);
-            setTextSize(15);setTextColor(INK);setMaxLines(4);setTypeface(Typeface.create("sans-serif",Typeface.NORMAL));
+            super(context);PulseUi124.install(context.getAssets());setButtonDrawable((Drawable)null);setBackground(null);setGravity(Gravity.CENTER_VERTICAL);
+            setTextSize(15);setTextColor(INK);setMaxLines(4);setTypeface(PulseUi124.face(400));
             setPadding(dp(context,66),dp(context,10),dp(context,8),dp(context,10));setMinHeight(dp(context,64));setMinimumWidth(dp(context,48));
             setClickable(true);setFocusable(true);setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_YES);
         }
         @Override public CharSequence getAccessibilityClassName(){return "android.widget.Switch";}
         @Override protected void drawableStateChanged(){super.drawableStateChanged();invalidate();}
         @Override protected void onDraw(Canvas canvas){
-            float unit=getResources().getDisplayMetrics().density,size=54*unit;
-            lamp.set(unit,(getHeight()-size)*.5f,unit+size,(getHeight()+size)*.5f);
-            scene.object(canvas,lamp,isChecked()?ScenicUi.GOLD:0xffa49bb1,isPressed(),ScenicUi.Kind.LANTERN);
-            state.set(lamp.right-22*unit,lamp.bottom-20*unit,lamp.right+unit,lamp.bottom+3*unit);
-            scene.object(canvas,state,isChecked()?ScenicUi.TEAL:ScenicUi.CORAL,false,isChecked()?ScenicUi.Kind.CONFIRM:ScenicUi.Kind.CANCEL);
+            float unit=getResources().getDisplayMetrics().density,size=38*unit;
+            face.set(3*unit,3*unit,getWidth()-3*unit,getHeight()-4*unit);pulse.metric(canvas,face,isChecked()?PulseUi124.CYAN:PulseUi124.LINE);
+            state.set(12*unit,(getHeight()-size)*.5f,12*unit+size,(getHeight()+size)*.5f);
+            pulse.orb(canvas,state,isChecked()?PulseUi124.CYAN:PulseUi124.LINE,isPressed());
+            state.inset(9*unit,9*unit);pulse.symbol(canvas,state,isChecked()?ScenicUi.Kind.CONFIRM:ScenicUi.Kind.CLOSE,INK);
+            if(hasFocus())pulse.focus(canvas,face);
             super.onDraw(canvas);
         }
     }
@@ -94,13 +96,14 @@ public final class SceneActionView extends TextView {
 
     /** Explicit confirmations keep their separate affirmative/cancel actions, without stock dialog rows. */
     public static Dialog showChoices(Activity activity,String title,CharSequence message,Choice... choices) {
+        PulseUi124.install(activity.getAssets());
         Dialog dialog=new Dialog(activity);dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         FrameLayout sheet=new FrameLayout(activity);sheet.setBackground(paper());
         LinearLayout content=new LinearLayout(activity);content.setOrientation(LinearLayout.VERTICAL);
         int pad=dp(activity,24);content.setPadding(pad,dp(activity,25),pad,dp(activity,24));
-        TextView heading=new TextView(activity);heading.setText(title);heading.setTextSize(23);heading.setTextColor(INK);heading.setTypeface(Typeface.create("sans-serif-medium",Typeface.NORMAL));heading.setPadding(0,0,0,dp(activity,14));
+        TextView heading=new TextView(activity);heading.setText(title);heading.setTextSize(23);heading.setTextColor(INK);heading.setTypeface(PulseUi124.face(800));heading.setPadding(0,0,0,dp(activity,14));
         if(android.os.Build.VERSION.SDK_INT>=28)heading.setAccessibilityHeading(true);content.addView(heading);
-        TextView body=new TextView(activity);body.setText(message);body.setTextColor(MUTED);body.setTextSize(15);body.setLineSpacing(dp(activity,3),1);body.setPadding(0,0,0,dp(activity,16));content.addView(body);
+        TextView body=new TextView(activity);body.setText(message);body.setTextColor(MUTED);body.setTypeface(PulseUi124.face(400));body.setTextSize(15);body.setLineSpacing(dp(activity,3),1);body.setPadding(0,0,0,dp(activity,16));content.addView(body);
         for(Choice choice:choices) {
             SceneActionView action=create(activity,choice.label,choice.kind,choice.accent,()->{dialog.dismiss();if(choice.action!=null)choice.action.run();});
             content.addView(action,new LinearLayout.LayoutParams(-1,-2));
@@ -122,22 +125,22 @@ public final class SceneActionView extends TextView {
         return dialog;
     }
 
-    /** Warm scene atmosphere shared by optional native account, social and wallet surfaces. */
-    public static Drawable atmosphere(){return new GradientDrawable(GradientDrawable.Orientation.TL_BR,new int[]{0xfffff8e9,0xfff4eaf8,0xffe7f5ed});}
+    /** Shared white/cyan atmosphere for account, social and wallet surfaces. */
+    public static Drawable atmosphere(){return new GradientDrawable(GradientDrawable.Orientation.TL_BR,new int[]{PulseUi124.WHITE,PulseUi124.BACKGROUND,0xffe9f8ff});}
 
-    /** One hanging fabric sheet; not a repeated table-cell or action background. */
+    /** A bright floating confirmation surface; scrolling and dismiss semantics stay native. */
     public static Drawable paper(){return new Drawable(){
-        private final ScenicUi drawing=new ScenicUi();private final RectF box=new RectF();
-        @Override public void draw(Canvas c){box.set(getBounds().left+2,getBounds().top+2,getBounds().right-2,getBounds().bottom-8);drawing.windowModal(c,box,ScenicUi.VIOLET);}
+        private final PulseUi124 drawing=new PulseUi124();private final RectF box=new RectF();
+        @Override public void draw(Canvas c){box.set(getBounds().left+2,getBounds().top+2,getBounds().right-2,getBounds().bottom-8);drawing.panel(c,box,PulseUi124.CYAN);}
         @Override public void setAlpha(int alpha){}
         @Override public void setColorFilter(ColorFilter filter){}
         @Override public int getOpacity(){return PixelFormat.TRANSLUCENT;}
     };}
 
-    /** A quiet wooden divider under a section of objects; no enclosing card. */
+    /** A light cyan divider under a native content section. */
     public static Drawable shelf(){return new Drawable(){
         private final Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);
-        @Override public void draw(Canvas c){paint.setColor(0xffd9bcaa);paint.setStrokeWidth(2);float y=getBounds().bottom-2;c.drawLine(getBounds().left+9,y,getBounds().right-9,y,paint);paint.setColor(0x70fff9e9);c.drawLine(getBounds().left+13,y-2,getBounds().right-13,y-2,paint);}
+        @Override public void draw(Canvas c){paint.setColor(PulseUi124.LINE);paint.setStrokeWidth(2);float y=getBounds().bottom-2;c.drawLine(getBounds().left+9,y,getBounds().right-9,y,paint);}
         @Override public void setAlpha(int alpha){paint.setAlpha(alpha);}
         @Override public void setColorFilter(ColorFilter filter){paint.setColorFilter(filter);}
         @Override public int getOpacity(){return PixelFormat.TRANSLUCENT;}

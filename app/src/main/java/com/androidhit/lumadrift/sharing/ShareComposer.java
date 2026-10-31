@@ -92,8 +92,8 @@ public final class ShareComposer {
         p.setStrokeWidth(size*.04f);c.drawArc(x-size*.12f,y-size*.28f,x+size*.12f,y-size*.02f,180,180,false,p);p.setStyle(Paint.Style.FILL);
         c.drawRoundRect(x-size*.18f,y-size*.13f,x+size*.18f,y+size*.12f,6,6,p);
         p.setColor(0xff4a4056);c.drawCircle(x,y-size*.025f,size*.025f,p);c.drawRect(x-size*.013f,y-size*.025f,x+size*.013f,y+size*.055f,p);
-        String label="K"+key;p.setTypeface(Typeface.create("sans-serif-black",Typeface.NORMAL));p.setTextSize(size*.17f);p.setColor(0xffffd992);c.drawText(label,x-p.measureText(label)/2,y+size*.32f,p);
+        String label="K"+key;p.setTypeface(com.androidhit.lumadrift.ui.PulseUi124.face(900));p.setTextSize(size*.17f);p.setColor(0xffffd992);c.drawText(label,x-p.measureText(label)/2,y+size*.32f,p);
     }
-    private static void text(Canvas c,Paint p,String s,float x,float y,float size,int color,boolean bold){p.setColor(color);p.setTypeface(android.graphics.Typeface.create(bold?"sans-serif-black":"sans-serif",android.graphics.Typeface.NORMAL));p.setTextSize(size);float w=p.measureText(s);if(w>925)p.setTextSize(size*925/w);c.drawText(s,x,y,p);}
+    private static void text(Canvas c,Paint p,String s,float x,float y,float size,int color,boolean bold){p.setColor(color);p.setTypeface(com.androidhit.lumadrift.ui.PulseUi124.face(bold?900:400));p.setTextSize(size);float w=p.measureText(s);if(w>925)p.setTextSize(size*925/w);c.drawText(s,x,y,p);}
     private static void arrow(Canvas c,Paint p,float x,float y,Direction d,float r,int color){c.save();c.translate(x,y);c.rotate(d.ordinal()*90);p.setStyle(Paint.Style.STROKE);p.setStrokeWidth(r*.2f);p.setStrokeCap(Paint.Cap.ROUND);p.setColor(color);Path path=new Path();path.moveTo(0,r*.7f);path.lineTo(0,-r*.7f);path.moveTo(-r*.5f,-r*.15f);path.lineTo(0,-r*.7f);path.lineTo(r*.5f,-r*.15f);c.drawPath(path,p);p.setStyle(Paint.Style.FILL);c.restore();}
 }

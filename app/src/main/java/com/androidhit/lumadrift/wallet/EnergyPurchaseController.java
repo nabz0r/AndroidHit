@@ -113,14 +113,17 @@ public final class EnergyPurchaseController {
     private void resume(){
         if(closed||busy||session.isEmpty())return;
         EnergyPurchaseJournal.State state=journal.state(session);
+        if(lab&&state.phase.equals("REFUSED")){error("wallet_insufficient");return;}
         if(!state.pending()){changed();return;}
         if(state.phase.equals("CREDIT")){credit(state);return;}
         // Restoring the original spend can recover a paid pack at any energy count.
         // Inventory consumption and local full credit only happen at zero.
         if(state.phase.equals("USE")&&energy.snapshot(System.currentTimeMillis()).count!=0){changed();return;}
         if(lab){
-            if(state.phase.equals("SPEND")){journal.labSpend(state);journal.advance(session,state,"USE");}
-            else{journal.labUse(state);journal.advance(session,state,"CREDIT");}
+            try{
+                if(state.phase.equals("SPEND")){journal.labSpend(state);journal.advance(session,state,"USE");}
+                else{journal.labUse(state);journal.advance(session,state,"CREDIT");}
+            }catch(EnergyPurchaseJournal.LabInsufficientGold refused){error("wallet_insufficient");return;}
             resume();return;
         }
         if(!server().isConfigured()){error("energy_not_configured");return;}

@@ -72,26 +72,32 @@ public final class HomeCatalog {
         new Item("bath",2,1,340,true,"relax",0xffdce9ea,0xffa5d7db),
         new Item("mirror",1,1,150,true,"watch",0xffdac29a,0xffb8dce5),
         new Item("kitchen",3,1,440,true,"tea",0xffa9c6bc,0xfff1d1af),
-        new Item("chess_table",2,2,240,true,"watch",0xffbd9c86,0xffefdfc6)
+        new Item("chess_table",2,2,240,true,"watch",0xffbd9c86,0xffefdfc6),
+        new Item("tea_station",2,1,180,true,"tea",0xff8edcf1,0xffffffff),
+        new Item("herb_cart",1,1,0,true,"admire",0xff9cdcb7,0xffffffff),
+        new Item("bubble_fridge",1,1,280,true,"watch",0xff8acdf2,0xffffaca2),
+        new Item("cooking_island",2,2,320,true,"tea",0xff9bdff1,0xffffb89d),
+        new Item("seed_shelf",2,1,0,true,"admire",0xff9bddb5,0xffffffff),
+        new Item("bloom_arch",2,1,260,true,"admire",0xffa2e0bb,0xffffa2a0)
     ));
     public static final List<Surface> WALLPAPERS=Collections.unmodifiableList(Arrays.asList(
-        new Surface("wallpaper_cream",0,0xfff8eadb,0xffefcfbf),
-        new Surface("wallpaper_sage",0,0xffdfebdf,0xffbdd1be),
-        new Surface("wallpaper_dusk",180,0xffded5ec,0xffbdacd5),
-        new Surface("wallpaper_peach",160,0xfff3d8ce,0xffdcae9d)
+        new Surface("wallpaper_cream",0,0xfff7fcff,0xffc6edfa),
+        new Surface("wallpaper_sage",0,0xffe1f8ed,0xffb4e8d2),
+        new Surface("wallpaper_dusk",180,0xffeee7ff,0xffc6bcf4),
+        new Surface("wallpaper_peach",160,0xffffeee9,0xffffc2b7)
     ));
     public static final List<Surface> FLOORS=Collections.unmodifiableList(Arrays.asList(
-        new Surface("floor_oak",0,0xffd9bea0,0xffb99375),
-        new Surface("floor_cloud",0,0xffdfe5ec,0xffbdc9d8),
-        new Surface("floor_rose",180,0xffdec2c9,0xffbd929e),
-        new Surface("floor_mint",160,0xffc9dccf,0xff9db8a9)
+        new Surface("floor_oak",0,0xffe7f3f8,0xffbedeea),
+        new Surface("floor_cloud",0,0xffedf8ff,0xffc6e5f8),
+        new Surface("floor_rose",180,0xffffe5e9,0xfff1b6c4),
+        new Surface("floor_mint",160,0xffdef7eb,0xffb4e2d0)
     ));
     /** Art direction used by the workshop; ownership never depends on a theme. */
     public static String theme(String id){
         if(id==null)return "stellar";
         switch(id){
-            case "greenhouse":case "plant":case "terrarium":case "bonsai":case "cactus":case "cherry_tree":case "fountain":case "pond":case "hammock":case "swing":case "bench":case "picnic":case "flowerbed":case "garden_path":return "forest";
-            case "arcade":case "record_player":case "kitchen":case "desk":case "easel":case "piano":case "chess_table":case "gate_lamp":return "neon";
+            case "greenhouse":case "plant":case "terrarium":case "bonsai":case "cactus":case "cherry_tree":case "fountain":case "pond":case "hammock":case "swing":case "bench":case "picnic":case "flowerbed":case "garden_path":case "herb_cart":case "seed_shelf":case "bloom_arch":return "forest";
+            case "arcade":case "record_player":case "kitchen":case "desk":case "easel":case "piano":case "chess_table":case "gate_lamp":case "tea_station":case "bubble_fridge":case "cooking_island":return "neon";
             default:return "stellar";
         }
     }

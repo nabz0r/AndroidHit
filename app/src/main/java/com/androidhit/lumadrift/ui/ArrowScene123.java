@@ -17,11 +17,11 @@ import com.androidhit.lumadrift.engine.Direction;
  * Coordinates, text and touch/accessibility targets remain the caller's responsibility.
  */
 public final class ArrowScene123 {
-    private static final int INK = 0xff332844;
-    private static final int CREAM = 0xfffffcf6;
-    private static final int RELAY = 0xff705093;
+    private static final int INK = 0xff153c64;
+    private static final int CREAM = 0xffffffff;
+    private static final int RELAY = 0xff4f7de6;
     private static final int[] TONES = {0xff91e5cc, 0xffffb398, 0xffceb3f7, 0xffa4cefa};
-    private static final int[] KEY_INKS = {0xff7c52b4, 0xff217f83, 0xffae526a, 0xff936317};
+    private static final int[] KEY_INKS = {0xff087d76, 0xffb33f62, 0xff7044c0, 0xff067fac};
     private final Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path path = new Path();
     private final RectF rect = new RectF();
@@ -41,6 +41,19 @@ public final class ArrowScene123 {
         if (direction == null || !usable(size)) return;
         int save = c.save();
         c.translate(x, y); c.scale(size / 100f, size / 100f);
+        ArtLibrary art = CharacterSprites.library();
+        if (art != null) {
+            float shiftX=keyNumber>0?5:0,shiftY=(switchMask&15)!=0?-4:0;
+            float extent=keyNumber>0||(switchMask&15)!=0?42:47;
+            oval(c,-41,39,41,49,0x182a79ab);
+            if(selected){fill(0xffc4f5ff);c.drawCircle(0,0,53,p);stroke(PulseUi124.CYAN,2.6f);c.drawCircle(0,0,52,p);}
+            String key="pulse/arrow/"+new String[]{"up","right","down","left"}[direction.ordinal()];
+            if(art.draw(c,key,shiftX-extent,shiftY-extent,shiftX+extent,shiftY+extent,.5f,.5f,255)){
+                if(keyNumber>0)keyTag(c,keyNumber,1);
+                if((switchMask&15)!=0)relayRail(c,switchMask&15);
+                c.restoreToCount(save);return;
+            }
+        }
         int tone = TONES[direction.ordinal()];
         // A small grounded shadow and opaque coloured rim, not a glowing HUD frame.
         oval(c, -43, 41, 43, 53, 0x1a42334f);
@@ -82,6 +95,14 @@ public final class ArrowScene123 {
         int save = c.save(); c.translate(x, y); c.scale(size / 100f, size / 100f);
         int layer = c.saveLayerAlpha(-59, -59, 59, 59, Math.round(amount * 255));
         int ink = keyColor(keyNumber);
+        ArtLibrary art=CharacterSprites.library();
+        if(art!=null){
+            if(highlighted){fill(0xffdaf9ff);c.drawCircle(0,0,53,p);stroke(PulseUi124.CYAN,2.5f);c.drawCircle(0,0,52,p);}
+            String key="pulse/lock/"+(open>.35f?"open/":"closed/")+Math.floorMod(keyNumber-1,4);
+            if(art.draw(c,key,-43,-49,45,48,.5f,.5f,255)){
+                keyTag(c,keyNumber,1);c.restoreToCount(layer);c.restoreToCount(save);return;
+            }
+        }
         oval(c, -40, 38, 40, 51, 0x1942334f);
         round(c, -47, -43, 47, 47, 19, mix(ink, INK, .12f));
         round(c, -47, -47, 47, 41, 19, mix(ink, CREAM, .85f));
@@ -141,13 +162,13 @@ public final class ArrowScene123 {
     private void keyTag(Canvas c, int number, float opacity) {
         int ink = keyColor(number);
         round(c, -47, -24, -30, 20, 7, alpha(mix(ink, INK, .15f), opacity));
-        round(c, -47, -26, -30, 17, 7, alpha(0xffffe8a3, opacity));
-        outline(c, -46, -25, -31, 16, 6, alpha(0xfffffcdf, opacity), 1.4f);
+        round(c, -47, -26, -30, 17, 7, alpha(CREAM, opacity));
+        outline(c, -46, -25, -31, 16, 6, alpha(mix(ink,CREAM,.55f), opacity), 1.4f);
         stroke(ink, 1.8f);
         c.drawCircle(-39.5f, -17, 3.1f, p);
         c.drawLine(-37.3f, -14.8f, -34, -11.5f, p);
         c.drawLine(-35.9f, -13.4f, -33.8f, -15.5f, p);
-        fill(ink); p.setTypeface(Typeface.create("sans-serif", Typeface.BOLD));
+        fill(ink); p.setTypeface(PulseUi124.face(900));
         p.setTextAlign(Paint.Align.CENTER); p.setTextSize(number < 10 ? 24 : 13);
         c.drawText(String.valueOf(number), -38.5f, 13.5f, p); p.setTextAlign(Paint.Align.LEFT);
     }

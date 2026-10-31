@@ -79,8 +79,6 @@ public final class ExpeditionScene {
     private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final TextPaint type = new TextPaint(Paint.ANTI_ALIAS_FLAG);
     private final Path path = new Path();
-    private final Typeface regular = Typeface.create("sans-serif", Typeface.NORMAL);
-    private final Typeface bold = Typeface.create("sans-serif", Typeface.BOLD);
     private float minimumText = 12, minimumTouch = 48, unit = 18;
     private String language = "en", pressedId = "";
     private RectF viewport;
@@ -292,7 +290,7 @@ public final class ExpeditionScene {
         paint.setStyle(Paint.Style.FILL); paint.setColor(empty(revealed) ? 0xffe6dfef : 0xffe5f1e9);
         canvas.drawCircle(x, y, 19, paint);
         if (empty(revealed)) {
-            paint.setTypeface(bold); paint.setTextAlign(Paint.Align.CENTER); paint.setTextSize(Math.max(20, minimumText)); paint.setColor(MUTED);
+            paint.setTypeface(PulseUi124.face(800)); paint.setTextAlign(Paint.Align.CENTER); paint.setTextSize(Math.max(20, minimumText)); paint.setColor(MUTED);
             canvas.drawText("?", x, y + 7, paint); paint.setTextAlign(Paint.Align.LEFT);
         } else scenic.object(canvas, new RectF(x - 23, y - 25, x + 23, y + 21), accent, false, ScenicUi.Kind.LANTERN);
     }
@@ -393,7 +391,7 @@ public final class ExpeditionScene {
     private void block(Canvas canvas, String value, float x, float y, float width, float size,
                        int color, boolean heavy, int lines) {
         if (empty(value)) return;
-        type.setColor(color); type.setTypeface(heavy ? bold : regular);
+        type.setColor(color); type.setTypeface(PulseUi124.face(heavy?800:400));
         type.setTextSize(Math.max(minimumText, size)); type.setShader(null);
         StaticLayout copy = StaticLayout.Builder.obtain(value, 0, value.length(), type, Math.max(1, (int) width))
                 .setAlignment(Alignment.ALIGN_NORMAL).setIncludePad(false).setLineSpacing(0, 1.15f)

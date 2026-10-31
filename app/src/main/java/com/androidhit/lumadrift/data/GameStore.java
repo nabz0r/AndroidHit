@@ -98,6 +98,7 @@ public final class GameStore {
                     write.put("owned_skin_lumina", true);
                     LocalSaveTransactions.write(prefs, write);
                 }
+                new AdCoinsRewardJournal(prefs).replay();
             } catch (LocalSaveException pending) {
                 // Construction must remain safe. The exact write stays pending;
                 // the first guarded read/action retries it or exposes the error.
@@ -106,7 +107,16 @@ public final class GameStore {
     }
 
     /** Flush the exact pending transaction before the UI resumes, without replaying its grant. */
-    public synchronized void retryPendingLocalSave() { LocalSaveTransactions.flush(prefs); }
+    public synchronized void retryPendingLocalSave() { LocalSaveTransactions.flush(prefs); retryPendingAdCoins(); }
+
+    /** Record only an already earned SDK GOLD-placement callback at the fixed local Coins amount. */
+    public synchronized void recordEarnedAdCoins(String showId) { new AdCoinsRewardJournal(prefs).record(showId); }
+
+    /** No SDK/network/consent work: an earned reward remains payable after its owner closes. */
+    public synchronized int retryPendingAdCoins() { return new AdCoinsRewardJournal(prefs).replay(); }
+
+    /** Read-only hint, including a first write retained only in this process. */
+    public synchronized boolean hasPendingAdCoins() { return new AdCoinsRewardJournal(prefs).hasPending(); }
 
     public synchronized int coins() { LocalSaveTransactions.flush(prefs); return Math.max(0, prefs.getInt("coins", 0)); }
 
@@ -1407,6 +1417,72 @@ public final class GameStore {
             return Math.min(CompanionProgression.MAX_COPIES,CompanionProgression.initialCopies(ownsCharacter(id),prefs.getInt("companion_copies_v118_"+id,0)));}
     }
     public synchronized CompanionProgression.Stats companionStats(String id){return CompanionProgression.stats(companionCopies(id));}
+    /** Freeze the already-granted base victory Coins before a rank reward can remain pending. */
+    public synchronized int freezeVictoryCoins124(String runId,int beforeCoins) {
+        if(runId==null||!runId.matches("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")||beforeCoins<0||beforeCoins>MAX_COINS)throw new IllegalArgumentException("Valid victory baseline required");
+        synchronized(GOLD_GRANT_LOCK){
+            LocalSaveTransactions.flush(prefs);
+            String key="rank_base_coins_v124_"+runId;
+            String record=prefs.getString(key,"");
+            if(!record.isEmpty()){
+                String[] fields=record.split("\\|",-1);
+                try{
+                    if(fields.length!=2)throw new IllegalArgumentException();
+                    int baseline=Integer.parseInt(fields[0]),amount=Integer.parseInt(fields[1]);
+                    if(baseline!=beforeCoins||amount<0||(long)baseline+amount>MAX_COINS||!record.equals(baseline+"|"+amount))throw new IllegalArgumentException();
+                    return amount;
+                }catch(IllegalArgumentException invalid){throw new LocalSaveException("Invalid victory Coins receipt");}
+            }
+            int amount=coins()-beforeCoins;
+            if(amount<0)throw new IllegalStateException("Victory balance moved before Coins were recorded");
+            Map<String,Object> write=new HashMap<>();write.put(key,beforeCoins+"|"+amount);LocalSaveTransactions.write(prefs,write);
+            return amount;
+        }
+    }
+    /** Capture existing rank once, before the first new-policy XP award; never gift historical ranks. */
+    public synchronized int initializeRankCopyFloor124(int existingRank) {
+        if(existingRank<1||existingRank>RankCopyRules124.rankForXp(Integer.MAX_VALUE))throw new IllegalArgumentException("Valid player rank required");
+        synchronized(GOLD_GRANT_LOCK){
+            LocalSaveTransactions.flush(prefs);
+            if(!prefs.contains("rank_copy_floor_v124")){
+                Map<String,Object> write=new HashMap<>();write.put("rank_copy_floor_v124",existingRank);LocalSaveTransactions.write(prefs,write);
+            }
+            int floor=prefs.getInt("rank_copy_floor_v124",1);
+            if(floor<1||floor>RankCopyRules124.rankForXp(Integer.MAX_VALUE))throw new LocalSaveException("Invalid rank migration floor");
+            return floor;
+        }
+    }
+    /** Rank marker, immutable run recipient and the actual copy/compensation share one commit. */
+    public synchronized RankCopyReward124 claimRankCopy124(RankVictoryXp124 award,int rank) {
+        if(award==null||!award.firstWin||rank<=RankCopyRules124.rankForXp(award.beforeXp)||rank>RankCopyRules124.rankForXp(award.afterXp))return null;
+        String runId=award.runId,captainId=award.captainId;
+        if(rank<2||rank>RankCopyRules124.rankForXp(Integer.MAX_VALUE)||runId==null||!runId.matches("[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}")||captainId==null||!captainId.matches("[a-z0-9_]{0,60}"))return null;
+        synchronized(GOLD_GRANT_LOCK){
+            LocalSaveTransactions.flush(prefs);
+            if(!prefs.contains("rank_copy_floor_v124"))throw new IllegalStateException("Rank migration must precede XP");
+            if(rank<=initializeRankCopyFloor124(1))return null;
+            String key="rank_copy_reward_v124_"+rank,record=prefs.getString(key,"");
+            if(!record.isEmpty()){
+                RankCopyReward124 old=RankCopyReward124.decode(record);
+                if(old==null||old.rank!=rank)throw new LocalSaveException("Invalid rank copy receipt");
+                return old.runId.equals(runId)&&old.captainId.equals(captainId)?old:null;
+            }
+            int before=0,after=0,compensation=0;String status="LEGACY_NO_CAPTAIN";
+            Map<String,Object> write=new HashMap<>();
+            if(!captainId.isEmpty()){
+                if(CompanionProgression.find(captainId)==null||!ownsCharacter(captainId))return null;
+                before=companionCopies(captainId);after=Math.min(CompanionProgression.MAX_COPIES,before+1);
+                if(after>before){write.put("companion_copies_v118_"+captainId,after);status="COPY";}
+                else{
+                    compensation=RankCopyRules124.MAX_CAPTAIN_DUPLICATE_COINS;
+                    if(coins()>MAX_COINS-compensation)throw new IllegalStateException("Rank compensation remains pending until wallet space is available");
+                    write.put("coins",coins()+compensation);status="MAX_COMPENSATION";
+                }
+            }
+            RankCopyReward124 reward=new RankCopyReward124(rank,runId,captainId,before,after,compensation,status);
+            write.put(key,reward.encode());LocalSaveTransactions.write(prefs,write);return reward;
+        }
+    }
     public synchronized String companionStance(String id){synchronized(GOLD_GRANT_LOCK){LocalSaveTransactions.flush(prefs);String stance=prefs.getString("companion_stance_v118_"+id,"CALM");return validCompanionStance(stance)?stance:"CALM";}}
     private static boolean validCompanionStance(String stance){return "CALM".equals(stance)||"READY".equals(stance)||"GUARD".equals(stance)||"PROUD".equals(stance);}
     public synchronized boolean setCompanionStance(String id,String stance){

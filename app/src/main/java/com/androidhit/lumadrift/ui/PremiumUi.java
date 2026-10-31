@@ -30,8 +30,6 @@ public final class PremiumUi {
     private final android.text.TextPaint text=new android.text.TextPaint(Paint.ANTI_ALIAS_FLAG);
     private final Path path=new Path();
     private final RectF scratch=new RectF();
-    private final Typeface regular=Typeface.create("sans-serif",Typeface.NORMAL);
-    private final Typeface medium=Typeface.create("sans-serif-medium",Typeface.NORMAL);
     private float minimumTextSize=11f;
 
     /** Pass ExperienceLayout.minimumTextSize after layout so narrow windows keep the physical font floor. */
@@ -213,7 +211,7 @@ public final class PremiumUi {
     /** Exact single-line fit. Does not invent line breaks or let large labels overflow a control. */
     public void fit(Canvas c,String value,float x,float baseline,float size,float max,int color,boolean heavy,boolean centered){
         if(value==null||max<=0)return;
-        text.setShader(null);text.setTypeface(heavy?medium:regular);text.setTextSize(Math.max(minimumTextSize,size));text.setColor(color);text.setTextAlign(Paint.Align.LEFT);
+        text.setShader(null);text.setTypeface(PulseUi124.face(heavy?800:400));text.setTextSize(Math.max(minimumTextSize,size));text.setColor(color);text.setTextAlign(Paint.Align.LEFT);
         String result=TextUtils.ellipsize(value,text,max,TextUtils.TruncateAt.END).toString();
         c.drawText(result,centered?x-text.measureText(result)/2:x,baseline,text);
     }
@@ -221,7 +219,7 @@ public final class PremiumUi {
     /** Short multi-line copy. Caller reserves the returned height; no fixed-height text collision. */
     public float copy(Canvas c,String value,float x,float baseline,float width,float size,int color,int maximumLines){
         if(value==null||maximumLines<=0)return 0;
-        text.setShader(null);text.setTypeface(regular);text.setTextSize(Math.max(minimumTextSize,Math.max(12,size)));text.setColor(color);
+        text.setShader(null);text.setTypeface(PulseUi124.face(400));text.setTextSize(Math.max(minimumTextSize,Math.max(12,size)));text.setColor(color);
         android.text.StaticLayout layout=android.text.StaticLayout.Builder.obtain(value,0,value.length(),text,Math.max(1,Math.round(width))).setIncludePad(false).setMaxLines(maximumLines).setEllipsize(TextUtils.TruncateAt.END).setLineSpacing(3,1).build();
         c.save();c.translate(x,baseline+text.ascent());layout.draw(c);c.restore();return layout.getHeight();
     }

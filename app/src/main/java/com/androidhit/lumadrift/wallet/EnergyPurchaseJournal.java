@@ -16,10 +16,14 @@ final class EnergyPurchaseJournal {
     private static final Object LOCK=new Object();
     private static final Map<SharedPreferences,Map<String,Object>> DIRTY=new WeakHashMap<>();
     private final SharedPreferences prefs;
+    static final class LabInsufficientGold extends IllegalArgumentException {
+        private static final long serialVersionUID=1L;
+        LabInsufficientGold(){super("wallet_insufficient");}
+    }
     static final class State {
         final String phase,spendId,useId;
         State(String phase,String spendId,String useId){this.phase=phase;this.spendId=spendId;this.useId=useId;}
-        boolean pending(){return !phase.equals("EMPTY");}
+        boolean pending(){return phase.equals("SPEND")||phase.equals("USE")||phase.equals("CREDIT");}
         String encode(){return "1|"+phase+"|"+spendId+"|"+useId;}
         boolean same(State other){return other!=null&&spendId.equals(other.spendId)&&useId.equals(other.useId)&&phase.equals(other.phase);}
     }
@@ -43,7 +47,7 @@ final class EnergyPurchaseJournal {
         flush();String raw=prefs.getString(prefix(uid)+"outbox","");
         if(raw.isEmpty())return new State("EMPTY","","");
         String[] v=raw.split("\\|",-1);
-        if(v.length!=4||!v[0].equals("1")||!v[1].matches("SPEND|USE|CREDIT")||!uuid(v[3])||(!v[2].isEmpty()&&!uuid(v[2]))||v[1].equals("SPEND")&&v[2].isEmpty())throw new IllegalStateException("Invalid energy purchase journal");
+        if(v.length!=4||!v[0].equals("1")||!v[1].matches("SPEND|USE|CREDIT|REFUSED")||!uuid(v[3])||(!v[2].isEmpty()&&!uuid(v[2]))||(v[1].equals("SPEND")||v[1].equals("REFUSED"))&&v[2].isEmpty()||v[1].equals("REFUSED")&&!uid.equals(LAB_UID))throw new IllegalStateException("Invalid energy purchase journal");
         return new State(v[1],v[2],v[3]);
     }}
     State start(String uid,boolean buying){synchronized(LOCK){
@@ -81,7 +85,12 @@ final class EnergyPurchaseJournal {
         String p=prefix(LAB_UID),key=p+"spent_"+expected.spendId;
         if(prefs.getBoolean(key,false))return;
         int balance=balance(LAB_UID),stock=stock(LAB_UID);
-        if(balance<PRICE)throw new IllegalArgumentException("wallet_insufficient");
+        if(balance<PRICE){
+            // Local Lab balance and the absence of its atomic paid marker are
+            // authoritative here. Never apply this terminal refusal to HTTP errors.
+            write(Map.of(p+"outbox",new State("REFUSED",expected.spendId,expected.useId).encode()));
+            throw new LabInsufficientGold();
+        }
         if(stock>=10000)throw new IllegalArgumentException("energy_inventory_limit");
         write(Map.of(p+"balance",balance-PRICE,p+"stock",stock+1,key,true));
     }}

@@ -29,10 +29,10 @@ public final class KeyLinkScene122 {
         for(Barrier wall:board.level.barriers){boolean on=board.isPresent(wall.keyTileId);Boolean old=active.put(wall.keyTileId,on);if(old!=null&&old!=on){changed.put(wall.keyTileId,now);inspected=wall.keyTileId;inspectUntil=now+2200;}}
     }
     public static int number(Board board,int key){ArrayList<Integer> ids=new ArrayList<>();for(Barrier wall:board.level.barriers)if(!ids.contains(wall.keyTileId))ids.add(wall.keyTileId);return ids.indexOf(key)+1;}
-    private int color(int n){return new int[]{0xff7c52b4,0xff217f83,0xffae526a,0xff936317}[(Math.max(1,n)-1)%4];}
+    private int color(int n){return ArrowScene123.keyColor(n);}
     private void mark(Canvas c,float x,float y,float radius,int number,int color){
         paint.setStyle(Paint.Style.FILL);paint.setColor(color);c.drawCircle(x,y,radius,paint);
-        paint.setColor(0xffffffff);paint.setTextAlign(Paint.Align.CENTER);paint.setTypeface(android.graphics.Typeface.create("sans-serif",android.graphics.Typeface.BOLD));paint.setTextSize(Math.max(11,radius));c.drawText(String.valueOf(number),x,y+radius*.34f,paint);
+        paint.setColor(0xffffffff);paint.setTextAlign(Paint.Align.CENTER);paint.setTypeface(PulseUi124.face(900));paint.setTextSize(Math.max(11,radius));c.drawText(String.valueOf(number),x,y+radius*.34f,paint);
     }
     public void key(Canvas c,Board board,int id,float x,float y,float cell,long now){
         int n=number(board,id),color=color(n);float radius=Math.max(11,cell*.21f),xx=x-cell*.34f,yy=y-cell*.34f;
